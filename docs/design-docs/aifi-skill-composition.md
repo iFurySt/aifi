@@ -55,6 +55,9 @@ Each skill should declare:
 - `skills/investment-thesis-synthesis`: turns evidence into bull case, bear
   case, base case, risk register, watch items, unresolved questions, and a
   user-controlled decision frame.
+- `skills/portfolio-exposure-review`: evaluates a target or watchlist idea in
+  portfolio context, including sizing considerations, concentration,
+  correlation, liquidity, drawdown contribution, and user-controlled options.
 - `skills/company-research-workflow`: orchestrates the full company-level
   workflow when a user asks for a complete target review.
 

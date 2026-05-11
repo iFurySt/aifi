@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Exposure Review"
+  short_description: "Review portfolio fit, sizing context, and exposure risks."
+  default_prompt: "Review how this investment target fits in portfolio context, including exposure, concentration, liquidity, drawdown, correlation, sizing considerations, and user-controlled options."

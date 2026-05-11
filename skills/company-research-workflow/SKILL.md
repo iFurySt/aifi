@@ -22,7 +22,9 @@ the shared memory layer.
    valuation, margin of safety, or price-implied expectations matter.
 5. Save all source notes and raw files through `research-evidence-archive`.
 6. Run `investment-thesis-synthesis` only after evidence coverage is visible.
-7. Return the final artifact paths, major findings, gaps, and suggested next
+7. Run `portfolio-exposure-review` when the user asks about sizing, adding,
+   trimming, holding, watchlists, or portfolio fit.
+8. Return the final artifact paths, major findings, gaps, and suggested next
    research runs.
 
 Read `references/intel-example-workflow.md` for the default Intel-like scenario.
@@ -41,6 +43,9 @@ Read `references/intel-example-workflow.md` for the default Intel-like scenario.
   financials, filings, peers, market, risks, valuation scenarios, then thesis.
 - User asks "what can go wrong": prioritize target, filings, earnings, news,
   financials, market, risk diligence, then thesis.
+- User asks "how much should I own" or "does this fit my portfolio": prioritize
+  target, thesis, valuation, risks, market, portfolio context, then portfolio
+  exposure review.
 
 ## Output
 
@@ -52,6 +57,7 @@ Return:
 - risk diligence path when created
 - valuation scenario path when created
 - final memo or decision-frame path
+- portfolio review path when created
 - unresolved gaps
 - recommended follow-up skills
 

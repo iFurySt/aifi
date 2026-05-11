@@ -46,6 +46,9 @@ coverage, and unresolved questions visible.
   thesis generated from evidence.
 - `DecisionFrame`: a structured output that separates facts, interpretations,
   risks, open questions, and possible portfolio actions.
+- `PortfolioExposureReview`: a structured artifact that connects a target or
+  watchlist idea to portfolio context, concentration, liquidity, correlation,
+  drawdown contribution, and user-controlled sizing considerations.
 
 ## Boundary Rules
 
