@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Filing Research"
+  short_description: "Analyze company filings and disclosures."
+  default_prompt: "Collect and analyze recent company filings, disclosures, and risk factor changes for this target."
