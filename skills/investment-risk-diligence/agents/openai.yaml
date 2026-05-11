@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investment Risk Diligence"
+  short_description: "Pressure-test downside and thesis-breaking risks."
+  default_prompt: "Build an evidence-backed risk diligence note with prioritized risks, thesis-breaking questions, red flags, watch indicators, and handoffs for this investment target."

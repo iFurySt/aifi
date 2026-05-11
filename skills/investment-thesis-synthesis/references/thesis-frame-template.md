@@ -25,6 +25,7 @@ Use this structure for synthesized AIFi artifacts.
 | Market signals |  |  |  |
 | Competitors |  |  |  |
 | Risks |  |  |  |
+| Valuation |  |  |  |
 
 ## Executive Snapshot
 

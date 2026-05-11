@@ -17,9 +17,9 @@ the shared memory layer.
 4. Run independent collection skills in parallel when possible:
    `company-news-research`, `company-filing-research`,
    `earnings-call-analysis`, `financial-snapshot-analysis`,
-   `market-signal-analysis`, `competitive-landscape-analysis`, and
-   `valuation-scenario-analysis` when valuation, margin of safety, or
-   price-implied expectations matter.
+   `market-signal-analysis`, `competitive-landscape-analysis`,
+   `investment-risk-diligence`, and `valuation-scenario-analysis` when
+   valuation, margin of safety, or price-implied expectations matter.
 5. Save all source notes and raw files through `research-evidence-archive`.
 6. Run `investment-thesis-synthesis` only after evidence coverage is visible.
 7. Return the final artifact paths, major findings, gaps, and suggested next
@@ -32,13 +32,15 @@ Read `references/intel-example-workflow.md` for the default Intel-like scenario.
 - User asks "what happened recently": prioritize target, archive, news, filings,
   earnings, market, then thesis.
 - User asks "is the business improving": prioritize filings, earnings,
-  financials, competitors, then thesis.
+  financials, competitors, risks, then thesis.
 - User asks "why did the stock move": prioritize news, earnings, market, then
   filings if the event is disclosure-driven.
 - User asks "how does it compare": prioritize target, financials, competitors,
   market, then thesis.
 - User asks "what is it worth" or "is it priced in": prioritize target,
-  financials, filings, peers, market, valuation scenarios, then thesis.
+  financials, filings, peers, market, risks, valuation scenarios, then thesis.
+- User asks "what can go wrong": prioritize target, filings, earnings, news,
+  financials, market, risk diligence, then thesis.
 
 ## Output
 
@@ -47,6 +49,7 @@ Return:
 - skills executed
 - archive paths touched
 - evidence coverage table
+- risk diligence path when created
 - valuation scenario path when created
 - final memo or decision-frame path
 - unresolved gaps

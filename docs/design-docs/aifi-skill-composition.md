@@ -49,6 +49,9 @@ Each skill should declare:
   interest, options signals, and relative performance.
 - `skills/competitive-landscape-analysis`: compares the target with peers and substitutes
   across product, margin, growth, valuation, and strategic positioning.
+- `skills/investment-risk-diligence`: pressure-tests downside, accounting
+  quality, governance, legal, regulatory, financing, concentration, cyclicality,
+  and execution risks before thesis synthesis.
 - `skills/investment-thesis-synthesis`: turns evidence into bull case, bear
   case, base case, risk register, watch items, unresolved questions, and a
   user-controlled decision frame.
