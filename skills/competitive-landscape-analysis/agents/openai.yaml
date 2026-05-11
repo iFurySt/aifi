@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitive Landscape"
+  short_description: "Compare peers and industry position."
+  default_prompt: "Analyze this target's competitive landscape, peer set, product position, and relative strengths and weaknesses."
