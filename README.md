@@ -2,6 +2,7 @@
 
 [![English](https://img.shields.io/badge/English-Click-yellow)](./README.md)
 [![简体中文](https://img.shields.io/badge/简体中文-点击查看-orange)](./README.zh-CN.md)
+[![LINUX.DO](https://img.shields.io/badge/LINUX.DO-Visit-blue)](https://linux.do/)
 
 AIFi is an agent-first investment research workspace. It uses small, reusable AI
 skills to collect filings, earnings, news, market signals, competitors, and risk
