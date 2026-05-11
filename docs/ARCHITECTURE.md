@@ -15,6 +15,8 @@ market information into decision-ready research.
 - `scripts/`: repository automation that agents can run directly.
 - `skills/`: reusable AIFi research skills, one skill per subdirectory, with
   concise `SKILL.md` entry points and detailed references loaded on demand.
+- `research/`: persistent research archive for target profiles, source
+  evidence, raw files, generated artifacts, and reusable findings.
 - `docs/`: the repository knowledge base and system of record.
 
 ## Product Shape

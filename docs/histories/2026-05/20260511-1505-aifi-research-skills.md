@@ -23,8 +23,10 @@
     file and a focused `references/` guide.
   - Added a persistent research archive skill and company research workflow
     skill so source materials can compound across future analysis runs.
+  - Added `research/README.md` as the root for repository-local persistent
+    research materials.
   - Updated architecture, skill composition, and quality docs to recognize the
-    `skills/` directory.
+    `skills/` and `research/` directories.
 
 ### Design Intent
 
@@ -50,3 +52,4 @@ opaque one-shot prompts.
 - `docs/design-docs/aifi-skill-composition.md`
 - `docs/QUALITY_SCORE.md`
 - `docs/histories/2026-05/20260511-1505-aifi-research-skills.md`
+- `research/README.md`
