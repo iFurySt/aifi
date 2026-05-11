@@ -35,7 +35,8 @@ This document defines the default collaboration model for an agent-first reposit
 ## CI/CD And Release Posture
 
 - CI should enforce repository legibility and baseline safety even in an early template state.
-- CD scaffolding should produce explicit artifacts and provenance rather than assuming a deployment target too early.
+- Add CD only after there is a real build artifact and deployment target; when
+  it exists, produce explicit artifacts and provenance.
 - When the real stack arrives, extend the existing release pipeline instead of bypassing it with ad hoc workflows.
 
 ## Configuration Hygiene

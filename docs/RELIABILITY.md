@@ -10,4 +10,4 @@ Suggested areas:
 - Local and CI validation for critical paths.
 - Incident notes, common failure modes, and recovery steps.
 
-CI/CD workflow structure and release automation defaults live in `docs/CICD.md`.
+CI workflow structure and deferred release automation guidance live in `docs/CICD.md`.

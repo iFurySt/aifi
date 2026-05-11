@@ -1,36 +1,39 @@
 # CI/CD Guide
 
-This template ships with repository-level CI/CD scaffolding that is intentionally language-agnostic.
+This repository keeps CI/CD intentionally small while AIFi is still a
+skills-driven research workspace rather than a deployable application.
 
 ## What Exists By Default
 
-- `ci.yml`: repository checks for docs, hygiene, markdown, and shell validity.
-- `supply-chain-security.yml`: pull-request dependency review plus OSV scanning on pull requests, scheduled runs, and manual dispatch.
-- `release.yml`: a workflow-dispatch release scaffold that packages repository metadata, generates provenance attestations, and creates a GitHub release.
+- `ci.yml`: repository checks for docs, hygiene, skill entry points, GitHub
+  Action pinning, and shell validity.
+- `scripts/ci.sh`: the local entry point used by GitHub Actions and by
+  contributors through `make ci`.
 
 ## Design Principle
 
-The default workflows prove out the delivery plumbing without pretending to know the real build command for your future project.
+CI should protect repository legibility without pretending there is a real
+application build, deploy target, dependency graph, or release artifact.
 
-You should replace the placeholder packaging step with your product's real build and deployment steps once the stack is known.
+Style-only document checks are intentionally not part of CI. This repository
+stores skill instructions, planning docs, and raw research evidence; source URLs
+and evidence shapes should not be blocked by formatting rules.
 
-All GitHub Actions in the workflows are pinned to commit SHAs. Keep that property when updating actions.
+All GitHub Actions in workflows are pinned to commit SHAs. Keep that property
+when updating actions.
 
 ## Recommended Customization Sequence
 
 1. Keep `ci.yml` as the only always-on repository gate.
-2. Extend `scripts/ci.sh` with project-specific verification.
-3. Replace `scripts/release-package.sh` with the real build or publish packaging logic.
-4. Add environment-specific deployment jobs after a real runtime and target environment exist.
-5. Keep artifact provenance and SBOM generation in place when the build becomes real.
+2. Extend `scripts/check-skills.sh` when skill metadata or reference structure
+   becomes stricter.
+3. Extend `scripts/ci.sh` with project-specific verification once there is a
+   runnable package, workflow engine, or app surface.
+4. Add dependency scanning after the repository has real manifests and lockfiles.
+5. Add release packaging, SBOM generation, and provenance attestations after the
+   project has a real build artifact.
 
-## Release Workflow Output
+## Deferred CD
 
-The default release pipeline produces:
-
-- `release-manifest.json`
-- `repo-metadata.tgz`
-- `sbom.spdx.json`
-- a GitHub artifact attestation for the packaged artifact
-
-This gives downstream consumers a verifiable, reproducible release envelope before product-specific deployment exists.
+There is no release workflow by default. Add one only when the output is a real
+versioned artifact, not a packaged copy of repository metadata.

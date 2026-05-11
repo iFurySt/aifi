@@ -1,7 +1,7 @@
 PROJECT ?=
 SLUG ?=
 
-.PHONY: init check-docs check-repo ci release-package new-history new-plan
+.PHONY: init check-docs check-repo check-skills ci new-history new-plan
 
 init:
 	@if [ -z "$(PROJECT)" ]; then echo "usage: make init PROJECT=my-project"; exit 1; fi
@@ -14,11 +14,11 @@ check-repo:
 	./scripts/check-docs.sh
 	./scripts/check-repo-hygiene.sh
 
+check-skills:
+	./scripts/check-skills.sh
+
 ci:
 	./scripts/ci.sh
-
-release-package:
-	./scripts/release-package.sh
 
 new-history:
 	@if [ -z "$(SLUG)" ]; then echo "usage: make new-history SLUG=my-change"; exit 1; fi

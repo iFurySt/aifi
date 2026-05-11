@@ -3,7 +3,7 @@
 Use this shape in `research/targets/<ticker-or-slug>/profile.md` and in
 handoffs to downstream skills.
 
-```markdown
+````markdown
 # <Canonical Name> Research Target
 
 ## Identity
@@ -51,7 +51,7 @@ research_target:
   archive_path:
   resolved_at:
 ```
-```
+````
 
 ## Resolution Guidance
 
