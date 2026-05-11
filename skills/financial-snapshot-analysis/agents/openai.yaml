@@ -1,0 +1,4 @@
+interface:
+  display_name: "Financial Snapshot Analysis"
+  short_description: "Analyze company financial trends."
+  default_prompt: "Build a sourced financial snapshot with trends, valuation context, and open metric gaps for this target."
