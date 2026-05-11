@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Signal Analysis"
+  short_description: "Analyze price and market signals."
+  default_prompt: "Analyze price action, relative performance, volatility, valuation, and event reactions for this target."
