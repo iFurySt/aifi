@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investment Thesis Synthesis"
+  short_description: "Synthesize thesis and risk frame."
+  default_prompt: "Synthesize archived evidence into bull, bear, base cases, risks, open questions, and a decision frame."
