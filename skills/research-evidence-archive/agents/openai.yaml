@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Evidence Archive"
+  short_description: "Store reusable AIFi research evidence."
+  default_prompt: "Create or update the persistent research archive for this target and store sourced evidence for reuse."
