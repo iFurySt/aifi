@@ -11,3 +11,5 @@ Suggested conventions:
 ## Seed Documents
 
 - `core-beliefs.md`
+- `aifi-skill-composition.md` - current direction for composing reusable
+  investment research skills into larger AI workflows.

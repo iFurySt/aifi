@@ -8,3 +8,8 @@ Suggested conventions:
 - Start with the user problem, not implementation detail.
 - State acceptance criteria and observable outcomes.
 - Cross-link the related execution plan, release note, and architecture changes.
+
+## Current Specs
+
+- `investment-research-workflow.md` - first AIFi workflow for company-level
+  investment research using composable AI skills.

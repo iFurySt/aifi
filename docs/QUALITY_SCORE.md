@@ -13,8 +13,8 @@ Track quality by product area and architectural layer so agents can prioritize t
 
 | Area | Score | Why | Next Step |
 | --- | --- | --- | --- |
-| Product surface | D | Not yet defined. | Define the first user journey and acceptance criteria. |
-| Architecture docs | C | Base scaffold exists but needs project-specific content. | Fill in `docs/ARCHITECTURE.md`. |
+| Product surface | C | First AIFi company research workflow is defined, but no implementation exists yet. | Turn `docs/product-specs/investment-research-workflow.md` into an executable prototype. |
+| Architecture docs | C | AIFi domain objects and boundaries are drafted; package boundaries and data flow are still pending. | Define package layering, evidence storage, and workflow orchestration contracts. |
 | Testing | D | No stack-specific tests yet. | Add a minimal smoke path with one real command. |
 | Observability | D | No local stack or conventions yet. | Document logs, metrics, traces, and local access. |
 | Security | C | Defaults are documented, implementation is pending. | Add real auth, secret, and dependency rules. |
