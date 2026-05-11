@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVIDIA Research Dashboard - 2026-05-11</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #5f6f7a;
+      --grid: #d8e0e5;
+      --panel: #ffffff;
+      --page: #f3f6f7;
+      --green: #2b8a3e;
+      --teal: #087f8c;
+      --blue: #2f5f98;
+      --amber: #b7791f;
+      --red: #b6423c;
+      --purple: #7057a3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.4;
+    }
+
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 28px 20px 36px;
+    }
+
+    header {
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 4px;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid #dbe3e8;
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 1px 2px rgb(23 32 38 / 0.06);
+    }
+
+    section.wide {
+      grid-column: 1 / -1;
+    }
+
+    h2 {
+      margin: 0 0 2px;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .note {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .axis {
+      stroke: #8da0aa;
+      stroke-width: 1;
+    }
+
+    .gridline {
+      stroke: var(--grid);
+      stroke-width: 1;
+    }
+
+    .label {
+      fill: var(--ink);
+      font-size: 12px;
+    }
+
+    .small {
+      fill: var(--muted);
+      font-size: 11px;
+    }
+
+    .value {
+      fill: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .value-on-dark {
+      fill: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .legend {
+      fill: var(--muted);
+      font-size: 11px;
+    }
+
+    .source {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    @media (max-width: 820px) {
+      main {
+        padding: 18px 12px 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>NVIDIA Research Dashboard</h1>
+      <div class="subtitle">Evidence cutoff: 2026-05-11. Currency: USD. Periods: FY2025, FY2026, Q3/Q4 FY2026, Q1 FY2027 guide.</div>
+    </header>
+
+    <div class="grid">
+      <section>
+        <h2>Scale: Revenue Is Still Accelerating</h2>
+        <p class="note">Total revenue and Data Center revenue, $B. FY2025 Data Center is derived from FY2026 +68% growth disclosure.</p>
+        <svg viewBox="0 0 560 350" role="img" aria-labelledby="growth-title growth-desc">
+          <title id="growth-title">NVIDIA revenue scale chart</title>
+          <desc id="growth-desc">Grouped bars compare FY2025 and FY2026 total revenue and Data Center revenue. A line shows quarterly Data Center revenue from Q3 to Q4 FY2026.</desc>
+          <line class="gridline" x1="72" y1="270" x2="500" y2="270"/>
+          <line class="gridline" x1="72" y1="219" x2="500" y2="219"/>
+          <line class="gridline" x1="72" y1="168" x2="500" y2="168"/>
+          <line class="gridline" x1="72" y1="117" x2="500" y2="117"/>
+          <line class="gridline" x1="72" y1="66" x2="500" y2="66"/>
+          <text class="small" x="38" y="274">$0</text>
+          <text class="small" x="30" y="223">$50</text>
+          <text class="small" x="24" y="172">$100</text>
+          <text class="small" x="24" y="121">$150</text>
+          <text class="small" x="24" y="70">$200</text>
+          <line class="axis" x1="72" y1="270" x2="500" y2="270"/>
+          <line class="axis" x1="72" y1="42" x2="72" y2="270"/>
+          <rect x="132" y="137" width="42" height="133" fill="var(--blue)"/>
+          <rect x="180" y="152" width="42" height="118" fill="var(--green)"/>
+          <text class="value" x="122" y="128">$130.5</text>
+          <text class="value" x="172" y="143">$115.3</text>
+          <text class="label" x="150" y="294" text-anchor="middle">FY2025</text>
+          <rect x="318" y="50" width="42" height="220" fill="var(--blue)"/>
+          <rect x="366" y="72" width="42" height="198" fill="var(--green)"/>
+          <text class="value" x="307" y="41">$215.9</text>
+          <text class="value" x="358" y="63">$193.7</text>
+          <text class="label" x="354" y="294" text-anchor="middle">FY2026</text>
+          <circle cx="434" cy="218" r="5" fill="var(--amber)"/>
+          <circle cx="482" cy="206" r="5" fill="var(--amber)"/>
+          <line x1="434" y1="218" x2="482" y2="206" stroke="var(--amber)" stroke-width="3"/>
+          <text class="small" x="420" y="239">Q3 DC</text>
+          <text class="value" x="416" y="254">$51.2</text>
+          <text class="small" x="462" y="186">Q4 DC</text>
+          <text class="value" x="460" y="201">$62.3</text>
+          <rect x="94" y="316" width="12" height="12" fill="var(--blue)"/>
+          <text class="legend" x="112" y="326">Total revenue</text>
+          <rect x="216" y="316" width="12" height="12" fill="var(--green)"/>
+          <text class="legend" x="234" y="326">Data Center revenue</text>
+          <line x1="370" y1="322" x2="394" y2="322" stroke="var(--amber)" stroke-width="3"/>
+          <circle cx="382" cy="322" r="4" fill="var(--amber)"/>
+          <text class="legend" x="402" y="326">Quarterly Data Center</text>
+        </svg>
+        <div class="source">Source: NVIDIA FY2026/Q4 release; NVIDIA Q3 FY2026 release for Q3 Data Center.</div>
+      </section>
+
+      <section>
+        <h2>Mix: Data Center Dominates FY2026</h2>
+        <p class="note">Specialized-market revenue composition, $B. Small residual reflects rounding and other categories.</p>
+        <svg viewBox="0 0 560 350" role="img" aria-labelledby="mix-title mix-desc">
+          <title id="mix-title">FY2026 revenue mix chart</title>
+          <desc id="mix-desc">A horizontal stacked bar shows Data Center as the dominant portion of NVIDIA FY2026 revenue.</desc>
+          <rect x="58" y="96" width="392" height="54" fill="var(--green)"/>
+          <rect x="450" y="96" width="32" height="54" fill="var(--blue)"/>
+          <rect x="482" y="96" width="7" height="54" fill="var(--teal)"/>
+          <rect x="489" y="96" width="5" height="54" fill="var(--amber)"/>
+          <rect x="494" y="96" width="2" height="54" fill="#9aa9b2"/>
+          <line class="axis" x1="58" y1="172" x2="496" y2="172"/>
+          <text class="small" x="58" y="194">$0</text>
+          <text class="small" x="146" y="194">$50</text>
+          <text class="small" x="234" y="194">$100</text>
+          <text class="small" x="322" y="194">$150</text>
+          <text class="small" x="410" y="194">$200</text>
+          <text class="value-on-dark" x="70" y="128">$193.7B Data Center</text>
+          <text class="value" x="56" y="54">FY2026 revenue: $215.9B</text>
+          <text class="label" x="58" y="76">Data Center is about 90% of reported FY2026 revenue.</text>
+          <g transform="translate(58 226)">
+            <rect width="12" height="12" fill="var(--green)"/>
+            <text class="legend" x="18" y="11">Data Center $193.7B</text>
+            <rect x="190" width="12" height="12" fill="var(--blue)"/>
+            <text class="legend" x="208" y="11">Gaming $16.0B</text>
+            <rect x="328" width="12" height="12" fill="var(--teal)"/>
+            <text class="legend" x="346" y="11">ProViz $3.2B</text>
+          </g>
+          <g transform="translate(58 254)">
+            <rect width="12" height="12" fill="var(--amber)"/>
+            <text class="legend" x="18" y="11">Auto/Robotics $2.3B</text>
+            <rect x="190" width="12" height="12" fill="#9aa9b2"/>
+            <text class="legend" x="208" y="11">Other/rounding $0.7B</text>
+          </g>
+        </svg>
+        <div class="source">Source: NVIDIA FY2026/Q4 release. Percentages are based on reported FY2026 revenue.</div>
+      </section>
+
+      <section>
+        <h2>Profit Quality: Margins Remain Exceptional</h2>
+        <p class="note">Margins in %. Q1 FY2027 is company guidance; Q4 uses non-GAAP gross margin.</p>
+        <svg viewBox="0 0 560 350" role="img" aria-labelledby="margin-title margin-desc">
+          <title id="margin-title">NVIDIA margin chart</title>
+          <desc id="margin-desc">Line chart shows gross margin, operating margin, and net margin across FY2025 and FY2026, plus Q4 FY2026 and Q1 FY2027 guide gross margin.</desc>
+          <line class="gridline" x1="72" y1="280" x2="508" y2="280"/>
+          <line class="gridline" x1="72" y1="228" x2="508" y2="228"/>
+          <line class="gridline" x1="72" y1="176" x2="508" y2="176"/>
+          <line class="gridline" x1="72" y1="124" x2="508" y2="124"/>
+          <line class="gridline" x1="72" y1="72" x2="508" y2="72"/>
+          <line class="axis" x1="72" y1="280" x2="508" y2="280"/>
+          <line class="axis" x1="72" y1="54" x2="72" y2="280"/>
+          <text class="small" x="34" y="284">40%</text>
+          <text class="small" x="34" y="232">50%</text>
+          <text class="small" x="34" y="180">60%</text>
+          <text class="small" x="34" y="128">70%</text>
+          <text class="small" x="34" y="76">80%</text>
+          <polyline fill="none" stroke="var(--green)" stroke-width="3" points="110,98 228,119 346,97 464,98"/>
+          <polyline fill="none" stroke="var(--blue)" stroke-width="3" points="110,164 228,176"/>
+          <polyline fill="none" stroke="var(--teal)" stroke-width="3" points="110,199 228,201"/>
+          <circle cx="110" cy="98" r="5" fill="var(--green)"/>
+          <circle cx="228" cy="119" r="5" fill="var(--green)"/>
+          <circle cx="346" cy="97" r="5" fill="var(--green)"/>
+          <circle cx="464" cy="98" r="5" fill="var(--green)"/>
+          <circle cx="110" cy="164" r="5" fill="var(--blue)"/>
+          <circle cx="228" cy="176" r="5" fill="var(--blue)"/>
+          <circle cx="110" cy="199" r="5" fill="var(--teal)"/>
+          <circle cx="228" cy="201" r="5" fill="var(--teal)"/>
+          <text class="label" x="110" y="304" text-anchor="middle">FY25</text>
+          <text class="label" x="228" y="304" text-anchor="middle">FY26</text>
+          <text class="label" x="346" y="304" text-anchor="middle">Q4 FY26</text>
+          <text class="label" x="464" y="304" text-anchor="middle">Q1 FY27 guide</text>
+          <text class="value" x="236" y="113">71.1%</text>
+          <text class="value" x="354" y="91">75.2%</text>
+          <text class="value" x="472" y="92">75.0%</text>
+          <rect x="82" y="24" width="12" height="12" fill="var(--green)"/>
+          <text class="legend" x="100" y="34">Gross margin</text>
+          <rect x="210" y="24" width="12" height="12" fill="var(--blue)"/>
+          <text class="legend" x="228" y="34">Operating margin</text>
+          <rect x="356" y="24" width="12" height="12" fill="var(--teal)"/>
+          <text class="legend" x="374" y="34">Net margin</text>
+        </svg>
+        <div class="source">Source: NVIDIA FY2026/Q4 release and FY2026 10-K.</div>
+      </section>
+
+      <section>
+        <h2>Risk Lens: Concentration And Commitments</h2>
+        <p class="note">Selected FY2026 risk metrics. Customer shares are % of revenue; balance-sheet items are $B.</p>
+        <svg viewBox="0 0 560 350" role="img" aria-labelledby="risk-title risk-desc">
+          <title id="risk-title">NVIDIA risk exposure chart</title>
+          <desc id="risk-desc">Bars compare customer concentration and balance sheet commitments for NVIDIA FY2026.</desc>
+          <text class="label" x="54" y="52">Direct customer revenue concentration</text>
+          <rect x="54" y="76" width="132" height="32" fill="var(--red)"/>
+          <rect x="186" y="76" width="84" height="32" fill="var(--amber)"/>
+          <rect x="270" y="76" width="226" height="32" fill="#b7c4ca"/>
+          <text class="value-on-dark" x="88" y="97">22%</text>
+          <text class="value-on-dark" x="212" y="97">14%</text>
+          <text class="value" x="350" y="97">Other 64%</text>
+          <text class="small" x="54" y="126">Two direct customers represented 36% of FY2026 revenue.</text>
+          <text class="label" x="54" y="168">Cash, inventory, obligations, and annual operating cash flow</text>
+          <line class="gridline" x1="172" y1="288" x2="500" y2="288"/>
+          <line class="gridline" x1="172" y1="243" x2="500" y2="243"/>
+          <line class="gridline" x1="172" y1="198" x2="500" y2="198"/>
+          <text class="small" x="132" y="292">$0</text>
+          <text class="small" x="126" y="247">$50</text>
+          <text class="small" x="120" y="202">$100</text>
+          <rect x="188" y="232" width="54" height="56" fill="var(--blue)"/>
+          <rect x="262" y="269" width="54" height="19" fill="var(--amber)"/>
+          <rect x="336" y="202" width="54" height="86" fill="var(--red)"/>
+          <rect x="410" y="196" width="54" height="92" fill="var(--green)"/>
+          <text class="value" x="182" y="224">$62.6</text>
+          <text class="value" x="256" y="261">$21.4</text>
+          <text class="value" x="330" y="194">$95.2</text>
+          <text class="value" x="401" y="188">$102.7</text>
+          <text class="small" x="215" y="309" text-anchor="middle">Cash +<tspan x="215" dy="13">securities</tspan></text>
+          <text class="small" x="289" y="309" text-anchor="middle">Inventory</text>
+          <text class="small" x="363" y="309" text-anchor="middle">Supply<tspan x="363" dy="13">obligations</tspan></text>
+          <text class="small" x="437" y="309" text-anchor="middle">FY26 OCF</text>
+        </svg>
+        <div class="source">Source: NVIDIA FY2026 10-K. OCF means operating cash flow.</div>
+      </section>
+
+      <section class="wide">
+        <h2>Readout</h2>
+        <p class="note">The charts separate business quality from stock risk. Revenue scale, mix, and margins support the bull case; customer concentration, China exposure, and forward supply commitments define the risk case.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
