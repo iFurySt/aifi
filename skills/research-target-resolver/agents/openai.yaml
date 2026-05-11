@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Target Resolver"
+  short_description: "Resolve tickers and company targets."
+  default_prompt: "Resolve this investment research target into canonical identifiers, peer context, and an archive path."
