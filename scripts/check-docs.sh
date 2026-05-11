@@ -18,7 +18,6 @@ required_files=(
   "docs/QUALITY_SCORE.md"
   "docs/RELIABILITY.md"
   "docs/SECURITY.md"
-  "docs/SUPPLY_CHAIN_SECURITY.md"
   "docs/design-docs/core-beliefs.md"
   "docs/design-docs/index.md"
   "docs/product-specs/index.md"
@@ -55,4 +54,4 @@ if [[ "${missing}" -ne 0 ]]; then
   exit 1
 fi
 
-echo "docs scaffold check passed"
+echo "docs check passed"

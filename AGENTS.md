@@ -1,6 +1,7 @@
 # aifi
 
-This repository is a base template for agent-first software projects.
+This repository is AIFi, an agent-first investment research workspace driven by
+reusable skills and repository-local research artifacts.
 
 `AGENTS.md` stays short on purpose. Treat it as a map, not the encyclopedia. Repository-local markdown under `docs/` is the system of record.
 
@@ -22,9 +23,8 @@ If a code or workflow change makes a doc stale, update the doc in the same task.
 - `docs/PLANS_GUIDE.md`: when to create an execution plan and how to maintain it.
 - `docs/PRODUCT_SENSE.md`: user value, product constraints, and feature prioritization heuristics.
 - `docs/RELIABILITY.md`: runtime guardrails, observability expectations, and operational readiness.
-- `docs/SECURITY.md`: secure defaults for auth, data handling, secrets, and external integrations.
-- `docs/SUPPLY_CHAIN_SECURITY.md`: dependency, SBOM, provenance, and repository security posture defaults.
-- `docs/CICD.md`: CI/CD scaffolding and where to customize it for the real project.
+- `docs/SECURITY.md`: secure defaults for research data, source handling, secrets, and external integrations.
+- `docs/CICD.md`: current CI scope and when to add heavier automation.
 - `docs/FRONTEND.md`: UI/system guidance if the repo includes a frontend surface.
 - `CONTRIBUTING.md`: pull request expectations and default review checklist.
 - `docs/releases/README.md`: how to maintain user-facing release notes.

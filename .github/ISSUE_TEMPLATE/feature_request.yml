@@ -1,5 +1,5 @@
 name: Feature Request
-description: Propose a repository-level capability or template improvement.
+description: Propose an AIFi skill, workflow, documentation, or research-archive improvement.
 title: "[Feature] "
 labels:
   - enhancement
@@ -15,7 +15,7 @@ body:
     id: user_value
     attributes:
       label: User value
-      description: Why does this matter for teams using the template?
+      description: Why does this matter for AIFi research workflows?
     validations:
       required: true
   - type: textarea

@@ -29,9 +29,10 @@ when updating actions.
    becomes stricter.
 3. Extend `scripts/ci.sh` with project-specific verification once there is a
    runnable package, workflow engine, or app surface.
-4. Add dependency scanning after the repository has real manifests and lockfiles.
-5. Add release packaging, SBOM generation, and provenance attestations after the
-   project has a real build artifact.
+4. Add dependency scanning only after the repository has real manifests and
+   lockfiles.
+5. Add release or deployment automation only after the project has a real build
+   artifact and target environment.
 
 ## Deferred CD
 

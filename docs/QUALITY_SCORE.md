@@ -9,7 +9,7 @@ Track quality by product area and architectural layer so agents can prioritize t
 - `C`: works but needs targeted hardening.
 - `D`: fragile or underspecified.
 
-## Initial Template
+## Current Snapshot
 
 | Area | Score | Why | Next Step |
 | --- | --- | --- | --- |

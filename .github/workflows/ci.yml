@@ -17,5 +17,5 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Run base CI checks
+      - name: Run AIFi CI checks
         run: ./scripts/ci.sh

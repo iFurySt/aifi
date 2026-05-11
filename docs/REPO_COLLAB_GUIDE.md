@@ -34,10 +34,11 @@ This document defines the default collaboration model for an agent-first reposit
 
 ## CI/CD And Release Posture
 
-- CI should enforce repository legibility and baseline safety even in an early template state.
-- Add CD only after there is a real build artifact and deployment target; when
-  it exists, produce explicit artifacts and provenance.
-- When the real stack arrives, extend the existing release pipeline instead of bypassing it with ad hoc workflows.
+- CI should enforce repository legibility and baseline safety for the current
+  skills-driven workspace.
+- Add CD only after there is a real build artifact and deployment target.
+- When a runtime stack arrives, extend `scripts/ci.sh` before adding separate
+  workflow-only checks.
 
 ## Configuration Hygiene
 

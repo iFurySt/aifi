@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a defect in the template or its default workflows.
+description: Report a defect in AIFi skills, docs, scripts, or research workflows.
 title: "[Bug] "
 labels:
   - bug

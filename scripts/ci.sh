@@ -13,4 +13,4 @@ while IFS= read -r file; do
   bash -n "$file"
 done < <(find "${repo_root}/scripts" -type f -name '*.sh' | sort)
 
-echo "base CI checks passed"
+echo "aifi CI checks passed"

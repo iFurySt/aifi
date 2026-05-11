@@ -1,11 +1,6 @@
-PROJECT ?=
 SLUG ?=
 
-.PHONY: init check-docs check-repo check-skills ci new-history new-plan
-
-init:
-	@if [ -z "$(PROJECT)" ]; then echo "usage: make init PROJECT=my-project"; exit 1; fi
-	./scripts/init-project.sh "$(PROJECT)"
+.PHONY: check-docs check-repo check-skills ci new-history new-plan
 
 check-docs:
 	./scripts/check-docs.sh
