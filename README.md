@@ -1,28 +1,22 @@
-# aifi
+# AIFi
 
-中文版本：[`aifi-cn`](https://github.com/iFurySt/aifi-cn)
+AIFi is an agent-first investment research workspace. It uses small, reusable AI
+skills to collect filings, earnings, news, market signals, competitors, and risk
+evidence, then saves the work under `research/` so future analysis can reuse it.
 
-## Intro
+It is for research and decision support, not autonomous trading or financial
+advice.
 
-An agent-first base repo template for building any product you want.
-
-## Quick Start
-
-Use GitHub's template flow from the top right of this repository:
-
-1. Select **Use this template**.
-2. Select [**Create a new repository**](https://github.com/new?template_name=aifi&template_owner=iFurySt).
-
-Or initialize a new or existing repository with `harness-cli`:
+## Usage
 
 ```sh
-harness-cli init --language en
+codex "Use ./skills/company-research-workflow to research Intel and save the output under research/targets/intc"
 ```
 
-## License
+```sh
+codex "Use ./skills/company-news-research to update recent INTC news"
+```
 
-[MIT](LICENSE)
-
-## Note
-
-This approach comes from our own exploration, while also drawing on some ideas from OpenAI's [harness engineering write-up](https://openai.com/index/harness-engineering/).
+```sh
+codex "Use ./skills/investment-thesis-synthesis to refresh the INTC decision frame from the archived evidence"
+```
