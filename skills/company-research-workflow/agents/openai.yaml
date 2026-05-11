@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Research Workflow"
+  short_description: "Orchestrate AIFi company research."
+  default_prompt: "Run the AIFi company research workflow for this target using the appropriate skills and archive outputs."
