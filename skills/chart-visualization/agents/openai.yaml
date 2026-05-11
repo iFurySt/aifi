@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chart Visualization"
+  short_description: "Create charts, diagrams, and Sankey visuals."
+  default_prompt: "Use $chart-visualization to turn this data into a clear chart artifact with source labels and validation notes."

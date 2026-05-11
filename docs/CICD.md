@@ -6,7 +6,7 @@ skills-driven research workspace rather than a deployable application.
 ## What Exists By Default
 
 - `ci.yml`: repository checks for docs, hygiene, skill entry points, GitHub
-  Action pinning, and shell validity.
+  Action pinning, shell validity, and Python script syntax.
 - `scripts/ci.sh`: the local entry point used by GitHub Actions and by
   contributors through `make ci`.
 
