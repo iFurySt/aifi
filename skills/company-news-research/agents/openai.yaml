@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company News Research"
+  short_description: "Collect recent company news signals."
+  default_prompt: "Research recent company news, announcements, and narrative changes for this investment target."
