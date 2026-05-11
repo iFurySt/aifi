@@ -2,10 +2,6 @@
 
 [![English](https://img.shields.io/badge/English-Click-yellow)](./README.md)
 [![简体中文](https://img.shields.io/badge/简体中文-点击查看-orange)](./README.zh-CN.md)
-[![LINUX.DO](https://img.shields.io/badge/LINUX.DO-Visit-blue)](https://linux.do/)
-[![Release](https://img.shields.io/github/v/release/iFurySt/aifi)](https://github.com/iFurySt/aifi/releases)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/iFurySt/aifi)
-<a href="https://llmapis.com?source=https%3A%2F%2Fgithub.com%2FiFurySt%2Faifi" target="_blank"><img src="https://llmapis.com/api/badge/iFurySt/aifi" alt="LLMAPIS" width="20" /></a>
 
 AIFi 是一个 agent-first 的投资研究工作区。它用一组可复用的 AI skills
 收集公告、财报、新闻、市场信号、竞品和风险证据，并把研究材料沉淀到
