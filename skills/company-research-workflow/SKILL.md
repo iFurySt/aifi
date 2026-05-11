@@ -17,7 +17,9 @@ the shared memory layer.
 4. Run independent collection skills in parallel when possible:
    `company-news-research`, `company-filing-research`,
    `earnings-call-analysis`, `financial-snapshot-analysis`,
-   `market-signal-analysis`, and `competitive-landscape-analysis`.
+   `market-signal-analysis`, `competitive-landscape-analysis`, and
+   `valuation-scenario-analysis` when valuation, margin of safety, or
+   price-implied expectations matter.
 5. Save all source notes and raw files through `research-evidence-archive`.
 6. Run `investment-thesis-synthesis` only after evidence coverage is visible.
 7. Return the final artifact paths, major findings, gaps, and suggested next
@@ -35,6 +37,8 @@ Read `references/intel-example-workflow.md` for the default Intel-like scenario.
   filings if the event is disclosure-driven.
 - User asks "how does it compare": prioritize target, financials, competitors,
   market, then thesis.
+- User asks "what is it worth" or "is it priced in": prioritize target,
+  financials, filings, peers, market, valuation scenarios, then thesis.
 
 ## Output
 
@@ -43,6 +47,7 @@ Return:
 - skills executed
 - archive paths touched
 - evidence coverage table
+- valuation scenario path when created
 - final memo or decision-frame path
 - unresolved gaps
 - recommended follow-up skills

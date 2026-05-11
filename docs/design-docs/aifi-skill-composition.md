@@ -42,6 +42,9 @@ Each skill should declare:
   management commentary, analyst Q&A, guidance, and tone shifts.
 - `skills/financial-snapshot-analysis`: collects revenue, margin, cash flow, balance sheet,
   valuation, guidance, and revision trends.
+- `skills/valuation-scenario-analysis`: converts sourced drivers into bear,
+  base, and bull valuation ranges, sensitivity checks, and market-implied
+  expectations without turning target prices into recommendations.
 - `skills/market-signal-analysis`: inspects price action, volume, volatility, short
   interest, options signals, and relative performance.
 - `skills/competitive-landscape-analysis`: compares the target with peers and substitutes

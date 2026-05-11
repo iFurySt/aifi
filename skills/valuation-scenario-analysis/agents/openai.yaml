@@ -1,0 +1,4 @@
+interface:
+  display_name: "Valuation Scenario Analysis"
+  short_description: "Build sourced valuation scenarios and sensitivity checks."
+  default_prompt: "Build bear, base, and bull valuation scenarios with explicit assumptions, source links, sensitivity checks, and valuation gaps for this investment target."
