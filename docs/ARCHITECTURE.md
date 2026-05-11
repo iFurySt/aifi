@@ -13,6 +13,8 @@ market information into decision-ready research.
 - `infra/`: deployment, infrastructure, data stores, queues, secrets, and
   scheduled job definitions.
 - `scripts/`: repository automation that agents can run directly.
+- `skills/`: reusable AIFi research skills, one skill per subdirectory, with
+  concise `SKILL.md` entry points and detailed references loaded on demand.
 - `docs/`: the repository knowledge base and system of record.
 
 ## Product Shape

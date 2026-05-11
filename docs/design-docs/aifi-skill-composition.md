@@ -30,28 +30,27 @@ Each skill should declare:
 
 ## Baseline Research Skills
 
-- Target resolver: maps a user phrase such as "Intel" to canonical company,
+- `skills/research-target-resolver`: maps a user phrase such as "Intel" to canonical company,
   ticker, exchange, sector, and peer set.
-- Freshness scanner: finds recent filings, earnings events, press releases,
-  news, executive changes, guidance updates, and major price moves.
-- Financial snapshot: collects revenue, margin, cash flow, balance sheet,
+- `skills/research-evidence-archive`: creates and maintains persistent
+  repository-local research archives under `research/`.
+- `skills/company-news-research`: finds recent press releases, news, executive
+  changes, product events, regulatory events, and market narratives.
+- `skills/company-filing-research`: reads filings, annual reports, quarterly
+  reports, 8-K/current reports, proxies, and disclosure changes.
+- `skills/earnings-call-analysis`: reviews earnings releases, transcripts,
+  management commentary, analyst Q&A, guidance, and tone shifts.
+- `skills/financial-snapshot-analysis`: collects revenue, margin, cash flow, balance sheet,
   valuation, guidance, and revision trends.
-- Filing reader: extracts key changes from 10-K, 10-Q, 8-K, proxy statements,
-  and risk factors.
-- Earnings call reader: summarizes management claims, analyst questions,
-  guidance deltas, and language shifts.
-- Market signal reader: inspects price action, volume, volatility, short
+- `skills/market-signal-analysis`: inspects price action, volume, volatility, short
   interest, options signals, and relative performance.
-- Competitive context reader: compares the target with peers and substitutes
+- `skills/competitive-landscape-analysis`: compares the target with peers and substitutes
   across product, margin, growth, valuation, and strategic positioning.
-- Narrative and sentiment reader: separates market narrative from sourced facts
-  across news, analyst notes, and social signals when available.
-- Risk register builder: lists fundamental, market, execution, legal,
-  geopolitical, and data-quality risks.
-- Thesis synthesizer: turns evidence into bull case, bear case, base case,
-  watch items, and unresolved questions.
-- Decision frame builder: converts the thesis into possible user actions such as
-  watch, research deeper, size cautiously, avoid, or revisit after an event.
+- `skills/investment-thesis-synthesis`: turns evidence into bull case, bear
+  case, base case, risk register, watch items, unresolved questions, and a
+  user-controlled decision frame.
+- `skills/company-research-workflow`: orchestrates the full company-level
+  workflow when a user asks for a complete target review.
 
 ## Workflow Shape
 
