@@ -24,3 +24,7 @@ codex "Update my Intel research with the latest earnings, filings, news, and mar
 ```sh
 codex "Compare Intel with AMD, Nvidia, and TSMC, then summarize the bull, base, and bear cases"
 ```
+
+## Preview
+
+![AIFi research result preview](./docs/assets/readme/aifi-preview-en.png)

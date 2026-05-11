@@ -22,3 +22,7 @@ codex "更新我的 Intel 研究，补充最新财报、公告、新闻和市场
 ```sh
 codex "对比 Intel、AMD、Nvidia 和 TSMC，并总结 bull/base/bear case"
 ```
+
+## 效果预览
+
+![AIFi 研究结果预览](./docs/assets/readme/aifi-preview-zh-CN.png)
