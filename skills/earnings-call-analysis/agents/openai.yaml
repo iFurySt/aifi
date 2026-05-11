@@ -1,0 +1,4 @@
+interface:
+  display_name: "Earnings Call Analysis"
+  short_description: "Analyze earnings calls and guidance."
+  default_prompt: "Analyze this target's earnings call, management commentary, analyst questions, and guidance changes."
