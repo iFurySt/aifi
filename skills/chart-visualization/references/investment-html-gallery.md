@@ -44,6 +44,23 @@ All examples follow the local `html-effectiveness` direction:
 | `html-examples/venture-saas-dashboard.html` | VC, growth equity, SaaS, and operating diligence | KPI cards, table, cap table, financial model, cohort, unit economics, burn multiple, magic number, Rule of 40, TAM/SAM/SOM, adoption/logistic curve, power law, Pareto, Lorenz |
 | `html-examples/flow-network-systems.html` | Capital movement, relationships, reasoning systems, and agent workflows | funnel, Sankey, flow diagram, chord, network graph, causal graph, Bayesian network, knowledge graph, agent workflow, multi-agent collaboration |
 
+## Extended Taxonomy Coverage
+
+Some investment chart names are specialized variants rather than separate HTML
+families. Map them to the nearest example before deciding whether to create a
+new component:
+
+| Chart Type | Start From | Notes |
+| --- | --- | --- |
+| OHLC, Heikin Ashi, Renko, Point & Figure, footprint, tick chart | `trading-microstructure.html` | Calculate transformed bars first, then reuse the price/liquidity layout. |
+| Hexbin, swarm plot, strip plot | `risk-distribution.html` or `portfolio-optimization.html` | Use when dense scatter or sample distribution would overplot. |
+| Radar chart, spider chart, parallel coordinates | `portfolio-optimization.html` | Use only when dimensions are fixed and comparable across assets or companies. |
+| Timeline and Gantt chart | `flow-network-systems.html` | Use for financing history, IPO process, diligence workstreams, or product milestones. |
+| Polar chart, seasonality chart, cycle chart | `macro-rates-dashboard.html` | Keep periodicity explicit: month, quarter, economic phase, or policy cycle. |
+| Sunburst, icicle, pyramid | `composition-and-allocation.html` | Use for hierarchy; switch to table if labels become cramped. |
+| Financial model spreadsheet and cap table | `venture-saas-dashboard.html` | Preserve row precision and formulas in companion notes when needed. |
+| Scenario tree, decision tree, Bayesian network | `attribution-scenario.html` or `flow-network-systems.html` | Use trees for discrete paths and networks for probabilistic dependency maps. |
+
 ## Production Checklist
 
 Before using an example in research:
