@@ -59,9 +59,23 @@ the existing script-oriented guidance for calculations and static rendering.
 - [x] Read required repository collaboration, architecture, and belief docs.
 - [x] Reviewed existing `chart-visualization` skill shape.
 - [x] Reviewed the external chart list and local `html-effectiveness` style.
-- [ ] Add skill TOC and investment HTML reference index.
-- [ ] Implement and visually verify HTML example slices.
-- [ ] Run CI, update history, and push.
+- [x] Add skill TOC and investment HTML reference index.
+- [x] Implement and visually verify HTML example slices.
+- [x] Run CI and update history.
+- [ ] Push final commits.
+
+## Visual Verification Log
+
+- `market-timeseries.html`: captured local Chrome screenshot at 1280x1100.
+- `trading-microstructure.html`: captured local Chrome screenshot at 1280x1100.
+- `composition-and-allocation.html`: captured local Chrome screenshot at
+  1280x1100 and fixed missing legend and treemap colors before commit.
+- `risk-distribution.html`: captured local Chrome screenshot at 1280x1100.
+- `portfolio-optimization.html`: captured local Chrome screenshot at 1280x1100.
+- `attribution-scenario.html`: captured local Chrome screenshot at 1280x1100.
+- `macro-rates-dashboard.html`: captured local Chrome screenshot at 1280x1450.
+- `venture-saas-dashboard.html`: captured local Chrome screenshot at 1280x1250.
+- `flow-network-systems.html`: captured local Chrome screenshot at 1280x1200.
 
 ## Decision Log
 
