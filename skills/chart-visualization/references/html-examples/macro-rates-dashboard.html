@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Macro Rates Dashboard</title>
+<style>
+  :root{--ivory:#FAF9F5;--slate:#141413;--clay:#D97757;--olive:#788C5D;--rust:#B04A3F;--oat:#E3DACC;--gray-100:#F0EEE6;--gray-300:#D1CFC5;--gray-500:#87867F;--gray-700:#3D3D3A;--white:#fff;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--border:1.5px solid var(--gray-300)}
+  *{box-sizing:border-box}body{margin:0;padding:52px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55}main{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:28px}h1{font-family:var(--serif);font-size:38px;line-height:1.1;font-weight:500;margin:0 0 8px}.sub{margin:0;color:var(--gray-500);max-width:700px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:1.18fr .9fr;gap:18px}.panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}.panel h2{font-family:var(--serif);font-size:23px;font-weight:500;margin:0 0 2px}.note{font-size:13px;color:var(--gray-500);margin:0 0 18px}svg{display:block;width:100%;height:auto}.axis{stroke:var(--gray-300);stroke-width:1.2}.gridline{stroke:var(--gray-100)}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}.curve{fill:none;stroke:var(--clay);stroke-width:3;stroke-linecap:round}.curve.prev{stroke:var(--olive);stroke-width:2.4;stroke-dasharray:5 5}.bar{fill:var(--oat)}.bar.hot{fill:var(--clay)}.dot{fill:var(--clay);stroke:#fff;stroke-width:2}.side{display:grid;gap:18px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{background:var(--gray-100);border:1px solid var(--gray-300);border-radius:10px;padding:12px}.metric b{display:block;font-family:var(--serif);font-size:25px;font-weight:500}.metric span{font-size:11px;color:var(--gray-500);text-transform:uppercase;letter-spacing:.05em}
+  .calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.day{aspect-ratio:1;border-radius:5px;background:var(--gray-100);font-family:var(--mono);font-size:10px;color:var(--gray-500);display:flex;align-items:center;justify-content:center}.d1{background:#E3DACC}.d2{background:#D97757;color:#fff}.d3{background:#788C5D;color:#fff}.map{height:170px;border-radius:10px;background:linear-gradient(0deg,#F0EEE6,#F7F4EC);border:1px solid var(--gray-300);position:relative;overflow:hidden}.map:before{content:"";position:absolute;left:44px;top:48px;width:260px;height:76px;border-radius:44% 56% 52% 48%;background:#E3DACC}.map:after{content:"";position:absolute;right:44px;top:54px;width:118px;height:84px;border-radius:50%;background:#D1CFC5}.bubble{position:absolute;border-radius:50%;background:rgba(217,119,87,.72);border:2px solid #fff}.source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:900px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.grid{grid-template-columns:1fr}}@media(max-width:540px){h1{font-size:31px}.panel{padding:18px 16px 16px}.metrics{grid-template-columns:1fr}.calendar{gap:3px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Macro Rates Dashboard</h1><p class="sub">Reference for macro investment work: yield curves, spreads, inflation lines, GDP growth, PMI diffusion, Fed dot plot, seasonality, cycle views, calendar heatmaps, and geographic exposure.</p></div>
+    <div class="stamp">SAMPLE / MACRO PACK</div>
+  </header>
+  <section class="grid">
+    <article class="panel">
+      <h2>Rates, Inflation, And Growth</h2>
+      <p class="note">Keep macro panels compact and label the release date or forecast vintage.</p>
+      <svg viewBox="0 0 700 430" role="img" aria-label="Yield curve, dot plot, and macro bars">
+        <line class="gridline" x1="58" y1="72" x2="650" y2="72"/><line class="gridline" x1="58" y1="138" x2="650" y2="138"/><line class="gridline" x1="58" y1="204" x2="650" y2="204"/><line class="axis" x1="58" y1="270" x2="650" y2="270"/><line class="axis" x1="58" y1="46" x2="58" y2="270"/>
+        <text class="tick" x="22" y="76">5%</text><text class="tick" x="22" y="142">4%</text><text class="tick" x="22" y="208">3%</text><text class="tick" x="76" y="296">3M</text><text class="tick" x="176" y="296">2Y</text><text class="tick" x="278" y="296">5Y</text><text class="tick" x="384" y="296">10Y</text><text class="tick" x="512" y="296">30Y</text>
+        <path class="curve prev" d="M86 100 C154 92,220 104,286 132 S438 164,604 148"/><path class="curve" d="M86 74 C154 84,220 118,286 160 S438 196,604 172"/>
+        <g transform="translate(78 334)">
+          <text class="tick" x="0" y="-16">Fed dot plot</text><circle class="dot" cx="20" cy="50" r="5"/><circle class="dot" cx="52" cy="44" r="5"/><circle class="dot" cx="84" cy="38" r="5"/><circle class="dot" cx="116" cy="34" r="5"/><circle class="dot" cx="148" cy="28" r="5"/><line class="axis" x1="0" y1="66" x2="176" y2="66"/>
+        </g>
+        <g transform="translate(330 324)">
+          <text class="tick" x="0" y="-6">CPI / GDP / PMI</text><rect class="bar hot" x="0" y="26" width="30" height="64"/><rect class="bar" x="44" y="54" width="30" height="36"/><rect class="bar hot" x="88" y="42" width="30" height="48"/><rect class="bar" x="132" y="18" width="30" height="72"/><rect class="bar hot" x="176" y="62" width="30" height="28"/><line class="axis" x1="0" y1="90" x2="230" y2="90"/>
+        </g>
+      </svg>
+      <div class="source">Covers yield curve, spread chart, CPI/PPI line, GDP growth chart, PMI diffusion index, Fed dot plot, and polar or cycle references.</div>
+    </article>
+    <aside class="side">
+      <article class="panel">
+        <h2>Macro Pulse</h2>
+        <p class="note">KPI cards work when paired with the chart's vintage and unit.</p>
+        <div class="metrics">
+          <div class="metric"><b>4.46%</b><span>10Y yield</span></div>
+          <div class="metric"><b>+88</b><span>HY spread bps</span></div>
+          <div class="metric"><b>51.7</b><span>PMI</span></div>
+        </div>
+        <div class="source">Good fit: macro dashboard cards, spread snapshots, and leading-indicator summaries.</div>
+      </article>
+      <article class="panel">
+        <h2>Calendar Heatmap</h2>
+        <p class="note">Use for daily returns, active days, data releases, and seasonality.</p>
+        <div class="calendar" aria-label="Calendar heatmap">
+          <div class="day">1</div><div class="day d1">2</div><div class="day d3">3</div><div class="day">4</div><div class="day d2">5</div><div class="day">6</div><div class="day d1">7</div>
+          <div class="day d3">8</div><div class="day">9</div><div class="day d1">10</div><div class="day d2">11</div><div class="day">12</div><div class="day d3">13</div><div class="day">14</div>
+          <div class="day">15</div><div class="day d1">16</div><div class="day">17</div><div class="day d3">18</div><div class="day d2">19</div><div class="day">20</div><div class="day d1">21</div>
+          <div class="day d3">22</div><div class="day">23</div><div class="day">24</div><div class="day d1">25</div><div class="day d2">26</div><div class="day">27</div><div class="day d3">28</div>
+        </div>
+      </article>
+      <article class="panel">
+        <h2>Geography Surface</h2>
+        <p class="note">Use maps only when location changes the decision.</p>
+        <div class="map" aria-label="Map-like geography panel"><span class="bubble" style="left:142px;top:72px;width:28px;height:28px"></span><span class="bubble" style="left:288px;top:58px;width:42px;height:42px"></span><span class="bubble" style="right:92px;top:92px;width:22px;height:22px"></span></div>
+        <div class="source">Covers choropleth map, geographic bubble map, and region-level allocation displays.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
