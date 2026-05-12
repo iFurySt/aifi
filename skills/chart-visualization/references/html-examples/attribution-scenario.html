@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Attribution Scenario Panel</title>
+<style>
+  :root{--ivory:#FAF9F5;--slate:#141413;--clay:#D97757;--olive:#788C5D;--rust:#B04A3F;--oat:#E3DACC;--gray-100:#F0EEE6;--gray-300:#D1CFC5;--gray-500:#87867F;--gray-700:#3D3D3A;--white:#fff;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--border:1.5px solid var(--gray-300)}
+  *{box-sizing:border-box}body{margin:0;padding:52px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55}main{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:28px}h1{font-family:var(--serif);font-size:38px;line-height:1.1;font-weight:500;margin:0 0 8px}.sub{margin:0;color:var(--gray-500);max-width:710px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:1.14fr .92fr;gap:18px}.panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}.panel h2{font-family:var(--serif);font-size:23px;font-weight:500;margin:0 0 2px}.note{font-size:13px;color:var(--gray-500);margin:0 0 18px}svg{display:block;width:100%;height:auto}.axis{stroke:var(--gray-300);stroke-width:1.2}.gridline{stroke:var(--gray-100)}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}.label{font-family:var(--mono);font-size:11px;fill:var(--gray-700)}.pos{fill:var(--olive)}.neg{fill:var(--rust)}.base{fill:var(--oat)}.fan1{fill:rgba(217,119,87,.15)}.fan2{fill:rgba(217,119,87,.25)}.mc{fill:none;stroke:var(--gray-300);stroke-width:1}.mc.hot{stroke:var(--clay);stroke-width:2.4}.tree-line{stroke:var(--gray-300);stroke-width:1.2}.node{fill:var(--gray-100);stroke:var(--gray-300);stroke-width:1.2}.node.hot{fill:#F4DAD4;stroke:var(--clay)}
+  .side{display:grid;gap:18px}.tornado{display:grid;gap:10px}.row{display:grid;grid-template-columns:94px 1fr 52px;gap:10px;align-items:center;font-size:13px}.track{height:9px;border-radius:999px;background:var(--gray-100);overflow:hidden}.track span{display:block;height:100%;border-radius:999px;background:var(--clay)}.mono{font-family:var(--mono);text-align:right;color:var(--gray-700)}.source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:900px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.grid{grid-template-columns:1fr}}@media(max-width:540px){h1{font-size:31px}.panel{padding:18px 16px 16px}.row{grid-template-columns:80px 1fr 46px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Attribution And Scenario Panel</h1><p class="sub">Reference for explaining changes and uncertainty: waterfall, bridge, performance attribution, tornado sensitivity, Monte Carlo paths, fan charts, scenario trees, and investment decision trees.</p></div>
+    <div class="stamp">SAMPLE / IC APPENDIX</div>
+  </header>
+  <section class="grid">
+    <article class="panel">
+      <h2>Waterfall Bridge</h2>
+      <p class="note">Use a bridge when the question is how one value became another.</p>
+      <svg viewBox="0 0 700 410" role="img" aria-label="Waterfall and scenario chart">
+        <line class="gridline" x1="58" y1="82" x2="650" y2="82"/><line class="gridline" x1="58" y1="148" x2="650" y2="148"/><line class="gridline" x1="58" y1="214" x2="650" y2="214"/><line class="axis" x1="58" y1="280" x2="650" y2="280"/>
+        <text class="tick" x="18" y="86">40%</text><text class="tick" x="18" y="152">20%</text><text class="tick" x="18" y="218">0%</text>
+        <rect class="base" x="82" y="178" width="58" height="102" rx="3"/><rect class="pos" x="166" y="132" width="58" height="46" rx="3"/><rect class="pos" x="250" y="94" width="58" height="38" rx="3"/><rect class="neg" x="334" y="94" width="58" height="52" rx="3"/><rect class="pos" x="418" y="116" width="58" height="30" rx="3"/><rect class="base" x="526" y="86" width="58" height="194" rx="3"/>
+        <line class="axis" x1="140" y1="178" x2="166" y2="178"/><line class="axis" x1="224" y1="132" x2="250" y2="132"/><line class="axis" x1="308" y1="94" x2="334" y2="94"/><line class="axis" x1="392" y1="146" x2="418" y2="146"/><line class="axis" x1="476" y1="116" x2="526" y2="116"/>
+        <text class="tick" x="82" y="306">Start</text><text class="tick" x="158" y="306">Sector</text><text class="tick" x="240" y="306">Stock</text><text class="tick" x="330" y="306">Rates</text><text class="tick" x="410" y="306">FX</text><text class="tick" x="522" y="306">End</text>
+        <g transform="translate(64 340)"><text class="label" x="0" y="0">Fan chart</text><path class="fan1" d="M92 24 C170 8,250 6,332 0 L332 52 C250 44,170 44,92 36Z"/><path class="fan2" d="M92 28 C170 18,250 16,332 12 L332 40 C250 36,170 36,92 32Z"/><path class="mc hot" d="M92 30 C150 26,208 22,332 20"/><path class="mc" d="M92 30 C160 42,230 18,332 34"/><path class="mc" d="M92 30 C160 22,230 38,332 12"/></g>
+      </svg>
+      <div class="source">Covers waterfall chart, bridge chart, performance attribution, Monte Carlo simulation, and fan chart uncertainty bands.</div>
+    </article>
+    <aside class="side">
+      <article class="panel">
+        <h2>Tornado Sensitivity</h2>
+        <p class="note">Sort variables by absolute impact and use the same unit for every bar.</p>
+        <div class="tornado">
+          <div class="row"><span>WACC</span><span class="track"><span style="width:92%;background:var(--rust)"></span></span><span class="mono">-18%</span></div>
+          <div class="row"><span>Margin</span><span class="track"><span style="width:78%;background:var(--olive)"></span></span><span class="mono">+14%</span></div>
+          <div class="row"><span>Growth</span><span class="track"><span style="width:67%"></span></span><span class="mono">+11%</span></div>
+          <div class="row"><span>Exit mult.</span><span class="track"><span style="width:52%"></span></span><span class="mono">+8%</span></div>
+          <div class="row"><span>Capex</span><span class="track"><span style="width:39%;background:var(--oat)"></span></span><span class="mono">-5%</span></div>
+        </div>
+        <div class="source">Good fit: DCF sensitivity, LBO bridge, downside case sizing, and scenario stress deltas.</div>
+      </article>
+      <article class="panel">
+        <h2>Scenario Tree</h2>
+        <p class="note">Use trees for discrete outcomes; keep probabilities and actions on the node.</p>
+        <svg viewBox="0 0 420 245" role="img" aria-label="Scenario and decision tree">
+          <line class="tree-line" x1="76" y1="120" x2="200" y2="60"/><line class="tree-line" x1="76" y1="120" x2="200" y2="120"/><line class="tree-line" x1="76" y1="120" x2="200" y2="180"/><line class="tree-line" x1="260" y1="60" x2="354" y2="38"/><line class="tree-line" x1="260" y1="60" x2="354" y2="82"/>
+          <rect class="node hot" x="22" y="94" width="108" height="52" rx="8"/><rect class="node" x="176" y="34" width="108" height="52" rx="8"/><rect class="node" x="176" y="94" width="108" height="52" rx="8"/><rect class="node" x="176" y="154" width="108" height="52" rx="8"/><rect class="node" x="326" y="18" width="76" height="38" rx="8"/><rect class="node" x="326" y="70" width="76" height="38" rx="8"/>
+          <text class="label" x="42" y="116">Invest</text><text class="tick" x="42" y="132">today</text><text class="label" x="198" y="56">Bull</text><text class="tick" x="198" y="72">30%</text><text class="label" x="198" y="116">Base</text><text class="tick" x="198" y="132">50%</text><text class="label" x="198" y="176">Bear</text><text class="tick" x="198" y="192">20%</text><text class="label" x="344" y="42">Add</text><text class="label" x="344" y="94">Hold</text>
+        </svg>
+        <div class="source">Covers scenario tree, decision tree, and discrete investment path analysis.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
