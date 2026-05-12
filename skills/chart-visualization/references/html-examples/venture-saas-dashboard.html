@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Venture SaaS Dashboard</title>
+<style>
+  :root{--ivory:#FAF9F5;--slate:#141413;--clay:#D97757;--olive:#788C5D;--rust:#B04A3F;--oat:#E3DACC;--gray-100:#F0EEE6;--gray-300:#D1CFC5;--gray-500:#87867F;--gray-700:#3D3D3A;--white:#fff;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--border:1.5px solid var(--gray-300)}
+  *{box-sizing:border-box}body{margin:0;padding:52px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55}main{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:28px}h1{font-family:var(--serif);font-size:38px;line-height:1.1;font-weight:500;margin:0 0 8px}.sub{margin:0;color:var(--gray-500);max-width:720px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px}.kpi{background:var(--white);border:var(--border);border-radius:12px;padding:16px}.kpi b{display:block;font-family:var(--serif);font-size:29px;font-weight:500;line-height:1}.kpi span{display:block;margin-top:8px;font-size:11px;color:var(--gray-500);text-transform:uppercase;letter-spacing:.05em}.grid{display:grid;grid-template-columns:1.08fr .95fr;gap:18px}.panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}.panel h2{font-family:var(--serif);font-size:23px;font-weight:500;margin:0 0 2px}.note{font-size:13px;color:var(--gray-500);margin:0 0 18px}svg{display:block;width:100%;height:auto}.axis{stroke:var(--gray-300);stroke-width:1.2}.gridline{stroke:var(--gray-100)}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}.line{fill:none;stroke:var(--clay);stroke-width:3}.line.alt{stroke:var(--olive)}.area{fill:rgba(217,119,87,.16)}.bar{fill:var(--oat)}.bar.hot{fill:var(--clay)}.side{display:grid;gap:18px}table{width:100%;border-collapse:separate;border-spacing:0;border:var(--border);border-radius:10px;overflow:hidden;font-size:13px}th{text-align:left;background:var(--gray-100);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-500);padding:10px 12px}td{padding:10px 12px;border-top:1px solid var(--gray-100)}td:last-child{text-align:right;font-family:var(--mono)}.cohort{display:grid;grid-template-columns:62px repeat(6,1fr);gap:4px}.cell,.head{height:30px;border-radius:5px;font-family:var(--mono);font-size:10px;display:flex;align-items:center;justify-content:center}.head{color:var(--gray-500)}.c1{background:#F0EEE6}.c2{background:#E3DACC}.c3{background:#D97757;color:#fff}.c4{background:#788C5D;color:#fff}.source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:960px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}@media(max-width:560px){h1{font-size:31px}.panel{padding:18px 16px 16px}.kpis{grid-template-columns:1fr}.cohort{grid-template-columns:48px repeat(6,1fr);gap:3px}.cell,.head{font-size:9px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Venture SaaS Dashboard</h1><p class="sub">Reference for VC and growth diligence: KPI cards, financial model tables, cap table, cohorts, unit economics, burn multiple, magic number, Rule of 40, TAM/SAM/SOM, adoption curves, power law, Pareto, and Lorenz views.</p></div>
+    <div class="stamp">SAMPLE / SERIES B DATA ROOM</div>
+  </header>
+  <section class="kpis" aria-label="SaaS KPIs">
+    <div class="kpi"><b>$42M</b><span>ARR</span></div><div class="kpi"><b>68%</b><span>Gross margin</span></div><div class="kpi"><b>1.4x</b><span>Burn multiple</span></div><div class="kpi"><b>0.92</b><span>Magic number</span></div><div class="kpi"><b>46</b><span>Rule of 40</span></div>
+  </section>
+  <section class="grid">
+    <article class="panel">
+      <h2>Growth Quality And Market Space</h2>
+      <p class="note">Use one panel to connect operating efficiency, adoption curve, and market-size claims.</p>
+      <svg viewBox="0 0 700 410" role="img" aria-label="SaaS adoption and market chart">
+        <line class="gridline" x1="58" y1="72" x2="650" y2="72"/><line class="gridline" x1="58" y1="138" x2="650" y2="138"/><line class="gridline" x1="58" y1="204" x2="650" y2="204"/><line class="axis" x1="58" y1="270" x2="650" y2="270"/><line class="axis" x1="58" y1="46" x2="58" y2="270"/>
+        <path class="area" d="M72 256 C146 252,202 238,250 202 S338 86,438 66 S556 72,632 56 L632 270 L72 270Z"/><path class="line" d="M72 256 C146 252,202 238,250 202 S338 86,438 66 S556 72,632 56"/>
+        <path class="line alt" d="M72 246 C152 232,210 210,276 166 S412 126,632 118"/>
+        <text class="tick" x="76" y="296">Seed</text><text class="tick" x="218" y="296">Series A</text><text class="tick" x="382" y="296">Series B</text><text class="tick" x="552" y="296">Scale</text>
+        <g transform="translate(82 326)"><text class="tick" x="0" y="-12">TAM / SAM / SOM</text><rect class="bar hot" x="0" y="0" width="70" height="58"/><rect class="bar" x="84" y="22" width="70" height="36"/><rect class="bar" x="168" y="42" width="70" height="16"/><text class="tick" x="18" y="78">TAM</text><text class="tick" x="102" y="78">SAM</text><text class="tick" x="186" y="78">SOM</text></g>
+        <g transform="translate(400 326)"><text class="tick" x="0" y="-12">Power law / Pareto</text><rect class="bar hot" x="0" y="0" width="30" height="58"/><rect class="bar" x="42" y="20" width="30" height="38"/><rect class="bar" x="84" y="34" width="30" height="24"/><rect class="bar" x="126" y="46" width="30" height="12"/></g>
+      </svg>
+      <div class="source">Covers adoption curve, logistic curve, TAM/SAM/SOM, power law distribution, Pareto chart, and Lorenz-style concentration narratives.</div>
+    </article>
+    <aside class="side">
+      <article class="panel">
+        <h2>Cohort Retention</h2>
+        <p class="note">Cohorts should scan as a matrix with month labels and consistent color bins.</p>
+        <div class="cohort" aria-label="Cohort heatmap">
+          <div></div><div class="head">M0</div><div class="head">M1</div><div class="head">M2</div><div class="head">M3</div><div class="head">M4</div><div class="head">M5</div>
+          <div class="head">Jan</div><div class="cell c4">100</div><div class="cell c4">88</div><div class="cell c3">76</div><div class="cell c2">69</div><div class="cell c2">63</div><div class="cell c1">58</div>
+          <div class="head">Feb</div><div class="cell c4">100</div><div class="cell c4">91</div><div class="cell c3">80</div><div class="cell c3">74</div><div class="cell c2">66</div><div class="cell c1">60</div>
+          <div class="head">Mar</div><div class="cell c4">100</div><div class="cell c4">92</div><div class="cell c3">82</div><div class="cell c2">70</div><div class="cell c2">64</div><div class="cell c1">59</div>
+          <div class="head">Apr</div><div class="cell c4">100</div><div class="cell c3">86</div><div class="cell c3">78</div><div class="cell c2">71</div><div class="cell c1">62</div><div class="cell c1">55</div>
+        </div>
+        <div class="source">Good fit: cohort retention, revenue retention, expansion quality, and customer health grids.</div>
+      </article>
+      <article class="panel">
+        <h2>Cap Table And Model</h2>
+        <p class="note">Investors often need table precision more than another chart.</p>
+        <table>
+          <thead><tr><th>Holder</th><th>Security</th><th>FD %</th></tr></thead>
+          <tbody><tr><td>Founders</td><td>Common</td><td>42.0%</td></tr><tr><td>Series A</td><td>Preferred</td><td>24.5%</td></tr><tr><td>Series B</td><td>Preferred</td><td>19.0%</td></tr><tr><td>Option pool</td><td>Common</td><td>14.5%</td></tr></tbody>
+        </table>
+        <div class="source">Covers KPI dashboard cards, table, cap table, financial model spreadsheet, unit economics, CAC/LTV, and payback period.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
