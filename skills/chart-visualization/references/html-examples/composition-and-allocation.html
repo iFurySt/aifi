@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Composition And Allocation Panel</title>
+<style>
+  :root{--ivory:#FAF9F5;--slate:#141413;--clay:#D97757;--olive:#788C5D;--rust:#B04A3F;--oat:#E3DACC;--gray-100:#F0EEE6;--gray-300:#D1CFC5;--gray-500:#87867F;--gray-700:#3D3D3A;--white:#fff;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--border:1.5px solid var(--gray-300)}
+  *{box-sizing:border-box}body{margin:0;padding:52px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55}main{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:28px}h1{font-family:var(--serif);font-size:38px;line-height:1.1;font-weight:500;margin:0 0 8px}.sub{margin:0;color:var(--gray-500);max-width:690px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:1.2fr .9fr;gap:18px}.panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}.panel h2{font-family:var(--serif);font-size:23px;font-weight:500;margin:0 0 2px}.note{font-size:13px;color:var(--gray-500);margin:0 0 18px}svg{display:block;width:100%;height:auto}.axis{stroke:var(--gray-300);stroke-width:1.2}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}.label{font-family:var(--mono);font-size:11px;fill:var(--gray-700)}.c1{fill:var(--clay)}.c2{fill:var(--olive)}.c3{fill:var(--oat)}.c4{fill:#C9B7A2}.c5{fill:var(--rust)}.gridline{stroke:var(--gray-100)}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:12px;color:var(--gray-700)}.key{display:inline-flex;align-items:center;gap:7px}.sw{display:inline-block;width:12px;height:12px;border-radius:3px}.sw.c1{background:var(--clay)}.sw.c2{background:var(--olive)}.sw.c3{background:var(--oat);border:1px solid var(--gray-300)}.side{display:grid;gap:18px}.donut-wrap{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:center}.alloc{display:grid;gap:10px}.alloc-row{display:grid;grid-template-columns:82px 1fr 44px;gap:10px;align-items:center;font-size:13px}.track{height:8px;border-radius:999px;background:var(--gray-100);overflow:hidden}.fill{display:block;height:100%;border-radius:999px;background:var(--clay)}.mono{font-family:var(--mono);text-align:right;color:var(--gray-700)}.tree{display:grid;grid-template-columns:1.35fr .8fr .55fr;grid-template-rows:92px 80px;gap:6px;height:178px}.box{border-radius:8px;padding:10px;color:var(--slate);font-size:12px;display:flex;align-items:flex-end}.box.c1{background:var(--clay)}.box.c2{background:var(--olive)}.box.c3{background:var(--oat)}.box.c4{background:#C9B7A2}.box.c5{background:#E7C9BF}.box b{font-family:var(--serif);font-size:20px;font-weight:500;display:block}.box small{display:block;color:var(--gray-700)}.source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:900px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.grid{grid-template-columns:1fr}.donut-wrap{grid-template-columns:160px 1fr}}@media(max-width:560px){h1{font-size:31px}.panel{padding:18px 16px 16px}.donut-wrap{grid-template-columns:1fr}.tree{grid-template-columns:1fr 1fr;height:auto}.box{min-height:84px}.alloc-row{grid-template-columns:72px 1fr 42px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Composition And Allocation Panel</h1><p class="sub">Reference for structure questions: portfolio allocation, revenue mix, market share, geography, fund holdings, ownership layers, and market-size decomposition.</p></div>
+    <div class="stamp">SAMPLE / PORTFOLIO WEIGHTS</div>
+  </header>
+  <section class="grid">
+    <article class="panel">
+      <h2>Revenue Mix And Share Shift</h2>
+      <p class="note">Stacked and 100% stacked bars should make absolute scale and structure change easy to compare.</p>
+      <svg viewBox="0 0 690 360" role="img" aria-label="Stacked bar and Marimekko chart">
+        <line class="gridline" x1="58" y1="62" x2="644" y2="62"/><line class="gridline" x1="58" y1="122" x2="644" y2="122"/><line class="gridline" x1="58" y1="182" x2="644" y2="182"/><line class="axis" x1="58" y1="242" x2="644" y2="242"/><line class="axis" x1="58" y1="42" x2="58" y2="242"/>
+        <text class="tick" x="18" y="66">$80B</text><text class="tick" x="18" y="126">$50B</text><text class="tick" x="18" y="186">$20B</text>
+        <g>
+          <rect class="c2" x="92" y="154" width="54" height="88"/><rect class="c1" x="92" y="96" width="54" height="58"/><rect class="c3" x="92" y="64" width="54" height="32"/>
+          <rect class="c2" x="202" y="138" width="54" height="104"/><rect class="c1" x="202" y="78" width="54" height="60"/><rect class="c3" x="202" y="52" width="54" height="26"/>
+          <rect class="c2" x="312" y="118" width="54" height="124"/><rect class="c1" x="312" y="68" width="54" height="50"/><rect class="c3" x="312" y="42" width="54" height="26"/>
+          <rect class="c2" x="422" y="92" width="54" height="150"/><rect class="c1" x="422" y="54" width="54" height="38"/><rect class="c3" x="422" y="32" width="54" height="22"/>
+        </g>
+        <text class="tick" x="102" y="266">2022</text><text class="tick" x="212" y="266">2023</text><text class="tick" x="322" y="266">2024</text><text class="tick" x="432" y="266">2025E</text>
+        <g transform="translate(514 46)">
+          <text class="label" x="0" y="-10">Marimekko</text>
+          <rect class="c2" x="0" y="0" width="46" height="108"/><rect class="c1" x="0" y="108" width="46" height="54"/><rect class="c3" x="0" y="162" width="46" height="38"/>
+          <rect class="c2" x="50" y="0" width="74" height="88"/><rect class="c1" x="50" y="88" width="74" height="72"/><rect class="c3" x="50" y="160" width="74" height="40"/>
+        </g>
+      </svg>
+      <div class="legend"><span class="key"><span class="sw c2"></span>Cloud</span><span class="key"><span class="sw c1"></span>Ads</span><span class="key"><span class="sw c3"></span>Other</span></div>
+      <div class="source">Covers bar, stacked bar, 100% stacked bar, grouped bar, horizontal ranking, and Marimekko use cases.</div>
+    </article>
+    <aside class="side">
+      <article class="panel">
+        <h2>Allocation Donut</h2>
+        <p class="note">Use donut or pie only when the number of slices stays small.</p>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 180 180" role="img" aria-label="Allocation donut chart">
+            <circle cx="90" cy="90" r="62" fill="none" stroke="#F0EEE6" stroke-width="28"/>
+            <circle cx="90" cy="90" r="62" fill="none" stroke="#788C5D" stroke-width="28" stroke-dasharray="175 390" transform="rotate(-90 90 90)"/>
+            <circle cx="90" cy="90" r="62" fill="none" stroke="#D97757" stroke-width="28" stroke-dasharray="113 390" stroke-dashoffset="-175" transform="rotate(-90 90 90)"/>
+            <circle cx="90" cy="90" r="62" fill="none" stroke="#E3DACC" stroke-width="28" stroke-dasharray="70 390" stroke-dashoffset="-288" transform="rotate(-90 90 90)"/>
+            <text x="90" y="86" text-anchor="middle" style="font:500 26px Georgia,serif;fill:#141413">100%</text>
+            <text x="90" y="106" text-anchor="middle" class="tick">capital</text>
+          </svg>
+          <div class="alloc">
+            <div class="alloc-row"><span>Equity</span><span class="track"><span class="fill" style="width:45%;background:var(--olive)"></span></span><span class="mono">45%</span></div>
+            <div class="alloc-row"><span>Credit</span><span class="track"><span class="fill" style="width:29%"></span></span><span class="mono">29%</span></div>
+            <div class="alloc-row"><span>Cash</span><span class="track"><span class="fill" style="width:18%;background:var(--oat)"></span></span><span class="mono">18%</span></div>
+            <div class="alloc-row"><span>Hedges</span><span class="track"><span class="fill" style="width:8%;background:var(--rust)"></span></span><span class="mono">8%</span></div>
+          </div>
+        </div>
+        <div class="source">Good fit: asset allocation, fund holding structure, market segment mix, and KPI tiles.</div>
+      </article>
+      <article class="panel">
+        <h2>Treemap And Hierarchy</h2>
+        <p class="note">Area encodes size. Nest labels sparingly to avoid cramped blocks.</p>
+        <div class="tree" aria-label="Treemap">
+          <div class="box c2" style="grid-row:span 2"><span><b>AI Infra</b><small>42% weight</small></span></div>
+          <div class="box c1"><span><b>Apps</b><small>24%</small></span></div>
+          <div class="box c3"><span><b>Data</b><small>14%</small></span></div>
+          <div class="box c4"><span><b>Cyber</b><small>12%</small></span></div>
+          <div class="box c5"><span><b>Cash</b><small>8%</small></span></div>
+        </div>
+        <div class="source">Use this pattern for treemap, sunburst, icicle, pyramid, and nested ownership references.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
