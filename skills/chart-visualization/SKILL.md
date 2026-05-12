@@ -7,15 +7,18 @@ description: Create analytical charts, data visualizations, diagrams, dashboards
 
 Use this skill to turn structured or semi-structured data into legible visual
 artifacts for AIFi research. The skill supports static figures, browser-native
-interactive charts, analysis dashboards, diagrams, and Sankey-style flow views.
+HTML components, interactive charts, analysis dashboards, diagrams, and
+Sankey-style flow views.
 
 ## Workflow
 
 1. Clarify the audience, artifact target, data source, and output format.
 2. Read `references/chart-selection.md` to choose the chart family and data
-   contract.
+   contract. For investment research, also read
+   `references/investment-html-gallery.md`.
 3. Load only the implementation reference needed for the selected environment:
-   static SVG, Python plotting, browser HTML, diagram text, or Sankey flow.
+   investment HTML, static SVG, Python plotting, browser HTML, diagram text, or
+   Sankey flow.
 4. Normalize the data before drawing. Keep source labels, units, time ranges,
    and transformations visible in the artifact or companion notes.
 5. Generate the smallest useful artifact first, then iterate on labeling,
@@ -28,6 +31,33 @@ interactive charts, analysis dashboards, diagrams, and Sankey-style flow views.
 
 - `references/chart-selection.md`: chart chooser, data contracts, and common
   analytical intents.
+- `references/investment-html-gallery.md`: investment chart taxonomy, HTML-first
+  design rules, and which example file to copy for each chart family.
+- `references/html-examples/market-timeseries.html`: line, area, indexed
+  performance, cumulative return, drawdown, rolling metric, and volume panels.
+- `references/html-examples/trading-microstructure.html`: candlestick, OHLC,
+  depth, order-flow, footprint, tick, Renko, Heikin Ashi, and Point & Figure
+  layouts.
+- `references/html-examples/composition-and-allocation.html`: stacked bars,
+  100% stacked bars, donut, treemap, sunburst, icicle, Marimekko, and asset
+  allocation views.
+- `references/html-examples/risk-distribution.html`: histogram, box plot,
+  violin, KDE, QQ plot, VaR, stress test, tracking error, and ratio ranking
+  views.
+- `references/html-examples/portfolio-optimization.html`: risk-return scatter,
+  efficient frontier, factor exposure, correlation matrix, covariance matrix,
+  alpha/beta, and risk attribution views.
+- `references/html-examples/attribution-scenario.html`: waterfall, bridge,
+  tornado, Monte Carlo, fan chart, scenario tree, and decision tree views.
+- `references/html-examples/macro-rates-dashboard.html`: yield curve, spread,
+  CPI/PPI, GDP, PMI, Fed dot plot, seasonality, cycle, and map-style macro
+  panels.
+- `references/html-examples/venture-saas-dashboard.html`: KPI cards, cap table,
+  financial model table, cohort, unit economics, burn multiple, magic number,
+  Rule of 40, TAM/SAM/SOM, adoption curve, power law, Pareto, and Lorenz views.
+- `references/html-examples/flow-network-systems.html`: funnel, Sankey, chord,
+  network graph, causal graph, Bayesian network, knowledge graph, agent
+  workflow, and multi-agent collaboration views.
 - `references/static-svg.md`: dependency-free SVG generation and when to use
   `scripts/render_examples.py`.
 - `references/python-analysis.md`: matplotlib, seaborn, pandas, and Plotly
@@ -44,6 +74,9 @@ interactive charts, analysis dashboards, diagrams, and Sankey-style flow views.
 ## Method Selection
 
 - Need guaranteed local execution with no packages: use `static-svg.md`.
+- Need a polished investment research artifact that opens directly in a
+  browser: use `investment-html-gallery.md` and the matching
+  `references/html-examples/*.html` file.
 - Need statistical analysis or print-quality PNG/PDF: use
   `python-analysis.md`.
 - Need interactive hover, zoom, filters, or browser delivery: use
