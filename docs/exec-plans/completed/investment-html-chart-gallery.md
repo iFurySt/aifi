@@ -62,7 +62,7 @@ the existing script-oriented guidance for calculations and static rendering.
 - [x] Add skill TOC and investment HTML reference index.
 - [x] Implement and visually verify HTML example slices.
 - [x] Run CI and update history.
-- [ ] Push final commits.
+- [x] Push final commits.
 
 ## Visual Verification Log
 
