@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Flow Network Systems Panel</title>
+<style>
+  :root{--ivory:#FAF9F5;--slate:#141413;--clay:#D97757;--olive:#788C5D;--rust:#B04A3F;--oat:#E3DACC;--gray-100:#F0EEE6;--gray-300:#D1CFC5;--gray-500:#87867F;--gray-700:#3D3D3A;--white:#fff;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--border:1.5px solid var(--gray-300)}
+  *{box-sizing:border-box}body{margin:0;padding:52px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55}main{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:28px}h1{font-family:var(--serif);font-size:38px;line-height:1.1;font-weight:500;margin:0 0 8px}.sub{margin:0;color:var(--gray-500);max-width:720px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:1.14fr .92fr;gap:18px}.panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}.panel h2{font-family:var(--serif);font-size:23px;font-weight:500;margin:0 0 2px}.note{font-size:13px;color:var(--gray-500);margin:0 0 18px}svg{display:block;width:100%;height:auto}.label{font-family:var(--mono);font-size:11px;fill:var(--gray-700)}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}.node{fill:#F0EEE6;stroke:#D1CFC5;stroke-width:1.3}.node.hot{fill:#F4DAD4;stroke:#D97757}.node.ok{fill:#E7ECD8;stroke:#788C5D}.flow{fill:none;stroke:rgba(217,119,87,.42);stroke-width:22;stroke-linecap:round}.flow.alt{stroke:rgba(120,140,93,.42);stroke-width:16}.edge{stroke:#D1CFC5;stroke-width:1.4;fill:none}.edge.hot{stroke:#D97757;stroke-width:2}.side{display:grid;gap:18px}.funnel{display:grid;gap:9px}.stage{height:38px;border-radius:8px;background:var(--oat);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;color:var(--gray-700);margin:auto}.stage:nth-child(1){width:100%;background:var(--olive);color:#fff}.stage:nth-child(2){width:82%;background:var(--clay);color:#fff}.stage:nth-child(3){width:62%}.stage:nth-child(4){width:44%}.stage:nth-child(5){width:28%;background:#E7C9BF}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--gray-100);border:1px solid var(--gray-300);border-radius:999px;padding:7px 10px;font-family:var(--mono);font-size:11px;color:var(--gray-700)}.source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:900px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.grid{grid-template-columns:1fr}}@media(max-width:540px){h1{font-size:31px}.panel{padding:18px 16px 16px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Flow Network Systems Panel</h1><p class="sub">Reference for capital movement and reasoning systems: funnel, Sankey, flow diagram, chord, network graph, causal graph, Bayesian network, knowledge graph, agent workflow, and multi-agent collaboration.</p></div>
+    <div class="stamp">SAMPLE / RESEARCH SYSTEM</div>
+  </header>
+  <section class="grid">
+    <article class="panel">
+      <h2>Capital And Evidence Flow</h2>
+      <p class="note">Use Sankey-style paths when the movement between categories is more important than the categories alone.</p>
+      <svg viewBox="0 0 700 430" role="img" aria-label="Sankey and network diagram">
+        <path class="flow" d="M110 86 C230 86,250 150,358 150 S500 108,596 108"/><path class="flow alt" d="M110 180 C242 180,250 150,358 150 S504 214,596 214"/><path class="flow" style="stroke-width:12" d="M110 282 C250 282,268 226,358 226 S508 214,596 214"/>
+        <rect class="node ok" x="44" y="58" width="132" height="56" rx="10"/><rect class="node hot" x="44" y="154" width="132" height="56" rx="10"/><rect class="node" x="44" y="256" width="132" height="56" rx="10"/><rect class="node hot" x="306" y="124" width="122" height="56" rx="10"/><rect class="node" x="306" y="204" width="122" height="56" rx="10"/><rect class="node ok" x="540" y="82" width="112" height="56" rx="10"/><rect class="node" x="540" y="188" width="112" height="56" rx="10"/>
+        <text class="label" x="76" y="91">Public</text><text class="label" x="72" y="188">Private</text><text class="label" x="74" y="290">Market</text><text class="label" x="334" y="158">Archive</text><text class="label" x="330" y="238">Models</text><text class="label" x="570" y="116">Memo</text><text class="label" x="568" y="222">Review</text>
+        <g transform="translate(88 344)">
+          <text class="tick" x="0" y="-12">Network / causal graph</text><circle class="node hot" cx="36" cy="42" r="24"/><circle class="node ok" cx="142" cy="28" r="24"/><circle class="node" cx="238" cy="54" r="24"/><circle class="node" cx="344" cy="26" r="24"/><path class="edge hot" d="M60 38 L118 30"/><path class="edge" d="M166 34 L214 48"/><path class="edge" d="M262 48 L320 32"/><text class="label" x="18" y="46">AI</text><text class="label" x="120" y="32">Capex</text><text class="label" x="218" y="58">Margin</text><text class="label" x="324" y="30">FCF</text>
+        </g>
+      </svg>
+      <div class="source">Covers Sankey diagram, flow diagram, chord-style relationship map, network graph, causal graph, Bayesian network, and knowledge graph.</div>
+    </article>
+    <aside class="side">
+      <article class="panel">
+        <h2>Deal Funnel</h2>
+        <p class="note">Funnel width should encode stage count or value, not visual decoration.</p>
+        <div class="funnel" aria-label="Deal funnel">
+          <div class="stage">Sourced 420</div>
+          <div class="stage">Screened 260</div>
+          <div class="stage">Diligence 94</div>
+          <div class="stage">IC 28</div>
+          <div class="stage">Invest 9</div>
+        </div>
+        <div class="source">Good fit: VC pipeline, sales funnel, sourcing conversion, and research triage stages.</div>
+      </article>
+      <article class="panel">
+        <h2>Agent Workflow</h2>
+        <p class="note">Workflow diagrams should expose handoffs, evidence gates, and unresolved questions.</p>
+        <svg viewBox="0 0 420 220" role="img" aria-label="Agent workflow diagram">
+          <rect class="node ok" x="18" y="34" width="92" height="42" rx="8"/><rect class="node" x="160" y="34" width="92" height="42" rx="8"/><rect class="node hot" x="302" y="34" width="92" height="42" rx="8"/><rect class="node" x="160" y="130" width="92" height="42" rx="8"/><path class="edge hot" d="M110 55 L160 55"/><path class="edge" d="M252 55 L302 55"/><path class="edge" d="M206 76 L206 130"/><path class="edge" d="M252 151 C318 150,346 116,348 76"/>
+          <text class="label" x="38" y="59">Resolve</text><text class="label" x="176" y="59">Collect</text><text class="label" x="320" y="59">Synthesize</text><text class="label" x="178" y="155">Critique</text>
+        </svg>
+        <div class="chips"><span class="chip">AI analyst</span><span class="chip">PM review</span><span class="chip">Evidence gate</span><span class="chip">Risk agent</span><span class="chip">Open questions</span></div>
+        <div class="source">Covers agent workflow, multi-agent collaboration, research pipeline, and system dependency diagrams.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
