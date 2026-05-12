@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Trading Microstructure Panel</title>
+<style>
+  :root {
+    --ivory:#FAF9F5; --slate:#141413; --clay:#D97757; --olive:#788C5D;
+    --rust:#B04A3F; --oat:#E3DACC; --gray-100:#F0EEE6; --gray-300:#D1CFC5;
+    --gray-500:#87867F; --gray-700:#3D3D3A; --white:#FFFFFF;
+    --serif:ui-serif, Georgia, serif; --sans:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono:ui-monospace, "SF Mono", Menlo, Consolas, monospace; --border:1.5px solid var(--gray-300);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:50px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .page{max-width:1120px;margin:0 auto}
+  header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
+  h1{font-family:var(--serif);font-weight:500;font-size:38px;line-height:1.1;margin:0 0 8px}
+  .sub{margin:0;color:var(--gray-500);max-width:670px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .book{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(330px,.9fr);gap:18px}
+  .panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}
+  .panel h2{font-family:var(--serif);font-weight:500;font-size:23px;margin:0 0 2px}.note{margin:0 0 16px;color:var(--gray-500);font-size:13px}
+  svg{display:block;width:100%;height:auto}.gridline{stroke:var(--gray-100);stroke-width:1}.axis{stroke:var(--gray-300);stroke-width:1.2}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}
+  .up-stroke{stroke:var(--olive);stroke-width:2}.down-stroke{stroke:var(--rust);stroke-width:2}.up-fill{fill:var(--olive)}.down-fill{fill:var(--rust)}.vol{fill:var(--oat)}.bid{fill:rgba(120,140,93,.72)}.ask{fill:rgba(176,74,63,.72)}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:12px;color:var(--gray-700)}.key{display:inline-flex;align-items:center;gap:7px}.dot{width:10px;height:10px;border-radius:2px;background:var(--olive)}.dot.ask{background:var(--rust)}.dot.oat{background:var(--oat);border:1px solid var(--gray-300)}
+  .side{display:grid;gap:18px}.ladder{display:grid;grid-template-columns:1fr 72px 1fr;gap:8px;align-items:center;font-family:var(--mono);font-size:12px}.ladder div{padding:5px 7px;border-radius:6px}.sell{background:#F4DAD4;text-align:right;color:var(--rust)}.buy{background:#E7ECD8;color:#52643E}.mid{text-align:center;color:var(--gray-500)}
+  .flow{display:grid;gap:8px}.flow-row{display:grid;grid-template-columns:72px 1fr 56px;gap:10px;align-items:center;font-size:12px}.bar{height:9px;background:var(--gray-100);border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;border-radius:999px;background:var(--clay)}
+  .small-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.chip{border:1px solid var(--gray-300);border-radius:8px;padding:10px 11px;background:var(--gray-100)}.chip b{display:block;font-family:var(--serif);font-size:20px;font-weight:500}.chip span{font-size:11px;color:var(--gray-500);text-transform:uppercase;letter-spacing:.05em}
+  .source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:900px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.book{grid-template-columns:1fr}.small-grid{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:540px){h1{font-size:31px}.panel{padding:18px 16px 16px}.small-grid{grid-template-columns:1fr}.ladder{grid-template-columns:1fr 64px 1fr}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <div>
+      <h1>Trading Microstructure Panel</h1>
+      <p class="sub">Reference layout for trading inspection: candlestick or OHLC bars, volume, order-book depth, footprint pressure, tick bars, Renko blocks, Heikin Ashi, and Point &amp; Figure summaries.</p>
+    </div>
+    <div class="stamp">SAMPLE / NVDA / 5-MIN BARS</div>
+  </header>
+
+  <section class="book">
+    <article class="panel">
+      <h2>Candlestick With Liquidity Context</h2>
+      <p class="note">Use a single coordinated panel for OHLC, volume, and material event markers.</p>
+      <svg viewBox="0 0 720 405" role="img" aria-label="Candlestick and volume chart">
+        <line class="gridline" x1="56" y1="54" x2="684" y2="54"/><line class="gridline" x1="56" y1="116" x2="684" y2="116"/><line class="gridline" x1="56" y1="178" x2="684" y2="178"/><line class="gridline" x1="56" y1="240" x2="684" y2="240"/>
+        <line class="axis" x1="56" y1="270" x2="684" y2="270"/><line class="axis" x1="56" y1="34" x2="56" y2="270"/>
+        <text class="tick" x="18" y="58">138</text><text class="tick" x="18" y="120">134</text><text class="tick" x="18" y="182">130</text><text class="tick" x="18" y="244">126</text>
+        <g>
+          <line class="up-stroke" x1="86" y1="205" x2="86" y2="142"/><rect class="up-fill" x="77" y="160" width="18" height="34" rx="2"/>
+          <line class="up-stroke" x1="122" y1="184" x2="122" y2="118"/><rect class="up-fill" x="113" y="136" width="18" height="32" rx="2"/>
+          <line class="down-stroke" x1="158" y1="134" x2="158" y2="210"/><rect class="down-fill" x="149" y="146" width="18" height="42" rx="2"/>
+          <line class="up-stroke" x1="194" y1="198" x2="194" y2="122"/><rect class="up-fill" x="185" y="140" width="18" height="44" rx="2"/>
+          <line class="up-stroke" x1="230" y1="170" x2="230" y2="94"/><rect class="up-fill" x="221" y="112" width="18" height="36" rx="2"/>
+          <line class="down-stroke" x1="266" y1="104" x2="266" y2="186"/><rect class="down-fill" x="257" y="118" width="18" height="46" rx="2"/>
+          <line class="down-stroke" x1="302" y1="138" x2="302" y2="222"/><rect class="down-fill" x="293" y="152" width="18" height="42" rx="2"/>
+          <line class="up-stroke" x1="338" y1="210" x2="338" y2="126"/><rect class="up-fill" x="329" y="146" width="18" height="48" rx="2"/>
+          <line class="up-stroke" x1="374" y1="168" x2="374" y2="82"/><rect class="up-fill" x="365" y="102" width="18" height="44" rx="2"/>
+          <line class="up-stroke" x1="410" y1="142" x2="410" y2="60"/><rect class="up-fill" x="401" y="78" width="18" height="42" rx="2"/>
+          <line class="down-stroke" x1="446" y1="72" x2="446" y2="158"/><rect class="down-fill" x="437" y="92" width="18" height="44" rx="2"/>
+          <line class="up-stroke" x1="482" y1="146" x2="482" y2="66"/><rect class="up-fill" x="473" y="82" width="18" height="42" rx="2"/>
+          <line class="down-stroke" x1="518" y1="76" x2="518" y2="166"/><rect class="down-fill" x="509" y="96" width="18" height="44" rx="2"/>
+          <line class="up-stroke" x1="554" y1="154" x2="554" y2="84"/><rect class="up-fill" x="545" y="102" width="18" height="36" rx="2"/>
+          <line class="up-stroke" x1="590" y1="138" x2="590" y2="56"/><rect class="up-fill" x="581" y="74" width="18" height="40" rx="2"/>
+          <line class="down-stroke" x1="626" y1="66" x2="626" y2="144"/><rect class="down-fill" x="617" y="84" width="18" height="38" rx="2"/>
+        </g>
+        <g>
+          <rect class="vol" x="77" y="334" width="18" height="34"/><rect class="vol" x="113" y="320" width="18" height="48"/><rect class="vol" x="149" y="304" width="18" height="64"/><rect class="vol" x="185" y="326" width="18" height="42"/>
+          <rect class="vol" x="221" y="292" width="18" height="76"/><rect class="vol" x="257" y="298" width="18" height="70"/><rect class="vol" x="293" y="288" width="18" height="80"/><rect class="vol" x="329" y="310" width="18" height="58"/>
+          <rect class="vol" x="365" y="282" width="18" height="86"/><rect class="vol" x="401" y="276" width="18" height="92"/><rect class="vol" x="437" y="300" width="18" height="68"/><rect class="vol" x="473" y="294" width="18" height="74"/>
+          <rect class="vol" x="509" y="306" width="18" height="62"/><rect class="vol" x="545" y="318" width="18" height="50"/><rect class="vol" x="581" y="286" width="18" height="82"/><rect class="vol" x="617" y="312" width="18" height="56"/>
+        </g>
+        <line class="axis" x1="56" y1="368" x2="684" y2="368"/>
+        <text class="tick" x="74" y="392">09:30</text><text class="tick" x="288" y="392">11:30</text><text class="tick" x="502" y="392">14:00</text><text class="tick" x="628" y="392">16:00</text>
+      </svg>
+      <div class="legend"><span class="key"><span class="dot"></span>Up candle</span><span class="key"><span class="dot ask"></span>Down candle</span><span class="key"><span class="dot oat"></span>Volume</span></div>
+      <div class="small-grid">
+        <div class="chip"><b>1.8x</b><span>relative volume</span></div>
+        <div class="chip"><b>42 bps</b><span>intraday range</span></div>
+        <div class="chip"><b>61%</b><span>aggressive buy</span></div>
+      </div>
+      <div class="source">Replace sample bars with sourced OHLCV data. For Heikin Ashi or Renko, calculate transformed bars before rendering.</div>
+    </article>
+
+    <aside class="side">
+      <article class="panel">
+        <h2>Depth Ladder</h2>
+        <p class="note">Order-book depth should separate bid and ask liquidity around mid price.</p>
+        <div class="ladder" aria-label="Depth ladder">
+          <div class="sell" style="width:66%;justify-self:end">1,480</div><div class="mid">137.20</div><div></div>
+          <div class="sell" style="width:78%;justify-self:end">1,920</div><div class="mid">137.15</div><div></div>
+          <div class="sell" style="width:54%;justify-self:end">1,110</div><div class="mid">137.10</div><div></div>
+          <div></div><div class="mid">137.05</div><div class="buy" style="width:61%">1,360</div>
+          <div></div><div class="mid">137.00</div><div class="buy" style="width:82%">2,040</div>
+          <div></div><div class="mid">136.95</div><div class="buy" style="width:73%">1,760</div>
+        </div>
+        <div class="source">Good fit: depth chart, order flow ladder, footprint imbalance, and liquidity walls.</div>
+      </article>
+
+      <article class="panel">
+        <h2>Order Flow Pressure</h2>
+        <p class="note">Use small multiples for tick and footprint summaries when the main chart is dense.</p>
+        <div class="flow">
+          <div class="flow-row"><span>09:30</span><span class="bar"><span style="width:58%"></span></span><b>+12k</b></div>
+          <div class="flow-row"><span>10:00</span><span class="bar"><span style="width:76%;background:var(--olive)"></span></span><b>+21k</b></div>
+          <div class="flow-row"><span>11:00</span><span class="bar"><span style="width:44%;background:var(--rust)"></span></span><b>-8k</b></div>
+          <div class="flow-row"><span>13:00</span><span class="bar"><span style="width:81%;background:var(--olive)"></span></span><b>+26k</b></div>
+          <div class="flow-row"><span>15:30</span><span class="bar"><span style="width:63%"></span></span><b>+15k</b></div>
+        </div>
+        <div class="source">Pair with a note explaining whether flow is trade count, signed volume, or notional value.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
