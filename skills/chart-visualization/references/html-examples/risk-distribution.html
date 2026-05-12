@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFi Risk Distribution Panel</title>
+<style>
+  :root{--ivory:#FAF9F5;--slate:#141413;--clay:#D97757;--olive:#788C5D;--rust:#B04A3F;--oat:#E3DACC;--gray-100:#F0EEE6;--gray-300:#D1CFC5;--gray-500:#87867F;--gray-700:#3D3D3A;--white:#fff;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--border:1.5px solid var(--gray-300)}
+  *{box-sizing:border-box}body{margin:0;padding:52px 24px 86px;background:var(--ivory);color:var(--slate);font-family:var(--sans);font-size:15px;line-height:1.55}main{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:28px}h1{font-family:var(--serif);font-size:38px;line-height:1.1;font-weight:500;margin:0 0 8px}.sub{margin:0;color:var(--gray-500);max-width:690px}.stamp{font-family:var(--mono);font-size:12px;color:var(--gray-700);background:var(--gray-100);border:var(--border);border-radius:999px;padding:6px 11px;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:1.15fr .9fr;gap:18px}.panel{background:var(--white);border:var(--border);border-radius:12px;padding:22px 24px 18px}.panel h2{font-family:var(--serif);font-size:23px;font-weight:500;margin:0 0 2px}.note{font-size:13px;color:var(--gray-500);margin:0 0 18px}svg{display:block;width:100%;height:auto}.axis{stroke:var(--gray-300);stroke-width:1.2}.gridline{stroke:var(--gray-100)}.tick{font-family:var(--mono);font-size:11px;fill:var(--gray-500)}.hist{fill:var(--oat)}.tail{fill:var(--rust);opacity:.78}.kde{fill:none;stroke:var(--clay);stroke-width:3;stroke-linecap:round}.normal{fill:none;stroke:var(--olive);stroke-width:2.5;stroke-dasharray:5 5}.box{fill:#F7F4EC;stroke:var(--gray-300)}.median{stroke:var(--clay);stroke-width:2}.whisker{stroke:var(--gray-700);stroke-width:1.4}.point{fill:var(--rust)}
+  .side{display:grid;gap:18px}.stress{display:grid;gap:10px}.row{display:grid;grid-template-columns:118px 1fr 54px;gap:10px;align-items:center;font-size:13px}.bar{height:9px;border-radius:999px;background:var(--gray-100);overflow:hidden}.bar span{display:block;height:100%;border-radius:999px;background:var(--rust)}.mono{font-family:var(--mono);text-align:right;color:var(--gray-700)}table{width:100%;border-collapse:separate;border-spacing:0;border:var(--border);border-radius:10px;overflow:hidden;font-size:13px}th{text-align:left;background:var(--gray-100);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-500);padding:10px 12px}td{padding:10px 12px;border-top:1px solid var(--gray-100)}td:last-child{text-align:right;font-family:var(--mono)}.source{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)}
+  @media(max-width:900px){body{padding:34px 16px 64px}header{display:block}.stamp{display:inline-flex;margin-top:16px}.grid{grid-template-columns:1fr}}@media(max-width:540px){h1{font-size:31px}.panel{padding:18px 16px 16px}.row{grid-template-columns:96px 1fr 48px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Risk Distribution Panel</h1><p class="sub">HTML reference for return distributions, volatility diagnostics, downside tails, manager ratio ranking, VaR, stress losses, and normality checks.</p></div>
+    <div class="stamp">SAMPLE / DAILY RETURNS / 3Y</div>
+  </header>
+  <section class="grid">
+    <article class="panel">
+      <h2>Return Distribution And Tail Risk</h2>
+      <p class="note">Histogram plus KDE and normal overlay makes fat tails visible without hiding sample counts.</p>
+      <svg viewBox="0 0 700 396" role="img" aria-label="Histogram, KDE, box, violin, and QQ plot">
+        <line class="gridline" x1="56" y1="70" x2="656" y2="70"/><line class="gridline" x1="56" y1="132" x2="656" y2="132"/><line class="gridline" x1="56" y1="194" x2="656" y2="194"/><line class="axis" x1="56" y1="256" x2="656" y2="256"/><line class="axis" x1="56" y1="46" x2="56" y2="256"/>
+        <text class="tick" x="20" y="74">80</text><text class="tick" x="20" y="136">50</text><text class="tick" x="20" y="198">20</text>
+        <rect class="tail" x="80" y="220" width="28" height="36"/><rect class="tail" x="112" y="200" width="28" height="56"/><rect class="hist" x="144" y="176" width="28" height="80"/><rect class="hist" x="176" y="136" width="28" height="120"/><rect class="hist" x="208" y="102" width="28" height="154"/><rect class="hist" x="240" y="78" width="28" height="178"/><rect class="hist" x="272" y="64" width="28" height="192"/><rect class="hist" x="304" y="88" width="28" height="168"/><rect class="hist" x="336" y="116" width="28" height="140"/><rect class="hist" x="368" y="152" width="28" height="104"/><rect class="hist" x="400" y="182" width="28" height="74"/><rect class="hist" x="432" y="210" width="28" height="46"/><rect class="tail" x="464" y="228" width="28" height="28"/>
+        <path class="normal" d="M80 246 C150 222,188 104,272 74 S394 122,492 238"/>
+        <path class="kde" d="M80 238 C134 226,162 166,206 120 S274 54,318 88 S382 172,426 204 S466 230,492 236"/>
+        <text class="tick" x="74" y="282">-6%</text><text class="tick" x="254" y="282">0%</text><text class="tick" x="458" y="282">+6%</text>
+        <g transform="translate(92 318)">
+          <text class="tick" x="0" y="-12">Box / violin</text><path d="M12 24 C32 -12,70 -12,90 24 C70 60,32 60,12 24Z" fill="#F0EEE6" stroke="#D1CFC5"/><rect class="box" x="32" y="10" width="38" height="28" rx="3"/><line class="median" x1="52" y1="10" x2="52" y2="38"/><line class="whisker" x1="22" y1="24" x2="92" y2="24"/>
+        </g>
+        <g transform="translate(300 310)">
+          <text class="tick" x="0" y="-4">QQ plot</text><line class="axis" x1="0" y1="78" x2="150" y2="10"/><circle class="point" cx="16" cy="70" r="3"/><circle class="point" cx="44" cy="54" r="3"/><circle class="point" cx="72" cy="42" r="3"/><circle class="point" cx="100" cy="28" r="3"/><circle class="point" cx="132" cy="18" r="3"/>
+        </g>
+      </svg>
+      <div class="source">Covers histogram, KDE density, box plot, violin plot, and QQ plot. Keep sample window and return frequency visible.</div>
+    </article>
+    <aside class="side">
+      <article class="panel">
+        <h2>Stress And VaR</h2>
+        <p class="note">Rank scenarios by estimated loss and separate model output from historical events.</p>
+        <div class="stress">
+          <div class="row"><span>Rate shock</span><span class="bar"><span style="width:41%"></span></span><span class="mono">-4.1%</span></div>
+          <div class="row"><span>Credit gap</span><span class="bar"><span style="width:68%"></span></span><span class="mono">-6.8%</span></div>
+          <div class="row"><span>AI capex cut</span><span class="bar"><span style="width:52%;background:var(--clay)"></span></span><span class="mono">-5.2%</span></div>
+          <div class="row"><span>Liquidity freeze</span><span class="bar"><span style="width:89%"></span></span><span class="mono">-8.9%</span></div>
+          <div class="row"><span>1-day 95% VaR</span><span class="bar"><span style="width:32%;background:var(--olive)"></span></span><span class="mono">-3.2%</span></div>
+        </div>
+        <div class="source">Good fit: VaR, expected shortfall, stress test, tracking error, and drawdown distribution.</div>
+      </article>
+      <article class="panel">
+        <h2>Risk-Adjusted Ranking</h2>
+        <p class="note">Tables beat tiny bars when investors compare several ratios at once.</p>
+        <table>
+          <thead><tr><th>Strategy</th><th>Sharpe</th><th>Sortino</th><th>Info</th></tr></thead>
+          <tbody>
+            <tr><td>Quality AI</td><td>1.24</td><td>1.81</td><td>0.62</td></tr>
+            <tr><td>Growth Basket</td><td>0.96</td><td>1.22</td><td>0.44</td></tr>
+            <tr><td>Market Neutral</td><td>1.08</td><td>1.35</td><td>0.57</td></tr>
+            <tr><td>Credit Carry</td><td>0.72</td><td>0.88</td><td>0.31</td></tr>
+          </tbody>
+        </table>
+        <div class="source">Covers Sharpe ratio ranking, Sortino ratio, information ratio, and tracking-error review.</div>
+      </article>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
