@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nokia HTML 分析 - 2026-05-13</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #62717b;
+      --soft: #eef3f2;
+      --line: #d8e0dc;
+      --panel: #ffffff;
+      --page: #f5f4ef;
+      --olive: #5f7f57;
+      --clay: #b76546;
+      --blue: #326b85;
+      --gold: #b2873b;
+      --red: #a64f45;
+      --slate: #33424a;
+      --green: #407a5a;
+      --shadow: 0 1px 2px rgb(23 32 38 / 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: #255f78;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .subtitle {
+      max-width: 790px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+
+    .meta-row strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+      min-height: 112px;
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .kpi .value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.08;
+    }
+
+    .kpi .note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    section.wide {
+      grid-column: 1 / -1;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .bar-chart {
+      display: grid;
+      gap: 10px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 138px minmax(0, 1fr) 66px;
+      gap: 10px;
+      align-items: center;
+      min-height: 28px;
+    }
+
+    .bar-label {
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .bar-track {
+      position: relative;
+      height: 20px;
+      background: var(--soft);
+      border: 1px solid #e0e7e3;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      min-width: 2px;
+      border-radius: 4px;
+    }
+
+    .bar-fill.neg {
+      margin-left: auto;
+    }
+
+    .bar-value {
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .split-bars {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .mini-title {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .profit-bars {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      align-items: end;
+      height: 220px;
+      padding: 8px 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profit-col {
+      display: grid;
+      align-content: end;
+      gap: 6px;
+      height: 100%;
+      text-align: center;
+    }
+
+    .profit-value {
+      color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .profit-fill {
+      width: 100%;
+      min-height: 4px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .profit-label {
+      color: var(--muted);
+      font-size: 11px;
+      min-height: 34px;
+    }
+
+    .valuation-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .range-row {
+      display: grid;
+      grid-template-columns: 128px minmax(0, 1fr) 82px;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .range-track {
+      position: relative;
+      height: 28px;
+      background: linear-gradient(90deg, #eef3f2, #f8f4e8);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .range-band {
+      position: absolute;
+      top: 5px;
+      height: 16px;
+      border-radius: 5px;
+      background: var(--clay);
+    }
+
+    .range-band.lower {
+      background: var(--olive);
+    }
+
+    .range-axis {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      margin: 2px 92px 0 138px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      gap: 10px 14px;
+      margin-top: 2px;
+    }
+
+    .date {
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      padding-top: 2px;
+    }
+
+    .event {
+      position: relative;
+      border-left: 3px solid var(--olive);
+      padding: 0 0 11px 12px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--panel);
+      border: 2px solid var(--olive);
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 82px repeat(3, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .cell {
+      min-height: 70px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 8px;
+      font-size: 12px;
+      background: #fbfcfa;
+    }
+
+    .cell:nth-child(4n) {
+      border-right: 0;
+    }
+
+    .cell.header,
+    .cell.axis-label {
+      background: #eef3f2;
+      color: var(--muted);
+      font-weight: 700;
+      min-height: auto;
+    }
+
+    .cell.axis-label {
+      display: grid;
+      align-items: center;
+      text-align: center;
+    }
+
+    .risk-pill {
+      display: inline-block;
+      margin: 2px 2px 4px 0;
+      border-radius: 5px;
+      padding: 4px 6px;
+      color: #fff;
+      background: var(--slate);
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .risk-pill.hot {
+      background: var(--red);
+    }
+
+    .risk-pill.warn {
+      background: var(--clay);
+    }
+
+    .risk-pill.watch {
+      background: var(--blue);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .case {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px;
+      background: #fbfcfa;
+    }
+
+    .case strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .case p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 8px 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 700;
+      background: #fbfcfa;
+    }
+
+    .source {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: var(--soft);
+      color: var(--slate);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .takeaway {
+      background: #f9f4eb;
+      border-color: #dfd1b5;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 18px 12px 30px;
+      }
+
+      header,
+      .grid,
+      .kpi-grid,
+      .split-bars,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .bar-row,
+      .range-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .bar-value {
+        text-align: left;
+      }
+
+      .range-axis {
+        margin: 2px 0 0;
+      }
+
+      .timeline {
+        grid-template-columns: 92px minmax(0, 1fr);
+      }
+
+      .matrix {
+        grid-template-columns: 64px repeat(3, minmax(0, 1fr));
+      }
+
+      .cell {
+        min-height: 82px;
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Nokia：AI 网络基础设施再评级，还是已经太贵？</h1>
+        <p class="subtitle">一页式 HTML 投资分析。证据截止 2026-05-13，基于 Nokia 官方 Q1 2026、FY 2025、战略发布、Infinera/NVIDIA 事件和 StockAnalysis 市场数据。本文是决策支持，不是投资建议。</p>
+      </div>
+      <div class="meta" aria-label="metadata">
+        <div class="meta-row"><span>Target</span><strong>Nokia Corporation</strong></div>
+        <div class="meta-row"><span>Ticker</span><strong>NOK / NOKIA</strong></div>
+        <div class="meta-row"><span>Currency</span><strong>EUR financials; USD market data</strong></div>
+        <div class="meta-row"><span>Evidence cutoff</span><strong>2026-05-13</strong></div>
+      </div>
+    </header>
+
+    <div class="kpi-grid" aria-label="key metrics">
+      <div class="kpi">
+        <div class="label">Q1 2026 net sales</div>
+        <div class="value">EUR 4.497B</div>
+        <div class="note">+2% reported; +4% comparable constant-currency / portfolio basis.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">AI & Cloud customer sales</div>
+        <div class="value">+49%</div>
+        <div class="note">Q1 2026 YoY, strongest disclosed customer-category growth.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">2026 comparable OP guide</div>
+        <div class="value">EUR 2.0-2.5B</div>
+        <div class="note">Company maintained guidance and tracked somewhat above midpoint after Q1.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Market cap</div>
+        <div class="value">USD 72.90B</div>
+        <div class="note">StockAnalysis as of 2026-05-12 close; market data is time-sensitive.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section>
+        <h2>增长信号：亮点集中在 AI/cloud 和光网络</h2>
+        <p class="section-note">同比增长率。除 reported net sales 外，图中业务增长为公司披露的 constant-currency / portfolio 口径。</p>
+        <div class="bar-chart" role="img" aria-label="Nokia Q1 2026 growth bars">
+          <div class="bar-row">
+            <div class="bar-label">AI & Cloud customers</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%; background: var(--green);"></div></div>
+            <div class="bar-value">+49%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Optical Networks</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 41%; background: var(--blue);"></div></div>
+            <div class="bar-value">+20%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Technology Standards</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 20%; background: var(--olive);"></div></div>
+            <div class="bar-value">+10%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Network Infrastructure</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 12%; background: var(--gold);"></div></div>
+            <div class="bar-value">+6%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Reported net sales</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 4%; background: var(--slate);"></div></div>
+            <div class="bar-value">+2%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Fixed Networks</div>
+            <div class="bar-track"><div class="bar-fill neg" style="width: 27%; background: var(--red);"></div></div>
+            <div class="bar-value">-13%</div>
+          </div>
+        </div>
+        <div class="source">Source: <a href="../../evidence/market/2026-05-13-financial-snapshot.md">financial snapshot</a>, Nokia Q1 2026 presentation. Bar scale uses +49% as max; negative bar is magnitude only.</div>
+      </section>
+
+      <section>
+        <h2>Q1 结构：Mobile 仍大，Network Infrastructure 是弹性来源</h2>
+        <p class="section-note">Q1 2026 segment net sales, EUR B。图中仅展示已归档的主要业务单元。</p>
+        <div class="bar-chart" role="img" aria-label="Nokia Q1 2026 segment revenue bars">
+          <div class="bar-row">
+            <div class="bar-label">Mobile Infrastructure</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%; background: var(--slate);"></div></div>
+            <div class="bar-value">2.495</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Network Infrastructure</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 73%; background: var(--blue);"></div></div>
+            <div class="bar-value">1.829</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Technology Standards</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 63%; background: var(--olive);"></div></div>
+            <div class="bar-value">1.580</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Optical Networks</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 33%; background: var(--green);"></div></div>
+            <div class="bar-value">0.821</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Fixed Networks</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 25%; background: var(--gold);"></div></div>
+            <div class="bar-value">0.626</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Core Software</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 21%; background: var(--clay);"></div></div>
+            <div class="bar-value">0.530</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">IP Networks</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 15%; background: #7e8f90;"></div></div>
+            <div class="bar-value">0.383</div>
+          </div>
+        </div>
+        <div class="source">Source: <a href="../../evidence/market/2026-05-13-financial-snapshot.md">financial snapshot</a>. Sub-units overlap with segment totals and should not be summed.</div>
+      </section>
+
+      <section>
+        <h2>利润质量：可比口径改善，报告口径仍要验证</h2>
+        <p class="section-note">FY 2025 经营利润 EUR B；Q1 2026 利润率 %。不同单位并列展示，重点是 comparable 与 reported gap。</p>
+        <div class="split-bars">
+          <div>
+            <div class="mini-title">FY 2025 operating profit, EUR B</div>
+            <div class="profit-bars" role="img" aria-label="FY 2025 comparable and reported operating profit">
+              <div class="profit-col">
+                <div class="profit-value">2.024</div>
+                <div class="profit-fill" style="height: 178px; background: var(--olive);"></div>
+                <div class="profit-label">Comparable OP</div>
+              </div>
+              <div class="profit-col">
+                <div class="profit-value">0.885</div>
+                <div class="profit-fill" style="height: 78px; background: var(--clay);"></div>
+                <div class="profit-label">Reported OP</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-title">Q1 2026 operating margin, %</div>
+            <div class="profit-bars" role="img" aria-label="Q1 2026 comparable and reported operating margin">
+              <div class="profit-col">
+                <div class="profit-value">6.2%</div>
+                <div class="profit-fill" style="height: 178px; background: var(--olive);"></div>
+                <div class="profit-label">Comparable margin</div>
+              </div>
+              <div class="profit-col">
+                <div class="profit-value">1.4%</div>
+                <div class="profit-fill" style="height: 40px; background: var(--clay);"></div>
+                <div class="profit-label">Reported margin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source">Source: <a href="../../evidence/market/2026-05-13-financial-snapshot.md">financial snapshot</a>. Heights are scaled within each mini-chart, not across units.</div>
+      </section>
+
+      <section>
+        <h2>估值压力：2026 不是低倍数故事</h2>
+        <p class="section-note">EV / comparable operating profit。使用 StockAnalysis EV USD 70.07B 和 EUR/USD 1.15 粗略换算；这是分析推导，不是公司指引。</p>
+        <div class="valuation-grid" role="img" aria-label="valuation range chart">
+          <div class="range-row">
+            <div class="bar-label">2026 guide</div>
+            <div class="range-track"><div class="range-band" style="left: 60%; width: 24%;"></div></div>
+            <div class="bar-value">24-30x</div>
+          </div>
+          <div class="range-row">
+            <div class="bar-label">2028 target</div>
+            <div class="range-track"><div class="range-band lower" style="left: 40%; width: 16%;"></div></div>
+            <div class="bar-value">19-23x</div>
+          </div>
+          <div class="range-axis"><span>10x</span><span>20x</span><span>30x</span><span>35x</span></div>
+        </div>
+        <table aria-label="valuation inputs">
+          <thead>
+            <tr><th>Input</th><th>Value</th><th>Source / note</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Enterprise value</td><td><span class="badge">USD 70.07B</span></td><td>StockAnalysis, 2026-05-12 close.</td></tr>
+            <tr><td>2026 comparable OP guide</td><td><span class="badge">EUR 2.0-2.5B</span></td><td>Nokia Q1 2026 outlook.</td></tr>
+            <tr><td>2028 comparable OP target</td><td><span class="badge">EUR 2.7-3.2B</span></td><td>Nokia strategy release.</td></tr>
+          </tbody>
+        </table>
+        <div class="source">Source: <a href="../../evidence/market/2026-05-13-financial-snapshot.md">financial snapshot</a>. Market data is stale after retrieval date.</div>
+      </section>
+
+      <section class="wide">
+        <h2>事件线：故事从光网络扩张走向 AI-RAN 再评级</h2>
+        <p class="section-note">只列投资判断相关事件；商业收入贡献仍需后续财报验证。</p>
+        <div class="timeline" aria-label="Nokia event timeline">
+          <div class="date">2025-02-28</div>
+          <div class="event"><strong>完成 Infinera 收购。</strong> Nokia 获得更大光网络规模，并目标到 2027 年获得超过 EUR 200M 净可比经营利润协同。</div>
+          <div class="date">2025-10-28</div>
+          <div class="event"><strong>NVIDIA 投资 USD 1B 并建立 AI-RAN 战略合作。</strong> 市场叙事从传统电信设备转向 AI-native mobile networks 和 6G 可选项。</div>
+          <div class="date">2025-11-19</div>
+          <div class="event"><strong>发布简化经营模式和 2028 目标。</strong> 2028 comparable operating profit 目标为 EUR 2.7-3.2B。</div>
+          <div class="date">2026-04-23</div>
+          <div class="event"><strong>Q1 2026 结果。</strong> Optical Networks +20%，AI & Cloud customer sales +49%，net cash EUR 3.8B。</div>
+          <div class="date">2026-05-13</div>
+          <div class="event"><strong>任命 Mobile Infrastructure 新负责人。</strong> Emma Falck 将于 2026-09-01 上任，Mobile 执行仍是利润韧性关键。</div>
+        </div>
+        <div class="source">Source: <a href="../../evidence/news/2026-05-13-news-digest.md">news digest</a>.</div>
+      </section>
+
+      <section>
+        <h2>风险矩阵：当前核心是估值与执行错配</h2>
+        <p class="section-note">概率与影响为研究判断，不是精确统计值。位置来自 risk diligence 的 Medium/High 分类。</p>
+        <div class="matrix" role="img" aria-label="risk probability impact matrix">
+          <div class="cell header">Impact / Prob.</div>
+          <div class="cell header">Low</div>
+          <div class="cell header">Medium</div>
+          <div class="cell header">High</div>
+
+          <div class="cell axis-label">High</div>
+          <div class="cell"></div>
+          <div class="cell">
+            <span class="risk-pill hot">AI/cloud 兑现不足</span>
+            <span class="risk-pill hot">运营商 capex 周期</span>
+          </div>
+          <div class="cell">
+            <span class="risk-pill hot">竞争强度</span>
+          </div>
+
+          <div class="cell axis-label">Medium</div>
+          <div class="cell"></div>
+          <div class="cell">
+            <span class="risk-pill warn">报告利润转换</span>
+            <span class="risk-pill warn">Infinera 整合</span>
+            <span class="risk-pill watch">IP 授权续约</span>
+            <span class="risk-pill watch">FX / 关税 / 供应链</span>
+          </div>
+          <div class="cell"></div>
+        </div>
+        <div class="source">Source: <a href="../../evidence/risks/2026-05-13-risk-diligence.md">risk diligence</a>.</div>
+      </section>
+
+      <section>
+        <h2>情景框架：不是“有没有变化”，而是“变化够不够快”</h2>
+        <p class="section-note">从证据到行动的决策支持框架，避免单一买卖结论。</p>
+        <div class="two-col">
+          <div class="case">
+            <strong>Bull</strong>
+            <p>AI/cloud 和光网络需求持续，Infinera 协同兑现，NVIDIA AI-RAN 合作转化为商业部署，报告口径利润和 FCF 收敛到可比口径。</p>
+          </div>
+          <div class="case">
+            <strong>Base</strong>
+            <p>战略方向正确，2026-2028 有利润改善，但股价已提前计入部分再评级，需要财报逐季验证。</p>
+          </div>
+          <div class="case">
+            <strong>Bear</strong>
+            <p>市场把 Nokia 当作 AI 赢家定价，但实际仍受电信 capex、竞争、整合成本和 adjusted/reported gap 约束。</p>
+          </div>
+          <div class="case">
+            <strong>Watch</strong>
+            <p>Q2 2026、Network Infrastructure 增速、Optical/IP 订单、AI-RAN 客户部署、reported vs comparable margin gap。</p>
+          </div>
+        </div>
+        <div class="source">Source: <a href="../memos/2026-05-13-nokia-analysis-zh.md">Chinese memo</a>.</div>
+      </section>
+
+      <section class="wide takeaway">
+        <h2>结论</h2>
+        <p>Nokia 的吸引力来自“老电信设备商被 AI/cloud 网络需求重新定价”的可能性：Infinera 增强光网络，NVIDIA 合作增强 AI-RAN 可信度，Q1 2026 的 Optical 和 AI & Cloud 客户数据确实强。但当前已经不是低估值修复很容易的故事。按 2026 指引粗算，EV 对可比经营利润约 24-30 倍；后续判断核心是 Nokia 能否把 AI/cloud 叙事转成持续收入、报告口径利润和自由现金流。</p>
+        <div class="source">Primary archive: <a href="../../index.md">Nokia research index</a>. This HTML is self-contained and uses no external JavaScript or remote assets.</div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
