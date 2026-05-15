@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cerebras IPO Dashboard - 2026-05-15</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #5d6872;
+      --line: #d9dfdf;
+      --panel: #ffffff;
+      --page: #f6f4ef;
+      --clay: #b65f45;
+      --olive: #6d7f3f;
+      --blue: #3e6f8f;
+      --gold: #b38a2e;
+      --red: #b54848;
+      --slate: #34434a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.42;
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 20px 38px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 920px;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .kpi,
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgb(23 32 38 / 0.04);
+    }
+
+    .kpi {
+      min-height: 88px;
+      padding: 12px 14px;
+    }
+
+    .kpi .label,
+    .eyebrow,
+    .source {
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .kpi .value {
+      margin-top: 8px;
+      font-size: 24px;
+      font-weight: 760;
+      line-height: 1.05;
+    }
+
+    .kpi .caption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    section {
+      min-height: 390px;
+      padding: 14px;
+    }
+
+    section.wide {
+      grid-column: 1 / -1;
+      min-height: 360px;
+    }
+
+    h2 {
+      margin: 2px 0 3px;
+      font-size: 17px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    .note {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .axis {
+      stroke: #8f9b9f;
+      stroke-width: 1;
+    }
+
+    .gridline {
+      stroke: #e6e9e7;
+      stroke-width: 1;
+    }
+
+    .svg-label {
+      fill: var(--ink);
+      font-size: 12px;
+    }
+
+    .svg-small {
+      fill: var(--muted);
+      font-size: 11px;
+    }
+
+    .svg-value {
+      fill: var(--ink);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .svg-white {
+      fill: #ffffff;
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .source {
+      margin-top: 10px;
+      text-transform: none;
+      line-height: 1.35;
+    }
+
+    .callout {
+      margin-top: 10px;
+      border-left: 4px solid var(--clay);
+      padding: 8px 10px;
+      color: var(--slate);
+      font-size: 13px;
+      background: #fbfaf7;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        padding: 18px 12px 30px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .kpis,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section,
+      section.wide {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">CBRS / IPO evidence dashboard</div>
+      <h1>Cerebras: big demand visibility, bigger execution test</h1>
+      <div class="subtitle">Evidence cutoff: 2026-05-15 CST. Currency: USD. Financial periods are calendar years ended December 31. Market prices use the May 14, 2026 first trading day snapshot archived in the research notes.</div>
+    </header>
+
+    <div class="kpis" aria-label="Headline Cerebras metrics">
+      <div class="kpi">
+        <div class="label">IPO price</div>
+        <div class="value">$185</div>
+        <div class="caption">30.0M Class A shares offered.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">First-day close</div>
+        <div class="value">$311.07</div>
+        <div class="caption">+68.15% vs. IPO price baseline.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">2025 revenue</div>
+        <div class="value">$510.0M</div>
+        <div class="caption">Up 76% from 2024.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">RPO</div>
+        <div class="value">$24.6B</div>
+        <div class="caption">Significant amount tied to OpenAI.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section>
+        <h2>IPO pop created a valuation hurdle</h2>
+        <p class="note">Share price, dollars. Bars start at zero; opening and intraday high are market snapshots.</p>
+        <svg viewBox="0 0 560 310" role="img" aria-labelledby="ipo-title ipo-desc">
+          <title id="ipo-title">Cerebras IPO trading bars</title>
+          <desc id="ipo-desc">Bars compare the 185 dollar IPO price, 350 dollar opening trade, 311.07 dollar first-day close, and 385 dollar first-day high.</desc>
+          <line class="gridline" x1="58" y1="250" x2="516" y2="250"/>
+          <line class="gridline" x1="58" y1="190" x2="516" y2="190"/>
+          <line class="gridline" x1="58" y1="130" x2="516" y2="130"/>
+          <line class="gridline" x1="58" y1="70" x2="516" y2="70"/>
+          <text class="svg-small" x="28" y="254">$0</text>
+          <text class="svg-small" x="18" y="194">$100</text>
+          <text class="svg-small" x="18" y="134">$200</text>
+          <text class="svg-small" x="18" y="74">$300</text>
+          <line class="axis" x1="58" y1="250" x2="516" y2="250"/>
+          <line class="axis" x1="58" y1="34" x2="58" y2="250"/>
+          <rect x="98" y="139" width="62" height="111" fill="var(--blue)"/>
+          <text class="svg-value" x="129" y="129" text-anchor="middle">$185</text>
+          <text class="svg-label" x="129" y="276" text-anchor="middle">IPO</text>
+          <rect x="202" y="40" width="62" height="210" fill="var(--clay)"/>
+          <text class="svg-value" x="233" y="30" text-anchor="middle">$350</text>
+          <text class="svg-label" x="233" y="276" text-anchor="middle">Open</text>
+          <rect x="306" y="63" width="62" height="187" fill="var(--olive)"/>
+          <text class="svg-value" x="337" y="53" text-anchor="middle">$311.07</text>
+          <text class="svg-label" x="337" y="276" text-anchor="middle">Close</text>
+          <rect x="410" y="19" width="62" height="231" fill="var(--gold)"/>
+          <text class="svg-value" x="441" y="15" text-anchor="middle">$385</text>
+          <text class="svg-label" x="441" y="276" text-anchor="middle">High</text>
+        </svg>
+        <div class="callout">The first-day close was already 68% above the IPO price, so future upside needs operating evidence, not just AI scarcity demand.</div>
+        <div class="source">Sources: SEC 424B4 final prospectus; Yahoo Finance CBRS quote page; Reuters report mirrored by Investing.com.</div>
+      </section>
+
+      <section>
+        <h2>Growth is real; operating profitability is not yet clean</h2>
+        <p class="note">Revenue and profit/loss, $M. Non-GAAP operating loss is shown below the zero line.</p>
+        <svg viewBox="0 0 560 310" role="img" aria-labelledby="financial-title financial-desc">
+          <title id="financial-title">Cerebras revenue and profitability quality</title>
+          <desc id="financial-desc">Bars show revenue growth from 290.3 million in 2024 to 510.0 million in 2025 and non-GAAP operating losses of 42.9 million and 96.1 million.</desc>
+          <line class="gridline" x1="64" y1="220" x2="510" y2="220"/>
+          <line class="gridline" x1="64" y1="170" x2="510" y2="170"/>
+          <line class="gridline" x1="64" y1="120" x2="510" y2="120"/>
+          <line class="gridline" x1="64" y1="70" x2="510" y2="70"/>
+          <line class="axis" x1="64" y1="220" x2="510" y2="220"/>
+          <line class="axis" x1="64" y1="40" x2="64" y2="272"/>
+          <text class="svg-small" x="24" y="224">$0</text>
+          <text class="svg-small" x="18" y="174">$200</text>
+          <text class="svg-small" x="18" y="124">$400</text>
+          <text class="svg-small" x="18" y="74">$600</text>
+          <text class="svg-small" x="16" y="274">-$200</text>
+          <rect x="138" y="147" width="70" height="73" fill="var(--blue)"/>
+          <text class="svg-value" x="173" y="137" text-anchor="middle">$290.3</text>
+          <rect x="238" y="220" width="70" height="11" fill="var(--red)"/>
+          <text class="svg-value" x="273" y="250" text-anchor="middle">-$42.9</text>
+          <text class="svg-label" x="223" y="292" text-anchor="middle">2024</text>
+          <rect x="336" y="93" width="70" height="127" fill="var(--olive)"/>
+          <text class="svg-value" x="371" y="83" text-anchor="middle">$510.0</text>
+          <rect x="436" y="220" width="70" height="24" fill="var(--red)"/>
+          <text class="svg-value" x="471" y="263" text-anchor="middle">-$96.1</text>
+          <text class="svg-label" x="421" y="292" text-anchor="middle">2025</text>
+          <rect x="108" y="24" width="12" height="12" fill="var(--blue)"/>
+          <text class="svg-small" x="126" y="34">Revenue 2024</text>
+          <rect x="224" y="24" width="12" height="12" fill="var(--olive)"/>
+          <text class="svg-small" x="242" y="34">Revenue 2025</text>
+          <rect x="340" y="24" width="12" height="12" fill="var(--red)"/>
+          <text class="svg-small" x="358" y="34">Non-GAAP operating loss</text>
+        </svg>
+        <div class="callout">2025 GAAP net income was positive, but core operating loss widened after excluding stock-based compensation.</div>
+        <div class="source">Source: SEC 424B4 final prospectus, selected consolidated financial data and non-GAAP reconciliation.</div>
+      </section>
+
+      <section>
+        <h2>2025 revenue was still concentrated</h2>
+        <p class="note">Share of 2025 revenue. MBZUAI and G42 are related parties under ASC 850.</p>
+        <svg viewBox="0 0 560 310" role="img" aria-labelledby="concentration-title concentration-desc">
+          <title id="concentration-title">Cerebras customer concentration</title>
+          <desc id="concentration-desc">A 100 percent stacked bar shows MBZUAI at 62 percent, G42 at 24 percent, and all other customers at 14 percent of 2025 revenue.</desc>
+          <rect x="60" y="98" width="434" height="60" fill="#eef1ef" stroke="var(--line)"/>
+          <rect x="60" y="98" width="269" height="60" fill="var(--clay)"/>
+          <rect x="329" y="98" width="104" height="60" fill="var(--gold)"/>
+          <rect x="433" y="98" width="61" height="60" fill="var(--blue)"/>
+          <text class="svg-white" x="194" y="132" text-anchor="middle">MBZUAI 62%</text>
+          <text class="svg-white" x="381" y="132" text-anchor="middle">G42 24%</text>
+          <text class="svg-white" x="463" y="132" text-anchor="middle">Other 14%</text>
+          <line class="axis" x1="60" y1="182" x2="494" y2="182"/>
+          <text class="svg-small" x="56" y="204">0%</text>
+          <text class="svg-small" x="268" y="204" text-anchor="middle">50%</text>
+          <text class="svg-small" x="494" y="204" text-anchor="end">100%</text>
+          <rect x="82" y="236" width="18" height="18" fill="var(--clay)"/>
+          <text class="svg-label" x="110" y="250">MBZUAI: 62.0% of revenue; 77.9% of accounts receivable</text>
+          <rect x="82" y="264" width="18" height="18" fill="var(--gold)"/>
+          <text class="svg-label" x="110" y="278">G42: 24.0% of revenue; 85.0% of 2024 revenue</text>
+        </svg>
+        <div class="callout">The public story is OpenAI/AWS, but the filed historical revenue base was not yet diversified.</div>
+        <div class="source">Source: SEC 424B4 final prospectus, risk factors and customer concentration disclosure.</div>
+      </section>
+
+      <section>
+        <h2>RPO conversion is back-end loaded</h2>
+        <p class="note">Remaining performance obligation recognition schedule. Values derive from $24.6B RPO times disclosed percentage buckets.</p>
+        <svg viewBox="0 0 560 310" role="img" aria-labelledby="rpo-title rpo-desc">
+          <title id="rpo-title">Cerebras RPO recognition schedule</title>
+          <desc id="rpo-desc">Bars show 3.69 billion expected through 2027, 10.58 billion in months 25 to 48, and 10.33 billion thereafter.</desc>
+          <line class="gridline" x1="66" y1="250" x2="510" y2="250"/>
+          <line class="gridline" x1="66" y1="198" x2="510" y2="198"/>
+          <line class="gridline" x1="66" y1="146" x2="510" y2="146"/>
+          <line class="gridline" x1="66" y1="94" x2="510" y2="94"/>
+          <line class="axis" x1="66" y1="250" x2="510" y2="250"/>
+          <line class="axis" x1="66" y1="54" x2="66" y2="250"/>
+          <text class="svg-small" x="30" y="254">$0B</text>
+          <text class="svg-small" x="26" y="202">$4B</text>
+          <text class="svg-small" x="26" y="150">$8B</text>
+          <text class="svg-small" x="20" y="98">$12B</text>
+          <rect x="112" y="190" width="86" height="60" fill="var(--blue)"/>
+          <text class="svg-value" x="155" y="180" text-anchor="middle">$3.69B</text>
+          <text class="svg-label" x="155" y="274" text-anchor="middle">Through 2027</text>
+          <rect x="238" y="78" width="86" height="172" fill="var(--olive)"/>
+          <text class="svg-value" x="281" y="68" text-anchor="middle">$10.58B</text>
+          <text class="svg-label" x="281" y="274" text-anchor="middle">Months 25-48</text>
+          <rect x="364" y="82" width="86" height="168" fill="var(--clay)"/>
+          <text class="svg-value" x="407" y="72" text-anchor="middle">$10.33B</text>
+          <text class="svg-label" x="407" y="274" text-anchor="middle">Thereafter</text>
+          <text class="svg-small" x="94" y="34">RPO total: $24.6B; significant amount attributable to OpenAI MRA</text>
+        </svg>
+        <div class="callout">The biggest opportunity is not immediate revenue. It is a multi-year capacity build that must clear data-center, power, and service-level hurdles.</div>
+        <div class="source">Source: SEC 424B4 final prospectus, remaining performance obligation note.</div>
+      </section>
+
+      <section class="wide">
+        <h2>Decision map: what has to go right</h2>
+        <p class="note">Qualitative map based on the archived thesis frame. X-axis is verification burden; color indicates risk intensity.</p>
+        <svg viewBox="0 0 1120 300" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">Cerebras investment decision map</title>
+          <desc id="map-desc">A decision map shows OpenAI delivery, AWS conversion, customer diversification, cloud unit economics, silicon edge, and internal controls as watch items with different risk levels.</desc>
+          <line class="gridline" x1="86" y1="218" x2="1040" y2="218"/>
+          <line class="gridline" x1="86" y1="148" x2="1040" y2="148"/>
+          <line class="gridline" x1="86" y1="78" x2="1040" y2="78"/>
+          <line class="axis" x1="86" y1="248" x2="1040" y2="248"/>
+          <line class="axis" x1="86" y1="46" x2="86" y2="248"/>
+          <text class="svg-small" x="86" y="274">Lower verification burden</text>
+          <text class="svg-small" x="1040" y="274" text-anchor="end">Higher verification burden</text>
+          <text class="svg-small" x="18" y="82">High impact</text>
+          <text class="svg-small" x="20" y="222">Lower impact</text>
+          <g>
+            <circle cx="260" cy="82" r="30" fill="var(--clay)" opacity="0.92"/>
+            <text class="svg-white" x="260" y="78" text-anchor="middle">OpenAI</text>
+            <text class="svg-white" x="260" y="94" text-anchor="middle">delivery</text>
+          </g>
+          <g>
+            <circle cx="450" cy="112" r="27" fill="var(--gold)" opacity="0.94"/>
+            <text class="svg-white" x="450" y="108" text-anchor="middle">AWS</text>
+            <text class="svg-white" x="450" y="124" text-anchor="middle">conversion</text>
+          </g>
+          <g>
+            <circle cx="640" cy="94" r="30" fill="var(--red)" opacity="0.92"/>
+            <text class="svg-white" x="640" y="90" text-anchor="middle">Customer</text>
+            <text class="svg-white" x="640" y="106" text-anchor="middle">diversity</text>
+          </g>
+          <g>
+            <circle cx="805" cy="126" r="29" fill="var(--red)" opacity="0.92"/>
+            <text class="svg-white" x="805" y="122" text-anchor="middle">Cloud unit</text>
+            <text class="svg-white" x="805" y="138" text-anchor="middle">economics</text>
+          </g>
+          <g>
+            <circle cx="910" cy="78" r="26" fill="var(--olive)" opacity="0.94"/>
+            <text class="svg-white" x="910" y="74" text-anchor="middle">Silicon</text>
+            <text class="svg-white" x="910" y="90" text-anchor="middle">edge</text>
+          </g>
+          <g>
+            <circle cx="520" cy="200" r="25" fill="var(--slate)" opacity="0.9"/>
+            <text class="svg-white" x="520" y="196" text-anchor="middle">Controls</text>
+            <text class="svg-white" x="520" y="212" text-anchor="middle">cleanup</text>
+          </g>
+        </svg>
+        <div class="callout">Watchlist posture: high potential, high verification burden. Upgrade only when OpenAI delivery, AWS deployment, revenue diversification, and cloud margins show up in reported results.</div>
+        <div class="source">Source: AIFi Cerebras thesis frame, 2026-05-15. This panel is synthesis, not a company-reported metric.</div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

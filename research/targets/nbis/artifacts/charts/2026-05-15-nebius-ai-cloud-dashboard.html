@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nebius AI Cloud Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5c6672;
+      --line: #d8dee6;
+      --surface: #ffffff;
+      --page: #f4f7f8;
+      --green: #1f8a70;
+      --blue: #2f6fbb;
+      --red: #bf4e30;
+      --gold: #b6851f;
+      --teal: #17839a;
+      --violet: #6c5aa7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--page);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 40px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: end;
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .pill {
+      min-height: 52px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 8px;
+    }
+
+    .pill b {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .pill span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      min-width: 0;
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-12 { grid-column: span 12; }
+
+    .kpi {
+      display: grid;
+      gap: 8px;
+    }
+
+    .kpi strong {
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .kpi .delta {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .bars {
+      display: grid;
+      gap: 14px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 108px 1fr 82px;
+      gap: 12px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .track {
+      height: 14px;
+      background: #e9edf1;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: inherit;
+    }
+
+    .contract-chart {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .contract {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-height: 142px;
+    }
+
+    .contract .name {
+      font-weight: 800;
+    }
+
+    .contract .amount {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .contract .caption {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .event:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .event time {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .event strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .risk-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .risk {
+      display: grid;
+      grid-template-columns: 128px 1fr 36px;
+      gap: 12px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .risk-meter {
+      height: 10px;
+      background: #e9edf1;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .score {
+      text-align: right;
+      font-weight: 800;
+    }
+
+    .footnotes {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .axis {
+      stroke: var(--line);
+      stroke-width: 1;
+    }
+
+    .label {
+      fill: var(--muted);
+      font-size: 12px;
+    }
+
+    .source-list {
+      columns: 2;
+      column-gap: 28px;
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: #235fa4;
+    }
+
+    @media (max-width: 880px) {
+      header,
+      .contract-chart {
+        grid-template-columns: 1fr;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .span-4,
+      .span-5,
+      .span-6,
+      .span-7 {
+        grid-column: span 12;
+      }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 20px, 1180px);
+        padding-top: 18px;
+      }
+
+      section {
+        padding: 16px;
+      }
+
+      .bar-row,
+      .risk,
+      .event {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .score {
+        text-align: left;
+      }
+
+      .source-list {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Nebius AI Cloud</h1>
+        <p>NBIS is a high-growth AI infrastructure operator: strong Microsoft, Meta, and NVIDIA validation, paired with unusually large capex, financing, power, and delivery risk.</p>
+      </div>
+      <div class="meta" aria-label="Company metadata">
+        <div class="pill"><b>Nasdaq</b><span>NBIS</span></div>
+        <div class="pill"><b>HQ</b><span>Amsterdam</span></div>
+        <div class="pill"><b>Resolved</b><span>2026-05-15</span></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="span-4 kpi">
+        <h2>Q1 Revenue</h2>
+        <strong>$399.0M</strong>
+        <span class="delta">+684% YoY</span>
+        <p>Revenue has moved beyond concept-stage, but the business is still scaling off a low base relative to planned capacity.</p>
+      </section>
+
+      <section class="span-4 kpi">
+        <h2>AI Cloud Margin</h2>
+        <strong>45%</strong>
+        <span class="delta">Adjusted EBITDA margin</span>
+        <p>The core AI cloud business generated $174.0M of adjusted EBITDA in Q1 2026.</p>
+      </section>
+
+      <section class="span-4 kpi">
+        <h2>Capex Run</h2>
+        <strong>$2.47B</strong>
+        <span class="delta" style="color: var(--red);">Q1 PPE + intangible purchases</span>
+        <p>The investment case depends on funding and filling capacity without losing economics to capital providers.</p>
+      </section>
+
+      <section class="span-7">
+        <h2>Financial Scale-Up</h2>
+        <div class="bars" role="img" aria-label="Nebius financial scale-up from Q1 2025 to Q1 2026">
+          <div class="bar-row">
+            <span>Revenue 2025</span>
+            <div class="track"><div class="fill" style="width: 13%; background: var(--blue);"></div></div>
+            <b>$50.9M</b>
+          </div>
+          <div class="bar-row">
+            <span>Revenue 2026</span>
+            <div class="track"><div class="fill" style="width: 100%; background: var(--blue);"></div></div>
+            <b>$399.0M</b>
+          </div>
+          <div class="bar-row">
+            <span>Adj. EBITDA</span>
+            <div class="track"><div class="fill" style="width: 32%; background: var(--green);"></div></div>
+            <b>32%</b>
+          </div>
+          <div class="bar-row">
+            <span>AI cloud margin</span>
+            <div class="track"><div class="fill" style="width: 45%; background: var(--teal);"></div></div>
+            <b>45%</b>
+          </div>
+          <div class="bar-row">
+            <span>Cash</span>
+            <div class="track"><div class="fill" style="width: 100%; background: var(--gold);"></div></div>
+            <b>$9.30B</b>
+          </div>
+          <div class="bar-row">
+            <span>Non-current debt</span>
+            <div class="track"><div class="fill" style="width: 91%; background: var(--red);"></div></div>
+            <b>$8.43B</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="span-5">
+        <h2>Contract Validation</h2>
+        <div class="contract-chart">
+          <div class="contract" style="border-top: 4px solid var(--blue);">
+            <span class="name">Microsoft</span>
+            <span class="amount">$17.4B</span>
+            <span class="caption">Through 2031, potentially about $19.4B with additional services or capacity.</span>
+          </div>
+          <div class="contract" style="border-top: 4px solid var(--violet);">
+            <span class="name">Meta</span>
+            <span class="amount">$27B</span>
+            <span class="caption">Up to five-year total value: $12B dedicated capacity plus up to $15B additional capacity.</span>
+          </div>
+          <div class="contract" style="border-top: 4px solid var(--green);">
+            <span class="name">NVIDIA</span>
+            <span class="amount">$2B</span>
+            <span class="caption">Strategic investment; partnership enables more than 5GW of NVIDIA systems by end-2030.</span>
+          </div>
+          <div class="contract" style="border-top: 4px solid var(--gold);">
+            <span class="name">Power target</span>
+            <span class="amount">800MW-1GW</span>
+            <span class="caption">Expected connected power by year-end 2026, plus a new Pennsylvania site up to 1.2GW.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="span-6">
+        <h2>Strategic Timeline</h2>
+        <div class="timeline">
+          <div class="event">
+            <time>2025-09-08</time>
+            <p><strong>Microsoft dedicated GPU agreement</strong>Vineland, New Jersey capacity with contract value about $17.4B through 2031.</p>
+          </div>
+          <div class="event">
+            <time>2026-03-11</time>
+            <p><strong>NVIDIA partnership</strong>$2B investment and full-stack AI factory collaboration.</p>
+          </div>
+          <div class="event">
+            <time>2026-03-16</time>
+            <p><strong>Meta supply agreement</strong>Up to about $27B over five years, with Vera Rubin deployments starting early 2027.</p>
+          </div>
+          <div class="event">
+            <time>2026-05-13</time>
+            <p><strong>Q1 report</strong>$399.0M revenue, $129.5M group adjusted EBITDA, $9.3B cash, and Pennsylvania AI factory site.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="span-6">
+        <h2>Risk Priority</h2>
+        <div class="risk-list" role="img" aria-label="Qualitative risk scores from 1 to 5">
+          <div class="risk">
+            <span>Financing scale</span>
+            <div class="risk-meter"><div class="fill" style="width: 96%; background: var(--red);"></div></div>
+            <span class="score">5</span>
+          </div>
+          <div class="risk">
+            <span>Delivery timing</span>
+            <div class="risk-meter"><div class="fill" style="width: 92%; background: var(--red);"></div></div>
+            <span class="score">5</span>
+          </div>
+          <div class="risk">
+            <span>NVIDIA dependence</span>
+            <div class="risk-meter"><div class="fill" style="width: 86%; background: var(--gold);"></div></div>
+            <span class="score">4</span>
+          </div>
+          <div class="risk">
+            <span>Power / sites</span>
+            <div class="risk-meter"><div class="fill" style="width: 84%; background: var(--gold);"></div></div>
+            <span class="score">4</span>
+          </div>
+          <div class="risk">
+            <span>Customer concentration</span>
+            <div class="risk-meter"><div class="fill" style="width: 78%; background: var(--teal);"></div></div>
+            <span class="score">4</span>
+          </div>
+          <div class="risk">
+            <span>Price compression</span>
+            <div class="risk-meter"><div class="fill" style="width: 72%; background: var(--blue);"></div></div>
+            <span class="score">4</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="span-12">
+        <h2>Research Read</h2>
+        <p>Nebius is a stronger near-term operating story than a pure architecture bet: it already has named hyperscaler customers, visible revenue growth, and NVIDIA ecosystem validation. The open question is whether gigawatt-scale AI factories can be financed, built, powered, refreshed, and filled at attractive owner economics after depreciation, interest expense, and future GPU price normalization.</p>
+      </section>
+
+      <section class="span-12 footnotes">
+        <h2>Sources</h2>
+        <ul class="source-list">
+          <li><a href="https://nebius.com/newsroom/nebius-reports-first-quarter-2026-financial-results">Nebius Q1 2026 results release</a></li>
+          <li><a href="https://assets.nebius.com/assets/6fc0ea6c-0884-4a1f-bed8-1f797eb9628f/Financial%20results_Q1%202026.pdf">Nebius Q1 2026 financial results PDF</a></li>
+          <li><a href="https://assets.nebius.com/assets/6aba98d1-946c-4891-a420-d2f0aa60da95/Nebius%20SHL_Q1%202026.pdf">Nebius Q1 2026 shareholder letter</a></li>
+          <li><a href="https://nebius.com/newsroom/nvidia-and-nebius-partner-to-scale-full-stack-ai-cloud">NVIDIA and Nebius partnership</a></li>
+          <li><a href="https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta">Nebius and Meta agreement</a></li>
+          <li><a href="https://assets.nebius.com/assets/86625727-9e66-46c1-af79-c27d57434e3c/25-25580-1_Nebius%20Group%20N.V._6-K.pdf">Nebius Microsoft Form 6-K</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm">Nebius 2025 Form 20-F</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
