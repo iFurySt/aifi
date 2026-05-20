@@ -39,6 +39,7 @@
 | OpenAI GPT-5.5 announcement | 2026-05-12 | Primary product signal for frontier-model roadmap. |
 | OpenAI Deployment Company announcement | 2026-05-12 | Primary enterprise go-to-market and services signal. |
 | OpenAI Dell Codex partnership and Enterprise/Edu release notes | 2026-05-20 | Primary sources for hybrid/on-prem enterprise Codex distribution and managed automation features. |
+| OpenAI content provenance update | 2026-05-20 | Primary source for C2PA conformance, SynthID image watermarking, and public verification-tool preview. |
 
 ## Downstream Handoff
 
@@ -59,5 +60,5 @@ research_target:
     - AMZN
     - NVDA
   archive_path: research/targets/openai
-  resolved_at: 2026-05-20T18:07:00+08:00
+  resolved_at: 2026-05-20T21:20:35+08:00
 ```
