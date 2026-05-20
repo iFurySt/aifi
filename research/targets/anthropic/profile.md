@@ -38,7 +38,7 @@
 | AWS and Anthropic strategic-collaboration updates | 2026-05-12 | Primary source for large compute commitment, AWS distribution, and Project Rainier context. |
 | Anthropic enterprise services announcement | 2026-05-12 | Primary source for enterprise implementation support beyond self-serve API usage. |
 | Anthropic Claude Code team and enterprise announcement | 2026-05-12 | Primary source for developer-tool commercialization and enterprise packaging. |
-| Anthropic SpaceX compute, finance agents, PwC, and Stainless announcements | 2026-05-20 | Primary sources for post-baseline capacity expansion, vertical enterprise packaging, services-channel distribution, and developer-platform acquisition. |
+| Anthropic SpaceX compute, finance agents, PwC, KPMG, and Stainless announcements | 2026-05-20 | Primary sources for post-baseline capacity expansion, vertical enterprise packaging, services-channel distribution, and developer-platform acquisition. |
 
 ## Downstream Handoff
 
@@ -60,5 +60,5 @@ research_target:
     - MSFT
     - NVDA
   archive_path: research/targets/anthropic
-  resolved_at: 2026-05-20T18:07:00+08:00
+  resolved_at: 2026-05-20T21:20:35+08:00
 ```
