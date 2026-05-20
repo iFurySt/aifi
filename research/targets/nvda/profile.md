@@ -40,6 +40,7 @@
 | NVIDIA Q1 FY2027 conference-call notice | 2026-05-11 | Confirms next earnings date: 2026-05-20. |
 | Microsoft, Alphabet, Amazon Q1 2026 disclosures | 2026-05-11 | AI capex/customer-demand context. |
 | Reuters/Bloomberg/industry media snippets | 2026-05-11 | China export-control and H200 restart context; secondary-source layer. |
+| NVIDIA Q1 FY2027 call notice and event page | 2026-05-20 | Primary source for result release timing, call timing, and post-release monitoring setup. |
 
 ## Downstream Handoff
 
@@ -63,5 +64,5 @@ research_target:
     - INTC
     - MRVL
   archive_path: research/targets/nvda
-  resolved_at: 2026-05-11T23:30:00+08:00
+  resolved_at: 2026-05-20T18:07:00+08:00
 ```
