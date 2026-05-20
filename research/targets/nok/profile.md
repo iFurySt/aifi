@@ -41,6 +41,7 @@
 | Nokia Annual Report 2025 | 2026-05-13 | Strategy, business mix, and market framing. |
 | Nokia strategy / Capital Markets Day 2025 release | 2026-05-13 | 2028 comparable operating profit target and segment KPIs. |
 | StockAnalysis market data | 2026-05-13 | Third-party market cap, EV, valuation, and market signal data; market data is time-sensitive. |
+| Nokia post-Q1 consensus and agentic fixed-network AI release | 2026-05-20 | Primary source for post-Q1 consensus baseline and product-level AI automation update. |
 
 ## Downstream Handoff
 
@@ -67,5 +68,5 @@ research_target:
     - HPE
     - MSI
   archive_path: research/targets/nok
-  resolved_at: 2026-05-13T21:00:00+08:00
+  resolved_at: 2026-05-20T18:07:00+08:00
 ```
