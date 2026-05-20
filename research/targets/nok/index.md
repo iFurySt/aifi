@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-21 | [U.S. broadband regulatory update](evidence/news/2026-05-21-us-broadband-regulatory-update.md) | FCC conditional approval for Nokia Beacons and ONT Beacons plus U.S. Wi-Fi 8 gateway manufacturing commitment. |
 | 2026-05-20 | [Consensus and product update](evidence/market/2026-05-20-consensus-and-product-update.md) | Post-Q1 consensus baseline and fixed-network agentic AI product update. |
 | 2026-05-13 | [Nokia HTML analysis](artifacts/charts/2026-05-13-nokia-html-analysis.html) | Static browser-ready Chinese analysis with charts. |
 | 2026-05-13 | [Nokia analysis memo - zh](artifacts/memos/2026-05-13-nokia-analysis-zh.md) | Chinese investment analysis for "分析一下nokia". |
@@ -13,7 +14,7 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical Nokia identity, listings, scope, and peer set. | Consumer phone brand ambiguity noted but not separately researched. |
-| News | [news digest](evidence/news/2026-05-13-news-digest.md) | Infinera, NVIDIA, strategy reset, Q1 2026, agentic AI, leadership change. | No full paid-media archive. |
+| News | [U.S. broadband regulatory update](evidence/news/2026-05-21-us-broadband-regulatory-update.md) and [news digest](evidence/news/2026-05-13-news-digest.md) | Infinera, NVIDIA, strategy reset, Q1 2026, agentic AI, leadership change, FCC approval for in-home broadband devices, and Wi-Fi 8 U.S. manufacturing commitment. | No full paid-media archive. |
 | Filings | Referenced in [financial snapshot](evidence/market/2026-05-13-financial-snapshot.md) | FY 2025 report and Q1 2026 interim report summarized. | No line-by-line 20-F filing review yet. |
 | Earnings | Referenced in [financial snapshot](evidence/market/2026-05-13-financial-snapshot.md) | FY 2025 and Q1 2026 results summarized. | Earnings-call transcript/Q&A not archived. |
 | Financials | [consensus and product update](evidence/market/2026-05-20-consensus-and-product-update.md) | Revenue, margins, cash flow, guidance, valuation context, and post-Q1 consensus baseline. | No full peer valuation table. |
@@ -34,6 +35,7 @@
 - StockAnalysis showed NOK at USD 13.17, USD 72.90B market cap, and USD 70.07B enterprise value at the 2026-05-12 close.
 - Nokia's 2026-05-06 post-Q1 consensus average was EUR 20.784B revenue, EUR 2.364B comparable operating profit, and EUR 0.33 comparable EPS.
 - Nokia launched agentic AI capabilities for fixed networks, citing more than 600 million broadband lines of deployment experience.
+- Nokia said its Beacons and ONT Beacons received conditional FCC approval exempting them from Covered List restrictions, and it committed to U.S. manufacturing for next-generation Wi-Fi 8 gateways.
 
 ## Open Questions
 
@@ -43,3 +45,4 @@
 - Does Nokia's current valuation leave margin of safety versus Ciena, Arista, Ericsson, Cisco, and HPE?
 - Do Infinera and China-related synergies exceed integration and restructuring costs?
 - Does Nokia beat or miss the post-Q1 2026 consensus baseline now embedded after the rerating?
+- Does the FCC approval and U.S. Wi-Fi 8 manufacturing commitment translate into stronger North American broadband operator wins?

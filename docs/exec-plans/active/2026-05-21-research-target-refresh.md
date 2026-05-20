@@ -65,6 +65,7 @@ material investment-research update.
 - [x] Confirmed target set and prior notification state.
 - [ ] Check all targets for current incremental information.
 - [x] Update OpenAI artifacts for ChatGPT product monetization and enterprise connector release-note evidence.
+- [x] Update Nokia artifacts for U.S. broadband FCC approval and Wi-Fi 8 manufacturing commitment.
 - [ ] Update any other target artifacts where warranted.
 - [ ] Commit and push completed updates.
 - [ ] Record final notification decision.
