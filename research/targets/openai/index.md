@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-21 | [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md) | Personal-finance rollout for US Pro users, Microsoft Teams admin-managed sync, and Apps Directory beta-label removal. |
 | 2026-05-20 | [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md) | C2PA conformance, SynthID image watermarking, and public verification-tool preview. |
 | 2026-05-20 | [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Dell hybrid/on-prem partnership and Enterprise/Edu Codex remote access / access-token release notes. |
 | 2026-05-12 | [Chinese company analysis](artifacts/memos/2026-05-12-company-analysis-zh.md) | First-pass AIFi analysis for "openai". |
@@ -13,7 +14,7 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical private-company target and peer set. | No public ticker. |
-| News / company updates | [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md) and [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, Enterprise/Edu Codex automation surfaces, C2PA conformance, SynthID image watermarking, and verification tooling. | Needs broader legal/regulatory evidence. |
+| News / company updates | [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md), [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md), and [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, Enterprise/Edu Codex automation surfaces, C2PA conformance, SynthID image watermarking, verification tooling, personal-finance UX, and enterprise Teams sync. | Needs broader legal/regulatory evidence. |
 | Financials | Included in company snapshot | Funding valuation and revenue-mix facts. | No audited public financials. |
 | Competitors | Partial | Peer set in profile and memo. | Needs deeper peer economics comparison. |
 | Risks | Partial | Risk register in memo. | Needs dedicated IP, safety, governance, and regulatory diligence. |
@@ -31,6 +32,8 @@
 - OpenAI and Dell announced a partnership to bring Codex into hybrid and on-premises enterprise environments.
 - OpenAI Enterprise/Edu release notes added Codex remote access from ChatGPT mobile and Codex access tokens for trusted local workflows.
 - OpenAI said it became a C2PA Conforming Generator Product, added Google DeepMind SynthID watermarking for OpenAI-generated images, and previewed a public image verification tool.
+- OpenAI started gradually rolling out a ChatGPT personal-finance experience for Pro users in the United States, using Plaid-connected accounts for spending, bills, subscriptions, net worth, and investment-information views while explicitly excluding money movement, trading, tax filing, and regulated advice.
+- OpenAI Enterprise/Edu release notes added an admin-managed Microsoft Teams sync app and removed the beta label from the Apps Directory and app creation flow.
 
 ## Open Questions
 
@@ -41,3 +44,5 @@
 - What indirect listed exposures offer the cleanest risk/reward?
 - Does Codex enterprise distribution create durable software revenue beyond API consumption?
 - Does stronger provenance tooling reduce enterprise, platform, and regulatory friction enough to matter commercially?
+- Does the personal-finance surface create durable Pro retention or a higher-tier consumer monetization path without increasing trust, compliance, or advice-boundary risk?
+- Do admin-managed enterprise connectors such as Teams sync translate into broader paid workplace deployment and expansion?
