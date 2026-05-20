@@ -39,6 +39,7 @@
 | Intel Q1 2026 10-Q | 2026-05-11 | Primary filing source. |
 | Intel Q1 2026 prepared remarks | 2026-05-11 | Management commentary source. |
 | Bloomberg, Reuters/Investing.com, Motley Fool, FX Leaders | 2026-05-11 | Secondary market/news sources for recent rally and Apple/Terafab reports. |
+| Intel press-release list | 2026-05-20 | Official low-materiality update check for post-baseline company announcements. |
 
 ## Downstream Handoff
 
@@ -61,5 +62,5 @@ research_target:
     - AVGO
     - QCOM
   archive_path: research/targets/intc
-  resolved_at: 2026-05-11T15:11:00+08:00
+  resolved_at: 2026-05-20T18:07:00+08:00
 ```
