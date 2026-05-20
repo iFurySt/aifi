@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resend Email CLI"
+  short_description: "Send AIFi emails through Resend CLI."
+  default_prompt: "Send an email from aifi@ifuryst.com with Resend CLI using the recipient, subject, and body I provide."
