@@ -38,6 +38,7 @@
 | OpenAI ads announcement | 2026-05-12 | Primary source for new monetization surface in ChatGPT. |
 | OpenAI GPT-5.5 announcement | 2026-05-12 | Primary product signal for frontier-model roadmap. |
 | OpenAI Deployment Company announcement | 2026-05-12 | Primary enterprise go-to-market and services signal. |
+| OpenAI Dell Codex partnership and Enterprise/Edu release notes | 2026-05-20 | Primary sources for hybrid/on-prem enterprise Codex distribution and managed automation features. |
 
 ## Downstream Handoff
 
@@ -58,5 +59,5 @@ research_target:
     - AMZN
     - NVDA
   archive_path: research/targets/openai
-  resolved_at: 2026-05-12T22:14:00+08:00
+  resolved_at: 2026-05-20T18:07:00+08:00
 ```

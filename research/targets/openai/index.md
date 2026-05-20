@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-20 | [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Dell hybrid/on-prem partnership and Enterprise/Edu Codex remote access / access-token release notes. |
 | 2026-05-12 | [Chinese company analysis](artifacts/memos/2026-05-12-company-analysis-zh.md) | First-pass AIFi analysis for "openai". |
 
 ## Evidence Coverage
@@ -11,7 +12,7 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical private-company target and peer set. | No public ticker. |
-| News / company updates | [company snapshot](evidence/news/2026-05-12-company-snapshot.md) | Funding, revenue scale, consumer scale, enterprise mix, AWS, ads, GPT-5.5, deployment company. | Needs broader legal/regulatory evidence. |
+| News / company updates | [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, and Enterprise/Edu Codex automation surfaces. | Needs broader legal/regulatory evidence. |
 | Financials | Included in company snapshot | Funding valuation and revenue-mix facts. | No audited public financials. |
 | Competitors | Partial | Peer set in profile and memo. | Needs deeper peer economics comparison. |
 | Risks | Partial | Risk register in memo. | Needs dedicated IP, safety, governance, and regulatory diligence. |
@@ -26,6 +27,8 @@
 - OpenAI disclosed that its ads pilot reached more than $100M ARR in under six weeks.
 - OpenAI brought OpenAI models, Codex, and Amazon Bedrock Managed Agents powered by OpenAI to AWS.
 - OpenAI expanded ChatGPT ads testing, creating a new consumer monetization path.
+- OpenAI and Dell announced a partnership to bring Codex into hybrid and on-premises enterprise environments.
+- OpenAI Enterprise/Edu release notes added Codex remote access from ChatGPT mobile and Codex access tokens for trusted local workflows.
 
 ## Open Questions
 
@@ -34,3 +37,4 @@
 - Can ads scale without weakening ChatGPT user trust?
 - How quickly do inference costs fall relative to usage growth?
 - What indirect listed exposures offer the cleanest risk/reward?
+- Does Codex enterprise distribution create durable software revenue beyond API consumption?
