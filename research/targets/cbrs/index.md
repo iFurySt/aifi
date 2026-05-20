@@ -4,7 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
-| 2026-05-20 | [IPO close and early market snapshot](evidence/news/2026-05-20-ipo-close-market-snapshot.md) | IPO close confirmation and early post-debut trading/valuation context. |
+| 2026-05-20 | [IPO close and early market snapshot](evidence/news/2026-05-20-ipo-close-market-snapshot.md) | IPO close confirmation from company and SEC sources plus early post-debut trading/valuation context. |
 | 2026-05-15 | [IPO dashboard](artifacts/charts/2026-05-15-cerebras-ipo-dashboard.html) | Static HTML chart dashboard for IPO, revenue quality, customer concentration, and RPO timing. |
 | 2026-05-15 | [Investment thesis frame](artifacts/decision-frames/2026-05-15-thesis-frame.md) | First-pass AIFi analysis for "分析一下Cerebras". |
 
@@ -32,7 +32,7 @@
 - Remaining performance obligations were $24.6B at 2025-12-31, with a significant amount tied to OpenAI.
 - OpenAI deal value was described as more than $20B and involved 750 MW of Cerebras compute.
 - AWS signed a binding term sheet to deploy Cerebras in AWS data centers, but definitive agreements remained pending in the prospectus.
-- Cerebras Investor Relations listed the IPO closing release dated 2026-05-15, moving CBRS from expected close to completed public-company status.
+- Cerebras Investor Relations and the 2026-05-15 SEC 8-K confirmed the IPO close, full underwriter-option exercise, final 34.5M-share offering, and about $6.4B of gross proceeds before expenses.
 - Early third-party market snapshots still showed CBRS far above the $185 IPO price after the first few sessions.
 
 ## Open Questions
