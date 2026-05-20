@@ -21,8 +21,8 @@
 
 ## Reusable Facts
 
-- Cerebras priced its IPO at $185.00 per share for 30,000,000 Class A shares.
-- Gross IPO proceeds were $5.55B; proceeds to Cerebras before other offering expenses were $5.419575B.
+- Cerebras priced its IPO at $185.00 per share for a base offering of 30,000,000 Class A shares.
+- The IPO closed with the underwriters exercising their full 4,500,000-share option, bringing the final offering to 34,500,000 shares and gross proceeds of about $6.38B before underwriting discounts, commissions, and other offering expenses.
 - CBRS began trading on Nasdaq on 2026-05-14.
 - First-day close was $311.07, up 68.15% from the IPO price baseline, according to Yahoo Finance.
 - 2025 revenue was $510.0M, up 76% from $290.3M in 2024.

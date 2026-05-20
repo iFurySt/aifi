@@ -27,7 +27,7 @@ The practical pitch is speed and simplicity: faster inference, fewer distributed
 - OpenAI agreement gives more than $20B headline contract value and drives a large $24.6B remaining performance obligation base.
 - AI inference demand may grow faster than training demand, and Cerebras is deliberately positioned around fast inference rather than only model training.
 - AWS could turn Cerebras from a niche high-performance architecture into a broadly available cloud option.
-- The company raised over $5.4B of IPO proceeds before other offering expenses, giving it capital to build data-center capacity.
+- The IPO closed with about $6.38B of gross proceeds after full exercise of the underwriters' option, giving it capital to build data-center capacity.
 
 ## Bear Case
 
@@ -43,7 +43,7 @@ The practical pitch is speed and simplicity: faster inference, fewer distributed
 | Item | Value | Why it matters |
 | --- | ---: | --- |
 | IPO price | $185.00/share | Final offering price, already above earlier marketed ranges. |
-| Gross IPO proceeds | $5.55B | Funds data-center and cloud buildout. |
+| Gross IPO proceeds | About $6.38B | Final closed offering after full underwriter-option exercise; funds data-center and cloud buildout. |
 | 2025 revenue | $510.0M | Base for growth and valuation comparisons. |
 | 2025 revenue growth | 76% | Strong but from a concentrated base. |
 | 2025 GAAP net income | $237.8M | Positive, but not clean operating profitability. |

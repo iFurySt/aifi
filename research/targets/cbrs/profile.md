@@ -41,7 +41,7 @@
 | Cerebras pricing press release | 2026-05-15 | Company confirmation of IPO pricing and listing date. |
 | Yahoo Finance CBRS quote page | 2026-05-15 | Market quote source for first-day close and day range. |
 | Reuters/Investing.com IPO debut report | 2026-05-15 | Secondary source for opening trade and fully diluted valuation estimate. |
-| Cerebras IR close release and early quote snapshots | 2026-05-20 | Primary source for IPO close status; third-party sources for time-sensitive early post-debut market context. |
+| Cerebras closing release and early quote snapshots | 2026-05-20 | Primary source for IPO close status, full underwriter-option exercise, final 34.5M-share offering, and about $6.38B gross proceeds; third-party sources for time-sensitive early post-debut market context. |
 
 ## Downstream Handoff
 
