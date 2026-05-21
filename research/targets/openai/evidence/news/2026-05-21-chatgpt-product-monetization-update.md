@@ -12,7 +12,8 @@
 
 ## Sources Checked
 
-- OpenAI Help Center, "ChatGPT - Release Notes": https://help.openai.com/en/articles/6825453-chatgpt-enterprise-security-overview
+- OpenAI Help Center, "ChatGPT - Release Notes":
+  https://help.openai.com/en/articles/6825453-chatgpt-release-notes
 - OpenAI Help Center, "ChatGPT Enterprise & Edu - Release Notes": https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes
 
 ## Incremental Facts Since 2026-05-20 Content Provenance Update
