@@ -42,6 +42,7 @@
 | Reuters/Bloomberg/industry media snippets | 2026-05-11 | China export-control and H200 restart context; secondary-source layer. |
 | NVIDIA Q1 FY2027 call notice and event page | 2026-05-20 | Primary source for result release timing, call timing, and post-release monitoring setup. |
 | NVIDIA Q1 FY2027 release, SEC 8-K mirror, and AP report | 2026-05-21 | Primary/secondary sources for Q1 actuals, Q2 guide, capital return, reporting-framework change, consensus comparison, and AI infrastructure readthrough. |
+| NVIDIA Q1 FY2027 official release and Motley Fool call transcript | 2026-05-21 | Primary release plus third-party transcript for Hyperscale / ACIE split, AI cloud / sovereign readthrough, networking commentary, China/H200 status, and supply-commitment follow-up items. |
 
 ## Downstream Handoff
 

@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-21 | [Q1 FY2027 call readthrough](evidence/earnings/2026-05-21-q1-fy2027-call-readthrough.md) | Hyperscale / ACIE split, AI cloud and sovereign readthrough, networking, China/H200, and supply-commitment follow-up. |
 | 2026-05-21 | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) | Record Q1 revenue, Data Center revenue, $91B Q2 guide excluding China Data Center compute revenue, and capital-return update. |
 | 2026-05-20 | [Earnings catalyst update](evidence/news/2026-05-20-earnings-catalyst.md) | Confirms Q1 FY2027 result/call timing and post-release checklist. |
 | 2026-05-11 | [Investment thesis frame](artifacts/decision-frames/2026-05-11-thesis-frame.md) | First-pass AIFi analysis for "NVIDIA 的情况". |
@@ -15,7 +16,8 @@
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical NVDA target and peer set. | None material. |
 | Financials | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) and [financial snapshot](evidence/market/2026-05-11-financial-snapshot.md) | Q1 FY2027 actuals, Q2 guide, Q4 FY2026, FY2026, liquidity, obligations. | Needs 10-Q update after filing and current consensus / valuation model. |
-| News | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) | Post-release catalyst follow-up, cross-target readthrough, and notification-worthy interpretation. | Needs full conference-call transcript analysis. |
+| Earnings | [Q1 FY2027 call readthrough](evidence/earnings/2026-05-21-q1-fy2027-call-readthrough.md) | Hyperscale / ACIE split, AI cloud and sovereign demand, networking, China/H200, and supply-commitment follow-up. | Needs official replay / transcript cross-check if NVIDIA publishes a clean transcript. |
+| News | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) | Post-release catalyst follow-up, cross-target readthrough, and notification-worthy interpretation. | Needs 10-Q and current market/valuation snapshot. |
 | Competitors | [competitive landscape](evidence/competitors/2026-05-11-competitive-landscape.md) | AMD, Broadcom, custom silicon, hyperscaler context. | No complete peer financial table. |
 | Filings | Included in financial snapshot | FY2026 10-K risk and concentration highlights. | No separate filing review file. |
 | Market signals | Partial | Not archived due missing live quote from finance tool. | Needs price, market cap, volume, options/short-interest context. |
@@ -39,6 +41,9 @@
 - Two direct customers represented 22% and 14% of FY2026 revenue.
 - Inventory purchase and long-term supply/capacity obligations were $95.2B as of 2026-01-25.
 - NVIDIA is moving to a Data Center / Edge Computing reporting framework, with Data Center split into Hyperscale and ACIE.
+- NVIDIA's Q1 FY2027 call described Hyperscale revenue at about $38B and ACIE revenue at about $37B, with AI cloud revenue more than tripling year over year.
+- The Q1 FY2027 call transcript summary cited more than 80 partner data centers above 10MW and sovereign AI revenue growth above 80% year over year.
+- Motley Fool's Q1 FY2027 transcript summary cited total supply, including inventory purchase commitments and prepaids, at about $145B; this needs 10-Q confirmation.
 
 ## Open Questions
 
@@ -47,4 +52,5 @@
 - Are hyperscalers still capacity-constrained after the 2026 capex surge, or does budget discipline start to bite?
 - How much inference demand migrates to custom silicon over the next 12-24 months?
 - Do inventory and supply obligations keep rising faster than revenue visibility?
-- Does the full Q1 FY2027 call transcript add new detail on Blackwell supply, Vera Rubin, China licensing, and customer concentration?
+- Does the Q1 FY2027 10-Q confirm the roughly $145B supply-commitment figure cited in the third-party call transcript summary?
+- How much of ACIE revenue is neocloud capacity versus industrial, enterprise, and sovereign AI factory demand?
