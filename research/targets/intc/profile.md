@@ -40,6 +40,7 @@
 | Intel Q1 2026 prepared remarks | 2026-05-11 | Management commentary source. |
 | Bloomberg, Reuters/Investing.com, Motley Fool, FX Leaders | 2026-05-11 | Secondary market/news sources for recent rally and Apple/Terafab reports. |
 | Intel press-release list | 2026-05-20 | Official low-materiality update check for post-baseline company announcements. |
+| Intel IR, StockAnalysis, TipRanks, Tom's Hardware / Nikkei, Reuters mirror via Investing.com | 2026-05-21 | Incremental market-signal update for INTC re-rating, analyst target revisions, Apple / 18A narrative, and confirmation gaps. |
 
 ## Downstream Handoff
 
@@ -62,5 +63,5 @@ research_target:
     - AVGO
     - QCOM
   archive_path: research/targets/intc
-  resolved_at: 2026-05-20T18:07:00+08:00
+  resolved_at: 2026-05-21T11:17:09+08:00
 ```
