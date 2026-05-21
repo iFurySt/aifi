@@ -5,6 +5,9 @@
 | Date | Artifact | Notes |
 | --- | --- | --- |
 | 2026-05-21 | [Q1 FY2027 call readthrough](evidence/earnings/2026-05-21-q1-fy2027-call-readthrough.md) | Hyperscale / ACIE split, AI cloud and sovereign readthrough, networking, China/H200, and supply-commitment follow-up. |
+| 2026-05-21 | [Post-earnings market snapshot](evidence/market/2026-05-21-post-earnings-market-snapshot.md) | Consensus comparison, muted after-hours stock reaction, rough valuation math, and market-readthrough framing. |
+| 2026-05-21 | [Chinese earnings analysis memo](artifacts/memos/2026-05-21-earnings-analysis-zh.md) | Unified Chinese analysis that combines Q1 results, call readthrough, market reaction, valuation framing, and bull/base/bear cases. |
+| 2026-05-21 | [Q1 FY2027 earnings dashboard](artifacts/charts/2026-05-21-nvda-earnings-dashboard.html) | Static Chinese HTML visualization for the post-earnings conclusion, with KPI, revenue, Data Center, margin, valuation, and scenario panels. |
 | 2026-05-21 | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) | Record Q1 revenue, Data Center revenue, $91B Q2 guide excluding China Data Center compute revenue, and capital-return update. |
 | 2026-05-20 | [Earnings catalyst update](evidence/news/2026-05-20-earnings-catalyst.md) | Confirms Q1 FY2027 result/call timing and post-release checklist. |
 | 2026-05-11 | [Investment thesis frame](artifacts/decision-frames/2026-05-11-thesis-frame.md) | First-pass AIFi analysis for "NVIDIA 的情况". |
@@ -15,12 +18,12 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical NVDA target and peer set. | None material. |
-| Financials | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) and [financial snapshot](evidence/market/2026-05-11-financial-snapshot.md) | Q1 FY2027 actuals, Q2 guide, Q4 FY2026, FY2026, liquidity, obligations. | Needs 10-Q update after filing and current consensus / valuation model. |
+| Financials | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md), [financial snapshot](evidence/market/2026-05-11-financial-snapshot.md), and [post-earnings market snapshot](evidence/market/2026-05-21-post-earnings-market-snapshot.md) | Q1 FY2027 actuals, Q2 guide, Q4 FY2026, FY2026, liquidity, obligations, consensus comparison, and rough valuation framing. | Needs 10-Q update after filing and a full current consensus / valuation model. |
 | Earnings | [Q1 FY2027 call readthrough](evidence/earnings/2026-05-21-q1-fy2027-call-readthrough.md) | Hyperscale / ACIE split, AI cloud and sovereign demand, networking, China/H200, and supply-commitment follow-up. | Needs official replay / transcript cross-check if NVIDIA publishes a clean transcript. |
 | News | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) | Post-release catalyst follow-up, cross-target readthrough, and notification-worthy interpretation. | Needs 10-Q and current market/valuation snapshot. |
 | Competitors | [competitive landscape](evidence/competitors/2026-05-11-competitive-landscape.md) | AMD, Broadcom, custom silicon, hyperscaler context. | No complete peer financial table. |
 | Filings | Included in financial snapshot | FY2026 10-K risk and concentration highlights. | No separate filing review file. |
-| Market signals | Partial | Not archived due missing live quote from finance tool. | Needs price, market cap, volume, options/short-interest context. |
+| Market signals | [Post-earnings market snapshot](evidence/market/2026-05-21-post-earnings-market-snapshot.md) | Closing price, after-hours reaction, market-cap framing, and rough valuation ratios from secondary-source market snapshots. | Needs live quote, volume, options/implied-move, short-interest, and full consensus-estimate context. |
 
 ## Reusable Facts
 
@@ -44,6 +47,8 @@
 - NVIDIA's Q1 FY2027 call described Hyperscale revenue at about $38B and ACIE revenue at about $37B, with AI cloud revenue more than tripling year over year.
 - The Q1 FY2027 call transcript summary cited more than 80 partner data centers above 10MW and sovereign AI revenue growth above 80% year over year.
 - Motley Fool's Q1 FY2027 transcript summary cited total supply, including inventory purchase commitments and prepaids, at about $145B; this needs 10-Q confirmation.
+- AP reported NVDA closed at $223.47 on 2026-05-20 and dipped slightly after hours to $222.12, with market value around $5.4T.
+- At an approximately $5.4T market capitalization, NVDA traded around 21x rough TTM revenue after Q1 FY2027 and around 15x annualized Q2 FY2027 revenue guidance.
 
 ## Open Questions
 

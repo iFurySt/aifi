@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVIDIA Q1 FY2027 财报可视化 - 2026-05-21</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #152027;
+      --muted: #5c6b73;
+      --subtle: #eef3f4;
+      --line: #d7e1e5;
+      --panel: #ffffff;
+      --page: #f5f7f8;
+      --green: #2f7d45;
+      --green-soft: #dcefe2;
+      --blue: #2d5f93;
+      --blue-soft: #dfe9f3;
+      --teal: #0b7984;
+      --amber: #b27518;
+      --amber-soft: #f1e6d1;
+      --red: #b0473f;
+      --red-soft: #f2dddd;
+      --violet: #6e5aa8;
+      --shadow: 0 1px 2px rgb(21 32 39 / 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.48;
+    }
+
+    main {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 26px 0 34px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-bottom: 4px;
+      font-size: 17px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .eyebrow {
+      margin-bottom: 7px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .subtitle, .note, .source, .meta { color: var(--muted); }
+
+    .subtitle {
+      max-width: 760px;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .meta {
+      display: grid;
+      gap: 6px;
+      justify-items: start;
+      font-size: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 4px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .panel {
+      grid-column: span 6;
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .wide { grid-column: 1 / -1; }
+    .third { grid-column: span 4; }
+
+    .note {
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+
+    .source {
+      margin-top: 11px;
+      padding-top: 9px;
+      border-top: 1px solid var(--line);
+      font-size: 11px;
+    }
+
+    .source a { color: var(--blue); }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kpi {
+      min-height: 104px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      padding: 12px;
+    }
+
+    .kpi .label {
+      min-height: 34px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .kpi .value {
+      margin-top: 4px;
+      color: var(--ink);
+      font-size: 23px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .kpi .delta {
+      margin-top: 8px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .kpi.warn .delta { color: var(--amber); }
+    .kpi.red .delta { color: var(--red); }
+
+    .chart {
+      display: grid;
+      gap: 10px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 116px minmax(0, 1fr) 76px;
+      gap: 10px;
+      align-items: center;
+      min-height: 28px;
+    }
+
+    .bar-label {
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .bar-track {
+      position: relative;
+      height: 22px;
+      overflow: hidden;
+      border-radius: 6px;
+      background: var(--subtle);
+    }
+
+    .bar {
+      height: 100%;
+      border-radius: 6px;
+    }
+
+    .bar.green { background: var(--green); }
+    .bar.blue { background: var(--blue); }
+    .bar.teal { background: var(--teal); }
+    .bar.amber { background: var(--amber); }
+    .bar.red { background: var(--red); }
+    .bar.violet { background: var(--violet); }
+
+    .bar-value {
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      text-align: right;
+    }
+
+    .stack {
+      display: flex;
+      height: 34px;
+      overflow: hidden;
+      border-radius: 7px;
+      background: var(--subtle);
+    }
+
+    .stack-seg {
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 10px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+    }
+
+    .metric-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .metric-table th,
+    .metric-table td {
+      padding: 8px 7px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .metric-table th {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .metric-table td:last-child,
+    .metric-table th:last-child {
+      text-align: right;
+    }
+
+    .callouts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .callout {
+      border-radius: 8px;
+      padding: 11px;
+      border: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .scenario {
+      min-height: 210px;
+      border-left: 4px solid var(--line);
+    }
+
+    .scenario.bull {
+      border-left-color: var(--green);
+      background: linear-gradient(0deg, var(--green-soft), var(--green-soft)) no-repeat 0 0 / 100% 5px, var(--panel);
+    }
+
+    .scenario.base {
+      border-left-color: var(--blue);
+      background: linear-gradient(0deg, var(--blue-soft), var(--blue-soft)) no-repeat 0 0 / 100% 5px, var(--panel);
+    }
+
+    .scenario.bear {
+      border-left-color: var(--red);
+      background: linear-gradient(0deg, var(--red-soft), var(--red-soft)) no-repeat 0 0 / 100% 5px, var(--panel);
+    }
+
+    .scenario .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .bull .tag { background: var(--green-soft); color: var(--green); }
+    .base .tag { background: var(--blue-soft); color: var(--blue); }
+    .bear .tag { background: var(--red-soft); color: var(--red); }
+
+    .scenario p,
+    .watch-list li {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .watch-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .watch-list li {
+      min-height: 86px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      padding: 10px;
+    }
+
+    .watch-list strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    @media (max-width: 920px) {
+      main { width: min(100% - 24px, 1240px); }
+      header { grid-template-columns: 1fr; }
+      .panel, .third { grid-column: 1 / -1; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .watch-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 18px, 1240px);
+        padding-top: 18px;
+      }
+
+      h1 { font-size: 23px; }
+      .kpis, .callouts, .watch-list { grid-template-columns: 1fr; }
+
+      .bar-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .bar-value { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="eyebrow">NVDA Q1 FY2027 Earnings Dashboard</div>
+        <h1>NVIDIA 财报可视化：基本面继续上修，股价已定价高预期</h1>
+        <p class="subtitle">证据截止 2026-05-21 11:45 CST。数据来自 NVIDIA 官方 Q1 FY2027 release、SEC 8-K 附件、AP 财报后报道，以及本地 NVDA 研究档案。本文是投资研究支持，不是投资建议。</p>
+      </div>
+      <div class="meta">
+        <span class="pill">季度：Q1 FY2027 ended 2026-04-26</span>
+        <span class="pill">货币：USD，金额单位多为十亿美元</span>
+        <span class="pill">核心变量：Q2 指引不含中国 Data Center compute</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="panel wide">
+        <h2>核心读数</h2>
+        <p class="note">财报本身偏强，市场反应克制。结论不是业务转弱，而是预期已经很高。</p>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="label">Q1 FY2027 revenue</div>
+            <div class="value">$81.6B</div>
+            <div class="delta">+85% YoY / +20% QoQ</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Data Center revenue</div>
+            <div class="value">$75.2B</div>
+            <div class="delta">+92% YoY / +21% QoQ</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Q2 FY2027 revenue guide</div>
+            <div class="value">$91.0B</div>
+            <div class="delta">不含中国 DC compute</div>
+          </div>
+          <div class="kpi warn">
+            <div class="label">GAAP / non-GAAP gross margin</div>
+            <div class="value">74.9% / 75.0%</div>
+            <div class="delta">Blackwell ramp 未明显压垮利润率</div>
+          </div>
+          <div class="kpi red">
+            <div class="label">AP reported market cap</div>
+            <div class="value">$5.4T</div>
+            <div class="delta">盘后小幅回落，估值纪律仍重要</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>收入台阶：Q2 指引继续抬高基准线</h2>
+        <p class="note">Q2 指引 910 亿美元，如果兑现，说明 Q1 不是孤立峰值。</p>
+        <div class="chart" aria-label="NVIDIA quarterly revenue and guidance chart">
+          <div class="bar-row">
+            <div class="bar-label">Q1 FY2026</div>
+            <div class="bar-track"><div class="bar blue" style="width: 48.4%;"></div></div>
+            <div class="bar-value">$44.1B</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Q4 FY2026</div>
+            <div class="bar-track"><div class="bar teal" style="width: 74.9%;"></div></div>
+            <div class="bar-value">$68.1B</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Q1 FY2027</div>
+            <div class="bar-track"><div class="bar green" style="width: 89.7%;"></div></div>
+            <div class="bar-value">$81.6B</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Q2 FY2027 guide</div>
+            <div class="bar-track"><div class="bar amber" style="width: 100%;"></div></div>
+            <div class="bar-value">$91.0B</div>
+          </div>
+        </div>
+        <div class="source">Source: NVIDIA Q1 FY2027 release and prior FY2026 release. Q2 is company guidance midpoint.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Data Center：仍是主要发动机</h2>
+        <p class="note">Q1 FY2027 总收入中，Data Center 约占 92%；Edge Computing 约占 8%。旧口径下，Data Center networking 同比增长 199%。</p>
+        <div class="stack" aria-label="Q1 FY2027 revenue mix stack chart">
+          <div class="stack-seg" style="width: 92.2%; background: var(--green);">Data Center $75.2B</div>
+          <div class="stack-seg" style="width: 7.8%; background: var(--blue);"></div>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background: var(--green);"></span>Data Center $75.2B</span>
+          <span class="legend-item"><span class="swatch" style="background: var(--blue);"></span>Edge Computing $6.4B</span>
+        </div>
+        <div class="chart" style="margin-top: 18px;" aria-label="Data Center compute and networking split">
+          <div class="bar-row">
+            <div class="bar-label">DC compute</div>
+            <div class="bar-track"><div class="bar green" style="width: 100%;"></div></div>
+            <div class="bar-value">$60.4B</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">DC networking</div>
+            <div class="bar-track"><div class="bar violet" style="width: 24.5%;"></div></div>
+            <div class="bar-value">$14.8B</div>
+          </div>
+        </div>
+        <div class="source">Source: NVIDIA Q1 FY2027 release. Compute/networking are under NVIDIA's previous sub-market framework.</div>
+      </section>
+
+      <section class="panel">
+        <h2>超预期：收入和指引都高于市场基准</h2>
+        <p class="note">EPS 口径有定义差异：NVIDIA 官方 non-GAAP diluted EPS 为 $1.87，AP 另引调整 EPS 为 $1.76。这里重点使用更干净的收入和指引比较。</p>
+        <table class="metric-table">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>市场基准</th>
+              <th>实际/指引</th>
+              <th>差异</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q1 revenue</td>
+              <td>$78.91B</td>
+              <td>$81.615B</td>
+              <td>+3.4%</td>
+            </tr>
+            <tr>
+              <td>Q2 revenue</td>
+              <td>$87.29B</td>
+              <td>$91.0B guide</td>
+              <td>+4.3%</td>
+            </tr>
+            <tr>
+              <td>After-hours price</td>
+              <td>$223.47 close</td>
+              <td>$222.12 AH</td>
+              <td>-0.6%</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="source">Source: AP article citing FactSet consensus and market reaction; NVIDIA release for actuals and guidance.</div>
+      </section>
+
+      <section class="panel">
+        <h2>毛利率：强增长下仍守住 75% 附近</h2>
+        <p class="note">Q1 FY2026 受 H20 相关影响，Q4 FY2026 和 Q1 FY2027 已回到约 75%。</p>
+        <div class="chart" aria-label="gross margin chart">
+          <div class="bar-row">
+            <div class="bar-label">Q1 FY2026 GAAP</div>
+            <div class="bar-track"><div class="bar red" style="width: 80.8%;"></div></div>
+            <div class="bar-value">60.5%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Q4 FY2026 GAAP</div>
+            <div class="bar-track"><div class="bar green" style="width: 100%;"></div></div>
+            <div class="bar-value">75.0%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Q1 FY2027 GAAP</div>
+            <div class="bar-track"><div class="bar green" style="width: 99.9%;"></div></div>
+            <div class="bar-value">74.9%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Q2 guide GAAP</div>
+            <div class="bar-track"><div class="bar amber" style="width: 99.9%;"></div></div>
+            <div class="bar-value">74.9%</div>
+          </div>
+        </div>
+        <div class="source">Source: NVIDIA Q1 FY2027 release and FY2026/Q4 release.</div>
+      </section>
+
+      <section class="panel wide">
+        <h2>估值粗算：盈利能力强，但价格已经要求耐久性</h2>
+        <p class="note">以下只做研究框架，不是完整估值模型。市场价和市值来自 AP 财报后报道的快照。</p>
+        <div class="callouts">
+          <div class="callout">
+            <strong>TTM revenue after Q1 FY2027: about $253.5B</strong>
+            <p>FY2026 $215.938B + Q1 FY2027 $81.615B - Q1 FY2026 $44.062B。以约 $5.4T 市值计，约 21x TTM revenue。</p>
+          </div>
+          <div class="callout">
+            <strong>Q2 guide annualized revenue: about $364B</strong>
+            <p>用 $91.0B 指引年化，约 15x revenue run-rate。这个口径更乐观，但隐含 Q2 台阶具有持续性。</p>
+          </div>
+          <div class="callout">
+            <strong>Q1 non-GAAP net income annualized: about $182.2B</strong>
+            <p>用 NVIDIA non-GAAP net income $45.548B 年化，市值约 30x 该利润 run-rate。利润规模能缓冲部分估值压力。</p>
+          </div>
+          <div class="callout">
+            <strong>关键不是当前盈利不足，而是未来可持续性</strong>
+            <p>只要 Data Center 继续扩张、毛利率维持、供应承诺被需求消化，估值可以被解释；任何需求消化期都会放大股价波动。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel third scenario bull">
+        <span class="tag">Bull case 更强</span>
+        <h3>AI factory 平台继续扩张</h3>
+        <p>NVIDIA 不只是 GPU 供应商，而是在卖数据中心级系统、networking、软件和生态。Q2 指引排除中国 Data Center compute 仍继续上行，是本次最强证据。</p>
+      </section>
+
+      <section class="panel third scenario base">
+        <span class="tag">Base case 仍最稳妥</span>
+        <h3>好公司，高预期</h3>
+        <p>公司质量极高，但股票需要持续兑现并继续超预期。盘后反应克制，说明市场已经把强增长和高毛利写进价格。</p>
+      </section>
+
+      <section class="panel third scenario bear">
+        <span class="tag">Bear case 被削弱但未消失</span>
+        <h3>风险集中在耐久性</h3>
+        <p>风险不是本季需求弱，而是 AI capex 周期、客户集中、出口限制、自研芯片替代、供应承诺过快上升和估值压缩。</p>
+      </section>
+
+      <section class="panel wide">
+        <h2>下一步跟踪清单</h2>
+        <ul class="watch-list">
+          <li><strong>Q1 FY2027 10-Q</strong>核对供应义务、预付款、库存和客户集中度是否继续上升。</li>
+          <li><strong>Hyperscale / ACIE</strong>看新口径是否持续披露，并区分大云厂商和更广泛 AI factory 需求。</li>
+          <li><strong>Q2 指引兑现</strong>收入是否接近 $91.0B，同时毛利率能否维持约 75%。</li>
+          <li><strong>中国变量</strong>中国 Data Center compute 是否仍为零，还是成为 FY2027 增量上行因素。</li>
+        </ul>
+        <div class="source">Local evidence: Q1 FY2027 results note, earnings-call readthrough, post-earnings market snapshot, and Chinese unified memo under <code>research/targets/nvda/</code>.</div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
