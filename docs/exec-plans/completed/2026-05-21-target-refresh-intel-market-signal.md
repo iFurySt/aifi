@@ -25,7 +25,7 @@ decide whether a user notification is warranted.
 6. Send a Resend notification only if the incremental evidence is time-sensitive
    or useful for asset / watchlist management.
 
-## Current Findings
+## Final Findings
 
 - `intc`: material market-signal update. The market continues to re-rate Intel
   around foundry optionality, 18A supply / adoption pressure, possible Apple
@@ -50,3 +50,13 @@ decide whether a user notification is warranted.
 - Run `git diff --check`.
 - Commit scoped changes and attempt `git push origin main`.
 
+## Completion Log
+
+- Added `research/targets/intc/evidence/market/2026-05-21-market-signal-update.md`.
+- Updated Intel `index.md` and `profile.md`.
+- Created local commit `a064fbb Add Intel market signal update`.
+- `git diff --check` passed.
+- `git push origin main` failed because local DNS could not resolve
+  `github.com`.
+- Notification to `ifuryst@gmail.com` was warranted but not sent because
+  `resend whoami --json` returned `not_authenticated`.
