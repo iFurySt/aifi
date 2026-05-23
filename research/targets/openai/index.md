@@ -4,6 +4,8 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-22 | [Codex platform update](evidence/news/2026-05-22-codex-platform-update.md) | Appshots, Goal mode GA, in-app browser annotations, and locked computer use for longer-running Codex workflows. |
+| 2026-05-21 | [Security and sensitive-conversation update](evidence/news/2026-05-21-security-and-safety-update.md) | TanStack supply-chain incident response, no evidence of user-data access, app certificate updates, and sensitive-conversation safety improvements. |
 | 2026-05-21 | [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md) | Personal-finance rollout for US Pro users, Microsoft Teams admin-managed sync, and Apps Directory beta-label removal. |
 | 2026-05-20 | [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md) | C2PA conformance, SynthID image watermarking, and public verification-tool preview. |
 | 2026-05-20 | [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Dell hybrid/on-prem partnership and Enterprise/Edu Codex remote access / access-token release notes. |
@@ -14,7 +16,7 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical private-company target and peer set. | No public ticker. |
-| News / company updates | [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md), [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md), and [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, Enterprise/Edu Codex automation surfaces, C2PA conformance, SynthID image watermarking, verification tooling, personal-finance UX, and enterprise Teams sync. | Needs broader legal/regulatory evidence. |
+| News / company updates | [Codex platform update](evidence/news/2026-05-22-codex-platform-update.md), [Security and sensitive-conversation update](evidence/news/2026-05-21-security-and-safety-update.md), [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md), [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md), and [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, Enterprise/Edu Codex automation surfaces, Appshots, Goal mode, browser annotations, locked computer use, C2PA/SynthID, verification tooling, personal-finance UX, enterprise Teams sync, TanStack incident response, and sensitive-conversation safety updates. | Needs broader legal/regulatory evidence and enterprise security-control evidence. |
 | Financials | Included in company snapshot | Funding valuation and revenue-mix facts. | No audited public financials. |
 | Competitors | Partial | Peer set in profile and memo. | Needs deeper peer economics comparison. |
 | Risks | Partial | Risk register in memo. | Needs dedicated IP, safety, governance, and regulatory diligence. |
@@ -34,6 +36,9 @@
 - OpenAI said it became a C2PA Conforming Generator Product, added Google DeepMind SynthID watermarking for OpenAI-generated images, and previewed a public image verification tool.
 - OpenAI started gradually rolling out a ChatGPT personal-finance experience for Pro users in the United States, using Plaid-connected accounts for spending, bills, subscriptions, net worth, and investment-information views while explicitly excluding money movement, trading, tax filing, and regulated advice.
 - OpenAI Enterprise/Edu release notes added an admin-managed Microsoft Teams sync app and removed the beta label from the Apps Directory and app creation flow.
+- OpenAI said the TanStack npm supply-chain attack affected two employee devices and a limited subset of internal source-code repositories, while saying it found no evidence that customer or user data was accessed.
+- OpenAI updated ChatGPT model policies and training to better recognize warning signs across sensitive conversations and respond more carefully with conversation-level context.
+- OpenAI Help Center release notes said Codex added Appshots, Goal mode GA across app / IDE / CLI, in-app browser annotations, and locked computer use for eligible Mac Computer Use users.
 
 ## Open Questions
 
@@ -46,3 +51,6 @@
 - Does stronger provenance tooling reduce enterprise, platform, and regulatory friction enough to matter commercially?
 - Does the personal-finance surface create durable Pro retention or a higher-tier consumer monetization path without increasing trust, compliance, or advice-boundary risk?
 - Do admin-managed enterprise connectors such as Teams sync translate into broader paid workplace deployment and expansion?
+- Does OpenAI's security posture keep pace with Codex, desktop apps, connectors, and enterprise data-access surfaces?
+- Do sensitive-conversation improvements reduce regulatory and reputational risk as ChatGPT expands into more personal domains?
+- Do richer Codex workflow controls convert into higher paid usage, enterprise expansion, or premium workflow pricing?

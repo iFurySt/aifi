@@ -43,6 +43,9 @@
 | StockAnalysis market data | 2026-05-13 | Third-party market cap, EV, valuation, and market signal data; market data is time-sensitive. |
 | Nokia post-Q1 consensus and agentic fixed-network AI release | 2026-05-20 | Primary source for post-Q1 consensus baseline and product-level AI automation update. |
 | Nokia U.S. broadband FCC approval announcement | 2026-05-21 | Primary source for Beacons / ONT Beacons conditional FCC approval and Wi-Fi 8 U.S. manufacturing commitment. |
+| Nokia Federal Solutions / Lockheed Martin defense 5G announcement | 2026-05-21 | Primary source for CMOSS-aligned mission-critical 5G product update for U.S. and allied defense forces. |
+| Nokia AI Networking Innovation Lab announcement | 2026-05-22 | Primary source for Sunnyvale AI networking lab, Nokia Validated Designs, and early AI/cloud technology partner list. |
+| Nokia investor relations, StockAnalysis, and secondary market commentary | 2026-05-23 | Sources for 2026-05-22 NOK / NOKIA high-volume re-rating signal and AI-infrastructure market narrative. |
 
 ## Downstream Handoff
 
@@ -69,5 +72,5 @@ research_target:
     - HPE
     - MSI
   archive_path: research/targets/nok
-  resolved_at: 2026-05-21T00:23:59+08:00
+  resolved_at: 2026-05-23T09:30:00+08:00
 ```

@@ -41,6 +41,8 @@
 | OpenAI Dell Codex partnership and Enterprise/Edu release notes | 2026-05-20 | Primary sources for hybrid/on-prem enterprise Codex distribution and managed automation features. |
 | OpenAI content provenance update | 2026-05-20 | Primary source for C2PA conformance, SynthID image watermarking, and public verification-tool preview. |
 | ChatGPT and ChatGPT Enterprise/Edu release notes | 2026-05-21 | Primary sources for personal-finance UX, Microsoft Teams admin-managed sync, and Apps Directory product-platform maturity signals. |
+| OpenAI TanStack incident response and sensitive-conversation update | 2026-05-21 | Primary sources for supply-chain security response, app certificate updates, and safety-quality improvements in sensitive conversations. |
+| ChatGPT release notes / Codex update | 2026-05-22 | Primary Help Center source for Appshots, Goal mode GA, browser annotations, and locked computer use. |
 
 ## Downstream Handoff
 
@@ -61,5 +63,5 @@ research_target:
     - AMZN
     - NVDA
   archive_path: research/targets/openai
-  resolved_at: 2026-05-21T00:22:29+08:00
+  resolved_at: 2026-05-22T17:20:00+08:00
 ```

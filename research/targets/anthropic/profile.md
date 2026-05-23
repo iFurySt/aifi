@@ -39,6 +39,8 @@
 | Anthropic enterprise services announcement | 2026-05-12 | Primary source for enterprise implementation support beyond self-serve API usage. |
 | Anthropic Claude Code team and enterprise announcement | 2026-05-12 | Primary source for developer-tool commercialization and enterprise packaging. |
 | Anthropic SpaceX compute, finance agents, PwC, KPMG, and Stainless announcements | 2026-05-20 | Primary sources for post-baseline capacity expansion, vertical enterprise packaging, services-channel distribution, and developer-platform acquisition. |
+| Claude for Legal, Anthropic policy note, AP / Axios policy-risk reporting | 2026-05-21 | Sources for legal-industry workflow packaging and safety-positioning / government-access risk monitoring. |
+| Anthropic Project Glasswing initial update | 2026-05-23 | Primary source for Mythos Preview cybersecurity findings, Claude Security public beta, and high-capability model release-constraint watch item. |
 
 ## Downstream Handoff
 
@@ -60,5 +62,5 @@ research_target:
     - MSFT
     - NVDA
   archive_path: research/targets/anthropic
-  resolved_at: 2026-05-20T21:20:35+08:00
+  resolved_at: 2026-05-23T09:30:00+08:00
 ```
