@@ -61,7 +61,9 @@ infrastructure / trust-risk theme.
 
 ### Blockers
 
-- Commit / push is blocked because Git cannot create `.git/index.lock` in this
-  sandbox (`Operation not permitted`).
+- Initial commit was blocked because Git could not create `.git/index.lock` in
+  this sandbox (`Operation not permitted`), but the repository updates were
+  later committed as `45c5d14`.
+- Push remains blocked because SSH cannot resolve `github.com`.
 - Real email delivery is blocked because `resend whoami --json` returns
   `not_authenticated`.
