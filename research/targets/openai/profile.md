@@ -43,6 +43,7 @@
 | ChatGPT and ChatGPT Enterprise/Edu release notes | 2026-05-21 | Primary sources for personal-finance UX, Microsoft Teams admin-managed sync, and Apps Directory product-platform maturity signals. |
 | OpenAI TanStack incident response and sensitive-conversation update | 2026-05-21 | Primary sources for supply-chain security response, app certificate updates, and safety-quality improvements in sensitive conversations. |
 | ChatGPT release notes / Codex update | 2026-05-22 | Primary Help Center source for Appshots, Goal mode GA, browser annotations, and locked computer use. |
+| ChatGPT and ChatGPT Enterprise/Edu release notes | 2026-05-24 | Primary Help Center sources for Codex admin analytics, plugin sharing defaults, EKM workspace agents, Intune mobile deployment, GPT-5.5 default, and ChatGPT for Excel / Google Sheets. |
 
 ## Downstream Handoff
 
@@ -63,5 +64,5 @@ research_target:
     - AMZN
     - NVDA
   archive_path: research/targets/openai
-  resolved_at: 2026-05-22T17:20:00+08:00
+  resolved_at: 2026-05-24T23:28:00+08:00
 ```
