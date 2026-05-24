@@ -44,8 +44,10 @@
 | Nebius / Meta agreement announcement | 2026-05-15 | Primary source for $27B potential five-year Meta agreement structure. |
 | Nebius / Microsoft Form 6-K | 2026-05-15 | Primary source for $17.4B to $19.4B Microsoft contract terms and financing contingency language. |
 | Motley Fool Q1 2026 earnings transcript | 2026-05-15 | Secondary transcript source for management's updated 2026 capex guidance and full-year guidance language. |
+| SEC Q1 2026 Form 6-K | 2026-05-20 | Primary filing source for Q1 operating review, unaudited financial statements, customer advances, deferred revenue, cash, debt, and capex context. |
 | Nebius newsroom and investor hub check | 2026-05-20 | No new material company-level update found after the 2026-05-15 archive refresh. |
 | StockAnalysis NBIS overview / forecast and NVIDIA Q1 FY2027 call readthrough | 2026-05-21 | Sources for post-Q1 market signal, analyst target context, and AI cloud demand readthrough. |
+| Nebius newsroom, StockAnalysis, MarketBeat, and Benzinga | 2026-05-23 | Sources for valuation-stretch update, analyst target dispersion, and official no-new-company-milestone check. |
 
 ## Downstream Handoff
 
@@ -70,5 +72,5 @@ research_target:
     - GOOGL
     - NVDA
   archive_path: research/targets/nbis
-  resolved_at: 2026-05-21T23:27:00+08:00
+  resolved_at: 2026-05-24T11:30:00+08:00
 ```
