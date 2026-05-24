@@ -42,6 +42,7 @@
 | Yahoo Finance CBRS quote page | 2026-05-15 | Market quote source for first-day close and day range. |
 | Reuters/Investing.com IPO debut report | 2026-05-15 | Secondary source for opening trade and fully diluted valuation estimate. |
 | Cerebras closing release, 2026-05-15 SEC 8-K, and early quote snapshots | 2026-05-20 | Primary company and SEC sources for IPO close status, full underwriter-option exercise, final 34.5M-share offering, and about $6.4B gross proceeds; third-party sources for time-sensitive early post-debut market context. |
+| StockAnalysis, SEC S-8 / reoffer prospectus, MIAX Options, and secondary S&P fast-track reports | 2026-05-23 | Sources for post-IPO volatility, resale-registration overhang context, CBRS options launch, and reported index-eligibility technical catalyst. |
 
 ## Downstream Handoff
 
@@ -65,5 +66,5 @@ research_target:
     - GOOGL
     - AMZN
   archive_path: research/targets/cbrs
-  resolved_at: 2026-05-20T21:20:35+08:00
+  resolved_at: 2026-05-23T16:15:00+08:00
 ```
