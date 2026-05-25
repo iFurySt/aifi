@@ -10,9 +10,9 @@ the user is warranted.
 ## Scope
 
 - In scope: `anthropic`, `cbrs`, `intc`, `nbis`, `nok`, `nvda`, and `openai`
-  target artifacts; private notification decision records under
-  `research/notification-log/`; email delivery through `skills/resend-email-cli`
-  if the evidence crosses a useful alert threshold.
+  target artifacts; notification decision notes in this plan and task history;
+  email delivery through `skills/resend-email-cli` if the evidence crosses a
+  useful alert threshold.
 - Out of scope: trade execution, personalized allocation instructions, and broad
   model rebuilds unrelated to this monitoring run.
 
@@ -20,11 +20,10 @@ the user is warranted.
 
 - Relevant docs: `docs/REPO_COLLAB_GUIDE.md`, `docs/ARCHITECTURE.md`,
   `docs/design-docs/core-beliefs.md`, `docs/PLANS_GUIDE.md`,
-  `docs/NOTIFICATION_LOG.md`.
-- Relevant paths: `research/targets/*`, `research/notification-log/`,
-  `skills/resend-email-cli/`.
+  `docs/HISTORY_GUIDE.md`.
+- Relevant paths: `research/targets/*`, `skills/resend-email-cli/`.
 - Constraints: prefer official filings, company IR, and primary sources; mark
-  secondary-source signals clearly; keep notification logs out of git.
+  secondary-source signals clearly.
 
 ## Risks
 
@@ -45,12 +44,12 @@ the user is warranted.
 - Commands: `git status --short`; source-specific link checks where practical.
 - Manual checks: each new artifact has a date, source list, and incremental
   interpretation relative to the existing target archive.
-- Observability checks: private decision log records sent/skipped rationale.
+- Observability checks: this plan records sent/skipped rationale.
 
 ## Progress Log
 
-- [x] Read repository collaboration, architecture, core-belief, notification,
-  history, quality, and planning docs.
+- [x] Read repository collaboration, architecture, core-belief, history,
+  quality, and planning docs.
 - [x] Inventory tracked targets and current latest artifacts.
 - [x] Review incremental sources for all tracked targets.
 - [x] Update target artifacts for material findings found so far: CBRS

@@ -46,6 +46,3 @@ venv/
 # Misc generated artifacts
 *.swp
 *.swo
-
-# Private research notification records
-research/notification-log/

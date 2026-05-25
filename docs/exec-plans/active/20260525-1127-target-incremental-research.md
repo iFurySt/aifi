@@ -11,8 +11,9 @@ decision-relevant.
 ## Scope
 
 - In scope: `anthropic`, `cbrs`, `intc`, `nbis`, `nok`, `nvda`, and `openai`.
-- In scope: target indexes, profiles, new evidence notes, notification decision
-  records, sent-message records, and task history entries as needed.
+- In scope: target indexes, profiles, new evidence notes, notification
+  decisions in this plan and task history, and sent-message summaries as
+  needed.
 - Out of scope: personalized trade instructions, brokerage execution, and
   unsourced thesis changes.
 
@@ -20,13 +21,10 @@ decision-relevant.
 
 - Relevant docs: `docs/REPO_COLLAB_GUIDE.md`, `docs/ARCHITECTURE.md`,
   `docs/design-docs/core-beliefs.md`, `docs/HISTORY_GUIDE.md`,
-  `docs/QUALITY_SCORE.md`, `docs/PLANS_GUIDE.md`,
-  `docs/NOTIFICATION_LOG.md`.
-- Relevant code paths: `research/targets/*`, `research/notification-log/`,
-  `skills/resend-email-cli/`.
-- Constraints: notification logs are private and gitignored; public research
-  changes must preserve source provenance; email sends use Resend CLI from
-  `aifi@ifuryst.com` to `ifuryst@gmail.com`.
+  `docs/QUALITY_SCORE.md`, `docs/PLANS_GUIDE.md`.
+- Relevant code paths: `research/targets/*`, `skills/resend-email-cli/`.
+- Constraints: public research changes must preserve source provenance; email
+  sends use Resend CLI from `aifi@ifuryst.com` to `ifuryst@gmail.com`.
 
 ## Risks
 
@@ -50,12 +48,12 @@ decision-relevant.
 - Commands: `git status --short --branch`, repository-native checks if any code
   changes are made, and `git diff --check` for markdown hygiene.
 - Manual checks: source links are present, target indexes point to new evidence,
-  and notification decision records match sent emails.
+  and notification decision notes match sent emails.
 
 ## Progress Log
 
 - [x] Read repository collaboration, architecture, core-belief, history,
-  quality, plan, and notification docs.
+  quality, and plan docs.
 - [x] Inventory tracked targets under `research/targets/`.
 - [x] Review `anthropic`: no new material official update after Project
   Glasswing / Claude Security evidence.
@@ -71,8 +69,7 @@ decision-relevant.
   disclosure after Q1 FY2027 materials.
 - [x] Review `openai`: no new material official release-note/news update after
   the 2026-05-24 enterprise product-surface archive.
-- [x] Record notification decision: no email sent; private decision log saved
-  at `research/notification-log/decisions/2026-05-25-run.md`.
+- [x] Record notification decision in this plan: no email sent.
 - [x] Rename generic 2026-05-25 evidence filenames to topic-specific slugs and
   update target index links.
 - [x] Commit completed updates locally; remote push remains pending.
@@ -83,6 +80,9 @@ decision-relevant.
   several targets, possible commits, and a notification decision.
 - 2026-05-25: Do not send a user email based solely on no-new-material checks
   and short post-earnings / holiday price digestion; preserve the decision in
-  the private notification log instead.
+  this plan instead.
+- 2026-05-25: `research/notification-log/` was retired as a private local
+  artifact store; future notification decisions should live in execution plans,
+  histories, or target evidence where appropriate.
 - 2026-05-25: Rename generic `incremental-check` evidence files to
   topic-specific slugs so indexes are legible without opening each artifact.

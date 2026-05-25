@@ -6,14 +6,14 @@ Review every tracked target in `research/targets`, identify material incremental
 
 ## Scope
 
-- In scope: `anthropic`, `cbrs`, `intc`, `nbis`, `nok`, `nvda`, `openai`; target evidence/index/profile updates; notification decision/sent logs.
+- In scope: `anthropic`, `cbrs`, `intc`, `nbis`, `nok`, `nvda`, `openai`; target evidence/index/profile updates; notification decision notes in this plan and task history.
 - Out of scope: portfolio trade instructions, target prices, and unsupported brokerage actions.
 
 ## Context
 
-- Relevant docs: `docs/REPO_COLLAB_GUIDE.md`, `docs/ARCHITECTURE.md`, `docs/design-docs/core-beliefs.md`, `docs/HISTORY_GUIDE.md`, `docs/QUALITY_SCORE.md`, `docs/NOTIFICATION_LOG.md`.
-- Relevant paths: `research/targets/*`, `research/notification-log/`, `skills/resend-email-cli/`.
-- Constraints: use high-confidence source attribution, preserve private notification logs outside git when gitignored, and do not expose secrets or Resend credentials.
+- Relevant docs: `docs/REPO_COLLAB_GUIDE.md`, `docs/ARCHITECTURE.md`, `docs/design-docs/core-beliefs.md`, `docs/HISTORY_GUIDE.md`, `docs/QUALITY_SCORE.md`.
+- Relevant paths: `research/targets/*`, `skills/resend-email-cli/`.
+- Constraints: use high-confidence source attribution and do not expose secrets or Resend credentials.
 
 ## Risks
 
@@ -24,7 +24,7 @@ Review every tracked target in `research/targets`, identify material incremental
 
 ## Milestones
 
-1. Confirm current target baselines and prior notification state.
+1. Confirm current target baselines and prior notification context.
 2. Search sources and update target archives one target at a time.
 3. Commit and push each completed repository update slice.
 4. Record the run-level notification decision and send only if warranted.
@@ -32,7 +32,7 @@ Review every tracked target in `research/targets`, identify material incremental
 ## Validation
 
 - Commands: `git status --short --branch`, targeted markdown review, `git diff --check`, `git push origin main`.
-- Manual checks: compare each new item against target index reusable facts and existing notification logs.
+- Manual checks: compare each new item against target index reusable facts and execution-plan decision notes.
 - Observability checks: Resend CLI `whoami --json` before any outbound email.
 
 ## Progress Log

@@ -24,7 +24,6 @@ If a code or workflow change makes a doc stale, update the doc in the same task.
 - `docs/PRODUCT_SENSE.md`: user value, product constraints, and feature prioritization heuristics.
 - `docs/RELIABILITY.md`: runtime guardrails, observability expectations, and operational readiness.
 - `docs/SECURITY.md`: secure defaults for research data, source handling, secrets, and external integrations.
-- `docs/NOTIFICATION_LOG.md`: private notification decision and sent-message log conventions.
 - `docs/CICD.md`: current CI scope and when to add heavier automation.
 - `docs/FRONTEND.md`: UI/system guidance if the repo includes a frontend surface.
 - `CONTRIBUTING.md`: pull request expectations and default review checklist.
