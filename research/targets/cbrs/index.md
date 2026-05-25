@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-25 | [Post-IPO catalyst check](evidence/market/2026-05-25-post-ipo-catalyst-check.md) | Company IR, IPO close, S-8, and options-listing surfaces checked; no new post-IPO operating or filing catalyst found. |
 | 2026-05-23 | [Post-IPO volatility update](evidence/market/2026-05-23-post-ipo-volatility-update.md) | Options launch, S-8 / reoffer resale registration, secondary S&P fast-track eligibility reports, and 2026-05-22 drawdown from the first-day premium. |
 | 2026-05-20 | [IPO close and early market snapshot](evidence/news/2026-05-20-ipo-close-market-snapshot.md) | IPO close confirmation from company and SEC sources plus early post-debut trading/valuation context. |
 | 2026-05-15 | [IPO dashboard](artifacts/charts/2026-05-15-cerebras-ipo-dashboard.html) | Static HTML chart dashboard for IPO, revenue quality, customer concentration, and RPO timing. |
@@ -15,7 +16,7 @@
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical CBRS identity, listing status, peer set. | None material for first pass. |
 | Filings / financials | [IPO prospectus evidence](evidence/filings/2026-05-15-ipo-prospectus.md) | IPO terms, 2025 financials, RPO, OpenAI/AWS details, customer concentration, risks. | Needs first post-IPO 10-Q or earnings call. |
-| News / market signals | [Post-IPO volatility update](evidence/market/2026-05-23-post-ipo-volatility-update.md) and [IPO close and early market snapshot](evidence/news/2026-05-20-ipo-close-market-snapshot.md) | IPO close confirmation, first sessions after listing, options launch, S-8 / reoffer resale registration, secondary S&P fast-track eligibility reports, and early valuation / float-risk caution. | Needs mature trading history, primary index-change confirmation, resale / ownership filings, short-interest context, and first public earnings report. |
+| News / market signals | [Post-IPO catalyst check](evidence/market/2026-05-25-post-ipo-catalyst-check.md), [Post-IPO volatility update](evidence/market/2026-05-23-post-ipo-volatility-update.md), and [IPO close and early market snapshot](evidence/news/2026-05-20-ipo-close-market-snapshot.md) | IPO close confirmation, first sessions after listing, options launch, S-8 / reoffer resale registration, secondary S&P fast-track eligibility reports, early valuation / float-risk caution, and a 2026-05-25 no-new-catalyst check. | Needs mature trading history, primary index-change confirmation, resale / ownership filings, short-interest context, and first public earnings report. |
 | Competitors | [competitive landscape](evidence/competitors/2026-05-15-competitive-landscape.md) | NVIDIA, AMD, hyperscaler custom silicon, and inference startup framing. | Needs benchmark/cost-per-token comparison. |
 | Thesis | [Investment thesis frame](artifacts/decision-frames/2026-05-15-thesis-frame.md) | Bull/bear case, key numbers, upgrade/downgrade triggers. | Needs valuation scenario model. |
 | Charts | [IPO dashboard](artifacts/charts/2026-05-15-cerebras-ipo-dashboard.html) | Browser-native HTML visual summary of the first-pass research. | Needs refresh after first public earnings report. |
@@ -40,6 +41,7 @@
 - StockAnalysis showed CBRS at $256.78 at the 2026-05-22 close, down 8.90% on the day, with a $55.24B market cap and 28.90M float.
 - The 2026-05-22 close remained about 38.8% above the $185 IPO price but about 17.4% below the $311.07 first-day close.
 - Cerebras filed a Form S-8 / reoffer prospectus on 2026-05-14 covering 6,808,018 Class A shares that may be offered by certain current or former directors, officers, employees, and consultants, subject to lock-up / market standoff mechanics and other limits.
+- A 2026-05-25 company / filing surface check found no new post-IPO operating update, definitive AWS agreement, OpenAI capacity update, or earnings timetable after the 2026-05-23 archive refresh.
 
 ## Open Questions
 

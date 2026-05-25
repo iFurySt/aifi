@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-25 | [AI networking catalyst check](evidence/market/2026-05-25-ai-networking-catalyst-check.md) | Nokia newsroom, consensus, AI lab, and market-holiday surfaces checked; no new company catalyst after the AI networking lab update. |
 | 2026-05-23 | [AI re-rating market signal](evidence/market/2026-05-23-ai-re-rating-market-signal.md) | NOK / NOKIA high-volume 2026-05-22 rally and AI-infrastructure narrative shift after the AI Networking Innovation Lab update. |
 | 2026-05-22 | [AI networking lab update](evidence/news/2026-05-22-ai-networking-lab-update.md) | Sunnyvale AI Networking Innovation Lab, Nokia Validated Designs, and multi-vendor partner validation for AI data-center networking. |
 | 2026-05-21 | [Defense 5G update](evidence/news/2026-05-21-defense-5g-update.md) | Nokia Federal Solutions / Lockheed Martin modular 5G solution for U.S. and allied defense forces. |
@@ -21,7 +22,7 @@
 | Filings | Referenced in [financial snapshot](evidence/market/2026-05-13-financial-snapshot.md) | FY 2025 report and Q1 2026 interim report summarized. | No line-by-line 20-F filing review yet. |
 | Earnings | Referenced in [financial snapshot](evidence/market/2026-05-13-financial-snapshot.md) | FY 2025 and Q1 2026 results summarized. | Earnings-call transcript/Q&A not archived. |
 | Financials | [consensus and product update](evidence/market/2026-05-20-consensus-and-product-update.md) | Revenue, margins, cash flow, guidance, valuation context, and post-Q1 consensus baseline. | No full peer valuation table. |
-| Market signals | [AI re-rating market signal](evidence/market/2026-05-23-ai-re-rating-market-signal.md) and [financial snapshot](evidence/market/2026-05-13-financial-snapshot.md) | May 2026 price, market cap, EV, valuation ratios, and 2026-05-22 high-volume re-rating signal tied to AI-infrastructure narrative. | No full historical price CSV or options / short-interest snapshot. |
+| Market signals | [AI networking catalyst check](evidence/market/2026-05-25-ai-networking-catalyst-check.md), [AI re-rating market signal](evidence/market/2026-05-23-ai-re-rating-market-signal.md), and [financial snapshot](evidence/market/2026-05-13-financial-snapshot.md) | May 2026 price, market cap, EV, valuation ratios, 2026-05-22 high-volume re-rating signal tied to AI-infrastructure narrative, and a 2026-05-25 no-new-company-catalyst check. | No full historical price CSV or options / short-interest snapshot. |
 | Risks | [risk diligence](evidence/risks/2026-05-13-risk-diligence.md) | Valuation, competition, capex cycle, reported profit conversion, M&A/IP/FX risks. | No legal docket review. |
 | Competitors | [profile.md](profile.md) | Initial peer set. | No full competitive landscape note. |
 | Charts | [HTML analysis](artifacts/charts/2026-05-13-nokia-html-analysis.html) | Growth bars, segment bars, profit-quality bars, valuation range, timeline, risk matrix. | Static charts only; no live market data. |
@@ -43,6 +44,7 @@
 - Nokia launched an AI Networking Innovation Lab in Sunnyvale to test Nokia Validated Designs and co-innovate with AI/cloud partners including AMD, Lenovo, Nscale, Supermicro, Keysight, VIAVI, Weka, and Everpure.
 - Nokia investor relations showed NOKIA at EUR 13.26, up 9.55%, and NYSE NOK at USD 15.47, up 9.10%, in its 2026-05-22 exchange snapshots.
 - StockAnalysis showed NYSE NOK volume of 126,154,838 shares on 2026-05-22, with the ADS closing at USD 15.47, up 9.10%.
+- A 2026-05-25 Nokia newsroom check found no new named AI data-center design win, guidance change, or financial target update after the AI Networking Innovation Lab archive refresh.
 
 ## Open Questions
 

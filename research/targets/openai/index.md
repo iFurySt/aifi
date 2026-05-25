@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-25 | [No-new-material update](evidence/news/2026-05-25-no-new-material-update.md) | Official OpenAI release-note/news surfaces checked; no new material product, funding, infrastructure, or partner update after the 2026-05-24 archive refresh. |
 | 2026-05-24 | [Enterprise product surface update](evidence/news/2026-05-24-enterprise-product-surface-update.md) | Codex admin analytics, plugin sharing defaults, EKM workspace agents, Intune mobile deployment, GPT-5.5 default, and ChatGPT for Excel / Google Sheets. |
 | 2026-05-22 | [Codex platform update](evidence/news/2026-05-22-codex-platform-update.md) | Appshots, Goal mode GA, in-app browser annotations, and locked computer use for longer-running Codex workflows. |
 | 2026-05-21 | [Security and sensitive-conversation update](evidence/news/2026-05-21-security-and-safety-update.md) | TanStack supply-chain incident response, no evidence of user-data access, app certificate updates, and sensitive-conversation safety improvements. |
@@ -17,7 +18,7 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical private-company target and peer set. | No public ticker. |
-| News / company updates | [Enterprise product surface update](evidence/news/2026-05-24-enterprise-product-surface-update.md), [Codex platform update](evidence/news/2026-05-22-codex-platform-update.md), [Security and sensitive-conversation update](evidence/news/2026-05-21-security-and-safety-update.md), [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md), [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md), and [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, Enterprise/Edu Codex automation surfaces, Appshots, Goal mode, browser annotations, locked computer use, Codex admin analytics, plugin sharing, EKM workspace agents, Intune mobile deployment, C2PA/SynthID, verification tooling, personal-finance UX, spreadsheet integrations, enterprise Teams sync, TanStack incident response, and sensitive-conversation safety updates. | Needs broader legal/regulatory evidence and enterprise security-control evidence. |
+| News / company updates | [No-new-material update](evidence/news/2026-05-25-no-new-material-update.md), [Enterprise product surface update](evidence/news/2026-05-24-enterprise-product-surface-update.md), [Codex platform update](evidence/news/2026-05-22-codex-platform-update.md), [Security and sensitive-conversation update](evidence/news/2026-05-21-security-and-safety-update.md), [ChatGPT product monetization update](evidence/news/2026-05-21-chatgpt-product-monetization-update.md), [Content provenance update](evidence/news/2026-05-20-content-provenance-update.md), and [Codex enterprise update](evidence/news/2026-05-20-codex-enterprise-update.md) | Funding baseline plus AWS, Dell hybrid/on-prem Codex, Enterprise/Edu Codex automation surfaces, Appshots, Goal mode, browser annotations, locked computer use, Codex admin analytics, plugin sharing, EKM workspace agents, Intune mobile deployment, C2PA/SynthID, verification tooling, personal-finance UX, spreadsheet integrations, enterprise Teams sync, TanStack incident response, sensitive-conversation safety updates, and a 2026-05-25 no-new-material check. | Needs broader legal/regulatory evidence and enterprise security-control evidence. |
 | Financials | Included in company snapshot | Funding valuation and revenue-mix facts. | No audited public financials. |
 | Competitors | Partial | Peer set in profile and memo. | Needs deeper peer economics comparison. |
 | Risks | Partial | Risk register in memo. | Needs dedicated IP, safety, governance, and regulatory diligence. |
@@ -44,6 +45,7 @@
 - OpenAI Enterprise / Edu release notes said eligible Enterprise workspaces with Enterprise Key Management can use ChatGPT workspace agents with templates, scheduled runs, Slack-connected usage, version history, and analytics.
 - OpenAI added ChatGPT for Intune for iOS and iPadOS for Enterprise organizations using Microsoft Intune and Entra.
 - OpenAI release notes said GPT-5.5 Instant became ChatGPT's default model and ChatGPT for Excel / Google Sheets became globally available.
+- A 2026-05-25 official-surface check found no new material OpenAI product, funding, infrastructure, or partner update after the 2026-05-24 archive refresh.
 
 ## Open Questions
 

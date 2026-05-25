@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-25 | [Post-Q1 catalyst check](evidence/market/2026-05-25-post-q1-catalyst-check.md) | Official newsroom and market-holiday check; no new capacity, financing, customer, or 6-K disclosure found after Q1 filing availability. |
 | 2026-05-24 | [Q1 Form 6-K availability](evidence/filings/2026-05-24-q1-6k-availability.md) | SEC filing availability closes the Q1 filing gap and confirms customer-advance-supported operating cash flow / deferred revenue context. |
 | 2026-05-23 | [Valuation stretch update](evidence/market/2026-05-23-valuation-stretch-update.md) | NBIS post-Q1 re-rating extended above average displayed analyst target; no new official company milestone found. |
 | 2026-05-21 | [Post-Q1 market signal](evidence/market/2026-05-21-post-q1-market-signal.md) | Post-Q1 stock reaction, analyst target context, and NVIDIA AI-cloud / ACIE readthrough. |
@@ -18,7 +19,7 @@
 | Target profile | [profile.md](profile.md) | Canonical NBIS identity, business scope, peer set. | Needs periodic refresh after any segment or ownership changes. |
 | Filings / financials | [Q1 Form 6-K availability](evidence/filings/2026-05-24-q1-6k-availability.md) and [Q1 and SEC evidence](evidence/filings/2026-05-15-q1-and-sec-baseline.md) | Q1 2026 revenue, adjusted EBITDA, capex, balance sheet, cash flow, 20-F risk baseline, and SEC-filed Q1 operating review / unaudited financial statements. | Needs later 6-K/earnings update and details on actual financed capex. |
 | News / strategic contracts | [No-new-material-update check](evidence/news/2026-05-20-no-new-material-update.md) | Microsoft, Meta, NVIDIA, Pennsylvania AI factory, inference-stack acquisitions; no newer material company update found. | Needs confirmed capacity delivery and customer revenue recognition schedule. |
-| Market signals | [Valuation stretch update](evidence/market/2026-05-23-valuation-stretch-update.md) and [Post-Q1 market signal](evidence/market/2026-05-21-post-q1-market-signal.md) | Post-Q1 stock strength, analyst target revisions / dispersion, NVIDIA AI-cloud / ACIE demand readthrough, and valuation-stretch warning after the latest quote moved above average displayed targets. | Needs current full consensus model and valuation sensitivity. |
+| Market signals | [Post-Q1 catalyst check](evidence/market/2026-05-25-post-q1-catalyst-check.md), [Valuation stretch update](evidence/market/2026-05-23-valuation-stretch-update.md), and [Post-Q1 market signal](evidence/market/2026-05-21-post-q1-market-signal.md) | Post-Q1 stock strength, analyst target revisions / dispersion, NVIDIA AI-cloud / ACIE demand readthrough, valuation-stretch warning after the latest quote moved above average displayed targets, and a 2026-05-25 no-new-company-milestone check. | Needs current full consensus model and valuation sensitivity. |
 | Competitors | [Competitive landscape](evidence/competitors/2026-05-15-competitive-landscape.md) | Neocloud, hyperscaler, NVIDIA ecosystem, and differentiation framing. | Needs price/performance and utilization comparison versus CoreWeave/OCI/AWS/GCP. |
 | Risks | [Risk register](evidence/risks/2026-05-15-risk-register.md) | Financing, capex, customer concentration, power, GPU supply, price compression, legacy/restructuring risks. | Needs covenant, maturity, and cash waterfall model once financing details are filed. |
 | Thesis | [Investment thesis frame](artifacts/decision-frames/2026-05-15-thesis-frame.md) | Bull/bear case, key numbers, watch items, and comparison to Cerebras. | Needs valuation scenario model and sensitivity to utilization / gross margin. |
@@ -45,6 +46,7 @@
 - Recent displayed analyst targets remained highly dispersed, including Citigroup at $287, Citizens at $270, DA Davidson at $250, and Morgan Stanley at $144.
 - Nebius furnished its Q1 2026 Form 6-K on 2026-05-20, including operating and financial review plus unaudited condensed consolidated financial statements for the period ended 2026-03-31.
 - The Q1 2026 Form 6-K showed $3.198B of advances received under customer agreements as the main driver of $2.258B of operating cash flow, reinforcing the need to track deferred revenue conversion and service delivery quality.
+- A 2026-05-25 official newsroom check found no new Nebius capacity, financing, customer, NVIDIA, Microsoft / Meta, Pennsylvania, Missouri, or 6-K disclosure after the 2026-05-24 archive update.
 
 ## Open Questions
 

@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-25 | [No-new-material update](evidence/news/2026-05-25-no-new-material-update.md) | Official newsroom, research, and webinar surfaces checked; no new material post-Glasswing update found. |
 | 2026-05-23 | [Project Glasswing update](evidence/news/2026-05-23-project-glasswing-update.md) | Mythos Preview security findings, Claude Security public beta, and release-constraint watch item for high-cyber-capability models. |
 | 2026-05-21 | [Legal vertical and policy risk update](evidence/news/2026-05-21-legal-and-policy-risk-update.md) | Claude for Legal connectors/plugins plus policy and U.S. government-access risk watch items. |
 | 2026-05-20 | [Enterprise and platform update](evidence/news/2026-05-20-enterprise-platform-update.md) | SpaceX compute capacity, finance-agent templates, PwC and KPMG rollouts, Stainless acquisition. |
@@ -14,7 +15,7 @@
 | Area | Latest file | Coverage | Gaps |
 | --- | --- | --- | --- |
 | Target profile | [profile.md](profile.md) | Canonical private-company target and peer set. | No public ticker. |
-| News / company updates | [Project Glasswing update](evidence/news/2026-05-23-project-glasswing-update.md), [legal vertical and policy risk update](evidence/news/2026-05-21-legal-and-policy-risk-update.md), and [enterprise and platform update](evidence/news/2026-05-20-enterprise-platform-update.md) | Funding baseline plus SpaceX compute, finance agents, legal connectors/plugins, PwC and KPMG rollouts, Stainless acquisition, Project Glasswing, Claude Security public beta, and policy/government-access risk. | Needs compute economics, Claude Security monetization evidence, and outcome evidence from regulated vertical deployments. |
+| News / company updates | [No-new-material update](evidence/news/2026-05-25-no-new-material-update.md), [Project Glasswing update](evidence/news/2026-05-23-project-glasswing-update.md), [legal vertical and policy risk update](evidence/news/2026-05-21-legal-and-policy-risk-update.md), and [enterprise and platform update](evidence/news/2026-05-20-enterprise-platform-update.md) | Funding baseline plus SpaceX compute, finance agents, legal connectors/plugins, PwC and KPMG rollouts, Stainless acquisition, Project Glasswing, Claude Security public beta, policy/government-access risk, and a 2026-05-25 no-new-material check. | Needs compute economics, Claude Security monetization evidence, and outcome evidence from regulated vertical deployments. |
 | Financials | Included in company snapshot | Funding valuation and disclosed run-rate revenue. | No audited public financials or margin data. |
 | Competitors | Partial | Peer set in profile and memo. | Needs deeper peer economics comparison. |
 | Risks | Partial | Risk register in memo. | Needs dedicated safety, IP, and platform-dependence diligence. |
@@ -34,6 +35,7 @@
 - U.S. government-access friction around Anthropic's AI-use restrictions remains a policy and litigation watch item.
 - Anthropic said Project Glasswing and about 50 partners used Claude Mythos Preview to find more than 10,000 high- or critical-severity vulnerabilities across systemically important software.
 - Anthropic said Claude Security is in public beta for Claude Enterprise customers and that Claude Opus 4.7 had been used to patch more than 2,100 vulnerabilities in three weeks.
+- A 2026-05-25 official-surface check found no new material Anthropic update after the already-archived Project Glasswing / Claude Security evidence.
 
 ## Open Questions
 

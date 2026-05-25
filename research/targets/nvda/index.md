@@ -4,6 +4,7 @@
 
 | Date | Artifact | Notes |
 | --- | --- | --- |
+| 2026-05-25 | [Post-earnings valuation digestion](evidence/market/2026-05-25-post-earnings-valuation-digestion.md) | Post-earnings price digestion and Memorial Day market-closure check; no new NVIDIA operating disclosure after Q1 FY2027 materials. |
 | 2026-05-21 | [Q1 FY2027 10-Q filing review](evidence/filings/2026-05-21-q1-fy2027-10-q.md) | SEC 10-Q availability, supply-commitment follow-up, and indirect AI research customer concentration watch item. |
 | 2026-05-21 | [Q1 FY2027 call readthrough](evidence/earnings/2026-05-21-q1-fy2027-call-readthrough.md) | Hyperscale / ACIE split, AI cloud and sovereign readthrough, networking, China/H200, and supply-commitment follow-up. |
 | 2026-05-21 | [Post-earnings market snapshot](evidence/market/2026-05-21-post-earnings-market-snapshot.md) | Consensus comparison, muted after-hours stock reaction, rough valuation math, and market-readthrough framing. |
@@ -24,7 +25,7 @@
 | News | [Q1 FY2027 results](evidence/news/2026-05-21-q1-fy2027-results.md) | Post-release catalyst follow-up, cross-target readthrough, and notification-worthy interpretation. | Needs 10-Q and current market/valuation snapshot. |
 | Competitors | [competitive landscape](evidence/competitors/2026-05-11-competitive-landscape.md) | AMD, Broadcom, custom silicon, hyperscaler context. | No complete peer financial table. |
 | Filings | [Q1 FY2027 10-Q filing review](evidence/filings/2026-05-21-q1-fy2027-10-q.md) | FY2026 10-K risk and concentration highlights plus Q1 FY2027 10-Q availability, supply-commitment, and indirect customer-concentration follow-up. | Needs full line-by-line 10-Q table extraction. |
-| Market signals | [Post-earnings market snapshot](evidence/market/2026-05-21-post-earnings-market-snapshot.md) | Closing price, after-hours reaction, market-cap framing, and rough valuation ratios from secondary-source market snapshots. | Needs live quote, volume, options/implied-move, short-interest, and full consensus-estimate context. |
+| Market signals | [Post-earnings valuation digestion](evidence/market/2026-05-25-post-earnings-valuation-digestion.md) and [Post-earnings market snapshot](evidence/market/2026-05-21-post-earnings-market-snapshot.md) | Closing price, after-hours reaction, market-cap framing, rough valuation ratios from secondary-source market snapshots, 2026-05-22 post-earnings pullback, and Memorial Day market-closure context. | Needs live quote, volume, options/implied-move, short-interest, and full consensus-estimate context. |
 
 ## Reusable Facts
 
@@ -52,6 +53,7 @@
 - Search-indexed SEC 10-Q text says one AI research and deployment company contributed a meaningful amount of Q1 FY2027 revenue by purchasing cloud services from NVIDIA customers.
 - AP reported NVDA closed at $223.47 on 2026-05-20 and dipped slightly after hours to $222.12, with market value around $5.4T.
 - At an approximately $5.4T market capitalization, NVDA traded around 21x rough TTM revenue after Q1 FY2027 and around 15x annualized Q2 FY2027 revenue guidance.
+- FinanceCharts showed NVDA closing at $215.33 on 2026-05-22, down 1.90% on the day, indicating post-earnings valuation digestion rather than a new operating disclosure.
 
 ## Open Questions
 
