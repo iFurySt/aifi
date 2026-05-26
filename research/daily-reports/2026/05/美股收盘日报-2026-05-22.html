@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>美股收盘日报｜2026-05-22</title>
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --paper: #fffdf8;
+      --ink: #202725;
+      --muted: #68706a;
+      --line: #ded5c8;
+      --up: #2f6f52;
+      --down: #9b4a45;
+      --amber: #9a7635;
+      --blue: #405f7d;
+      --slate: #33413f;
+      --soft: #efe6d8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: #315f7f; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 30px 0 52px;
+    }
+    header {
+      min-height: 470px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap: 28px;
+      align-items: end;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 26px;
+    }
+    .eyebrow {
+      color: #83503e;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 12px 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 7vw, 78px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+    h1 .report-date { display: block; white-space: nowrap; }
+    h2 {
+      margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 12px; }
+    .summary {
+      max-width: 820px;
+      font-size: 18px;
+      color: #37403c;
+    }
+    .session-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 18px 38px rgba(36, 28, 21, .08);
+    }
+    .session-card dl {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 0 14px;
+      margin: 0;
+    }
+    .session-card dt, .session-card dd {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .session-card dt {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .session-card dd { margin: 0; }
+    .session-card dt:last-of-type, .session-card dd:last-of-type { border-bottom: 0; }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .kpi {
+      min-height: 132px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .kpi-label { color: var(--muted); font-size: 13px; }
+    .kpi-value {
+      margin: 8px 0 7px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+    .kpi-note { color: var(--muted); font-size: 13px; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .lead-list {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin: 16px 0 0;
+    }
+    .lead-list div, .panel, .chart-card, .callout, .theme {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .lead-list div { padding: 12px; }
+    .lead-list b { display: block; margin-bottom: 4px; }
+    .lead-list span { color: var(--muted); font-size: 13px; }
+    .reader-map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .reader-map div {
+      min-height: 108px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-top: 4px solid var(--blue);
+    }
+    .reader-map div:nth-child(2) { border-top-color: var(--up); }
+    .reader-map div:nth-child(3) { border-top-color: var(--amber); }
+    .reader-map div:nth-child(4) { border-top-color: var(--down); }
+    .reader-map b { display: block; margin-bottom: 5px; }
+    .reader-map span { color: var(--muted); font-size: 13px; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .grid-2 > *, .grid-3 > * { min-width: 0; }
+    .chart-card, .panel, .callout, .theme { padding: 16px; }
+    .panel, .chart-card, .callout, .theme { min-width: 0; }
+    .chart-title {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr) 78px;
+      gap: 10px;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .bar-track {
+      height: 16px;
+      background: #e7ded1;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--up);
+    }
+    .bar.downbar { background: var(--down); }
+    .bar-row strong, .bar-row span {
+      font: 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sw {
+      width: 11px;
+      height: 11px;
+      border-radius: 3px;
+      display: inline-block;
+      background: var(--blue);
+    }
+    .sw.up { background: var(--up); }
+    .sw.down { background: var(--down); }
+    .sw.amber { background: var(--amber); }
+    .sw.soft { background: var(--soft); border: 1px solid var(--line); }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+    }
+    .panel > table { min-width: 0; }
+    th, td {
+      padding: 11px 12px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      background: #f0e7da;
+      color: #3e4944;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #f3ece1;
+      border: 1px solid var(--line);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .risk-high { color: #8a332e; font-weight: 800; }
+    .risk-mid { color: #87601e; font-weight: 800; }
+    .callout {
+      border-left: 4px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+    }
+    .timeline {
+      display: grid;
+      gap: 10px;
+    }
+    .timeline div {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 12px;
+      padding: 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .timeline b { color: var(--blue); }
+    .theme { min-height: 156px; border-top: 4px solid var(--blue); }
+    .theme:nth-child(2) { border-top-color: var(--up); }
+    .theme:nth-child(3) { border-top-color: var(--amber); }
+    .theme:nth-child(4) { border-top-color: var(--down); }
+    .heatmap {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .heat {
+      min-height: 92px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .heat b, .score b { display: block; margin-bottom: 5px; }
+    .heat span, .score span { color: var(--muted); font-size: 13px; }
+    .pos { background: #e7f1ea; border-color: #c8ddcf; }
+    .neg { background: #f4e5e2; border-color: #e1c7c2; }
+    .neu { background: #f2eadf; }
+    .calendar-heat {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 5px;
+      margin-top: 14px;
+    }
+    .day {
+      min-height: 44px;
+      border-radius: 6px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .day.hot { background: #e7f1ea; border-color: #c8ddcf; color: var(--up); font-weight: 800; }
+    .day.warn { background: #f2eadf; border-color: #dfc88f; color: var(--amber); font-weight: 800; }
+    .day.risk { background: #f4e5e2; border-color: #e1c7c2; color: var(--down); font-weight: 800; }
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .score {
+      min-height: 118px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+    }
+    .matrix div {
+      min-height: 88px;
+      padding: 12px;
+      background: var(--paper);
+    }
+    .matrix .head {
+      min-height: auto;
+      background: #f0e7da;
+      color: #3e4944;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .svg-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+    }
+    .svg-card svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .axis, .gridline { fill: none; stroke: #d8cfc2; stroke-width: 1; }
+    .chart-line {
+      fill: none;
+      stroke: var(--blue);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .chart-area { fill: #dce6eb; opacity: .75; }
+    .chart-dot { fill: var(--blue); stroke: var(--paper); stroke-width: 2; }
+    .chart-dot.up { fill: var(--up); }
+    .chart-dot.down { fill: var(--down); }
+    .chart-dot.amber { fill: var(--amber); }
+    .chart-text {
+      fill: var(--muted);
+      font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .chart-label {
+      fill: #31403b;
+      font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+    }
+    .hist { fill: #e3d7c8; }
+    .hist.tail { fill: var(--down); opacity: .82; }
+    .kde {
+      fill: none;
+      stroke: var(--amber);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .curve {
+      fill: none;
+      stroke: var(--amber);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .curve.alt {
+      stroke: var(--up);
+      stroke-width: 2.5;
+      stroke-dasharray: 6 6;
+    }
+    .bubble { fill: rgba(64, 95, 125, .78); stroke: var(--paper); stroke-width: 2; }
+    .bubble.up { fill: rgba(47, 111, 82, .82); }
+    .bubble.down { fill: rgba(155, 74, 69, .82); }
+    .treemap {
+      display: grid;
+      grid-template-columns: 1.25fr .95fr .7fr;
+      grid-template-rows: 108px 88px;
+      gap: 7px;
+      margin-top: 14px;
+    }
+    .tree-box {
+      padding: 12px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      color: #1f2b27;
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+    .tree-box b { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 25px; line-height: 1; }
+    .tree-box span { display: block; margin-top: 5px; color: #43504b; font-size: 13px; }
+    .tree-box.big { grid-row: span 2; background: #dcebe1; border-color: #c8ddcf; }
+    .tree-box.blue { background: #dce6eb; }
+    .tree-box.amber { background: #eee2c8; }
+    .tree-box.risk { background: #f2dedb; }
+    .flow {
+      fill: none;
+      stroke-linecap: round;
+      opacity: .82;
+    }
+    .flow.green { stroke: #2f6f52; }
+    .flow.blue { stroke: #405f7d; }
+    .flow.amber { stroke: #9a7635; }
+    .node { fill: #fffdf8; stroke: #cfc5b7; stroke-width: 1; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin: 7px 0; }
+    .source-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer {
+      padding-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 880px) {
+      .page { width: min(100% - 20px, 720px); padding-top: 18px; }
+      header { grid-template-columns: 1fr; min-height: auto; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lead-list, .reader-map, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .heatmap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .score-grid, .matrix { grid-template-columns: 1fr; }
+      .treemap { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .tree-box.big { grid-row: span 1; }
+      h1 { font-size: 44px; }
+    }
+    @media (max-width: 560px) {
+      .kpis { grid-template-columns: 1fr; }
+      .session-card dl { grid-template-columns: 1fr; }
+      .session-card dt { padding-bottom: 0; border-bottom: 0; }
+      h1 { font-size: 34px; }
+      h1 .report-date { font-size: 31px; }
+      h2 { font-size: 25px; }
+      .summary { font-size: 16px; }
+      th, td { padding: 10px; }
+      .svg-card { overflow-x: auto; }
+      .svg-card svg { width: 760px; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <div class="eyebrow">US Market Close Daily</div>
+        <h1>美股收盘日报<span class="report-date">2026-05-22</span></h1>
+        <p class="summary">节前最后一个交易日，美股呈现 risk-on 普涨：道指创历史新高，标普连涨第 8 周，小盘和半导体显著跑赢。长端利率回落、AI 资本开支乐观、中东缓和预期和企业财报支撑共同推升风险偏好。结构上，NVDA 财报后 sell the news，但资金扩散到半导体、AI 电力、工业和医疗，市场宽度好于权重股表现。</p>
+      </div>
+      <aside class="session-card">
+        <dl>
+          <dt>Session</dt><dd>US close</dd>
+          <dt>Date</dt><dd>2026-05-22</dd>
+          <dt>Holiday</dt><dd>5 月 25 日 Memorial Day 休市</dd>
+          <dt>Market State</dt><dd>宽度扩散 + AI 硬件内部轮动</dd>
+        </dl>
+      </aside>
+    </header>
+
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-label">Dow Jones</div><div class="kpi-value up">+0.58%</div><div class="kpi-note">50,579.70，历史新高收盘</div></div>
+      <div class="kpi"><div class="kpi-label">S&P 500</div><div class="kpi-value up">+0.37%</div><div class="kpi-note">连涨第 8 周</div></div>
+      <div class="kpi"><div class="kpi-label">SOX</div><div class="kpi-value up">+1.99%</div><div class="kpi-note">半导体领涨，资金扩散</div></div>
+      <div class="kpi"><div class="kpi-label">VIX</div><div class="kpi-value">16.70</div><div class="kpi-note">低位下行，避险情绪回落</div></div>
+    </div>
+
+    <section id="s0">
+      <h2>0. 今日一句话总结</h2>
+      <div class="lead-list">
+        <div><b>大盘上涨</b><span>道指 +0.58%，标普 +0.37%，纳指 +0.19%。</span></div>
+        <div><b>风险偏好</b><span>小盘、半导体和周期股领涨，VIX 维持低位。</span></div>
+        <div><b>主线</b><span>AI 硬件从 NVDA 向网络、电力、光通信扩散。</span></div>
+        <div><b>暗流</b><span>UMich 消费者信心 44.8 显著低于预期。</span></div>
+        <div><b>状态</b><span>节前 risk-on 普涨，接近高位震荡边缘。</span></div>
+      </div>
+      <div class="reader-map" aria-label="今日市场状态图">
+        <div><b>一眼看方向</b><span>指数上行、板块普涨、VIX 低位，市场当天更像 risk-on。</span></div>
+        <div><b>看懂主线</b><span>不是 NVDA 一只股带动，而是半导体、小盘、工业和电力一起扩散。</span></div>
+        <div><b>老手看确认</b><span>真正关键是 SOX 是否继续跑赢 QQQ、IWM 是否站稳，以及 10Y 是否低于 4.6%。</span></div>
+        <div><b>别忽略风险</b><span>消费者信心 44.8 与标普 8 周连涨，意味着节后容易进入高位震荡。</span></div>
+      </div>
+    </section>
+
+    <section id="s1">
+      <h2>1. 大盘表现总览</h2>
+      <div class="grid-2">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>技术状态</th></tr></thead>
+            <tbody>
+              <tr><td>Dow Jones</td><td>50,579.70</td><td class="up">+0.58%</td><td>历史新高收盘</td></tr>
+              <tr><td>S&P 500</td><td>7,473.47</td><td class="up">+0.37%</td><td>连涨第 8 周</td></tr>
+              <tr><td>Nasdaq Composite</td><td>26,343.97</td><td class="up">+0.19%</td><td>被 NVDA 拖累，跑输大盘</td></tr>
+              <tr><td>Russell 2000</td><td>2,869.23</td><td class="up">+0.91%</td><td>跑赢，risk-on 信号</td></tr>
+              <tr><td>SOX</td><td>12,202.54</td><td class="up">+1.99%</td><td>半导体强势领涨</td></tr>
+              <tr><td>VIX</td><td>16.70</td><td>-0.36%</td><td>低位下行</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">主要指数当日表现</div>
+          <div class="bar-row"><strong>SOX</strong><div class="bar-track"><div class="bar" style="width:100%"></div></div><span>+1.99%</span></div>
+          <div class="bar-row"><strong>RUT</strong><div class="bar-track"><div class="bar" style="width:46%"></div></div><span>+0.91%</span></div>
+          <div class="bar-row"><strong>DJIA</strong><div class="bar-track"><div class="bar" style="width:29%"></div></div><span>+0.58%</span></div>
+          <div class="bar-row"><strong>SPX</strong><div class="bar-track"><div class="bar" style="width:19%"></div></div><span>+0.37%</span></div>
+          <div class="bar-row"><strong>IXIC</strong><div class="bar-track"><div class="bar" style="width:10%"></div></div><span>+0.19%</span></div>
+          <div class="bar-row"><strong>VIX</strong><div class="bar-track"><div class="bar downbar" style="width:18%"></div></div><span>-0.36%</span></div>
+        </div>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">节前 risk-on 路径（定性折线，非精确点位）</div>
+        <svg viewBox="0 0 820 260" role="img" aria-label="Qualitative intraday risk-on path">
+          <path class="gridline" d="M72 60H770M72 120H770M72 180H770"></path>
+          <path class="axis" d="M72 32V210H770"></path>
+          <path class="chart-area" d="M72 180L210 138L350 118L495 92L640 72L770 78L770 210L72 210Z"></path>
+          <path class="chart-line" d="M72 180L210 138L350 118L495 92L640 72L770 78"></path>
+          <circle class="chart-dot" cx="72" cy="180" r="5"></circle>
+          <circle class="chart-dot" cx="210" cy="138" r="5"></circle>
+          <circle class="chart-dot" cx="350" cy="118" r="5"></circle>
+          <circle class="chart-dot" cx="495" cy="92" r="5"></circle>
+          <circle class="chart-dot" cx="640" cy="72" r="5"></circle>
+          <circle class="chart-dot" cx="770" cy="78" r="5"></circle>
+          <text class="chart-text" x="54" y="222">盘前</text>
+          <text class="chart-text" x="190" y="222">开盘</text>
+          <text class="chart-text" x="330" y="222">午盘</text>
+          <text class="chart-text" x="468" y="222">尾盘</text>
+          <text class="chart-text" x="612" y="222">收盘</text>
+          <text class="chart-text" x="742" y="222">盘后</text>
+          <text class="chart-text" x="12" y="64">强</text>
+          <text class="chart-text" x="12" y="184">弱</text>
+          <text class="chart-text" x="430" y="48">利率回落 + 宽度扩散</text>
+        </svg>
+        <p class="source-note">该折线用于展示盘中风险偏好变化方向；精确分钟级指数点位本期暂无可靠数据。</p>
+      </div>
+      <p class="source-note">来源：TheStreet、Yahoo Finance。日内高低点与精确成交量本期暂无可靠数据。</p>
+    </section>
+
+    <section id="s2">
+      <h2>2. 盘中走势复盘</h2>
+      <div class="timeline">
+        <div><b>盘前</b><span>NVDA Q1 FY2027 财报后续发酵，但市场关注点转向利率回落、中东缓和和 AI 资本开支扩散。</span></div>
+        <div><b>开盘</b><span>高开后道指、标普和半导体同步走强，避险情绪下降。</span></div>
+        <div><b>午盘</b><span>买盘扩散到医疗、工业、金融和小盘；NVDA 承压但板块内其他 AI 硬件接力。</span></div>
+        <div><b>尾盘</b><span>道指创历史新高收盘，标普逼近前高，小盘继续跑赢。</span></div>
+        <div><b>盘后</b><span>美股进入 Memorial Day 长周末，盘后无显著异动。</span></div>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>驱动因素</th><th>方向</th><th>作用资产</th><th>证据 / 结果</th></tr></thead>
+          <tbody>
+            <tr><td>长端利率回落</td><td class="up">利好</td><td>小盘、科技、成长</td><td>10Y 回到 4.56%，Russell 2000 +0.91%</td></tr>
+            <tr><td>AI capex 乐观</td><td class="up">利好</td><td>半导体、网络、电力</td><td>SOX +1.99%，AI 电力链维持强势</td></tr>
+            <tr><td>NVDA 财报后兑现</td><td class="down">局部利空</td><td>GPU 龙头、纳指权重</td><td>NVDA -1.86%，纳指跑输标普</td></tr>
+            <tr><td>UMich 消费者信心</td><td class="down">潜伏风险</td><td>可选消费、宏观情绪</td><td>44.8，低于预期 48.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s3">
+      <h2>3. 宏观环境</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>美债与 Fed</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>项目</th><th>读数</th><th>解读</th></tr></thead>
+              <tbody>
+                <tr><td>2Y</td><td>4.13%</td><td>降息预期仍低</td></tr>
+                <tr><td>10Y</td><td>4.56%</td><td>回到 4.5%-4.6% 关键带，缓解科技股估值压力</td></tr>
+                <tr><td>6 月 FOMC</td><td>不变 88.2%</td><td>CME FedWatch 显示短期降息概率极低</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>美元、大宗、加密</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>资产</th><th>价格</th><th>含义</th></tr></thead>
+              <tbody>
+                <tr><td>DXY</td><td>约 99.32</td><td>中性偏弱，未压制风险资产</td></tr>
+                <tr><td>黄金</td><td>周内下跌约 30-35 美元/盎司</td><td>避险需求下降</td></tr>
+                <tr><td>WTI / Brent</td><td>约 94.47 / 100.21 美元</td><td>中东缓和预期压制油价风险溢价</td></tr>
+                <tr><td>BTC</td><td>76,660.17 美元</td><td>风险偏好正常</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">宏观脉冲图：利率、Fed 概率、PMI 与消费者信心</div>
+        <svg viewBox="0 0 920 420" role="img" aria-label="Macro rates and growth dashboard">
+          <line class="gridline" x1="70" y1="72" x2="510" y2="72"></line>
+          <line class="gridline" x1="70" y1="132" x2="510" y2="132"></line>
+          <line class="gridline" x1="70" y1="192" x2="510" y2="192"></line>
+          <path class="axis" d="M70 42V250H510"></path>
+          <text class="chart-text" x="24" y="76">4.8%</text>
+          <text class="chart-text" x="24" y="136">4.4%</text>
+          <text class="chart-text" x="24" y="196">4.0%</text>
+          <text class="chart-text" x="94" y="276">2Y</text>
+          <text class="chart-text" x="282" y="276">10Y</text>
+          <text class="chart-text" x="454" y="276">压力带</text>
+          <path class="curve alt" d="M110 128C190 120 248 104 330 94S430 88 488 90"></path>
+          <path class="curve" d="M110 172C198 166 260 112 330 96S430 72 488 70"></path>
+          <circle class="chart-dot amber" cx="110" cy="172" r="6"></circle>
+          <circle class="chart-dot amber" cx="330" cy="96" r="6"></circle>
+          <text class="chart-label" x="88" y="154">2Y 4.13%</text>
+          <text class="chart-label" x="304" y="78">10Y 4.56%</text>
+          <text class="chart-text" x="72" y="28">收益率曲线：长端仍高，但回落缓解估值压力</text>
+
+          <g transform="translate(585 42)">
+            <text class="chart-text" x="0" y="0">6 月 FOMC 概率</text>
+            <rect x="0" y="24" width="260" height="22" rx="11" fill="#eadfce"></rect>
+            <rect x="0" y="24" width="229" height="22" rx="11" fill="#405f7d"></rect>
+            <text class="chart-label" x="0" y="78">不变 88.2%</text>
+            <text class="chart-text" x="158" y="78">降息概率很低</text>
+          </g>
+
+          <g transform="translate(585 156)">
+            <text class="chart-text" x="0" y="0">增长 / 情绪对照</text>
+            <rect x="0" y="42" width="76" height="98" rx="4" fill="#2f6f52"></rect>
+            <rect x="112" y="72" width="76" height="68" rx="4" fill="#9b4a45"></rect>
+            <line class="axis" x1="0" y1="140" x2="230" y2="140"></line>
+            <text class="chart-label" x="6" y="34">PMI 55.3</text>
+            <text class="chart-label" x="112" y="64">UMich 44.8</text>
+            <text class="chart-text" x="0" y="170">制造业扩张与消费信心走弱并存</text>
+          </g>
+
+          <g transform="translate(78 326)">
+            <rect x="0" y="0" width="150" height="44" rx="8" fill="#e7f1ea" stroke="#c8ddcf"></rect>
+            <rect x="172" y="0" width="150" height="44" rx="8" fill="#f2eadf" stroke="#dfc88f"></rect>
+            <rect x="344" y="0" width="150" height="44" rx="8" fill="#f4e5e2" stroke="#e1c7c2"></rect>
+            <text class="chart-label" x="18" y="27">利率：缓和</text>
+            <text class="chart-label" x="190" y="27">Fed：偏鹰</text>
+            <text class="chart-label" x="362" y="27">消费：转弱</text>
+          </g>
+        </svg>
+        <p class="source-note">读图结论：当天 risk-on 的支撑来自长端利率回落和 PMI 扩张；但 Fed 不变概率高、消费者信心下滑，限制了“无脑追涨”的确定性。</p>
+      </div>
+      <div class="callout">
+        <strong>当日经济数据：</strong>UMich 5 月消费者信心终值 44.8，低于预期 48.2，是本日报最重要的潜伏风险；S&P Flash 制造业 PMI 55.3 维持扩张，对工业和道指形成支撑。
+      </div>
+      <div class="score-grid" style="margin-top:14px">
+        <div class="score"><b>利率压力</b><span>中性偏松：10Y 低于 4.6% 压力带，但仍处高位。</span></div>
+        <div class="score"><b>Fed 预期</b><span>偏鹰：6 月不变概率 88.2%，降息暂不构成催化。</span></div>
+        <div class="score"><b>通胀 / 消费</b><span>分化：PMI 强，但消费者信心明显走弱。</span></div>
+        <div class="score"><b>风险资产</b><span>偏强：美元偏弱、黄金回落、BTC 高位整理。</span></div>
+      </div>
+    </section>
+
+    <section id="s4">
+      <h2>4. 板块表现</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>排名</th><th>板块</th><th>ETF</th><th>当日</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>医疗保健</td><td>XLV</td><td class="up">+1.19%</td><td>领涨，防御与成长共振</td></tr>
+            <tr><td>2</td><td>信息技术</td><td>XLK</td><td class="up">+1.02%</td><td>半导体推动</td></tr>
+            <tr><td>3</td><td>工业</td><td>XLI</td><td class="up">+0.73%</td><td>PMI 强支撑</td></tr>
+            <tr><td>4</td><td>金融</td><td>XLF</td><td class="up">+0.41%</td><td>周期风险偏好改善</td></tr>
+            <tr><td>5</td><td>必需消费</td><td>XLP</td><td class="up">+0.17%</td><td>温和跟涨</td></tr>
+            <tr><td>-</td><td>通信服务</td><td>XLC</td><td class="down">-0.54%</td><td>唯一下跌板块</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">11 个板块中 10 个上涨，说明当日不是少数权重股拉指数，而是宽度扩散。</p>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">板块强弱条形图：科技不是唯一主角</div>
+        <svg viewBox="0 0 900 330" role="img" aria-label="Sector performance horizontal bar chart">
+          <line class="axis" x1="188" y1="32" x2="188" y2="278"></line>
+          <line class="gridline" x1="330" y1="32" x2="330" y2="278"></line>
+          <line class="gridline" x1="472" y1="32" x2="472" y2="278"></line>
+          <line class="gridline" x1="614" y1="32" x2="614" y2="278"></line>
+          <text class="chart-text" x="182" y="304">0%</text>
+          <text class="chart-text" x="462" y="304">+0.8%</text>
+          <text class="chart-text" x="604" y="304">+1.2%</text>
+          <text class="chart-text" x="18" y="62">医疗 XLV</text>
+          <rect x="188" y="42" width="426" height="22" rx="11" fill="#2f6f52"></rect>
+          <text class="chart-label" x="632" y="59">+1.19%</text>
+          <text class="chart-text" x="18" y="102">科技 XLK</text>
+          <rect x="188" y="82" width="365" height="22" rx="11" fill="#405f7d"></rect>
+          <text class="chart-label" x="570" y="99">+1.02%</text>
+          <text class="chart-text" x="18" y="142">工业 XLI</text>
+          <rect x="188" y="122" width="261" height="22" rx="11" fill="#9a7635"></rect>
+          <text class="chart-label" x="466" y="139">+0.73%</text>
+          <text class="chart-text" x="18" y="182">金融 XLF</text>
+          <rect x="188" y="162" width="147" height="22" rx="11" fill="#7f8c6b"></rect>
+          <text class="chart-label" x="352" y="179">+0.41%</text>
+          <text class="chart-text" x="18" y="222">必需消费 XLP</text>
+          <rect x="188" y="202" width="61" height="22" rx="11" fill="#b8aa91"></rect>
+          <text class="chart-label" x="266" y="219">+0.17%</text>
+          <text class="chart-text" x="18" y="262">通信服务 XLC</text>
+          <rect x="112" y="242" width="76" height="22" rx="11" fill="#9b4a45"></rect>
+          <text class="chart-label" x="204" y="259">-0.54%</text>
+        </svg>
+        <p class="source-note">新手看颜色：绿色/蓝色越长越强；老手看结构：XLV、XLI 与 IWM 同强，说明当天不是单一科技权重行情。</p>
+      </div>
+      <div class="heatmap" style="margin-top:14px">
+        <div class="heat pos"><b>XLV</b><span>+1.19%<br>医疗领涨</span></div>
+        <div class="heat pos"><b>XLK</b><span>+1.02%<br>科技受半导体推动</span></div>
+        <div class="heat pos"><b>XLI</b><span>+0.73%<br>工业受 PMI 支撑</span></div>
+        <div class="heat pos"><b>XLF</b><span>+0.41%<br>周期跟涨</span></div>
+        <div class="heat pos"><b>XLP</b><span>+0.17%<br>防御温和上涨</span></div>
+        <div class="heat neg"><b>XLC</b><span>-0.54%<br>唯一走弱板块</span></div>
+      </div>
+    </section>
+
+    <section id="s5">
+      <h2>5. 主题与风格表现</h2>
+      <div class="grid-3">
+        <article class="theme"><h3>AI 硬件</h3><p>SOX +1.99%，但 NVDA -1.86%，显示 GPU 龙头利好钝化，资金向 AVGO、AMD、MRVL、ANET、光通信和服务器链扩散。</p></article>
+        <article class="theme"><h3>AI 电力 / 数据中心</h3><p>CEG、VST、OKLO 等 5 月已受 PJM 数据中心-电厂配对和核电政策催化推动，仍是 AI capex 外溢主线。</p></article>
+        <article class="theme"><h3>小盘与等权</h3><p>Russell 2000 +0.91% 跑赢，配合 10/11 板块上涨，说明 risk-on 不只集中在大型科技。</p></article>
+      </div>
+      <div class="treemap" aria-label="主题强度矩形图">
+        <div class="tree-box big"><span><b>AI 硬件扩散</b><span>SOX +1.99%，主线仍强但从 NVDA 单点扩散。</span></span></div>
+        <div class="tree-box blue"><span><b>网络 / 光通信</b><span>AI capex 的第二层接力，需看 SMH 继续跑赢。</span></span></div>
+        <div class="tree-box amber"><span><b>小盘 / 工业</b><span>利率回落与 PMI 扩张共振。</span></span></div>
+        <div class="tree-box"><span><b>AI 电力</b><span>政策与数据中心用电仍有催化。</span></span></div>
+        <div class="tree-box risk"><span><b>软件待确认</b><span>CRM 等财报决定补涨能否成立。</span></span></div>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>主题</th><th>方向</th><th>强度</th><th>确认信号</th><th>待验证数据</th></tr></thead>
+          <tbody>
+            <tr><td>半导体 / AI 硬件</td><td class="up">向上</td><td>高</td><td>SOX +1.99%，板块跑赢</td><td>SMH / SOXX 成交量</td></tr>
+            <tr><td>AI 电力 / 核电</td><td class="up">向上</td><td>中高</td><td>PJM、数据中心电力、核电政策催化</td><td>CEG / VST / OKLO 当日涨跌</td></tr>
+            <tr><td>软件 / SaaS</td><td>待确认</td><td>中</td><td>利率回落利好估值</td><td>IGV、CRM 财报反应</td></tr>
+            <tr><td>小盘 / 等权</td><td class="up">向上</td><td>中高</td><td>Russell 2000 +0.91%</td><td>RSP 相对 SPY</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s6">
+      <h2>6. 市场宽度与参与度</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>宽度判断</h3>
+          <div class="bar-row"><strong>板块上涨</strong><div class="bar-track"><div class="bar" style="width:91%"></div></div><span>10/11</span></div>
+          <div class="bar-row"><strong>小盘参与</strong><div class="bar-track"><div class="bar" style="width:75%"></div></div><span>强</span></div>
+          <div class="bar-row"><strong>恐慌水平</strong><div class="bar-track"><div class="bar" style="width:25%"></div></div><span>低</span></div>
+          <div class="bar-row"><strong>数据完整</strong><div class="bar-track"><div class="bar downbar" style="width:45%"></div></div><span>中</span></div>
+        </div>
+        <div class="panel">
+          <h3>内部指标</h3>
+          <table>
+            <tbody>
+              <tr><td>VIX</td><td>16.70</td><td>低位下行</td></tr>
+              <tr><td>Put/Call</td><td>暂无可靠数据</td><td>-</td></tr>
+              <tr><td>MOVE / Credit</td><td>暂无可靠数据</td><td>-</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">市场宽度仪表盘：上涨广度强，但部分内部数据缺口仍在</div>
+        <svg viewBox="0 0 900 320" role="img" aria-label="Market breadth dashboard">
+          <g transform="translate(72 52)">
+            <circle cx="90" cy="90" r="70" fill="none" stroke="#eadfce" stroke-width="24"></circle>
+            <path d="M90 20 A70 70 0 1 1 50 148" fill="none" stroke="#2f6f52" stroke-width="24" stroke-linecap="round"></path>
+            <text class="chart-label" x="54" y="88">10 / 11</text>
+            <text class="chart-text" x="44" y="112">板块上涨</text>
+          </g>
+          <g transform="translate(326 52)">
+            <circle cx="90" cy="90" r="70" fill="none" stroke="#eadfce" stroke-width="24"></circle>
+            <path d="M90 20 A70 70 0 0 1 156 118" fill="none" stroke="#405f7d" stroke-width="24" stroke-linecap="round"></path>
+            <text class="chart-label" x="62" y="88">IWM</text>
+            <text class="chart-text" x="48" y="112">小盘跑赢</text>
+          </g>
+          <g transform="translate(580 52)">
+            <circle cx="90" cy="90" r="70" fill="none" stroke="#eadfce" stroke-width="24"></circle>
+            <path d="M90 20 A70 70 0 0 1 132 34" fill="none" stroke="#9b4a45" stroke-width="24" stroke-linecap="round"></path>
+            <text class="chart-label" x="56" y="88">缺口</text>
+            <text class="chart-text" x="34" y="112">A/D 与新高新低</text>
+          </g>
+          <text class="chart-text" x="80" y="250">结论：宽度信号足够支持 risk-on，但还不能用涨跌家数和新高新低做完全确认。</text>
+        </svg>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>宽度项目</th><th>当前读数</th><th>解释</th><th>可靠性</th></tr></thead>
+          <tbody>
+            <tr><td>板块上涨数</td><td>10 / 11</td><td>普涨，非少数权重拉动</td><td>较高</td></tr>
+            <tr><td>小盘相对表现</td><td>Russell 2000 +0.91%</td><td>risk-on 扩散到利率敏感资产</td><td>较高</td></tr>
+            <tr><td>均线参与度</td><td>暂无可靠数据</td><td>需 Finviz / Barchart 补齐</td><td>缺口</td></tr>
+            <tr><td>涨跌家数 / 新高新低</td><td>暂无可靠数据</td><td>不能用定量 A/D 比确认</td><td>缺口</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s7">
+      <h2>7. 技术面分析</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>标的</th><th>状态</th><th>关键支撑</th><th>关键压力</th><th>判断</th></tr></thead>
+          <tbody>
+            <tr><td>SPY / S&P 500</td><td>连涨 8 周，逼近前高</td><td>7,400 / 7,350</td><td>7,500</td><td>突破确认前追高性价比下降</td></tr>
+            <tr><td>QQQ / Nasdaq</td><td>上涨但被 NVDA 拖累</td><td>26,000</td><td>26,500</td><td>看 NVDA 能否企稳</td></tr>
+            <tr><td>IWM</td><td>小盘转强</td><td>2,850</td><td>2,900</td><td>站稳代表宽度延续</td></tr>
+            <tr><td>SOX / SMH</td><td>半导体领涨</td><td>12,000</td><td>12,500</td><td>板块强于单一 GPU 龙头</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">技术位铁路图：离压力越近，追高性价比越低</div>
+        <svg viewBox="0 0 900 340" role="img" aria-label="Technical support resistance rail chart">
+          <line class="gridline" x1="150" y1="54" x2="820" y2="54"></line>
+          <line class="gridline" x1="150" y1="124" x2="820" y2="124"></line>
+          <line class="gridline" x1="150" y1="194" x2="820" y2="194"></line>
+          <line class="gridline" x1="150" y1="264" x2="820" y2="264"></line>
+          <text class="chart-label" x="30" y="60">SPX</text>
+          <line class="axis" x1="180" y1="54" x2="760" y2="54"></line>
+          <rect x="268" y="44" width="96" height="20" rx="10" fill="#e7f1ea"></rect>
+          <circle class="chart-dot up" cx="704" cy="54" r="8"></circle>
+          <text class="chart-text" x="178" y="36">7,350</text>
+          <text class="chart-text" x="688" y="36">7,473</text>
+          <text class="chart-text" x="742" y="36">7,500</text>
+
+          <text class="chart-label" x="30" y="130">QQQ / 纳指</text>
+          <line class="axis" x1="180" y1="124" x2="760" y2="124"></line>
+          <rect x="220" y="114" width="118" height="20" rx="10" fill="#f2eadf"></rect>
+          <circle class="chart-dot amber" cx="612" cy="124" r="8"></circle>
+          <text class="chart-text" x="178" y="106">26,000</text>
+          <text class="chart-text" x="586" y="106">26,344</text>
+          <text class="chart-text" x="742" y="106">26,500</text>
+
+          <text class="chart-label" x="30" y="200">IWM / 小盘</text>
+          <line class="axis" x1="180" y1="194" x2="760" y2="194"></line>
+          <rect x="180" y="184" width="170" height="20" rx="10" fill="#e7f1ea"></rect>
+          <circle class="chart-dot up" cx="684" cy="194" r="8"></circle>
+          <text class="chart-text" x="178" y="176">2,850</text>
+          <text class="chart-text" x="664" y="176">2,869</text>
+          <text class="chart-text" x="742" y="176">2,900</text>
+
+          <text class="chart-label" x="30" y="270">SOX</text>
+          <line class="axis" x1="180" y1="264" x2="760" y2="264"></line>
+          <rect x="180" y="254" width="180" height="20" rx="10" fill="#dce6eb"></rect>
+          <circle class="chart-dot up" cx="520" cy="264" r="8"></circle>
+          <text class="chart-text" x="178" y="246">12,000</text>
+          <text class="chart-text" x="498" y="246">12,203</text>
+          <text class="chart-text" x="742" y="246">12,500</text>
+        </svg>
+        <p class="source-note">绿色区是支撑带，右侧是压力位；SPX 和 IWM 已接近压力，SOX 更像强势延续，QQQ 仍受 NVDA 拖累。</p>
+      </div>
+    </section>
+
+    <section id="s8">
+      <h2>8. 重点个股新闻与异动</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>分组</th><th>重点</th><th>判断</th></tr></thead>
+          <tbody>
+            <tr><td>七巨头</td><td>NVDA -1.86%，AAPL +1.38%，MSFT +0.22%</td><td>权重内部分化，道指受益更明显，纳指被 NVDA 拖累。</td></tr>
+            <tr><td>AI 硬件 / 半导体</td><td>SOX +1.99% 跑赢 NVDA</td><td>资金从 GPU 龙头向板块内其他硬件、网络和光通信扩散。</td></tr>
+            <tr><td>软件 / SaaS</td><td>IGV 与个股数据暂无可靠数据</td><td>利率回落利好估值，但软件补涨需等 CRM 等财报确认。</td></tr>
+            <tr><td>AI 电力 / 数据中心</td><td>CEG、VST、OKLO、SMR 月内强势</td><td>PJM、数据中心用电和核电政策仍是催化线索。</td></tr>
+            <tr><td>其他异动</td><td>暂无可靠数据</td><td>等待节后财报和评级数据补充。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-2" style="margin-top:14px">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>七巨头</th><th>涨跌</th><th>作用</th><th>后续观察</th></tr></thead>
+            <tbody>
+              <tr><td>NVDA</td><td class="down">-1.86%</td><td>拖累纳指</td><td>50 日均线与财报后成交量</td></tr>
+              <tr><td>AAPL</td><td class="up">+1.38%</td><td>支撑道指</td><td>能否延续防御成长属性</td></tr>
+              <tr><td>MSFT</td><td class="up">+0.22%</td><td>平稳跟随</td><td>420 美元附近是否站稳</td></tr>
+              <tr><td>GOOGL / META</td><td>暂无可靠数据</td><td>疑似拖累 XLC</td><td>补齐通信服务弱势原因</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>AI 链条</th><th>状态</th><th>代表股</th><th>结论</th></tr></thead>
+            <tbody>
+              <tr><td>GPU 龙头</td><td class="down">消化</td><td>NVDA</td><td>利好兑现，不代表主线结束</td></tr>
+              <tr><td>网络 / 光通信</td><td class="up">接力</td><td>AVGO / MRVL / ANET / LITE</td><td>AI capex 扩散核心</td></tr>
+              <tr><td>服务器 / 液冷</td><td>待确认</td><td>SMCI / DELL / VRT</td><td>需补齐个股行情</td></tr>
+              <tr><td>电力 / 核电</td><td class="up">强势</td><td>CEG / VST / OKLO / SMR</td><td>政策与数据中心电力驱动</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="s9">
+      <h2>9. 财报日历与财报解读</h2>
+      <div class="grid-2">
+        <div class="panel"><h3>已公布</h3><p>NVDA 于 5 月 20 日公布 Q1 FY2027 财报，5 月 22 日股价 -1.86%，呈现“超预期但 sell the news”格局。完整收入、EPS、数据中心收入和指引细节需在正式财报解读中补齐。</p></div>
+        <div class="panel"><h3>下周关注</h3><p>CRM、HPE、DELL、CRWD、SNOW、MDB 等可能成为软件、AI 服务器和数据云主线确认信号。具体财报日期本期暂无可靠数据，节后需补齐。</p></div>
+      </div>
+      <div class="calendar-heat" aria-label="财报热力日历">
+        <div class="day">Mon<br>休市</div>
+        <div class="day warn">Tue<br>软件预热</div>
+        <div class="day hot">Wed<br>CRM</div>
+        <div class="day hot">Thu<br>HPE / DELL</div>
+        <div class="day warn">Fri<br>CRWD / SNOW</div>
+        <div class="day">Sat</div>
+        <div class="day">Sun</div>
+      </div>
+      <p class="source-note">日历颜色表示“对主线验证的重要度”，不是精确涨跌预测；具体发布时间仍需节后核实。</p>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>日期</th><th>公司</th><th>关注点</th><th>可能影响</th><th>数据状态</th></tr></thead>
+          <tbody>
+            <tr><td>2026-05-20</td><td>NVDA</td><td>Q1 FY2027 结果、数据中心收入、Q2 指引</td><td>AI 硬件、数据中心、电力链</td><td>需补完整财报表</td></tr>
+            <tr><td>下周</td><td>CRM</td><td>软件需求、AI Agent monetization、指引</td><td>IGV / SaaS 补涨确认</td><td>日期待核</td></tr>
+            <tr><td>下周</td><td>HPE / DELL</td><td>AI 服务器订单与毛利</td><td>服务器、液冷、数据中心供应链</td><td>日期待核</td></tr>
+            <tr><td>下周</td><td>CRWD / SNOW / MDB</td><td>安全、数据云、消费型软件预算</td><td>软件风险偏好</td><td>日期待核</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s10">
+      <h2>10. 机构观点与资金流</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>来源</th><th>观点</th><th>涉及资产</th><th>影响</th></tr></thead>
+          <tbody>
+            <tr><td>JPM 等大行</td><td>首次降息推迟至 2027 的观点延续</td><td>全市场利率</td><td>higher-for-longer 仍是估值约束</td></tr>
+            <tr><td>CEG 分析师汇总</td><td>Buy，目标价 365.73 美元</td><td>CEG</td><td>AI 电力主题仍受关注</td></tr>
+            <tr><td>ETF / 期权 / 大宗交易</td><td>暂无可靠数据</td><td>-</td><td>需节后补充</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">资金流证据漏斗：哪些结论强，哪些还只是待验证</div>
+        <svg viewBox="0 0 900 300" role="img" aria-label="Institutional view and flow evidence funnel">
+          <rect x="80" y="34" width="740" height="46" rx="8" fill="#dce6eb" stroke="#cfc5b7"></rect>
+          <rect x="150" y="102" width="600" height="46" rx="8" fill="#e7f1ea" stroke="#c8ddcf"></rect>
+          <rect x="230" y="170" width="440" height="46" rx="8" fill="#f2eadf" stroke="#dfc88f"></rect>
+          <rect x="320" y="238" width="260" height="46" rx="8" fill="#f4e5e2" stroke="#e1c7c2"></rect>
+          <text class="chart-label" x="338" y="63">已确认：指数、板块、利率、Fed 概率</text>
+          <text class="chart-label" x="316" y="131">较强证据：AI capex 扩散、小盘跑赢、SOX 跑赢</text>
+          <text class="chart-label" x="320" y="199">弱证据：ETF / 期权 / 大宗交易暂无可靠数据</text>
+          <text class="chart-label" x="358" y="267">节后补齐：真实资金流与期权定位</text>
+        </svg>
+        <p class="source-note">这一图把“能下结论”和“还需数据”的边界分开，避免把价格表现误读成已验证资金流。</p>
+      </div>
+    </section>
+
+    <section id="s11">
+      <h2>11. 板块轮动判断</h2>
+      <div class="callout">
+        <strong>当前状态：宽度扩散 + AI 硬件内部轮动。</strong>
+        资金主要流入医疗、半导体板块、工业、小盘和 AI 电力；主要承压的是 NVDA 和通信服务。AI 主线没有结束，但从单一 GPU 龙头扩散到网络、光通信、电力、数据中心和工业链条。
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">资金轮动桑基图（相对强度，非精确资金流）</div>
+        <svg viewBox="0 0 900 360" role="img" aria-label="Qualitative rotation Sankey chart">
+          <rect class="node" x="30" y="38" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="30" y="144" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="30" y="250" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="380" y="28" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="380" y="116" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="380" y="204" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="380" y="292" width="150" height="52" rx="8"></rect>
+          <rect class="node" x="710" y="82" width="160" height="52" rx="8"></rect>
+          <rect class="node" x="710" y="208" width="160" height="52" rx="8"></rect>
+
+          <path class="flow blue" stroke-width="24" d="M180 64C275 64 285 54 380 54"></path>
+          <path class="flow blue" stroke-width="16" d="M180 64C278 82 282 132 380 142"></path>
+          <path class="flow green" stroke-width="20" d="M180 170C275 170 285 230 380 230"></path>
+          <path class="flow green" stroke-width="15" d="M180 170C280 182 280 318 380 318"></path>
+          <path class="flow amber" stroke-width="18" d="M180 276C278 260 282 230 380 230"></path>
+          <path class="flow amber" stroke-width="13" d="M180 276C290 282 600 238 710 234"></path>
+          <path class="flow blue" stroke-width="18" d="M530 54C610 62 632 98 710 108"></path>
+          <path class="flow blue" stroke-width="12" d="M530 142C615 148 630 104 710 108"></path>
+          <path class="flow green" stroke-width="16" d="M530 230C610 220 630 108 710 108"></path>
+          <path class="flow amber" stroke-width="14" d="M530 318C620 312 620 250 710 234"></path>
+
+          <text class="chart-text" x="52" y="69">NVDA 兑现</text>
+          <text class="chart-text" x="52" y="176">利率回落</text>
+          <text class="chart-text" x="52" y="282">AI capex</text>
+          <text class="chart-text" x="405" y="59">半导体接力</text>
+          <text class="chart-text" x="408" y="147">网络/光通信</text>
+          <text class="chart-text" x="407" y="235">小盘/工业</text>
+          <text class="chart-text" x="405" y="323">AI 电力</text>
+          <text class="chart-text" x="744" y="113">宽度扩散</text>
+          <text class="chart-text" x="742" y="239">下周观察</text>
+        </svg>
+        <p class="source-note">线宽表示相对叙事强度：SOX 跑赢、IWM 跑赢和 AI 电力主题强势共同支持“从单一 GPU 龙头向更宽 AI capex 链扩散”的判断。</p>
+      </div>
+      <div class="matrix" style="margin-top:14px">
+        <div class="head">资金来源</div><div class="head">流向</div><div class="head">证据</div><div class="head">确认信号</div>
+        <div>NVDA / 少数权重兑现</div><div>SOX 内部其他硬件、网络、光通信</div><div>NVDA -1.86%，SOX +1.99%</div><div>SMH 继续跑赢 QQQ</div>
+        <div>长端利率压力缓解</div><div>小盘、工业、金融</div><div>10Y 4.56%，RUT +0.91%</div><div>IWM 站稳 2,850</div>
+        <div>AI capex 扩散</div><div>电力、核电、数据中心基础设施</div><div>CEG / VST / OKLO 月内强势</div><div>新电力合同与政策催化</div>
+      </div>
+    </section>
+
+    <section id="s12">
+      <h2>12. 我的重点关注股观察</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>股票</th><th>5/22 表现</th><th>当前趋势</th><th>判断</th></tr></thead>
+          <tbody>
+            <tr><td>NVDA</td><td class="down">-1.86%</td><td>财报后消化</td><td>观察 50 日均线附近是否企稳</td></tr>
+            <tr><td>AAPL</td><td class="up">+1.38%</td><td>继续强势</td><td>受益利率回落和防御属性</td></tr>
+            <tr><td>MSFT</td><td class="up">+0.22%</td><td>稳健</td><td>站稳 420 美元后观察云和 AI 叙事</td></tr>
+            <tr><td>AVGO / MRVL / ANET</td><td>推测偏强</td><td>AI 网络接力</td><td>若 SMH 继续跑赢，是主线扩散确认</td></tr>
+            <tr><td>CEG / VST / OKLO</td><td>月内强势</td><td>AI 电力主线</td><td>关注政策、PJM 和数据中心电力交易</td></tr>
+            <tr><td>CRM</td><td>暂无可靠数据</td><td>等待财报</td><td>软件补涨是否成立的关键样本</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">关注股定位图：越靠右越值得跟踪，越靠上风险越需要控制</div>
+        <svg viewBox="0 0 900 380" role="img" aria-label="Watchlist conviction and risk bubble chart">
+          <line class="gridline" x1="92" y1="78" x2="820" y2="78"></line>
+          <line class="gridline" x1="92" y1="154" x2="820" y2="154"></line>
+          <line class="gridline" x1="92" y1="230" x2="820" y2="230"></line>
+          <path class="axis" d="M92 44V306H820"></path>
+          <text class="chart-text" x="40" y="50">高风险</text>
+          <text class="chart-text" x="40" y="306">低风险</text>
+          <text class="chart-text" x="92" y="342">低确认</text>
+          <text class="chart-text" x="740" y="342">高确认</text>
+          <circle class="bubble down" cx="336" cy="100" r="28"></circle>
+          <text class="chart-label" x="306" y="105">NVDA</text>
+          <circle class="bubble up" cx="690" cy="148" r="32"></circle>
+          <text class="chart-label" x="657" y="153">SMH / SOX</text>
+          <circle class="bubble up" cx="632" cy="220" r="24"></circle>
+          <text class="chart-label" x="613" y="225">IWM</text>
+          <circle class="bubble" cx="560" cy="174" r="26"></circle>
+          <text class="chart-label" x="522" y="179">CEG / VST</text>
+          <circle class="bubble down" cx="250" cy="238" r="22"></circle>
+          <text class="chart-label" x="230" y="243">CRM</text>
+          <circle class="bubble" cx="482" cy="202" r="20"></circle>
+          <text class="chart-label" x="448" y="207">AVGO / ANET</text>
+        </svg>
+        <p class="source-note">气泡不是仓位建议：它把“当前确认度”和“需要警惕的波动风险”放在同一张图里，方便区分主线跟踪与事件等待。</p>
+      </div>
+    </section>
+
+    <section id="s13">
+      <h2>13. 明日交易计划 / 观察清单</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>宏观与大盘</h3>
+          <ul>
+            <li>10Y 能否从 4.56% 进一步回落至 4.4%-4.5%。</li>
+            <li>标普能否站稳 7,500，道指能否站稳 50,600。</li>
+            <li>VIX 是否维持 16-17 区间低波，还是节后回升。</li>
+            <li>PCE、ISM、JOLTS 是否验证 UMich 消费走弱风险。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>个股与板块</h3>
+          <ul>
+            <li>NVDA 是否企稳，AVGO / MRVL / ANET 能否继续接力。</li>
+            <li>SMH 相对 QQQ 是否继续跑赢。</li>
+            <li>IGV 和 CRM 财报能否确认软件补涨。</li>
+            <li>CEG / VST / OKLO 的 AI 电力主题是否延续。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">节后观察决策树：先看利率，再看指数确认，最后看主线接力</div>
+        <svg viewBox="0 0 900 340" role="img" aria-label="Next session observation decision tree">
+          <path class="axis" d="M176 168L344 92M176 168L344 168M176 168L344 244M500 92L704 68M500 92L704 118M500 244L704 220M500 244L704 270"></path>
+          <rect class="node" x="44" y="138" width="132" height="60" rx="10"></rect>
+          <rect class="node" x="344" y="62" width="156" height="60" rx="10"></rect>
+          <rect class="node" x="344" y="138" width="156" height="60" rx="10"></rect>
+          <rect class="node" x="344" y="214" width="156" height="60" rx="10"></rect>
+          <rect class="node" x="704" y="38" width="148" height="52" rx="10"></rect>
+          <rect class="node" x="704" y="96" width="148" height="52" rx="10"></rect>
+          <rect class="node" x="704" y="190" width="148" height="52" rx="10"></rect>
+          <rect class="node" x="704" y="248" width="148" height="52" rx="10"></rect>
+          <text class="chart-label" x="68" y="162">10Y 利率</text>
+          <text class="chart-text" x="68" y="182">4.6% 是分水岭</text>
+          <text class="chart-label" x="366" y="86">继续回落</text>
+          <text class="chart-text" x="366" y="106">看 SPX 7,500</text>
+          <text class="chart-label" x="366" y="162">横盘</text>
+          <text class="chart-text" x="366" y="182">看宽度是否维持</text>
+          <text class="chart-label" x="366" y="238">反弹上行</text>
+          <text class="chart-text" x="366" y="258">先降风险偏好</text>
+          <text class="chart-label" x="726" y="68">SMH 接力</text>
+          <text class="chart-label" x="726" y="126">CRM 验证软件</text>
+          <text class="chart-label" x="726" y="220">IWM 站稳</text>
+          <text class="chart-label" x="726" y="278">NVDA 防破位</text>
+        </svg>
+        <p class="source-note">这张图把下一个交易日的观察顺序固定下来：先判定宏观约束，再判断指数突破，最后看 AI 链条和软件是否接力。</p>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>优先级</th><th>观察对象</th><th>触发信号</th><th>含义</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>10Y 收益率</td><td>跌向 4.4%-4.5% 或重回 4.6% 上方</td><td>决定成长股估值空间</td></tr>
+            <tr><td>2</td><td>SPX 7,500</td><td>放量站稳 / 突破失败</td><td>确认趋势延续还是高位震荡</td></tr>
+            <tr><td>3</td><td>NVDA</td><td>50 日均线附近企稳 / 破位</td><td>AI 硬件情绪锚</td></tr>
+            <tr><td>4</td><td>SMH vs QQQ</td><td>SMH 继续跑赢</td><td>半导体内部轮动延续</td></tr>
+            <tr><td>5</td><td>CRM / IGV</td><td>财报后软件补涨</td><td>高切低或主线扩散确认</td></tr>
+            <tr><td>6</td><td>UMich 后续验证</td><td>PCE / ISM / JOLTS 转弱</td><td>消费风险是否从暗流变成主线</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s14">
+      <h2>14. 风险提示</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>风险维度</th><th>当前状态</th><th>风险等级</th></tr></thead>
+          <tbody>
+            <tr><td>宏观利率</td><td>10Y 4.56%，接近 4.6% 关键位</td><td class="risk-mid">中</td></tr>
+            <tr><td>市场宽度</td><td>11 板块 10 涨，宽度健康</td><td>低</td></tr>
+            <tr><td>AI 拥挤度</td><td>NVDA -1.86%，龙头 sell the news</td><td class="risk-mid">中</td></tr>
+            <tr><td>技术面</td><td>标普连涨 8 周，短线过热概率上升</td><td class="risk-high">中高</td></tr>
+            <tr><td>消费者信心</td><td>UMich 44.8，显著低于预期</td><td class="risk-high">中高</td></tr>
+            <tr><td>地缘与油价</td><td>中东缓和预期支撑 risk-on，但反复风险仍在</td><td class="risk-mid">中</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="svg-card" style="margin-top:14px">
+        <div class="chart-title">风险分布图：当天风险低，不等于节后没有尾部风险</div>
+        <svg viewBox="0 0 900 390" role="img" aria-label="Risk distribution and stress bar chart">
+          <line class="gridline" x1="58" y1="68" x2="510" y2="68"></line>
+          <line class="gridline" x1="58" y1="128" x2="510" y2="128"></line>
+          <line class="gridline" x1="58" y1="188" x2="510" y2="188"></line>
+          <path class="axis" d="M58 36V248H510"></path>
+          <rect class="hist tail" x="82" y="210" width="28" height="38"></rect>
+          <rect class="hist tail" x="116" y="190" width="28" height="58"></rect>
+          <rect class="hist" x="150" y="164" width="28" height="84"></rect>
+          <rect class="hist" x="184" y="112" width="28" height="136"></rect>
+          <rect class="hist" x="218" y="78" width="28" height="170"></rect>
+          <rect class="hist" x="252" y="56" width="28" height="192"></rect>
+          <rect class="hist" x="286" y="72" width="28" height="176"></rect>
+          <rect class="hist" x="320" y="116" width="28" height="132"></rect>
+          <rect class="hist" x="354" y="160" width="28" height="88"></rect>
+          <rect class="hist" x="388" y="198" width="28" height="50"></rect>
+          <rect class="hist tail" x="422" y="222" width="28" height="26"></rect>
+          <path class="kde" d="M82 232C138 218 160 152 206 102S272 44 318 88S382 180 450 232"></path>
+          <text class="chart-text" x="78" y="280">压力释放</text>
+          <text class="chart-text" x="236" y="280">常态波动</text>
+          <text class="chart-text" x="402" y="280">尾部风险</text>
+
+          <g transform="translate(590 44)">
+            <text class="chart-text" x="0" y="0">节后压力测试</text>
+            <text class="chart-text" x="0" y="46">利率重回 4.6%</text>
+            <rect x="128" y="32" width="168" height="18" rx="9" fill="#9b4a45"></rect>
+            <text class="chart-label" x="310" y="47">中高</text>
+            <text class="chart-text" x="0" y="92">NVDA 破位</text>
+            <rect x="128" y="78" width="136" height="18" rx="9" fill="#9a7635"></rect>
+            <text class="chart-label" x="310" y="93">中</text>
+            <text class="chart-text" x="0" y="138">消费数据转弱</text>
+            <rect x="128" y="124" width="178" height="18" rx="9" fill="#9b4a45"></rect>
+            <text class="chart-label" x="310" y="139">中高</text>
+            <text class="chart-text" x="0" y="184">宽度继续扩散</text>
+            <rect x="128" y="170" width="86" height="18" rx="9" fill="#2f6f52"></rect>
+            <text class="chart-label" x="310" y="185">缓冲</text>
+          </g>
+        </svg>
+        <p class="source-note">直观看：左侧是当天低波动环境，右侧列出能把市场从“健康轮动”推回“高位震荡”的触发器。</p>
+      </div>
+    </section>
+
+    <section id="s15">
+      <h2>15. 最终结论</h2>
+      <p><strong>今日市场结论：</strong>5 月 22 日美股节前普涨，道指创历史新高，标普连涨第 8 周，宽度和小盘参与度都偏健康。市场主线不是简单的“NVDA 拉指数”，而是 AI 资本开支向半导体、网络、电力和工业链扩散。</p>
+      <p><strong>当前市场阶段：</strong>板块轮动 + 趋势延续，接近高位震荡边缘。</p>
+      <p><strong>观察倾向：</strong>短线追高谨慎，节后重点观察标普 7,500、10Y 收益率、NVDA 企稳、CRM 财报和 UMich 消费信心的后续验证。本报告仅用于研究和复盘，不构成投资建议。</p>
+      <p><strong>最值得关注的 5 个信号：</strong>10Y 是否回落；NVDA 50 日均线；标普 7,500 突破确认；CRM 财报；PCE / ISM / JOLTS 是否验证消费走弱。</p>
+    </section>
+
+    <footer>
+      <strong>数据来源汇总：</strong>
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-22-2026">TheStreet</a>,
+      <a href="https://finance.yahoo.com/markets/live/stock-market-today-sp-500-notches-longest-weekly-win-streak-since-2023-dow-climbs-to-record-high-223454966.html">Yahoo Finance market recap</a>,
+      <a href="https://finance.yahoo.com/quote/%5ESOX/">Yahoo Finance SOX</a>,
+      <a href="https://finance.yahoo.com/quote/%5ERUT/">Yahoo Finance Russell 2000</a>,
+      <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html">CME FedWatch</a>,
+      <a href="https://investinglive.com/news/umich-may-final-consumer-sentiment-448-vs-482-expected-20260522/">InvestingLive UMich</a>,
+      <a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/02b7d9dac19f4c2f883c4eca8f785978">S&P Global PMI</a>,
+      <a href="https://seekingalpha.com/news/4595417-utility-shares-surge-on-pjms-plans-to-speed-up-data-center-timeline">Seeking Alpha</a>,
+      <a href="https://www.gurufocus.com/news/2854317/nuclear-stocks-rally-ceg-vst-oklo-surge">GuruFocus</a>.
+    </footer>
+  </main>
+</body>
+</html>
