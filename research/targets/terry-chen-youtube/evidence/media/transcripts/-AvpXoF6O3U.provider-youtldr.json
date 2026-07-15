@@ -1,0 +1,531 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=-AvpXoF6O3U",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 149,
+  "video": {
+    "index": 149,
+    "id": "-AvpXoF6O3U",
+    "title": "矽谷資深產品經理收入公開 ft.@chloeshih",
+    "url": "https://www.youtube.com/watch?v=-AvpXoF6O3U",
+    "duration_seconds": 802.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "-AvpXoF6O3U",
+    "title": "矽谷資深產品經理收入公開 ft.@chloeshih",
+    "text": "Hello大家好我是Terry最近美國科技公司裁員還是持續不斷但是拿到offer的人還是非常多其實我覺得這一連串的操作就是換寫員工把不必要的崗位給砍掉然後引進一波新的願意為公司賣命的人才尤其是現在所有的公司都在轉型AI我知道有一些看我頻道的觀眾其實是想要來美國的尤其是來美國矽谷那邊工作不只有誘人的收入你的履歷上面有Fang或是Manga看起來就比較屌\n所以我今天特别邀请到Chloe HsuChloe 自己本身有一个YouTube频道然后她的LinkedIn上面有超过10万个追踪我觉得这个真的蛮屌的LinkedIn上面有10万个追踪真的不简单而且她还曾经入选过富比士30 under 30Chloe 的背景是资深产品经理她曾经在Google, Meta, TikTok, Discord 工作过今天特别来西雅图跟大家分享一下怎么培养个人能力还有她谈薪水拿offer的背后故事另外Chloe 本身是在LA出生长大的\n所以他的中文真的不是很好希望大家不要見諒但是呢在這集訪談的過程中間呢我也會盡量用中文跟他說話OK對 很好\n她是PM,之前在TAC工作然后今天特别来西雅图对,很久没来过了很久没来,你上次来西雅图是不是?好像是十年前耶,大学的时候Cloe是美国长大的对,洛杉矶上次有一个老师也是来我的频道跟大家聊一下关于PM相关的内容今天特别再次邀请Cloe来\n我做过管理工程学院在克里尔蒙大学然后在Columbia的IOR但大部分的人在Columbia如果他们选这个的话他们会直接去Wall Street做投资投资投资我真的不喜欢这个所以我一直都知道自己想去科技学院\n所以Chloe之前是讀Operational Research就是Industrial Engineering工業工程跟我以前是一樣的要不要跟大家分享一下你怎麼進入當PM這個工作\n所以我一开始是people operations然后后来就觉得,maybe this is not for meand then I went to more like data oriented jobs and interviewsI found a 新创公司的startupI joined it as one of the first non-technical hires doing business developmentand it was in the streaming space, 直播的so I would go work with gaming companies and live streamersand do partnership dealsI realized that streamers 当一个博主很累很难然后赚钱很难\n他们有那么多问题他们有那么多科技我发现我们可以解决那么多问题如果我们建立XYZ功能我会把他们的痛点带回到产品团队里面说我们需要建立这个我不能卖产品比你更快因为无论我怎么样如果产品不好我们就不能做了我发现那是产品管理然后我学会了\nI was like oh in Silicon Valley in tech当一个PM有很多能力and leadership and prestigeso I feel wow this is something that has longevityand I don't know where my current career is going to gobut product can go so farthey're considered like mini CEOs of the company\n而且最後,我覺得產品管理很值得所以薪水很高對講到薪水,我覺得你喜歡這個題目不是我喜歡,我覺得我的觀眾喜歡大家應該很好奇我在矽谷工作這麼多年\n薪水大概是怎么样跟大家分享一下其实我过了很难的时间从商业发展到产品发展后来我去到新创公司Facebook做产品行业所以不是PM,是PM的工作与产品行业然后在Facebook我有做PM的工作我就是这个小产品的PM但我不是以名字来做的我做了95,000元,95k元我有资金,但不是很多的我觉得第一个工作是在下费\n大家以为可能在FAN只要在里面工作薪水都很高其实不一定一定要在EPD\n其实在旧金山如果你赚less than 10万,you're considered low income.It's very hard to live in San Francisco for that amount.So when I got the TikTok offer,I actually got a senior PM role for 18万 base salary,25% target bonus,217,000 in equity over four years,and it was a total first year comp of $279,000.So I feel like it changed my life.Yeah, then I was trying to move on.\n因为在大公司做这些交易事情就是很麻烦,很长时间。这真的改变了我的生活。我已经有预算了所有事情,现在我都没有要看了。所以那就是TikTok。那什么时候的成绩?他们给我最低的提示在开始,但我协议了,我协议的成绩还蛮好的。我从180k元的基金到215k元的基金。\n很棒的因为是同一层次然后我得到50k的资金赔偿然后我得到贷款贷款不过我不能说是什么因为数字是上下的但它是六个数字的\n你需要哪一些skill可以让你变成很成功的partner\n技术的项目是,产品管理人拥有的\"为什么\"和\"我们在建造什么\"为什么我们在建造这个,我们在建造什么,设计师和设计师,以及其他人都在建造的方式上,让我们建造它,让它开始。作为产品管理人,你必须要有非常强的产品感觉,以解决你为什么在建造某些东西,\n和领导来说,让其他人知道这是对的动作然后有很强的执行技巧去详细看出它是什么样子的,如何行动坦白说,你的老板会说我们需要10%增长,去吧!你只需要把那些东西拿下然后把所有问题分开,去解决问题然后我们可以从那里去建立新的解决方案还有一个重要的技巧\n是用户情绪,能够将您的客户的认识转移到产品的战略,是一个你需要建立的超级能力。你认为什么是一个很好的总监,和一个你不喜欢工作的总监?我觉得这都来自于联系,可能是关键。如果你知道怎么跟工程师聊天,那会是一个很好的优点。你会得到很多尊重的工程师,这很好。你会想要的,对吧?\n对,确实是这样的。我自己的背景是软体工程。像我们要去找工作的时候,我们会用LiCode。哦,是的。你们如果要找工作的话,面试会需要准备很多这些东西吗?当然啦。有很多个案的问题,有百多个。嗯。是的,比如说,有个商业访问,有个商业执行访问,有个论点访问。也许我们可以做一个评测,我们的商业工作,他们会给我们一个提示。\n听起来好像也是花很多时间要准备\n对,要花很多,因为有些方法,你可以跟随和练习这些问题。基本上,他们在寻找你能在场上想到的答案,以及你的决定方法。有很多观众其实有试去问我说,现在整个技术的环境怎么样,就是layoff 之前,像 Chloe 之前也被layoff,我也是被layoff。所以你觉得被layoff 完之后,有没有什么感受?\n在科技上 在SILICON VALLEY里其实40%的美国人在他们的事业里都被撒尿所以这也是一个很正常的事情 尤其是在美国但是在科技上 我觉得最后一件事是很难过的因为我超喜欢Discord然后就是比特帅然后就继续去做下一件事我总是觉得我必须要工作我不能休息每年都要计划新的目标我终于可以重新重新计划 想起我自己的生活\n然后突然间,这些门都开了我心中的门我经历了很多讨论,包括专业业和教育学院如果我进入了职业,我总是会对所有人说不但现在这些门都开了,我感到很兴奋,来到下一章我听说Discord很厉害你们的工程师其实很小,但是你们的目标很大我进入Discord的时候,我觉得整个公司只有8点钟,我离开的时候只有25点钟\nChloe 我看你的Instagram上面之前在台灣拍了一些東西我跟大家分享一下\n三月的时候回台湾 for three weeks我跟一个 educational tech company called知识卫星work together as a 老师 I'm so excited because actually去年十二月我有去台湾做一个 career talk for take resumeand then talk about my product careerand from that知识卫星 reach downwas like teaching product thinking\n在台湾帮助科技当这次机会出现的时候我说:是的,我会很喜欢的所以我回来拍了三个星期每天9-6天的课程最后我们组织了一个在企业中的最具体的项目8-10小时的课程我从分解到发展\n去看看你做什么在项目上,去看你如何当项目管理员。这不仅是为了PMS,也为了任何一个想要建立技术的企业的未来。这就是我带来的第一步,帮助TEC4Taiwan。我今天去上你的课,那我可以学到什么东西?这四个部分有四个部分。第一个是,我不知道怎么说中文。大环境。大画面思考。每天你做一些很小的事情,你不知道为什么你做了什么。\n如果你回头看,这就真的和目标和影响相似吗?这是否实际上是达到更大的目标?你会感觉到,因为我们在各种公司中进行了很多案例,所以你会看到那些事情是怎么分开的。第二个是问题解决,你会得到那种艰难的问题。你的老板就说,我们需要增加收入,20%我们需要全顶,去做吧。这是一个很可怕的问题。你怎么做?你使用第一个理论思维。\n我认为我所知道的最佳例子是你必须要改善升降机速度,你会觉得那是很多工作,但如果你解决问题的话,可能问题是客户觉得它慢,你不需要改善升降机速度,你可能可以加一个镜头,加一些音乐,加一个眼镜,\nso it feels like the time is passing by fasterit's a much lower cost way of solving the problemnow you can go on to other problemsthat are probably more importantso that's what first principles is very much likeand the third is user centric approachbuilding your user empathycustomer insightslike how do you go from\n所有这些客户面评论和用户面评论,并且将这些提供,建立正确的产品理解和一个产品团队的行动计划。我觉得任何一个建立一个产品或拥有一个生意的人,你必须知道你的观众和客户想要什么,并且从中创建一个行动计划。最后,这是数据主义思维。所以显然,你有你的意见,我有我的意见,我们可以一天都讨论,但我们明显会合适的一件事是数据。是的,那么你如何做测试,你如何取得分析?\n然後把數據拿出來,然後跟別人說故事,這樣就可以立即開始實行。所以這就是這四個功能。我真心覺得,這個課程雖然是專注於產品,但是應該就像我自己是工程師,我在TAC工作裡面,假如我想要再往上走,比如說我要再做得更年輕,可能我想要當EM,或者我要當人工經理。\n那我觉得这些skill其实都是要有的就这个course从工程师的角度去看的话我觉得是一个可以让我自我成长增加一些我自己其他除了技术之外的一些比较弱的一些项目比如说你来跟我讲话的话我就知道说你的reasoning是什么就是你从哪里来的为什么你会这样想\n我写了整个课程然后我说\n那现在Cody特别飞来一下主席就是想要跟大家分享这个课程这个课程呢从\n谢谢Terry 请带我来",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:00",
+        "start": 0,
+        "duration": 27.54,
+        "text": "Hello大家好我是Terry最近美國科技公司裁員還是持續不斷但是拿到offer的人還是非常多其實我覺得這一連串的操作就是換寫員工把不必要的崗位給砍掉然後引進一波新的願意為公司賣命的人才尤其是現在所有的公司都在轉型AI我知道有一些看我頻道的觀眾其實是想要來美國的尤其是來美國矽谷那邊工作不只有誘人的收入你的履歷上面有Fang或是Manga看起來就比較屌"
+      },
+      {
+        "index": 1,
+        "time": "00:27",
+        "start": 27.2,
+        "duration": 28.56,
+        "text": "所以我今天特别邀请到Chloe HsuChloe 自己本身有一个YouTube频道然后她的LinkedIn上面有超过10万个追踪我觉得这个真的蛮屌的LinkedIn上面有10万个追踪真的不简单而且她还曾经入选过富比士30 under 30Chloe 的背景是资深产品经理她曾经在Google, Meta, TikTok, Discord 工作过今天特别来西雅图跟大家分享一下怎么培养个人能力还有她谈薪水拿offer的背后故事另外Chloe 本身是在LA出生长大的"
+      },
+      {
+        "index": 2,
+        "time": "00:55",
+        "start": 55.76,
+        "duration": 9.420000000000009,
+        "text": "所以他的中文真的不是很好希望大家不要見諒但是呢在這集訪談的過程中間呢我也會盡量用中文跟他說話OK對 很好"
+      },
+      {
+        "index": 3,
+        "time": "01:05",
+        "start": 65.34,
+        "duration": 22.28,
+        "text": "她是PM,之前在TAC工作然后今天特别来西雅图对,很久没来过了很久没来,你上次来西雅图是不是?好像是十年前耶,大学的时候Cloe是美国长大的对,洛杉矶上次有一个老师也是来我的频道跟大家聊一下关于PM相关的内容今天特别再次邀请Cloe来"
+      },
+      {
+        "index": 4,
+        "time": "01:27",
+        "start": 87.62,
+        "duration": 27.039999999999992,
+        "text": "我做过管理工程学院在克里尔蒙大学然后在Columbia的IOR但大部分的人在Columbia如果他们选这个的话他们会直接去Wall Street做投资投资投资我真的不喜欢这个所以我一直都知道自己想去科技学院"
+      },
+      {
+        "index": 5,
+        "time": "01:54",
+        "start": 114.66,
+        "duration": 23.22,
+        "text": "所以Chloe之前是讀Operational Research就是Industrial Engineering工業工程跟我以前是一樣的要不要跟大家分享一下你怎麼進入當PM這個工作"
+      },
+      {
+        "index": 6,
+        "time": "02:17",
+        "start": 137.88,
+        "duration": 26.400000000000006,
+        "text": "所以我一开始是people operations然后后来就觉得,maybe this is not for meand then I went to more like data oriented jobs and interviewsI found a 新创公司的startupI joined it as one of the first non-technical hires doing business developmentand it was in the streaming space, 直播的so I would go work with gaming companies and live streamersand do partnership dealsI realized that streamers 当一个博主很累很难然后赚钱很难"
+      },
+      {
+        "index": 7,
+        "time": "02:44",
+        "start": 164.28,
+        "duration": 20.02000000000001,
+        "text": "他们有那么多问题他们有那么多科技我发现我们可以解决那么多问题如果我们建立XYZ功能我会把他们的痛点带回到产品团队里面说我们需要建立这个我不能卖产品比你更快因为无论我怎么样如果产品不好我们就不能做了我发现那是产品管理然后我学会了"
+      },
+      {
+        "index": 8,
+        "time": "03:04",
+        "start": 184.3,
+        "duration": 16.5,
+        "text": "I was like oh in Silicon Valley in tech当一个PM有很多能力and leadership and prestigeso I feel wow this is something that has longevityand I don't know where my current career is going to gobut product can go so farthey're considered like mini CEOs of the company"
+      },
+      {
+        "index": 9,
+        "time": "03:20",
+        "start": 200.8,
+        "duration": 13.379999999999995,
+        "text": "而且最後,我覺得產品管理很值得所以薪水很高對講到薪水,我覺得你喜歡這個題目不是我喜歡,我覺得我的觀眾喜歡大家應該很好奇我在矽谷工作這麼多年"
+      },
+      {
+        "index": 10,
+        "time": "03:34",
+        "start": 214.14,
+        "duration": 26.980000000000018,
+        "text": "薪水大概是怎么样跟大家分享一下其实我过了很难的时间从商业发展到产品发展后来我去到新创公司Facebook做产品行业所以不是PM,是PM的工作与产品行业然后在Facebook我有做PM的工作我就是这个小产品的PM但我不是以名字来做的我做了95,000元,95k元我有资金,但不是很多的我觉得第一个工作是在下费"
+      },
+      {
+        "index": 11,
+        "time": "04:00",
+        "start": 240.74,
+        "duration": 17.579999999999984,
+        "text": "大家以为可能在FAN只要在里面工作薪水都很高其实不一定一定要在EPD"
+      },
+      {
+        "index": 12,
+        "time": "04:18",
+        "start": 258,
+        "duration": 26.620000000000005,
+        "text": "其实在旧金山如果你赚less than 10万,you're considered low income.It's very hard to live in San Francisco for that amount.So when I got the TikTok offer,I actually got a senior PM role for 18万 base salary,25% target bonus,217,000 in equity over four years,and it was a total first year comp of $279,000.So I feel like it changed my life.Yeah, then I was trying to move on."
+      },
+      {
+        "index": 13,
+        "time": "04:44",
+        "start": 284.52,
+        "duration": 23.939999999999998,
+        "text": "因为在大公司做这些交易事情就是很麻烦,很长时间。这真的改变了我的生活。我已经有预算了所有事情,现在我都没有要看了。所以那就是TikTok。那什么时候的成绩?他们给我最低的提示在开始,但我协议了,我协议的成绩还蛮好的。我从180k元的基金到215k元的基金。"
+      },
+      {
+        "index": 14,
+        "time": "05:08",
+        "start": 308.46,
+        "duration": 13.260000000000048,
+        "text": "很棒的因为是同一层次然后我得到50k的资金赔偿然后我得到贷款贷款不过我不能说是什么因为数字是上下的但它是六个数字的"
+      },
+      {
+        "index": 15,
+        "time": "05:21",
+        "start": 321.9,
+        "duration": 17.74000000000001,
+        "text": "你需要哪一些skill可以让你变成很成功的partner"
+      },
+      {
+        "index": 16,
+        "time": "05:39",
+        "start": 339.64,
+        "duration": 20.960000000000036,
+        "text": "技术的项目是,产品管理人拥有的\"为什么\"和\"我们在建造什么\"为什么我们在建造这个,我们在建造什么,设计师和设计师,以及其他人都在建造的方式上,让我们建造它,让它开始。作为产品管理人,你必须要有非常强的产品感觉,以解决你为什么在建造某些东西,"
+      },
+      {
+        "index": 17,
+        "time": "06:00",
+        "start": 360.6,
+        "duration": 21.399999999999977,
+        "text": "和领导来说,让其他人知道这是对的动作然后有很强的执行技巧去详细看出它是什么样子的,如何行动坦白说,你的老板会说我们需要10%增长,去吧!你只需要把那些东西拿下然后把所有问题分开,去解决问题然后我们可以从那里去建立新的解决方案还有一个重要的技巧"
+      },
+      {
+        "index": 18,
+        "time": "06:22",
+        "start": 382,
+        "duration": 22.439999999999998,
+        "text": "是用户情绪,能够将您的客户的认识转移到产品的战略,是一个你需要建立的超级能力。你认为什么是一个很好的总监,和一个你不喜欢工作的总监?我觉得这都来自于联系,可能是关键。如果你知道怎么跟工程师聊天,那会是一个很好的优点。你会得到很多尊重的工程师,这很好。你会想要的,对吧?"
+      },
+      {
+        "index": 19,
+        "time": "06:44",
+        "start": 404.44,
+        "duration": 22.600000000000023,
+        "text": "对,确实是这样的。我自己的背景是软体工程。像我们要去找工作的时候,我们会用LiCode。哦,是的。你们如果要找工作的话,面试会需要准备很多这些东西吗?当然啦。有很多个案的问题,有百多个。嗯。是的,比如说,有个商业访问,有个商业执行访问,有个论点访问。也许我们可以做一个评测,我们的商业工作,他们会给我们一个提示。"
+      },
+      {
+        "index": 20,
+        "time": "07:07",
+        "start": 427.04,
+        "duration": 20.620000000000005,
+        "text": "听起来好像也是花很多时间要准备"
+      },
+      {
+        "index": 21,
+        "time": "07:27",
+        "start": 447.7,
+        "duration": 23.74000000000001,
+        "text": "对,要花很多,因为有些方法,你可以跟随和练习这些问题。基本上,他们在寻找你能在场上想到的答案,以及你的决定方法。有很多观众其实有试去问我说,现在整个技术的环境怎么样,就是layoff 之前,像 Chloe 之前也被layoff,我也是被layoff。所以你觉得被layoff 完之后,有没有什么感受?"
+      },
+      {
+        "index": 22,
+        "time": "07:51",
+        "start": 471.44,
+        "duration": 28.30000000000001,
+        "text": "在科技上 在SILICON VALLEY里其实40%的美国人在他们的事业里都被撒尿所以这也是一个很正常的事情 尤其是在美国但是在科技上 我觉得最后一件事是很难过的因为我超喜欢Discord然后就是比特帅然后就继续去做下一件事我总是觉得我必须要工作我不能休息每年都要计划新的目标我终于可以重新重新计划 想起我自己的生活"
+      },
+      {
+        "index": 23,
+        "time": "08:19",
+        "start": 499.74,
+        "duration": 27.120000000000005,
+        "text": "然后突然间,这些门都开了我心中的门我经历了很多讨论,包括专业业和教育学院如果我进入了职业,我总是会对所有人说不但现在这些门都开了,我感到很兴奋,来到下一章我听说Discord很厉害你们的工程师其实很小,但是你们的目标很大我进入Discord的时候,我觉得整个公司只有8点钟,我离开的时候只有25点钟"
+      },
+      {
+        "index": 24,
+        "time": "08:46",
+        "start": 526.86,
+        "duration": 14.960000000000036,
+        "text": "Chloe 我看你的Instagram上面之前在台灣拍了一些東西我跟大家分享一下"
+      },
+      {
+        "index": 25,
+        "time": "09:01",
+        "start": 541.82,
+        "duration": 19.019999999999982,
+        "text": "三月的时候回台湾 for three weeks我跟一个 educational tech company called知识卫星work together as a 老师 I'm so excited because actually去年十二月我有去台湾做一个 career talk for take resumeand then talk about my product careerand from that知识卫星 reach downwas like teaching product thinking"
+      },
+      {
+        "index": 26,
+        "time": "09:20",
+        "start": 560.84,
+        "duration": 17.839999999999918,
+        "text": "在台湾帮助科技当这次机会出现的时候我说:是的,我会很喜欢的所以我回来拍了三个星期每天9-6天的课程最后我们组织了一个在企业中的最具体的项目8-10小时的课程我从分解到发展"
+      },
+      {
+        "index": 27,
+        "time": "09:38",
+        "start": 578.68,
+        "duration": 27.020000000000095,
+        "text": "去看看你做什么在项目上,去看你如何当项目管理员。这不仅是为了PMS,也为了任何一个想要建立技术的企业的未来。这就是我带来的第一步,帮助TEC4Taiwan。我今天去上你的课,那我可以学到什么东西?这四个部分有四个部分。第一个是,我不知道怎么说中文。大环境。大画面思考。每天你做一些很小的事情,你不知道为什么你做了什么。"
+      },
+      {
+        "index": 28,
+        "time": "10:05",
+        "start": 605.7,
+        "duration": 25.039999999999964,
+        "text": "如果你回头看,这就真的和目标和影响相似吗?这是否实际上是达到更大的目标?你会感觉到,因为我们在各种公司中进行了很多案例,所以你会看到那些事情是怎么分开的。第二个是问题解决,你会得到那种艰难的问题。你的老板就说,我们需要增加收入,20%我们需要全顶,去做吧。这是一个很可怕的问题。你怎么做?你使用第一个理论思维。"
+      },
+      {
+        "index": 29,
+        "time": "10:30",
+        "start": 630.74,
+        "duration": 15.559999999999945,
+        "text": "我认为我所知道的最佳例子是你必须要改善升降机速度,你会觉得那是很多工作,但如果你解决问题的话,可能问题是客户觉得它慢,你不需要改善升降机速度,你可能可以加一个镜头,加一些音乐,加一个眼镜,"
+      },
+      {
+        "index": 30,
+        "time": "10:46",
+        "start": 646.3,
+        "duration": 17.720000000000027,
+        "text": "so it feels like the time is passing by fasterit's a much lower cost way of solving the problemnow you can go on to other problemsthat are probably more importantso that's what first principles is very much likeand the third is user centric approachbuilding your user empathycustomer insightslike how do you go from"
+      },
+      {
+        "index": 31,
+        "time": "11:04",
+        "start": 664.02,
+        "duration": 26.019999999999982,
+        "text": "所有这些客户面评论和用户面评论,并且将这些提供,建立正确的产品理解和一个产品团队的行动计划。我觉得任何一个建立一个产品或拥有一个生意的人,你必须知道你的观众和客户想要什么,并且从中创建一个行动计划。最后,这是数据主义思维。所以显然,你有你的意见,我有我的意见,我们可以一天都讨论,但我们明显会合适的一件事是数据。是的,那么你如何做测试,你如何取得分析?"
+      },
+      {
+        "index": 32,
+        "time": "11:30",
+        "start": 690.04,
+        "duration": 23.720000000000027,
+        "text": "然後把數據拿出來,然後跟別人說故事,這樣就可以立即開始實行。所以這就是這四個功能。我真心覺得,這個課程雖然是專注於產品,但是應該就像我自己是工程師,我在TAC工作裡面,假如我想要再往上走,比如說我要再做得更年輕,可能我想要當EM,或者我要當人工經理。"
+      },
+      {
+        "index": 33,
+        "time": "11:53",
+        "start": 713.46,
+        "duration": 16.959999999999923,
+        "text": "那我觉得这些skill其实都是要有的就这个course从工程师的角度去看的话我觉得是一个可以让我自我成长增加一些我自己其他除了技术之外的一些比较弱的一些项目比如说你来跟我讲话的话我就知道说你的reasoning是什么就是你从哪里来的为什么你会这样想"
+      },
+      {
+        "index": 34,
+        "time": "12:10",
+        "start": 730.08,
+        "duration": 17.860000000000014,
+        "text": "我写了整个课程然后我说"
+      },
+      {
+        "index": 35,
+        "time": "12:27",
+        "start": 747.94,
+        "duration": 28.199999999999932,
+        "text": "那现在Cody特别飞来一下主席就是想要跟大家分享这个课程这个课程呢从"
+      },
+      {
+        "index": 36,
+        "time": "12:56",
+        "start": 776.14,
+        "duration": 25.041000000000054,
+        "text": "谢谢Terry 请带我来"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": "whisper",
+    "fallback": false,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXEZVKY9Q3T0DPTRJQKC56X1",
+    "status": "completed",
+    "videoId": "-AvpXoF6O3U",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "Hello大家好我是Terry最近美國科技公司裁員還是持續不斷但是拿到offer的人還是非常多其實我覺得這一連串的操作就是換寫員工把不必要的崗位給砍掉然後引進一波新的願意為公司賣命的人才尤其是現在所有的公司都在轉型AI我知道有一些看我頻道的觀眾其實是想要來美國的尤其是來美國矽谷那邊工作不只有誘人的收入你的履歷上面有Fang或是Manga看起來就比較屌",
+            "start": 0,
+            "duration": 27.54
+          },
+          {
+            "text": "所以我今天特别邀请到Chloe HsuChloe 自己本身有一个YouTube频道然后她的LinkedIn上面有超过10万个追踪我觉得这个真的蛮屌的LinkedIn上面有10万个追踪真的不简单而且她还曾经入选过富比士30 under 30Chloe 的背景是资深产品经理她曾经在Google, Meta, TikTok, Discord 工作过今天特别来西雅图跟大家分享一下怎么培养个人能力还有她谈薪水拿offer的背后故事另外Chloe 本身是在LA出生长大的",
+            "start": 27.2,
+            "duration": 28.56
+          },
+          {
+            "text": "所以他的中文真的不是很好希望大家不要見諒但是呢在這集訪談的過程中間呢我也會盡量用中文跟他說話OK對 很好",
+            "start": 55.76,
+            "duration": 9.420000000000009
+          },
+          {
+            "text": "她是PM,之前在TAC工作然后今天特别来西雅图对,很久没来过了很久没来,你上次来西雅图是不是?好像是十年前耶,大学的时候Cloe是美国长大的对,洛杉矶上次有一个老师也是来我的频道跟大家聊一下关于PM相关的内容今天特别再次邀请Cloe来",
+            "start": 65.34,
+            "duration": 22.28
+          },
+          {
+            "text": "我做过管理工程学院在克里尔蒙大学然后在Columbia的IOR但大部分的人在Columbia如果他们选这个的话他们会直接去Wall Street做投资投资投资我真的不喜欢这个所以我一直都知道自己想去科技学院",
+            "start": 87.62,
+            "duration": 27.039999999999992
+          },
+          {
+            "text": "所以Chloe之前是讀Operational Research就是Industrial Engineering工業工程跟我以前是一樣的要不要跟大家分享一下你怎麼進入當PM這個工作",
+            "start": 114.66,
+            "duration": 23.22
+          },
+          {
+            "text": "所以我一开始是people operations然后后来就觉得,maybe this is not for meand then I went to more like data oriented jobs and interviewsI found a 新创公司的startupI joined it as one of the first non-technical hires doing business developmentand it was in the streaming space, 直播的so I would go work with gaming companies and live streamersand do partnership dealsI realized that streamers 当一个博主很累很难然后赚钱很难",
+            "start": 137.88,
+            "duration": 26.400000000000006
+          },
+          {
+            "text": "他们有那么多问题他们有那么多科技我发现我们可以解决那么多问题如果我们建立XYZ功能我会把他们的痛点带回到产品团队里面说我们需要建立这个我不能卖产品比你更快因为无论我怎么样如果产品不好我们就不能做了我发现那是产品管理然后我学会了",
+            "start": 164.28,
+            "duration": 20.02000000000001
+          },
+          {
+            "text": "I was like oh in Silicon Valley in tech当一个PM有很多能力and leadership and prestigeso I feel wow this is something that has longevityand I don't know where my current career is going to gobut product can go so farthey're considered like mini CEOs of the company",
+            "start": 184.3,
+            "duration": 16.5
+          },
+          {
+            "text": "而且最後,我覺得產品管理很值得所以薪水很高對講到薪水,我覺得你喜歡這個題目不是我喜歡,我覺得我的觀眾喜歡大家應該很好奇我在矽谷工作這麼多年",
+            "start": 200.8,
+            "duration": 13.379999999999995
+          },
+          {
+            "text": "薪水大概是怎么样跟大家分享一下其实我过了很难的时间从商业发展到产品发展后来我去到新创公司Facebook做产品行业所以不是PM,是PM的工作与产品行业然后在Facebook我有做PM的工作我就是这个小产品的PM但我不是以名字来做的我做了95,000元,95k元我有资金,但不是很多的我觉得第一个工作是在下费",
+            "start": 214.14,
+            "duration": 26.980000000000018
+          },
+          {
+            "text": "大家以为可能在FAN只要在里面工作薪水都很高其实不一定一定要在EPD",
+            "start": 240.74,
+            "duration": 17.579999999999984
+          },
+          {
+            "text": "其实在旧金山如果你赚less than 10万,you're considered low income.It's very hard to live in San Francisco for that amount.So when I got the TikTok offer,I actually got a senior PM role for 18万 base salary,25% target bonus,217,000 in equity over four years,and it was a total first year comp of $279,000.So I feel like it changed my life.Yeah, then I was trying to move on.",
+            "start": 258,
+            "duration": 26.620000000000005
+          },
+          {
+            "text": "因为在大公司做这些交易事情就是很麻烦,很长时间。这真的改变了我的生活。我已经有预算了所有事情,现在我都没有要看了。所以那就是TikTok。那什么时候的成绩?他们给我最低的提示在开始,但我协议了,我协议的成绩还蛮好的。我从180k元的基金到215k元的基金。",
+            "start": 284.52,
+            "duration": 23.939999999999998
+          },
+          {
+            "text": "很棒的因为是同一层次然后我得到50k的资金赔偿然后我得到贷款贷款不过我不能说是什么因为数字是上下的但它是六个数字的",
+            "start": 308.46,
+            "duration": 13.260000000000048
+          },
+          {
+            "text": "你需要哪一些skill可以让你变成很成功的partner",
+            "start": 321.9,
+            "duration": 17.74000000000001
+          },
+          {
+            "text": "技术的项目是,产品管理人拥有的\"为什么\"和\"我们在建造什么\"为什么我们在建造这个,我们在建造什么,设计师和设计师,以及其他人都在建造的方式上,让我们建造它,让它开始。作为产品管理人,你必须要有非常强的产品感觉,以解决你为什么在建造某些东西,",
+            "start": 339.64,
+            "duration": 20.960000000000036
+          },
+          {
+            "text": "和领导来说,让其他人知道这是对的动作然后有很强的执行技巧去详细看出它是什么样子的,如何行动坦白说,你的老板会说我们需要10%增长,去吧!你只需要把那些东西拿下然后把所有问题分开,去解决问题然后我们可以从那里去建立新的解决方案还有一个重要的技巧",
+            "start": 360.6,
+            "duration": 21.399999999999977
+          },
+          {
+            "text": "是用户情绪,能够将您的客户的认识转移到产品的战略,是一个你需要建立的超级能力。你认为什么是一个很好的总监,和一个你不喜欢工作的总监?我觉得这都来自于联系,可能是关键。如果你知道怎么跟工程师聊天,那会是一个很好的优点。你会得到很多尊重的工程师,这很好。你会想要的,对吧?",
+            "start": 382,
+            "duration": 22.439999999999998
+          },
+          {
+            "text": "对,确实是这样的。我自己的背景是软体工程。像我们要去找工作的时候,我们会用LiCode。哦,是的。你们如果要找工作的话,面试会需要准备很多这些东西吗?当然啦。有很多个案的问题,有百多个。嗯。是的,比如说,有个商业访问,有个商业执行访问,有个论点访问。也许我们可以做一个评测,我们的商业工作,他们会给我们一个提示。",
+            "start": 404.44,
+            "duration": 22.600000000000023
+          },
+          {
+            "text": "听起来好像也是花很多时间要准备",
+            "start": 427.04,
+            "duration": 20.620000000000005
+          },
+          {
+            "text": "对,要花很多,因为有些方法,你可以跟随和练习这些问题。基本上,他们在寻找你能在场上想到的答案,以及你的决定方法。有很多观众其实有试去问我说,现在整个技术的环境怎么样,就是layoff 之前,像 Chloe 之前也被layoff,我也是被layoff。所以你觉得被layoff 完之后,有没有什么感受?",
+            "start": 447.7,
+            "duration": 23.74000000000001
+          },
+          {
+            "text": "在科技上 在SILICON VALLEY里其实40%的美国人在他们的事业里都被撒尿所以这也是一个很正常的事情 尤其是在美国但是在科技上 我觉得最后一件事是很难过的因为我超喜欢Discord然后就是比特帅然后就继续去做下一件事我总是觉得我必须要工作我不能休息每年都要计划新的目标我终于可以重新重新计划 想起我自己的生活",
+            "start": 471.44,
+            "duration": 28.30000000000001
+          },
+          {
+            "text": "然后突然间,这些门都开了我心中的门我经历了很多讨论,包括专业业和教育学院如果我进入了职业,我总是会对所有人说不但现在这些门都开了,我感到很兴奋,来到下一章我听说Discord很厉害你们的工程师其实很小,但是你们的目标很大我进入Discord的时候,我觉得整个公司只有8点钟,我离开的时候只有25点钟",
+            "start": 499.74,
+            "duration": 27.120000000000005
+          },
+          {
+            "text": "Chloe 我看你的Instagram上面之前在台灣拍了一些東西我跟大家分享一下",
+            "start": 526.86,
+            "duration": 14.960000000000036
+          },
+          {
+            "text": "三月的时候回台湾 for three weeks我跟一个 educational tech company called知识卫星work together as a 老师 I'm so excited because actually去年十二月我有去台湾做一个 career talk for take resumeand then talk about my product careerand from that知识卫星 reach downwas like teaching product thinking",
+            "start": 541.82,
+            "duration": 19.019999999999982
+          },
+          {
+            "text": "在台湾帮助科技当这次机会出现的时候我说:是的,我会很喜欢的所以我回来拍了三个星期每天9-6天的课程最后我们组织了一个在企业中的最具体的项目8-10小时的课程我从分解到发展",
+            "start": 560.84,
+            "duration": 17.839999999999918
+          },
+          {
+            "text": "去看看你做什么在项目上,去看你如何当项目管理员。这不仅是为了PMS,也为了任何一个想要建立技术的企业的未来。这就是我带来的第一步,帮助TEC4Taiwan。我今天去上你的课,那我可以学到什么东西?这四个部分有四个部分。第一个是,我不知道怎么说中文。大环境。大画面思考。每天你做一些很小的事情,你不知道为什么你做了什么。",
+            "start": 578.68,
+            "duration": 27.020000000000095
+          },
+          {
+            "text": "如果你回头看,这就真的和目标和影响相似吗?这是否实际上是达到更大的目标?你会感觉到,因为我们在各种公司中进行了很多案例,所以你会看到那些事情是怎么分开的。第二个是问题解决,你会得到那种艰难的问题。你的老板就说,我们需要增加收入,20%我们需要全顶,去做吧。这是一个很可怕的问题。你怎么做?你使用第一个理论思维。",
+            "start": 605.7,
+            "duration": 25.039999999999964
+          },
+          {
+            "text": "我认为我所知道的最佳例子是你必须要改善升降机速度,你会觉得那是很多工作,但如果你解决问题的话,可能问题是客户觉得它慢,你不需要改善升降机速度,你可能可以加一个镜头,加一些音乐,加一个眼镜,",
+            "start": 630.74,
+            "duration": 15.559999999999945
+          },
+          {
+            "text": "so it feels like the time is passing by fasterit's a much lower cost way of solving the problemnow you can go on to other problemsthat are probably more importantso that's what first principles is very much likeand the third is user centric approachbuilding your user empathycustomer insightslike how do you go from",
+            "start": 646.3,
+            "duration": 17.720000000000027
+          },
+          {
+            "text": "所有这些客户面评论和用户面评论,并且将这些提供,建立正确的产品理解和一个产品团队的行动计划。我觉得任何一个建立一个产品或拥有一个生意的人,你必须知道你的观众和客户想要什么,并且从中创建一个行动计划。最后,这是数据主义思维。所以显然,你有你的意见,我有我的意见,我们可以一天都讨论,但我们明显会合适的一件事是数据。是的,那么你如何做测试,你如何取得分析?",
+            "start": 664.02,
+            "duration": 26.019999999999982
+          },
+          {
+            "text": "然後把數據拿出來,然後跟別人說故事,這樣就可以立即開始實行。所以這就是這四個功能。我真心覺得,這個課程雖然是專注於產品,但是應該就像我自己是工程師,我在TAC工作裡面,假如我想要再往上走,比如說我要再做得更年輕,可能我想要當EM,或者我要當人工經理。",
+            "start": 690.04,
+            "duration": 23.720000000000027
+          },
+          {
+            "text": "那我觉得这些skill其实都是要有的就这个course从工程师的角度去看的话我觉得是一个可以让我自我成长增加一些我自己其他除了技术之外的一些比较弱的一些项目比如说你来跟我讲话的话我就知道说你的reasoning是什么就是你从哪里来的为什么你会这样想",
+            "start": 713.46,
+            "duration": 16.959999999999923
+          },
+          {
+            "text": "我写了整个课程然后我说",
+            "start": 730.08,
+            "duration": 17.860000000000014
+          },
+          {
+            "text": "那现在Cody特别飞来一下主席就是想要跟大家分享这个课程这个课程呢从",
+            "start": 747.94,
+            "duration": 28.199999999999932
+          },
+          {
+            "text": "谢谢Terry 请带我来",
+            "start": 776.14,
+            "duration": 25.041000000000054
+          }
+        ],
+        "videoTitle": "矽谷資深產品經理收入公開 ft.@chloeshih",
+        "metadata": {
+          "title": "矽谷資深產品經理收入公開 ft.@chloeshih",
+          "description": "產品思維養成術｜矽谷產品經理帶你掌握產品全貌觀\n從觀念到實踐，看一流科技公司如何思考與佈局\n🌟 培養產品思維｜系統化的學習架構，扎根PM需具備的核心能力\n🌟 必備職能建立｜全面掌握入門、初階、進階產品經理的各階段職能\n🌟 成功案例解析 | 大量矽谷產品案例，洞察一流科技公司的思考決策\n🌟 求職攻略｜洞察跨國職場生態文化，掌握履歷、面試、職涯發展的訣竅\n 5/23～6/30 限時預購優於4折\n👉 結帳輸入「Terry300」再折 $300 元\n🔍 課程介紹：https://hi.sat.cool/ikrqI\nChloe Youtube: @chloeshih \nChloe IG: @chloe.shih\n--------------------------\n盈透證券Interactive Brokers ❤️：https://hackbear.tv/ib\n歡迎追蹤我的 Instagram: https://hackbear.tv/ig\n合作郵箱: hack.tech.entertainment@gmail.com\n#矽谷 #產品經理 #薪水",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 801,
+          "viewCount": 124719,
+          "keywords": [],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/-AvpXoF6O3U/maxresdefault.jpg",
+            "width": 0,
+            "height": 0
+          }
+        },
+        "source": "whisper",
+        "fallback": false,
+        "error": null,
+        "reason": null,
+        "timings": {
+          "downloadSeconds": 25.1,
+          "transcribeSeconds": 32.7,
+          "totalSeconds": 57.8,
+          "audioBytes": 4877666,
+          "videoDurationSeconds": 801,
+          "engine": "wizper"
+        }
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

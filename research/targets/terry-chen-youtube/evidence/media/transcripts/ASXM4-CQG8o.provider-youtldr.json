@@ -1,0 +1,1719 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=ASXM4-CQG8o",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 272,
+  "video": {
+    "index": 272,
+    "id": "ASXM4-CQG8o",
+    "title": "How to tech interview Like a Pro | ft.內褲面試官",
+    "url": "https://www.youtube.com/watch?v=ASXM4-CQG8o",
+    "duration_seconds": 342.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "ASXM4-CQG8o",
+    "title": "How to tech interview Like a Pro | ft.內褲面試官",
+    "text": "[Music]\ni can do this\noh [ __ ]\nhi hey tom my name is jerry\ni will be conducting your technical\ninterview today\num just a little bit about myself i\nam a senior software engineer at the\napplication service platform\ninfrastructure mobile kubernetes\nengineering team and i have been with\nthe company for\na good eight years now alright\nthis is it the moment of truth i am so\nready\ni have been practicing nico for the past\ncouple months\nday and night i have never felt more\npowerful\ntime and space complexity are\ninconsequential\ni can easily clear all the median\nquestions without looking at the\ndiscussion board\nmy forearms are so big and sore probably\nbecause i've been typing so much\nand so fast i'm finally going to see a\nreturn on my lego premium subscription\nokay so why don't you start with telling\nme a little bit about yourself\nah oh no i spent all my time on litco\nand completely forget to prepare for the\nstupid behavioral questions\noh my god what do i do what do i tell\nhim\nabout myself i had a big breakfast today\njust so i can carve up and now\nno no no that's not what he wants to\nhear tom\nare you still there gotta say something\nclever about my resume\nyes my job oh no i don't really like the\npeople in my team and i haven't done\nanything since the pandemic i committed\ncomments in code and removed\nsome more comments just so people think\ni'm working\noh wait maybe i can just lie\nand he would never find out just like\nhow my manager always told me\ni would get a pay raise easy peasy\ni have been working at this company as a\nback-end software engineer since i\ngraduated in 2018\ni really like my job and my team and\ni've been learning a lot from them\ni am passionate about doing impactful\nwork and solving complex\nand challenging engineering problems and\nmost importantly\ni code really fast okay okay\nsounds good um cool if you're ready\nlet's dive right into the coding part\ni just want to let you know that i do\nwant to leave maybe\n5-10 minutes at the end for you to ask\nany questions\ndoes that sound good to you you're\nkidding me i was born ready\nuh tom oh yes please please go ahead\ncool so here's the question given an\narray of integers\nand the number k i want you to write a\nfunction that returns the k\nlargest element array the k is\nguaranteed to be smaller or equal to the\nsize of the array\nso here's an example of input and output\nfeel free to think out loud and walk me\nthrough your thoughts\njack madam hacking pod i was studying\nthe exact same question just a few days\nago\nif i remember correctly it was number\n215 medium in lead code\ni am lee coded and unbeatable\nbut hold on i need to pretend i've never\nseen this question before otherwise he\nmight be suspicious if i finish it too\nsoon\noh god this is hard\ni'm not sure if i oh no worries um i can\ngive you some hint\nif you don't know where to start hint\nknown as the silent\nstrong higher killer so many newbies\nwere down leveled or ghosted after the\ninterviews\ni would not fall for this trap oh no no\ni don't mean hard i mean\nhot it's so hot here i gotta go turn on\nmy ac if you don't mind\nyeah go ahead thanks i'll be right back\nmost mediocre engineers will think hip\nis the solution\nby maintaining a k size priority queue\nruntime complexity is slightly better\nthan sorting the entire array\nnaive solution only good enough for\namazon\nit is most efficient to use quick select\nfor this problem\nbut it would take some time to implement\nsince i've done so many legal questions\nthis is too trivial for me i am a much\nbetter engineer than you\nokay wow this actually looks pretty good\ncan you kind of talk a little bit about\nthe runtime complexity here\nyeah the simplest brute force solution\nwill be n of log\nn which is basically just sorting the\narray but if you use a heap like data\nstructure you can actually achieve a\nslightly better performance which is\nn of log k however with my quick sort\nalgorithm the wrong time complexity is\nfurther reduced down off n in average\ncase and of course the worst case will\nalways be off\nand square\ncool thanks tom this is awesome um i\nthink that's it for me\nare there any questions that you want to\nask me yeah\nwhen can i start",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:03",
+        "start": 3.43,
+        "duration": 13.53,
+        "text": "[Music]"
+      },
+      {
+        "index": 1,
+        "time": "00:07",
+        "start": 7.12,
+        "duration": 12.56,
+        "text": "i can do this"
+      },
+      {
+        "index": 2,
+        "time": "00:16",
+        "start": 16.96,
+        "duration": 2.72,
+        "text": "oh [ __ ]"
+      },
+      {
+        "index": 3,
+        "time": "00:25",
+        "start": 25.439,
+        "duration": 6.401,
+        "text": "hi hey tom my name is jerry"
+      },
+      {
+        "index": 4,
+        "time": "00:29",
+        "start": 29.519,
+        "duration": 3.921,
+        "text": "i will be conducting your technical"
+      },
+      {
+        "index": 5,
+        "time": "00:31",
+        "start": 31.84,
+        "duration": 4.64,
+        "text": "interview today"
+      },
+      {
+        "index": 6,
+        "time": "00:33",
+        "start": 33.44,
+        "duration": 5.279,
+        "text": "um just a little bit about myself i"
+      },
+      {
+        "index": 7,
+        "time": "00:36",
+        "start": 36.48,
+        "duration": 3.84,
+        "text": "am a senior software engineer at the"
+      },
+      {
+        "index": 8,
+        "time": "00:38",
+        "start": 38.719,
+        "duration": 3.601,
+        "text": "application service platform"
+      },
+      {
+        "index": 9,
+        "time": "00:40",
+        "start": 40.32,
+        "duration": 4.719,
+        "text": "infrastructure mobile kubernetes"
+      },
+      {
+        "index": 10,
+        "time": "00:42",
+        "start": 42.32,
+        "duration": 4.96,
+        "text": "engineering team and i have been with"
+      },
+      {
+        "index": 11,
+        "time": "00:45",
+        "start": 45.039,
+        "duration": 5.68,
+        "text": "the company for"
+      },
+      {
+        "index": 12,
+        "time": "00:47",
+        "start": 47.28,
+        "duration": 7.04,
+        "text": "a good eight years now alright"
+      },
+      {
+        "index": 13,
+        "time": "00:50",
+        "start": 50.719,
+        "duration": 4.801,
+        "text": "this is it the moment of truth i am so"
+      },
+      {
+        "index": 14,
+        "time": "00:54",
+        "start": 54.32,
+        "duration": 3.52,
+        "text": "ready"
+      },
+      {
+        "index": 15,
+        "time": "00:55",
+        "start": 55.52,
+        "duration": 3.44,
+        "text": "i have been practicing nico for the past"
+      },
+      {
+        "index": 16,
+        "time": "00:57",
+        "start": 57.84,
+        "duration": 4.08,
+        "text": "couple months"
+      },
+      {
+        "index": 17,
+        "time": "00:58",
+        "start": 58.96,
+        "duration": 4.16,
+        "text": "day and night i have never felt more"
+      },
+      {
+        "index": 18,
+        "time": "01:01",
+        "start": 61.92,
+        "duration": 3.32,
+        "text": "powerful"
+      },
+      {
+        "index": 19,
+        "time": "01:03",
+        "start": 63.12,
+        "duration": 3.6,
+        "text": "time and space complexity are"
+      },
+      {
+        "index": 20,
+        "time": "01:05",
+        "start": 65.24,
+        "duration": 3.64,
+        "text": "inconsequential"
+      },
+      {
+        "index": 21,
+        "time": "01:06",
+        "start": 66.72,
+        "duration": 3.759,
+        "text": "i can easily clear all the median"
+      },
+      {
+        "index": 22,
+        "time": "01:08",
+        "start": 68.88,
+        "duration": 3.44,
+        "text": "questions without looking at the"
+      },
+      {
+        "index": 23,
+        "time": "01:10",
+        "start": 70.479,
+        "duration": 5.201,
+        "text": "discussion board"
+      },
+      {
+        "index": 24,
+        "time": "01:12",
+        "start": 72.32,
+        "duration": 5.28,
+        "text": "my forearms are so big and sore probably"
+      },
+      {
+        "index": 25,
+        "time": "01:15",
+        "start": 75.68,
+        "duration": 5.36,
+        "text": "because i've been typing so much"
+      },
+      {
+        "index": 26,
+        "time": "01:17",
+        "start": 77.6,
+        "duration": 8.4,
+        "text": "and so fast i'm finally going to see a"
+      },
+      {
+        "index": 27,
+        "time": "01:21",
+        "start": 81.04,
+        "duration": 7.119,
+        "text": "return on my lego premium subscription"
+      },
+      {
+        "index": 28,
+        "time": "01:26",
+        "start": 86,
+        "duration": 4.32,
+        "text": "okay so why don't you start with telling"
+      },
+      {
+        "index": 29,
+        "time": "01:28",
+        "start": 88.159,
+        "duration": 6.081,
+        "text": "me a little bit about yourself"
+      },
+      {
+        "index": 30,
+        "time": "01:30",
+        "start": 90.32,
+        "duration": 5.839,
+        "text": "ah oh no i spent all my time on litco"
+      },
+      {
+        "index": 31,
+        "time": "01:34",
+        "start": 94.24,
+        "duration": 3.839,
+        "text": "and completely forget to prepare for the"
+      },
+      {
+        "index": 32,
+        "time": "01:36",
+        "start": 96.159,
+        "duration": 4.721,
+        "text": "stupid behavioral questions"
+      },
+      {
+        "index": 33,
+        "time": "01:38",
+        "start": 98.079,
+        "duration": 3.521,
+        "text": "oh my god what do i do what do i tell"
+      },
+      {
+        "index": 34,
+        "time": "01:40",
+        "start": 100.88,
+        "duration": 3.919,
+        "text": "him"
+      },
+      {
+        "index": 35,
+        "time": "01:41",
+        "start": 101.6,
+        "duration": 5.04,
+        "text": "about myself i had a big breakfast today"
+      },
+      {
+        "index": 36,
+        "time": "01:44",
+        "start": 104.799,
+        "duration": 4.241,
+        "text": "just so i can carve up and now"
+      },
+      {
+        "index": 37,
+        "time": "01:46",
+        "start": 106.64,
+        "duration": 3.36,
+        "text": "no no no that's not what he wants to"
+      },
+      {
+        "index": 38,
+        "time": "01:49",
+        "start": 109.04,
+        "duration": 3.2,
+        "text": "hear tom"
+      },
+      {
+        "index": 39,
+        "time": "01:50",
+        "start": 110,
+        "duration": 4,
+        "text": "are you still there gotta say something"
+      },
+      {
+        "index": 40,
+        "time": "01:52",
+        "start": 112.24,
+        "duration": 5.36,
+        "text": "clever about my resume"
+      },
+      {
+        "index": 41,
+        "time": "01:54",
+        "start": 114,
+        "duration": 5.6,
+        "text": "yes my job oh no i don't really like the"
+      },
+      {
+        "index": 42,
+        "time": "01:57",
+        "start": 117.6,
+        "duration": 4.879,
+        "text": "people in my team and i haven't done"
+      },
+      {
+        "index": 43,
+        "time": "01:59",
+        "start": 119.6,
+        "duration": 4.72,
+        "text": "anything since the pandemic i committed"
+      },
+      {
+        "index": 44,
+        "time": "02:02",
+        "start": 122.479,
+        "duration": 3.761,
+        "text": "comments in code and removed"
+      },
+      {
+        "index": 45,
+        "time": "02:04",
+        "start": 124.32,
+        "duration": 4.159,
+        "text": "some more comments just so people think"
+      },
+      {
+        "index": 46,
+        "time": "02:06",
+        "start": 126.24,
+        "duration": 5.44,
+        "text": "i'm working"
+      },
+      {
+        "index": 47,
+        "time": "02:08",
+        "start": 128.479,
+        "duration": 5.601,
+        "text": "oh wait maybe i can just lie"
+      },
+      {
+        "index": 48,
+        "time": "02:11",
+        "start": 131.68,
+        "duration": 4.16,
+        "text": "and he would never find out just like"
+      },
+      {
+        "index": 49,
+        "time": "02:14",
+        "start": 134.08,
+        "duration": 5.28,
+        "text": "how my manager always told me"
+      },
+      {
+        "index": 50,
+        "time": "02:15",
+        "start": 135.84,
+        "duration": 5.6,
+        "text": "i would get a pay raise easy peasy"
+      },
+      {
+        "index": 51,
+        "time": "02:19",
+        "start": 139.36,
+        "duration": 3.76,
+        "text": "i have been working at this company as a"
+      },
+      {
+        "index": 52,
+        "time": "02:21",
+        "start": 141.44,
+        "duration": 3.439,
+        "text": "back-end software engineer since i"
+      },
+      {
+        "index": 53,
+        "time": "02:23",
+        "start": 143.12,
+        "duration": 3.92,
+        "text": "graduated in 2018"
+      },
+      {
+        "index": 54,
+        "time": "02:24",
+        "start": 144.879,
+        "duration": 4.161,
+        "text": "i really like my job and my team and"
+      },
+      {
+        "index": 55,
+        "time": "02:27",
+        "start": 147.04,
+        "duration": 4.08,
+        "text": "i've been learning a lot from them"
+      },
+      {
+        "index": 56,
+        "time": "02:29",
+        "start": 149.04,
+        "duration": 3.839,
+        "text": "i am passionate about doing impactful"
+      },
+      {
+        "index": 57,
+        "time": "02:31",
+        "start": 151.12,
+        "duration": 4.479,
+        "text": "work and solving complex"
+      },
+      {
+        "index": 58,
+        "time": "02:32",
+        "start": 152.879,
+        "duration": 4,
+        "text": "and challenging engineering problems and"
+      },
+      {
+        "index": 59,
+        "time": "02:35",
+        "start": 155.599,
+        "duration": 4.961,
+        "text": "most importantly"
+      },
+      {
+        "index": 60,
+        "time": "02:36",
+        "start": 156.879,
+        "duration": 6.481,
+        "text": "i code really fast okay okay"
+      },
+      {
+        "index": 61,
+        "time": "02:40",
+        "start": 160.56,
+        "duration": 5.2,
+        "text": "sounds good um cool if you're ready"
+      },
+      {
+        "index": 62,
+        "time": "02:43",
+        "start": 163.36,
+        "duration": 4.239,
+        "text": "let's dive right into the coding part"
+      },
+      {
+        "index": 63,
+        "time": "02:45",
+        "start": 165.76,
+        "duration": 3.119,
+        "text": "i just want to let you know that i do"
+      },
+      {
+        "index": 64,
+        "time": "02:47",
+        "start": 167.599,
+        "duration": 3.841,
+        "text": "want to leave maybe"
+      },
+      {
+        "index": 65,
+        "time": "02:48",
+        "start": 168.879,
+        "duration": 4.401,
+        "text": "5-10 minutes at the end for you to ask"
+      },
+      {
+        "index": 66,
+        "time": "02:51",
+        "start": 171.44,
+        "duration": 3.519,
+        "text": "any questions"
+      },
+      {
+        "index": 67,
+        "time": "02:53",
+        "start": 173.28,
+        "duration": 5.28,
+        "text": "does that sound good to you you're"
+      },
+      {
+        "index": 68,
+        "time": "02:54",
+        "start": 174.959,
+        "duration": 6.881,
+        "text": "kidding me i was born ready"
+      },
+      {
+        "index": 69,
+        "time": "02:58",
+        "start": 178.56,
+        "duration": 5.84,
+        "text": "uh tom oh yes please please go ahead"
+      },
+      {
+        "index": 70,
+        "time": "03:01",
+        "start": 181.84,
+        "duration": 3.84,
+        "text": "cool so here's the question given an"
+      },
+      {
+        "index": 71,
+        "time": "03:04",
+        "start": 184.4,
+        "duration": 3.919,
+        "text": "array of integers"
+      },
+      {
+        "index": 72,
+        "time": "03:05",
+        "start": 185.68,
+        "duration": 4.8,
+        "text": "and the number k i want you to write a"
+      },
+      {
+        "index": 73,
+        "time": "03:08",
+        "start": 188.319,
+        "duration": 4.961,
+        "text": "function that returns the k"
+      },
+      {
+        "index": 74,
+        "time": "03:10",
+        "start": 190.48,
+        "duration": 5.44,
+        "text": "largest element array the k is"
+      },
+      {
+        "index": 75,
+        "time": "03:13",
+        "start": 193.28,
+        "duration": 4.319,
+        "text": "guaranteed to be smaller or equal to the"
+      },
+      {
+        "index": 76,
+        "time": "03:15",
+        "start": 195.92,
+        "duration": 4.959,
+        "text": "size of the array"
+      },
+      {
+        "index": 77,
+        "time": "03:17",
+        "start": 197.599,
+        "duration": 5.441,
+        "text": "so here's an example of input and output"
+      },
+      {
+        "index": 78,
+        "time": "03:20",
+        "start": 200.879,
+        "duration": 4,
+        "text": "feel free to think out loud and walk me"
+      },
+      {
+        "index": 79,
+        "time": "03:23",
+        "start": 203.04,
+        "duration": 4.64,
+        "text": "through your thoughts"
+      },
+      {
+        "index": 80,
+        "time": "03:24",
+        "start": 204.879,
+        "duration": 4.881,
+        "text": "jack madam hacking pod i was studying"
+      },
+      {
+        "index": 81,
+        "time": "03:27",
+        "start": 207.68,
+        "duration": 2.72,
+        "text": "the exact same question just a few days"
+      },
+      {
+        "index": 82,
+        "time": "03:29",
+        "start": 209.76,
+        "duration": 2.8,
+        "text": "ago"
+      },
+      {
+        "index": 83,
+        "time": "03:30",
+        "start": 210.4,
+        "duration": 4.8,
+        "text": "if i remember correctly it was number"
+      },
+      {
+        "index": 84,
+        "time": "03:32",
+        "start": 212.56,
+        "duration": 5.84,
+        "text": "215 medium in lead code"
+      },
+      {
+        "index": 85,
+        "time": "03:35",
+        "start": 215.2,
+        "duration": 5.599,
+        "text": "i am lee coded and unbeatable"
+      },
+      {
+        "index": 86,
+        "time": "03:38",
+        "start": 218.4,
+        "duration": 4.08,
+        "text": "but hold on i need to pretend i've never"
+      },
+      {
+        "index": 87,
+        "time": "03:40",
+        "start": 220.799,
+        "duration": 4.041,
+        "text": "seen this question before otherwise he"
+      },
+      {
+        "index": 88,
+        "time": "03:42",
+        "start": 222.48,
+        "duration": 5.36,
+        "text": "might be suspicious if i finish it too"
+      },
+      {
+        "index": 89,
+        "time": "03:44",
+        "start": 224.84,
+        "duration": 3,
+        "text": "soon"
+      },
+      {
+        "index": 90,
+        "time": "03:48",
+        "start": 228.159,
+        "duration": 6.64,
+        "text": "oh god this is hard"
+      },
+      {
+        "index": 91,
+        "time": "03:51",
+        "start": 231.44,
+        "duration": 4.24,
+        "text": "i'm not sure if i oh no worries um i can"
+      },
+      {
+        "index": 92,
+        "time": "03:54",
+        "start": 234.799,
+        "duration": 2.961,
+        "text": "give you some hint"
+      },
+      {
+        "index": 93,
+        "time": "03:55",
+        "start": 235.68,
+        "duration": 3.44,
+        "text": "if you don't know where to start hint"
+      },
+      {
+        "index": 94,
+        "time": "03:57",
+        "start": 237.76,
+        "duration": 3.6,
+        "text": "known as the silent"
+      },
+      {
+        "index": 95,
+        "time": "03:59",
+        "start": 239.12,
+        "duration": 4.479,
+        "text": "strong higher killer so many newbies"
+      },
+      {
+        "index": 96,
+        "time": "04:01",
+        "start": 241.36,
+        "duration": 3.04,
+        "text": "were down leveled or ghosted after the"
+      },
+      {
+        "index": 97,
+        "time": "04:03",
+        "start": 243.599,
+        "duration": 3.761,
+        "text": "interviews"
+      },
+      {
+        "index": 98,
+        "time": "04:04",
+        "start": 244.4,
+        "duration": 4.399,
+        "text": "i would not fall for this trap oh no no"
+      },
+      {
+        "index": 99,
+        "time": "04:07",
+        "start": 247.36,
+        "duration": 4.48,
+        "text": "i don't mean hard i mean"
+      },
+      {
+        "index": 100,
+        "time": "04:08",
+        "start": 248.799,
+        "duration": 4.8,
+        "text": "hot it's so hot here i gotta go turn on"
+      },
+      {
+        "index": 101,
+        "time": "04:11",
+        "start": 251.84,
+        "duration": 6.72,
+        "text": "my ac if you don't mind"
+      },
+      {
+        "index": 102,
+        "time": "04:13",
+        "start": 253.599,
+        "duration": 4.961,
+        "text": "yeah go ahead thanks i'll be right back"
+      },
+      {
+        "index": 103,
+        "time": "04:23",
+        "start": 263.36,
+        "duration": 3.68,
+        "text": "most mediocre engineers will think hip"
+      },
+      {
+        "index": 104,
+        "time": "04:25",
+        "start": 265.84,
+        "duration": 3.84,
+        "text": "is the solution"
+      },
+      {
+        "index": 105,
+        "time": "04:27",
+        "start": 267.04,
+        "duration": 4.64,
+        "text": "by maintaining a k size priority queue"
+      },
+      {
+        "index": 106,
+        "time": "04:29",
+        "start": 269.68,
+        "duration": 4.799,
+        "text": "runtime complexity is slightly better"
+      },
+      {
+        "index": 107,
+        "time": "04:31",
+        "start": 271.68,
+        "duration": 5.12,
+        "text": "than sorting the entire array"
+      },
+      {
+        "index": 108,
+        "time": "04:34",
+        "start": 274.479,
+        "duration": 3.121,
+        "text": "naive solution only good enough for"
+      },
+      {
+        "index": 109,
+        "time": "04:36",
+        "start": 276.8,
+        "duration": 3.36,
+        "text": "amazon"
+      },
+      {
+        "index": 110,
+        "time": "04:37",
+        "start": 277.6,
+        "duration": 3.68,
+        "text": "it is most efficient to use quick select"
+      },
+      {
+        "index": 111,
+        "time": "04:40",
+        "start": 280.16,
+        "duration": 3.12,
+        "text": "for this problem"
+      },
+      {
+        "index": 112,
+        "time": "04:41",
+        "start": 281.28,
+        "duration": 4.4,
+        "text": "but it would take some time to implement"
+      },
+      {
+        "index": 113,
+        "time": "04:43",
+        "start": 283.28,
+        "duration": 5.04,
+        "text": "since i've done so many legal questions"
+      },
+      {
+        "index": 114,
+        "time": "04:45",
+        "start": 285.68,
+        "duration": 5.92,
+        "text": "this is too trivial for me i am a much"
+      },
+      {
+        "index": 115,
+        "time": "04:48",
+        "start": 288.32,
+        "duration": 3.28,
+        "text": "better engineer than you"
+      },
+      {
+        "index": 116,
+        "time": "04:53",
+        "start": 293.44,
+        "duration": 6.64,
+        "text": "okay wow this actually looks pretty good"
+      },
+      {
+        "index": 117,
+        "time": "04:57",
+        "start": 297.28,
+        "duration": 4.96,
+        "text": "can you kind of talk a little bit about"
+      },
+      {
+        "index": 118,
+        "time": "05:00",
+        "start": 300.08,
+        "duration": 4.08,
+        "text": "the runtime complexity here"
+      },
+      {
+        "index": 119,
+        "time": "05:02",
+        "start": 302.24,
+        "duration": 3.28,
+        "text": "yeah the simplest brute force solution"
+      },
+      {
+        "index": 120,
+        "time": "05:04",
+        "start": 304.16,
+        "duration": 3.36,
+        "text": "will be n of log"
+      },
+      {
+        "index": 121,
+        "time": "05:05",
+        "start": 305.52,
+        "duration": 4.48,
+        "text": "n which is basically just sorting the"
+      },
+      {
+        "index": 122,
+        "time": "05:07",
+        "start": 307.52,
+        "duration": 4.16,
+        "text": "array but if you use a heap like data"
+      },
+      {
+        "index": 123,
+        "time": "05:10",
+        "start": 310,
+        "duration": 3.6,
+        "text": "structure you can actually achieve a"
+      },
+      {
+        "index": 124,
+        "time": "05:11",
+        "start": 311.68,
+        "duration": 5.28,
+        "text": "slightly better performance which is"
+      },
+      {
+        "index": 125,
+        "time": "05:13",
+        "start": 313.6,
+        "duration": 5.599,
+        "text": "n of log k however with my quick sort"
+      },
+      {
+        "index": 126,
+        "time": "05:16",
+        "start": 316.96,
+        "duration": 5.12,
+        "text": "algorithm the wrong time complexity is"
+      },
+      {
+        "index": 127,
+        "time": "05:19",
+        "start": 319.199,
+        "duration": 4.961,
+        "text": "further reduced down off n in average"
+      },
+      {
+        "index": 128,
+        "time": "05:22",
+        "start": 322.08,
+        "duration": 3.119,
+        "text": "case and of course the worst case will"
+      },
+      {
+        "index": 129,
+        "time": "05:24",
+        "start": 324.16,
+        "duration": 3.759,
+        "text": "always be off"
+      },
+      {
+        "index": 130,
+        "time": "05:25",
+        "start": 325.199,
+        "duration": 2.72,
+        "text": "and square"
+      },
+      {
+        "index": 131,
+        "time": "05:29",
+        "start": 329.28,
+        "duration": 4.639,
+        "text": "cool thanks tom this is awesome um i"
+      },
+      {
+        "index": 132,
+        "time": "05:32",
+        "start": 332.24,
+        "duration": 3.519,
+        "text": "think that's it for me"
+      },
+      {
+        "index": 133,
+        "time": "05:33",
+        "start": 333.919,
+        "duration": 4.321,
+        "text": "are there any questions that you want to"
+      },
+      {
+        "index": 134,
+        "time": "05:35",
+        "start": 335.759,
+        "duration": 7.44,
+        "text": "ask me yeah"
+      },
+      {
+        "index": 135,
+        "time": "05:38",
+        "start": 338.24,
+        "duration": 4.959,
+        "text": "when can i start"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": null,
+    "fallback": null,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXF1PRAF03CQ7R793EBBFEEH",
+    "status": "completed",
+    "videoId": "ASXM4-CQG8o",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "[Music]",
+            "start": 3.43,
+            "duration": 13.53
+          },
+          {
+            "text": "i can do this",
+            "start": 7.12,
+            "duration": 12.56
+          },
+          {
+            "text": "oh [ __ ]",
+            "start": 16.96,
+            "duration": 2.72
+          },
+          {
+            "text": "hi hey tom my name is jerry",
+            "start": 25.439,
+            "duration": 6.401
+          },
+          {
+            "text": "i will be conducting your technical",
+            "start": 29.519,
+            "duration": 3.921
+          },
+          {
+            "text": "interview today",
+            "start": 31.84,
+            "duration": 4.64
+          },
+          {
+            "text": "um just a little bit about myself i",
+            "start": 33.44,
+            "duration": 5.279
+          },
+          {
+            "text": "am a senior software engineer at the",
+            "start": 36.48,
+            "duration": 3.84
+          },
+          {
+            "text": "application service platform",
+            "start": 38.719,
+            "duration": 3.601
+          },
+          {
+            "text": "infrastructure mobile kubernetes",
+            "start": 40.32,
+            "duration": 4.719
+          },
+          {
+            "text": "engineering team and i have been with",
+            "start": 42.32,
+            "duration": 4.96
+          },
+          {
+            "text": "the company for",
+            "start": 45.039,
+            "duration": 5.68
+          },
+          {
+            "text": "a good eight years now alright",
+            "start": 47.28,
+            "duration": 7.04
+          },
+          {
+            "text": "this is it the moment of truth i am so",
+            "start": 50.719,
+            "duration": 4.801
+          },
+          {
+            "text": "ready",
+            "start": 54.32,
+            "duration": 3.52
+          },
+          {
+            "text": "i have been practicing nico for the past",
+            "start": 55.52,
+            "duration": 3.44
+          },
+          {
+            "text": "couple months",
+            "start": 57.84,
+            "duration": 4.08
+          },
+          {
+            "text": "day and night i have never felt more",
+            "start": 58.96,
+            "duration": 4.16
+          },
+          {
+            "text": "powerful",
+            "start": 61.92,
+            "duration": 3.32
+          },
+          {
+            "text": "time and space complexity are",
+            "start": 63.12,
+            "duration": 3.6
+          },
+          {
+            "text": "inconsequential",
+            "start": 65.24,
+            "duration": 3.64
+          },
+          {
+            "text": "i can easily clear all the median",
+            "start": 66.72,
+            "duration": 3.759
+          },
+          {
+            "text": "questions without looking at the",
+            "start": 68.88,
+            "duration": 3.44
+          },
+          {
+            "text": "discussion board",
+            "start": 70.479,
+            "duration": 5.201
+          },
+          {
+            "text": "my forearms are so big and sore probably",
+            "start": 72.32,
+            "duration": 5.28
+          },
+          {
+            "text": "because i've been typing so much",
+            "start": 75.68,
+            "duration": 5.36
+          },
+          {
+            "text": "and so fast i'm finally going to see a",
+            "start": 77.6,
+            "duration": 8.4
+          },
+          {
+            "text": "return on my lego premium subscription",
+            "start": 81.04,
+            "duration": 7.119
+          },
+          {
+            "text": "okay so why don't you start with telling",
+            "start": 86,
+            "duration": 4.32
+          },
+          {
+            "text": "me a little bit about yourself",
+            "start": 88.159,
+            "duration": 6.081
+          },
+          {
+            "text": "ah oh no i spent all my time on litco",
+            "start": 90.32,
+            "duration": 5.839
+          },
+          {
+            "text": "and completely forget to prepare for the",
+            "start": 94.24,
+            "duration": 3.839
+          },
+          {
+            "text": "stupid behavioral questions",
+            "start": 96.159,
+            "duration": 4.721
+          },
+          {
+            "text": "oh my god what do i do what do i tell",
+            "start": 98.079,
+            "duration": 3.521
+          },
+          {
+            "text": "him",
+            "start": 100.88,
+            "duration": 3.919
+          },
+          {
+            "text": "about myself i had a big breakfast today",
+            "start": 101.6,
+            "duration": 5.04
+          },
+          {
+            "text": "just so i can carve up and now",
+            "start": 104.799,
+            "duration": 4.241
+          },
+          {
+            "text": "no no no that's not what he wants to",
+            "start": 106.64,
+            "duration": 3.36
+          },
+          {
+            "text": "hear tom",
+            "start": 109.04,
+            "duration": 3.2
+          },
+          {
+            "text": "are you still there gotta say something",
+            "start": 110,
+            "duration": 4
+          },
+          {
+            "text": "clever about my resume",
+            "start": 112.24,
+            "duration": 5.36
+          },
+          {
+            "text": "yes my job oh no i don't really like the",
+            "start": 114,
+            "duration": 5.6
+          },
+          {
+            "text": "people in my team and i haven't done",
+            "start": 117.6,
+            "duration": 4.879
+          },
+          {
+            "text": "anything since the pandemic i committed",
+            "start": 119.6,
+            "duration": 4.72
+          },
+          {
+            "text": "comments in code and removed",
+            "start": 122.479,
+            "duration": 3.761
+          },
+          {
+            "text": "some more comments just so people think",
+            "start": 124.32,
+            "duration": 4.159
+          },
+          {
+            "text": "i'm working",
+            "start": 126.24,
+            "duration": 5.44
+          },
+          {
+            "text": "oh wait maybe i can just lie",
+            "start": 128.479,
+            "duration": 5.601
+          },
+          {
+            "text": "and he would never find out just like",
+            "start": 131.68,
+            "duration": 4.16
+          },
+          {
+            "text": "how my manager always told me",
+            "start": 134.08,
+            "duration": 5.28
+          },
+          {
+            "text": "i would get a pay raise easy peasy",
+            "start": 135.84,
+            "duration": 5.6
+          },
+          {
+            "text": "i have been working at this company as a",
+            "start": 139.36,
+            "duration": 3.76
+          },
+          {
+            "text": "back-end software engineer since i",
+            "start": 141.44,
+            "duration": 3.439
+          },
+          {
+            "text": "graduated in 2018",
+            "start": 143.12,
+            "duration": 3.92
+          },
+          {
+            "text": "i really like my job and my team and",
+            "start": 144.879,
+            "duration": 4.161
+          },
+          {
+            "text": "i've been learning a lot from them",
+            "start": 147.04,
+            "duration": 4.08
+          },
+          {
+            "text": "i am passionate about doing impactful",
+            "start": 149.04,
+            "duration": 3.839
+          },
+          {
+            "text": "work and solving complex",
+            "start": 151.12,
+            "duration": 4.479
+          },
+          {
+            "text": "and challenging engineering problems and",
+            "start": 152.879,
+            "duration": 4
+          },
+          {
+            "text": "most importantly",
+            "start": 155.599,
+            "duration": 4.961
+          },
+          {
+            "text": "i code really fast okay okay",
+            "start": 156.879,
+            "duration": 6.481
+          },
+          {
+            "text": "sounds good um cool if you're ready",
+            "start": 160.56,
+            "duration": 5.2
+          },
+          {
+            "text": "let's dive right into the coding part",
+            "start": 163.36,
+            "duration": 4.239
+          },
+          {
+            "text": "i just want to let you know that i do",
+            "start": 165.76,
+            "duration": 3.119
+          },
+          {
+            "text": "want to leave maybe",
+            "start": 167.599,
+            "duration": 3.841
+          },
+          {
+            "text": "5-10 minutes at the end for you to ask",
+            "start": 168.879,
+            "duration": 4.401
+          },
+          {
+            "text": "any questions",
+            "start": 171.44,
+            "duration": 3.519
+          },
+          {
+            "text": "does that sound good to you you're",
+            "start": 173.28,
+            "duration": 5.28
+          },
+          {
+            "text": "kidding me i was born ready",
+            "start": 174.959,
+            "duration": 6.881
+          },
+          {
+            "text": "uh tom oh yes please please go ahead",
+            "start": 178.56,
+            "duration": 5.84
+          },
+          {
+            "text": "cool so here's the question given an",
+            "start": 181.84,
+            "duration": 3.84
+          },
+          {
+            "text": "array of integers",
+            "start": 184.4,
+            "duration": 3.919
+          },
+          {
+            "text": "and the number k i want you to write a",
+            "start": 185.68,
+            "duration": 4.8
+          },
+          {
+            "text": "function that returns the k",
+            "start": 188.319,
+            "duration": 4.961
+          },
+          {
+            "text": "largest element array the k is",
+            "start": 190.48,
+            "duration": 5.44
+          },
+          {
+            "text": "guaranteed to be smaller or equal to the",
+            "start": 193.28,
+            "duration": 4.319
+          },
+          {
+            "text": "size of the array",
+            "start": 195.92,
+            "duration": 4.959
+          },
+          {
+            "text": "so here's an example of input and output",
+            "start": 197.599,
+            "duration": 5.441
+          },
+          {
+            "text": "feel free to think out loud and walk me",
+            "start": 200.879,
+            "duration": 4
+          },
+          {
+            "text": "through your thoughts",
+            "start": 203.04,
+            "duration": 4.64
+          },
+          {
+            "text": "jack madam hacking pod i was studying",
+            "start": 204.879,
+            "duration": 4.881
+          },
+          {
+            "text": "the exact same question just a few days",
+            "start": 207.68,
+            "duration": 2.72
+          },
+          {
+            "text": "ago",
+            "start": 209.76,
+            "duration": 2.8
+          },
+          {
+            "text": "if i remember correctly it was number",
+            "start": 210.4,
+            "duration": 4.8
+          },
+          {
+            "text": "215 medium in lead code",
+            "start": 212.56,
+            "duration": 5.84
+          },
+          {
+            "text": "i am lee coded and unbeatable",
+            "start": 215.2,
+            "duration": 5.599
+          },
+          {
+            "text": "but hold on i need to pretend i've never",
+            "start": 218.4,
+            "duration": 4.08
+          },
+          {
+            "text": "seen this question before otherwise he",
+            "start": 220.799,
+            "duration": 4.041
+          },
+          {
+            "text": "might be suspicious if i finish it too",
+            "start": 222.48,
+            "duration": 5.36
+          },
+          {
+            "text": "soon",
+            "start": 224.84,
+            "duration": 3
+          },
+          {
+            "text": "oh god this is hard",
+            "start": 228.159,
+            "duration": 6.64
+          },
+          {
+            "text": "i'm not sure if i oh no worries um i can",
+            "start": 231.44,
+            "duration": 4.24
+          },
+          {
+            "text": "give you some hint",
+            "start": 234.799,
+            "duration": 2.961
+          },
+          {
+            "text": "if you don't know where to start hint",
+            "start": 235.68,
+            "duration": 3.44
+          },
+          {
+            "text": "known as the silent",
+            "start": 237.76,
+            "duration": 3.6
+          },
+          {
+            "text": "strong higher killer so many newbies",
+            "start": 239.12,
+            "duration": 4.479
+          },
+          {
+            "text": "were down leveled or ghosted after the",
+            "start": 241.36,
+            "duration": 3.04
+          },
+          {
+            "text": "interviews",
+            "start": 243.599,
+            "duration": 3.761
+          },
+          {
+            "text": "i would not fall for this trap oh no no",
+            "start": 244.4,
+            "duration": 4.399
+          },
+          {
+            "text": "i don't mean hard i mean",
+            "start": 247.36,
+            "duration": 4.48
+          },
+          {
+            "text": "hot it's so hot here i gotta go turn on",
+            "start": 248.799,
+            "duration": 4.8
+          },
+          {
+            "text": "my ac if you don't mind",
+            "start": 251.84,
+            "duration": 6.72
+          },
+          {
+            "text": "yeah go ahead thanks i'll be right back",
+            "start": 253.599,
+            "duration": 4.961
+          },
+          {
+            "text": "most mediocre engineers will think hip",
+            "start": 263.36,
+            "duration": 3.68
+          },
+          {
+            "text": "is the solution",
+            "start": 265.84,
+            "duration": 3.84
+          },
+          {
+            "text": "by maintaining a k size priority queue",
+            "start": 267.04,
+            "duration": 4.64
+          },
+          {
+            "text": "runtime complexity is slightly better",
+            "start": 269.68,
+            "duration": 4.799
+          },
+          {
+            "text": "than sorting the entire array",
+            "start": 271.68,
+            "duration": 5.12
+          },
+          {
+            "text": "naive solution only good enough for",
+            "start": 274.479,
+            "duration": 3.121
+          },
+          {
+            "text": "amazon",
+            "start": 276.8,
+            "duration": 3.36
+          },
+          {
+            "text": "it is most efficient to use quick select",
+            "start": 277.6,
+            "duration": 3.68
+          },
+          {
+            "text": "for this problem",
+            "start": 280.16,
+            "duration": 3.12
+          },
+          {
+            "text": "but it would take some time to implement",
+            "start": 281.28,
+            "duration": 4.4
+          },
+          {
+            "text": "since i've done so many legal questions",
+            "start": 283.28,
+            "duration": 5.04
+          },
+          {
+            "text": "this is too trivial for me i am a much",
+            "start": 285.68,
+            "duration": 5.92
+          },
+          {
+            "text": "better engineer than you",
+            "start": 288.32,
+            "duration": 3.28
+          },
+          {
+            "text": "okay wow this actually looks pretty good",
+            "start": 293.44,
+            "duration": 6.64
+          },
+          {
+            "text": "can you kind of talk a little bit about",
+            "start": 297.28,
+            "duration": 4.96
+          },
+          {
+            "text": "the runtime complexity here",
+            "start": 300.08,
+            "duration": 4.08
+          },
+          {
+            "text": "yeah the simplest brute force solution",
+            "start": 302.24,
+            "duration": 3.28
+          },
+          {
+            "text": "will be n of log",
+            "start": 304.16,
+            "duration": 3.36
+          },
+          {
+            "text": "n which is basically just sorting the",
+            "start": 305.52,
+            "duration": 4.48
+          },
+          {
+            "text": "array but if you use a heap like data",
+            "start": 307.52,
+            "duration": 4.16
+          },
+          {
+            "text": "structure you can actually achieve a",
+            "start": 310,
+            "duration": 3.6
+          },
+          {
+            "text": "slightly better performance which is",
+            "start": 311.68,
+            "duration": 5.28
+          },
+          {
+            "text": "n of log k however with my quick sort",
+            "start": 313.6,
+            "duration": 5.599
+          },
+          {
+            "text": "algorithm the wrong time complexity is",
+            "start": 316.96,
+            "duration": 5.12
+          },
+          {
+            "text": "further reduced down off n in average",
+            "start": 319.199,
+            "duration": 4.961
+          },
+          {
+            "text": "case and of course the worst case will",
+            "start": 322.08,
+            "duration": 3.119
+          },
+          {
+            "text": "always be off",
+            "start": 324.16,
+            "duration": 3.759
+          },
+          {
+            "text": "and square",
+            "start": 325.199,
+            "duration": 2.72
+          },
+          {
+            "text": "cool thanks tom this is awesome um i",
+            "start": 329.28,
+            "duration": 4.639
+          },
+          {
+            "text": "think that's it for me",
+            "start": 332.24,
+            "duration": 3.519
+          },
+          {
+            "text": "are there any questions that you want to",
+            "start": 333.919,
+            "duration": 4.321
+          },
+          {
+            "text": "ask me yeah",
+            "start": 335.759,
+            "duration": 7.44
+          },
+          {
+            "text": "when can i start",
+            "start": 338.24,
+            "duration": 4.959
+          }
+        ],
+        "videoTitle": "How to tech interview Like a Pro | ft.內褲面試官",
+        "metadata": {
+          "title": "How to tech interview Like a Pro | ft.內褲面試官",
+          "description": "盈透證卷Interactive Brokers ❤️：https://www.interactivebrokers.com/mkt/?src=terryY1&url=%2Fcn%2Fwhyib%2Foverview.php\n\n歡迎追蹤我的\nInstagram: https://www.instagram.com/master.terry.chen\nEmail: terry.chen.company@gmail.com",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 341,
+          "viewCount": 38545,
+          "keywords": [
+            "tech interview",
+            "software",
+            "interview",
+            "leetcode",
+            "strong hire",
+            "engineering",
+            "工程師",
+            "軟體工程師",
+            "面試",
+            "刷題"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/ASXM4-CQG8o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "clientUsed": "ANDROID"
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

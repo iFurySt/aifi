@@ -1,0 +1,246 @@
+[
+  {
+    "id": "Q59J5roE5lM",
+    "index": 27,
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQ59J5roE5lM",
+    "status": "ok",
+    "error": null,
+    "output_txt": "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-tactiq.txt",
+    "output_json": "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-tactiq.json",
+    "segments": 755,
+    "characters": 8557
+  },
+  {
+    "id": "Gwn_kEegfJ4",
+    "index": 72,
+    "title": "公開我的全部身家，資產配置",
+    "url": "https://www.youtube.com/watch?v=Gwn_kEegfJ4",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGwn_kEegfJ4",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "52XVsVj6b4E",
+    "index": 277,
+    "title": "公開我全部的資產配置與投資",
+    "url": "https://www.youtube.com/watch?v=52XVsVj6b4E",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D52XVsVj6b4E",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "L7xgc12JfHA",
+    "index": 69,
+    "title": "分享我的被動收入",
+    "url": "https://www.youtube.com/watch?v=L7xgc12JfHA",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DL7xgc12JfHA",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "hbJ0S2hINWg",
+    "index": 105,
+    "title": "公開我$2,500美金的被動收入",
+    "url": "https://www.youtube.com/watch?v=hbJ0S2hINWg",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhbJ0S2hINWg",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "P6XYXfePAsA",
+    "index": 254,
+    "title": "我的$550美金被動收入",
+    "url": "https://www.youtube.com/watch?v=P6XYXfePAsA",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DP6XYXfePAsA",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "e5oYYw1tXbo",
+    "index": 49,
+    "title": "選股真的能跑贏大盤嗎？公開我回測的結果",
+    "url": "https://www.youtube.com/watch?v=e5oYYw1tXbo",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3De5oYYw1tXbo",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "lL-aGwCD5xk",
+    "index": 34,
+    "title": "其實退休沒那麼難：專訪投資前輩，如何利用高股息＋優化資產配置 @justin-fu",
+    "url": "https://www.youtube.com/watch?v=lL-aGwCD5xk",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DlL-aGwCD5xk",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "dqAsQyRJHAg",
+    "index": 65,
+    "title": "一次搞懂選擇權（期權）",
+    "url": "https://www.youtube.com/watch?v=dqAsQyRJHAg",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdqAsQyRJHAg",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "HL26tMSTqO4",
+    "index": 120,
+    "title": "Nexo的被動收入利息可以相信嗎？",
+    "url": "https://www.youtube.com/watch?v=HL26tMSTqO4",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DHL26tMSTqO4",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "XJtbWhnclB4",
+    "index": 15,
+    "title": "全球財富正在輪動，經典的資產配置法則已經不適用？",
+    "url": "https://www.youtube.com/watch?v=XJtbWhnclB4",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXJtbWhnclB4",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "lL-aGwCD5xk",
+    "index": 34,
+    "title": "其實退休沒那麼難：專訪投資前輩，如何利用高股息＋優化資產配置 @justin-fu",
+    "url": "https://www.youtube.com/watch?v=lL-aGwCD5xk",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DlL-aGwCD5xk",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "e5oYYw1tXbo",
+    "index": 49,
+    "title": "選股真的能跑贏大盤嗎？公開我回測的結果",
+    "url": "https://www.youtube.com/watch?v=e5oYYw1tXbo",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3De5oYYw1tXbo",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "kE1NjL9hQxo",
+    "index": 60,
+    "title": "有幾股特斯拉就能財富自由？",
+    "url": "https://www.youtube.com/watch?v=kE1NjL9hQxo",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkE1NjL9hQxo",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "dqAsQyRJHAg",
+    "index": 65,
+    "title": "一次搞懂選擇權（期權）",
+    "url": "https://www.youtube.com/watch?v=dqAsQyRJHAg",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdqAsQyRJHAg",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "L7xgc12JfHA",
+    "index": 69,
+    "title": "分享我的被動收入",
+    "url": "https://www.youtube.com/watch?v=L7xgc12JfHA",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DL7xgc12JfHA",
+    "status": "error",
+    "error": "no running Open Browser Use host matched --browser \"chrome\" --profile \"Default\"; no Chrome host was reachable; open Chrome on the desired profile and retry"
+  },
+  {
+    "id": "Gwn_kEegfJ4",
+    "index": 72,
+    "title": "公開我的全部身家，資產配置",
+    "url": "https://www.youtube.com/watch?v=Gwn_kEegfJ4",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGwn_kEegfJ4",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "YMjsNbiWTj8",
+    "index": 98,
+    "title": "我財富自由了嗎？移居日本Q&A",
+    "url": "https://www.youtube.com/watch?v=YMjsNbiWTj8",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DYMjsNbiWTj8",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "nONnDP5-SLA",
+    "index": 101,
+    "title": "我又開始加倉特斯拉了",
+    "url": "https://www.youtube.com/watch?v=nONnDP5-SLA",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DnONnDP5-SLA",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "hbJ0S2hINWg",
+    "index": 105,
+    "title": "公開我$2,500美金的被動收入",
+    "url": "https://www.youtube.com/watch?v=hbJ0S2hINWg",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhbJ0S2hINWg",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "HL26tMSTqO4",
+    "index": 120,
+    "title": "Nexo的被動收入利息可以相信嗎？",
+    "url": "https://www.youtube.com/watch?v=HL26tMSTqO4",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DHL26tMSTqO4",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "52XVsVj6b4E",
+    "index": 277,
+    "title": "公開我全部的資產配置與投資",
+    "url": "https://www.youtube.com/watch?v=52XVsVj6b4E",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D52XVsVj6b4E",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  },
+  {
+    "id": "xeEd1DEizNE",
+    "index": 273,
+    "title": "比特幣從月亮跌回地球了",
+    "url": "https://www.youtube.com/watch?v=xeEd1DEizNE",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DxeEd1DEizNE",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 8 segments"
+  },
+  {
+    "id": "5TDTxHZXiLE",
+    "index": 275,
+    "title": "為什麼投資比特幣",
+    "url": "https://www.youtube.com/watch?v=5TDTxHZXiLE",
+    "provider": "Tactiq",
+    "provider_url": "https://tactiq.io/tools/run/youtube_transcript?yt=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5TDTxHZXiLE",
+    "status": "provider_failed",
+    "error": "no timestamped transcript segments found; parsed 0 segments"
+  }
+]

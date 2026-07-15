@@ -1,0 +1,136 @@
+[Music]
+i can do this
+oh [ __ ]
+hi hey tom my name is jerry
+i will be conducting your technical
+interview today
+um just a little bit about myself i
+am a senior software engineer at the
+application service platform
+infrastructure mobile kubernetes
+engineering team and i have been with
+the company for
+a good eight years now alright
+this is it the moment of truth i am so
+ready
+i have been practicing nico for the past
+couple months
+day and night i have never felt more
+powerful
+time and space complexity are
+inconsequential
+i can easily clear all the median
+questions without looking at the
+discussion board
+my forearms are so big and sore probably
+because i've been typing so much
+and so fast i'm finally going to see a
+return on my lego premium subscription
+okay so why don't you start with telling
+me a little bit about yourself
+ah oh no i spent all my time on litco
+and completely forget to prepare for the
+stupid behavioral questions
+oh my god what do i do what do i tell
+him
+about myself i had a big breakfast today
+just so i can carve up and now
+no no no that's not what he wants to
+hear tom
+are you still there gotta say something
+clever about my resume
+yes my job oh no i don't really like the
+people in my team and i haven't done
+anything since the pandemic i committed
+comments in code and removed
+some more comments just so people think
+i'm working
+oh wait maybe i can just lie
+and he would never find out just like
+how my manager always told me
+i would get a pay raise easy peasy
+i have been working at this company as a
+back-end software engineer since i
+graduated in 2018
+i really like my job and my team and
+i've been learning a lot from them
+i am passionate about doing impactful
+work and solving complex
+and challenging engineering problems and
+most importantly
+i code really fast okay okay
+sounds good um cool if you're ready
+let's dive right into the coding part
+i just want to let you know that i do
+want to leave maybe
+5-10 minutes at the end for you to ask
+any questions
+does that sound good to you you're
+kidding me i was born ready
+uh tom oh yes please please go ahead
+cool so here's the question given an
+array of integers
+and the number k i want you to write a
+function that returns the k
+largest element array the k is
+guaranteed to be smaller or equal to the
+size of the array
+so here's an example of input and output
+feel free to think out loud and walk me
+through your thoughts
+jack madam hacking pod i was studying
+the exact same question just a few days
+ago
+if i remember correctly it was number
+215 medium in lead code
+i am lee coded and unbeatable
+but hold on i need to pretend i've never
+seen this question before otherwise he
+might be suspicious if i finish it too
+soon
+oh god this is hard
+i'm not sure if i oh no worries um i can
+give you some hint
+if you don't know where to start hint
+known as the silent
+strong higher killer so many newbies
+were down leveled or ghosted after the
+interviews
+i would not fall for this trap oh no no
+i don't mean hard i mean
+hot it's so hot here i gotta go turn on
+my ac if you don't mind
+yeah go ahead thanks i'll be right back
+most mediocre engineers will think hip
+is the solution
+by maintaining a k size priority queue
+runtime complexity is slightly better
+than sorting the entire array
+naive solution only good enough for
+amazon
+it is most efficient to use quick select
+for this problem
+but it would take some time to implement
+since i've done so many legal questions
+this is too trivial for me i am a much
+better engineer than you
+okay wow this actually looks pretty good
+can you kind of talk a little bit about
+the runtime complexity here
+yeah the simplest brute force solution
+will be n of log
+n which is basically just sorting the
+array but if you use a heap like data
+structure you can actually achieve a
+slightly better performance which is
+n of log k however with my quick sort
+algorithm the wrong time complexity is
+further reduced down off n in average
+case and of course the worst case will
+always be off
+and square
+cool thanks tom this is awesome um i
+think that's it for me
+are there any questions that you want to
+ask me yeah
+when can i start

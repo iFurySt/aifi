@@ -1,0 +1,5154 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=ofitybjcHz0",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 230,
+  "video": {
+    "index": 230,
+    "id": "ofitybjcHz0",
+    "title": "矽谷大神來了｜Part2",
+    "url": "https://www.youtube.com/watch?v=ofitybjcHz0",
+    "duration_seconds": 1093.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "ofitybjcHz0",
+    "title": "矽谷大神來了｜Part2",
+    "text": "next question this is something i do\nwant to ask personally okay so right now\ni'm a senior level software engineer so\nhow do i become like a staff engineer or\nyou know what what distinguishes an\nengineer from senior level to say you\nknow staff or principal level very very\nhard question in there because the whole\nthing is that i can tell you that i\ndon't see any standard definition out\nthere that says that well this is the\ndefinition of a junior intermediate\nsenior staff like principal architect\nlike yadda yadda like i don't see it\nanywhere but i guess like the years of\nexperience of the projects that you\nworked on before kind of contribute to\nthat\nso it does but at the same time how do\nyou measure this yeah because you can\nhave someone that works three years over\nat a startup and like basically just\nfigure out everything themselves like on\na very technical level being able to do\nmachine learning architecture\ninfrastructure building a scalable dom\nsystem\nright and you can have someone who has\nbeen staying at um some ecosystem no\noffense and lego system\ni may get in a lot of trouble for this\nand work 10 years on a very specialized\nproject that has no idea how to do\ndatabase yeah yeah right in that case\nwho is um who is closer to a senior\nengineer who is closer to a principal\nengineer so when you're talking about\nlike senior level engineers um like like\nyou're on a certain level how do you\nwant to grow and get to the next thing\nyou have to understand what the next\nthing is first at least have an idea of\nwhat you want the next thing to be is it\nthat you foresee yourself to be a\nevangelist\nto go into the company and teach people\nand build tools and teach people how to\nuse tools to become better and like more\nefficient in that job is it that you\nwant to be able to lead teams\nto actually show them and be able to\ntake on bigger and bigger projects is it\nthat you want to have more time spending\non specialization which i just said\nabout the microsystem again no offense\nto get into like something that is like\nvery specific that requires a lot more\ntime to do\nthat's where your growth paths are going\nto be and in different companies they\ncan all be called principal engineers\nso the question is back to you is what\ndo you want\nfor your next step let's see right so so\nthink about that like if you're saying\nthat hey\ni want to learn how to take on bigger\nand bigger projects and my answer would\nbe that you should know that at some\npoint of time you're going to run out of\nyour like your physical tighten speed\nit's not going to be able to do bigger\nand bigger project at some some point of\ntime you will have to subcontract it out\nto to delegate this stuff\nin that case the first thing that you\nshould learn is how do i actually get a\nteam how do i actually start organizing\npeople so that in the group of us we can\nactually build something\nright yeah and i would say that like if\nyou're going to do that doing work\ntalking with your boss and actually\ngetting the opportunity to take on\nbigger projects\nwhile bringing on other people sometimes\neasiest bring on interns yeah right\nbring on interns bring on juniors at the\nsame time you learn how to teach you\nlearn how to manage you need learn how\nto lead then you start growing and\ngetting bigger and bigger in terms of\nscience and getting enough feedback from\nboth management your peers and also the\npeople that are working on the that's\nhow i actually start off i see you know\nmajority of the time i will tell you\nthat like once i get to a certain level\na lot of times the feedback is directly\nfrom people that i manage yeah right so\nthat makes sense yeah so would you say\nlike as usually progress is it the\ncoding skill or the hard skill itself is\nnot so important anymore focus should be\nmore on you know people skill and how\nyou manage projects and how you build\nthe team if you're talking about\nproportion a lot of times that's true\nbut that's the answer of my previous\nquestion goes it really depends on how\nyou want to grow\ni'm still seeing like some really really\nbrilliant engineers you want me to lead\na team no i'm not going to do it i don't\nwant to like um i want to focus on\nbuilding and designing good systems and\nlike and they just end up being very\ngood at it they would still be able to\nfigure out how to define the work\nbut they would be paired up with project\nmanagers that actually helped manage the\npeople\nthey would be the one that actually say\nthat this is the wrong map this is why\nforesee and their expertise comes in\npicking a very nebulous problem and\nbreaking it down\nand that's their specialty and they're\nstill okay with that\nright it doesn't mean that the more\nexperienced you are the the more you\nhave to have to um teach or like to to\nmanage and what not it would be great if\nyou do like it's awesome like that like\nour society and our industry needs it\nbut if you want to you can focus on\ndoing something you specialize in stuff\nlike getting a phd like this doesn't\nmean that you have to do like i'm i'm\nspecific you can choose whatever topic\nyou want i see ics so it's not really\njust a singular path it's a lot of\nthings when you get to that level you\ncan specialize it depends on what you\nwant exactly at the end of the day is a\nfree market like nowadays i walk to\ncompanies i don't try to get them to\nlike identify me as one thing or another\ni present to them\nwhat i know what i have what i can help\nthem with\nand they decide if they want to buy it\nor not i see right like my own products\nthe most important thing is like knowing\nyourself on what you want to become and\ntrying to market that and see if there's\nany like buyers\nyes\nsir\nwhat do you care the most other than you\nknow the technical respect assuming the\nperson is you know technically strong\nenough for the team it's a gripe that we\nhave like in um in software engineering\nespecially software engineering\ninterviews\na lot of companies that i go with like\num i go to even\nyou know some experience from that like\nit's uh go in an interview and people\njust keep throwing new technical\nquestions like um algorithmic questions\nright given an array this size and this\nstuff like figure it out and all that\nstuff a smart person of a certain\nexperience would be able to find the\npatterns and answer you those\nbut in work when you when you choose a\npartner\nright um for for starting a business\nyeah or when you're building your team\nwhat do you want them to be or someone i\ncan work with\nsomething you can work with what does\nthat mean when someone i can trust\nsomeone i can you know learn from\nsomeone who is you know\ngenuine and smart understand yeah that's\nsomething that i look forward in general\nthat is the most important thing right\nsomeone that you can trust\nright someone that you can learn from\nright\nthe whole thing is that how do you\nactually get that well first you need to\nmake sure that they're good at\ncommunication if they suck at it it's\ngoing to be a hell of a ride right like\nif they can clearly articulate what they\nare thinking and convey the idea to you\nand back and forth right that's why i'm\nlooking for it\nright like so so a lot of times like i\nstill use um these technical questions\nand and like algorithms make questions\nnow things that are going to get harder\nis going to be the next thing how do you\nthink that you can work with this person\nthat means that personality has to be\nthere yeah right i'm not just saying\nthat a boring personality or not like\ni'm talking about like hey if we're\ngoing to have a an argument are you\ngoing to stand on your ground\nwhen you're right and also being able to\nlisten when there is a discussion going\non or are you going to say that no i'm\nright uh i don't care about any of you\nguys like yada yada or are you going to\nbe backing down everything is kind of\nlike yes i'm junior i will listen to\neverything you say happening right like\nare you able to get a good conversation\na good sparring session happening right\nso now for me interview is relatively\ndynamic i'm trying to see if i can\nactually poke them a little bit\nand see how they respond\nright see if they are going to be\ndismissive seeing if they are actually\nlike listening\nand actually understanding the\ninformation and then regurgitating or\nlike disagreeing with the ideas\nseeing how\nmuch they are going to be willing to\nactually do the feedback\nso that's part of that yeah first thing\nis about reliability um and that is\ngoing to be extremely hard yeah how do\nyou know someone is going to be reliable\nyeah when you're interviewing without\nyeah you only spend like 30 minutes with\nthe person it's really hard exactly yeah\nright yeah but generally there are\nthings that you have to you can rely on\nsome of the things actually is your\nintuition\none of the strongest things that um\nwe\nhave to rely on is understanding our\nintuition a lot of times what i have\nseen is that people who are who have\ngreat attention to detail\nalso hold great responsibility as\nthemselves i see is this a type of\nperson that you feel like that they see\na problem and they will own the problem\nholy exactly\nseeing that and like trying to do that a\nlot has to come with pps experience as\nwell so when we talk about like hey tell\nme about your like um your history about\nlike your previous work and whatnot get\ninto what situation talk about what\nhappened how did they handle it why did\nthey step up why did they not step up\nwhat is the reaction what is their\nfeeling about a situation or the\nsituation that they're talking about and\nfrom that you just clean more and more\nof their personality\ni believe that technology technical\ncapabilities i can train\nright give me a smart person and i can\ntrain them within x amount of months\nand they will become capable\ngive me a lazy person and i will spend\nmore time working on the person then\ni'll be doing work\na non-motivated person or\nsomeone who actually let's just say not\na good personality match with me\nit's not going to work out\nbecause it's so much harder to actually\nadjust personality yeah then it is two\nare just technical capabilities\ni see\nright\nyou know a lot of my audience right in\nasia right asian traditions like you're\ngrowing up parents teachers to be humble\nright\nand it's very different over here let's\nsay you come here and then you start a\nnew career in\nthe u.s north america or silicon valley\nright how do you kind of like balance\nout and what advice would you give\npeople growing up in asia there is a\ndifference between knowing what you know\nand being good at what you do and\nbragging about it there is a fine line\nabout it yeah usually i cross that line\nmy apologies on that um the humility in\nit\nhappens the easiest when you are genuine\nif you are able to be more transparent\nthen people will understand you\nlet people understand you and when you\ndo that you get a lot more leeway i try\nto communicate my intentions\nand if they align or if they understand\nit then people usually appreciate it\nand that like alleviates a lot of\nproblems about like humility or or like\ni'm i'm trying to be too like saying too\nmany stories well i still do that\nthat's a problem with canada no no no\ni guess folks\nbut like\nyeah i don't know if i answer your\nquestions it does yeah okay\nwhen senai we met back in the days um he\nwas the mentor to help build the team i\nwas at and i was very fortunate um you\nknow to have said and found it very\nhelpful to have a mentor at earlier\nstage of my career how would you help a\nteam to be more productive and you know\njust generally make people happy and\nmotivated i don't know like in my\nopinion i corrupted him\nyes\nthe most important factor in a workplace\nthat makes people happy is empowerment\npeople being listened to and people\nfeeling that they are being trusted to\nwork on something that sense of\nempowerment actually gives a lot of\nsatisfaction to people ownership is in\nthere but a lot of companies a lot of\nteams they do this they say that here\nyou own this\nright yeah but you should do it this way\nthis way this way oh don't do it like\nthis do it like this this this right\njust telling people like exactly you own\nthis but no you don't really own this\nright ownership\nwithout um empowerment\nit's just responsibility ownership is\nactually both responsibility and\nempowerment\nright usually i tell my boss that if i\nown a team i have the power to choose\nwho is in my team i have the power to\ndiscipline\npeople in my team\ni have the power to actually enable\npeople in my team and if i cannot do\nthat\nthen it's just responsibility blaming i\ndon't want to be a scapegoat i don't\nwant to set myself up and buy extension\nsetting the team that i built to be in\nfailure\nso they have to understand what that\nownership empowerment responsibility\nmodel is\ngenerally is that and second part of it\nis about having an open conversation\nbeing able to be free with your thoughts\nto feel comfortable\nthat you can actually say whatever you\nwant to say\nif you disagree with something you are\ngoing to be able to say it out if you\nwant something to be changed you can\nraise it up\nyou eliminate the fear of like offending\nsomeone and good ideas come out and\ncollaboration comes out\nand\ncamaraderie comes out\nthose are the two things that i believe\nare important i don't think that we can\nactually utilize one methodology and\npush it to everyone\ni think that is the wrong thing like\nstandardization like doesn't what\ndoesn't work\nif you're paying dollars for a good team\nthen you need to utilize those things by\nrecognizing how the niches\nand different quirks each person has and\nhow to actually gear them and help them\nto be successful while challenging them\nto be growing i believe that when people\nare happy at their work and they feel\nlike that they are growing they don't\nfeel like that they want to leave unless\nyou're grossly underpaying them right\nbut if they feel like that they are\nhappy they enjoy the people that they\nare working with they are being\nchallenged at all times that they are\ngrowing at all times they know that this\nis the place for them oh cool um thank\nyou steve for joining us today and\ni'm sure um this will give people pretty\ngood guidance and you know something to\nthink about right yeah yeah and i guess\ni learned a lot today um if you find\nthis video helpful please give it a like\nand subscribe and\nuh if you have other questions that you\nwant to ask um just you know leave a\ncomment down below\nand yeah um\ni'll see you next time then\nbye",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:37",
+        "start": 37.68,
+        "duration": 4.16,
+        "text": "next question this is something i do"
+      },
+      {
+        "index": 1,
+        "time": "00:39",
+        "start": 39.68,
+        "duration": 4.559,
+        "text": "want to ask personally okay so right now"
+      },
+      {
+        "index": 2,
+        "time": "00:41",
+        "start": 41.84,
+        "duration": 4.879,
+        "text": "i'm a senior level software engineer so"
+      },
+      {
+        "index": 3,
+        "time": "00:44",
+        "start": 44.239,
+        "duration": 4.241,
+        "text": "how do i become like a staff engineer or"
+      },
+      {
+        "index": 4,
+        "time": "00:46",
+        "start": 46.719,
+        "duration": 3.441,
+        "text": "you know what what distinguishes an"
+      },
+      {
+        "index": 5,
+        "time": "00:48",
+        "start": 48.48,
+        "duration": 4,
+        "text": "engineer from senior level to say you"
+      },
+      {
+        "index": 6,
+        "time": "00:50",
+        "start": 50.16,
+        "duration": 4,
+        "text": "know staff or principal level very very"
+      },
+      {
+        "index": 7,
+        "time": "00:52",
+        "start": 52.48,
+        "duration": 3.28,
+        "text": "hard question in there because the whole"
+      },
+      {
+        "index": 8,
+        "time": "00:54",
+        "start": 54.16,
+        "duration": 4.48,
+        "text": "thing is that i can tell you that i"
+      },
+      {
+        "index": 9,
+        "time": "00:55",
+        "start": 55.76,
+        "duration": 4.88,
+        "text": "don't see any standard definition out"
+      },
+      {
+        "index": 10,
+        "time": "00:58",
+        "start": 58.64,
+        "duration": 4.48,
+        "text": "there that says that well this is the"
+      },
+      {
+        "index": 11,
+        "time": "01:00",
+        "start": 60.64,
+        "duration": 5.2,
+        "text": "definition of a junior intermediate"
+      },
+      {
+        "index": 12,
+        "time": "01:03",
+        "start": 63.12,
+        "duration": 4.8,
+        "text": "senior staff like principal architect"
+      },
+      {
+        "index": 13,
+        "time": "01:05",
+        "start": 65.84,
+        "duration": 4.24,
+        "text": "like yadda yadda like i don't see it"
+      },
+      {
+        "index": 14,
+        "time": "01:07",
+        "start": 67.92,
+        "duration": 3.44,
+        "text": "anywhere but i guess like the years of"
+      },
+      {
+        "index": 15,
+        "time": "01:10",
+        "start": 70.08,
+        "duration": 3.44,
+        "text": "experience of the projects that you"
+      },
+      {
+        "index": 16,
+        "time": "01:11",
+        "start": 71.36,
+        "duration": 3.119,
+        "text": "worked on before kind of contribute to"
+      },
+      {
+        "index": 17,
+        "time": "01:13",
+        "start": 73.52,
+        "duration": 4.08,
+        "text": "that"
+      },
+      {
+        "index": 18,
+        "time": "01:14",
+        "start": 74.479,
+        "duration": 5.361,
+        "text": "so it does but at the same time how do"
+      },
+      {
+        "index": 19,
+        "time": "01:17",
+        "start": 77.6,
+        "duration": 5.519,
+        "text": "you measure this yeah because you can"
+      },
+      {
+        "index": 20,
+        "time": "01:19",
+        "start": 79.84,
+        "duration": 6,
+        "text": "have someone that works three years over"
+      },
+      {
+        "index": 21,
+        "time": "01:23",
+        "start": 83.119,
+        "duration": 5.201,
+        "text": "at a startup and like basically just"
+      },
+      {
+        "index": 22,
+        "time": "01:25",
+        "start": 85.84,
+        "duration": 5.2,
+        "text": "figure out everything themselves like on"
+      },
+      {
+        "index": 23,
+        "time": "01:28",
+        "start": 88.32,
+        "duration": 4.32,
+        "text": "a very technical level being able to do"
+      },
+      {
+        "index": 24,
+        "time": "01:31",
+        "start": 91.04,
+        "duration": 3.84,
+        "text": "machine learning architecture"
+      },
+      {
+        "index": 25,
+        "time": "01:32",
+        "start": 92.64,
+        "duration": 3.2,
+        "text": "infrastructure building a scalable dom"
+      },
+      {
+        "index": 26,
+        "time": "01:34",
+        "start": 94.88,
+        "duration": 2.72,
+        "text": "system"
+      },
+      {
+        "index": 27,
+        "time": "01:35",
+        "start": 95.84,
+        "duration": 3.919,
+        "text": "right and you can have someone who has"
+      },
+      {
+        "index": 28,
+        "time": "01:37",
+        "start": 97.6,
+        "duration": 5.28,
+        "text": "been staying at um some ecosystem no"
+      },
+      {
+        "index": 29,
+        "time": "01:39",
+        "start": 99.759,
+        "duration": 6.081,
+        "text": "offense and lego system"
+      },
+      {
+        "index": 30,
+        "time": "01:42",
+        "start": 102.88,
+        "duration": 5.279,
+        "text": "i may get in a lot of trouble for this"
+      },
+      {
+        "index": 31,
+        "time": "01:45",
+        "start": 105.84,
+        "duration": 4.8,
+        "text": "and work 10 years on a very specialized"
+      },
+      {
+        "index": 32,
+        "time": "01:48",
+        "start": 108.159,
+        "duration": 5.441,
+        "text": "project that has no idea how to do"
+      },
+      {
+        "index": 33,
+        "time": "01:50",
+        "start": 110.64,
+        "duration": 4.96,
+        "text": "database yeah yeah right in that case"
+      },
+      {
+        "index": 34,
+        "time": "01:53",
+        "start": 113.6,
+        "duration": 3.76,
+        "text": "who is um who is closer to a senior"
+      },
+      {
+        "index": 35,
+        "time": "01:55",
+        "start": 115.6,
+        "duration": 3.92,
+        "text": "engineer who is closer to a principal"
+      },
+      {
+        "index": 36,
+        "time": "01:57",
+        "start": 117.36,
+        "duration": 4.88,
+        "text": "engineer so when you're talking about"
+      },
+      {
+        "index": 37,
+        "time": "01:59",
+        "start": 119.52,
+        "duration": 4.72,
+        "text": "like senior level engineers um like like"
+      },
+      {
+        "index": 38,
+        "time": "02:02",
+        "start": 122.24,
+        "duration": 4.96,
+        "text": "you're on a certain level how do you"
+      },
+      {
+        "index": 39,
+        "time": "02:04",
+        "start": 124.24,
+        "duration": 4.719,
+        "text": "want to grow and get to the next thing"
+      },
+      {
+        "index": 40,
+        "time": "02:07",
+        "start": 127.2,
+        "duration": 4.8,
+        "text": "you have to understand what the next"
+      },
+      {
+        "index": 41,
+        "time": "02:08",
+        "start": 128.959,
+        "duration": 4.881,
+        "text": "thing is first at least have an idea of"
+      },
+      {
+        "index": 42,
+        "time": "02:12",
+        "start": 132,
+        "duration": 4.959,
+        "text": "what you want the next thing to be is it"
+      },
+      {
+        "index": 43,
+        "time": "02:13",
+        "start": 133.84,
+        "duration": 4.72,
+        "text": "that you foresee yourself to be a"
+      },
+      {
+        "index": 44,
+        "time": "02:16",
+        "start": 136.959,
+        "duration": 4.081,
+        "text": "evangelist"
+      },
+      {
+        "index": 45,
+        "time": "02:18",
+        "start": 138.56,
+        "duration": 4.64,
+        "text": "to go into the company and teach people"
+      },
+      {
+        "index": 46,
+        "time": "02:21",
+        "start": 141.04,
+        "duration": 5.199,
+        "text": "and build tools and teach people how to"
+      },
+      {
+        "index": 47,
+        "time": "02:23",
+        "start": 143.2,
+        "duration": 5.44,
+        "text": "use tools to become better and like more"
+      },
+      {
+        "index": 48,
+        "time": "02:26",
+        "start": 146.239,
+        "duration": 4.801,
+        "text": "efficient in that job is it that you"
+      },
+      {
+        "index": 49,
+        "time": "02:28",
+        "start": 148.64,
+        "duration": 4.319,
+        "text": "want to be able to lead teams"
+      },
+      {
+        "index": 50,
+        "time": "02:31",
+        "start": 151.04,
+        "duration": 4.72,
+        "text": "to actually show them and be able to"
+      },
+      {
+        "index": 51,
+        "time": "02:32",
+        "start": 152.959,
+        "duration": 6.161,
+        "text": "take on bigger and bigger projects is it"
+      },
+      {
+        "index": 52,
+        "time": "02:35",
+        "start": 155.76,
+        "duration": 5.68,
+        "text": "that you want to have more time spending"
+      },
+      {
+        "index": 53,
+        "time": "02:39",
+        "start": 159.12,
+        "duration": 5.6,
+        "text": "on specialization which i just said"
+      },
+      {
+        "index": 54,
+        "time": "02:41",
+        "start": 161.44,
+        "duration": 5.519,
+        "text": "about the microsystem again no offense"
+      },
+      {
+        "index": 55,
+        "time": "02:44",
+        "start": 164.72,
+        "duration": 4.64,
+        "text": "to get into like something that is like"
+      },
+      {
+        "index": 56,
+        "time": "02:46",
+        "start": 166.959,
+        "duration": 3.601,
+        "text": "very specific that requires a lot more"
+      },
+      {
+        "index": 57,
+        "time": "02:49",
+        "start": 169.36,
+        "duration": 3.44,
+        "text": "time to do"
+      },
+      {
+        "index": 58,
+        "time": "02:50",
+        "start": 170.56,
+        "duration": 4.48,
+        "text": "that's where your growth paths are going"
+      },
+      {
+        "index": 59,
+        "time": "02:52",
+        "start": 172.8,
+        "duration": 5.2,
+        "text": "to be and in different companies they"
+      },
+      {
+        "index": 60,
+        "time": "02:55",
+        "start": 175.04,
+        "duration": 5.52,
+        "text": "can all be called principal engineers"
+      },
+      {
+        "index": 61,
+        "time": "02:58",
+        "start": 178,
+        "duration": 4.4,
+        "text": "so the question is back to you is what"
+      },
+      {
+        "index": 62,
+        "time": "03:00",
+        "start": 180.56,
+        "duration": 5.52,
+        "text": "do you want"
+      },
+      {
+        "index": 63,
+        "time": "03:02",
+        "start": 182.4,
+        "duration": 5.28,
+        "text": "for your next step let's see right so so"
+      },
+      {
+        "index": 64,
+        "time": "03:06",
+        "start": 186.08,
+        "duration": 2.879,
+        "text": "think about that like if you're saying"
+      },
+      {
+        "index": 65,
+        "time": "03:07",
+        "start": 187.68,
+        "duration": 3.12,
+        "text": "that hey"
+      },
+      {
+        "index": 66,
+        "time": "03:08",
+        "start": 188.959,
+        "duration": 3.92,
+        "text": "i want to learn how to take on bigger"
+      },
+      {
+        "index": 67,
+        "time": "03:10",
+        "start": 190.8,
+        "duration": 4.159,
+        "text": "and bigger projects and my answer would"
+      },
+      {
+        "index": 68,
+        "time": "03:12",
+        "start": 192.879,
+        "duration": 4.64,
+        "text": "be that you should know that at some"
+      },
+      {
+        "index": 69,
+        "time": "03:14",
+        "start": 194.959,
+        "duration": 4.721,
+        "text": "point of time you're going to run out of"
+      },
+      {
+        "index": 70,
+        "time": "03:17",
+        "start": 197.519,
+        "duration": 3.921,
+        "text": "your like your physical tighten speed"
+      },
+      {
+        "index": 71,
+        "time": "03:19",
+        "start": 199.68,
+        "duration": 3.76,
+        "text": "it's not going to be able to do bigger"
+      },
+      {
+        "index": 72,
+        "time": "03:21",
+        "start": 201.44,
+        "duration": 5.12,
+        "text": "and bigger project at some some point of"
+      },
+      {
+        "index": 73,
+        "time": "03:23",
+        "start": 203.44,
+        "duration": 5.439,
+        "text": "time you will have to subcontract it out"
+      },
+      {
+        "index": 74,
+        "time": "03:26",
+        "start": 206.56,
+        "duration": 3.759,
+        "text": "to to delegate this stuff"
+      },
+      {
+        "index": 75,
+        "time": "03:28",
+        "start": 208.879,
+        "duration": 3.36,
+        "text": "in that case the first thing that you"
+      },
+      {
+        "index": 76,
+        "time": "03:30",
+        "start": 210.319,
+        "duration": 4.321,
+        "text": "should learn is how do i actually get a"
+      },
+      {
+        "index": 77,
+        "time": "03:32",
+        "start": 212.239,
+        "duration": 5.121,
+        "text": "team how do i actually start organizing"
+      },
+      {
+        "index": 78,
+        "time": "03:34",
+        "start": 214.64,
+        "duration": 4.8,
+        "text": "people so that in the group of us we can"
+      },
+      {
+        "index": 79,
+        "time": "03:37",
+        "start": 217.36,
+        "duration": 4.08,
+        "text": "actually build something"
+      },
+      {
+        "index": 80,
+        "time": "03:39",
+        "start": 219.44,
+        "duration": 4,
+        "text": "right yeah and i would say that like if"
+      },
+      {
+        "index": 81,
+        "time": "03:41",
+        "start": 221.44,
+        "duration": 3.76,
+        "text": "you're going to do that doing work"
+      },
+      {
+        "index": 82,
+        "time": "03:43",
+        "start": 223.44,
+        "duration": 4.24,
+        "text": "talking with your boss and actually"
+      },
+      {
+        "index": 83,
+        "time": "03:45",
+        "start": 225.2,
+        "duration": 4.08,
+        "text": "getting the opportunity to take on"
+      },
+      {
+        "index": 84,
+        "time": "03:47",
+        "start": 227.68,
+        "duration": 4.08,
+        "text": "bigger projects"
+      },
+      {
+        "index": 85,
+        "time": "03:49",
+        "start": 229.28,
+        "duration": 6.159,
+        "text": "while bringing on other people sometimes"
+      },
+      {
+        "index": 86,
+        "time": "03:51",
+        "start": 231.76,
+        "duration": 5.679,
+        "text": "easiest bring on interns yeah right"
+      },
+      {
+        "index": 87,
+        "time": "03:55",
+        "start": 235.439,
+        "duration": 3.601,
+        "text": "bring on interns bring on juniors at the"
+      },
+      {
+        "index": 88,
+        "time": "03:57",
+        "start": 237.439,
+        "duration": 3.52,
+        "text": "same time you learn how to teach you"
+      },
+      {
+        "index": 89,
+        "time": "03:59",
+        "start": 239.04,
+        "duration": 4,
+        "text": "learn how to manage you need learn how"
+      },
+      {
+        "index": 90,
+        "time": "04:00",
+        "start": 240.959,
+        "duration": 3.92,
+        "text": "to lead then you start growing and"
+      },
+      {
+        "index": 91,
+        "time": "04:03",
+        "start": 243.04,
+        "duration": 3.919,
+        "text": "getting bigger and bigger in terms of"
+      },
+      {
+        "index": 92,
+        "time": "04:04",
+        "start": 244.879,
+        "duration": 5.36,
+        "text": "science and getting enough feedback from"
+      },
+      {
+        "index": 93,
+        "time": "04:06",
+        "start": 246.959,
+        "duration": 5.121,
+        "text": "both management your peers and also the"
+      },
+      {
+        "index": 94,
+        "time": "04:10",
+        "start": 250.239,
+        "duration": 4,
+        "text": "people that are working on the that's"
+      },
+      {
+        "index": 95,
+        "time": "04:12",
+        "start": 252.08,
+        "duration": 3.84,
+        "text": "how i actually start off i see you know"
+      },
+      {
+        "index": 96,
+        "time": "04:14",
+        "start": 254.239,
+        "duration": 4.641,
+        "text": "majority of the time i will tell you"
+      },
+      {
+        "index": 97,
+        "time": "04:15",
+        "start": 255.92,
+        "duration": 5.039,
+        "text": "that like once i get to a certain level"
+      },
+      {
+        "index": 98,
+        "time": "04:18",
+        "start": 258.88,
+        "duration": 5.039,
+        "text": "a lot of times the feedback is directly"
+      },
+      {
+        "index": 99,
+        "time": "04:20",
+        "start": 260.959,
+        "duration": 4.561,
+        "text": "from people that i manage yeah right so"
+      },
+      {
+        "index": 100,
+        "time": "04:23",
+        "start": 263.919,
+        "duration": 3.681,
+        "text": "that makes sense yeah so would you say"
+      },
+      {
+        "index": 101,
+        "time": "04:25",
+        "start": 265.52,
+        "duration": 4.56,
+        "text": "like as usually progress is it the"
+      },
+      {
+        "index": 102,
+        "time": "04:27",
+        "start": 267.6,
+        "duration": 4.72,
+        "text": "coding skill or the hard skill itself is"
+      },
+      {
+        "index": 103,
+        "time": "04:30",
+        "start": 270.08,
+        "duration": 4.399,
+        "text": "not so important anymore focus should be"
+      },
+      {
+        "index": 104,
+        "time": "04:32",
+        "start": 272.32,
+        "duration": 5.12,
+        "text": "more on you know people skill and how"
+      },
+      {
+        "index": 105,
+        "time": "04:34",
+        "start": 274.479,
+        "duration": 4.641,
+        "text": "you manage projects and how you build"
+      },
+      {
+        "index": 106,
+        "time": "04:37",
+        "start": 277.44,
+        "duration": 4.64,
+        "text": "the team if you're talking about"
+      },
+      {
+        "index": 107,
+        "time": "04:39",
+        "start": 279.12,
+        "duration": 4.799,
+        "text": "proportion a lot of times that's true"
+      },
+      {
+        "index": 108,
+        "time": "04:42",
+        "start": 282.08,
+        "duration": 4.08,
+        "text": "but that's the answer of my previous"
+      },
+      {
+        "index": 109,
+        "time": "04:43",
+        "start": 283.919,
+        "duration": 3.521,
+        "text": "question goes it really depends on how"
+      },
+      {
+        "index": 110,
+        "time": "04:46",
+        "start": 286.16,
+        "duration": 4,
+        "text": "you want to grow"
+      },
+      {
+        "index": 111,
+        "time": "04:47",
+        "start": 287.44,
+        "duration": 5.12,
+        "text": "i'm still seeing like some really really"
+      },
+      {
+        "index": 112,
+        "time": "04:50",
+        "start": 290.16,
+        "duration": 5.759,
+        "text": "brilliant engineers you want me to lead"
+      },
+      {
+        "index": 113,
+        "time": "04:52",
+        "start": 292.56,
+        "duration": 6.079,
+        "text": "a team no i'm not going to do it i don't"
+      },
+      {
+        "index": 114,
+        "time": "04:55",
+        "start": 295.919,
+        "duration": 5.521,
+        "text": "want to like um i want to focus on"
+      },
+      {
+        "index": 115,
+        "time": "04:58",
+        "start": 298.639,
+        "duration": 5.12,
+        "text": "building and designing good systems and"
+      },
+      {
+        "index": 116,
+        "time": "05:01",
+        "start": 301.44,
+        "duration": 4.8,
+        "text": "like and they just end up being very"
+      },
+      {
+        "index": 117,
+        "time": "05:03",
+        "start": 303.759,
+        "duration": 6.321,
+        "text": "good at it they would still be able to"
+      },
+      {
+        "index": 118,
+        "time": "05:06",
+        "start": 306.24,
+        "duration": 5.76,
+        "text": "figure out how to define the work"
+      },
+      {
+        "index": 119,
+        "time": "05:10",
+        "start": 310.08,
+        "duration": 4.959,
+        "text": "but they would be paired up with project"
+      },
+      {
+        "index": 120,
+        "time": "05:12",
+        "start": 312,
+        "duration": 4.08,
+        "text": "managers that actually helped manage the"
+      },
+      {
+        "index": 121,
+        "time": "05:15",
+        "start": 315.039,
+        "duration": 3.281,
+        "text": "people"
+      },
+      {
+        "index": 122,
+        "time": "05:16",
+        "start": 316.08,
+        "duration": 4.559,
+        "text": "they would be the one that actually say"
+      },
+      {
+        "index": 123,
+        "time": "05:18",
+        "start": 318.32,
+        "duration": 5.599,
+        "text": "that this is the wrong map this is why"
+      },
+      {
+        "index": 124,
+        "time": "05:20",
+        "start": 320.639,
+        "duration": 5.921,
+        "text": "foresee and their expertise comes in"
+      },
+      {
+        "index": 125,
+        "time": "05:23",
+        "start": 323.919,
+        "duration": 4.161,
+        "text": "picking a very nebulous problem and"
+      },
+      {
+        "index": 126,
+        "time": "05:26",
+        "start": 326.56,
+        "duration": 3.52,
+        "text": "breaking it down"
+      },
+      {
+        "index": 127,
+        "time": "05:28",
+        "start": 328.08,
+        "duration": 3.92,
+        "text": "and that's their specialty and they're"
+      },
+      {
+        "index": 128,
+        "time": "05:30",
+        "start": 330.08,
+        "duration": 3.6,
+        "text": "still okay with that"
+      },
+      {
+        "index": 129,
+        "time": "05:32",
+        "start": 332,
+        "duration": 4.56,
+        "text": "right it doesn't mean that the more"
+      },
+      {
+        "index": 130,
+        "time": "05:33",
+        "start": 333.68,
+        "duration": 6.32,
+        "text": "experienced you are the the more you"
+      },
+      {
+        "index": 131,
+        "time": "05:36",
+        "start": 336.56,
+        "duration": 5.359,
+        "text": "have to have to um teach or like to to"
+      },
+      {
+        "index": 132,
+        "time": "05:40",
+        "start": 340,
+        "duration": 4.56,
+        "text": "manage and what not it would be great if"
+      },
+      {
+        "index": 133,
+        "time": "05:41",
+        "start": 341.919,
+        "duration": 5.681,
+        "text": "you do like it's awesome like that like"
+      },
+      {
+        "index": 134,
+        "time": "05:44",
+        "start": 344.56,
+        "duration": 5.84,
+        "text": "our society and our industry needs it"
+      },
+      {
+        "index": 135,
+        "time": "05:47",
+        "start": 347.6,
+        "duration": 5.52,
+        "text": "but if you want to you can focus on"
+      },
+      {
+        "index": 136,
+        "time": "05:50",
+        "start": 350.4,
+        "duration": 4.32,
+        "text": "doing something you specialize in stuff"
+      },
+      {
+        "index": 137,
+        "time": "05:53",
+        "start": 353.12,
+        "duration": 3.919,
+        "text": "like getting a phd like this doesn't"
+      },
+      {
+        "index": 138,
+        "time": "05:54",
+        "start": 354.72,
+        "duration": 4.16,
+        "text": "mean that you have to do like i'm i'm"
+      },
+      {
+        "index": 139,
+        "time": "05:57",
+        "start": 357.039,
+        "duration": 4.401,
+        "text": "specific you can choose whatever topic"
+      },
+      {
+        "index": 140,
+        "time": "05:58",
+        "start": 358.88,
+        "duration": 4.64,
+        "text": "you want i see ics so it's not really"
+      },
+      {
+        "index": 141,
+        "time": "06:01",
+        "start": 361.44,
+        "duration": 3.44,
+        "text": "just a singular path it's a lot of"
+      },
+      {
+        "index": 142,
+        "time": "06:03",
+        "start": 363.52,
+        "duration": 2.959,
+        "text": "things when you get to that level you"
+      },
+      {
+        "index": 143,
+        "time": "06:04",
+        "start": 364.88,
+        "duration": 3.68,
+        "text": "can specialize it depends on what you"
+      },
+      {
+        "index": 144,
+        "time": "06:06",
+        "start": 366.479,
+        "duration": 4.321,
+        "text": "want exactly at the end of the day is a"
+      },
+      {
+        "index": 145,
+        "time": "06:08",
+        "start": 368.56,
+        "duration": 4.56,
+        "text": "free market like nowadays i walk to"
+      },
+      {
+        "index": 146,
+        "time": "06:10",
+        "start": 370.8,
+        "duration": 4.959,
+        "text": "companies i don't try to get them to"
+      },
+      {
+        "index": 147,
+        "time": "06:13",
+        "start": 373.12,
+        "duration": 4.4,
+        "text": "like identify me as one thing or another"
+      },
+      {
+        "index": 148,
+        "time": "06:15",
+        "start": 375.759,
+        "duration": 4.241,
+        "text": "i present to them"
+      },
+      {
+        "index": 149,
+        "time": "06:17",
+        "start": 377.52,
+        "duration": 3.76,
+        "text": "what i know what i have what i can help"
+      },
+      {
+        "index": 150,
+        "time": "06:20",
+        "start": 380,
+        "duration": 3.039,
+        "text": "them with"
+      },
+      {
+        "index": 151,
+        "time": "06:21",
+        "start": 381.28,
+        "duration": 4.96,
+        "text": "and they decide if they want to buy it"
+      },
+      {
+        "index": 152,
+        "time": "06:23",
+        "start": 383.039,
+        "duration": 6,
+        "text": "or not i see right like my own products"
+      },
+      {
+        "index": 153,
+        "time": "06:26",
+        "start": 386.24,
+        "duration": 5.84,
+        "text": "the most important thing is like knowing"
+      },
+      {
+        "index": 154,
+        "time": "06:29",
+        "start": 389.039,
+        "duration": 5.041,
+        "text": "yourself on what you want to become and"
+      },
+      {
+        "index": 155,
+        "time": "06:32",
+        "start": 392.08,
+        "duration": 4.8,
+        "text": "trying to market that and see if there's"
+      },
+      {
+        "index": 156,
+        "time": "06:34",
+        "start": 394.08,
+        "duration": 2.8,
+        "text": "any like buyers"
+      },
+      {
+        "index": 157,
+        "time": "06:40",
+        "start": 400.479,
+        "duration": 2.321,
+        "text": "yes"
+      },
+      {
+        "index": 158,
+        "time": "06:46",
+        "start": 406.24,
+        "duration": 3,
+        "text": "sir"
+      },
+      {
+        "index": 159,
+        "time": "08:25",
+        "start": 505.28,
+        "duration": 3.68,
+        "text": "what do you care the most other than you"
+      },
+      {
+        "index": 160,
+        "time": "08:26",
+        "start": 506.96,
+        "duration": 4.079,
+        "text": "know the technical respect assuming the"
+      },
+      {
+        "index": 161,
+        "time": "08:28",
+        "start": 508.96,
+        "duration": 4.559,
+        "text": "person is you know technically strong"
+      },
+      {
+        "index": 162,
+        "time": "08:31",
+        "start": 511.039,
+        "duration": 4.8,
+        "text": "enough for the team it's a gripe that we"
+      },
+      {
+        "index": 163,
+        "time": "08:33",
+        "start": 513.519,
+        "duration": 4,
+        "text": "have like in um in software engineering"
+      },
+      {
+        "index": 164,
+        "time": "08:35",
+        "start": 515.839,
+        "duration": 3.12,
+        "text": "especially software engineering"
+      },
+      {
+        "index": 165,
+        "time": "08:37",
+        "start": 517.519,
+        "duration": 3.44,
+        "text": "interviews"
+      },
+      {
+        "index": 166,
+        "time": "08:38",
+        "start": 518.959,
+        "duration": 4,
+        "text": "a lot of companies that i go with like"
+      },
+      {
+        "index": 167,
+        "time": "08:40",
+        "start": 520.959,
+        "duration": 3.681,
+        "text": "um i go to even"
+      },
+      {
+        "index": 168,
+        "time": "08:42",
+        "start": 522.959,
+        "duration": 4.241,
+        "text": "you know some experience from that like"
+      },
+      {
+        "index": 169,
+        "time": "08:44",
+        "start": 524.64,
+        "duration": 4.4,
+        "text": "it's uh go in an interview and people"
+      },
+      {
+        "index": 170,
+        "time": "08:47",
+        "start": 527.2,
+        "duration": 4.24,
+        "text": "just keep throwing new technical"
+      },
+      {
+        "index": 171,
+        "time": "08:49",
+        "start": 529.04,
+        "duration": 4.96,
+        "text": "questions like um algorithmic questions"
+      },
+      {
+        "index": 172,
+        "time": "08:51",
+        "start": 531.44,
+        "duration": 4.32,
+        "text": "right given an array this size and this"
+      },
+      {
+        "index": 173,
+        "time": "08:54",
+        "start": 534,
+        "duration": 4.399,
+        "text": "stuff like figure it out and all that"
+      },
+      {
+        "index": 174,
+        "time": "08:55",
+        "start": 535.76,
+        "duration": 5.199,
+        "text": "stuff a smart person of a certain"
+      },
+      {
+        "index": 175,
+        "time": "08:58",
+        "start": 538.399,
+        "duration": 4.88,
+        "text": "experience would be able to find the"
+      },
+      {
+        "index": 176,
+        "time": "09:00",
+        "start": 540.959,
+        "duration": 4.961,
+        "text": "patterns and answer you those"
+      },
+      {
+        "index": 177,
+        "time": "09:03",
+        "start": 543.279,
+        "duration": 3.521,
+        "text": "but in work when you when you choose a"
+      },
+      {
+        "index": 178,
+        "time": "09:05",
+        "start": 545.92,
+        "duration": 3.52,
+        "text": "partner"
+      },
+      {
+        "index": 179,
+        "time": "09:06",
+        "start": 546.8,
+        "duration": 4.56,
+        "text": "right um for for starting a business"
+      },
+      {
+        "index": 180,
+        "time": "09:09",
+        "start": 549.44,
+        "duration": 4.24,
+        "text": "yeah or when you're building your team"
+      },
+      {
+        "index": 181,
+        "time": "09:11",
+        "start": 551.36,
+        "duration": 3.44,
+        "text": "what do you want them to be or someone i"
+      },
+      {
+        "index": 182,
+        "time": "09:13",
+        "start": 553.68,
+        "duration": 3.2,
+        "text": "can work with"
+      },
+      {
+        "index": 183,
+        "time": "09:14",
+        "start": 554.8,
+        "duration": 4.08,
+        "text": "something you can work with what does"
+      },
+      {
+        "index": 184,
+        "time": "09:16",
+        "start": 556.88,
+        "duration": 4.399,
+        "text": "that mean when someone i can trust"
+      },
+      {
+        "index": 185,
+        "time": "09:18",
+        "start": 558.88,
+        "duration": 3.84,
+        "text": "someone i can you know learn from"
+      },
+      {
+        "index": 186,
+        "time": "09:21",
+        "start": 561.279,
+        "duration": 3.841,
+        "text": "someone who is you know"
+      },
+      {
+        "index": 187,
+        "time": "09:22",
+        "start": 562.72,
+        "duration": 4,
+        "text": "genuine and smart understand yeah that's"
+      },
+      {
+        "index": 188,
+        "time": "09:25",
+        "start": 565.12,
+        "duration": 3.279,
+        "text": "something that i look forward in general"
+      },
+      {
+        "index": 189,
+        "time": "09:26",
+        "start": 566.72,
+        "duration": 3.28,
+        "text": "that is the most important thing right"
+      },
+      {
+        "index": 190,
+        "time": "09:28",
+        "start": 568.399,
+        "duration": 4,
+        "text": "someone that you can trust"
+      },
+      {
+        "index": 191,
+        "time": "09:30",
+        "start": 570,
+        "duration": 3.2,
+        "text": "right someone that you can learn from"
+      },
+      {
+        "index": 192,
+        "time": "09:32",
+        "start": 572.399,
+        "duration": 2.56,
+        "text": "right"
+      },
+      {
+        "index": 193,
+        "time": "09:33",
+        "start": 573.2,
+        "duration": 4,
+        "text": "the whole thing is that how do you"
+      },
+      {
+        "index": 194,
+        "time": "09:34",
+        "start": 574.959,
+        "duration": 3.521,
+        "text": "actually get that well first you need to"
+      },
+      {
+        "index": 195,
+        "time": "09:37",
+        "start": 577.2,
+        "duration": 3.6,
+        "text": "make sure that they're good at"
+      },
+      {
+        "index": 196,
+        "time": "09:38",
+        "start": 578.48,
+        "duration": 5.44,
+        "text": "communication if they suck at it it's"
+      },
+      {
+        "index": 197,
+        "time": "09:40",
+        "start": 580.8,
+        "duration": 5.84,
+        "text": "going to be a hell of a ride right like"
+      },
+      {
+        "index": 198,
+        "time": "09:43",
+        "start": 583.92,
+        "duration": 5.359,
+        "text": "if they can clearly articulate what they"
+      },
+      {
+        "index": 199,
+        "time": "09:46",
+        "start": 586.64,
+        "duration": 4.879,
+        "text": "are thinking and convey the idea to you"
+      },
+      {
+        "index": 200,
+        "time": "09:49",
+        "start": 589.279,
+        "duration": 3.601,
+        "text": "and back and forth right that's why i'm"
+      },
+      {
+        "index": 201,
+        "time": "09:51",
+        "start": 591.519,
+        "duration": 3.76,
+        "text": "looking for it"
+      },
+      {
+        "index": 202,
+        "time": "09:52",
+        "start": 592.88,
+        "duration": 5.2,
+        "text": "right like so so a lot of times like i"
+      },
+      {
+        "index": 203,
+        "time": "09:55",
+        "start": 595.279,
+        "duration": 5.12,
+        "text": "still use um these technical questions"
+      },
+      {
+        "index": 204,
+        "time": "09:58",
+        "start": 598.08,
+        "duration": 5.199,
+        "text": "and and like algorithms make questions"
+      },
+      {
+        "index": 205,
+        "time": "10:00",
+        "start": 600.399,
+        "duration": 5.281,
+        "text": "now things that are going to get harder"
+      },
+      {
+        "index": 206,
+        "time": "10:03",
+        "start": 603.279,
+        "duration": 4.8,
+        "text": "is going to be the next thing how do you"
+      },
+      {
+        "index": 207,
+        "time": "10:05",
+        "start": 605.68,
+        "duration": 4.8,
+        "text": "think that you can work with this person"
+      },
+      {
+        "index": 208,
+        "time": "10:08",
+        "start": 608.079,
+        "duration": 4.401,
+        "text": "that means that personality has to be"
+      },
+      {
+        "index": 209,
+        "time": "10:10",
+        "start": 610.48,
+        "duration": 4.24,
+        "text": "there yeah right i'm not just saying"
+      },
+      {
+        "index": 210,
+        "time": "10:12",
+        "start": 612.48,
+        "duration": 4.32,
+        "text": "that a boring personality or not like"
+      },
+      {
+        "index": 211,
+        "time": "10:14",
+        "start": 614.72,
+        "duration": 4.32,
+        "text": "i'm talking about like hey if we're"
+      },
+      {
+        "index": 212,
+        "time": "10:16",
+        "start": 616.8,
+        "duration": 4.4,
+        "text": "going to have a an argument are you"
+      },
+      {
+        "index": 213,
+        "time": "10:19",
+        "start": 619.04,
+        "duration": 4.88,
+        "text": "going to stand on your ground"
+      },
+      {
+        "index": 214,
+        "time": "10:21",
+        "start": 621.2,
+        "duration": 4.8,
+        "text": "when you're right and also being able to"
+      },
+      {
+        "index": 215,
+        "time": "10:23",
+        "start": 623.92,
+        "duration": 4.56,
+        "text": "listen when there is a discussion going"
+      },
+      {
+        "index": 216,
+        "time": "10:26",
+        "start": 626,
+        "duration": 4.48,
+        "text": "on or are you going to say that no i'm"
+      },
+      {
+        "index": 217,
+        "time": "10:28",
+        "start": 628.48,
+        "duration": 4.88,
+        "text": "right uh i don't care about any of you"
+      },
+      {
+        "index": 218,
+        "time": "10:30",
+        "start": 630.48,
+        "duration": 4.72,
+        "text": "guys like yada yada or are you going to"
+      },
+      {
+        "index": 219,
+        "time": "10:33",
+        "start": 633.36,
+        "duration": 4.159,
+        "text": "be backing down everything is kind of"
+      },
+      {
+        "index": 220,
+        "time": "10:35",
+        "start": 635.2,
+        "duration": 4.319,
+        "text": "like yes i'm junior i will listen to"
+      },
+      {
+        "index": 221,
+        "time": "10:37",
+        "start": 637.519,
+        "duration": 4.56,
+        "text": "everything you say happening right like"
+      },
+      {
+        "index": 222,
+        "time": "10:39",
+        "start": 639.519,
+        "duration": 6.081,
+        "text": "are you able to get a good conversation"
+      },
+      {
+        "index": 223,
+        "time": "10:42",
+        "start": 642.079,
+        "duration": 6.401,
+        "text": "a good sparring session happening right"
+      },
+      {
+        "index": 224,
+        "time": "10:45",
+        "start": 645.6,
+        "duration": 5.12,
+        "text": "so now for me interview is relatively"
+      },
+      {
+        "index": 225,
+        "time": "10:48",
+        "start": 648.48,
+        "duration": 4.799,
+        "text": "dynamic i'm trying to see if i can"
+      },
+      {
+        "index": 226,
+        "time": "10:50",
+        "start": 650.72,
+        "duration": 4.64,
+        "text": "actually poke them a little bit"
+      },
+      {
+        "index": 227,
+        "time": "10:53",
+        "start": 653.279,
+        "duration": 3.601,
+        "text": "and see how they respond"
+      },
+      {
+        "index": 228,
+        "time": "10:55",
+        "start": 655.36,
+        "duration": 3.919,
+        "text": "right see if they are going to be"
+      },
+      {
+        "index": 229,
+        "time": "10:56",
+        "start": 656.88,
+        "duration": 3.84,
+        "text": "dismissive seeing if they are actually"
+      },
+      {
+        "index": 230,
+        "time": "10:59",
+        "start": 659.279,
+        "duration": 3.12,
+        "text": "like listening"
+      },
+      {
+        "index": 231,
+        "time": "11:00",
+        "start": 660.72,
+        "duration": 4.48,
+        "text": "and actually understanding the"
+      },
+      {
+        "index": 232,
+        "time": "11:02",
+        "start": 662.399,
+        "duration": 5.12,
+        "text": "information and then regurgitating or"
+      },
+      {
+        "index": 233,
+        "time": "11:05",
+        "start": 665.2,
+        "duration": 3.6,
+        "text": "like disagreeing with the ideas"
+      },
+      {
+        "index": 234,
+        "time": "11:07",
+        "start": 667.519,
+        "duration": 3.121,
+        "text": "seeing how"
+      },
+      {
+        "index": 235,
+        "time": "11:08",
+        "start": 668.8,
+        "duration": 4,
+        "text": "much they are going to be willing to"
+      },
+      {
+        "index": 236,
+        "time": "11:10",
+        "start": 670.64,
+        "duration": 4.24,
+        "text": "actually do the feedback"
+      },
+      {
+        "index": 237,
+        "time": "11:12",
+        "start": 672.8,
+        "duration": 4.4,
+        "text": "so that's part of that yeah first thing"
+      },
+      {
+        "index": 238,
+        "time": "11:14",
+        "start": 674.88,
+        "duration": 4.639,
+        "text": "is about reliability um and that is"
+      },
+      {
+        "index": 239,
+        "time": "11:17",
+        "start": 677.2,
+        "duration": 4.879,
+        "text": "going to be extremely hard yeah how do"
+      },
+      {
+        "index": 240,
+        "time": "11:19",
+        "start": 679.519,
+        "duration": 4.241,
+        "text": "you know someone is going to be reliable"
+      },
+      {
+        "index": 241,
+        "time": "11:22",
+        "start": 682.079,
+        "duration": 3.521,
+        "text": "yeah when you're interviewing without"
+      },
+      {
+        "index": 242,
+        "time": "11:23",
+        "start": 683.76,
+        "duration": 4,
+        "text": "yeah you only spend like 30 minutes with"
+      },
+      {
+        "index": 243,
+        "time": "11:25",
+        "start": 685.6,
+        "duration": 4.32,
+        "text": "the person it's really hard exactly yeah"
+      },
+      {
+        "index": 244,
+        "time": "11:27",
+        "start": 687.76,
+        "duration": 4.8,
+        "text": "right yeah but generally there are"
+      },
+      {
+        "index": 245,
+        "time": "11:29",
+        "start": 689.92,
+        "duration": 4.4,
+        "text": "things that you have to you can rely on"
+      },
+      {
+        "index": 246,
+        "time": "11:32",
+        "start": 692.56,
+        "duration": 3.76,
+        "text": "some of the things actually is your"
+      },
+      {
+        "index": 247,
+        "time": "11:34",
+        "start": 694.32,
+        "duration": 4.16,
+        "text": "intuition"
+      },
+      {
+        "index": 248,
+        "time": "11:36",
+        "start": 696.32,
+        "duration": 2.959,
+        "text": "one of the strongest things that um"
+      },
+      {
+        "index": 249,
+        "time": "11:38",
+        "start": 698.48,
+        "duration": 2.56,
+        "text": "we"
+      },
+      {
+        "index": 250,
+        "time": "11:39",
+        "start": 699.279,
+        "duration": 4.161,
+        "text": "have to rely on is understanding our"
+      },
+      {
+        "index": 251,
+        "time": "11:41",
+        "start": 701.04,
+        "duration": 4.96,
+        "text": "intuition a lot of times what i have"
+      },
+      {
+        "index": 252,
+        "time": "11:43",
+        "start": 703.44,
+        "duration": 4.72,
+        "text": "seen is that people who are who have"
+      },
+      {
+        "index": 253,
+        "time": "11:46",
+        "start": 706,
+        "duration": 4.56,
+        "text": "great attention to detail"
+      },
+      {
+        "index": 254,
+        "time": "11:48",
+        "start": 708.16,
+        "duration": 4.72,
+        "text": "also hold great responsibility as"
+      },
+      {
+        "index": 255,
+        "time": "11:50",
+        "start": 710.56,
+        "duration": 4.719,
+        "text": "themselves i see is this a type of"
+      },
+      {
+        "index": 256,
+        "time": "11:52",
+        "start": 712.88,
+        "duration": 4.959,
+        "text": "person that you feel like that they see"
+      },
+      {
+        "index": 257,
+        "time": "11:55",
+        "start": 715.279,
+        "duration": 4.721,
+        "text": "a problem and they will own the problem"
+      },
+      {
+        "index": 258,
+        "time": "11:57",
+        "start": 717.839,
+        "duration": 4.641,
+        "text": "holy exactly"
+      },
+      {
+        "index": 259,
+        "time": "12:00",
+        "start": 720,
+        "duration": 5.44,
+        "text": "seeing that and like trying to do that a"
+      },
+      {
+        "index": 260,
+        "time": "12:02",
+        "start": 722.48,
+        "duration": 5.599,
+        "text": "lot has to come with pps experience as"
+      },
+      {
+        "index": 261,
+        "time": "12:05",
+        "start": 725.44,
+        "duration": 5.12,
+        "text": "well so when we talk about like hey tell"
+      },
+      {
+        "index": 262,
+        "time": "12:08",
+        "start": 728.079,
+        "duration": 4.401,
+        "text": "me about your like um your history about"
+      },
+      {
+        "index": 263,
+        "time": "12:10",
+        "start": 730.56,
+        "duration": 4.56,
+        "text": "like your previous work and whatnot get"
+      },
+      {
+        "index": 264,
+        "time": "12:12",
+        "start": 732.48,
+        "duration": 4.96,
+        "text": "into what situation talk about what"
+      },
+      {
+        "index": 265,
+        "time": "12:15",
+        "start": 735.12,
+        "duration": 4.48,
+        "text": "happened how did they handle it why did"
+      },
+      {
+        "index": 266,
+        "time": "12:17",
+        "start": 737.44,
+        "duration": 3.839,
+        "text": "they step up why did they not step up"
+      },
+      {
+        "index": 267,
+        "time": "12:19",
+        "start": 739.6,
+        "duration": 5.039,
+        "text": "what is the reaction what is their"
+      },
+      {
+        "index": 268,
+        "time": "12:21",
+        "start": 741.279,
+        "duration": 5.521,
+        "text": "feeling about a situation or the"
+      },
+      {
+        "index": 269,
+        "time": "12:24",
+        "start": 744.639,
+        "duration": 4.081,
+        "text": "situation that they're talking about and"
+      },
+      {
+        "index": 270,
+        "time": "12:26",
+        "start": 746.8,
+        "duration": 4.08,
+        "text": "from that you just clean more and more"
+      },
+      {
+        "index": 271,
+        "time": "12:28",
+        "start": 748.72,
+        "duration": 4.559,
+        "text": "of their personality"
+      },
+      {
+        "index": 272,
+        "time": "12:30",
+        "start": 750.88,
+        "duration": 4.88,
+        "text": "i believe that technology technical"
+      },
+      {
+        "index": 273,
+        "time": "12:33",
+        "start": 753.279,
+        "duration": 5.441,
+        "text": "capabilities i can train"
+      },
+      {
+        "index": 274,
+        "time": "12:35",
+        "start": 755.76,
+        "duration": 5.759,
+        "text": "right give me a smart person and i can"
+      },
+      {
+        "index": 275,
+        "time": "12:38",
+        "start": 758.72,
+        "duration": 5.359,
+        "text": "train them within x amount of months"
+      },
+      {
+        "index": 276,
+        "time": "12:41",
+        "start": 761.519,
+        "duration": 5.281,
+        "text": "and they will become capable"
+      },
+      {
+        "index": 277,
+        "time": "12:44",
+        "start": 764.079,
+        "duration": 4.88,
+        "text": "give me a lazy person and i will spend"
+      },
+      {
+        "index": 278,
+        "time": "12:46",
+        "start": 766.8,
+        "duration": 3.92,
+        "text": "more time working on the person then"
+      },
+      {
+        "index": 279,
+        "time": "12:48",
+        "start": 768.959,
+        "duration": 4.401,
+        "text": "i'll be doing work"
+      },
+      {
+        "index": 280,
+        "time": "12:50",
+        "start": 770.72,
+        "duration": 5.04,
+        "text": "a non-motivated person or"
+      },
+      {
+        "index": 281,
+        "time": "12:53",
+        "start": 773.36,
+        "duration": 4.8,
+        "text": "someone who actually let's just say not"
+      },
+      {
+        "index": 282,
+        "time": "12:55",
+        "start": 775.76,
+        "duration": 4.639,
+        "text": "a good personality match with me"
+      },
+      {
+        "index": 283,
+        "time": "12:58",
+        "start": 778.16,
+        "duration": 4.56,
+        "text": "it's not going to work out"
+      },
+      {
+        "index": 284,
+        "time": "13:00",
+        "start": 780.399,
+        "duration": 6.401,
+        "text": "because it's so much harder to actually"
+      },
+      {
+        "index": 285,
+        "time": "13:02",
+        "start": 782.72,
+        "duration": 6.4,
+        "text": "adjust personality yeah then it is two"
+      },
+      {
+        "index": 286,
+        "time": "13:06",
+        "start": 786.8,
+        "duration": 3.599,
+        "text": "are just technical capabilities"
+      },
+      {
+        "index": 287,
+        "time": "13:09",
+        "start": 789.12,
+        "duration": 2.8,
+        "text": "i see"
+      },
+      {
+        "index": 288,
+        "time": "13:10",
+        "start": 790.399,
+        "duration": 3.601,
+        "text": "right"
+      },
+      {
+        "index": 289,
+        "time": "13:11",
+        "start": 791.92,
+        "duration": 4.4,
+        "text": "you know a lot of my audience right in"
+      },
+      {
+        "index": 290,
+        "time": "13:14",
+        "start": 794,
+        "duration": 4.32,
+        "text": "asia right asian traditions like you're"
+      },
+      {
+        "index": 291,
+        "time": "13:16",
+        "start": 796.32,
+        "duration": 2.72,
+        "text": "growing up parents teachers to be humble"
+      },
+      {
+        "index": 292,
+        "time": "13:18",
+        "start": 798.32,
+        "duration": 3.28,
+        "text": "right"
+      },
+      {
+        "index": 293,
+        "time": "13:19",
+        "start": 799.04,
+        "duration": 4.4,
+        "text": "and it's very different over here let's"
+      },
+      {
+        "index": 294,
+        "time": "13:21",
+        "start": 801.6,
+        "duration": 3.2,
+        "text": "say you come here and then you start a"
+      },
+      {
+        "index": 295,
+        "time": "13:23",
+        "start": 803.44,
+        "duration": 3.519,
+        "text": "new career in"
+      },
+      {
+        "index": 296,
+        "time": "13:24",
+        "start": 804.8,
+        "duration": 3.92,
+        "text": "the u.s north america or silicon valley"
+      },
+      {
+        "index": 297,
+        "time": "13:26",
+        "start": 806.959,
+        "duration": 3.44,
+        "text": "right how do you kind of like balance"
+      },
+      {
+        "index": 298,
+        "time": "13:28",
+        "start": 808.72,
+        "duration": 4.4,
+        "text": "out and what advice would you give"
+      },
+      {
+        "index": 299,
+        "time": "13:30",
+        "start": 810.399,
+        "duration": 6,
+        "text": "people growing up in asia there is a"
+      },
+      {
+        "index": 300,
+        "time": "13:33",
+        "start": 813.12,
+        "duration": 5.44,
+        "text": "difference between knowing what you know"
+      },
+      {
+        "index": 301,
+        "time": "13:36",
+        "start": 816.399,
+        "duration": 4.161,
+        "text": "and being good at what you do and"
+      },
+      {
+        "index": 302,
+        "time": "13:38",
+        "start": 818.56,
+        "duration": 4.399,
+        "text": "bragging about it there is a fine line"
+      },
+      {
+        "index": 303,
+        "time": "13:40",
+        "start": 820.56,
+        "duration": 5.839,
+        "text": "about it yeah usually i cross that line"
+      },
+      {
+        "index": 304,
+        "time": "13:42",
+        "start": 822.959,
+        "duration": 4.32,
+        "text": "my apologies on that um the humility in"
+      },
+      {
+        "index": 305,
+        "time": "13:46",
+        "start": 826.399,
+        "duration": 4.321,
+        "text": "it"
+      },
+      {
+        "index": 306,
+        "time": "13:47",
+        "start": 827.279,
+        "duration": 6.8,
+        "text": "happens the easiest when you are genuine"
+      },
+      {
+        "index": 307,
+        "time": "13:50",
+        "start": 830.72,
+        "duration": 5.52,
+        "text": "if you are able to be more transparent"
+      },
+      {
+        "index": 308,
+        "time": "13:54",
+        "start": 834.079,
+        "duration": 4.961,
+        "text": "then people will understand you"
+      },
+      {
+        "index": 309,
+        "time": "13:56",
+        "start": 836.24,
+        "duration": 6.08,
+        "text": "let people understand you and when you"
+      },
+      {
+        "index": 310,
+        "time": "13:59",
+        "start": 839.04,
+        "duration": 5.76,
+        "text": "do that you get a lot more leeway i try"
+      },
+      {
+        "index": 311,
+        "time": "14:02",
+        "start": 842.32,
+        "duration": 5.12,
+        "text": "to communicate my intentions"
+      },
+      {
+        "index": 312,
+        "time": "14:04",
+        "start": 844.8,
+        "duration": 5.92,
+        "text": "and if they align or if they understand"
+      },
+      {
+        "index": 313,
+        "time": "14:07",
+        "start": 847.44,
+        "duration": 5.92,
+        "text": "it then people usually appreciate it"
+      },
+      {
+        "index": 314,
+        "time": "14:10",
+        "start": 850.72,
+        "duration": 5.52,
+        "text": "and that like alleviates a lot of"
+      },
+      {
+        "index": 315,
+        "time": "14:13",
+        "start": 853.36,
+        "duration": 5.2,
+        "text": "problems about like humility or or like"
+      },
+      {
+        "index": 316,
+        "time": "14:16",
+        "start": 856.24,
+        "duration": 5.279,
+        "text": "i'm i'm trying to be too like saying too"
+      },
+      {
+        "index": 317,
+        "time": "14:18",
+        "start": 858.56,
+        "duration": 5.6,
+        "text": "many stories well i still do that"
+      },
+      {
+        "index": 318,
+        "time": "14:21",
+        "start": 861.519,
+        "duration": 4.161,
+        "text": "that's a problem with canada no no no"
+      },
+      {
+        "index": 319,
+        "time": "14:24",
+        "start": 864.16,
+        "duration": 2.56,
+        "text": "i guess folks"
+      },
+      {
+        "index": 320,
+        "time": "14:25",
+        "start": 865.68,
+        "duration": 2.399,
+        "text": "but like"
+      },
+      {
+        "index": 321,
+        "time": "14:26",
+        "start": 866.72,
+        "duration": 3.359,
+        "text": "yeah i don't know if i answer your"
+      },
+      {
+        "index": 322,
+        "time": "14:28",
+        "start": 868.079,
+        "duration": 4.801,
+        "text": "questions it does yeah okay"
+      },
+      {
+        "index": 323,
+        "time": "14:30",
+        "start": 870.079,
+        "duration": 4.641,
+        "text": "when senai we met back in the days um he"
+      },
+      {
+        "index": 324,
+        "time": "14:32",
+        "start": 872.88,
+        "duration": 4.079,
+        "text": "was the mentor to help build the team i"
+      },
+      {
+        "index": 325,
+        "time": "14:34",
+        "start": 874.72,
+        "duration": 4.32,
+        "text": "was at and i was very fortunate um you"
+      },
+      {
+        "index": 326,
+        "time": "14:36",
+        "start": 876.959,
+        "duration": 3.841,
+        "text": "know to have said and found it very"
+      },
+      {
+        "index": 327,
+        "time": "14:39",
+        "start": 879.04,
+        "duration": 3.84,
+        "text": "helpful to have a mentor at earlier"
+      },
+      {
+        "index": 328,
+        "time": "14:40",
+        "start": 880.8,
+        "duration": 4.64,
+        "text": "stage of my career how would you help a"
+      },
+      {
+        "index": 329,
+        "time": "14:42",
+        "start": 882.88,
+        "duration": 4.079,
+        "text": "team to be more productive and you know"
+      },
+      {
+        "index": 330,
+        "time": "14:45",
+        "start": 885.44,
+        "duration": 4,
+        "text": "just generally make people happy and"
+      },
+      {
+        "index": 331,
+        "time": "14:46",
+        "start": 886.959,
+        "duration": 6,
+        "text": "motivated i don't know like in my"
+      },
+      {
+        "index": 332,
+        "time": "14:49",
+        "start": 889.44,
+        "duration": 3.519,
+        "text": "opinion i corrupted him"
+      },
+      {
+        "index": 333,
+        "time": "14:53",
+        "start": 893.199,
+        "duration": 2.401,
+        "text": "yes"
+      },
+      {
+        "index": 334,
+        "time": "14:56",
+        "start": 896.079,
+        "duration": 6.32,
+        "text": "the most important factor in a workplace"
+      },
+      {
+        "index": 335,
+        "time": "15:00",
+        "start": 900,
+        "duration": 4.56,
+        "text": "that makes people happy is empowerment"
+      },
+      {
+        "index": 336,
+        "time": "15:02",
+        "start": 902.399,
+        "duration": 4.321,
+        "text": "people being listened to and people"
+      },
+      {
+        "index": 337,
+        "time": "15:04",
+        "start": 904.56,
+        "duration": 4.399,
+        "text": "feeling that they are being trusted to"
+      },
+      {
+        "index": 338,
+        "time": "15:06",
+        "start": 906.72,
+        "duration": 4.88,
+        "text": "work on something that sense of"
+      },
+      {
+        "index": 339,
+        "time": "15:08",
+        "start": 908.959,
+        "duration": 5.921,
+        "text": "empowerment actually gives a lot of"
+      },
+      {
+        "index": 340,
+        "time": "15:11",
+        "start": 911.6,
+        "duration": 5.76,
+        "text": "satisfaction to people ownership is in"
+      },
+      {
+        "index": 341,
+        "time": "15:14",
+        "start": 914.88,
+        "duration": 5.04,
+        "text": "there but a lot of companies a lot of"
+      },
+      {
+        "index": 342,
+        "time": "15:17",
+        "start": 917.36,
+        "duration": 4.32,
+        "text": "teams they do this they say that here"
+      },
+      {
+        "index": 343,
+        "time": "15:19",
+        "start": 919.92,
+        "duration": 3.919,
+        "text": "you own this"
+      },
+      {
+        "index": 344,
+        "time": "15:21",
+        "start": 921.68,
+        "duration": 3.92,
+        "text": "right yeah but you should do it this way"
+      },
+      {
+        "index": 345,
+        "time": "15:23",
+        "start": 923.839,
+        "duration": 4.081,
+        "text": "this way this way oh don't do it like"
+      },
+      {
+        "index": 346,
+        "time": "15:25",
+        "start": 925.6,
+        "duration": 4.56,
+        "text": "this do it like this this this right"
+      },
+      {
+        "index": 347,
+        "time": "15:27",
+        "start": 927.92,
+        "duration": 4.64,
+        "text": "just telling people like exactly you own"
+      },
+      {
+        "index": 348,
+        "time": "15:30",
+        "start": 930.16,
+        "duration": 4.479,
+        "text": "this but no you don't really own this"
+      },
+      {
+        "index": 349,
+        "time": "15:32",
+        "start": 932.56,
+        "duration": 4.88,
+        "text": "right ownership"
+      },
+      {
+        "index": 350,
+        "time": "15:34",
+        "start": 934.639,
+        "duration": 4.721,
+        "text": "without um empowerment"
+      },
+      {
+        "index": 351,
+        "time": "15:37",
+        "start": 937.44,
+        "duration": 4.079,
+        "text": "it's just responsibility ownership is"
+      },
+      {
+        "index": 352,
+        "time": "15:39",
+        "start": 939.36,
+        "duration": 3.44,
+        "text": "actually both responsibility and"
+      },
+      {
+        "index": 353,
+        "time": "15:41",
+        "start": 941.519,
+        "duration": 3.68,
+        "text": "empowerment"
+      },
+      {
+        "index": 354,
+        "time": "15:42",
+        "start": 942.8,
+        "duration": 5.039,
+        "text": "right usually i tell my boss that if i"
+      },
+      {
+        "index": 355,
+        "time": "15:45",
+        "start": 945.199,
+        "duration": 4.64,
+        "text": "own a team i have the power to choose"
+      },
+      {
+        "index": 356,
+        "time": "15:47",
+        "start": 947.839,
+        "duration": 3.44,
+        "text": "who is in my team i have the power to"
+      },
+      {
+        "index": 357,
+        "time": "15:49",
+        "start": 949.839,
+        "duration": 3.12,
+        "text": "discipline"
+      },
+      {
+        "index": 358,
+        "time": "15:51",
+        "start": 951.279,
+        "duration": 4.321,
+        "text": "people in my team"
+      },
+      {
+        "index": 359,
+        "time": "15:52",
+        "start": 952.959,
+        "duration": 4.56,
+        "text": "i have the power to actually enable"
+      },
+      {
+        "index": 360,
+        "time": "15:55",
+        "start": 955.6,
+        "duration": 2.799,
+        "text": "people in my team and if i cannot do"
+      },
+      {
+        "index": 361,
+        "time": "15:57",
+        "start": 957.519,
+        "duration": 2.961,
+        "text": "that"
+      },
+      {
+        "index": 362,
+        "time": "15:58",
+        "start": 958.399,
+        "duration": 4,
+        "text": "then it's just responsibility blaming i"
+      },
+      {
+        "index": 363,
+        "time": "16:00",
+        "start": 960.48,
+        "duration": 4.88,
+        "text": "don't want to be a scapegoat i don't"
+      },
+      {
+        "index": 364,
+        "time": "16:02",
+        "start": 962.399,
+        "duration": 6.081,
+        "text": "want to set myself up and buy extension"
+      },
+      {
+        "index": 365,
+        "time": "16:05",
+        "start": 965.36,
+        "duration": 4.24,
+        "text": "setting the team that i built to be in"
+      },
+      {
+        "index": 366,
+        "time": "16:08",
+        "start": 968.48,
+        "duration": 4.159,
+        "text": "failure"
+      },
+      {
+        "index": 367,
+        "time": "16:09",
+        "start": 969.6,
+        "duration": 5.76,
+        "text": "so they have to understand what that"
+      },
+      {
+        "index": 368,
+        "time": "16:12",
+        "start": 972.639,
+        "duration": 4.241,
+        "text": "ownership empowerment responsibility"
+      },
+      {
+        "index": 369,
+        "time": "16:15",
+        "start": 975.36,
+        "duration": 4.08,
+        "text": "model is"
+      },
+      {
+        "index": 370,
+        "time": "16:16",
+        "start": 976.88,
+        "duration": 5.36,
+        "text": "generally is that and second part of it"
+      },
+      {
+        "index": 371,
+        "time": "16:19",
+        "start": 979.44,
+        "duration": 5.36,
+        "text": "is about having an open conversation"
+      },
+      {
+        "index": 372,
+        "time": "16:22",
+        "start": 982.24,
+        "duration": 4.56,
+        "text": "being able to be free with your thoughts"
+      },
+      {
+        "index": 373,
+        "time": "16:24",
+        "start": 984.8,
+        "duration": 5.12,
+        "text": "to feel comfortable"
+      },
+      {
+        "index": 374,
+        "time": "16:26",
+        "start": 986.8,
+        "duration": 4.399,
+        "text": "that you can actually say whatever you"
+      },
+      {
+        "index": 375,
+        "time": "16:29",
+        "start": 989.92,
+        "duration": 3.2,
+        "text": "want to say"
+      },
+      {
+        "index": 376,
+        "time": "16:31",
+        "start": 991.199,
+        "duration": 4.08,
+        "text": "if you disagree with something you are"
+      },
+      {
+        "index": 377,
+        "time": "16:33",
+        "start": 993.12,
+        "duration": 4.48,
+        "text": "going to be able to say it out if you"
+      },
+      {
+        "index": 378,
+        "time": "16:35",
+        "start": 995.279,
+        "duration": 3.601,
+        "text": "want something to be changed you can"
+      },
+      {
+        "index": 379,
+        "time": "16:37",
+        "start": 997.6,
+        "duration": 4.72,
+        "text": "raise it up"
+      },
+      {
+        "index": 380,
+        "time": "16:38",
+        "start": 998.88,
+        "duration": 6.72,
+        "text": "you eliminate the fear of like offending"
+      },
+      {
+        "index": 381,
+        "time": "16:42",
+        "start": 1002.32,
+        "duration": 5.6,
+        "text": "someone and good ideas come out and"
+      },
+      {
+        "index": 382,
+        "time": "16:45",
+        "start": 1005.6,
+        "duration": 3.039,
+        "text": "collaboration comes out"
+      },
+      {
+        "index": 383,
+        "time": "16:47",
+        "start": 1007.92,
+        "duration": 2.479,
+        "text": "and"
+      },
+      {
+        "index": 384,
+        "time": "16:48",
+        "start": 1008.639,
+        "duration": 3.841,
+        "text": "camaraderie comes out"
+      },
+      {
+        "index": 385,
+        "time": "16:50",
+        "start": 1010.399,
+        "duration": 4.56,
+        "text": "those are the two things that i believe"
+      },
+      {
+        "index": 386,
+        "time": "16:52",
+        "start": 1012.48,
+        "duration": 6.32,
+        "text": "are important i don't think that we can"
+      },
+      {
+        "index": 387,
+        "time": "16:54",
+        "start": 1014.959,
+        "duration": 6.32,
+        "text": "actually utilize one methodology and"
+      },
+      {
+        "index": 388,
+        "time": "16:58",
+        "start": 1018.8,
+        "duration": 4.24,
+        "text": "push it to everyone"
+      },
+      {
+        "index": 389,
+        "time": "17:01",
+        "start": 1021.279,
+        "duration": 3.68,
+        "text": "i think that is the wrong thing like"
+      },
+      {
+        "index": 390,
+        "time": "17:03",
+        "start": 1023.04,
+        "duration": 3.44,
+        "text": "standardization like doesn't what"
+      },
+      {
+        "index": 391,
+        "time": "17:04",
+        "start": 1024.959,
+        "duration": 5.12,
+        "text": "doesn't work"
+      },
+      {
+        "index": 392,
+        "time": "17:06",
+        "start": 1026.48,
+        "duration": 7.04,
+        "text": "if you're paying dollars for a good team"
+      },
+      {
+        "index": 393,
+        "time": "17:10",
+        "start": 1030.079,
+        "duration": 6.96,
+        "text": "then you need to utilize those things by"
+      },
+      {
+        "index": 394,
+        "time": "17:13",
+        "start": 1033.52,
+        "duration": 6.48,
+        "text": "recognizing how the niches"
+      },
+      {
+        "index": 395,
+        "time": "17:17",
+        "start": 1037.039,
+        "duration": 5.121,
+        "text": "and different quirks each person has and"
+      },
+      {
+        "index": 396,
+        "time": "17:20",
+        "start": 1040,
+        "duration": 4.799,
+        "text": "how to actually gear them and help them"
+      },
+      {
+        "index": 397,
+        "time": "17:22",
+        "start": 1042.16,
+        "duration": 5.44,
+        "text": "to be successful while challenging them"
+      },
+      {
+        "index": 398,
+        "time": "17:24",
+        "start": 1044.799,
+        "duration": 4.961,
+        "text": "to be growing i believe that when people"
+      },
+      {
+        "index": 399,
+        "time": "17:27",
+        "start": 1047.6,
+        "duration": 4.16,
+        "text": "are happy at their work and they feel"
+      },
+      {
+        "index": 400,
+        "time": "17:29",
+        "start": 1049.76,
+        "duration": 4.32,
+        "text": "like that they are growing they don't"
+      },
+      {
+        "index": 401,
+        "time": "17:31",
+        "start": 1051.76,
+        "duration": 5.039,
+        "text": "feel like that they want to leave unless"
+      },
+      {
+        "index": 402,
+        "time": "17:34",
+        "start": 1054.08,
+        "duration": 4.479,
+        "text": "you're grossly underpaying them right"
+      },
+      {
+        "index": 403,
+        "time": "17:36",
+        "start": 1056.799,
+        "duration": 3.76,
+        "text": "but if they feel like that they are"
+      },
+      {
+        "index": 404,
+        "time": "17:38",
+        "start": 1058.559,
+        "duration": 3.761,
+        "text": "happy they enjoy the people that they"
+      },
+      {
+        "index": 405,
+        "time": "17:40",
+        "start": 1060.559,
+        "duration": 3.521,
+        "text": "are working with they are being"
+      },
+      {
+        "index": 406,
+        "time": "17:42",
+        "start": 1062.32,
+        "duration": 4.08,
+        "text": "challenged at all times that they are"
+      },
+      {
+        "index": 407,
+        "time": "17:44",
+        "start": 1064.08,
+        "duration": 4.8,
+        "text": "growing at all times they know that this"
+      },
+      {
+        "index": 408,
+        "time": "17:46",
+        "start": 1066.4,
+        "duration": 4.8,
+        "text": "is the place for them oh cool um thank"
+      },
+      {
+        "index": 409,
+        "time": "17:48",
+        "start": 1068.88,
+        "duration": 4.24,
+        "text": "you steve for joining us today and"
+      },
+      {
+        "index": 410,
+        "time": "17:51",
+        "start": 1071.2,
+        "duration": 3.28,
+        "text": "i'm sure um this will give people pretty"
+      },
+      {
+        "index": 411,
+        "time": "17:53",
+        "start": 1073.12,
+        "duration": 3.76,
+        "text": "good guidance and you know something to"
+      },
+      {
+        "index": 412,
+        "time": "17:54",
+        "start": 1074.48,
+        "duration": 4.319,
+        "text": "think about right yeah yeah and i guess"
+      },
+      {
+        "index": 413,
+        "time": "17:56",
+        "start": 1076.88,
+        "duration": 3.679,
+        "text": "i learned a lot today um if you find"
+      },
+      {
+        "index": 414,
+        "time": "17:58",
+        "start": 1078.799,
+        "duration": 3.361,
+        "text": "this video helpful please give it a like"
+      },
+      {
+        "index": 415,
+        "time": "18:00",
+        "start": 1080.559,
+        "duration": 3.441,
+        "text": "and subscribe and"
+      },
+      {
+        "index": 416,
+        "time": "18:02",
+        "start": 1082.16,
+        "duration": 4.399,
+        "text": "uh if you have other questions that you"
+      },
+      {
+        "index": 417,
+        "time": "18:04",
+        "start": 1084,
+        "duration": 4,
+        "text": "want to ask um just you know leave a"
+      },
+      {
+        "index": 418,
+        "time": "18:06",
+        "start": 1086.559,
+        "duration": 3.281,
+        "text": "comment down below"
+      },
+      {
+        "index": 419,
+        "time": "18:08",
+        "start": 1088,
+        "duration": 3.84,
+        "text": "and yeah um"
+      },
+      {
+        "index": 420,
+        "time": "18:09",
+        "start": 1089.84,
+        "duration": 4.56,
+        "text": "i'll see you next time then"
+      },
+      {
+        "index": 421,
+        "time": "18:11",
+        "start": 1091.84,
+        "duration": 2.56,
+        "text": "bye"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": null,
+    "fallback": null,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXFM0ZWM9Y5R9W850ZP3CKPG",
+    "status": "completed",
+    "videoId": "ofitybjcHz0",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "next question this is something i do",
+            "start": 37.68,
+            "duration": 4.16
+          },
+          {
+            "text": "want to ask personally okay so right now",
+            "start": 39.68,
+            "duration": 4.559
+          },
+          {
+            "text": "i'm a senior level software engineer so",
+            "start": 41.84,
+            "duration": 4.879
+          },
+          {
+            "text": "how do i become like a staff engineer or",
+            "start": 44.239,
+            "duration": 4.241
+          },
+          {
+            "text": "you know what what distinguishes an",
+            "start": 46.719,
+            "duration": 3.441
+          },
+          {
+            "text": "engineer from senior level to say you",
+            "start": 48.48,
+            "duration": 4
+          },
+          {
+            "text": "know staff or principal level very very",
+            "start": 50.16,
+            "duration": 4
+          },
+          {
+            "text": "hard question in there because the whole",
+            "start": 52.48,
+            "duration": 3.28
+          },
+          {
+            "text": "thing is that i can tell you that i",
+            "start": 54.16,
+            "duration": 4.48
+          },
+          {
+            "text": "don't see any standard definition out",
+            "start": 55.76,
+            "duration": 4.88
+          },
+          {
+            "text": "there that says that well this is the",
+            "start": 58.64,
+            "duration": 4.48
+          },
+          {
+            "text": "definition of a junior intermediate",
+            "start": 60.64,
+            "duration": 5.2
+          },
+          {
+            "text": "senior staff like principal architect",
+            "start": 63.12,
+            "duration": 4.8
+          },
+          {
+            "text": "like yadda yadda like i don't see it",
+            "start": 65.84,
+            "duration": 4.24
+          },
+          {
+            "text": "anywhere but i guess like the years of",
+            "start": 67.92,
+            "duration": 3.44
+          },
+          {
+            "text": "experience of the projects that you",
+            "start": 70.08,
+            "duration": 3.44
+          },
+          {
+            "text": "worked on before kind of contribute to",
+            "start": 71.36,
+            "duration": 3.119
+          },
+          {
+            "text": "that",
+            "start": 73.52,
+            "duration": 4.08
+          },
+          {
+            "text": "so it does but at the same time how do",
+            "start": 74.479,
+            "duration": 5.361
+          },
+          {
+            "text": "you measure this yeah because you can",
+            "start": 77.6,
+            "duration": 5.519
+          },
+          {
+            "text": "have someone that works three years over",
+            "start": 79.84,
+            "duration": 6
+          },
+          {
+            "text": "at a startup and like basically just",
+            "start": 83.119,
+            "duration": 5.201
+          },
+          {
+            "text": "figure out everything themselves like on",
+            "start": 85.84,
+            "duration": 5.2
+          },
+          {
+            "text": "a very technical level being able to do",
+            "start": 88.32,
+            "duration": 4.32
+          },
+          {
+            "text": "machine learning architecture",
+            "start": 91.04,
+            "duration": 3.84
+          },
+          {
+            "text": "infrastructure building a scalable dom",
+            "start": 92.64,
+            "duration": 3.2
+          },
+          {
+            "text": "system",
+            "start": 94.88,
+            "duration": 2.72
+          },
+          {
+            "text": "right and you can have someone who has",
+            "start": 95.84,
+            "duration": 3.919
+          },
+          {
+            "text": "been staying at um some ecosystem no",
+            "start": 97.6,
+            "duration": 5.28
+          },
+          {
+            "text": "offense and lego system",
+            "start": 99.759,
+            "duration": 6.081
+          },
+          {
+            "text": "i may get in a lot of trouble for this",
+            "start": 102.88,
+            "duration": 5.279
+          },
+          {
+            "text": "and work 10 years on a very specialized",
+            "start": 105.84,
+            "duration": 4.8
+          },
+          {
+            "text": "project that has no idea how to do",
+            "start": 108.159,
+            "duration": 5.441
+          },
+          {
+            "text": "database yeah yeah right in that case",
+            "start": 110.64,
+            "duration": 4.96
+          },
+          {
+            "text": "who is um who is closer to a senior",
+            "start": 113.6,
+            "duration": 3.76
+          },
+          {
+            "text": "engineer who is closer to a principal",
+            "start": 115.6,
+            "duration": 3.92
+          },
+          {
+            "text": "engineer so when you're talking about",
+            "start": 117.36,
+            "duration": 4.88
+          },
+          {
+            "text": "like senior level engineers um like like",
+            "start": 119.52,
+            "duration": 4.72
+          },
+          {
+            "text": "you're on a certain level how do you",
+            "start": 122.24,
+            "duration": 4.96
+          },
+          {
+            "text": "want to grow and get to the next thing",
+            "start": 124.24,
+            "duration": 4.719
+          },
+          {
+            "text": "you have to understand what the next",
+            "start": 127.2,
+            "duration": 4.8
+          },
+          {
+            "text": "thing is first at least have an idea of",
+            "start": 128.959,
+            "duration": 4.881
+          },
+          {
+            "text": "what you want the next thing to be is it",
+            "start": 132,
+            "duration": 4.959
+          },
+          {
+            "text": "that you foresee yourself to be a",
+            "start": 133.84,
+            "duration": 4.72
+          },
+          {
+            "text": "evangelist",
+            "start": 136.959,
+            "duration": 4.081
+          },
+          {
+            "text": "to go into the company and teach people",
+            "start": 138.56,
+            "duration": 4.64
+          },
+          {
+            "text": "and build tools and teach people how to",
+            "start": 141.04,
+            "duration": 5.199
+          },
+          {
+            "text": "use tools to become better and like more",
+            "start": 143.2,
+            "duration": 5.44
+          },
+          {
+            "text": "efficient in that job is it that you",
+            "start": 146.239,
+            "duration": 4.801
+          },
+          {
+            "text": "want to be able to lead teams",
+            "start": 148.64,
+            "duration": 4.319
+          },
+          {
+            "text": "to actually show them and be able to",
+            "start": 151.04,
+            "duration": 4.72
+          },
+          {
+            "text": "take on bigger and bigger projects is it",
+            "start": 152.959,
+            "duration": 6.161
+          },
+          {
+            "text": "that you want to have more time spending",
+            "start": 155.76,
+            "duration": 5.68
+          },
+          {
+            "text": "on specialization which i just said",
+            "start": 159.12,
+            "duration": 5.6
+          },
+          {
+            "text": "about the microsystem again no offense",
+            "start": 161.44,
+            "duration": 5.519
+          },
+          {
+            "text": "to get into like something that is like",
+            "start": 164.72,
+            "duration": 4.64
+          },
+          {
+            "text": "very specific that requires a lot more",
+            "start": 166.959,
+            "duration": 3.601
+          },
+          {
+            "text": "time to do",
+            "start": 169.36,
+            "duration": 3.44
+          },
+          {
+            "text": "that's where your growth paths are going",
+            "start": 170.56,
+            "duration": 4.48
+          },
+          {
+            "text": "to be and in different companies they",
+            "start": 172.8,
+            "duration": 5.2
+          },
+          {
+            "text": "can all be called principal engineers",
+            "start": 175.04,
+            "duration": 5.52
+          },
+          {
+            "text": "so the question is back to you is what",
+            "start": 178,
+            "duration": 4.4
+          },
+          {
+            "text": "do you want",
+            "start": 180.56,
+            "duration": 5.52
+          },
+          {
+            "text": "for your next step let's see right so so",
+            "start": 182.4,
+            "duration": 5.28
+          },
+          {
+            "text": "think about that like if you're saying",
+            "start": 186.08,
+            "duration": 2.879
+          },
+          {
+            "text": "that hey",
+            "start": 187.68,
+            "duration": 3.12
+          },
+          {
+            "text": "i want to learn how to take on bigger",
+            "start": 188.959,
+            "duration": 3.92
+          },
+          {
+            "text": "and bigger projects and my answer would",
+            "start": 190.8,
+            "duration": 4.159
+          },
+          {
+            "text": "be that you should know that at some",
+            "start": 192.879,
+            "duration": 4.64
+          },
+          {
+            "text": "point of time you're going to run out of",
+            "start": 194.959,
+            "duration": 4.721
+          },
+          {
+            "text": "your like your physical tighten speed",
+            "start": 197.519,
+            "duration": 3.921
+          },
+          {
+            "text": "it's not going to be able to do bigger",
+            "start": 199.68,
+            "duration": 3.76
+          },
+          {
+            "text": "and bigger project at some some point of",
+            "start": 201.44,
+            "duration": 5.12
+          },
+          {
+            "text": "time you will have to subcontract it out",
+            "start": 203.44,
+            "duration": 5.439
+          },
+          {
+            "text": "to to delegate this stuff",
+            "start": 206.56,
+            "duration": 3.759
+          },
+          {
+            "text": "in that case the first thing that you",
+            "start": 208.879,
+            "duration": 3.36
+          },
+          {
+            "text": "should learn is how do i actually get a",
+            "start": 210.319,
+            "duration": 4.321
+          },
+          {
+            "text": "team how do i actually start organizing",
+            "start": 212.239,
+            "duration": 5.121
+          },
+          {
+            "text": "people so that in the group of us we can",
+            "start": 214.64,
+            "duration": 4.8
+          },
+          {
+            "text": "actually build something",
+            "start": 217.36,
+            "duration": 4.08
+          },
+          {
+            "text": "right yeah and i would say that like if",
+            "start": 219.44,
+            "duration": 4
+          },
+          {
+            "text": "you're going to do that doing work",
+            "start": 221.44,
+            "duration": 3.76
+          },
+          {
+            "text": "talking with your boss and actually",
+            "start": 223.44,
+            "duration": 4.24
+          },
+          {
+            "text": "getting the opportunity to take on",
+            "start": 225.2,
+            "duration": 4.08
+          },
+          {
+            "text": "bigger projects",
+            "start": 227.68,
+            "duration": 4.08
+          },
+          {
+            "text": "while bringing on other people sometimes",
+            "start": 229.28,
+            "duration": 6.159
+          },
+          {
+            "text": "easiest bring on interns yeah right",
+            "start": 231.76,
+            "duration": 5.679
+          },
+          {
+            "text": "bring on interns bring on juniors at the",
+            "start": 235.439,
+            "duration": 3.601
+          },
+          {
+            "text": "same time you learn how to teach you",
+            "start": 237.439,
+            "duration": 3.52
+          },
+          {
+            "text": "learn how to manage you need learn how",
+            "start": 239.04,
+            "duration": 4
+          },
+          {
+            "text": "to lead then you start growing and",
+            "start": 240.959,
+            "duration": 3.92
+          },
+          {
+            "text": "getting bigger and bigger in terms of",
+            "start": 243.04,
+            "duration": 3.919
+          },
+          {
+            "text": "science and getting enough feedback from",
+            "start": 244.879,
+            "duration": 5.36
+          },
+          {
+            "text": "both management your peers and also the",
+            "start": 246.959,
+            "duration": 5.121
+          },
+          {
+            "text": "people that are working on the that's",
+            "start": 250.239,
+            "duration": 4
+          },
+          {
+            "text": "how i actually start off i see you know",
+            "start": 252.08,
+            "duration": 3.84
+          },
+          {
+            "text": "majority of the time i will tell you",
+            "start": 254.239,
+            "duration": 4.641
+          },
+          {
+            "text": "that like once i get to a certain level",
+            "start": 255.92,
+            "duration": 5.039
+          },
+          {
+            "text": "a lot of times the feedback is directly",
+            "start": 258.88,
+            "duration": 5.039
+          },
+          {
+            "text": "from people that i manage yeah right so",
+            "start": 260.959,
+            "duration": 4.561
+          },
+          {
+            "text": "that makes sense yeah so would you say",
+            "start": 263.919,
+            "duration": 3.681
+          },
+          {
+            "text": "like as usually progress is it the",
+            "start": 265.52,
+            "duration": 4.56
+          },
+          {
+            "text": "coding skill or the hard skill itself is",
+            "start": 267.6,
+            "duration": 4.72
+          },
+          {
+            "text": "not so important anymore focus should be",
+            "start": 270.08,
+            "duration": 4.399
+          },
+          {
+            "text": "more on you know people skill and how",
+            "start": 272.32,
+            "duration": 5.12
+          },
+          {
+            "text": "you manage projects and how you build",
+            "start": 274.479,
+            "duration": 4.641
+          },
+          {
+            "text": "the team if you're talking about",
+            "start": 277.44,
+            "duration": 4.64
+          },
+          {
+            "text": "proportion a lot of times that's true",
+            "start": 279.12,
+            "duration": 4.799
+          },
+          {
+            "text": "but that's the answer of my previous",
+            "start": 282.08,
+            "duration": 4.08
+          },
+          {
+            "text": "question goes it really depends on how",
+            "start": 283.919,
+            "duration": 3.521
+          },
+          {
+            "text": "you want to grow",
+            "start": 286.16,
+            "duration": 4
+          },
+          {
+            "text": "i'm still seeing like some really really",
+            "start": 287.44,
+            "duration": 5.12
+          },
+          {
+            "text": "brilliant engineers you want me to lead",
+            "start": 290.16,
+            "duration": 5.759
+          },
+          {
+            "text": "a team no i'm not going to do it i don't",
+            "start": 292.56,
+            "duration": 6.079
+          },
+          {
+            "text": "want to like um i want to focus on",
+            "start": 295.919,
+            "duration": 5.521
+          },
+          {
+            "text": "building and designing good systems and",
+            "start": 298.639,
+            "duration": 5.12
+          },
+          {
+            "text": "like and they just end up being very",
+            "start": 301.44,
+            "duration": 4.8
+          },
+          {
+            "text": "good at it they would still be able to",
+            "start": 303.759,
+            "duration": 6.321
+          },
+          {
+            "text": "figure out how to define the work",
+            "start": 306.24,
+            "duration": 5.76
+          },
+          {
+            "text": "but they would be paired up with project",
+            "start": 310.08,
+            "duration": 4.959
+          },
+          {
+            "text": "managers that actually helped manage the",
+            "start": 312,
+            "duration": 4.08
+          },
+          {
+            "text": "people",
+            "start": 315.039,
+            "duration": 3.281
+          },
+          {
+            "text": "they would be the one that actually say",
+            "start": 316.08,
+            "duration": 4.559
+          },
+          {
+            "text": "that this is the wrong map this is why",
+            "start": 318.32,
+            "duration": 5.599
+          },
+          {
+            "text": "foresee and their expertise comes in",
+            "start": 320.639,
+            "duration": 5.921
+          },
+          {
+            "text": "picking a very nebulous problem and",
+            "start": 323.919,
+            "duration": 4.161
+          },
+          {
+            "text": "breaking it down",
+            "start": 326.56,
+            "duration": 3.52
+          },
+          {
+            "text": "and that's their specialty and they're",
+            "start": 328.08,
+            "duration": 3.92
+          },
+          {
+            "text": "still okay with that",
+            "start": 330.08,
+            "duration": 3.6
+          },
+          {
+            "text": "right it doesn't mean that the more",
+            "start": 332,
+            "duration": 4.56
+          },
+          {
+            "text": "experienced you are the the more you",
+            "start": 333.68,
+            "duration": 6.32
+          },
+          {
+            "text": "have to have to um teach or like to to",
+            "start": 336.56,
+            "duration": 5.359
+          },
+          {
+            "text": "manage and what not it would be great if",
+            "start": 340,
+            "duration": 4.56
+          },
+          {
+            "text": "you do like it's awesome like that like",
+            "start": 341.919,
+            "duration": 5.681
+          },
+          {
+            "text": "our society and our industry needs it",
+            "start": 344.56,
+            "duration": 5.84
+          },
+          {
+            "text": "but if you want to you can focus on",
+            "start": 347.6,
+            "duration": 5.52
+          },
+          {
+            "text": "doing something you specialize in stuff",
+            "start": 350.4,
+            "duration": 4.32
+          },
+          {
+            "text": "like getting a phd like this doesn't",
+            "start": 353.12,
+            "duration": 3.919
+          },
+          {
+            "text": "mean that you have to do like i'm i'm",
+            "start": 354.72,
+            "duration": 4.16
+          },
+          {
+            "text": "specific you can choose whatever topic",
+            "start": 357.039,
+            "duration": 4.401
+          },
+          {
+            "text": "you want i see ics so it's not really",
+            "start": 358.88,
+            "duration": 4.64
+          },
+          {
+            "text": "just a singular path it's a lot of",
+            "start": 361.44,
+            "duration": 3.44
+          },
+          {
+            "text": "things when you get to that level you",
+            "start": 363.52,
+            "duration": 2.959
+          },
+          {
+            "text": "can specialize it depends on what you",
+            "start": 364.88,
+            "duration": 3.68
+          },
+          {
+            "text": "want exactly at the end of the day is a",
+            "start": 366.479,
+            "duration": 4.321
+          },
+          {
+            "text": "free market like nowadays i walk to",
+            "start": 368.56,
+            "duration": 4.56
+          },
+          {
+            "text": "companies i don't try to get them to",
+            "start": 370.8,
+            "duration": 4.959
+          },
+          {
+            "text": "like identify me as one thing or another",
+            "start": 373.12,
+            "duration": 4.4
+          },
+          {
+            "text": "i present to them",
+            "start": 375.759,
+            "duration": 4.241
+          },
+          {
+            "text": "what i know what i have what i can help",
+            "start": 377.52,
+            "duration": 3.76
+          },
+          {
+            "text": "them with",
+            "start": 380,
+            "duration": 3.039
+          },
+          {
+            "text": "and they decide if they want to buy it",
+            "start": 381.28,
+            "duration": 4.96
+          },
+          {
+            "text": "or not i see right like my own products",
+            "start": 383.039,
+            "duration": 6
+          },
+          {
+            "text": "the most important thing is like knowing",
+            "start": 386.24,
+            "duration": 5.84
+          },
+          {
+            "text": "yourself on what you want to become and",
+            "start": 389.039,
+            "duration": 5.041
+          },
+          {
+            "text": "trying to market that and see if there's",
+            "start": 392.08,
+            "duration": 4.8
+          },
+          {
+            "text": "any like buyers",
+            "start": 394.08,
+            "duration": 2.8
+          },
+          {
+            "text": "yes",
+            "start": 400.479,
+            "duration": 2.321
+          },
+          {
+            "text": "sir",
+            "start": 406.24,
+            "duration": 3
+          },
+          {
+            "text": "what do you care the most other than you",
+            "start": 505.28,
+            "duration": 3.68
+          },
+          {
+            "text": "know the technical respect assuming the",
+            "start": 506.96,
+            "duration": 4.079
+          },
+          {
+            "text": "person is you know technically strong",
+            "start": 508.96,
+            "duration": 4.559
+          },
+          {
+            "text": "enough for the team it's a gripe that we",
+            "start": 511.039,
+            "duration": 4.8
+          },
+          {
+            "text": "have like in um in software engineering",
+            "start": 513.519,
+            "duration": 4
+          },
+          {
+            "text": "especially software engineering",
+            "start": 515.839,
+            "duration": 3.12
+          },
+          {
+            "text": "interviews",
+            "start": 517.519,
+            "duration": 3.44
+          },
+          {
+            "text": "a lot of companies that i go with like",
+            "start": 518.959,
+            "duration": 4
+          },
+          {
+            "text": "um i go to even",
+            "start": 520.959,
+            "duration": 3.681
+          },
+          {
+            "text": "you know some experience from that like",
+            "start": 522.959,
+            "duration": 4.241
+          },
+          {
+            "text": "it's uh go in an interview and people",
+            "start": 524.64,
+            "duration": 4.4
+          },
+          {
+            "text": "just keep throwing new technical",
+            "start": 527.2,
+            "duration": 4.24
+          },
+          {
+            "text": "questions like um algorithmic questions",
+            "start": 529.04,
+            "duration": 4.96
+          },
+          {
+            "text": "right given an array this size and this",
+            "start": 531.44,
+            "duration": 4.32
+          },
+          {
+            "text": "stuff like figure it out and all that",
+            "start": 534,
+            "duration": 4.399
+          },
+          {
+            "text": "stuff a smart person of a certain",
+            "start": 535.76,
+            "duration": 5.199
+          },
+          {
+            "text": "experience would be able to find the",
+            "start": 538.399,
+            "duration": 4.88
+          },
+          {
+            "text": "patterns and answer you those",
+            "start": 540.959,
+            "duration": 4.961
+          },
+          {
+            "text": "but in work when you when you choose a",
+            "start": 543.279,
+            "duration": 3.521
+          },
+          {
+            "text": "partner",
+            "start": 545.92,
+            "duration": 3.52
+          },
+          {
+            "text": "right um for for starting a business",
+            "start": 546.8,
+            "duration": 4.56
+          },
+          {
+            "text": "yeah or when you're building your team",
+            "start": 549.44,
+            "duration": 4.24
+          },
+          {
+            "text": "what do you want them to be or someone i",
+            "start": 551.36,
+            "duration": 3.44
+          },
+          {
+            "text": "can work with",
+            "start": 553.68,
+            "duration": 3.2
+          },
+          {
+            "text": "something you can work with what does",
+            "start": 554.8,
+            "duration": 4.08
+          },
+          {
+            "text": "that mean when someone i can trust",
+            "start": 556.88,
+            "duration": 4.399
+          },
+          {
+            "text": "someone i can you know learn from",
+            "start": 558.88,
+            "duration": 3.84
+          },
+          {
+            "text": "someone who is you know",
+            "start": 561.279,
+            "duration": 3.841
+          },
+          {
+            "text": "genuine and smart understand yeah that's",
+            "start": 562.72,
+            "duration": 4
+          },
+          {
+            "text": "something that i look forward in general",
+            "start": 565.12,
+            "duration": 3.279
+          },
+          {
+            "text": "that is the most important thing right",
+            "start": 566.72,
+            "duration": 3.28
+          },
+          {
+            "text": "someone that you can trust",
+            "start": 568.399,
+            "duration": 4
+          },
+          {
+            "text": "right someone that you can learn from",
+            "start": 570,
+            "duration": 3.2
+          },
+          {
+            "text": "right",
+            "start": 572.399,
+            "duration": 2.56
+          },
+          {
+            "text": "the whole thing is that how do you",
+            "start": 573.2,
+            "duration": 4
+          },
+          {
+            "text": "actually get that well first you need to",
+            "start": 574.959,
+            "duration": 3.521
+          },
+          {
+            "text": "make sure that they're good at",
+            "start": 577.2,
+            "duration": 3.6
+          },
+          {
+            "text": "communication if they suck at it it's",
+            "start": 578.48,
+            "duration": 5.44
+          },
+          {
+            "text": "going to be a hell of a ride right like",
+            "start": 580.8,
+            "duration": 5.84
+          },
+          {
+            "text": "if they can clearly articulate what they",
+            "start": 583.92,
+            "duration": 5.359
+          },
+          {
+            "text": "are thinking and convey the idea to you",
+            "start": 586.64,
+            "duration": 4.879
+          },
+          {
+            "text": "and back and forth right that's why i'm",
+            "start": 589.279,
+            "duration": 3.601
+          },
+          {
+            "text": "looking for it",
+            "start": 591.519,
+            "duration": 3.76
+          },
+          {
+            "text": "right like so so a lot of times like i",
+            "start": 592.88,
+            "duration": 5.2
+          },
+          {
+            "text": "still use um these technical questions",
+            "start": 595.279,
+            "duration": 5.12
+          },
+          {
+            "text": "and and like algorithms make questions",
+            "start": 598.08,
+            "duration": 5.199
+          },
+          {
+            "text": "now things that are going to get harder",
+            "start": 600.399,
+            "duration": 5.281
+          },
+          {
+            "text": "is going to be the next thing how do you",
+            "start": 603.279,
+            "duration": 4.8
+          },
+          {
+            "text": "think that you can work with this person",
+            "start": 605.68,
+            "duration": 4.8
+          },
+          {
+            "text": "that means that personality has to be",
+            "start": 608.079,
+            "duration": 4.401
+          },
+          {
+            "text": "there yeah right i'm not just saying",
+            "start": 610.48,
+            "duration": 4.24
+          },
+          {
+            "text": "that a boring personality or not like",
+            "start": 612.48,
+            "duration": 4.32
+          },
+          {
+            "text": "i'm talking about like hey if we're",
+            "start": 614.72,
+            "duration": 4.32
+          },
+          {
+            "text": "going to have a an argument are you",
+            "start": 616.8,
+            "duration": 4.4
+          },
+          {
+            "text": "going to stand on your ground",
+            "start": 619.04,
+            "duration": 4.88
+          },
+          {
+            "text": "when you're right and also being able to",
+            "start": 621.2,
+            "duration": 4.8
+          },
+          {
+            "text": "listen when there is a discussion going",
+            "start": 623.92,
+            "duration": 4.56
+          },
+          {
+            "text": "on or are you going to say that no i'm",
+            "start": 626,
+            "duration": 4.48
+          },
+          {
+            "text": "right uh i don't care about any of you",
+            "start": 628.48,
+            "duration": 4.88
+          },
+          {
+            "text": "guys like yada yada or are you going to",
+            "start": 630.48,
+            "duration": 4.72
+          },
+          {
+            "text": "be backing down everything is kind of",
+            "start": 633.36,
+            "duration": 4.159
+          },
+          {
+            "text": "like yes i'm junior i will listen to",
+            "start": 635.2,
+            "duration": 4.319
+          },
+          {
+            "text": "everything you say happening right like",
+            "start": 637.519,
+            "duration": 4.56
+          },
+          {
+            "text": "are you able to get a good conversation",
+            "start": 639.519,
+            "duration": 6.081
+          },
+          {
+            "text": "a good sparring session happening right",
+            "start": 642.079,
+            "duration": 6.401
+          },
+          {
+            "text": "so now for me interview is relatively",
+            "start": 645.6,
+            "duration": 5.12
+          },
+          {
+            "text": "dynamic i'm trying to see if i can",
+            "start": 648.48,
+            "duration": 4.799
+          },
+          {
+            "text": "actually poke them a little bit",
+            "start": 650.72,
+            "duration": 4.64
+          },
+          {
+            "text": "and see how they respond",
+            "start": 653.279,
+            "duration": 3.601
+          },
+          {
+            "text": "right see if they are going to be",
+            "start": 655.36,
+            "duration": 3.919
+          },
+          {
+            "text": "dismissive seeing if they are actually",
+            "start": 656.88,
+            "duration": 3.84
+          },
+          {
+            "text": "like listening",
+            "start": 659.279,
+            "duration": 3.12
+          },
+          {
+            "text": "and actually understanding the",
+            "start": 660.72,
+            "duration": 4.48
+          },
+          {
+            "text": "information and then regurgitating or",
+            "start": 662.399,
+            "duration": 5.12
+          },
+          {
+            "text": "like disagreeing with the ideas",
+            "start": 665.2,
+            "duration": 3.6
+          },
+          {
+            "text": "seeing how",
+            "start": 667.519,
+            "duration": 3.121
+          },
+          {
+            "text": "much they are going to be willing to",
+            "start": 668.8,
+            "duration": 4
+          },
+          {
+            "text": "actually do the feedback",
+            "start": 670.64,
+            "duration": 4.24
+          },
+          {
+            "text": "so that's part of that yeah first thing",
+            "start": 672.8,
+            "duration": 4.4
+          },
+          {
+            "text": "is about reliability um and that is",
+            "start": 674.88,
+            "duration": 4.639
+          },
+          {
+            "text": "going to be extremely hard yeah how do",
+            "start": 677.2,
+            "duration": 4.879
+          },
+          {
+            "text": "you know someone is going to be reliable",
+            "start": 679.519,
+            "duration": 4.241
+          },
+          {
+            "text": "yeah when you're interviewing without",
+            "start": 682.079,
+            "duration": 3.521
+          },
+          {
+            "text": "yeah you only spend like 30 minutes with",
+            "start": 683.76,
+            "duration": 4
+          },
+          {
+            "text": "the person it's really hard exactly yeah",
+            "start": 685.6,
+            "duration": 4.32
+          },
+          {
+            "text": "right yeah but generally there are",
+            "start": 687.76,
+            "duration": 4.8
+          },
+          {
+            "text": "things that you have to you can rely on",
+            "start": 689.92,
+            "duration": 4.4
+          },
+          {
+            "text": "some of the things actually is your",
+            "start": 692.56,
+            "duration": 3.76
+          },
+          {
+            "text": "intuition",
+            "start": 694.32,
+            "duration": 4.16
+          },
+          {
+            "text": "one of the strongest things that um",
+            "start": 696.32,
+            "duration": 2.959
+          },
+          {
+            "text": "we",
+            "start": 698.48,
+            "duration": 2.56
+          },
+          {
+            "text": "have to rely on is understanding our",
+            "start": 699.279,
+            "duration": 4.161
+          },
+          {
+            "text": "intuition a lot of times what i have",
+            "start": 701.04,
+            "duration": 4.96
+          },
+          {
+            "text": "seen is that people who are who have",
+            "start": 703.44,
+            "duration": 4.72
+          },
+          {
+            "text": "great attention to detail",
+            "start": 706,
+            "duration": 4.56
+          },
+          {
+            "text": "also hold great responsibility as",
+            "start": 708.16,
+            "duration": 4.72
+          },
+          {
+            "text": "themselves i see is this a type of",
+            "start": 710.56,
+            "duration": 4.719
+          },
+          {
+            "text": "person that you feel like that they see",
+            "start": 712.88,
+            "duration": 4.959
+          },
+          {
+            "text": "a problem and they will own the problem",
+            "start": 715.279,
+            "duration": 4.721
+          },
+          {
+            "text": "holy exactly",
+            "start": 717.839,
+            "duration": 4.641
+          },
+          {
+            "text": "seeing that and like trying to do that a",
+            "start": 720,
+            "duration": 5.44
+          },
+          {
+            "text": "lot has to come with pps experience as",
+            "start": 722.48,
+            "duration": 5.599
+          },
+          {
+            "text": "well so when we talk about like hey tell",
+            "start": 725.44,
+            "duration": 5.12
+          },
+          {
+            "text": "me about your like um your history about",
+            "start": 728.079,
+            "duration": 4.401
+          },
+          {
+            "text": "like your previous work and whatnot get",
+            "start": 730.56,
+            "duration": 4.56
+          },
+          {
+            "text": "into what situation talk about what",
+            "start": 732.48,
+            "duration": 4.96
+          },
+          {
+            "text": "happened how did they handle it why did",
+            "start": 735.12,
+            "duration": 4.48
+          },
+          {
+            "text": "they step up why did they not step up",
+            "start": 737.44,
+            "duration": 3.839
+          },
+          {
+            "text": "what is the reaction what is their",
+            "start": 739.6,
+            "duration": 5.039
+          },
+          {
+            "text": "feeling about a situation or the",
+            "start": 741.279,
+            "duration": 5.521
+          },
+          {
+            "text": "situation that they're talking about and",
+            "start": 744.639,
+            "duration": 4.081
+          },
+          {
+            "text": "from that you just clean more and more",
+            "start": 746.8,
+            "duration": 4.08
+          },
+          {
+            "text": "of their personality",
+            "start": 748.72,
+            "duration": 4.559
+          },
+          {
+            "text": "i believe that technology technical",
+            "start": 750.88,
+            "duration": 4.88
+          },
+          {
+            "text": "capabilities i can train",
+            "start": 753.279,
+            "duration": 5.441
+          },
+          {
+            "text": "right give me a smart person and i can",
+            "start": 755.76,
+            "duration": 5.759
+          },
+          {
+            "text": "train them within x amount of months",
+            "start": 758.72,
+            "duration": 5.359
+          },
+          {
+            "text": "and they will become capable",
+            "start": 761.519,
+            "duration": 5.281
+          },
+          {
+            "text": "give me a lazy person and i will spend",
+            "start": 764.079,
+            "duration": 4.88
+          },
+          {
+            "text": "more time working on the person then",
+            "start": 766.8,
+            "duration": 3.92
+          },
+          {
+            "text": "i'll be doing work",
+            "start": 768.959,
+            "duration": 4.401
+          },
+          {
+            "text": "a non-motivated person or",
+            "start": 770.72,
+            "duration": 5.04
+          },
+          {
+            "text": "someone who actually let's just say not",
+            "start": 773.36,
+            "duration": 4.8
+          },
+          {
+            "text": "a good personality match with me",
+            "start": 775.76,
+            "duration": 4.639
+          },
+          {
+            "text": "it's not going to work out",
+            "start": 778.16,
+            "duration": 4.56
+          },
+          {
+            "text": "because it's so much harder to actually",
+            "start": 780.399,
+            "duration": 6.401
+          },
+          {
+            "text": "adjust personality yeah then it is two",
+            "start": 782.72,
+            "duration": 6.4
+          },
+          {
+            "text": "are just technical capabilities",
+            "start": 786.8,
+            "duration": 3.599
+          },
+          {
+            "text": "i see",
+            "start": 789.12,
+            "duration": 2.8
+          },
+          {
+            "text": "right",
+            "start": 790.399,
+            "duration": 3.601
+          },
+          {
+            "text": "you know a lot of my audience right in",
+            "start": 791.92,
+            "duration": 4.4
+          },
+          {
+            "text": "asia right asian traditions like you're",
+            "start": 794,
+            "duration": 4.32
+          },
+          {
+            "text": "growing up parents teachers to be humble",
+            "start": 796.32,
+            "duration": 2.72
+          },
+          {
+            "text": "right",
+            "start": 798.32,
+            "duration": 3.28
+          },
+          {
+            "text": "and it's very different over here let's",
+            "start": 799.04,
+            "duration": 4.4
+          },
+          {
+            "text": "say you come here and then you start a",
+            "start": 801.6,
+            "duration": 3.2
+          },
+          {
+            "text": "new career in",
+            "start": 803.44,
+            "duration": 3.519
+          },
+          {
+            "text": "the u.s north america or silicon valley",
+            "start": 804.8,
+            "duration": 3.92
+          },
+          {
+            "text": "right how do you kind of like balance",
+            "start": 806.959,
+            "duration": 3.44
+          },
+          {
+            "text": "out and what advice would you give",
+            "start": 808.72,
+            "duration": 4.4
+          },
+          {
+            "text": "people growing up in asia there is a",
+            "start": 810.399,
+            "duration": 6
+          },
+          {
+            "text": "difference between knowing what you know",
+            "start": 813.12,
+            "duration": 5.44
+          },
+          {
+            "text": "and being good at what you do and",
+            "start": 816.399,
+            "duration": 4.161
+          },
+          {
+            "text": "bragging about it there is a fine line",
+            "start": 818.56,
+            "duration": 4.399
+          },
+          {
+            "text": "about it yeah usually i cross that line",
+            "start": 820.56,
+            "duration": 5.839
+          },
+          {
+            "text": "my apologies on that um the humility in",
+            "start": 822.959,
+            "duration": 4.32
+          },
+          {
+            "text": "it",
+            "start": 826.399,
+            "duration": 4.321
+          },
+          {
+            "text": "happens the easiest when you are genuine",
+            "start": 827.279,
+            "duration": 6.8
+          },
+          {
+            "text": "if you are able to be more transparent",
+            "start": 830.72,
+            "duration": 5.52
+          },
+          {
+            "text": "then people will understand you",
+            "start": 834.079,
+            "duration": 4.961
+          },
+          {
+            "text": "let people understand you and when you",
+            "start": 836.24,
+            "duration": 6.08
+          },
+          {
+            "text": "do that you get a lot more leeway i try",
+            "start": 839.04,
+            "duration": 5.76
+          },
+          {
+            "text": "to communicate my intentions",
+            "start": 842.32,
+            "duration": 5.12
+          },
+          {
+            "text": "and if they align or if they understand",
+            "start": 844.8,
+            "duration": 5.92
+          },
+          {
+            "text": "it then people usually appreciate it",
+            "start": 847.44,
+            "duration": 5.92
+          },
+          {
+            "text": "and that like alleviates a lot of",
+            "start": 850.72,
+            "duration": 5.52
+          },
+          {
+            "text": "problems about like humility or or like",
+            "start": 853.36,
+            "duration": 5.2
+          },
+          {
+            "text": "i'm i'm trying to be too like saying too",
+            "start": 856.24,
+            "duration": 5.279
+          },
+          {
+            "text": "many stories well i still do that",
+            "start": 858.56,
+            "duration": 5.6
+          },
+          {
+            "text": "that's a problem with canada no no no",
+            "start": 861.519,
+            "duration": 4.161
+          },
+          {
+            "text": "i guess folks",
+            "start": 864.16,
+            "duration": 2.56
+          },
+          {
+            "text": "but like",
+            "start": 865.68,
+            "duration": 2.399
+          },
+          {
+            "text": "yeah i don't know if i answer your",
+            "start": 866.72,
+            "duration": 3.359
+          },
+          {
+            "text": "questions it does yeah okay",
+            "start": 868.079,
+            "duration": 4.801
+          },
+          {
+            "text": "when senai we met back in the days um he",
+            "start": 870.079,
+            "duration": 4.641
+          },
+          {
+            "text": "was the mentor to help build the team i",
+            "start": 872.88,
+            "duration": 4.079
+          },
+          {
+            "text": "was at and i was very fortunate um you",
+            "start": 874.72,
+            "duration": 4.32
+          },
+          {
+            "text": "know to have said and found it very",
+            "start": 876.959,
+            "duration": 3.841
+          },
+          {
+            "text": "helpful to have a mentor at earlier",
+            "start": 879.04,
+            "duration": 3.84
+          },
+          {
+            "text": "stage of my career how would you help a",
+            "start": 880.8,
+            "duration": 4.64
+          },
+          {
+            "text": "team to be more productive and you know",
+            "start": 882.88,
+            "duration": 4.079
+          },
+          {
+            "text": "just generally make people happy and",
+            "start": 885.44,
+            "duration": 4
+          },
+          {
+            "text": "motivated i don't know like in my",
+            "start": 886.959,
+            "duration": 6
+          },
+          {
+            "text": "opinion i corrupted him",
+            "start": 889.44,
+            "duration": 3.519
+          },
+          {
+            "text": "yes",
+            "start": 893.199,
+            "duration": 2.401
+          },
+          {
+            "text": "the most important factor in a workplace",
+            "start": 896.079,
+            "duration": 6.32
+          },
+          {
+            "text": "that makes people happy is empowerment",
+            "start": 900,
+            "duration": 4.56
+          },
+          {
+            "text": "people being listened to and people",
+            "start": 902.399,
+            "duration": 4.321
+          },
+          {
+            "text": "feeling that they are being trusted to",
+            "start": 904.56,
+            "duration": 4.399
+          },
+          {
+            "text": "work on something that sense of",
+            "start": 906.72,
+            "duration": 4.88
+          },
+          {
+            "text": "empowerment actually gives a lot of",
+            "start": 908.959,
+            "duration": 5.921
+          },
+          {
+            "text": "satisfaction to people ownership is in",
+            "start": 911.6,
+            "duration": 5.76
+          },
+          {
+            "text": "there but a lot of companies a lot of",
+            "start": 914.88,
+            "duration": 5.04
+          },
+          {
+            "text": "teams they do this they say that here",
+            "start": 917.36,
+            "duration": 4.32
+          },
+          {
+            "text": "you own this",
+            "start": 919.92,
+            "duration": 3.919
+          },
+          {
+            "text": "right yeah but you should do it this way",
+            "start": 921.68,
+            "duration": 3.92
+          },
+          {
+            "text": "this way this way oh don't do it like",
+            "start": 923.839,
+            "duration": 4.081
+          },
+          {
+            "text": "this do it like this this this right",
+            "start": 925.6,
+            "duration": 4.56
+          },
+          {
+            "text": "just telling people like exactly you own",
+            "start": 927.92,
+            "duration": 4.64
+          },
+          {
+            "text": "this but no you don't really own this",
+            "start": 930.16,
+            "duration": 4.479
+          },
+          {
+            "text": "right ownership",
+            "start": 932.56,
+            "duration": 4.88
+          },
+          {
+            "text": "without um empowerment",
+            "start": 934.639,
+            "duration": 4.721
+          },
+          {
+            "text": "it's just responsibility ownership is",
+            "start": 937.44,
+            "duration": 4.079
+          },
+          {
+            "text": "actually both responsibility and",
+            "start": 939.36,
+            "duration": 3.44
+          },
+          {
+            "text": "empowerment",
+            "start": 941.519,
+            "duration": 3.68
+          },
+          {
+            "text": "right usually i tell my boss that if i",
+            "start": 942.8,
+            "duration": 5.039
+          },
+          {
+            "text": "own a team i have the power to choose",
+            "start": 945.199,
+            "duration": 4.64
+          },
+          {
+            "text": "who is in my team i have the power to",
+            "start": 947.839,
+            "duration": 3.44
+          },
+          {
+            "text": "discipline",
+            "start": 949.839,
+            "duration": 3.12
+          },
+          {
+            "text": "people in my team",
+            "start": 951.279,
+            "duration": 4.321
+          },
+          {
+            "text": "i have the power to actually enable",
+            "start": 952.959,
+            "duration": 4.56
+          },
+          {
+            "text": "people in my team and if i cannot do",
+            "start": 955.6,
+            "duration": 2.799
+          },
+          {
+            "text": "that",
+            "start": 957.519,
+            "duration": 2.961
+          },
+          {
+            "text": "then it's just responsibility blaming i",
+            "start": 958.399,
+            "duration": 4
+          },
+          {
+            "text": "don't want to be a scapegoat i don't",
+            "start": 960.48,
+            "duration": 4.88
+          },
+          {
+            "text": "want to set myself up and buy extension",
+            "start": 962.399,
+            "duration": 6.081
+          },
+          {
+            "text": "setting the team that i built to be in",
+            "start": 965.36,
+            "duration": 4.24
+          },
+          {
+            "text": "failure",
+            "start": 968.48,
+            "duration": 4.159
+          },
+          {
+            "text": "so they have to understand what that",
+            "start": 969.6,
+            "duration": 5.76
+          },
+          {
+            "text": "ownership empowerment responsibility",
+            "start": 972.639,
+            "duration": 4.241
+          },
+          {
+            "text": "model is",
+            "start": 975.36,
+            "duration": 4.08
+          },
+          {
+            "text": "generally is that and second part of it",
+            "start": 976.88,
+            "duration": 5.36
+          },
+          {
+            "text": "is about having an open conversation",
+            "start": 979.44,
+            "duration": 5.36
+          },
+          {
+            "text": "being able to be free with your thoughts",
+            "start": 982.24,
+            "duration": 4.56
+          },
+          {
+            "text": "to feel comfortable",
+            "start": 984.8,
+            "duration": 5.12
+          },
+          {
+            "text": "that you can actually say whatever you",
+            "start": 986.8,
+            "duration": 4.399
+          },
+          {
+            "text": "want to say",
+            "start": 989.92,
+            "duration": 3.2
+          },
+          {
+            "text": "if you disagree with something you are",
+            "start": 991.199,
+            "duration": 4.08
+          },
+          {
+            "text": "going to be able to say it out if you",
+            "start": 993.12,
+            "duration": 4.48
+          },
+          {
+            "text": "want something to be changed you can",
+            "start": 995.279,
+            "duration": 3.601
+          },
+          {
+            "text": "raise it up",
+            "start": 997.6,
+            "duration": 4.72
+          },
+          {
+            "text": "you eliminate the fear of like offending",
+            "start": 998.88,
+            "duration": 6.72
+          },
+          {
+            "text": "someone and good ideas come out and",
+            "start": 1002.32,
+            "duration": 5.6
+          },
+          {
+            "text": "collaboration comes out",
+            "start": 1005.6,
+            "duration": 3.039
+          },
+          {
+            "text": "and",
+            "start": 1007.92,
+            "duration": 2.479
+          },
+          {
+            "text": "camaraderie comes out",
+            "start": 1008.639,
+            "duration": 3.841
+          },
+          {
+            "text": "those are the two things that i believe",
+            "start": 1010.399,
+            "duration": 4.56
+          },
+          {
+            "text": "are important i don't think that we can",
+            "start": 1012.48,
+            "duration": 6.32
+          },
+          {
+            "text": "actually utilize one methodology and",
+            "start": 1014.959,
+            "duration": 6.32
+          },
+          {
+            "text": "push it to everyone",
+            "start": 1018.8,
+            "duration": 4.24
+          },
+          {
+            "text": "i think that is the wrong thing like",
+            "start": 1021.279,
+            "duration": 3.68
+          },
+          {
+            "text": "standardization like doesn't what",
+            "start": 1023.04,
+            "duration": 3.44
+          },
+          {
+            "text": "doesn't work",
+            "start": 1024.959,
+            "duration": 5.12
+          },
+          {
+            "text": "if you're paying dollars for a good team",
+            "start": 1026.48,
+            "duration": 7.04
+          },
+          {
+            "text": "then you need to utilize those things by",
+            "start": 1030.079,
+            "duration": 6.96
+          },
+          {
+            "text": "recognizing how the niches",
+            "start": 1033.52,
+            "duration": 6.48
+          },
+          {
+            "text": "and different quirks each person has and",
+            "start": 1037.039,
+            "duration": 5.121
+          },
+          {
+            "text": "how to actually gear them and help them",
+            "start": 1040,
+            "duration": 4.799
+          },
+          {
+            "text": "to be successful while challenging them",
+            "start": 1042.16,
+            "duration": 5.44
+          },
+          {
+            "text": "to be growing i believe that when people",
+            "start": 1044.799,
+            "duration": 4.961
+          },
+          {
+            "text": "are happy at their work and they feel",
+            "start": 1047.6,
+            "duration": 4.16
+          },
+          {
+            "text": "like that they are growing they don't",
+            "start": 1049.76,
+            "duration": 4.32
+          },
+          {
+            "text": "feel like that they want to leave unless",
+            "start": 1051.76,
+            "duration": 5.039
+          },
+          {
+            "text": "you're grossly underpaying them right",
+            "start": 1054.08,
+            "duration": 4.479
+          },
+          {
+            "text": "but if they feel like that they are",
+            "start": 1056.799,
+            "duration": 3.76
+          },
+          {
+            "text": "happy they enjoy the people that they",
+            "start": 1058.559,
+            "duration": 3.761
+          },
+          {
+            "text": "are working with they are being",
+            "start": 1060.559,
+            "duration": 3.521
+          },
+          {
+            "text": "challenged at all times that they are",
+            "start": 1062.32,
+            "duration": 4.08
+          },
+          {
+            "text": "growing at all times they know that this",
+            "start": 1064.08,
+            "duration": 4.8
+          },
+          {
+            "text": "is the place for them oh cool um thank",
+            "start": 1066.4,
+            "duration": 4.8
+          },
+          {
+            "text": "you steve for joining us today and",
+            "start": 1068.88,
+            "duration": 4.24
+          },
+          {
+            "text": "i'm sure um this will give people pretty",
+            "start": 1071.2,
+            "duration": 3.28
+          },
+          {
+            "text": "good guidance and you know something to",
+            "start": 1073.12,
+            "duration": 3.76
+          },
+          {
+            "text": "think about right yeah yeah and i guess",
+            "start": 1074.48,
+            "duration": 4.319
+          },
+          {
+            "text": "i learned a lot today um if you find",
+            "start": 1076.88,
+            "duration": 3.679
+          },
+          {
+            "text": "this video helpful please give it a like",
+            "start": 1078.799,
+            "duration": 3.361
+          },
+          {
+            "text": "and subscribe and",
+            "start": 1080.559,
+            "duration": 3.441
+          },
+          {
+            "text": "uh if you have other questions that you",
+            "start": 1082.16,
+            "duration": 4.399
+          },
+          {
+            "text": "want to ask um just you know leave a",
+            "start": 1084,
+            "duration": 4
+          },
+          {
+            "text": "comment down below",
+            "start": 1086.559,
+            "duration": 3.281
+          },
+          {
+            "text": "and yeah um",
+            "start": 1088,
+            "duration": 3.84
+          },
+          {
+            "text": "i'll see you next time then",
+            "start": 1089.84,
+            "duration": 4.56
+          },
+          {
+            "text": "bye",
+            "start": 1091.84,
+            "duration": 2.56
+          }
+        ],
+        "videoTitle": "矽谷大神來了｜Part2",
+        "metadata": {
+          "title": "矽谷大神來了｜Part2",
+          "description": "感謝BingX贊助今天這一集影片：）\n⭐️進群領泰瑞好帥贈金：https://t.me/+B6Jksjn8WeUwNGY1\n⭐️BingX註冊連結：https://hackbear.tv/bingx\n---------------\n盈透證卷Interactive Brokers ❤️：https://hackbear.tv/ib\n---------------\n#矽谷 #軟體工程師 #轉職 \n歡迎追蹤我的 Instagram: https://www.instagram.com/master.terry.chen\n合作的話: hack.tech.entertainment@gmail.com",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 1093,
+          "viewCount": 40641,
+          "keywords": [
+            "software",
+            "silicon valley",
+            "software engineering",
+            "mentor",
+            "矽谷",
+            "大神",
+            "職涯",
+            "導師",
+            "硅谷",
+            "軟體工程",
+            "轉職",
+            "程序員",
+            "碼農"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/ofitybjcHz0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "clientUsed": "ANDROID"
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

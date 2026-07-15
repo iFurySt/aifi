@@ -1,0 +1,422 @@
+next question this is something i do
+want to ask personally okay so right now
+i'm a senior level software engineer so
+how do i become like a staff engineer or
+you know what what distinguishes an
+engineer from senior level to say you
+know staff or principal level very very
+hard question in there because the whole
+thing is that i can tell you that i
+don't see any standard definition out
+there that says that well this is the
+definition of a junior intermediate
+senior staff like principal architect
+like yadda yadda like i don't see it
+anywhere but i guess like the years of
+experience of the projects that you
+worked on before kind of contribute to
+that
+so it does but at the same time how do
+you measure this yeah because you can
+have someone that works three years over
+at a startup and like basically just
+figure out everything themselves like on
+a very technical level being able to do
+machine learning architecture
+infrastructure building a scalable dom
+system
+right and you can have someone who has
+been staying at um some ecosystem no
+offense and lego system
+i may get in a lot of trouble for this
+and work 10 years on a very specialized
+project that has no idea how to do
+database yeah yeah right in that case
+who is um who is closer to a senior
+engineer who is closer to a principal
+engineer so when you're talking about
+like senior level engineers um like like
+you're on a certain level how do you
+want to grow and get to the next thing
+you have to understand what the next
+thing is first at least have an idea of
+what you want the next thing to be is it
+that you foresee yourself to be a
+evangelist
+to go into the company and teach people
+and build tools and teach people how to
+use tools to become better and like more
+efficient in that job is it that you
+want to be able to lead teams
+to actually show them and be able to
+take on bigger and bigger projects is it
+that you want to have more time spending
+on specialization which i just said
+about the microsystem again no offense
+to get into like something that is like
+very specific that requires a lot more
+time to do
+that's where your growth paths are going
+to be and in different companies they
+can all be called principal engineers
+so the question is back to you is what
+do you want
+for your next step let's see right so so
+think about that like if you're saying
+that hey
+i want to learn how to take on bigger
+and bigger projects and my answer would
+be that you should know that at some
+point of time you're going to run out of
+your like your physical tighten speed
+it's not going to be able to do bigger
+and bigger project at some some point of
+time you will have to subcontract it out
+to to delegate this stuff
+in that case the first thing that you
+should learn is how do i actually get a
+team how do i actually start organizing
+people so that in the group of us we can
+actually build something
+right yeah and i would say that like if
+you're going to do that doing work
+talking with your boss and actually
+getting the opportunity to take on
+bigger projects
+while bringing on other people sometimes
+easiest bring on interns yeah right
+bring on interns bring on juniors at the
+same time you learn how to teach you
+learn how to manage you need learn how
+to lead then you start growing and
+getting bigger and bigger in terms of
+science and getting enough feedback from
+both management your peers and also the
+people that are working on the that's
+how i actually start off i see you know
+majority of the time i will tell you
+that like once i get to a certain level
+a lot of times the feedback is directly
+from people that i manage yeah right so
+that makes sense yeah so would you say
+like as usually progress is it the
+coding skill or the hard skill itself is
+not so important anymore focus should be
+more on you know people skill and how
+you manage projects and how you build
+the team if you're talking about
+proportion a lot of times that's true
+but that's the answer of my previous
+question goes it really depends on how
+you want to grow
+i'm still seeing like some really really
+brilliant engineers you want me to lead
+a team no i'm not going to do it i don't
+want to like um i want to focus on
+building and designing good systems and
+like and they just end up being very
+good at it they would still be able to
+figure out how to define the work
+but they would be paired up with project
+managers that actually helped manage the
+people
+they would be the one that actually say
+that this is the wrong map this is why
+foresee and their expertise comes in
+picking a very nebulous problem and
+breaking it down
+and that's their specialty and they're
+still okay with that
+right it doesn't mean that the more
+experienced you are the the more you
+have to have to um teach or like to to
+manage and what not it would be great if
+you do like it's awesome like that like
+our society and our industry needs it
+but if you want to you can focus on
+doing something you specialize in stuff
+like getting a phd like this doesn't
+mean that you have to do like i'm i'm
+specific you can choose whatever topic
+you want i see ics so it's not really
+just a singular path it's a lot of
+things when you get to that level you
+can specialize it depends on what you
+want exactly at the end of the day is a
+free market like nowadays i walk to
+companies i don't try to get them to
+like identify me as one thing or another
+i present to them
+what i know what i have what i can help
+them with
+and they decide if they want to buy it
+or not i see right like my own products
+the most important thing is like knowing
+yourself on what you want to become and
+trying to market that and see if there's
+any like buyers
+yes
+sir
+what do you care the most other than you
+know the technical respect assuming the
+person is you know technically strong
+enough for the team it's a gripe that we
+have like in um in software engineering
+especially software engineering
+interviews
+a lot of companies that i go with like
+um i go to even
+you know some experience from that like
+it's uh go in an interview and people
+just keep throwing new technical
+questions like um algorithmic questions
+right given an array this size and this
+stuff like figure it out and all that
+stuff a smart person of a certain
+experience would be able to find the
+patterns and answer you those
+but in work when you when you choose a
+partner
+right um for for starting a business
+yeah or when you're building your team
+what do you want them to be or someone i
+can work with
+something you can work with what does
+that mean when someone i can trust
+someone i can you know learn from
+someone who is you know
+genuine and smart understand yeah that's
+something that i look forward in general
+that is the most important thing right
+someone that you can trust
+right someone that you can learn from
+right
+the whole thing is that how do you
+actually get that well first you need to
+make sure that they're good at
+communication if they suck at it it's
+going to be a hell of a ride right like
+if they can clearly articulate what they
+are thinking and convey the idea to you
+and back and forth right that's why i'm
+looking for it
+right like so so a lot of times like i
+still use um these technical questions
+and and like algorithms make questions
+now things that are going to get harder
+is going to be the next thing how do you
+think that you can work with this person
+that means that personality has to be
+there yeah right i'm not just saying
+that a boring personality or not like
+i'm talking about like hey if we're
+going to have a an argument are you
+going to stand on your ground
+when you're right and also being able to
+listen when there is a discussion going
+on or are you going to say that no i'm
+right uh i don't care about any of you
+guys like yada yada or are you going to
+be backing down everything is kind of
+like yes i'm junior i will listen to
+everything you say happening right like
+are you able to get a good conversation
+a good sparring session happening right
+so now for me interview is relatively
+dynamic i'm trying to see if i can
+actually poke them a little bit
+and see how they respond
+right see if they are going to be
+dismissive seeing if they are actually
+like listening
+and actually understanding the
+information and then regurgitating or
+like disagreeing with the ideas
+seeing how
+much they are going to be willing to
+actually do the feedback
+so that's part of that yeah first thing
+is about reliability um and that is
+going to be extremely hard yeah how do
+you know someone is going to be reliable
+yeah when you're interviewing without
+yeah you only spend like 30 minutes with
+the person it's really hard exactly yeah
+right yeah but generally there are
+things that you have to you can rely on
+some of the things actually is your
+intuition
+one of the strongest things that um
+we
+have to rely on is understanding our
+intuition a lot of times what i have
+seen is that people who are who have
+great attention to detail
+also hold great responsibility as
+themselves i see is this a type of
+person that you feel like that they see
+a problem and they will own the problem
+holy exactly
+seeing that and like trying to do that a
+lot has to come with pps experience as
+well so when we talk about like hey tell
+me about your like um your history about
+like your previous work and whatnot get
+into what situation talk about what
+happened how did they handle it why did
+they step up why did they not step up
+what is the reaction what is their
+feeling about a situation or the
+situation that they're talking about and
+from that you just clean more and more
+of their personality
+i believe that technology technical
+capabilities i can train
+right give me a smart person and i can
+train them within x amount of months
+and they will become capable
+give me a lazy person and i will spend
+more time working on the person then
+i'll be doing work
+a non-motivated person or
+someone who actually let's just say not
+a good personality match with me
+it's not going to work out
+because it's so much harder to actually
+adjust personality yeah then it is two
+are just technical capabilities
+i see
+right
+you know a lot of my audience right in
+asia right asian traditions like you're
+growing up parents teachers to be humble
+right
+and it's very different over here let's
+say you come here and then you start a
+new career in
+the u.s north america or silicon valley
+right how do you kind of like balance
+out and what advice would you give
+people growing up in asia there is a
+difference between knowing what you know
+and being good at what you do and
+bragging about it there is a fine line
+about it yeah usually i cross that line
+my apologies on that um the humility in
+it
+happens the easiest when you are genuine
+if you are able to be more transparent
+then people will understand you
+let people understand you and when you
+do that you get a lot more leeway i try
+to communicate my intentions
+and if they align or if they understand
+it then people usually appreciate it
+and that like alleviates a lot of
+problems about like humility or or like
+i'm i'm trying to be too like saying too
+many stories well i still do that
+that's a problem with canada no no no
+i guess folks
+but like
+yeah i don't know if i answer your
+questions it does yeah okay
+when senai we met back in the days um he
+was the mentor to help build the team i
+was at and i was very fortunate um you
+know to have said and found it very
+helpful to have a mentor at earlier
+stage of my career how would you help a
+team to be more productive and you know
+just generally make people happy and
+motivated i don't know like in my
+opinion i corrupted him
+yes
+the most important factor in a workplace
+that makes people happy is empowerment
+people being listened to and people
+feeling that they are being trusted to
+work on something that sense of
+empowerment actually gives a lot of
+satisfaction to people ownership is in
+there but a lot of companies a lot of
+teams they do this they say that here
+you own this
+right yeah but you should do it this way
+this way this way oh don't do it like
+this do it like this this this right
+just telling people like exactly you own
+this but no you don't really own this
+right ownership
+without um empowerment
+it's just responsibility ownership is
+actually both responsibility and
+empowerment
+right usually i tell my boss that if i
+own a team i have the power to choose
+who is in my team i have the power to
+discipline
+people in my team
+i have the power to actually enable
+people in my team and if i cannot do
+that
+then it's just responsibility blaming i
+don't want to be a scapegoat i don't
+want to set myself up and buy extension
+setting the team that i built to be in
+failure
+so they have to understand what that
+ownership empowerment responsibility
+model is
+generally is that and second part of it
+is about having an open conversation
+being able to be free with your thoughts
+to feel comfortable
+that you can actually say whatever you
+want to say
+if you disagree with something you are
+going to be able to say it out if you
+want something to be changed you can
+raise it up
+you eliminate the fear of like offending
+someone and good ideas come out and
+collaboration comes out
+and
+camaraderie comes out
+those are the two things that i believe
+are important i don't think that we can
+actually utilize one methodology and
+push it to everyone
+i think that is the wrong thing like
+standardization like doesn't what
+doesn't work
+if you're paying dollars for a good team
+then you need to utilize those things by
+recognizing how the niches
+and different quirks each person has and
+how to actually gear them and help them
+to be successful while challenging them
+to be growing i believe that when people
+are happy at their work and they feel
+like that they are growing they don't
+feel like that they want to leave unless
+you're grossly underpaying them right
+but if they feel like that they are
+happy they enjoy the people that they
+are working with they are being
+challenged at all times that they are
+growing at all times they know that this
+is the place for them oh cool um thank
+you steve for joining us today and
+i'm sure um this will give people pretty
+good guidance and you know something to
+think about right yeah yeah and i guess
+i learned a lot today um if you find
+this video helpful please give it a like
+and subscribe and
+uh if you have other questions that you
+want to ask um just you know leave a
+comment down below
+and yeah um
+i'll see you next time then
+bye

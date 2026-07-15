@@ -1,0 +1,158 @@
+{
+  "target": "Terry Chen YouTube channel",
+  "artifact_type": "evidence-backed portfolio and wealth-development extraction",
+  "generated": "2026-07-13",
+  "coverage": {
+    "video_titles": 290,
+    "transcript_text_files": 26,
+    "transcript_probe_rows": 68,
+    "asr_queue_remaining": 264,
+    "confidence": "medium for claims tied to transcript line evidence; low for title-only hypotheses"
+  },
+  "confirmed_from_transcripts": [
+    {
+      "category": "career_transition",
+      "claim": "Terry says he ended a 10-year software-engineering career, stopped relying on salary, and does not expect to return to a normal job.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:2",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:14",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:20",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:21"
+      ]
+    },
+    {
+      "category": "options_income",
+      "claim": "He identifies covered-call selling as a major current income source, operated conservatively against long-term stock holdings, especially Tesla.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:41",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:42",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:43",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:44",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:45",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:46"
+      ]
+    },
+    {
+      "category": "equity_holdings",
+      "claim": "Transcript-level holdings or covered-call underlyings explicitly mention Tesla, Nvidia, and Palantir.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:49"
+      ]
+    },
+    {
+      "category": "real_estate_income",
+      "claim": "He describes Airbnb/rental-property income as a more passive income source, mostly handled by professional management, with properties moved into an LLC structure.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:51",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:52",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:54",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:55",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:56",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:57"
+      ]
+    },
+    {
+      "category": "business_income",
+      "claim": "He describes side-business income from enterprise infra/DevOps work, with execution largely delegated to a team.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:60",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:61",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:63",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:64",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:65",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:66"
+      ]
+    },
+    {
+      "category": "creator_income",
+      "claim": "He treats YouTube revenue as real but low-ROI relative to effort and not a dependable passive-income pillar.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:69",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:70",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:72",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:77",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:78",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:82"
+      ]
+    },
+    {
+      "category": "financial_moat",
+      "claim": "His stated framework is to build multiple failovers so that losing one income source, job, or investment does not impair daily life.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:84",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:85",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:86",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:87",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:88",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:89"
+      ]
+    },
+    {
+      "category": "cash_yield_and_crypto_lending",
+      "claim": "He mentions interest-like income from short-term Treasuries/IB01, QQQI, and stablecoin lending as separate failover income sources.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:91",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/2avMoXe8Bwg.txt:92"
+      ]
+    },
+    {
+      "category": "early_wealth_development",
+      "claim": "He describes an ordinary-family background, self-funded study through internships, scholarships/subsidies, frugal rent, and early consulting work.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:18",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:19",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:24",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:25",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:27",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:29",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:35",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/rF5thvdRjnE.txt:40"
+      ]
+    },
+    {
+      "category": "ordinary_investor_policy",
+      "claim": "For most ordinary investors, the transcript supports a broad-market default: indexing remains suitable for most people; active stock-picking requires accepting large single-name volatility, resisting panic selling, and doing behaviorally difficult buying/holding work. A tech-tilted ETF such as QQQ is discussed as a possible partial allocation for investors who believe technology will lead, but not as a replacement for risk discipline.",
+      "evidence": [
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:259",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:261",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:271",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:305",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:316",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:331",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:340",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:743",
+        "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-youtubetranscript-pro.txt:752"
+      ]
+    }
+  ],
+  "title_only_hypotheses_to_verify_with_asr": [
+    {
+      "hypothesis": "A net-worth and asset-allocation video likely contains explicit allocation details.",
+      "video": "Gwn_kEegfJ4",
+      "title": "公開我的全部身家，資產配置",
+      "priority": "highest"
+    },
+    {
+      "hypothesis": "Passive-income videos likely contain income stack details and historical changes.",
+      "videos": [
+        "L7xgc12JfHA",
+        "hbJ0S2hINWg",
+        "HL26tMSTqO4",
+        "P6XYXfePAsA",
+        "KLjed4HMArA"
+      ],
+      "priority": "highest"
+    },
+    {
+      "hypothesis": "Index-versus-stock-picking and allocation videos likely contain the most generalizable ordinary-investor rules.",
+      "videos": [
+        "Q59J5roE5lM",
+        "e5oYYw1tXbo",
+        "XJtbWhnclB4",
+        "lL-aGwCD5xk",
+        "52XVsVj6b4E"
+      ],
+      "priority": "highest"
+    }
+  ]
+}

@@ -1,0 +1,2576 @@
+[
+  {
+    "id": "JzIfrGMeAFw",
+    "index": 1,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 12,
+    "text_chars": 5876,
+    "publishDate": null
+  },
+  {
+    "id": "2avMoXe8Bwg",
+    "index": 2,
+    "status": "ok",
+    "source": "youtube_transcript_panel",
+    "segments": 104,
+    "text_chars": 6065,
+    "publishDate": "2026-07-08T03:00:20-07:00"
+  },
+  {
+    "id": "NhJ1fqtsmc8",
+    "index": 3,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 567,
+    "text_chars": 8001,
+    "publishDate": null
+  },
+  {
+    "id": "_Y6jtxDItuM",
+    "index": 4,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 340,
+    "text_chars": 5806,
+    "publishDate": null
+  },
+  {
+    "id": "ZgnMCKbLiOg",
+    "index": 5,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 517,
+    "text_chars": 7740,
+    "publishDate": null
+  },
+  {
+    "id": "T_6ItJrj-q4",
+    "index": 6,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 615,
+    "text_chars": 8743,
+    "publishDate": null
+  },
+  {
+    "id": "aQ7lcFoPnNA",
+    "index": 7,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 547,
+    "text_chars": 7785,
+    "publishDate": null
+  },
+  {
+    "id": "2-pNl3diL64",
+    "index": 8,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 498,
+    "text_chars": 7731,
+    "publishDate": null
+  },
+  {
+    "id": "YWYDnDoHblc",
+    "index": 9,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 3263,
+    "publishDate": null
+  },
+  {
+    "id": "XOtj2D5Hfhs",
+    "index": 10,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 1487,
+    "text_chars": 12901,
+    "publishDate": null
+  },
+  {
+    "id": "dNA7ZjFPQRM",
+    "index": 11,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 447,
+    "text_chars": 6256,
+    "publishDate": null
+  },
+  {
+    "id": "8Ete4v-RaAQ",
+    "index": 12,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 419,
+    "text_chars": 5676,
+    "publishDate": null
+  },
+  {
+    "id": "gj5gBsjYaF4",
+    "index": 13,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 555,
+    "text_chars": 6918,
+    "publishDate": null
+  },
+  {
+    "id": "tFoOnWuBql4",
+    "index": 14,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 601,
+    "text_chars": 7906,
+    "publishDate": null
+  },
+  {
+    "id": "GHBP2FS9tBc",
+    "index": 15,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 544,
+    "text_chars": 8612,
+    "publishDate": null
+  },
+  {
+    "id": "XJtbWhnclB4",
+    "index": 16,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 375,
+    "text_chars": 5335,
+    "publishDate": null
+  },
+  {
+    "id": "kUtyH9Lh17c",
+    "index": 17,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 341,
+    "text_chars": 6007,
+    "publishDate": null
+  },
+  {
+    "id": "rF5thvdRjnE",
+    "index": 18,
+    "status": "ok",
+    "source": "youtube_transcript_panel",
+    "segments": 112,
+    "text_chars": 5793,
+    "publishDate": "2026-04-04T07:01:17-07:00"
+  },
+  {
+    "id": "ceafmSAe9P8",
+    "index": 19,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 1894,
+    "text_chars": 19991,
+    "publishDate": null
+  },
+  {
+    "id": "51dNGqLoM00",
+    "index": 20,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 3292,
+    "publishDate": null
+  },
+  {
+    "id": "8dDTVbDg55w",
+    "index": 22,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 1979,
+    "text_chars": 22618,
+    "publishDate": null
+  },
+  {
+    "id": "j-6Pgl55e_w",
+    "index": 23,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 544,
+    "text_chars": 6528,
+    "publishDate": null
+  },
+  {
+    "id": "VFTEpnDyFSg",
+    "index": 24,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 413,
+    "text_chars": 4984,
+    "publishDate": null
+  },
+  {
+    "id": "cmGxNTazyd4",
+    "index": 25,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 1215,
+    "text_chars": 13255,
+    "publishDate": null
+  },
+  {
+    "id": "p2E0OyTKDv4",
+    "index": 26,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 809,
+    "text_chars": 13010,
+    "publishDate": null
+  },
+  {
+    "id": "XGveb2bQhAI",
+    "index": 27,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 908,
+    "text_chars": 10136,
+    "publishDate": null
+  },
+  {
+    "id": "Q59J5roE5lM",
+    "index": 28,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 126,
+    "text_chars": 8561,
+    "publishDate": null
+  },
+  {
+    "id": "hh_oZm9kS24",
+    "index": 29,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 522,
+    "text_chars": 6337,
+    "publishDate": null
+  },
+  {
+    "id": "_7lpGM5X8d8",
+    "index": 30,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 954,
+    "text_chars": 11553,
+    "publishDate": null
+  },
+  {
+    "id": "WtLdnzwpZ8Y",
+    "index": 31,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 545,
+    "text_chars": 6862,
+    "publishDate": null
+  },
+  {
+    "id": "qenBa_WIpPE",
+    "index": 32,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 431,
+    "text_chars": 6470,
+    "publishDate": null
+  },
+  {
+    "id": "jpoMabs9t4s",
+    "index": 33,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 443,
+    "text_chars": 6884,
+    "publishDate": null
+  },
+  {
+    "id": "XWL5AgNh8K4",
+    "index": 34,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 139,
+    "text_chars": 9235,
+    "publishDate": null
+  },
+  {
+    "id": "lL-aGwCD5xk",
+    "index": 35,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 1665,
+    "text_chars": 16227,
+    "publishDate": null
+  },
+  {
+    "id": "IVAMrYyDYCY",
+    "index": 37,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 427,
+    "text_chars": 5976,
+    "publishDate": null
+  },
+  {
+    "id": "P7hMRufj1y0",
+    "index": 38,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 2112,
+    "text_chars": 22046,
+    "publishDate": null
+  },
+  {
+    "id": "f_76gfumg44",
+    "index": 39,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 442,
+    "text_chars": 6234,
+    "publishDate": null
+  },
+  {
+    "id": "IOR3txrsq64",
+    "index": 40,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 342,
+    "text_chars": 5316,
+    "publishDate": null
+  },
+  {
+    "id": "vkIh4XPu1EE",
+    "index": 41,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3392,
+    "publishDate": null
+  },
+  {
+    "id": "xE4QoJ4hoC4",
+    "index": 42,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 565,
+    "text_chars": 8526,
+    "publishDate": null
+  },
+  {
+    "id": "AFB5JNjXjsE",
+    "index": 43,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 41,
+    "text_chars": 5701,
+    "publishDate": null
+  },
+  {
+    "id": "R7zAMgiawks",
+    "index": 45,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 5276,
+    "publishDate": null
+  },
+  {
+    "id": "mDpxLytPUKg",
+    "index": 46,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 51,
+    "text_chars": 5993,
+    "publishDate": null
+  },
+  {
+    "id": "295d-r85l_I",
+    "index": 48,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 39,
+    "text_chars": 4873,
+    "publishDate": null
+  },
+  {
+    "id": "e0CJBzGa0hQ",
+    "index": 49,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 63,
+    "text_chars": 7657,
+    "publishDate": null
+  },
+  {
+    "id": "e5oYYw1tXbo",
+    "index": 50,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 388,
+    "text_chars": 6940,
+    "publishDate": null
+  },
+  {
+    "id": "_9Vjc25BaW4",
+    "index": 51,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 63,
+    "text_chars": 8549,
+    "publishDate": null
+  },
+  {
+    "id": "VLsbfzuuk6Q",
+    "index": 52,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 3740,
+    "publishDate": null
+  },
+  {
+    "id": "3NzmDiMEYP8",
+    "index": 53,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 5068,
+    "publishDate": null
+  },
+  {
+    "id": "1PEjeshVbZw",
+    "index": 54,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 2799,
+    "publishDate": null
+  },
+  {
+    "id": "vJTm4BZsMA0",
+    "index": 55,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 482,
+    "text_chars": 14825,
+    "publishDate": null
+  },
+  {
+    "id": "m7iFNwj_bDQ",
+    "index": 56,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 3800,
+    "publishDate": null
+  },
+  {
+    "id": "_g4HRf-vwIg",
+    "index": 57,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 3024,
+    "publishDate": null
+  },
+  {
+    "id": "zFeCVunJOoY",
+    "index": 58,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 4967,
+    "publishDate": null
+  },
+  {
+    "id": "-dRVpWPFBCg",
+    "index": 59,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 190,
+    "text_chars": 22927,
+    "publishDate": null
+  },
+  {
+    "id": "CfM7JHJWe58",
+    "index": 60,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4330,
+    "publishDate": null
+  },
+  {
+    "id": "kE1NjL9hQxo",
+    "index": 61,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 402,
+    "text_chars": 6549,
+    "publishDate": null
+  },
+  {
+    "id": "nOj2qKzsgLY",
+    "index": 62,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 91,
+    "text_chars": 11387,
+    "publishDate": null
+  },
+  {
+    "id": "44-lmGgGzv8",
+    "index": 63,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 39,
+    "text_chars": 4778,
+    "publishDate": null
+  },
+  {
+    "id": "tk7WzzZ3CCQ",
+    "index": 64,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 195,
+    "text_chars": 33077,
+    "publishDate": null
+  },
+  {
+    "id": "KVhL2RqVtiM",
+    "index": 65,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4122,
+    "publishDate": null
+  },
+  {
+    "id": "dqAsQyRJHAg",
+    "index": 66,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 515,
+    "text_chars": 7707,
+    "publishDate": null
+  },
+  {
+    "id": "BO6tCA0MPlU",
+    "index": 67,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 702,
+    "text_chars": 9011,
+    "publishDate": null
+  },
+  {
+    "id": "1V6BoBHSh1k",
+    "index": 68,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 557,
+    "text_chars": 6980,
+    "publishDate": null
+  },
+  {
+    "id": "0kBPGbsSuMs",
+    "index": 69,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 607,
+    "text_chars": 9082,
+    "publishDate": null
+  },
+  {
+    "id": "L7xgc12JfHA",
+    "index": 70,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 400,
+    "text_chars": 6136,
+    "publishDate": null
+  },
+  {
+    "id": "s9s32vVzYIo",
+    "index": 71,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 733,
+    "text_chars": 10162,
+    "publishDate": null
+  },
+  {
+    "id": "SXgn3JiTjRA",
+    "index": 72,
+    "status": "ok",
+    "source": "youtube_transcript_panel",
+    "segments": 164,
+    "text_chars": 12851,
+    "publishDate": "2025-07-24T02:00:39-07:00"
+  },
+  {
+    "id": "Gwn_kEegfJ4",
+    "index": 73,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 436,
+    "text_chars": 6284,
+    "publishDate": null
+  },
+  {
+    "id": "U9xIBSYp7xQ",
+    "index": 74,
+    "status": "ok",
+    "source": "youtube_transcript_panel",
+    "segments": 196,
+    "text_chars": 14672,
+    "publishDate": "2025-07-18T02:00:48-07:00"
+  },
+  {
+    "id": "KF3fPgSQx8E",
+    "index": 75,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 43,
+    "text_chars": 4236,
+    "publishDate": null
+  },
+  {
+    "id": "nCticKfLCj8",
+    "index": 76,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 48,
+    "text_chars": 5237,
+    "publishDate": null
+  },
+  {
+    "id": "PvzgMhM7bK8",
+    "index": 77,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 4635,
+    "publishDate": null
+  },
+  {
+    "id": "diU75OZiuX8",
+    "index": 78,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4011,
+    "publishDate": null
+  },
+  {
+    "id": "zWt8DOYJiTE",
+    "index": 79,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 4528,
+    "publishDate": null
+  },
+  {
+    "id": "uaEm4XRSAAc",
+    "index": 80,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 44,
+    "text_chars": 5658,
+    "publishDate": null
+  },
+  {
+    "id": "bsN8REhmr6M",
+    "index": 81,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4372,
+    "publishDate": null
+  },
+  {
+    "id": "8OjJp5jJQOs",
+    "index": 82,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 36,
+    "text_chars": 4495,
+    "publishDate": null
+  },
+  {
+    "id": "T5DzIzHwJvk",
+    "index": 83,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 41,
+    "text_chars": 4984,
+    "publishDate": null
+  },
+  {
+    "id": "uFzesIxJA_E",
+    "index": 84,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4929,
+    "publishDate": null
+  },
+  {
+    "id": "g9UHIIYBOdE",
+    "index": 85,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4603,
+    "publishDate": null
+  },
+  {
+    "id": "Z4n70osikaw",
+    "index": 86,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5326,
+    "publishDate": null
+  },
+  {
+    "id": "zZGFt6K3kaY",
+    "index": 87,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 47,
+    "text_chars": 7121,
+    "publishDate": null
+  },
+  {
+    "id": "_5BTnJElgt8",
+    "index": 88,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 53,
+    "text_chars": 7133,
+    "publishDate": null
+  },
+  {
+    "id": "Kn82i27buV4",
+    "index": 89,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 4894,
+    "publishDate": null
+  },
+  {
+    "id": "uHyDQHlpXM8",
+    "index": 90,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 36,
+    "text_chars": 4911,
+    "publishDate": null
+  },
+  {
+    "id": "XB89ywDAzh0",
+    "index": 91,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 3461,
+    "publishDate": null
+  },
+  {
+    "id": "JH8SoCsf35g",
+    "index": 92,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 4414,
+    "publishDate": null
+  },
+  {
+    "id": "plpyrtLavn4",
+    "index": 93,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 27,
+    "text_chars": 3764,
+    "publishDate": null
+  },
+  {
+    "id": "E17LUN8uzzQ",
+    "index": 94,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3824,
+    "publishDate": null
+  },
+  {
+    "id": "OFQbCl8mLoo",
+    "index": 95,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 5437,
+    "publishDate": null
+  },
+  {
+    "id": "Id3-EiuDRw8",
+    "index": 96,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 3573,
+    "publishDate": null
+  },
+  {
+    "id": "iOCR2iKXhOs",
+    "index": 97,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 4980,
+    "publishDate": null
+  },
+  {
+    "id": "9sliXt8Zs-Y",
+    "index": 98,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4307,
+    "publishDate": null
+  },
+  {
+    "id": "YMjsNbiWTj8",
+    "index": 99,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 307,
+    "text_chars": 4462,
+    "publishDate": null
+  },
+  {
+    "id": "onmhfPxboTg",
+    "index": 100,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 237,
+    "text_chars": 3637,
+    "publishDate": null
+  },
+  {
+    "id": "EanJhw8oYzk",
+    "index": 101,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4463,
+    "publishDate": null
+  },
+  {
+    "id": "nONnDP5-SLA",
+    "index": 102,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 361,
+    "text_chars": 6494,
+    "publishDate": null
+  },
+  {
+    "id": "2JjXdva3mWU",
+    "index": 103,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5045,
+    "publishDate": null
+  },
+  {
+    "id": "PZTcQgUAGls",
+    "index": 104,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4732,
+    "publishDate": null
+  },
+  {
+    "id": "btBFmKxSoe0",
+    "index": 105,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 4696,
+    "publishDate": null
+  },
+  {
+    "id": "hbJ0S2hINWg",
+    "index": 106,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 428,
+    "text_chars": 6591,
+    "publishDate": null
+  },
+  {
+    "id": "aS7F9IjYqGM",
+    "index": 107,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4179,
+    "publishDate": null
+  },
+  {
+    "id": "ZLbtMwcjWSA",
+    "index": 108,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 328,
+    "text_chars": 5625,
+    "publishDate": null
+  },
+  {
+    "id": "euRySEUNwy4",
+    "index": 109,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 42,
+    "text_chars": 5579,
+    "publishDate": null
+  },
+  {
+    "id": "Bm4qkzrl-Hg",
+    "index": 110,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 75,
+    "text_chars": 9951,
+    "publishDate": null
+  },
+  {
+    "id": "fnhYyrnkQYg",
+    "index": 111,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 461,
+    "text_chars": 7373,
+    "publishDate": null
+  },
+  {
+    "id": "hkw0_YSeaRU",
+    "index": 112,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 48,
+    "text_chars": 6519,
+    "publishDate": null
+  },
+  {
+    "id": "eoQIAlQkCgc",
+    "index": 113,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 406,
+    "text_chars": 6216,
+    "publishDate": null
+  },
+  {
+    "id": "e9VnPAWpjVg",
+    "index": 114,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 352,
+    "text_chars": 5510,
+    "publishDate": null
+  },
+  {
+    "id": "OsNSj3qpPY0",
+    "index": 115,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 634,
+    "text_chars": 9822,
+    "publishDate": null
+  },
+  {
+    "id": "5lXsYdh4sgI",
+    "index": 116,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 74,
+    "text_chars": 10439,
+    "publishDate": null
+  },
+  {
+    "id": "JbZeFG4fEbA",
+    "index": 117,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 721,
+    "text_chars": 8657,
+    "publishDate": null
+  },
+  {
+    "id": "lQ7cV2jkWZQ",
+    "index": 118,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4024,
+    "publishDate": null
+  },
+  {
+    "id": "B0AT2OZcy6Q",
+    "index": 119,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 3618,
+    "publishDate": null
+  },
+  {
+    "id": "Tvjs6pGSIcw",
+    "index": 120,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 302,
+    "text_chars": 4909,
+    "publishDate": null
+  },
+  {
+    "id": "HL26tMSTqO4",
+    "index": 121,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 297,
+    "text_chars": 4807,
+    "publishDate": null
+  },
+  {
+    "id": "kpYGOc9QyPc",
+    "index": 122,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 300,
+    "text_chars": 4613,
+    "publishDate": null
+  },
+  {
+    "id": "wduqrFdcZX4",
+    "index": 123,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 4607,
+    "publishDate": null
+  },
+  {
+    "id": "6gp8-XENKqk",
+    "index": 124,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 3864,
+    "publishDate": null
+  },
+  {
+    "id": "dRs2QO6yRMk",
+    "index": 125,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 475,
+    "text_chars": 6543,
+    "publishDate": null
+  },
+  {
+    "id": "UbR6eD-1EHU",
+    "index": 126,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4717,
+    "publishDate": null
+  },
+  {
+    "id": "Py1UFAAmCc4",
+    "index": 127,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 5141,
+    "publishDate": null
+  },
+  {
+    "id": "BgfTSZXNUa0",
+    "index": 128,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5290,
+    "publishDate": null
+  },
+  {
+    "id": "MvdwRa5nNO4",
+    "index": 129,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 5403,
+    "publishDate": null
+  },
+  {
+    "id": "6gjoMD3qDq8",
+    "index": 130,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4199,
+    "publishDate": null
+  },
+  {
+    "id": "GfcrfcJpGbw",
+    "index": 131,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 4178,
+    "publishDate": null
+  },
+  {
+    "id": "f-OOnm7pv_s",
+    "index": 132,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 5593,
+    "publishDate": null
+  },
+  {
+    "id": "dmjCg7cGlW8",
+    "index": 133,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 4858,
+    "publishDate": null
+  },
+  {
+    "id": "7jMD0AKhW10",
+    "index": 134,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 48,
+    "text_chars": 5453,
+    "publishDate": null
+  },
+  {
+    "id": "nUvHiUaEIOw",
+    "index": 135,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 41,
+    "text_chars": 5772,
+    "publishDate": null
+  },
+  {
+    "id": "ixG4OLDnHzM",
+    "index": 136,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 2543,
+    "publishDate": null
+  },
+  {
+    "id": "JoKtRXg89bk",
+    "index": 137,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 36,
+    "text_chars": 5050,
+    "publishDate": null
+  },
+  {
+    "id": "g4uA-hK_ouY",
+    "index": 138,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 2953,
+    "publishDate": null
+  },
+  {
+    "id": "2gxNM-5HaYA",
+    "index": 139,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4704,
+    "publishDate": null
+  },
+  {
+    "id": "_kpyMxtTMCk",
+    "index": 140,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4175,
+    "publishDate": null
+  },
+  {
+    "id": "Y-9KCih1zOA",
+    "index": 141,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 4012,
+    "publishDate": null
+  },
+  {
+    "id": "d5vU_IcnLQY",
+    "index": 142,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 4467,
+    "publishDate": null
+  },
+  {
+    "id": "LrjIsA0qnrE",
+    "index": 143,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 36,
+    "text_chars": 4178,
+    "publishDate": null
+  },
+  {
+    "id": "-juM640BPnw",
+    "index": 144,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4392,
+    "publishDate": null
+  },
+  {
+    "id": "g6jbYUdj36Y",
+    "index": 145,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 36,
+    "text_chars": 4715,
+    "publishDate": null
+  },
+  {
+    "id": "MWXffsMmz-o",
+    "index": 146,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 3370,
+    "publishDate": null
+  },
+  {
+    "id": "OAjivEnWHcA",
+    "index": 147,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4564,
+    "publishDate": null
+  },
+  {
+    "id": "03PrnQPmi6o",
+    "index": 148,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 27,
+    "text_chars": 4032,
+    "publishDate": null
+  },
+  {
+    "id": "0CV8JlhHSA4",
+    "index": 149,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 22,
+    "text_chars": 3118,
+    "publishDate": null
+  },
+  {
+    "id": "-AvpXoF6O3U",
+    "index": 150,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4969,
+    "publishDate": null
+  },
+  {
+    "id": "0JpAC7XvdYY",
+    "index": 151,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 41,
+    "text_chars": 4913,
+    "publishDate": null
+  },
+  {
+    "id": "P1SqFI4RMrY",
+    "index": 152,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 3640,
+    "publishDate": null
+  },
+  {
+    "id": "p7FqJm0qyEM",
+    "index": 153,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 3831,
+    "publishDate": null
+  },
+  {
+    "id": "mkRNzJ5iasA",
+    "index": 154,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 36,
+    "text_chars": 5132,
+    "publishDate": null
+  },
+  {
+    "id": "Ea_eEXei4c8",
+    "index": 155,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 29,
+    "text_chars": 4377,
+    "publishDate": null
+  },
+  {
+    "id": "eiqrVenTXD4",
+    "index": 156,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5960,
+    "publishDate": null
+  },
+  {
+    "id": "9QRA-rCUA5U",
+    "index": 157,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 27,
+    "text_chars": 3872,
+    "publishDate": null
+  },
+  {
+    "id": "TXhmc6ryMIg",
+    "index": 158,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 43,
+    "text_chars": 5206,
+    "publishDate": null
+  },
+  {
+    "id": "eO-XgTedlsQ",
+    "index": 159,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 19,
+    "text_chars": 2684,
+    "publishDate": null
+  },
+  {
+    "id": "Xy1VVfbBBLU",
+    "index": 160,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 49,
+    "text_chars": 6495,
+    "publishDate": null
+  },
+  {
+    "id": "yp-Wp4nIWp0",
+    "index": 161,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 3417,
+    "publishDate": null
+  },
+  {
+    "id": "235KLJfaPlQ",
+    "index": 162,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4186,
+    "publishDate": null
+  },
+  {
+    "id": "32lXkmZM8pQ",
+    "index": 164,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 245,
+    "text_chars": 9203,
+    "publishDate": null
+  },
+  {
+    "id": "_i2febc-9jY",
+    "index": 165,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4328,
+    "publishDate": null
+  },
+  {
+    "id": "SrtvkPL15R0",
+    "index": 166,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 5655,
+    "publishDate": null
+  },
+  {
+    "id": "ht3VXIYQIqU",
+    "index": 167,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 5326,
+    "publishDate": null
+  },
+  {
+    "id": "NhiosK0JSKU",
+    "index": 168,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 5055,
+    "publishDate": null
+  },
+  {
+    "id": "A8GWS00nYDQ",
+    "index": 169,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5447,
+    "publishDate": null
+  },
+  {
+    "id": "YoS3MZVa6Cc",
+    "index": 170,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3854,
+    "publishDate": null
+  },
+  {
+    "id": "NZlhYG1YIas",
+    "index": 171,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 23,
+    "text_chars": 3943,
+    "publishDate": null
+  },
+  {
+    "id": "WL47wW4ail8",
+    "index": 172,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 5204,
+    "publishDate": null
+  },
+  {
+    "id": "at7uItPdu7s",
+    "index": 173,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 45,
+    "text_chars": 5645,
+    "publishDate": null
+  },
+  {
+    "id": "ckwDcHE_QJY",
+    "index": 174,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4319,
+    "publishDate": null
+  },
+  {
+    "id": "Ska2dPEu7EA",
+    "index": 175,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4229,
+    "publishDate": null
+  },
+  {
+    "id": "pbzs6A-topY",
+    "index": 176,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 3981,
+    "publishDate": null
+  },
+  {
+    "id": "MvdK9at7GHE",
+    "index": 177,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 59,
+    "text_chars": 7290,
+    "publishDate": null
+  },
+  {
+    "id": "uASW46AWEwo",
+    "index": 178,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 29,
+    "text_chars": 3836,
+    "publishDate": null
+  },
+  {
+    "id": "fcdUBUnfCA4",
+    "index": 179,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 4037,
+    "publishDate": null
+  },
+  {
+    "id": "Rde7K2lf1RE",
+    "index": 180,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4246,
+    "publishDate": null
+  },
+  {
+    "id": "xMUjQKn13PA",
+    "index": 181,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 4121,
+    "publishDate": null
+  },
+  {
+    "id": "W5ZWlX1LxEk",
+    "index": 182,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3395,
+    "publishDate": null
+  },
+  {
+    "id": "Pw4rPF0Gh_0",
+    "index": 183,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 74,
+    "text_chars": 9623,
+    "publishDate": null
+  },
+  {
+    "id": "ygL6OOOdwqM",
+    "index": 184,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4715,
+    "publishDate": null
+  },
+  {
+    "id": "HN7f1thlGso",
+    "index": 185,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 49,
+    "text_chars": 5514,
+    "publishDate": null
+  },
+  {
+    "id": "CxeDMF2jF9E",
+    "index": 186,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4664,
+    "publishDate": null
+  },
+  {
+    "id": "epaBq0UIPLk",
+    "index": 187,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 5084,
+    "publishDate": null
+  },
+  {
+    "id": "4XLE6C6R7dc",
+    "index": 188,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5568,
+    "publishDate": null
+  },
+  {
+    "id": "PgZI0k-_j_k",
+    "index": 189,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 76,
+    "text_chars": 9135,
+    "publishDate": null
+  },
+  {
+    "id": "hWb2_NEPebI",
+    "index": 190,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4955,
+    "publishDate": null
+  },
+  {
+    "id": "FyUKux68iag",
+    "index": 191,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 5318,
+    "publishDate": null
+  },
+  {
+    "id": "4ZFMZUTfi4M",
+    "index": 192,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 27,
+    "text_chars": 4194,
+    "publishDate": null
+  },
+  {
+    "id": "wSc3nGM8GOY",
+    "index": 193,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 2920,
+    "publishDate": null
+  },
+  {
+    "id": "e5n6XXhEK4U",
+    "index": 194,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 39,
+    "text_chars": 5589,
+    "publishDate": null
+  },
+  {
+    "id": "-A0I6qZ5cZw",
+    "index": 195,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 266,
+    "text_chars": 10197,
+    "publishDate": null
+  },
+  {
+    "id": "lAoXCHSCVT0",
+    "index": 196,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 4133,
+    "publishDate": null
+  },
+  {
+    "id": "Ng14_K-W6wQ",
+    "index": 197,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 22,
+    "text_chars": 3250,
+    "publishDate": null
+  },
+  {
+    "id": "kXVlrSjSPUE",
+    "index": 198,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4097,
+    "publishDate": null
+  },
+  {
+    "id": "Cm23CquLasU",
+    "index": 199,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 5186,
+    "publishDate": null
+  },
+  {
+    "id": "Dgjic4BbjGs",
+    "index": 200,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4473,
+    "publishDate": null
+  },
+  {
+    "id": "gnDxkZJxs4A",
+    "index": 201,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 4518,
+    "publishDate": null
+  },
+  {
+    "id": "1-IwQm9ybsA",
+    "index": 202,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 4613,
+    "publishDate": null
+  },
+  {
+    "id": "BkszA-MvjXA",
+    "index": 203,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 55,
+    "text_chars": 7989,
+    "publishDate": null
+  },
+  {
+    "id": "HApApK3G6MA",
+    "index": 204,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 53,
+    "text_chars": 5973,
+    "publishDate": null
+  },
+  {
+    "id": "ZKqWsYqqClg",
+    "index": 205,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4426,
+    "publishDate": null
+  },
+  {
+    "id": "aGowhfZFpFI",
+    "index": 206,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 44,
+    "text_chars": 5793,
+    "publishDate": null
+  },
+  {
+    "id": "sDGc4fK7O_U",
+    "index": 207,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4867,
+    "publishDate": null
+  },
+  {
+    "id": "f7jJU6qoxe8",
+    "index": 208,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 3810,
+    "publishDate": null
+  },
+  {
+    "id": "94Yu6n_Hw58",
+    "index": 209,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 29,
+    "text_chars": 4157,
+    "publishDate": null
+  },
+  {
+    "id": "YESQyP49-Mg",
+    "index": 210,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4741,
+    "publishDate": null
+  },
+  {
+    "id": "GoDzWt6ESh8",
+    "index": 211,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4067,
+    "publishDate": null
+  },
+  {
+    "id": "2m_FB0hCdmk",
+    "index": 212,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5291,
+    "publishDate": null
+  },
+  {
+    "id": "Pp78kf_6d3g",
+    "index": 213,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3953,
+    "publishDate": null
+  },
+  {
+    "id": "V8-s0FE3nF4",
+    "index": 214,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 92,
+    "text_chars": 10048,
+    "publishDate": null
+  },
+  {
+    "id": "k3Gh_5JrFa4",
+    "index": 215,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 34,
+    "text_chars": 4707,
+    "publishDate": null
+  },
+  {
+    "id": "l-GLv-a9Pco",
+    "index": 216,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 5454,
+    "publishDate": null
+  },
+  {
+    "id": "QuLOU6uYKyI",
+    "index": 217,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 69,
+    "text_chars": 7570,
+    "publishDate": null
+  },
+  {
+    "id": "lgVir_IqQ28",
+    "index": 218,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4854,
+    "publishDate": null
+  },
+  {
+    "id": "pLfpDHfKHHs",
+    "index": 219,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 4717,
+    "publishDate": null
+  },
+  {
+    "id": "bpx08OOZmeQ",
+    "index": 220,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 41,
+    "text_chars": 5057,
+    "publishDate": null
+  },
+  {
+    "id": "lnxs2Kup3sQ",
+    "index": 221,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 5449,
+    "publishDate": null
+  },
+  {
+    "id": "IAq64jL6228",
+    "index": 222,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 5362,
+    "publishDate": null
+  },
+  {
+    "id": "ixmEqAsYUas",
+    "index": 223,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4911,
+    "publishDate": null
+  },
+  {
+    "id": "ZxEkw_OWvxA",
+    "index": 224,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 4547,
+    "publishDate": null
+  },
+  {
+    "id": "9gqqCkWaP50",
+    "index": 225,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4976,
+    "publishDate": null
+  },
+  {
+    "id": "Awuhw2y1AgY",
+    "index": 226,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 2554,
+    "publishDate": null
+  },
+  {
+    "id": "B0kUs1tZWUo",
+    "index": 227,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4227,
+    "publishDate": null
+  },
+  {
+    "id": "si_Cfyj2nCg",
+    "index": 228,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 61,
+    "text_chars": 6925,
+    "publishDate": null
+  },
+  {
+    "id": "3oyROW1YKdY",
+    "index": 229,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 3966,
+    "publishDate": null
+  },
+  {
+    "id": "ufoK9DxJt3o",
+    "index": 230,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 2890,
+    "publishDate": null
+  },
+  {
+    "id": "ofitybjcHz0",
+    "index": 231,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 422,
+    "text_chars": 14417,
+    "publishDate": null
+  },
+  {
+    "id": "z6wMUaErCxU",
+    "index": 232,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 430,
+    "text_chars": 15005,
+    "publishDate": null
+  },
+  {
+    "id": "SvOV80Rlpqk",
+    "index": 233,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 40,
+    "text_chars": 6070,
+    "publishDate": null
+  },
+  {
+    "id": "k4K1uNM4S_k",
+    "index": 234,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4711,
+    "publishDate": null
+  },
+  {
+    "id": "0xKLVJuBRCU",
+    "index": 235,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 27,
+    "text_chars": 4227,
+    "publishDate": null
+  },
+  {
+    "id": "YKcagGAZRz0",
+    "index": 236,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 53,
+    "text_chars": 5928,
+    "publishDate": null
+  },
+  {
+    "id": "pSoDUFdqVOU",
+    "index": 237,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 4353,
+    "publishDate": null
+  },
+  {
+    "id": "i4xNoRa20Qc",
+    "index": 238,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4526,
+    "publishDate": null
+  },
+  {
+    "id": "7A54_5MVH-8",
+    "index": 239,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 29,
+    "text_chars": 4036,
+    "publishDate": null
+  },
+  {
+    "id": "G2w_6egpDvM",
+    "index": 240,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 23,
+    "text_chars": 3886,
+    "publishDate": null
+  },
+  {
+    "id": "LOZLE0oJWtY",
+    "index": 241,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 3545,
+    "publishDate": null
+  },
+  {
+    "id": "klErNfEgW6E",
+    "index": 242,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 23,
+    "text_chars": 3543,
+    "publishDate": null
+  },
+  {
+    "id": "lwsFycElqrs",
+    "index": 243,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3533,
+    "publishDate": null
+  },
+  {
+    "id": "BQ_mYbm6C9I",
+    "index": 244,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4585,
+    "publishDate": null
+  },
+  {
+    "id": "7gdjRNSCtoI",
+    "index": 245,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 55,
+    "text_chars": 6024,
+    "publishDate": null
+  },
+  {
+    "id": "QJhG_17DpRU",
+    "index": 246,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 3628,
+    "publishDate": null
+  },
+  {
+    "id": "qnp7KaEimo4",
+    "index": 247,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 18,
+    "text_chars": 2624,
+    "publishDate": null
+  },
+  {
+    "id": "feJf1if-r1M",
+    "index": 248,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 3669,
+    "publishDate": null
+  },
+  {
+    "id": "FOry3r6yuDg",
+    "index": 249,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 4239,
+    "publishDate": null
+  },
+  {
+    "id": "c24laHz3Vmo",
+    "index": 250,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 39,
+    "text_chars": 509,
+    "publishDate": null
+  },
+  {
+    "id": "GbuwJ7FcmaU",
+    "index": 251,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 68,
+    "text_chars": 8966,
+    "publishDate": null
+  },
+  {
+    "id": "tog6Ue7He9Q",
+    "index": 252,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3475,
+    "publishDate": null
+  },
+  {
+    "id": "qefEi0grWeA",
+    "index": 253,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 45,
+    "text_chars": 7203,
+    "publishDate": null
+  },
+  {
+    "id": "Bo4_nVFpVps",
+    "index": 254,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 3732,
+    "publishDate": null
+  },
+  {
+    "id": "P6XYXfePAsA",
+    "index": 255,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 314,
+    "text_chars": 4946,
+    "publishDate": null
+  },
+  {
+    "id": "erlOBf7auSE",
+    "index": 256,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 287,
+    "text_chars": 4549,
+    "publishDate": null
+  },
+  {
+    "id": "_CjLipqZgUU",
+    "index": 257,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 20,
+    "text_chars": 2470,
+    "publishDate": null
+  },
+  {
+    "id": "MsbzY6QbRVA",
+    "index": 258,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 37,
+    "text_chars": 5417,
+    "publishDate": null
+  },
+  {
+    "id": "A6TW2Oc4j7Q",
+    "index": 259,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 19,
+    "text_chars": 2816,
+    "publishDate": null
+  },
+  {
+    "id": "DtoLuOysaqQ",
+    "index": 260,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 24,
+    "text_chars": 3490,
+    "publishDate": null
+  },
+  {
+    "id": "DkirUmf4Asw",
+    "index": 261,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 22,
+    "text_chars": 3096,
+    "publishDate": null
+  },
+  {
+    "id": "V4Ww3l9YFSo",
+    "index": 262,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 2704,
+    "publishDate": null
+  },
+  {
+    "id": "7DTs5W4Zmuo",
+    "index": 263,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 2549,
+    "publishDate": null
+  },
+  {
+    "id": "xS5Lv7-bMYI",
+    "index": 264,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 3432,
+    "publishDate": null
+  },
+  {
+    "id": "YAg2OTiFHBE",
+    "index": 265,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 32,
+    "text_chars": 4562,
+    "publishDate": null
+  },
+  {
+    "id": "KLjed4HMArA",
+    "index": 266,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 322,
+    "text_chars": 4323,
+    "publishDate": null
+  },
+  {
+    "id": "02_xHMc_lBg",
+    "index": 267,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 49,
+    "text_chars": 5403,
+    "publishDate": null
+  },
+  {
+    "id": "S3wi54arf04",
+    "index": 268,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 22,
+    "text_chars": 3376,
+    "publishDate": null
+  },
+  {
+    "id": "CNsXroT21dU",
+    "index": 269,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 28,
+    "text_chars": 4012,
+    "publishDate": null
+  },
+  {
+    "id": "1SyDth2hDpE",
+    "index": 270,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 23,
+    "text_chars": 3192,
+    "publishDate": null
+  },
+  {
+    "id": "rC-vbPLmx-8",
+    "index": 271,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 49,
+    "text_chars": 6762,
+    "publishDate": null
+  },
+  {
+    "id": "69BxQJmnaSU",
+    "index": 272,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 26,
+    "text_chars": 3729,
+    "publishDate": null
+  },
+  {
+    "id": "ASXM4-CQG8o",
+    "index": 273,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 136,
+    "text_chars": 4132,
+    "publishDate": null
+  },
+  {
+    "id": "xeEd1DEizNE",
+    "index": 274,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 267,
+    "text_chars": 4961,
+    "publishDate": null
+  },
+  {
+    "id": "OjaK7nmCYCo",
+    "index": 275,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 35,
+    "text_chars": 5896,
+    "publishDate": null
+  },
+  {
+    "id": "5TDTxHZXiLE",
+    "index": 276,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 4226,
+    "publishDate": null
+  },
+  {
+    "id": "zomYKjlvJGU",
+    "index": 277,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 31,
+    "text_chars": 5476,
+    "publishDate": null
+  },
+  {
+    "id": "52XVsVj6b4E",
+    "index": 278,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 307,
+    "text_chars": 4695,
+    "publishDate": null
+  },
+  {
+    "id": "x9sM5rI3tW8",
+    "index": 279,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 39,
+    "text_chars": 4968,
+    "publishDate": null
+  },
+  {
+    "id": "cULgfb_v4GE",
+    "index": 280,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 3751,
+    "publishDate": null
+  },
+  {
+    "id": "Q3hEnlIHhoY",
+    "index": 281,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 25,
+    "text_chars": 3657,
+    "publishDate": null
+  },
+  {
+    "id": "dT_9yuPYems",
+    "index": 282,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 19,
+    "text_chars": 2677,
+    "publishDate": null
+  },
+  {
+    "id": "3EkaxkNGXD8",
+    "index": 283,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 30,
+    "text_chars": 4278,
+    "publishDate": null
+  },
+  {
+    "id": "cMGT5XXAEWw",
+    "index": 284,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 21,
+    "text_chars": 1517,
+    "publishDate": null
+  },
+  {
+    "id": "e32UtIo0C3c",
+    "index": 285,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 248,
+    "text_chars": 3737,
+    "publishDate": null
+  },
+  {
+    "id": "axpmhUKyixg",
+    "index": 286,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 15,
+    "text_chars": 2310,
+    "publishDate": null
+  },
+  {
+    "id": "vJcMEojoGxY",
+    "index": 287,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 38,
+    "text_chars": 5298,
+    "publishDate": null
+  },
+  {
+    "id": "IXrpfHPqYfg",
+    "index": 288,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 63,
+    "text_chars": 1020,
+    "publishDate": null
+  },
+  {
+    "id": "sFWfC72WWQY",
+    "index": 289,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 45,
+    "text_chars": 5931,
+    "publishDate": null
+  },
+  {
+    "id": "z6RnHqSuqUo",
+    "index": 290,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 39,
+    "text_chars": 5329,
+    "publishDate": null
+  },
+  {
+    "id": "lr57dn0-Zmk",
+    "index": 291,
+    "status": "ok",
+    "source": "online_transcript_provider",
+    "segments": 33,
+    "text_chars": 4296,
+    "publishDate": null
+  }
+]

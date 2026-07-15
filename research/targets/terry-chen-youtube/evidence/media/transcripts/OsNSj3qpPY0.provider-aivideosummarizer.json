@@ -1,0 +1,5137 @@
+{
+  "source": "Online transcript provider: AI Video Summarizer",
+  "source_url": "https://www.youtube.com/watch?v=OsNSj3qpPY0",
+  "provider": {
+    "name": "aivideosummarizer.io",
+    "endpoint": "https://aivideosummarizer.io/youtube-subtitle-downloader/",
+    "retrieved": "2026-07-13",
+    "route": "OBU browser page -> IndexedDB tr-history"
+  },
+  "video_index": 114,
+  "video": {
+    "index": 114,
+    "id": "OsNSj3qpPY0",
+    "title": "Google工程師能通過我的面試嗎？",
+    "url": "https://www.youtube.com/watch?v=OsNSj3qpPY0",
+    "duration_seconds": 1222.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "OsNSj3qpPY0",
+    "title": "Google工程師能通過我的面試嗎？",
+    "text": "哈囉大家好我是Terry\n今天這集影片呢\n特別邀請了Hank\n來跟我做一集模擬面試\n那Hank他的來頭可不小喔\n現在在Google當工程師\n曾經是ICPC世界第五名\n還得過很多獎\n所以說希望可以透過今天這集的模擬面試\n大家可以跟Hank學到一點東西\n那在模擬面試開始之前呢\n其實我跟Hank兩個人並不認識\n我跟他也沒有講過話\n我們是透過一個中間的朋友認識的\n所以說面試之前呢\nHank是不知道我要考什麼的\n其實我也不知道要考什麼\n我也不想要考Liqo的題目\n我覺得考Liqo沒有什麼太大意義\n所以我就看一下我手機當下在用什麼APP\n就以那個APP為主題呢\n去出了一道題\n那我們就來看一下\n算法競賽的得獎者Hank\n面對這種現實生活中的應用問題\n而非Liqo的問題\n他是怎麼去解決的那在影片開始之前呢\n跟大家分享一個很適合我們在科技業工作\n練習英語口語的App\n叫做ElsaSpeak\n它是一款用AI來幫你專門練習英語口說的App\n我覺得它最厲害的是可以精準的找到\n並糾正我英語發音不標準的地方\n那還有很多情境口語練習\n讓AI提供我及時的反饋跟建議\n我覺得是未來練習英文最好的方式之一\n現在終於有AI工具可以把英文練習\n變得超簡單\n那更多關於ElsaSpeak\n跟他給頻道觀眾的專屬優惠呢\n我會在影片最後再跟大家分享\n那廢話不多說我們就直接開始面試\n今天的題目呢我們要設計一個\n股票的Alert系統\n就是你知道股票不是會有\n譬如說你用一個股票的App比如說Yahoo的\nYahoo Finance或是之類\n就是那種Trading App你可以設\n譬如說蘋果漲到多少錢的時候\n我要得到一個Alert之類的\nOK\n或是說跌到多少錢的時候跌低於100塊的時候我要得到一個 alert 之類的OK對或是說跌到多少錢的時候\nOK\n比如說跌到\n跌低於 100 塊的時候我要得到一個 alert\n或是\n或是漲超過 150 的時候我要得到一個 alert\n類似這樣子一個系統\nOK\n就它可以設某一張股票\n譬如說它超過多少點的時候 alert\n或是跌低於多少點的時候 alert\n對它可以設一個 ticker\n比如說\n蘋果或是台積電或者是說\n麥當勞然後漲到多少我要得劳然后涨到多少我要得到一个 alert\n跌到多少我要得到一个 alert\n系统呢会收到这些 price 的 update 对不对\n你需要一个它是一个 data stream 进来\n这个时间点几点几分在几秒\n现在这个 price 多少\n然后这个 ticker 是多少\n是苹果还是什么股票\n嗯\n然后举个例子我把它写在这个 Google Docs 上好了\n对根据这样子你要怎么去设计你的系统\n可以让你随时给你的用户去报这些Alert\n只需要handle\n考虑一个客户的情况还是要考虑很多客户的情况\n要考虑很多客户的情况\n就是你可能会有几万甚至几十万的用户\n对\n有些用户可能会用到上百个Alert\n现在如果要Alert这个用户\n我需要给他的资讯有什么\n是就可能通知某个用户\n然后是哪一支股票\n現在多少價錢給他還是\n嗯你只要通知那個用戶\n然後跟他說\n哎現在有這個你當時 subscribe\n譬如說他是 subscribe\n譬如說超過80一股的話\n我就要得到這個 alarm\n你就跟他說\n哎現在這個已經超過80塊錢了\n等於說呃如果現在漲超過一次\n譬如說我現在你現在設定 tesla\n他超過120\n那他如果漲超過一次譬如說他現在跳到130了然後他又又有一筆資料 update 進來一次譬如說你現在設定 Tesla 它超過 120那它如果漲超過一次\n譬如說它現在跳到 130 了\n然後它又有一筆資料 Update 進來變譬如說 125\n那我還要再 Alert 一次\n還是 Alert 過了就不用再 Alert\n對 這個就看你要怎麼去設計吧\n我覺得目前第一個版本的話\n我們先處理 Alert 過一次就不要再 Alert 了\n因為它可能用戶已經會做一些新的操作\n它可能就會重新設定 Alert\n所以我覺得這是一個比較合理的user scenario\n然后这部分的话\n因为其实这个东西就是\n我们可以用一个priority queue去做\n对那我们把每一个用户的价钱\n丢进priority queue里面\n然后那我们priority queue可能\n有一个MathMath heap\n跟一个MiniMath heap\n那如果这个\n譬如说以MathMath heap来讲\nMathMath heap的top\n如果超过用户设定的值的话\n那代表说这一笔\n这一笔alert已經被觸發了\n我們就可以把這一筆 return 出去\n所以主要就是如果要維護漲幅跟跌幅的話\n我們就需要兩個 priority queue\n去handle這件事情\n每一次操作的話就是\n因為 priority queue 插入跟刪除都落根\n就是 n 就是裡面的數量\n那所以整體來說\n每一次每一個用戶新增一個 alert 進來\n就是落根\n每一筆資料進来我去扫过的话\n因为取TAP而已\n这是O1\n但是我要把某笔资料\n我要触发某一个LUR的话\n那就是一次会有一个Logan\n所以说你的意思是说\n所有的用户的Subscription都会在那个Queue里面吗\n对\n那像这个Data Stream是可能\n每秒会有几十个甚至上百个这个Price Action对不对\n嗯\n然后你每次进来你就要把你的Priority Queue給查找\n就是前面幾個全部都找出來\n因為我們可以用一個就是Map的東西去連接\n就是某一個Ticker跟它相關的Alert\n所以我們就是一筆資料Update進來的話\n我們就只要找特定某一個Ticker的Priority Queue就好了\nOK 所以就是你會有一個Hash Map\n它的Key就是那個Ticker的名字\n然後Value就是它的Priority Queue那如果是做就是你會有一個 Hash Map它的 Key 就是那個 Ticker 的名字然後 Value 就是它的 Priority Queue\n那如果是設一個就是我要\nSold Alert 超過 100 塊\n然後 Sold Alert 超過 120\n這樣子我設兩個這個 Subscription 的話\n你要怎麼 Handle 這個 Case\n呃 這個 Case 我是要兩次都 Alert\n還是我只要\n我要清掉前面那一次\n比如說我設 100 跟 120 嘛\n它現在漲到 110 的話\n那我那個 100 的那個就會被 Triggered 對不對\n對\n那如果它漲到 115 的話那你那個 100到110的话那我那个100的那个就会被trigger对不对那如果它涨到115的话\n那你那个100已经trigger过\n你就不会再trigger对不对\n等于是涨超过120的时候\n你才会再trigger一次\n这样是ok的 我觉得这样可以的\nok那我们就开始\n首先就会是一个soc alert\n然后主要我们刚讨论主要会有\n讲一下主要会有两个interface\n一个是user设定某一個user設定一個 alert\n他會去設 alert\n然後可能會用到的東西就是\n第一個是 user id\n我可以假設 user id 是一個\n他可能 user 會有一個 user id\n然後他是一個整數\nok user id\n然後他可能就會有一個股票\n某一張股票的那個股票的 ticker\n然後一個 price\n那 price 是 integer 還是\n我們就簡單就 integer 好了\n這個時候就處理漲跌的\n還是我們先做漲超過一定數值\n我們就先簡化一點\n我們就先做漲超過一定數值\n等於說他漲超過這個 alert\n這個 set alert 就是代表這個 user id\n他設定某一個 ticker\n如果他漲超過它設定的price的話\n那我們就會發EleR給這個user\n然後可能要定義一下就是\n那個priority queue裡面存的格式\n然後會有一個user的ID\n然後會有一個price\n然後因為priority queue要設定那個大小\n我希望把設定的最大值拿出來\n然後這邊是EleR data然後可能有一個initial的function那个大小我希望把设定的最大值拿出来就是然后这边是 alert data\n然后可能有一个initial的function\n就是主要是清空这些\n对那我每次设定的话就是很简单\n就是把就是把ticker的就是把某一只股票的\n他设定的 alert\n他设定那个 alert 的 user id 跟 price 加进去\n所以那这样子我们就设定好\n每一次 alert 发进来的时候\n就是每一次 alert request 进来的时候我们就�設定好每一次Alert發進來的時候就是每一次Alert request進來的時候\n我們就設定好它的\n算它的Tracker這樣\n對然後接下來就是\n可能會有一個股票\n價格update的Sys的Interface\n那它的input可能就是\n一個time step\n就是剛剛這個格式\n然後\n那time step它會給的格式是\n你可以用epock\n那我先用stream好了\nstream也可以對那可能就進來一筆block data對那這時候那Time Step它会给的格式是你可以用Epoch那我先用String好了String也可以对对String\n那可能就进来一笔Stock Data\n那这时候我们就去查找\n这一笔Stock Data里面那个Ticker\n那个Ticker的这个Priority Queue\n等于说没新的Price进\n新的就是股票的Data进来\n我就Core一次这个Function\n然后传一笔我update到多少\n对然后这时候我们就可以看\n这个先要判斷它是不是空的\n而且它最上面的那一個的價錢\nprice是不是\n我剛剛這邊好像講錯了\n就是它應該是一個minimahip\n就是因為它是我越price越小的會\n越先額熱到\n所以它如果它當下抓到的價錢\n如果是小於等於我現在update的價錢的話\n那我們就額熱那個用戶\nsend alert可能send alert是一個interface如果是小于等于我现在update的价钱的话那我们就 alert 那个用户Send Alert\n可能Send Alert是一个 interface\n就是我可以送指定的用户\n然后我等比 stock data 给他\n因为他里面应该就有他需要的资讯\n就是 timestamp 然后 ticker 跟 price\n那我们可以升级比测试资料给他\n你的 priority queue 是怎么变动\n对\n然后他 alert 过了之后\npriority queue 就会把上面的給 pop 掉\n這樣子應該就沒有什麼問題\n那我們可以升級筆測試資料給他\n那可能第一個要測的就是\n我如果直接 Update Ticker Price\n但當下沒有任何 Alert 的 System 的話\n就是沒有任何 Alert 的 Data 的話\n他會發生什麼事情\n因為他其實就是一個 System 嘛\n那我們就一直重複做一些操作\n對他一直做一些操作\n然后接下来可能会有个user\n设了一个alert\n然后user id\n我们就从1开始好了\n那可能就设定125\n然后我们可能就判\n有一个测试资料\n就是说如果现在\n有一个低于它alert价钱的\ndata进来\n它会发生什么事情\n照这个目前情况来讲\n它已经被alert过了\n那我们如果再送一次\n同一个价格的\n它应该要\n不会再alert一次所以这也是格的它應該要不會再額熱一次\n所以這也是需要測試\n然後再來就是\n可能要測一下多用戶的\n看會不會有額熱到錯誤的用戶\n如果update到130的話\n照理來講這兩筆都會被觸發\n然後再幫第二個用戶去測試一下\n然後再測一下就是\n可能有兩筆資料但只有一筆資料會被觸發的情況\n大概就这样\n那整体复杂度\n就是set alert一次\n因为它第一个hash map\n所以它大体上来讲是O1\n那可能会有collision的情况\n就是因为它是hash map\n就是会有collision的情况\n最差可能会到\n所有股票现存\n有设定 alert的股票\n都会跑过一次\n但平均来说是O1\n然后一个priority queue他push進去就是\nOlog\n看他當下裡面有多少東西\n那update的話\n然後這邊用cobie reference\n所以他兩個值要同一個東西\n不會有cobie一個priority queue進來的情況\n他取top是O1\n所以等於說如果沒有pop值出去\n他就是做一次就是O1\n那如果只要有centENT一次的 alert 出來\n他就會多一個Login\n因為他PUB掉一個值\n對PUB掉一個值的話\n那個整個HIP HOP DAY就是Login\n這個是可以的\n那假如說\n因為我們如果真的在設計一個這個系統的話\n其實這個alert進來之後\n用戶一般來講\n他希望就是設這個alert\n就是譬如說我設120\n他也是到150之後\n他之後點一下 點回100\n然後他又到 又漲到超過100\n那這樣的話我想得到\n繼續得到 alert\n就是我不需要重新再 subscribe\n一個新的 alert\nOK 好\n那這樣的話\n等於說我們不能直接把資料 pop 出去\n因為 pop 出去的資料也是\n未來可能會 rollback 回來的資料\n對那這時候我們就可以用\n再開另外一個 priority queue 去維護這個東西\n那另外一個 priority queue 它可能就是會反過來的\n就是它原本是 minima heap 後面會變 mesma heap\n因為就是價格跌超過某一個時候\n它就要把資料 pop 回來原本的 priority queue 裡面\n哦所以你是說就是只要價格跌下去之後\n你再把它放回\n你第一個這個 Priority Queue 裡面\n對\n那如果它一直都沒有跌的話\n你就不會放\n譬如說它\n它就漲120\n然後130 140 150\n就一直往上漲\n你就不把它\n你就永遠不會把它放回去\n對\n對 那它只會\n那原本那個就是 Priority Queue\n它只會一直增加\n好 我直接加在裡面\n就是\n那可能就是另外一個 Priority Queue但它的條件增加好我直接加在裡面就是那可能就是另外一個Priority Queue\n但它的條件會反過來\n代表它已經是Errug過的Data\n那這時候我們就把\n那它這時候把它Pop掉了\n那我們就把它Push進\n這時候就把它\n就把我Errug過的東西就加進那個\n已經跳過Errug的Data\n然後另外一個就是\n我要把已經Errug過的Data\n看要不要還原回來\n就是它如果\n我現在股票價格跌低於它的價錢的話\n我就要把它Rowback回來\n所以它就是它大於我現在股票的價格\n我就把它放回去原本的\n然後一樣因為它被使用過\n所以要把它清掉\n那這時候測試資料可能就看一下喔\n就是我們要測試我們新家的東西\n我額熱過130之後\n它兩筆就會\n這兩筆就會pop掉\n那可能讓它降回去125\n然後再升回去130\n看是不是user3有被額熱到\n大概是這樣\n那也還是沒什麼問題\n那另外我比較好奇的是\n假如說現在我們\n因為我們現在這個是\n你現在是每一個Ticker\n它存在一個HashMap的\n在現實的情況下\n你會怎麼設計這個系統\n就是現實有增加的 limitation 是\n像我們現在要查找嘛\n那其實我們這個需要 alert\n基本上是要 latency 要夠低嘛\n就我們要\n對那如果一個 pq 裡面有\n好幾十萬個\n甚至上百萬個 alert 的話\n那首先我們能夠存下这么多alert吗\n因为这个price action update是很快的\n以一个现实情况下\n我们可能每秒钟会有好几个update\n对不对\n那如果是这样的情况下\n你的这个update ticker price\n会被扣好几次\n同时被扣好几次\n因为我们现在这个\n就这个in theory我觉得可以work\n没有问题\n那就是真的在�計這個系統的時候\n你會考慮到怎麼樣去\n你會把這些全部都還是放在一個server裡面嗎\n還是你會怎麼樣去scale這個系統\n如果說它這個update ticker price\n每秒鐘被扣好幾\n因為可能有好幾千個ticker\n然後每個ticker\n我大概懂你的意思\n就是這樣子的話\n我目前想到可能需要\n我們可以用MatiSpreader去做一些優化\n因為他同時call好幾個Ticker,那他可能call好幾次updateTickerPrice\n但是每一次update可能是不同的Ticker,那如果兩個不同的Ticker我還要在同一個Threader上等\n那可能不make sense,那可能這邊的話就可以做類似MatiThread的事情\n那MatiThread可能就可以分散到其他Server上去做\n所以你的意思就是你會把每一個Ticker分到不同的Server上面嗎\n對\n那你會怎麼去分\n就是你會怎麼去做決定說這個Ticker要到這個Server上面\n或這個Ticker要存在這個Server上面\n因為我們希望每一個Server能盡量平均嘛\n想到第一個最簡單的方法就是\n我們每一個ticker可能給他一個\n譬如說一個hash的value\n然後可能我們有n台server\n那我們就我們這個hash value就去mode這個n\n那我們就mode出來的值就會看到\n看他會落在哪一個server上\nok就簡單的做一個平均\n就是期望上會平均的分配這樣\n那這樣的話一般來講有沒有什麼問題\n因為在這次的情況下\n它會出現一些情況\n比如說某些TICKER可能很多人用\n對 因為我剛剛只考慮TICKER的平均分配TICKER\n但是有些TICKER可能價格變動比較頻繁\n那有些TICKER可能價格變動沒那麼頻繁\n那如果這個就變成\n我會預先知道哪一個Ticker預期被call過幾次\n還是我要動態去調整\n你知道某些Ticker比較熱門的情況下\n你可能會需要把它再分散給更多其他的Server\n比如說很多人設了特斯拉的Alert你可能會需要把它再分散給更多其他Server來Handle\n譬如說像假如說很多人設這個特斯拉的這個Alert\n在你的System裡面你要Skill的話\n你會需要給這個Server更多的Resource\n或是說你可以有更多的Server來Handle這個特斯拉的Alert\n那可能比較冷門的一些Ticker沒有人設Alert\n你就可以把它們全部都放在同一個Server裡面\n那可能就是我們要去計算說某一個Ticker它被設定過幾次\n然後照設定的次數去做排序之類的\n然後可能設定譬如說前幾熱門的\n我們可能可以單獨給它一個Server\n關於這個設計如果說�說比如說特斯拉這個Ticker\n每秒我被update\n就Price這個Action Update\n大概有好幾\n比如說上百個update\n可能每秒有十個好了\n十個update\n那這樣的話會不會造成任何問題\n就是以你現在的設計來看的話\n比如說我有\n你的PQ裡面有十萬個Alert\n那你的這個特斯拉Update\n同時在一秒內有10個Price Action\n它可能譬如說它在兩個數字之間跳動\n那User可能一下跌回去又會被\n就是Alert又被還原回去\n然後漲上來又被Alert一次\n那可能某一個User會\n如果設定了兩個價錢\n設定了一個價錢\n它可能在某一個時間點\n突然被Alert了好幾次\n對 這個是有可能的\n我的意思說就是\n像在你的well loop裡面\n你要把你的priority queue一直跑跑跑出來\n你要一直檢查\n那比如說你在這個operation完成之前\n你就有另外一個thread進來說我要update\n就是我剛剛應該有說到\n就是我同一個ticker\n它可能同時只能被一個Threader給存取\n所以就是說,你必須等到這個Threader完成之後\n你再等下一個,再去process下一個request\n對\n我只是想大家了解一下,真實情況啦\n假如說在設計這個系統\n因為我們扣可能還有9分鐘\n結果不要讓影片太長\n要聊太久很難剪\n對\nOK\n我覺得總括來說\n就是Coding的方面\n絕對沒有什麼問題\n然後我覺得\n就是你的思路很清楚\n就是你知道\n而且很快\n就是馬上就可以\n知道用Priority Queue\n我一開始想的是\n用個什麼Binary Search之類的\n對阿,因為Binary Search的問題就是\n你插入跟刪除\n刪除很麻煩,插入也很麻煩\n對阿,然後Complexity也是\n應該是最優解的,我想不到還有什麼\n可以比這還要更優化\n我覺得應該有辦法證明\n它已經是最優\n因為它有一個比較大小的問題在\n本來想說有一點時間是可以\n聊一下系統設計\n因為我覺得這一道題在\n在 System Design 裡面應該會更\n對我覺得在 System Design 上面會\n更好一點\n但因為我\n真的沒有面過系統設計\n哦\n對\n就是我也不知道系統設計開考慮的點\n在哪裡\n嗯嗯嗯因為我觉得面试\n面试比起真实的那个\n因为面试可能需要\n你在短时间内\n点出很多重点\n在你面Google的时候\n没有考系统设计吗\n因为我面\n我面的时候\n我是New Grade就进去了\n所以不会考到系统设计\nOKOK\n了解了解\n大概有感觉\n就是好像\n就是系统设计这方面\n就是好像你没有\n特别去练习过针对这种面试的题目还是要练习过因为不是说把答案大概有感覺就是好像就是就是系統設計這方面就是好像你沒有特別去練習過\n針對這種面試的題目還是要練習過\n因為不是說把答案打出來就好了\n我們中間還要溝通\n我們還要訂好 interface\n就是訂好一些 protocols 類的\n對我覺得真的在練習上跟\n真實面試差比較多的地方\n對我覺得蠻厲害的就是\ncoding 這方面覺得是沒有問題\n對你還有沒有其他公司嗎當時\n當時我有\n我有面過一家Quant\n我有面過WorldQuant\n嗯\n對但是那時候他們比較想要找有\n記憶學習背景\n所以雖然他們\n面試的題目我都\n很完美的解掉但是他們還是希望找有\n那個記憶學習相關\n對\n然後那時候還有變過 Amazon\n但是它結果出來的時候\n我已經拿到 Google Offer 了\n所以就沒有記憶學\nOK 那希望今天這集影片呢\n大家有學到一點東西\n也非常感謝 Hank 抽空來跟我做這個模擬面試\n如果大家覺得有幫助的話\n記得要幫影片點個讚\n也給 Hank 點個讚\n那如果你也像我一樣\n內向不想要去跟真人去练习口语的话\n一定要去试试看Elsa Speak\n这个APP用AI来帮你找出\n英语发音跟口说的错误\n它会根据你的发音\n每一个音节的语调\n流利程度\n跟母语人士的英文比较\n然后给你一个精确的反馈\n那除了发音跟语调之外呢\n日常生活跟工作中会遇到的词汇\n跟语句呢都会练习到APP上面呢有超过40个主题1600个课程除了發音與語調之外日常生活與工作中會遇到的詞彙與語句都會練習到\nAPP上面有超過40個主題\n1600個課程\n比如說我們今天來選一個Machine Learning的主題\nI doubt anyone has more exciting news than thatOK那现在扫这个QR code\n或是用这个连结呢\n就可以免费的下载Elsa Speak\n还有7天的专业版可以免费试用\n那用完之后呢\n如果你觉得喜欢\n你觉得真的有帮助到你的话\n记得一定要用我的专属连结\n就可以享有专业版的年费6折\n或是终身会员1.5折的优惠\n我觉得APP做得真的很不錯\n大家可以去試試看\n那最後也感謝Jonathan\n才有機會認識到Hank\n所以大家也可以去關注一下Jonathan的頻道\n他之前也邀請了凱西林去他的頻道\n做了一集模擬面試\n大家如果有興趣的話可以去看一下\n我會把連結放影片底下的資訊欄\n那我們下次見囉",
+    "segments": [
+      {
+        "time": "00:00",
+        "text": "哈囉大家好我是Terry"
+      },
+      {
+        "time": "00:01",
+        "text": "今天這集影片呢"
+      },
+      {
+        "time": "00:02",
+        "text": "特別邀請了Hank"
+      },
+      {
+        "time": "00:03",
+        "text": "來跟我做一集模擬面試"
+      },
+      {
+        "time": "00:05",
+        "text": "那Hank他的來頭可不小喔"
+      },
+      {
+        "time": "00:07",
+        "text": "現在在Google當工程師"
+      },
+      {
+        "time": "00:09",
+        "text": "曾經是ICPC世界第五名"
+      },
+      {
+        "time": "00:11",
+        "text": "還得過很多獎"
+      },
+      {
+        "time": "00:12",
+        "text": "所以說希望可以透過今天這集的模擬面試"
+      },
+      {
+        "time": "00:15",
+        "text": "大家可以跟Hank學到一點東西"
+      },
+      {
+        "time": "00:17",
+        "text": "那在模擬面試開始之前呢"
+      },
+      {
+        "time": "00:19",
+        "text": "其實我跟Hank兩個人並不認識"
+      },
+      {
+        "time": "00:21",
+        "text": "我跟他也沒有講過話"
+      },
+      {
+        "time": "00:22",
+        "text": "我們是透過一個中間的朋友認識的"
+      },
+      {
+        "time": "00:24",
+        "text": "所以說面試之前呢"
+      },
+      {
+        "time": "00:25",
+        "text": "Hank是不知道我要考什麼的"
+      },
+      {
+        "time": "00:27",
+        "text": "其實我也不知道要考什麼"
+      },
+      {
+        "time": "00:28",
+        "text": "我也不想要考Liqo的題目"
+      },
+      {
+        "time": "00:30",
+        "text": "我覺得考Liqo沒有什麼太大意義"
+      },
+      {
+        "time": "00:32",
+        "text": "所以我就看一下我手機當下在用什麼APP"
+      },
+      {
+        "time": "00:34",
+        "text": "就以那個APP為主題呢"
+      },
+      {
+        "time": "00:36",
+        "text": "去出了一道題"
+      },
+      {
+        "time": "00:37",
+        "text": "那我們就來看一下"
+      },
+      {
+        "time": "00:38",
+        "text": "算法競賽的得獎者Hank"
+      },
+      {
+        "time": "00:40",
+        "text": "面對這種現實生活中的應用問題"
+      },
+      {
+        "time": "00:42",
+        "text": "而非Liqo的問題"
+      },
+      {
+        "time": "00:43",
+        "text": "他是怎麼去解決的那在影片開始之前呢"
+      },
+      {
+        "time": "00:46",
+        "text": "跟大家分享一個很適合我們在科技業工作"
+      },
+      {
+        "time": "00:49",
+        "text": "練習英語口語的App"
+      },
+      {
+        "time": "00:51",
+        "text": "叫做ElsaSpeak"
+      },
+      {
+        "time": "00:52",
+        "text": "它是一款用AI來幫你專門練習英語口說的App"
+      },
+      {
+        "time": "00:55",
+        "text": "我覺得它最厲害的是可以精準的找到"
+      },
+      {
+        "time": "00:58",
+        "text": "並糾正我英語發音不標準的地方"
+      },
+      {
+        "time": "01:06",
+        "text": "那還有很多情境口語練習"
+      },
+      {
+        "time": "01:08",
+        "text": "讓AI提供我及時的反饋跟建議"
+      },
+      {
+        "time": "01:11",
+        "text": "我覺得是未來練習英文最好的方式之一"
+      },
+      {
+        "time": "01:14",
+        "text": "現在終於有AI工具可以把英文練習"
+      },
+      {
+        "time": "01:16",
+        "text": "變得超簡單"
+      },
+      {
+        "time": "01:18",
+        "text": "那更多關於ElsaSpeak"
+      },
+      {
+        "time": "01:19",
+        "text": "跟他給頻道觀眾的專屬優惠呢"
+      },
+      {
+        "time": "01:22",
+        "text": "我會在影片最後再跟大家分享"
+      },
+      {
+        "time": "01:24",
+        "text": "那廢話不多說我們就直接開始面試"
+      },
+      {
+        "time": "01:26",
+        "text": "今天的題目呢我們要設計一個"
+      },
+      {
+        "time": "01:28",
+        "text": "股票的Alert系統"
+      },
+      {
+        "time": "01:30",
+        "text": "就是你知道股票不是會有"
+      },
+      {
+        "time": "01:32",
+        "text": "譬如說你用一個股票的App比如說Yahoo的"
+      },
+      {
+        "time": "01:34",
+        "text": "Yahoo Finance或是之類"
+      },
+      {
+        "time": "01:36",
+        "text": "就是那種Trading App你可以設"
+      },
+      {
+        "time": "01:38",
+        "text": "譬如說蘋果漲到多少錢的時候"
+      },
+      {
+        "time": "01:40",
+        "text": "我要得到一個Alert之類的"
+      },
+      {
+        "time": "01:42",
+        "text": "OK"
+      },
+      {
+        "time": "01:44",
+        "text": "或是說跌到多少錢的時候跌低於100塊的時候我要得到一個 alert 之類的OK對或是說跌到多少錢的時候"
+      },
+      {
+        "time": "01:45",
+        "text": "OK"
+      },
+      {
+        "time": "01:45",
+        "text": "比如說跌到"
+      },
+      {
+        "time": "01:46",
+        "text": "跌低於 100 塊的時候我要得到一個 alert"
+      },
+      {
+        "time": "01:48",
+        "text": "或是"
+      },
+      {
+        "time": "01:49",
+        "text": "或是漲超過 150 的時候我要得到一個 alert"
+      },
+      {
+        "time": "01:52",
+        "text": "類似這樣子一個系統"
+      },
+      {
+        "time": "01:53",
+        "text": "OK"
+      },
+      {
+        "time": "01:53",
+        "text": "就它可以設某一張股票"
+      },
+      {
+        "time": "01:56",
+        "text": "譬如說它超過多少點的時候 alert"
+      },
+      {
+        "time": "01:58",
+        "text": "或是跌低於多少點的時候 alert"
+      },
+      {
+        "time": "02:00",
+        "text": "對它可以設一個 ticker"
+      },
+      {
+        "time": "02:01",
+        "text": "比如說"
+      },
+      {
+        "time": "02:02",
+        "text": "蘋果或是台積電或者是說"
+      },
+      {
+        "time": "02:04",
+        "text": "麥當勞然後漲到多少我要得劳然后涨到多少我要得到一个 alert"
+      },
+      {
+        "time": "02:07",
+        "text": "跌到多少我要得到一个 alert"
+      },
+      {
+        "time": "02:08",
+        "text": "系统呢会收到这些 price 的 update 对不对"
+      },
+      {
+        "time": "02:11",
+        "text": "你需要一个它是一个 data stream 进来"
+      },
+      {
+        "time": "02:13",
+        "text": "这个时间点几点几分在几秒"
+      },
+      {
+        "time": "02:15",
+        "text": "现在这个 price 多少"
+      },
+      {
+        "time": "02:16",
+        "text": "然后这个 ticker 是多少"
+      },
+      {
+        "time": "02:17",
+        "text": "是苹果还是什么股票"
+      },
+      {
+        "time": "02:19",
+        "text": "嗯"
+      },
+      {
+        "time": "02:19",
+        "text": "然后举个例子我把它写在这个 Google Docs 上好了"
+      },
+      {
+        "time": "02:22",
+        "text": "对根据这样子你要怎么去设计你的系统"
+      },
+      {
+        "time": "02:25",
+        "text": "可以让你随时给你的用户去报这些Alert"
+      },
+      {
+        "time": "02:29",
+        "text": "只需要handle"
+      },
+      {
+        "time": "02:30",
+        "text": "考虑一个客户的情况还是要考虑很多客户的情况"
+      },
+      {
+        "time": "02:33",
+        "text": "要考虑很多客户的情况"
+      },
+      {
+        "time": "02:34",
+        "text": "就是你可能会有几万甚至几十万的用户"
+      },
+      {
+        "time": "02:37",
+        "text": "对"
+      },
+      {
+        "time": "02:37",
+        "text": "有些用户可能会用到上百个Alert"
+      },
+      {
+        "time": "02:39",
+        "text": "现在如果要Alert这个用户"
+      },
+      {
+        "time": "02:41",
+        "text": "我需要给他的资讯有什么"
+      },
+      {
+        "time": "02:42",
+        "text": "是就可能通知某个用户"
+      },
+      {
+        "time": "02:44",
+        "text": "然后是哪一支股票"
+      },
+      {
+        "time": "02:46",
+        "text": "現在多少價錢給他還是"
+      },
+      {
+        "time": "02:48",
+        "text": "嗯你只要通知那個用戶"
+      },
+      {
+        "time": "02:49",
+        "text": "然後跟他說"
+      },
+      {
+        "time": "02:50",
+        "text": "哎現在有這個你當時 subscribe"
+      },
+      {
+        "time": "02:52",
+        "text": "譬如說他是 subscribe"
+      },
+      {
+        "time": "02:53",
+        "text": "譬如說超過80一股的話"
+      },
+      {
+        "time": "02:55",
+        "text": "我就要得到這個 alarm"
+      },
+      {
+        "time": "02:56",
+        "text": "你就跟他說"
+      },
+      {
+        "time": "02:57",
+        "text": "哎現在這個已經超過80塊錢了"
+      },
+      {
+        "time": "02:59",
+        "text": "等於說呃如果現在漲超過一次"
+      },
+      {
+        "time": "03:01",
+        "text": "譬如說我現在你現在設定 tesla"
+      },
+      {
+        "time": "03:03",
+        "text": "他超過120"
+      },
+      {
+        "time": "03:03",
+        "text": "那他如果漲超過一次譬如說他現在跳到130了然後他又又有一筆資料 update 進來一次譬如說你現在設定 Tesla 它超過 120那它如果漲超過一次"
+      },
+      {
+        "time": "03:05",
+        "text": "譬如說它現在跳到 130 了"
+      },
+      {
+        "time": "03:06",
+        "text": "然後它又有一筆資料 Update 進來變譬如說 125"
+      },
+      {
+        "time": "03:09",
+        "text": "那我還要再 Alert 一次"
+      },
+      {
+        "time": "03:10",
+        "text": "還是 Alert 過了就不用再 Alert"
+      },
+      {
+        "time": "03:11",
+        "text": "對 這個就看你要怎麼去設計吧"
+      },
+      {
+        "time": "03:14",
+        "text": "我覺得目前第一個版本的話"
+      },
+      {
+        "time": "03:15",
+        "text": "我們先處理 Alert 過一次就不要再 Alert 了"
+      },
+      {
+        "time": "03:18",
+        "text": "因為它可能用戶已經會做一些新的操作"
+      },
+      {
+        "time": "03:21",
+        "text": "它可能就會重新設定 Alert"
+      },
+      {
+        "time": "03:22",
+        "text": "所以我覺得這是一個比較合理的user scenario"
+      },
+      {
+        "time": "03:25",
+        "text": "然后这部分的话"
+      },
+      {
+        "time": "03:26",
+        "text": "因为其实这个东西就是"
+      },
+      {
+        "time": "03:27",
+        "text": "我们可以用一个priority queue去做"
+      },
+      {
+        "time": "03:29",
+        "text": "对那我们把每一个用户的价钱"
+      },
+      {
+        "time": "03:31",
+        "text": "丢进priority queue里面"
+      },
+      {
+        "time": "03:33",
+        "text": "然后那我们priority queue可能"
+      },
+      {
+        "time": "03:34",
+        "text": "有一个MathMath heap"
+      },
+      {
+        "time": "03:36",
+        "text": "跟一个MiniMath heap"
+      },
+      {
+        "time": "03:37",
+        "text": "那如果这个"
+      },
+      {
+        "time": "03:38",
+        "text": "譬如说以MathMath heap来讲"
+      },
+      {
+        "time": "03:40",
+        "text": "MathMath heap的top"
+      },
+      {
+        "time": "03:41",
+        "text": "如果超过用户设定的值的话"
+      },
+      {
+        "time": "03:43",
+        "text": "那代表说这一笔"
+      },
+      {
+        "time": "03:44",
+        "text": "这一笔alert已經被觸發了"
+      },
+      {
+        "time": "03:46",
+        "text": "我們就可以把這一筆 return 出去"
+      },
+      {
+        "time": "03:47",
+        "text": "所以主要就是如果要維護漲幅跟跌幅的話"
+      },
+      {
+        "time": "03:51",
+        "text": "我們就需要兩個 priority queue"
+      },
+      {
+        "time": "03:52",
+        "text": "去handle這件事情"
+      },
+      {
+        "time": "03:53",
+        "text": "每一次操作的話就是"
+      },
+      {
+        "time": "03:55",
+        "text": "因為 priority queue 插入跟刪除都落根"
+      },
+      {
+        "time": "03:58",
+        "text": "就是 n 就是裡面的數量"
+      },
+      {
+        "time": "03:59",
+        "text": "那所以整體來說"
+      },
+      {
+        "time": "04:00",
+        "text": "每一次每一個用戶新增一個 alert 進來"
+      },
+      {
+        "time": "04:03",
+        "text": "就是落根"
+      },
+      {
+        "time": "04:04",
+        "text": "每一筆資料進来我去扫过的话"
+      },
+      {
+        "time": "04:06",
+        "text": "因为取TAP而已"
+      },
+      {
+        "time": "04:07",
+        "text": "这是O1"
+      },
+      {
+        "time": "04:08",
+        "text": "但是我要把某笔资料"
+      },
+      {
+        "time": "04:10",
+        "text": "我要触发某一个LUR的话"
+      },
+      {
+        "time": "04:12",
+        "text": "那就是一次会有一个Logan"
+      },
+      {
+        "time": "04:13",
+        "text": "所以说你的意思是说"
+      },
+      {
+        "time": "04:14",
+        "text": "所有的用户的Subscription都会在那个Queue里面吗"
+      },
+      {
+        "time": "04:17",
+        "text": "对"
+      },
+      {
+        "time": "04:18",
+        "text": "那像这个Data Stream是可能"
+      },
+      {
+        "time": "04:19",
+        "text": "每秒会有几十个甚至上百个这个Price Action对不对"
+      },
+      {
+        "time": "04:23",
+        "text": "嗯"
+      },
+      {
+        "time": "04:23",
+        "text": "然后你每次进来你就要把你的Priority Queue給查找"
+      },
+      {
+        "time": "04:26",
+        "text": "就是前面幾個全部都找出來"
+      },
+      {
+        "time": "04:28",
+        "text": "因為我們可以用一個就是Map的東西去連接"
+      },
+      {
+        "time": "04:32",
+        "text": "就是某一個Ticker跟它相關的Alert"
+      },
+      {
+        "time": "04:35",
+        "text": "所以我們就是一筆資料Update進來的話"
+      },
+      {
+        "time": "04:37",
+        "text": "我們就只要找特定某一個Ticker的Priority Queue就好了"
+      },
+      {
+        "time": "04:40",
+        "text": "OK 所以就是你會有一個Hash Map"
+      },
+      {
+        "time": "04:42",
+        "text": "它的Key就是那個Ticker的名字"
+      },
+      {
+        "time": "04:44",
+        "text": "然後Value就是它的Priority Queue那如果是做就是你會有一個 Hash Map它的 Key 就是那個 Ticker 的名字然後 Value 就是它的 Priority Queue"
+      },
+      {
+        "time": "04:46",
+        "text": "那如果是設一個就是我要"
+      },
+      {
+        "time": "04:48",
+        "text": "Sold Alert 超過 100 塊"
+      },
+      {
+        "time": "04:49",
+        "text": "然後 Sold Alert 超過 120"
+      },
+      {
+        "time": "04:51",
+        "text": "這樣子我設兩個這個 Subscription 的話"
+      },
+      {
+        "time": "04:53",
+        "text": "你要怎麼 Handle 這個 Case"
+      },
+      {
+        "time": "04:54",
+        "text": "呃 這個 Case 我是要兩次都 Alert"
+      },
+      {
+        "time": "04:56",
+        "text": "還是我只要"
+      },
+      {
+        "time": "04:57",
+        "text": "我要清掉前面那一次"
+      },
+      {
+        "time": "04:59",
+        "text": "比如說我設 100 跟 120 嘛"
+      },
+      {
+        "time": "05:00",
+        "text": "它現在漲到 110 的話"
+      },
+      {
+        "time": "05:01",
+        "text": "那我那個 100 的那個就會被 Triggered 對不對"
+      },
+      {
+        "time": "05:04",
+        "text": "對"
+      },
+      {
+        "time": "05:04",
+        "text": "那如果它漲到 115 的話那你那個 100到110的话那我那个100的那个就会被trigger对不对那如果它涨到115的话"
+      },
+      {
+        "time": "05:06",
+        "text": "那你那个100已经trigger过"
+      },
+      {
+        "time": "05:08",
+        "text": "你就不会再trigger对不对"
+      },
+      {
+        "time": "05:10",
+        "text": "等于是涨超过120的时候"
+      },
+      {
+        "time": "05:12",
+        "text": "你才会再trigger一次"
+      },
+      {
+        "time": "05:14",
+        "text": "这样是ok的 我觉得这样可以的"
+      },
+      {
+        "time": "05:16",
+        "text": "ok那我们就开始"
+      },
+      {
+        "time": "05:18",
+        "text": "首先就会是一个soc alert"
+      },
+      {
+        "time": "05:20",
+        "text": "然后主要我们刚讨论主要会有"
+      },
+      {
+        "time": "05:22",
+        "text": "讲一下主要会有两个interface"
+      },
+      {
+        "time": "05:24",
+        "text": "一个是user设定某一個user設定一個 alert"
+      },
+      {
+        "time": "05:28",
+        "text": "他會去設 alert"
+      },
+      {
+        "time": "05:30",
+        "text": "然後可能會用到的東西就是"
+      },
+      {
+        "time": "05:33",
+        "text": "第一個是 user id"
+      },
+      {
+        "time": "05:34",
+        "text": "我可以假設 user id 是一個"
+      },
+      {
+        "time": "05:35",
+        "text": "他可能 user 會有一個 user id"
+      },
+      {
+        "time": "05:37",
+        "text": "然後他是一個整數"
+      },
+      {
+        "time": "05:38",
+        "text": "ok user id"
+      },
+      {
+        "time": "05:40",
+        "text": "然後他可能就會有一個股票"
+      },
+      {
+        "time": "05:42",
+        "text": "某一張股票的那個股票的 ticker"
+      },
+      {
+        "time": "05:44",
+        "text": "然後一個 price"
+      },
+      {
+        "time": "05:45",
+        "text": "那 price 是 integer 還是"
+      },
+      {
+        "time": "05:48",
+        "text": "我們就簡單就 integer 好了"
+      },
+      {
+        "time": "05:49",
+        "text": "這個時候就處理漲跌的"
+      },
+      {
+        "time": "05:51",
+        "text": "還是我們先做漲超過一定數值"
+      },
+      {
+        "time": "05:54",
+        "text": "我們就先簡化一點"
+      },
+      {
+        "time": "05:56",
+        "text": "我們就先做漲超過一定數值"
+      },
+      {
+        "time": "05:58",
+        "text": "等於說他漲超過這個 alert"
+      },
+      {
+        "time": "06:00",
+        "text": "這個 set alert 就是代表這個 user id"
+      },
+      {
+        "time": "06:02",
+        "text": "他設定某一個 ticker"
+      },
+      {
+        "time": "06:04",
+        "text": "如果他漲超過它設定的price的話"
+      },
+      {
+        "time": "06:06",
+        "text": "那我們就會發EleR給這個user"
+      },
+      {
+        "time": "06:09",
+        "text": "然後可能要定義一下就是"
+      },
+      {
+        "time": "06:12",
+        "text": "那個priority queue裡面存的格式"
+      },
+      {
+        "time": "06:14",
+        "text": "然後會有一個user的ID"
+      },
+      {
+        "time": "06:16",
+        "text": "然後會有一個price"
+      },
+      {
+        "time": "06:17",
+        "text": "然後因為priority queue要設定那個大小"
+      },
+      {
+        "time": "06:21",
+        "text": "我希望把設定的最大值拿出來"
+      },
+      {
+        "time": "06:24",
+        "text": "然後這邊是EleR data然後可能有一個initial的function那个大小我希望把设定的最大值拿出来就是然后这边是 alert data"
+      },
+      {
+        "time": "06:26",
+        "text": "然后可能有一个initial的function"
+      },
+      {
+        "time": "06:28",
+        "text": "就是主要是清空这些"
+      },
+      {
+        "time": "06:30",
+        "text": "对那我每次设定的话就是很简单"
+      },
+      {
+        "time": "06:33",
+        "text": "就是把就是把ticker的就是把某一只股票的"
+      },
+      {
+        "time": "06:36",
+        "text": "他设定的 alert"
+      },
+      {
+        "time": "06:37",
+        "text": "他设定那个 alert 的 user id 跟 price 加进去"
+      },
+      {
+        "time": "06:40",
+        "text": "所以那这样子我们就设定好"
+      },
+      {
+        "time": "06:42",
+        "text": "每一次 alert 发进来的时候"
+      },
+      {
+        "time": "06:44",
+        "text": "就是每一次 alert request 进来的时候我们就�設定好每一次Alert發進來的時候就是每一次Alert request進來的時候"
+      },
+      {
+        "time": "06:46",
+        "text": "我們就設定好它的"
+      },
+      {
+        "time": "06:48",
+        "text": "算它的Tracker這樣"
+      },
+      {
+        "time": "06:49",
+        "text": "對然後接下來就是"
+      },
+      {
+        "time": "06:51",
+        "text": "可能會有一個股票"
+      },
+      {
+        "time": "06:52",
+        "text": "價格update的Sys的Interface"
+      },
+      {
+        "time": "06:54",
+        "text": "那它的input可能就是"
+      },
+      {
+        "time": "06:56",
+        "text": "一個time step"
+      },
+      {
+        "time": "06:57",
+        "text": "就是剛剛這個格式"
+      },
+      {
+        "time": "06:59",
+        "text": "然後"
+      },
+      {
+        "time": "07:00",
+        "text": "那time step它會給的格式是"
+      },
+      {
+        "time": "07:02",
+        "text": "你可以用epock"
+      },
+      {
+        "time": "07:03",
+        "text": "那我先用stream好了"
+      },
+      {
+        "time": "07:04",
+        "text": "stream也可以對那可能就進來一筆block data對那這時候那Time Step它会给的格式是你可以用Epoch那我先用String好了String也可以对对String"
+      },
+      {
+        "time": "07:06",
+        "text": "那可能就进来一笔Stock Data"
+      },
+      {
+        "time": "07:08",
+        "text": "那这时候我们就去查找"
+      },
+      {
+        "time": "07:10",
+        "text": "这一笔Stock Data里面那个Ticker"
+      },
+      {
+        "time": "07:12",
+        "text": "那个Ticker的这个Priority Queue"
+      },
+      {
+        "time": "07:14",
+        "text": "等于说没新的Price进"
+      },
+      {
+        "time": "07:16",
+        "text": "新的就是股票的Data进来"
+      },
+      {
+        "time": "07:18",
+        "text": "我就Core一次这个Function"
+      },
+      {
+        "time": "07:19",
+        "text": "然后传一笔我update到多少"
+      },
+      {
+        "time": "07:21",
+        "text": "对然后这时候我们就可以看"
+      },
+      {
+        "time": "07:23",
+        "text": "这个先要判斷它是不是空的"
+      },
+      {
+        "time": "07:25",
+        "text": "而且它最上面的那一個的價錢"
+      },
+      {
+        "time": "07:29",
+        "text": "price是不是"
+      },
+      {
+        "time": "07:30",
+        "text": "我剛剛這邊好像講錯了"
+      },
+      {
+        "time": "07:32",
+        "text": "就是它應該是一個minimahip"
+      },
+      {
+        "time": "07:33",
+        "text": "就是因為它是我越price越小的會"
+      },
+      {
+        "time": "07:37",
+        "text": "越先額熱到"
+      },
+      {
+        "time": "07:38",
+        "text": "所以它如果它當下抓到的價錢"
+      },
+      {
+        "time": "07:40",
+        "text": "如果是小於等於我現在update的價錢的話"
+      },
+      {
+        "time": "07:43",
+        "text": "那我們就額熱那個用戶"
+      },
+      {
+        "time": "07:44",
+        "text": "send alert可能send alert是一個interface如果是小于等于我现在update的价钱的话那我们就 alert 那个用户Send Alert"
+      },
+      {
+        "time": "07:45",
+        "text": "可能Send Alert是一个 interface"
+      },
+      {
+        "time": "07:47",
+        "text": "就是我可以送指定的用户"
+      },
+      {
+        "time": "07:50",
+        "text": "然后我等比 stock data 给他"
+      },
+      {
+        "time": "07:52",
+        "text": "因为他里面应该就有他需要的资讯"
+      },
+      {
+        "time": "07:54",
+        "text": "就是 timestamp 然后 ticker 跟 price"
+      },
+      {
+        "time": "07:57",
+        "text": "那我们可以升级比测试资料给他"
+      },
+      {
+        "time": "07:59",
+        "text": "你的 priority queue 是怎么变动"
+      },
+      {
+        "time": "08:01",
+        "text": "对"
+      },
+      {
+        "time": "08:02",
+        "text": "然后他 alert 过了之后"
+      },
+      {
+        "time": "08:04",
+        "text": "priority queue 就会把上面的給 pop 掉"
+      },
+      {
+        "time": "08:06",
+        "text": "這樣子應該就沒有什麼問題"
+      },
+      {
+        "time": "08:07",
+        "text": "那我們可以升級筆測試資料給他"
+      },
+      {
+        "time": "08:09",
+        "text": "那可能第一個要測的就是"
+      },
+      {
+        "time": "08:11",
+        "text": "我如果直接 Update Ticker Price"
+      },
+      {
+        "time": "08:14",
+        "text": "但當下沒有任何 Alert 的 System 的話"
+      },
+      {
+        "time": "08:16",
+        "text": "就是沒有任何 Alert 的 Data 的話"
+      },
+      {
+        "time": "08:18",
+        "text": "他會發生什麼事情"
+      },
+      {
+        "time": "08:19",
+        "text": "因為他其實就是一個 System 嘛"
+      },
+      {
+        "time": "08:21",
+        "text": "那我們就一直重複做一些操作"
+      },
+      {
+        "time": "08:23",
+        "text": "對他一直做一些操作"
+      },
+      {
+        "time": "08:25",
+        "text": "然后接下来可能会有个user"
+      },
+      {
+        "time": "08:26",
+        "text": "设了一个alert"
+      },
+      {
+        "time": "08:27",
+        "text": "然后user id"
+      },
+      {
+        "time": "08:28",
+        "text": "我们就从1开始好了"
+      },
+      {
+        "time": "08:29",
+        "text": "那可能就设定125"
+      },
+      {
+        "time": "08:31",
+        "text": "然后我们可能就判"
+      },
+      {
+        "time": "08:32",
+        "text": "有一个测试资料"
+      },
+      {
+        "time": "08:33",
+        "text": "就是说如果现在"
+      },
+      {
+        "time": "08:34",
+        "text": "有一个低于它alert价钱的"
+      },
+      {
+        "time": "08:37",
+        "text": "data进来"
+      },
+      {
+        "time": "08:37",
+        "text": "它会发生什么事情"
+      },
+      {
+        "time": "08:38",
+        "text": "照这个目前情况来讲"
+      },
+      {
+        "time": "08:40",
+        "text": "它已经被alert过了"
+      },
+      {
+        "time": "08:41",
+        "text": "那我们如果再送一次"
+      },
+      {
+        "time": "08:43",
+        "text": "同一个价格的"
+      },
+      {
+        "time": "08:44",
+        "text": "它应该要"
+      },
+      {
+        "time": "08:44",
+        "text": "不会再alert一次所以这也是格的它應該要不會再額熱一次"
+      },
+      {
+        "time": "08:46",
+        "text": "所以這也是需要測試"
+      },
+      {
+        "time": "08:48",
+        "text": "然後再來就是"
+      },
+      {
+        "time": "08:50",
+        "text": "可能要測一下多用戶的"
+      },
+      {
+        "time": "08:52",
+        "text": "看會不會有額熱到錯誤的用戶"
+      },
+      {
+        "time": "08:54",
+        "text": "如果update到130的話"
+      },
+      {
+        "time": "08:56",
+        "text": "照理來講這兩筆都會被觸發"
+      },
+      {
+        "time": "08:58",
+        "text": "然後再幫第二個用戶去測試一下"
+      },
+      {
+        "time": "09:00",
+        "text": "然後再測一下就是"
+      },
+      {
+        "time": "09:02",
+        "text": "可能有兩筆資料但只有一筆資料會被觸發的情況"
+      },
+      {
+        "time": "09:04",
+        "text": "大概就这样"
+      },
+      {
+        "time": "09:05",
+        "text": "那整体复杂度"
+      },
+      {
+        "time": "09:06",
+        "text": "就是set alert一次"
+      },
+      {
+        "time": "09:07",
+        "text": "因为它第一个hash map"
+      },
+      {
+        "time": "09:09",
+        "text": "所以它大体上来讲是O1"
+      },
+      {
+        "time": "09:10",
+        "text": "那可能会有collision的情况"
+      },
+      {
+        "time": "09:12",
+        "text": "就是因为它是hash map"
+      },
+      {
+        "time": "09:15",
+        "text": "就是会有collision的情况"
+      },
+      {
+        "time": "09:16",
+        "text": "最差可能会到"
+      },
+      {
+        "time": "09:17",
+        "text": "所有股票现存"
+      },
+      {
+        "time": "09:19",
+        "text": "有设定 alert的股票"
+      },
+      {
+        "time": "09:21",
+        "text": "都会跑过一次"
+      },
+      {
+        "time": "09:21",
+        "text": "但平均来说是O1"
+      },
+      {
+        "time": "09:23",
+        "text": "然后一个priority queue他push進去就是"
+      },
+      {
+        "time": "09:26",
+        "text": "Olog"
+      },
+      {
+        "time": "09:27",
+        "text": "看他當下裡面有多少東西"
+      },
+      {
+        "time": "09:30",
+        "text": "那update的話"
+      },
+      {
+        "time": "09:31",
+        "text": "然後這邊用cobie reference"
+      },
+      {
+        "time": "09:33",
+        "text": "所以他兩個值要同一個東西"
+      },
+      {
+        "time": "09:35",
+        "text": "不會有cobie一個priority queue進來的情況"
+      },
+      {
+        "time": "09:37",
+        "text": "他取top是O1"
+      },
+      {
+        "time": "09:39",
+        "text": "所以等於說如果沒有pop值出去"
+      },
+      {
+        "time": "09:42",
+        "text": "他就是做一次就是O1"
+      },
+      {
+        "time": "09:43",
+        "text": "那如果只要有centENT一次的 alert 出來"
+      },
+      {
+        "time": "09:46",
+        "text": "他就會多一個Login"
+      },
+      {
+        "time": "09:47",
+        "text": "因為他PUB掉一個值"
+      },
+      {
+        "time": "09:48",
+        "text": "對PUB掉一個值的話"
+      },
+      {
+        "time": "09:50",
+        "text": "那個整個HIP HOP DAY就是Login"
+      },
+      {
+        "time": "09:52",
+        "text": "這個是可以的"
+      },
+      {
+        "time": "09:54",
+        "text": "那假如說"
+      },
+      {
+        "time": "09:55",
+        "text": "因為我們如果真的在設計一個這個系統的話"
+      },
+      {
+        "time": "09:58",
+        "text": "其實這個alert進來之後"
+      },
+      {
+        "time": "10:01",
+        "text": "用戶一般來講"
+      },
+      {
+        "time": "10:02",
+        "text": "他希望就是設這個alert"
+      },
+      {
+        "time": "10:04",
+        "text": "就是譬如說我設120"
+      },
+      {
+        "time": "10:06",
+        "text": "他也是到150之後"
+      },
+      {
+        "time": "10:07",
+        "text": "他之後點一下 點回100"
+      },
+      {
+        "time": "10:09",
+        "text": "然後他又到 又漲到超過100"
+      },
+      {
+        "time": "10:12",
+        "text": "那這樣的話我想得到"
+      },
+      {
+        "time": "10:13",
+        "text": "繼續得到 alert"
+      },
+      {
+        "time": "10:15",
+        "text": "就是我不需要重新再 subscribe"
+      },
+      {
+        "time": "10:17",
+        "text": "一個新的 alert"
+      },
+      {
+        "time": "10:18",
+        "text": "OK 好"
+      },
+      {
+        "time": "10:19",
+        "text": "那這樣的話"
+      },
+      {
+        "time": "10:20",
+        "text": "等於說我們不能直接把資料 pop 出去"
+      },
+      {
+        "time": "10:22",
+        "text": "因為 pop 出去的資料也是"
+      },
+      {
+        "time": "10:24",
+        "text": "未來可能會 rollback 回來的資料"
+      },
+      {
+        "time": "10:26",
+        "text": "對那這時候我們就可以用"
+      },
+      {
+        "time": "10:28",
+        "text": "再開另外一個 priority queue 去維護這個東西"
+      },
+      {
+        "time": "10:31",
+        "text": "那另外一個 priority queue 它可能就是會反過來的"
+      },
+      {
+        "time": "10:34",
+        "text": "就是它原本是 minima heap 後面會變 mesma heap"
+      },
+      {
+        "time": "10:38",
+        "text": "因為就是價格跌超過某一個時候"
+      },
+      {
+        "time": "10:41",
+        "text": "它就要把資料 pop 回來原本的 priority queue 裡面"
+      },
+      {
+        "time": "10:43",
+        "text": "哦所以你是說就是只要價格跌下去之後"
+      },
+      {
+        "time": "10:46",
+        "text": "你再把它放回"
+      },
+      {
+        "time": "10:47",
+        "text": "你第一個這個 Priority Queue 裡面"
+      },
+      {
+        "time": "10:49",
+        "text": "對"
+      },
+      {
+        "time": "10:49",
+        "text": "那如果它一直都沒有跌的話"
+      },
+      {
+        "time": "10:51",
+        "text": "你就不會放"
+      },
+      {
+        "time": "10:51",
+        "text": "譬如說它"
+      },
+      {
+        "time": "10:52",
+        "text": "它就漲120"
+      },
+      {
+        "time": "10:53",
+        "text": "然後130 140 150"
+      },
+      {
+        "time": "10:55",
+        "text": "就一直往上漲"
+      },
+      {
+        "time": "10:56",
+        "text": "你就不把它"
+      },
+      {
+        "time": "10:57",
+        "text": "你就永遠不會把它放回去"
+      },
+      {
+        "time": "10:58",
+        "text": "對"
+      },
+      {
+        "time": "10:58",
+        "text": "對 那它只會"
+      },
+      {
+        "time": "10:59",
+        "text": "那原本那個就是 Priority Queue"
+      },
+      {
+        "time": "11:02",
+        "text": "它只會一直增加"
+      },
+      {
+        "time": "11:02",
+        "text": "好 我直接加在裡面"
+      },
+      {
+        "time": "11:03",
+        "text": "就是"
+      },
+      {
+        "time": "11:04",
+        "text": "那可能就是另外一個 Priority Queue但它的條件增加好我直接加在裡面就是那可能就是另外一個Priority Queue"
+      },
+      {
+        "time": "11:06",
+        "text": "但它的條件會反過來"
+      },
+      {
+        "time": "11:08",
+        "text": "代表它已經是Errug過的Data"
+      },
+      {
+        "time": "11:09",
+        "text": "那這時候我們就把"
+      },
+      {
+        "time": "11:11",
+        "text": "那它這時候把它Pop掉了"
+      },
+      {
+        "time": "11:12",
+        "text": "那我們就把它Push進"
+      },
+      {
+        "time": "11:14",
+        "text": "這時候就把它"
+      },
+      {
+        "time": "11:15",
+        "text": "就把我Errug過的東西就加進那個"
+      },
+      {
+        "time": "11:17",
+        "text": "已經跳過Errug的Data"
+      },
+      {
+        "time": "11:19",
+        "text": "然後另外一個就是"
+      },
+      {
+        "time": "11:21",
+        "text": "我要把已經Errug過的Data"
+      },
+      {
+        "time": "11:22",
+        "text": "看要不要還原回來"
+      },
+      {
+        "time": "11:24",
+        "text": "就是它如果"
+      },
+      {
+        "time": "11:26",
+        "text": "我現在股票價格跌低於它的價錢的話"
+      },
+      {
+        "time": "11:29",
+        "text": "我就要把它Rowback回來"
+      },
+      {
+        "time": "11:30",
+        "text": "所以它就是它大於我現在股票的價格"
+      },
+      {
+        "time": "11:34",
+        "text": "我就把它放回去原本的"
+      },
+      {
+        "time": "11:35",
+        "text": "然後一樣因為它被使用過"
+      },
+      {
+        "time": "11:37",
+        "text": "所以要把它清掉"
+      },
+      {
+        "time": "11:38",
+        "text": "那這時候測試資料可能就看一下喔"
+      },
+      {
+        "time": "11:41",
+        "text": "就是我們要測試我們新家的東西"
+      },
+      {
+        "time": "11:43",
+        "text": "我額熱過130之後"
+      },
+      {
+        "time": "11:44",
+        "text": "它兩筆就會"
+      },
+      {
+        "time": "11:45",
+        "text": "這兩筆就會pop掉"
+      },
+      {
+        "time": "11:46",
+        "text": "那可能讓它降回去125"
+      },
+      {
+        "time": "11:49",
+        "text": "然後再升回去130"
+      },
+      {
+        "time": "11:50",
+        "text": "看是不是user3有被額熱到"
+      },
+      {
+        "time": "11:52",
+        "text": "大概是這樣"
+      },
+      {
+        "time": "11:53",
+        "text": "那也還是沒什麼問題"
+      },
+      {
+        "time": "11:54",
+        "text": "那另外我比較好奇的是"
+      },
+      {
+        "time": "11:56",
+        "text": "假如說現在我們"
+      },
+      {
+        "time": "11:57",
+        "text": "因為我們現在這個是"
+      },
+      {
+        "time": "11:59",
+        "text": "你現在是每一個Ticker"
+      },
+      {
+        "time": "12:00",
+        "text": "它存在一個HashMap的"
+      },
+      {
+        "time": "12:01",
+        "text": "在現實的情況下"
+      },
+      {
+        "time": "12:02",
+        "text": "你會怎麼設計這個系統"
+      },
+      {
+        "time": "12:04",
+        "text": "就是現實有增加的 limitation 是"
+      },
+      {
+        "time": "12:07",
+        "text": "像我們現在要查找嘛"
+      },
+      {
+        "time": "12:09",
+        "text": "那其實我們這個需要 alert"
+      },
+      {
+        "time": "12:13",
+        "text": "基本上是要 latency 要夠低嘛"
+      },
+      {
+        "time": "12:16",
+        "text": "就我們要"
+      },
+      {
+        "time": "12:16",
+        "text": "對那如果一個 pq 裡面有"
+      },
+      {
+        "time": "12:19",
+        "text": "好幾十萬個"
+      },
+      {
+        "time": "12:20",
+        "text": "甚至上百萬個 alert 的話"
+      },
+      {
+        "time": "12:22",
+        "text": "那首先我們能夠存下这么多alert吗"
+      },
+      {
+        "time": "12:25",
+        "text": "因为这个price action update是很快的"
+      },
+      {
+        "time": "12:27",
+        "text": "以一个现实情况下"
+      },
+      {
+        "time": "12:28",
+        "text": "我们可能每秒钟会有好几个update"
+      },
+      {
+        "time": "12:31",
+        "text": "对不对"
+      },
+      {
+        "time": "12:32",
+        "text": "那如果是这样的情况下"
+      },
+      {
+        "time": "12:34",
+        "text": "你的这个update ticker price"
+      },
+      {
+        "time": "12:37",
+        "text": "会被扣好几次"
+      },
+      {
+        "time": "12:38",
+        "text": "同时被扣好几次"
+      },
+      {
+        "time": "12:39",
+        "text": "因为我们现在这个"
+      },
+      {
+        "time": "12:40",
+        "text": "就这个in theory我觉得可以work"
+      },
+      {
+        "time": "12:43",
+        "text": "没有问题"
+      },
+      {
+        "time": "12:44",
+        "text": "那就是真的在�計這個系統的時候"
+      },
+      {
+        "time": "12:46",
+        "text": "你會考慮到怎麼樣去"
+      },
+      {
+        "time": "12:48",
+        "text": "你會把這些全部都還是放在一個server裡面嗎"
+      },
+      {
+        "time": "12:50",
+        "text": "還是你會怎麼樣去scale這個系統"
+      },
+      {
+        "time": "12:53",
+        "text": "如果說它這個update ticker price"
+      },
+      {
+        "time": "12:55",
+        "text": "每秒鐘被扣好幾"
+      },
+      {
+        "time": "12:56",
+        "text": "因為可能有好幾千個ticker"
+      },
+      {
+        "time": "12:58",
+        "text": "然後每個ticker"
+      },
+      {
+        "time": "12:59",
+        "text": "我大概懂你的意思"
+      },
+      {
+        "time": "13:01",
+        "text": "就是這樣子的話"
+      },
+      {
+        "time": "13:02",
+        "text": "我目前想到可能需要"
+      },
+      {
+        "time": "13:04",
+        "text": "我們可以用MatiSpreader去做一些優化"
+      },
+      {
+        "time": "13:06",
+        "text": "因為他同時call好幾個Ticker,那他可能call好幾次updateTickerPrice"
+      },
+      {
+        "time": "13:12",
+        "text": "但是每一次update可能是不同的Ticker,那如果兩個不同的Ticker我還要在同一個Threader上等"
+      },
+      {
+        "time": "13:19",
+        "text": "那可能不make sense,那可能這邊的話就可以做類似MatiThread的事情"
+      },
+      {
+        "time": "13:25",
+        "text": "那MatiThread可能就可以分散到其他Server上去做"
+      },
+      {
+        "time": "13:28",
+        "text": "所以你的意思就是你會把每一個Ticker分到不同的Server上面嗎"
+      },
+      {
+        "time": "13:32",
+        "text": "對"
+      },
+      {
+        "time": "13:33",
+        "text": "那你會怎麼去分"
+      },
+      {
+        "time": "13:34",
+        "text": "就是你會怎麼去做決定說這個Ticker要到這個Server上面"
+      },
+      {
+        "time": "13:39",
+        "text": "或這個Ticker要存在這個Server上面"
+      },
+      {
+        "time": "13:41",
+        "text": "因為我們希望每一個Server能盡量平均嘛"
+      },
+      {
+        "time": "13:44",
+        "text": "想到第一個最簡單的方法就是"
+      },
+      {
+        "time": "13:46",
+        "text": "我們每一個ticker可能給他一個"
+      },
+      {
+        "time": "13:48",
+        "text": "譬如說一個hash的value"
+      },
+      {
+        "time": "13:51",
+        "text": "然後可能我們有n台server"
+      },
+      {
+        "time": "13:53",
+        "text": "那我們就我們這個hash value就去mode這個n"
+      },
+      {
+        "time": "13:57",
+        "text": "那我們就mode出來的值就會看到"
+      },
+      {
+        "time": "13:58",
+        "text": "看他會落在哪一個server上"
+      },
+      {
+        "time": "14:01",
+        "text": "ok就簡單的做一個平均"
+      },
+      {
+        "time": "14:03",
+        "text": "就是期望上會平均的分配這樣"
+      },
+      {
+        "time": "14:06",
+        "text": "那這樣的話一般來講有沒有什麼問題"
+      },
+      {
+        "time": "14:09",
+        "text": "因為在這次的情況下"
+      },
+      {
+        "time": "14:11",
+        "text": "它會出現一些情況"
+      },
+      {
+        "time": "14:13",
+        "text": "比如說某些TICKER可能很多人用"
+      },
+      {
+        "time": "14:16",
+        "text": "對 因為我剛剛只考慮TICKER的平均分配TICKER"
+      },
+      {
+        "time": "14:20",
+        "text": "但是有些TICKER可能價格變動比較頻繁"
+      },
+      {
+        "time": "14:23",
+        "text": "那有些TICKER可能價格變動沒那麼頻繁"
+      },
+      {
+        "time": "14:27",
+        "text": "那如果這個就變成"
+      },
+      {
+        "time": "14:31",
+        "text": "我會預先知道哪一個Ticker預期被call過幾次"
+      },
+      {
+        "time": "14:34",
+        "text": "還是我要動態去調整"
+      },
+      {
+        "time": "14:36",
+        "text": "你知道某些Ticker比較熱門的情況下"
+      },
+      {
+        "time": "14:40",
+        "text": "你可能會需要把它再分散給更多其他的Server"
+      },
+      {
+        "time": "14:44",
+        "text": "比如說很多人設了特斯拉的Alert你可能會需要把它再分散給更多其他Server來Handle"
+      },
+      {
+        "time": "14:45",
+        "text": "譬如說像假如說很多人設這個特斯拉的這個Alert"
+      },
+      {
+        "time": "14:49",
+        "text": "在你的System裡面你要Skill的話"
+      },
+      {
+        "time": "14:52",
+        "text": "你會需要給這個Server更多的Resource"
+      },
+      {
+        "time": "14:55",
+        "text": "或是說你可以有更多的Server來Handle這個特斯拉的Alert"
+      },
+      {
+        "time": "15:00",
+        "text": "那可能比較冷門的一些Ticker沒有人設Alert"
+      },
+      {
+        "time": "15:03",
+        "text": "你就可以把它們全部都放在同一個Server裡面"
+      },
+      {
+        "time": "15:05",
+        "text": "那可能就是我們要去計算說某一個Ticker它被設定過幾次"
+      },
+      {
+        "time": "15:12",
+        "text": "然後照設定的次數去做排序之類的"
+      },
+      {
+        "time": "15:17",
+        "text": "然後可能設定譬如說前幾熱門的"
+      },
+      {
+        "time": "15:20",
+        "text": "我們可能可以單獨給它一個Server"
+      },
+      {
+        "time": "15:22",
+        "text": "關於這個設計如果說�說比如說特斯拉這個Ticker"
+      },
+      {
+        "time": "15:25",
+        "text": "每秒我被update"
+      },
+      {
+        "time": "15:27",
+        "text": "就Price這個Action Update"
+      },
+      {
+        "time": "15:29",
+        "text": "大概有好幾"
+      },
+      {
+        "time": "15:30",
+        "text": "比如說上百個update"
+      },
+      {
+        "time": "15:31",
+        "text": "可能每秒有十個好了"
+      },
+      {
+        "time": "15:34",
+        "text": "十個update"
+      },
+      {
+        "time": "15:35",
+        "text": "那這樣的話會不會造成任何問題"
+      },
+      {
+        "time": "15:37",
+        "text": "就是以你現在的設計來看的話"
+      },
+      {
+        "time": "15:39",
+        "text": "比如說我有"
+      },
+      {
+        "time": "15:40",
+        "text": "你的PQ裡面有十萬個Alert"
+      },
+      {
+        "time": "15:42",
+        "text": "那你的這個特斯拉Update"
+      },
+      {
+        "time": "15:43",
+        "text": "同時在一秒內有10個Price Action"
+      },
+      {
+        "time": "15:46",
+        "text": "它可能譬如說它在兩個數字之間跳動"
+      },
+      {
+        "time": "15:48",
+        "text": "那User可能一下跌回去又會被"
+      },
+      {
+        "time": "15:51",
+        "text": "就是Alert又被還原回去"
+      },
+      {
+        "time": "15:53",
+        "text": "然後漲上來又被Alert一次"
+      },
+      {
+        "time": "15:54",
+        "text": "那可能某一個User會"
+      },
+      {
+        "time": "15:56",
+        "text": "如果設定了兩個價錢"
+      },
+      {
+        "time": "15:57",
+        "text": "設定了一個價錢"
+      },
+      {
+        "time": "15:59",
+        "text": "它可能在某一個時間點"
+      },
+      {
+        "time": "16:00",
+        "text": "突然被Alert了好幾次"
+      },
+      {
+        "time": "16:02",
+        "text": "對 這個是有可能的"
+      },
+      {
+        "time": "16:03",
+        "text": "我的意思說就是"
+      },
+      {
+        "time": "16:04",
+        "text": "像在你的well loop裡面"
+      },
+      {
+        "time": "16:06",
+        "text": "你要把你的priority queue一直跑跑跑出來"
+      },
+      {
+        "time": "16:09",
+        "text": "你要一直檢查"
+      },
+      {
+        "time": "16:11",
+        "text": "那比如說你在這個operation完成之前"
+      },
+      {
+        "time": "16:15",
+        "text": "你就有另外一個thread進來說我要update"
+      },
+      {
+        "time": "16:17",
+        "text": "就是我剛剛應該有說到"
+      },
+      {
+        "time": "16:19",
+        "text": "就是我同一個ticker"
+      },
+      {
+        "time": "16:21",
+        "text": "它可能同時只能被一個Threader給存取"
+      },
+      {
+        "time": "16:25",
+        "text": "所以就是說,你必須等到這個Threader完成之後"
+      },
+      {
+        "time": "16:30",
+        "text": "你再等下一個,再去process下一個request"
+      },
+      {
+        "time": "16:34",
+        "text": "對"
+      },
+      {
+        "time": "16:34",
+        "text": "我只是想大家了解一下,真實情況啦"
+      },
+      {
+        "time": "16:38",
+        "text": "假如說在設計這個系統"
+      },
+      {
+        "time": "16:40",
+        "text": "因為我們扣可能還有9分鐘"
+      },
+      {
+        "time": "16:44",
+        "text": "結果不要讓影片太長"
+      },
+      {
+        "time": "16:46",
+        "text": "要聊太久很難剪"
+      },
+      {
+        "time": "16:47",
+        "text": "對"
+      },
+      {
+        "time": "16:49",
+        "text": "OK"
+      },
+      {
+        "time": "16:50",
+        "text": "我覺得總括來說"
+      },
+      {
+        "time": "16:51",
+        "text": "就是Coding的方面"
+      },
+      {
+        "time": "16:52",
+        "text": "絕對沒有什麼問題"
+      },
+      {
+        "time": "16:54",
+        "text": "然後我覺得"
+      },
+      {
+        "time": "16:55",
+        "text": "就是你的思路很清楚"
+      },
+      {
+        "time": "16:56",
+        "text": "就是你知道"
+      },
+      {
+        "time": "16:58",
+        "text": "而且很快"
+      },
+      {
+        "time": "16:58",
+        "text": "就是馬上就可以"
+      },
+      {
+        "time": "17:00",
+        "text": "知道用Priority Queue"
+      },
+      {
+        "time": "17:02",
+        "text": "我一開始想的是"
+      },
+      {
+        "time": "17:03",
+        "text": "用個什麼Binary Search之類的"
+      },
+      {
+        "time": "17:06",
+        "text": "對阿,因為Binary Search的問題就是"
+      },
+      {
+        "time": "17:08",
+        "text": "你插入跟刪除"
+      },
+      {
+        "time": "17:10",
+        "text": "刪除很麻煩,插入也很麻煩"
+      },
+      {
+        "time": "17:12",
+        "text": "對阿,然後Complexity也是"
+      },
+      {
+        "time": "17:14",
+        "text": "應該是最優解的,我想不到還有什麼"
+      },
+      {
+        "time": "17:16",
+        "text": "可以比這還要更優化"
+      },
+      {
+        "time": "17:18",
+        "text": "我覺得應該有辦法證明"
+      },
+      {
+        "time": "17:20",
+        "text": "它已經是最優"
+      },
+      {
+        "time": "17:22",
+        "text": "因為它有一個比較大小的問題在"
+      },
+      {
+        "time": "17:24",
+        "text": "本來想說有一點時間是可以"
+      },
+      {
+        "time": "17:26",
+        "text": "聊一下系統設計"
+      },
+      {
+        "time": "17:27",
+        "text": "因為我覺得這一道題在"
+      },
+      {
+        "time": "17:29",
+        "text": "在 System Design 裡面應該會更"
+      },
+      {
+        "time": "17:31",
+        "text": "對我覺得在 System Design 上面會"
+      },
+      {
+        "time": "17:33",
+        "text": "更好一點"
+      },
+      {
+        "time": "17:34",
+        "text": "但因為我"
+      },
+      {
+        "time": "17:36",
+        "text": "真的沒有面過系統設計"
+      },
+      {
+        "time": "17:38",
+        "text": "哦"
+      },
+      {
+        "time": "17:39",
+        "text": "對"
+      },
+      {
+        "time": "17:41",
+        "text": "就是我也不知道系統設計開考慮的點"
+      },
+      {
+        "time": "17:43",
+        "text": "在哪裡"
+      },
+      {
+        "time": "17:44",
+        "text": "嗯嗯嗯因為我觉得面试"
+      },
+      {
+        "time": "17:46",
+        "text": "面试比起真实的那个"
+      },
+      {
+        "time": "17:48",
+        "text": "因为面试可能需要"
+      },
+      {
+        "time": "17:49",
+        "text": "你在短时间内"
+      },
+      {
+        "time": "17:50",
+        "text": "点出很多重点"
+      },
+      {
+        "time": "17:51",
+        "text": "在你面Google的时候"
+      },
+      {
+        "time": "17:52",
+        "text": "没有考系统设计吗"
+      },
+      {
+        "time": "17:54",
+        "text": "因为我面"
+      },
+      {
+        "time": "17:54",
+        "text": "我面的时候"
+      },
+      {
+        "time": "17:55",
+        "text": "我是New Grade就进去了"
+      },
+      {
+        "time": "17:56",
+        "text": "所以不会考到系统设计"
+      },
+      {
+        "time": "17:58",
+        "text": "OKOK"
+      },
+      {
+        "time": "17:59",
+        "text": "了解了解"
+      },
+      {
+        "time": "17:59",
+        "text": "大概有感觉"
+      },
+      {
+        "time": "18:01",
+        "text": "就是好像"
+      },
+      {
+        "time": "18:01",
+        "text": "就是系统设计这方面"
+      },
+      {
+        "time": "18:03",
+        "text": "就是好像你没有"
+      },
+      {
+        "time": "18:04",
+        "text": "特别去练习过针对这种面试的题目还是要练习过因为不是说把答案大概有感覺就是好像就是就是系統設計這方面就是好像你沒有特別去練習過"
+      },
+      {
+        "time": "18:06",
+        "text": "針對這種面試的題目還是要練習過"
+      },
+      {
+        "time": "18:08",
+        "text": "因為不是說把答案打出來就好了"
+      },
+      {
+        "time": "18:10",
+        "text": "我們中間還要溝通"
+      },
+      {
+        "time": "18:12",
+        "text": "我們還要訂好 interface"
+      },
+      {
+        "time": "18:13",
+        "text": "就是訂好一些 protocols 類的"
+      },
+      {
+        "time": "18:16",
+        "text": "對我覺得真的在練習上跟"
+      },
+      {
+        "time": "18:19",
+        "text": "真實面試差比較多的地方"
+      },
+      {
+        "time": "18:21",
+        "text": "對我覺得蠻厲害的就是"
+      },
+      {
+        "time": "18:22",
+        "text": "coding 這方面覺得是沒有問題"
+      },
+      {
+        "time": "18:24",
+        "text": "對你還有沒有其他公司嗎當時"
+      },
+      {
+        "time": "18:26",
+        "text": "當時我有"
+      },
+      {
+        "time": "18:27",
+        "text": "我有面過一家Quant"
+      },
+      {
+        "time": "18:29",
+        "text": "我有面過WorldQuant"
+      },
+      {
+        "time": "18:30",
+        "text": "嗯"
+      },
+      {
+        "time": "18:31",
+        "text": "對但是那時候他們比較想要找有"
+      },
+      {
+        "time": "18:33",
+        "text": "記憶學習背景"
+      },
+      {
+        "time": "18:34",
+        "text": "所以雖然他們"
+      },
+      {
+        "time": "18:36",
+        "text": "面試的題目我都"
+      },
+      {
+        "time": "18:37",
+        "text": "很完美的解掉但是他們還是希望找有"
+      },
+      {
+        "time": "18:40",
+        "text": "那個記憶學習相關"
+      },
+      {
+        "time": "18:42",
+        "text": "對"
+      },
+      {
+        "time": "18:43",
+        "text": "然後那時候還有變過 Amazon"
+      },
+      {
+        "time": "18:45",
+        "text": "但是它結果出來的時候"
+      },
+      {
+        "time": "18:47",
+        "text": "我已經拿到 Google Offer 了"
+      },
+      {
+        "time": "18:49",
+        "text": "所以就沒有記憶學"
+      },
+      {
+        "time": "18:51",
+        "text": "OK 那希望今天這集影片呢"
+      },
+      {
+        "time": "18:52",
+        "text": "大家有學到一點東西"
+      },
+      {
+        "time": "18:54",
+        "text": "也非常感謝 Hank 抽空來跟我做這個模擬面試"
+      },
+      {
+        "time": "18:57",
+        "text": "如果大家覺得有幫助的話"
+      },
+      {
+        "time": "18:59",
+        "text": "記得要幫影片點個讚"
+      },
+      {
+        "time": "19:00",
+        "text": "也給 Hank 點個讚"
+      },
+      {
+        "time": "19:01",
+        "text": "那如果你也像我一樣"
+      },
+      {
+        "time": "19:03",
+        "text": "內向不想要去跟真人去练习口语的话"
+      },
+      {
+        "time": "19:05",
+        "text": "一定要去试试看Elsa Speak"
+      },
+      {
+        "time": "19:07",
+        "text": "这个APP用AI来帮你找出"
+      },
+      {
+        "time": "19:09",
+        "text": "英语发音跟口说的错误"
+      },
+      {
+        "time": "19:11",
+        "text": "它会根据你的发音"
+      },
+      {
+        "time": "19:12",
+        "text": "每一个音节的语调"
+      },
+      {
+        "time": "19:14",
+        "text": "流利程度"
+      },
+      {
+        "time": "19:15",
+        "text": "跟母语人士的英文比较"
+      },
+      {
+        "time": "19:17",
+        "text": "然后给你一个精确的反馈"
+      },
+      {
+        "time": "19:19",
+        "text": "那除了发音跟语调之外呢"
+      },
+      {
+        "time": "19:21",
+        "text": "日常生活跟工作中会遇到的词汇"
+      },
+      {
+        "time": "19:23",
+        "text": "跟语句呢都会练习到APP上面呢有超过40个主题1600个课程除了發音與語調之外日常生活與工作中會遇到的詞彙與語句都會練習到"
+      },
+      {
+        "time": "19:26",
+        "text": "APP上面有超過40個主題"
+      },
+      {
+        "time": "19:28",
+        "text": "1600個課程"
+      },
+      {
+        "time": "19:30",
+        "text": "比如說我們今天來選一個Machine Learning的主題"
+      },
+      {
+        "time": "19:45",
+        "text": "I doubt anyone has more exciting news than thatOK那现在扫这个QR code"
+      },
+      {
+        "time": "19:48",
+        "text": "或是用这个连结呢"
+      },
+      {
+        "time": "19:49",
+        "text": "就可以免费的下载Elsa Speak"
+      },
+      {
+        "time": "19:51",
+        "text": "还有7天的专业版可以免费试用"
+      },
+      {
+        "time": "19:54",
+        "text": "那用完之后呢"
+      },
+      {
+        "time": "19:55",
+        "text": "如果你觉得喜欢"
+      },
+      {
+        "time": "19:56",
+        "text": "你觉得真的有帮助到你的话"
+      },
+      {
+        "time": "19:57",
+        "text": "记得一定要用我的专属连结"
+      },
+      {
+        "time": "19:59",
+        "text": "就可以享有专业版的年费6折"
+      },
+      {
+        "time": "20:01",
+        "text": "或是终身会员1.5折的优惠"
+      },
+      {
+        "time": "20:04",
+        "text": "我觉得APP做得真的很不錯"
+      },
+      {
+        "time": "20:06",
+        "text": "大家可以去試試看"
+      },
+      {
+        "time": "20:07",
+        "text": "那最後也感謝Jonathan"
+      },
+      {
+        "time": "20:08",
+        "text": "才有機會認識到Hank"
+      },
+      {
+        "time": "20:10",
+        "text": "所以大家也可以去關注一下Jonathan的頻道"
+      },
+      {
+        "time": "20:12",
+        "text": "他之前也邀請了凱西林去他的頻道"
+      },
+      {
+        "time": "20:14",
+        "text": "做了一集模擬面試"
+      },
+      {
+        "time": "20:16",
+        "text": "大家如果有興趣的話可以去看一下"
+      },
+      {
+        "time": "20:18",
+        "text": "我會把連結放影片底下的資訊欄"
+      },
+      {
+        "time": "20:20",
+        "text": "那我們下次見囉"
+      }
+    ]
+  },
+  "raw_provider_payload": {
+    "actual_url": "https://youtu.be/OsNSj3qpPY0",
+    "content": "",
+    "conversation_id": "",
+    "cover": "https://i.ytimg.com/vi/OsNSj3qpPY0/sddefault.jpg",
+    "createdAt": 1783958192742,
+    "expiresAt": 1784130995871,
+    "historyScope": "/youtube-subtitle-downloader/",
+    "id": "/youtube-subtitle-downloader/:1:1:OsNSj3qpPY0",
+    "mindMap": "",
+    "notes": [],
+    "overviewData": {
+      "overview": "這集影片以模擬面試形式，邀請現任 Google 工程師 Hank 解析如何設計一個股票價格 Alert 系統，從需求定義、資料結構選擇到多使用者與高頻更新下的擴展性都進行討論。面試過程中也延伸到系統設計在真實面試中的考點差異，以及如何用 Priority Queue、Hash Map 與分散式思維處理即時通知問題。影片前後還穿插了 Elsa Speak 的 AI 英語口說練習推薦與專屬優惠介紹。",
+      "tags": [
+        "#模擬面試",
+        "#系統設計",
+        "#股票提醒系統",
+        "#PriorityQueue",
+        "#Google工程師",
+        "#求職面試",
+        "#AI口說練習",
+        "#ElsaSpeak"
+      ]
+    },
+    "platform": "1",
+    "remoteNoteArtifactIds": {},
+    "routeType": "subtitle",
+    "sourceKey": "/youtube-subtitle-downloader/:1:1:OsNSj3qpPY0",
+    "subtitles": [
+      {
+        "text": "哈囉大家好我是Terry",
+        "time": "00:00"
+      },
+      {
+        "text": "今天這集影片呢",
+        "time": "00:01"
+      },
+      {
+        "text": "特別邀請了Hank",
+        "time": "00:02"
+      },
+      {
+        "text": "來跟我做一集模擬面試",
+        "time": "00:03"
+      },
+      {
+        "text": "那Hank他的來頭可不小喔",
+        "time": "00:05"
+      },
+      {
+        "text": "現在在Google當工程師",
+        "time": "00:07"
+      },
+      {
+        "text": "曾經是ICPC世界第五名",
+        "time": "00:09"
+      },
+      {
+        "text": "還得過很多獎",
+        "time": "00:11"
+      },
+      {
+        "text": "所以說希望可以透過今天這集的模擬面試",
+        "time": "00:12"
+      },
+      {
+        "text": "大家可以跟Hank學到一點東西",
+        "time": "00:15"
+      },
+      {
+        "text": "那在模擬面試開始之前呢",
+        "time": "00:17"
+      },
+      {
+        "text": "其實我跟Hank兩個人並不認識",
+        "time": "00:19"
+      },
+      {
+        "text": "我跟他也沒有講過話",
+        "time": "00:21"
+      },
+      {
+        "text": "我們是透過一個中間的朋友認識的",
+        "time": "00:22"
+      },
+      {
+        "text": "所以說面試之前呢",
+        "time": "00:24"
+      },
+      {
+        "text": "Hank是不知道我要考什麼的",
+        "time": "00:25"
+      },
+      {
+        "text": "其實我也不知道要考什麼",
+        "time": "00:27"
+      },
+      {
+        "text": "我也不想要考Liqo的題目",
+        "time": "00:28"
+      },
+      {
+        "text": "我覺得考Liqo沒有什麼太大意義",
+        "time": "00:30"
+      },
+      {
+        "text": "所以我就看一下我手機當下在用什麼APP",
+        "time": "00:32"
+      },
+      {
+        "text": "就以那個APP為主題呢",
+        "time": "00:34"
+      },
+      {
+        "text": "去出了一道題",
+        "time": "00:36"
+      },
+      {
+        "text": "那我們就來看一下",
+        "time": "00:37"
+      },
+      {
+        "text": "算法競賽的得獎者Hank",
+        "time": "00:38"
+      },
+      {
+        "text": "面對這種現實生活中的應用問題",
+        "time": "00:40"
+      },
+      {
+        "text": "而非Liqo的問題",
+        "time": "00:42"
+      },
+      {
+        "text": "他是怎麼去解決的那在影片開始之前呢",
+        "time": "00:43"
+      },
+      {
+        "text": "跟大家分享一個很適合我們在科技業工作",
+        "time": "00:46"
+      },
+      {
+        "text": "練習英語口語的App",
+        "time": "00:49"
+      },
+      {
+        "text": "叫做ElsaSpeak",
+        "time": "00:51"
+      },
+      {
+        "text": "它是一款用AI來幫你專門練習英語口說的App",
+        "time": "00:52"
+      },
+      {
+        "text": "我覺得它最厲害的是可以精準的找到",
+        "time": "00:55"
+      },
+      {
+        "text": "並糾正我英語發音不標準的地方",
+        "time": "00:58"
+      },
+      {
+        "text": "那還有很多情境口語練習",
+        "time": "01:06"
+      },
+      {
+        "text": "讓AI提供我及時的反饋跟建議",
+        "time": "01:08"
+      },
+      {
+        "text": "我覺得是未來練習英文最好的方式之一",
+        "time": "01:11"
+      },
+      {
+        "text": "現在終於有AI工具可以把英文練習",
+        "time": "01:14"
+      },
+      {
+        "text": "變得超簡單",
+        "time": "01:16"
+      },
+      {
+        "text": "那更多關於ElsaSpeak",
+        "time": "01:18"
+      },
+      {
+        "text": "跟他給頻道觀眾的專屬優惠呢",
+        "time": "01:19"
+      },
+      {
+        "text": "我會在影片最後再跟大家分享",
+        "time": "01:22"
+      },
+      {
+        "text": "那廢話不多說我們就直接開始面試",
+        "time": "01:24"
+      },
+      {
+        "text": "今天的題目呢我們要設計一個",
+        "time": "01:26"
+      },
+      {
+        "text": "股票的Alert系統",
+        "time": "01:28"
+      },
+      {
+        "text": "就是你知道股票不是會有",
+        "time": "01:30"
+      },
+      {
+        "text": "譬如說你用一個股票的App比如說Yahoo的",
+        "time": "01:32"
+      },
+      {
+        "text": "Yahoo Finance或是之類",
+        "time": "01:34"
+      },
+      {
+        "text": "就是那種Trading App你可以設",
+        "time": "01:36"
+      },
+      {
+        "text": "譬如說蘋果漲到多少錢的時候",
+        "time": "01:38"
+      },
+      {
+        "text": "我要得到一個Alert之類的",
+        "time": "01:40"
+      },
+      {
+        "text": "OK",
+        "time": "01:42"
+      },
+      {
+        "text": "或是說跌到多少錢的時候跌低於100塊的時候我要得到一個 alert 之類的OK對或是說跌到多少錢的時候",
+        "time": "01:44"
+      },
+      {
+        "text": "OK",
+        "time": "01:45"
+      },
+      {
+        "text": "比如說跌到",
+        "time": "01:45"
+      },
+      {
+        "text": "跌低於 100 塊的時候我要得到一個 alert",
+        "time": "01:46"
+      },
+      {
+        "text": "或是",
+        "time": "01:48"
+      },
+      {
+        "text": "或是漲超過 150 的時候我要得到一個 alert",
+        "time": "01:49"
+      },
+      {
+        "text": "類似這樣子一個系統",
+        "time": "01:52"
+      },
+      {
+        "text": "OK",
+        "time": "01:53"
+      },
+      {
+        "text": "就它可以設某一張股票",
+        "time": "01:53"
+      },
+      {
+        "text": "譬如說它超過多少點的時候 alert",
+        "time": "01:56"
+      },
+      {
+        "text": "或是跌低於多少點的時候 alert",
+        "time": "01:58"
+      },
+      {
+        "text": "對它可以設一個 ticker",
+        "time": "02:00"
+      },
+      {
+        "text": "比如說",
+        "time": "02:01"
+      },
+      {
+        "text": "蘋果或是台積電或者是說",
+        "time": "02:02"
+      },
+      {
+        "text": "麥當勞然後漲到多少我要得劳然后涨到多少我要得到一个 alert",
+        "time": "02:04"
+      },
+      {
+        "text": "跌到多少我要得到一个 alert",
+        "time": "02:07"
+      },
+      {
+        "text": "系统呢会收到这些 price 的 update 对不对",
+        "time": "02:08"
+      },
+      {
+        "text": "你需要一个它是一个 data stream 进来",
+        "time": "02:11"
+      },
+      {
+        "text": "这个时间点几点几分在几秒",
+        "time": "02:13"
+      },
+      {
+        "text": "现在这个 price 多少",
+        "time": "02:15"
+      },
+      {
+        "text": "然后这个 ticker 是多少",
+        "time": "02:16"
+      },
+      {
+        "text": "是苹果还是什么股票",
+        "time": "02:17"
+      },
+      {
+        "text": "嗯",
+        "time": "02:19"
+      },
+      {
+        "text": "然后举个例子我把它写在这个 Google Docs 上好了",
+        "time": "02:19"
+      },
+      {
+        "text": "对根据这样子你要怎么去设计你的系统",
+        "time": "02:22"
+      },
+      {
+        "text": "可以让你随时给你的用户去报这些Alert",
+        "time": "02:25"
+      },
+      {
+        "text": "只需要handle",
+        "time": "02:29"
+      },
+      {
+        "text": "考虑一个客户的情况还是要考虑很多客户的情况",
+        "time": "02:30"
+      },
+      {
+        "text": "要考虑很多客户的情况",
+        "time": "02:33"
+      },
+      {
+        "text": "就是你可能会有几万甚至几十万的用户",
+        "time": "02:34"
+      },
+      {
+        "text": "对",
+        "time": "02:37"
+      },
+      {
+        "text": "有些用户可能会用到上百个Alert",
+        "time": "02:37"
+      },
+      {
+        "text": "现在如果要Alert这个用户",
+        "time": "02:39"
+      },
+      {
+        "text": "我需要给他的资讯有什么",
+        "time": "02:41"
+      },
+      {
+        "text": "是就可能通知某个用户",
+        "time": "02:42"
+      },
+      {
+        "text": "然后是哪一支股票",
+        "time": "02:44"
+      },
+      {
+        "text": "現在多少價錢給他還是",
+        "time": "02:46"
+      },
+      {
+        "text": "嗯你只要通知那個用戶",
+        "time": "02:48"
+      },
+      {
+        "text": "然後跟他說",
+        "time": "02:49"
+      },
+      {
+        "text": "哎現在有這個你當時 subscribe",
+        "time": "02:50"
+      },
+      {
+        "text": "譬如說他是 subscribe",
+        "time": "02:52"
+      },
+      {
+        "text": "譬如說超過80一股的話",
+        "time": "02:53"
+      },
+      {
+        "text": "我就要得到這個 alarm",
+        "time": "02:55"
+      },
+      {
+        "text": "你就跟他說",
+        "time": "02:56"
+      },
+      {
+        "text": "哎現在這個已經超過80塊錢了",
+        "time": "02:57"
+      },
+      {
+        "text": "等於說呃如果現在漲超過一次",
+        "time": "02:59"
+      },
+      {
+        "text": "譬如說我現在你現在設定 tesla",
+        "time": "03:01"
+      },
+      {
+        "text": "他超過120",
+        "time": "03:03"
+      },
+      {
+        "text": "那他如果漲超過一次譬如說他現在跳到130了然後他又又有一筆資料 update 進來一次譬如說你現在設定 Tesla 它超過 120那它如果漲超過一次",
+        "time": "03:03"
+      },
+      {
+        "text": "譬如說它現在跳到 130 了",
+        "time": "03:05"
+      },
+      {
+        "text": "然後它又有一筆資料 Update 進來變譬如說 125",
+        "time": "03:06"
+      },
+      {
+        "text": "那我還要再 Alert 一次",
+        "time": "03:09"
+      },
+      {
+        "text": "還是 Alert 過了就不用再 Alert",
+        "time": "03:10"
+      },
+      {
+        "text": "對 這個就看你要怎麼去設計吧",
+        "time": "03:11"
+      },
+      {
+        "text": "我覺得目前第一個版本的話",
+        "time": "03:14"
+      },
+      {
+        "text": "我們先處理 Alert 過一次就不要再 Alert 了",
+        "time": "03:15"
+      },
+      {
+        "text": "因為它可能用戶已經會做一些新的操作",
+        "time": "03:18"
+      },
+      {
+        "text": "它可能就會重新設定 Alert",
+        "time": "03:21"
+      },
+      {
+        "text": "所以我覺得這是一個比較合理的user scenario",
+        "time": "03:22"
+      },
+      {
+        "text": "然后这部分的话",
+        "time": "03:25"
+      },
+      {
+        "text": "因为其实这个东西就是",
+        "time": "03:26"
+      },
+      {
+        "text": "我们可以用一个priority queue去做",
+        "time": "03:27"
+      },
+      {
+        "text": "对那我们把每一个用户的价钱",
+        "time": "03:29"
+      },
+      {
+        "text": "丢进priority queue里面",
+        "time": "03:31"
+      },
+      {
+        "text": "然后那我们priority queue可能",
+        "time": "03:33"
+      },
+      {
+        "text": "有一个MathMath heap",
+        "time": "03:34"
+      },
+      {
+        "text": "跟一个MiniMath heap",
+        "time": "03:36"
+      },
+      {
+        "text": "那如果这个",
+        "time": "03:37"
+      },
+      {
+        "text": "譬如说以MathMath heap来讲",
+        "time": "03:38"
+      },
+      {
+        "text": "MathMath heap的top",
+        "time": "03:40"
+      },
+      {
+        "text": "如果超过用户设定的值的话",
+        "time": "03:41"
+      },
+      {
+        "text": "那代表说这一笔",
+        "time": "03:43"
+      },
+      {
+        "text": "这一笔alert已經被觸發了",
+        "time": "03:44"
+      },
+      {
+        "text": "我們就可以把這一筆 return 出去",
+        "time": "03:46"
+      },
+      {
+        "text": "所以主要就是如果要維護漲幅跟跌幅的話",
+        "time": "03:47"
+      },
+      {
+        "text": "我們就需要兩個 priority queue",
+        "time": "03:51"
+      },
+      {
+        "text": "去handle這件事情",
+        "time": "03:52"
+      },
+      {
+        "text": "每一次操作的話就是",
+        "time": "03:53"
+      },
+      {
+        "text": "因為 priority queue 插入跟刪除都落根",
+        "time": "03:55"
+      },
+      {
+        "text": "就是 n 就是裡面的數量",
+        "time": "03:58"
+      },
+      {
+        "text": "那所以整體來說",
+        "time": "03:59"
+      },
+      {
+        "text": "每一次每一個用戶新增一個 alert 進來",
+        "time": "04:00"
+      },
+      {
+        "text": "就是落根",
+        "time": "04:03"
+      },
+      {
+        "text": "每一筆資料進来我去扫过的话",
+        "time": "04:04"
+      },
+      {
+        "text": "因为取TAP而已",
+        "time": "04:06"
+      },
+      {
+        "text": "这是O1",
+        "time": "04:07"
+      },
+      {
+        "text": "但是我要把某笔资料",
+        "time": "04:08"
+      },
+      {
+        "text": "我要触发某一个LUR的话",
+        "time": "04:10"
+      },
+      {
+        "text": "那就是一次会有一个Logan",
+        "time": "04:12"
+      },
+      {
+        "text": "所以说你的意思是说",
+        "time": "04:13"
+      },
+      {
+        "text": "所有的用户的Subscription都会在那个Queue里面吗",
+        "time": "04:14"
+      },
+      {
+        "text": "对",
+        "time": "04:17"
+      },
+      {
+        "text": "那像这个Data Stream是可能",
+        "time": "04:18"
+      },
+      {
+        "text": "每秒会有几十个甚至上百个这个Price Action对不对",
+        "time": "04:19"
+      },
+      {
+        "text": "嗯",
+        "time": "04:23"
+      },
+      {
+        "text": "然后你每次进来你就要把你的Priority Queue給查找",
+        "time": "04:23"
+      },
+      {
+        "text": "就是前面幾個全部都找出來",
+        "time": "04:26"
+      },
+      {
+        "text": "因為我們可以用一個就是Map的東西去連接",
+        "time": "04:28"
+      },
+      {
+        "text": "就是某一個Ticker跟它相關的Alert",
+        "time": "04:32"
+      },
+      {
+        "text": "所以我們就是一筆資料Update進來的話",
+        "time": "04:35"
+      },
+      {
+        "text": "我們就只要找特定某一個Ticker的Priority Queue就好了",
+        "time": "04:37"
+      },
+      {
+        "text": "OK 所以就是你會有一個Hash Map",
+        "time": "04:40"
+      },
+      {
+        "text": "它的Key就是那個Ticker的名字",
+        "time": "04:42"
+      },
+      {
+        "text": "然後Value就是它的Priority Queue那如果是做就是你會有一個 Hash Map它的 Key 就是那個 Ticker 的名字然後 Value 就是它的 Priority Queue",
+        "time": "04:44"
+      },
+      {
+        "text": "那如果是設一個就是我要",
+        "time": "04:46"
+      },
+      {
+        "text": "Sold Alert 超過 100 塊",
+        "time": "04:48"
+      },
+      {
+        "text": "然後 Sold Alert 超過 120",
+        "time": "04:49"
+      },
+      {
+        "text": "這樣子我設兩個這個 Subscription 的話",
+        "time": "04:51"
+      },
+      {
+        "text": "你要怎麼 Handle 這個 Case",
+        "time": "04:53"
+      },
+      {
+        "text": "呃 這個 Case 我是要兩次都 Alert",
+        "time": "04:54"
+      },
+      {
+        "text": "還是我只要",
+        "time": "04:56"
+      },
+      {
+        "text": "我要清掉前面那一次",
+        "time": "04:57"
+      },
+      {
+        "text": "比如說我設 100 跟 120 嘛",
+        "time": "04:59"
+      },
+      {
+        "text": "它現在漲到 110 的話",
+        "time": "05:00"
+      },
+      {
+        "text": "那我那個 100 的那個就會被 Triggered 對不對",
+        "time": "05:01"
+      },
+      {
+        "text": "對",
+        "time": "05:04"
+      },
+      {
+        "text": "那如果它漲到 115 的話那你那個 100到110的话那我那个100的那个就会被trigger对不对那如果它涨到115的话",
+        "time": "05:04"
+      },
+      {
+        "text": "那你那个100已经trigger过",
+        "time": "05:06"
+      },
+      {
+        "text": "你就不会再trigger对不对",
+        "time": "05:08"
+      },
+      {
+        "text": "等于是涨超过120的时候",
+        "time": "05:10"
+      },
+      {
+        "text": "你才会再trigger一次",
+        "time": "05:12"
+      },
+      {
+        "text": "这样是ok的 我觉得这样可以的",
+        "time": "05:14"
+      },
+      {
+        "text": "ok那我们就开始",
+        "time": "05:16"
+      },
+      {
+        "text": "首先就会是一个soc alert",
+        "time": "05:18"
+      },
+      {
+        "text": "然后主要我们刚讨论主要会有",
+        "time": "05:20"
+      },
+      {
+        "text": "讲一下主要会有两个interface",
+        "time": "05:22"
+      },
+      {
+        "text": "一个是user设定某一個user設定一個 alert",
+        "time": "05:24"
+      },
+      {
+        "text": "他會去設 alert",
+        "time": "05:28"
+      },
+      {
+        "text": "然後可能會用到的東西就是",
+        "time": "05:30"
+      },
+      {
+        "text": "第一個是 user id",
+        "time": "05:33"
+      },
+      {
+        "text": "我可以假設 user id 是一個",
+        "time": "05:34"
+      },
+      {
+        "text": "他可能 user 會有一個 user id",
+        "time": "05:35"
+      },
+      {
+        "text": "然後他是一個整數",
+        "time": "05:37"
+      },
+      {
+        "text": "ok user id",
+        "time": "05:38"
+      },
+      {
+        "text": "然後他可能就會有一個股票",
+        "time": "05:40"
+      },
+      {
+        "text": "某一張股票的那個股票的 ticker",
+        "time": "05:42"
+      },
+      {
+        "text": "然後一個 price",
+        "time": "05:44"
+      },
+      {
+        "text": "那 price 是 integer 還是",
+        "time": "05:45"
+      },
+      {
+        "text": "我們就簡單就 integer 好了",
+        "time": "05:48"
+      },
+      {
+        "text": "這個時候就處理漲跌的",
+        "time": "05:49"
+      },
+      {
+        "text": "還是我們先做漲超過一定數值",
+        "time": "05:51"
+      },
+      {
+        "text": "我們就先簡化一點",
+        "time": "05:54"
+      },
+      {
+        "text": "我們就先做漲超過一定數值",
+        "time": "05:56"
+      },
+      {
+        "text": "等於說他漲超過這個 alert",
+        "time": "05:58"
+      },
+      {
+        "text": "這個 set alert 就是代表這個 user id",
+        "time": "06:00"
+      },
+      {
+        "text": "他設定某一個 ticker",
+        "time": "06:02"
+      },
+      {
+        "text": "如果他漲超過它設定的price的話",
+        "time": "06:04"
+      },
+      {
+        "text": "那我們就會發EleR給這個user",
+        "time": "06:06"
+      },
+      {
+        "text": "然後可能要定義一下就是",
+        "time": "06:09"
+      },
+      {
+        "text": "那個priority queue裡面存的格式",
+        "time": "06:12"
+      },
+      {
+        "text": "然後會有一個user的ID",
+        "time": "06:14"
+      },
+      {
+        "text": "然後會有一個price",
+        "time": "06:16"
+      },
+      {
+        "text": "然後因為priority queue要設定那個大小",
+        "time": "06:17"
+      },
+      {
+        "text": "我希望把設定的最大值拿出來",
+        "time": "06:21"
+      },
+      {
+        "text": "然後這邊是EleR data然後可能有一個initial的function那个大小我希望把设定的最大值拿出来就是然后这边是 alert data",
+        "time": "06:24"
+      },
+      {
+        "text": "然后可能有一个initial的function",
+        "time": "06:26"
+      },
+      {
+        "text": "就是主要是清空这些",
+        "time": "06:28"
+      },
+      {
+        "text": "对那我每次设定的话就是很简单",
+        "time": "06:30"
+      },
+      {
+        "text": "就是把就是把ticker的就是把某一只股票的",
+        "time": "06:33"
+      },
+      {
+        "text": "他设定的 alert",
+        "time": "06:36"
+      },
+      {
+        "text": "他设定那个 alert 的 user id 跟 price 加进去",
+        "time": "06:37"
+      },
+      {
+        "text": "所以那这样子我们就设定好",
+        "time": "06:40"
+      },
+      {
+        "text": "每一次 alert 发进来的时候",
+        "time": "06:42"
+      },
+      {
+        "text": "就是每一次 alert request 进来的时候我们就�設定好每一次Alert發進來的時候就是每一次Alert request進來的時候",
+        "time": "06:44"
+      },
+      {
+        "text": "我們就設定好它的",
+        "time": "06:46"
+      },
+      {
+        "text": "算它的Tracker這樣",
+        "time": "06:48"
+      },
+      {
+        "text": "對然後接下來就是",
+        "time": "06:49"
+      },
+      {
+        "text": "可能會有一個股票",
+        "time": "06:51"
+      },
+      {
+        "text": "價格update的Sys的Interface",
+        "time": "06:52"
+      },
+      {
+        "text": "那它的input可能就是",
+        "time": "06:54"
+      },
+      {
+        "text": "一個time step",
+        "time": "06:56"
+      },
+      {
+        "text": "就是剛剛這個格式",
+        "time": "06:57"
+      },
+      {
+        "text": "然後",
+        "time": "06:59"
+      },
+      {
+        "text": "那time step它會給的格式是",
+        "time": "07:00"
+      },
+      {
+        "text": "你可以用epock",
+        "time": "07:02"
+      },
+      {
+        "text": "那我先用stream好了",
+        "time": "07:03"
+      },
+      {
+        "text": "stream也可以對那可能就進來一筆block data對那這時候那Time Step它会给的格式是你可以用Epoch那我先用String好了String也可以对对String",
+        "time": "07:04"
+      },
+      {
+        "text": "那可能就进来一笔Stock Data",
+        "time": "07:06"
+      },
+      {
+        "text": "那这时候我们就去查找",
+        "time": "07:08"
+      },
+      {
+        "text": "这一笔Stock Data里面那个Ticker",
+        "time": "07:10"
+      },
+      {
+        "text": "那个Ticker的这个Priority Queue",
+        "time": "07:12"
+      },
+      {
+        "text": "等于说没新的Price进",
+        "time": "07:14"
+      },
+      {
+        "text": "新的就是股票的Data进来",
+        "time": "07:16"
+      },
+      {
+        "text": "我就Core一次这个Function",
+        "time": "07:18"
+      },
+      {
+        "text": "然后传一笔我update到多少",
+        "time": "07:19"
+      },
+      {
+        "text": "对然后这时候我们就可以看",
+        "time": "07:21"
+      },
+      {
+        "text": "这个先要判斷它是不是空的",
+        "time": "07:23"
+      },
+      {
+        "text": "而且它最上面的那一個的價錢",
+        "time": "07:25"
+      },
+      {
+        "text": "price是不是",
+        "time": "07:29"
+      },
+      {
+        "text": "我剛剛這邊好像講錯了",
+        "time": "07:30"
+      },
+      {
+        "text": "就是它應該是一個minimahip",
+        "time": "07:32"
+      },
+      {
+        "text": "就是因為它是我越price越小的會",
+        "time": "07:33"
+      },
+      {
+        "text": "越先額熱到",
+        "time": "07:37"
+      },
+      {
+        "text": "所以它如果它當下抓到的價錢",
+        "time": "07:38"
+      },
+      {
+        "text": "如果是小於等於我現在update的價錢的話",
+        "time": "07:40"
+      },
+      {
+        "text": "那我們就額熱那個用戶",
+        "time": "07:43"
+      },
+      {
+        "text": "send alert可能send alert是一個interface如果是小于等于我现在update的价钱的话那我们就 alert 那个用户Send Alert",
+        "time": "07:44"
+      },
+      {
+        "text": "可能Send Alert是一个 interface",
+        "time": "07:45"
+      },
+      {
+        "text": "就是我可以送指定的用户",
+        "time": "07:47"
+      },
+      {
+        "text": "然后我等比 stock data 给他",
+        "time": "07:50"
+      },
+      {
+        "text": "因为他里面应该就有他需要的资讯",
+        "time": "07:52"
+      },
+      {
+        "text": "就是 timestamp 然后 ticker 跟 price",
+        "time": "07:54"
+      },
+      {
+        "text": "那我们可以升级比测试资料给他",
+        "time": "07:57"
+      },
+      {
+        "text": "你的 priority queue 是怎么变动",
+        "time": "07:59"
+      },
+      {
+        "text": "对",
+        "time": "08:01"
+      },
+      {
+        "text": "然后他 alert 过了之后",
+        "time": "08:02"
+      },
+      {
+        "text": "priority queue 就会把上面的給 pop 掉",
+        "time": "08:04"
+      },
+      {
+        "text": "這樣子應該就沒有什麼問題",
+        "time": "08:06"
+      },
+      {
+        "text": "那我們可以升級筆測試資料給他",
+        "time": "08:07"
+      },
+      {
+        "text": "那可能第一個要測的就是",
+        "time": "08:09"
+      },
+      {
+        "text": "我如果直接 Update Ticker Price",
+        "time": "08:11"
+      },
+      {
+        "text": "但當下沒有任何 Alert 的 System 的話",
+        "time": "08:14"
+      },
+      {
+        "text": "就是沒有任何 Alert 的 Data 的話",
+        "time": "08:16"
+      },
+      {
+        "text": "他會發生什麼事情",
+        "time": "08:18"
+      },
+      {
+        "text": "因為他其實就是一個 System 嘛",
+        "time": "08:19"
+      },
+      {
+        "text": "那我們就一直重複做一些操作",
+        "time": "08:21"
+      },
+      {
+        "text": "對他一直做一些操作",
+        "time": "08:23"
+      },
+      {
+        "text": "然后接下来可能会有个user",
+        "time": "08:25"
+      },
+      {
+        "text": "设了一个alert",
+        "time": "08:26"
+      },
+      {
+        "text": "然后user id",
+        "time": "08:27"
+      },
+      {
+        "text": "我们就从1开始好了",
+        "time": "08:28"
+      },
+      {
+        "text": "那可能就设定125",
+        "time": "08:29"
+      },
+      {
+        "text": "然后我们可能就判",
+        "time": "08:31"
+      },
+      {
+        "text": "有一个测试资料",
+        "time": "08:32"
+      },
+      {
+        "text": "就是说如果现在",
+        "time": "08:33"
+      },
+      {
+        "text": "有一个低于它alert价钱的",
+        "time": "08:34"
+      },
+      {
+        "text": "data进来",
+        "time": "08:37"
+      },
+      {
+        "text": "它会发生什么事情",
+        "time": "08:37"
+      },
+      {
+        "text": "照这个目前情况来讲",
+        "time": "08:38"
+      },
+      {
+        "text": "它已经被alert过了",
+        "time": "08:40"
+      },
+      {
+        "text": "那我们如果再送一次",
+        "time": "08:41"
+      },
+      {
+        "text": "同一个价格的",
+        "time": "08:43"
+      },
+      {
+        "text": "它应该要",
+        "time": "08:44"
+      },
+      {
+        "text": "不会再alert一次所以这也是格的它應該要不會再額熱一次",
+        "time": "08:44"
+      },
+      {
+        "text": "所以這也是需要測試",
+        "time": "08:46"
+      },
+      {
+        "text": "然後再來就是",
+        "time": "08:48"
+      },
+      {
+        "text": "可能要測一下多用戶的",
+        "time": "08:50"
+      },
+      {
+        "text": "看會不會有額熱到錯誤的用戶",
+        "time": "08:52"
+      },
+      {
+        "text": "如果update到130的話",
+        "time": "08:54"
+      },
+      {
+        "text": "照理來講這兩筆都會被觸發",
+        "time": "08:56"
+      },
+      {
+        "text": "然後再幫第二個用戶去測試一下",
+        "time": "08:58"
+      },
+      {
+        "text": "然後再測一下就是",
+        "time": "09:00"
+      },
+      {
+        "text": "可能有兩筆資料但只有一筆資料會被觸發的情況",
+        "time": "09:02"
+      },
+      {
+        "text": "大概就这样",
+        "time": "09:04"
+      },
+      {
+        "text": "那整体复杂度",
+        "time": "09:05"
+      },
+      {
+        "text": "就是set alert一次",
+        "time": "09:06"
+      },
+      {
+        "text": "因为它第一个hash map",
+        "time": "09:07"
+      },
+      {
+        "text": "所以它大体上来讲是O1",
+        "time": "09:09"
+      },
+      {
+        "text": "那可能会有collision的情况",
+        "time": "09:10"
+      },
+      {
+        "text": "就是因为它是hash map",
+        "time": "09:12"
+      },
+      {
+        "text": "就是会有collision的情况",
+        "time": "09:15"
+      },
+      {
+        "text": "最差可能会到",
+        "time": "09:16"
+      },
+      {
+        "text": "所有股票现存",
+        "time": "09:17"
+      },
+      {
+        "text": "有设定 alert的股票",
+        "time": "09:19"
+      },
+      {
+        "text": "都会跑过一次",
+        "time": "09:21"
+      },
+      {
+        "text": "但平均来说是O1",
+        "time": "09:21"
+      },
+      {
+        "text": "然后一个priority queue他push進去就是",
+        "time": "09:23"
+      },
+      {
+        "text": "Olog",
+        "time": "09:26"
+      },
+      {
+        "text": "看他當下裡面有多少東西",
+        "time": "09:27"
+      },
+      {
+        "text": "那update的話",
+        "time": "09:30"
+      },
+      {
+        "text": "然後這邊用cobie reference",
+        "time": "09:31"
+      },
+      {
+        "text": "所以他兩個值要同一個東西",
+        "time": "09:33"
+      },
+      {
+        "text": "不會有cobie一個priority queue進來的情況",
+        "time": "09:35"
+      },
+      {
+        "text": "他取top是O1",
+        "time": "09:37"
+      },
+      {
+        "text": "所以等於說如果沒有pop值出去",
+        "time": "09:39"
+      },
+      {
+        "text": "他就是做一次就是O1",
+        "time": "09:42"
+      },
+      {
+        "text": "那如果只要有centENT一次的 alert 出來",
+        "time": "09:43"
+      },
+      {
+        "text": "他就會多一個Login",
+        "time": "09:46"
+      },
+      {
+        "text": "因為他PUB掉一個值",
+        "time": "09:47"
+      },
+      {
+        "text": "對PUB掉一個值的話",
+        "time": "09:48"
+      },
+      {
+        "text": "那個整個HIP HOP DAY就是Login",
+        "time": "09:50"
+      },
+      {
+        "text": "這個是可以的",
+        "time": "09:52"
+      },
+      {
+        "text": "那假如說",
+        "time": "09:54"
+      },
+      {
+        "text": "因為我們如果真的在設計一個這個系統的話",
+        "time": "09:55"
+      },
+      {
+        "text": "其實這個alert進來之後",
+        "time": "09:58"
+      },
+      {
+        "text": "用戶一般來講",
+        "time": "10:01"
+      },
+      {
+        "text": "他希望就是設這個alert",
+        "time": "10:02"
+      },
+      {
+        "text": "就是譬如說我設120",
+        "time": "10:04"
+      },
+      {
+        "text": "他也是到150之後",
+        "time": "10:06"
+      },
+      {
+        "text": "他之後點一下 點回100",
+        "time": "10:07"
+      },
+      {
+        "text": "然後他又到 又漲到超過100",
+        "time": "10:09"
+      },
+      {
+        "text": "那這樣的話我想得到",
+        "time": "10:12"
+      },
+      {
+        "text": "繼續得到 alert",
+        "time": "10:13"
+      },
+      {
+        "text": "就是我不需要重新再 subscribe",
+        "time": "10:15"
+      },
+      {
+        "text": "一個新的 alert",
+        "time": "10:17"
+      },
+      {
+        "text": "OK 好",
+        "time": "10:18"
+      },
+      {
+        "text": "那這樣的話",
+        "time": "10:19"
+      },
+      {
+        "text": "等於說我們不能直接把資料 pop 出去",
+        "time": "10:20"
+      },
+      {
+        "text": "因為 pop 出去的資料也是",
+        "time": "10:22"
+      },
+      {
+        "text": "未來可能會 rollback 回來的資料",
+        "time": "10:24"
+      },
+      {
+        "text": "對那這時候我們就可以用",
+        "time": "10:26"
+      },
+      {
+        "text": "再開另外一個 priority queue 去維護這個東西",
+        "time": "10:28"
+      },
+      {
+        "text": "那另外一個 priority queue 它可能就是會反過來的",
+        "time": "10:31"
+      },
+      {
+        "text": "就是它原本是 minima heap 後面會變 mesma heap",
+        "time": "10:34"
+      },
+      {
+        "text": "因為就是價格跌超過某一個時候",
+        "time": "10:38"
+      },
+      {
+        "text": "它就要把資料 pop 回來原本的 priority queue 裡面",
+        "time": "10:41"
+      },
+      {
+        "text": "哦所以你是說就是只要價格跌下去之後",
+        "time": "10:43"
+      },
+      {
+        "text": "你再把它放回",
+        "time": "10:46"
+      },
+      {
+        "text": "你第一個這個 Priority Queue 裡面",
+        "time": "10:47"
+      },
+      {
+        "text": "對",
+        "time": "10:49"
+      },
+      {
+        "text": "那如果它一直都沒有跌的話",
+        "time": "10:49"
+      },
+      {
+        "text": "你就不會放",
+        "time": "10:51"
+      },
+      {
+        "text": "譬如說它",
+        "time": "10:51"
+      },
+      {
+        "text": "它就漲120",
+        "time": "10:52"
+      },
+      {
+        "text": "然後130 140 150",
+        "time": "10:53"
+      },
+      {
+        "text": "就一直往上漲",
+        "time": "10:55"
+      },
+      {
+        "text": "你就不把它",
+        "time": "10:56"
+      },
+      {
+        "text": "你就永遠不會把它放回去",
+        "time": "10:57"
+      },
+      {
+        "text": "對",
+        "time": "10:58"
+      },
+      {
+        "text": "對 那它只會",
+        "time": "10:58"
+      },
+      {
+        "text": "那原本那個就是 Priority Queue",
+        "time": "10:59"
+      },
+      {
+        "text": "它只會一直增加",
+        "time": "11:02"
+      },
+      {
+        "text": "好 我直接加在裡面",
+        "time": "11:02"
+      },
+      {
+        "text": "就是",
+        "time": "11:03"
+      },
+      {
+        "text": "那可能就是另外一個 Priority Queue但它的條件增加好我直接加在裡面就是那可能就是另外一個Priority Queue",
+        "time": "11:04"
+      },
+      {
+        "text": "但它的條件會反過來",
+        "time": "11:06"
+      },
+      {
+        "text": "代表它已經是Errug過的Data",
+        "time": "11:08"
+      },
+      {
+        "text": "那這時候我們就把",
+        "time": "11:09"
+      },
+      {
+        "text": "那它這時候把它Pop掉了",
+        "time": "11:11"
+      },
+      {
+        "text": "那我們就把它Push進",
+        "time": "11:12"
+      },
+      {
+        "text": "這時候就把它",
+        "time": "11:14"
+      },
+      {
+        "text": "就把我Errug過的東西就加進那個",
+        "time": "11:15"
+      },
+      {
+        "text": "已經跳過Errug的Data",
+        "time": "11:17"
+      },
+      {
+        "text": "然後另外一個就是",
+        "time": "11:19"
+      },
+      {
+        "text": "我要把已經Errug過的Data",
+        "time": "11:21"
+      },
+      {
+        "text": "看要不要還原回來",
+        "time": "11:22"
+      },
+      {
+        "text": "就是它如果",
+        "time": "11:24"
+      },
+      {
+        "text": "我現在股票價格跌低於它的價錢的話",
+        "time": "11:26"
+      },
+      {
+        "text": "我就要把它Rowback回來",
+        "time": "11:29"
+      },
+      {
+        "text": "所以它就是它大於我現在股票的價格",
+        "time": "11:30"
+      },
+      {
+        "text": "我就把它放回去原本的",
+        "time": "11:34"
+      },
+      {
+        "text": "然後一樣因為它被使用過",
+        "time": "11:35"
+      },
+      {
+        "text": "所以要把它清掉",
+        "time": "11:37"
+      },
+      {
+        "text": "那這時候測試資料可能就看一下喔",
+        "time": "11:38"
+      },
+      {
+        "text": "就是我們要測試我們新家的東西",
+        "time": "11:41"
+      },
+      {
+        "text": "我額熱過130之後",
+        "time": "11:43"
+      },
+      {
+        "text": "它兩筆就會",
+        "time": "11:44"
+      },
+      {
+        "text": "這兩筆就會pop掉",
+        "time": "11:45"
+      },
+      {
+        "text": "那可能讓它降回去125",
+        "time": "11:46"
+      },
+      {
+        "text": "然後再升回去130",
+        "time": "11:49"
+      },
+      {
+        "text": "看是不是user3有被額熱到",
+        "time": "11:50"
+      },
+      {
+        "text": "大概是這樣",
+        "time": "11:52"
+      },
+      {
+        "text": "那也還是沒什麼問題",
+        "time": "11:53"
+      },
+      {
+        "text": "那另外我比較好奇的是",
+        "time": "11:54"
+      },
+      {
+        "text": "假如說現在我們",
+        "time": "11:56"
+      },
+      {
+        "text": "因為我們現在這個是",
+        "time": "11:57"
+      },
+      {
+        "text": "你現在是每一個Ticker",
+        "time": "11:59"
+      },
+      {
+        "text": "它存在一個HashMap的",
+        "time": "12:00"
+      },
+      {
+        "text": "在現實的情況下",
+        "time": "12:01"
+      },
+      {
+        "text": "你會怎麼設計這個系統",
+        "time": "12:02"
+      },
+      {
+        "text": "就是現實有增加的 limitation 是",
+        "time": "12:04"
+      },
+      {
+        "text": "像我們現在要查找嘛",
+        "time": "12:07"
+      },
+      {
+        "text": "那其實我們這個需要 alert",
+        "time": "12:09"
+      },
+      {
+        "text": "基本上是要 latency 要夠低嘛",
+        "time": "12:13"
+      },
+      {
+        "text": "就我們要",
+        "time": "12:16"
+      },
+      {
+        "text": "對那如果一個 pq 裡面有",
+        "time": "12:16"
+      },
+      {
+        "text": "好幾十萬個",
+        "time": "12:19"
+      },
+      {
+        "text": "甚至上百萬個 alert 的話",
+        "time": "12:20"
+      },
+      {
+        "text": "那首先我們能夠存下这么多alert吗",
+        "time": "12:22"
+      },
+      {
+        "text": "因为这个price action update是很快的",
+        "time": "12:25"
+      },
+      {
+        "text": "以一个现实情况下",
+        "time": "12:27"
+      },
+      {
+        "text": "我们可能每秒钟会有好几个update",
+        "time": "12:28"
+      },
+      {
+        "text": "对不对",
+        "time": "12:31"
+      },
+      {
+        "text": "那如果是这样的情况下",
+        "time": "12:32"
+      },
+      {
+        "text": "你的这个update ticker price",
+        "time": "12:34"
+      },
+      {
+        "text": "会被扣好几次",
+        "time": "12:37"
+      },
+      {
+        "text": "同时被扣好几次",
+        "time": "12:38"
+      },
+      {
+        "text": "因为我们现在这个",
+        "time": "12:39"
+      },
+      {
+        "text": "就这个in theory我觉得可以work",
+        "time": "12:40"
+      },
+      {
+        "text": "没有问题",
+        "time": "12:43"
+      },
+      {
+        "text": "那就是真的在�計這個系統的時候",
+        "time": "12:44"
+      },
+      {
+        "text": "你會考慮到怎麼樣去",
+        "time": "12:46"
+      },
+      {
+        "text": "你會把這些全部都還是放在一個server裡面嗎",
+        "time": "12:48"
+      },
+      {
+        "text": "還是你會怎麼樣去scale這個系統",
+        "time": "12:50"
+      },
+      {
+        "text": "如果說它這個update ticker price",
+        "time": "12:53"
+      },
+      {
+        "text": "每秒鐘被扣好幾",
+        "time": "12:55"
+      },
+      {
+        "text": "因為可能有好幾千個ticker",
+        "time": "12:56"
+      },
+      {
+        "text": "然後每個ticker",
+        "time": "12:58"
+      },
+      {
+        "text": "我大概懂你的意思",
+        "time": "12:59"
+      },
+      {
+        "text": "就是這樣子的話",
+        "time": "13:01"
+      },
+      {
+        "text": "我目前想到可能需要",
+        "time": "13:02"
+      },
+      {
+        "text": "我們可以用MatiSpreader去做一些優化",
+        "time": "13:04"
+      },
+      {
+        "text": "因為他同時call好幾個Ticker,那他可能call好幾次updateTickerPrice",
+        "time": "13:06"
+      },
+      {
+        "text": "但是每一次update可能是不同的Ticker,那如果兩個不同的Ticker我還要在同一個Threader上等",
+        "time": "13:12"
+      },
+      {
+        "text": "那可能不make sense,那可能這邊的話就可以做類似MatiThread的事情",
+        "time": "13:19"
+      },
+      {
+        "text": "那MatiThread可能就可以分散到其他Server上去做",
+        "time": "13:25"
+      },
+      {
+        "text": "所以你的意思就是你會把每一個Ticker分到不同的Server上面嗎",
+        "time": "13:28"
+      },
+      {
+        "text": "對",
+        "time": "13:32"
+      },
+      {
+        "text": "那你會怎麼去分",
+        "time": "13:33"
+      },
+      {
+        "text": "就是你會怎麼去做決定說這個Ticker要到這個Server上面",
+        "time": "13:34"
+      },
+      {
+        "text": "或這個Ticker要存在這個Server上面",
+        "time": "13:39"
+      },
+      {
+        "text": "因為我們希望每一個Server能盡量平均嘛",
+        "time": "13:41"
+      },
+      {
+        "text": "想到第一個最簡單的方法就是",
+        "time": "13:44"
+      },
+      {
+        "text": "我們每一個ticker可能給他一個",
+        "time": "13:46"
+      },
+      {
+        "text": "譬如說一個hash的value",
+        "time": "13:48"
+      },
+      {
+        "text": "然後可能我們有n台server",
+        "time": "13:51"
+      },
+      {
+        "text": "那我們就我們這個hash value就去mode這個n",
+        "time": "13:53"
+      },
+      {
+        "text": "那我們就mode出來的值就會看到",
+        "time": "13:57"
+      },
+      {
+        "text": "看他會落在哪一個server上",
+        "time": "13:58"
+      },
+      {
+        "text": "ok就簡單的做一個平均",
+        "time": "14:01"
+      },
+      {
+        "text": "就是期望上會平均的分配這樣",
+        "time": "14:03"
+      },
+      {
+        "text": "那這樣的話一般來講有沒有什麼問題",
+        "time": "14:06"
+      },
+      {
+        "text": "因為在這次的情況下",
+        "time": "14:09"
+      },
+      {
+        "text": "它會出現一些情況",
+        "time": "14:11"
+      },
+      {
+        "text": "比如說某些TICKER可能很多人用",
+        "time": "14:13"
+      },
+      {
+        "text": "對 因為我剛剛只考慮TICKER的平均分配TICKER",
+        "time": "14:16"
+      },
+      {
+        "text": "但是有些TICKER可能價格變動比較頻繁",
+        "time": "14:20"
+      },
+      {
+        "text": "那有些TICKER可能價格變動沒那麼頻繁",
+        "time": "14:23"
+      },
+      {
+        "text": "那如果這個就變成",
+        "time": "14:27"
+      },
+      {
+        "text": "我會預先知道哪一個Ticker預期被call過幾次",
+        "time": "14:31"
+      },
+      {
+        "text": "還是我要動態去調整",
+        "time": "14:34"
+      },
+      {
+        "text": "你知道某些Ticker比較熱門的情況下",
+        "time": "14:36"
+      },
+      {
+        "text": "你可能會需要把它再分散給更多其他的Server",
+        "time": "14:40"
+      },
+      {
+        "text": "比如說很多人設了特斯拉的Alert你可能會需要把它再分散給更多其他Server來Handle",
+        "time": "14:44"
+      },
+      {
+        "text": "譬如說像假如說很多人設這個特斯拉的這個Alert",
+        "time": "14:45"
+      },
+      {
+        "text": "在你的System裡面你要Skill的話",
+        "time": "14:49"
+      },
+      {
+        "text": "你會需要給這個Server更多的Resource",
+        "time": "14:52"
+      },
+      {
+        "text": "或是說你可以有更多的Server來Handle這個特斯拉的Alert",
+        "time": "14:55"
+      },
+      {
+        "text": "那可能比較冷門的一些Ticker沒有人設Alert",
+        "time": "15:00"
+      },
+      {
+        "text": "你就可以把它們全部都放在同一個Server裡面",
+        "time": "15:03"
+      },
+      {
+        "text": "那可能就是我們要去計算說某一個Ticker它被設定過幾次",
+        "time": "15:05"
+      },
+      {
+        "text": "然後照設定的次數去做排序之類的",
+        "time": "15:12"
+      },
+      {
+        "text": "然後可能設定譬如說前幾熱門的",
+        "time": "15:17"
+      },
+      {
+        "text": "我們可能可以單獨給它一個Server",
+        "time": "15:20"
+      },
+      {
+        "text": "關於這個設計如果說�說比如說特斯拉這個Ticker",
+        "time": "15:22"
+      },
+      {
+        "text": "每秒我被update",
+        "time": "15:25"
+      },
+      {
+        "text": "就Price這個Action Update",
+        "time": "15:27"
+      },
+      {
+        "text": "大概有好幾",
+        "time": "15:29"
+      },
+      {
+        "text": "比如說上百個update",
+        "time": "15:30"
+      },
+      {
+        "text": "可能每秒有十個好了",
+        "time": "15:31"
+      },
+      {
+        "text": "十個update",
+        "time": "15:34"
+      },
+      {
+        "text": "那這樣的話會不會造成任何問題",
+        "time": "15:35"
+      },
+      {
+        "text": "就是以你現在的設計來看的話",
+        "time": "15:37"
+      },
+      {
+        "text": "比如說我有",
+        "time": "15:39"
+      },
+      {
+        "text": "你的PQ裡面有十萬個Alert",
+        "time": "15:40"
+      },
+      {
+        "text": "那你的這個特斯拉Update",
+        "time": "15:42"
+      },
+      {
+        "text": "同時在一秒內有10個Price Action",
+        "time": "15:43"
+      },
+      {
+        "text": "它可能譬如說它在兩個數字之間跳動",
+        "time": "15:46"
+      },
+      {
+        "text": "那User可能一下跌回去又會被",
+        "time": "15:48"
+      },
+      {
+        "text": "就是Alert又被還原回去",
+        "time": "15:51"
+      },
+      {
+        "text": "然後漲上來又被Alert一次",
+        "time": "15:53"
+      },
+      {
+        "text": "那可能某一個User會",
+        "time": "15:54"
+      },
+      {
+        "text": "如果設定了兩個價錢",
+        "time": "15:56"
+      },
+      {
+        "text": "設定了一個價錢",
+        "time": "15:57"
+      },
+      {
+        "text": "它可能在某一個時間點",
+        "time": "15:59"
+      },
+      {
+        "text": "突然被Alert了好幾次",
+        "time": "16:00"
+      },
+      {
+        "text": "對 這個是有可能的",
+        "time": "16:02"
+      },
+      {
+        "text": "我的意思說就是",
+        "time": "16:03"
+      },
+      {
+        "text": "像在你的well loop裡面",
+        "time": "16:04"
+      },
+      {
+        "text": "你要把你的priority queue一直跑跑跑出來",
+        "time": "16:06"
+      },
+      {
+        "text": "你要一直檢查",
+        "time": "16:09"
+      },
+      {
+        "text": "那比如說你在這個operation完成之前",
+        "time": "16:11"
+      },
+      {
+        "text": "你就有另外一個thread進來說我要update",
+        "time": "16:15"
+      },
+      {
+        "text": "就是我剛剛應該有說到",
+        "time": "16:17"
+      },
+      {
+        "text": "就是我同一個ticker",
+        "time": "16:19"
+      },
+      {
+        "text": "它可能同時只能被一個Threader給存取",
+        "time": "16:21"
+      },
+      {
+        "text": "所以就是說,你必須等到這個Threader完成之後",
+        "time": "16:25"
+      },
+      {
+        "text": "你再等下一個,再去process下一個request",
+        "time": "16:30"
+      },
+      {
+        "text": "對",
+        "time": "16:34"
+      },
+      {
+        "text": "我只是想大家了解一下,真實情況啦",
+        "time": "16:34"
+      },
+      {
+        "text": "假如說在設計這個系統",
+        "time": "16:38"
+      },
+      {
+        "text": "因為我們扣可能還有9分鐘",
+        "time": "16:40"
+      },
+      {
+        "text": "結果不要讓影片太長",
+        "time": "16:44"
+      },
+      {
+        "text": "要聊太久很難剪",
+        "time": "16:46"
+      },
+      {
+        "text": "對",
+        "time": "16:47"
+      },
+      {
+        "text": "OK",
+        "time": "16:49"
+      },
+      {
+        "text": "我覺得總括來說",
+        "time": "16:50"
+      },
+      {
+        "text": "就是Coding的方面",
+        "time": "16:51"
+      },
+      {
+        "text": "絕對沒有什麼問題",
+        "time": "16:52"
+      },
+      {
+        "text": "然後我覺得",
+        "time": "16:54"
+      },
+      {
+        "text": "就是你的思路很清楚",
+        "time": "16:55"
+      },
+      {
+        "text": "就是你知道",
+        "time": "16:56"
+      },
+      {
+        "text": "而且很快",
+        "time": "16:58"
+      },
+      {
+        "text": "就是馬上就可以",
+        "time": "16:58"
+      },
+      {
+        "text": "知道用Priority Queue",
+        "time": "17:00"
+      },
+      {
+        "text": "我一開始想的是",
+        "time": "17:02"
+      },
+      {
+        "text": "用個什麼Binary Search之類的",
+        "time": "17:03"
+      },
+      {
+        "text": "對阿,因為Binary Search的問題就是",
+        "time": "17:06"
+      },
+      {
+        "text": "你插入跟刪除",
+        "time": "17:08"
+      },
+      {
+        "text": "刪除很麻煩,插入也很麻煩",
+        "time": "17:10"
+      },
+      {
+        "text": "對阿,然後Complexity也是",
+        "time": "17:12"
+      },
+      {
+        "text": "應該是最優解的,我想不到還有什麼",
+        "time": "17:14"
+      },
+      {
+        "text": "可以比這還要更優化",
+        "time": "17:16"
+      },
+      {
+        "text": "我覺得應該有辦法證明",
+        "time": "17:18"
+      },
+      {
+        "text": "它已經是最優",
+        "time": "17:20"
+      },
+      {
+        "text": "因為它有一個比較大小的問題在",
+        "time": "17:22"
+      },
+      {
+        "text": "本來想說有一點時間是可以",
+        "time": "17:24"
+      },
+      {
+        "text": "聊一下系統設計",
+        "time": "17:26"
+      },
+      {
+        "text": "因為我覺得這一道題在",
+        "time": "17:27"
+      },
+      {
+        "text": "在 System Design 裡面應該會更",
+        "time": "17:29"
+      },
+      {
+        "text": "對我覺得在 System Design 上面會",
+        "time": "17:31"
+      },
+      {
+        "text": "更好一點",
+        "time": "17:33"
+      },
+      {
+        "text": "但因為我",
+        "time": "17:34"
+      },
+      {
+        "text": "真的沒有面過系統設計",
+        "time": "17:36"
+      },
+      {
+        "text": "哦",
+        "time": "17:38"
+      },
+      {
+        "text": "對",
+        "time": "17:39"
+      },
+      {
+        "text": "就是我也不知道系統設計開考慮的點",
+        "time": "17:41"
+      },
+      {
+        "text": "在哪裡",
+        "time": "17:43"
+      },
+      {
+        "text": "嗯嗯嗯因為我觉得面试",
+        "time": "17:44"
+      },
+      {
+        "text": "面试比起真实的那个",
+        "time": "17:46"
+      },
+      {
+        "text": "因为面试可能需要",
+        "time": "17:48"
+      },
+      {
+        "text": "你在短时间内",
+        "time": "17:49"
+      },
+      {
+        "text": "点出很多重点",
+        "time": "17:50"
+      },
+      {
+        "text": "在你面Google的时候",
+        "time": "17:51"
+      },
+      {
+        "text": "没有考系统设计吗",
+        "time": "17:52"
+      },
+      {
+        "text": "因为我面",
+        "time": "17:54"
+      },
+      {
+        "text": "我面的时候",
+        "time": "17:54"
+      },
+      {
+        "text": "我是New Grade就进去了",
+        "time": "17:55"
+      },
+      {
+        "text": "所以不会考到系统设计",
+        "time": "17:56"
+      },
+      {
+        "text": "OKOK",
+        "time": "17:58"
+      },
+      {
+        "text": "了解了解",
+        "time": "17:59"
+      },
+      {
+        "text": "大概有感觉",
+        "time": "17:59"
+      },
+      {
+        "text": "就是好像",
+        "time": "18:01"
+      },
+      {
+        "text": "就是系统设计这方面",
+        "time": "18:01"
+      },
+      {
+        "text": "就是好像你没有",
+        "time": "18:03"
+      },
+      {
+        "text": "特别去练习过针对这种面试的题目还是要练习过因为不是说把答案大概有感覺就是好像就是就是系統設計這方面就是好像你沒有特別去練習過",
+        "time": "18:04"
+      },
+      {
+        "text": "針對這種面試的題目還是要練習過",
+        "time": "18:06"
+      },
+      {
+        "text": "因為不是說把答案打出來就好了",
+        "time": "18:08"
+      },
+      {
+        "text": "我們中間還要溝通",
+        "time": "18:10"
+      },
+      {
+        "text": "我們還要訂好 interface",
+        "time": "18:12"
+      },
+      {
+        "text": "就是訂好一些 protocols 類的",
+        "time": "18:13"
+      },
+      {
+        "text": "對我覺得真的在練習上跟",
+        "time": "18:16"
+      },
+      {
+        "text": "真實面試差比較多的地方",
+        "time": "18:19"
+      },
+      {
+        "text": "對我覺得蠻厲害的就是",
+        "time": "18:21"
+      },
+      {
+        "text": "coding 這方面覺得是沒有問題",
+        "time": "18:22"
+      },
+      {
+        "text": "對你還有沒有其他公司嗎當時",
+        "time": "18:24"
+      },
+      {
+        "text": "當時我有",
+        "time": "18:26"
+      },
+      {
+        "text": "我有面過一家Quant",
+        "time": "18:27"
+      },
+      {
+        "text": "我有面過WorldQuant",
+        "time": "18:29"
+      },
+      {
+        "text": "嗯",
+        "time": "18:30"
+      },
+      {
+        "text": "對但是那時候他們比較想要找有",
+        "time": "18:31"
+      },
+      {
+        "text": "記憶學習背景",
+        "time": "18:33"
+      },
+      {
+        "text": "所以雖然他們",
+        "time": "18:34"
+      },
+      {
+        "text": "面試的題目我都",
+        "time": "18:36"
+      },
+      {
+        "text": "很完美的解掉但是他們還是希望找有",
+        "time": "18:37"
+      },
+      {
+        "text": "那個記憶學習相關",
+        "time": "18:40"
+      },
+      {
+        "text": "對",
+        "time": "18:42"
+      },
+      {
+        "text": "然後那時候還有變過 Amazon",
+        "time": "18:43"
+      },
+      {
+        "text": "但是它結果出來的時候",
+        "time": "18:45"
+      },
+      {
+        "text": "我已經拿到 Google Offer 了",
+        "time": "18:47"
+      },
+      {
+        "text": "所以就沒有記憶學",
+        "time": "18:49"
+      },
+      {
+        "text": "OK 那希望今天這集影片呢",
+        "time": "18:51"
+      },
+      {
+        "text": "大家有學到一點東西",
+        "time": "18:52"
+      },
+      {
+        "text": "也非常感謝 Hank 抽空來跟我做這個模擬面試",
+        "time": "18:54"
+      },
+      {
+        "text": "如果大家覺得有幫助的話",
+        "time": "18:57"
+      },
+      {
+        "text": "記得要幫影片點個讚",
+        "time": "18:59"
+      },
+      {
+        "text": "也給 Hank 點個讚",
+        "time": "19:00"
+      },
+      {
+        "text": "那如果你也像我一樣",
+        "time": "19:01"
+      },
+      {
+        "text": "內向不想要去跟真人去练习口语的话",
+        "time": "19:03"
+      },
+      {
+        "text": "一定要去试试看Elsa Speak",
+        "time": "19:05"
+      },
+      {
+        "text": "这个APP用AI来帮你找出",
+        "time": "19:07"
+      },
+      {
+        "text": "英语发音跟口说的错误",
+        "time": "19:09"
+      },
+      {
+        "text": "它会根据你的发音",
+        "time": "19:11"
+      },
+      {
+        "text": "每一个音节的语调",
+        "time": "19:12"
+      },
+      {
+        "text": "流利程度",
+        "time": "19:14"
+      },
+      {
+        "text": "跟母语人士的英文比较",
+        "time": "19:15"
+      },
+      {
+        "text": "然后给你一个精确的反馈",
+        "time": "19:17"
+      },
+      {
+        "text": "那除了发音跟语调之外呢",
+        "time": "19:19"
+      },
+      {
+        "text": "日常生活跟工作中会遇到的词汇",
+        "time": "19:21"
+      },
+      {
+        "text": "跟语句呢都会练习到APP上面呢有超过40个主题1600个课程除了發音與語調之外日常生活與工作中會遇到的詞彙與語句都會練習到",
+        "time": "19:23"
+      },
+      {
+        "text": "APP上面有超過40個主題",
+        "time": "19:26"
+      },
+      {
+        "text": "1600個課程",
+        "time": "19:28"
+      },
+      {
+        "text": "比如說我們今天來選一個Machine Learning的主題",
+        "time": "19:30"
+      },
+      {
+        "text": "I doubt anyone has more exciting news than thatOK那现在扫这个QR code",
+        "time": "19:45"
+      },
+      {
+        "text": "或是用这个连结呢",
+        "time": "19:48"
+      },
+      {
+        "text": "就可以免费的下载Elsa Speak",
+        "time": "19:49"
+      },
+      {
+        "text": "还有7天的专业版可以免费试用",
+        "time": "19:51"
+      },
+      {
+        "text": "那用完之后呢",
+        "time": "19:54"
+      },
+      {
+        "text": "如果你觉得喜欢",
+        "time": "19:55"
+      },
+      {
+        "text": "你觉得真的有帮助到你的话",
+        "time": "19:56"
+      },
+      {
+        "text": "记得一定要用我的专属连结",
+        "time": "19:57"
+      },
+      {
+        "text": "就可以享有专业版的年费6折",
+        "time": "19:59"
+      },
+      {
+        "text": "或是终身会员1.5折的优惠",
+        "time": "20:01"
+      },
+      {
+        "text": "我觉得APP做得真的很不錯",
+        "time": "20:04"
+      },
+      {
+        "text": "大家可以去試試看",
+        "time": "20:06"
+      },
+      {
+        "text": "那最後也感謝Jonathan",
+        "time": "20:07"
+      },
+      {
+        "text": "才有機會認識到Hank",
+        "time": "20:08"
+      },
+      {
+        "text": "所以大家也可以去關注一下Jonathan的頻道",
+        "time": "20:10"
+      },
+      {
+        "text": "他之前也邀請了凱西林去他的頻道",
+        "time": "20:12"
+      },
+      {
+        "text": "做了一集模擬面試",
+        "time": "20:14"
+      },
+      {
+        "text": "大家如果有興趣的話可以去看一下",
+        "time": "20:16"
+      },
+      {
+        "text": "我會把連結放影片底下的資訊欄",
+        "time": "20:18"
+      },
+      {
+        "text": "那我們下次見囉",
+        "time": "20:20"
+      }
+    ],
+    "task_id": "68922ac714034661957b271b109d7d64",
+    "title": "Google工程師能通過我的面試嗎？",
+    "transcript": [],
+    "updatedAt": 1783958195871,
+    "url": "https://youtu.be/OsNSj3qpPY0",
+    "video_url": ""
+  }
+}

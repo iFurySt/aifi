@@ -1,0 +1,18 @@
+[
+  {
+    "id": "L7xgc12JfHA",
+    "index": 69,
+    "title": "分享我的被動收入",
+    "url": "https://www.youtube.com/watch?v=L7xgc12JfHA",
+    "status": "request_blocked",
+    "error": "Expecting value: line 2 column 1 (char 1); stdout head: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=L7xgc12JfHA! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things y"
+  },
+  {
+    "id": "Gwn_kEegfJ4",
+    "index": 72,
+    "title": "公開我的全部身家，資產配置",
+    "url": "https://www.youtube.com/watch?v=Gwn_kEegfJ4",
+    "status": "request_blocked",
+    "error": "Expecting value: line 2 column 1 (char 1); stdout head: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=Gwn_kEegfJ4! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things y"
+  }
+]

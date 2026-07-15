@@ -1,0 +1,556 @@
+{
+  "source": "Online transcript provider: AI Video Summarizer",
+  "source_url": "https://www.youtube.com/watch?v=IXrpfHPqYfg",
+  "provider": {
+    "name": "aivideosummarizer.io",
+    "endpoint": "https://aivideosummarizer.io/youtube-subtitle-downloader/",
+    "retrieved": "2026-07-14",
+    "route": "OBU browser page -> IndexedDB tr-history"
+  },
+  "video_index": 287,
+  "video": {
+    "index": 287,
+    "id": "IXrpfHPqYfg",
+    "title": "在家工作的軟體工程師都在幹嘛？",
+    "url": "https://www.youtube.com/watch?v=IXrpfHPqYfg",
+    "duration_seconds": 341.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "IXrpfHPqYfg",
+    "title": "在家工作的軟體工程師都在幹嘛？",
+    "text": "嗨,飛鷗該剪頭髮了\n都幾個月沒剪頭髮了,那麼油又那麼長\n不要給我丟臉好嗎\n嗯,確實自從在家工作以來就變得很邋遢\n難怪老闆最近一直懷疑我上班都在耍廢啊\n我也覺得是時候該剪頭髮了\n但是現在疫情嚴重,剪頭髮了唉 但是現在疫情嚴重\n剪頭髮好麻煩喔\n要出家門還要穿衣服\n唉 唉對了\n之前買的那個理髮刀到現在都還沒用過\n剪頭髮這種簡單的手部運動\n怎麼可能難得倒我\n我每天狂練的手臂現在總算有正當的用途了\n欸白癡你剪頭髮都不用看鏡子喔\n鏡子\n哼\n剪頭髮這種東西就是靠感覺\n業餘的才需要用鏡子\n就像煮飯一樣\n業餘的才需要用鍋子\n哼就像寫扣子一樣\n業餘的才需要用鍋子哼 就像寫扣子一樣業餘的才需要用手指\n等一下\n我記得在Youtube上面看過\n削兩邊之前要先用髮夾\n把沒有要修掉的頭髮夾起來\n這樣才不會烙曬\n哇\n呃\n哇\n完美的秀法难\n难道已经来不及了吗\n等一下\n这种事情能难得倒我\n现在再夹也来得及吧\n反正才两刀\n应该没有人会发现\n你以为这样就可以难得倒我吗\n哈哈哈哈\n夹\n夹\n我夹你个彪彪头\n嗯\n有夹跟没夹好像没什么差诶\n嗯\n好像等一下下午三点要开会我得快一点了有家跟沒家好像沒什麼差\n好像下午三點要開會我得快一點\n我剛剛都踢了三小換個面 換個心情 繼續來 Thank you.怎麼有一股鹹鴨蛋的味道\n水溫剛好\n我果然是名優秀的工程師来磨发了��壓壓筋\nPretty knit矽谷彭于晏又回來了\n啊 shit 3點要開會\nHey Terry, we were just waiting for you.\nYeah, sorry guys, I was just working on that bug thingy.\nUh, yeah, you know, it's really complicated and tricky.I probably will have to spend a bit more time to figure it out.对不起,我只是在工作那只蚊子的东西你知道,这很复杂,我可能会花更多时间去惊醒它\n但我觉得我们很接近\n对,好,让我知道你完成了\n谢谢大家,再见\n一天就这样过了\n把握今天所剩不多的時間\n認真工作一下\nSpongebob Squirtle pants, Spongebob Squirtle pants, Spongebob Squirtle pants, Spongebob Squirtle pants.",
+    "segments": [
+      {
+        "time": "00:00",
+        "text": "嗨,飛鷗該剪頭髮了"
+      },
+      {
+        "time": "00:07",
+        "text": "都幾個月沒剪頭髮了,那麼油又那麼長"
+      },
+      {
+        "time": "00:12",
+        "text": "不要給我丟臉好嗎"
+      },
+      {
+        "time": "00:13",
+        "text": "嗯,確實自從在家工作以來就變得很邋遢"
+      },
+      {
+        "time": "00:17",
+        "text": "難怪老闆最近一直懷疑我上班都在耍廢啊"
+      },
+      {
+        "time": "00:20",
+        "text": "我也覺得是時候該剪頭髮了"
+      },
+      {
+        "time": "00:23",
+        "text": "但是現在疫情嚴重,剪頭髮了唉 但是現在疫情嚴重"
+      },
+      {
+        "time": "00:26",
+        "text": "剪頭髮好麻煩喔"
+      },
+      {
+        "time": "00:28",
+        "text": "要出家門還要穿衣服"
+      },
+      {
+        "time": "00:30",
+        "text": "唉 唉對了"
+      },
+      {
+        "time": "00:33",
+        "text": "之前買的那個理髮刀到現在都還沒用過"
+      },
+      {
+        "time": "00:36",
+        "text": "剪頭髮這種簡單的手部運動"
+      },
+      {
+        "time": "00:39",
+        "text": "怎麼可能難得倒我"
+      },
+      {
+        "time": "00:41",
+        "text": "我每天狂練的手臂現在總算有正當的用途了"
+      },
+      {
+        "time": "00:50",
+        "text": "欸白癡你剪頭髮都不用看鏡子喔"
+      },
+      {
+        "time": "00:51",
+        "text": "鏡子"
+      },
+      {
+        "time": "00:53",
+        "text": "哼"
+      },
+      {
+        "time": "00:55",
+        "text": "剪頭髮這種東西就是靠感覺"
+      },
+      {
+        "time": "00:58",
+        "text": "業餘的才需要用鏡子"
+      },
+      {
+        "time": "00:59",
+        "text": "就像煮飯一樣"
+      },
+      {
+        "time": "01:01",
+        "text": "業餘的才需要用鍋子"
+      },
+      {
+        "time": "01:02",
+        "text": "哼就像寫扣子一樣"
+      },
+      {
+        "time": "01:04",
+        "text": "業餘的才需要用鍋子哼 就像寫扣子一樣業餘的才需要用手指"
+      },
+      {
+        "time": "01:10",
+        "text": "等一下"
+      },
+      {
+        "time": "01:11",
+        "text": "我記得在Youtube上面看過"
+      },
+      {
+        "time": "01:14",
+        "text": "削兩邊之前要先用髮夾"
+      },
+      {
+        "time": "01:16",
+        "text": "把沒有要修掉的頭髮夾起來"
+      },
+      {
+        "time": "01:18",
+        "text": "這樣才不會烙曬"
+      },
+      {
+        "time": "01:20",
+        "text": "哇"
+      },
+      {
+        "time": "01:21",
+        "text": "呃"
+      },
+      {
+        "time": "01:22",
+        "text": "哇"
+      },
+      {
+        "time": "01:23",
+        "text": "完美的秀法难"
+      },
+      {
+        "time": "01:25",
+        "text": "难道已经来不及了吗"
+      },
+      {
+        "time": "01:28",
+        "text": "等一下"
+      },
+      {
+        "time": "01:29",
+        "text": "这种事情能难得倒我"
+      },
+      {
+        "time": "01:33",
+        "text": "现在再夹也来得及吧"
+      },
+      {
+        "time": "01:35",
+        "text": "反正才两刀"
+      },
+      {
+        "time": "01:36",
+        "text": "应该没有人会发现"
+      },
+      {
+        "time": "01:38",
+        "text": "你以为这样就可以难得倒我吗"
+      },
+      {
+        "time": "01:40",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "01:41",
+        "text": "夹"
+      },
+      {
+        "time": "01:43",
+        "text": "夹"
+      },
+      {
+        "time": "01:44",
+        "text": "我夹你个彪彪头"
+      },
+      {
+        "time": "01:46",
+        "text": "嗯"
+      },
+      {
+        "time": "01:59",
+        "text": "有夹跟没夹好像没什么差诶"
+      },
+      {
+        "time": "02:02",
+        "text": "嗯"
+      },
+      {
+        "time": "02:04",
+        "text": "好像等一下下午三点要开会我得快一点了有家跟沒家好像沒什麼差"
+      },
+      {
+        "time": "02:07",
+        "text": "好像下午三點要開會我得快一點"
+      },
+      {
+        "time": "02:29",
+        "text": "我剛剛都踢了三小換個面 換個心情 繼續來 Thank you.怎麼有一股鹹鴨蛋的味道"
+      },
+      {
+        "time": "03:21",
+        "text": "水溫剛好"
+      },
+      {
+        "time": "03:22",
+        "text": "我果然是名優秀的工程師来磨发了��壓壓筋"
+      },
+      {
+        "time": "04:07",
+        "text": "Pretty knit矽谷彭于晏又回來了"
+      },
+      {
+        "time": "04:30",
+        "text": "啊 shit 3點要開會"
+      },
+      {
+        "time": "04:37",
+        "text": "Hey Terry, we were just waiting for you."
+      },
+      {
+        "time": "04:40",
+        "text": "Yeah, sorry guys, I was just working on that bug thingy."
+      },
+      {
+        "time": "04:43",
+        "text": "Uh, yeah, you know, it's really complicated and tricky.I probably will have to spend a bit more time to figure it out.对不起,我只是在工作那只蚊子的东西你知道,这很复杂,我可能会花更多时间去惊醒它"
+      },
+      {
+        "time": "04:49",
+        "text": "但我觉得我们很接近"
+      },
+      {
+        "time": "04:52",
+        "text": "对,好,让我知道你完成了"
+      },
+      {
+        "time": "04:56",
+        "text": "谢谢大家,再见"
+      },
+      {
+        "time": "05:03",
+        "text": "一天就这样过了"
+      },
+      {
+        "time": "05:04",
+        "text": "把握今天所剩不多的時間"
+      },
+      {
+        "time": "05:06",
+        "text": "認真工作一下"
+      },
+      {
+        "time": "05:37",
+        "text": "Spongebob Squirtle pants, Spongebob Squirtle pants, Spongebob Squirtle pants, Spongebob Squirtle pants."
+      }
+    ]
+  },
+  "raw_provider_payload": {
+    "actual_url": "https://youtu.be/IXrpfHPqYfg",
+    "content": "",
+    "conversation_id": "",
+    "cover": "https://i.ytimg.com/vi/IXrpfHPqYfg/sddefault.jpg",
+    "createdAt": 1784015178613,
+    "expiresAt": 1784187978613,
+    "historyScope": "/youtube-subtitle-downloader/",
+    "id": "/youtube-subtitle-downloader/:1:1:IXrpfHPqYfg",
+    "mindMap": "",
+    "notes": [],
+    "overviewData": null,
+    "platform": "1",
+    "remoteNoteArtifactIds": {},
+    "sourceKey": "/youtube-subtitle-downloader/:1:1:IXrpfHPqYfg",
+    "subtitles": [
+      {
+        "text": "嗨,飛鷗該剪頭髮了",
+        "time": "00:00"
+      },
+      {
+        "text": "都幾個月沒剪頭髮了,那麼油又那麼長",
+        "time": "00:07"
+      },
+      {
+        "text": "不要給我丟臉好嗎",
+        "time": "00:12"
+      },
+      {
+        "text": "嗯,確實自從在家工作以來就變得很邋遢",
+        "time": "00:13"
+      },
+      {
+        "text": "難怪老闆最近一直懷疑我上班都在耍廢啊",
+        "time": "00:17"
+      },
+      {
+        "text": "我也覺得是時候該剪頭髮了",
+        "time": "00:20"
+      },
+      {
+        "text": "但是現在疫情嚴重,剪頭髮了唉 但是現在疫情嚴重",
+        "time": "00:23"
+      },
+      {
+        "text": "剪頭髮好麻煩喔",
+        "time": "00:26"
+      },
+      {
+        "text": "要出家門還要穿衣服",
+        "time": "00:28"
+      },
+      {
+        "text": "唉 唉對了",
+        "time": "00:30"
+      },
+      {
+        "text": "之前買的那個理髮刀到現在都還沒用過",
+        "time": "00:33"
+      },
+      {
+        "text": "剪頭髮這種簡單的手部運動",
+        "time": "00:36"
+      },
+      {
+        "text": "怎麼可能難得倒我",
+        "time": "00:39"
+      },
+      {
+        "text": "我每天狂練的手臂現在總算有正當的用途了",
+        "time": "00:41"
+      },
+      {
+        "text": "欸白癡你剪頭髮都不用看鏡子喔",
+        "time": "00:50"
+      },
+      {
+        "text": "鏡子",
+        "time": "00:51"
+      },
+      {
+        "text": "哼",
+        "time": "00:53"
+      },
+      {
+        "text": "剪頭髮這種東西就是靠感覺",
+        "time": "00:55"
+      },
+      {
+        "text": "業餘的才需要用鏡子",
+        "time": "00:58"
+      },
+      {
+        "text": "就像煮飯一樣",
+        "time": "00:59"
+      },
+      {
+        "text": "業餘的才需要用鍋子",
+        "time": "01:01"
+      },
+      {
+        "text": "哼就像寫扣子一樣",
+        "time": "01:02"
+      },
+      {
+        "text": "業餘的才需要用鍋子哼 就像寫扣子一樣業餘的才需要用手指",
+        "time": "01:04"
+      },
+      {
+        "text": "等一下",
+        "time": "01:10"
+      },
+      {
+        "text": "我記得在Youtube上面看過",
+        "time": "01:11"
+      },
+      {
+        "text": "削兩邊之前要先用髮夾",
+        "time": "01:14"
+      },
+      {
+        "text": "把沒有要修掉的頭髮夾起來",
+        "time": "01:16"
+      },
+      {
+        "text": "這樣才不會烙曬",
+        "time": "01:18"
+      },
+      {
+        "text": "哇",
+        "time": "01:20"
+      },
+      {
+        "text": "呃",
+        "time": "01:21"
+      },
+      {
+        "text": "哇",
+        "time": "01:22"
+      },
+      {
+        "text": "完美的秀法难",
+        "time": "01:23"
+      },
+      {
+        "text": "难道已经来不及了吗",
+        "time": "01:25"
+      },
+      {
+        "text": "等一下",
+        "time": "01:28"
+      },
+      {
+        "text": "这种事情能难得倒我",
+        "time": "01:29"
+      },
+      {
+        "text": "现在再夹也来得及吧",
+        "time": "01:33"
+      },
+      {
+        "text": "反正才两刀",
+        "time": "01:35"
+      },
+      {
+        "text": "应该没有人会发现",
+        "time": "01:36"
+      },
+      {
+        "text": "你以为这样就可以难得倒我吗",
+        "time": "01:38"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "01:40"
+      },
+      {
+        "text": "夹",
+        "time": "01:41"
+      },
+      {
+        "text": "夹",
+        "time": "01:43"
+      },
+      {
+        "text": "我夹你个彪彪头",
+        "time": "01:44"
+      },
+      {
+        "text": "嗯",
+        "time": "01:46"
+      },
+      {
+        "text": "有夹跟没夹好像没什么差诶",
+        "time": "01:59"
+      },
+      {
+        "text": "嗯",
+        "time": "02:02"
+      },
+      {
+        "text": "好像等一下下午三点要开会我得快一点了有家跟沒家好像沒什麼差",
+        "time": "02:04"
+      },
+      {
+        "text": "好像下午三點要開會我得快一點",
+        "time": "02:07"
+      },
+      {
+        "text": "我剛剛都踢了三小換個面 換個心情 繼續來 Thank you.怎麼有一股鹹鴨蛋的味道",
+        "time": "02:29"
+      },
+      {
+        "text": "水溫剛好",
+        "time": "03:21"
+      },
+      {
+        "text": "我果然是名優秀的工程師来磨发了��壓壓筋",
+        "time": "03:22"
+      },
+      {
+        "text": "Pretty knit矽谷彭于晏又回來了",
+        "time": "04:07"
+      },
+      {
+        "text": "啊 shit 3點要開會",
+        "time": "04:30"
+      },
+      {
+        "text": "Hey Terry, we were just waiting for you.",
+        "time": "04:37"
+      },
+      {
+        "text": "Yeah, sorry guys, I was just working on that bug thingy.",
+        "time": "04:40"
+      },
+      {
+        "text": "Uh, yeah, you know, it's really complicated and tricky.I probably will have to spend a bit more time to figure it out.对不起,我只是在工作那只蚊子的东西你知道,这很复杂,我可能会花更多时间去惊醒它",
+        "time": "04:43"
+      },
+      {
+        "text": "但我觉得我们很接近",
+        "time": "04:49"
+      },
+      {
+        "text": "对,好,让我知道你完成了",
+        "time": "04:52"
+      },
+      {
+        "text": "谢谢大家,再见",
+        "time": "04:56"
+      },
+      {
+        "text": "一天就这样过了",
+        "time": "05:03"
+      },
+      {
+        "text": "把握今天所剩不多的時間",
+        "time": "05:04"
+      },
+      {
+        "text": "認真工作一下",
+        "time": "05:06"
+      },
+      {
+        "text": "Spongebob Squirtle pants, Spongebob Squirtle pants, Spongebob Squirtle pants, Spongebob Squirtle pants.",
+        "time": "05:37"
+      }
+    ],
+    "task_id": "766b1debec784d2bbfba682256bd7041",
+    "title": "在家工作的軟體工程師都在幹嘛？",
+    "transcript": [],
+    "updatedAt": 1784015178613,
+    "url": "https://youtu.be/IXrpfHPqYfg",
+    "video_url": ""
+  }
+}

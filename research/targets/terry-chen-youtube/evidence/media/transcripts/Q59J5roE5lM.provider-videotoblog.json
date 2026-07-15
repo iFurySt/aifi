@@ -1,0 +1,3522 @@
+{
+  "source": "Online transcript provider: VideoToBlog",
+  "source_url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+  "provider": {
+    "name": "VideoToBlog",
+    "page_url": "https://videotoblog.ai/tools/youtube-to-transcript",
+    "endpoint": "https://videotoblog.ai/api/getYtTranscript",
+    "retrieved": "2026-07-14",
+    "extraction": "Direct POST endpoint from VideoToBlog web tool",
+    "selected_language": "en",
+    "content_type": "application/json; charset=utf-8"
+  },
+  "video_index": 27,
+  "video": {
+    "index": 27,
+    "id": "Q59J5roE5lM",
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "duration_seconds": 1346.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "provider_video_info": {
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "thumbnail": "https://i.ytimg.com/vi/Q59J5roE5lM/maxresdefault.jpg",
+    "author": "Terry Chen 泰瑞",
+    "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+    "channelOwnerName": "Terry Chen 泰瑞",
+    "lengthSeconds": 1346,
+    "description": "Mitrade註冊鏈接：https://mytd.cc/pBn3\n無成本體驗交易，賺到的錢還可以提現，虧得算平台：到3/31號前，\n新用戶（註冊7天內）累積入金達到 USD $500, $1500, $3000, $5000, $10000 可以累計獲得 USD $40, $135, $300, $550, $1200 交易贈金券。\n\n這個活動還可以與新人開戶贈金 $100 USD 活動疊加，累計最高可以獲得 $1300 USD。\n\n參與方式：\n1.使用 Terry 專屬活動鏈接註冊賬號即可參與活動：https://mytd.cc/pBn3\n2.進入活動頁面，點擊報名。報名之後去完成相應入金額\n3.滿足領獎條件後，返回活動頁面手動領取交易贈金券\n\nMitrade 註冊開戶教學：https://alphalab.site/mitrade\n----------------------------------------------------\n現代系統設計實戰營（早鳥優惠到3/8）：https://buildmoat.org\n可以先加入實戰營 Discord 群組：https://discord.com/invite/YS5nYQj9Hc\n----------------------------------------------------\n\n買賣美股我用IB盈透證券❤️：https://hackbear.tv/ib\nIB註冊出入金教學：https://alphalab.site/ib\n\n最適合新手的美股券商Firstrade：https://hackbear.tv/firstrade\nFirstrade註冊出入金教學：https://alphalab.site/firstrade\n\n有美國SSN的網友可以來拿Moomoo專屬福利：https://hackbear.tv/moomoo\n\n用SeekingAlpha來分析美股：https://hackbear.tv/seeking-alpha\n能跑贏大盤的量化團隊AlphaPicks：https://hackbear.tv/alpha-picks\n\n幣安交易所買賣加密貨幣：https://hackbear.tv/binance\n幣安註冊/出入金教學：https://alphalab.site/binance\n\nOKX交易所買賣加密貨幣：https://hackbear.tv/okx\nOKX註冊/出入金教學：https://alphalab.site/okx\n\nNexo穩定理財註冊連結：https://hackbear.tv/nexo\nNexo註冊使用教學：https://alphalab.site/nexo\n\n我用派網交易所做網格策略：https://hackbear.tv/pionex\n\n台灣本地交易所 HOYA BIT 註冊連結：https://hackbear.tv/hoyabit\nHOYA BIT 註冊出入金教學：https://alphalab.site/hoyabit\n\nEtherFi 幣圈神卡註冊連結：https://hackbear.tv/etherfi\nEtherFi 幣圈神卡註冊教學：https://alphalab.site/etherfi\n\n冷錢包我只用Ledger：https://hackbear.tv/ledger\nLedger使用教學：https://alphalab.site/ledger\n----------------------------------------------------\n我的IG: https://hackbear.tv/ig\n我的唯一TG社群：https://t.me/alphalab_live\n阿爾發實驗室（我的網站）：https://alphalab.site\n我的X: https://x.com/hackbearterry\n合作郵箱: hack.tech.entertainment@gmail.com\n\n#投資 #理財 #美股 #股票 #大盤 #ETF #選股 #个股 #被動投資 #主动投资 #價值投資 #科技股 #AI #人工智慧 #人工智能 #Tesla #特斯拉 #Nvidia #辉达 #英伟达 #Palantir #PLTR #Meta #台積電 #TSMC #Sofi #Google #谷歌 #SP500 #VOO #QQQ #FIRE #提早退休 #財富自由 #财富自由 #躺平 #工程師 #工程师 #矽谷 #硅谷 #灣區 #湾区 #RSU #薪水 #個人理財 #消费习惯 #資產 #负债 #黃金 #白銀 #贵金属 #Mitrade #交易平台 #美股投資 #投資心態 #市場波動 #抄底 #加倉 #財報 #ElonMusk #JensenHuang #MichaelBurry",
+    "channelOwnerUrl": "https://www.youtube.com/channel/UC_whOg3XES3Fihic53fvo4Q",
+    "publishedDate": {
+      "_seconds": 1771587019,
+      "_nanoseconds": 0
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "isLiveNow": false,
+    "isUpcoming": false,
+    "defaultAudioLanguage": "zh",
+    "scheduledStartTime": null
+  },
+  "transcript": {
+    "videoId": "Q59J5roE5lM",
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "text": "Don't be so tense, just relax.\nI think you always seem a bit stiff during\nfilming\nbecause I'm not used to it. Yeah, just\nrelax.\nPeople don't know how I met Bo.\nActually, we're online friends.\nWell, it's mainly because our backgrounds are similar.\nYou started filming during the pandemic,\nand I was really bored then, so I\nkept watching a bunch of YouTube videos. Then\nyour videos were recommended to me, like\nwatching what this person is doing. Yeah, and that's how\nwe met. And\nyou also like to share things like\nyour company and your salary, so people click to see.\nActually, I think the content I share\nis pretty\ntypical of what engineers\nwould want to share,\nor rather, we do similar things.\nWe just work, earn money, and invest—it's really\nsimple.\nI only found out today, after talking to you, that your\ninvestments are basically the same as mine.\nI mainly hold three stocks:\nTesla,\nNvidia, and Palantir.\nThese are my largest holdings.\nAnd you do too, right?\nThese three are also my largest holdings,\nplus Meta,\nTSMC, and SOFI.\nWhat's interesting is\nthat you have a family with two children.\nNormally, people in that situation would\nn't want to heavily invest in individual stocks.\nWhat prompted you to do that?\nBecause you told me before that\nyou only bought large-cap stocks.\nActually, I've never really bought large-cap stocks. Okay, okay,\nbefore I started working, for the first\nfew years, I was quite naive and ignorant. I just\ngot Google RSUs...\nI left it there and didn't sell it. The\nreturns were actually pretty good,\nbut because there weren't many RSUs at the time, the\nreturns were limited. The\nmain reason I wanted to invest in individual stocks was that I was\nparticularly optimistic about these few companies. I felt that\nthese companies could outperform the market in the short term,\nsay within three years, so\nI invested.\nPalantir was more of an unexpected success. At\nthat time,\nits stock price was very low;\nI bought it for only $25.\nMany people were optimistic about it then, including\nsome financial influencers I followed.\nThey all thought it was a good\ninvestment, so I put some money in.\nAt that time, it wasn't actually my largest holding; it was just a\nsmall part. I thought I'd put it in and\nsee how it\ngrew, ignoring it and wondering if it would.\nBut unexpectedly,\nafter several financial reports last year, it grew into\nmy largest holding.\nOkay, I understand.\nNvidia is also a classic example.\nI entered the Nvidia market quite late; I\nonly made a major entry at the beginning of this year. Around\nthat time, it plummeted\nbecause of the DeepSeek\nnews.\nI thought this was a good buying point. It\ndropped to around 120, or even 100-something, around\n110. But\nthen the tariff war caused it to drop below 100 again, so\nI didn't add any more. However,\nDeepFake\ndropped by more than ten percent in a short period.\nI thought this was a good buying point,\nso I bought a lot at once.\nI think Nvidia's logic is\nactually quite simple;\nI think everyone understands it.\nFind a good entry point and go for it. Like a\ngold mine,\nNvidia is the shovel.\nEveryone knows that. But with\nPalantir,\nmany people don't understand what this company actually does.\nHonestly, I don't fully understand it either,\nbecause their products\naren't primarily aimed at end users.\nTheir main clients are related to the Department of Defense. Let\nme share my\ninvestment logic for Palantir.\nIn this AI era, it's\nnot just Nvidia doing the shovel;\nI think Palantir\nis also doing it.\nYou see, its software\nitself is also a platform.\nThat's my understanding.\nBecause I think everyone\nwill rush into AI\nand do AI transformation,\nand Palantir is a very\ngood option.\nThis company helps enterprises with AI transformation.\nTheir software is\nproven to work, as evidenced by\ntheir impressive\ngrowth rate,\nindicating that\nmany companies are using their solutions.\nTheir\ncase studies\nare truly remarkable,\nsaving companies a tremendous amount of\nmoney.\nAnd this kind of revenue stream for individual companies is very\ndifficult to reverse once it starts. What I find\nmost impressive about Palantir\nis that\nwhile many companies\ncan do similar things, their\nbacking from the Department of Defense allows\nthem to manage data very well.\nIn other words, how do you trust a company? If\nI give you all my data, will\nI trust\na startup that's just\nrandomly choosing a company,\nor will I trust a company already backed by the Department of Defense?\nYes, he has\ncollected all the data from the Department of Defense,\nand even data from other departments in the US. The fact that\nhe can do this so well\nmeans\nhe has excellent data security.\nI can then give him my data.\nI think this is a\nhuge advantage he has, something\nmany companies can't do. That's\nwhy I invested in Palantir when it was only\na few dollars,\nand now my position has gradually\ngrown larger. The\nthird point\nis that my largest position is in Tesla, as\neveryone knows. It's a\nfact that\nyou yourself also have a\nsignificant position\nin\nTesla. The\nmain reason I invest in Tesla is because I\nbelieve in Elon Musk.\nBecause\nmany things are based on a vision,\nyou've already seen\nsome of his prototypes.\nHowever, to achieve\nlarge-scale\ndeployment, you\nneed execution capabilities.\nInvesting in Tesla\nmeans believing in Elon's execution capabilities, that\nhis\nenvisioned\nthings can be fully implemented, and that\nhis\nvision can be fully realized.\nElon's\ntrack record\nmakes you feel that\nyou really can do it.\nEven Jensen said, \"\nDon't bet against Elon.\"\nBasically,\nTesla shareholders who invest in Elon are\nbetting on Elon's execution.\nBut what I have to say is that when you\ninvest in Tesla,\nyou are essentially\nbuying into a beautiful vision.\nYou are definitely not value investing\nbecause the company itself hasn't reached the point where it's\ncompletely decoupled from fundamentals. Yes, it's already\ndecoupled.\nIt's a matter of whether you're willing to accept that.\nI believe in the company's future development; that's\nroughly the concept.\nI know it sounds crazy\nbecause you have to believe in a company\nand bet your entire position on it—\nthat's really difficult.\nI think making Tesla your\nthird-largest position is quite impressive.\nI guess you didn't get in very early, right?\nI got in during the tariff war.\nActually, I've been in before and then got out\nbecause Tesla is a very volatile stock. The\nlast time I got in was this year during the tariff war.\nI did a sell put,\nand then it was executed, so I just held it.\nI see, I see, it's\nokay, the price is okay too.\nWe've always\nthought that many people listen to others saying that you should just\nbuy the big picture.\nAnd actually, I used to think that way too.\nFor most people,\ngenerally speaking, 99% of people,\ninvesting in the broader market is sufficient;\ninvesting in the S&P 500,\nsuch as VOO ETFs, would suffice.\nHowever, I'm\nslightly changing this view\nbecause if you\nlook at the current US economic development, most of the\nS&P 500\n's profits are\nconcentrated in the top few companies. The\ncompanies behind them haven't performed as well.\nFurthermore, it's\nclear that AI will\ncontinue to drive up the value of these companies.\nIn this situation,\nI personally feel that\nif you\nsimply invest in the S&P 500—a rather\npassive approach—\nmany opportunities are being diluted. Do\nyou agree? Let me start by saying what\nI think.\nInvesting in the overall market is still suitable for most people\nbecause the reason why\n90% of fund managers can't outperform the market is because the\ndata speaks for itself—the market is that powerful.\nHowever, I also believe that\nin the next few years,\nthese giants who have a significant advantage in AI will capture\nmost of the market's\nprofits, which I am very optimistic about.\nBut the reason why investing in\nindividual stocks isn't for everyone is\nbecause it's not suitable for everyone. Individual\nstocks are highly volatile.\nFor example, last\nweek, due to the\nUS government shutdown and\nMichael Burry's\nshort positions,\nPalantir and\nNvidia experienced significant pullbacks, but they rebounded yesterday.\nThat's how volatile individual stocks are.\nSo, basically, anyone who wants to invest in individual stocks\nmust first...\nI know what you'll experience next: a\nshort-term dip.\nDuring this dip,\nyou need to\nremain calm and hold on.\nMany people give up\nwhen the market is volatile,\nthen\nchase the price back up, wiping out\ntheir profits.\nMental fortitude is crucial. In\nfact,\nmost people are like this;\nI've experienced it many times.\nLater, I realized that to make money\nin active investing,\nyou have to\ndo things that go against human nature. As I\nmentioned in a previous video, the reason I\ndon't\nrecommend active investing is because of\nits high volatility,\nand there\n's a high probability you\nstill won't outperform the market. The\ncombined\nperformance of the stocks you choose might still underperform the market.\nThirdly,\nbecause you're afraid of\nvolatility, you're hesitant to invest too much capital.\nTherefore, compared to\ninvesting all your capital in the market,\nyour overall profit will be lower. This is one reason.\nSo, for various reasons, when\nactively investing and selecting individual stocks,\nyou must be very clear about what you're doing\nand your mindset must not be swayed.\nI think what you just said is very good: the overall\nmarket is actually suitable for most people\nbecause it's a form of passive investing with\nrelatively less volatility. You\ncould even consider allocating capital\nif you believe that\nfuture tech will\nlead the trend.\nPart of the market analysis is done on QQQ,\ncomparing tech-driven ETFs\nrather than just\nS&P 500 ETFs.\nI think this is a\npretty good option.\nIf you want to be a bit more aggressive like\nus and still make money, as\nyou just mentioned, you\nneed to do some counterintuitive, contrarian trading.\nFor example, when prices fall, you should add to your position,\nand when prices rise, you\nshould restrain yourself from chasing highs.\nI think this is the hardest part. The\ntheory is simple, but\nI think it really tests your discipline.\nLike many\nthings, you know what you should do,\nbut very few people can actually do it.\nLifestyle habits can make you very healthy,\nbut truly consistent\nadherence to them is rare.\nYes, it's a theory everyone knows: buy low, sell high.\nEveryone wants to achieve this,\nbut often, when prices are low,\neveryone wants to sell.\nI vaguely remember\nwhen Tesla\nfell to 100, or even lower.\nEveryone was predicting its demise, and it\nbriefly dipped below 100.\nThis usually happens when\nindividual stocks fall; all sorts of\nnegative news emerge. Yes,\nthe whole\nmarket panics, and everyone\nsays Tesla is going to go to zero.\nEveryone's saying things like, \"We'll\nsee it at 60, we'll see it at 50,\" and that kind of\ntalk will definitely make you nervous,\nand you'll want to sell what you have. At that\nmoment, it really depends on you... At\nthis point, you should\nwatch Terry's\nYouTube videos to see how he upholds his beliefs.\nI think\npeople who can add to their positions at that time are really ruthless.\nYou have to be ruthless and willing to do this, which is\ndifficult for most people.\nSo,\nfor most people,\ninvesting in broad market ETFs is the safest option.\nOkay, speaking of diversifying investments across different industries, the\nrecent performance of precious metals has been quite remarkable. They have\noutperformed the QQQ and S&P 500 in six months, one year, and five years.\nAlthough gold dipped slightly a few days ago, it\nlooks like it's about to recover.\nIf you are\ninterested in trading gold, silver, and other precious metals, I would like to\nintroduce a\ncompliant trading platform called Mitrade. It\nalso allows trading in\nBitcoin, US stocks, crude oil, and forex. Mitrade offers\nover 900 popular assets across various indices and\nsupports deposits and withdrawals in cryptocurrencies, including credit cards and USDT. This is\nvery convenient for those without US dollars. The\nplatform itself has no transaction fees and\nprofits primarily from very low spreads.\nMitrade also\nprovides a $1 million fund security policy for each user.\nNow, Mitrade is\ngiving away free trading vouchers to its channel viewers. With these vouchers,\nprofits go to you, and\nlosses go to the platform.\nRegister using the link below my video and\ndeposit up to $1300 worth of trading vouchers.\nI'll put the details of the promotion in the information section below the video.\nIf you don't want to miss out on free trading,\nfeel free to try it out.\nAnother point I want to ask is about Bollinger Bands...\nMany of our viewers work in tech, and the\nsalaries are actually quite good,\nespecially if you've been in tech for\nthe past five or ten years. You\nshould be doing quite well now.\nHowever,\nmany people are still\nstruggling and haven't saved much money.\nWe just talked about\nhow if you don't have a family or children, you've probably\nalready exceeded the fat FIRE threshold.\nWell, it depends on where you are. In the\nBay Area, it might not be, but\nif you're in Japan, for example,\nyou probably have reached the FIRE\nthreshold. Yes,\nI think\neveryone's FIRE\nnumber is\ndifferent, but based on your current lifestyle\nand my expenses, it's about the same. Now,\nif you do\nn't have children or a family, you could\nprobably retire long ago and just\nrelax. Yeah,\nany advice?\nHow can an engineer get fired sooner?\nHonestly, the most\nuseful advice is often the most boring.\nLike I just said,\nif you know\nwhat the right thing to do is and\nyou stick to your discipline, then it's basically just a\nmatter of time.\nI think a few years ago, when interest rates were very low,\nif you\ncould leverage your money to buy a house,\nthat was a good option.\nI think a lot of times it's like this:\nyou need to know the\nright principle first,\nthen wait for the opportunity,\nand when the opportunity comes,\ndon't hesitate, act immediately. Buying and\nselling stocks is the same, as is the\ntiming of interest rates I just mentioned, and\nalso the timing of job hunting.\nYou need to find the right\ntrack and there just happens to be... If\nyou have an opportunity, don't look back. Just go for it and\ndo it. In\nlife, all\nthese\ndecisions are investments.\nBecause\ndoing the right thing at the right time is really that simple.\nIf\nmore than half of your ten decisions are correct,\nyou won't be doing too badly. Another\nvery important point, which\nI often see on English\nplatforms and websites, is that whether\nyou can fire\ndepends on your spending habits. Someone\nlike Terry, with\nsuch low material desires, can\nfire quickly.\nIf we're talking about spending,\nyou need to be careful about\nluxury expense creep.\nSome people might think, \"\nI got a raise today, so\nI have to buy a bigger house and a new car.\"\nFor example,\nyou need to distinguish between\nliabilities and\nassets. A\ncar is a liability,\nwhich I don't understand.\nThe reason many people like to buy luxury cars is\nbecause cars are liabilities; their value\nbegins to depreciate significantly the moment they are purchased. Of\ncourse,\nif buying something\nbrings you happiness\nand you are genuinely\ninterested in it, then that's a different story.\nBut if not,\nyou need to consider that\nsome assets appreciate on\ntheir own, while others do\nn't.\nYou need to think this through before buying.\nActually, I think many people\nbuy luxury cars, excluding the super-rich. For them,\nbuying luxury cars is normal.\nBut for the average middle-class person, the reason they might buy luxury cars—\nI don't know if this is correct—is that\nwithin that circle,\nyou see others doing it,\nor perhaps people think\nit's a great thing.\nThen, buying a car is something that can increase your sense of happiness.\nI think many people think, \"\nWhy do I work so hard to earn money? It's so that\nI can live a better life and buy the\nthings I want.\"\nI think that's perfectly fine,\nabsolutely no problem.\nBut the problem is, I think,\nmany times, is the\nreward you get from doing this\ntruly leading to a\nsustained increase in your sense of happiness? It depends on\nyour first principle,\nyour ultimate goal.\nI want to save more money.\nPerhaps this short-term\npurchase will\nmake it harder to achieve that goal.\nThen you need to carefully consider whether it's worth\nit. Because, in my own opinion, a\nluxury car is indeed something I enjoy—\nyeah, buying a cool car makes me feel good—but\nthat feeling is only temporary. What\nI truly want to feel good about is being\nable to do nothing, just relax, and\neither retire early or not\nat all,\nlike in my early 30s\nor 35, so\nI don't have to work for money.\nThat's what makes me feel good about the rest of my\nlife.\nThat's what I know I want,\nso I can use this method\nto control myself from\nbuying a luxury car\nor anything like that.\nI'm not particularly interested in luxury cars.\nWho doesn't like\nfancy things?\nI think everyone does.\nOf course,\nyeah, having one in\nfront of me would feel great,\nbut that feeling is fleeting. But that\ndoesn't\nmean you can't make any purchases at all.\nI just think that, like I\nmentioned earlier, every decision is an\ninvestment, and\nyou need to carefully consider whether\nthat investment is worthwhile.\nAlthough I might\nnot be materialistic, I\nthink\nrewarding yourself is quite important. For\nme, the\nhappiest thing might be being able to\neat a good meal\nor occasionally fly\nbusiness class—that\n's a good reward for me.\nI don't need too\nmany material things. That's\nwhy...\nFor me, FIRE isn't that difficult.\nRight now, I'm willing to spend\nmoney wisely on experiences,\nlike traveling with kids\nor saving time.\nSometimes, spending a little money can save you time, and\nif\nI feel the amount is reasonable, I'll do it without hesitation.\nBecause money can't buy back time. That's right,\ntime is the only thing with a limit.\nMoney can always be earned back, and everyone has the same amount of time. What\nI really want to ask is, since\nwe're all pretty crazy now, with\nlarge positions in individual stocks,\nat\nwhat stage of life will you gradually shift your focus to the broader market,\nlike the S&P 500 or QQQ?\nDo you think you'll always be heavily invested in individual stocks? In terms of\nproportion, as you\nget older, you might start reducing the proportion of individual stocks. After all, as\nyou get older, and on the\nother hand, you have\nless time,\nso it's harder to withstand large fluctuations.\nSome\nfluctuations, although they recover quickly, take several years. Those\nyears might take up a significant portion of your life,\nleaving only a small percentage.\nSo, it's possible they might never recover\nin your lifetime.\nTherefore, as I get older, I might\nallocate some funds\nto fixed income—that\nfixed income that can\nsupport my daily living expenses—\nand maybe add a little more\nroom for error.\nYes, that makes sense.\nI think I will...\nPart of my portfolio\nis tied up in companies I'm very optimistic about.\nAt least\na small portion of my\nfixed income can support my living expenses. The\nrest is equity.\nI want a\nportion of my assets to provide\nme with a\ncomfortable lifestyle, and the\nrest I\ncan invest in companies I believe have a bright future.\nYou know, there's a\nhack, I don't know if it's mentioned\nin videos,\ncalled \"buy-borrow-die,\"\nwhere when you transfer your\nequity to your child,\ntheir cost basis is readjusted to the\ncost basis when they receive it,\nso they don't have\nany capital gains. That\napplies\nin the US, specifically regarding\ncapital gains tax. Yes,\nbecause the US\nhas capital gains tax. But\nthis might\nnot apply to every country,\nand with individual stocks, it's\nhard to say whether you can hold them until they're transferred to your\nchild,\nbecause individual stocks have...\nThis drawback is that you need to know when to let go,\nunlike the broader market where you can blindly hold on.\nAnother point I wanted to\nask you about is crypto,\nbecause you have\nn't invested in any\ncrypto-related things, right?\nI used to, but I sold them\nbecause the volatility was just too\nmuch for me to handle. The\nbiggest difference between crypto and the stock market\nis that it's 24/7.\nIt can\ndrop or rise at any time due to\nnews.\nAnd\nunlike the stock market, which\nhas open\nand closed markets,\nit's constantly\nfluctuating. For\nme, back then, my\nheart couldn't handle the volatility,\nso I\nsold everything. But now I'm looking for... I'm looking for... It's a good\ntime to buy some Bitcoin.\nI think\nbuying some Bitcoin is a good idea.\nI've been considering buying some Bitcoin for my\nchild to grow up.\nMy dad bought some back then,\nabout ten years ago. At that time,\nmost people\nthought it was just\nhype, so I didn't buy\nany. And frankly, if you bought Bitcoin ten years ago—let\nme give you an example—it's\nhard to say whether you could still hold onto it now if you bought 10 dollars worth,\nunless you forget about the account.\nMany people think, \"\nIf I had bought Bitcoin ten or twenty years ago...\" Twenty years ago, Bitcoin did\nn't exist.\nSeventeen or eighteen years ago, around\nten years ago,\nmany people were talking about Bitcoin.\nThat's a question many people would... I used\nto think that if I had\nbought back then, I would be doing this or that now.\nBut reality is different.\nYou might buy at ten dollars, and if\nyou get 100 dollars, I think that's pretty awesome. Even if it\nincreases tenfold,\nmany people might only double or triple their money\nbefore selling.\nThat's the\nmentality of most retail investors. That's\nwhy many people aren't suited for active investing. Yes, that's\nright. So, you have to\ndo things that go against human nature.\nAnd active investing also has\nanother characteristic: what\nwe've just talked about\nare stocks that have a long-term upward trend,\nbut some stocks, once they fall, never\ncome back.\nThat's also a risk of active investing. Yes, yes, that's\nright.",
+    "segments": [
+      {
+        "text": "Don't be so tense, just relax.",
+        "duration": 2840,
+        "offset": 1770
+      },
+      {
+        "text": "I think you always seem a bit stiff during",
+        "duration": 880,
+        "offset": 4610
+      },
+      {
+        "text": "filming",
+        "duration": 1160,
+        "offset": 5490
+      },
+      {
+        "text": "because I'm not used to it. Yeah, just",
+        "duration": 3200,
+        "offset": 6650
+      },
+      {
+        "text": "relax.",
+        "duration": 680,
+        "offset": 9850
+      },
+      {
+        "text": "People don't know how I met Bo.",
+        "duration": 2640,
+        "offset": 10530
+      },
+      {
+        "text": "Actually, we're online friends.",
+        "duration": 1200,
+        "offset": 13170
+      },
+      {
+        "text": "Well, it's mainly because our backgrounds are similar.",
+        "duration": 2360,
+        "offset": 14370
+      },
+      {
+        "text": "You started filming during the pandemic,",
+        "duration": 2320,
+        "offset": 16730
+      },
+      {
+        "text": "and I was really bored then, so I",
+        "duration": 1110,
+        "offset": 19050
+      },
+      {
+        "text": "kept watching a bunch of YouTube videos. Then",
+        "duration": 1240,
+        "offset": 20160
+      },
+      {
+        "text": "your videos were recommended to me, like",
+        "duration": 1640,
+        "offset": 21400
+      },
+      {
+        "text": "watching what this person is doing. Yeah, and that's how",
+        "duration": 800,
+        "offset": 23040
+      },
+      {
+        "text": "we met. And",
+        "duration": 1720,
+        "offset": 23840
+      },
+      {
+        "text": "you also like to share things like",
+        "duration": 2440,
+        "offset": 25560
+      },
+      {
+        "text": "your company and your salary, so people click to see.",
+        "duration": 4080,
+        "offset": 28000
+      },
+      {
+        "text": "Actually, I think the content I share",
+        "duration": 920,
+        "offset": 32080
+      },
+      {
+        "text": "is pretty",
+        "duration": 1590,
+        "offset": 33000
+      },
+      {
+        "text": "typical of what engineers",
+        "duration": 1360,
+        "offset": 34590
+      },
+      {
+        "text": "would want to share,",
+        "duration": 1600,
+        "offset": 35950
+      },
+      {
+        "text": "or rather, we do similar things.",
+        "duration": 1880,
+        "offset": 37550
+      },
+      {
+        "text": "We just work, earn money, and invest—it's really",
+        "duration": 3000,
+        "offset": 39430
+      },
+      {
+        "text": "simple.",
+        "duration": 1040,
+        "offset": 42430
+      },
+      {
+        "text": "I only found out today, after talking to you, that your",
+        "duration": 2000,
+        "offset": 43470
+      },
+      {
+        "text": "investments are basically the same as mine.",
+        "duration": 1800,
+        "offset": 45470
+      },
+      {
+        "text": "I mainly hold three stocks:",
+        "duration": 1200,
+        "offset": 47270
+      },
+      {
+        "text": "Tesla,",
+        "duration": 700,
+        "offset": 48470
+      },
+      {
+        "text": "Nvidia, and Palantir.",
+        "duration": 1520,
+        "offset": 49170
+      },
+      {
+        "text": "These are my largest holdings.",
+        "duration": 1640,
+        "offset": 50690
+      },
+      {
+        "text": "And you do too, right?",
+        "duration": 1000,
+        "offset": 52330
+      },
+      {
+        "text": "These three are also my largest holdings,",
+        "duration": 2080,
+        "offset": 53330
+      },
+      {
+        "text": "plus Meta,",
+        "duration": 1920,
+        "offset": 55410
+      },
+      {
+        "text": "TSMC, and SOFI.",
+        "duration": 2720,
+        "offset": 57330
+      },
+      {
+        "text": "What's interesting is",
+        "duration": 2280,
+        "offset": 60050
+      },
+      {
+        "text": "that you have a family with two children.",
+        "duration": 3000,
+        "offset": 62330
+      },
+      {
+        "text": "Normally, people in that situation would",
+        "duration": 2280,
+        "offset": 65330
+      },
+      {
+        "text": "n't want to heavily invest in individual stocks.",
+        "duration": 3080,
+        "offset": 67610
+      },
+      {
+        "text": "What prompted you to do that?",
+        "duration": 2660,
+        "offset": 70690
+      },
+      {
+        "text": "Because you told me before that",
+        "duration": 760,
+        "offset": 73350
+      },
+      {
+        "text": "you only bought large-cap stocks.",
+        "duration": 2000,
+        "offset": 74110
+      },
+      {
+        "text": "Actually, I've never really bought large-cap stocks. Okay, okay,",
+        "duration": 2720,
+        "offset": 76110
+      },
+      {
+        "text": "before I started working, for the first",
+        "duration": 1960,
+        "offset": 78830
+      },
+      {
+        "text": "few years, I was quite naive and ignorant. I just",
+        "duration": 1560,
+        "offset": 80790
+      },
+      {
+        "text": "got Google RSUs...",
+        "duration": 1480,
+        "offset": 82350
+      },
+      {
+        "text": "I left it there and didn't sell it. The",
+        "duration": 1720,
+        "offset": 83830
+      },
+      {
+        "text": "returns were actually pretty good,",
+        "duration": 2400,
+        "offset": 85550
+      },
+      {
+        "text": "but because there weren't many RSUs at the time, the",
+        "duration": 1760,
+        "offset": 87950
+      },
+      {
+        "text": "returns were limited. The",
+        "duration": 2320,
+        "offset": 89710
+      },
+      {
+        "text": "main reason I wanted to invest in individual stocks was that I was",
+        "duration": 3480,
+        "offset": 92030
+      },
+      {
+        "text": "particularly optimistic about these few companies. I felt that",
+        "duration": 1720,
+        "offset": 95510
+      },
+      {
+        "text": "these companies could outperform the market in the short term,",
+        "duration": 3750,
+        "offset": 97230
+      },
+      {
+        "text": "say within three years, so",
+        "duration": 2840,
+        "offset": 100980
+      },
+      {
+        "text": "I invested.",
+        "duration": 2480,
+        "offset": 103820
+      },
+      {
+        "text": "Palantir was more of an unexpected success. At",
+        "duration": 3120,
+        "offset": 106300
+      },
+      {
+        "text": "that time,",
+        "duration": 2750,
+        "offset": 109420
+      },
+      {
+        "text": "its stock price was very low;",
+        "duration": 1360,
+        "offset": 112170
+      },
+      {
+        "text": "I bought it for only $25.",
+        "duration": 2040,
+        "offset": 113530
+      },
+      {
+        "text": "Many people were optimistic about it then, including",
+        "duration": 2280,
+        "offset": 115570
+      },
+      {
+        "text": "some financial influencers I followed.",
+        "duration": 7490,
+        "offset": 117850
+      },
+      {
+        "text": "They all thought it was a good",
+        "duration": 3160,
+        "offset": 125340
+      },
+      {
+        "text": "investment, so I put some money in.",
+        "duration": 1960,
+        "offset": 128500
+      },
+      {
+        "text": "At that time, it wasn't actually my largest holding; it was just a",
+        "duration": 1680,
+        "offset": 130460.00000000001
+      },
+      {
+        "text": "small part. I thought I'd put it in and",
+        "duration": 2120,
+        "offset": 132140
+      },
+      {
+        "text": "see how it",
+        "duration": 1120,
+        "offset": 134260
+      },
+      {
+        "text": "grew, ignoring it and wondering if it would.",
+        "duration": 1760,
+        "offset": 135380
+      },
+      {
+        "text": "But unexpectedly,",
+        "duration": 1200,
+        "offset": 137140
+      },
+      {
+        "text": "after several financial reports last year, it grew into",
+        "duration": 1840,
+        "offset": 138340
+      },
+      {
+        "text": "my largest holding.",
+        "duration": 2320,
+        "offset": 140180
+      },
+      {
+        "text": "Okay, I understand.",
+        "duration": 1000,
+        "offset": 142500
+      },
+      {
+        "text": "Nvidia is also a classic example.",
+        "duration": 2600,
+        "offset": 143500
+      },
+      {
+        "text": "I entered the Nvidia market quite late; I",
+        "duration": 2560,
+        "offset": 146100
+      },
+      {
+        "text": "only made a major entry at the beginning of this year. Around",
+        "duration": 1560,
+        "offset": 148660
+      },
+      {
+        "text": "that time, it plummeted",
+        "duration": 520,
+        "offset": 150220
+      },
+      {
+        "text": "because of the DeepSeek",
+        "duration": 1040,
+        "offset": 150740
+      },
+      {
+        "text": "news.",
+        "duration": 2040,
+        "offset": 151780
+      },
+      {
+        "text": "I thought this was a good buying point. It",
+        "duration": 1760,
+        "offset": 153820
+      },
+      {
+        "text": "dropped to around 120, or even 100-something, around",
+        "duration": 1400,
+        "offset": 155580
+      },
+      {
+        "text": "110. But",
+        "duration": 2020,
+        "offset": 156980
+      },
+      {
+        "text": "then the tariff war caused it to drop below 100 again, so",
+        "duration": 1760,
+        "offset": 159000
+      },
+      {
+        "text": "I didn't add any more. However,",
+        "duration": 1920,
+        "offset": 160760
+      },
+      {
+        "text": "DeepFake",
+        "duration": 920,
+        "offset": 162680
+      },
+      {
+        "text": "dropped by more than ten percent in a short period.",
+        "duration": 3480,
+        "offset": 163600
+      },
+      {
+        "text": "I thought this was a good buying point,",
+        "duration": 1680,
+        "offset": 167080
+      },
+      {
+        "text": "so I bought a lot at once.",
+        "duration": 3320,
+        "offset": 168760
+      },
+      {
+        "text": "I think Nvidia's logic is",
+        "duration": 960,
+        "offset": 172080
+      },
+      {
+        "text": "actually quite simple;",
+        "duration": 1400,
+        "offset": 173040
+      },
+      {
+        "text": "I think everyone understands it.",
+        "duration": 680,
+        "offset": 174440
+      },
+      {
+        "text": "Find a good entry point and go for it. Like a",
+        "duration": 1080,
+        "offset": 175120
+      },
+      {
+        "text": "gold mine,",
+        "duration": 1240,
+        "offset": 176200
+      },
+      {
+        "text": "Nvidia is the shovel.",
+        "duration": 2240,
+        "offset": 177440
+      },
+      {
+        "text": "Everyone knows that. But with",
+        "duration": 1560,
+        "offset": 179680
+      },
+      {
+        "text": "Palantir,",
+        "duration": 840,
+        "offset": 181240
+      },
+      {
+        "text": "many people don't understand what this company actually does.",
+        "duration": 2320,
+        "offset": 182080
+      },
+      {
+        "text": "Honestly, I don't fully understand it either,",
+        "duration": 1880,
+        "offset": 184400
+      },
+      {
+        "text": "because their products",
+        "duration": 870,
+        "offset": 186280
+      },
+      {
+        "text": "aren't primarily aimed at end users.",
+        "duration": 2200,
+        "offset": 187150
+      },
+      {
+        "text": "Their main clients are related to the Department of Defense. Let",
+        "duration": 3680,
+        "offset": 189350
+      },
+      {
+        "text": "me share my",
+        "duration": 1200,
+        "offset": 193030
+      },
+      {
+        "text": "investment logic for Palantir.",
+        "duration": 1480,
+        "offset": 194230
+      },
+      {
+        "text": "In this AI era, it's",
+        "duration": 1000,
+        "offset": 195710
+      },
+      {
+        "text": "not just Nvidia doing the shovel;",
+        "duration": 1400,
+        "offset": 196710
+      },
+      {
+        "text": "I think Palantir",
+        "duration": 1000,
+        "offset": 198110
+      },
+      {
+        "text": "is also doing it.",
+        "duration": 1560,
+        "offset": 199110
+      },
+      {
+        "text": "You see, its software",
+        "duration": 1040,
+        "offset": 200670
+      },
+      {
+        "text": "itself is also a platform.",
+        "duration": 1280,
+        "offset": 201710
+      },
+      {
+        "text": "That's my understanding.",
+        "duration": 1520,
+        "offset": 202990
+      },
+      {
+        "text": "Because I think everyone",
+        "duration": 1240,
+        "offset": 204510
+      },
+      {
+        "text": "will rush into AI",
+        "duration": 1440,
+        "offset": 205750
+      },
+      {
+        "text": "and do AI transformation,",
+        "duration": 1080,
+        "offset": 207190
+      },
+      {
+        "text": "and Palantir is a very",
+        "duration": 840,
+        "offset": 208270
+      },
+      {
+        "text": "good option.",
+        "duration": 2240,
+        "offset": 209110
+      },
+      {
+        "text": "This company helps enterprises with AI transformation.",
+        "duration": 2320,
+        "offset": 211350
+      },
+      {
+        "text": "Their software is",
+        "duration": 2000,
+        "offset": 213670
+      },
+      {
+        "text": "proven to work, as evidenced by",
+        "duration": 1520,
+        "offset": 215670
+      },
+      {
+        "text": "their impressive",
+        "duration": 1880,
+        "offset": 217190
+      },
+      {
+        "text": "growth rate,",
+        "duration": 1400,
+        "offset": 219070
+      },
+      {
+        "text": "indicating that",
+        "duration": 1880,
+        "offset": 220470
+      },
+      {
+        "text": "many companies are using their solutions.",
+        "duration": 1920,
+        "offset": 222350
+      },
+      {
+        "text": "Their",
+        "duration": 680,
+        "offset": 224270
+      },
+      {
+        "text": "case studies",
+        "duration": 840,
+        "offset": 224950
+      },
+      {
+        "text": "are truly remarkable,",
+        "duration": 1730,
+        "offset": 225790
+      },
+      {
+        "text": "saving companies a tremendous amount of",
+        "duration": 1720,
+        "offset": 227520
+      },
+      {
+        "text": "money.",
+        "duration": 1160,
+        "offset": 229240
+      },
+      {
+        "text": "And this kind of revenue stream for individual companies is very",
+        "duration": 1840,
+        "offset": 230400
+      },
+      {
+        "text": "difficult to reverse once it starts. What I find",
+        "duration": 1800,
+        "offset": 232240
+      },
+      {
+        "text": "most impressive about Palantir",
+        "duration": 1200,
+        "offset": 234040
+      },
+      {
+        "text": "is that",
+        "duration": 1440,
+        "offset": 235240
+      },
+      {
+        "text": "while many companies",
+        "duration": 920,
+        "offset": 236680
+      },
+      {
+        "text": "can do similar things, their",
+        "duration": 1280,
+        "offset": 237600
+      },
+      {
+        "text": "backing from the Department of Defense allows",
+        "duration": 2260,
+        "offset": 238880
+      },
+      {
+        "text": "them to manage data very well.",
+        "duration": 2680,
+        "offset": 241140
+      },
+      {
+        "text": "In other words, how do you trust a company? If",
+        "duration": 3040,
+        "offset": 243820
+      },
+      {
+        "text": "I give you all my data, will",
+        "duration": 1480,
+        "offset": 246860
+      },
+      {
+        "text": "I trust",
+        "duration": 680,
+        "offset": 248340
+      },
+      {
+        "text": "a startup that's just",
+        "duration": 800,
+        "offset": 249020
+      },
+      {
+        "text": "randomly choosing a company,",
+        "duration": 1640,
+        "offset": 249820
+      },
+      {
+        "text": "or will I trust a company already backed by the Department of Defense?",
+        "duration": 2140,
+        "offset": 251460
+      },
+      {
+        "text": "Yes, he has",
+        "duration": 1000,
+        "offset": 253600
+      },
+      {
+        "text": "collected all the data from the Department of Defense,",
+        "duration": 1760,
+        "offset": 254600
+      },
+      {
+        "text": "and even data from other departments in the US. The fact that",
+        "duration": 2360,
+        "offset": 256360
+      },
+      {
+        "text": "he can do this so well",
+        "duration": 1320,
+        "offset": 258720.00000000003
+      },
+      {
+        "text": "means",
+        "duration": 720,
+        "offset": 260040.00000000003
+      },
+      {
+        "text": "he has excellent data security.",
+        "duration": 2040,
+        "offset": 260760
+      },
+      {
+        "text": "I can then give him my data.",
+        "duration": 1700,
+        "offset": 262800
+      },
+      {
+        "text": "I think this is a",
+        "duration": 1480,
+        "offset": 264500
+      },
+      {
+        "text": "huge advantage he has, something",
+        "duration": 1200,
+        "offset": 265980
+      },
+      {
+        "text": "many companies can't do. That's",
+        "duration": 1240,
+        "offset": 267180
+      },
+      {
+        "text": "why I invested in Palantir when it was only",
+        "duration": 800,
+        "offset": 268420
+      },
+      {
+        "text": "a few dollars,",
+        "duration": 2600,
+        "offset": 269220
+      },
+      {
+        "text": "and now my position has gradually",
+        "duration": 1880,
+        "offset": 271820
+      },
+      {
+        "text": "grown larger. The",
+        "duration": 2080,
+        "offset": 273700
+      },
+      {
+        "text": "third point",
+        "duration": 1160,
+        "offset": 275780
+      },
+      {
+        "text": "is that my largest position is in Tesla, as",
+        "duration": 1880,
+        "offset": 276940
+      },
+      {
+        "text": "everyone knows. It's a",
+        "duration": 1360,
+        "offset": 278820
+      },
+      {
+        "text": "fact that",
+        "duration": 1880,
+        "offset": 280180
+      },
+      {
+        "text": "you yourself also have a",
+        "duration": 560,
+        "offset": 282060
+      },
+      {
+        "text": "significant position",
+        "duration": 2640,
+        "offset": 282620
+      },
+      {
+        "text": "in",
+        "duration": 520,
+        "offset": 285260
+      },
+      {
+        "text": "Tesla. The",
+        "duration": 1390,
+        "offset": 285780
+      },
+      {
+        "text": "main reason I invest in Tesla is because I",
+        "duration": 960,
+        "offset": 287170
+      },
+      {
+        "text": "believe in Elon Musk.",
+        "duration": 2960,
+        "offset": 288130
+      },
+      {
+        "text": "Because",
+        "duration": 1120,
+        "offset": 291090
+      },
+      {
+        "text": "many things are based on a vision,",
+        "duration": 2480,
+        "offset": 292210
+      },
+      {
+        "text": "you've already seen",
+        "duration": 760,
+        "offset": 294690
+      },
+      {
+        "text": "some of his prototypes.",
+        "duration": 1040,
+        "offset": 295450
+      },
+      {
+        "text": "However, to achieve",
+        "duration": 560,
+        "offset": 296490
+      },
+      {
+        "text": "large-scale",
+        "duration": 880,
+        "offset": 297050
+      },
+      {
+        "text": "deployment, you",
+        "duration": 720,
+        "offset": 297930
+      },
+      {
+        "text": "need execution capabilities.",
+        "duration": 960,
+        "offset": 298650
+      },
+      {
+        "text": "Investing in Tesla",
+        "duration": 720,
+        "offset": 299610
+      },
+      {
+        "text": "means believing in Elon's execution capabilities, that",
+        "duration": 1840,
+        "offset": 300330
+      },
+      {
+        "text": "his",
+        "duration": 1000,
+        "offset": 302170
+      },
+      {
+        "text": "envisioned",
+        "duration": 840,
+        "offset": 303170
+      },
+      {
+        "text": "things can be fully implemented, and that",
+        "duration": 2390,
+        "offset": 304010
+      },
+      {
+        "text": "his",
+        "duration": 680,
+        "offset": 306400
+      },
+      {
+        "text": "vision can be fully realized.",
+        "duration": 1280,
+        "offset": 307080
+      },
+      {
+        "text": "Elon's",
+        "duration": 1080,
+        "offset": 308360
+      },
+      {
+        "text": "track record",
+        "duration": 840,
+        "offset": 309440
+      },
+      {
+        "text": "makes you feel that",
+        "duration": 1080,
+        "offset": 310280
+      },
+      {
+        "text": "you really can do it.",
+        "duration": 1520,
+        "offset": 311360
+      },
+      {
+        "text": "Even Jensen said, \"",
+        "duration": 1660,
+        "offset": 312880
+      },
+      {
+        "text": "Don't bet against Elon.\"",
+        "duration": 1560,
+        "offset": 314540
+      },
+      {
+        "text": "Basically,",
+        "duration": 2160,
+        "offset": 316100
+      },
+      {
+        "text": "Tesla shareholders who invest in Elon are",
+        "duration": 1040,
+        "offset": 318260
+      },
+      {
+        "text": "betting on Elon's execution.",
+        "duration": 1880,
+        "offset": 319300
+      },
+      {
+        "text": "But what I have to say is that when you",
+        "duration": 2000,
+        "offset": 321180
+      },
+      {
+        "text": "invest in Tesla,",
+        "duration": 2000,
+        "offset": 323180
+      },
+      {
+        "text": "you are essentially",
+        "duration": 1470,
+        "offset": 325180
+      },
+      {
+        "text": "buying into a beautiful vision.",
+        "duration": 2640,
+        "offset": 326650
+      },
+      {
+        "text": "You are definitely not value investing",
+        "duration": 1760,
+        "offset": 329290
+      },
+      {
+        "text": "because the company itself hasn't reached the point where it's",
+        "duration": 1560,
+        "offset": 331050
+      },
+      {
+        "text": "completely decoupled from fundamentals. Yes, it's already",
+        "duration": 1720,
+        "offset": 332610
+      },
+      {
+        "text": "decoupled.",
+        "duration": 880,
+        "offset": 334330
+      },
+      {
+        "text": "It's a matter of whether you're willing to accept that.",
+        "duration": 1080,
+        "offset": 335210
+      },
+      {
+        "text": "I believe in the company's future development; that's",
+        "duration": 2480,
+        "offset": 336290
+      },
+      {
+        "text": "roughly the concept.",
+        "duration": 1260,
+        "offset": 338770
+      },
+      {
+        "text": "I know it sounds crazy",
+        "duration": 1520,
+        "offset": 340030
+      },
+      {
+        "text": "because you have to believe in a company",
+        "duration": 1400,
+        "offset": 341550
+      },
+      {
+        "text": "and bet your entire position on it—",
+        "duration": 2120,
+        "offset": 342950
+      },
+      {
+        "text": "that's really difficult.",
+        "duration": 2040,
+        "offset": 345070
+      },
+      {
+        "text": "I think making Tesla your",
+        "duration": 1800,
+        "offset": 347110
+      },
+      {
+        "text": "third-largest position is quite impressive.",
+        "duration": 1760,
+        "offset": 348910
+      },
+      {
+        "text": "I guess you didn't get in very early, right?",
+        "duration": 1990,
+        "offset": 350670
+      },
+      {
+        "text": "I got in during the tariff war.",
+        "duration": 2000,
+        "offset": 352660
+      },
+      {
+        "text": "Actually, I've been in before and then got out",
+        "duration": 2400,
+        "offset": 354660
+      },
+      {
+        "text": "because Tesla is a very volatile stock. The",
+        "duration": 1840,
+        "offset": 357060
+      },
+      {
+        "text": "last time I got in was this year during the tariff war.",
+        "duration": 3200,
+        "offset": 358900
+      },
+      {
+        "text": "I did a sell put,",
+        "duration": 1040,
+        "offset": 362100
+      },
+      {
+        "text": "and then it was executed, so I just held it.",
+        "duration": 2670,
+        "offset": 363140
+      },
+      {
+        "text": "I see, I see, it's",
+        "duration": 1560,
+        "offset": 365810
+      },
+      {
+        "text": "okay, the price is okay too.",
+        "duration": 2480,
+        "offset": 367370
+      },
+      {
+        "text": "We've always",
+        "duration": 960,
+        "offset": 369850
+      },
+      {
+        "text": "thought that many people listen to others saying that you should just",
+        "duration": 2920,
+        "offset": 370810
+      },
+      {
+        "text": "buy the big picture.",
+        "duration": 2040,
+        "offset": 373730
+      },
+      {
+        "text": "And actually, I used to think that way too.",
+        "duration": 2530,
+        "offset": 375770
+      },
+      {
+        "text": "For most people,",
+        "duration": 880,
+        "offset": 378300
+      },
+      {
+        "text": "generally speaking, 99% of people,",
+        "duration": 2200,
+        "offset": 379180
+      },
+      {
+        "text": "investing in the broader market is sufficient;",
+        "duration": 680,
+        "offset": 381380
+      },
+      {
+        "text": "investing in the S&P 500,",
+        "duration": 1880,
+        "offset": 382060
+      },
+      {
+        "text": "such as VOO ETFs, would suffice.",
+        "duration": 2280,
+        "offset": 383940
+      },
+      {
+        "text": "However, I'm",
+        "duration": 1400,
+        "offset": 386220
+      },
+      {
+        "text": "slightly changing this view",
+        "duration": 2360,
+        "offset": 387620
+      },
+      {
+        "text": "because if you",
+        "duration": 800,
+        "offset": 389980
+      },
+      {
+        "text": "look at the current US economic development, most of the",
+        "duration": 2270,
+        "offset": 390780
+      },
+      {
+        "text": "S&P 500",
+        "duration": 1520,
+        "offset": 393050
+      },
+      {
+        "text": "'s profits are",
+        "duration": 1360,
+        "offset": 394570
+      },
+      {
+        "text": "concentrated in the top few companies. The",
+        "duration": 1280,
+        "offset": 395930
+      },
+      {
+        "text": "companies behind them haven't performed as well.",
+        "duration": 1840,
+        "offset": 397210
+      },
+      {
+        "text": "Furthermore, it's",
+        "duration": 1680,
+        "offset": 399050
+      },
+      {
+        "text": "clear that AI will",
+        "duration": 1600,
+        "offset": 400730
+      },
+      {
+        "text": "continue to drive up the value of these companies.",
+        "duration": 2860,
+        "offset": 402330
+      },
+      {
+        "text": "In this situation,",
+        "duration": 1000,
+        "offset": 405190
+      },
+      {
+        "text": "I personally feel that",
+        "duration": 2800,
+        "offset": 406190
+      },
+      {
+        "text": "if you",
+        "duration": 960,
+        "offset": 408990
+      },
+      {
+        "text": "simply invest in the S&P 500—a rather",
+        "duration": 1560,
+        "offset": 409950
+      },
+      {
+        "text": "passive approach—",
+        "duration": 1360,
+        "offset": 411510
+      },
+      {
+        "text": "many opportunities are being diluted. Do",
+        "duration": 1480,
+        "offset": 412870
+      },
+      {
+        "text": "you agree? Let me start by saying what",
+        "duration": 1000,
+        "offset": 414350
+      },
+      {
+        "text": "I think.",
+        "duration": 960,
+        "offset": 415350
+      },
+      {
+        "text": "Investing in the overall market is still suitable for most people",
+        "duration": 2600,
+        "offset": 416310
+      },
+      {
+        "text": "because the reason why",
+        "duration": 1680,
+        "offset": 418910
+      },
+      {
+        "text": "90% of fund managers can't outperform the market is because the",
+        "duration": 3040,
+        "offset": 420590
+      },
+      {
+        "text": "data speaks for itself—the market is that powerful.",
+        "duration": 3560,
+        "offset": 423630
+      },
+      {
+        "text": "However, I also believe that",
+        "duration": 1800,
+        "offset": 427190
+      },
+      {
+        "text": "in the next few years,",
+        "duration": 1520,
+        "offset": 428990
+      },
+      {
+        "text": "these giants who have a significant advantage in AI will capture",
+        "duration": 4240,
+        "offset": 430510
+      },
+      {
+        "text": "most of the market's",
+        "duration": 1880,
+        "offset": 434750
+      },
+      {
+        "text": "profits, which I am very optimistic about.",
+        "duration": 2760,
+        "offset": 436630
+      },
+      {
+        "text": "But the reason why investing in",
+        "duration": 1840,
+        "offset": 439390
+      },
+      {
+        "text": "individual stocks isn't for everyone is",
+        "duration": 1080,
+        "offset": 441230
+      },
+      {
+        "text": "because it's not suitable for everyone. Individual",
+        "duration": 2180,
+        "offset": 442310
+      },
+      {
+        "text": "stocks are highly volatile.",
+        "duration": 2440,
+        "offset": 444490
+      },
+      {
+        "text": "For example, last",
+        "duration": 1080,
+        "offset": 446930
+      },
+      {
+        "text": "week, due to the",
+        "duration": 1840,
+        "offset": 448010
+      },
+      {
+        "text": "US government shutdown and",
+        "duration": 2880,
+        "offset": 449850
+      },
+      {
+        "text": "Michael Burry's",
+        "duration": 600,
+        "offset": 452730
+      },
+      {
+        "text": "short positions,",
+        "duration": 2480,
+        "offset": 453330
+      },
+      {
+        "text": "Palantir and",
+        "duration": 200,
+        "offset": 455810
+      },
+      {
+        "text": "Nvidia experienced significant pullbacks, but they rebounded yesterday.",
+        "duration": 2160,
+        "offset": 456010
+      },
+      {
+        "text": "That's how volatile individual stocks are.",
+        "duration": 1600,
+        "offset": 458170
+      },
+      {
+        "text": "So, basically, anyone who wants to invest in individual stocks",
+        "duration": 1560,
+        "offset": 459770
+      },
+      {
+        "text": "must first...",
+        "duration": 760,
+        "offset": 461330
+      },
+      {
+        "text": "I know what you'll experience next: a",
+        "duration": 2160,
+        "offset": 462090
+      },
+      {
+        "text": "short-term dip.",
+        "duration": 2550,
+        "offset": 464250
+      },
+      {
+        "text": "During this dip,",
+        "duration": 920,
+        "offset": 466800
+      },
+      {
+        "text": "you need to",
+        "duration": 2360,
+        "offset": 467720
+      },
+      {
+        "text": "remain calm and hold on.",
+        "duration": 920,
+        "offset": 470080
+      },
+      {
+        "text": "Many people give up",
+        "duration": 2160,
+        "offset": 471000
+      },
+      {
+        "text": "when the market is volatile,",
+        "duration": 1880,
+        "offset": 473160
+      },
+      {
+        "text": "then",
+        "duration": 880,
+        "offset": 475040
+      },
+      {
+        "text": "chase the price back up, wiping out",
+        "duration": 1040,
+        "offset": 475920
+      },
+      {
+        "text": "their profits.",
+        "duration": 2270,
+        "offset": 476960
+      },
+      {
+        "text": "Mental fortitude is crucial. In",
+        "duration": 680,
+        "offset": 479230
+      },
+      {
+        "text": "fact,",
+        "duration": 920,
+        "offset": 479910
+      },
+      {
+        "text": "most people are like this;",
+        "duration": 1120,
+        "offset": 480830
+      },
+      {
+        "text": "I've experienced it many times.",
+        "duration": 1360,
+        "offset": 481950
+      },
+      {
+        "text": "Later, I realized that to make money",
+        "duration": 2520,
+        "offset": 483310
+      },
+      {
+        "text": "in active investing,",
+        "duration": 1160,
+        "offset": 485830
+      },
+      {
+        "text": "you have to",
+        "duration": 1320,
+        "offset": 486990
+      },
+      {
+        "text": "do things that go against human nature. As I",
+        "duration": 2350,
+        "offset": 488310
+      },
+      {
+        "text": "mentioned in a previous video, the reason I",
+        "duration": 2480,
+        "offset": 490660
+      },
+      {
+        "text": "don't",
+        "duration": 1160,
+        "offset": 493140
+      },
+      {
+        "text": "recommend active investing is because of",
+        "duration": 1720,
+        "offset": 494300
+      },
+      {
+        "text": "its high volatility,",
+        "duration": 2440,
+        "offset": 496020
+      },
+      {
+        "text": "and there",
+        "duration": 2400,
+        "offset": 498460
+      },
+      {
+        "text": "'s a high probability you",
+        "duration": 920,
+        "offset": 500860
+      },
+      {
+        "text": "still won't outperform the market. The",
+        "duration": 2800,
+        "offset": 501780
+      },
+      {
+        "text": "combined",
+        "duration": 1320,
+        "offset": 504580
+      },
+      {
+        "text": "performance of the stocks you choose might still underperform the market.",
+        "duration": 2000,
+        "offset": 505900
+      },
+      {
+        "text": "Thirdly,",
+        "duration": 2000,
+        "offset": 507900
+      },
+      {
+        "text": "because you're afraid of",
+        "duration": 1080,
+        "offset": 509900
+      },
+      {
+        "text": "volatility, you're hesitant to invest too much capital.",
+        "duration": 1900,
+        "offset": 510980
+      },
+      {
+        "text": "Therefore, compared to",
+        "duration": 1480,
+        "offset": 512880
+      },
+      {
+        "text": "investing all your capital in the market,",
+        "duration": 1440,
+        "offset": 514360
+      },
+      {
+        "text": "your overall profit will be lower. This is one reason.",
+        "duration": 2520,
+        "offset": 515799.99999999994
+      },
+      {
+        "text": "So, for various reasons, when",
+        "duration": 1120,
+        "offset": 518320.00000000006
+      },
+      {
+        "text": "actively investing and selecting individual stocks,",
+        "duration": 2960,
+        "offset": 519440.00000000006
+      },
+      {
+        "text": "you must be very clear about what you're doing",
+        "duration": 1560,
+        "offset": 522400
+      },
+      {
+        "text": "and your mindset must not be swayed.",
+        "duration": 2690,
+        "offset": 523960.00000000006
+      },
+      {
+        "text": "I think what you just said is very good: the overall",
+        "duration": 2320,
+        "offset": 526650
+      },
+      {
+        "text": "market is actually suitable for most people",
+        "duration": 1720,
+        "offset": 528970
+      },
+      {
+        "text": "because it's a form of passive investing with",
+        "duration": 1800,
+        "offset": 530690
+      },
+      {
+        "text": "relatively less volatility. You",
+        "duration": 2160,
+        "offset": 532490
+      },
+      {
+        "text": "could even consider allocating capital",
+        "duration": 1320,
+        "offset": 534650
+      },
+      {
+        "text": "if you believe that",
+        "duration": 1480,
+        "offset": 535970
+      },
+      {
+        "text": "future tech will",
+        "duration": 1440,
+        "offset": 537450
+      },
+      {
+        "text": "lead the trend.",
+        "duration": 3480,
+        "offset": 538890
+      },
+      {
+        "text": "Part of the market analysis is done on QQQ,",
+        "duration": 2320,
+        "offset": 542370
+      },
+      {
+        "text": "comparing tech-driven ETFs",
+        "duration": 1880,
+        "offset": 544690
+      },
+      {
+        "text": "rather than just",
+        "duration": 960,
+        "offset": 546570
+      },
+      {
+        "text": "S&P 500 ETFs.",
+        "duration": 2160,
+        "offset": 547530
+      },
+      {
+        "text": "I think this is a",
+        "duration": 880,
+        "offset": 549690
+      },
+      {
+        "text": "pretty good option.",
+        "duration": 1520,
+        "offset": 550570
+      },
+      {
+        "text": "If you want to be a bit more aggressive like",
+        "duration": 2720,
+        "offset": 552090
+      },
+      {
+        "text": "us and still make money, as",
+        "duration": 2240,
+        "offset": 554810
+      },
+      {
+        "text": "you just mentioned, you",
+        "duration": 720,
+        "offset": 557050
+      },
+      {
+        "text": "need to do some counterintuitive, contrarian trading.",
+        "duration": 2600,
+        "offset": 557770
+      },
+      {
+        "text": "For example, when prices fall, you should add to your position,",
+        "duration": 2110,
+        "offset": 560370
+      },
+      {
+        "text": "and when prices rise, you",
+        "duration": 760,
+        "offset": 562480
+      },
+      {
+        "text": "should restrain yourself from chasing highs.",
+        "duration": 2280,
+        "offset": 563240
+      },
+      {
+        "text": "I think this is the hardest part. The",
+        "duration": 1480,
+        "offset": 565520
+      },
+      {
+        "text": "theory is simple, but",
+        "duration": 1480,
+        "offset": 567000
+      },
+      {
+        "text": "I think it really tests your discipline.",
+        "duration": 1680,
+        "offset": 568480
+      },
+      {
+        "text": "Like many",
+        "duration": 1000,
+        "offset": 570160
+      },
+      {
+        "text": "things, you know what you should do,",
+        "duration": 1680,
+        "offset": 571160
+      },
+      {
+        "text": "but very few people can actually do it.",
+        "duration": 4080,
+        "offset": 572840
+      },
+      {
+        "text": "Lifestyle habits can make you very healthy,",
+        "duration": 1750,
+        "offset": 576920
+      },
+      {
+        "text": "but truly consistent",
+        "duration": 1880,
+        "offset": 578670
+      },
+      {
+        "text": "adherence to them is rare.",
+        "duration": 1120,
+        "offset": 580550
+      },
+      {
+        "text": "Yes, it's a theory everyone knows: buy low, sell high.",
+        "duration": 3360,
+        "offset": 581670
+      },
+      {
+        "text": "Everyone wants to achieve this,",
+        "duration": 1560,
+        "offset": 585030
+      },
+      {
+        "text": "but often, when prices are low,",
+        "duration": 1900,
+        "offset": 586590
+      },
+      {
+        "text": "everyone wants to sell.",
+        "duration": 1040,
+        "offset": 588490
+      },
+      {
+        "text": "I vaguely remember",
+        "duration": 760,
+        "offset": 589530
+      },
+      {
+        "text": "when Tesla",
+        "duration": 1200,
+        "offset": 590290
+      },
+      {
+        "text": "fell to 100, or even lower.",
+        "duration": 2280,
+        "offset": 591490
+      },
+      {
+        "text": "Everyone was predicting its demise, and it",
+        "duration": 1640,
+        "offset": 593770
+      },
+      {
+        "text": "briefly dipped below 100.",
+        "duration": 1960,
+        "offset": 595410
+      },
+      {
+        "text": "This usually happens when",
+        "duration": 1240,
+        "offset": 597370
+      },
+      {
+        "text": "individual stocks fall; all sorts of",
+        "duration": 1080,
+        "offset": 598610
+      },
+      {
+        "text": "negative news emerge. Yes,",
+        "duration": 1360,
+        "offset": 599690
+      },
+      {
+        "text": "the whole",
+        "duration": 1120,
+        "offset": 601050
+      },
+      {
+        "text": "market panics, and everyone",
+        "duration": 1100,
+        "offset": 602170
+      },
+      {
+        "text": "says Tesla is going to go to zero.",
+        "duration": 1480,
+        "offset": 603270
+      },
+      {
+        "text": "Everyone's saying things like, \"We'll",
+        "duration": 1600,
+        "offset": 604750
+      },
+      {
+        "text": "see it at 60, we'll see it at 50,\" and that kind of",
+        "duration": 1800,
+        "offset": 606350
+      },
+      {
+        "text": "talk will definitely make you nervous,",
+        "duration": 1720,
+        "offset": 608150
+      },
+      {
+        "text": "and you'll want to sell what you have. At that",
+        "duration": 1840,
+        "offset": 609870
+      },
+      {
+        "text": "moment, it really depends on you... At",
+        "duration": 2300,
+        "offset": 611710
+      },
+      {
+        "text": "this point, you should",
+        "duration": 560,
+        "offset": 614010
+      },
+      {
+        "text": "watch Terry's",
+        "duration": 480,
+        "offset": 614570
+      },
+      {
+        "text": "YouTube videos to see how he upholds his beliefs.",
+        "duration": 1840,
+        "offset": 615050
+      },
+      {
+        "text": "I think",
+        "duration": 1680,
+        "offset": 616890
+      },
+      {
+        "text": "people who can add to their positions at that time are really ruthless.",
+        "duration": 1840,
+        "offset": 618570
+      },
+      {
+        "text": "You have to be ruthless and willing to do this, which is",
+        "duration": 3400,
+        "offset": 620410
+      },
+      {
+        "text": "difficult for most people.",
+        "duration": 1600,
+        "offset": 623810
+      },
+      {
+        "text": "So,",
+        "duration": 1400,
+        "offset": 625410
+      },
+      {
+        "text": "for most people,",
+        "duration": 1520,
+        "offset": 626810
+      },
+      {
+        "text": "investing in broad market ETFs is the safest option.",
+        "duration": 2200,
+        "offset": 628330
+      },
+      {
+        "text": "Okay, speaking of diversifying investments across different industries, the",
+        "duration": 2200,
+        "offset": 630530
+      },
+      {
+        "text": "recent performance of precious metals has been quite remarkable. They have",
+        "duration": 3440,
+        "offset": 632730
+      },
+      {
+        "text": "outperformed the QQQ and S&P 500 in six months, one year, and five years.",
+        "duration": 2520,
+        "offset": 636170
+      },
+      {
+        "text": "Although gold dipped slightly a few days ago, it",
+        "duration": 2320,
+        "offset": 638690
+      },
+      {
+        "text": "looks like it's about to recover.",
+        "duration": 1700,
+        "offset": 641010
+      },
+      {
+        "text": "If you are",
+        "duration": 640,
+        "offset": 642710
+      },
+      {
+        "text": "interested in trading gold, silver, and other precious metals, I would like to",
+        "duration": 2400,
+        "offset": 643350
+      },
+      {
+        "text": "introduce a",
+        "duration": 920,
+        "offset": 645750
+      },
+      {
+        "text": "compliant trading platform called Mitrade. It",
+        "duration": 1760,
+        "offset": 646670
+      },
+      {
+        "text": "also allows trading in",
+        "duration": 1080,
+        "offset": 648430
+      },
+      {
+        "text": "Bitcoin, US stocks, crude oil, and forex. Mitrade offers",
+        "duration": 1600,
+        "offset": 649510
+      },
+      {
+        "text": "over 900 popular assets across various indices and",
+        "duration": 3130,
+        "offset": 651110
+      },
+      {
+        "text": "supports deposits and withdrawals in cryptocurrencies, including credit cards and USDT. This is",
+        "duration": 4040,
+        "offset": 654240
+      },
+      {
+        "text": "very convenient for those without US dollars. The",
+        "duration": 1800,
+        "offset": 658280
+      },
+      {
+        "text": "platform itself has no transaction fees and",
+        "duration": 1560,
+        "offset": 660080
+      },
+      {
+        "text": "profits primarily from very low spreads.",
+        "duration": 1840,
+        "offset": 661640
+      },
+      {
+        "text": "Mitrade also",
+        "duration": 1800,
+        "offset": 663480
+      },
+      {
+        "text": "provides a $1 million fund security policy for each user.",
+        "duration": 2440,
+        "offset": 665280
+      },
+      {
+        "text": "Now, Mitrade is",
+        "duration": 880,
+        "offset": 667720
+      },
+      {
+        "text": "giving away free trading vouchers to its channel viewers. With these vouchers,",
+        "duration": 2150,
+        "offset": 668600
+      },
+      {
+        "text": "profits go to you, and",
+        "duration": 1880,
+        "offset": 670750
+      },
+      {
+        "text": "losses go to the platform.",
+        "duration": 1240,
+        "offset": 672630
+      },
+      {
+        "text": "Register using the link below my video and",
+        "duration": 2000,
+        "offset": 673870
+      },
+      {
+        "text": "deposit up to $1300 worth of trading vouchers.",
+        "duration": 2800,
+        "offset": 675870
+      },
+      {
+        "text": "I'll put the details of the promotion in the information section below the video.",
+        "duration": 2880,
+        "offset": 678670
+      },
+      {
+        "text": "If you don't want to miss out on free trading,",
+        "duration": 1440,
+        "offset": 681550
+      },
+      {
+        "text": "feel free to try it out.",
+        "duration": 1000,
+        "offset": 682990
+      },
+      {
+        "text": "Another point I want to ask is about Bollinger Bands...",
+        "duration": 3840,
+        "offset": 683990
+      },
+      {
+        "text": "Many of our viewers work in tech, and the",
+        "duration": 1560,
+        "offset": 687830
+      },
+      {
+        "text": "salaries are actually quite good,",
+        "duration": 2840,
+        "offset": 689390
+      },
+      {
+        "text": "especially if you've been in tech for",
+        "duration": 1200,
+        "offset": 692230
+      },
+      {
+        "text": "the past five or ten years. You",
+        "duration": 2240,
+        "offset": 693430
+      },
+      {
+        "text": "should be doing quite well now.",
+        "duration": 2410,
+        "offset": 695670
+      },
+      {
+        "text": "However,",
+        "duration": 1080,
+        "offset": 698080
+      },
+      {
+        "text": "many people are still",
+        "duration": 640,
+        "offset": 699160
+      },
+      {
+        "text": "struggling and haven't saved much money.",
+        "duration": 1920,
+        "offset": 699800
+      },
+      {
+        "text": "We just talked about",
+        "duration": 720,
+        "offset": 701720
+      },
+      {
+        "text": "how if you don't have a family or children, you've probably",
+        "duration": 1800,
+        "offset": 702440
+      },
+      {
+        "text": "already exceeded the fat FIRE threshold.",
+        "duration": 2130,
+        "offset": 704240
+      },
+      {
+        "text": "Well, it depends on where you are. In the",
+        "duration": 1040,
+        "offset": 706370
+      },
+      {
+        "text": "Bay Area, it might not be, but",
+        "duration": 1600,
+        "offset": 707410
+      },
+      {
+        "text": "if you're in Japan, for example,",
+        "duration": 1920,
+        "offset": 709010
+      },
+      {
+        "text": "you probably have reached the FIRE",
+        "duration": 1920,
+        "offset": 710930
+      },
+      {
+        "text": "threshold. Yes,",
+        "duration": 880,
+        "offset": 712850
+      },
+      {
+        "text": "I think",
+        "duration": 280,
+        "offset": 713730
+      },
+      {
+        "text": "everyone's FIRE",
+        "duration": 440,
+        "offset": 714010
+      },
+      {
+        "text": "number is",
+        "duration": 1560,
+        "offset": 714450
+      },
+      {
+        "text": "different, but based on your current lifestyle",
+        "duration": 2930,
+        "offset": 716010
+      },
+      {
+        "text": "and my expenses, it's about the same. Now,",
+        "duration": 2920,
+        "offset": 718940
+      },
+      {
+        "text": "if you do",
+        "duration": 1120,
+        "offset": 721860
+      },
+      {
+        "text": "n't have children or a family, you could",
+        "duration": 1480,
+        "offset": 722980
+      },
+      {
+        "text": "probably retire long ago and just",
+        "duration": 1240,
+        "offset": 724460
+      },
+      {
+        "text": "relax. Yeah,",
+        "duration": 2280,
+        "offset": 725700
+      },
+      {
+        "text": "any advice?",
+        "duration": 2240,
+        "offset": 727980
+      },
+      {
+        "text": "How can an engineer get fired sooner?",
+        "duration": 2520,
+        "offset": 730220
+      },
+      {
+        "text": "Honestly, the most",
+        "duration": 1400,
+        "offset": 732740
+      },
+      {
+        "text": "useful advice is often the most boring.",
+        "duration": 1960,
+        "offset": 734140
+      },
+      {
+        "text": "Like I just said,",
+        "duration": 680,
+        "offset": 736100
+      },
+      {
+        "text": "if you know",
+        "duration": 1720,
+        "offset": 736780
+      },
+      {
+        "text": "what the right thing to do is and",
+        "duration": 840,
+        "offset": 738500
+      },
+      {
+        "text": "you stick to your discipline, then it's basically just a",
+        "duration": 2060,
+        "offset": 739340
+      },
+      {
+        "text": "matter of time.",
+        "duration": 2640,
+        "offset": 741400
+      },
+      {
+        "text": "I think a few years ago, when interest rates were very low,",
+        "duration": 2760,
+        "offset": 744040
+      },
+      {
+        "text": "if you",
+        "duration": 880,
+        "offset": 746800
+      },
+      {
+        "text": "could leverage your money to buy a house,",
+        "duration": 1120,
+        "offset": 747680
+      },
+      {
+        "text": "that was a good option.",
+        "duration": 1280,
+        "offset": 748800
+      },
+      {
+        "text": "I think a lot of times it's like this:",
+        "duration": 2400,
+        "offset": 750080
+      },
+      {
+        "text": "you need to know the",
+        "duration": 1600,
+        "offset": 752480
+      },
+      {
+        "text": "right principle first,",
+        "duration": 1000,
+        "offset": 754080
+      },
+      {
+        "text": "then wait for the opportunity,",
+        "duration": 1040,
+        "offset": 755080
+      },
+      {
+        "text": "and when the opportunity comes,",
+        "duration": 1280,
+        "offset": 756120
+      },
+      {
+        "text": "don't hesitate, act immediately. Buying and",
+        "duration": 1560,
+        "offset": 757400
+      },
+      {
+        "text": "selling stocks is the same, as is the",
+        "duration": 1680,
+        "offset": 758960
+      },
+      {
+        "text": "timing of interest rates I just mentioned, and",
+        "duration": 2240,
+        "offset": 760640
+      },
+      {
+        "text": "also the timing of job hunting.",
+        "duration": 2280,
+        "offset": 762880
+      },
+      {
+        "text": "You need to find the right",
+        "duration": 840,
+        "offset": 765160
+      },
+      {
+        "text": "track and there just happens to be... If",
+        "duration": 1390,
+        "offset": 766000
+      },
+      {
+        "text": "you have an opportunity, don't look back. Just go for it and",
+        "duration": 1240,
+        "offset": 767390
+      },
+      {
+        "text": "do it. In",
+        "duration": 1360,
+        "offset": 768630
+      },
+      {
+        "text": "life, all",
+        "duration": 1520,
+        "offset": 769990
+      },
+      {
+        "text": "these",
+        "duration": 1760,
+        "offset": 771510
+      },
+      {
+        "text": "decisions are investments.",
+        "duration": 1840,
+        "offset": 773270
+      },
+      {
+        "text": "Because",
+        "duration": 1120,
+        "offset": 775110
+      },
+      {
+        "text": "doing the right thing at the right time is really that simple.",
+        "duration": 1800,
+        "offset": 776230
+      },
+      {
+        "text": "If",
+        "duration": 1120,
+        "offset": 778030
+      },
+      {
+        "text": "more than half of your ten decisions are correct,",
+        "duration": 2840,
+        "offset": 779150
+      },
+      {
+        "text": "you won't be doing too badly. Another",
+        "duration": 1480,
+        "offset": 781990
+      },
+      {
+        "text": "very important point, which",
+        "duration": 1960,
+        "offset": 783470
+      },
+      {
+        "text": "I often see on English",
+        "duration": 920,
+        "offset": 785430
+      },
+      {
+        "text": "platforms and websites, is that whether",
+        "duration": 2100,
+        "offset": 786350
+      },
+      {
+        "text": "you can fire",
+        "duration": 720,
+        "offset": 788450
+      },
+      {
+        "text": "depends on your spending habits. Someone",
+        "duration": 1160,
+        "offset": 789170
+      },
+      {
+        "text": "like Terry, with",
+        "duration": 1360,
+        "offset": 790330
+      },
+      {
+        "text": "such low material desires, can",
+        "duration": 1000,
+        "offset": 791690
+      },
+      {
+        "text": "fire quickly.",
+        "duration": 960,
+        "offset": 792690
+      },
+      {
+        "text": "If we're talking about spending,",
+        "duration": 1680,
+        "offset": 793650
+      },
+      {
+        "text": "you need to be careful about",
+        "duration": 920,
+        "offset": 795330
+      },
+      {
+        "text": "luxury expense creep.",
+        "duration": 2440,
+        "offset": 796250
+      },
+      {
+        "text": "Some people might think, \"",
+        "duration": 1630,
+        "offset": 798690
+      },
+      {
+        "text": "I got a raise today, so",
+        "duration": 2200,
+        "offset": 800320
+      },
+      {
+        "text": "I have to buy a bigger house and a new car.\"",
+        "duration": 1360,
+        "offset": 802520
+      },
+      {
+        "text": "For example,",
+        "duration": 960,
+        "offset": 803880
+      },
+      {
+        "text": "you need to distinguish between",
+        "duration": 1400,
+        "offset": 804840
+      },
+      {
+        "text": "liabilities and",
+        "duration": 1520,
+        "offset": 806240
+      },
+      {
+        "text": "assets. A",
+        "duration": 920,
+        "offset": 807760
+      },
+      {
+        "text": "car is a liability,",
+        "duration": 1980,
+        "offset": 808680
+      },
+      {
+        "text": "which I don't understand.",
+        "duration": 1000,
+        "offset": 810660
+      },
+      {
+        "text": "The reason many people like to buy luxury cars is",
+        "duration": 1840,
+        "offset": 811660
+      },
+      {
+        "text": "because cars are liabilities; their value",
+        "duration": 1430,
+        "offset": 813500
+      },
+      {
+        "text": "begins to depreciate significantly the moment they are purchased. Of",
+        "duration": 4330,
+        "offset": 814930
+      },
+      {
+        "text": "course,",
+        "duration": 920,
+        "offset": 819260
+      },
+      {
+        "text": "if buying something",
+        "duration": 1200,
+        "offset": 820180
+      },
+      {
+        "text": "brings you happiness",
+        "duration": 1280,
+        "offset": 821380
+      },
+      {
+        "text": "and you are genuinely",
+        "duration": 800,
+        "offset": 822660
+      },
+      {
+        "text": "interested in it, then that's a different story.",
+        "duration": 1480,
+        "offset": 823460
+      },
+      {
+        "text": "But if not,",
+        "duration": 1400,
+        "offset": 824940
+      },
+      {
+        "text": "you need to consider that",
+        "duration": 1240,
+        "offset": 826340
+      },
+      {
+        "text": "some assets appreciate on",
+        "duration": 880,
+        "offset": 827580
+      },
+      {
+        "text": "their own, while others do",
+        "duration": 1800,
+        "offset": 828460
+      },
+      {
+        "text": "n't.",
+        "duration": 1000,
+        "offset": 830260
+      },
+      {
+        "text": "You need to think this through before buying.",
+        "duration": 2980,
+        "offset": 831260
+      },
+      {
+        "text": "Actually, I think many people",
+        "duration": 760,
+        "offset": 834240
+      },
+      {
+        "text": "buy luxury cars, excluding the super-rich. For them,",
+        "duration": 3200,
+        "offset": 835000
+      },
+      {
+        "text": "buying luxury cars is normal.",
+        "duration": 2480,
+        "offset": 838200
+      },
+      {
+        "text": "But for the average middle-class person, the reason they might buy luxury cars—",
+        "duration": 3240,
+        "offset": 840680
+      },
+      {
+        "text": "I don't know if this is correct—is that",
+        "duration": 1200,
+        "offset": 843920
+      },
+      {
+        "text": "within that circle,",
+        "duration": 1160,
+        "offset": 845120
+      },
+      {
+        "text": "you see others doing it,",
+        "duration": 2050,
+        "offset": 846280
+      },
+      {
+        "text": "or perhaps people think",
+        "duration": 1080,
+        "offset": 848330
+      },
+      {
+        "text": "it's a great thing.",
+        "duration": 1800,
+        "offset": 849410
+      },
+      {
+        "text": "Then, buying a car is something that can increase your sense of happiness.",
+        "duration": 2880,
+        "offset": 851210
+      },
+      {
+        "text": "I think many people think, \"",
+        "duration": 1960,
+        "offset": 854090
+      },
+      {
+        "text": "Why do I work so hard to earn money? It's so that",
+        "duration": 2200,
+        "offset": 856050
+      },
+      {
+        "text": "I can live a better life and buy the",
+        "duration": 2160,
+        "offset": 858250
+      },
+      {
+        "text": "things I want.\"",
+        "duration": 2260,
+        "offset": 860410
+      },
+      {
+        "text": "I think that's perfectly fine,",
+        "duration": 2040,
+        "offset": 862670
+      },
+      {
+        "text": "absolutely no problem.",
+        "duration": 920,
+        "offset": 864710
+      },
+      {
+        "text": "But the problem is, I think,",
+        "duration": 1640,
+        "offset": 865630
+      },
+      {
+        "text": "many times, is the",
+        "duration": 1640,
+        "offset": 867270
+      },
+      {
+        "text": "reward you get from doing this",
+        "duration": 1280,
+        "offset": 868910
+      },
+      {
+        "text": "truly leading to a",
+        "duration": 1360,
+        "offset": 870190
+      },
+      {
+        "text": "sustained increase in your sense of happiness? It depends on",
+        "duration": 3120,
+        "offset": 871550
+      },
+      {
+        "text": "your first principle,",
+        "duration": 2270,
+        "offset": 874670
+      },
+      {
+        "text": "your ultimate goal.",
+        "duration": 1040,
+        "offset": 876940
+      },
+      {
+        "text": "I want to save more money.",
+        "duration": 1040,
+        "offset": 877980
+      },
+      {
+        "text": "Perhaps this short-term",
+        "duration": 1360,
+        "offset": 879020
+      },
+      {
+        "text": "purchase will",
+        "duration": 2640,
+        "offset": 880380
+      },
+      {
+        "text": "make it harder to achieve that goal.",
+        "duration": 1480,
+        "offset": 883020
+      },
+      {
+        "text": "Then you need to carefully consider whether it's worth",
+        "duration": 1800,
+        "offset": 884500
+      },
+      {
+        "text": "it. Because, in my own opinion, a",
+        "duration": 1500,
+        "offset": 886300
+      },
+      {
+        "text": "luxury car is indeed something I enjoy—",
+        "duration": 2040,
+        "offset": 887800
+      },
+      {
+        "text": "yeah, buying a cool car makes me feel good—but",
+        "duration": 2400,
+        "offset": 889840
+      },
+      {
+        "text": "that feeling is only temporary. What",
+        "duration": 2560,
+        "offset": 892240
+      },
+      {
+        "text": "I truly want to feel good about is being",
+        "duration": 920,
+        "offset": 894800
+      },
+      {
+        "text": "able to do nothing, just relax, and",
+        "duration": 1760,
+        "offset": 895720
+      },
+      {
+        "text": "either retire early or not",
+        "duration": 920,
+        "offset": 897480
+      },
+      {
+        "text": "at all,",
+        "duration": 2240,
+        "offset": 898400
+      },
+      {
+        "text": "like in my early 30s",
+        "duration": 1150,
+        "offset": 900640
+      },
+      {
+        "text": "or 35, so",
+        "duration": 960,
+        "offset": 901790
+      },
+      {
+        "text": "I don't have to work for money.",
+        "duration": 1960,
+        "offset": 902750
+      },
+      {
+        "text": "That's what makes me feel good about the rest of my",
+        "duration": 1200,
+        "offset": 904710
+      },
+      {
+        "text": "life.",
+        "duration": 2760,
+        "offset": 905910
+      },
+      {
+        "text": "That's what I know I want,",
+        "duration": 1680,
+        "offset": 908670
+      },
+      {
+        "text": "so I can use this method",
+        "duration": 1440,
+        "offset": 910350
+      },
+      {
+        "text": "to control myself from",
+        "duration": 1730,
+        "offset": 911790
+      },
+      {
+        "text": "buying a luxury car",
+        "duration": 1360,
+        "offset": 913520
+      },
+      {
+        "text": "or anything like that.",
+        "duration": 1040,
+        "offset": 914880
+      },
+      {
+        "text": "I'm not particularly interested in luxury cars.",
+        "duration": 2160,
+        "offset": 915920
+      },
+      {
+        "text": "Who doesn't like",
+        "duration": 880,
+        "offset": 918080
+      },
+      {
+        "text": "fancy things?",
+        "duration": 1200,
+        "offset": 918960
+      },
+      {
+        "text": "I think everyone does.",
+        "duration": 1000,
+        "offset": 920160
+      },
+      {
+        "text": "Of course,",
+        "duration": 680,
+        "offset": 921160
+      },
+      {
+        "text": "yeah, having one in",
+        "duration": 560,
+        "offset": 921840
+      },
+      {
+        "text": "front of me would feel great,",
+        "duration": 1040,
+        "offset": 922400
+      },
+      {
+        "text": "but that feeling is fleeting. But that",
+        "duration": 2250,
+        "offset": 923440
+      },
+      {
+        "text": "doesn't",
+        "duration": 1040,
+        "offset": 925690
+      },
+      {
+        "text": "mean you can't make any purchases at all.",
+        "duration": 1440,
+        "offset": 926730
+      },
+      {
+        "text": "I just think that, like I",
+        "duration": 2440,
+        "offset": 928170
+      },
+      {
+        "text": "mentioned earlier, every decision is an",
+        "duration": 1320,
+        "offset": 930610
+      },
+      {
+        "text": "investment, and",
+        "duration": 1040,
+        "offset": 931930
+      },
+      {
+        "text": "you need to carefully consider whether",
+        "duration": 840,
+        "offset": 932970
+      },
+      {
+        "text": "that investment is worthwhile.",
+        "duration": 1720,
+        "offset": 933810
+      },
+      {
+        "text": "Although I might",
+        "duration": 1000,
+        "offset": 935530
+      },
+      {
+        "text": "not be materialistic, I",
+        "duration": 1000,
+        "offset": 936530
+      },
+      {
+        "text": "think",
+        "duration": 1280,
+        "offset": 937530
+      },
+      {
+        "text": "rewarding yourself is quite important. For",
+        "duration": 2120,
+        "offset": 938810
+      },
+      {
+        "text": "me, the",
+        "duration": 1040,
+        "offset": 940930
+      },
+      {
+        "text": "happiest thing might be being able to",
+        "duration": 1360,
+        "offset": 941970
+      },
+      {
+        "text": "eat a good meal",
+        "duration": 1200,
+        "offset": 943330
+      },
+      {
+        "text": "or occasionally fly",
+        "duration": 1400,
+        "offset": 944530
+      },
+      {
+        "text": "business class—that",
+        "duration": 1000,
+        "offset": 945930
+      },
+      {
+        "text": "'s a good reward for me.",
+        "duration": 1360,
+        "offset": 946930
+      },
+      {
+        "text": "I don't need too",
+        "duration": 920,
+        "offset": 948290
+      },
+      {
+        "text": "many material things. That's",
+        "duration": 1740,
+        "offset": 949210
+      },
+      {
+        "text": "why...",
+        "duration": 800,
+        "offset": 950950
+      },
+      {
+        "text": "For me, FIRE isn't that difficult.",
+        "duration": 2200,
+        "offset": 951750
+      },
+      {
+        "text": "Right now, I'm willing to spend",
+        "duration": 1080,
+        "offset": 953950
+      },
+      {
+        "text": "money wisely on experiences,",
+        "duration": 2920,
+        "offset": 955030
+      },
+      {
+        "text": "like traveling with kids",
+        "duration": 2440,
+        "offset": 957950
+      },
+      {
+        "text": "or saving time.",
+        "duration": 2840,
+        "offset": 960390
+      },
+      {
+        "text": "Sometimes, spending a little money can save you time, and",
+        "duration": 2600,
+        "offset": 963230
+      },
+      {
+        "text": "if",
+        "duration": 1880,
+        "offset": 965830
+      },
+      {
+        "text": "I feel the amount is reasonable, I'll do it without hesitation.",
+        "duration": 2400,
+        "offset": 967710
+      },
+      {
+        "text": "Because money can't buy back time. That's right,",
+        "duration": 1760,
+        "offset": 970110
+      },
+      {
+        "text": "time is the only thing with a limit.",
+        "duration": 3660,
+        "offset": 971870
+      },
+      {
+        "text": "Money can always be earned back, and everyone has the same amount of time. What",
+        "duration": 3080,
+        "offset": 975530
+      },
+      {
+        "text": "I really want to ask is, since",
+        "duration": 1200,
+        "offset": 978610
+      },
+      {
+        "text": "we're all pretty crazy now, with",
+        "duration": 1200,
+        "offset": 979810
+      },
+      {
+        "text": "large positions in individual stocks,",
+        "duration": 2500,
+        "offset": 981010
+      },
+      {
+        "text": "at",
+        "duration": 1560,
+        "offset": 983510
+      },
+      {
+        "text": "what stage of life will you gradually shift your focus to the broader market,",
+        "duration": 3200,
+        "offset": 985070
+      },
+      {
+        "text": "like the S&P 500 or QQQ?",
+        "duration": 2480,
+        "offset": 988270
+      },
+      {
+        "text": "Do you think you'll always be heavily invested in individual stocks? In terms of",
+        "duration": 2560,
+        "offset": 990750
+      },
+      {
+        "text": "proportion, as you",
+        "duration": 2390,
+        "offset": 993310
+      },
+      {
+        "text": "get older, you might start reducing the proportion of individual stocks. After all, as",
+        "duration": 3200,
+        "offset": 995700
+      },
+      {
+        "text": "you get older, and on the",
+        "duration": 2520,
+        "offset": 998900
+      },
+      {
+        "text": "other hand, you have",
+        "duration": 840,
+        "offset": 1001420
+      },
+      {
+        "text": "less time,",
+        "duration": 1240,
+        "offset": 1002260
+      },
+      {
+        "text": "so it's harder to withstand large fluctuations.",
+        "duration": 2820,
+        "offset": 1003500
+      },
+      {
+        "text": "Some",
+        "duration": 1320,
+        "offset": 1006320
+      },
+      {
+        "text": "fluctuations, although they recover quickly, take several years. Those",
+        "duration": 4120,
+        "offset": 1007640
+      },
+      {
+        "text": "years might take up a significant portion of your life,",
+        "duration": 960,
+        "offset": 1011760
+      },
+      {
+        "text": "leaving only a small percentage.",
+        "duration": 2120,
+        "offset": 1012720
+      },
+      {
+        "text": "So, it's possible they might never recover",
+        "duration": 1240,
+        "offset": 1014840
+      },
+      {
+        "text": "in your lifetime.",
+        "duration": 2400,
+        "offset": 1016080
+      },
+      {
+        "text": "Therefore, as I get older, I might",
+        "duration": 1960,
+        "offset": 1018480
+      },
+      {
+        "text": "allocate some funds",
+        "duration": 2120,
+        "offset": 1020440
+      },
+      {
+        "text": "to fixed income—that",
+        "duration": 920,
+        "offset": 1022560
+      },
+      {
+        "text": "fixed income that can",
+        "duration": 1040,
+        "offset": 1023480
+      },
+      {
+        "text": "support my daily living expenses—",
+        "duration": 1680,
+        "offset": 1024520
+      },
+      {
+        "text": "and maybe add a little more",
+        "duration": 680,
+        "offset": 1026200
+      },
+      {
+        "text": "room for error.",
+        "duration": 3040,
+        "offset": 1026880.0000000001
+      },
+      {
+        "text": "Yes, that makes sense.",
+        "duration": 1240,
+        "offset": 1029920.0000000001
+      },
+      {
+        "text": "I think I will...",
+        "duration": 640,
+        "offset": 1031160.0000000001
+      },
+      {
+        "text": "Part of my portfolio",
+        "duration": 1000,
+        "offset": 1031800
+      },
+      {
+        "text": "is tied up in companies I'm very optimistic about.",
+        "duration": 2120,
+        "offset": 1032800
+      },
+      {
+        "text": "At least",
+        "duration": 600,
+        "offset": 1034920.0000000001
+      },
+      {
+        "text": "a small portion of my",
+        "duration": 440,
+        "offset": 1035520
+      },
+      {
+        "text": "fixed income can support my living expenses. The",
+        "duration": 2040,
+        "offset": 1035960
+      },
+      {
+        "text": "rest is equity.",
+        "duration": 1720,
+        "offset": 1038000
+      },
+      {
+        "text": "I want a",
+        "duration": 1600,
+        "offset": 1039720
+      },
+      {
+        "text": "portion of my assets to provide",
+        "duration": 1870,
+        "offset": 1041319.9999999999
+      },
+      {
+        "text": "me with a",
+        "duration": 1360,
+        "offset": 1043190
+      },
+      {
+        "text": "comfortable lifestyle, and the",
+        "duration": 1880,
+        "offset": 1044550
+      },
+      {
+        "text": "rest I",
+        "duration": 1320,
+        "offset": 1046430.0000000001
+      },
+      {
+        "text": "can invest in companies I believe have a bright future.",
+        "duration": 2400,
+        "offset": 1047750
+      },
+      {
+        "text": "You know, there's a",
+        "duration": 600,
+        "offset": 1050150
+      },
+      {
+        "text": "hack, I don't know if it's mentioned",
+        "duration": 560,
+        "offset": 1050750
+      },
+      {
+        "text": "in videos,",
+        "duration": 1000,
+        "offset": 1051310
+      },
+      {
+        "text": "called \"buy-borrow-die,\"",
+        "duration": 2110,
+        "offset": 1052310
+      },
+      {
+        "text": "where when you transfer your",
+        "duration": 960,
+        "offset": 1054420
+      },
+      {
+        "text": "equity to your child,",
+        "duration": 2720,
+        "offset": 1055380
+      },
+      {
+        "text": "their cost basis is readjusted to the",
+        "duration": 2520,
+        "offset": 1058100
+      },
+      {
+        "text": "cost basis when they receive it,",
+        "duration": 1240,
+        "offset": 1060620
+      },
+      {
+        "text": "so they don't have",
+        "duration": 640,
+        "offset": 1061860
+      },
+      {
+        "text": "any capital gains. That",
+        "duration": 920,
+        "offset": 1062500
+      },
+      {
+        "text": "applies",
+        "duration": 1240,
+        "offset": 1063420
+      },
+      {
+        "text": "in the US, specifically regarding",
+        "duration": 1560,
+        "offset": 1064660
+      },
+      {
+        "text": "capital gains tax. Yes,",
+        "duration": 1040,
+        "offset": 1066220
+      },
+      {
+        "text": "because the US",
+        "duration": 920,
+        "offset": 1067260
+      },
+      {
+        "text": "has capital gains tax. But",
+        "duration": 1490,
+        "offset": 1068180
+      },
+      {
+        "text": "this might",
+        "duration": 1280,
+        "offset": 1069670
+      },
+      {
+        "text": "not apply to every country,",
+        "duration": 1560,
+        "offset": 1070950
+      },
+      {
+        "text": "and with individual stocks, it's",
+        "duration": 1280,
+        "offset": 1072510
+      },
+      {
+        "text": "hard to say whether you can hold them until they're transferred to your",
+        "duration": 1440,
+        "offset": 1073790
+      },
+      {
+        "text": "child,",
+        "duration": 1440,
+        "offset": 1075230
+      },
+      {
+        "text": "because individual stocks have...",
+        "duration": 1000,
+        "offset": 1076670
+      },
+      {
+        "text": "This drawback is that you need to know when to let go,",
+        "duration": 1970,
+        "offset": 1077670
+      },
+      {
+        "text": "unlike the broader market where you can blindly hold on.",
+        "duration": 2120,
+        "offset": 1079640
+      },
+      {
+        "text": "Another point I wanted to",
+        "duration": 1360,
+        "offset": 1081760
+      },
+      {
+        "text": "ask you about is crypto,",
+        "duration": 1120,
+        "offset": 1083120
+      },
+      {
+        "text": "because you have",
+        "duration": 720,
+        "offset": 1084240
+      },
+      {
+        "text": "n't invested in any",
+        "duration": 1040,
+        "offset": 1084960
+      },
+      {
+        "text": "crypto-related things, right?",
+        "duration": 1600,
+        "offset": 1086000
+      },
+      {
+        "text": "I used to, but I sold them",
+        "duration": 2360,
+        "offset": 1087600
+      },
+      {
+        "text": "because the volatility was just too",
+        "duration": 720,
+        "offset": 1089960
+      },
+      {
+        "text": "much for me to handle. The",
+        "duration": 5440,
+        "offset": 1090680
+      },
+      {
+        "text": "biggest difference between crypto and the stock market",
+        "duration": 960,
+        "offset": 1096120
+      },
+      {
+        "text": "is that it's 24/7.",
+        "duration": 2120,
+        "offset": 1097080
+      },
+      {
+        "text": "It can",
+        "duration": 3480,
+        "offset": 1099200
+      },
+      {
+        "text": "drop or rise at any time due to",
+        "duration": 2480,
+        "offset": 1102680
+      },
+      {
+        "text": "news.",
+        "duration": 1840,
+        "offset": 1105160
+      },
+      {
+        "text": "And",
+        "duration": 560,
+        "offset": 1107000
+      },
+      {
+        "text": "unlike the stock market, which",
+        "duration": 1280,
+        "offset": 1107560
+      },
+      {
+        "text": "has open",
+        "duration": 920,
+        "offset": 1108840
+      },
+      {
+        "text": "and closed markets,",
+        "duration": 960,
+        "offset": 1109760
+      },
+      {
+        "text": "it's constantly",
+        "duration": 1440,
+        "offset": 1110720
+      },
+      {
+        "text": "fluctuating. For",
+        "duration": 1480,
+        "offset": 1112160
+      },
+      {
+        "text": "me, back then, my",
+        "duration": 1040,
+        "offset": 1113640
+      },
+      {
+        "text": "heart couldn't handle the volatility,",
+        "duration": 1440,
+        "offset": 1114680
+      },
+      {
+        "text": "so I",
+        "duration": 640,
+        "offset": 1116120
+      },
+      {
+        "text": "sold everything. But now I'm looking for... I'm looking for... It's a good",
+        "duration": 2720,
+        "offset": 1116760
+      },
+      {
+        "text": "time to buy some Bitcoin.",
+        "duration": 1280,
+        "offset": 1119480
+      },
+      {
+        "text": "I think",
+        "duration": 1430,
+        "offset": 1120760
+      },
+      {
+        "text": "buying some Bitcoin is a good idea.",
+        "duration": 1360,
+        "offset": 1122190
+      },
+      {
+        "text": "I've been considering buying some Bitcoin for my",
+        "duration": 1360,
+        "offset": 1123550
+      },
+      {
+        "text": "child to grow up.",
+        "duration": 1760,
+        "offset": 1124910
+      },
+      {
+        "text": "My dad bought some back then,",
+        "duration": 3120,
+        "offset": 1126670
+      },
+      {
+        "text": "about ten years ago. At that time,",
+        "duration": 2880,
+        "offset": 1129790
+      },
+      {
+        "text": "most people",
+        "duration": 1280,
+        "offset": 1132670
+      },
+      {
+        "text": "thought it was just",
+        "duration": 1200,
+        "offset": 1133950
+      },
+      {
+        "text": "hype, so I didn't buy",
+        "duration": 2190,
+        "offset": 1135150
+      },
+      {
+        "text": "any. And frankly, if you bought Bitcoin ten years ago—let",
+        "duration": 2000,
+        "offset": 1137340
+      },
+      {
+        "text": "me give you an example—it's",
+        "duration": 2520,
+        "offset": 1139340
+      },
+      {
+        "text": "hard to say whether you could still hold onto it now if you bought 10 dollars worth,",
+        "duration": 1800,
+        "offset": 1141860
+      },
+      {
+        "text": "unless you forget about the account.",
+        "duration": 2990,
+        "offset": 1143660
+      },
+      {
+        "text": "Many people think, \"",
+        "duration": 760,
+        "offset": 1146650
+      },
+      {
+        "text": "If I had bought Bitcoin ten or twenty years ago...\" Twenty years ago, Bitcoin did",
+        "duration": 3480,
+        "offset": 1147410
+      },
+      {
+        "text": "n't exist.",
+        "duration": 520,
+        "offset": 1150890
+      },
+      {
+        "text": "Seventeen or eighteen years ago, around",
+        "duration": 960,
+        "offset": 1151410
+      },
+      {
+        "text": "ten years ago,",
+        "duration": 800,
+        "offset": 1152370
+      },
+      {
+        "text": "many people were talking about Bitcoin.",
+        "duration": 880,
+        "offset": 1153170
+      },
+      {
+        "text": "That's a question many people would... I used",
+        "duration": 2160,
+        "offset": 1154050
+      },
+      {
+        "text": "to think that if I had",
+        "duration": 1030,
+        "offset": 1156210
+      },
+      {
+        "text": "bought back then, I would be doing this or that now.",
+        "duration": 1160,
+        "offset": 1157240
+      },
+      {
+        "text": "But reality is different.",
+        "duration": 1600,
+        "offset": 1158400
+      },
+      {
+        "text": "You might buy at ten dollars, and if",
+        "duration": 2320,
+        "offset": 1160000
+      },
+      {
+        "text": "you get 100 dollars, I think that's pretty awesome. Even if it",
+        "duration": 2440,
+        "offset": 1162320
+      },
+      {
+        "text": "increases tenfold,",
+        "duration": 1400,
+        "offset": 1164760
+      },
+      {
+        "text": "many people might only double or triple their money",
+        "duration": 1720,
+        "offset": 1166160
+      },
+      {
+        "text": "before selling.",
+        "duration": 840,
+        "offset": 1167880
+      },
+      {
+        "text": "That's the",
+        "duration": 1000,
+        "offset": 1168720
+      },
+      {
+        "text": "mentality of most retail investors. That's",
+        "duration": 1040,
+        "offset": 1169720
+      },
+      {
+        "text": "why many people aren't suited for active investing. Yes, that's",
+        "duration": 2840,
+        "offset": 1170760
+      },
+      {
+        "text": "right. So, you have to",
+        "duration": 1480,
+        "offset": 1173600
+      },
+      {
+        "text": "do things that go against human nature.",
+        "duration": 2320,
+        "offset": 1175080
+      },
+      {
+        "text": "And active investing also has",
+        "duration": 1000,
+        "offset": 1177400
+      },
+      {
+        "text": "another characteristic: what",
+        "duration": 1940,
+        "offset": 1178400
+      },
+      {
+        "text": "we've just talked about",
+        "duration": 560,
+        "offset": 1180340
+      },
+      {
+        "text": "are stocks that have a long-term upward trend,",
+        "duration": 3200,
+        "offset": 1180900
+      },
+      {
+        "text": "but some stocks, once they fall, never",
+        "duration": 1080,
+        "offset": 1184100
+      },
+      {
+        "text": "come back.",
+        "duration": 1120,
+        "offset": 1185180
+      },
+      {
+        "text": "That's also a risk of active investing. Yes, yes, that's",
+        "duration": 3280,
+        "offset": 1186300
+      },
+      {
+        "text": "right.",
+        "duration": 510,
+        "offset": 1189580
+      }
+    ],
+    "languages": [
+      {
+        "name": "Chinese",
+        "lang": "zh"
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  }
+}

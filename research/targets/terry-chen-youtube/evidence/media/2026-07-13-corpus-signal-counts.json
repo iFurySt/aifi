@@ -1,0 +1,40 @@
+{
+  "theme_counts_from_titles": {
+    "career_wealth": 58,
+    "crypto": 36,
+    "equities_single_names": 28,
+    "portfolio_disclosure": 26,
+    "travel_lifestyle": 14,
+    "macro_regime": 13,
+    "learning_tools": 13,
+    "real_estate": 10,
+    "index_or_factor": 7,
+    "options_income": 1
+  },
+  "asset_counts_from_titles": {
+    "TSLA / Tesla": 22,
+    "Bitcoin": 18,
+    "Airbnb / rental real estate": 6,
+    "SpaceX": 3,
+    "NVDA / Nvidia": 2,
+    "Stablecoins / crypto lending": 2,
+    "Grid strategy": 1,
+    "Covered calls": 1,
+    "PLTR / Palantir": 1
+  },
+  "asset_counts_from_transcripts": {
+    "TSLA / Tesla": 937,
+    "Bitcoin": 773,
+    "Airbnb / rental real estate": 301,
+    "NVDA / Nvidia": 180,
+    "SpaceX": 146,
+    "Stablecoins / crypto lending": 127,
+    "Covered calls": 114,
+    "IB01 / short-term Treasuries": 62,
+    "PLTR / Palantir": 54,
+    "TSM / 台積電": 34,
+    "Grid strategy": 18,
+    "QQQI": 12,
+    "BNB": 1
+  }
+}

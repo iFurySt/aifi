@@ -1,0 +1,7113 @@
+{
+  "source": "Online transcript provider: youtubetranscript.pro",
+  "source_url": "https://www.youtube.com/watch?v=GHBP2FS9tBc",
+  "provider": {
+    "name": "youtubetranscript.pro",
+    "endpoint": "https://youtubetranscript.pro",
+    "retrieved": "2026-07-13"
+  },
+  "video_index": 14,
+  "video": {
+    "index": 14,
+    "id": "GHBP2FS9tBc",
+    "title": "特斯拉 $250億 的世紀豪賭，壯舉還是災難？",
+    "url": "https://www.youtube.com/watch?v=GHBP2FS9tBc",
+    "duration_seconds": 1160.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "GHBP2FS9tBc",
+    "title": "特斯拉 $250億 的世紀豪賭，壯舉還是災難？",
+    "text": "哈囉大家好我是Terry特斯拉Q1第一季度的\n這個2026年earnings call\n體檢報告昨天晚上剛剛結束剛剛出來\n哦不是昨天晚上是前天晚上\n那因為這次財報會議\n跟之前有點不太一樣\n所以說我覺得有必要\n來跟大家聊一下到底發生了什麼事情\n那還是一樣\n我們就先講一下這個財報的結論\n基本上財報是beat超出這個當時分析師的預測\n營收呢是beat然後EPS是beat\n毛利率呢也是拉到了21.1%\n然後這也是這幾年來的新高\n但真正的重點是什麼呢\n我覺得這次重點呢Elon在這次earning call裡面呢\n第一次這麼直接這麼明確的\n告訴華爾街說\nOK特斯拉呢準備開始要花大錢了\n而且是馬上2026年的Capex要增加要拉到\n250億美金以上\n然後未來幾個季度的free cash flow會直接變成負的\n而且這個重資本的投資呢按照Elon他自己的說法呢\n會持續好幾年\n那我不知道大家還記不記得\n就是我們身為特斯拉的投資人\n想要的是什麼？\n不是車子可以賣多少台\n也不是說能源儲備可以賣幾個\n我們投資的是接下來物理世界的王者\n是10T10 trillion market cap的特斯拉\n那要到達10T呢當然不是說你賣幾台車可以做到\n所以我覺得這次的earning call\n是很清楚的給市場一個訊號說\n特斯拉要開始轉型成hyperscaler\n好那還是一樣我們先從\n最基本的數字來看一下\nQ1 2026年的營收總營收是223.9億美金\n然後year over year的成長是16%\n那比華爾街預測的這個214.2億\n高了快大概10億美金\n所以營收是非常不錯的那EPS\nnon-GAAP是0.14，sorry0.41\n然後consensus是0.33嘛\n那beat了大概8 cents\n這個幅度也是非常非常大的\nyear over year的成長是52%\n在毛利率方面呢\n整體的毛利率是21.1%\n那這也是特斯拉\n連續好幾季的這個算是新高了\n然後auto電動車毛利率扣掉這個碳credit之後呢\n大概剩下19.2%\n上一季度是17.9%\n所以是相當不錯的\n可以看得出這個車子賣車的業務呢\n是越來越賺錢\n那為什麼毛利率會這麼高呢\n我們還是要來看一些真相\n裡面是有說呢\n部分是有一次性的補貼\n像是warranty true down\n大概貢獻了2.3億美金\n加上一些關稅的減免啊\n所以說這個21.1%呢\n又不能算是產能效率跟成本降低\n完全啦不能完全算是\n但是呢即便你把這些\n一次性的因素扣掉\n我覺得這個underlying margin呢\n還是有在變好的路上\n比如說我們看柏林工廠在這一季度呢\n有出貨超過了6萬1000台\n這也是破了柏林工廠\n單季的這個出貨記錄\n還有就是歐洲市場\n法國德國的交付數據呢\n都是單季成長超過150%\n所以說在銷售上面就是\n其實市場還是非常非常願意買單的\n至少在歐洲來講\n那operating margin呢是9.41億美金\nyear over year成長是136%\n重點來了free cash flow是14.4億美金\n那這一季度的普遍分析師預測Q1的這個\nfree cash flow是負的15億美金\n這也是為什麼財報剛出來的時候\n特斯拉股價是上漲的\n我記得好像拉了大概3%還是4%吧\n特斯拉他們現在手上的現金\n加上短期的投資呢\n是總共447億美金\n這個數字非常重要\n這也是今天影片的重點\n最後呢就是服務類的營收\n37.45億美金\nyear over year成長是42%\n這邊最大的驅動力當然就是FSD的訂閱了\nFSD的付費用戶呢來到了128萬\nyear over year的成長是51%\n我覺得這個才是\n我們股東真正要在乎的東西\n我覺得前面其實都還好\n這我在影片裡面講過很多遍了\n軟體訂閱的毛利率呢是非常非常高的\n基本上就是100%接近100%的毛利率MRR\n所以我覺得身為特斯拉的投資人\n接下來我們需要重點關注的基本上就是這個FSD的訂閱人數\n看能不能繼續往上衝\n當然Robotaxi在未來會是一個非常非常重要的現金流\n這個我等一下也會講\n那能源那邊呢就比較弱一點\n營收呢是24億\n那year over year是掉了12%\n總共部署是8.8 GWh\n環比掉了38%\n但是能源這部分的業務呢\n特斯拉他們也有講過\n季節性很強我覺得也make sense\n就是你訂單下來了真正到你去部署呢\n它不是一個平均分散在\n每一個季度的一個情況\n就有可能你第一季度比較弱\n然後第二季度突然變很強\n然後第三季度變很弱\n完全depends on它這個部署的這個時間在哪裡\n然後特斯拉呢\n他們也是維持這個2026年呢\n全年的部署會比去年2025年還要高的這個guidance\n所以我覺得大概在Q2的時候\n我們再去看一下有沒有on track就可以了\nOK那數字大部分都講完了\n我覺得今天影片重點呢是這250億美金的Capex\n到底要花在哪裡?\n那昨天晚上特斯拉股價收盤呢\n一共跌了3.56%\n我覺得有部分是市場擔心說\n特斯拉的這個Capex spending會太高\n還有一部分很重要的原因\n當然也是宏觀整個宏觀的因素\n伊朗戰爭啊還有石油這些問題\n因為不只是特斯拉跌\n但是因為現在市場的sentiment是\n你花越多錢呢市場就會越擔心說\n你這個錢能不能收回來\n就Capex spending對股價的影響呢是完全取決於市場\n對於現在的這個宏觀的sentiment\n如果現在宏觀是一個大放水的情況下大家都很bullish\n那你spend越多的Capex你的股價當然會漲\n但是如果現在市場有concern說\n比如說什麼AI bubble或是花太多錢\n那就很有可能因為Capex的股價跌\n但不管怎麼樣今天特斯拉\n跌了大概4%左右不到4%\n那就像我剛剛講的\n我覺得這一次財報會議呢\n最重要的還是什麼呢\n是特斯拉的CFO他說這250億美金呢\n是用來支付六座工廠\n再加上AI的infrastructure\n加上半導體的這個研究室Fab\n加上這個太陽能製造的這個設備\n他甚至說呢we're in a very big\ncapital investment phase\nwhich is going to start now and would last a couple of years\n那我來幫各位股東翻譯一下\n我自己的感覺他想講什麼呢\n我覺得他想要說的是\n特斯拉在接下來的幾年呢\n要開始花大錢投資擴建了\n那如果你沒有準備好你沒有想要參與這個investment的話\n其實你可以把你現在的股票給賣掉\n他後面還補了一句說\nwe expect negative free cash flow\nfor the rest of the year\n基本上就是在說我覺得啦\n各位投資人準備好面對接下來的財報\n自由現金流呢會非常的難看\n那如果你沒辦法接受的話呢\n現在就是一個蠻好的這個離場點\n好我知道他當然\n沒有叫大家真的去離場啦\n但就是現在股票價格嘛\n大概是373嘛\n我覺得這是一個不錯的exit point\n如果你沒有什麼conviction的話\n我覺得現在把它出掉\n這個價格其實還算不錯\n我相信對於大部分的投資人\n尤其是有看我影片的網友\n肯定是以370這個價格\n`出掉是不會虧錢的\n我在IG上面或是我在我的TG群組裡面發我特斯拉的入場價格呢\n基本上都低於300\n所以我覺得假如你沒有那個conviction\n你也不覺得這個Capex投資進去可以收回來的話\n那我覺得現在真的就是\n一個蠻好的離場的時間點\n那我們來看一下實際的數字\n特斯拉在2025年就是去年的Capex是大概80億出頭\n然後2026年整年的guidance直接拉到250億\n就是漲了大概三倍多嘛\n聽起來好像很誇張\n但實際上的整個M7\nMicrosoft Google Meta Amazon\n所有Big Tech都早就已經開始做Hyperscaler\n這幾年Capex也都是這樣爆發性的增長\n像Amazon在2026年的Capex\n是200 billion 2000億美金\n是特斯拉的10倍\n因為整個市場所有的Big Tech\n都在搶著做AI infrastructure\n但是區別是什麼呢\n特斯拉跟這些M7的公司的區別到底在哪裡呢\n特斯拉花了這個250億美金呢\n它不只是蓋資料中心\n它同時還要蓋六座工廠\n還要蓋一棟晶圓的研究廠\n還要蓋電池的材料廠，還要蓋太陽能廠\n還要把它Cortex 2\n這個AI訓練的cluster給ramp起來\n現在的Cortex 2呢的算力呢已經等同於有超過\n13萬張這個H100的GPU在跑\n那再加上Cortex 1的10萬張H100等同的算力\n特斯拉現在自己手上的算力呢\n已經有接近\n等同於25萬張這個H100 GPU的算力\n那我大概問了一下ChatGPT這個算力呢在全世界\n應該是已經數一數二的公司了\n這也是為什麼\n我一直以來都覺得投資特斯拉呢\n其實是在投資一個全世界最大的AI project\n那這個250億美金的Capex呢\n當然包含了現在爭議比較多的這個TeraFab\nTeraFab這個project呢就是特斯拉他最近宣布的\n他們要在Giga Texas園區內蓋一座這個研究級的晶圓廠\n預算大概是30億美金\n每個月呢可以做幾千片的wafer就是晶圓\n晶圓就是台積電logo上面那個圓圓的東西\n如果你不知道晶圓是什麼的話\n就是所有的這個晶片生產\n最基本這個foundation就是那片圓圓的晶圓\n你可以把它想像成是\n蓋房子的時候你最基本的那個地基\n那這個研究廠呢\n當然是特斯拉自己出錢蓋\n注意特斯拉這邊蓋的是晶圓的研究廠\n然後接下來真正能夠scale up的是TeraFab的主場\n那那邊就會由SpaceX去主導第一階段\n然後整個製程呢會用Intel最新的這個14A\n應該是Intel下一代最強的這個製程節點\n雖然我不知道這是什麼意思\n但聽起來好像他們知道自己在講什麼\n那關於TeraFab我覺得之後它強的地方呢不是它的產能\n應該說短期內產能\n一定會遇到非常非常多的瓶頸\n但是呢我覺得Elon他厲害的地方呢不是在製程\n不是在晶片的製程\n我覺得他強的地方是\n怎麼去增加那個iteration的speed\n他在這次的earnings call又再次強調\n這個研究廠呢是世界上唯一一個會把\n光照製作，邏輯晶片\n記憶體，跟先進封裝呢\n全部放在同一棟建築物的Fab\n那這麼做的目的呢就是要把\n研發的這個迭代週期壓到最低\n當然我對半導體的這個製程還有\n生產是完全沒有任何一點概念的\n所以有概念的網友\n也可以在影片底下留言分享一下\n糾正一下我如果有講錯什麼\n但是就我的理解，傳統的chip iteration\n會比較像是\n我們拿比如說軟體開發\n來做一個比喻好了\n當你寫好你的code之後呢\n你把你的code email到其他國家\n去幫你做compile\n然後你可能要等幾個月之後呢\n才可以拿到結果\n而TeraFab想要做的事情呢\n就是直接在電腦上面就可以做compile\n等於是當天你就可以\n直接修直接改直接測試\n那聽起來呢確實好像真的很厲害\n但是我覺得目前這些呢\n看到的這些東西呢\n我覺得就只是在畫餅而已\n所有的東西呢都還沒有實現\n也沒有人知道\n真的到底會發生什麼事情\n當然我覺得這就是\n身為特斯拉投資人一個很好玩的地方\n就是你永遠不知道你在投資什麼東西\n像上一季度呢特斯拉投資了2 billion\n在SpaceX上面20億美金\n那身為特斯拉投資人我們又突然變成了這個SpaceX的股東\n所以說取決於你的認知會決定你\n在這家公司上面能不能賺到錢\n然後呢就是你可以真的賺到多少錢\n好那說到投資SpaceX呢我們先暫停一下\n之前我跟Han哥在我的影片裡面\n就跟大家聊到他的新創公司Jarsy\n也是因為Jarsy讓我接觸到很多這個還沒上市公司的投資機會\n那我覺得這也是Jarsy他們很厲害的地方\n就是可以讓我們這種\n非常普通的散戶投資人\n可以開始投資接觸到\n這些還沒上市公司的股票\n像是SpaceX Anthropic xAI\n就這些公司呢在以前你想要投資他們\n你需要有非常非常多的錢\n你不是要有超高的淨資產\n你就是要成為一個合格的投資人\naccredited investor\n才能有機會有可能\n可以投資到這些公司\n那Jarsy呢也是業界首創以來幫散戶去實現這個夢想\n那我自己會選擇用Jarsy的原因呢\n首先第一個當然就是我認識Han\n我也知道他在矽谷的reputation\n再來就是Jarsy呢它是一家美國公司它是一家合規的公司\n所以在安全上面呢我覺得是OK的\n那整體的運作原理呢\n就是他們會在二級市場上面\n直接收購這些公司的股權\n然後再以1比1的比例呢\n發行在他們的平台上面讓用戶去購買\n然後每一個股權呢\n你在他們的網站上面呢\n都可以找到proof of reserve\n意思就是說所有你在Jarsy上面購買的股權呢\n全部都有實際的Jarsy持有的這個資產證明\n那平台入金的方式呢\n也非非非常的簡單\n首先你可以透過國際電匯\n你可以直接把美元匯進去\n或者說呢你也可以轉USDC到你的Jarsy上面的錢包\n那完成之後呢你就可以\n直接開始收購你想要投資的公司\n那大家如果有興趣的話呢\n可以在影片底下留言跟我講一下\n我之後呢也可以再做一集影片\n跟大家分享一下\n我在Jarsy上面都做了哪些投資\n然後還有一些操作的教學\n跟一些你需要注意的事項\n那我也會把我的Jarsy推薦好友連結呢放在影片底下的資訊欄\n大家可以自己去看一下啦\n是有幾家公司我覺得\n還蠻值得去研究一下的\n不過還是要提醒一下大家啦\n就是投資這些還沒有上市的公司呢\n風險呢也是非常非常的高\n價格波動呢也是很大\n所以呢要注意安全\nOK那我們回到影片的正題\n那也是因為TeraFab\n我最近在Threads上面看到很多人發文說呢\n他們把這個特斯拉股票先拋售掉了\n最主要最大的原因呢就是因為TeraFab會非常非常的燒錢\n然後不確定的因素呢也是太多了\n畢竟呢我們都知道\n要做晶片呢是有多困難的\n加上特斯拉呢\n是完全沒有任何製作晶片的這個經驗\n所以TeraFab到底會是一個慢性的自殺呢\n還是最終又變成一個壯舉?\n我覺得這個問題呢\n你要從兩個角度去看\n第一個角度當然是\n你去看特斯拉是不是真的有錢去花\n目前呢公司手上\n大概有447億的現金\n加上Q1呢做了大概有14億的free cash flow\n再加上呢他們還可以發債融資\n這一次Q1就發了43億的這個新債\n所以short term短期的\nfinancing capacity呢\n我覺得是綽綽有餘的\n也就是說這個豪賭呢\n目前來看特斯拉是玩得起的\n那第二個角度呢就是要看\n花這個錢呢我們能得到什麼\n我們就非常簡單的來粗算一下\n如果說Robotaxi按照Elon的guidance\n今年年底呢\n可以在十幾個州開始運營的話\n那每一個Robotaxi一天可以做我們就舉例\n16個小時有效的這個載客時間\n然後我們假設每一個小時\n平均收入20塊美金好了\n那一台車一年呢大概可以做到\n16乘以20乘以365\n大概就是12萬美金的營收\n然後這個毛利率我們就假設\n保守保守的毛利率50%好了\n就是大概6萬塊錢的毛利率\n那特斯拉現在在路上一共\n在路上有跑的這個車\n有大概1300萬台\n那我們再外加上特斯拉自己生產的這個Cybercab\n我們就算總共總共1300萬台\n然後1%可以convert成Robotaxi\n有效的Robotaxi車隊\n那就是大概有13萬台\n那13萬乘以6萬\n6萬的毛利率每一台\n就是大概78億美金的\n這個純額外的這個毛利率收入\n而且這是每一年只有1%的adoption\n它基本上就可以支撐特斯拉的purpose這個250億\n美金的這個Capex的三分之一的量\n另外一點就是Optimus我覺得這個還是一個謎啦\n就具體Optimus能夠給特斯拉帶來多少現金流\n我覺得沒有一個人真的知道\n但是Elon在這次的earnings call裡面\n有講到說Optimus的production\n會在7月底8月初開始\n第一條的生產線呢是在Fremont年產能呢大概是100萬台\n設計是年產能的設計是100萬台\n第二條是在Giga Texas\n年產能年產能的設計呢是1000萬台Optimus\n然後Giga Texas是明年夏天開工\n那我知道我在影片裡面講過就是Optimus其實離我們太遠了\n但你說真的很遠嗎其實Optimus在今年就會開始生產了\n而且他們這次刻意非常的low key非常的低調\n不過去公佈現在版本的樣子\n其中最主要原因就是Elon說他們只要公佈之後\n所有的competitor他們就會開始\n每一個frame每一個frame的照抄\n我覺得這個make sense\n所以說我們現在對Optimus基本上是沒有任何的概念\n但是Elon講過很多遍Optimus呢\n會是特斯拉史上最大的一個product\n甚至可能是全人類史上最大的product\n這點我也是同意的物理世界的AI\n但是執行起來真的非常非常的難\n所以理論上來說你要去支持這個production產能的話\n這個Capex的支出是完全有必要的\n也是一個能夠讓特斯拉真的達到10T 10 trillion的估值\n我覺得唯一的一條路\n要不然你過去幾個季度\n賺那麼多現金賺那麼多錢\n放在手上幹嘛?\n發回去給股東當股息嗎?\n當然不是了\n拿去收購自家公司的股票?\n當然不是了\n我覺得這也是為什麼\n特斯拉在過去幾個季度呢\n過於保守的原因\n其實就是一直在存錢那等到現在\n當軟體的技術已經成熟差不多的之後\n這個limiting factor已經不是軟體技術了\n就可以開始真的ramp up Robotaxi\n然後就是ramp up Optimus\n所以我認為啦，我就隨便猜一下\n大家不要太認真\n2026年下半年Q3跟Q4的這個毛利率呢\n我覺得還是會維持在20%以上\n但是因為Capex會爆炸性的成長\n那operating margin呢會被RD拉低\n所以他們的free cash flow\n在Q2 Q3 Q4真的都有可能會變成負的\n那關於特斯拉股票的這個走勢呢\n我覺得最大的關鍵因素當然就會變成FSD的訂閱數字\n如果說FSD的訂閱數字繼續爆炸性的增長的話\n那整年的EPS呢還是可以超出分析師的預期\n首先第一個我們已經確定的\n就是下半年\nCybercab跟Semi會開始量產\n如果產能爬坡呢\n也沒有遇到什麼大問題的話\n然後再加上FSD在中國還有歐洲\n如果能夠更順利的有審批的通過的話\n這樣就可以再更加速adoption\n整體股票我覺得在今年\n還是很有機會可以再創新高的\n當然我還是一樣\n我不是很想去給一個具體的數字啊\n因為每一次我講一個具體數字呢\n酸民就會開始嘴\n如果沒有達到那個數字的話\n當然還是就是好玩啦，我可以猜一下\n我覺得可以達到600塊以上\n但是這也要建立在我們剛剛講的\n所有那些都很順利的情況下\n而且很多東西呢其實也不是\n特斯拉他們自己能夠控制的\n像比如說關稅啊 利率 地緣政治的風險\n這些當然都會直接影響到特斯拉接下來一整年的執行力還有它的EPS\n當然啦如果真的一切\n我剛剛講的一切都很順利的話\n我覺得EPS是可以超過兩塊錢的\n現在分析師的普遍認為的EPS大概是\n看一下1.87\n對那兩塊錢就是一個strong beat\n至於短期的股價走勢呢\n說真的我也不知道\n市場呢不是很喜歡看到這個\nFCF free cash flow變成負的\n那我也不知道華爾街\n看不看得懂特斯拉在做的事情\n反正我是沒有期待他們可以看得懂\n如果說呢短期股價\n回調到350以下呢\n我一定會繼續加倉\n到時候我也會在我的TG群組還有IG上面跟大家分享\n我不覺得TeraFab是一個不理智的賭注\n你去看一下Amazon會有今天的成就\n就是因為他們當年賭上了AWS\n然後也是因為有AWS拉開了一整個雲服務的時代\n蘋果當年也賭上了做手機\n我們才會有今天的iPhone可以用\n微軟呢當年也是賭上了Azure\n才可以撐到今天不被時代給淘汰\n所以在下一個我們現在這個AI大爆發的時代呢\n如果台積電三星的晶片\n沒辦法去支撐特斯拉的這個需求\n那我覺得特斯拉去做TeraFab也是理所當然的\n這也完全符合特斯拉\n一直以來的經營理念\n如果說supplier沒辦法提供的話\n那就只有我們自己去做\n我們變成我們自己的supplier\n就像Elon講過的\nwhen something is so important enough\nyou do it even if odds are not in your favor\n我不覺得特斯拉有任何的改變\n他們還是一樣在做同樣的事情\nOK那如果你覺得今天這集影片對你有幫助的話\n還是一樣記得一定要\n幫我把影片點個讚\n也歡迎你在影片底下\n留言跟我分享一下\n你會拋掉你手上的股票嗎？\n還是說你會繼續跟他們一起發瘋\n另外就是記得一定要訂閱我的頻道\n因為你知道\n大部分看我的影片的人\n其實都沒有訂閱\nOK那我們下次見囉",
+    "segments": [
+      {
+        "text": "哈囉大家好我是Terry特斯拉Q1第一季度的",
+        "offset": 0.01,
+        "duration": 2.7,
+        "lang": "zh",
+        "time": "0:00"
+      },
+      {
+        "text": "這個2026年earnings call",
+        "offset": 2.73,
+        "duration": 2.23,
+        "lang": "zh",
+        "time": "0:02"
+      },
+      {
+        "text": "體檢報告昨天晚上剛剛結束剛剛出來",
+        "offset": 5.25,
+        "duration": 3.19,
+        "lang": "zh",
+        "time": "0:05"
+      },
+      {
+        "text": "哦不是昨天晚上是前天晚上",
+        "offset": 8.45,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "0:08"
+      },
+      {
+        "text": "那因為這次財報會議",
+        "offset": 10.29,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "0:10"
+      },
+      {
+        "text": "跟之前有點不太一樣",
+        "offset": 11.81,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "0:11"
+      },
+      {
+        "text": "所以說我覺得有必要",
+        "offset": 13.21,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "0:13"
+      },
+      {
+        "text": "來跟大家聊一下到底發生了什麼事情",
+        "offset": 14.33,
+        "duration": 2.02,
+        "lang": "zh",
+        "time": "0:14"
+      },
+      {
+        "text": "那還是一樣",
+        "offset": 16.42,
+        "duration": 0.54,
+        "lang": "zh",
+        "time": "0:16"
+      },
+      {
+        "text": "我們就先講一下這個財報的結論",
+        "offset": 16.98,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "0:16"
+      },
+      {
+        "text": "基本上財報是beat超出這個當時分析師的預測",
+        "offset": 19.06,
+        "duration": 3.74,
+        "lang": "zh",
+        "time": "0:19"
+      },
+      {
+        "text": "營收呢是beat然後EPS是beat",
+        "offset": 22.82,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "0:22"
+      },
+      {
+        "text": "毛利率呢也是拉到了21.1%",
+        "offset": 25.1,
+        "duration": 2.46,
+        "lang": "zh",
+        "time": "0:25"
+      },
+      {
+        "text": "然後這也是這幾年來的新高",
+        "offset": 27.58,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "0:27"
+      },
+      {
+        "text": "但真正的重點是什麼呢",
+        "offset": 29.97,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "0:29"
+      },
+      {
+        "text": "我覺得這次重點呢Elon在這次earning call裡面呢",
+        "offset": 31.72,
+        "duration": 2.7,
+        "lang": "zh",
+        "time": "0:31"
+      },
+      {
+        "text": "第一次這麼直接這麼明確的",
+        "offset": 34.44,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "0:34"
+      },
+      {
+        "text": "告訴華爾街說",
+        "offset": 36.52,
+        "duration": 0.91,
+        "lang": "zh",
+        "time": "0:36"
+      },
+      {
+        "text": "OK特斯拉呢準備開始要花大錢了",
+        "offset": 37.44,
+        "duration": 2.54,
+        "lang": "zh",
+        "time": "0:37"
+      },
+      {
+        "text": "而且是馬上2026年的Capex要增加要拉到",
+        "offset": 40,
+        "duration": 3.78,
+        "lang": "zh",
+        "time": "0:40"
+      },
+      {
+        "text": "250億美金以上",
+        "offset": 43.8,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "0:43"
+      },
+      {
+        "text": "然後未來幾個季度的free cash flow會直接變成負的",
+        "offset": 46.07,
+        "duration": 2.86,
+        "lang": "zh",
+        "time": "0:46"
+      },
+      {
+        "text": "而且這個重資本的投資呢按照Elon他自己的說法呢",
+        "offset": 48.95,
+        "duration": 2.66,
+        "lang": "zh",
+        "time": "0:48"
+      },
+      {
+        "text": "會持續好幾年",
+        "offset": 51.63,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "0:51"
+      },
+      {
+        "text": "那我不知道大家還記不記得",
+        "offset": 52.71,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "0:52"
+      },
+      {
+        "text": "就是我們身為特斯拉的投資人",
+        "offset": 53.95,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "0:53"
+      },
+      {
+        "text": "想要的是什麼？",
+        "offset": 55.76,
+        "duration": 0.86,
+        "lang": "zh",
+        "time": "0:55"
+      },
+      {
+        "text": "不是車子可以賣多少台",
+        "offset": 56.64,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "0:56"
+      },
+      {
+        "text": "也不是說能源儲備可以賣幾個",
+        "offset": 58,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "0:58"
+      },
+      {
+        "text": "我們投資的是接下來物理世界的王者",
+        "offset": 60.12,
+        "duration": 2.7,
+        "lang": "zh",
+        "time": "1:00"
+      },
+      {
+        "text": "是10T10 trillion market cap的特斯拉",
+        "offset": 62.84,
+        "duration": 3.02,
+        "lang": "zh",
+        "time": "1:02"
+      },
+      {
+        "text": "那要到達10T呢當然不是說你賣幾台車可以做到",
+        "offset": 65.88,
+        "duration": 3.22,
+        "lang": "zh",
+        "time": "1:05"
+      },
+      {
+        "text": "所以我覺得這次的earning call",
+        "offset": 69.19,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "1:09"
+      },
+      {
+        "text": "是很清楚的給市場一個訊號說",
+        "offset": 70.39,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "1:10"
+      },
+      {
+        "text": "特斯拉要開始轉型成hyperscaler",
+        "offset": 72.67,
+        "duration": 2.02,
+        "lang": "zh",
+        "time": "1:12"
+      },
+      {
+        "text": "好那還是一樣我們先從",
+        "offset": 74.83,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "1:14"
+      },
+      {
+        "text": "最基本的數字來看一下",
+        "offset": 75.91,
+        "duration": 1.91,
+        "lang": "zh",
+        "time": "1:15"
+      },
+      {
+        "text": "Q1 2026年的營收總營收是223.9億美金",
+        "offset": 77.83,
+        "duration": 5.22,
+        "lang": "zh",
+        "time": "1:17"
+      },
+      {
+        "text": "然後year over year的成長是16%",
+        "offset": 83.27,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "1:23"
+      },
+      {
+        "text": "那比華爾街預測的這個214.2億",
+        "offset": 85.59,
+        "duration": 3.3,
+        "lang": "zh",
+        "time": "1:25"
+      },
+      {
+        "text": "高了快大概10億美金",
+        "offset": 88.97,
+        "duration": 1.67,
+        "lang": "zh",
+        "time": "1:28"
+      },
+      {
+        "text": "所以營收是非常不錯的那EPS",
+        "offset": 90.65,
+        "duration": 2.41,
+        "lang": "zh",
+        "time": "1:30"
+      },
+      {
+        "text": "non-GAAP是0.14，sorry0.41",
+        "offset": 93.15,
+        "duration": 3.42,
+        "lang": "zh",
+        "time": "1:33"
+      },
+      {
+        "text": "然後consensus是0.33嘛",
+        "offset": 96.77,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "1:36"
+      },
+      {
+        "text": "那beat了大概8 cents",
+        "offset": 99.09,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "1:39"
+      },
+      {
+        "text": "這個幅度也是非常非常大的",
+        "offset": 100.73,
+        "duration": 1.47,
+        "lang": "zh",
+        "time": "1:40"
+      },
+      {
+        "text": "year over year的成長是52%",
+        "offset": 102.21,
+        "duration": 2.28,
+        "lang": "zh",
+        "time": "1:42"
+      },
+      {
+        "text": "在毛利率方面呢",
+        "offset": 104.77,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "1:44"
+      },
+      {
+        "text": "整體的毛利率是21.1%",
+        "offset": 106.09,
+        "duration": 2.66,
+        "lang": "zh",
+        "time": "1:46"
+      },
+      {
+        "text": "那這也是特斯拉",
+        "offset": 108.77,
+        "duration": 0.82,
+        "lang": "zh",
+        "time": "1:48"
+      },
+      {
+        "text": "連續好幾季的這個算是新高了",
+        "offset": 109.61,
+        "duration": 2.15,
+        "lang": "zh",
+        "time": "1:49"
+      },
+      {
+        "text": "然後auto電動車毛利率扣掉這個碳credit之後呢",
+        "offset": 111.77,
+        "duration": 3.16,
+        "lang": "zh",
+        "time": "1:51"
+      },
+      {
+        "text": "大概剩下19.2%",
+        "offset": 114.95,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "1:54"
+      },
+      {
+        "text": "上一季度是17.9%",
+        "offset": 116.79,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "1:56"
+      },
+      {
+        "text": "所以是相當不錯的",
+        "offset": 118.75,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "1:58"
+      },
+      {
+        "text": "可以看得出這個車子賣車的業務呢",
+        "offset": 119.95,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "1:59"
+      },
+      {
+        "text": "是越來越賺錢",
+        "offset": 121.95,
+        "duration": 0.86,
+        "lang": "zh",
+        "time": "2:01"
+      },
+      {
+        "text": "那為什麼毛利率會這麼高呢",
+        "offset": 122.91,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "2:02"
+      },
+      {
+        "text": "我們還是要來看一些真相",
+        "offset": 125.07,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "2:05"
+      },
+      {
+        "text": "裡面是有說呢",
+        "offset": 126.63,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "2:06"
+      },
+      {
+        "text": "部分是有一次性的補貼",
+        "offset": 127.95,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "2:07"
+      },
+      {
+        "text": "像是warranty true down",
+        "offset": 129.79,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "2:09"
+      },
+      {
+        "text": "大概貢獻了2.3億美金",
+        "offset": 131.46,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "2:11"
+      },
+      {
+        "text": "加上一些關稅的減免啊",
+        "offset": 133.63,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "2:13"
+      },
+      {
+        "text": "所以說這個21.1%呢",
+        "offset": 135.27,
+        "duration": 1.79,
+        "lang": "zh",
+        "time": "2:15"
+      },
+      {
+        "text": "又不能算是產能效率跟成本降低",
+        "offset": 137.19,
+        "duration": 2.94,
+        "lang": "zh",
+        "time": "2:17"
+      },
+      {
+        "text": "完全啦不能完全算是",
+        "offset": 140.24,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "2:20"
+      },
+      {
+        "text": "但是呢即便你把這些",
+        "offset": 141.8,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "2:21"
+      },
+      {
+        "text": "一次性的因素扣掉",
+        "offset": 143.2,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "2:23"
+      },
+      {
+        "text": "我覺得這個underlying margin呢",
+        "offset": 144.44,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "2:24"
+      },
+      {
+        "text": "還是有在變好的路上",
+        "offset": 146.04,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "2:26"
+      },
+      {
+        "text": "比如說我們看柏林工廠在這一季度呢",
+        "offset": 147.52,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "2:27"
+      },
+      {
+        "text": "有出貨超過了6萬1000台",
+        "offset": 149.72,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "2:29"
+      },
+      {
+        "text": "這也是破了柏林工廠",
+        "offset": 152.19,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "2:32"
+      },
+      {
+        "text": "單季的這個出貨記錄",
+        "offset": 153.51,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "2:33"
+      },
+      {
+        "text": "還有就是歐洲市場",
+        "offset": 154.91,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "2:34"
+      },
+      {
+        "text": "法國德國的交付數據呢",
+        "offset": 156.31,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "2:36"
+      },
+      {
+        "text": "都是單季成長超過150%",
+        "offset": 157.95,
+        "duration": 2.42,
+        "lang": "zh",
+        "time": "2:37"
+      },
+      {
+        "text": "所以說在銷售上面就是",
+        "offset": 160.39,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "2:40"
+      },
+      {
+        "text": "其實市場還是非常非常願意買單的",
+        "offset": 162.03,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "2:42"
+      },
+      {
+        "text": "至少在歐洲來講",
+        "offset": 164.36,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "2:44"
+      },
+      {
+        "text": "那operating margin呢是9.41億美金",
+        "offset": 165.65,
+        "duration": 3.18,
+        "lang": "zh",
+        "time": "2:45"
+      },
+      {
+        "text": "year over year成長是136%",
+        "offset": 168.85,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "2:48"
+      },
+      {
+        "text": "重點來了free cash flow是14.4億美金",
+        "offset": 171.13,
+        "duration": 3.38,
+        "lang": "zh",
+        "time": "2:51"
+      },
+      {
+        "text": "那這一季度的普遍分析師預測Q1的這個",
+        "offset": 174.52,
+        "duration": 3.88,
+        "lang": "zh",
+        "time": "2:54"
+      },
+      {
+        "text": "free cash flow是負的15億美金",
+        "offset": 179.04,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "2:59"
+      },
+      {
+        "text": "這也是為什麼財報剛出來的時候",
+        "offset": 180.8,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "3:00"
+      },
+      {
+        "text": "特斯拉股價是上漲的",
+        "offset": 182.56,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "3:02"
+      },
+      {
+        "text": "我記得好像拉了大概3%還是4%吧",
+        "offset": 184.36,
+        "duration": 2.57,
+        "lang": "zh",
+        "time": "3:04"
+      },
+      {
+        "text": "特斯拉他們現在手上的現金",
+        "offset": 186.95,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "3:06"
+      },
+      {
+        "text": "加上短期的投資呢",
+        "offset": 188.47,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "3:08"
+      },
+      {
+        "text": "是總共447億美金",
+        "offset": 190.11,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "3:10"
+      },
+      {
+        "text": "這個數字非常重要",
+        "offset": 192.15,
+        "duration": 1.14,
+        "lang": "zh",
+        "time": "3:12"
+      },
+      {
+        "text": "這也是今天影片的重點",
+        "offset": 193.31,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "3:13"
+      },
+      {
+        "text": "最後呢就是服務類的營收",
+        "offset": 194.83,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "3:14"
+      },
+      {
+        "text": "37.45億美金",
+        "offset": 196.43,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "3:16"
+      },
+      {
+        "text": "year over year成長是42%",
+        "offset": 197.99,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "3:17"
+      },
+      {
+        "text": "這邊最大的驅動力當然就是FSD的訂閱了",
+        "offset": 199.95,
+        "duration": 2.51,
+        "lang": "zh",
+        "time": "3:19"
+      },
+      {
+        "text": "FSD的付費用戶呢來到了128萬",
+        "offset": 202.59,
+        "duration": 3.15,
+        "lang": "zh",
+        "time": "3:22"
+      },
+      {
+        "text": "year over year的成長是51%",
+        "offset": 205.75,
+        "duration": 2.02,
+        "lang": "zh",
+        "time": "3:25"
+      },
+      {
+        "text": "我覺得這個才是",
+        "offset": 207.89,
+        "duration": 0.62,
+        "lang": "zh",
+        "time": "3:27"
+      },
+      {
+        "text": "我們股東真正要在乎的東西",
+        "offset": 208.53,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "3:28"
+      },
+      {
+        "text": "我覺得前面其實都還好",
+        "offset": 210.81,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "3:30"
+      },
+      {
+        "text": "這我在影片裡面講過很多遍了",
+        "offset": 212.57,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "3:32"
+      },
+      {
+        "text": "軟體訂閱的毛利率呢是非常非常高的",
+        "offset": 214.22,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "3:34"
+      },
+      {
+        "text": "基本上就是100%接近100%的毛利率MRR",
+        "offset": 216.54,
+        "duration": 3.22,
+        "lang": "zh",
+        "time": "3:36"
+      },
+      {
+        "text": "所以我覺得身為特斯拉的投資人",
+        "offset": 219.78,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "3:39"
+      },
+      {
+        "text": "接下來我們需要重點關注的基本上就是這個FSD的訂閱人數",
+        "offset": 221.38,
+        "duration": 3.54,
+        "lang": "zh",
+        "time": "3:41"
+      },
+      {
+        "text": "看能不能繼續往上衝",
+        "offset": 225.03,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "3:45"
+      },
+      {
+        "text": "當然Robotaxi在未來會是一個非常非常重要的現金流",
+        "offset": 226.15,
+        "duration": 2.98,
+        "lang": "zh",
+        "time": "3:46"
+      },
+      {
+        "text": "這個我等一下也會講",
+        "offset": 229.23,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "3:49"
+      },
+      {
+        "text": "那能源那邊呢就比較弱一點",
+        "offset": 230.33,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "3:50"
+      },
+      {
+        "text": "營收呢是24億",
+        "offset": 232.29,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "3:52"
+      },
+      {
+        "text": "那year over year是掉了12%",
+        "offset": 233.73,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "3:53"
+      },
+      {
+        "text": "總共部署是8.8 GWh",
+        "offset": 236.08,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "3:56"
+      },
+      {
+        "text": "環比掉了38%",
+        "offset": 238.84,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "3:58"
+      },
+      {
+        "text": "但是能源這部分的業務呢",
+        "offset": 240.44,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "4:00"
+      },
+      {
+        "text": "特斯拉他們也有講過",
+        "offset": 241.72,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "4:01"
+      },
+      {
+        "text": "季節性很強我覺得也make sense",
+        "offset": 243.12,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "4:03"
+      },
+      {
+        "text": "就是你訂單下來了真正到你去部署呢",
+        "offset": 244.84,
+        "duration": 2.46,
+        "lang": "zh",
+        "time": "4:04"
+      },
+      {
+        "text": "它不是一個平均分散在",
+        "offset": 247.32,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "4:07"
+      },
+      {
+        "text": "每一個季度的一個情況",
+        "offset": 249.32,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "4:09"
+      },
+      {
+        "text": "就有可能你第一季度比較弱",
+        "offset": 250.74,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "4:10"
+      },
+      {
+        "text": "然後第二季度突然變很強",
+        "offset": 251.98,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "4:11"
+      },
+      {
+        "text": "然後第三季度變很弱",
+        "offset": 253.26,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "4:13"
+      },
+      {
+        "text": "完全depends on它這個部署的這個時間在哪裡",
+        "offset": 254.38,
+        "duration": 3.94,
+        "lang": "zh",
+        "time": "4:14"
+      },
+      {
+        "text": "然後特斯拉呢",
+        "offset": 258.34,
+        "duration": 0.62,
+        "lang": "zh",
+        "time": "4:18"
+      },
+      {
+        "text": "他們也是維持這個2026年呢",
+        "offset": 258.98,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "4:18"
+      },
+      {
+        "text": "全年的部署會比去年2025年還要高的這個guidance",
+        "offset": 260.82,
+        "duration": 3.66,
+        "lang": "zh",
+        "time": "4:20"
+      },
+      {
+        "text": "所以我覺得大概在Q2的時候",
+        "offset": 264.64,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "4:24"
+      },
+      {
+        "text": "我們再去看一下有沒有on track就可以了",
+        "offset": 266.36,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "4:26"
+      },
+      {
+        "text": "OK那數字大部分都講完了",
+        "offset": 268.45,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "4:28"
+      },
+      {
+        "text": "我覺得今天影片重點呢是這250億美金的Capex",
+        "offset": 270.09,
+        "duration": 4.06,
+        "lang": "zh",
+        "time": "4:30"
+      },
+      {
+        "text": "到底要花在哪裡?",
+        "offset": 274.29,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "4:34"
+      },
+      {
+        "text": "那昨天晚上特斯拉股價收盤呢",
+        "offset": 275.61,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "4:35"
+      },
+      {
+        "text": "一共跌了3.56%",
+        "offset": 277.53,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "4:37"
+      },
+      {
+        "text": "我覺得有部分是市場擔心說",
+        "offset": 279.61,
+        "duration": 2.9,
+        "lang": "zh",
+        "time": "4:39"
+      },
+      {
+        "text": "特斯拉的這個Capex spending會太高",
+        "offset": 282.53,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "4:42"
+      },
+      {
+        "text": "還有一部分很重要的原因",
+        "offset": 284.9,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "4:44"
+      },
+      {
+        "text": "當然也是宏觀整個宏觀的因素",
+        "offset": 286.26,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "4:46"
+      },
+      {
+        "text": "伊朗戰爭啊還有石油這些問題",
+        "offset": 288.12,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "4:48"
+      },
+      {
+        "text": "因為不只是特斯拉跌",
+        "offset": 290.24,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "4:50"
+      },
+      {
+        "text": "但是因為現在市場的sentiment是",
+        "offset": 291.56,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "4:51"
+      },
+      {
+        "text": "你花越多錢呢市場就會越擔心說",
+        "offset": 293.36,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "4:53"
+      },
+      {
+        "text": "你這個錢能不能收回來",
+        "offset": 295.52,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "4:55"
+      },
+      {
+        "text": "就Capex spending對股價的影響呢是完全取決於市場",
+        "offset": 297.23,
+        "duration": 3.54,
+        "lang": "zh",
+        "time": "4:57"
+      },
+      {
+        "text": "對於現在的這個宏觀的sentiment",
+        "offset": 300.79,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "5:00"
+      },
+      {
+        "text": "如果現在宏觀是一個大放水的情況下大家都很bullish",
+        "offset": 303.15,
+        "duration": 3.02,
+        "lang": "zh",
+        "time": "5:03"
+      },
+      {
+        "text": "那你spend越多的Capex你的股價當然會漲",
+        "offset": 306.19,
+        "duration": 2.77,
+        "lang": "zh",
+        "time": "5:06"
+      },
+      {
+        "text": "但是如果現在市場有concern說",
+        "offset": 308.98,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "5:08"
+      },
+      {
+        "text": "比如說什麼AI bubble或是花太多錢",
+        "offset": 311.16,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "5:11"
+      },
+      {
+        "text": "那就很有可能因為Capex的股價跌",
+        "offset": 313.52,
+        "duration": 2.19,
+        "lang": "zh",
+        "time": "5:13"
+      },
+      {
+        "text": "但不管怎麼樣今天特斯拉",
+        "offset": 315.72,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "5:15"
+      },
+      {
+        "text": "跌了大概4%左右不到4%",
+        "offset": 317.2,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "5:17"
+      },
+      {
+        "text": "那就像我剛剛講的",
+        "offset": 319.46,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "5:19"
+      },
+      {
+        "text": "我覺得這一次財報會議呢",
+        "offset": 320.46,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "5:20"
+      },
+      {
+        "text": "最重要的還是什麼呢",
+        "offset": 321.7,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "5:21"
+      },
+      {
+        "text": "是特斯拉的CFO他說這250億美金呢",
+        "offset": 323.22,
+        "duration": 3.86,
+        "lang": "zh",
+        "time": "5:23"
+      },
+      {
+        "text": "是用來支付六座工廠",
+        "offset": 327.24,
+        "duration": 2.69,
+        "lang": "zh",
+        "time": "5:27"
+      },
+      {
+        "text": "再加上AI的infrastructure",
+        "offset": 330.06,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "5:30"
+      },
+      {
+        "text": "加上半導體的這個研究室Fab",
+        "offset": 331.7,
+        "duration": 2.5,
+        "lang": "zh",
+        "time": "5:31"
+      },
+      {
+        "text": "加上這個太陽能製造的這個設備",
+        "offset": 334.28,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "5:34"
+      },
+      {
+        "text": "他甚至說呢we're in a very big",
+        "offset": 336.66,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "5:36"
+      },
+      {
+        "text": "capital investment phase",
+        "offset": 338.38,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "5:38"
+      },
+      {
+        "text": "which is going to start now and would last a couple of years",
+        "offset": 339.62,
+        "duration": 3.14,
+        "lang": "zh",
+        "time": "5:39"
+      },
+      {
+        "text": "那我來幫各位股東翻譯一下",
+        "offset": 342.78,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "5:42"
+      },
+      {
+        "text": "我自己的感覺他想講什麼呢",
+        "offset": 344.62,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "5:44"
+      },
+      {
+        "text": "我覺得他想要說的是",
+        "offset": 346.7,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "5:46"
+      },
+      {
+        "text": "特斯拉在接下來的幾年呢",
+        "offset": 347.82,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "5:47"
+      },
+      {
+        "text": "要開始花大錢投資擴建了",
+        "offset": 349.66,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "5:49"
+      },
+      {
+        "text": "那如果你沒有準備好你沒有想要參與這個investment的話",
+        "offset": 351.94,
+        "duration": 3.74,
+        "lang": "zh",
+        "time": "5:51"
+      },
+      {
+        "text": "其實你可以把你現在的股票給賣掉",
+        "offset": 355.7,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "5:55"
+      },
+      {
+        "text": "他後面還補了一句說",
+        "offset": 357.55,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "5:57"
+      },
+      {
+        "text": "we expect negative free cash flow",
+        "offset": 358.87,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "5:58"
+      },
+      {
+        "text": "for the rest of the year",
+        "offset": 360.75,
+        "duration": 1.14,
+        "lang": "zh",
+        "time": "6:00"
+      },
+      {
+        "text": "基本上就是在說我覺得啦",
+        "offset": 361.91,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "6:01"
+      },
+      {
+        "text": "各位投資人準備好面對接下來的財報",
+        "offset": 363.98,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "6:03"
+      },
+      {
+        "text": "自由現金流呢會非常的難看",
+        "offset": 366.22,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "6:06"
+      },
+      {
+        "text": "那如果你沒辦法接受的話呢",
+        "offset": 368.14,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "6:08"
+      },
+      {
+        "text": "現在就是一個蠻好的這個離場點",
+        "offset": 369.7,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "6:09"
+      },
+      {
+        "text": "好我知道他當然",
+        "offset": 371.62,
+        "duration": 0.86,
+        "lang": "zh",
+        "time": "6:11"
+      },
+      {
+        "text": "沒有叫大家真的去離場啦",
+        "offset": 372.5,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "6:12"
+      },
+      {
+        "text": "但就是現在股票價格嘛",
+        "offset": 373.86,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "6:13"
+      },
+      {
+        "text": "大概是373嘛",
+        "offset": 375.58,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "6:15"
+      },
+      {
+        "text": "我覺得這是一個不錯的exit point",
+        "offset": 378.07,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "6:18"
+      },
+      {
+        "text": "如果你沒有什麼conviction的話",
+        "offset": 379.95,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "6:19"
+      },
+      {
+        "text": "我覺得現在把它出掉",
+        "offset": 381.43,
+        "duration": 0.82,
+        "lang": "zh",
+        "time": "6:21"
+      },
+      {
+        "text": "這個價格其實還算不錯",
+        "offset": 382.27,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "6:22"
+      },
+      {
+        "text": "我相信對於大部分的投資人",
+        "offset": 383.67,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "6:23"
+      },
+      {
+        "text": "尤其是有看我影片的網友",
+        "offset": 385.31,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "6:25"
+      },
+      {
+        "text": "肯定是以370這個價格",
+        "offset": 386.83,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "6:26"
+      },
+      {
+        "text": "`出掉是不會虧錢的",
+        "offset": 388.59,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "6:28"
+      },
+      {
+        "text": "我在IG上面或是我在我的TG群組裡面發我特斯拉的入場價格呢",
+        "offset": 390.03,
+        "duration": 4.46,
+        "lang": "zh",
+        "time": "6:30"
+      },
+      {
+        "text": "基本上都低於300",
+        "offset": 394.51,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "6:34"
+      },
+      {
+        "text": "所以我覺得假如你沒有那個conviction",
+        "offset": 395.83,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "6:35"
+      },
+      {
+        "text": "你也不覺得這個Capex投資進去可以收回來的話",
+        "offset": 397.79,
+        "duration": 2.86,
+        "lang": "zh",
+        "time": "6:37"
+      },
+      {
+        "text": "那我覺得現在真的就是",
+        "offset": 400.77,
+        "duration": 0.94,
+        "lang": "zh",
+        "time": "6:40"
+      },
+      {
+        "text": "一個蠻好的離場的時間點",
+        "offset": 401.73,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "6:41"
+      },
+      {
+        "text": "那我們來看一下實際的數字",
+        "offset": 403.53,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "6:43"
+      },
+      {
+        "text": "特斯拉在2025年就是去年的Capex是大概80億出頭",
+        "offset": 405.46,
+        "duration": 4.5,
+        "lang": "zh",
+        "time": "6:45"
+      },
+      {
+        "text": "然後2026年整年的guidance直接拉到250億",
+        "offset": 410.03,
+        "duration": 3.46,
+        "lang": "zh",
+        "time": "6:50"
+      },
+      {
+        "text": "就是漲了大概三倍多嘛",
+        "offset": 413.64,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "6:53"
+      },
+      {
+        "text": "聽起來好像很誇張",
+        "offset": 415.27,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "6:55"
+      },
+      {
+        "text": "但實際上的整個M7",
+        "offset": 417.03,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "6:57"
+      },
+      {
+        "text": "Microsoft Google Meta Amazon",
+        "offset": 418.51,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "6:58"
+      },
+      {
+        "text": "所有Big Tech都早就已經開始做Hyperscaler",
+        "offset": 420.27,
+        "duration": 2.78,
+        "lang": "zh",
+        "time": "7:00"
+      },
+      {
+        "text": "這幾年Capex也都是這樣爆發性的增長",
+        "offset": 423.07,
+        "duration": 2.78,
+        "lang": "zh",
+        "time": "7:03"
+      },
+      {
+        "text": "像Amazon在2026年的Capex",
+        "offset": 425.93,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "7:05"
+      },
+      {
+        "text": "是200 billion 2000億美金",
+        "offset": 427.85,
+        "duration": 2.38,
+        "lang": "zh",
+        "time": "7:07"
+      },
+      {
+        "text": "是特斯拉的10倍",
+        "offset": 430.25,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "7:10"
+      },
+      {
+        "text": "因為整個市場所有的Big Tech",
+        "offset": 431.65,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "7:11"
+      },
+      {
+        "text": "都在搶著做AI infrastructure",
+        "offset": 433.61,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "7:13"
+      },
+      {
+        "text": "但是區別是什麼呢",
+        "offset": 435.57,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "7:15"
+      },
+      {
+        "text": "特斯拉跟這些M7的公司的區別到底在哪裡呢",
+        "offset": 436.81,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "7:16"
+      },
+      {
+        "text": "特斯拉花了這個250億美金呢",
+        "offset": 439.65,
+        "duration": 2.07,
+        "lang": "zh",
+        "time": "7:19"
+      },
+      {
+        "text": "它不只是蓋資料中心",
+        "offset": 441.88,
+        "duration": 1.71,
+        "lang": "zh",
+        "time": "7:21"
+      },
+      {
+        "text": "它同時還要蓋六座工廠",
+        "offset": 443.6,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "7:23"
+      },
+      {
+        "text": "還要蓋一棟晶圓的研究廠",
+        "offset": 445.65,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "7:25"
+      },
+      {
+        "text": "還要蓋電池的材料廠，還要蓋太陽能廠",
+        "offset": 447.74,
+        "duration": 2.8,
+        "lang": "zh",
+        "time": "7:27"
+      },
+      {
+        "text": "還要把它Cortex 2",
+        "offset": 450.56,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "7:30"
+      },
+      {
+        "text": "這個AI訓練的cluster給ramp起來",
+        "offset": 451.76,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "7:31"
+      },
+      {
+        "text": "現在的Cortex 2呢的算力呢已經等同於有超過",
+        "offset": 454.04,
+        "duration": 3.7,
+        "lang": "zh",
+        "time": "7:34"
+      },
+      {
+        "text": "13萬張這個H100的GPU在跑",
+        "offset": 457.76,
+        "duration": 2.62,
+        "lang": "zh",
+        "time": "7:37"
+      },
+      {
+        "text": "那再加上Cortex 1的10萬張H100等同的算力",
+        "offset": 460.46,
+        "duration": 3.82,
+        "lang": "zh",
+        "time": "7:40"
+      },
+      {
+        "text": "特斯拉現在自己手上的算力呢",
+        "offset": 464.3,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "7:44"
+      },
+      {
+        "text": "已經有接近",
+        "offset": 465.98,
+        "duration": 0.9,
+        "lang": "zh",
+        "time": "7:45"
+      },
+      {
+        "text": "等同於25萬張這個H100 GPU的算力",
+        "offset": 466.9,
+        "duration": 3.26,
+        "lang": "zh",
+        "time": "7:46"
+      },
+      {
+        "text": "那我大概問了一下ChatGPT這個算力呢在全世界",
+        "offset": 470.37,
+        "duration": 3.14,
+        "lang": "zh",
+        "time": "7:50"
+      },
+      {
+        "text": "應該是已經數一數二的公司了",
+        "offset": 473.63,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "7:53"
+      },
+      {
+        "text": "這也是為什麼",
+        "offset": 475.96,
+        "duration": 0.82,
+        "lang": "zh",
+        "time": "7:55"
+      },
+      {
+        "text": "我一直以來都覺得投資特斯拉呢",
+        "offset": 476.8,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "7:56"
+      },
+      {
+        "text": "其實是在投資一個全世界最大的AI project",
+        "offset": 478.76,
+        "duration": 2.94,
+        "lang": "zh",
+        "time": "7:58"
+      },
+      {
+        "text": "那這個250億美金的Capex呢",
+        "offset": 481.91,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "8:01"
+      },
+      {
+        "text": "當然包含了現在爭議比較多的這個TeraFab",
+        "offset": 484.03,
+        "duration": 2.27,
+        "lang": "zh",
+        "time": "8:04"
+      },
+      {
+        "text": "TeraFab這個project呢就是特斯拉他最近宣布的",
+        "offset": 487.35,
+        "duration": 2.54,
+        "lang": "zh",
+        "time": "8:07"
+      },
+      {
+        "text": "他們要在Giga Texas園區內蓋一座這個研究級的晶圓廠",
+        "offset": 489.91,
+        "duration": 4.3,
+        "lang": "zh",
+        "time": "8:09"
+      },
+      {
+        "text": "預算大概是30億美金",
+        "offset": 494.29,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "8:14"
+      },
+      {
+        "text": "每個月呢可以做幾千片的wafer就是晶圓",
+        "offset": 495.85,
+        "duration": 3.06,
+        "lang": "zh",
+        "time": "8:15"
+      },
+      {
+        "text": "晶圓就是台積電logo上面那個圓圓的東西",
+        "offset": 498.93,
+        "duration": 2.86,
+        "lang": "zh",
+        "time": "8:18"
+      },
+      {
+        "text": "如果你不知道晶圓是什麼的話",
+        "offset": 501.81,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "8:21"
+      },
+      {
+        "text": "就是所有的這個晶片生產",
+        "offset": 503.45,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "8:23"
+      },
+      {
+        "text": "最基本這個foundation就是那片圓圓的晶圓",
+        "offset": 505.45,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "8:25"
+      },
+      {
+        "text": "你可以把它想像成是",
+        "offset": 508.36,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "8:28"
+      },
+      {
+        "text": "蓋房子的時候你最基本的那個地基",
+        "offset": 509.36,
+        "duration": 2.62,
+        "lang": "zh",
+        "time": "8:29"
+      },
+      {
+        "text": "那這個研究廠呢",
+        "offset": 512,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "8:32"
+      },
+      {
+        "text": "當然是特斯拉自己出錢蓋",
+        "offset": 513.08,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "8:33"
+      },
+      {
+        "text": "注意特斯拉這邊蓋的是晶圓的研究廠",
+        "offset": 514.79,
+        "duration": 2.58,
+        "lang": "zh",
+        "time": "8:34"
+      },
+      {
+        "text": "然後接下來真正能夠scale up的是TeraFab的主場",
+        "offset": 517.39,
+        "duration": 3.34,
+        "lang": "zh",
+        "time": "8:37"
+      },
+      {
+        "text": "那那邊就會由SpaceX去主導第一階段",
+        "offset": 520.75,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "8:40"
+      },
+      {
+        "text": "然後整個製程呢會用Intel最新的這個14A",
+        "offset": 523.59,
+        "duration": 3.18,
+        "lang": "zh",
+        "time": "8:43"
+      },
+      {
+        "text": "應該是Intel下一代最強的這個製程節點",
+        "offset": 527.05,
+        "duration": 2.5,
+        "lang": "zh",
+        "time": "8:47"
+      },
+      {
+        "text": "雖然我不知道這是什麼意思",
+        "offset": 529.66,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "8:49"
+      },
+      {
+        "text": "但聽起來好像他們知道自己在講什麼",
+        "offset": 530.78,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "8:50"
+      },
+      {
+        "text": "那關於TeraFab我覺得之後它強的地方呢不是它的產能",
+        "offset": 532.78,
+        "duration": 3.7,
+        "lang": "zh",
+        "time": "8:52"
+      },
+      {
+        "text": "應該說短期內產能",
+        "offset": 536.5,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "8:56"
+      },
+      {
+        "text": "一定會遇到非常非常多的瓶頸",
+        "offset": 538.06,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "8:58"
+      },
+      {
+        "text": "但是呢我覺得Elon他厲害的地方呢不是在製程",
+        "offset": 539.78,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "8:59"
+      },
+      {
+        "text": "不是在晶片的製程",
+        "offset": 542.67,
+        "duration": 1.14,
+        "lang": "zh",
+        "time": "9:02"
+      },
+      {
+        "text": "我覺得他強的地方是",
+        "offset": 543.83,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "9:03"
+      },
+      {
+        "text": "怎麼去增加那個iteration的speed",
+        "offset": 544.83,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "9:04"
+      },
+      {
+        "text": "他在這次的earnings call又再次強調",
+        "offset": 546.99,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "9:06"
+      },
+      {
+        "text": "這個研究廠呢是世界上唯一一個會把",
+        "offset": 549.15,
+        "duration": 2.7,
+        "lang": "zh",
+        "time": "9:09"
+      },
+      {
+        "text": "光照製作，邏輯晶片",
+        "offset": 551.87,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "9:11"
+      },
+      {
+        "text": "記憶體，跟先進封裝呢",
+        "offset": 554.03,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "9:14"
+      },
+      {
+        "text": "全部放在同一棟建築物的Fab",
+        "offset": 555.83,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "9:15"
+      },
+      {
+        "text": "那這麼做的目的呢就是要把",
+        "offset": 558.15,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "9:18"
+      },
+      {
+        "text": "研發的這個迭代週期壓到最低",
+        "offset": 559.75,
+        "duration": 2.74,
+        "lang": "zh",
+        "time": "9:19"
+      },
+      {
+        "text": "當然我對半導體的這個製程還有",
+        "offset": 562.51,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "9:22"
+      },
+      {
+        "text": "生產是完全沒有任何一點概念的",
+        "offset": 564.79,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "9:24"
+      },
+      {
+        "text": "所以有概念的網友",
+        "offset": 566.75,
+        "duration": 0.94,
+        "lang": "zh",
+        "time": "9:26"
+      },
+      {
+        "text": "也可以在影片底下留言分享一下",
+        "offset": 567.71,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "9:27"
+      },
+      {
+        "text": "糾正一下我如果有講錯什麼",
+        "offset": 569.59,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "9:29"
+      },
+      {
+        "text": "但是就我的理解，傳統的chip iteration",
+        "offset": 571.19,
+        "duration": 3.22,
+        "lang": "zh",
+        "time": "9:31"
+      },
+      {
+        "text": "會比較像是",
+        "offset": 574.43,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "9:34"
+      },
+      {
+        "text": "我們拿比如說軟體開發",
+        "offset": 575.72,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "9:35"
+      },
+      {
+        "text": "來做一個比喻好了",
+        "offset": 577.68,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "9:37"
+      },
+      {
+        "text": "當你寫好你的code之後呢",
+        "offset": 579.04,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "9:39"
+      },
+      {
+        "text": "你把你的code email到其他國家",
+        "offset": 580.64,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "9:40"
+      },
+      {
+        "text": "去幫你做compile",
+        "offset": 582.88,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "9:42"
+      },
+      {
+        "text": "然後你可能要等幾個月之後呢",
+        "offset": 584.33,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "9:44"
+      },
+      {
+        "text": "才可以拿到結果",
+        "offset": 585.73,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "9:45"
+      },
+      {
+        "text": "而TeraFab想要做的事情呢",
+        "offset": 586.85,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "9:46"
+      },
+      {
+        "text": "就是直接在電腦上面就可以做compile",
+        "offset": 588.69,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "9:48"
+      },
+      {
+        "text": "等於是當天你就可以",
+        "offset": 590.91,
+        "duration": 0.94,
+        "lang": "zh",
+        "time": "9:50"
+      },
+      {
+        "text": "直接修直接改直接測試",
+        "offset": 591.87,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "9:51"
+      },
+      {
+        "text": "那聽起來呢確實好像真的很厲害",
+        "offset": 593.39,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "9:53"
+      },
+      {
+        "text": "但是我覺得目前這些呢",
+        "offset": 595.39,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "9:55"
+      },
+      {
+        "text": "看到的這些東西呢",
+        "offset": 596.87,
+        "duration": 1.02,
+        "lang": "zh",
+        "time": "9:56"
+      },
+      {
+        "text": "我覺得就只是在畫餅而已",
+        "offset": 597.91,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "9:57"
+      },
+      {
+        "text": "所有的東西呢都還沒有實現",
+        "offset": 599.51,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "9:59"
+      },
+      {
+        "text": "也沒有人知道",
+        "offset": 601.03,
+        "duration": 0.7,
+        "lang": "zh",
+        "time": "10:01"
+      },
+      {
+        "text": "真的到底會發生什麼事情",
+        "offset": 601.75,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "10:01"
+      },
+      {
+        "text": "當然我覺得這就是",
+        "offset": 603.29,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "10:03"
+      },
+      {
+        "text": "身為特斯拉投資人一個很好玩的地方",
+        "offset": 604.37,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "10:04"
+      },
+      {
+        "text": "就是你永遠不知道你在投資什麼東西",
+        "offset": 606.53,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "10:06"
+      },
+      {
+        "text": "像上一季度呢特斯拉投資了2 billion",
+        "offset": 608.61,
+        "duration": 3.16,
+        "lang": "zh",
+        "time": "10:08"
+      },
+      {
+        "text": "在SpaceX上面20億美金",
+        "offset": 611.79,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "10:11"
+      },
+      {
+        "text": "那身為特斯拉投資人我們又突然變成了這個SpaceX的股東",
+        "offset": 614.04,
+        "duration": 3.94,
+        "lang": "zh",
+        "time": "10:14"
+      },
+      {
+        "text": "所以說取決於你的認知會決定你",
+        "offset": 618,
+        "duration": 2.46,
+        "lang": "zh",
+        "time": "10:18"
+      },
+      {
+        "text": "在這家公司上面能不能賺到錢",
+        "offset": 620.48,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "10:20"
+      },
+      {
+        "text": "然後呢就是你可以真的賺到多少錢",
+        "offset": 622.65,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "10:22"
+      },
+      {
+        "text": "好那說到投資SpaceX呢我們先暫停一下",
+        "offset": 624.57,
+        "duration": 2.7,
+        "lang": "zh",
+        "time": "10:24"
+      },
+      {
+        "text": "之前我跟Han哥在我的影片裡面",
+        "offset": 627.29,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "10:27"
+      },
+      {
+        "text": "就跟大家聊到他的新創公司Jarsy",
+        "offset": 629.17,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "10:29"
+      },
+      {
+        "text": "也是因為Jarsy讓我接觸到很多這個還沒上市公司的投資機會",
+        "offset": 631.33,
+        "duration": 4.38,
+        "lang": "zh",
+        "time": "10:31"
+      },
+      {
+        "text": "那我覺得這也是Jarsy他們很厲害的地方",
+        "offset": 635.84,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "10:35"
+      },
+      {
+        "text": "就是可以讓我們這種",
+        "offset": 638.04,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "10:38"
+      },
+      {
+        "text": "非常普通的散戶投資人",
+        "offset": 639.04,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "10:39"
+      },
+      {
+        "text": "可以開始投資接觸到",
+        "offset": 640.76,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "10:40"
+      },
+      {
+        "text": "這些還沒上市公司的股票",
+        "offset": 642.16,
+        "duration": 1.59,
+        "lang": "zh",
+        "time": "10:42"
+      },
+      {
+        "text": "像是SpaceX Anthropic xAI",
+        "offset": 644.92,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "10:44"
+      },
+      {
+        "text": "就這些公司呢在以前你想要投資他們",
+        "offset": 646.4,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "10:46"
+      },
+      {
+        "text": "你需要有非常非常多的錢",
+        "offset": 648.72,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "10:48"
+      },
+      {
+        "text": "你不是要有超高的淨資產",
+        "offset": 650.78,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "10:50"
+      },
+      {
+        "text": "你就是要成為一個合格的投資人",
+        "offset": 652.5,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "10:52"
+      },
+      {
+        "text": "accredited investor",
+        "offset": 654.58,
+        "duration": 1.02,
+        "lang": "zh",
+        "time": "10:54"
+      },
+      {
+        "text": "才能有機會有可能",
+        "offset": 655.62,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "10:55"
+      },
+      {
+        "text": "可以投資到這些公司",
+        "offset": 657.42,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "10:57"
+      },
+      {
+        "text": "那Jarsy呢也是業界首創以來幫散戶去實現這個夢想",
+        "offset": 658.99,
+        "duration": 3.62,
+        "lang": "zh",
+        "time": "10:58"
+      },
+      {
+        "text": "那我自己會選擇用Jarsy的原因呢",
+        "offset": 662.63,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "11:02"
+      },
+      {
+        "text": "首先第一個當然就是我認識Han",
+        "offset": 664.59,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "11:04"
+      },
+      {
+        "text": "我也知道他在矽谷的reputation",
+        "offset": 666.35,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "11:06"
+      },
+      {
+        "text": "再來就是Jarsy呢它是一家美國公司它是一家合規的公司",
+        "offset": 668.55,
+        "duration": 3.5,
+        "lang": "zh",
+        "time": "11:08"
+      },
+      {
+        "text": "所以在安全上面呢我覺得是OK的",
+        "offset": 672.15,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "11:12"
+      },
+      {
+        "text": "那整體的運作原理呢",
+        "offset": 674.07,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "11:14"
+      },
+      {
+        "text": "就是他們會在二級市場上面",
+        "offset": 675.63,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "11:15"
+      },
+      {
+        "text": "直接收購這些公司的股權",
+        "offset": 677.43,
+        "duration": 2.02,
+        "lang": "zh",
+        "time": "11:17"
+      },
+      {
+        "text": "然後再以1比1的比例呢",
+        "offset": 679.47,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "11:19"
+      },
+      {
+        "text": "發行在他們的平台上面讓用戶去購買",
+        "offset": 681.15,
+        "duration": 2.76,
+        "lang": "zh",
+        "time": "11:21"
+      },
+      {
+        "text": "然後每一個股權呢",
+        "offset": 684.07,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "11:24"
+      },
+      {
+        "text": "你在他們的網站上面呢",
+        "offset": 685.35,
+        "duration": 1.38,
+        "lang": "zh",
+        "time": "11:25"
+      },
+      {
+        "text": "都可以找到proof of reserve",
+        "offset": 686.75,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "11:26"
+      },
+      {
+        "text": "意思就是說所有你在Jarsy上面購買的股權呢",
+        "offset": 688.63,
+        "duration": 2.98,
+        "lang": "zh",
+        "time": "11:28"
+      },
+      {
+        "text": "全部都有實際的Jarsy持有的這個資產證明",
+        "offset": 691.77,
+        "duration": 3.06,
+        "lang": "zh",
+        "time": "11:31"
+      },
+      {
+        "text": "那平台入金的方式呢",
+        "offset": 694.97,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "11:34"
+      },
+      {
+        "text": "也非非非常的簡單",
+        "offset": 696.29,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "11:36"
+      },
+      {
+        "text": "首先你可以透過國際電匯",
+        "offset": 697.54,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "11:37"
+      },
+      {
+        "text": "你可以直接把美元匯進去",
+        "offset": 699.18,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "11:39"
+      },
+      {
+        "text": "或者說呢你也可以轉USDC到你的Jarsy上面的錢包",
+        "offset": 700.98,
+        "duration": 3.54,
+        "lang": "zh",
+        "time": "11:40"
+      },
+      {
+        "text": "那完成之後呢你就可以",
+        "offset": 704.54,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "11:44"
+      },
+      {
+        "text": "直接開始收購你想要投資的公司",
+        "offset": 705.66,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "11:45"
+      },
+      {
+        "text": "那大家如果有興趣的話呢",
+        "offset": 707.88,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "11:47"
+      },
+      {
+        "text": "可以在影片底下留言跟我講一下",
+        "offset": 709.08,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "11:49"
+      },
+      {
+        "text": "我之後呢也可以再做一集影片",
+        "offset": 710.84,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "11:50"
+      },
+      {
+        "text": "跟大家分享一下",
+        "offset": 712.44,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "11:52"
+      },
+      {
+        "text": "我在Jarsy上面都做了哪些投資",
+        "offset": 713.44,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "11:53"
+      },
+      {
+        "text": "然後還有一些操作的教學",
+        "offset": 715.72,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "11:55"
+      },
+      {
+        "text": "跟一些你需要注意的事項",
+        "offset": 717.28,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "11:57"
+      },
+      {
+        "text": "那我也會把我的Jarsy推薦好友連結呢放在影片底下的資訊欄",
+        "offset": 718.8,
+        "duration": 3.66,
+        "lang": "zh",
+        "time": "11:58"
+      },
+      {
+        "text": "大家可以自己去看一下啦",
+        "offset": 722.56,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "12:02"
+      },
+      {
+        "text": "是有幾家公司我覺得",
+        "offset": 723.84,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "12:03"
+      },
+      {
+        "text": "還蠻值得去研究一下的",
+        "offset": 725.36,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "12:05"
+      },
+      {
+        "text": "不過還是要提醒一下大家啦",
+        "offset": 726.8,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "12:06"
+      },
+      {
+        "text": "就是投資這些還沒有上市的公司呢",
+        "offset": 728.32,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "12:08"
+      },
+      {
+        "text": "風險呢也是非常非常的高",
+        "offset": 730.28,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "12:10"
+      },
+      {
+        "text": "價格波動呢也是很大",
+        "offset": 731.84,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "12:11"
+      },
+      {
+        "text": "所以呢要注意安全",
+        "offset": 733.41,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "12:13"
+      },
+      {
+        "text": "OK那我們回到影片的正題",
+        "offset": 734.68,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "12:14"
+      },
+      {
+        "text": "那也是因為TeraFab",
+        "offset": 736.42,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "12:16"
+      },
+      {
+        "text": "我最近在Threads上面看到很多人發文說呢",
+        "offset": 737.86,
+        "duration": 2.5,
+        "lang": "zh",
+        "time": "12:17"
+      },
+      {
+        "text": "他們把這個特斯拉股票先拋售掉了",
+        "offset": 740.38,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "12:20"
+      },
+      {
+        "text": "最主要最大的原因呢就是因為TeraFab會非常非常的燒錢",
+        "offset": 742.54,
+        "duration": 3.5,
+        "lang": "zh",
+        "time": "12:22"
+      },
+      {
+        "text": "然後不確定的因素呢也是太多了",
+        "offset": 746.06,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "12:26"
+      },
+      {
+        "text": "畢竟呢我們都知道",
+        "offset": 748.09,
+        "duration": 1.14,
+        "lang": "zh",
+        "time": "12:28"
+      },
+      {
+        "text": "要做晶片呢是有多困難的",
+        "offset": 749.25,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "12:29"
+      },
+      {
+        "text": "加上特斯拉呢",
+        "offset": 751.17,
+        "duration": 0.78,
+        "lang": "zh",
+        "time": "12:31"
+      },
+      {
+        "text": "是完全沒有任何製作晶片的這個經驗",
+        "offset": 751.97,
+        "duration": 2.9,
+        "lang": "zh",
+        "time": "12:31"
+      },
+      {
+        "text": "所以TeraFab到底會是一個慢性的自殺呢",
+        "offset": 754.89,
+        "duration": 2.62,
+        "lang": "zh",
+        "time": "12:34"
+      },
+      {
+        "text": "還是最終又變成一個壯舉?",
+        "offset": 757.53,
+        "duration": 2.25,
+        "lang": "zh",
+        "time": "12:37"
+      },
+      {
+        "text": "我覺得這個問題呢",
+        "offset": 759.79,
+        "duration": 0.67,
+        "lang": "zh",
+        "time": "12:39"
+      },
+      {
+        "text": "你要從兩個角度去看",
+        "offset": 760.48,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "12:40"
+      },
+      {
+        "text": "第一個角度當然是",
+        "offset": 762,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "12:42"
+      },
+      {
+        "text": "你去看特斯拉是不是真的有錢去花",
+        "offset": 763,
+        "duration": 2.42,
+        "lang": "zh",
+        "time": "12:43"
+      },
+      {
+        "text": "目前呢公司手上",
+        "offset": 765.52,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "12:45"
+      },
+      {
+        "text": "大概有447億的現金",
+        "offset": 766.84,
+        "duration": 2.38,
+        "lang": "zh",
+        "time": "12:46"
+      },
+      {
+        "text": "加上Q1呢做了大概有14億的free cash flow",
+        "offset": 769.35,
+        "duration": 3.1,
+        "lang": "zh",
+        "time": "12:49"
+      },
+      {
+        "text": "再加上呢他們還可以發債融資",
+        "offset": 772.68,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "12:52"
+      },
+      {
+        "text": "這一次Q1就發了43億的這個新債",
+        "offset": 774.92,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "12:54"
+      },
+      {
+        "text": "所以short term短期的",
+        "offset": 777.76,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "12:57"
+      },
+      {
+        "text": "financing capacity呢",
+        "offset": 779.52,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "12:59"
+      },
+      {
+        "text": "我覺得是綽綽有餘的",
+        "offset": 780.64,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "13:00"
+      },
+      {
+        "text": "也就是說這個豪賭呢",
+        "offset": 782.15,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "13:02"
+      },
+      {
+        "text": "目前來看特斯拉是玩得起的",
+        "offset": 783.51,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "13:03"
+      },
+      {
+        "text": "那第二個角度呢就是要看",
+        "offset": 785.39,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "13:05"
+      },
+      {
+        "text": "花這個錢呢我們能得到什麼",
+        "offset": 787.14,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "13:07"
+      },
+      {
+        "text": "我們就非常簡單的來粗算一下",
+        "offset": 789.33,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "13:09"
+      },
+      {
+        "text": "如果說Robotaxi按照Elon的guidance",
+        "offset": 791.7,
+        "duration": 3.26,
+        "lang": "zh",
+        "time": "13:11"
+      },
+      {
+        "text": "今年年底呢",
+        "offset": 794.98,
+        "duration": 0.9,
+        "lang": "zh",
+        "time": "13:14"
+      },
+      {
+        "text": "可以在十幾個州開始運營的話",
+        "offset": 795.9,
+        "duration": 2.38,
+        "lang": "zh",
+        "time": "13:15"
+      },
+      {
+        "text": "那每一個Robotaxi一天可以做我們就舉例",
+        "offset": 798.35,
+        "duration": 3.18,
+        "lang": "zh",
+        "time": "13:18"
+      },
+      {
+        "text": "16個小時有效的這個載客時間",
+        "offset": 801.65,
+        "duration": 2.72,
+        "lang": "zh",
+        "time": "13:21"
+      },
+      {
+        "text": "然後我們假設每一個小時",
+        "offset": 804.39,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "13:24"
+      },
+      {
+        "text": "平均收入20塊美金好了",
+        "offset": 805.67,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "13:25"
+      },
+      {
+        "text": "那一台車一年呢大概可以做到",
+        "offset": 807.89,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "13:27"
+      },
+      {
+        "text": "16乘以20乘以365",
+        "offset": 810.09,
+        "duration": 2.5,
+        "lang": "zh",
+        "time": "13:30"
+      },
+      {
+        "text": "大概就是12萬美金的營收",
+        "offset": 812.61,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "13:32"
+      },
+      {
+        "text": "然後這個毛利率我們就假設",
+        "offset": 814.49,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "13:34"
+      },
+      {
+        "text": "保守保守的毛利率50%好了",
+        "offset": 816.25,
+        "duration": 2.54,
+        "lang": "zh",
+        "time": "13:36"
+      },
+      {
+        "text": "就是大概6萬塊錢的毛利率",
+        "offset": 818.98,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "13:38"
+      },
+      {
+        "text": "那特斯拉現在在路上一共",
+        "offset": 820.78,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "13:40"
+      },
+      {
+        "text": "在路上有跑的這個車",
+        "offset": 823.02,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "13:43"
+      },
+      {
+        "text": "有大概1300萬台",
+        "offset": 824.22,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "13:44"
+      },
+      {
+        "text": "那我們再外加上特斯拉自己生產的這個Cybercab",
+        "offset": 825.98,
+        "duration": 3.02,
+        "lang": "zh",
+        "time": "13:45"
+      },
+      {
+        "text": "我們就算總共總共1300萬台",
+        "offset": 829.08,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "13:49"
+      },
+      {
+        "text": "然後1%可以convert成Robotaxi",
+        "offset": 831.4,
+        "duration": 2.74,
+        "lang": "zh",
+        "time": "13:51"
+      },
+      {
+        "text": "有效的Robotaxi車隊",
+        "offset": 834.16,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "13:54"
+      },
+      {
+        "text": "那就是大概有13萬台",
+        "offset": 835.72,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "13:55"
+      },
+      {
+        "text": "那13萬乘以6萬",
+        "offset": 837.76,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "13:57"
+      },
+      {
+        "text": "6萬的毛利率每一台",
+        "offset": 839.2,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "13:59"
+      },
+      {
+        "text": "就是大概78億美金的",
+        "offset": 841.18,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "14:01"
+      },
+      {
+        "text": "這個純額外的這個毛利率收入",
+        "offset": 842.98,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "14:02"
+      },
+      {
+        "text": "而且這是每一年只有1%的adoption",
+        "offset": 845.26,
+        "duration": 2.7,
+        "lang": "zh",
+        "time": "14:05"
+      },
+      {
+        "text": "它基本上就可以支撐特斯拉的purpose這個250億",
+        "offset": 847.98,
+        "duration": 3.22,
+        "lang": "zh",
+        "time": "14:07"
+      },
+      {
+        "text": "美金的這個Capex的三分之一的量",
+        "offset": 851.42,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "14:11"
+      },
+      {
+        "text": "另外一點就是Optimus我覺得這個還是一個謎啦",
+        "offset": 853.91,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "14:13"
+      },
+      {
+        "text": "就具體Optimus能夠給特斯拉帶來多少現金流",
+        "offset": 856.47,
+        "duration": 3.14,
+        "lang": "zh",
+        "time": "14:16"
+      },
+      {
+        "text": "我覺得沒有一個人真的知道",
+        "offset": 859.69,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "14:19"
+      },
+      {
+        "text": "但是Elon在這次的earnings call裡面",
+        "offset": 861.25,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "14:21"
+      },
+      {
+        "text": "有講到說Optimus的production",
+        "offset": 863.13,
+        "duration": 2.02,
+        "lang": "zh",
+        "time": "14:23"
+      },
+      {
+        "text": "會在7月底8月初開始",
+        "offset": 865.3,
+        "duration": 2.18,
+        "lang": "zh",
+        "time": "14:25"
+      },
+      {
+        "text": "第一條的生產線呢是在Fremont年產能呢大概是100萬台",
+        "offset": 867.69,
+        "duration": 3.86,
+        "lang": "zh",
+        "time": "14:27"
+      },
+      {
+        "text": "設計是年產能的設計是100萬台",
+        "offset": 871.86,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "14:31"
+      },
+      {
+        "text": "第二條是在Giga Texas",
+        "offset": 874.1,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "14:34"
+      },
+      {
+        "text": "年產能年產能的設計呢是1000萬台Optimus",
+        "offset": 875.42,
+        "duration": 3.7,
+        "lang": "zh",
+        "time": "14:35"
+      },
+      {
+        "text": "然後Giga Texas是明年夏天開工",
+        "offset": 879.14,
+        "duration": 2.94,
+        "lang": "zh",
+        "time": "14:39"
+      },
+      {
+        "text": "那我知道我在影片裡面講過就是Optimus其實離我們太遠了",
+        "offset": 882.17,
+        "duration": 3.38,
+        "lang": "zh",
+        "time": "14:42"
+      },
+      {
+        "text": "但你說真的很遠嗎其實Optimus在今年就會開始生產了",
+        "offset": 885.57,
+        "duration": 3.42,
+        "lang": "zh",
+        "time": "14:45"
+      },
+      {
+        "text": "而且他們這次刻意非常的low key非常的低調",
+        "offset": 889.09,
+        "duration": 3.3,
+        "lang": "zh",
+        "time": "14:49"
+      },
+      {
+        "text": "不過去公佈現在版本的樣子",
+        "offset": 892.48,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "14:52"
+      },
+      {
+        "text": "其中最主要原因就是Elon說他們只要公佈之後",
+        "offset": 894.16,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "14:54"
+      },
+      {
+        "text": "所有的competitor他們就會開始",
+        "offset": 897,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "14:57"
+      },
+      {
+        "text": "每一個frame每一個frame的照抄",
+        "offset": 898.6,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "14:58"
+      },
+      {
+        "text": "我覺得這個make sense",
+        "offset": 900.24,
+        "duration": 1.22,
+        "lang": "zh",
+        "time": "15:00"
+      },
+      {
+        "text": "所以說我們現在對Optimus基本上是沒有任何的概念",
+        "offset": 901.59,
+        "duration": 3.02,
+        "lang": "zh",
+        "time": "15:01"
+      },
+      {
+        "text": "但是Elon講過很多遍Optimus呢",
+        "offset": 904.63,
+        "duration": 2.32,
+        "lang": "zh",
+        "time": "15:04"
+      },
+      {
+        "text": "會是特斯拉史上最大的一個product",
+        "offset": 906.97,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "15:06"
+      },
+      {
+        "text": "甚至可能是全人類史上最大的product",
+        "offset": 909.36,
+        "duration": 2.54,
+        "lang": "zh",
+        "time": "15:09"
+      },
+      {
+        "text": "這點我也是同意的物理世界的AI",
+        "offset": 912.06,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "15:12"
+      },
+      {
+        "text": "但是執行起來真的非常非常的難",
+        "offset": 914.34,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "15:14"
+      },
+      {
+        "text": "所以理論上來說你要去支持這個production產能的話",
+        "offset": 916.64,
+        "duration": 3.22,
+        "lang": "zh",
+        "time": "15:16"
+      },
+      {
+        "text": "這個Capex的支出是完全有必要的",
+        "offset": 919.88,
+        "duration": 2.62,
+        "lang": "zh",
+        "time": "15:19"
+      },
+      {
+        "text": "也是一個能夠讓特斯拉真的達到10T 10 trillion的估值",
+        "offset": 922.67,
+        "duration": 3.78,
+        "lang": "zh",
+        "time": "15:22"
+      },
+      {
+        "text": "我覺得唯一的一條路",
+        "offset": 926.47,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "15:26"
+      },
+      {
+        "text": "要不然你過去幾個季度",
+        "offset": 927.95,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "15:27"
+      },
+      {
+        "text": "賺那麼多現金賺那麼多錢",
+        "offset": 929.27,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "15:29"
+      },
+      {
+        "text": "放在手上幹嘛?",
+        "offset": 930.99,
+        "duration": 1.07,
+        "lang": "zh",
+        "time": "15:30"
+      },
+      {
+        "text": "發回去給股東當股息嗎?",
+        "offset": 932.07,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "15:32"
+      },
+      {
+        "text": "當然不是了",
+        "offset": 933.96,
+        "duration": 0.66,
+        "lang": "zh",
+        "time": "15:33"
+      },
+      {
+        "text": "拿去收購自家公司的股票?",
+        "offset": 934.78,
+        "duration": 1.79,
+        "lang": "zh",
+        "time": "15:34"
+      },
+      {
+        "text": "當然不是了",
+        "offset": 936.58,
+        "duration": 0.82,
+        "lang": "zh",
+        "time": "15:36"
+      },
+      {
+        "text": "我覺得這也是為什麼",
+        "offset": 937.42,
+        "duration": 0.9,
+        "lang": "zh",
+        "time": "15:37"
+      },
+      {
+        "text": "特斯拉在過去幾個季度呢",
+        "offset": 938.34,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "15:38"
+      },
+      {
+        "text": "過於保守的原因",
+        "offset": 940.06,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "15:40"
+      },
+      {
+        "text": "其實就是一直在存錢那等到現在",
+        "offset": 941.38,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "15:41"
+      },
+      {
+        "text": "當軟體的技術已經成熟差不多的之後",
+        "offset": 943.46,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "15:43"
+      },
+      {
+        "text": "這個limiting factor已經不是軟體技術了",
+        "offset": 945.78,
+        "duration": 2.42,
+        "lang": "zh",
+        "time": "15:45"
+      },
+      {
+        "text": "就可以開始真的ramp up Robotaxi",
+        "offset": 948.31,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "15:48"
+      },
+      {
+        "text": "然後就是ramp up Optimus",
+        "offset": 950.23,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "15:50"
+      },
+      {
+        "text": "所以我認為啦，我就隨便猜一下",
+        "offset": 951.79,
+        "duration": 1.98,
+        "lang": "zh",
+        "time": "15:51"
+      },
+      {
+        "text": "大家不要太認真",
+        "offset": 953.79,
+        "duration": 0.98,
+        "lang": "zh",
+        "time": "15:53"
+      },
+      {
+        "text": "2026年下半年Q3跟Q4的這個毛利率呢",
+        "offset": 954.79,
+        "duration": 3.62,
+        "lang": "zh",
+        "time": "15:54"
+      },
+      {
+        "text": "我覺得還是會維持在20%以上",
+        "offset": 958.61,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "15:58"
+      },
+      {
+        "text": "但是因為Capex會爆炸性的成長",
+        "offset": 961.08,
+        "duration": 2.26,
+        "lang": "zh",
+        "time": "16:01"
+      },
+      {
+        "text": "那operating margin呢會被RD拉低",
+        "offset": 963.46,
+        "duration": 2.5,
+        "lang": "zh",
+        "time": "16:03"
+      },
+      {
+        "text": "所以他們的free cash flow",
+        "offset": 965.98,
+        "duration": 1.3,
+        "lang": "zh",
+        "time": "16:05"
+      },
+      {
+        "text": "在Q2 Q3 Q4真的都有可能會變成負的",
+        "offset": 967.3,
+        "duration": 2.86,
+        "lang": "zh",
+        "time": "16:07"
+      },
+      {
+        "text": "那關於特斯拉股票的這個走勢呢",
+        "offset": 970.38,
+        "duration": 2.42,
+        "lang": "zh",
+        "time": "16:10"
+      },
+      {
+        "text": "我覺得最大的關鍵因素當然就會變成FSD的訂閱數字",
+        "offset": 972.92,
+        "duration": 3.62,
+        "lang": "zh",
+        "time": "16:12"
+      },
+      {
+        "text": "如果說FSD的訂閱數字繼續爆炸性的增長的話",
+        "offset": 976.69,
+        "duration": 3.58,
+        "lang": "zh",
+        "time": "16:16"
+      },
+      {
+        "text": "那整年的EPS呢還是可以超出分析師的預期",
+        "offset": 980.29,
+        "duration": 3.14,
+        "lang": "zh",
+        "time": "16:20"
+      },
+      {
+        "text": "首先第一個我們已經確定的",
+        "offset": 983.45,
+        "duration": 1.62,
+        "lang": "zh",
+        "time": "16:23"
+      },
+      {
+        "text": "就是下半年",
+        "offset": 985.09,
+        "duration": 0.83,
+        "lang": "zh",
+        "time": "16:25"
+      },
+      {
+        "text": "Cybercab跟Semi會開始量產",
+        "offset": 985.93,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "16:25"
+      },
+      {
+        "text": "如果產能爬坡呢",
+        "offset": 988.04,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "16:28"
+      },
+      {
+        "text": "也沒有遇到什麼大問題的話",
+        "offset": 989.16,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "16:29"
+      },
+      {
+        "text": "然後再加上FSD在中國還有歐洲",
+        "offset": 991,
+        "duration": 2.62,
+        "lang": "zh",
+        "time": "16:31"
+      },
+      {
+        "text": "如果能夠更順利的有審批的通過的話",
+        "offset": 993.64,
+        "duration": 3.06,
+        "lang": "zh",
+        "time": "16:33"
+      },
+      {
+        "text": "這樣就可以再更加速adoption",
+        "offset": 996.72,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "16:36"
+      },
+      {
+        "text": "整體股票我覺得在今年",
+        "offset": 998.7,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "16:38"
+      },
+      {
+        "text": "還是很有機會可以再創新高的",
+        "offset": 1000.18,
+        "duration": 1.86,
+        "lang": "zh",
+        "time": "16:40"
+      },
+      {
+        "text": "當然我還是一樣",
+        "offset": 1002.22,
+        "duration": 0.78,
+        "lang": "zh",
+        "time": "16:42"
+      },
+      {
+        "text": "我不是很想去給一個具體的數字啊",
+        "offset": 1003.02,
+        "duration": 2.02,
+        "lang": "zh",
+        "time": "16:43"
+      },
+      {
+        "text": "因為每一次我講一個具體數字呢",
+        "offset": 1005.06,
+        "duration": 1.55,
+        "lang": "zh",
+        "time": "16:45"
+      },
+      {
+        "text": "酸民就會開始嘴",
+        "offset": 1006.78,
+        "duration": 0.86,
+        "lang": "zh",
+        "time": "16:46"
+      },
+      {
+        "text": "如果沒有達到那個數字的話",
+        "offset": 1007.78,
+        "duration": 1.46,
+        "lang": "zh",
+        "time": "16:47"
+      },
+      {
+        "text": "當然還是就是好玩啦，我可以猜一下",
+        "offset": 1009.26,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "16:49"
+      },
+      {
+        "text": "我覺得可以達到600塊以上",
+        "offset": 1011.34,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "16:51"
+      },
+      {
+        "text": "但是這也要建立在我們剛剛講的",
+        "offset": 1012.94,
+        "duration": 2.14,
+        "lang": "zh",
+        "time": "16:52"
+      },
+      {
+        "text": "所有那些都很順利的情況下",
+        "offset": 1015.1,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "16:55"
+      },
+      {
+        "text": "而且很多東西呢其實也不是",
+        "offset": 1017.02,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "16:57"
+      },
+      {
+        "text": "特斯拉他們自己能夠控制的",
+        "offset": 1018.82,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "16:58"
+      },
+      {
+        "text": "像比如說關稅啊 利率 地緣政治的風險",
+        "offset": 1020.65,
+        "duration": 3.3,
+        "lang": "zh",
+        "time": "17:00"
+      },
+      {
+        "text": "這些當然都會直接影響到特斯拉接下來一整年的執行力還有它的EPS",
+        "offset": 1023.97,
+        "duration": 4.62,
+        "lang": "zh",
+        "time": "17:03"
+      },
+      {
+        "text": "當然啦如果真的一切",
+        "offset": 1028.61,
+        "duration": 1.5,
+        "lang": "zh",
+        "time": "17:08"
+      },
+      {
+        "text": "我剛剛講的一切都很順利的話",
+        "offset": 1030.13,
+        "duration": 1.58,
+        "lang": "zh",
+        "time": "17:10"
+      },
+      {
+        "text": "我覺得EPS是可以超過兩塊錢的",
+        "offset": 1031.8,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "17:11"
+      },
+      {
+        "text": "現在分析師的普遍認為的EPS大概是",
+        "offset": 1034.18,
+        "duration": 3.1,
+        "lang": "zh",
+        "time": "17:14"
+      },
+      {
+        "text": "看一下1.87",
+        "offset": 1037.3,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "17:17"
+      },
+      {
+        "text": "對那兩塊錢就是一個strong beat",
+        "offset": 1039.39,
+        "duration": 1.74,
+        "lang": "zh",
+        "time": "17:19"
+      },
+      {
+        "text": "至於短期的股價走勢呢",
+        "offset": 1041.3,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "17:21"
+      },
+      {
+        "text": "說真的我也不知道",
+        "offset": 1043.26,
+        "duration": 0.94,
+        "lang": "zh",
+        "time": "17:23"
+      },
+      {
+        "text": "市場呢不是很喜歡看到這個",
+        "offset": 1044.22,
+        "duration": 1.9,
+        "lang": "zh",
+        "time": "17:24"
+      },
+      {
+        "text": "FCF free cash flow變成負的",
+        "offset": 1046.14,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "17:26"
+      },
+      {
+        "text": "那我也不知道華爾街",
+        "offset": 1047.98,
+        "duration": 1.1,
+        "lang": "zh",
+        "time": "17:27"
+      },
+      {
+        "text": "看不看得懂特斯拉在做的事情",
+        "offset": 1049.1,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "17:29"
+      },
+      {
+        "text": "反正我是沒有期待他們可以看得懂",
+        "offset": 1050.94,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "17:30"
+      },
+      {
+        "text": "如果說呢短期股價",
+        "offset": 1052.97,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "17:32"
+      },
+      {
+        "text": "回調到350以下呢",
+        "offset": 1054.41,
+        "duration": 1.54,
+        "lang": "zh",
+        "time": "17:34"
+      },
+      {
+        "text": "我一定會繼續加倉",
+        "offset": 1056.1,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "17:36"
+      },
+      {
+        "text": "到時候我也會在我的TG群組還有IG上面跟大家分享",
+        "offset": 1057.42,
+        "duration": 3.18,
+        "lang": "zh",
+        "time": "17:37"
+      },
+      {
+        "text": "我不覺得TeraFab是一個不理智的賭注",
+        "offset": 1060.76,
+        "duration": 2.38,
+        "lang": "zh",
+        "time": "17:40"
+      },
+      {
+        "text": "你去看一下Amazon會有今天的成就",
+        "offset": 1063.16,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "17:43"
+      },
+      {
+        "text": "就是因為他們當年賭上了AWS",
+        "offset": 1065.54,
+        "duration": 2.58,
+        "lang": "zh",
+        "time": "17:45"
+      },
+      {
+        "text": "然後也是因為有AWS拉開了一整個雲服務的時代",
+        "offset": 1068.25,
+        "duration": 4.34,
+        "lang": "zh",
+        "time": "17:48"
+      },
+      {
+        "text": "蘋果當年也賭上了做手機",
+        "offset": 1072.61,
+        "duration": 2.15,
+        "lang": "zh",
+        "time": "17:52"
+      },
+      {
+        "text": "我們才會有今天的iPhone可以用",
+        "offset": 1074.77,
+        "duration": 1.78,
+        "lang": "zh",
+        "time": "17:54"
+      },
+      {
+        "text": "微軟呢當年也是賭上了Azure",
+        "offset": 1076.67,
+        "duration": 1.63,
+        "lang": "zh",
+        "time": "17:56"
+      },
+      {
+        "text": "才可以撐到今天不被時代給淘汰",
+        "offset": 1078.31,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "17:58"
+      },
+      {
+        "text": "所以在下一個我們現在這個AI大爆發的時代呢",
+        "offset": 1080.68,
+        "duration": 3.34,
+        "lang": "zh",
+        "time": "18:00"
+      },
+      {
+        "text": "如果台積電三星的晶片",
+        "offset": 1084.04,
+        "duration": 2.3,
+        "lang": "zh",
+        "time": "18:04"
+      },
+      {
+        "text": "沒辦法去支撐特斯拉的這個需求",
+        "offset": 1086.36,
+        "duration": 2.1,
+        "lang": "zh",
+        "time": "18:06"
+      },
+      {
+        "text": "那我覺得特斯拉去做TeraFab也是理所當然的",
+        "offset": 1088.54,
+        "duration": 2.82,
+        "lang": "zh",
+        "time": "18:08"
+      },
+      {
+        "text": "這也完全符合特斯拉",
+        "offset": 1091.53,
+        "duration": 1.34,
+        "lang": "zh",
+        "time": "18:11"
+      },
+      {
+        "text": "一直以來的經營理念",
+        "offset": 1092.89,
+        "duration": 1.42,
+        "lang": "zh",
+        "time": "18:12"
+      },
+      {
+        "text": "如果說supplier沒辦法提供的話",
+        "offset": 1094.33,
+        "duration": 2.34,
+        "lang": "zh",
+        "time": "18:14"
+      },
+      {
+        "text": "那就只有我們自己去做",
+        "offset": 1096.69,
+        "duration": 1.55,
+        "lang": "zh",
+        "time": "18:16"
+      },
+      {
+        "text": "我們變成我們自己的supplier",
+        "offset": 1098.25,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "18:18"
+      },
+      {
+        "text": "就像Elon講過的",
+        "offset": 1100.43,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "18:20"
+      },
+      {
+        "text": "when something is so important enough",
+        "offset": 1101.61,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "18:21"
+      },
+      {
+        "text": "you do it even if odds are not in your favor",
+        "offset": 1103.39,
+        "duration": 2.06,
+        "lang": "zh",
+        "time": "18:23"
+      },
+      {
+        "text": "我不覺得特斯拉有任何的改變",
+        "offset": 1105.62,
+        "duration": 1.66,
+        "lang": "zh",
+        "time": "18:25"
+      },
+      {
+        "text": "他們還是一樣在做同樣的事情",
+        "offset": 1107.3,
+        "duration": 1.82,
+        "lang": "zh",
+        "time": "18:27"
+      },
+      {
+        "text": "OK那如果你覺得今天這集影片對你有幫助的話",
+        "offset": 1109.26,
+        "duration": 2.22,
+        "lang": "zh",
+        "time": "18:29"
+      },
+      {
+        "text": "還是一樣記得一定要",
+        "offset": 1111.5,
+        "duration": 1.18,
+        "lang": "zh",
+        "time": "18:31"
+      },
+      {
+        "text": "幫我把影片點個讚",
+        "offset": 1112.7,
+        "duration": 1.02,
+        "lang": "zh",
+        "time": "18:32"
+      },
+      {
+        "text": "也歡迎你在影片底下",
+        "offset": 1113.74,
+        "duration": 1.26,
+        "lang": "zh",
+        "time": "18:33"
+      },
+      {
+        "text": "留言跟我分享一下",
+        "offset": 1115.02,
+        "duration": 1.06,
+        "lang": "zh",
+        "time": "18:35"
+      },
+      {
+        "text": "你會拋掉你手上的股票嗎？",
+        "offset": 1116.1,
+        "duration": 1.7,
+        "lang": "zh",
+        "time": "18:36"
+      },
+      {
+        "text": "還是說你會繼續跟他們一起發瘋",
+        "offset": 1117.82,
+        "duration": 2.38,
+        "lang": "zh",
+        "time": "18:37"
+      },
+      {
+        "text": "另外就是記得一定要訂閱我的頻道",
+        "offset": 1120.31,
+        "duration": 1.94,
+        "lang": "zh",
+        "time": "18:40"
+      },
+      {
+        "text": "因為你知道",
+        "offset": 1122.33,
+        "duration": 0.46,
+        "lang": "zh",
+        "time": "18:42"
+      },
+      {
+        "text": "大部分看我的影片的人",
+        "offset": 1122.81,
+        "duration": 1.02,
+        "lang": "zh",
+        "time": "18:42"
+      },
+      {
+        "text": "其實都沒有訂閱",
+        "offset": 1123.85,
+        "duration": 0.95,
+        "lang": "zh",
+        "time": "18:43"
+      },
+      {
+        "text": "OK那我們下次見囉",
+        "offset": 1124.81,
+        "duration": 0.79,
+        "lang": "zh",
+        "time": "18:44"
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "success": true,
+    "data": {
+      "error": false,
+      "message": "Transcript extracted successful",
+      "response": [
+        {
+          "text": "哈囉大家好我是Terry特斯拉Q1第一季度的",
+          "duration": 2.7,
+          "offset": 0.01,
+          "lang": "zh"
+        },
+        {
+          "text": "這個2026年earnings call",
+          "duration": 2.23,
+          "offset": 2.73,
+          "lang": "zh"
+        },
+        {
+          "text": "體檢報告昨天晚上剛剛結束剛剛出來",
+          "duration": 3.19,
+          "offset": 5.25,
+          "lang": "zh"
+        },
+        {
+          "text": "哦不是昨天晚上是前天晚上",
+          "duration": 1.82,
+          "offset": 8.45,
+          "lang": "zh"
+        },
+        {
+          "text": "那因為這次財報會議",
+          "duration": 1.5,
+          "offset": 10.29,
+          "lang": "zh"
+        },
+        {
+          "text": "跟之前有點不太一樣",
+          "duration": 1.26,
+          "offset": 11.81,
+          "lang": "zh"
+        },
+        {
+          "text": "所以說我覺得有必要",
+          "duration": 1.1,
+          "offset": 13.21,
+          "lang": "zh"
+        },
+        {
+          "text": "來跟大家聊一下到底發生了什麼事情",
+          "duration": 2.02,
+          "offset": 14.33,
+          "lang": "zh"
+        },
+        {
+          "text": "那還是一樣",
+          "duration": 0.54,
+          "offset": 16.42,
+          "lang": "zh"
+        },
+        {
+          "text": "我們就先講一下這個財報的結論",
+          "duration": 1.9,
+          "offset": 16.98,
+          "lang": "zh"
+        },
+        {
+          "text": "基本上財報是beat超出這個當時分析師的預測",
+          "duration": 3.74,
+          "offset": 19.06,
+          "lang": "zh"
+        },
+        {
+          "text": "營收呢是beat然後EPS是beat",
+          "duration": 2.26,
+          "offset": 22.82,
+          "lang": "zh"
+        },
+        {
+          "text": "毛利率呢也是拉到了21.1%",
+          "duration": 2.46,
+          "offset": 25.1,
+          "lang": "zh"
+        },
+        {
+          "text": "然後這也是這幾年來的新高",
+          "duration": 2.26,
+          "offset": 27.58,
+          "lang": "zh"
+        },
+        {
+          "text": "但真正的重點是什麼呢",
+          "duration": 1.66,
+          "offset": 29.97,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這次重點呢Elon在這次earning call裡面呢",
+          "duration": 2.7,
+          "offset": 31.72,
+          "lang": "zh"
+        },
+        {
+          "text": "第一次這麼直接這麼明確的",
+          "duration": 2.06,
+          "offset": 34.44,
+          "lang": "zh"
+        },
+        {
+          "text": "告訴華爾街說",
+          "duration": 0.91,
+          "offset": 36.52,
+          "lang": "zh"
+        },
+        {
+          "text": "OK特斯拉呢準備開始要花大錢了",
+          "duration": 2.54,
+          "offset": 37.44,
+          "lang": "zh"
+        },
+        {
+          "text": "而且是馬上2026年的Capex要增加要拉到",
+          "duration": 3.78,
+          "offset": 40,
+          "lang": "zh"
+        },
+        {
+          "text": "250億美金以上",
+          "duration": 2.18,
+          "offset": 43.8,
+          "lang": "zh"
+        },
+        {
+          "text": "然後未來幾個季度的free cash flow會直接變成負的",
+          "duration": 2.86,
+          "offset": 46.07,
+          "lang": "zh"
+        },
+        {
+          "text": "而且這個重資本的投資呢按照Elon他自己的說法呢",
+          "duration": 2.66,
+          "offset": 48.95,
+          "lang": "zh"
+        },
+        {
+          "text": "會持續好幾年",
+          "duration": 1.06,
+          "offset": 51.63,
+          "lang": "zh"
+        },
+        {
+          "text": "那我不知道大家還記不記得",
+          "duration": 1.22,
+          "offset": 52.71,
+          "lang": "zh"
+        },
+        {
+          "text": "就是我們身為特斯拉的投資人",
+          "duration": 1.66,
+          "offset": 53.95,
+          "lang": "zh"
+        },
+        {
+          "text": "想要的是什麼？",
+          "duration": 0.86,
+          "offset": 55.76,
+          "lang": "zh"
+        },
+        {
+          "text": "不是車子可以賣多少台",
+          "duration": 1.34,
+          "offset": 56.64,
+          "lang": "zh"
+        },
+        {
+          "text": "也不是說能源儲備可以賣幾個",
+          "duration": 2.1,
+          "offset": 58,
+          "lang": "zh"
+        },
+        {
+          "text": "我們投資的是接下來物理世界的王者",
+          "duration": 2.7,
+          "offset": 60.12,
+          "lang": "zh"
+        },
+        {
+          "text": "是10T10 trillion market cap的特斯拉",
+          "duration": 3.02,
+          "offset": 62.84,
+          "lang": "zh"
+        },
+        {
+          "text": "那要到達10T呢當然不是說你賣幾台車可以做到",
+          "duration": 3.22,
+          "offset": 65.88,
+          "lang": "zh"
+        },
+        {
+          "text": "所以我覺得這次的earning call",
+          "duration": 1.18,
+          "offset": 69.19,
+          "lang": "zh"
+        },
+        {
+          "text": "是很清楚的給市場一個訊號說",
+          "duration": 2.26,
+          "offset": 70.39,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉要開始轉型成hyperscaler",
+          "duration": 2.02,
+          "offset": 72.67,
+          "lang": "zh"
+        },
+        {
+          "text": "好那還是一樣我們先從",
+          "duration": 1.06,
+          "offset": 74.83,
+          "lang": "zh"
+        },
+        {
+          "text": "最基本的數字來看一下",
+          "duration": 1.91,
+          "offset": 75.91,
+          "lang": "zh"
+        },
+        {
+          "text": "Q1 2026年的營收總營收是223.9億美金",
+          "duration": 5.22,
+          "offset": 77.83,
+          "lang": "zh"
+        },
+        {
+          "text": "然後year over year的成長是16%",
+          "duration": 2.22,
+          "offset": 83.27,
+          "lang": "zh"
+        },
+        {
+          "text": "那比華爾街預測的這個214.2億",
+          "duration": 3.3,
+          "offset": 85.59,
+          "lang": "zh"
+        },
+        {
+          "text": "高了快大概10億美金",
+          "duration": 1.67,
+          "offset": 88.97,
+          "lang": "zh"
+        },
+        {
+          "text": "所以營收是非常不錯的那EPS",
+          "duration": 2.41,
+          "offset": 90.65,
+          "lang": "zh"
+        },
+        {
+          "text": "non-GAAP是0.14，sorry0.41",
+          "duration": 3.42,
+          "offset": 93.15,
+          "lang": "zh"
+        },
+        {
+          "text": "然後consensus是0.33嘛",
+          "duration": 2.3,
+          "offset": 96.77,
+          "lang": "zh"
+        },
+        {
+          "text": "那beat了大概8 cents",
+          "duration": 1.46,
+          "offset": 99.09,
+          "lang": "zh"
+        },
+        {
+          "text": "這個幅度也是非常非常大的",
+          "duration": 1.47,
+          "offset": 100.73,
+          "lang": "zh"
+        },
+        {
+          "text": "year over year的成長是52%",
+          "duration": 2.28,
+          "offset": 102.21,
+          "lang": "zh"
+        },
+        {
+          "text": "在毛利率方面呢",
+          "duration": 1.3,
+          "offset": 104.77,
+          "lang": "zh"
+        },
+        {
+          "text": "整體的毛利率是21.1%",
+          "duration": 2.66,
+          "offset": 106.09,
+          "lang": "zh"
+        },
+        {
+          "text": "那這也是特斯拉",
+          "duration": 0.82,
+          "offset": 108.77,
+          "lang": "zh"
+        },
+        {
+          "text": "連續好幾季的這個算是新高了",
+          "duration": 2.15,
+          "offset": 109.61,
+          "lang": "zh"
+        },
+        {
+          "text": "然後auto電動車毛利率扣掉這個碳credit之後呢",
+          "duration": 3.16,
+          "offset": 111.77,
+          "lang": "zh"
+        },
+        {
+          "text": "大概剩下19.2%",
+          "duration": 1.82,
+          "offset": 114.95,
+          "lang": "zh"
+        },
+        {
+          "text": "上一季度是17.9%",
+          "duration": 1.86,
+          "offset": 116.79,
+          "lang": "zh"
+        },
+        {
+          "text": "所以是相當不錯的",
+          "duration": 1.06,
+          "offset": 118.75,
+          "lang": "zh"
+        },
+        {
+          "text": "可以看得出這個車子賣車的業務呢",
+          "duration": 1.98,
+          "offset": 119.95,
+          "lang": "zh"
+        },
+        {
+          "text": "是越來越賺錢",
+          "duration": 0.86,
+          "offset": 121.95,
+          "lang": "zh"
+        },
+        {
+          "text": "那為什麼毛利率會這麼高呢",
+          "duration": 1.78,
+          "offset": 122.91,
+          "lang": "zh"
+        },
+        {
+          "text": "我們還是要來看一些真相",
+          "duration": 1.54,
+          "offset": 125.07,
+          "lang": "zh"
+        },
+        {
+          "text": "裡面是有說呢",
+          "duration": 1.3,
+          "offset": 126.63,
+          "lang": "zh"
+        },
+        {
+          "text": "部分是有一次性的補貼",
+          "duration": 1.82,
+          "offset": 127.95,
+          "lang": "zh"
+        },
+        {
+          "text": "像是warranty true down",
+          "duration": 1.54,
+          "offset": 129.79,
+          "lang": "zh"
+        },
+        {
+          "text": "大概貢獻了2.3億美金",
+          "duration": 2.1,
+          "offset": 131.46,
+          "lang": "zh"
+        },
+        {
+          "text": "加上一些關稅的減免啊",
+          "duration": 1.62,
+          "offset": 133.63,
+          "lang": "zh"
+        },
+        {
+          "text": "所以說這個21.1%呢",
+          "duration": 1.79,
+          "offset": 135.27,
+          "lang": "zh"
+        },
+        {
+          "text": "又不能算是產能效率跟成本降低",
+          "duration": 2.94,
+          "offset": 137.19,
+          "lang": "zh"
+        },
+        {
+          "text": "完全啦不能完全算是",
+          "duration": 1.54,
+          "offset": 140.24,
+          "lang": "zh"
+        },
+        {
+          "text": "但是呢即便你把這些",
+          "duration": 1.38,
+          "offset": 141.8,
+          "lang": "zh"
+        },
+        {
+          "text": "一次性的因素扣掉",
+          "duration": 1.22,
+          "offset": 143.2,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這個underlying margin呢",
+          "duration": 1.58,
+          "offset": 144.44,
+          "lang": "zh"
+        },
+        {
+          "text": "還是有在變好的路上",
+          "duration": 1.46,
+          "offset": 146.04,
+          "lang": "zh"
+        },
+        {
+          "text": "比如說我們看柏林工廠在這一季度呢",
+          "duration": 2.18,
+          "offset": 147.52,
+          "lang": "zh"
+        },
+        {
+          "text": "有出貨超過了6萬1000台",
+          "duration": 2.3,
+          "offset": 149.72,
+          "lang": "zh"
+        },
+        {
+          "text": "這也是破了柏林工廠",
+          "duration": 1.3,
+          "offset": 152.19,
+          "lang": "zh"
+        },
+        {
+          "text": "單季的這個出貨記錄",
+          "duration": 1.38,
+          "offset": 153.51,
+          "lang": "zh"
+        },
+        {
+          "text": "還有就是歐洲市場",
+          "duration": 1.38,
+          "offset": 154.91,
+          "lang": "zh"
+        },
+        {
+          "text": "法國德國的交付數據呢",
+          "duration": 1.62,
+          "offset": 156.31,
+          "lang": "zh"
+        },
+        {
+          "text": "都是單季成長超過150%",
+          "duration": 2.42,
+          "offset": 157.95,
+          "lang": "zh"
+        },
+        {
+          "text": "所以說在銷售上面就是",
+          "duration": 1.62,
+          "offset": 160.39,
+          "lang": "zh"
+        },
+        {
+          "text": "其實市場還是非常非常願意買單的",
+          "duration": 2.22,
+          "offset": 162.03,
+          "lang": "zh"
+        },
+        {
+          "text": "至少在歐洲來講",
+          "duration": 1.18,
+          "offset": 164.36,
+          "lang": "zh"
+        },
+        {
+          "text": "那operating margin呢是9.41億美金",
+          "duration": 3.18,
+          "offset": 165.65,
+          "lang": "zh"
+        },
+        {
+          "text": "year over year成長是136%",
+          "duration": 2.26,
+          "offset": 168.85,
+          "lang": "zh"
+        },
+        {
+          "text": "重點來了free cash flow是14.4億美金",
+          "duration": 3.38,
+          "offset": 171.13,
+          "lang": "zh"
+        },
+        {
+          "text": "那這一季度的普遍分析師預測Q1的這個",
+          "duration": 3.88,
+          "offset": 174.52,
+          "lang": "zh"
+        },
+        {
+          "text": "free cash flow是負的15億美金",
+          "duration": 1.74,
+          "offset": 179.04,
+          "lang": "zh"
+        },
+        {
+          "text": "這也是為什麼財報剛出來的時候",
+          "duration": 1.74,
+          "offset": 180.8,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉股價是上漲的",
+          "duration": 1.78,
+          "offset": 182.56,
+          "lang": "zh"
+        },
+        {
+          "text": "我記得好像拉了大概3%還是4%吧",
+          "duration": 2.57,
+          "offset": 184.36,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉他們現在手上的現金",
+          "duration": 1.5,
+          "offset": 186.95,
+          "lang": "zh"
+        },
+        {
+          "text": "加上短期的投資呢",
+          "duration": 1.62,
+          "offset": 188.47,
+          "lang": "zh"
+        },
+        {
+          "text": "是總共447億美金",
+          "duration": 1.86,
+          "offset": 190.11,
+          "lang": "zh"
+        },
+        {
+          "text": "這個數字非常重要",
+          "duration": 1.14,
+          "offset": 192.15,
+          "lang": "zh"
+        },
+        {
+          "text": "這也是今天影片的重點",
+          "duration": 1.34,
+          "offset": 193.31,
+          "lang": "zh"
+        },
+        {
+          "text": "最後呢就是服務類的營收",
+          "duration": 1.58,
+          "offset": 194.83,
+          "lang": "zh"
+        },
+        {
+          "text": "37.45億美金",
+          "duration": 1.54,
+          "offset": 196.43,
+          "lang": "zh"
+        },
+        {
+          "text": "year over year成長是42%",
+          "duration": 1.94,
+          "offset": 197.99,
+          "lang": "zh"
+        },
+        {
+          "text": "這邊最大的驅動力當然就是FSD的訂閱了",
+          "duration": 2.51,
+          "offset": 199.95,
+          "lang": "zh"
+        },
+        {
+          "text": "FSD的付費用戶呢來到了128萬",
+          "duration": 3.15,
+          "offset": 202.59,
+          "lang": "zh"
+        },
+        {
+          "text": "year over year的成長是51%",
+          "duration": 2.02,
+          "offset": 205.75,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這個才是",
+          "duration": 0.62,
+          "offset": 207.89,
+          "lang": "zh"
+        },
+        {
+          "text": "我們股東真正要在乎的東西",
+          "duration": 2.26,
+          "offset": 208.53,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得前面其實都還好",
+          "duration": 1.74,
+          "offset": 210.81,
+          "lang": "zh"
+        },
+        {
+          "text": "這我在影片裡面講過很多遍了",
+          "duration": 1.58,
+          "offset": 212.57,
+          "lang": "zh"
+        },
+        {
+          "text": "軟體訂閱的毛利率呢是非常非常高的",
+          "duration": 2.3,
+          "offset": 214.22,
+          "lang": "zh"
+        },
+        {
+          "text": "基本上就是100%接近100%的毛利率MRR",
+          "duration": 3.22,
+          "offset": 216.54,
+          "lang": "zh"
+        },
+        {
+          "text": "所以我覺得身為特斯拉的投資人",
+          "duration": 1.58,
+          "offset": 219.78,
+          "lang": "zh"
+        },
+        {
+          "text": "接下來我們需要重點關注的基本上就是這個FSD的訂閱人數",
+          "duration": 3.54,
+          "offset": 221.38,
+          "lang": "zh"
+        },
+        {
+          "text": "看能不能繼續往上衝",
+          "duration": 1.1,
+          "offset": 225.03,
+          "lang": "zh"
+        },
+        {
+          "text": "當然Robotaxi在未來會是一個非常非常重要的現金流",
+          "duration": 2.98,
+          "offset": 226.15,
+          "lang": "zh"
+        },
+        {
+          "text": "這個我等一下也會講",
+          "duration": 0.98,
+          "offset": 229.23,
+          "lang": "zh"
+        },
+        {
+          "text": "那能源那邊呢就比較弱一點",
+          "duration": 1.94,
+          "offset": 230.33,
+          "lang": "zh"
+        },
+        {
+          "text": "營收呢是24億",
+          "duration": 1.42,
+          "offset": 232.29,
+          "lang": "zh"
+        },
+        {
+          "text": "那year over year是掉了12%",
+          "duration": 2.1,
+          "offset": 233.73,
+          "lang": "zh"
+        },
+        {
+          "text": "總共部署是8.8 GWh",
+          "duration": 2.34,
+          "offset": 236.08,
+          "lang": "zh"
+        },
+        {
+          "text": "環比掉了38%",
+          "duration": 1.58,
+          "offset": 238.84,
+          "lang": "zh"
+        },
+        {
+          "text": "但是能源這部分的業務呢",
+          "duration": 1.26,
+          "offset": 240.44,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉他們也有講過",
+          "duration": 1.38,
+          "offset": 241.72,
+          "lang": "zh"
+        },
+        {
+          "text": "季節性很強我覺得也make sense",
+          "duration": 1.7,
+          "offset": 243.12,
+          "lang": "zh"
+        },
+        {
+          "text": "就是你訂單下來了真正到你去部署呢",
+          "duration": 2.46,
+          "offset": 244.84,
+          "lang": "zh"
+        },
+        {
+          "text": "它不是一個平均分散在",
+          "duration": 1.98,
+          "offset": 247.32,
+          "lang": "zh"
+        },
+        {
+          "text": "每一個季度的一個情況",
+          "duration": 1.34,
+          "offset": 249.32,
+          "lang": "zh"
+        },
+        {
+          "text": "就有可能你第一季度比較弱",
+          "duration": 1.22,
+          "offset": 250.74,
+          "lang": "zh"
+        },
+        {
+          "text": "然後第二季度突然變很強",
+          "duration": 1.26,
+          "offset": 251.98,
+          "lang": "zh"
+        },
+        {
+          "text": "然後第三季度變很弱",
+          "duration": 1.1,
+          "offset": 253.26,
+          "lang": "zh"
+        },
+        {
+          "text": "完全depends on它這個部署的這個時間在哪裡",
+          "duration": 3.94,
+          "offset": 254.38,
+          "lang": "zh"
+        },
+        {
+          "text": "然後特斯拉呢",
+          "duration": 0.62,
+          "offset": 258.34,
+          "lang": "zh"
+        },
+        {
+          "text": "他們也是維持這個2026年呢",
+          "duration": 1.82,
+          "offset": 258.98,
+          "lang": "zh"
+        },
+        {
+          "text": "全年的部署會比去年2025年還要高的這個guidance",
+          "duration": 3.66,
+          "offset": 260.82,
+          "lang": "zh"
+        },
+        {
+          "text": "所以我覺得大概在Q2的時候",
+          "duration": 1.7,
+          "offset": 264.64,
+          "lang": "zh"
+        },
+        {
+          "text": "我們再去看一下有沒有on track就可以了",
+          "duration": 1.94,
+          "offset": 266.36,
+          "lang": "zh"
+        },
+        {
+          "text": "OK那數字大部分都講完了",
+          "duration": 1.62,
+          "offset": 268.45,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得今天影片重點呢是這250億美金的Capex",
+          "duration": 4.06,
+          "offset": 270.09,
+          "lang": "zh"
+        },
+        {
+          "text": "到底要花在哪裡?",
+          "duration": 1.3,
+          "offset": 274.29,
+          "lang": "zh"
+        },
+        {
+          "text": "那昨天晚上特斯拉股價收盤呢",
+          "duration": 1.9,
+          "offset": 275.61,
+          "lang": "zh"
+        },
+        {
+          "text": "一共跌了3.56%",
+          "duration": 2.06,
+          "offset": 277.53,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得有部分是市場擔心說",
+          "duration": 2.9,
+          "offset": 279.61,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉的這個Capex spending會太高",
+          "duration": 2.3,
+          "offset": 282.53,
+          "lang": "zh"
+        },
+        {
+          "text": "還有一部分很重要的原因",
+          "duration": 1.34,
+          "offset": 284.9,
+          "lang": "zh"
+        },
+        {
+          "text": "當然也是宏觀整個宏觀的因素",
+          "duration": 1.74,
+          "offset": 286.26,
+          "lang": "zh"
+        },
+        {
+          "text": "伊朗戰爭啊還有石油這些問題",
+          "duration": 2.1,
+          "offset": 288.12,
+          "lang": "zh"
+        },
+        {
+          "text": "因為不只是特斯拉跌",
+          "duration": 1.3,
+          "offset": 290.24,
+          "lang": "zh"
+        },
+        {
+          "text": "但是因為現在市場的sentiment是",
+          "duration": 1.78,
+          "offset": 291.56,
+          "lang": "zh"
+        },
+        {
+          "text": "你花越多錢呢市場就會越擔心說",
+          "duration": 2.14,
+          "offset": 293.36,
+          "lang": "zh"
+        },
+        {
+          "text": "你這個錢能不能收回來",
+          "duration": 1.62,
+          "offset": 295.52,
+          "lang": "zh"
+        },
+        {
+          "text": "就Capex spending對股價的影響呢是完全取決於市場",
+          "duration": 3.54,
+          "offset": 297.23,
+          "lang": "zh"
+        },
+        {
+          "text": "對於現在的這個宏觀的sentiment",
+          "duration": 2.34,
+          "offset": 300.79,
+          "lang": "zh"
+        },
+        {
+          "text": "如果現在宏觀是一個大放水的情況下大家都很bullish",
+          "duration": 3.02,
+          "offset": 303.15,
+          "lang": "zh"
+        },
+        {
+          "text": "那你spend越多的Capex你的股價當然會漲",
+          "duration": 2.77,
+          "offset": 306.19,
+          "lang": "zh"
+        },
+        {
+          "text": "但是如果現在市場有concern說",
+          "duration": 2.06,
+          "offset": 308.98,
+          "lang": "zh"
+        },
+        {
+          "text": "比如說什麼AI bubble或是花太多錢",
+          "duration": 2.34,
+          "offset": 311.16,
+          "lang": "zh"
+        },
+        {
+          "text": "那就很有可能因為Capex的股價跌",
+          "duration": 2.19,
+          "offset": 313.52,
+          "lang": "zh"
+        },
+        {
+          "text": "但不管怎麼樣今天特斯拉",
+          "duration": 1.46,
+          "offset": 315.72,
+          "lang": "zh"
+        },
+        {
+          "text": "跌了大概4%左右不到4%",
+          "duration": 2.14,
+          "offset": 317.2,
+          "lang": "zh"
+        },
+        {
+          "text": "那就像我剛剛講的",
+          "duration": 0.98,
+          "offset": 319.46,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這一次財報會議呢",
+          "duration": 1.22,
+          "offset": 320.46,
+          "lang": "zh"
+        },
+        {
+          "text": "最重要的還是什麼呢",
+          "duration": 1.5,
+          "offset": 321.7,
+          "lang": "zh"
+        },
+        {
+          "text": "是特斯拉的CFO他說這250億美金呢",
+          "duration": 3.86,
+          "offset": 323.22,
+          "lang": "zh"
+        },
+        {
+          "text": "是用來支付六座工廠",
+          "duration": 2.69,
+          "offset": 327.24,
+          "lang": "zh"
+        },
+        {
+          "text": "再加上AI的infrastructure",
+          "duration": 1.62,
+          "offset": 330.06,
+          "lang": "zh"
+        },
+        {
+          "text": "加上半導體的這個研究室Fab",
+          "duration": 2.5,
+          "offset": 331.7,
+          "lang": "zh"
+        },
+        {
+          "text": "加上這個太陽能製造的這個設備",
+          "duration": 2.3,
+          "offset": 334.28,
+          "lang": "zh"
+        },
+        {
+          "text": "他甚至說呢we're in a very big",
+          "duration": 1.7,
+          "offset": 336.66,
+          "lang": "zh"
+        },
+        {
+          "text": "capital investment phase",
+          "duration": 1.22,
+          "offset": 338.38,
+          "lang": "zh"
+        },
+        {
+          "text": "which is going to start now and would last a couple of years",
+          "duration": 3.14,
+          "offset": 339.62,
+          "lang": "zh"
+        },
+        {
+          "text": "那我來幫各位股東翻譯一下",
+          "duration": 1.82,
+          "offset": 342.78,
+          "lang": "zh"
+        },
+        {
+          "text": "我自己的感覺他想講什麼呢",
+          "duration": 1.7,
+          "offset": 344.62,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得他想要說的是",
+          "duration": 1.1,
+          "offset": 346.7,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉在接下來的幾年呢",
+          "duration": 1.82,
+          "offset": 347.82,
+          "lang": "zh"
+        },
+        {
+          "text": "要開始花大錢投資擴建了",
+          "duration": 2.26,
+          "offset": 349.66,
+          "lang": "zh"
+        },
+        {
+          "text": "那如果你沒有準備好你沒有想要參與這個investment的話",
+          "duration": 3.74,
+          "offset": 351.94,
+          "lang": "zh"
+        },
+        {
+          "text": "其實你可以把你現在的股票給賣掉",
+          "duration": 1.78,
+          "offset": 355.7,
+          "lang": "zh"
+        },
+        {
+          "text": "他後面還補了一句說",
+          "duration": 1.3,
+          "offset": 357.55,
+          "lang": "zh"
+        },
+        {
+          "text": "we expect negative free cash flow",
+          "duration": 1.86,
+          "offset": 358.87,
+          "lang": "zh"
+        },
+        {
+          "text": "for the rest of the year",
+          "duration": 1.14,
+          "offset": 360.75,
+          "lang": "zh"
+        },
+        {
+          "text": "基本上就是在說我覺得啦",
+          "duration": 1.94,
+          "offset": 361.91,
+          "lang": "zh"
+        },
+        {
+          "text": "各位投資人準備好面對接下來的財報",
+          "duration": 2.22,
+          "offset": 363.98,
+          "lang": "zh"
+        },
+        {
+          "text": "自由現金流呢會非常的難看",
+          "duration": 1.9,
+          "offset": 366.22,
+          "lang": "zh"
+        },
+        {
+          "text": "那如果你沒辦法接受的話呢",
+          "duration": 1.54,
+          "offset": 368.14,
+          "lang": "zh"
+        },
+        {
+          "text": "現在就是一個蠻好的這個離場點",
+          "duration": 1.9,
+          "offset": 369.7,
+          "lang": "zh"
+        },
+        {
+          "text": "好我知道他當然",
+          "duration": 0.86,
+          "offset": 371.62,
+          "lang": "zh"
+        },
+        {
+          "text": "沒有叫大家真的去離場啦",
+          "duration": 1.34,
+          "offset": 372.5,
+          "lang": "zh"
+        },
+        {
+          "text": "但就是現在股票價格嘛",
+          "duration": 1.7,
+          "offset": 373.86,
+          "lang": "zh"
+        },
+        {
+          "text": "大概是373嘛",
+          "duration": 2.34,
+          "offset": 375.58,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這是一個不錯的exit point",
+          "duration": 1.86,
+          "offset": 378.07,
+          "lang": "zh"
+        },
+        {
+          "text": "如果你沒有什麼conviction的話",
+          "duration": 1.46,
+          "offset": 379.95,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得現在把它出掉",
+          "duration": 0.82,
+          "offset": 381.43,
+          "lang": "zh"
+        },
+        {
+          "text": "這個價格其實還算不錯",
+          "duration": 1.38,
+          "offset": 382.27,
+          "lang": "zh"
+        },
+        {
+          "text": "我相信對於大部分的投資人",
+          "duration": 1.62,
+          "offset": 383.67,
+          "lang": "zh"
+        },
+        {
+          "text": "尤其是有看我影片的網友",
+          "duration": 1.5,
+          "offset": 385.31,
+          "lang": "zh"
+        },
+        {
+          "text": "肯定是以370這個價格",
+          "duration": 1.74,
+          "offset": 386.83,
+          "lang": "zh"
+        },
+        {
+          "text": "`出掉是不會虧錢的",
+          "duration": 1.3,
+          "offset": 388.59,
+          "lang": "zh"
+        },
+        {
+          "text": "我在IG上面或是我在我的TG群組裡面發我特斯拉的入場價格呢",
+          "duration": 4.46,
+          "offset": 390.03,
+          "lang": "zh"
+        },
+        {
+          "text": "基本上都低於300",
+          "duration": 1.3,
+          "offset": 394.51,
+          "lang": "zh"
+        },
+        {
+          "text": "所以我覺得假如你沒有那個conviction",
+          "duration": 1.94,
+          "offset": 395.83,
+          "lang": "zh"
+        },
+        {
+          "text": "你也不覺得這個Capex投資進去可以收回來的話",
+          "duration": 2.86,
+          "offset": 397.79,
+          "lang": "zh"
+        },
+        {
+          "text": "那我覺得現在真的就是",
+          "duration": 0.94,
+          "offset": 400.77,
+          "lang": "zh"
+        },
+        {
+          "text": "一個蠻好的離場的時間點",
+          "duration": 1.78,
+          "offset": 401.73,
+          "lang": "zh"
+        },
+        {
+          "text": "那我們來看一下實際的數字",
+          "duration": 1.78,
+          "offset": 403.53,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉在2025年就是去年的Capex是大概80億出頭",
+          "duration": 4.5,
+          "offset": 405.46,
+          "lang": "zh"
+        },
+        {
+          "text": "然後2026年整年的guidance直接拉到250億",
+          "duration": 3.46,
+          "offset": 410.03,
+          "lang": "zh"
+        },
+        {
+          "text": "就是漲了大概三倍多嘛",
+          "duration": 1.38,
+          "offset": 413.64,
+          "lang": "zh"
+        },
+        {
+          "text": "聽起來好像很誇張",
+          "duration": 1.74,
+          "offset": 415.27,
+          "lang": "zh"
+        },
+        {
+          "text": "但實際上的整個M7",
+          "duration": 1.46,
+          "offset": 417.03,
+          "lang": "zh"
+        },
+        {
+          "text": "Microsoft Google Meta Amazon",
+          "duration": 1.74,
+          "offset": 418.51,
+          "lang": "zh"
+        },
+        {
+          "text": "所有Big Tech都早就已經開始做Hyperscaler",
+          "duration": 2.78,
+          "offset": 420.27,
+          "lang": "zh"
+        },
+        {
+          "text": "這幾年Capex也都是這樣爆發性的增長",
+          "duration": 2.78,
+          "offset": 423.07,
+          "lang": "zh"
+        },
+        {
+          "text": "像Amazon在2026年的Capex",
+          "duration": 1.9,
+          "offset": 425.93,
+          "lang": "zh"
+        },
+        {
+          "text": "是200 billion 2000億美金",
+          "duration": 2.38,
+          "offset": 427.85,
+          "lang": "zh"
+        },
+        {
+          "text": "是特斯拉的10倍",
+          "duration": 1.38,
+          "offset": 430.25,
+          "lang": "zh"
+        },
+        {
+          "text": "因為整個市場所有的Big Tech",
+          "duration": 1.94,
+          "offset": 431.65,
+          "lang": "zh"
+        },
+        {
+          "text": "都在搶著做AI infrastructure",
+          "duration": 1.78,
+          "offset": 433.61,
+          "lang": "zh"
+        },
+        {
+          "text": "但是區別是什麼呢",
+          "duration": 1.22,
+          "offset": 435.57,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉跟這些M7的公司的區別到底在哪裡呢",
+          "duration": 2.82,
+          "offset": 436.81,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉花了這個250億美金呢",
+          "duration": 2.07,
+          "offset": 439.65,
+          "lang": "zh"
+        },
+        {
+          "text": "它不只是蓋資料中心",
+          "duration": 1.71,
+          "offset": 441.88,
+          "lang": "zh"
+        },
+        {
+          "text": "它同時還要蓋六座工廠",
+          "duration": 1.98,
+          "offset": 443.6,
+          "lang": "zh"
+        },
+        {
+          "text": "還要蓋一棟晶圓的研究廠",
+          "duration": 1.98,
+          "offset": 445.65,
+          "lang": "zh"
+        },
+        {
+          "text": "還要蓋電池的材料廠，還要蓋太陽能廠",
+          "duration": 2.8,
+          "offset": 447.74,
+          "lang": "zh"
+        },
+        {
+          "text": "還要把它Cortex 2",
+          "duration": 1.18,
+          "offset": 450.56,
+          "lang": "zh"
+        },
+        {
+          "text": "這個AI訓練的cluster給ramp起來",
+          "duration": 2.26,
+          "offset": 451.76,
+          "lang": "zh"
+        },
+        {
+          "text": "現在的Cortex 2呢的算力呢已經等同於有超過",
+          "duration": 3.7,
+          "offset": 454.04,
+          "lang": "zh"
+        },
+        {
+          "text": "13萬張這個H100的GPU在跑",
+          "duration": 2.62,
+          "offset": 457.76,
+          "lang": "zh"
+        },
+        {
+          "text": "那再加上Cortex 1的10萬張H100等同的算力",
+          "duration": 3.82,
+          "offset": 460.46,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉現在自己手上的算力呢",
+          "duration": 1.66,
+          "offset": 464.3,
+          "lang": "zh"
+        },
+        {
+          "text": "已經有接近",
+          "duration": 0.9,
+          "offset": 465.98,
+          "lang": "zh"
+        },
+        {
+          "text": "等同於25萬張這個H100 GPU的算力",
+          "duration": 3.26,
+          "offset": 466.9,
+          "lang": "zh"
+        },
+        {
+          "text": "那我大概問了一下ChatGPT這個算力呢在全世界",
+          "duration": 3.14,
+          "offset": 470.37,
+          "lang": "zh"
+        },
+        {
+          "text": "應該是已經數一數二的公司了",
+          "duration": 2.18,
+          "offset": 473.63,
+          "lang": "zh"
+        },
+        {
+          "text": "這也是為什麼",
+          "duration": 0.82,
+          "offset": 475.96,
+          "lang": "zh"
+        },
+        {
+          "text": "我一直以來都覺得投資特斯拉呢",
+          "duration": 1.94,
+          "offset": 476.8,
+          "lang": "zh"
+        },
+        {
+          "text": "其實是在投資一個全世界最大的AI project",
+          "duration": 2.94,
+          "offset": 478.76,
+          "lang": "zh"
+        },
+        {
+          "text": "那這個250億美金的Capex呢",
+          "duration": 2.1,
+          "offset": 481.91,
+          "lang": "zh"
+        },
+        {
+          "text": "當然包含了現在爭議比較多的這個TeraFab",
+          "duration": 2.27,
+          "offset": 484.03,
+          "lang": "zh"
+        },
+        {
+          "text": "TeraFab這個project呢就是特斯拉他最近宣布的",
+          "duration": 2.54,
+          "offset": 487.35,
+          "lang": "zh"
+        },
+        {
+          "text": "他們要在Giga Texas園區內蓋一座這個研究級的晶圓廠",
+          "duration": 4.3,
+          "offset": 489.91,
+          "lang": "zh"
+        },
+        {
+          "text": "預算大概是30億美金",
+          "duration": 1.54,
+          "offset": 494.29,
+          "lang": "zh"
+        },
+        {
+          "text": "每個月呢可以做幾千片的wafer就是晶圓",
+          "duration": 3.06,
+          "offset": 495.85,
+          "lang": "zh"
+        },
+        {
+          "text": "晶圓就是台積電logo上面那個圓圓的東西",
+          "duration": 2.86,
+          "offset": 498.93,
+          "lang": "zh"
+        },
+        {
+          "text": "如果你不知道晶圓是什麼的話",
+          "duration": 1.62,
+          "offset": 501.81,
+          "lang": "zh"
+        },
+        {
+          "text": "就是所有的這個晶片生產",
+          "duration": 1.98,
+          "offset": 503.45,
+          "lang": "zh"
+        },
+        {
+          "text": "最基本這個foundation就是那片圓圓的晶圓",
+          "duration": 2.82,
+          "offset": 505.45,
+          "lang": "zh"
+        },
+        {
+          "text": "你可以把它想像成是",
+          "duration": 0.98,
+          "offset": 508.36,
+          "lang": "zh"
+        },
+        {
+          "text": "蓋房子的時候你最基本的那個地基",
+          "duration": 2.62,
+          "offset": 509.36,
+          "lang": "zh"
+        },
+        {
+          "text": "那這個研究廠呢",
+          "duration": 1.06,
+          "offset": 512,
+          "lang": "zh"
+        },
+        {
+          "text": "當然是特斯拉自己出錢蓋",
+          "duration": 1.62,
+          "offset": 513.08,
+          "lang": "zh"
+        },
+        {
+          "text": "注意特斯拉這邊蓋的是晶圓的研究廠",
+          "duration": 2.58,
+          "offset": 514.79,
+          "lang": "zh"
+        },
+        {
+          "text": "然後接下來真正能夠scale up的是TeraFab的主場",
+          "duration": 3.34,
+          "offset": 517.39,
+          "lang": "zh"
+        },
+        {
+          "text": "那那邊就會由SpaceX去主導第一階段",
+          "duration": 2.82,
+          "offset": 520.75,
+          "lang": "zh"
+        },
+        {
+          "text": "然後整個製程呢會用Intel最新的這個14A",
+          "duration": 3.18,
+          "offset": 523.59,
+          "lang": "zh"
+        },
+        {
+          "text": "應該是Intel下一代最強的這個製程節點",
+          "duration": 2.5,
+          "offset": 527.05,
+          "lang": "zh"
+        },
+        {
+          "text": "雖然我不知道這是什麼意思",
+          "duration": 1.1,
+          "offset": 529.66,
+          "lang": "zh"
+        },
+        {
+          "text": "但聽起來好像他們知道自己在講什麼",
+          "duration": 1.98,
+          "offset": 530.78,
+          "lang": "zh"
+        },
+        {
+          "text": "那關於TeraFab我覺得之後它強的地方呢不是它的產能",
+          "duration": 3.7,
+          "offset": 532.78,
+          "lang": "zh"
+        },
+        {
+          "text": "應該說短期內產能",
+          "duration": 1.54,
+          "offset": 536.5,
+          "lang": "zh"
+        },
+        {
+          "text": "一定會遇到非常非常多的瓶頸",
+          "duration": 1.7,
+          "offset": 538.06,
+          "lang": "zh"
+        },
+        {
+          "text": "但是呢我覺得Elon他厲害的地方呢不是在製程",
+          "duration": 2.82,
+          "offset": 539.78,
+          "lang": "zh"
+        },
+        {
+          "text": "不是在晶片的製程",
+          "duration": 1.14,
+          "offset": 542.67,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得他強的地方是",
+          "duration": 0.98,
+          "offset": 543.83,
+          "lang": "zh"
+        },
+        {
+          "text": "怎麼去增加那個iteration的speed",
+          "duration": 2.14,
+          "offset": 544.83,
+          "lang": "zh"
+        },
+        {
+          "text": "他在這次的earnings call又再次強調",
+          "duration": 2.14,
+          "offset": 546.99,
+          "lang": "zh"
+        },
+        {
+          "text": "這個研究廠呢是世界上唯一一個會把",
+          "duration": 2.7,
+          "offset": 549.15,
+          "lang": "zh"
+        },
+        {
+          "text": "光照製作，邏輯晶片",
+          "duration": 2.14,
+          "offset": 551.87,
+          "lang": "zh"
+        },
+        {
+          "text": "記憶體，跟先進封裝呢",
+          "duration": 1.78,
+          "offset": 554.03,
+          "lang": "zh"
+        },
+        {
+          "text": "全部放在同一棟建築物的Fab",
+          "duration": 2.3,
+          "offset": 555.83,
+          "lang": "zh"
+        },
+        {
+          "text": "那這麼做的目的呢就是要把",
+          "duration": 1.58,
+          "offset": 558.15,
+          "lang": "zh"
+        },
+        {
+          "text": "研發的這個迭代週期壓到最低",
+          "duration": 2.74,
+          "offset": 559.75,
+          "lang": "zh"
+        },
+        {
+          "text": "當然我對半導體的這個製程還有",
+          "duration": 2.06,
+          "offset": 562.51,
+          "lang": "zh"
+        },
+        {
+          "text": "生產是完全沒有任何一點概念的",
+          "duration": 1.94,
+          "offset": 564.79,
+          "lang": "zh"
+        },
+        {
+          "text": "所以有概念的網友",
+          "duration": 0.94,
+          "offset": 566.75,
+          "lang": "zh"
+        },
+        {
+          "text": "也可以在影片底下留言分享一下",
+          "duration": 1.86,
+          "offset": 567.71,
+          "lang": "zh"
+        },
+        {
+          "text": "糾正一下我如果有講錯什麼",
+          "duration": 1.58,
+          "offset": 569.59,
+          "lang": "zh"
+        },
+        {
+          "text": "但是就我的理解，傳統的chip iteration",
+          "duration": 3.22,
+          "offset": 571.19,
+          "lang": "zh"
+        },
+        {
+          "text": "會比較像是",
+          "duration": 1.22,
+          "offset": 574.43,
+          "lang": "zh"
+        },
+        {
+          "text": "我們拿比如說軟體開發",
+          "duration": 1.94,
+          "offset": 575.72,
+          "lang": "zh"
+        },
+        {
+          "text": "來做一個比喻好了",
+          "duration": 1.34,
+          "offset": 577.68,
+          "lang": "zh"
+        },
+        {
+          "text": "當你寫好你的code之後呢",
+          "duration": 1.58,
+          "offset": 579.04,
+          "lang": "zh"
+        },
+        {
+          "text": "你把你的code email到其他國家",
+          "duration": 2.22,
+          "offset": 580.64,
+          "lang": "zh"
+        },
+        {
+          "text": "去幫你做compile",
+          "duration": 1.3,
+          "offset": 582.88,
+          "lang": "zh"
+        },
+        {
+          "text": "然後你可能要等幾個月之後呢",
+          "duration": 1.38,
+          "offset": 584.33,
+          "lang": "zh"
+        },
+        {
+          "text": "才可以拿到結果",
+          "duration": 1.1,
+          "offset": 585.73,
+          "lang": "zh"
+        },
+        {
+          "text": "而TeraFab想要做的事情呢",
+          "duration": 1.82,
+          "offset": 586.85,
+          "lang": "zh"
+        },
+        {
+          "text": "就是直接在電腦上面就可以做compile",
+          "duration": 2.14,
+          "offset": 588.69,
+          "lang": "zh"
+        },
+        {
+          "text": "等於是當天你就可以",
+          "duration": 0.94,
+          "offset": 590.91,
+          "lang": "zh"
+        },
+        {
+          "text": "直接修直接改直接測試",
+          "duration": 1.5,
+          "offset": 591.87,
+          "lang": "zh"
+        },
+        {
+          "text": "那聽起來呢確實好像真的很厲害",
+          "duration": 1.98,
+          "offset": 593.39,
+          "lang": "zh"
+        },
+        {
+          "text": "但是我覺得目前這些呢",
+          "duration": 1.46,
+          "offset": 595.39,
+          "lang": "zh"
+        },
+        {
+          "text": "看到的這些東西呢",
+          "duration": 1.02,
+          "offset": 596.87,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得就只是在畫餅而已",
+          "duration": 1.58,
+          "offset": 597.91,
+          "lang": "zh"
+        },
+        {
+          "text": "所有的東西呢都還沒有實現",
+          "duration": 1.5,
+          "offset": 599.51,
+          "lang": "zh"
+        },
+        {
+          "text": "也沒有人知道",
+          "duration": 0.7,
+          "offset": 601.03,
+          "lang": "zh"
+        },
+        {
+          "text": "真的到底會發生什麼事情",
+          "duration": 1.42,
+          "offset": 601.75,
+          "lang": "zh"
+        },
+        {
+          "text": "當然我覺得這就是",
+          "duration": 1.06,
+          "offset": 603.29,
+          "lang": "zh"
+        },
+        {
+          "text": "身為特斯拉投資人一個很好玩的地方",
+          "duration": 2.14,
+          "offset": 604.37,
+          "lang": "zh"
+        },
+        {
+          "text": "就是你永遠不知道你在投資什麼東西",
+          "duration": 2.06,
+          "offset": 606.53,
+          "lang": "zh"
+        },
+        {
+          "text": "像上一季度呢特斯拉投資了2 billion",
+          "duration": 3.16,
+          "offset": 608.61,
+          "lang": "zh"
+        },
+        {
+          "text": "在SpaceX上面20億美金",
+          "duration": 2.1,
+          "offset": 611.79,
+          "lang": "zh"
+        },
+        {
+          "text": "那身為特斯拉投資人我們又突然變成了這個SpaceX的股東",
+          "duration": 3.94,
+          "offset": 614.04,
+          "lang": "zh"
+        },
+        {
+          "text": "所以說取決於你的認知會決定你",
+          "duration": 2.46,
+          "offset": 618,
+          "lang": "zh"
+        },
+        {
+          "text": "在這家公司上面能不能賺到錢",
+          "duration": 2.06,
+          "offset": 620.48,
+          "lang": "zh"
+        },
+        {
+          "text": "然後呢就是你可以真的賺到多少錢",
+          "duration": 1.9,
+          "offset": 622.65,
+          "lang": "zh"
+        },
+        {
+          "text": "好那說到投資SpaceX呢我們先暫停一下",
+          "duration": 2.7,
+          "offset": 624.57,
+          "lang": "zh"
+        },
+        {
+          "text": "之前我跟Han哥在我的影片裡面",
+          "duration": 1.86,
+          "offset": 627.29,
+          "lang": "zh"
+        },
+        {
+          "text": "就跟大家聊到他的新創公司Jarsy",
+          "duration": 2.14,
+          "offset": 629.17,
+          "lang": "zh"
+        },
+        {
+          "text": "也是因為Jarsy讓我接觸到很多這個還沒上市公司的投資機會",
+          "duration": 4.38,
+          "offset": 631.33,
+          "lang": "zh"
+        },
+        {
+          "text": "那我覺得這也是Jarsy他們很厲害的地方",
+          "duration": 2.18,
+          "offset": 635.84,
+          "lang": "zh"
+        },
+        {
+          "text": "就是可以讓我們這種",
+          "duration": 0.98,
+          "offset": 638.04,
+          "lang": "zh"
+        },
+        {
+          "text": "非常普通的散戶投資人",
+          "duration": 1.58,
+          "offset": 639.04,
+          "lang": "zh"
+        },
+        {
+          "text": "可以開始投資接觸到",
+          "duration": 1.38,
+          "offset": 640.76,
+          "lang": "zh"
+        },
+        {
+          "text": "這些還沒上市公司的股票",
+          "duration": 1.59,
+          "offset": 642.16,
+          "lang": "zh"
+        },
+        {
+          "text": "像是SpaceX Anthropic xAI",
+          "duration": 1.46,
+          "offset": 644.92,
+          "lang": "zh"
+        },
+        {
+          "text": "就這些公司呢在以前你想要投資他們",
+          "duration": 2.3,
+          "offset": 646.4,
+          "lang": "zh"
+        },
+        {
+          "text": "你需要有非常非常多的錢",
+          "duration": 1.94,
+          "offset": 648.72,
+          "lang": "zh"
+        },
+        {
+          "text": "你不是要有超高的淨資產",
+          "duration": 1.7,
+          "offset": 650.78,
+          "lang": "zh"
+        },
+        {
+          "text": "你就是要成為一個合格的投資人",
+          "duration": 2.06,
+          "offset": 652.5,
+          "lang": "zh"
+        },
+        {
+          "text": "accredited investor",
+          "duration": 1.02,
+          "offset": 654.58,
+          "lang": "zh"
+        },
+        {
+          "text": "才能有機會有可能",
+          "duration": 1.78,
+          "offset": 655.62,
+          "lang": "zh"
+        },
+        {
+          "text": "可以投資到這些公司",
+          "duration": 1.5,
+          "offset": 657.42,
+          "lang": "zh"
+        },
+        {
+          "text": "那Jarsy呢也是業界首創以來幫散戶去實現這個夢想",
+          "duration": 3.62,
+          "offset": 658.99,
+          "lang": "zh"
+        },
+        {
+          "text": "那我自己會選擇用Jarsy的原因呢",
+          "duration": 1.94,
+          "offset": 662.63,
+          "lang": "zh"
+        },
+        {
+          "text": "首先第一個當然就是我認識Han",
+          "duration": 1.74,
+          "offset": 664.59,
+          "lang": "zh"
+        },
+        {
+          "text": "我也知道他在矽谷的reputation",
+          "duration": 2.18,
+          "offset": 666.35,
+          "lang": "zh"
+        },
+        {
+          "text": "再來就是Jarsy呢它是一家美國公司它是一家合規的公司",
+          "duration": 3.5,
+          "offset": 668.55,
+          "lang": "zh"
+        },
+        {
+          "text": "所以在安全上面呢我覺得是OK的",
+          "duration": 1.9,
+          "offset": 672.15,
+          "lang": "zh"
+        },
+        {
+          "text": "那整體的運作原理呢",
+          "duration": 1.54,
+          "offset": 674.07,
+          "lang": "zh"
+        },
+        {
+          "text": "就是他們會在二級市場上面",
+          "duration": 1.78,
+          "offset": 675.63,
+          "lang": "zh"
+        },
+        {
+          "text": "直接收購這些公司的股權",
+          "duration": 2.02,
+          "offset": 677.43,
+          "lang": "zh"
+        },
+        {
+          "text": "然後再以1比1的比例呢",
+          "duration": 1.66,
+          "offset": 679.47,
+          "lang": "zh"
+        },
+        {
+          "text": "發行在他們的平台上面讓用戶去購買",
+          "duration": 2.76,
+          "offset": 681.15,
+          "lang": "zh"
+        },
+        {
+          "text": "然後每一個股權呢",
+          "duration": 1.26,
+          "offset": 684.07,
+          "lang": "zh"
+        },
+        {
+          "text": "你在他們的網站上面呢",
+          "duration": 1.38,
+          "offset": 685.35,
+          "lang": "zh"
+        },
+        {
+          "text": "都可以找到proof of reserve",
+          "duration": 1.66,
+          "offset": 686.75,
+          "lang": "zh"
+        },
+        {
+          "text": "意思就是說所有你在Jarsy上面購買的股權呢",
+          "duration": 2.98,
+          "offset": 688.63,
+          "lang": "zh"
+        },
+        {
+          "text": "全部都有實際的Jarsy持有的這個資產證明",
+          "duration": 3.06,
+          "offset": 691.77,
+          "lang": "zh"
+        },
+        {
+          "text": "那平台入金的方式呢",
+          "duration": 1.3,
+          "offset": 694.97,
+          "lang": "zh"
+        },
+        {
+          "text": "也非非非常的簡單",
+          "duration": 1.18,
+          "offset": 696.29,
+          "lang": "zh"
+        },
+        {
+          "text": "首先你可以透過國際電匯",
+          "duration": 1.62,
+          "offset": 697.54,
+          "lang": "zh"
+        },
+        {
+          "text": "你可以直接把美元匯進去",
+          "duration": 1.78,
+          "offset": 699.18,
+          "lang": "zh"
+        },
+        {
+          "text": "或者說呢你也可以轉USDC到你的Jarsy上面的錢包",
+          "duration": 3.54,
+          "offset": 700.98,
+          "lang": "zh"
+        },
+        {
+          "text": "那完成之後呢你就可以",
+          "duration": 1.1,
+          "offset": 704.54,
+          "lang": "zh"
+        },
+        {
+          "text": "直接開始收購你想要投資的公司",
+          "duration": 2.1,
+          "offset": 705.66,
+          "lang": "zh"
+        },
+        {
+          "text": "那大家如果有興趣的話呢",
+          "duration": 1.18,
+          "offset": 707.88,
+          "lang": "zh"
+        },
+        {
+          "text": "可以在影片底下留言跟我講一下",
+          "duration": 1.74,
+          "offset": 709.08,
+          "lang": "zh"
+        },
+        {
+          "text": "我之後呢也可以再做一集影片",
+          "duration": 1.58,
+          "offset": 710.84,
+          "lang": "zh"
+        },
+        {
+          "text": "跟大家分享一下",
+          "duration": 0.98,
+          "offset": 712.44,
+          "lang": "zh"
+        },
+        {
+          "text": "我在Jarsy上面都做了哪些投資",
+          "duration": 2.26,
+          "offset": 713.44,
+          "lang": "zh"
+        },
+        {
+          "text": "然後還有一些操作的教學",
+          "duration": 1.54,
+          "offset": 715.72,
+          "lang": "zh"
+        },
+        {
+          "text": "跟一些你需要注意的事項",
+          "duration": 1.5,
+          "offset": 717.28,
+          "lang": "zh"
+        },
+        {
+          "text": "那我也會把我的Jarsy推薦好友連結呢放在影片底下的資訊欄",
+          "duration": 3.66,
+          "offset": 718.8,
+          "lang": "zh"
+        },
+        {
+          "text": "大家可以自己去看一下啦",
+          "duration": 1.26,
+          "offset": 722.56,
+          "lang": "zh"
+        },
+        {
+          "text": "是有幾家公司我覺得",
+          "duration": 1.5,
+          "offset": 723.84,
+          "lang": "zh"
+        },
+        {
+          "text": "還蠻值得去研究一下的",
+          "duration": 1.42,
+          "offset": 725.36,
+          "lang": "zh"
+        },
+        {
+          "text": "不過還是要提醒一下大家啦",
+          "duration": 1.5,
+          "offset": 726.8,
+          "lang": "zh"
+        },
+        {
+          "text": "就是投資這些還沒有上市的公司呢",
+          "duration": 1.94,
+          "offset": 728.32,
+          "lang": "zh"
+        },
+        {
+          "text": "風險呢也是非常非常的高",
+          "duration": 1.54,
+          "offset": 730.28,
+          "lang": "zh"
+        },
+        {
+          "text": "價格波動呢也是很大",
+          "duration": 1.5,
+          "offset": 731.84,
+          "lang": "zh"
+        },
+        {
+          "text": "所以呢要注意安全",
+          "duration": 1.18,
+          "offset": 733.41,
+          "lang": "zh"
+        },
+        {
+          "text": "OK那我們回到影片的正題",
+          "duration": 1.58,
+          "offset": 734.68,
+          "lang": "zh"
+        },
+        {
+          "text": "那也是因為TeraFab",
+          "duration": 1.42,
+          "offset": 736.42,
+          "lang": "zh"
+        },
+        {
+          "text": "我最近在Threads上面看到很多人發文說呢",
+          "duration": 2.5,
+          "offset": 737.86,
+          "lang": "zh"
+        },
+        {
+          "text": "他們把這個特斯拉股票先拋售掉了",
+          "duration": 2.14,
+          "offset": 740.38,
+          "lang": "zh"
+        },
+        {
+          "text": "最主要最大的原因呢就是因為TeraFab會非常非常的燒錢",
+          "duration": 3.5,
+          "offset": 742.54,
+          "lang": "zh"
+        },
+        {
+          "text": "然後不確定的因素呢也是太多了",
+          "duration": 1.9,
+          "offset": 746.06,
+          "lang": "zh"
+        },
+        {
+          "text": "畢竟呢我們都知道",
+          "duration": 1.14,
+          "offset": 748.09,
+          "lang": "zh"
+        },
+        {
+          "text": "要做晶片呢是有多困難的",
+          "duration": 1.9,
+          "offset": 749.25,
+          "lang": "zh"
+        },
+        {
+          "text": "加上特斯拉呢",
+          "duration": 0.78,
+          "offset": 751.17,
+          "lang": "zh"
+        },
+        {
+          "text": "是完全沒有任何製作晶片的這個經驗",
+          "duration": 2.9,
+          "offset": 751.97,
+          "lang": "zh"
+        },
+        {
+          "text": "所以TeraFab到底會是一個慢性的自殺呢",
+          "duration": 2.62,
+          "offset": 754.89,
+          "lang": "zh"
+        },
+        {
+          "text": "還是最終又變成一個壯舉?",
+          "duration": 2.25,
+          "offset": 757.53,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這個問題呢",
+          "duration": 0.67,
+          "offset": 759.79,
+          "lang": "zh"
+        },
+        {
+          "text": "你要從兩個角度去看",
+          "duration": 1.5,
+          "offset": 760.48,
+          "lang": "zh"
+        },
+        {
+          "text": "第一個角度當然是",
+          "duration": 0.98,
+          "offset": 762,
+          "lang": "zh"
+        },
+        {
+          "text": "你去看特斯拉是不是真的有錢去花",
+          "duration": 2.42,
+          "offset": 763,
+          "lang": "zh"
+        },
+        {
+          "text": "目前呢公司手上",
+          "duration": 1.3,
+          "offset": 765.52,
+          "lang": "zh"
+        },
+        {
+          "text": "大概有447億的現金",
+          "duration": 2.38,
+          "offset": 766.84,
+          "lang": "zh"
+        },
+        {
+          "text": "加上Q1呢做了大概有14億的free cash flow",
+          "duration": 3.1,
+          "offset": 769.35,
+          "lang": "zh"
+        },
+        {
+          "text": "再加上呢他們還可以發債融資",
+          "duration": 2.22,
+          "offset": 772.68,
+          "lang": "zh"
+        },
+        {
+          "text": "這一次Q1就發了43億的這個新債",
+          "duration": 2.82,
+          "offset": 774.92,
+          "lang": "zh"
+        },
+        {
+          "text": "所以short term短期的",
+          "duration": 1.74,
+          "offset": 777.76,
+          "lang": "zh"
+        },
+        {
+          "text": "financing capacity呢",
+          "duration": 1.1,
+          "offset": 779.52,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得是綽綽有餘的",
+          "duration": 1.34,
+          "offset": 780.64,
+          "lang": "zh"
+        },
+        {
+          "text": "也就是說這個豪賭呢",
+          "duration": 1.34,
+          "offset": 782.15,
+          "lang": "zh"
+        },
+        {
+          "text": "目前來看特斯拉是玩得起的",
+          "duration": 1.86,
+          "offset": 783.51,
+          "lang": "zh"
+        },
+        {
+          "text": "那第二個角度呢就是要看",
+          "duration": 1.62,
+          "offset": 785.39,
+          "lang": "zh"
+        },
+        {
+          "text": "花這個錢呢我們能得到什麼",
+          "duration": 2.06,
+          "offset": 787.14,
+          "lang": "zh"
+        },
+        {
+          "text": "我們就非常簡單的來粗算一下",
+          "duration": 2.26,
+          "offset": 789.33,
+          "lang": "zh"
+        },
+        {
+          "text": "如果說Robotaxi按照Elon的guidance",
+          "duration": 3.26,
+          "offset": 791.7,
+          "lang": "zh"
+        },
+        {
+          "text": "今年年底呢",
+          "duration": 0.9,
+          "offset": 794.98,
+          "lang": "zh"
+        },
+        {
+          "text": "可以在十幾個州開始運營的話",
+          "duration": 2.38,
+          "offset": 795.9,
+          "lang": "zh"
+        },
+        {
+          "text": "那每一個Robotaxi一天可以做我們就舉例",
+          "duration": 3.18,
+          "offset": 798.35,
+          "lang": "zh"
+        },
+        {
+          "text": "16個小時有效的這個載客時間",
+          "duration": 2.72,
+          "offset": 801.65,
+          "lang": "zh"
+        },
+        {
+          "text": "然後我們假設每一個小時",
+          "duration": 1.26,
+          "offset": 804.39,
+          "lang": "zh"
+        },
+        {
+          "text": "平均收入20塊美金好了",
+          "duration": 2.06,
+          "offset": 805.67,
+          "lang": "zh"
+        },
+        {
+          "text": "那一台車一年呢大概可以做到",
+          "duration": 2.18,
+          "offset": 807.89,
+          "lang": "zh"
+        },
+        {
+          "text": "16乘以20乘以365",
+          "duration": 2.5,
+          "offset": 810.09,
+          "lang": "zh"
+        },
+        {
+          "text": "大概就是12萬美金的營收",
+          "duration": 1.7,
+          "offset": 812.61,
+          "lang": "zh"
+        },
+        {
+          "text": "然後這個毛利率我們就假設",
+          "duration": 1.74,
+          "offset": 814.49,
+          "lang": "zh"
+        },
+        {
+          "text": "保守保守的毛利率50%好了",
+          "duration": 2.54,
+          "offset": 816.25,
+          "lang": "zh"
+        },
+        {
+          "text": "就是大概6萬塊錢的毛利率",
+          "duration": 1.78,
+          "offset": 818.98,
+          "lang": "zh"
+        },
+        {
+          "text": "那特斯拉現在在路上一共",
+          "duration": 2.22,
+          "offset": 820.78,
+          "lang": "zh"
+        },
+        {
+          "text": "在路上有跑的這個車",
+          "duration": 1.18,
+          "offset": 823.02,
+          "lang": "zh"
+        },
+        {
+          "text": "有大概1300萬台",
+          "duration": 1.74,
+          "offset": 824.22,
+          "lang": "zh"
+        },
+        {
+          "text": "那我們再外加上特斯拉自己生產的這個Cybercab",
+          "duration": 3.02,
+          "offset": 825.98,
+          "lang": "zh"
+        },
+        {
+          "text": "我們就算總共總共1300萬台",
+          "duration": 2.3,
+          "offset": 829.08,
+          "lang": "zh"
+        },
+        {
+          "text": "然後1%可以convert成Robotaxi",
+          "duration": 2.74,
+          "offset": 831.4,
+          "lang": "zh"
+        },
+        {
+          "text": "有效的Robotaxi車隊",
+          "duration": 1.42,
+          "offset": 834.16,
+          "lang": "zh"
+        },
+        {
+          "text": "那就是大概有13萬台",
+          "duration": 1.66,
+          "offset": 835.72,
+          "lang": "zh"
+        },
+        {
+          "text": "那13萬乘以6萬",
+          "duration": 1.42,
+          "offset": 837.76,
+          "lang": "zh"
+        },
+        {
+          "text": "6萬的毛利率每一台",
+          "duration": 1.74,
+          "offset": 839.2,
+          "lang": "zh"
+        },
+        {
+          "text": "就是大概78億美金的",
+          "duration": 1.78,
+          "offset": 841.18,
+          "lang": "zh"
+        },
+        {
+          "text": "這個純額外的這個毛利率收入",
+          "duration": 2.14,
+          "offset": 842.98,
+          "lang": "zh"
+        },
+        {
+          "text": "而且這是每一年只有1%的adoption",
+          "duration": 2.7,
+          "offset": 845.26,
+          "lang": "zh"
+        },
+        {
+          "text": "它基本上就可以支撐特斯拉的purpose這個250億",
+          "duration": 3.22,
+          "offset": 847.98,
+          "lang": "zh"
+        },
+        {
+          "text": "美金的這個Capex的三分之一的量",
+          "duration": 2.34,
+          "offset": 851.42,
+          "lang": "zh"
+        },
+        {
+          "text": "另外一點就是Optimus我覺得這個還是一個謎啦",
+          "duration": 2.26,
+          "offset": 853.91,
+          "lang": "zh"
+        },
+        {
+          "text": "就具體Optimus能夠給特斯拉帶來多少現金流",
+          "duration": 3.14,
+          "offset": 856.47,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得沒有一個人真的知道",
+          "duration": 1.46,
+          "offset": 859.69,
+          "lang": "zh"
+        },
+        {
+          "text": "但是Elon在這次的earnings call裡面",
+          "duration": 1.86,
+          "offset": 861.25,
+          "lang": "zh"
+        },
+        {
+          "text": "有講到說Optimus的production",
+          "duration": 2.02,
+          "offset": 863.13,
+          "lang": "zh"
+        },
+        {
+          "text": "會在7月底8月初開始",
+          "duration": 2.18,
+          "offset": 865.3,
+          "lang": "zh"
+        },
+        {
+          "text": "第一條的生產線呢是在Fremont年產能呢大概是100萬台",
+          "duration": 3.86,
+          "offset": 867.69,
+          "lang": "zh"
+        },
+        {
+          "text": "設計是年產能的設計是100萬台",
+          "duration": 2.22,
+          "offset": 871.86,
+          "lang": "zh"
+        },
+        {
+          "text": "第二條是在Giga Texas",
+          "duration": 1.3,
+          "offset": 874.1,
+          "lang": "zh"
+        },
+        {
+          "text": "年產能年產能的設計呢是1000萬台Optimus",
+          "duration": 3.7,
+          "offset": 875.42,
+          "lang": "zh"
+        },
+        {
+          "text": "然後Giga Texas是明年夏天開工",
+          "duration": 2.94,
+          "offset": 879.14,
+          "lang": "zh"
+        },
+        {
+          "text": "那我知道我在影片裡面講過就是Optimus其實離我們太遠了",
+          "duration": 3.38,
+          "offset": 882.17,
+          "lang": "zh"
+        },
+        {
+          "text": "但你說真的很遠嗎其實Optimus在今年就會開始生產了",
+          "duration": 3.42,
+          "offset": 885.57,
+          "lang": "zh"
+        },
+        {
+          "text": "而且他們這次刻意非常的low key非常的低調",
+          "duration": 3.3,
+          "offset": 889.09,
+          "lang": "zh"
+        },
+        {
+          "text": "不過去公佈現在版本的樣子",
+          "duration": 1.66,
+          "offset": 892.48,
+          "lang": "zh"
+        },
+        {
+          "text": "其中最主要原因就是Elon說他們只要公佈之後",
+          "duration": 2.82,
+          "offset": 894.16,
+          "lang": "zh"
+        },
+        {
+          "text": "所有的competitor他們就會開始",
+          "duration": 1.58,
+          "offset": 897,
+          "lang": "zh"
+        },
+        {
+          "text": "每一個frame每一個frame的照抄",
+          "duration": 1.62,
+          "offset": 898.6,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這個make sense",
+          "duration": 1.22,
+          "offset": 900.24,
+          "lang": "zh"
+        },
+        {
+          "text": "所以說我們現在對Optimus基本上是沒有任何的概念",
+          "duration": 3.02,
+          "offset": 901.59,
+          "lang": "zh"
+        },
+        {
+          "text": "但是Elon講過很多遍Optimus呢",
+          "duration": 2.32,
+          "offset": 904.63,
+          "lang": "zh"
+        },
+        {
+          "text": "會是特斯拉史上最大的一個product",
+          "duration": 2.3,
+          "offset": 906.97,
+          "lang": "zh"
+        },
+        {
+          "text": "甚至可能是全人類史上最大的product",
+          "duration": 2.54,
+          "offset": 909.36,
+          "lang": "zh"
+        },
+        {
+          "text": "這點我也是同意的物理世界的AI",
+          "duration": 2.26,
+          "offset": 912.06,
+          "lang": "zh"
+        },
+        {
+          "text": "但是執行起來真的非常非常的難",
+          "duration": 2.14,
+          "offset": 914.34,
+          "lang": "zh"
+        },
+        {
+          "text": "所以理論上來說你要去支持這個production產能的話",
+          "duration": 3.22,
+          "offset": 916.64,
+          "lang": "zh"
+        },
+        {
+          "text": "這個Capex的支出是完全有必要的",
+          "duration": 2.62,
+          "offset": 919.88,
+          "lang": "zh"
+        },
+        {
+          "text": "也是一個能夠讓特斯拉真的達到10T 10 trillion的估值",
+          "duration": 3.78,
+          "offset": 922.67,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得唯一的一條路",
+          "duration": 1.46,
+          "offset": 926.47,
+          "lang": "zh"
+        },
+        {
+          "text": "要不然你過去幾個季度",
+          "duration": 1.3,
+          "offset": 927.95,
+          "lang": "zh"
+        },
+        {
+          "text": "賺那麼多現金賺那麼多錢",
+          "duration": 1.7,
+          "offset": 929.27,
+          "lang": "zh"
+        },
+        {
+          "text": "放在手上幹嘛?",
+          "duration": 1.07,
+          "offset": 930.99,
+          "lang": "zh"
+        },
+        {
+          "text": "發回去給股東當股息嗎?",
+          "duration": 1.78,
+          "offset": 932.07,
+          "lang": "zh"
+        },
+        {
+          "text": "當然不是了",
+          "duration": 0.66,
+          "offset": 933.96,
+          "lang": "zh"
+        },
+        {
+          "text": "拿去收購自家公司的股票?",
+          "duration": 1.79,
+          "offset": 934.78,
+          "lang": "zh"
+        },
+        {
+          "text": "當然不是了",
+          "duration": 0.82,
+          "offset": 936.58,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得這也是為什麼",
+          "duration": 0.9,
+          "offset": 937.42,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉在過去幾個季度呢",
+          "duration": 1.7,
+          "offset": 938.34,
+          "lang": "zh"
+        },
+        {
+          "text": "過於保守的原因",
+          "duration": 1.3,
+          "offset": 940.06,
+          "lang": "zh"
+        },
+        {
+          "text": "其實就是一直在存錢那等到現在",
+          "duration": 2.06,
+          "offset": 941.38,
+          "lang": "zh"
+        },
+        {
+          "text": "當軟體的技術已經成熟差不多的之後",
+          "duration": 2.3,
+          "offset": 943.46,
+          "lang": "zh"
+        },
+        {
+          "text": "這個limiting factor已經不是軟體技術了",
+          "duration": 2.42,
+          "offset": 945.78,
+          "lang": "zh"
+        },
+        {
+          "text": "就可以開始真的ramp up Robotaxi",
+          "duration": 1.9,
+          "offset": 948.31,
+          "lang": "zh"
+        },
+        {
+          "text": "然後就是ramp up Optimus",
+          "duration": 1.54,
+          "offset": 950.23,
+          "lang": "zh"
+        },
+        {
+          "text": "所以我認為啦，我就隨便猜一下",
+          "duration": 1.98,
+          "offset": 951.79,
+          "lang": "zh"
+        },
+        {
+          "text": "大家不要太認真",
+          "duration": 0.98,
+          "offset": 953.79,
+          "lang": "zh"
+        },
+        {
+          "text": "2026年下半年Q3跟Q4的這個毛利率呢",
+          "duration": 3.62,
+          "offset": 954.79,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得還是會維持在20%以上",
+          "duration": 2.34,
+          "offset": 958.61,
+          "lang": "zh"
+        },
+        {
+          "text": "但是因為Capex會爆炸性的成長",
+          "duration": 2.26,
+          "offset": 961.08,
+          "lang": "zh"
+        },
+        {
+          "text": "那operating margin呢會被RD拉低",
+          "duration": 2.5,
+          "offset": 963.46,
+          "lang": "zh"
+        },
+        {
+          "text": "所以他們的free cash flow",
+          "duration": 1.3,
+          "offset": 965.98,
+          "lang": "zh"
+        },
+        {
+          "text": "在Q2 Q3 Q4真的都有可能會變成負的",
+          "duration": 2.86,
+          "offset": 967.3,
+          "lang": "zh"
+        },
+        {
+          "text": "那關於特斯拉股票的這個走勢呢",
+          "duration": 2.42,
+          "offset": 970.38,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得最大的關鍵因素當然就會變成FSD的訂閱數字",
+          "duration": 3.62,
+          "offset": 972.92,
+          "lang": "zh"
+        },
+        {
+          "text": "如果說FSD的訂閱數字繼續爆炸性的增長的話",
+          "duration": 3.58,
+          "offset": 976.69,
+          "lang": "zh"
+        },
+        {
+          "text": "那整年的EPS呢還是可以超出分析師的預期",
+          "duration": 3.14,
+          "offset": 980.29,
+          "lang": "zh"
+        },
+        {
+          "text": "首先第一個我們已經確定的",
+          "duration": 1.62,
+          "offset": 983.45,
+          "lang": "zh"
+        },
+        {
+          "text": "就是下半年",
+          "duration": 0.83,
+          "offset": 985.09,
+          "lang": "zh"
+        },
+        {
+          "text": "Cybercab跟Semi會開始量產",
+          "duration": 1.9,
+          "offset": 985.93,
+          "lang": "zh"
+        },
+        {
+          "text": "如果產能爬坡呢",
+          "duration": 1.1,
+          "offset": 988.04,
+          "lang": "zh"
+        },
+        {
+          "text": "也沒有遇到什麼大問題的話",
+          "duration": 1.82,
+          "offset": 989.16,
+          "lang": "zh"
+        },
+        {
+          "text": "然後再加上FSD在中國還有歐洲",
+          "duration": 2.62,
+          "offset": 991,
+          "lang": "zh"
+        },
+        {
+          "text": "如果能夠更順利的有審批的通過的話",
+          "duration": 3.06,
+          "offset": 993.64,
+          "lang": "zh"
+        },
+        {
+          "text": "這樣就可以再更加速adoption",
+          "duration": 1.78,
+          "offset": 996.72,
+          "lang": "zh"
+        },
+        {
+          "text": "整體股票我覺得在今年",
+          "duration": 1.46,
+          "offset": 998.7,
+          "lang": "zh"
+        },
+        {
+          "text": "還是很有機會可以再創新高的",
+          "duration": 1.86,
+          "offset": 1000.18,
+          "lang": "zh"
+        },
+        {
+          "text": "當然我還是一樣",
+          "duration": 0.78,
+          "offset": 1002.22,
+          "lang": "zh"
+        },
+        {
+          "text": "我不是很想去給一個具體的數字啊",
+          "duration": 2.02,
+          "offset": 1003.02,
+          "lang": "zh"
+        },
+        {
+          "text": "因為每一次我講一個具體數字呢",
+          "duration": 1.55,
+          "offset": 1005.06,
+          "lang": "zh"
+        },
+        {
+          "text": "酸民就會開始嘴",
+          "duration": 0.86,
+          "offset": 1006.78,
+          "lang": "zh"
+        },
+        {
+          "text": "如果沒有達到那個數字的話",
+          "duration": 1.46,
+          "offset": 1007.78,
+          "lang": "zh"
+        },
+        {
+          "text": "當然還是就是好玩啦，我可以猜一下",
+          "duration": 2.06,
+          "offset": 1009.26,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得可以達到600塊以上",
+          "duration": 1.58,
+          "offset": 1011.34,
+          "lang": "zh"
+        },
+        {
+          "text": "但是這也要建立在我們剛剛講的",
+          "duration": 2.14,
+          "offset": 1012.94,
+          "lang": "zh"
+        },
+        {
+          "text": "所有那些都很順利的情況下",
+          "duration": 1.9,
+          "offset": 1015.1,
+          "lang": "zh"
+        },
+        {
+          "text": "而且很多東西呢其實也不是",
+          "duration": 1.78,
+          "offset": 1017.02,
+          "lang": "zh"
+        },
+        {
+          "text": "特斯拉他們自己能夠控制的",
+          "duration": 1.74,
+          "offset": 1018.82,
+          "lang": "zh"
+        },
+        {
+          "text": "像比如說關稅啊 利率 地緣政治的風險",
+          "duration": 3.3,
+          "offset": 1020.65,
+          "lang": "zh"
+        },
+        {
+          "text": "這些當然都會直接影響到特斯拉接下來一整年的執行力還有它的EPS",
+          "duration": 4.62,
+          "offset": 1023.97,
+          "lang": "zh"
+        },
+        {
+          "text": "當然啦如果真的一切",
+          "duration": 1.5,
+          "offset": 1028.61,
+          "lang": "zh"
+        },
+        {
+          "text": "我剛剛講的一切都很順利的話",
+          "duration": 1.58,
+          "offset": 1030.13,
+          "lang": "zh"
+        },
+        {
+          "text": "我覺得EPS是可以超過兩塊錢的",
+          "duration": 2.22,
+          "offset": 1031.8,
+          "lang": "zh"
+        },
+        {
+          "text": "現在分析師的普遍認為的EPS大概是",
+          "duration": 3.1,
+          "offset": 1034.18,
+          "lang": "zh"
+        },
+        {
+          "text": "看一下1.87",
+          "duration": 1.82,
+          "offset": 1037.3,
+          "lang": "zh"
+        },
+        {
+          "text": "對那兩塊錢就是一個strong beat",
+          "duration": 1.74,
+          "offset": 1039.39,
+          "lang": "zh"
+        },
+        {
+          "text": "至於短期的股價走勢呢",
+          "duration": 1.94,
+          "offset": 1041.3,
+          "lang": "zh"
+        },
+        {
+          "text": "說真的我也不知道",
+          "duration": 0.94,
+          "offset": 1043.26,
+          "lang": "zh"
+        },
+        {
+          "text": "市場呢不是很喜歡看到這個",
+          "duration": 1.9,
+          "offset": 1044.22,
+          "lang": "zh"
+        },
+        {
+          "text": "FCF free cash flow變成負的",
+          "duration": 1.82,
+          "offset": 1046.14,
+          "lang": "zh"
+        },
+        {
+          "text": "那我也不知道華爾街",
+          "duration": 1.1,
+          "offset": 1047.98,
+          "lang": "zh"
+        },
+        {
+          "text": "看不看得懂特斯拉在做的事情",
+          "duration": 1.82,
+          "offset": 1049.1,
+          "lang": "zh"
+        },
+        {
+          "text": "反正我是沒有期待他們可以看得懂",
+          "duration": 1.94,
+          "offset": 1050.94,
+          "lang": "zh"
+        },
+        {
+          "text": "如果說呢短期股價",
+          "duration": 1.42,
+          "offset": 1052.97,
+          "lang": "zh"
+        },
+        {
+          "text": "回調到350以下呢",
+          "duration": 1.54,
+          "offset": 1054.41,
+          "lang": "zh"
+        },
+        {
+          "text": "我一定會繼續加倉",
+          "duration": 1.18,
+          "offset": 1056.1,
+          "lang": "zh"
+        },
+        {
+          "text": "到時候我也會在我的TG群組還有IG上面跟大家分享",
+          "duration": 3.18,
+          "offset": 1057.42,
+          "lang": "zh"
+        },
+        {
+          "text": "我不覺得TeraFab是一個不理智的賭注",
+          "duration": 2.38,
+          "offset": 1060.76,
+          "lang": "zh"
+        },
+        {
+          "text": "你去看一下Amazon會有今天的成就",
+          "duration": 2.3,
+          "offset": 1063.16,
+          "lang": "zh"
+        },
+        {
+          "text": "就是因為他們當年賭上了AWS",
+          "duration": 2.58,
+          "offset": 1065.54,
+          "lang": "zh"
+        },
+        {
+          "text": "然後也是因為有AWS拉開了一整個雲服務的時代",
+          "duration": 4.34,
+          "offset": 1068.25,
+          "lang": "zh"
+        },
+        {
+          "text": "蘋果當年也賭上了做手機",
+          "duration": 2.15,
+          "offset": 1072.61,
+          "lang": "zh"
+        },
+        {
+          "text": "我們才會有今天的iPhone可以用",
+          "duration": 1.78,
+          "offset": 1074.77,
+          "lang": "zh"
+        },
+        {
+          "text": "微軟呢當年也是賭上了Azure",
+          "duration": 1.63,
+          "offset": 1076.67,
+          "lang": "zh"
+        },
+        {
+          "text": "才可以撐到今天不被時代給淘汰",
+          "duration": 2.22,
+          "offset": 1078.31,
+          "lang": "zh"
+        },
+        {
+          "text": "所以在下一個我們現在這個AI大爆發的時代呢",
+          "duration": 3.34,
+          "offset": 1080.68,
+          "lang": "zh"
+        },
+        {
+          "text": "如果台積電三星的晶片",
+          "duration": 2.3,
+          "offset": 1084.04,
+          "lang": "zh"
+        },
+        {
+          "text": "沒辦法去支撐特斯拉的這個需求",
+          "duration": 2.1,
+          "offset": 1086.36,
+          "lang": "zh"
+        },
+        {
+          "text": "那我覺得特斯拉去做TeraFab也是理所當然的",
+          "duration": 2.82,
+          "offset": 1088.54,
+          "lang": "zh"
+        },
+        {
+          "text": "這也完全符合特斯拉",
+          "duration": 1.34,
+          "offset": 1091.53,
+          "lang": "zh"
+        },
+        {
+          "text": "一直以來的經營理念",
+          "duration": 1.42,
+          "offset": 1092.89,
+          "lang": "zh"
+        },
+        {
+          "text": "如果說supplier沒辦法提供的話",
+          "duration": 2.34,
+          "offset": 1094.33,
+          "lang": "zh"
+        },
+        {
+          "text": "那就只有我們自己去做",
+          "duration": 1.55,
+          "offset": 1096.69,
+          "lang": "zh"
+        },
+        {
+          "text": "我們變成我們自己的supplier",
+          "duration": 2.06,
+          "offset": 1098.25,
+          "lang": "zh"
+        },
+        {
+          "text": "就像Elon講過的",
+          "duration": 1.06,
+          "offset": 1100.43,
+          "lang": "zh"
+        },
+        {
+          "text": "when something is so important enough",
+          "duration": 1.66,
+          "offset": 1101.61,
+          "lang": "zh"
+        },
+        {
+          "text": "you do it even if odds are not in your favor",
+          "duration": 2.06,
+          "offset": 1103.39,
+          "lang": "zh"
+        },
+        {
+          "text": "我不覺得特斯拉有任何的改變",
+          "duration": 1.66,
+          "offset": 1105.62,
+          "lang": "zh"
+        },
+        {
+          "text": "他們還是一樣在做同樣的事情",
+          "duration": 1.82,
+          "offset": 1107.3,
+          "lang": "zh"
+        },
+        {
+          "text": "OK那如果你覺得今天這集影片對你有幫助的話",
+          "duration": 2.22,
+          "offset": 1109.26,
+          "lang": "zh"
+        },
+        {
+          "text": "還是一樣記得一定要",
+          "duration": 1.18,
+          "offset": 1111.5,
+          "lang": "zh"
+        },
+        {
+          "text": "幫我把影片點個讚",
+          "duration": 1.02,
+          "offset": 1112.7,
+          "lang": "zh"
+        },
+        {
+          "text": "也歡迎你在影片底下",
+          "duration": 1.26,
+          "offset": 1113.74,
+          "lang": "zh"
+        },
+        {
+          "text": "留言跟我分享一下",
+          "duration": 1.06,
+          "offset": 1115.02,
+          "lang": "zh"
+        },
+        {
+          "text": "你會拋掉你手上的股票嗎？",
+          "duration": 1.7,
+          "offset": 1116.1,
+          "lang": "zh"
+        },
+        {
+          "text": "還是說你會繼續跟他們一起發瘋",
+          "duration": 2.38,
+          "offset": 1117.82,
+          "lang": "zh"
+        },
+        {
+          "text": "另外就是記得一定要訂閱我的頻道",
+          "duration": 1.94,
+          "offset": 1120.31,
+          "lang": "zh"
+        },
+        {
+          "text": "因為你知道",
+          "duration": 0.46,
+          "offset": 1122.33,
+          "lang": "zh"
+        },
+        {
+          "text": "大部分看我的影片的人",
+          "duration": 1.02,
+          "offset": 1122.81,
+          "lang": "zh"
+        },
+        {
+          "text": "其實都沒有訂閱",
+          "duration": 0.95,
+          "offset": 1123.85,
+          "lang": "zh"
+        },
+        {
+          "text": "OK那我們下次見囉",
+          "duration": 0.79,
+          "offset": 1124.81,
+          "lang": "zh"
+        }
+      ]
+    },
+    "creditsRemaining": 9999,
+    "isAnonymous": true,
+    "processingTime": 3211,
+    "message": "9999 free credits remaining"
+  }
+}

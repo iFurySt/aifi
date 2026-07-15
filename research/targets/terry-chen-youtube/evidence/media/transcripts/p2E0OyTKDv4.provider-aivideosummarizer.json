@@ -1,0 +1,6524 @@
+{
+  "source": "Online transcript provider: AI Video Summarizer",
+  "source_url": "https://www.youtube.com/watch?v=p2E0OyTKDv4",
+  "provider": {
+    "name": "aivideosummarizer.io",
+    "endpoint": "https://aivideosummarizer.io/youtube-subtitle-downloader/",
+    "retrieved": "2026-07-14",
+    "route": "OBU browser page -> IndexedDB tr-history"
+  },
+  "video_index": 25,
+  "video": {
+    "index": 25,
+    "id": "p2E0OyTKDv4",
+    "title": "工程師面試 Bar 變高了？如何在面試中拿 Strong Hire",
+    "url": "https://www.youtube.com/watch?v=p2E0OyTKDv4",
+    "duration_seconds": 1516.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "p2E0OyTKDv4",
+    "title": "工程師面試 Bar 變高了？如何在面試中拿 Strong Hire",
+    "text": "很多網友有密我說\n尤其是我之前跟Hank面試的那一集影片之後呢\n大家有在下面留言說想要看\n私生Design就是系統設計相關的面試\n那今天呢剛好特別請Bor來這邊跟大家分享一下\n因為Bor你自己本身也經歷過非常非常多輪的私生Design面試\n然後也有拿過很好的成績也有Fail過\n所以你大概知道面試官想要看什麼\n然後你平常在幫你們公司招人的時候\n你也會做很多面試官想要看什麼然後你平常在幫你們公司招人的時候你也會做很多面試對吧\n對\n其實我在四年前\n就做過一集關於系統設計的\n怎麼樣去更好地去掌握\n那個面試的節奏的一集影片\n然後我們剛剛有稍微看一下\n我以為已經updated\n因為我講的東西很basic\n它的框架還是可以用在現在的面試\n那個東西我覺得就是比較基礎的東西\n那今天請波爾來\n就想說也可以跟大家分享一下\n在矽谷这么多年的经验\n你觉得面试官通常在一轮面试\n尤其是在比较高级的大公司里面\n会希望给到强劲的原因是什么\n基本上你要拿到强劲就是\n你要在面试的时候表现出\n超出你现在所面试等级的表现\n比如说你现在是面试中的等级\n可是你在面试从头到尾就\n表现出的signal就是\n你就是一个senior engineer的signal\n或者是说\n你现在面试一个senior level的职位\n你从头到尾表现出\n你是一个staff level的前置\n那这样的话\n面试官就会很impressed\n就会给你strong hire这样子\n那更bonus point就是说\n假设你今天够资深\n你能够在面试的时候讨论的时候\n同样面试官学到一些新的他不知道的東西\n那這樣他當然面試完對你都是一些會有非常深刻的印象\n當然給你損害的機會就會很高\n這個就讓我聯想到一個問題\n因為我自己也曾經遇過這樣的事情\n就是很多時候Recruiter或是那公司的Hiring Manager\n或是那個跟我接洽的人\n他會問我說你想要面哪个 level\n像是我之前在 Meta 的时候\n他就问我说你要 L5 还是 L6\n你要面 staff 还是 senior\n对那这个时候就很 tricky 了\n我当然是想要拿到 staff 的 level\n但是呢我如果去面 staff 的话\n我可能比较容易 fail\n对然后我面 senior 的话我成功的机率比较大\n因为我可能更容易拿到双孩那在这样的下,你会建议大家去怎么做选择?\n嗯,这是个很好问题\n因为我在你问我的时候,当下我做了一些思考\n我觉得如果你今天有这一个option的话\n我会尽量倾向于选择高level的\n因为高level的话,你除了没上\n通常还有一个option是,他会给你downlevel\n但如果你今天,比如说你面试Staff他觉得,欸,你面试还ok因为高level的话你除了没上通常还有一个option是他会给你down level\n但如果你今天比如说你面的staff\n他觉得你面试还ok\n但是有些东西我觉得你可能fall short\n那我就给你senior level这样子\n可是当你今天面senior level\n你如果表现的没有说非常到达预期\n那他可能就直接给你fail掉\n这是一个因子\n然后另外一个就是说\n你今天即使在senior Level拿到Strong Hire\n他也未必会给你Staff Level Package\n但是如果你今天是Staff Level\n你是一个OK Hire\n但他给你的package\n绝对会比你在Senior Level\n拿到Strong Hire Package还要高\n因为Staff Level跟Senior Level的Ban\n就不一样了\n所以你今天Senior Level的Ban\n你Senior Level拿到再高的Offer\n有可能就是Staff Level\nBelow Average的Offer\n其实我们今天要特别针对这个去深入讨论\n有一个原因是现在尤其现在\n大家也知道AI发展很快\n然后其实尤其是我们现在学的东西也非常非常的快\n那我自己是感觉这一两年来\n整个tech不管是software engineer还是\n只要你做tech它的bar都会变得很高\n那我们在讨论software engineer\n这个工作的面试的过程\n其实我不知道\n你自己有没有这样\n去提升你们公司\n或者你在\nhiring人的bar\n但是我是感觉出来\n就是确实是\n就我自己在帮我们公司\nhiring人的时候\n我们是有在\n让这个process\n变得更难一点\n要是你的基本的lead code\n或是基本的coding\nalgorithm\ndatastructure\n你都没有熟悉的话\n那我不可能会考虑你\n然后师生design也是就是以前呢junior L3 L 4的人我们是不可能會考慮然後資深Design也是\n就是以前呢\nJunior L3 L4的人\n我們是不可能會面對他的資深Design\n但現在呢很多公司會開始考\n對那可能Bar不會那麼高\n但是相對來講也是會有這個這一關在裡面\n對你們有類似這樣子嗎\n我覺得我們沒有刻意去提高Bar什麼\n但是我覺得是這個是在不知不覺間\n你的Bar就提升了\n因為現在這些知識變得太 Accessible\n就像以前立刻沒有這麼多題\n那現在有這麼多題\n變一些以前的 Medium 題現在都變 Easy 題了\n那同樣 System Design\n可能這些線上學習的 Material 以前沒有這麼普及\n那現在越來越多這種 Material\n所以大家對於 System Design\nInterview 的一些問題也有一些概念\n所以變成說說大家的 Calibaliber同時提高的情況下\n你要脫穎而出就變成說你必須要Raise your Bar even higher\n就是你要在其他Candidate脫穎而出的話\n你必須要表現出更高level的表現才有辦法\n那在身為面試官的話其實沒有特別去說提高Bar\n可是就是一個 都是一個相對的嘛\n就是當今天大家平均的Bar升高\n就變成說你要再升到更高你才有辦法脫穎而出去說提高吧可是就是一個這是一個都是一個相對的嘛就是當今天大家平均的把身高\n就變成說你要再升到更高\n你才有辦法脫穎而出\n嗯\n對那你是怎麼去評判這個人\n他是屬於比較Junior\n比較Mid level\n比較Senior\n就以System Design的Interview角度去做這件事情\nJunior跟Senior level最大的差別就是\nSenior level的話\n基本會期待說\n你是在主導這個Interview\n而不是面試官在在主导interview\n就今天面试官会更像是你的同事\n然后你今天你在lead的一个project的时候\n你会如何去做propose\n你会根据你的\n你现在的requirements\n跟你的你有的工具\n如何去propose一些option\n然后跟面试官分析这些option pros and cons\n然后最后再根据requirements去决定说你要走哪个option这样\n那对于Junior Engineer来说\n那可能在面试流程上就更需要面试官的引导\n就譬如说今天在提出requirement的时候\n他可能漏掉一些最根本的东西\n那可能还需要面试官提示\n还是说最后在讨论设计的时候\nJunior的思考方式会比较偏向\n有时候并不一定是说他能力不足\n而是就是经验不够\n那可能他在思考的方式上\n可能就是没有像Senior Engineer\n有这么的同时监督广度和深度这样子\n我们刚刚有稍微聊一下\n就是你说一个Point\n就是你要Impress这个面试官\n假如他觉得他在这个Interview里面\n跟你学到的一点东西\n这个是一个非常好的一个Signal是吧假如他觉得他在这个interview里面跟你学到的连东西对\n这个是一个非常好的一个signal\n基本上等于是一个very strong hire\n代表说你在这方面\n铁定是接触过类似的系统\n要不然你没办法如此的深入浅出\n因为通常当面试官问一个问题的时候\n一般的情况下来说\n他自己也有做过类似的系统\n所以他可以马上就知道说你今天\n提出的option是可行\n还是说单纯就是你在凭空想象\n那当你今天可以再更进一步讲出一些\n他之前没有考虑过的事情\n那他可能就会留下非常深刻的印象\nOK\n那我相信很多人去\n在准备系统设计面试的时候\n我们基本上都是在凭空想象\n没错\n对那我们要怎么样去克服这一关\n就是就算我们今天沒有設計過的東西\n我們要怎麼樣去準備它\n讓它變得好像我們真的有設計過\n其實就算今天沒有實際上做過這個系統\n但是在根本邏輯上\n很多系統其實是share很多類似的一些特性\n最基本的就是你做一些Cropped Service\n就是Cropped就是Create Read Update Delete\n像這種Hotel Booking Service還是說這種Ticketing Service你做一些 CRUD 服務就是 Create, Read, Update, Delete\n像是 Hotel Booking Service\n還是 Ticketing Service\n這種最基本的 CRUD 服務\n在 Business Logic 上可能有點粗\n但是基本上在設計系統上\n就是一個很根本的架構\n就是 Request Response Model\n然後你 Fire Request 給 Server\nServer Return 給 Response\n然後他用 DataPage 去存他的 State\n在 Business Logic Logic上就是一个\n就是一个Request Response Flow\n可是在底层逻辑上\n可能就是有一点粗弱\n譬如说他今天的Traffic是\nRead Heavy还是Write Heavy\n那如果今天他的Traffic Pattern不同的话\n那你可能需要根据这些Pattern去\n将你的系统做一些微调来调整\n来去适应这个\nRead或Write Heavy的Pattern这样子\n那通用的部分就是说\n他们都是一个Request Response Model\n那细节部分就是可能就是需要\n你一些经验跟一些\n你去自己去额外做学习\n就知道说\n我今天在面对一个Write Heavy的系统的时候\n我可以用哪些方式去\n让我的系统更robust\n还是我今天对一些Read Heavy的系统的时候\n我可以用\n我可以用Cache去减轻我Database的负担这种\n这些有些是通用的经验\n虽然说表层的business logic有点不太一样\n但是你只要把它分析过\n在它问题系统背后的本质上\n这些如何去解决系统上的问题\n有些后面这些解法其实这些option大部分有时候是通用的\n对\n其实我以前在准备系统设计面试的时候\n我会常做的事情是\n我会一直去深挖某一个技术细节\n像比如说我在准备那个Material\n跟我讲说可以用Cassandra\n那我当时就觉得说\nOK yeah我了解为什么它背后逻辑可以用Cassandra\n但是具体为什么要用Cassandra\n或是Cassandra到底用在这个情节的时候\n它的Pros and's又是又什麼\n那可能也是同樣是NoSQL\n但是有其他Option\n為什麼我不選擇用其他Option\n就我會一直去問我自己這些問題\n然後我就開始查\nOK Cassandra它背後邏輯到底是什麼\n什麼是Virtual Node\n什麼亂七八糟的東西\n我都會一直進去\n它是一個無底洞\n一直學更多的東西\n但是我覺得這對我的\n就技術的這個廣度\n還有深度其實是有幫助的\n對 因為其實雖然都是Database\n可是它其實有些Database他們背後\n他們想要解決問題是一樣的\n他們只是採取不同的approach\n那我覺得這種反覆問自己問題\n為什麼要這個為什麼要這個步驟\n其實也是面試的時候常常會碰到的\n就是你需要跟面試官去解釋說\n我今天為什麼要這個option\n因為其實很多時候\n同樣一個問題不是只有一个option能用\n还是说其实option A跟option B都可以work\n但是你只要可以去justify\n为什么你要用option A\n然后而且你这个justification\n是可以去meet requirement\n那这样也就够了\n那这也是面试官所想要听到\n他并不是想要听到说\n我今天这个系统就只有一个标准答案\n那我这边database一定要用SQL或nonSQL\n还是说我今天这边一定要加Cash之类的\n就是你必须要去Justify your decision\n你之前那个影片讲的就是\nAlways start from simple\n就是因为当你今天\n你要多加一个Diagram\n多加一个Box在你的Diagram\n同样也是增加你这个系统的复杂度\n那背后也隐含到说\n我今天这个系统要上线\n我要维护它也是另外一个成本\n包含金钱的成本跟人力的成本\n所以你今天让这个系统變得更複雜\n你就必須要同時去justify說\n為什麼有這個必要性\n讓系統變得更複雜\n然後同時把背後的原因解釋給面試官\n然後取得他的反應\n那這都是系統設計實際上在考的地方\n嗯 對 對啊\n我記得我當時面的比較好的一些\n就是我在跟面試官溝通的時候\n是我一直跟面試官說\n在這個情況下我們有幾個option可以做\n然後可能這個是option A\n然後這個是option B\n然後我個人比較prefer option A\n因為什麼什麼\n然後option B也是OK\n但是假如今天這個沒有那麼重要\n我們可能就不會選擇option B\n對我會這樣去drive那個conversation\n然後這種通常我得到的feedback\n都是還滿不錯的\n對通常就回應剛剛所說的就是你如果會去主動去drive那個conversation然後這種通常我得到的feedback都是還蠻不錯的對通常就回應剛剛所說的\n就是你如果會去主動去drive這個過程\n那就是一個很強的senior的signal\n很強的一個senior engineer的signal\n對那比起說可能不是這麼資深的人\n他們可能就會說我們這邊就先用這個\n然後當面試官追問他原因的時候\n他可能回答的理由可能並不是很強的\n跟他的requirement太在一起那這樣面試官就可能不會被那麼強的跟他的requirementtied在一起\n那這樣面子官就可能不會被那麼強的說服\n然後就不會給strong hire這樣\n好那就像我們聊到的\n接下來軟體工程師的發展呢\n會專注在幫公司解決問題跟痛點\n還有我們覺得能夠真正stand out的工程師呢\n是需要有一個product mindset的\n所以我跟博爾呢\n希望可以透過我們在矽谷超過十年的工作經驗\n帶著大家變成那個能夠真正解決問題\n而不是只會寫code的軟體工程師\n所以我們才會創立這個現代系統設計實戰營\n除了幫助大家能夠在面試的時候拿到offer之外\n希望可以增加你對整體系統設計的架構理解能力\n還有實際去執行這個設計的能力\n我覺得實際執行這個也非常非常的重要\n所以說在我們的實戰引裡面講到的\n所有的設計應用都是我們現在平常會用到的APP\n像是比如說設計這個地震警報系統\n或者是說如何設計一個AI的Support Agent\n還有這個像是如何設計LOM的Inference API\n從OpenAI工程師的角度去思考\n這些都是目前最實用\n而且我們覺得軟體工程師都需要有的最基础的概念,重点是\n当你有了这些概念之后呢,你\n遇到一个新的问题,一个你从来没有\n见过的问题,你还是可以融会\n贯通的,以第一性原理去思考\n用正确的方向去思考怎么去解决\n这个问题,那除了这些系统\n设计之外呢,我们的实战营还包含\n有live,直播的部分,带着大家\n一起去实际做一些project\n像比如说怎么用RAC跟promptpt Engineering去搭建一個AI chatbot\n一個AI聊天機器人\n或者是說我們會在裡面做一個cohort\n教你怎麼去搭建一個屬於你自己的AI機器人\n來專門回覆一些大家對你的疑問\n那這個就是一個很好的side project\n你可以放在你的履歷上面\n你在interview的時候也可以去講\n那除了這個之外呢\n我們也會在Live裡面去討論更深度的系統設計需求\n像比如說當你在設計特斯拉的Robotex App的時候\n如何去handle一個事故發生之後\n你要怎麼樣去還原真相的一個極端需求\n這些問題呢都非常有趣\n而且可以大幅度的提升\n你怎麼樣用第一性原理去思考並且解決問題的這個能力\n也是我們一直在強調的軟體工程師的真實價值\n那我們實戰營目前的找鳥遊會呢\n是到2月底結束\n也就是說沒剩幾天了\n如果不想錯過的話\n可以到我們的官網\nbuildmode.org去看一下\n而且如果你來我們Discord上面可以看到\n我們有很多現在實戰營的同學\n是去年已經參加過\n我跟Hank那個Coding實戰營的同學\n他們在去年是真的有學到很多東西\n而且應該是覺得悟草所知才會在今年再繼續報名我們的現代系統設計實戰營的同學他們在去年是真的有學到很多東西而且應該是覺得物超所值\n才會在今年再繼續報名我們的\n現代系統設計實戰營\n然後這次也是一樣\n我們的實戰營全部都是採用小班制\n所以說跟去年一樣\n如果額滿的話\n我們也會把這個銷售窗口給關掉\n因為我們要確保每一個學員的學習品質\n所以說在今年想要好好投資自己的同學\n也絕對不要錯過了\n那如何去區分Senior到Staff\n我觉得Senior到Staff最大的差别是\nSenior的话你要有一定的广度\nStaff的话你必须要在某一些领域\n你有足够的深度\n就是你的Expert\n要有足够的Expertise\n就像我刚刚讲到的\n你今天在讨论这些Option的时候\n你能够更去深入浅出的说\n为什么我要做这个\n然后因为它背后的原理是什么\n还是说你今天在讨论一个\n讨论说要采用Technology A\n或Technology B的时候\n你可以去用\n一般Senior Engineer\n不会想到的角度去讨论事情\n譬如说\n这个背后隐含的Cost是什么\n因为我用过\n对\n那这些东西\n很多时候是对方的面试官\n未必也知道的东西\n那假设你今天\n可以把这些东西端出来\n然后让对方面试官可以耳目一新\n那這就是一個很強的staff signal\n就是你是一個特定領域的domain expertise\n而且在面試的時候可以表現得出來說\n我知道我自己在做什麼\n然後我今天有辦法把這個東西\n說服leadership說為什麼我們要這麼做\n那就是一個很強的staff signal\n那對於比較初學者\n可能大學剛畢業或是可能剛工作一兩年這樣子的同學就是一個很強的指示嗯 明白那對於比較初學者\n可能大學剛畢業\n或是可能剛工作一兩年\n這樣子的同學\n如果要去做面試的話\n在準備上面有沒有什麼建議\n這個有點困難\n因為怎麼講\n老實說\n如果你沒有實際上去做過一個\n大規模的分散式\n就是一個把東西Deport上線的話\n其實你對於一些細節\n都只能去凭空想像\n意思也不是说我们这样就不要去准备\n就是随便就是凭空想像\n网络上也是有很多material可以去学习\n然后你可以试着去\n现在AI的工具也很发达\n现在好处是说你有很多工具是accessible\n比如说公有云还有AI tool\n所以可以试着去搭建一个服务利用现有的公有云的试着去搭建一个服务\n利用现有的公有云的一些Tool去搭建一个服务\n然后让它上线去\n让它上线然后有使用\n这是一个end-to-end experience\n在使用公有云的时候\n你去了解说它这个Tool背后的特性是什么\n比如说今天像Amazon、Google跟Microsoft\n他们都比如说对Key Value Store\n他们都有类似的Counterpart\n那就可以了解說\n為什麼這三個都會有這種東西\n那它背後的原因是什麼\n那它所適用的情境是什麼\n當你在玩的時候\n你就去讀那個文檔\n然後就可以理解\n那現在有AI又更容易\n你就可以用AI去Summarize它的文檔\n然後它所適用的情境\n那這些所學到的知識\n都可以利用在世界上的Design\n就像我們剛剛講的就是\n當你今天在討論說你的項要採用什麼東西的時候\n你就可以有一個很好的理由去說服面試官\n你在實際上去念文檔、去搭系統所學到的經驗\n都是可以拿來去用在設計上\n要上線一個東西其實並不困難\n因為你今天有個網頁\n你要想要去逗一個Key Value Store進來\n就是點幾下去Configure就完成了\n接下來就是你要付他的錢\n這樣子\n這個其實在一般準備面試的Material比較早講\n因為面試的時候其實你跟面試官的Chemistry很重要\n比如說你今天設計一個東西\n然後他在追問一些Follow up question\n他其實是想要聽到一些東西的\n你要知道說他問這個問題背後想要聽到什麼東西\n那你就根據他的問題去 frame 一個合理的回答\n然後讓他聽到他想要的東西\n舉個例子來說\n今天可能會追問說為什麼你這邊要這樣子設計\n你可能有想到其他 Option 的時候\n你這個時候就可以把它提出來\n因為你可能在畫圖的時候沒有想到\n那你這個時候就可以提出來說\n其實我想到 Option A 跟 B\n但是我最後決定用這個ion并且直接画上来\n是因为说option A可能对于这个系统\n在scale up的时候会有问题\noption B可能会比较容易在这种\ntraffic pattern去scale up\n这个的话就是可能面试官想听到\n他可能不是想要听到一个亿元的答案\n他想听到一个二元或多元的答案\n这样子\n对我觉得你刚讲那个跟面试官\n那个chemistry很重要\n然后其实也是溝通啦\n雖然說我認為語言在這裡\n沒有到非常非常重\n就英語其實夠用就可以了\n對\n但是我覺得在系統設計的時候\n我自己會認為\n對於英語的這個bar\n我會希望高一點\n應該說我也不會去說\n喔他文法不夠\n他講 咬字不清楚\n但是至少我們這是一個互相work的一個session\n對那我會覺得說那我以後要跟這個人工作\n我能不能聽得懂他在講什麼\n我能不能告訴他我的想法\n然後他也能接受我的想法\n對我覺得這點是很重要的\n所以這個就是我覺得就是communication skill\n我覺得在面試的時候你就是要表現出\n怎麼講有一個自信的氣場\n但是同樣是一個good lesson\n就是你在present你的design的時候\n你如果沒有自信的話\n有可能對方就可能沒辦法\n完全聽得到你在講什麼\n因為可能說了實話聲音就會變小聲\n所以你要很有自信的說\n你為什麼要這麼做\n可是當你今天面試官表現一些質疑的時候\n你同時又是一個很好listener\n可以面對質疑\n然後適時的做出調整這樣子\n我覺得最後我會建議\n尤其是在\nsystem design 这一轮的准备\n后期的时候\n大家尽量去做 mark interview\n最好是跟厉害的人啦\n最好是跟有经验的\n有经验的人\n有当过面试官\n当过面试官的人\n有经验的人\n然后知道他在做什么的人\n所以我觉得这种人\n他可以给你很多 pointer\n然后其实\n我觉得有 mark 跟没有 mark\n是差非常非常多\n对\n当然也有\n就找不到的人可以 mark interview那你就直接去直接非常多當然也有找不到人可以Mock interview\n那你就直接去interview也算是一個Mock interview\n只是你沒辦法拿到feedback\n對我覺得Mock interview最大優點是說你可以獲得feedback\n因為你通常去正式的公司面試完\n他們大部分時候是不會給你一個具體的feedback\n所以你不知道說你哪邊還可以再加強\n那Mock interview尤其是你找一個experienced interviewer的話\n他可以立刻给你\n一些Constructive的Feedback\n那你就可以\n针对一些Feedback\n去再做加强\n那这种东西就是\n一回生二回首嘛\n就是优点就是\n你知道吗\n可以再加强\n那你就可以针对你\n不足的地方再去做加强\n那总比说\n你同样的事情\n做了一百次\n可是你不知道\n你哪边做不好\n所以你进步的幅度\n就是有限这样\n而且我觉得\nSystem Design Interview\n的这个模式\n是一直以来都差不多\n就是没有什么\n太大的变化\n就从四年前\n我在讲录那支影片的时候\n到现在\n其实还是差不多\n刚看我影片的时候\n你有觉得就是\n其实还是relevant\n其实到现在\n都还是很适用\n我是一直觉得\n是一个很值得投资的一个\n应该说\n如果你认真想要在career\n在你的tech career上面\n繼續前進繼續advance的話\n我覺得生產設計是必要的\n以前是對於可能比較senior level的人來說是必要的\n但現在是基本上你不管在大學\n或是你可能剛畢業建議啦\n開始做這方面的準備\n我覺得生產設計的話就是像我們另外一個影片提到\n就是它可以根本去測驗你的problem solving skills\n除此之外他可以考驗你的communication\n跟collaborative skills\n這個都是在實際工作上\n怎麼講 比單純你coding很快又流利\n還要更重要一些特質\n就比較全面一點\n其實透過實戰的這一輪面試\n我就可以很清楚的看到這個人\n他的level到底在哪裡\n因為coding其實\n現在AI拓那麼多\n然後就是用AI去作弊的話\n我當然是現在也看得出來\n但是我覺得實身Design是基本上\n不太可能用AI作弊的\n因為現在用AI你下prompt\n除非你prompt下得很精準很精準\n但是我覺得就是你要multiple prompts\n慢慢去把它給\n把那個solution給拼起來\n對我覺得很難是一個prompt就可能也可以但就是你要打很久所以 prompts慢慢去把它給把那個solution給拼起來\n我覺得很難是一個prompt就\n可能也可以\n但就是你要打很久\n所以我覺得這不太容易作弊\n基本上你現在如果要用AI tool\n去做些商品商業的interview\n首先你要ask the right questions\n可是如果你沒有經驗的話\n你很難去ask the right question\n你也很難去判斷說\n今天AI給你的solution是不是真的\n就是make sense\n其實我有自己在练习的时候\n也有用过AI tool\n但是很多时候我还是必须要\nask the right question去引导他\n就是我已经有一定的知识面\n但是我只是在细节上\n我想要知道说这细节上\n我不知道的东西把它补足\n那这种时候去用AI tool就很方便\n因为我知道说\n我现在缺了什么东西\n那我具体上我要如何去问AI\n去套出说我现在想要补足的是什么东西\n当你今天知识面不够的话\n比如说你完全不知道\n这系统是怎么去开始\nAI可能会给你一个非常detail\n非常隆重的答案\n可是你不知道说\n我该如何从这边去extract出\n一个合理的high level的solution\n用在system design interview上\n根据你之前的经验你在Google Meta Stripe这些大公司全都待过一個合理的 High Level 的 Solution用在 System Design Interview 上嗯嗯嗯\n那根據你之前的經驗\n你在 Google Meta\nStripe 這些大公司全都待過\nOpenAI 也待過\n你認為 Interesting 的\nSystem Design 的面試經驗\n面試經驗嗎\n對\n就因為我記得你跟我講說\n你之前面那個\nOnTropic 還是哪一家公司\n然後他考的題目是\n你是完全沒有任何信心會做好\n啊然後最後其實做得還不錯\n其實我也有點忘記\n我記得\n我不曉得他現在還問是不是問一樣問題\n可是就是類似於說\n因為現在GPU是稀缺資源\n所以那一個System Design Interview\n就圍繞著說\n你現在就只有這幾個GPU\n然後你有多少個Traffic\n你要如何合理的去分配這些Traffic\n去最大化使用这些GPU\n其实这个我是完全没做过这个题目\n只是就是根本的从First principle出发\n就是我的目标是要合理最大化使用这GPU\n也就是说可能在一些尖峰的时刻\n我可以去Even这些Traffic\n到稍微没有那么闲置的时候\n让一些Low priority Traffic去Shift到\n不是那么尖峰的时刻去做Async Process\n那就是背后我想要做的事情\n那再根據這一個我想要做的Solution\n我再去做一些紙上的計算\n去計算說我要如何分配這些Traffic\n然後提出一個合理的Scheduling的Solution\n當然細節上我有點忘記\n但大致上大概是這樣\n可是其實想要討論的背後就是說\n這些其實是從我平常在工作上碰到一些經驗\n去套用在這個問題上面\n那很多時候就是你沒有實際上去真的做過\n你其實很難去做這個聯想\n但當你有過了以後你就可以把同樣的philosophy去套用在很多問題上\n那細節部分就是剩下就是去flesh out the details\n我覺得有一點你剛剛講的很好的是first principle thinking\n就是第一性原理去思考\n性有面试确实是有\n大概几道题是经典题\n但是你有可能会遇到面试官\n是不考经典题的\n他就不按牌理出牌\n他就是考一些很特别的一些case\n可能是他们自己team遇到的问题\n或什么之类的\n我自己个人今天是\n遇到这种题的时候\n第一步你就是先不要紧张\n虽然你完全没有看过\n你也不知道他在说什么\n我当时的approach就是\n我先用第一性原理去思考\n因为这个东西可能或许看起来是\n包装起来是一个很复杂\n或是甚至是没有看过\n但其实底层逻辑\n他想要考你的东西其实差不多的\n对因为其实一个面试就是一个小时\n所以他不可能今天\n让你设计一个非常复杂\n然后从深入浅出\n每一个细节都解释得很清楚\n如果去drive interview你之后\n像你那个影片有讲到就是\n一开始去澄清这个requirement是最重要的地方\n因为requirement就可以set out你这个问题的scope\n需要做到什么程度\n那他今天一开始可能丢给你一个很抽象的东西\n那这东西可能需要里面很多feature\n比如他今天丢给你说我们要设计一个YouTube\n那YouTube feature都要爆炸\n你有可以看影片你可以上传影片\n你可以留comment对不对\n那他可能\n那你当然这个时候\n就是要跟他clarify requirement\n就是说我们实际上到底是要\n在这个问题是想要去做\n是什么Feature出来\n那有时候他就是\n大部分时候他就是要你去实现一个\n最核心的一个Feature\n那你跟他确定这个以后再往下\n就是有一些像Top-Down Approach\n我们先确立我们的Scope\n然后从那个Scope再往下\n我们开始去做一个High-Level Design\n那High-Level Design也不需要做太详细\n就是说我们需要\n我们为了做这件事情\n我们需要有一个\n有几个High-Level的Abstraction\n就是这个Black Box做什么\n这个Black Box做什么\n然后你有一个End-to-End的Data Flow出来了以后\n去满足那Requirement\n之后再去做第一代\n那第一代就是\n你去如何去鑑別說\n這一個人的 seniority level 這樣子\n好那實戰營的連結呢\n我也會放在影片底下資訊欄\n如果你喜歡今天的內容的話\n記得一定要幫我們點個讚\n那我們下次見囉",
+    "segments": [
+      {
+        "time": "00:00",
+        "text": "很多網友有密我說"
+      },
+      {
+        "time": "00:01",
+        "text": "尤其是我之前跟Hank面試的那一集影片之後呢"
+      },
+      {
+        "time": "00:04",
+        "text": "大家有在下面留言說想要看"
+      },
+      {
+        "time": "00:07",
+        "text": "私生Design就是系統設計相關的面試"
+      },
+      {
+        "time": "00:09",
+        "text": "那今天呢剛好特別請Bor來這邊跟大家分享一下"
+      },
+      {
+        "time": "00:12",
+        "text": "因為Bor你自己本身也經歷過非常非常多輪的私生Design面試"
+      },
+      {
+        "time": "00:16",
+        "text": "然後也有拿過很好的成績也有Fail過"
+      },
+      {
+        "time": "00:19",
+        "text": "所以你大概知道面試官想要看什麼"
+      },
+      {
+        "time": "00:21",
+        "text": "然後你平常在幫你們公司招人的時候"
+      },
+      {
+        "time": "00:24",
+        "text": "你也會做很多面試官想要看什麼然後你平常在幫你們公司招人的時候你也會做很多面試對吧"
+      },
+      {
+        "time": "00:25",
+        "text": "對"
+      },
+      {
+        "time": "00:25",
+        "text": "其實我在四年前"
+      },
+      {
+        "time": "00:27",
+        "text": "就做過一集關於系統設計的"
+      },
+      {
+        "time": "00:30",
+        "text": "怎麼樣去更好地去掌握"
+      },
+      {
+        "time": "00:32",
+        "text": "那個面試的節奏的一集影片"
+      },
+      {
+        "time": "00:34",
+        "text": "然後我們剛剛有稍微看一下"
+      },
+      {
+        "time": "00:35",
+        "text": "我以為已經updated"
+      },
+      {
+        "time": "00:37",
+        "text": "因為我講的東西很basic"
+      },
+      {
+        "time": "00:38",
+        "text": "它的框架還是可以用在現在的面試"
+      },
+      {
+        "time": "00:41",
+        "text": "那個東西我覺得就是比較基礎的東西"
+      },
+      {
+        "time": "00:43",
+        "text": "那今天請波爾來"
+      },
+      {
+        "time": "00:44",
+        "text": "就想說也可以跟大家分享一下"
+      },
+      {
+        "time": "00:46",
+        "text": "在矽谷这么多年的经验"
+      },
+      {
+        "time": "00:47",
+        "text": "你觉得面试官通常在一轮面试"
+      },
+      {
+        "time": "00:49",
+        "text": "尤其是在比较高级的大公司里面"
+      },
+      {
+        "time": "00:53",
+        "text": "会希望给到强劲的原因是什么"
+      },
+      {
+        "time": "00:55",
+        "text": "基本上你要拿到强劲就是"
+      },
+      {
+        "time": "00:57",
+        "text": "你要在面试的时候表现出"
+      },
+      {
+        "time": "00:59",
+        "text": "超出你现在所面试等级的表现"
+      },
+      {
+        "time": "01:02",
+        "text": "比如说你现在是面试中的等级"
+      },
+      {
+        "time": "01:04",
+        "text": "可是你在面试从头到尾就"
+      },
+      {
+        "time": "01:06",
+        "text": "表现出的signal就是"
+      },
+      {
+        "time": "01:07",
+        "text": "你就是一个senior engineer的signal"
+      },
+      {
+        "time": "01:09",
+        "text": "或者是说"
+      },
+      {
+        "time": "01:10",
+        "text": "你现在面试一个senior level的职位"
+      },
+      {
+        "time": "01:13",
+        "text": "你从头到尾表现出"
+      },
+      {
+        "time": "01:14",
+        "text": "你是一个staff level的前置"
+      },
+      {
+        "time": "01:15",
+        "text": "那这样的话"
+      },
+      {
+        "time": "01:16",
+        "text": "面试官就会很impressed"
+      },
+      {
+        "time": "01:17",
+        "text": "就会给你strong hire这样子"
+      },
+      {
+        "time": "01:19",
+        "text": "那更bonus point就是说"
+      },
+      {
+        "time": "01:20",
+        "text": "假设你今天够资深"
+      },
+      {
+        "time": "01:21",
+        "text": "你能够在面试的时候讨论的时候"
+      },
+      {
+        "time": "01:24",
+        "text": "同样面试官学到一些新的他不知道的東西"
+      },
+      {
+        "time": "01:27",
+        "text": "那這樣他當然面試完對你都是一些會有非常深刻的印象"
+      },
+      {
+        "time": "01:32",
+        "text": "當然給你損害的機會就會很高"
+      },
+      {
+        "time": "01:34",
+        "text": "這個就讓我聯想到一個問題"
+      },
+      {
+        "time": "01:36",
+        "text": "因為我自己也曾經遇過這樣的事情"
+      },
+      {
+        "time": "01:38",
+        "text": "就是很多時候Recruiter或是那公司的Hiring Manager"
+      },
+      {
+        "time": "01:41",
+        "text": "或是那個跟我接洽的人"
+      },
+      {
+        "time": "01:43",
+        "text": "他會問我說你想要面哪个 level"
+      },
+      {
+        "time": "01:45",
+        "text": "像是我之前在 Meta 的时候"
+      },
+      {
+        "time": "01:47",
+        "text": "他就问我说你要 L5 还是 L6"
+      },
+      {
+        "time": "01:49",
+        "text": "你要面 staff 还是 senior"
+      },
+      {
+        "time": "01:51",
+        "text": "对那这个时候就很 tricky 了"
+      },
+      {
+        "time": "01:53",
+        "text": "我当然是想要拿到 staff 的 level"
+      },
+      {
+        "time": "01:56",
+        "text": "但是呢我如果去面 staff 的话"
+      },
+      {
+        "time": "01:58",
+        "text": "我可能比较容易 fail"
+      },
+      {
+        "time": "02:00",
+        "text": "对然后我面 senior 的话我成功的机率比较大"
+      },
+      {
+        "time": "02:03",
+        "text": "因为我可能更容易拿到双孩那在这样的下,你会建议大家去怎么做选择?"
+      },
+      {
+        "time": "02:08",
+        "text": "嗯,这是个很好问题"
+      },
+      {
+        "time": "02:10",
+        "text": "因为我在你问我的时候,当下我做了一些思考"
+      },
+      {
+        "time": "02:13",
+        "text": "我觉得如果你今天有这一个option的话"
+      },
+      {
+        "time": "02:16",
+        "text": "我会尽量倾向于选择高level的"
+      },
+      {
+        "time": "02:19",
+        "text": "因为高level的话,你除了没上"
+      },
+      {
+        "time": "02:22",
+        "text": "通常还有一个option是,他会给你downlevel"
+      },
+      {
+        "time": "02:24",
+        "text": "但如果你今天,比如说你面试Staff他觉得,欸,你面试还ok因为高level的话你除了没上通常还有一个option是他会给你down level"
+      },
+      {
+        "time": "02:25",
+        "text": "但如果你今天比如说你面的staff"
+      },
+      {
+        "time": "02:27",
+        "text": "他觉得你面试还ok"
+      },
+      {
+        "time": "02:29",
+        "text": "但是有些东西我觉得你可能fall short"
+      },
+      {
+        "time": "02:31",
+        "text": "那我就给你senior level这样子"
+      },
+      {
+        "time": "02:33",
+        "text": "可是当你今天面senior level"
+      },
+      {
+        "time": "02:35",
+        "text": "你如果表现的没有说非常到达预期"
+      },
+      {
+        "time": "02:38",
+        "text": "那他可能就直接给你fail掉"
+      },
+      {
+        "time": "02:40",
+        "text": "这是一个因子"
+      },
+      {
+        "time": "02:41",
+        "text": "然后另外一个就是说"
+      },
+      {
+        "time": "02:43",
+        "text": "你今天即使在senior Level拿到Strong Hire"
+      },
+      {
+        "time": "02:45",
+        "text": "他也未必会给你Staff Level Package"
+      },
+      {
+        "time": "02:47",
+        "text": "但是如果你今天是Staff Level"
+      },
+      {
+        "time": "02:49",
+        "text": "你是一个OK Hire"
+      },
+      {
+        "time": "02:51",
+        "text": "但他给你的package"
+      },
+      {
+        "time": "02:52",
+        "text": "绝对会比你在Senior Level"
+      },
+      {
+        "time": "02:53",
+        "text": "拿到Strong Hire Package还要高"
+      },
+      {
+        "time": "02:55",
+        "text": "因为Staff Level跟Senior Level的Ban"
+      },
+      {
+        "time": "02:57",
+        "text": "就不一样了"
+      },
+      {
+        "time": "02:58",
+        "text": "所以你今天Senior Level的Ban"
+      },
+      {
+        "time": "02:59",
+        "text": "你Senior Level拿到再高的Offer"
+      },
+      {
+        "time": "03:01",
+        "text": "有可能就是Staff Level"
+      },
+      {
+        "time": "03:02",
+        "text": "Below Average的Offer"
+      },
+      {
+        "time": "03:04",
+        "text": "其实我们今天要特别针对这个去深入讨论"
+      },
+      {
+        "time": "03:06",
+        "text": "有一个原因是现在尤其现在"
+      },
+      {
+        "time": "03:09",
+        "text": "大家也知道AI发展很快"
+      },
+      {
+        "time": "03:11",
+        "text": "然后其实尤其是我们现在学的东西也非常非常的快"
+      },
+      {
+        "time": "03:13",
+        "text": "那我自己是感觉这一两年来"
+      },
+      {
+        "time": "03:16",
+        "text": "整个tech不管是software engineer还是"
+      },
+      {
+        "time": "03:18",
+        "text": "只要你做tech它的bar都会变得很高"
+      },
+      {
+        "time": "03:20",
+        "text": "那我们在讨论software engineer"
+      },
+      {
+        "time": "03:23",
+        "text": "这个工作的面试的过程"
+      },
+      {
+        "time": "03:25",
+        "text": "其实我不知道"
+      },
+      {
+        "time": "03:26",
+        "text": "你自己有没有这样"
+      },
+      {
+        "time": "03:27",
+        "text": "去提升你们公司"
+      },
+      {
+        "time": "03:28",
+        "text": "或者你在"
+      },
+      {
+        "time": "03:29",
+        "text": "hiring人的bar"
+      },
+      {
+        "time": "03:29",
+        "text": "但是我是感觉出来"
+      },
+      {
+        "time": "03:31",
+        "text": "就是确实是"
+      },
+      {
+        "time": "03:32",
+        "text": "就我自己在帮我们公司"
+      },
+      {
+        "time": "03:33",
+        "text": "hiring人的时候"
+      },
+      {
+        "time": "03:34",
+        "text": "我们是有在"
+      },
+      {
+        "time": "03:35",
+        "text": "让这个process"
+      },
+      {
+        "time": "03:37",
+        "text": "变得更难一点"
+      },
+      {
+        "time": "03:38",
+        "text": "要是你的基本的lead code"
+      },
+      {
+        "time": "03:39",
+        "text": "或是基本的coding"
+      },
+      {
+        "time": "03:40",
+        "text": "algorithm"
+      },
+      {
+        "time": "03:40",
+        "text": "datastructure"
+      },
+      {
+        "time": "03:41",
+        "text": "你都没有熟悉的话"
+      },
+      {
+        "time": "03:42",
+        "text": "那我不可能会考虑你"
+      },
+      {
+        "time": "03:43",
+        "text": "然后师生design也是就是以前呢junior L3 L 4的人我们是不可能會考慮然後資深Design也是"
+      },
+      {
+        "time": "03:45",
+        "text": "就是以前呢"
+      },
+      {
+        "time": "03:46",
+        "text": "Junior L3 L4的人"
+      },
+      {
+        "time": "03:48",
+        "text": "我們是不可能會面對他的資深Design"
+      },
+      {
+        "time": "03:49",
+        "text": "但現在呢很多公司會開始考"
+      },
+      {
+        "time": "03:52",
+        "text": "對那可能Bar不會那麼高"
+      },
+      {
+        "time": "03:54",
+        "text": "但是相對來講也是會有這個這一關在裡面"
+      },
+      {
+        "time": "03:57",
+        "text": "對你們有類似這樣子嗎"
+      },
+      {
+        "time": "03:59",
+        "text": "我覺得我們沒有刻意去提高Bar什麼"
+      },
+      {
+        "time": "04:02",
+        "text": "但是我覺得是這個是在不知不覺間"
+      },
+      {
+        "time": "04:04",
+        "text": "你的Bar就提升了"
+      },
+      {
+        "time": "04:05",
+        "text": "因為現在這些知識變得太 Accessible"
+      },
+      {
+        "time": "04:08",
+        "text": "就像以前立刻沒有這麼多題"
+      },
+      {
+        "time": "04:10",
+        "text": "那現在有這麼多題"
+      },
+      {
+        "time": "04:11",
+        "text": "變一些以前的 Medium 題現在都變 Easy 題了"
+      },
+      {
+        "time": "04:14",
+        "text": "那同樣 System Design"
+      },
+      {
+        "time": "04:15",
+        "text": "可能這些線上學習的 Material 以前沒有這麼普及"
+      },
+      {
+        "time": "04:18",
+        "text": "那現在越來越多這種 Material"
+      },
+      {
+        "time": "04:20",
+        "text": "所以大家對於 System Design"
+      },
+      {
+        "time": "04:22",
+        "text": "Interview 的一些問題也有一些概念"
+      },
+      {
+        "time": "04:24",
+        "text": "所以變成說說大家的 Calibaliber同時提高的情況下"
+      },
+      {
+        "time": "04:27",
+        "text": "你要脫穎而出就變成說你必須要Raise your Bar even higher"
+      },
+      {
+        "time": "04:31",
+        "text": "就是你要在其他Candidate脫穎而出的話"
+      },
+      {
+        "time": "04:33",
+        "text": "你必須要表現出更高level的表現才有辦法"
+      },
+      {
+        "time": "04:37",
+        "text": "那在身為面試官的話其實沒有特別去說提高Bar"
+      },
+      {
+        "time": "04:40",
+        "text": "可是就是一個 都是一個相對的嘛"
+      },
+      {
+        "time": "04:42",
+        "text": "就是當今天大家平均的Bar升高"
+      },
+      {
+        "time": "04:44",
+        "text": "就變成說你要再升到更高你才有辦法脫穎而出去說提高吧可是就是一個這是一個都是一個相對的嘛就是當今天大家平均的把身高"
+      },
+      {
+        "time": "04:45",
+        "text": "就變成說你要再升到更高"
+      },
+      {
+        "time": "04:46",
+        "text": "你才有辦法脫穎而出"
+      },
+      {
+        "time": "04:47",
+        "text": "嗯"
+      },
+      {
+        "time": "04:48",
+        "text": "對那你是怎麼去評判這個人"
+      },
+      {
+        "time": "04:50",
+        "text": "他是屬於比較Junior"
+      },
+      {
+        "time": "04:52",
+        "text": "比較Mid level"
+      },
+      {
+        "time": "04:53",
+        "text": "比較Senior"
+      },
+      {
+        "time": "04:54",
+        "text": "就以System Design的Interview角度去做這件事情"
+      },
+      {
+        "time": "04:58",
+        "text": "Junior跟Senior level最大的差別就是"
+      },
+      {
+        "time": "05:00",
+        "text": "Senior level的話"
+      },
+      {
+        "time": "05:01",
+        "text": "基本會期待說"
+      },
+      {
+        "time": "05:02",
+        "text": "你是在主導這個Interview"
+      },
+      {
+        "time": "05:04",
+        "text": "而不是面試官在在主导interview"
+      },
+      {
+        "time": "05:06",
+        "text": "就今天面试官会更像是你的同事"
+      },
+      {
+        "time": "05:09",
+        "text": "然后你今天你在lead的一个project的时候"
+      },
+      {
+        "time": "05:11",
+        "text": "你会如何去做propose"
+      },
+      {
+        "time": "05:13",
+        "text": "你会根据你的"
+      },
+      {
+        "time": "05:15",
+        "text": "你现在的requirements"
+      },
+      {
+        "time": "05:16",
+        "text": "跟你的你有的工具"
+      },
+      {
+        "time": "05:18",
+        "text": "如何去propose一些option"
+      },
+      {
+        "time": "05:20",
+        "text": "然后跟面试官分析这些option pros and cons"
+      },
+      {
+        "time": "05:23",
+        "text": "然后最后再根据requirements去决定说你要走哪个option这样"
+      },
+      {
+        "time": "05:27",
+        "text": "那对于Junior Engineer来说"
+      },
+      {
+        "time": "05:29",
+        "text": "那可能在面试流程上就更需要面试官的引导"
+      },
+      {
+        "time": "05:32",
+        "text": "就譬如说今天在提出requirement的时候"
+      },
+      {
+        "time": "05:36",
+        "text": "他可能漏掉一些最根本的东西"
+      },
+      {
+        "time": "05:38",
+        "text": "那可能还需要面试官提示"
+      },
+      {
+        "time": "05:39",
+        "text": "还是说最后在讨论设计的时候"
+      },
+      {
+        "time": "05:41",
+        "text": "Junior的思考方式会比较偏向"
+      },
+      {
+        "time": "05:43",
+        "text": "有时候并不一定是说他能力不足"
+      },
+      {
+        "time": "05:45",
+        "text": "而是就是经验不够"
+      },
+      {
+        "time": "05:46",
+        "text": "那可能他在思考的方式上"
+      },
+      {
+        "time": "05:49",
+        "text": "可能就是没有像Senior Engineer"
+      },
+      {
+        "time": "05:51",
+        "text": "有这么的同时监督广度和深度这样子"
+      },
+      {
+        "time": "05:54",
+        "text": "我们刚刚有稍微聊一下"
+      },
+      {
+        "time": "05:56",
+        "text": "就是你说一个Point"
+      },
+      {
+        "time": "05:58",
+        "text": "就是你要Impress这个面试官"
+      },
+      {
+        "time": "06:00",
+        "text": "假如他觉得他在这个Interview里面"
+      },
+      {
+        "time": "06:02",
+        "text": "跟你学到的一点东西"
+      },
+      {
+        "time": "06:04",
+        "text": "这个是一个非常好的一个Signal是吧假如他觉得他在这个interview里面跟你学到的连东西对"
+      },
+      {
+        "time": "06:05",
+        "text": "这个是一个非常好的一个signal"
+      },
+      {
+        "time": "06:07",
+        "text": "基本上等于是一个very strong hire"
+      },
+      {
+        "time": "06:10",
+        "text": "代表说你在这方面"
+      },
+      {
+        "time": "06:12",
+        "text": "铁定是接触过类似的系统"
+      },
+      {
+        "time": "06:14",
+        "text": "要不然你没办法如此的深入浅出"
+      },
+      {
+        "time": "06:16",
+        "text": "因为通常当面试官问一个问题的时候"
+      },
+      {
+        "time": "06:18",
+        "text": "一般的情况下来说"
+      },
+      {
+        "time": "06:19",
+        "text": "他自己也有做过类似的系统"
+      },
+      {
+        "time": "06:21",
+        "text": "所以他可以马上就知道说你今天"
+      },
+      {
+        "time": "06:23",
+        "text": "提出的option是可行"
+      },
+      {
+        "time": "06:25",
+        "text": "还是说单纯就是你在凭空想象"
+      },
+      {
+        "time": "06:28",
+        "text": "那当你今天可以再更进一步讲出一些"
+      },
+      {
+        "time": "06:30",
+        "text": "他之前没有考虑过的事情"
+      },
+      {
+        "time": "06:32",
+        "text": "那他可能就会留下非常深刻的印象"
+      },
+      {
+        "time": "06:34",
+        "text": "OK"
+      },
+      {
+        "time": "06:34",
+        "text": "那我相信很多人去"
+      },
+      {
+        "time": "06:36",
+        "text": "在准备系统设计面试的时候"
+      },
+      {
+        "time": "06:38",
+        "text": "我们基本上都是在凭空想象"
+      },
+      {
+        "time": "06:40",
+        "text": "没错"
+      },
+      {
+        "time": "06:41",
+        "text": "对那我们要怎么样去克服这一关"
+      },
+      {
+        "time": "06:43",
+        "text": "就是就算我们今天沒有設計過的東西"
+      },
+      {
+        "time": "06:45",
+        "text": "我們要怎麼樣去準備它"
+      },
+      {
+        "time": "06:47",
+        "text": "讓它變得好像我們真的有設計過"
+      },
+      {
+        "time": "06:49",
+        "text": "其實就算今天沒有實際上做過這個系統"
+      },
+      {
+        "time": "06:51",
+        "text": "但是在根本邏輯上"
+      },
+      {
+        "time": "06:54",
+        "text": "很多系統其實是share很多類似的一些特性"
+      },
+      {
+        "time": "06:59",
+        "text": "最基本的就是你做一些Cropped Service"
+      },
+      {
+        "time": "07:01",
+        "text": "就是Cropped就是Create Read Update Delete"
+      },
+      {
+        "time": "07:04",
+        "text": "像這種Hotel Booking Service還是說這種Ticketing Service你做一些 CRUD 服務就是 Create, Read, Update, Delete"
+      },
+      {
+        "time": "07:05",
+        "text": "像是 Hotel Booking Service"
+      },
+      {
+        "time": "07:07",
+        "text": "還是 Ticketing Service"
+      },
+      {
+        "time": "07:09",
+        "text": "這種最基本的 CRUD 服務"
+      },
+      {
+        "time": "07:10",
+        "text": "在 Business Logic 上可能有點粗"
+      },
+      {
+        "time": "07:12",
+        "text": "但是基本上在設計系統上"
+      },
+      {
+        "time": "07:14",
+        "text": "就是一個很根本的架構"
+      },
+      {
+        "time": "07:16",
+        "text": "就是 Request Response Model"
+      },
+      {
+        "time": "07:18",
+        "text": "然後你 Fire Request 給 Server"
+      },
+      {
+        "time": "07:20",
+        "text": "Server Return 給 Response"
+      },
+      {
+        "time": "07:21",
+        "text": "然後他用 DataPage 去存他的 State"
+      },
+      {
+        "time": "07:23",
+        "text": "在 Business Logic Logic上就是一个"
+      },
+      {
+        "time": "07:25",
+        "text": "就是一个Request Response Flow"
+      },
+      {
+        "time": "07:26",
+        "text": "可是在底层逻辑上"
+      },
+      {
+        "time": "07:28",
+        "text": "可能就是有一点粗弱"
+      },
+      {
+        "time": "07:29",
+        "text": "譬如说他今天的Traffic是"
+      },
+      {
+        "time": "07:31",
+        "text": "Read Heavy还是Write Heavy"
+      },
+      {
+        "time": "07:32",
+        "text": "那如果今天他的Traffic Pattern不同的话"
+      },
+      {
+        "time": "07:34",
+        "text": "那你可能需要根据这些Pattern去"
+      },
+      {
+        "time": "07:37",
+        "text": "将你的系统做一些微调来调整"
+      },
+      {
+        "time": "07:39",
+        "text": "来去适应这个"
+      },
+      {
+        "time": "07:40",
+        "text": "Read或Write Heavy的Pattern这样子"
+      },
+      {
+        "time": "07:42",
+        "text": "那通用的部分就是说"
+      },
+      {
+        "time": "07:44",
+        "text": "他们都是一个Request Response Model"
+      },
+      {
+        "time": "07:46",
+        "text": "那细节部分就是可能就是需要"
+      },
+      {
+        "time": "07:48",
+        "text": "你一些经验跟一些"
+      },
+      {
+        "time": "07:49",
+        "text": "你去自己去额外做学习"
+      },
+      {
+        "time": "07:51",
+        "text": "就知道说"
+      },
+      {
+        "time": "07:52",
+        "text": "我今天在面对一个Write Heavy的系统的时候"
+      },
+      {
+        "time": "07:54",
+        "text": "我可以用哪些方式去"
+      },
+      {
+        "time": "07:56",
+        "text": "让我的系统更robust"
+      },
+      {
+        "time": "07:58",
+        "text": "还是我今天对一些Read Heavy的系统的时候"
+      },
+      {
+        "time": "07:59",
+        "text": "我可以用"
+      },
+      {
+        "time": "08:01",
+        "text": "我可以用Cache去减轻我Database的负担这种"
+      },
+      {
+        "time": "08:04",
+        "text": "这些有些是通用的经验"
+      },
+      {
+        "time": "08:06",
+        "text": "虽然说表层的business logic有点不太一样"
+      },
+      {
+        "time": "08:09",
+        "text": "但是你只要把它分析过"
+      },
+      {
+        "time": "08:10",
+        "text": "在它问题系统背后的本质上"
+      },
+      {
+        "time": "08:12",
+        "text": "这些如何去解决系统上的问题"
+      },
+      {
+        "time": "08:17",
+        "text": "有些后面这些解法其实这些option大部分有时候是通用的"
+      },
+      {
+        "time": "08:20",
+        "text": "对"
+      },
+      {
+        "time": "08:21",
+        "text": "其实我以前在准备系统设计面试的时候"
+      },
+      {
+        "time": "08:24",
+        "text": "我会常做的事情是"
+      },
+      {
+        "time": "08:26",
+        "text": "我会一直去深挖某一个技术细节"
+      },
+      {
+        "time": "08:29",
+        "text": "像比如说我在准备那个Material"
+      },
+      {
+        "time": "08:32",
+        "text": "跟我讲说可以用Cassandra"
+      },
+      {
+        "time": "08:34",
+        "text": "那我当时就觉得说"
+      },
+      {
+        "time": "08:37",
+        "text": "OK yeah我了解为什么它背后逻辑可以用Cassandra"
+      },
+      {
+        "time": "08:39",
+        "text": "但是具体为什么要用Cassandra"
+      },
+      {
+        "time": "08:41",
+        "text": "或是Cassandra到底用在这个情节的时候"
+      },
+      {
+        "time": "08:44",
+        "text": "它的Pros and's又是又什麼"
+      },
+      {
+        "time": "08:46",
+        "text": "那可能也是同樣是NoSQL"
+      },
+      {
+        "time": "08:47",
+        "text": "但是有其他Option"
+      },
+      {
+        "time": "08:48",
+        "text": "為什麼我不選擇用其他Option"
+      },
+      {
+        "time": "08:50",
+        "text": "就我會一直去問我自己這些問題"
+      },
+      {
+        "time": "08:52",
+        "text": "然後我就開始查"
+      },
+      {
+        "time": "08:53",
+        "text": "OK Cassandra它背後邏輯到底是什麼"
+      },
+      {
+        "time": "08:55",
+        "text": "什麼是Virtual Node"
+      },
+      {
+        "time": "08:56",
+        "text": "什麼亂七八糟的東西"
+      },
+      {
+        "time": "08:57",
+        "text": "我都會一直進去"
+      },
+      {
+        "time": "08:58",
+        "text": "它是一個無底洞"
+      },
+      {
+        "time": "08:59",
+        "text": "一直學更多的東西"
+      },
+      {
+        "time": "09:00",
+        "text": "但是我覺得這對我的"
+      },
+      {
+        "time": "09:02",
+        "text": "就技術的這個廣度"
+      },
+      {
+        "time": "09:03",
+        "text": "還有深度其實是有幫助的"
+      },
+      {
+        "time": "09:05",
+        "text": "對 因為其實雖然都是Database"
+      },
+      {
+        "time": "09:07",
+        "text": "可是它其實有些Database他們背後"
+      },
+      {
+        "time": "09:09",
+        "text": "他們想要解決問題是一樣的"
+      },
+      {
+        "time": "09:11",
+        "text": "他們只是採取不同的approach"
+      },
+      {
+        "time": "09:12",
+        "text": "那我覺得這種反覆問自己問題"
+      },
+      {
+        "time": "09:14",
+        "text": "為什麼要這個為什麼要這個步驟"
+      },
+      {
+        "time": "09:16",
+        "text": "其實也是面試的時候常常會碰到的"
+      },
+      {
+        "time": "09:18",
+        "text": "就是你需要跟面試官去解釋說"
+      },
+      {
+        "time": "09:20",
+        "text": "我今天為什麼要這個option"
+      },
+      {
+        "time": "09:21",
+        "text": "因為其實很多時候"
+      },
+      {
+        "time": "09:23",
+        "text": "同樣一個問題不是只有一个option能用"
+      },
+      {
+        "time": "09:25",
+        "text": "还是说其实option A跟option B都可以work"
+      },
+      {
+        "time": "09:28",
+        "text": "但是你只要可以去justify"
+      },
+      {
+        "time": "09:29",
+        "text": "为什么你要用option A"
+      },
+      {
+        "time": "09:30",
+        "text": "然后而且你这个justification"
+      },
+      {
+        "time": "09:32",
+        "text": "是可以去meet requirement"
+      },
+      {
+        "time": "09:34",
+        "text": "那这样也就够了"
+      },
+      {
+        "time": "09:35",
+        "text": "那这也是面试官所想要听到"
+      },
+      {
+        "time": "09:37",
+        "text": "他并不是想要听到说"
+      },
+      {
+        "time": "09:38",
+        "text": "我今天这个系统就只有一个标准答案"
+      },
+      {
+        "time": "09:40",
+        "text": "那我这边database一定要用SQL或nonSQL"
+      },
+      {
+        "time": "09:43",
+        "text": "还是说我今天这边一定要加Cash之类的"
+      },
+      {
+        "time": "09:46",
+        "text": "就是你必须要去Justify your decision"
+      },
+      {
+        "time": "09:49",
+        "text": "你之前那个影片讲的就是"
+      },
+      {
+        "time": "09:50",
+        "text": "Always start from simple"
+      },
+      {
+        "time": "09:52",
+        "text": "就是因为当你今天"
+      },
+      {
+        "time": "09:53",
+        "text": "你要多加一个Diagram"
+      },
+      {
+        "time": "09:54",
+        "text": "多加一个Box在你的Diagram"
+      },
+      {
+        "time": "09:56",
+        "text": "同样也是增加你这个系统的复杂度"
+      },
+      {
+        "time": "09:58",
+        "text": "那背后也隐含到说"
+      },
+      {
+        "time": "09:59",
+        "text": "我今天这个系统要上线"
+      },
+      {
+        "time": "10:00",
+        "text": "我要维护它也是另外一个成本"
+      },
+      {
+        "time": "10:02",
+        "text": "包含金钱的成本跟人力的成本"
+      },
+      {
+        "time": "10:04",
+        "text": "所以你今天让这个系统變得更複雜"
+      },
+      {
+        "time": "10:06",
+        "text": "你就必須要同時去justify說"
+      },
+      {
+        "time": "10:09",
+        "text": "為什麼有這個必要性"
+      },
+      {
+        "time": "10:11",
+        "text": "讓系統變得更複雜"
+      },
+      {
+        "time": "10:12",
+        "text": "然後同時把背後的原因解釋給面試官"
+      },
+      {
+        "time": "10:14",
+        "text": "然後取得他的反應"
+      },
+      {
+        "time": "10:16",
+        "text": "那這都是系統設計實際上在考的地方"
+      },
+      {
+        "time": "10:19",
+        "text": "嗯 對 對啊"
+      },
+      {
+        "time": "10:20",
+        "text": "我記得我當時面的比較好的一些"
+      },
+      {
+        "time": "10:23",
+        "text": "就是我在跟面試官溝通的時候"
+      },
+      {
+        "time": "10:25",
+        "text": "是我一直跟面試官說"
+      },
+      {
+        "time": "10:27",
+        "text": "在這個情況下我們有幾個option可以做"
+      },
+      {
+        "time": "10:29",
+        "text": "然後可能這個是option A"
+      },
+      {
+        "time": "10:31",
+        "text": "然後這個是option B"
+      },
+      {
+        "time": "10:32",
+        "text": "然後我個人比較prefer option A"
+      },
+      {
+        "time": "10:33",
+        "text": "因為什麼什麼"
+      },
+      {
+        "time": "10:34",
+        "text": "然後option B也是OK"
+      },
+      {
+        "time": "10:36",
+        "text": "但是假如今天這個沒有那麼重要"
+      },
+      {
+        "time": "10:37",
+        "text": "我們可能就不會選擇option B"
+      },
+      {
+        "time": "10:39",
+        "text": "對我會這樣去drive那個conversation"
+      },
+      {
+        "time": "10:41",
+        "text": "然後這種通常我得到的feedback"
+      },
+      {
+        "time": "10:43",
+        "text": "都是還滿不錯的"
+      },
+      {
+        "time": "10:44",
+        "text": "對通常就回應剛剛所說的就是你如果會去主動去drive那個conversation然後這種通常我得到的feedback都是還蠻不錯的對通常就回應剛剛所說的"
+      },
+      {
+        "time": "10:46",
+        "text": "就是你如果會去主動去drive這個過程"
+      },
+      {
+        "time": "10:48",
+        "text": "那就是一個很強的senior的signal"
+      },
+      {
+        "time": "10:50",
+        "text": "很強的一個senior engineer的signal"
+      },
+      {
+        "time": "10:52",
+        "text": "對那比起說可能不是這麼資深的人"
+      },
+      {
+        "time": "10:55",
+        "text": "他們可能就會說我們這邊就先用這個"
+      },
+      {
+        "time": "10:57",
+        "text": "然後當面試官追問他原因的時候"
+      },
+      {
+        "time": "10:59",
+        "text": "他可能回答的理由可能並不是很強的"
+      },
+      {
+        "time": "11:03",
+        "text": "跟他的requirement太在一起那這樣面試官就可能不會被那麼強的跟他的requirementtied在一起"
+      },
+      {
+        "time": "11:05",
+        "text": "那這樣面子官就可能不會被那麼強的說服"
+      },
+      {
+        "time": "11:08",
+        "text": "然後就不會給strong hire這樣"
+      },
+      {
+        "time": "11:09",
+        "text": "好那就像我們聊到的"
+      },
+      {
+        "time": "11:11",
+        "text": "接下來軟體工程師的發展呢"
+      },
+      {
+        "time": "11:13",
+        "text": "會專注在幫公司解決問題跟痛點"
+      },
+      {
+        "time": "11:16",
+        "text": "還有我們覺得能夠真正stand out的工程師呢"
+      },
+      {
+        "time": "11:18",
+        "text": "是需要有一個product mindset的"
+      },
+      {
+        "time": "11:20",
+        "text": "所以我跟博爾呢"
+      },
+      {
+        "time": "11:22",
+        "text": "希望可以透過我們在矽谷超過十年的工作經驗"
+      },
+      {
+        "time": "11:25",
+        "text": "帶著大家變成那個能夠真正解決問題"
+      },
+      {
+        "time": "11:28",
+        "text": "而不是只會寫code的軟體工程師"
+      },
+      {
+        "time": "11:30",
+        "text": "所以我們才會創立這個現代系統設計實戰營"
+      },
+      {
+        "time": "11:33",
+        "text": "除了幫助大家能夠在面試的時候拿到offer之外"
+      },
+      {
+        "time": "11:36",
+        "text": "希望可以增加你對整體系統設計的架構理解能力"
+      },
+      {
+        "time": "11:39",
+        "text": "還有實際去執行這個設計的能力"
+      },
+      {
+        "time": "11:42",
+        "text": "我覺得實際執行這個也非常非常的重要"
+      },
+      {
+        "time": "11:44",
+        "text": "所以說在我們的實戰引裡面講到的"
+      },
+      {
+        "time": "11:46",
+        "text": "所有的設計應用都是我們現在平常會用到的APP"
+      },
+      {
+        "time": "11:49",
+        "text": "像是比如說設計這個地震警報系統"
+      },
+      {
+        "time": "11:51",
+        "text": "或者是說如何設計一個AI的Support Agent"
+      },
+      {
+        "time": "11:54",
+        "text": "還有這個像是如何設計LOM的Inference API"
+      },
+      {
+        "time": "11:58",
+        "text": "從OpenAI工程師的角度去思考"
+      },
+      {
+        "time": "12:00",
+        "text": "這些都是目前最實用"
+      },
+      {
+        "time": "12:02",
+        "text": "而且我們覺得軟體工程師都需要有的最基础的概念,重点是"
+      },
+      {
+        "time": "12:05",
+        "text": "当你有了这些概念之后呢,你"
+      },
+      {
+        "time": "12:07",
+        "text": "遇到一个新的问题,一个你从来没有"
+      },
+      {
+        "time": "12:09",
+        "text": "见过的问题,你还是可以融会"
+      },
+      {
+        "time": "12:11",
+        "text": "贯通的,以第一性原理去思考"
+      },
+      {
+        "time": "12:13",
+        "text": "用正确的方向去思考怎么去解决"
+      },
+      {
+        "time": "12:15",
+        "text": "这个问题,那除了这些系统"
+      },
+      {
+        "time": "12:17",
+        "text": "设计之外呢,我们的实战营还包含"
+      },
+      {
+        "time": "12:19",
+        "text": "有live,直播的部分,带着大家"
+      },
+      {
+        "time": "12:21",
+        "text": "一起去实际做一些project"
+      },
+      {
+        "time": "12:23",
+        "text": "像比如说怎么用RAC跟promptpt Engineering去搭建一個AI chatbot"
+      },
+      {
+        "time": "12:27",
+        "text": "一個AI聊天機器人"
+      },
+      {
+        "time": "12:29",
+        "text": "或者是說我們會在裡面做一個cohort"
+      },
+      {
+        "time": "12:31",
+        "text": "教你怎麼去搭建一個屬於你自己的AI機器人"
+      },
+      {
+        "time": "12:34",
+        "text": "來專門回覆一些大家對你的疑問"
+      },
+      {
+        "time": "12:36",
+        "text": "那這個就是一個很好的side project"
+      },
+      {
+        "time": "12:38",
+        "text": "你可以放在你的履歷上面"
+      },
+      {
+        "time": "12:39",
+        "text": "你在interview的時候也可以去講"
+      },
+      {
+        "time": "12:41",
+        "text": "那除了這個之外呢"
+      },
+      {
+        "time": "12:43",
+        "text": "我們也會在Live裡面去討論更深度的系統設計需求"
+      },
+      {
+        "time": "12:46",
+        "text": "像比如說當你在設計特斯拉的Robotex App的時候"
+      },
+      {
+        "time": "12:49",
+        "text": "如何去handle一個事故發生之後"
+      },
+      {
+        "time": "12:51",
+        "text": "你要怎麼樣去還原真相的一個極端需求"
+      },
+      {
+        "time": "12:54",
+        "text": "這些問題呢都非常有趣"
+      },
+      {
+        "time": "12:56",
+        "text": "而且可以大幅度的提升"
+      },
+      {
+        "time": "12:58",
+        "text": "你怎麼樣用第一性原理去思考並且解決問題的這個能力"
+      },
+      {
+        "time": "13:01",
+        "text": "也是我們一直在強調的軟體工程師的真實價值"
+      },
+      {
+        "time": "13:05",
+        "text": "那我們實戰營目前的找鳥遊會呢"
+      },
+      {
+        "time": "13:07",
+        "text": "是到2月底結束"
+      },
+      {
+        "time": "13:08",
+        "text": "也就是說沒剩幾天了"
+      },
+      {
+        "time": "13:09",
+        "text": "如果不想錯過的話"
+      },
+      {
+        "time": "13:10",
+        "text": "可以到我們的官網"
+      },
+      {
+        "time": "13:11",
+        "text": "buildmode.org去看一下"
+      },
+      {
+        "time": "13:13",
+        "text": "而且如果你來我們Discord上面可以看到"
+      },
+      {
+        "time": "13:15",
+        "text": "我們有很多現在實戰營的同學"
+      },
+      {
+        "time": "13:17",
+        "text": "是去年已經參加過"
+      },
+      {
+        "time": "13:18",
+        "text": "我跟Hank那個Coding實戰營的同學"
+      },
+      {
+        "time": "13:21",
+        "text": "他們在去年是真的有學到很多東西"
+      },
+      {
+        "time": "13:23",
+        "text": "而且應該是覺得悟草所知才會在今年再繼續報名我們的現代系統設計實戰營的同學他們在去年是真的有學到很多東西而且應該是覺得物超所值"
+      },
+      {
+        "time": "13:25",
+        "text": "才會在今年再繼續報名我們的"
+      },
+      {
+        "time": "13:26",
+        "text": "現代系統設計實戰營"
+      },
+      {
+        "time": "13:28",
+        "text": "然後這次也是一樣"
+      },
+      {
+        "time": "13:29",
+        "text": "我們的實戰營全部都是採用小班制"
+      },
+      {
+        "time": "13:32",
+        "text": "所以說跟去年一樣"
+      },
+      {
+        "time": "13:33",
+        "text": "如果額滿的話"
+      },
+      {
+        "time": "13:34",
+        "text": "我們也會把這個銷售窗口給關掉"
+      },
+      {
+        "time": "13:36",
+        "text": "因為我們要確保每一個學員的學習品質"
+      },
+      {
+        "time": "13:39",
+        "text": "所以說在今年想要好好投資自己的同學"
+      },
+      {
+        "time": "13:41",
+        "text": "也絕對不要錯過了"
+      },
+      {
+        "time": "13:43",
+        "text": "那如何去區分Senior到Staff"
+      },
+      {
+        "time": "13:45",
+        "text": "我觉得Senior到Staff最大的差别是"
+      },
+      {
+        "time": "13:47",
+        "text": "Senior的话你要有一定的广度"
+      },
+      {
+        "time": "13:49",
+        "text": "Staff的话你必须要在某一些领域"
+      },
+      {
+        "time": "13:52",
+        "text": "你有足够的深度"
+      },
+      {
+        "time": "13:53",
+        "text": "就是你的Expert"
+      },
+      {
+        "time": "13:54",
+        "text": "要有足够的Expertise"
+      },
+      {
+        "time": "13:55",
+        "text": "就像我刚刚讲到的"
+      },
+      {
+        "time": "13:56",
+        "text": "你今天在讨论这些Option的时候"
+      },
+      {
+        "time": "13:58",
+        "text": "你能够更去深入浅出的说"
+      },
+      {
+        "time": "14:01",
+        "text": "为什么我要做这个"
+      },
+      {
+        "time": "14:02",
+        "text": "然后因为它背后的原理是什么"
+      },
+      {
+        "time": "14:03",
+        "text": "还是说你今天在讨论一个"
+      },
+      {
+        "time": "14:05",
+        "text": "讨论说要采用Technology A"
+      },
+      {
+        "time": "14:07",
+        "text": "或Technology B的时候"
+      },
+      {
+        "time": "14:08",
+        "text": "你可以去用"
+      },
+      {
+        "time": "14:09",
+        "text": "一般Senior Engineer"
+      },
+      {
+        "time": "14:10",
+        "text": "不会想到的角度去讨论事情"
+      },
+      {
+        "time": "14:12",
+        "text": "譬如说"
+      },
+      {
+        "time": "14:13",
+        "text": "这个背后隐含的Cost是什么"
+      },
+      {
+        "time": "14:15",
+        "text": "因为我用过"
+      },
+      {
+        "time": "14:16",
+        "text": "对"
+      },
+      {
+        "time": "14:16",
+        "text": "那这些东西"
+      },
+      {
+        "time": "14:17",
+        "text": "很多时候是对方的面试官"
+      },
+      {
+        "time": "14:20",
+        "text": "未必也知道的东西"
+      },
+      {
+        "time": "14:21",
+        "text": "那假设你今天"
+      },
+      {
+        "time": "14:22",
+        "text": "可以把这些东西端出来"
+      },
+      {
+        "time": "14:23",
+        "text": "然后让对方面试官可以耳目一新"
+      },
+      {
+        "time": "14:25",
+        "text": "那這就是一個很強的staff signal"
+      },
+      {
+        "time": "14:28",
+        "text": "就是你是一個特定領域的domain expertise"
+      },
+      {
+        "time": "14:30",
+        "text": "而且在面試的時候可以表現得出來說"
+      },
+      {
+        "time": "14:34",
+        "text": "我知道我自己在做什麼"
+      },
+      {
+        "time": "14:35",
+        "text": "然後我今天有辦法把這個東西"
+      },
+      {
+        "time": "14:37",
+        "text": "說服leadership說為什麼我們要這麼做"
+      },
+      {
+        "time": "14:39",
+        "text": "那就是一個很強的staff signal"
+      },
+      {
+        "time": "14:42",
+        "text": "那對於比較初學者"
+      },
+      {
+        "time": "14:44",
+        "text": "可能大學剛畢業或是可能剛工作一兩年這樣子的同學就是一個很強的指示嗯 明白那對於比較初學者"
+      },
+      {
+        "time": "14:45",
+        "text": "可能大學剛畢業"
+      },
+      {
+        "time": "14:46",
+        "text": "或是可能剛工作一兩年"
+      },
+      {
+        "time": "14:48",
+        "text": "這樣子的同學"
+      },
+      {
+        "time": "14:49",
+        "text": "如果要去做面試的話"
+      },
+      {
+        "time": "14:51",
+        "text": "在準備上面有沒有什麼建議"
+      },
+      {
+        "time": "14:53",
+        "text": "這個有點困難"
+      },
+      {
+        "time": "14:54",
+        "text": "因為怎麼講"
+      },
+      {
+        "time": "14:55",
+        "text": "老實說"
+      },
+      {
+        "time": "14:56",
+        "text": "如果你沒有實際上去做過一個"
+      },
+      {
+        "time": "14:58",
+        "text": "大規模的分散式"
+      },
+      {
+        "time": "15:00",
+        "text": "就是一個把東西Deport上線的話"
+      },
+      {
+        "time": "15:02",
+        "text": "其實你對於一些細節"
+      },
+      {
+        "time": "15:04",
+        "text": "都只能去凭空想像"
+      },
+      {
+        "time": "15:06",
+        "text": "意思也不是说我们这样就不要去准备"
+      },
+      {
+        "time": "15:08",
+        "text": "就是随便就是凭空想像"
+      },
+      {
+        "time": "15:10",
+        "text": "网络上也是有很多material可以去学习"
+      },
+      {
+        "time": "15:13",
+        "text": "然后你可以试着去"
+      },
+      {
+        "time": "15:15",
+        "text": "现在AI的工具也很发达"
+      },
+      {
+        "time": "15:17",
+        "text": "现在好处是说你有很多工具是accessible"
+      },
+      {
+        "time": "15:20",
+        "text": "比如说公有云还有AI tool"
+      },
+      {
+        "time": "15:24",
+        "text": "所以可以试着去搭建一个服务利用现有的公有云的试着去搭建一个服务"
+      },
+      {
+        "time": "15:26",
+        "text": "利用现有的公有云的一些Tool去搭建一个服务"
+      },
+      {
+        "time": "15:29",
+        "text": "然后让它上线去"
+      },
+      {
+        "time": "15:31",
+        "text": "让它上线然后有使用"
+      },
+      {
+        "time": "15:32",
+        "text": "这是一个end-to-end experience"
+      },
+      {
+        "time": "15:34",
+        "text": "在使用公有云的时候"
+      },
+      {
+        "time": "15:35",
+        "text": "你去了解说它这个Tool背后的特性是什么"
+      },
+      {
+        "time": "15:38",
+        "text": "比如说今天像Amazon、Google跟Microsoft"
+      },
+      {
+        "time": "15:41",
+        "text": "他们都比如说对Key Value Store"
+      },
+      {
+        "time": "15:43",
+        "text": "他们都有类似的Counterpart"
+      },
+      {
+        "time": "15:45",
+        "text": "那就可以了解說"
+      },
+      {
+        "time": "15:46",
+        "text": "為什麼這三個都會有這種東西"
+      },
+      {
+        "time": "15:48",
+        "text": "那它背後的原因是什麼"
+      },
+      {
+        "time": "15:49",
+        "text": "那它所適用的情境是什麼"
+      },
+      {
+        "time": "15:51",
+        "text": "當你在玩的時候"
+      },
+      {
+        "time": "15:53",
+        "text": "你就去讀那個文檔"
+      },
+      {
+        "time": "15:54",
+        "text": "然後就可以理解"
+      },
+      {
+        "time": "15:54",
+        "text": "那現在有AI又更容易"
+      },
+      {
+        "time": "15:55",
+        "text": "你就可以用AI去Summarize它的文檔"
+      },
+      {
+        "time": "15:58",
+        "text": "然後它所適用的情境"
+      },
+      {
+        "time": "16:00",
+        "text": "那這些所學到的知識"
+      },
+      {
+        "time": "16:01",
+        "text": "都可以利用在世界上的Design"
+      },
+      {
+        "time": "16:03",
+        "text": "就像我們剛剛講的就是"
+      },
+      {
+        "time": "16:04",
+        "text": "當你今天在討論說你的項要採用什麼東西的時候"
+      },
+      {
+        "time": "16:07",
+        "text": "你就可以有一個很好的理由去說服面試官"
+      },
+      {
+        "time": "16:10",
+        "text": "你在實際上去念文檔、去搭系統所學到的經驗"
+      },
+      {
+        "time": "16:15",
+        "text": "都是可以拿來去用在設計上"
+      },
+      {
+        "time": "16:18",
+        "text": "要上線一個東西其實並不困難"
+      },
+      {
+        "time": "16:20",
+        "text": "因為你今天有個網頁"
+      },
+      {
+        "time": "16:21",
+        "text": "你要想要去逗一個Key Value Store進來"
+      },
+      {
+        "time": "16:24",
+        "text": "就是點幾下去Configure就完成了"
+      },
+      {
+        "time": "16:26",
+        "text": "接下來就是你要付他的錢"
+      },
+      {
+        "time": "16:28",
+        "text": "這樣子"
+      },
+      {
+        "time": "16:29",
+        "text": "這個其實在一般準備面試的Material比較早講"
+      },
+      {
+        "time": "16:33",
+        "text": "因為面試的時候其實你跟面試官的Chemistry很重要"
+      },
+      {
+        "time": "16:36",
+        "text": "比如說你今天設計一個東西"
+      },
+      {
+        "time": "16:37",
+        "text": "然後他在追問一些Follow up question"
+      },
+      {
+        "time": "16:40",
+        "text": "他其實是想要聽到一些東西的"
+      },
+      {
+        "time": "16:42",
+        "text": "你要知道說他問這個問題背後想要聽到什麼東西"
+      },
+      {
+        "time": "16:45",
+        "text": "那你就根據他的問題去 frame 一個合理的回答"
+      },
+      {
+        "time": "16:49",
+        "text": "然後讓他聽到他想要的東西"
+      },
+      {
+        "time": "16:50",
+        "text": "舉個例子來說"
+      },
+      {
+        "time": "16:51",
+        "text": "今天可能會追問說為什麼你這邊要這樣子設計"
+      },
+      {
+        "time": "16:53",
+        "text": "你可能有想到其他 Option 的時候"
+      },
+      {
+        "time": "16:55",
+        "text": "你這個時候就可以把它提出來"
+      },
+      {
+        "time": "16:56",
+        "text": "因為你可能在畫圖的時候沒有想到"
+      },
+      {
+        "time": "16:58",
+        "text": "那你這個時候就可以提出來說"
+      },
+      {
+        "time": "17:00",
+        "text": "其實我想到 Option A 跟 B"
+      },
+      {
+        "time": "17:01",
+        "text": "但是我最後決定用這個ion并且直接画上来"
+      },
+      {
+        "time": "17:05",
+        "text": "是因为说option A可能对于这个系统"
+      },
+      {
+        "time": "17:08",
+        "text": "在scale up的时候会有问题"
+      },
+      {
+        "time": "17:10",
+        "text": "option B可能会比较容易在这种"
+      },
+      {
+        "time": "17:12",
+        "text": "traffic pattern去scale up"
+      },
+      {
+        "time": "17:14",
+        "text": "这个的话就是可能面试官想听到"
+      },
+      {
+        "time": "17:16",
+        "text": "他可能不是想要听到一个亿元的答案"
+      },
+      {
+        "time": "17:18",
+        "text": "他想听到一个二元或多元的答案"
+      },
+      {
+        "time": "17:21",
+        "text": "这样子"
+      },
+      {
+        "time": "17:21",
+        "text": "对我觉得你刚讲那个跟面试官"
+      },
+      {
+        "time": "17:23",
+        "text": "那个chemistry很重要"
+      },
+      {
+        "time": "17:24",
+        "text": "然后其实也是溝通啦"
+      },
+      {
+        "time": "17:26",
+        "text": "雖然說我認為語言在這裡"
+      },
+      {
+        "time": "17:29",
+        "text": "沒有到非常非常重"
+      },
+      {
+        "time": "17:30",
+        "text": "就英語其實夠用就可以了"
+      },
+      {
+        "time": "17:32",
+        "text": "對"
+      },
+      {
+        "time": "17:32",
+        "text": "但是我覺得在系統設計的時候"
+      },
+      {
+        "time": "17:34",
+        "text": "我自己會認為"
+      },
+      {
+        "time": "17:36",
+        "text": "對於英語的這個bar"
+      },
+      {
+        "time": "17:38",
+        "text": "我會希望高一點"
+      },
+      {
+        "time": "17:39",
+        "text": "應該說我也不會去說"
+      },
+      {
+        "time": "17:41",
+        "text": "喔他文法不夠"
+      },
+      {
+        "time": "17:42",
+        "text": "他講 咬字不清楚"
+      },
+      {
+        "time": "17:43",
+        "text": "但是至少我們這是一個互相work的一個session"
+      },
+      {
+        "time": "17:47",
+        "text": "對那我會覺得說那我以後要跟這個人工作"
+      },
+      {
+        "time": "17:49",
+        "text": "我能不能聽得懂他在講什麼"
+      },
+      {
+        "time": "17:51",
+        "text": "我能不能告訴他我的想法"
+      },
+      {
+        "time": "17:53",
+        "text": "然後他也能接受我的想法"
+      },
+      {
+        "time": "17:54",
+        "text": "對我覺得這點是很重要的"
+      },
+      {
+        "time": "17:56",
+        "text": "所以這個就是我覺得就是communication skill"
+      },
+      {
+        "time": "17:58",
+        "text": "我覺得在面試的時候你就是要表現出"
+      },
+      {
+        "time": "18:01",
+        "text": "怎麼講有一個自信的氣場"
+      },
+      {
+        "time": "18:02",
+        "text": "但是同樣是一個good lesson"
+      },
+      {
+        "time": "18:04",
+        "text": "就是你在present你的design的時候"
+      },
+      {
+        "time": "18:06",
+        "text": "你如果沒有自信的話"
+      },
+      {
+        "time": "18:07",
+        "text": "有可能對方就可能沒辦法"
+      },
+      {
+        "time": "18:09",
+        "text": "完全聽得到你在講什麼"
+      },
+      {
+        "time": "18:11",
+        "text": "因為可能說了實話聲音就會變小聲"
+      },
+      {
+        "time": "18:13",
+        "text": "所以你要很有自信的說"
+      },
+      {
+        "time": "18:14",
+        "text": "你為什麼要這麼做"
+      },
+      {
+        "time": "18:15",
+        "text": "可是當你今天面試官表現一些質疑的時候"
+      },
+      {
+        "time": "18:18",
+        "text": "你同時又是一個很好listener"
+      },
+      {
+        "time": "18:19",
+        "text": "可以面對質疑"
+      },
+      {
+        "time": "18:20",
+        "text": "然後適時的做出調整這樣子"
+      },
+      {
+        "time": "18:23",
+        "text": "我覺得最後我會建議"
+      },
+      {
+        "time": "18:24",
+        "text": "尤其是在"
+      },
+      {
+        "time": "18:25",
+        "text": "system design 这一轮的准备"
+      },
+      {
+        "time": "18:28",
+        "text": "后期的时候"
+      },
+      {
+        "time": "18:29",
+        "text": "大家尽量去做 mark interview"
+      },
+      {
+        "time": "18:31",
+        "text": "最好是跟厉害的人啦"
+      },
+      {
+        "time": "18:32",
+        "text": "最好是跟有经验的"
+      },
+      {
+        "time": "18:33",
+        "text": "有经验的人"
+      },
+      {
+        "time": "18:34",
+        "text": "有当过面试官"
+      },
+      {
+        "time": "18:35",
+        "text": "当过面试官的人"
+      },
+      {
+        "time": "18:35",
+        "text": "有经验的人"
+      },
+      {
+        "time": "18:36",
+        "text": "然后知道他在做什么的人"
+      },
+      {
+        "time": "18:38",
+        "text": "所以我觉得这种人"
+      },
+      {
+        "time": "18:39",
+        "text": "他可以给你很多 pointer"
+      },
+      {
+        "time": "18:40",
+        "text": "然后其实"
+      },
+      {
+        "time": "18:41",
+        "text": "我觉得有 mark 跟没有 mark"
+      },
+      {
+        "time": "18:42",
+        "text": "是差非常非常多"
+      },
+      {
+        "time": "18:43",
+        "text": "对"
+      },
+      {
+        "time": "18:44",
+        "text": "当然也有"
+      },
+      {
+        "time": "18:44",
+        "text": "就找不到的人可以 mark interview那你就直接去直接非常多當然也有找不到人可以Mock interview"
+      },
+      {
+        "time": "18:46",
+        "text": "那你就直接去interview也算是一個Mock interview"
+      },
+      {
+        "time": "18:49",
+        "text": "只是你沒辦法拿到feedback"
+      },
+      {
+        "time": "18:51",
+        "text": "對我覺得Mock interview最大優點是說你可以獲得feedback"
+      },
+      {
+        "time": "18:54",
+        "text": "因為你通常去正式的公司面試完"
+      },
+      {
+        "time": "18:56",
+        "text": "他們大部分時候是不會給你一個具體的feedback"
+      },
+      {
+        "time": "18:59",
+        "text": "所以你不知道說你哪邊還可以再加強"
+      },
+      {
+        "time": "19:01",
+        "text": "那Mock interview尤其是你找一個experienced interviewer的話"
+      },
+      {
+        "time": "19:04",
+        "text": "他可以立刻给你"
+      },
+      {
+        "time": "19:05",
+        "text": "一些Constructive的Feedback"
+      },
+      {
+        "time": "19:07",
+        "text": "那你就可以"
+      },
+      {
+        "time": "19:08",
+        "text": "针对一些Feedback"
+      },
+      {
+        "time": "19:09",
+        "text": "去再做加强"
+      },
+      {
+        "time": "19:10",
+        "text": "那这种东西就是"
+      },
+      {
+        "time": "19:11",
+        "text": "一回生二回首嘛"
+      },
+      {
+        "time": "19:12",
+        "text": "就是优点就是"
+      },
+      {
+        "time": "19:13",
+        "text": "你知道吗"
+      },
+      {
+        "time": "19:13",
+        "text": "可以再加强"
+      },
+      {
+        "time": "19:14",
+        "text": "那你就可以针对你"
+      },
+      {
+        "time": "19:15",
+        "text": "不足的地方再去做加强"
+      },
+      {
+        "time": "19:17",
+        "text": "那总比说"
+      },
+      {
+        "time": "19:18",
+        "text": "你同样的事情"
+      },
+      {
+        "time": "19:18",
+        "text": "做了一百次"
+      },
+      {
+        "time": "19:19",
+        "text": "可是你不知道"
+      },
+      {
+        "time": "19:19",
+        "text": "你哪边做不好"
+      },
+      {
+        "time": "19:20",
+        "text": "所以你进步的幅度"
+      },
+      {
+        "time": "19:22",
+        "text": "就是有限这样"
+      },
+      {
+        "time": "19:23",
+        "text": "而且我觉得"
+      },
+      {
+        "time": "19:24",
+        "text": "System Design Interview"
+      },
+      {
+        "time": "19:25",
+        "text": "的这个模式"
+      },
+      {
+        "time": "19:27",
+        "text": "是一直以来都差不多"
+      },
+      {
+        "time": "19:29",
+        "text": "就是没有什么"
+      },
+      {
+        "time": "19:30",
+        "text": "太大的变化"
+      },
+      {
+        "time": "19:30",
+        "text": "就从四年前"
+      },
+      {
+        "time": "19:32",
+        "text": "我在讲录那支影片的时候"
+      },
+      {
+        "time": "19:33",
+        "text": "到现在"
+      },
+      {
+        "time": "19:34",
+        "text": "其实还是差不多"
+      },
+      {
+        "time": "19:35",
+        "text": "刚看我影片的时候"
+      },
+      {
+        "time": "19:37",
+        "text": "你有觉得就是"
+      },
+      {
+        "time": "19:37",
+        "text": "其实还是relevant"
+      },
+      {
+        "time": "19:38",
+        "text": "其实到现在"
+      },
+      {
+        "time": "19:39",
+        "text": "都还是很适用"
+      },
+      {
+        "time": "19:40",
+        "text": "我是一直觉得"
+      },
+      {
+        "time": "19:41",
+        "text": "是一个很值得投资的一个"
+      },
+      {
+        "time": "19:43",
+        "text": "应该说"
+      },
+      {
+        "time": "19:43",
+        "text": "如果你认真想要在career"
+      },
+      {
+        "time": "19:45",
+        "text": "在你的tech career上面"
+      },
+      {
+        "time": "19:47",
+        "text": "繼續前進繼續advance的話"
+      },
+      {
+        "time": "19:48",
+        "text": "我覺得生產設計是必要的"
+      },
+      {
+        "time": "19:50",
+        "text": "以前是對於可能比較senior level的人來說是必要的"
+      },
+      {
+        "time": "19:54",
+        "text": "但現在是基本上你不管在大學"
+      },
+      {
+        "time": "19:57",
+        "text": "或是你可能剛畢業建議啦"
+      },
+      {
+        "time": "19:59",
+        "text": "開始做這方面的準備"
+      },
+      {
+        "time": "20:00",
+        "text": "我覺得生產設計的話就是像我們另外一個影片提到"
+      },
+      {
+        "time": "20:03",
+        "text": "就是它可以根本去測驗你的problem solving skills"
+      },
+      {
+        "time": "20:07",
+        "text": "除此之外他可以考驗你的communication"
+      },
+      {
+        "time": "20:10",
+        "text": "跟collaborative skills"
+      },
+      {
+        "time": "20:12",
+        "text": "這個都是在實際工作上"
+      },
+      {
+        "time": "20:14",
+        "text": "怎麼講 比單純你coding很快又流利"
+      },
+      {
+        "time": "20:17",
+        "text": "還要更重要一些特質"
+      },
+      {
+        "time": "20:19",
+        "text": "就比較全面一點"
+      },
+      {
+        "time": "20:21",
+        "text": "其實透過實戰的這一輪面試"
+      },
+      {
+        "time": "20:23",
+        "text": "我就可以很清楚的看到這個人"
+      },
+      {
+        "time": "20:25",
+        "text": "他的level到底在哪裡"
+      },
+      {
+        "time": "20:26",
+        "text": "因為coding其實"
+      },
+      {
+        "time": "20:28",
+        "text": "現在AI拓那麼多"
+      },
+      {
+        "time": "20:29",
+        "text": "然後就是用AI去作弊的話"
+      },
+      {
+        "time": "20:31",
+        "text": "我當然是現在也看得出來"
+      },
+      {
+        "time": "20:33",
+        "text": "但是我覺得實身Design是基本上"
+      },
+      {
+        "time": "20:34",
+        "text": "不太可能用AI作弊的"
+      },
+      {
+        "time": "20:36",
+        "text": "因為現在用AI你下prompt"
+      },
+      {
+        "time": "20:37",
+        "text": "除非你prompt下得很精準很精準"
+      },
+      {
+        "time": "20:40",
+        "text": "但是我覺得就是你要multiple prompts"
+      },
+      {
+        "time": "20:42",
+        "text": "慢慢去把它給"
+      },
+      {
+        "time": "20:43",
+        "text": "把那個solution給拼起來"
+      },
+      {
+        "time": "20:44",
+        "text": "對我覺得很難是一個prompt就可能也可以但就是你要打很久所以 prompts慢慢去把它給把那個solution給拼起來"
+      },
+      {
+        "time": "20:45",
+        "text": "我覺得很難是一個prompt就"
+      },
+      {
+        "time": "20:46",
+        "text": "可能也可以"
+      },
+      {
+        "time": "20:47",
+        "text": "但就是你要打很久"
+      },
+      {
+        "time": "20:48",
+        "text": "所以我覺得這不太容易作弊"
+      },
+      {
+        "time": "20:50",
+        "text": "基本上你現在如果要用AI tool"
+      },
+      {
+        "time": "20:51",
+        "text": "去做些商品商業的interview"
+      },
+      {
+        "time": "20:52",
+        "text": "首先你要ask the right questions"
+      },
+      {
+        "time": "20:54",
+        "text": "可是如果你沒有經驗的話"
+      },
+      {
+        "time": "20:56",
+        "text": "你很難去ask the right question"
+      },
+      {
+        "time": "20:58",
+        "text": "你也很難去判斷說"
+      },
+      {
+        "time": "21:00",
+        "text": "今天AI給你的solution是不是真的"
+      },
+      {
+        "time": "21:02",
+        "text": "就是make sense"
+      },
+      {
+        "time": "21:03",
+        "text": "其實我有自己在练习的时候"
+      },
+      {
+        "time": "21:07",
+        "text": "也有用过AI tool"
+      },
+      {
+        "time": "21:08",
+        "text": "但是很多时候我还是必须要"
+      },
+      {
+        "time": "21:09",
+        "text": "ask the right question去引导他"
+      },
+      {
+        "time": "21:11",
+        "text": "就是我已经有一定的知识面"
+      },
+      {
+        "time": "21:13",
+        "text": "但是我只是在细节上"
+      },
+      {
+        "time": "21:15",
+        "text": "我想要知道说这细节上"
+      },
+      {
+        "time": "21:16",
+        "text": "我不知道的东西把它补足"
+      },
+      {
+        "time": "21:18",
+        "text": "那这种时候去用AI tool就很方便"
+      },
+      {
+        "time": "21:19",
+        "text": "因为我知道说"
+      },
+      {
+        "time": "21:20",
+        "text": "我现在缺了什么东西"
+      },
+      {
+        "time": "21:22",
+        "text": "那我具体上我要如何去问AI"
+      },
+      {
+        "time": "21:24",
+        "text": "去套出说我现在想要补足的是什么东西"
+      },
+      {
+        "time": "21:27",
+        "text": "当你今天知识面不够的话"
+      },
+      {
+        "time": "21:30",
+        "text": "比如说你完全不知道"
+      },
+      {
+        "time": "21:31",
+        "text": "这系统是怎么去开始"
+      },
+      {
+        "time": "21:33",
+        "text": "AI可能会给你一个非常detail"
+      },
+      {
+        "time": "21:35",
+        "text": "非常隆重的答案"
+      },
+      {
+        "time": "21:36",
+        "text": "可是你不知道说"
+      },
+      {
+        "time": "21:37",
+        "text": "我该如何从这边去extract出"
+      },
+      {
+        "time": "21:39",
+        "text": "一个合理的high level的solution"
+      },
+      {
+        "time": "21:42",
+        "text": "用在system design interview上"
+      },
+      {
+        "time": "21:43",
+        "text": "根据你之前的经验你在Google Meta Stripe这些大公司全都待过一個合理的 High Level 的 Solution用在 System Design Interview 上嗯嗯嗯"
+      },
+      {
+        "time": "21:45",
+        "text": "那根據你之前的經驗"
+      },
+      {
+        "time": "21:46",
+        "text": "你在 Google Meta"
+      },
+      {
+        "time": "21:48",
+        "text": "Stripe 這些大公司全都待過"
+      },
+      {
+        "time": "21:49",
+        "text": "OpenAI 也待過"
+      },
+      {
+        "time": "21:50",
+        "text": "你認為 Interesting 的"
+      },
+      {
+        "time": "21:52",
+        "text": "System Design 的面試經驗"
+      },
+      {
+        "time": "21:54",
+        "text": "面試經驗嗎"
+      },
+      {
+        "time": "21:55",
+        "text": "對"
+      },
+      {
+        "time": "21:56",
+        "text": "就因為我記得你跟我講說"
+      },
+      {
+        "time": "21:57",
+        "text": "你之前面那個"
+      },
+      {
+        "time": "21:58",
+        "text": "OnTropic 還是哪一家公司"
+      },
+      {
+        "time": "22:00",
+        "text": "然後他考的題目是"
+      },
+      {
+        "time": "22:02",
+        "text": "你是完全沒有任何信心會做好"
+      },
+      {
+        "time": "22:04",
+        "text": "啊然後最後其實做得還不錯"
+      },
+      {
+        "time": "22:06",
+        "text": "其實我也有點忘記"
+      },
+      {
+        "time": "22:08",
+        "text": "我記得"
+      },
+      {
+        "time": "22:09",
+        "text": "我不曉得他現在還問是不是問一樣問題"
+      },
+      {
+        "time": "22:10",
+        "text": "可是就是類似於說"
+      },
+      {
+        "time": "22:12",
+        "text": "因為現在GPU是稀缺資源"
+      },
+      {
+        "time": "22:14",
+        "text": "所以那一個System Design Interview"
+      },
+      {
+        "time": "22:16",
+        "text": "就圍繞著說"
+      },
+      {
+        "time": "22:17",
+        "text": "你現在就只有這幾個GPU"
+      },
+      {
+        "time": "22:19",
+        "text": "然後你有多少個Traffic"
+      },
+      {
+        "time": "22:21",
+        "text": "你要如何合理的去分配這些Traffic"
+      },
+      {
+        "time": "22:24",
+        "text": "去最大化使用这些GPU"
+      },
+      {
+        "time": "22:26",
+        "text": "其实这个我是完全没做过这个题目"
+      },
+      {
+        "time": "22:29",
+        "text": "只是就是根本的从First principle出发"
+      },
+      {
+        "time": "22:31",
+        "text": "就是我的目标是要合理最大化使用这GPU"
+      },
+      {
+        "time": "22:34",
+        "text": "也就是说可能在一些尖峰的时刻"
+      },
+      {
+        "time": "22:36",
+        "text": "我可以去Even这些Traffic"
+      },
+      {
+        "time": "22:37",
+        "text": "到稍微没有那么闲置的时候"
+      },
+      {
+        "time": "22:39",
+        "text": "让一些Low priority Traffic去Shift到"
+      },
+      {
+        "time": "22:41",
+        "text": "不是那么尖峰的时刻去做Async Process"
+      },
+      {
+        "time": "22:43",
+        "text": "那就是背后我想要做的事情"
+      },
+      {
+        "time": "22:45",
+        "text": "那再根據這一個我想要做的Solution"
+      },
+      {
+        "time": "22:48",
+        "text": "我再去做一些紙上的計算"
+      },
+      {
+        "time": "22:49",
+        "text": "去計算說我要如何分配這些Traffic"
+      },
+      {
+        "time": "22:51",
+        "text": "然後提出一個合理的Scheduling的Solution"
+      },
+      {
+        "time": "22:54",
+        "text": "當然細節上我有點忘記"
+      },
+      {
+        "time": "22:56",
+        "text": "但大致上大概是這樣"
+      },
+      {
+        "time": "22:57",
+        "text": "可是其實想要討論的背後就是說"
+      },
+      {
+        "time": "22:59",
+        "text": "這些其實是從我平常在工作上碰到一些經驗"
+      },
+      {
+        "time": "23:02",
+        "text": "去套用在這個問題上面"
+      },
+      {
+        "time": "23:04",
+        "text": "那很多時候就是你沒有實際上去真的做過"
+      },
+      {
+        "time": "23:07",
+        "text": "你其實很難去做這個聯想"
+      },
+      {
+        "time": "23:09",
+        "text": "但當你有過了以後你就可以把同樣的philosophy去套用在很多問題上"
+      },
+      {
+        "time": "23:15",
+        "text": "那細節部分就是剩下就是去flesh out the details"
+      },
+      {
+        "time": "23:19",
+        "text": "我覺得有一點你剛剛講的很好的是first principle thinking"
+      },
+      {
+        "time": "23:23",
+        "text": "就是第一性原理去思考"
+      },
+      {
+        "time": "23:25",
+        "text": "性有面试确实是有"
+      },
+      {
+        "time": "23:26",
+        "text": "大概几道题是经典题"
+      },
+      {
+        "time": "23:28",
+        "text": "但是你有可能会遇到面试官"
+      },
+      {
+        "time": "23:30",
+        "text": "是不考经典题的"
+      },
+      {
+        "time": "23:31",
+        "text": "他就不按牌理出牌"
+      },
+      {
+        "time": "23:32",
+        "text": "他就是考一些很特别的一些case"
+      },
+      {
+        "time": "23:35",
+        "text": "可能是他们自己team遇到的问题"
+      },
+      {
+        "time": "23:37",
+        "text": "或什么之类的"
+      },
+      {
+        "time": "23:38",
+        "text": "我自己个人今天是"
+      },
+      {
+        "time": "23:39",
+        "text": "遇到这种题的时候"
+      },
+      {
+        "time": "23:40",
+        "text": "第一步你就是先不要紧张"
+      },
+      {
+        "time": "23:41",
+        "text": "虽然你完全没有看过"
+      },
+      {
+        "time": "23:42",
+        "text": "你也不知道他在说什么"
+      },
+      {
+        "time": "23:43",
+        "text": "我当时的approach就是"
+      },
+      {
+        "time": "23:44",
+        "text": "我先用第一性原理去思考"
+      },
+      {
+        "time": "23:46",
+        "text": "因为这个东西可能或许看起来是"
+      },
+      {
+        "time": "23:49",
+        "text": "包装起来是一个很复杂"
+      },
+      {
+        "time": "23:50",
+        "text": "或是甚至是没有看过"
+      },
+      {
+        "time": "23:51",
+        "text": "但其实底层逻辑"
+      },
+      {
+        "time": "23:52",
+        "text": "他想要考你的东西其实差不多的"
+      },
+      {
+        "time": "23:55",
+        "text": "对因为其实一个面试就是一个小时"
+      },
+      {
+        "time": "23:57",
+        "text": "所以他不可能今天"
+      },
+      {
+        "time": "23:58",
+        "text": "让你设计一个非常复杂"
+      },
+      {
+        "time": "24:00",
+        "text": "然后从深入浅出"
+      },
+      {
+        "time": "24:01",
+        "text": "每一个细节都解释得很清楚"
+      },
+      {
+        "time": "24:03",
+        "text": "如果去drive interview你之后"
+      },
+      {
+        "time": "24:04",
+        "text": "像你那个影片有讲到就是"
+      },
+      {
+        "time": "24:06",
+        "text": "一开始去澄清这个requirement是最重要的地方"
+      },
+      {
+        "time": "24:09",
+        "text": "因为requirement就可以set out你这个问题的scope"
+      },
+      {
+        "time": "24:11",
+        "text": "需要做到什么程度"
+      },
+      {
+        "time": "24:12",
+        "text": "那他今天一开始可能丢给你一个很抽象的东西"
+      },
+      {
+        "time": "24:16",
+        "text": "那这东西可能需要里面很多feature"
+      },
+      {
+        "time": "24:18",
+        "text": "比如他今天丢给你说我们要设计一个YouTube"
+      },
+      {
+        "time": "24:20",
+        "text": "那YouTube feature都要爆炸"
+      },
+      {
+        "time": "24:21",
+        "text": "你有可以看影片你可以上传影片"
+      },
+      {
+        "time": "24:23",
+        "text": "你可以留comment对不对"
+      },
+      {
+        "time": "24:25",
+        "text": "那他可能"
+      },
+      {
+        "time": "24:25",
+        "text": "那你当然这个时候"
+      },
+      {
+        "time": "24:26",
+        "text": "就是要跟他clarify requirement"
+      },
+      {
+        "time": "24:28",
+        "text": "就是说我们实际上到底是要"
+      },
+      {
+        "time": "24:30",
+        "text": "在这个问题是想要去做"
+      },
+      {
+        "time": "24:31",
+        "text": "是什么Feature出来"
+      },
+      {
+        "time": "24:32",
+        "text": "那有时候他就是"
+      },
+      {
+        "time": "24:33",
+        "text": "大部分时候他就是要你去实现一个"
+      },
+      {
+        "time": "24:35",
+        "text": "最核心的一个Feature"
+      },
+      {
+        "time": "24:37",
+        "text": "那你跟他确定这个以后再往下"
+      },
+      {
+        "time": "24:39",
+        "text": "就是有一些像Top-Down Approach"
+      },
+      {
+        "time": "24:41",
+        "text": "我们先确立我们的Scope"
+      },
+      {
+        "time": "24:43",
+        "text": "然后从那个Scope再往下"
+      },
+      {
+        "time": "24:44",
+        "text": "我们开始去做一个High-Level Design"
+      },
+      {
+        "time": "24:46",
+        "text": "那High-Level Design也不需要做太详细"
+      },
+      {
+        "time": "24:48",
+        "text": "就是说我们需要"
+      },
+      {
+        "time": "24:49",
+        "text": "我们为了做这件事情"
+      },
+      {
+        "time": "24:50",
+        "text": "我们需要有一个"
+      },
+      {
+        "time": "24:52",
+        "text": "有几个High-Level的Abstraction"
+      },
+      {
+        "time": "24:54",
+        "text": "就是这个Black Box做什么"
+      },
+      {
+        "time": "24:56",
+        "text": "这个Black Box做什么"
+      },
+      {
+        "time": "24:58",
+        "text": "然后你有一个End-to-End的Data Flow出来了以后"
+      },
+      {
+        "time": "25:00",
+        "text": "去满足那Requirement"
+      },
+      {
+        "time": "25:02",
+        "text": "之后再去做第一代"
+      },
+      {
+        "time": "25:03",
+        "text": "那第一代就是"
+      },
+      {
+        "time": "25:04",
+        "text": "你去如何去鑑別說"
+      },
+      {
+        "time": "25:05",
+        "text": "這一個人的 seniority level 這樣子"
+      },
+      {
+        "time": "25:08",
+        "text": "好那實戰營的連結呢"
+      },
+      {
+        "time": "25:09",
+        "text": "我也會放在影片底下資訊欄"
+      },
+      {
+        "time": "25:11",
+        "text": "如果你喜歡今天的內容的話"
+      },
+      {
+        "time": "25:13",
+        "text": "記得一定要幫我們點個讚"
+      },
+      {
+        "time": "25:14",
+        "text": "那我們下次見囉"
+      }
+    ]
+  },
+  "raw_provider_payload": {
+    "actual_url": "https://youtu.be/p2E0OyTKDv4",
+    "content": "",
+    "conversation_id": "",
+    "cover": "https://i.ytimg.com/vi/p2E0OyTKDv4/sddefault.jpg",
+    "createdAt": 1783959052350,
+    "expiresAt": 1784131852350,
+    "historyScope": "/youtube-subtitle-downloader/",
+    "id": "/youtube-subtitle-downloader/:1:1:p2E0OyTKDv4",
+    "mindMap": "",
+    "notes": [],
+    "overviewData": null,
+    "platform": "1",
+    "remoteNoteArtifactIds": {},
+    "sourceKey": "/youtube-subtitle-downloader/:1:1:p2E0OyTKDv4",
+    "subtitles": [
+      {
+        "text": "很多網友有密我說",
+        "time": "00:00"
+      },
+      {
+        "text": "尤其是我之前跟Hank面試的那一集影片之後呢",
+        "time": "00:01"
+      },
+      {
+        "text": "大家有在下面留言說想要看",
+        "time": "00:04"
+      },
+      {
+        "text": "私生Design就是系統設計相關的面試",
+        "time": "00:07"
+      },
+      {
+        "text": "那今天呢剛好特別請Bor來這邊跟大家分享一下",
+        "time": "00:09"
+      },
+      {
+        "text": "因為Bor你自己本身也經歷過非常非常多輪的私生Design面試",
+        "time": "00:12"
+      },
+      {
+        "text": "然後也有拿過很好的成績也有Fail過",
+        "time": "00:16"
+      },
+      {
+        "text": "所以你大概知道面試官想要看什麼",
+        "time": "00:19"
+      },
+      {
+        "text": "然後你平常在幫你們公司招人的時候",
+        "time": "00:21"
+      },
+      {
+        "text": "你也會做很多面試官想要看什麼然後你平常在幫你們公司招人的時候你也會做很多面試對吧",
+        "time": "00:24"
+      },
+      {
+        "text": "對",
+        "time": "00:25"
+      },
+      {
+        "text": "其實我在四年前",
+        "time": "00:25"
+      },
+      {
+        "text": "就做過一集關於系統設計的",
+        "time": "00:27"
+      },
+      {
+        "text": "怎麼樣去更好地去掌握",
+        "time": "00:30"
+      },
+      {
+        "text": "那個面試的節奏的一集影片",
+        "time": "00:32"
+      },
+      {
+        "text": "然後我們剛剛有稍微看一下",
+        "time": "00:34"
+      },
+      {
+        "text": "我以為已經updated",
+        "time": "00:35"
+      },
+      {
+        "text": "因為我講的東西很basic",
+        "time": "00:37"
+      },
+      {
+        "text": "它的框架還是可以用在現在的面試",
+        "time": "00:38"
+      },
+      {
+        "text": "那個東西我覺得就是比較基礎的東西",
+        "time": "00:41"
+      },
+      {
+        "text": "那今天請波爾來",
+        "time": "00:43"
+      },
+      {
+        "text": "就想說也可以跟大家分享一下",
+        "time": "00:44"
+      },
+      {
+        "text": "在矽谷这么多年的经验",
+        "time": "00:46"
+      },
+      {
+        "text": "你觉得面试官通常在一轮面试",
+        "time": "00:47"
+      },
+      {
+        "text": "尤其是在比较高级的大公司里面",
+        "time": "00:49"
+      },
+      {
+        "text": "会希望给到强劲的原因是什么",
+        "time": "00:53"
+      },
+      {
+        "text": "基本上你要拿到强劲就是",
+        "time": "00:55"
+      },
+      {
+        "text": "你要在面试的时候表现出",
+        "time": "00:57"
+      },
+      {
+        "text": "超出你现在所面试等级的表现",
+        "time": "00:59"
+      },
+      {
+        "text": "比如说你现在是面试中的等级",
+        "time": "01:02"
+      },
+      {
+        "text": "可是你在面试从头到尾就",
+        "time": "01:04"
+      },
+      {
+        "text": "表现出的signal就是",
+        "time": "01:06"
+      },
+      {
+        "text": "你就是一个senior engineer的signal",
+        "time": "01:07"
+      },
+      {
+        "text": "或者是说",
+        "time": "01:09"
+      },
+      {
+        "text": "你现在面试一个senior level的职位",
+        "time": "01:10"
+      },
+      {
+        "text": "你从头到尾表现出",
+        "time": "01:13"
+      },
+      {
+        "text": "你是一个staff level的前置",
+        "time": "01:14"
+      },
+      {
+        "text": "那这样的话",
+        "time": "01:15"
+      },
+      {
+        "text": "面试官就会很impressed",
+        "time": "01:16"
+      },
+      {
+        "text": "就会给你strong hire这样子",
+        "time": "01:17"
+      },
+      {
+        "text": "那更bonus point就是说",
+        "time": "01:19"
+      },
+      {
+        "text": "假设你今天够资深",
+        "time": "01:20"
+      },
+      {
+        "text": "你能够在面试的时候讨论的时候",
+        "time": "01:21"
+      },
+      {
+        "text": "同样面试官学到一些新的他不知道的東西",
+        "time": "01:24"
+      },
+      {
+        "text": "那這樣他當然面試完對你都是一些會有非常深刻的印象",
+        "time": "01:27"
+      },
+      {
+        "text": "當然給你損害的機會就會很高",
+        "time": "01:32"
+      },
+      {
+        "text": "這個就讓我聯想到一個問題",
+        "time": "01:34"
+      },
+      {
+        "text": "因為我自己也曾經遇過這樣的事情",
+        "time": "01:36"
+      },
+      {
+        "text": "就是很多時候Recruiter或是那公司的Hiring Manager",
+        "time": "01:38"
+      },
+      {
+        "text": "或是那個跟我接洽的人",
+        "time": "01:41"
+      },
+      {
+        "text": "他會問我說你想要面哪个 level",
+        "time": "01:43"
+      },
+      {
+        "text": "像是我之前在 Meta 的时候",
+        "time": "01:45"
+      },
+      {
+        "text": "他就问我说你要 L5 还是 L6",
+        "time": "01:47"
+      },
+      {
+        "text": "你要面 staff 还是 senior",
+        "time": "01:49"
+      },
+      {
+        "text": "对那这个时候就很 tricky 了",
+        "time": "01:51"
+      },
+      {
+        "text": "我当然是想要拿到 staff 的 level",
+        "time": "01:53"
+      },
+      {
+        "text": "但是呢我如果去面 staff 的话",
+        "time": "01:56"
+      },
+      {
+        "text": "我可能比较容易 fail",
+        "time": "01:58"
+      },
+      {
+        "text": "对然后我面 senior 的话我成功的机率比较大",
+        "time": "02:00"
+      },
+      {
+        "text": "因为我可能更容易拿到双孩那在这样的下,你会建议大家去怎么做选择?",
+        "time": "02:03"
+      },
+      {
+        "text": "嗯,这是个很好问题",
+        "time": "02:08"
+      },
+      {
+        "text": "因为我在你问我的时候,当下我做了一些思考",
+        "time": "02:10"
+      },
+      {
+        "text": "我觉得如果你今天有这一个option的话",
+        "time": "02:13"
+      },
+      {
+        "text": "我会尽量倾向于选择高level的",
+        "time": "02:16"
+      },
+      {
+        "text": "因为高level的话,你除了没上",
+        "time": "02:19"
+      },
+      {
+        "text": "通常还有一个option是,他会给你downlevel",
+        "time": "02:22"
+      },
+      {
+        "text": "但如果你今天,比如说你面试Staff他觉得,欸,你面试还ok因为高level的话你除了没上通常还有一个option是他会给你down level",
+        "time": "02:24"
+      },
+      {
+        "text": "但如果你今天比如说你面的staff",
+        "time": "02:25"
+      },
+      {
+        "text": "他觉得你面试还ok",
+        "time": "02:27"
+      },
+      {
+        "text": "但是有些东西我觉得你可能fall short",
+        "time": "02:29"
+      },
+      {
+        "text": "那我就给你senior level这样子",
+        "time": "02:31"
+      },
+      {
+        "text": "可是当你今天面senior level",
+        "time": "02:33"
+      },
+      {
+        "text": "你如果表现的没有说非常到达预期",
+        "time": "02:35"
+      },
+      {
+        "text": "那他可能就直接给你fail掉",
+        "time": "02:38"
+      },
+      {
+        "text": "这是一个因子",
+        "time": "02:40"
+      },
+      {
+        "text": "然后另外一个就是说",
+        "time": "02:41"
+      },
+      {
+        "text": "你今天即使在senior Level拿到Strong Hire",
+        "time": "02:43"
+      },
+      {
+        "text": "他也未必会给你Staff Level Package",
+        "time": "02:45"
+      },
+      {
+        "text": "但是如果你今天是Staff Level",
+        "time": "02:47"
+      },
+      {
+        "text": "你是一个OK Hire",
+        "time": "02:49"
+      },
+      {
+        "text": "但他给你的package",
+        "time": "02:51"
+      },
+      {
+        "text": "绝对会比你在Senior Level",
+        "time": "02:52"
+      },
+      {
+        "text": "拿到Strong Hire Package还要高",
+        "time": "02:53"
+      },
+      {
+        "text": "因为Staff Level跟Senior Level的Ban",
+        "time": "02:55"
+      },
+      {
+        "text": "就不一样了",
+        "time": "02:57"
+      },
+      {
+        "text": "所以你今天Senior Level的Ban",
+        "time": "02:58"
+      },
+      {
+        "text": "你Senior Level拿到再高的Offer",
+        "time": "02:59"
+      },
+      {
+        "text": "有可能就是Staff Level",
+        "time": "03:01"
+      },
+      {
+        "text": "Below Average的Offer",
+        "time": "03:02"
+      },
+      {
+        "text": "其实我们今天要特别针对这个去深入讨论",
+        "time": "03:04"
+      },
+      {
+        "text": "有一个原因是现在尤其现在",
+        "time": "03:06"
+      },
+      {
+        "text": "大家也知道AI发展很快",
+        "time": "03:09"
+      },
+      {
+        "text": "然后其实尤其是我们现在学的东西也非常非常的快",
+        "time": "03:11"
+      },
+      {
+        "text": "那我自己是感觉这一两年来",
+        "time": "03:13"
+      },
+      {
+        "text": "整个tech不管是software engineer还是",
+        "time": "03:16"
+      },
+      {
+        "text": "只要你做tech它的bar都会变得很高",
+        "time": "03:18"
+      },
+      {
+        "text": "那我们在讨论software engineer",
+        "time": "03:20"
+      },
+      {
+        "text": "这个工作的面试的过程",
+        "time": "03:23"
+      },
+      {
+        "text": "其实我不知道",
+        "time": "03:25"
+      },
+      {
+        "text": "你自己有没有这样",
+        "time": "03:26"
+      },
+      {
+        "text": "去提升你们公司",
+        "time": "03:27"
+      },
+      {
+        "text": "或者你在",
+        "time": "03:28"
+      },
+      {
+        "text": "hiring人的bar",
+        "time": "03:29"
+      },
+      {
+        "text": "但是我是感觉出来",
+        "time": "03:29"
+      },
+      {
+        "text": "就是确实是",
+        "time": "03:31"
+      },
+      {
+        "text": "就我自己在帮我们公司",
+        "time": "03:32"
+      },
+      {
+        "text": "hiring人的时候",
+        "time": "03:33"
+      },
+      {
+        "text": "我们是有在",
+        "time": "03:34"
+      },
+      {
+        "text": "让这个process",
+        "time": "03:35"
+      },
+      {
+        "text": "变得更难一点",
+        "time": "03:37"
+      },
+      {
+        "text": "要是你的基本的lead code",
+        "time": "03:38"
+      },
+      {
+        "text": "或是基本的coding",
+        "time": "03:39"
+      },
+      {
+        "text": "algorithm",
+        "time": "03:40"
+      },
+      {
+        "text": "datastructure",
+        "time": "03:40"
+      },
+      {
+        "text": "你都没有熟悉的话",
+        "time": "03:41"
+      },
+      {
+        "text": "那我不可能会考虑你",
+        "time": "03:42"
+      },
+      {
+        "text": "然后师生design也是就是以前呢junior L3 L 4的人我们是不可能會考慮然後資深Design也是",
+        "time": "03:43"
+      },
+      {
+        "text": "就是以前呢",
+        "time": "03:45"
+      },
+      {
+        "text": "Junior L3 L4的人",
+        "time": "03:46"
+      },
+      {
+        "text": "我們是不可能會面對他的資深Design",
+        "time": "03:48"
+      },
+      {
+        "text": "但現在呢很多公司會開始考",
+        "time": "03:49"
+      },
+      {
+        "text": "對那可能Bar不會那麼高",
+        "time": "03:52"
+      },
+      {
+        "text": "但是相對來講也是會有這個這一關在裡面",
+        "time": "03:54"
+      },
+      {
+        "text": "對你們有類似這樣子嗎",
+        "time": "03:57"
+      },
+      {
+        "text": "我覺得我們沒有刻意去提高Bar什麼",
+        "time": "03:59"
+      },
+      {
+        "text": "但是我覺得是這個是在不知不覺間",
+        "time": "04:02"
+      },
+      {
+        "text": "你的Bar就提升了",
+        "time": "04:04"
+      },
+      {
+        "text": "因為現在這些知識變得太 Accessible",
+        "time": "04:05"
+      },
+      {
+        "text": "就像以前立刻沒有這麼多題",
+        "time": "04:08"
+      },
+      {
+        "text": "那現在有這麼多題",
+        "time": "04:10"
+      },
+      {
+        "text": "變一些以前的 Medium 題現在都變 Easy 題了",
+        "time": "04:11"
+      },
+      {
+        "text": "那同樣 System Design",
+        "time": "04:14"
+      },
+      {
+        "text": "可能這些線上學習的 Material 以前沒有這麼普及",
+        "time": "04:15"
+      },
+      {
+        "text": "那現在越來越多這種 Material",
+        "time": "04:18"
+      },
+      {
+        "text": "所以大家對於 System Design",
+        "time": "04:20"
+      },
+      {
+        "text": "Interview 的一些問題也有一些概念",
+        "time": "04:22"
+      },
+      {
+        "text": "所以變成說說大家的 Calibaliber同時提高的情況下",
+        "time": "04:24"
+      },
+      {
+        "text": "你要脫穎而出就變成說你必須要Raise your Bar even higher",
+        "time": "04:27"
+      },
+      {
+        "text": "就是你要在其他Candidate脫穎而出的話",
+        "time": "04:31"
+      },
+      {
+        "text": "你必須要表現出更高level的表現才有辦法",
+        "time": "04:33"
+      },
+      {
+        "text": "那在身為面試官的話其實沒有特別去說提高Bar",
+        "time": "04:37"
+      },
+      {
+        "text": "可是就是一個 都是一個相對的嘛",
+        "time": "04:40"
+      },
+      {
+        "text": "就是當今天大家平均的Bar升高",
+        "time": "04:42"
+      },
+      {
+        "text": "就變成說你要再升到更高你才有辦法脫穎而出去說提高吧可是就是一個這是一個都是一個相對的嘛就是當今天大家平均的把身高",
+        "time": "04:44"
+      },
+      {
+        "text": "就變成說你要再升到更高",
+        "time": "04:45"
+      },
+      {
+        "text": "你才有辦法脫穎而出",
+        "time": "04:46"
+      },
+      {
+        "text": "嗯",
+        "time": "04:47"
+      },
+      {
+        "text": "對那你是怎麼去評判這個人",
+        "time": "04:48"
+      },
+      {
+        "text": "他是屬於比較Junior",
+        "time": "04:50"
+      },
+      {
+        "text": "比較Mid level",
+        "time": "04:52"
+      },
+      {
+        "text": "比較Senior",
+        "time": "04:53"
+      },
+      {
+        "text": "就以System Design的Interview角度去做這件事情",
+        "time": "04:54"
+      },
+      {
+        "text": "Junior跟Senior level最大的差別就是",
+        "time": "04:58"
+      },
+      {
+        "text": "Senior level的話",
+        "time": "05:00"
+      },
+      {
+        "text": "基本會期待說",
+        "time": "05:01"
+      },
+      {
+        "text": "你是在主導這個Interview",
+        "time": "05:02"
+      },
+      {
+        "text": "而不是面試官在在主导interview",
+        "time": "05:04"
+      },
+      {
+        "text": "就今天面试官会更像是你的同事",
+        "time": "05:06"
+      },
+      {
+        "text": "然后你今天你在lead的一个project的时候",
+        "time": "05:09"
+      },
+      {
+        "text": "你会如何去做propose",
+        "time": "05:11"
+      },
+      {
+        "text": "你会根据你的",
+        "time": "05:13"
+      },
+      {
+        "text": "你现在的requirements",
+        "time": "05:15"
+      },
+      {
+        "text": "跟你的你有的工具",
+        "time": "05:16"
+      },
+      {
+        "text": "如何去propose一些option",
+        "time": "05:18"
+      },
+      {
+        "text": "然后跟面试官分析这些option pros and cons",
+        "time": "05:20"
+      },
+      {
+        "text": "然后最后再根据requirements去决定说你要走哪个option这样",
+        "time": "05:23"
+      },
+      {
+        "text": "那对于Junior Engineer来说",
+        "time": "05:27"
+      },
+      {
+        "text": "那可能在面试流程上就更需要面试官的引导",
+        "time": "05:29"
+      },
+      {
+        "text": "就譬如说今天在提出requirement的时候",
+        "time": "05:32"
+      },
+      {
+        "text": "他可能漏掉一些最根本的东西",
+        "time": "05:36"
+      },
+      {
+        "text": "那可能还需要面试官提示",
+        "time": "05:38"
+      },
+      {
+        "text": "还是说最后在讨论设计的时候",
+        "time": "05:39"
+      },
+      {
+        "text": "Junior的思考方式会比较偏向",
+        "time": "05:41"
+      },
+      {
+        "text": "有时候并不一定是说他能力不足",
+        "time": "05:43"
+      },
+      {
+        "text": "而是就是经验不够",
+        "time": "05:45"
+      },
+      {
+        "text": "那可能他在思考的方式上",
+        "time": "05:46"
+      },
+      {
+        "text": "可能就是没有像Senior Engineer",
+        "time": "05:49"
+      },
+      {
+        "text": "有这么的同时监督广度和深度这样子",
+        "time": "05:51"
+      },
+      {
+        "text": "我们刚刚有稍微聊一下",
+        "time": "05:54"
+      },
+      {
+        "text": "就是你说一个Point",
+        "time": "05:56"
+      },
+      {
+        "text": "就是你要Impress这个面试官",
+        "time": "05:58"
+      },
+      {
+        "text": "假如他觉得他在这个Interview里面",
+        "time": "06:00"
+      },
+      {
+        "text": "跟你学到的一点东西",
+        "time": "06:02"
+      },
+      {
+        "text": "这个是一个非常好的一个Signal是吧假如他觉得他在这个interview里面跟你学到的连东西对",
+        "time": "06:04"
+      },
+      {
+        "text": "这个是一个非常好的一个signal",
+        "time": "06:05"
+      },
+      {
+        "text": "基本上等于是一个very strong hire",
+        "time": "06:07"
+      },
+      {
+        "text": "代表说你在这方面",
+        "time": "06:10"
+      },
+      {
+        "text": "铁定是接触过类似的系统",
+        "time": "06:12"
+      },
+      {
+        "text": "要不然你没办法如此的深入浅出",
+        "time": "06:14"
+      },
+      {
+        "text": "因为通常当面试官问一个问题的时候",
+        "time": "06:16"
+      },
+      {
+        "text": "一般的情况下来说",
+        "time": "06:18"
+      },
+      {
+        "text": "他自己也有做过类似的系统",
+        "time": "06:19"
+      },
+      {
+        "text": "所以他可以马上就知道说你今天",
+        "time": "06:21"
+      },
+      {
+        "text": "提出的option是可行",
+        "time": "06:23"
+      },
+      {
+        "text": "还是说单纯就是你在凭空想象",
+        "time": "06:25"
+      },
+      {
+        "text": "那当你今天可以再更进一步讲出一些",
+        "time": "06:28"
+      },
+      {
+        "text": "他之前没有考虑过的事情",
+        "time": "06:30"
+      },
+      {
+        "text": "那他可能就会留下非常深刻的印象",
+        "time": "06:32"
+      },
+      {
+        "text": "OK",
+        "time": "06:34"
+      },
+      {
+        "text": "那我相信很多人去",
+        "time": "06:34"
+      },
+      {
+        "text": "在准备系统设计面试的时候",
+        "time": "06:36"
+      },
+      {
+        "text": "我们基本上都是在凭空想象",
+        "time": "06:38"
+      },
+      {
+        "text": "没错",
+        "time": "06:40"
+      },
+      {
+        "text": "对那我们要怎么样去克服这一关",
+        "time": "06:41"
+      },
+      {
+        "text": "就是就算我们今天沒有設計過的東西",
+        "time": "06:43"
+      },
+      {
+        "text": "我們要怎麼樣去準備它",
+        "time": "06:45"
+      },
+      {
+        "text": "讓它變得好像我們真的有設計過",
+        "time": "06:47"
+      },
+      {
+        "text": "其實就算今天沒有實際上做過這個系統",
+        "time": "06:49"
+      },
+      {
+        "text": "但是在根本邏輯上",
+        "time": "06:51"
+      },
+      {
+        "text": "很多系統其實是share很多類似的一些特性",
+        "time": "06:54"
+      },
+      {
+        "text": "最基本的就是你做一些Cropped Service",
+        "time": "06:59"
+      },
+      {
+        "text": "就是Cropped就是Create Read Update Delete",
+        "time": "07:01"
+      },
+      {
+        "text": "像這種Hotel Booking Service還是說這種Ticketing Service你做一些 CRUD 服務就是 Create, Read, Update, Delete",
+        "time": "07:04"
+      },
+      {
+        "text": "像是 Hotel Booking Service",
+        "time": "07:05"
+      },
+      {
+        "text": "還是 Ticketing Service",
+        "time": "07:07"
+      },
+      {
+        "text": "這種最基本的 CRUD 服務",
+        "time": "07:09"
+      },
+      {
+        "text": "在 Business Logic 上可能有點粗",
+        "time": "07:10"
+      },
+      {
+        "text": "但是基本上在設計系統上",
+        "time": "07:12"
+      },
+      {
+        "text": "就是一個很根本的架構",
+        "time": "07:14"
+      },
+      {
+        "text": "就是 Request Response Model",
+        "time": "07:16"
+      },
+      {
+        "text": "然後你 Fire Request 給 Server",
+        "time": "07:18"
+      },
+      {
+        "text": "Server Return 給 Response",
+        "time": "07:20"
+      },
+      {
+        "text": "然後他用 DataPage 去存他的 State",
+        "time": "07:21"
+      },
+      {
+        "text": "在 Business Logic Logic上就是一个",
+        "time": "07:23"
+      },
+      {
+        "text": "就是一个Request Response Flow",
+        "time": "07:25"
+      },
+      {
+        "text": "可是在底层逻辑上",
+        "time": "07:26"
+      },
+      {
+        "text": "可能就是有一点粗弱",
+        "time": "07:28"
+      },
+      {
+        "text": "譬如说他今天的Traffic是",
+        "time": "07:29"
+      },
+      {
+        "text": "Read Heavy还是Write Heavy",
+        "time": "07:31"
+      },
+      {
+        "text": "那如果今天他的Traffic Pattern不同的话",
+        "time": "07:32"
+      },
+      {
+        "text": "那你可能需要根据这些Pattern去",
+        "time": "07:34"
+      },
+      {
+        "text": "将你的系统做一些微调来调整",
+        "time": "07:37"
+      },
+      {
+        "text": "来去适应这个",
+        "time": "07:39"
+      },
+      {
+        "text": "Read或Write Heavy的Pattern这样子",
+        "time": "07:40"
+      },
+      {
+        "text": "那通用的部分就是说",
+        "time": "07:42"
+      },
+      {
+        "text": "他们都是一个Request Response Model",
+        "time": "07:44"
+      },
+      {
+        "text": "那细节部分就是可能就是需要",
+        "time": "07:46"
+      },
+      {
+        "text": "你一些经验跟一些",
+        "time": "07:48"
+      },
+      {
+        "text": "你去自己去额外做学习",
+        "time": "07:49"
+      },
+      {
+        "text": "就知道说",
+        "time": "07:51"
+      },
+      {
+        "text": "我今天在面对一个Write Heavy的系统的时候",
+        "time": "07:52"
+      },
+      {
+        "text": "我可以用哪些方式去",
+        "time": "07:54"
+      },
+      {
+        "text": "让我的系统更robust",
+        "time": "07:56"
+      },
+      {
+        "text": "还是我今天对一些Read Heavy的系统的时候",
+        "time": "07:58"
+      },
+      {
+        "text": "我可以用",
+        "time": "07:59"
+      },
+      {
+        "text": "我可以用Cache去减轻我Database的负担这种",
+        "time": "08:01"
+      },
+      {
+        "text": "这些有些是通用的经验",
+        "time": "08:04"
+      },
+      {
+        "text": "虽然说表层的business logic有点不太一样",
+        "time": "08:06"
+      },
+      {
+        "text": "但是你只要把它分析过",
+        "time": "08:09"
+      },
+      {
+        "text": "在它问题系统背后的本质上",
+        "time": "08:10"
+      },
+      {
+        "text": "这些如何去解决系统上的问题",
+        "time": "08:12"
+      },
+      {
+        "text": "有些后面这些解法其实这些option大部分有时候是通用的",
+        "time": "08:17"
+      },
+      {
+        "text": "对",
+        "time": "08:20"
+      },
+      {
+        "text": "其实我以前在准备系统设计面试的时候",
+        "time": "08:21"
+      },
+      {
+        "text": "我会常做的事情是",
+        "time": "08:24"
+      },
+      {
+        "text": "我会一直去深挖某一个技术细节",
+        "time": "08:26"
+      },
+      {
+        "text": "像比如说我在准备那个Material",
+        "time": "08:29"
+      },
+      {
+        "text": "跟我讲说可以用Cassandra",
+        "time": "08:32"
+      },
+      {
+        "text": "那我当时就觉得说",
+        "time": "08:34"
+      },
+      {
+        "text": "OK yeah我了解为什么它背后逻辑可以用Cassandra",
+        "time": "08:37"
+      },
+      {
+        "text": "但是具体为什么要用Cassandra",
+        "time": "08:39"
+      },
+      {
+        "text": "或是Cassandra到底用在这个情节的时候",
+        "time": "08:41"
+      },
+      {
+        "text": "它的Pros and's又是又什麼",
+        "time": "08:44"
+      },
+      {
+        "text": "那可能也是同樣是NoSQL",
+        "time": "08:46"
+      },
+      {
+        "text": "但是有其他Option",
+        "time": "08:47"
+      },
+      {
+        "text": "為什麼我不選擇用其他Option",
+        "time": "08:48"
+      },
+      {
+        "text": "就我會一直去問我自己這些問題",
+        "time": "08:50"
+      },
+      {
+        "text": "然後我就開始查",
+        "time": "08:52"
+      },
+      {
+        "text": "OK Cassandra它背後邏輯到底是什麼",
+        "time": "08:53"
+      },
+      {
+        "text": "什麼是Virtual Node",
+        "time": "08:55"
+      },
+      {
+        "text": "什麼亂七八糟的東西",
+        "time": "08:56"
+      },
+      {
+        "text": "我都會一直進去",
+        "time": "08:57"
+      },
+      {
+        "text": "它是一個無底洞",
+        "time": "08:58"
+      },
+      {
+        "text": "一直學更多的東西",
+        "time": "08:59"
+      },
+      {
+        "text": "但是我覺得這對我的",
+        "time": "09:00"
+      },
+      {
+        "text": "就技術的這個廣度",
+        "time": "09:02"
+      },
+      {
+        "text": "還有深度其實是有幫助的",
+        "time": "09:03"
+      },
+      {
+        "text": "對 因為其實雖然都是Database",
+        "time": "09:05"
+      },
+      {
+        "text": "可是它其實有些Database他們背後",
+        "time": "09:07"
+      },
+      {
+        "text": "他們想要解決問題是一樣的",
+        "time": "09:09"
+      },
+      {
+        "text": "他們只是採取不同的approach",
+        "time": "09:11"
+      },
+      {
+        "text": "那我覺得這種反覆問自己問題",
+        "time": "09:12"
+      },
+      {
+        "text": "為什麼要這個為什麼要這個步驟",
+        "time": "09:14"
+      },
+      {
+        "text": "其實也是面試的時候常常會碰到的",
+        "time": "09:16"
+      },
+      {
+        "text": "就是你需要跟面試官去解釋說",
+        "time": "09:18"
+      },
+      {
+        "text": "我今天為什麼要這個option",
+        "time": "09:20"
+      },
+      {
+        "text": "因為其實很多時候",
+        "time": "09:21"
+      },
+      {
+        "text": "同樣一個問題不是只有一个option能用",
+        "time": "09:23"
+      },
+      {
+        "text": "还是说其实option A跟option B都可以work",
+        "time": "09:25"
+      },
+      {
+        "text": "但是你只要可以去justify",
+        "time": "09:28"
+      },
+      {
+        "text": "为什么你要用option A",
+        "time": "09:29"
+      },
+      {
+        "text": "然后而且你这个justification",
+        "time": "09:30"
+      },
+      {
+        "text": "是可以去meet requirement",
+        "time": "09:32"
+      },
+      {
+        "text": "那这样也就够了",
+        "time": "09:34"
+      },
+      {
+        "text": "那这也是面试官所想要听到",
+        "time": "09:35"
+      },
+      {
+        "text": "他并不是想要听到说",
+        "time": "09:37"
+      },
+      {
+        "text": "我今天这个系统就只有一个标准答案",
+        "time": "09:38"
+      },
+      {
+        "text": "那我这边database一定要用SQL或nonSQL",
+        "time": "09:40"
+      },
+      {
+        "text": "还是说我今天这边一定要加Cash之类的",
+        "time": "09:43"
+      },
+      {
+        "text": "就是你必须要去Justify your decision",
+        "time": "09:46"
+      },
+      {
+        "text": "你之前那个影片讲的就是",
+        "time": "09:49"
+      },
+      {
+        "text": "Always start from simple",
+        "time": "09:50"
+      },
+      {
+        "text": "就是因为当你今天",
+        "time": "09:52"
+      },
+      {
+        "text": "你要多加一个Diagram",
+        "time": "09:53"
+      },
+      {
+        "text": "多加一个Box在你的Diagram",
+        "time": "09:54"
+      },
+      {
+        "text": "同样也是增加你这个系统的复杂度",
+        "time": "09:56"
+      },
+      {
+        "text": "那背后也隐含到说",
+        "time": "09:58"
+      },
+      {
+        "text": "我今天这个系统要上线",
+        "time": "09:59"
+      },
+      {
+        "text": "我要维护它也是另外一个成本",
+        "time": "10:00"
+      },
+      {
+        "text": "包含金钱的成本跟人力的成本",
+        "time": "10:02"
+      },
+      {
+        "text": "所以你今天让这个系统變得更複雜",
+        "time": "10:04"
+      },
+      {
+        "text": "你就必須要同時去justify說",
+        "time": "10:06"
+      },
+      {
+        "text": "為什麼有這個必要性",
+        "time": "10:09"
+      },
+      {
+        "text": "讓系統變得更複雜",
+        "time": "10:11"
+      },
+      {
+        "text": "然後同時把背後的原因解釋給面試官",
+        "time": "10:12"
+      },
+      {
+        "text": "然後取得他的反應",
+        "time": "10:14"
+      },
+      {
+        "text": "那這都是系統設計實際上在考的地方",
+        "time": "10:16"
+      },
+      {
+        "text": "嗯 對 對啊",
+        "time": "10:19"
+      },
+      {
+        "text": "我記得我當時面的比較好的一些",
+        "time": "10:20"
+      },
+      {
+        "text": "就是我在跟面試官溝通的時候",
+        "time": "10:23"
+      },
+      {
+        "text": "是我一直跟面試官說",
+        "time": "10:25"
+      },
+      {
+        "text": "在這個情況下我們有幾個option可以做",
+        "time": "10:27"
+      },
+      {
+        "text": "然後可能這個是option A",
+        "time": "10:29"
+      },
+      {
+        "text": "然後這個是option B",
+        "time": "10:31"
+      },
+      {
+        "text": "然後我個人比較prefer option A",
+        "time": "10:32"
+      },
+      {
+        "text": "因為什麼什麼",
+        "time": "10:33"
+      },
+      {
+        "text": "然後option B也是OK",
+        "time": "10:34"
+      },
+      {
+        "text": "但是假如今天這個沒有那麼重要",
+        "time": "10:36"
+      },
+      {
+        "text": "我們可能就不會選擇option B",
+        "time": "10:37"
+      },
+      {
+        "text": "對我會這樣去drive那個conversation",
+        "time": "10:39"
+      },
+      {
+        "text": "然後這種通常我得到的feedback",
+        "time": "10:41"
+      },
+      {
+        "text": "都是還滿不錯的",
+        "time": "10:43"
+      },
+      {
+        "text": "對通常就回應剛剛所說的就是你如果會去主動去drive那個conversation然後這種通常我得到的feedback都是還蠻不錯的對通常就回應剛剛所說的",
+        "time": "10:44"
+      },
+      {
+        "text": "就是你如果會去主動去drive這個過程",
+        "time": "10:46"
+      },
+      {
+        "text": "那就是一個很強的senior的signal",
+        "time": "10:48"
+      },
+      {
+        "text": "很強的一個senior engineer的signal",
+        "time": "10:50"
+      },
+      {
+        "text": "對那比起說可能不是這麼資深的人",
+        "time": "10:52"
+      },
+      {
+        "text": "他們可能就會說我們這邊就先用這個",
+        "time": "10:55"
+      },
+      {
+        "text": "然後當面試官追問他原因的時候",
+        "time": "10:57"
+      },
+      {
+        "text": "他可能回答的理由可能並不是很強的",
+        "time": "10:59"
+      },
+      {
+        "text": "跟他的requirement太在一起那這樣面試官就可能不會被那麼強的跟他的requirementtied在一起",
+        "time": "11:03"
+      },
+      {
+        "text": "那這樣面子官就可能不會被那麼強的說服",
+        "time": "11:05"
+      },
+      {
+        "text": "然後就不會給strong hire這樣",
+        "time": "11:08"
+      },
+      {
+        "text": "好那就像我們聊到的",
+        "time": "11:09"
+      },
+      {
+        "text": "接下來軟體工程師的發展呢",
+        "time": "11:11"
+      },
+      {
+        "text": "會專注在幫公司解決問題跟痛點",
+        "time": "11:13"
+      },
+      {
+        "text": "還有我們覺得能夠真正stand out的工程師呢",
+        "time": "11:16"
+      },
+      {
+        "text": "是需要有一個product mindset的",
+        "time": "11:18"
+      },
+      {
+        "text": "所以我跟博爾呢",
+        "time": "11:20"
+      },
+      {
+        "text": "希望可以透過我們在矽谷超過十年的工作經驗",
+        "time": "11:22"
+      },
+      {
+        "text": "帶著大家變成那個能夠真正解決問題",
+        "time": "11:25"
+      },
+      {
+        "text": "而不是只會寫code的軟體工程師",
+        "time": "11:28"
+      },
+      {
+        "text": "所以我們才會創立這個現代系統設計實戰營",
+        "time": "11:30"
+      },
+      {
+        "text": "除了幫助大家能夠在面試的時候拿到offer之外",
+        "time": "11:33"
+      },
+      {
+        "text": "希望可以增加你對整體系統設計的架構理解能力",
+        "time": "11:36"
+      },
+      {
+        "text": "還有實際去執行這個設計的能力",
+        "time": "11:39"
+      },
+      {
+        "text": "我覺得實際執行這個也非常非常的重要",
+        "time": "11:42"
+      },
+      {
+        "text": "所以說在我們的實戰引裡面講到的",
+        "time": "11:44"
+      },
+      {
+        "text": "所有的設計應用都是我們現在平常會用到的APP",
+        "time": "11:46"
+      },
+      {
+        "text": "像是比如說設計這個地震警報系統",
+        "time": "11:49"
+      },
+      {
+        "text": "或者是說如何設計一個AI的Support Agent",
+        "time": "11:51"
+      },
+      {
+        "text": "還有這個像是如何設計LOM的Inference API",
+        "time": "11:54"
+      },
+      {
+        "text": "從OpenAI工程師的角度去思考",
+        "time": "11:58"
+      },
+      {
+        "text": "這些都是目前最實用",
+        "time": "12:00"
+      },
+      {
+        "text": "而且我們覺得軟體工程師都需要有的最基础的概念,重点是",
+        "time": "12:02"
+      },
+      {
+        "text": "当你有了这些概念之后呢,你",
+        "time": "12:05"
+      },
+      {
+        "text": "遇到一个新的问题,一个你从来没有",
+        "time": "12:07"
+      },
+      {
+        "text": "见过的问题,你还是可以融会",
+        "time": "12:09"
+      },
+      {
+        "text": "贯通的,以第一性原理去思考",
+        "time": "12:11"
+      },
+      {
+        "text": "用正确的方向去思考怎么去解决",
+        "time": "12:13"
+      },
+      {
+        "text": "这个问题,那除了这些系统",
+        "time": "12:15"
+      },
+      {
+        "text": "设计之外呢,我们的实战营还包含",
+        "time": "12:17"
+      },
+      {
+        "text": "有live,直播的部分,带着大家",
+        "time": "12:19"
+      },
+      {
+        "text": "一起去实际做一些project",
+        "time": "12:21"
+      },
+      {
+        "text": "像比如说怎么用RAC跟promptpt Engineering去搭建一個AI chatbot",
+        "time": "12:23"
+      },
+      {
+        "text": "一個AI聊天機器人",
+        "time": "12:27"
+      },
+      {
+        "text": "或者是說我們會在裡面做一個cohort",
+        "time": "12:29"
+      },
+      {
+        "text": "教你怎麼去搭建一個屬於你自己的AI機器人",
+        "time": "12:31"
+      },
+      {
+        "text": "來專門回覆一些大家對你的疑問",
+        "time": "12:34"
+      },
+      {
+        "text": "那這個就是一個很好的side project",
+        "time": "12:36"
+      },
+      {
+        "text": "你可以放在你的履歷上面",
+        "time": "12:38"
+      },
+      {
+        "text": "你在interview的時候也可以去講",
+        "time": "12:39"
+      },
+      {
+        "text": "那除了這個之外呢",
+        "time": "12:41"
+      },
+      {
+        "text": "我們也會在Live裡面去討論更深度的系統設計需求",
+        "time": "12:43"
+      },
+      {
+        "text": "像比如說當你在設計特斯拉的Robotex App的時候",
+        "time": "12:46"
+      },
+      {
+        "text": "如何去handle一個事故發生之後",
+        "time": "12:49"
+      },
+      {
+        "text": "你要怎麼樣去還原真相的一個極端需求",
+        "time": "12:51"
+      },
+      {
+        "text": "這些問題呢都非常有趣",
+        "time": "12:54"
+      },
+      {
+        "text": "而且可以大幅度的提升",
+        "time": "12:56"
+      },
+      {
+        "text": "你怎麼樣用第一性原理去思考並且解決問題的這個能力",
+        "time": "12:58"
+      },
+      {
+        "text": "也是我們一直在強調的軟體工程師的真實價值",
+        "time": "13:01"
+      },
+      {
+        "text": "那我們實戰營目前的找鳥遊會呢",
+        "time": "13:05"
+      },
+      {
+        "text": "是到2月底結束",
+        "time": "13:07"
+      },
+      {
+        "text": "也就是說沒剩幾天了",
+        "time": "13:08"
+      },
+      {
+        "text": "如果不想錯過的話",
+        "time": "13:09"
+      },
+      {
+        "text": "可以到我們的官網",
+        "time": "13:10"
+      },
+      {
+        "text": "buildmode.org去看一下",
+        "time": "13:11"
+      },
+      {
+        "text": "而且如果你來我們Discord上面可以看到",
+        "time": "13:13"
+      },
+      {
+        "text": "我們有很多現在實戰營的同學",
+        "time": "13:15"
+      },
+      {
+        "text": "是去年已經參加過",
+        "time": "13:17"
+      },
+      {
+        "text": "我跟Hank那個Coding實戰營的同學",
+        "time": "13:18"
+      },
+      {
+        "text": "他們在去年是真的有學到很多東西",
+        "time": "13:21"
+      },
+      {
+        "text": "而且應該是覺得悟草所知才會在今年再繼續報名我們的現代系統設計實戰營的同學他們在去年是真的有學到很多東西而且應該是覺得物超所值",
+        "time": "13:23"
+      },
+      {
+        "text": "才會在今年再繼續報名我們的",
+        "time": "13:25"
+      },
+      {
+        "text": "現代系統設計實戰營",
+        "time": "13:26"
+      },
+      {
+        "text": "然後這次也是一樣",
+        "time": "13:28"
+      },
+      {
+        "text": "我們的實戰營全部都是採用小班制",
+        "time": "13:29"
+      },
+      {
+        "text": "所以說跟去年一樣",
+        "time": "13:32"
+      },
+      {
+        "text": "如果額滿的話",
+        "time": "13:33"
+      },
+      {
+        "text": "我們也會把這個銷售窗口給關掉",
+        "time": "13:34"
+      },
+      {
+        "text": "因為我們要確保每一個學員的學習品質",
+        "time": "13:36"
+      },
+      {
+        "text": "所以說在今年想要好好投資自己的同學",
+        "time": "13:39"
+      },
+      {
+        "text": "也絕對不要錯過了",
+        "time": "13:41"
+      },
+      {
+        "text": "那如何去區分Senior到Staff",
+        "time": "13:43"
+      },
+      {
+        "text": "我觉得Senior到Staff最大的差别是",
+        "time": "13:45"
+      },
+      {
+        "text": "Senior的话你要有一定的广度",
+        "time": "13:47"
+      },
+      {
+        "text": "Staff的话你必须要在某一些领域",
+        "time": "13:49"
+      },
+      {
+        "text": "你有足够的深度",
+        "time": "13:52"
+      },
+      {
+        "text": "就是你的Expert",
+        "time": "13:53"
+      },
+      {
+        "text": "要有足够的Expertise",
+        "time": "13:54"
+      },
+      {
+        "text": "就像我刚刚讲到的",
+        "time": "13:55"
+      },
+      {
+        "text": "你今天在讨论这些Option的时候",
+        "time": "13:56"
+      },
+      {
+        "text": "你能够更去深入浅出的说",
+        "time": "13:58"
+      },
+      {
+        "text": "为什么我要做这个",
+        "time": "14:01"
+      },
+      {
+        "text": "然后因为它背后的原理是什么",
+        "time": "14:02"
+      },
+      {
+        "text": "还是说你今天在讨论一个",
+        "time": "14:03"
+      },
+      {
+        "text": "讨论说要采用Technology A",
+        "time": "14:05"
+      },
+      {
+        "text": "或Technology B的时候",
+        "time": "14:07"
+      },
+      {
+        "text": "你可以去用",
+        "time": "14:08"
+      },
+      {
+        "text": "一般Senior Engineer",
+        "time": "14:09"
+      },
+      {
+        "text": "不会想到的角度去讨论事情",
+        "time": "14:10"
+      },
+      {
+        "text": "譬如说",
+        "time": "14:12"
+      },
+      {
+        "text": "这个背后隐含的Cost是什么",
+        "time": "14:13"
+      },
+      {
+        "text": "因为我用过",
+        "time": "14:15"
+      },
+      {
+        "text": "对",
+        "time": "14:16"
+      },
+      {
+        "text": "那这些东西",
+        "time": "14:16"
+      },
+      {
+        "text": "很多时候是对方的面试官",
+        "time": "14:17"
+      },
+      {
+        "text": "未必也知道的东西",
+        "time": "14:20"
+      },
+      {
+        "text": "那假设你今天",
+        "time": "14:21"
+      },
+      {
+        "text": "可以把这些东西端出来",
+        "time": "14:22"
+      },
+      {
+        "text": "然后让对方面试官可以耳目一新",
+        "time": "14:23"
+      },
+      {
+        "text": "那這就是一個很強的staff signal",
+        "time": "14:25"
+      },
+      {
+        "text": "就是你是一個特定領域的domain expertise",
+        "time": "14:28"
+      },
+      {
+        "text": "而且在面試的時候可以表現得出來說",
+        "time": "14:30"
+      },
+      {
+        "text": "我知道我自己在做什麼",
+        "time": "14:34"
+      },
+      {
+        "text": "然後我今天有辦法把這個東西",
+        "time": "14:35"
+      },
+      {
+        "text": "說服leadership說為什麼我們要這麼做",
+        "time": "14:37"
+      },
+      {
+        "text": "那就是一個很強的staff signal",
+        "time": "14:39"
+      },
+      {
+        "text": "那對於比較初學者",
+        "time": "14:42"
+      },
+      {
+        "text": "可能大學剛畢業或是可能剛工作一兩年這樣子的同學就是一個很強的指示嗯 明白那對於比較初學者",
+        "time": "14:44"
+      },
+      {
+        "text": "可能大學剛畢業",
+        "time": "14:45"
+      },
+      {
+        "text": "或是可能剛工作一兩年",
+        "time": "14:46"
+      },
+      {
+        "text": "這樣子的同學",
+        "time": "14:48"
+      },
+      {
+        "text": "如果要去做面試的話",
+        "time": "14:49"
+      },
+      {
+        "text": "在準備上面有沒有什麼建議",
+        "time": "14:51"
+      },
+      {
+        "text": "這個有點困難",
+        "time": "14:53"
+      },
+      {
+        "text": "因為怎麼講",
+        "time": "14:54"
+      },
+      {
+        "text": "老實說",
+        "time": "14:55"
+      },
+      {
+        "text": "如果你沒有實際上去做過一個",
+        "time": "14:56"
+      },
+      {
+        "text": "大規模的分散式",
+        "time": "14:58"
+      },
+      {
+        "text": "就是一個把東西Deport上線的話",
+        "time": "15:00"
+      },
+      {
+        "text": "其實你對於一些細節",
+        "time": "15:02"
+      },
+      {
+        "text": "都只能去凭空想像",
+        "time": "15:04"
+      },
+      {
+        "text": "意思也不是说我们这样就不要去准备",
+        "time": "15:06"
+      },
+      {
+        "text": "就是随便就是凭空想像",
+        "time": "15:08"
+      },
+      {
+        "text": "网络上也是有很多material可以去学习",
+        "time": "15:10"
+      },
+      {
+        "text": "然后你可以试着去",
+        "time": "15:13"
+      },
+      {
+        "text": "现在AI的工具也很发达",
+        "time": "15:15"
+      },
+      {
+        "text": "现在好处是说你有很多工具是accessible",
+        "time": "15:17"
+      },
+      {
+        "text": "比如说公有云还有AI tool",
+        "time": "15:20"
+      },
+      {
+        "text": "所以可以试着去搭建一个服务利用现有的公有云的试着去搭建一个服务",
+        "time": "15:24"
+      },
+      {
+        "text": "利用现有的公有云的一些Tool去搭建一个服务",
+        "time": "15:26"
+      },
+      {
+        "text": "然后让它上线去",
+        "time": "15:29"
+      },
+      {
+        "text": "让它上线然后有使用",
+        "time": "15:31"
+      },
+      {
+        "text": "这是一个end-to-end experience",
+        "time": "15:32"
+      },
+      {
+        "text": "在使用公有云的时候",
+        "time": "15:34"
+      },
+      {
+        "text": "你去了解说它这个Tool背后的特性是什么",
+        "time": "15:35"
+      },
+      {
+        "text": "比如说今天像Amazon、Google跟Microsoft",
+        "time": "15:38"
+      },
+      {
+        "text": "他们都比如说对Key Value Store",
+        "time": "15:41"
+      },
+      {
+        "text": "他们都有类似的Counterpart",
+        "time": "15:43"
+      },
+      {
+        "text": "那就可以了解說",
+        "time": "15:45"
+      },
+      {
+        "text": "為什麼這三個都會有這種東西",
+        "time": "15:46"
+      },
+      {
+        "text": "那它背後的原因是什麼",
+        "time": "15:48"
+      },
+      {
+        "text": "那它所適用的情境是什麼",
+        "time": "15:49"
+      },
+      {
+        "text": "當你在玩的時候",
+        "time": "15:51"
+      },
+      {
+        "text": "你就去讀那個文檔",
+        "time": "15:53"
+      },
+      {
+        "text": "然後就可以理解",
+        "time": "15:54"
+      },
+      {
+        "text": "那現在有AI又更容易",
+        "time": "15:54"
+      },
+      {
+        "text": "你就可以用AI去Summarize它的文檔",
+        "time": "15:55"
+      },
+      {
+        "text": "然後它所適用的情境",
+        "time": "15:58"
+      },
+      {
+        "text": "那這些所學到的知識",
+        "time": "16:00"
+      },
+      {
+        "text": "都可以利用在世界上的Design",
+        "time": "16:01"
+      },
+      {
+        "text": "就像我們剛剛講的就是",
+        "time": "16:03"
+      },
+      {
+        "text": "當你今天在討論說你的項要採用什麼東西的時候",
+        "time": "16:04"
+      },
+      {
+        "text": "你就可以有一個很好的理由去說服面試官",
+        "time": "16:07"
+      },
+      {
+        "text": "你在實際上去念文檔、去搭系統所學到的經驗",
+        "time": "16:10"
+      },
+      {
+        "text": "都是可以拿來去用在設計上",
+        "time": "16:15"
+      },
+      {
+        "text": "要上線一個東西其實並不困難",
+        "time": "16:18"
+      },
+      {
+        "text": "因為你今天有個網頁",
+        "time": "16:20"
+      },
+      {
+        "text": "你要想要去逗一個Key Value Store進來",
+        "time": "16:21"
+      },
+      {
+        "text": "就是點幾下去Configure就完成了",
+        "time": "16:24"
+      },
+      {
+        "text": "接下來就是你要付他的錢",
+        "time": "16:26"
+      },
+      {
+        "text": "這樣子",
+        "time": "16:28"
+      },
+      {
+        "text": "這個其實在一般準備面試的Material比較早講",
+        "time": "16:29"
+      },
+      {
+        "text": "因為面試的時候其實你跟面試官的Chemistry很重要",
+        "time": "16:33"
+      },
+      {
+        "text": "比如說你今天設計一個東西",
+        "time": "16:36"
+      },
+      {
+        "text": "然後他在追問一些Follow up question",
+        "time": "16:37"
+      },
+      {
+        "text": "他其實是想要聽到一些東西的",
+        "time": "16:40"
+      },
+      {
+        "text": "你要知道說他問這個問題背後想要聽到什麼東西",
+        "time": "16:42"
+      },
+      {
+        "text": "那你就根據他的問題去 frame 一個合理的回答",
+        "time": "16:45"
+      },
+      {
+        "text": "然後讓他聽到他想要的東西",
+        "time": "16:49"
+      },
+      {
+        "text": "舉個例子來說",
+        "time": "16:50"
+      },
+      {
+        "text": "今天可能會追問說為什麼你這邊要這樣子設計",
+        "time": "16:51"
+      },
+      {
+        "text": "你可能有想到其他 Option 的時候",
+        "time": "16:53"
+      },
+      {
+        "text": "你這個時候就可以把它提出來",
+        "time": "16:55"
+      },
+      {
+        "text": "因為你可能在畫圖的時候沒有想到",
+        "time": "16:56"
+      },
+      {
+        "text": "那你這個時候就可以提出來說",
+        "time": "16:58"
+      },
+      {
+        "text": "其實我想到 Option A 跟 B",
+        "time": "17:00"
+      },
+      {
+        "text": "但是我最後決定用這個ion并且直接画上来",
+        "time": "17:01"
+      },
+      {
+        "text": "是因为说option A可能对于这个系统",
+        "time": "17:05"
+      },
+      {
+        "text": "在scale up的时候会有问题",
+        "time": "17:08"
+      },
+      {
+        "text": "option B可能会比较容易在这种",
+        "time": "17:10"
+      },
+      {
+        "text": "traffic pattern去scale up",
+        "time": "17:12"
+      },
+      {
+        "text": "这个的话就是可能面试官想听到",
+        "time": "17:14"
+      },
+      {
+        "text": "他可能不是想要听到一个亿元的答案",
+        "time": "17:16"
+      },
+      {
+        "text": "他想听到一个二元或多元的答案",
+        "time": "17:18"
+      },
+      {
+        "text": "这样子",
+        "time": "17:21"
+      },
+      {
+        "text": "对我觉得你刚讲那个跟面试官",
+        "time": "17:21"
+      },
+      {
+        "text": "那个chemistry很重要",
+        "time": "17:23"
+      },
+      {
+        "text": "然后其实也是溝通啦",
+        "time": "17:24"
+      },
+      {
+        "text": "雖然說我認為語言在這裡",
+        "time": "17:26"
+      },
+      {
+        "text": "沒有到非常非常重",
+        "time": "17:29"
+      },
+      {
+        "text": "就英語其實夠用就可以了",
+        "time": "17:30"
+      },
+      {
+        "text": "對",
+        "time": "17:32"
+      },
+      {
+        "text": "但是我覺得在系統設計的時候",
+        "time": "17:32"
+      },
+      {
+        "text": "我自己會認為",
+        "time": "17:34"
+      },
+      {
+        "text": "對於英語的這個bar",
+        "time": "17:36"
+      },
+      {
+        "text": "我會希望高一點",
+        "time": "17:38"
+      },
+      {
+        "text": "應該說我也不會去說",
+        "time": "17:39"
+      },
+      {
+        "text": "喔他文法不夠",
+        "time": "17:41"
+      },
+      {
+        "text": "他講 咬字不清楚",
+        "time": "17:42"
+      },
+      {
+        "text": "但是至少我們這是一個互相work的一個session",
+        "time": "17:43"
+      },
+      {
+        "text": "對那我會覺得說那我以後要跟這個人工作",
+        "time": "17:47"
+      },
+      {
+        "text": "我能不能聽得懂他在講什麼",
+        "time": "17:49"
+      },
+      {
+        "text": "我能不能告訴他我的想法",
+        "time": "17:51"
+      },
+      {
+        "text": "然後他也能接受我的想法",
+        "time": "17:53"
+      },
+      {
+        "text": "對我覺得這點是很重要的",
+        "time": "17:54"
+      },
+      {
+        "text": "所以這個就是我覺得就是communication skill",
+        "time": "17:56"
+      },
+      {
+        "text": "我覺得在面試的時候你就是要表現出",
+        "time": "17:58"
+      },
+      {
+        "text": "怎麼講有一個自信的氣場",
+        "time": "18:01"
+      },
+      {
+        "text": "但是同樣是一個good lesson",
+        "time": "18:02"
+      },
+      {
+        "text": "就是你在present你的design的時候",
+        "time": "18:04"
+      },
+      {
+        "text": "你如果沒有自信的話",
+        "time": "18:06"
+      },
+      {
+        "text": "有可能對方就可能沒辦法",
+        "time": "18:07"
+      },
+      {
+        "text": "完全聽得到你在講什麼",
+        "time": "18:09"
+      },
+      {
+        "text": "因為可能說了實話聲音就會變小聲",
+        "time": "18:11"
+      },
+      {
+        "text": "所以你要很有自信的說",
+        "time": "18:13"
+      },
+      {
+        "text": "你為什麼要這麼做",
+        "time": "18:14"
+      },
+      {
+        "text": "可是當你今天面試官表現一些質疑的時候",
+        "time": "18:15"
+      },
+      {
+        "text": "你同時又是一個很好listener",
+        "time": "18:18"
+      },
+      {
+        "text": "可以面對質疑",
+        "time": "18:19"
+      },
+      {
+        "text": "然後適時的做出調整這樣子",
+        "time": "18:20"
+      },
+      {
+        "text": "我覺得最後我會建議",
+        "time": "18:23"
+      },
+      {
+        "text": "尤其是在",
+        "time": "18:24"
+      },
+      {
+        "text": "system design 这一轮的准备",
+        "time": "18:25"
+      },
+      {
+        "text": "后期的时候",
+        "time": "18:28"
+      },
+      {
+        "text": "大家尽量去做 mark interview",
+        "time": "18:29"
+      },
+      {
+        "text": "最好是跟厉害的人啦",
+        "time": "18:31"
+      },
+      {
+        "text": "最好是跟有经验的",
+        "time": "18:32"
+      },
+      {
+        "text": "有经验的人",
+        "time": "18:33"
+      },
+      {
+        "text": "有当过面试官",
+        "time": "18:34"
+      },
+      {
+        "text": "当过面试官的人",
+        "time": "18:35"
+      },
+      {
+        "text": "有经验的人",
+        "time": "18:35"
+      },
+      {
+        "text": "然后知道他在做什么的人",
+        "time": "18:36"
+      },
+      {
+        "text": "所以我觉得这种人",
+        "time": "18:38"
+      },
+      {
+        "text": "他可以给你很多 pointer",
+        "time": "18:39"
+      },
+      {
+        "text": "然后其实",
+        "time": "18:40"
+      },
+      {
+        "text": "我觉得有 mark 跟没有 mark",
+        "time": "18:41"
+      },
+      {
+        "text": "是差非常非常多",
+        "time": "18:42"
+      },
+      {
+        "text": "对",
+        "time": "18:43"
+      },
+      {
+        "text": "当然也有",
+        "time": "18:44"
+      },
+      {
+        "text": "就找不到的人可以 mark interview那你就直接去直接非常多當然也有找不到人可以Mock interview",
+        "time": "18:44"
+      },
+      {
+        "text": "那你就直接去interview也算是一個Mock interview",
+        "time": "18:46"
+      },
+      {
+        "text": "只是你沒辦法拿到feedback",
+        "time": "18:49"
+      },
+      {
+        "text": "對我覺得Mock interview最大優點是說你可以獲得feedback",
+        "time": "18:51"
+      },
+      {
+        "text": "因為你通常去正式的公司面試完",
+        "time": "18:54"
+      },
+      {
+        "text": "他們大部分時候是不會給你一個具體的feedback",
+        "time": "18:56"
+      },
+      {
+        "text": "所以你不知道說你哪邊還可以再加強",
+        "time": "18:59"
+      },
+      {
+        "text": "那Mock interview尤其是你找一個experienced interviewer的話",
+        "time": "19:01"
+      },
+      {
+        "text": "他可以立刻给你",
+        "time": "19:04"
+      },
+      {
+        "text": "一些Constructive的Feedback",
+        "time": "19:05"
+      },
+      {
+        "text": "那你就可以",
+        "time": "19:07"
+      },
+      {
+        "text": "针对一些Feedback",
+        "time": "19:08"
+      },
+      {
+        "text": "去再做加强",
+        "time": "19:09"
+      },
+      {
+        "text": "那这种东西就是",
+        "time": "19:10"
+      },
+      {
+        "text": "一回生二回首嘛",
+        "time": "19:11"
+      },
+      {
+        "text": "就是优点就是",
+        "time": "19:12"
+      },
+      {
+        "text": "你知道吗",
+        "time": "19:13"
+      },
+      {
+        "text": "可以再加强",
+        "time": "19:13"
+      },
+      {
+        "text": "那你就可以针对你",
+        "time": "19:14"
+      },
+      {
+        "text": "不足的地方再去做加强",
+        "time": "19:15"
+      },
+      {
+        "text": "那总比说",
+        "time": "19:17"
+      },
+      {
+        "text": "你同样的事情",
+        "time": "19:18"
+      },
+      {
+        "text": "做了一百次",
+        "time": "19:18"
+      },
+      {
+        "text": "可是你不知道",
+        "time": "19:19"
+      },
+      {
+        "text": "你哪边做不好",
+        "time": "19:19"
+      },
+      {
+        "text": "所以你进步的幅度",
+        "time": "19:20"
+      },
+      {
+        "text": "就是有限这样",
+        "time": "19:22"
+      },
+      {
+        "text": "而且我觉得",
+        "time": "19:23"
+      },
+      {
+        "text": "System Design Interview",
+        "time": "19:24"
+      },
+      {
+        "text": "的这个模式",
+        "time": "19:25"
+      },
+      {
+        "text": "是一直以来都差不多",
+        "time": "19:27"
+      },
+      {
+        "text": "就是没有什么",
+        "time": "19:29"
+      },
+      {
+        "text": "太大的变化",
+        "time": "19:30"
+      },
+      {
+        "text": "就从四年前",
+        "time": "19:30"
+      },
+      {
+        "text": "我在讲录那支影片的时候",
+        "time": "19:32"
+      },
+      {
+        "text": "到现在",
+        "time": "19:33"
+      },
+      {
+        "text": "其实还是差不多",
+        "time": "19:34"
+      },
+      {
+        "text": "刚看我影片的时候",
+        "time": "19:35"
+      },
+      {
+        "text": "你有觉得就是",
+        "time": "19:37"
+      },
+      {
+        "text": "其实还是relevant",
+        "time": "19:37"
+      },
+      {
+        "text": "其实到现在",
+        "time": "19:38"
+      },
+      {
+        "text": "都还是很适用",
+        "time": "19:39"
+      },
+      {
+        "text": "我是一直觉得",
+        "time": "19:40"
+      },
+      {
+        "text": "是一个很值得投资的一个",
+        "time": "19:41"
+      },
+      {
+        "text": "应该说",
+        "time": "19:43"
+      },
+      {
+        "text": "如果你认真想要在career",
+        "time": "19:43"
+      },
+      {
+        "text": "在你的tech career上面",
+        "time": "19:45"
+      },
+      {
+        "text": "繼續前進繼續advance的話",
+        "time": "19:47"
+      },
+      {
+        "text": "我覺得生產設計是必要的",
+        "time": "19:48"
+      },
+      {
+        "text": "以前是對於可能比較senior level的人來說是必要的",
+        "time": "19:50"
+      },
+      {
+        "text": "但現在是基本上你不管在大學",
+        "time": "19:54"
+      },
+      {
+        "text": "或是你可能剛畢業建議啦",
+        "time": "19:57"
+      },
+      {
+        "text": "開始做這方面的準備",
+        "time": "19:59"
+      },
+      {
+        "text": "我覺得生產設計的話就是像我們另外一個影片提到",
+        "time": "20:00"
+      },
+      {
+        "text": "就是它可以根本去測驗你的problem solving skills",
+        "time": "20:03"
+      },
+      {
+        "text": "除此之外他可以考驗你的communication",
+        "time": "20:07"
+      },
+      {
+        "text": "跟collaborative skills",
+        "time": "20:10"
+      },
+      {
+        "text": "這個都是在實際工作上",
+        "time": "20:12"
+      },
+      {
+        "text": "怎麼講 比單純你coding很快又流利",
+        "time": "20:14"
+      },
+      {
+        "text": "還要更重要一些特質",
+        "time": "20:17"
+      },
+      {
+        "text": "就比較全面一點",
+        "time": "20:19"
+      },
+      {
+        "text": "其實透過實戰的這一輪面試",
+        "time": "20:21"
+      },
+      {
+        "text": "我就可以很清楚的看到這個人",
+        "time": "20:23"
+      },
+      {
+        "text": "他的level到底在哪裡",
+        "time": "20:25"
+      },
+      {
+        "text": "因為coding其實",
+        "time": "20:26"
+      },
+      {
+        "text": "現在AI拓那麼多",
+        "time": "20:28"
+      },
+      {
+        "text": "然後就是用AI去作弊的話",
+        "time": "20:29"
+      },
+      {
+        "text": "我當然是現在也看得出來",
+        "time": "20:31"
+      },
+      {
+        "text": "但是我覺得實身Design是基本上",
+        "time": "20:33"
+      },
+      {
+        "text": "不太可能用AI作弊的",
+        "time": "20:34"
+      },
+      {
+        "text": "因為現在用AI你下prompt",
+        "time": "20:36"
+      },
+      {
+        "text": "除非你prompt下得很精準很精準",
+        "time": "20:37"
+      },
+      {
+        "text": "但是我覺得就是你要multiple prompts",
+        "time": "20:40"
+      },
+      {
+        "text": "慢慢去把它給",
+        "time": "20:42"
+      },
+      {
+        "text": "把那個solution給拼起來",
+        "time": "20:43"
+      },
+      {
+        "text": "對我覺得很難是一個prompt就可能也可以但就是你要打很久所以 prompts慢慢去把它給把那個solution給拼起來",
+        "time": "20:44"
+      },
+      {
+        "text": "我覺得很難是一個prompt就",
+        "time": "20:45"
+      },
+      {
+        "text": "可能也可以",
+        "time": "20:46"
+      },
+      {
+        "text": "但就是你要打很久",
+        "time": "20:47"
+      },
+      {
+        "text": "所以我覺得這不太容易作弊",
+        "time": "20:48"
+      },
+      {
+        "text": "基本上你現在如果要用AI tool",
+        "time": "20:50"
+      },
+      {
+        "text": "去做些商品商業的interview",
+        "time": "20:51"
+      },
+      {
+        "text": "首先你要ask the right questions",
+        "time": "20:52"
+      },
+      {
+        "text": "可是如果你沒有經驗的話",
+        "time": "20:54"
+      },
+      {
+        "text": "你很難去ask the right question",
+        "time": "20:56"
+      },
+      {
+        "text": "你也很難去判斷說",
+        "time": "20:58"
+      },
+      {
+        "text": "今天AI給你的solution是不是真的",
+        "time": "21:00"
+      },
+      {
+        "text": "就是make sense",
+        "time": "21:02"
+      },
+      {
+        "text": "其實我有自己在练习的时候",
+        "time": "21:03"
+      },
+      {
+        "text": "也有用过AI tool",
+        "time": "21:07"
+      },
+      {
+        "text": "但是很多时候我还是必须要",
+        "time": "21:08"
+      },
+      {
+        "text": "ask the right question去引导他",
+        "time": "21:09"
+      },
+      {
+        "text": "就是我已经有一定的知识面",
+        "time": "21:11"
+      },
+      {
+        "text": "但是我只是在细节上",
+        "time": "21:13"
+      },
+      {
+        "text": "我想要知道说这细节上",
+        "time": "21:15"
+      },
+      {
+        "text": "我不知道的东西把它补足",
+        "time": "21:16"
+      },
+      {
+        "text": "那这种时候去用AI tool就很方便",
+        "time": "21:18"
+      },
+      {
+        "text": "因为我知道说",
+        "time": "21:19"
+      },
+      {
+        "text": "我现在缺了什么东西",
+        "time": "21:20"
+      },
+      {
+        "text": "那我具体上我要如何去问AI",
+        "time": "21:22"
+      },
+      {
+        "text": "去套出说我现在想要补足的是什么东西",
+        "time": "21:24"
+      },
+      {
+        "text": "当你今天知识面不够的话",
+        "time": "21:27"
+      },
+      {
+        "text": "比如说你完全不知道",
+        "time": "21:30"
+      },
+      {
+        "text": "这系统是怎么去开始",
+        "time": "21:31"
+      },
+      {
+        "text": "AI可能会给你一个非常detail",
+        "time": "21:33"
+      },
+      {
+        "text": "非常隆重的答案",
+        "time": "21:35"
+      },
+      {
+        "text": "可是你不知道说",
+        "time": "21:36"
+      },
+      {
+        "text": "我该如何从这边去extract出",
+        "time": "21:37"
+      },
+      {
+        "text": "一个合理的high level的solution",
+        "time": "21:39"
+      },
+      {
+        "text": "用在system design interview上",
+        "time": "21:42"
+      },
+      {
+        "text": "根据你之前的经验你在Google Meta Stripe这些大公司全都待过一個合理的 High Level 的 Solution用在 System Design Interview 上嗯嗯嗯",
+        "time": "21:43"
+      },
+      {
+        "text": "那根據你之前的經驗",
+        "time": "21:45"
+      },
+      {
+        "text": "你在 Google Meta",
+        "time": "21:46"
+      },
+      {
+        "text": "Stripe 這些大公司全都待過",
+        "time": "21:48"
+      },
+      {
+        "text": "OpenAI 也待過",
+        "time": "21:49"
+      },
+      {
+        "text": "你認為 Interesting 的",
+        "time": "21:50"
+      },
+      {
+        "text": "System Design 的面試經驗",
+        "time": "21:52"
+      },
+      {
+        "text": "面試經驗嗎",
+        "time": "21:54"
+      },
+      {
+        "text": "對",
+        "time": "21:55"
+      },
+      {
+        "text": "就因為我記得你跟我講說",
+        "time": "21:56"
+      },
+      {
+        "text": "你之前面那個",
+        "time": "21:57"
+      },
+      {
+        "text": "OnTropic 還是哪一家公司",
+        "time": "21:58"
+      },
+      {
+        "text": "然後他考的題目是",
+        "time": "22:00"
+      },
+      {
+        "text": "你是完全沒有任何信心會做好",
+        "time": "22:02"
+      },
+      {
+        "text": "啊然後最後其實做得還不錯",
+        "time": "22:04"
+      },
+      {
+        "text": "其實我也有點忘記",
+        "time": "22:06"
+      },
+      {
+        "text": "我記得",
+        "time": "22:08"
+      },
+      {
+        "text": "我不曉得他現在還問是不是問一樣問題",
+        "time": "22:09"
+      },
+      {
+        "text": "可是就是類似於說",
+        "time": "22:10"
+      },
+      {
+        "text": "因為現在GPU是稀缺資源",
+        "time": "22:12"
+      },
+      {
+        "text": "所以那一個System Design Interview",
+        "time": "22:14"
+      },
+      {
+        "text": "就圍繞著說",
+        "time": "22:16"
+      },
+      {
+        "text": "你現在就只有這幾個GPU",
+        "time": "22:17"
+      },
+      {
+        "text": "然後你有多少個Traffic",
+        "time": "22:19"
+      },
+      {
+        "text": "你要如何合理的去分配這些Traffic",
+        "time": "22:21"
+      },
+      {
+        "text": "去最大化使用这些GPU",
+        "time": "22:24"
+      },
+      {
+        "text": "其实这个我是完全没做过这个题目",
+        "time": "22:26"
+      },
+      {
+        "text": "只是就是根本的从First principle出发",
+        "time": "22:29"
+      },
+      {
+        "text": "就是我的目标是要合理最大化使用这GPU",
+        "time": "22:31"
+      },
+      {
+        "text": "也就是说可能在一些尖峰的时刻",
+        "time": "22:34"
+      },
+      {
+        "text": "我可以去Even这些Traffic",
+        "time": "22:36"
+      },
+      {
+        "text": "到稍微没有那么闲置的时候",
+        "time": "22:37"
+      },
+      {
+        "text": "让一些Low priority Traffic去Shift到",
+        "time": "22:39"
+      },
+      {
+        "text": "不是那么尖峰的时刻去做Async Process",
+        "time": "22:41"
+      },
+      {
+        "text": "那就是背后我想要做的事情",
+        "time": "22:43"
+      },
+      {
+        "text": "那再根據這一個我想要做的Solution",
+        "time": "22:45"
+      },
+      {
+        "text": "我再去做一些紙上的計算",
+        "time": "22:48"
+      },
+      {
+        "text": "去計算說我要如何分配這些Traffic",
+        "time": "22:49"
+      },
+      {
+        "text": "然後提出一個合理的Scheduling的Solution",
+        "time": "22:51"
+      },
+      {
+        "text": "當然細節上我有點忘記",
+        "time": "22:54"
+      },
+      {
+        "text": "但大致上大概是這樣",
+        "time": "22:56"
+      },
+      {
+        "text": "可是其實想要討論的背後就是說",
+        "time": "22:57"
+      },
+      {
+        "text": "這些其實是從我平常在工作上碰到一些經驗",
+        "time": "22:59"
+      },
+      {
+        "text": "去套用在這個問題上面",
+        "time": "23:02"
+      },
+      {
+        "text": "那很多時候就是你沒有實際上去真的做過",
+        "time": "23:04"
+      },
+      {
+        "text": "你其實很難去做這個聯想",
+        "time": "23:07"
+      },
+      {
+        "text": "但當你有過了以後你就可以把同樣的philosophy去套用在很多問題上",
+        "time": "23:09"
+      },
+      {
+        "text": "那細節部分就是剩下就是去flesh out the details",
+        "time": "23:15"
+      },
+      {
+        "text": "我覺得有一點你剛剛講的很好的是first principle thinking",
+        "time": "23:19"
+      },
+      {
+        "text": "就是第一性原理去思考",
+        "time": "23:23"
+      },
+      {
+        "text": "性有面试确实是有",
+        "time": "23:25"
+      },
+      {
+        "text": "大概几道题是经典题",
+        "time": "23:26"
+      },
+      {
+        "text": "但是你有可能会遇到面试官",
+        "time": "23:28"
+      },
+      {
+        "text": "是不考经典题的",
+        "time": "23:30"
+      },
+      {
+        "text": "他就不按牌理出牌",
+        "time": "23:31"
+      },
+      {
+        "text": "他就是考一些很特别的一些case",
+        "time": "23:32"
+      },
+      {
+        "text": "可能是他们自己team遇到的问题",
+        "time": "23:35"
+      },
+      {
+        "text": "或什么之类的",
+        "time": "23:37"
+      },
+      {
+        "text": "我自己个人今天是",
+        "time": "23:38"
+      },
+      {
+        "text": "遇到这种题的时候",
+        "time": "23:39"
+      },
+      {
+        "text": "第一步你就是先不要紧张",
+        "time": "23:40"
+      },
+      {
+        "text": "虽然你完全没有看过",
+        "time": "23:41"
+      },
+      {
+        "text": "你也不知道他在说什么",
+        "time": "23:42"
+      },
+      {
+        "text": "我当时的approach就是",
+        "time": "23:43"
+      },
+      {
+        "text": "我先用第一性原理去思考",
+        "time": "23:44"
+      },
+      {
+        "text": "因为这个东西可能或许看起来是",
+        "time": "23:46"
+      },
+      {
+        "text": "包装起来是一个很复杂",
+        "time": "23:49"
+      },
+      {
+        "text": "或是甚至是没有看过",
+        "time": "23:50"
+      },
+      {
+        "text": "但其实底层逻辑",
+        "time": "23:51"
+      },
+      {
+        "text": "他想要考你的东西其实差不多的",
+        "time": "23:52"
+      },
+      {
+        "text": "对因为其实一个面试就是一个小时",
+        "time": "23:55"
+      },
+      {
+        "text": "所以他不可能今天",
+        "time": "23:57"
+      },
+      {
+        "text": "让你设计一个非常复杂",
+        "time": "23:58"
+      },
+      {
+        "text": "然后从深入浅出",
+        "time": "24:00"
+      },
+      {
+        "text": "每一个细节都解释得很清楚",
+        "time": "24:01"
+      },
+      {
+        "text": "如果去drive interview你之后",
+        "time": "24:03"
+      },
+      {
+        "text": "像你那个影片有讲到就是",
+        "time": "24:04"
+      },
+      {
+        "text": "一开始去澄清这个requirement是最重要的地方",
+        "time": "24:06"
+      },
+      {
+        "text": "因为requirement就可以set out你这个问题的scope",
+        "time": "24:09"
+      },
+      {
+        "text": "需要做到什么程度",
+        "time": "24:11"
+      },
+      {
+        "text": "那他今天一开始可能丢给你一个很抽象的东西",
+        "time": "24:12"
+      },
+      {
+        "text": "那这东西可能需要里面很多feature",
+        "time": "24:16"
+      },
+      {
+        "text": "比如他今天丢给你说我们要设计一个YouTube",
+        "time": "24:18"
+      },
+      {
+        "text": "那YouTube feature都要爆炸",
+        "time": "24:20"
+      },
+      {
+        "text": "你有可以看影片你可以上传影片",
+        "time": "24:21"
+      },
+      {
+        "text": "你可以留comment对不对",
+        "time": "24:23"
+      },
+      {
+        "text": "那他可能",
+        "time": "24:25"
+      },
+      {
+        "text": "那你当然这个时候",
+        "time": "24:25"
+      },
+      {
+        "text": "就是要跟他clarify requirement",
+        "time": "24:26"
+      },
+      {
+        "text": "就是说我们实际上到底是要",
+        "time": "24:28"
+      },
+      {
+        "text": "在这个问题是想要去做",
+        "time": "24:30"
+      },
+      {
+        "text": "是什么Feature出来",
+        "time": "24:31"
+      },
+      {
+        "text": "那有时候他就是",
+        "time": "24:32"
+      },
+      {
+        "text": "大部分时候他就是要你去实现一个",
+        "time": "24:33"
+      },
+      {
+        "text": "最核心的一个Feature",
+        "time": "24:35"
+      },
+      {
+        "text": "那你跟他确定这个以后再往下",
+        "time": "24:37"
+      },
+      {
+        "text": "就是有一些像Top-Down Approach",
+        "time": "24:39"
+      },
+      {
+        "text": "我们先确立我们的Scope",
+        "time": "24:41"
+      },
+      {
+        "text": "然后从那个Scope再往下",
+        "time": "24:43"
+      },
+      {
+        "text": "我们开始去做一个High-Level Design",
+        "time": "24:44"
+      },
+      {
+        "text": "那High-Level Design也不需要做太详细",
+        "time": "24:46"
+      },
+      {
+        "text": "就是说我们需要",
+        "time": "24:48"
+      },
+      {
+        "text": "我们为了做这件事情",
+        "time": "24:49"
+      },
+      {
+        "text": "我们需要有一个",
+        "time": "24:50"
+      },
+      {
+        "text": "有几个High-Level的Abstraction",
+        "time": "24:52"
+      },
+      {
+        "text": "就是这个Black Box做什么",
+        "time": "24:54"
+      },
+      {
+        "text": "这个Black Box做什么",
+        "time": "24:56"
+      },
+      {
+        "text": "然后你有一个End-to-End的Data Flow出来了以后",
+        "time": "24:58"
+      },
+      {
+        "text": "去满足那Requirement",
+        "time": "25:00"
+      },
+      {
+        "text": "之后再去做第一代",
+        "time": "25:02"
+      },
+      {
+        "text": "那第一代就是",
+        "time": "25:03"
+      },
+      {
+        "text": "你去如何去鑑別說",
+        "time": "25:04"
+      },
+      {
+        "text": "這一個人的 seniority level 這樣子",
+        "time": "25:05"
+      },
+      {
+        "text": "好那實戰營的連結呢",
+        "time": "25:08"
+      },
+      {
+        "text": "我也會放在影片底下資訊欄",
+        "time": "25:09"
+      },
+      {
+        "text": "如果你喜歡今天的內容的話",
+        "time": "25:11"
+      },
+      {
+        "text": "記得一定要幫我們點個讚",
+        "time": "25:13"
+      },
+      {
+        "text": "那我們下次見囉",
+        "time": "25:14"
+      }
+    ],
+    "task_id": "cd2d9132a2574c51af0ea33ed00d9386",
+    "title": "工程師面試 Bar 變高了？如何在面試中拿 Strong Hire",
+    "transcript": [],
+    "updatedAt": 1783959052350,
+    "url": "https://youtu.be/p2E0OyTKDv4",
+    "video_url": ""
+  }
+}

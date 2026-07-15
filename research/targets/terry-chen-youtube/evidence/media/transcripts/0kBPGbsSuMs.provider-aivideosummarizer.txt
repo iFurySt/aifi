@@ -1,0 +1,607 @@
+Hello大家好我是Terry
+今天呢我們的矽谷女神 Kelly來東京玩了
+那按照慣例呢我們是不是要來做一些什麼
+沒錯我們就是要來寫Code
+因為大家也知道最近矽谷是蠻多公司
+把招人的這個專注呢
+放在比較偏向Mid-Senior Level的工程師上面
+那Kelly身為一個也算是
+大學剛畢業沒有太久的一個工程師
+我們就來看一下Kelly有沒有辦法通過這個簡單的Coding面試
+那這個面試
+那這個面試的難度呢也是通常我在幫我們公司招人的時候呢
+會去考的一個稍微偏簡單一點的題目
+可以準備好了嗎
+我們開頭先簡單聊兩句啦
+所以怎麼樣
+超緊張
+很緊張
+真的很緊張嗎
+超緊張真的很緊張
+那你對我們公司有沒有什麼期許
+希望錢給得多一點
+錢
+對嗎
+我在面什麼職位啊
+我們沒有找副職位我們只有找副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副�我們CEO都會需要知道怎麼做離口好好很神奇的公司好 錢給到位都可以
+我們是有心意
+有心意
+我到底來了什麼黑心的面試
+OK 好 準備好了嗎
+那不要緊張
+這是一個很好玩的一個
+體育
+exercise
+喔 好
+體育不好玩
+體育不好玩
+exercise很好玩
+好好
+沒有想到在東京會做這個事情對不對沒有我在東京我是來玩的我們題目不好玩題目不好玩誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒我剛剛是開玩笑我突然想說你那個comments裡面會不會在那邊Kelly拜金啊
+Kelly
+這個這個這個
+錢什麼
+沒事
+Kelly沒有拜金
+Kelly是我看過最
+那叫什麼 樸實
+樸實無華的女生
+謝謝
+謝謝
+對 你不拜金吧
+還好吧
+我只是想說我剛剛開玩笑
+在那邊說什麼
+錢給到位什麼
+我不是這種人
+沒有 我覺得錢要給到位啊
+走公路不是為了錢
+對啊 這不是拜金
+這叫做為自己的前程負責
+嗯 謝謝 謝謝 Terry
+OK 好
+那這道題呢
+算是一個比較經典的一道題啦
+對 然後我們就假設
+你的input是一個
+Array of coins 的denomination
+好
+對 那你想coins可能會有1 1 3 5
+或是1塊2塊3塊
+它可以是任何的denomination
+可以是100 1000 10000
+對
+那你的input就是
+coin
+nation
+好
+是一個Array
+對 是一個Array
+好
+然後TargetNumber
+嗯
+對 這是一個Integer
+嗯
+那TargetNumber就是你要用這個Coin去Match
+想辦法湊到那個錢
+對 像比如說
+OK 我今天Target是100
+好
+那你有你的Denomination是1塊跟10塊
+嗯
+那你可以給它十个十块
+或是你可以给他一百个一块
+或是你也可以mix and match
+那今天我们要找的是
+举个例子好了比如说你的input是
+1,3,5好了
+那我的target是
+11,距离
+如果是11个1的话
+但是这不是最优的
+因为我们要找minimum number of coins
+就是几个单位
+所以说我们这道題的solution是
+5加5加1對吧
+那等於說你要3
+等於說你有3個coin
+你就可以把它湊成這個target
+好
+了解
+ok好那雖然這個題目蠻simple
+但我還是clarify一下
+我們現在input 你會給我一個
+coin denomination 是一個 array of
+它有拿幾種硬幣
+跟一個 target number
+然後我要 return 的就是
+我最少需要幾個硬幣
+來 make up 到這個 target amount
+對
+好 那這聽起來就是一個
+dynamic programming 的題目
+可以用一個 dp array 來解
+我現在想的是
+我建一个array
+然后我array的每一个index去存
+就是我到这个target amount
+需要多少个硬币
+就是比如说我如果
+你的target amount是10的话
+那我就建一个
+有11个items的一个array
+然后每一个去存
+就是0要多少1要多少一直到11
+然後我可以去就是用一個for loop來update這些amounts
+所以說你的array size是
+amount plus 1
+因為從0開始嘛
+然後我如果要到10的話就會0 1 2 3 4 5 6 7 8 9 10
+哦 ok
+對
+就是你的target是11的話就是
+就是12個
+12個
+ok 懂了ok哦OK就是你的目標是C的話就是12個
+OK懂了
+那所以我一開始會先initialize一個很大的數字
+因為一開始我不知道minimum number是多少
+所以我先用一個大的數字
+然後每一個position都放這個數字
+然後我從0開始
+然後因為makeup amount 0一定是0嘛
+所以第一個就會是0
+然後我再來從1開始去
+用一個for loop
+就是外層的for loop要先
+go over每一個coin的denomination
+然後呢從coin value到target value之中間去看
+就是每一個position update的
+either是它現在存的這個minimum value
+或者是就是dp的xgen coin
+因為你現在已經有這個coin value了
+然後再加一個就是我 current coin
+所以就是 DP 的 Xgen coin 加 1
+這樣然後看哪一個比較小
+然後去 update 這個 value
+然後一路到就是 target amount
+然後最後 target amount
+如果是就是小於我 initialize 的那個 max value
+那就代表我可以就是 make up 這個 combination
+可是如果它完全沒有被 update 到
+它還是一開始我 initialize 的那個
+很大的數字就是不ize的那個很大的數字
+就是不合理的很大的數字的話
+那就代表它沒有辦法make up這個value
+就是這個題目有可能是不合理的嘛
+因為你給的不一定是可以剛好那個數字
+那我就要
+如果沒有辦法make up要return是嗎
+你可以return-1
+-1 好 那我就
+那你剛剛講的這個DP approach是
+對
+bottom up的 approach嗯
+對
+從小的開始
+從小的開始
+ok 沒問題
+好 那我就開始寫了
+我用Python寫
+可以啊
+對
+這個題目要叫什麼
+沒關係 你不用管那個大小寫
+你Google Doc管就是
+然後要給我的是
+coin.num
+那我那個就會叫coin
+然後後面就target number
+那就target amount嘛嗯哼這樣子然後呢我要initialize一個max value那我這個就會叫Coin然後後面就Target Number那就Target Amount嘛
+這樣子
+然後呢我要Initialize一個Max Value
+就是一開始那個最大的
+我就Initialize一個
+如果你的Target Amount
+然後你Target Amount大的話
+那就是不合理嘛
+那個就是Basically無限大
+因為我只是要Make up 10的話
+你給11
+那就是不合理了
+因為Coin應該一定是大於1的吧
+不可能有小數點的quint
+對 我們就assume是integer
+好 所以那我這個就
+比如說initialize amount加1
+這樣子就是已經是比合理的還要再大了
+因為不可能最後return amount加1
+好 然後我initialize這個dp array
+那我就用就是我的max value
+max valuemax value
+然后我要乘以
+我要store从0到我们的target amount
+所以是amount加1
+这样
+然后呢
+我们initialize了这个dp array之后
+要先从第一个开始
+所以第一个就是makeup amount 0就是0
+dp array的0我要先initialize第一个吗
+0会是0
+因为makeup amount 0就是0
+聪明
+然后呢我们就要开始写for loop
+所以第一个我们应该要go through那个coin的denominations
+所以呢
+这个我把它改成coins好了因为它是一个list of coin的denominations所以呢这个我把它改成coins好了
+它是一个list of coin的denominations
+然后for coin in coins这样
+嗯
+然后呢里面还要一个for loop
+好for
+我们外层的for loop是for coin in coins
+然后内层的for i in range
+我想一下它的range要是多少
+因为我们要一路到amount
+就一路到我们的target amount
+但是从哪一个开始是
+最小的会是就是我们现在的coin是多少
+因为假设你这边给135好了
+那我现在在1的话
+我最小就是只能从1开始
+因为比1小的不可能
+就是前面我就已经不用考虑了
+我就只有这个coin的话它就只能从这里开始因为比1小的不可能就是前面我就已经不用考虑了我就只有这个Coin的话
+它就只能从这里开始
+所以这应该是从Coin开始的
+然后到Amount
+所以要Amount加1
+因为Range是不会
+就是include最后那个数字
+然后呢
+我们现在就要update这个DP Array
+所以DP Array的i
+我们要把它update成
+minimum of什么东西
+minimum of现在DP array currently是多少
+就是看它现在Stored的
+所以DP array的i跟什么呢
+就是DP array的
+我们现在的current coin
+我们要加这个current coin
+所以加1因为多这个
+然后我们去减掉i
+减掉这个coin value
+因为我们现在的dpi
+减掉current coin value
+然后去看那个position是多少
+然后再加上我现在current coin的这个数量
+所以加1
+对
+所以这个minimum
+然后呢
+这for loop跑完
+我们就已经update所有dp array每个positionminimum然后呢这for loop跑完我们就已经update所有
+dparray每一个position
+minimum是要多少
+所以我们最后return的数字就会是
+要看就是有被update到的话
+就是可以到那个amount
+没有的话就要return-1
+所以dparray的amount
+然后这是if
+if dp array amount
+小於我們一開始 initialize 的 max value
+如果是等於的話
+那就要 return 負1
+這樣
+OK 結束
+那妳要不要 dry run 一下一些 test case
+好啊
+那給個簡單的 input
+還是我用你一開始給的這個
+可以好
+可以用哪個
+好
+那我就不額外型
+input 135 然後
+target amount 是 11 的話
+max value 我們這裡就會 initialize 成
+amount 加 1 12
+然後 dp array 現在就會是max value 就會 12 12 12 12amount加1 12然后dparray现在就会是
+max value就会12 12 12 12
+然后有12个12
+嗯哼
+对
+然后呢
+我们把它update成第一个是0
+所以现在变成0
+然后后面都是12
+嗯哼
+后面有11个12这样
+然后for coin and coins
+所以好我们第一个
+for coin and coins第一个我們第一個for coin and coins
+第一個是1嘛
+我們先用1來看
+然後再來for i and range
+從coin到amount
+所以我們從1開始看
+然後會一路看到11
+就從1開始這樣loop
+然後dparray的第一個
+就是這個它會標記嗎
+嗯?
+我mark它不會mark
+OK
+喔欸喔
+它沒有就是顯示我一個在這邊喔
+Interesting
+你是
+就是
+剛剛有顯示我不知道為什麼不見了
+但是它還是在同步
+有有同步
+OK
+好
+for coin and coins
+對
+然後現在的range
+E
+然後DP array的第一個所以我們來看minimum的DP array现在的range是1,dp array是1
+所以我们来看minimum的dp array
+现在这个dp array的i是12
+然后呢,dp array的i-coin加1
+所以会变成是dp array的乘以dp就好
+所以是dp的i 1-coin 1-1 0
+然后加1,会变成这样所以dp的0就是0-0-1-1-0-1會變成這樣
+所以DP的0就是0
+所以這樣子就會變成是0加1
+所以就是1
+所以這一項就被update成1了
+然後呢
+再來進入到第二個
+我們這一個就要
+就是說在1的位置
+你有一種解法
+對
+OK
+然後再來for ion range所以我們這個就要再增加
+變成2
+然後我們來看第二個
+第二個現在也是minimum
+它前面還是12
+然後後面的我們變成dp的i-coin
+所以2減掉1
+就是dp的1然後加1
+所以就會是2
+因為我們現在dp的1是1嘛
+然後這一個就再被update成2
+我們要整個run完嗎
+我們要run到最後一個嗎
+有點多
+你可以快速run一下沒關係
+好
+那再來3
+然後就會變成minimum of 12
+加上後面這一個
+所以我這邊加個豆好了
+這樣就看得出來
+然後這樣子就會是
+DP的i-coin 3-1
+加1
+所以是DP的2
+然後加1
+所以就會是3
+所以這邊我們第三個就update成3
+這樣子
+然後因為我現在的coin就是1嘛
+所以其實就會一直就是4
+然後5然後blablablablablablablabl這個 loop 在找的就是所有用1可能最小
+然後再換下一個
+所以我們下一個就還要再看再來3的情況會是怎麼樣
+然後又要重來一次就是3的話
+因為3不可能每個比3小的數字
+所以我們只能從3開始
+所以 for i in the range 我們就要從3開始的話
+然後從315到11
+那我換一行
+就會變成MINIMUM OF DP ARRAY的i
+我們現在在3
+所以3在這邊
+它會是MINIMUM OF 3跟DP的
+現在3減COIN是0
+然後加1這樣
+所以就是MINIMum的3跟1
+所以會變成1
+因為用3一個Coin就可以make up 3
+對然後再來就會變成到4
+然後4的話我們就變成minimum of
+我們4這個position就是4嘛
+然後跟DP的4減Coin
+所以4減3是1
+DP的1然後加1
+所以就會是
+DP的1是1所以這裡就是2
+對然後再這樣子1次
+累推
+然後再到5
+然後我們就會從5開始
+然後因為5就會再被update成1嘛
+因為你就只需要一個5就好
+對然後最後
+我們loop完每一個coin denomination之後
+這整個array就已經被update成minimum amount了
+然後最後再return
+所以這樣這個code
+我目前run下來應該是對的
+ok
+嗯
+那你可不可以想到一些比較邊際的一些edge case
+edge case嗎 我想一下喔
+比如說找不到可能return-free的一個情況
+那比如說你可以舉一個簡單eturn-1的一個情況那比如說Input
+你可以舉一個簡單的例子
+很小一個例子
+比如說Input如果給
+不能有1 因為1什麼都可以
+那我們就給3 5
+然後你的Target的Amount是
+比如說4
+4就出不來
+那這個就應該要Return-1
+或者是Edge Case
+這個題目沒有特別講
+但就是Coin不能有0
+這個之類
+或者是它也是0的話
+其實我們就是Return就是0
+一開始我也有問的
+就是它一定要是整數啊什麼這些
+就是如果它故意給你一個不是整數的
+那這個也會沒有辦法解
+那你可以Dry Run一下這個Test Case
+喔好啊
+我把這些Comment先清掉
+不然有點亂
+不然你直接寫下面也可以
+好
+那一開始的Max Value我們會把它Initial來乘負喔好啊我把這些comments先清掉不然有點亂不然你直接寫下面好
+那一開始的max value
+我們會把它initial x 乘5
+然後呢我們的dp array一開始就會是5
+然後呢第一個被update成0
+再來for coin and coins
+我們有3跟5
+所以第一個oin是3
+然后For i and range
+所以我们的i现在是从Coin开始
+所以i也是3
+然后呢
+DP Array的i
+所以我们现在在看的是0 1 2 3
+就是这一个5
+Minimum
+所以我们现在看Minimum of
+它现在DP Array的i就是5
+然后跟DP的i-coin
+所以3-3是0
+然后加1这样
+所以呢就会是minimum 5跟1所以是1
+那我们就把第三个这个改成1
+然后再来下一个
+我们就会变成Coin 3 i 4
+然后变成Minimum of
+DP的i现在是5
+然后DP的1加1
+然后呢再来我们的Coin就要到下一个
+5
+然后我们的i就会从
+Range就会变成从 5 到 5
+所以它不会 loop anything
+对,因为它不会 include 你后面摆的那个数字
+所以我们这个 loop 就根本不会进去
+所以你最后得到的 dp array
+就还是会 stay 05515
+那你最后再 return dp array 的 amount 格
+就是最后一个的话
+它就是5
+就是跟你Initialize的MaxValue是一樣的
+所以它會回復-1
+嗯
+OK
+那這個的Space跟Runtime
+嗯
+Runtime的話
+因為我們有兩層Four Loop嘛
+然後第一個是Coin and Coins
+所以我們是Length of Coins
+然後去乘以
+因為在Four裡面
+然後就是乘Amount
+因為我們就是L through那個amount
+所以應該是這樣子
+這個是time complexity
+這樣子
+然後space的話
+我們就是存那個dp array
+然後dp array的長度
+我們就是max value乘以amount
+所以它就是o of amount
+這樣子
+這是space
+OK
+perfect
+我有過這個面試嗎?
+可以給我導演嗎?
+你可以當CTO
+謝謝謝謝
+就是希望Terry有再一日的合作
+我覺得不錯
+可以
+超緊張
+就是Terry可以證明我剛剛有多緊張
+有有剛剛很緊張
+差點就是很想趕快直接逃離了
+直接是逃跑
+我到底來這邊幹嘛呢?
+來東京找贅獸
+OK那不知道大家覺得女神的表現怎麼樣
+可以在影片底下留言
+我是覺得還不錯啦
+基本的底質是一定有的
+而且一定比看兩個臭宅男
+在那邊寫扣還要優美
+那如果你覺得你的這個軟體工程師的基礎比較差
+或者是說你想要認真的在軟體工程這個行業發展的話
+也非常歡迎你來加入我們的這個資鴉護城河實戰營
+這個是我跟大神Hank一起共同設計跟製作了8個月的時間
+目的呢也是希望可以幫助大家拿到心儀的offer
+也希望可以透過實戰營來訓練
+並且提升你的這個工程師最基礎的解決問題的能力
+很多人可能會有一個誤解說
+我們這個實戰營呢好像就只是為了幫助你去通過面試而已
+對確實這個實戰營對於面試來講是有
+百分之百的這個變強的效果
+參加完之後呢
+你在面對任何形式的Coding面試呢
+你都會有非常明顯的這個實力的提升
+但是我覺得另外一點非常重要
+就是可能大家會miss掉的就是
+其實你如果真的系統性的練習過一遍之後
+你就會發現你整體的實力力都有非常大幅度的提升
+不管是幫別人做Code Review
+或者說看AI生成的這個代碼
+還是說當你遇到了複雜的問題之後
+能不能有這個工程師思維
+把問題從非常複雜非常難的問題
+拆解變成小而簡單的問題
+這些都是在我們的實戰營訓練完之後
+你可以得到的而且你可以馬上的感受出來不同變成小而簡單的問題這些都是在我們的這個實戰營訓練完之後呢
+你可以得到的
+而且你可以馬上的感受出來不同
+因為我自己曾經也經歷過那段時間
+所以我非常非常的清楚
+而且我們的實戰營呢
+也會線上帶著大家一起去做這些實戰演練
+所以說絕對會遠比那些坊間的線上課程呢
+還要來得有效很多
+因為我們是真的希望你可以透過這個實戰營
+打造屬於你的護城河然後變得更強
+那我們其實也非常的歡迎那些可能基礎比較差
+或是在轉職
+或是正在成為軟體工程師的朋友們
+因為我們有特別為這些同學準備一個更基礎的一個指南
+讓你可以自己先去練習
+然後可以快速的跟上大家的腳步
+而且我跟Hank還有我們的助教Alan
+也會在我們的學員專屬的Discord群組裡面
+去特別幫助大家
+那大家如果有興趣的話
+可以去我們的實戰營的官網
+buildmode.org上面看一下
+也歡迎來加入我們的公共Discord群組
+這個群組也是開放給所有人都可以來加入
+我會把連結放在影片底下的資訊欄
+那我們下次見囉

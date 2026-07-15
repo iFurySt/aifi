@@ -1,0 +1,741 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=YKcagGAZRz0",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 235,
+  "video": {
+    "index": 235,
+    "id": "YKcagGAZRz0",
+    "title": "AI科學家薪資公開｜16萬美金簽字費",
+    "url": "https://www.youtube.com/watch?v=YKcagGAZRz0",
+    "duration_seconds": 1119.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "YKcagGAZRz0",
+    "title": "AI科學家薪資公開｜16萬美金簽字費",
+    "text": "那你自己呢?我自己大概是中職,我大概是median我不是特別高,也不是特別低,大概就是3出3大家好,我是Terry今天呢,我們來到了San Diego現在在我朋友Dave家裡因為其實我頻道一直來都是講軟體工程相關的東西那我覺得在tech領域還有非常多其他的東西像是data science,做AI,或是做research就很多不同的領域在tech\n找Dave來就是我們可以一起聊一下就是關於AI的東西如果大家有興趣想要往這一條路走這就是為什麼我投資比如說NVIDIA或是投資特斯拉都是因為AI這個原因我才去投資的我覺得今天很開心能找到\nDr. Pai Pai在這個頻道上跟大家一起聊一下AI可能大家對AI這東西不是很熟或是不是很了解的話我覺得希望這一集可以給大家一個比較基礎的概念Dave的話他現在是在美國San Diego這邊工作在Qualcomm對不對就是高通嘛高通最主要是做什麼高通最主要是做AI Chipslike DSP MCUslike those kind of likeMobile ChipsMobile Chips\n謝謝你邀請我\n其實我是在台灣出生長大的我是台灣人我在台灣念到大學大學的時候大概大二、大三的時候我就想說就開始 career plan大學念什麼?機電系電機系對就像機電系然後那時候我就在計劃我的未來\n那時候我就很想要出國當教授是件很酷的事情然後我那時候也想說要決定什麼專業然後其實我那時候並不了解AI我只知道那時候其實Machine Learning比較流行像是數據、大數據那時候大數據是比較大數據最火的時候對對對是直到我出國以後我想說我想念一個EC major然後我那時候開始找說哪一個教授\n有這麼多的資金然後可以去投資在高中然後發現\n我花很多課餘的時間在讀文章、相關的論文就自己的興趣\n對對自己去啟發那條路對然後我也去很主動去找教授去問說有沒有相關的project我可以做我那時候也很主動的跟就是教授的博士生去交流說他們做什麼樣的方向然後我就自己跟他們在交流這樣子對那是the starting point為什麼選擇來美國do PhD\n其實在美國讀PhD最一開始是覺得說在台灣我可能的選擇沒有很多例如說大家畢業就是去什麼台積電聯發科like it's a norm, it's a good job但是\n我想要嘗試不同的東西然後我想知道說我喜歡的潛質是什麼所以就決定來美國了自己一個人過來這邊然後在這邊讀Duke我是Duke畢業的Duke你專業的專業是什麼我Duke是ECE major也是ECE是不是對然後我做的主要是偏On-Device Machine Learning例如說\n手機端或是移動端IoT端的Machine Learning現在就是畢業了剛去年剛畢業然後現在在跨行第一份工作對但是也有實習對不對之前有在Facebook實習跨行也實習其實我在念書的時候因為大家知道念書其實薪水沒有很多然後我是靠獎學金撐過來\n我是自己貸款出國所以沒有什麼太大的經驗然後我就得Summer的時候去找part-time工作然後我一開始很幸運先去高通後來中間我去Facebook當part-time researcher然後現在又回來高通了我們的頻道講求的就是透明第一個沒有等一下先不要緊張\n第一個我要問的就是你當時在Facebook的實習的時候是哪一年薪水多少?這個其實蠻公開的我在Facebook的時候是2020還是2021年就一兩年前對對對然後那個時候薪水是他們是算實行因為如果你是part-time researcher不然你是part-time researcher還是intern你是算實行然後我記得是\n50出頭51塊還是52塊50出頭我印象很深刻的是我的Monthly Paycheck是9000塊錢\n9000美金然後因為如果你選你不要選擇住宿的話你不要選擇住Facebook提供的住宿的話他會再多給你1800他給你一個聽說最近漲價但是我那年是1800所以一個月的總共是10800那還不錯還可以\n其實對學生來講也是很吸引對學生來講也是很吸引對呀我比較好奇就是就對我而言因為我是軟體工程的背景軟體工程、計畫、計畫我比較了解那做AI研究尤其是機器人這些東西其實我自己比較陌生那我覺得對很多大多數人來講也是算一個比較陌生的一個行業可能大家對這個行業不太熟悉\n可以用比較簡單的方法去跟大家介紹一下就是AI researcher或是AI scientist就你們在做的東西 公布內容大概是什麼樣子AI科學家或是AI researcher主要就是一群科學家負責將人工智能整合到產品Deliver到人們手中\n這是個很難的工作,因為AI科學家不僅要具備軟體或硬體工程師的能力之外我們還要能夠研發最新的人工智能模型我們俗稱這樣的模型叫State of the Art那這個工作包括研究最新的論文在學術期刊發表設計最優的模型給公司的產品\n還要跟軟硬體工程師討論說如何把這樣的AI模型優化到產品然後這包括了頂層的設計編譯器優化到壓縮推理計算就是主要AI科學家的工作\n其實AI researcher他的入門門檻會比較高因為他尤其是對學歷的要求他有說一定要什麼碩士或是PhD嗎對 例如說我們先不講我們組就是大部分可能minimum就是Master degree\n然後然後 you have experience like intern experienceor like phd目前為止我身邊的人都是有 at least phd 然後 from\n我覺得說是跟PhD還差蠻多的對因為PhD是就是四年以上嘛很多人是五年是正常的有沒有\n哪一些學校在美國這邊是比較推薦給大家假如你對想要做AI做研究這方面有興趣的話就以後想要成為像你這樣子的人有沒有什麼學校或是專業你會比較推薦大家的我覺得很多工科很強的專業學校特別吃香例如說Stanford MIT或是\nCMU,Connecticut, Maryland因為我們頻道一直倡導透明就是公開然後我最喜歡就是問來賓你賺多少錢?That's what I do跟大家分享一下你的薪水那我們先暫停一下今天這集影片是由MUUMU贊助MUUMU是富途旗下的一家零手續費證券交易軟件在美國的帳戶都有FDIC的保險那富途是一家在美國的NASDAQ上市目前全球有超過1800萬個用戶\n那这次平台有一个专门送给美国用户最多10股股票的开户优惠现在到7月31号以前开户美国MUUMU入金任意金额送6股股票入金如果到达100块再多送1股到达2000的话再多送3股所以一共最多送10股单股价值3到2500的股\n这个优惠活动目前只有美国居民有SSN开户才有的那我自己原本看走势图还有一些公司方面的咨询都是用Yahoo Finance的App但是MUUMU在这方面做得真的非常的专业整体UI也做得很好而且在美国买美股跟ETF都是零手续费一个账户可以交易港股跟美股所以如果你在美国的话我推荐你尝试一下这个交易平台而且免费送最多10股美股的活动真的非常的值得只要入金2000就有了基本上就是免费送你股票\n那如果你在美國有興趣的話我會把活動註冊連結放在影片底下的資訊欄大家可以自己去看一下\n就是身為AI researcher就是可能剛畢業PhD剛畢業一段時間然後你在這個行業Qualcomm算是不錯的公司做晶片嘛很棒的一家公司然後分享一下你在San Diego這邊年薪大概是怎麼樣?其實如果你是fresh grade就是你博士第一年畢業我覺得比較就還蠻It's not uncommon to see like\n250k\n300k 20萬到30萬就還蠻正常 是PhD畢業對不對然後例如說可能例如說那年可能Market不好可能比較低一點是很正常那可能那年Market比較好你可能會拿到32 35都是很正常的Pay grade大概就是25到30我覺得是很正常當然公司有區別對不對對當然公司有區別而且你有沒有compete offer也有影響那你自己呢\n我自己大概是中值就是我大概是median就我不是特別高也不是特別低大概就是三出三三字頭其實我不知道Qualcomm的pay是怎麼樣的structure就我所知就是你叫什麼Sign on bonus就是簽字費蠻高的如果你不介意跟大家分享一下你的簽字費大部分我自己的簽字費是160對差不多160160K就是16萬美金\n就是你把那個名字簽上去就16萬美金我賣身賣兩年賣兩年生就寫一下名字ok Dr. Pai Pai名字簽一下就16萬美金對差不多我覺得這蠻屌的因為其實就我所知做software engineering的話像我聽說過最高的簽資費就10萬而已你跟我講當時跟我說的時候16萬我想oh shit就很蠻高的一個簽資費我從來沒有聽過這麼高的簽資費\n就满掉了你觉得在你这行算是比较正常吗还是就是一个比较会negotiate 到比较好的成本我觉得其实是我自己negotiate 的成分其实就像software engineer就是我们我们也会被lobalrightno matter how good you arethey're gonna lobal you在你找工作的时候尤其是在北美找工作你要很努力的去投\n各種不同的公司不管他好或不好或是你想不想去你可能會很正常你可能不會有offer或是不會有interview然後\n但是你試的過程中你就會知道自己的市值在哪裡然後你就會知道說你自己值多少錢然後可能有一家公司在世界上他們會付你200萬然後你就會知道其實我值這個價錢然後你就可以拿這個價錢去競爭然後你就可以提升你的整個總額\n所以那時候因為我比較想要一起投資可能大家不知道Terry其實是我的business partner所以我們你要投資就是要有現金所以現金就是三樣bonus沒錯 看滿長的\n有想要考慮做這一行業的就是有對這行業有興趣的人你有沒有什麼建議給他們建議不管是求學的道路還是說準備面試的方向你有沒有什麼給他們的建議其實我覺得每一個人的成功或是他的Path都是不太可能被100% Reproduce的\n而且如果你只是想要賺錢我可以跟你保證念博士絕對不是一個最快的路我覺得會選擇念博士然後當一個researcher或是一個research scientist他們都是對工程有一些執著會有passion我相信你也不是為了錢對其實我真的一開始並沒有我沒有想到我一開始沒有想到我以後會賺多少錢\n我一開始是就像一個很正常的大學生然後我只是很 fascinate by engineer然後我看到我可以 program然後看到那個 LED light being light up然後 changing that 我覺得很 cool所以我就覺得說 I'm more like passion and driven\n因為如果你想賺錢的話你去華爾街或是自己去做trading可能更快自己開公司或是開sort ofit's like way faster這邊其實很多做餐廳的超級比我們多多少那假如譬如說我現在想要以後想要成為一個\nAI scientist我有什麼方向我可以比較好讓我往這個路走嗎?所以有些人可能會想說我可能得拿一個 degree或是去CoreSera上一課我覺得這是有幫助就Depends on你願意花多少錢花多少錢花多少時間在這個上面但是你要知道其實AI is part of the industrypart of the tech industry\n他有一個波他有一個上一個下所以很有可能如果你規劃5年10年\n你畢業後這個浪潮已經不在你可能想說OK Dave他念一個博士我也要念一個博士但是你可能你博士出來AI已經沒有當年這麼紅這麼火的對所以我覺得你要對市場跟整個Tag industry有一些基本的了解By following Terry Chen's YouTube channel訂閱分享按讚\n所以然後你有這些了解以後你才能夠知道說你自己願意投資多少時間你不一定要拿個 degree你可以去找公司 intern做相關的 project\n你可以去一些AI相關的company他可能不一定配這麼多但是他可能做的project非常相關然後讓你覺得很有潛力這是值得去嘗試還有一點我覺得蠻有意思的就是像我現在是一個software engineer我就寫code我對AI不是很懂但假如今天我去了一家AI的公司然後雖然我還是寫比如說我還是寫server還是寫我自己的code但是因為我對AI就會有稍微接觸到\n然後我如果跟比如做AI的那些research team關係比較好的話我可以慢慢的說我會幫你們一些做一些東西然後跟你們學一些東西就通常這種方式其實是還蠻好我個人認為是一個蠻好切入的一個方式就是你可以slowly去加入他們然後可能在旁邊\n你可以比如说回家自己去进修一些课程啊不管是上网学啊或什么之类这些我觉得都是一个可以让你往一个全新的领域去发展的一个方式对也不一定就是说你一定要去重新读一个PhD或是读一个什么当然你有钱有时间我觉得这是大概是最好最容易走的路但是就是PhD要五年对不对\n不好讀而且對啊而且這五年來要花很多錢Depends on what kind of PhD有些學校會給你錢對那據我所知的話Dave以前也是蠻省的就是也是跟我一樣就是我們都是窮學生過來的對啊然後\n就是你要有這個時間要有這個錢因為它不是一個小投資而且時間就是金錢你想看青春你要把四五年的時間給砸進去所以這個就是取捨吧那還有一點我覺得就echo一下Dave剛剛講的那個我覺得就是\n就是不要說我就做這尤其是這一行就真的不能自己說OK我今天為了賺錢因為假如真的是為了賺錢投資四五年再讀一個PhD就為了賺錢這是一個我個人覺得是蠻愚蠢的一個選擇你真的是要有興趣我覺得才會成功好啊那非常感謝Dave今天來到我們頻道然後我會在San Diego這邊待幾天Dave單身嗎\n大家如果對這個帥氣的AI科學家有興趣的話IG連結在這裡\n大家可以去去follow想要問Dave問題私人問他問題的話可以去他的IG上面meet他有什麼問題想要問Dave也可以在我影片底下留言啊對吧那Dave應該都會去下面回覆大家對吧是是會會會會of course應該會OK感謝大家觀看今天的影片如果你覺得這集對你有幫助的話記得一定要點讚幫Dave點個讚吧對不對終於難得頻道有這麼帥的engineer來這邊還蠻蠻難得對不對好那我們下次見囉掰掰",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:00",
+        "start": 0,
+        "duration": 25.5,
+        "text": "那你自己呢?我自己大概是中職,我大概是median我不是特別高,也不是特別低,大概就是3出3大家好,我是Terry今天呢,我們來到了San Diego現在在我朋友Dave家裡因為其實我頻道一直來都是講軟體工程相關的東西那我覺得在tech領域還有非常多其他的東西像是data science,做AI,或是做research就很多不同的領域在tech"
+      },
+      {
+        "index": 1,
+        "time": "00:25",
+        "start": 25.5,
+        "duration": 19.4,
+        "text": "找Dave來就是我們可以一起聊一下就是關於AI的東西如果大家有興趣想要往這一條路走這就是為什麼我投資比如說NVIDIA或是投資特斯拉都是因為AI這個原因我才去投資的我覺得今天很開心能找到"
+      },
+      {
+        "index": 2,
+        "time": "00:44",
+        "start": 44.56,
+        "duration": 26.879999999999995,
+        "text": "Dr. Pai Pai在這個頻道上跟大家一起聊一下AI可能大家對AI這東西不是很熟或是不是很了解的話我覺得希望這一集可以給大家一個比較基礎的概念Dave的話他現在是在美國San Diego這邊工作在Qualcomm對不對就是高通嘛高通最主要是做什麼高通最主要是做AI Chipslike DSP MCUslike those kind of likeMobile ChipsMobile Chips"
+      },
+      {
+        "index": 3,
+        "time": "01:11",
+        "start": 71.14,
+        "duration": 15.019999999999996,
+        "text": "謝謝你邀請我"
+      },
+      {
+        "index": 4,
+        "time": "01:25",
+        "start": 85.9,
+        "duration": 25.19999999999999,
+        "text": "其實我是在台灣出生長大的我是台灣人我在台灣念到大學大學的時候大概大二、大三的時候我就想說就開始 career plan大學念什麼?機電系電機系對就像機電系然後那時候我就在計劃我的未來"
+      },
+      {
+        "index": 5,
+        "time": "01:51",
+        "start": 111.28,
+        "duration": 28.939999999999998,
+        "text": "那時候我就很想要出國當教授是件很酷的事情然後我那時候也想說要決定什麼專業然後其實我那時候並不了解AI我只知道那時候其實Machine Learning比較流行像是數據、大數據那時候大數據是比較大數據最火的時候對對對是直到我出國以後我想說我想念一個EC major然後我那時候開始找說哪一個教授"
+      },
+      {
+        "index": 6,
+        "time": "02:20",
+        "start": 140.32,
+        "duration": 7.480000000000018,
+        "text": "有這麼多的資金然後可以去投資在高中然後發現"
+      },
+      {
+        "index": 7,
+        "time": "02:28",
+        "start": 148.08,
+        "duration": 23.5,
+        "text": "我花很多課餘的時間在讀文章、相關的論文就自己的興趣"
+      },
+      {
+        "index": 8,
+        "time": "02:51",
+        "start": 171.58,
+        "duration": 23.47999999999999,
+        "text": "對對自己去啟發那條路對然後我也去很主動去找教授去問說有沒有相關的project我可以做我那時候也很主動的跟就是教授的博士生去交流說他們做什麼樣的方向然後我就自己跟他們在交流這樣子對那是the starting point為什麼選擇來美國do PhD"
+      },
+      {
+        "index": 9,
+        "time": "03:15",
+        "start": 195.54,
+        "duration": 14.719999999999999,
+        "text": "其實在美國讀PhD最一開始是覺得說在台灣我可能的選擇沒有很多例如說大家畢業就是去什麼台積電聯發科like it's a norm, it's a good job但是"
+      },
+      {
+        "index": 10,
+        "time": "03:30",
+        "start": 210.5,
+        "duration": 27.69999999999999,
+        "text": "我想要嘗試不同的東西然後我想知道說我喜歡的潛質是什麼所以就決定來美國了自己一個人過來這邊然後在這邊讀Duke我是Duke畢業的Duke你專業的專業是什麼我Duke是ECE major也是ECE是不是對然後我做的主要是偏On-Device Machine Learning例如說"
+      },
+      {
+        "index": 11,
+        "time": "03:58",
+        "start": 238.34,
+        "duration": 25.78,
+        "text": "手機端或是移動端IoT端的Machine Learning現在就是畢業了剛去年剛畢業然後現在在跨行第一份工作對但是也有實習對不對之前有在Facebook實習跨行也實習其實我在念書的時候因為大家知道念書其實薪水沒有很多然後我是靠獎學金撐過來"
+      },
+      {
+        "index": 12,
+        "time": "04:23",
+        "start": 263.98,
+        "duration": 25.339999999999975,
+        "text": "我是自己貸款出國所以沒有什麼太大的經驗然後我就得Summer的時候去找part-time工作然後我一開始很幸運先去高通後來中間我去Facebook當part-time researcher然後現在又回來高通了我們的頻道講求的就是透明第一個沒有等一下先不要緊張"
+      },
+      {
+        "index": 13,
+        "time": "04:49",
+        "start": 289.72,
+        "duration": 24.439999999999998,
+        "text": "第一個我要問的就是你當時在Facebook的實習的時候是哪一年薪水多少?這個其實蠻公開的我在Facebook的時候是2020還是2021年就一兩年前對對對然後那個時候薪水是他們是算實行因為如果你是part-time researcher不然你是part-time researcher還是intern你是算實行然後我記得是"
+      },
+      {
+        "index": 14,
+        "time": "05:14",
+        "start": 314.3,
+        "duration": 10,
+        "text": "50出頭51塊還是52塊50出頭我印象很深刻的是我的Monthly Paycheck是9000塊錢"
+      },
+      {
+        "index": 15,
+        "time": "05:24",
+        "start": 324.6,
+        "duration": 22.819999999999993,
+        "text": "9000美金然後因為如果你選你不要選擇住宿的話你不要選擇住Facebook提供的住宿的話他會再多給你1800他給你一個聽說最近漲價但是我那年是1800所以一個月的總共是10800那還不錯還可以"
+      },
+      {
+        "index": 16,
+        "time": "05:47",
+        "start": 347.58,
+        "duration": 26.660000000000025,
+        "text": "其實對學生來講也是很吸引對學生來講也是很吸引對呀我比較好奇就是就對我而言因為我是軟體工程的背景軟體工程、計畫、計畫我比較了解那做AI研究尤其是機器人這些東西其實我自己比較陌生那我覺得對很多大多數人來講也是算一個比較陌生的一個行業可能大家對這個行業不太熟悉"
+      },
+      {
+        "index": 17,
+        "time": "06:14",
+        "start": 374.16,
+        "duration": 18.45999999999998,
+        "text": "可以用比較簡單的方法去跟大家介紹一下就是AI researcher或是AI scientist就你們在做的東西 公布內容大概是什麼樣子AI科學家或是AI researcher主要就是一群科學家負責將人工智能整合到產品Deliver到人們手中"
+      },
+      {
+        "index": 18,
+        "time": "06:32",
+        "start": 392.88,
+        "duration": 21.879999999999995,
+        "text": "這是個很難的工作,因為AI科學家不僅要具備軟體或硬體工程師的能力之外我們還要能夠研發最新的人工智能模型我們俗稱這樣的模型叫State of the Art那這個工作包括研究最新的論文在學術期刊發表設計最優的模型給公司的產品"
+      },
+      {
+        "index": 19,
+        "time": "06:54",
+        "start": 414.94,
+        "duration": 17.439999999999998,
+        "text": "還要跟軟硬體工程師討論說如何把這樣的AI模型優化到產品然後這包括了頂層的設計編譯器優化到壓縮推理計算就是主要AI科學家的工作"
+      },
+      {
+        "index": 20,
+        "time": "07:12",
+        "start": 432.38,
+        "duration": 19.160000000000025,
+        "text": "其實AI researcher他的入門門檻會比較高因為他尤其是對學歷的要求他有說一定要什麼碩士或是PhD嗎對 例如說我們先不講我們組就是大部分可能minimum就是Master degree"
+      },
+      {
+        "index": 21,
+        "time": "07:31",
+        "start": 451.54,
+        "duration": 12.519999999999982,
+        "text": "然後然後 you have experience like intern experienceor like phd目前為止我身邊的人都是有 at least phd 然後 from"
+      },
+      {
+        "index": 22,
+        "time": "07:44",
+        "start": 464.54,
+        "duration": 23.739999999999952,
+        "text": "我覺得說是跟PhD還差蠻多的對因為PhD是就是四年以上嘛很多人是五年是正常的有沒有"
+      },
+      {
+        "index": 23,
+        "time": "08:08",
+        "start": 488.28,
+        "duration": 25.340000000000032,
+        "text": "哪一些學校在美國這邊是比較推薦給大家假如你對想要做AI做研究這方面有興趣的話就以後想要成為像你這樣子的人有沒有什麼學校或是專業你會比較推薦大家的我覺得很多工科很強的專業學校特別吃香例如說Stanford MIT或是"
+      },
+      {
+        "index": 24,
+        "time": "08:33",
+        "start": 513.82,
+        "duration": 27.019999999999982,
+        "text": "CMU,Connecticut, Maryland因為我們頻道一直倡導透明就是公開然後我最喜歡就是問來賓你賺多少錢?That's what I do跟大家分享一下你的薪水那我們先暫停一下今天這集影片是由MUUMU贊助MUUMU是富途旗下的一家零手續費證券交易軟件在美國的帳戶都有FDIC的保險那富途是一家在美國的NASDAQ上市目前全球有超過1800萬個用戶"
+      },
+      {
+        "index": 25,
+        "time": "09:00",
+        "start": 540.84,
+        "duration": 18.539999999999964,
+        "text": "那这次平台有一个专门送给美国用户最多10股股票的开户优惠现在到7月31号以前开户美国MUUMU入金任意金额送6股股票入金如果到达100块再多送1股到达2000的话再多送3股所以一共最多送10股单股价值3到2500的股"
+      },
+      {
+        "index": 26,
+        "time": "09:19",
+        "start": 559.38,
+        "duration": 27.539999999999964,
+        "text": "这个优惠活动目前只有美国居民有SSN开户才有的那我自己原本看走势图还有一些公司方面的咨询都是用Yahoo Finance的App但是MUUMU在这方面做得真的非常的专业整体UI也做得很好而且在美国买美股跟ETF都是零手续费一个账户可以交易港股跟美股所以如果你在美国的话我推荐你尝试一下这个交易平台而且免费送最多10股美股的活动真的非常的值得只要入金2000就有了基本上就是免费送你股票"
+      },
+      {
+        "index": 27,
+        "time": "09:46",
+        "start": 586.92,
+        "duration": 5.960000000000036,
+        "text": "那如果你在美國有興趣的話我會把活動註冊連結放在影片底下的資訊欄大家可以自己去看一下"
+      },
+      {
+        "index": 28,
+        "time": "09:52",
+        "start": 592.5,
+        "duration": 28.139999999999986,
+        "text": "就是身為AI researcher就是可能剛畢業PhD剛畢業一段時間然後你在這個行業Qualcomm算是不錯的公司做晶片嘛很棒的一家公司然後分享一下你在San Diego這邊年薪大概是怎麼樣?其實如果你是fresh grade就是你博士第一年畢業我覺得比較就還蠻It's not uncommon to see like"
+      },
+      {
+        "index": 29,
+        "time": "10:20",
+        "start": 620.32,
+        "duration": 2.2399999999998954,
+        "text": "250k"
+      },
+      {
+        "index": 30,
+        "time": "10:22",
+        "start": 622.76,
+        "duration": 28.24000000000001,
+        "text": "300k 20萬到30萬就還蠻正常 是PhD畢業對不對然後例如說可能例如說那年可能Market不好可能比較低一點是很正常那可能那年Market比較好你可能會拿到32 35都是很正常的Pay grade大概就是25到30我覺得是很正常當然公司有區別對不對對當然公司有區別而且你有沒有compete offer也有影響那你自己呢"
+      },
+      {
+        "index": 31,
+        "time": "10:50",
+        "start": 650.62,
+        "duration": 28.620000000000005,
+        "text": "我自己大概是中值就是我大概是median就我不是特別高也不是特別低大概就是三出三三字頭其實我不知道Qualcomm的pay是怎麼樣的structure就我所知就是你叫什麼Sign on bonus就是簽字費蠻高的如果你不介意跟大家分享一下你的簽字費大部分我自己的簽字費是160對差不多160160K就是16萬美金"
+      },
+      {
+        "index": 32,
+        "time": "11:18",
+        "start": 678.86,
+        "duration": 26.779999999999973,
+        "text": "就是你把那個名字簽上去就16萬美金我賣身賣兩年賣兩年生就寫一下名字ok Dr. Pai Pai名字簽一下就16萬美金對差不多我覺得這蠻屌的因為其實就我所知做software engineering的話像我聽說過最高的簽資費就10萬而已你跟我講當時跟我說的時候16萬我想oh shit就很蠻高的一個簽資費我從來沒有聽過這麼高的簽資費"
+      },
+      {
+        "index": 33,
+        "time": "11:45",
+        "start": 705.64,
+        "duration": 22.24000000000001,
+        "text": "就满掉了你觉得在你这行算是比较正常吗还是就是一个比较会negotiate 到比较好的成本我觉得其实是我自己negotiate 的成分其实就像software engineer就是我们我们也会被lobalrightno matter how good you arethey're gonna lobal you在你找工作的时候尤其是在北美找工作你要很努力的去投"
+      },
+      {
+        "index": 34,
+        "time": "12:07",
+        "start": 727.88,
+        "duration": 13.919999999999959,
+        "text": "各種不同的公司不管他好或不好或是你想不想去你可能會很正常你可能不會有offer或是不會有interview然後"
+      },
+      {
+        "index": 35,
+        "time": "12:21",
+        "start": 741.94,
+        "duration": 24.819999999999936,
+        "text": "但是你試的過程中你就會知道自己的市值在哪裡然後你就會知道說你自己值多少錢然後可能有一家公司在世界上他們會付你200萬然後你就會知道其實我值這個價錢然後你就可以拿這個價錢去競爭然後你就可以提升你的整個總額"
+      },
+      {
+        "index": 36,
+        "time": "12:46",
+        "start": 766.7,
+        "duration": 17.17999999999995,
+        "text": "所以那時候因為我比較想要一起投資可能大家不知道Terry其實是我的business partner所以我們你要投資就是要有現金所以現金就是三樣bonus沒錯 看滿長的"
+      },
+      {
+        "index": 37,
+        "time": "13:04",
+        "start": 784.2,
+        "duration": 24.8599999999999,
+        "text": "有想要考慮做這一行業的就是有對這行業有興趣的人你有沒有什麼建議給他們建議不管是求學的道路還是說準備面試的方向你有沒有什麼給他們的建議其實我覺得每一個人的成功或是他的Path都是不太可能被100% Reproduce的"
+      },
+      {
+        "index": 38,
+        "time": "13:29",
+        "start": 809.36,
+        "duration": 25.399999999999977,
+        "text": "而且如果你只是想要賺錢我可以跟你保證念博士絕對不是一個最快的路我覺得會選擇念博士然後當一個researcher或是一個research scientist他們都是對工程有一些執著會有passion我相信你也不是為了錢對其實我真的一開始並沒有我沒有想到我一開始沒有想到我以後會賺多少錢"
+      },
+      {
+        "index": 39,
+        "time": "13:54",
+        "start": 834.98,
+        "duration": 21.74000000000001,
+        "text": "我一開始是就像一個很正常的大學生然後我只是很 fascinate by engineer然後我看到我可以 program然後看到那個 LED light being light up然後 changing that 我覺得很 cool所以我就覺得說 I'm more like passion and driven"
+      },
+      {
+        "index": 40,
+        "time": "14:17",
+        "start": 857.38,
+        "duration": 17.75999999999999,
+        "text": "因為如果你想賺錢的話你去華爾街或是自己去做trading可能更快自己開公司或是開sort ofit's like way faster這邊其實很多做餐廳的超級比我們多多少那假如譬如說我現在想要以後想要成為一個"
+      },
+      {
+        "index": 41,
+        "time": "14:34",
+        "start": 874.94,
+        "duration": 26.299999999999955,
+        "text": "AI scientist我有什麼方向我可以比較好讓我往這個路走嗎?所以有些人可能會想說我可能得拿一個 degree或是去CoreSera上一課我覺得這是有幫助就Depends on你願意花多少錢花多少錢花多少時間在這個上面但是你要知道其實AI is part of the industrypart of the tech industry"
+      },
+      {
+        "index": 42,
+        "time": "15:01",
+        "start": 901.5,
+        "duration": 7.279999999999973,
+        "text": "他有一個波他有一個上一個下所以很有可能如果你規劃5年10年"
+      },
+      {
+        "index": 43,
+        "time": "15:09",
+        "start": 909.2,
+        "duration": 25.799999999999955,
+        "text": "你畢業後這個浪潮已經不在你可能想說OK Dave他念一個博士我也要念一個博士但是你可能你博士出來AI已經沒有當年這麼紅這麼火的對所以我覺得你要對市場跟整個Tag industry有一些基本的了解By following Terry Chen's YouTube channel訂閱分享按讚"
+      },
+      {
+        "index": 44,
+        "time": "15:34",
+        "start": 934.66,
+        "duration": 11.300000000000068,
+        "text": "所以然後你有這些了解以後你才能夠知道說你自己願意投資多少時間你不一定要拿個 degree你可以去找公司 intern做相關的 project"
+      },
+      {
+        "index": 45,
+        "time": "15:45",
+        "start": 945.82,
+        "duration": 29.120000000000005,
+        "text": "你可以去一些AI相關的company他可能不一定配這麼多但是他可能做的project非常相關然後讓你覺得很有潛力這是值得去嘗試還有一點我覺得蠻有意思的就是像我現在是一個software engineer我就寫code我對AI不是很懂但假如今天我去了一家AI的公司然後雖然我還是寫比如說我還是寫server還是寫我自己的code但是因為我對AI就會有稍微接觸到"
+      },
+      {
+        "index": 46,
+        "time": "16:14",
+        "start": 974.76,
+        "duration": 23.519999999999982,
+        "text": "然後我如果跟比如做AI的那些research team關係比較好的話我可以慢慢的說我會幫你們一些做一些東西然後跟你們學一些東西就通常這種方式其實是還蠻好我個人認為是一個蠻好切入的一個方式就是你可以slowly去加入他們然後可能在旁邊"
+      },
+      {
+        "index": 47,
+        "time": "16:38",
+        "start": 998.4,
+        "duration": 20.720000000000027,
+        "text": "你可以比如说回家自己去进修一些课程啊不管是上网学啊或什么之类这些我觉得都是一个可以让你往一个全新的领域去发展的一个方式对也不一定就是说你一定要去重新读一个PhD或是读一个什么当然你有钱有时间我觉得这是大概是最好最容易走的路但是就是PhD要五年对不对"
+      },
+      {
+        "index": 48,
+        "time": "16:58",
+        "start": 1018.86,
+        "duration": 17.600000000000023,
+        "text": "不好讀而且對啊而且這五年來要花很多錢Depends on what kind of PhD有些學校會給你錢對那據我所知的話Dave以前也是蠻省的就是也是跟我一樣就是我們都是窮學生過來的對啊然後"
+      },
+      {
+        "index": 49,
+        "time": "17:16",
+        "start": 1036.46,
+        "duration": 17.180000000000064,
+        "text": "就是你要有這個時間要有這個錢因為它不是一個小投資而且時間就是金錢你想看青春你要把四五年的時間給砸進去所以這個就是取捨吧那還有一點我覺得就echo一下Dave剛剛講的那個我覺得就是"
+      },
+      {
+        "index": 50,
+        "time": "17:33",
+        "start": 1053.42,
+        "duration": 27.559999999999945,
+        "text": "就是不要說我就做這尤其是這一行就真的不能自己說OK我今天為了賺錢因為假如真的是為了賺錢投資四五年再讀一個PhD就為了賺錢這是一個我個人覺得是蠻愚蠢的一個選擇你真的是要有興趣我覺得才會成功好啊那非常感謝Dave今天來到我們頻道然後我會在San Diego這邊待幾天Dave單身嗎"
+      },
+      {
+        "index": 51,
+        "time": "18:01",
+        "start": 1081.3,
+        "duration": 8.940000000000055,
+        "text": "大家如果對這個帥氣的AI科學家有興趣的話IG連結在這裡"
+      },
+      {
+        "index": 52,
+        "time": "18:10",
+        "start": 1090.02,
+        "duration": 28.519999999999982,
+        "text": "大家可以去去follow想要問Dave問題私人問他問題的話可以去他的IG上面meet他有什麼問題想要問Dave也可以在我影片底下留言啊對吧那Dave應該都會去下面回覆大家對吧是是會會會會of course應該會OK感謝大家觀看今天的影片如果你覺得這集對你有幫助的話記得一定要點讚幫Dave點個讚吧對不對終於難得頻道有這麼帥的engineer來這邊還蠻蠻難得對不對好那我們下次見囉掰掰"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": "whisper",
+    "fallback": false,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXF90HT0Z2RVD06WH9H19QMQ",
+    "status": "completed",
+    "videoId": "YKcagGAZRz0",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "那你自己呢?我自己大概是中職,我大概是median我不是特別高,也不是特別低,大概就是3出3大家好,我是Terry今天呢,我們來到了San Diego現在在我朋友Dave家裡因為其實我頻道一直來都是講軟體工程相關的東西那我覺得在tech領域還有非常多其他的東西像是data science,做AI,或是做research就很多不同的領域在tech",
+            "start": 0,
+            "duration": 25.5
+          },
+          {
+            "text": "找Dave來就是我們可以一起聊一下就是關於AI的東西如果大家有興趣想要往這一條路走這就是為什麼我投資比如說NVIDIA或是投資特斯拉都是因為AI這個原因我才去投資的我覺得今天很開心能找到",
+            "start": 25.5,
+            "duration": 19.4
+          },
+          {
+            "text": "Dr. Pai Pai在這個頻道上跟大家一起聊一下AI可能大家對AI這東西不是很熟或是不是很了解的話我覺得希望這一集可以給大家一個比較基礎的概念Dave的話他現在是在美國San Diego這邊工作在Qualcomm對不對就是高通嘛高通最主要是做什麼高通最主要是做AI Chipslike DSP MCUslike those kind of likeMobile ChipsMobile Chips",
+            "start": 44.56,
+            "duration": 26.879999999999995
+          },
+          {
+            "text": "謝謝你邀請我",
+            "start": 71.14,
+            "duration": 15.019999999999996
+          },
+          {
+            "text": "其實我是在台灣出生長大的我是台灣人我在台灣念到大學大學的時候大概大二、大三的時候我就想說就開始 career plan大學念什麼?機電系電機系對就像機電系然後那時候我就在計劃我的未來",
+            "start": 85.9,
+            "duration": 25.19999999999999
+          },
+          {
+            "text": "那時候我就很想要出國當教授是件很酷的事情然後我那時候也想說要決定什麼專業然後其實我那時候並不了解AI我只知道那時候其實Machine Learning比較流行像是數據、大數據那時候大數據是比較大數據最火的時候對對對是直到我出國以後我想說我想念一個EC major然後我那時候開始找說哪一個教授",
+            "start": 111.28,
+            "duration": 28.939999999999998
+          },
+          {
+            "text": "有這麼多的資金然後可以去投資在高中然後發現",
+            "start": 140.32,
+            "duration": 7.480000000000018
+          },
+          {
+            "text": "我花很多課餘的時間在讀文章、相關的論文就自己的興趣",
+            "start": 148.08,
+            "duration": 23.5
+          },
+          {
+            "text": "對對自己去啟發那條路對然後我也去很主動去找教授去問說有沒有相關的project我可以做我那時候也很主動的跟就是教授的博士生去交流說他們做什麼樣的方向然後我就自己跟他們在交流這樣子對那是the starting point為什麼選擇來美國do PhD",
+            "start": 171.58,
+            "duration": 23.47999999999999
+          },
+          {
+            "text": "其實在美國讀PhD最一開始是覺得說在台灣我可能的選擇沒有很多例如說大家畢業就是去什麼台積電聯發科like it's a norm, it's a good job但是",
+            "start": 195.54,
+            "duration": 14.719999999999999
+          },
+          {
+            "text": "我想要嘗試不同的東西然後我想知道說我喜歡的潛質是什麼所以就決定來美國了自己一個人過來這邊然後在這邊讀Duke我是Duke畢業的Duke你專業的專業是什麼我Duke是ECE major也是ECE是不是對然後我做的主要是偏On-Device Machine Learning例如說",
+            "start": 210.5,
+            "duration": 27.69999999999999
+          },
+          {
+            "text": "手機端或是移動端IoT端的Machine Learning現在就是畢業了剛去年剛畢業然後現在在跨行第一份工作對但是也有實習對不對之前有在Facebook實習跨行也實習其實我在念書的時候因為大家知道念書其實薪水沒有很多然後我是靠獎學金撐過來",
+            "start": 238.34,
+            "duration": 25.78
+          },
+          {
+            "text": "我是自己貸款出國所以沒有什麼太大的經驗然後我就得Summer的時候去找part-time工作然後我一開始很幸運先去高通後來中間我去Facebook當part-time researcher然後現在又回來高通了我們的頻道講求的就是透明第一個沒有等一下先不要緊張",
+            "start": 263.98,
+            "duration": 25.339999999999975
+          },
+          {
+            "text": "第一個我要問的就是你當時在Facebook的實習的時候是哪一年薪水多少?這個其實蠻公開的我在Facebook的時候是2020還是2021年就一兩年前對對對然後那個時候薪水是他們是算實行因為如果你是part-time researcher不然你是part-time researcher還是intern你是算實行然後我記得是",
+            "start": 289.72,
+            "duration": 24.439999999999998
+          },
+          {
+            "text": "50出頭51塊還是52塊50出頭我印象很深刻的是我的Monthly Paycheck是9000塊錢",
+            "start": 314.3,
+            "duration": 10
+          },
+          {
+            "text": "9000美金然後因為如果你選你不要選擇住宿的話你不要選擇住Facebook提供的住宿的話他會再多給你1800他給你一個聽說最近漲價但是我那年是1800所以一個月的總共是10800那還不錯還可以",
+            "start": 324.6,
+            "duration": 22.819999999999993
+          },
+          {
+            "text": "其實對學生來講也是很吸引對學生來講也是很吸引對呀我比較好奇就是就對我而言因為我是軟體工程的背景軟體工程、計畫、計畫我比較了解那做AI研究尤其是機器人這些東西其實我自己比較陌生那我覺得對很多大多數人來講也是算一個比較陌生的一個行業可能大家對這個行業不太熟悉",
+            "start": 347.58,
+            "duration": 26.660000000000025
+          },
+          {
+            "text": "可以用比較簡單的方法去跟大家介紹一下就是AI researcher或是AI scientist就你們在做的東西 公布內容大概是什麼樣子AI科學家或是AI researcher主要就是一群科學家負責將人工智能整合到產品Deliver到人們手中",
+            "start": 374.16,
+            "duration": 18.45999999999998
+          },
+          {
+            "text": "這是個很難的工作,因為AI科學家不僅要具備軟體或硬體工程師的能力之外我們還要能夠研發最新的人工智能模型我們俗稱這樣的模型叫State of the Art那這個工作包括研究最新的論文在學術期刊發表設計最優的模型給公司的產品",
+            "start": 392.88,
+            "duration": 21.879999999999995
+          },
+          {
+            "text": "還要跟軟硬體工程師討論說如何把這樣的AI模型優化到產品然後這包括了頂層的設計編譯器優化到壓縮推理計算就是主要AI科學家的工作",
+            "start": 414.94,
+            "duration": 17.439999999999998
+          },
+          {
+            "text": "其實AI researcher他的入門門檻會比較高因為他尤其是對學歷的要求他有說一定要什麼碩士或是PhD嗎對 例如說我們先不講我們組就是大部分可能minimum就是Master degree",
+            "start": 432.38,
+            "duration": 19.160000000000025
+          },
+          {
+            "text": "然後然後 you have experience like intern experienceor like phd目前為止我身邊的人都是有 at least phd 然後 from",
+            "start": 451.54,
+            "duration": 12.519999999999982
+          },
+          {
+            "text": "我覺得說是跟PhD還差蠻多的對因為PhD是就是四年以上嘛很多人是五年是正常的有沒有",
+            "start": 464.54,
+            "duration": 23.739999999999952
+          },
+          {
+            "text": "哪一些學校在美國這邊是比較推薦給大家假如你對想要做AI做研究這方面有興趣的話就以後想要成為像你這樣子的人有沒有什麼學校或是專業你會比較推薦大家的我覺得很多工科很強的專業學校特別吃香例如說Stanford MIT或是",
+            "start": 488.28,
+            "duration": 25.340000000000032
+          },
+          {
+            "text": "CMU,Connecticut, Maryland因為我們頻道一直倡導透明就是公開然後我最喜歡就是問來賓你賺多少錢?That's what I do跟大家分享一下你的薪水那我們先暫停一下今天這集影片是由MUUMU贊助MUUMU是富途旗下的一家零手續費證券交易軟件在美國的帳戶都有FDIC的保險那富途是一家在美國的NASDAQ上市目前全球有超過1800萬個用戶",
+            "start": 513.82,
+            "duration": 27.019999999999982
+          },
+          {
+            "text": "那这次平台有一个专门送给美国用户最多10股股票的开户优惠现在到7月31号以前开户美国MUUMU入金任意金额送6股股票入金如果到达100块再多送1股到达2000的话再多送3股所以一共最多送10股单股价值3到2500的股",
+            "start": 540.84,
+            "duration": 18.539999999999964
+          },
+          {
+            "text": "这个优惠活动目前只有美国居民有SSN开户才有的那我自己原本看走势图还有一些公司方面的咨询都是用Yahoo Finance的App但是MUUMU在这方面做得真的非常的专业整体UI也做得很好而且在美国买美股跟ETF都是零手续费一个账户可以交易港股跟美股所以如果你在美国的话我推荐你尝试一下这个交易平台而且免费送最多10股美股的活动真的非常的值得只要入金2000就有了基本上就是免费送你股票",
+            "start": 559.38,
+            "duration": 27.539999999999964
+          },
+          {
+            "text": "那如果你在美國有興趣的話我會把活動註冊連結放在影片底下的資訊欄大家可以自己去看一下",
+            "start": 586.92,
+            "duration": 5.960000000000036
+          },
+          {
+            "text": "就是身為AI researcher就是可能剛畢業PhD剛畢業一段時間然後你在這個行業Qualcomm算是不錯的公司做晶片嘛很棒的一家公司然後分享一下你在San Diego這邊年薪大概是怎麼樣?其實如果你是fresh grade就是你博士第一年畢業我覺得比較就還蠻It's not uncommon to see like",
+            "start": 592.5,
+            "duration": 28.139999999999986
+          },
+          {
+            "text": "250k",
+            "start": 620.32,
+            "duration": 2.2399999999998954
+          },
+          {
+            "text": "300k 20萬到30萬就還蠻正常 是PhD畢業對不對然後例如說可能例如說那年可能Market不好可能比較低一點是很正常那可能那年Market比較好你可能會拿到32 35都是很正常的Pay grade大概就是25到30我覺得是很正常當然公司有區別對不對對當然公司有區別而且你有沒有compete offer也有影響那你自己呢",
+            "start": 622.76,
+            "duration": 28.24000000000001
+          },
+          {
+            "text": "我自己大概是中值就是我大概是median就我不是特別高也不是特別低大概就是三出三三字頭其實我不知道Qualcomm的pay是怎麼樣的structure就我所知就是你叫什麼Sign on bonus就是簽字費蠻高的如果你不介意跟大家分享一下你的簽字費大部分我自己的簽字費是160對差不多160160K就是16萬美金",
+            "start": 650.62,
+            "duration": 28.620000000000005
+          },
+          {
+            "text": "就是你把那個名字簽上去就16萬美金我賣身賣兩年賣兩年生就寫一下名字ok Dr. Pai Pai名字簽一下就16萬美金對差不多我覺得這蠻屌的因為其實就我所知做software engineering的話像我聽說過最高的簽資費就10萬而已你跟我講當時跟我說的時候16萬我想oh shit就很蠻高的一個簽資費我從來沒有聽過這麼高的簽資費",
+            "start": 678.86,
+            "duration": 26.779999999999973
+          },
+          {
+            "text": "就满掉了你觉得在你这行算是比较正常吗还是就是一个比较会negotiate 到比较好的成本我觉得其实是我自己negotiate 的成分其实就像software engineer就是我们我们也会被lobalrightno matter how good you arethey're gonna lobal you在你找工作的时候尤其是在北美找工作你要很努力的去投",
+            "start": 705.64,
+            "duration": 22.24000000000001
+          },
+          {
+            "text": "各種不同的公司不管他好或不好或是你想不想去你可能會很正常你可能不會有offer或是不會有interview然後",
+            "start": 727.88,
+            "duration": 13.919999999999959
+          },
+          {
+            "text": "但是你試的過程中你就會知道自己的市值在哪裡然後你就會知道說你自己值多少錢然後可能有一家公司在世界上他們會付你200萬然後你就會知道其實我值這個價錢然後你就可以拿這個價錢去競爭然後你就可以提升你的整個總額",
+            "start": 741.94,
+            "duration": 24.819999999999936
+          },
+          {
+            "text": "所以那時候因為我比較想要一起投資可能大家不知道Terry其實是我的business partner所以我們你要投資就是要有現金所以現金就是三樣bonus沒錯 看滿長的",
+            "start": 766.7,
+            "duration": 17.17999999999995
+          },
+          {
+            "text": "有想要考慮做這一行業的就是有對這行業有興趣的人你有沒有什麼建議給他們建議不管是求學的道路還是說準備面試的方向你有沒有什麼給他們的建議其實我覺得每一個人的成功或是他的Path都是不太可能被100% Reproduce的",
+            "start": 784.2,
+            "duration": 24.8599999999999
+          },
+          {
+            "text": "而且如果你只是想要賺錢我可以跟你保證念博士絕對不是一個最快的路我覺得會選擇念博士然後當一個researcher或是一個research scientist他們都是對工程有一些執著會有passion我相信你也不是為了錢對其實我真的一開始並沒有我沒有想到我一開始沒有想到我以後會賺多少錢",
+            "start": 809.36,
+            "duration": 25.399999999999977
+          },
+          {
+            "text": "我一開始是就像一個很正常的大學生然後我只是很 fascinate by engineer然後我看到我可以 program然後看到那個 LED light being light up然後 changing that 我覺得很 cool所以我就覺得說 I'm more like passion and driven",
+            "start": 834.98,
+            "duration": 21.74000000000001
+          },
+          {
+            "text": "因為如果你想賺錢的話你去華爾街或是自己去做trading可能更快自己開公司或是開sort ofit's like way faster這邊其實很多做餐廳的超級比我們多多少那假如譬如說我現在想要以後想要成為一個",
+            "start": 857.38,
+            "duration": 17.75999999999999
+          },
+          {
+            "text": "AI scientist我有什麼方向我可以比較好讓我往這個路走嗎?所以有些人可能會想說我可能得拿一個 degree或是去CoreSera上一課我覺得這是有幫助就Depends on你願意花多少錢花多少錢花多少時間在這個上面但是你要知道其實AI is part of the industrypart of the tech industry",
+            "start": 874.94,
+            "duration": 26.299999999999955
+          },
+          {
+            "text": "他有一個波他有一個上一個下所以很有可能如果你規劃5年10年",
+            "start": 901.5,
+            "duration": 7.279999999999973
+          },
+          {
+            "text": "你畢業後這個浪潮已經不在你可能想說OK Dave他念一個博士我也要念一個博士但是你可能你博士出來AI已經沒有當年這麼紅這麼火的對所以我覺得你要對市場跟整個Tag industry有一些基本的了解By following Terry Chen's YouTube channel訂閱分享按讚",
+            "start": 909.2,
+            "duration": 25.799999999999955
+          },
+          {
+            "text": "所以然後你有這些了解以後你才能夠知道說你自己願意投資多少時間你不一定要拿個 degree你可以去找公司 intern做相關的 project",
+            "start": 934.66,
+            "duration": 11.300000000000068
+          },
+          {
+            "text": "你可以去一些AI相關的company他可能不一定配這麼多但是他可能做的project非常相關然後讓你覺得很有潛力這是值得去嘗試還有一點我覺得蠻有意思的就是像我現在是一個software engineer我就寫code我對AI不是很懂但假如今天我去了一家AI的公司然後雖然我還是寫比如說我還是寫server還是寫我自己的code但是因為我對AI就會有稍微接觸到",
+            "start": 945.82,
+            "duration": 29.120000000000005
+          },
+          {
+            "text": "然後我如果跟比如做AI的那些research team關係比較好的話我可以慢慢的說我會幫你們一些做一些東西然後跟你們學一些東西就通常這種方式其實是還蠻好我個人認為是一個蠻好切入的一個方式就是你可以slowly去加入他們然後可能在旁邊",
+            "start": 974.76,
+            "duration": 23.519999999999982
+          },
+          {
+            "text": "你可以比如说回家自己去进修一些课程啊不管是上网学啊或什么之类这些我觉得都是一个可以让你往一个全新的领域去发展的一个方式对也不一定就是说你一定要去重新读一个PhD或是读一个什么当然你有钱有时间我觉得这是大概是最好最容易走的路但是就是PhD要五年对不对",
+            "start": 998.4,
+            "duration": 20.720000000000027
+          },
+          {
+            "text": "不好讀而且對啊而且這五年來要花很多錢Depends on what kind of PhD有些學校會給你錢對那據我所知的話Dave以前也是蠻省的就是也是跟我一樣就是我們都是窮學生過來的對啊然後",
+            "start": 1018.86,
+            "duration": 17.600000000000023
+          },
+          {
+            "text": "就是你要有這個時間要有這個錢因為它不是一個小投資而且時間就是金錢你想看青春你要把四五年的時間給砸進去所以這個就是取捨吧那還有一點我覺得就echo一下Dave剛剛講的那個我覺得就是",
+            "start": 1036.46,
+            "duration": 17.180000000000064
+          },
+          {
+            "text": "就是不要說我就做這尤其是這一行就真的不能自己說OK我今天為了賺錢因為假如真的是為了賺錢投資四五年再讀一個PhD就為了賺錢這是一個我個人覺得是蠻愚蠢的一個選擇你真的是要有興趣我覺得才會成功好啊那非常感謝Dave今天來到我們頻道然後我會在San Diego這邊待幾天Dave單身嗎",
+            "start": 1053.42,
+            "duration": 27.559999999999945
+          },
+          {
+            "text": "大家如果對這個帥氣的AI科學家有興趣的話IG連結在這裡",
+            "start": 1081.3,
+            "duration": 8.940000000000055
+          },
+          {
+            "text": "大家可以去去follow想要問Dave問題私人問他問題的話可以去他的IG上面meet他有什麼問題想要問Dave也可以在我影片底下留言啊對吧那Dave應該都會去下面回覆大家對吧是是會會會會of course應該會OK感謝大家觀看今天的影片如果你覺得這集對你有幫助的話記得一定要點讚幫Dave點個讚吧對不對終於難得頻道有這麼帥的engineer來這邊還蠻蠻難得對不對好那我們下次見囉掰掰",
+            "start": 1090.02,
+            "duration": 28.519999999999982
+          }
+        ],
+        "videoTitle": "AI科學家薪資公開｜16萬美金簽字費",
+        "metadata": {
+          "title": "AI科學家薪資公開｜16萬美金簽字費",
+          "description": "感謝今天這一集影片由Moomoo贊助\nMoomoo開戶連結：https://hackbear.tv/moomoo\n『僅限美國用戶』現在開戶就送6股，入金達到$100再多送1股，入金達到$2,000再多送3股，一共最多送10股單股價值$3到$2500的股票。\n----------------------------------\n盈透證卷Interactive Brokers ❤️：https://www.interactivebrokers.com/mkt/?src=terryY1&url=%2Fcn%2Fwhyib%2Foverview.php\n----------------------------------\nDr. PaiPai Instagram: https://www.instagram.com/dr.paipai\nBachelor 泰瑞 Instagram: https://www.instagram.com/master.terry.chen\n商業合作：hack.tech.entertainment@gmail.com",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 1119,
+          "viewCount": 249032,
+          "keywords": [
+            "ai",
+            "machine learning",
+            "phd",
+            "san diego",
+            "salary",
+            "reveal",
+            "人工智能",
+            "人工智慧",
+            "博士",
+            "聖地牙哥",
+            "薪水公開",
+            "工資",
+            "加州",
+            "硅谷",
+            "矽谷",
+            "台灣",
+            "台灣人"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/YKcagGAZRz0/maxresdefault.jpg",
+            "width": 0,
+            "height": 0
+          }
+        },
+        "source": "whisper",
+        "fallback": false,
+        "error": null,
+        "reason": null,
+        "timings": {
+          "downloadSeconds": 42.7,
+          "transcribeSeconds": 10.7,
+          "totalSeconds": 53.4,
+          "audioBytes": 6810864,
+          "videoDurationSeconds": 1119,
+          "engine": "wizper"
+        }
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

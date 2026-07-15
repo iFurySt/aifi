@@ -1,0 +1,8347 @@
+{
+  "source": "Online transcript provider: GetYouTubeText",
+  "source_url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+  "provider": {
+    "name": "GetYouTubeText",
+    "page_url": "https://getyoutubetext.com/",
+    "endpoint": "https://getyoutubetext.com/api/transcript",
+    "retrieved": "2026-07-13",
+    "extraction": "Open Browser Use page token plus provider API"
+  },
+  "video_index": 27,
+  "video": {
+    "index": 27,
+    "id": "Q59J5roE5lM",
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "duration_seconds": 1346.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "Q59J5roE5lM",
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "text": "開始了開始了是吧\n不用那麼緊張放鬆就好\n我覺得你看起來\n你每次錄影都很ㄍㄧㄥ\n因為我很不習慣啊\n因為我對啊\n放鬆就好\n大家不知道我跟博怎麼認識的\n其實我們是網友啦\n嗯主要是因為你跟我背景比較相近吧\n因為你是疫情那時候開始錄影的\n然後那時候疫情很無聊\n就一直在看一堆YouTube\n然後就被推薦你的影片\n就看一下這個人在幹嘛這樣子\n對啊然後我們就認識了\n然後然後你也很喜歡分享說\n你的公司啊還有你的薪水啊\n這種就點進去看一下這樣子\n其實我覺得我分享的\n內容都是比較\n很typical engineer\n會想要分享的東西\n或者說我們在做的事情其實差不多\n我們也是就是工作，賺錢，然後投資\n就其實很單純的\n然後我是今天才跟你聊到才知道\n你跟我投資基本上差不多\n我主要重倉三家嘛\nTesla\nNvidia跟Palantir\n這三個是我最大倉位\n然後其實你也是對不對\n這三個也是我目前最大倉位\n還有再加上Meta\n然後台積電 Sofi 這樣子\n嗯嗯嗯 比較有趣的是\n因為你有家庭有小孩兩個小孩\n然後其實正常人在這樣的情況下\n他不太會想要去重倉個股\n那是什麼契機讓你去做這個事情?\n因為你之前有跟我\n講說你之前也是都只是買大盤而已\n其實我沒有真的買過大盤\nOKOK\n我以前是剛工作前\n幾年也是比較懵懂無知\n就是拿到Google RSU就\n放在那邊然後沒賣這樣子\n然後其實收益也不錯\n可是因為那時候RSU也不多\n所以收益再多也就是那個樣子\n對那之所以會想要投資個股主要是\n應該說就特別看好這幾家公司\n就覺得說這幾家公司在未來短時間內\n比如說三年內\n我覺得可以表現得比大盤好\n所以就把頭洗下去了這樣子\n那Palantir比較像是無心插柳柳成枝\n就是就是說那個時候\n那時候他股價很低嘛\n那時候我買的時候才25塊\n那那個時候因為很多人都看好\n有一些我在追蹤的一些財經網紅\n他們就是都很看好\n包含我嗎\n對你\n他就覺得說不然就當成怎麼講\n就投資嘛就放一點錢進去\n那時候其實也不是佔我最大部位\n那時候就佔我很小部位想說放進去\n然後給他放看看\n不要理他看會不會長大這樣子\n那沒想到就\n去年幾次財報以後就長大\n成我最大部位這樣子\nOK了解\n然後Nvidia其實也算是經典啦\nNvidia我很晚才進場我是\n今年初才大舉進場\n就是那時候\n他因為deepseek\n的新聞出來他大跌\n我想說這是一個好買點\n跌到120嗎還是100初的時候\n110幾可是\n那時候關稅戰有再跌到100以下\n那時候我就沒有再加\n但是那\n時候deepfake他短\n時間內一口氣跌了好像十幾趴吧\n然後我想說這是一個不錯的買點\n所以那時候就一次進場很多這樣子\n我覺得Nvidia的邏輯\n其實蠻蠻簡單的\n我覺得大家都懂\n找到好買點就上\n對那金礦嘛\n然後那Nvidia是做鏟子的\n對這個東西大家都知道\n我覺得Palantir\n很多人不懂到底這家公司在做什麼\n老實說我也沒有百分之百理解\n因為他們的產品\n主要不是面對end user\n他的主要客戶都是國防部相關的\n我分享一下我的投資\n我自己投資Palantir的邏輯\n在這個AI時代\n不只是Nvidia在做這個鏟子\n我覺得Palantir也\n是在做這個鏟子\n你覺得它的軟體\n本身也是一個platform\n對我覺得這是我的理解\n因為我覺得大家\n會rush要進去AI\n然後要做AI轉型\n那Palantir就是\n一個很好的一個\n幫你去做AI轉型\n幫enterprise做AI轉型的一家公司\n他們提供的軟體就是\n而且它是\nproven to work\n對\n因為它實際上的業績也表現出來\n就是它的成長率非常驚人\n就代表說確實是有\n很多企業在用它的solution\n對而且它\n很多case study\n是真的是蠻驚人的\n就是幫很多公司省\n了非常非常非常多錢\n而且這種企業單的revenue stream\n是一上去就很難下來的\n對Palantir最厲害\n讓我覺得最強的點是\n其實很多公司也\n可以做類似這樣的事情\n但是因為他們有國防部的背書\n他們對data這部分可以做到很好\n也就是說一家公司要怎麼去信任\n我把所有data都給你\n我會去信任\n一個startup會\n信任一家random的一家公司\n還是我信任一家已經有國防部背書\n對就是他已經\n把國防部的所有data都收集起來\n然後甚至美國其他\n部門的data都給他們\n他可以把它做到這麼好\n那代表說\n他data security這方面\n可以做得很好\n然後我可以把我的data給他\n這點我是覺得是他\n很大的一個moat\n就很多公司做不到的\n對這也是為什麼我\n可能十幾塊的\n時候就也是投資Palantir\n然後現在慢慢的倉位\n就移到越變越大這樣子\n對然後第三個\n就是我最重的倉位是Tesla啦\n那大家都知道\n對是一個事實\n然後你自己也\n是Tesla是也蠻重的一個倉位\n對\n你會投資Tesla的原因\n投資Tesla我覺得最\n主要是就是相信Elon這個人\n就是因為他現在\n其實很多東西都在一個願景\n就是你已經看到\n他的一些prototype\n但是要等\n他大規模\ndeployment你\n需要一個執行力\n那投資Tesla\n就是你相信Elon的執行力\n他這些他\nenvision的這些\n東西可以真的到時候全面展開\n就是他的一些\n願景可以全部realize\n那Elon的\n一些track record\n是讓你覺得說\n這個人我真的他真的可以做得到\n就是像連Jensen都說\ndon&#39;t bet against Elon\n就是基本上會\n投資Elon的\n投資Tesla的股東就是\n在bet on Elon的execute\n對但是我要講的\n是不得不說\n確實你投資Tesla這家公司\n其實你是在有點\n像是買一個美好的願景的概念\n就是你絕對不是價值投資\n對\n因為他公司本身還沒有到那個\n已經完全跟基本面脫鉤對\n對已經脫鉤了\n就是你願不願意\n相信這家公司未來的這個發展\n大概就是這個概念\n那我知道這聽起來是蠻瘋的\n因為你要去相信一家公司\n然後你要把你的倉位全都賭上去\n那確實是一個很難做到的一個事情\n那我覺得你可以把Tesla變成\n第三大倉位也是蠻厲害的\n我猜你進去了也沒有到很早吧\n我是在關稅戰的時候進去的\n其實我以前也有進去過後來出來了\n因為Tesla是一個波動很大的股票\n那我最後一次進去是今年關稅戰\n我做了一個sell put\n然後後來被執行然後就放著\nI see I see\n那還OK啦那那個價格也是OK的\n一直以來我們都\n覺得說很多人會聽大家講說\n那其實買大盤就好了\n然後其實我以前也是這個概念就是說\n對於大部分人來\n講普遍99%的人來說\n其實你就\n投資大盤就好\n投資S&amp;P500的大盤\n比如說VOO這種ETF就可以了\n但是我現在有一點\n點改變這個觀念的原因是什麼呢\n因為如果你去\n看整個現在美國經濟發展\n其實S&amp;P500\n的這個盈利大部分都\n集中在前面幾家公司\n後面的公司其實是沒有表現那麼好\n然後未來已經很\n明顯趨勢就是AI會\n再繼續把這些公司的價值拉上去\n那在這樣的情況\n下我個人覺得可能S&amp;P500\n其實你如果\n只是單純投資S&amp;P500\n這種比較被動的方式\n很多機會是被稀釋掉了\n你有這樣覺得嗎\n先說我覺得\n投資大盤還是適合大部分人\n因為之所以沒有\n90%的基金管理人沒辦法贏過大盤\n這是數據擺在那邊大盤就是這麼強大\n但是我也覺得說\n在接下來幾年確實這些\n在AI上佔盡優勢的這些幾大巨頭會\n把市場上大部分的\n獲利給端走這個我也是很看好的\n但是之所以說投資\n個股不是for everyone\n是因為不是每個人都適用\n是因為個股的波動會很就是會很大\n比如說你看像\n上禮拜上禮拜因為\n美國政府關門的關係\n那個還有\n就是因為\nMichael Burry\n那個空單的關係\nPalantir跟\nNvidia就大回調昨天又回來了\n就是個股的波動就這麼大\n所以基本上要投資個股\n的人你必須要先\n知道說你接下來會經歷什麼東西\n就是在你可能會經歷短時間內下跌\n那在短時間下跌的\n時候你要心情不受影響\n繼續hold住\n因為有很多人就是\n當你在波動的時候你就抱不住了\n然後可是當他回來的\n時候你又把它追回來\n那這樣就變成你的獲利都被吃掉了\n心理素質很重要\n對那其實而且\n其實大部分人都是這個樣子\n我也是經歷過很多次這樣子\n後來才意識到說啊我不能就是\n你要在主動投資上\n賺錢你就必須要\n做一些違反人性的東西\n你之前影片有講過就是\n之所以為什麼不\n推薦主動投資是因為就是說\n因為它的波動性太大\n然後而且再加上說\n有很高的機率你\n可能還是沒辦法贏過大盤\n就是那些你選的\n股票最後加起來的\n表現可能還是最後輸給大盤\n還是說第三點就是說\n因為你怕這個波動\n性所以你不敢投太多本金在上面\n那所以比起你願意\n把全部的本金投在大盤上\n你總獲利還是比較少，這也是其中一點\n所以各種原因就是\n你在做一些主動投資在選個股的時候\n你必須要很清楚自己在做什麼\n然後就必須心態上不能受影響\n對我覺得你剛剛講的很好一點就是\n其實大盤還是適合大多數的人\n因為它是屬於被動投資\n然後波動相對來講少很多對\n甚至可以考慮的是\n如果你覺得相信\n未來的tech會\n帶領接下來的趨勢的話\n其實你可以可能allocate\n部分的大盤是到QQQ上面\n就比較tech driven的那些ETF\n而不是單純就\n只是S&amp;P500的ETF這樣子\n我覺得這個是一個\n還蠻不錯的一個選擇啦\n那如果你像我們比較瘋一點的話\n要做到像我們這樣然後然後還賺錢\n就像你剛剛講的\n要做一些反人性，就比較反人性的操作\n像在跌的時候你就反而要加倉\n然後在漲的時候你\n就要克制自己的手不要去追高\n對我覺得這個是最難的\n就這個理論很簡單\n我覺得這很考驗你的紀律\n就是就像很多\n事情你知道說應該要怎麼做\n可是能夠真的做到\n的人很少就是還是少數\n就是你知道說哪些\n生活習慣可以讓你身體很健康\n真的能夠從一而終貫徹\n執行的人畢竟是少數\n沒錯就是理論大家都知道低買高賣\n這個所有人都想要做到\n但是往往就是在低的時候\n大家都想要把它賣掉\n我依稀記得\n就是那時候Tesla\n跌到100甚至甚至好像\n那時候大家都在唱衰他嘛\n短暫時間跌到跌破100\n這種通常就是當\n個股下跌的時候各種\n負面新聞就會出來\n對啊大家就整個\n市場恐慌加上所有\n人都來說Tesla要歸零了\n然後每個人都說我們\n60塊見50塊見這些\n就這種言論看到你一定會緊張\n然後你就會想要把你手上的給賣掉\n那這個時候其實就是看你\n這個時候就要\n看Terry的\nYouTube貫徹信念\n我我覺得能在那個\n時候加倉的人其實都是很狠的\n你要很狠敢願意去做這個事情\n就對可能大部分\n人比較難做到這個事情\n所以其實還是\n對於大部分人來說其實也\n是投資大盤ETF最穩健\n嗯嗯嗯\n好那說到分散投資到不同的產業呢\n最近貴金屬的走勢也是非常的誇張\n六個月一年跟五\n年都是跑贏QQQ跟S&amp;P500\n儘管幾天前黃金\n稍微跌了一點但是\n看起來是又快回來了\n那大家如果有\n興趣交易黃金白銀這些貴金屬的話\n這邊跟大家介紹一個\n合規的交易平台Mitrade\n還可以交易比特幣\n美股，原油，外匯和\n各大指數等等超過\n900多種熱門的標的\n那他們也支持信用卡跟USDT\n加密貨幣出入金\n我覺得對於沒有\n美金的朋友們來說也是非常的方便\n那平台本身沒有手續費\n主要是靠很低的點差來賺錢\n而且Mitrade也為每位用戶\n提供了100萬美金的資金安保政策\n好那現在Mitrade呢\n要來免費送給頻道觀眾交易券\n交易券的話就是賺到的錢歸你的\n虧的話是歸平台的\n現在用我的影片底下連結註冊呢\n入金最多可以獲得$1300美元的交易券\n我會把具體活動辦法呢放在影片底下資訊欄\n如果不想錯過免費交易的話\n歡迎來試試看\n另外一點就是我想要問波爾就是\n頻道觀眾大家也\n很多人都在tech工作嘛\n其實tech工作薪水是很不錯\n尤其是假如你是\n比如說過去五年十年\n都在tech的話\n其實現在應該都過得不錯\n對但是也有\n很多人還是\n在struggle存的沒有很多錢\n我們剛剛有聊到\n就是假如你沒有家庭小孩的話\n其實早就超過fat FIRE\n嗯看在哪裡在\n灣區可能沒有可是\n如果比如說來日本的話應該有\nFIRE對你來講已經是達到了\n對就就是應該說你現在\n我覺得\n每個人的FIRE\nnumber不一樣\n對每\n個人的FIRE number\n不一樣但是以你的現在的狀態生活\n以我的支出來說差不多\n差不多對那假如\n再加上假如你沒有\n小孩沒有沒有家庭的話\n那可能早就已經\n可以退休了就是可以躺平對\n對啊那有沒有什麼建議啊\n工程師要怎麼樣可以早點去FIRE\n老實說最有\n最有用的建議通常就是最無聊的建議\n就像剛剛講的\n如果你可以你知道\n什麼是對的事情然後\n你貫徹你的紀律去做\n那其實就是基本上就是時間問題\n我覺得前幾年的話那時候利率很低\n那那時候如果你\n可以去槓桿買房子\n那就是一個不錯的選擇\n我覺得很多時候就是怎麼講\n你要知道你要先知道一個\n對的principle\n然後等待機會\n然後等到機會一來\n就不要猶豫立刻下手\n買賣股票也是像\n我剛剛講的利率的時機也是\n還有就是找工作的時機也是\n你找到一個對的\n賽道然後剛好有這個\n機會你就不要回頭\n就進去就下去做這樣子\n對其實人生做\n這些決定都是在投資工作\n各種各種決定都是在投資\n對因為在對的時間\n做對的事情其實就是這麼簡單\n那你只要十個\n裡面有超過一半是對的決定的話\n其實你都不會過得太差\n還有一個很重要的就是\n我常常在英文\n英文那些平台上網站看到就是\n你能不能FIRE是\n取決於你的消費習慣嘛\n像像Terry這種\n這麼低物慾的\n當然很快一下就FIRE了\n如果是以消費來說的話\n你要小心就是\n一些你有luxury expense creep in\n就是有些人可能覺得\n說我今天加薪了我就要換個大房子\n我就要買個新車\n像比如說有些東西\n你也要分辨出分別出\n說什麼東西是liability\n什麼東西是asset\n像車子就是liability\n那我很不理解\n就是為什麼很多人喜歡買豪車\n因為車子本身是liability\n他買他從落地的一瞬間就開始貶值\n而且是大幅貶值\n那如果你當然\n你如果這是買的東西\n可以讓你有幸福感\n然後你也是對\n這方面有興趣那就另當別論\n但是如果是不是的\n話那你就要考量到說\n有些東西是會\n自己是asset是它會自己增長\n有些東西是不會\n增長那你就要在買之前要考慮清楚\n其實我覺得很多人\n買豪車的原因我我我排除富豪之外\n就很有錢的人那他們買豪車就是正常\n那我說一般中產可能買豪車的原因是\n我覺得\n我不知道是不是正確就是\n在那個圈子裡面\n你看到旁邊的人都在做這個事情\n或是可能大家會覺得\n這個是一個很棒的一個事情\n然後買車是一個讓你幸福感提升\n應該說我覺得很多人觀念會覺得說\n我這麼辛苦的賺錢為什麼\n為了就是可以讓生活過得好一點然後我\n可以把錢買到我自己想買的東西\n那我覺得這個東西是沒有錯\n完全沒有問題\n完全沒有任何問題對\n但問題是我覺得\n很多時候是做這個事情\n你得到的這個回報\n是不是真的可以讓你\n持續性的幸福感提升\n對你就想看說\n你的first principle嘛\n你的終極目標是什麼？\n我想要存更多錢\n那或許這個短\n這一筆消費或許沒有可以\n會讓你更難達成那個目標\n那你就要考慮清楚說這個是不是值得\n對因為因為我自己的想法是\n豪車對我來講確實是\nyeah我買一台很屌的車我覺得很爽\n那個爽只是一下子而已\n我真的要爽是什麼\n我真的想爽的是\n我可以什麼事情都不做然後躺平\n然後或是早點退休\n或是完全可以在人生比較早階段\n比如說30歲出頭\n或是35歲的時候\n我就可以不要去為了錢而工作\n這是讓我覺得\n可以一直在接下來人生\n比較爽的一個事情\n那這是我知道我自己想要的\n所以我才可以用這個方式\n去控制我自己不要去\n可能要買一個豪車\n啊或是幹什麼之類的\n本身我對豪車也沒有什麼太大的興趣啦\n誰不喜歡那種\n很fancy的東西對\n我覺得每個人都會喜歡\n我當然\nyeah這個東西放在\n我面前我也覺得很爽\n但是那個爽感就是一下下而已\n對但這個也不是\n說你完全不能做任何消費\n我覺得只是說就\n像剛才講的任何決定\n都是一筆investment\n你就要考慮清楚\n說這筆investment是不是worth it這樣子\n雖然說我可能\n沒有什麼物慾但是我\n覺得事實的去\nreward你自己還是蠻重要的\n那對我來講最\n快樂的事情可能是可以\n去吃一頓好吃的\n或是比如說偶爾做個\n商務艙這對我來\n講就是一個蠻好的reward\n我就不需要就是\n太多物質上面的東西\n也是因為這樣子\n對我來講FIRE其實沒有那麼難啦\n現在對我來說我會\n願意正值的花錢是體驗和經驗上吧\n比如說跟小孩子一起去旅行啊\n還是說花錢省時間啊\n有些東西你花一點小錢可以省時間\n那我如果這個金額\n是我覺得合理那我就會毫不猶豫去做\n因為錢是買不回來時間的\n沒錯對時間是唯一一個有上限的\n錢永遠可以再賺時間是每個人都一樣\n對\n我比較想問的是因為\n我們現在都蠻瘋的\n我們都是很大倉位都是在個股\n那你覺得在人生\n哪個階段你會把它慢慢轉為大盤\n就是S&amp;P500或是QQQ之類的\n還是你覺得你永遠都會一直在壓個股\n比例上來說可能隨著\n年紀變大可能會開始降低個股的比例\n因為畢竟你隨著年紀越來越大\n另外一方面來說就是\n你的時間越來越少\n所以你你更難去承受說大的波動\n一些波動因為有些\n波動雖然很快就回來\n但是那也是好幾年的時間\n那你可能到時候好\n幾年時間佔你人生\n只剩下只剩下百分之多少之類的\n所以搞不好永遠回\n不來就是在你有生之年搞不好回不來\n對所以隨著年紀變大我可能\n會allocate一些部分\n到fix income\n就是那些fix income可以\n支撐我的日常生活花費\n然後可能再多\n一點一些容錯空間這樣子\n嗯嗯嗯\n對yeah that makes sense\n我覺得我還是會\n有一部分的倉位\n是壓住在一些我自己很看好的\n我至少會有\n一小部分\nfix income是可以支撐我生活花費\n那剩下可能就是equity這樣子\n對我覺得我是想\n把我的資產一部分\n是能給我一個\n很充裕的生活expense這些\n那剩下的錢我就\n可以把它壓在我覺得很有未來的公司\n你知道有一個\nhack我不曉得\n有沒有在影片上面\n講叫buy borrow die\n哦\n就是你把你的\nequity傳給你的小孩的時候\n他的cost basis會重新調到他\n接收時候的cost basis\n所以他們沒有\n任何capital gain\n對那那那適用\n在美國啦就是對\ncapital gain來講對\n對因為美國\n有capital gain tax對\n對那可能這個就\n不一定每個國家都都適用\n而且個股的話也\n很難說你可以hold\n到傳到小孩的時候\n因為個股就是有\n這個缺點你要知道什麼時候要放手\n不像大盤就無腦一直hold\n對\n另外一點就是我想\n問你是關於crypto\n因為因為你是\n沒有投資任何\ncrypto相關的東西對吧\n我之前有但是我後來就賣掉\n因為那個波動實在太\n大到我當初可以承受的那個波動範圍\n因為crypto\n跟stock market最\n大的差異是它是24小時\n它可以隨時因為\n一個一個消息面的東西\n就開始就掉下去\n然後也可以隨時\n因為一個消息面的東西就上來\n而且它不\n像stock market\n有open market\n跟close market\n它是隨時都有可能\n波動所以它的對\n我那時候來說我\n心臟我沒辦法承受那個波動\n所以我後來就全部\n賣掉但是我現在在找\n我現在在找一個\n時機可以買一點Bitcoin\n哦我覺\n買一點Bitcoin是還不錯\n我有考慮買一點Bitcoin\n小孩以後長大的時候\n嗯我爸在那個時候是有買的\n其實我那個時候\n那時候大概十年前那\n時候就有人在說要買Bitcoin\n然後那時候大部分人\n都覺得說這只是在\n炒作所以我沒有去買\n對而且說實話你十年前買\n比如說我舉個例子\n比如說你10塊錢買Bitcoin\n你能不能拿到現在也很難\n除非你把那個account忘掉\n對除非你忘掉\n很多人會覺得\n說哦我如果十年前或是二十\n年前就買Bitcoin\n二十年前\n還沒有Bitcoin\n十七八年前\n就是十年前那時候\n就有很多人在講Bitcoin\n對那問題是很多人會\n想說我那時候\n買我現在就怎麼樣怎麼樣\n但其實現實不會是這樣\n因為你可能十塊錢買\n對你十塊錢買\n你能拿到100我覺得就已經很屌了\n對你翻十倍對不對\n那很多人是可能翻一倍兩倍\n他就把它賣掉了\n對那就是大部分\n散戶心態所以也是\n為什麼很多人不適合主動投資\n對沒錯所以說就是\n要做一些非常反人性的東西\n而且主動還有一個\n沒有主動還有一個特點就是\n我們剛剛講的\n都是那些長期往上的個股\n但是也有一些個股\n是下來就回不來了\n這也是主動投資的風險\n對\n對\n沒錯",
+    "segments": [
+      {
+        "index": 0,
+        "text": "開始了開始了是吧",
+        "offset": 10,
+        "duration": 1740
+      },
+      {
+        "index": 1,
+        "text": "不用那麼緊張放鬆就好",
+        "offset": 1770,
+        "duration": 2420
+      },
+      {
+        "index": 2,
+        "text": "我覺得你看起來",
+        "offset": 4610,
+        "duration": 870
+      },
+      {
+        "index": 3,
+        "text": "你每次錄影都很ㄍㄧㄥ",
+        "offset": 5490,
+        "duration": 1140
+      },
+      {
+        "index": 4,
+        "text": "因為我很不習慣啊",
+        "offset": 6650,
+        "duration": 1660
+      },
+      {
+        "index": 5,
+        "text": "因為我對啊",
+        "offset": 8650,
+        "duration": 1180
+      },
+      {
+        "index": 6,
+        "text": "放鬆就好",
+        "offset": 9850,
+        "duration": 660
+      },
+      {
+        "index": 7,
+        "text": "大家不知道我跟博怎麼認識的",
+        "offset": 10530,
+        "duration": 2220
+      },
+      {
+        "index": 8,
+        "text": "其實我們是網友啦",
+        "offset": 13170,
+        "duration": 1060
+      },
+      {
+        "index": 9,
+        "text": "嗯主要是因為你跟我背景比較相近吧",
+        "offset": 14370,
+        "duration": 2140
+      },
+      {
+        "index": 10,
+        "text": "因為你是疫情那時候開始錄影的",
+        "offset": 16730,
+        "duration": 1940
+      },
+      {
+        "index": 11,
+        "text": "然後那時候疫情很無聊",
+        "offset": 19050,
+        "duration": 1090
+      },
+      {
+        "index": 12,
+        "text": "就一直在看一堆YouTube",
+        "offset": 20160,
+        "duration": 1220
+      },
+      {
+        "index": 13,
+        "text": "然後就被推薦你的影片",
+        "offset": 21400,
+        "duration": 1620
+      },
+      {
+        "index": 14,
+        "text": "就看一下這個人在幹嘛這樣子",
+        "offset": 23040,
+        "duration": 790
+      },
+      {
+        "index": 15,
+        "text": "對啊然後我們就認識了",
+        "offset": 23840,
+        "duration": 1700
+      },
+      {
+        "index": 16,
+        "text": "然後然後你也很喜歡分享說",
+        "offset": 25560,
+        "duration": 2420
+      },
+      {
+        "index": 17,
+        "text": "你的公司啊還有你的薪水啊",
+        "offset": 28000,
+        "duration": 2220
+      },
+      {
+        "index": 18,
+        "text": "這種就點進去看一下這樣子",
+        "offset": 30240,
+        "duration": 1820
+      },
+      {
+        "index": 19,
+        "text": "其實我覺得我分享的",
+        "offset": 32080,
+        "duration": 910
+      },
+      {
+        "index": 20,
+        "text": "內容都是比較",
+        "offset": 33000,
+        "duration": 1580
+      },
+      {
+        "index": 21,
+        "text": "很typical engineer",
+        "offset": 34590,
+        "duration": 1340
+      },
+      {
+        "index": 22,
+        "text": "會想要分享的東西",
+        "offset": 35950,
+        "duration": 1580
+      },
+      {
+        "index": 23,
+        "text": "或者說我們在做的事情其實差不多",
+        "offset": 37550,
+        "duration": 1860
+      },
+      {
+        "index": 24,
+        "text": "我們也是就是工作，賺錢，然後投資",
+        "offset": 39430,
+        "duration": 2980
+      },
+      {
+        "index": 25,
+        "text": "就其實很單純的",
+        "offset": 42430,
+        "duration": 1030
+      },
+      {
+        "index": 26,
+        "text": "然後我是今天才跟你聊到才知道",
+        "offset": 43470,
+        "duration": 1980
+      },
+      {
+        "index": 27,
+        "text": "你跟我投資基本上差不多",
+        "offset": 45470,
+        "duration": 1780
+      },
+      {
+        "index": 28,
+        "text": "我主要重倉三家嘛",
+        "offset": 47270,
+        "duration": 1190
+      },
+      {
+        "index": 29,
+        "text": "Tesla",
+        "offset": 48470,
+        "duration": 590
+      },
+      {
+        "index": 30,
+        "text": "Nvidia跟Palantir",
+        "offset": 49170,
+        "duration": 1300
+      },
+      {
+        "index": 31,
+        "text": "這三個是我最大倉位",
+        "offset": 50690,
+        "duration": 1620
+      },
+      {
+        "index": 32,
+        "text": "然後其實你也是對不對",
+        "offset": 52330,
+        "duration": 980
+      },
+      {
+        "index": 33,
+        "text": "這三個也是我目前最大倉位",
+        "offset": 53330,
+        "duration": 2060
+      },
+      {
+        "index": 34,
+        "text": "還有再加上Meta",
+        "offset": 55410,
+        "duration": 1900
+      },
+      {
+        "index": 35,
+        "text": "然後台積電 Sofi 這樣子",
+        "offset": 57330,
+        "duration": 2460
+      },
+      {
+        "index": 36,
+        "text": "嗯嗯嗯 比較有趣的是",
+        "offset": 60050,
+        "duration": 2260
+      },
+      {
+        "index": 37,
+        "text": "因為你有家庭有小孩兩個小孩",
+        "offset": 62330,
+        "duration": 2860
+      },
+      {
+        "index": 38,
+        "text": "然後其實正常人在這樣的情況下",
+        "offset": 65330,
+        "duration": 2260
+      },
+      {
+        "index": 39,
+        "text": "他不太會想要去重倉個股",
+        "offset": 67610,
+        "duration": 2780
+      },
+      {
+        "index": 40,
+        "text": "那是什麼契機讓你去做這個事情?",
+        "offset": 70690,
+        "duration": 2640
+      },
+      {
+        "index": 41,
+        "text": "因為你之前有跟我",
+        "offset": 73350,
+        "duration": 750
+      },
+      {
+        "index": 42,
+        "text": "講說你之前也是都只是買大盤而已",
+        "offset": 74110,
+        "duration": 1980
+      },
+      {
+        "index": 43,
+        "text": "其實我沒有真的買過大盤",
+        "offset": 76110,
+        "duration": 1990
+      },
+      {
+        "index": 44,
+        "text": "OKOK",
+        "offset": 78110,
+        "duration": 700
+      },
+      {
+        "index": 45,
+        "text": "我以前是剛工作前",
+        "offset": 78830,
+        "duration": 1950
+      },
+      {
+        "index": 46,
+        "text": "幾年也是比較懵懂無知",
+        "offset": 80790,
+        "duration": 1540
+      },
+      {
+        "index": 47,
+        "text": "就是拿到Google RSU就",
+        "offset": 82350,
+        "duration": 1470
+      },
+      {
+        "index": 48,
+        "text": "放在那邊然後沒賣這樣子",
+        "offset": 83830,
+        "duration": 1700
+      },
+      {
+        "index": 49,
+        "text": "然後其實收益也不錯",
+        "offset": 85550,
+        "duration": 2380
+      },
+      {
+        "index": 50,
+        "text": "可是因為那時候RSU也不多",
+        "offset": 87950,
+        "duration": 1740
+      },
+      {
+        "index": 51,
+        "text": "所以收益再多也就是那個樣子",
+        "offset": 89710,
+        "duration": 2100
+      },
+      {
+        "index": 52,
+        "text": "對那之所以會想要投資個股主要是",
+        "offset": 92030,
+        "duration": 3460
+      },
+      {
+        "index": 53,
+        "text": "應該說就特別看好這幾家公司",
+        "offset": 95510,
+        "duration": 1700
+      },
+      {
+        "index": 54,
+        "text": "就覺得說這幾家公司在未來短時間內",
+        "offset": 97230,
+        "duration": 3730
+      },
+      {
+        "index": 55,
+        "text": "比如說三年內",
+        "offset": 100980,
+        "duration": 790
+      },
+      {
+        "index": 56,
+        "text": "我覺得可以表現得比大盤好",
+        "offset": 101780,
+        "duration": 2020
+      },
+      {
+        "index": 57,
+        "text": "所以就把頭洗下去了這樣子",
+        "offset": 103820,
+        "duration": 2460
+      },
+      {
+        "index": 58,
+        "text": "那Palantir比較像是無心插柳柳成枝",
+        "offset": 106300,
+        "duration": 3100
+      },
+      {
+        "index": 59,
+        "text": "就是就是說那個時候",
+        "offset": 109420,
+        "duration": 2730
+      },
+      {
+        "index": 60,
+        "text": "那時候他股價很低嘛",
+        "offset": 112170,
+        "duration": 1340
+      },
+      {
+        "index": 61,
+        "text": "那時候我買的時候才25塊",
+        "offset": 113530,
+        "duration": 1940
+      },
+      {
+        "index": 62,
+        "text": "那那個時候因為很多人都看好",
+        "offset": 115570,
+        "duration": 2260
+      },
+      {
+        "index": 63,
+        "text": "有一些我在追蹤的一些財經網紅",
+        "offset": 117850,
+        "duration": 2860
+      },
+      {
+        "index": 64,
+        "text": "他們就是都很看好",
+        "offset": 120730,
+        "duration": 1510
+      },
+      {
+        "index": 65,
+        "text": "包含我嗎",
+        "offset": 122250,
+        "duration": 2110
+      },
+      {
+        "index": 66,
+        "text": "對你",
+        "offset": 124380,
+        "duration": 950
+      },
+      {
+        "index": 67,
+        "text": "他就覺得說不然就當成怎麼講",
+        "offset": 125340,
+        "duration": 3140
+      },
+      {
+        "index": 68,
+        "text": "就投資嘛就放一點錢進去",
+        "offset": 128500,
+        "duration": 1940
+      },
+      {
+        "index": 69,
+        "text": "那時候其實也不是佔我最大部位",
+        "offset": 130460.00000000001,
+        "duration": 1660
+      },
+      {
+        "index": 70,
+        "text": "那時候就佔我很小部位想說放進去",
+        "offset": 132140,
+        "duration": 2100
+      },
+      {
+        "index": 71,
+        "text": "然後給他放看看",
+        "offset": 134260,
+        "duration": 1110
+      },
+      {
+        "index": 72,
+        "text": "不要理他看會不會長大這樣子",
+        "offset": 135380,
+        "duration": 1750
+      },
+      {
+        "index": 73,
+        "text": "那沒想到就",
+        "offset": 137140,
+        "duration": 1190
+      },
+      {
+        "index": 74,
+        "text": "去年幾次財報以後就長大",
+        "offset": 138340,
+        "duration": 1830
+      },
+      {
+        "index": 75,
+        "text": "成我最大部位這樣子",
+        "offset": 140180,
+        "duration": 2100
+      },
+      {
+        "index": 76,
+        "text": "OK了解",
+        "offset": 142500,
+        "duration": 980
+      },
+      {
+        "index": 77,
+        "text": "然後Nvidia其實也算是經典啦",
+        "offset": 143500,
+        "duration": 2580
+      },
+      {
+        "index": 78,
+        "text": "Nvidia我很晚才進場我是",
+        "offset": 146100,
+        "duration": 2540
+      },
+      {
+        "index": 79,
+        "text": "今年初才大舉進場",
+        "offset": 148660,
+        "duration": 1540
+      },
+      {
+        "index": 80,
+        "text": "就是那時候",
+        "offset": 150220,
+        "duration": 510
+      },
+      {
+        "index": 81,
+        "text": "他因為deepseek",
+        "offset": 150740,
+        "duration": 1030
+      },
+      {
+        "index": 82,
+        "text": "的新聞出來他大跌",
+        "offset": 151780,
+        "duration": 2020
+      },
+      {
+        "index": 83,
+        "text": "我想說這是一個好買點",
+        "offset": 153820,
+        "duration": 1740
+      },
+      {
+        "index": 84,
+        "text": "跌到120嗎還是100初的時候",
+        "offset": 155580,
+        "duration": 1390
+      },
+      {
+        "index": 85,
+        "text": "110幾可是",
+        "offset": 156980,
+        "duration": 2009.9999999999998
+      },
+      {
+        "index": 86,
+        "text": "那時候關稅戰有再跌到100以下",
+        "offset": 159000,
+        "duration": 1740
+      },
+      {
+        "index": 87,
+        "text": "那時候我就沒有再加",
+        "offset": 160760,
+        "duration": 1060
+      },
+      {
+        "index": 88,
+        "text": "但是那",
+        "offset": 161840,
+        "duration": 830
+      },
+      {
+        "index": 89,
+        "text": "時候deepfake他短",
+        "offset": 162680,
+        "duration": 910
+      },
+      {
+        "index": 90,
+        "text": "時間內一口氣跌了好像十幾趴吧",
+        "offset": 163600,
+        "duration": 3460
+      },
+      {
+        "index": 91,
+        "text": "然後我想說這是一個不錯的買點",
+        "offset": 167080,
+        "duration": 1660
+      },
+      {
+        "index": 92,
+        "text": "所以那時候就一次進場很多這樣子",
+        "offset": 168760,
+        "duration": 2820
+      },
+      {
+        "index": 93,
+        "text": "我覺得Nvidia的邏輯",
+        "offset": 172080,
+        "duration": 950
+      },
+      {
+        "index": 94,
+        "text": "其實蠻蠻簡單的",
+        "offset": 173040,
+        "duration": 1380
+      },
+      {
+        "index": 95,
+        "text": "我覺得大家都懂",
+        "offset": 174440,
+        "duration": 660
+      },
+      {
+        "index": 96,
+        "text": "找到好買點就上",
+        "offset": 175120,
+        "duration": 1060
+      },
+      {
+        "index": 97,
+        "text": "對那金礦嘛",
+        "offset": 176200,
+        "duration": 1230
+      },
+      {
+        "index": 98,
+        "text": "然後那Nvidia是做鏟子的",
+        "offset": 177440,
+        "duration": 2230
+      },
+      {
+        "index": 99,
+        "text": "對這個東西大家都知道",
+        "offset": 179680,
+        "duration": 1540
+      },
+      {
+        "index": 100,
+        "text": "我覺得Palantir",
+        "offset": 181240,
+        "duration": 830
+      },
+      {
+        "index": 101,
+        "text": "很多人不懂到底這家公司在做什麼",
+        "offset": 182080,
+        "duration": 2300
+      },
+      {
+        "index": 102,
+        "text": "老實說我也沒有百分之百理解",
+        "offset": 184400,
+        "duration": 1860
+      },
+      {
+        "index": 103,
+        "text": "因為他們的產品",
+        "offset": 186280,
+        "duration": 790
+      },
+      {
+        "index": 104,
+        "text": "主要不是面對end user",
+        "offset": 187150,
+        "duration": 2190
+      },
+      {
+        "index": 105,
+        "text": "他的主要客戶都是國防部相關的",
+        "offset": 189350,
+        "duration": 3340
+      },
+      {
+        "index": 106,
+        "text": "我分享一下我的投資",
+        "offset": 193030,
+        "duration": 1190
+      },
+      {
+        "index": 107,
+        "text": "我自己投資Palantir的邏輯",
+        "offset": 194230,
+        "duration": 1460
+      },
+      {
+        "index": 108,
+        "text": "在這個AI時代",
+        "offset": 195710,
+        "duration": 990
+      },
+      {
+        "index": 109,
+        "text": "不只是Nvidia在做這個鏟子",
+        "offset": 196710,
+        "duration": 1390
+      },
+      {
+        "index": 110,
+        "text": "我覺得Palantir也",
+        "offset": 198110,
+        "duration": 990
+      },
+      {
+        "index": 111,
+        "text": "是在做這個鏟子",
+        "offset": 199110,
+        "duration": 1380
+      },
+      {
+        "index": 112,
+        "text": "你覺得它的軟體",
+        "offset": 200670,
+        "duration": 1030
+      },
+      {
+        "index": 113,
+        "text": "本身也是一個platform",
+        "offset": 201710,
+        "duration": 1260
+      },
+      {
+        "index": 114,
+        "text": "對我覺得這是我的理解",
+        "offset": 202990,
+        "duration": 1500
+      },
+      {
+        "index": 115,
+        "text": "因為我覺得大家",
+        "offset": 204510,
+        "duration": 1230
+      },
+      {
+        "index": 116,
+        "text": "會rush要進去AI",
+        "offset": 205750,
+        "duration": 1430
+      },
+      {
+        "index": 117,
+        "text": "然後要做AI轉型",
+        "offset": 207190,
+        "duration": 1060
+      },
+      {
+        "index": 118,
+        "text": "那Palantir就是",
+        "offset": 208270,
+        "duration": 830
+      },
+      {
+        "index": 119,
+        "text": "一個很好的一個",
+        "offset": 209110,
+        "duration": 1020
+      },
+      {
+        "index": 120,
+        "text": "幫你去做AI轉型",
+        "offset": 210150,
+        "duration": 1190
+      },
+      {
+        "index": 121,
+        "text": "幫enterprise做AI轉型的一家公司",
+        "offset": 211350,
+        "duration": 2300
+      },
+      {
+        "index": 122,
+        "text": "他們提供的軟體就是",
+        "offset": 213670,
+        "duration": 1300
+      },
+      {
+        "index": 123,
+        "text": "而且它是",
+        "offset": 214990,
+        "duration": 590
+      },
+      {
+        "index": 124,
+        "text": "proven to work",
+        "offset": 215670,
+        "duration": 1140
+      },
+      {
+        "index": 125,
+        "text": "對",
+        "offset": 216830,
+        "duration": 340
+      },
+      {
+        "index": 126,
+        "text": "因為它實際上的業績也表現出來",
+        "offset": 217190,
+        "duration": 1860
+      },
+      {
+        "index": 127,
+        "text": "就是它的成長率非常驚人",
+        "offset": 219070,
+        "duration": 1380
+      },
+      {
+        "index": 128,
+        "text": "就代表說確實是有",
+        "offset": 220470,
+        "duration": 1870
+      },
+      {
+        "index": 129,
+        "text": "很多企業在用它的solution",
+        "offset": 222350,
+        "duration": 1900
+      },
+      {
+        "index": 130,
+        "text": "對而且它",
+        "offset": 224270,
+        "duration": 670
+      },
+      {
+        "index": 131,
+        "text": "很多case study",
+        "offset": 224950,
+        "duration": 830
+      },
+      {
+        "index": 132,
+        "text": "是真的是蠻驚人的",
+        "offset": 225790,
+        "duration": 1660
+      },
+      {
+        "index": 133,
+        "text": "就是幫很多公司省",
+        "offset": 227520,
+        "duration": 1710
+      },
+      {
+        "index": 134,
+        "text": "了非常非常非常多錢",
+        "offset": 229240,
+        "duration": 1140
+      },
+      {
+        "index": 135,
+        "text": "而且這種企業單的revenue stream",
+        "offset": 230400,
+        "duration": 1830
+      },
+      {
+        "index": 136,
+        "text": "是一上去就很難下來的",
+        "offset": 232240,
+        "duration": 1780
+      },
+      {
+        "index": 137,
+        "text": "對Palantir最厲害",
+        "offset": 234040,
+        "duration": 1030
+      },
+      {
+        "index": 138,
+        "text": "讓我覺得最強的點是",
+        "offset": 235240,
+        "duration": 1420
+      },
+      {
+        "index": 139,
+        "text": "其實很多公司也",
+        "offset": 236680,
+        "duration": 910
+      },
+      {
+        "index": 140,
+        "text": "可以做類似這樣的事情",
+        "offset": 237600,
+        "duration": 1260
+      },
+      {
+        "index": 141,
+        "text": "但是因為他們有國防部的背書",
+        "offset": 238880,
+        "duration": 2180
+      },
+      {
+        "index": 142,
+        "text": "他們對data這部分可以做到很好",
+        "offset": 241140,
+        "duration": 2580
+      },
+      {
+        "index": 143,
+        "text": "也就是說一家公司要怎麼去信任",
+        "offset": 243820,
+        "duration": 3020
+      },
+      {
+        "index": 144,
+        "text": "我把所有data都給你",
+        "offset": 246860,
+        "duration": 1460
+      },
+      {
+        "index": 145,
+        "text": "我會去信任",
+        "offset": 248340,
+        "duration": 670
+      },
+      {
+        "index": 146,
+        "text": "一個startup會",
+        "offset": 249020,
+        "duration": 790
+      },
+      {
+        "index": 147,
+        "text": "信任一家random的一家公司",
+        "offset": 249820,
+        "duration": 1620
+      },
+      {
+        "index": 148,
+        "text": "還是我信任一家已經有國防部背書",
+        "offset": 251460,
+        "duration": 2120
+      },
+      {
+        "index": 149,
+        "text": "對就是他已經",
+        "offset": 253600,
+        "duration": 990
+      },
+      {
+        "index": 150,
+        "text": "把國防部的所有data都收集起來",
+        "offset": 254600,
+        "duration": 1740
+      },
+      {
+        "index": 151,
+        "text": "然後甚至美國其他",
+        "offset": 256360,
+        "duration": 990
+      },
+      {
+        "index": 152,
+        "text": "部門的data都給他們",
+        "offset": 257360,
+        "duration": 1340
+      },
+      {
+        "index": 153,
+        "text": "他可以把它做到這麼好",
+        "offset": 258720.00000000003,
+        "duration": 1300
+      },
+      {
+        "index": 154,
+        "text": "那代表說",
+        "offset": 260040.00000000003,
+        "duration": 710
+      },
+      {
+        "index": 155,
+        "text": "他data security這方面",
+        "offset": 260760,
+        "duration": 1190
+      },
+      {
+        "index": 156,
+        "text": "可以做得很好",
+        "offset": 261959.99999999997,
+        "duration": 820
+      },
+      {
+        "index": 157,
+        "text": "然後我可以把我的data給他",
+        "offset": 262800,
+        "duration": 1540
+      },
+      {
+        "index": 158,
+        "text": "這點我是覺得是他",
+        "offset": 264500,
+        "duration": 1470
+      },
+      {
+        "index": 159,
+        "text": "很大的一個moat",
+        "offset": 265980,
+        "duration": 1180
+      },
+      {
+        "index": 160,
+        "text": "就很多公司做不到的",
+        "offset": 267180,
+        "duration": 1220
+      },
+      {
+        "index": 161,
+        "text": "對這也是為什麼我",
+        "offset": 268420,
+        "duration": 790
+      },
+      {
+        "index": 162,
+        "text": "可能十幾塊的",
+        "offset": 269220,
+        "duration": 870
+      },
+      {
+        "index": 163,
+        "text": "時候就也是投資Palantir",
+        "offset": 270100,
+        "duration": 1700
+      },
+      {
+        "index": 164,
+        "text": "然後現在慢慢的倉位",
+        "offset": 271820,
+        "duration": 1870
+      },
+      {
+        "index": 165,
+        "text": "就移到越變越大這樣子",
+        "offset": 273700,
+        "duration": 1980
+      },
+      {
+        "index": 166,
+        "text": "對然後第三個",
+        "offset": 275780,
+        "duration": 1150
+      },
+      {
+        "index": 167,
+        "text": "就是我最重的倉位是Tesla啦",
+        "offset": 276940,
+        "duration": 1860
+      },
+      {
+        "index": 168,
+        "text": "那大家都知道",
+        "offset": 278820,
+        "duration": 1340
+      },
+      {
+        "index": 169,
+        "text": "對是一個事實",
+        "offset": 280180,
+        "duration": 1620
+      },
+      {
+        "index": 170,
+        "text": "然後你自己也",
+        "offset": 282060,
+        "duration": 550
+      },
+      {
+        "index": 171,
+        "text": "是Tesla是也蠻重的一個倉位",
+        "offset": 282620,
+        "duration": 2620
+      },
+      {
+        "index": 172,
+        "text": "對",
+        "offset": 285260,
+        "duration": 500
+      },
+      {
+        "index": 173,
+        "text": "你會投資Tesla的原因",
+        "offset": 285780,
+        "duration": 1300
+      },
+      {
+        "index": 174,
+        "text": "投資Tesla我覺得最",
+        "offset": 287170,
+        "duration": 950
+      },
+      {
+        "index": 175,
+        "text": "主要是就是相信Elon這個人",
+        "offset": 288130,
+        "duration": 2140
+      },
+      {
+        "index": 176,
+        "text": "就是因為他現在",
+        "offset": 291090,
+        "duration": 1110
+      },
+      {
+        "index": 177,
+        "text": "其實很多東西都在一個願景",
+        "offset": 292210,
+        "duration": 2460
+      },
+      {
+        "index": 178,
+        "text": "就是你已經看到",
+        "offset": 294690,
+        "duration": 750
+      },
+      {
+        "index": 179,
+        "text": "他的一些prototype",
+        "offset": 295450,
+        "duration": 1020
+      },
+      {
+        "index": 180,
+        "text": "但是要等",
+        "offset": 296490,
+        "duration": 550
+      },
+      {
+        "index": 181,
+        "text": "他大規模",
+        "offset": 297050,
+        "duration": 870
+      },
+      {
+        "index": 182,
+        "text": "deployment你",
+        "offset": 297930,
+        "duration": 710
+      },
+      {
+        "index": 183,
+        "text": "需要一個執行力",
+        "offset": 298650,
+        "duration": 940
+      },
+      {
+        "index": 184,
+        "text": "那投資Tesla",
+        "offset": 299610,
+        "duration": 710
+      },
+      {
+        "index": 185,
+        "text": "就是你相信Elon的執行力",
+        "offset": 300330,
+        "duration": 1820
+      },
+      {
+        "index": 186,
+        "text": "他這些他",
+        "offset": 302170,
+        "duration": 990
+      },
+      {
+        "index": 187,
+        "text": "envision的這些",
+        "offset": 303170,
+        "duration": 830
+      },
+      {
+        "index": 188,
+        "text": "東西可以真的到時候全面展開",
+        "offset": 304010,
+        "duration": 2370
+      },
+      {
+        "index": 189,
+        "text": "就是他的一些",
+        "offset": 306400,
+        "duration": 670
+      },
+      {
+        "index": 190,
+        "text": "願景可以全部realize",
+        "offset": 307080,
+        "duration": 1260
+      },
+      {
+        "index": 191,
+        "text": "那Elon的",
+        "offset": 308360,
+        "duration": 1070
+      },
+      {
+        "index": 192,
+        "text": "一些track record",
+        "offset": 309440,
+        "duration": 830
+      },
+      {
+        "index": 193,
+        "text": "是讓你覺得說",
+        "offset": 310280,
+        "duration": 1060
+      },
+      {
+        "index": 194,
+        "text": "這個人我真的他真的可以做得到",
+        "offset": 311360,
+        "duration": 1500
+      },
+      {
+        "index": 195,
+        "text": "就是像連Jensen都說",
+        "offset": 312880,
+        "duration": 1650
+      },
+      {
+        "index": 196,
+        "text": "don&#39;t bet against Elon",
+        "offset": 314540,
+        "duration": 1400
+      },
+      {
+        "index": 197,
+        "text": "就是基本上會",
+        "offset": 316100,
+        "duration": 1350
+      },
+      {
+        "index": 198,
+        "text": "投資Elon的",
+        "offset": 317460,
+        "duration": 790
+      },
+      {
+        "index": 199,
+        "text": "投資Tesla的股東就是",
+        "offset": 318260,
+        "duration": 1030
+      },
+      {
+        "index": 200,
+        "text": "在bet on Elon的execute",
+        "offset": 319300,
+        "duration": 1860
+      },
+      {
+        "index": 201,
+        "text": "對但是我要講的",
+        "offset": 321180,
+        "duration": 1190
+      },
+      {
+        "index": 202,
+        "text": "是不得不說",
+        "offset": 322380,
+        "duration": 790
+      },
+      {
+        "index": 203,
+        "text": "確實你投資Tesla這家公司",
+        "offset": 323180,
+        "duration": 1980
+      },
+      {
+        "index": 204,
+        "text": "其實你是在有點",
+        "offset": 325180,
+        "duration": 1460
+      },
+      {
+        "index": 205,
+        "text": "像是買一個美好的願景的概念",
+        "offset": 326650,
+        "duration": 2620
+      },
+      {
+        "index": 206,
+        "text": "就是你絕對不是價值投資",
+        "offset": 329290,
+        "duration": 1500
+      },
+      {
+        "index": 207,
+        "text": "對",
+        "offset": 330810,
+        "duration": 220
+      },
+      {
+        "index": 208,
+        "text": "因為他公司本身還沒有到那個",
+        "offset": 331050,
+        "duration": 1460
+      },
+      {
+        "index": 209,
+        "text": "已經完全跟基本面脫鉤對",
+        "offset": 332610,
+        "duration": 1700
+      },
+      {
+        "index": 210,
+        "text": "對已經脫鉤了",
+        "offset": 334330,
+        "duration": 860
+      },
+      {
+        "index": 211,
+        "text": "就是你願不願意",
+        "offset": 335210,
+        "duration": 1070
+      },
+      {
+        "index": 212,
+        "text": "相信這家公司未來的這個發展",
+        "offset": 336290,
+        "duration": 2460
+      },
+      {
+        "index": 213,
+        "text": "大概就是這個概念",
+        "offset": 338770,
+        "duration": 1180
+      },
+      {
+        "index": 214,
+        "text": "那我知道這聽起來是蠻瘋的",
+        "offset": 340030,
+        "duration": 1500
+      },
+      {
+        "index": 215,
+        "text": "因為你要去相信一家公司",
+        "offset": 341550,
+        "duration": 1380
+      },
+      {
+        "index": 216,
+        "text": "然後你要把你的倉位全都賭上去",
+        "offset": 342950,
+        "duration": 2100
+      },
+      {
+        "index": 217,
+        "text": "那確實是一個很難做到的一個事情",
+        "offset": 345070,
+        "duration": 2020
+      },
+      {
+        "index": 218,
+        "text": "那我覺得你可以把Tesla變成",
+        "offset": 347110,
+        "duration": 1790
+      },
+      {
+        "index": 219,
+        "text": "第三大倉位也是蠻厲害的",
+        "offset": 348910,
+        "duration": 1740
+      },
+      {
+        "index": 220,
+        "text": "我猜你進去了也沒有到很早吧",
+        "offset": 350670,
+        "duration": 1900
+      },
+      {
+        "index": 221,
+        "text": "我是在關稅戰的時候進去的",
+        "offset": 352660,
+        "duration": 1980
+      },
+      {
+        "index": 222,
+        "text": "其實我以前也有進去過後來出來了",
+        "offset": 354660,
+        "duration": 2380
+      },
+      {
+        "index": 223,
+        "text": "因為Tesla是一個波動很大的股票",
+        "offset": 357060,
+        "duration": 1820
+      },
+      {
+        "index": 224,
+        "text": "那我最後一次進去是今年關稅戰",
+        "offset": 358900,
+        "duration": 2780
+      },
+      {
+        "index": 225,
+        "text": "我做了一個sell put",
+        "offset": 362100,
+        "duration": 1030
+      },
+      {
+        "index": 226,
+        "text": "然後後來被執行然後就放著",
+        "offset": 363140,
+        "duration": 2570
+      },
+      {
+        "index": 227,
+        "text": "I see I see",
+        "offset": 365810,
+        "duration": 1540
+      },
+      {
+        "index": 228,
+        "text": "那還OK啦那那個價格也是OK的",
+        "offset": 367370,
+        "duration": 2460
+      },
+      {
+        "index": 229,
+        "text": "一直以來我們都",
+        "offset": 369850,
+        "duration": 950
+      },
+      {
+        "index": 230,
+        "text": "覺得說很多人會聽大家講說",
+        "offset": 370810,
+        "duration": 2900
+      },
+      {
+        "index": 231,
+        "text": "那其實買大盤就好了",
+        "offset": 373730,
+        "duration": 2020
+      },
+      {
+        "index": 232,
+        "text": "然後其實我以前也是這個概念就是說",
+        "offset": 375770,
+        "duration": 2510
+      },
+      {
+        "index": 233,
+        "text": "對於大部分人來",
+        "offset": 378300,
+        "duration": 870
+      },
+      {
+        "index": 234,
+        "text": "講普遍99%的人來說",
+        "offset": 379180,
+        "duration": 1660
+      },
+      {
+        "index": 235,
+        "text": "其實你就",
+        "offset": 380860,
+        "duration": 510
+      },
+      {
+        "index": 236,
+        "text": "投資大盤就好",
+        "offset": 381380,
+        "duration": 670
+      },
+      {
+        "index": 237,
+        "text": "投資S&amp;P500的大盤",
+        "offset": 382060,
+        "duration": 1670
+      },
+      {
+        "index": 238,
+        "text": "比如說VOO這種ETF就可以了",
+        "offset": 383940,
+        "duration": 2260
+      },
+      {
+        "index": 239,
+        "text": "但是我現在有一點",
+        "offset": 386220,
+        "duration": 1390
+      },
+      {
+        "index": 240,
+        "text": "點改變這個觀念的原因是什麼呢",
+        "offset": 387620,
+        "duration": 2340
+      },
+      {
+        "index": 241,
+        "text": "因為如果你去",
+        "offset": 389980,
+        "duration": 790
+      },
+      {
+        "index": 242,
+        "text": "看整個現在美國經濟發展",
+        "offset": 390780,
+        "duration": 2250
+      },
+      {
+        "index": 243,
+        "text": "其實S&amp;P500",
+        "offset": 393050,
+        "duration": 1510
+      },
+      {
+        "index": 244,
+        "text": "的這個盈利大部分都",
+        "offset": 394570,
+        "duration": 1350
+      },
+      {
+        "index": 245,
+        "text": "集中在前面幾家公司",
+        "offset": 395930,
+        "duration": 1260
+      },
+      {
+        "index": 246,
+        "text": "後面的公司其實是沒有表現那麼好",
+        "offset": 397210,
+        "duration": 1740
+      },
+      {
+        "index": 247,
+        "text": "然後未來已經很",
+        "offset": 399050,
+        "duration": 1670
+      },
+      {
+        "index": 248,
+        "text": "明顯趨勢就是AI會",
+        "offset": 400730,
+        "duration": 1590
+      },
+      {
+        "index": 249,
+        "text": "再繼續把這些公司的價值拉上去",
+        "offset": 402330,
+        "duration": 2840
+      },
+      {
+        "index": 250,
+        "text": "那在這樣的情況",
+        "offset": 405190,
+        "duration": 990
+      },
+      {
+        "index": 251,
+        "text": "下我個人覺得可能S&amp;P500",
+        "offset": 406190,
+        "duration": 2780
+      },
+      {
+        "index": 252,
+        "text": "其實你如果",
+        "offset": 408990,
+        "duration": 950
+      },
+      {
+        "index": 253,
+        "text": "只是單純投資S&amp;P500",
+        "offset": 409950,
+        "duration": 1550
+      },
+      {
+        "index": 254,
+        "text": "這種比較被動的方式",
+        "offset": 411510,
+        "duration": 1340
+      },
+      {
+        "index": 255,
+        "text": "很多機會是被稀釋掉了",
+        "offset": 412870,
+        "duration": 1470
+      },
+      {
+        "index": 256,
+        "text": "你有這樣覺得嗎",
+        "offset": 414350,
+        "duration": 980
+      },
+      {
+        "index": 257,
+        "text": "先說我覺得",
+        "offset": 415350,
+        "duration": 950
+      },
+      {
+        "index": 258,
+        "text": "投資大盤還是適合大部分人",
+        "offset": 416310,
+        "duration": 1820
+      },
+      {
+        "index": 259,
+        "text": "因為之所以沒有",
+        "offset": 418910,
+        "duration": 1670
+      },
+      {
+        "index": 260,
+        "text": "90%的基金管理人沒辦法贏過大盤",
+        "offset": 420590,
+        "duration": 3020
+      },
+      {
+        "index": 261,
+        "text": "這是數據擺在那邊大盤就是這麼強大",
+        "offset": 423630,
+        "duration": 3060
+      },
+      {
+        "index": 262,
+        "text": "但是我也覺得說",
+        "offset": 427190,
+        "duration": 1790
+      },
+      {
+        "index": 263,
+        "text": "在接下來幾年確實這些",
+        "offset": 428990,
+        "duration": 1510
+      },
+      {
+        "index": 264,
+        "text": "在AI上佔盡優勢的這些幾大巨頭會",
+        "offset": 430510,
+        "duration": 4220
+      },
+      {
+        "index": 265,
+        "text": "把市場上大部分的",
+        "offset": 434750,
+        "duration": 1870
+      },
+      {
+        "index": 266,
+        "text": "獲利給端走這個我也是很看好的",
+        "offset": 436630,
+        "duration": 2740
+      },
+      {
+        "index": 267,
+        "text": "但是之所以說投資",
+        "offset": 439390,
+        "duration": 1830
+      },
+      {
+        "index": 268,
+        "text": "個股不是for everyone",
+        "offset": 441230,
+        "duration": 1060
+      },
+      {
+        "index": 269,
+        "text": "是因為不是每個人都適用",
+        "offset": 442310,
+        "duration": 2160
+      },
+      {
+        "index": 270,
+        "text": "是因為個股的波動會很就是會很大",
+        "offset": 444490,
+        "duration": 2420
+      },
+      {
+        "index": 271,
+        "text": "比如說你看像",
+        "offset": 446930,
+        "duration": 1070
+      },
+      {
+        "index": 272,
+        "text": "上禮拜上禮拜因為",
+        "offset": 448010,
+        "duration": 1830
+      },
+      {
+        "index": 273,
+        "text": "美國政府關門的關係",
+        "offset": 449850,
+        "duration": 1460
+      },
+      {
+        "index": 274,
+        "text": "那個還有",
+        "offset": 451330,
+        "duration": 910
+      },
+      {
+        "index": 275,
+        "text": "就是因為",
+        "offset": 452250,
+        "duration": 470
+      },
+      {
+        "index": 276,
+        "text": "Michael Burry",
+        "offset": 452730,
+        "duration": 590
+      },
+      {
+        "index": 277,
+        "text": "那個空單的關係",
+        "offset": 453330,
+        "duration": 2029.9999999999998
+      },
+      {
+        "index": 278,
+        "text": "Palantir跟",
+        "offset": 455810,
+        "duration": 190
+      },
+      {
+        "index": 279,
+        "text": "Nvidia就大回調昨天又回來了",
+        "offset": 456010,
+        "duration": 2140
+      },
+      {
+        "index": 280,
+        "text": "就是個股的波動就這麼大",
+        "offset": 458170,
+        "duration": 1580
+      },
+      {
+        "index": 281,
+        "text": "所以基本上要投資個股",
+        "offset": 459770,
+        "duration": 1550
+      },
+      {
+        "index": 282,
+        "text": "的人你必須要先",
+        "offset": 461330,
+        "duration": 750
+      },
+      {
+        "index": 283,
+        "text": "知道說你接下來會經歷什麼東西",
+        "offset": 462090,
+        "duration": 2140
+      },
+      {
+        "index": 284,
+        "text": "就是在你可能會經歷短時間內下跌",
+        "offset": 464250,
+        "duration": 2530
+      },
+      {
+        "index": 285,
+        "text": "那在短時間下跌的",
+        "offset": 466800,
+        "duration": 910
+      },
+      {
+        "index": 286,
+        "text": "時候你要心情不受影響",
+        "offset": 467720,
+        "duration": 2110
+      },
+      {
+        "index": 287,
+        "text": "繼續hold住",
+        "offset": 470080,
+        "duration": 900
+      },
+      {
+        "index": 288,
+        "text": "因為有很多人就是",
+        "offset": 471000,
+        "duration": 2150
+      },
+      {
+        "index": 289,
+        "text": "當你在波動的時候你就抱不住了",
+        "offset": 473160,
+        "duration": 1860
+      },
+      {
+        "index": 290,
+        "text": "然後可是當他回來的",
+        "offset": 475040,
+        "duration": 870
+      },
+      {
+        "index": 291,
+        "text": "時候你又把它追回來",
+        "offset": 475920,
+        "duration": 1020
+      },
+      {
+        "index": 292,
+        "text": "那這樣就變成你的獲利都被吃掉了",
+        "offset": 476960,
+        "duration": 2250
+      },
+      {
+        "index": 293,
+        "text": "心理素質很重要",
+        "offset": 479230,
+        "duration": 660
+      },
+      {
+        "index": 294,
+        "text": "對那其實而且",
+        "offset": 479910,
+        "duration": 910
+      },
+      {
+        "index": 295,
+        "text": "其實大部分人都是這個樣子",
+        "offset": 480830,
+        "duration": 1100
+      },
+      {
+        "index": 296,
+        "text": "我也是經歷過很多次這樣子",
+        "offset": 481950,
+        "duration": 1340
+      },
+      {
+        "index": 297,
+        "text": "後來才意識到說啊我不能就是",
+        "offset": 483310,
+        "duration": 2500
+      },
+      {
+        "index": 298,
+        "text": "你要在主動投資上",
+        "offset": 485830,
+        "duration": 1150
+      },
+      {
+        "index": 299,
+        "text": "賺錢你就必須要",
+        "offset": 486990,
+        "duration": 1310
+      },
+      {
+        "index": 300,
+        "text": "做一些違反人性的東西",
+        "offset": 488310,
+        "duration": 2009.9999999999998
+      },
+      {
+        "index": 301,
+        "text": "你之前影片有講過就是",
+        "offset": 490660,
+        "duration": 2460
+      },
+      {
+        "index": 302,
+        "text": "之所以為什麼不",
+        "offset": 493140,
+        "duration": 1150
+      },
+      {
+        "index": 303,
+        "text": "推薦主動投資是因為就是說",
+        "offset": 494300,
+        "duration": 1700
+      },
+      {
+        "index": 304,
+        "text": "因為它的波動性太大",
+        "offset": 496020,
+        "duration": 2420
+      },
+      {
+        "index": 305,
+        "text": "然後而且再加上說",
+        "offset": 498460,
+        "duration": 2310
+      },
+      {
+        "index": 306,
+        "text": "有很高的機率你",
+        "offset": 500860,
+        "duration": 910
+      },
+      {
+        "index": 307,
+        "text": "可能還是沒辦法贏過大盤",
+        "offset": 501780,
+        "duration": 1300
+      },
+      {
+        "index": 308,
+        "text": "就是那些你選的",
+        "offset": 503100,
+        "duration": 1470
+      },
+      {
+        "index": 309,
+        "text": "股票最後加起來的",
+        "offset": 504580,
+        "duration": 1310
+      },
+      {
+        "index": 310,
+        "text": "表現可能還是最後輸給大盤",
+        "offset": 505900,
+        "duration": 1980
+      },
+      {
+        "index": 311,
+        "text": "還是說第三點就是說",
+        "offset": 507900,
+        "duration": 1980
+      },
+      {
+        "index": 312,
+        "text": "因為你怕這個波動",
+        "offset": 509900,
+        "duration": 1070
+      },
+      {
+        "index": 313,
+        "text": "性所以你不敢投太多本金在上面",
+        "offset": 510980,
+        "duration": 1820
+      },
+      {
+        "index": 314,
+        "text": "那所以比起你願意",
+        "offset": 512880,
+        "duration": 1470
+      },
+      {
+        "index": 315,
+        "text": "把全部的本金投在大盤上",
+        "offset": 514360,
+        "duration": 1420
+      },
+      {
+        "index": 316,
+        "text": "你總獲利還是比較少，這也是其中一點",
+        "offset": 515799.99999999994,
+        "duration": 2500
+      },
+      {
+        "index": 317,
+        "text": "所以各種原因就是",
+        "offset": 518320.00000000006,
+        "duration": 1110
+      },
+      {
+        "index": 318,
+        "text": "你在做一些主動投資在選個股的時候",
+        "offset": 519440.00000000006,
+        "duration": 2940
+      },
+      {
+        "index": 319,
+        "text": "你必須要很清楚自己在做什麼",
+        "offset": 522400,
+        "duration": 1540
+      },
+      {
+        "index": 320,
+        "text": "然後就必須心態上不能受影響",
+        "offset": 523960.00000000006,
+        "duration": 2670
+      },
+      {
+        "index": 321,
+        "text": "對我覺得你剛剛講的很好一點就是",
+        "offset": 526650,
+        "duration": 2300
+      },
+      {
+        "index": 322,
+        "text": "其實大盤還是適合大多數的人",
+        "offset": 528970,
+        "duration": 1700
+      },
+      {
+        "index": 323,
+        "text": "因為它是屬於被動投資",
+        "offset": 530690,
+        "duration": 1780
+      },
+      {
+        "index": 324,
+        "text": "然後波動相對來講少很多對",
+        "offset": 532490,
+        "duration": 2140
+      },
+      {
+        "index": 325,
+        "text": "甚至可以考慮的是",
+        "offset": 534650,
+        "duration": 1230
+      },
+      {
+        "index": 326,
+        "text": "如果你覺得相信",
+        "offset": 535970,
+        "duration": 1470
+      },
+      {
+        "index": 327,
+        "text": "未來的tech會",
+        "offset": 537450,
+        "duration": 1430
+      },
+      {
+        "index": 328,
+        "text": "帶領接下來的趨勢的話",
+        "offset": 538890,
+        "duration": 1380
+      },
+      {
+        "index": 329,
+        "text": "其實你可以可能allocate",
+        "offset": 540290,
+        "duration": 2070
+      },
+      {
+        "index": 330,
+        "text": "部分的大盤是到QQQ上面",
+        "offset": 542370,
+        "duration": 2300
+      },
+      {
+        "index": 331,
+        "text": "就比較tech driven的那些ETF",
+        "offset": 544690,
+        "duration": 1860
+      },
+      {
+        "index": 332,
+        "text": "而不是單純就",
+        "offset": 546570,
+        "duration": 950
+      },
+      {
+        "index": 333,
+        "text": "只是S&amp;P500的ETF這樣子",
+        "offset": 547530,
+        "duration": 2140
+      },
+      {
+        "index": 334,
+        "text": "我覺得這個是一個",
+        "offset": 549690,
+        "duration": 870
+      },
+      {
+        "index": 335,
+        "text": "還蠻不錯的一個選擇啦",
+        "offset": 550570,
+        "duration": 1340
+      },
+      {
+        "index": 336,
+        "text": "那如果你像我們比較瘋一點的話",
+        "offset": 552090,
+        "duration": 2700
+      },
+      {
+        "index": 337,
+        "text": "要做到像我們這樣然後然後還賺錢",
+        "offset": 554810,
+        "duration": 2220
+      },
+      {
+        "index": 338,
+        "text": "就像你剛剛講的",
+        "offset": 557050,
+        "duration": 710
+      },
+      {
+        "index": 339,
+        "text": "要做一些反人性，就比較反人性的操作",
+        "offset": 557770,
+        "duration": 2580
+      },
+      {
+        "index": 340,
+        "text": "像在跌的時候你就反而要加倉",
+        "offset": 560370,
+        "duration": 2020
+      },
+      {
+        "index": 341,
+        "text": "然後在漲的時候你",
+        "offset": 562480,
+        "duration": 750
+      },
+      {
+        "index": 342,
+        "text": "就要克制自己的手不要去追高",
+        "offset": 563240,
+        "duration": 2260
+      },
+      {
+        "index": 343,
+        "text": "對我覺得這個是最難的",
+        "offset": 565520,
+        "duration": 1470
+      },
+      {
+        "index": 344,
+        "text": "就這個理論很簡單",
+        "offset": 567000,
+        "duration": 1460
+      },
+      {
+        "index": 345,
+        "text": "我覺得這很考驗你的紀律",
+        "offset": 568480,
+        "duration": 1660
+      },
+      {
+        "index": 346,
+        "text": "就是就像很多",
+        "offset": 570160,
+        "duration": 990
+      },
+      {
+        "index": 347,
+        "text": "事情你知道說應該要怎麼做",
+        "offset": 571160,
+        "duration": 1660
+      },
+      {
+        "index": 348,
+        "text": "可是能夠真的做到",
+        "offset": 572840,
+        "duration": 1110
+      },
+      {
+        "index": 349,
+        "text": "的人很少就是還是少數",
+        "offset": 573960,
+        "duration": 1540
+      },
+      {
+        "index": 350,
+        "text": "就是你知道說哪些",
+        "offset": 575520,
+        "duration": 1390
+      },
+      {
+        "index": 351,
+        "text": "生活習慣可以讓你身體很健康",
+        "offset": 576920,
+        "duration": 1730
+      },
+      {
+        "index": 352,
+        "text": "真的能夠從一而終貫徹",
+        "offset": 578670,
+        "duration": 1870
+      },
+      {
+        "index": 353,
+        "text": "執行的人畢竟是少數",
+        "offset": 580550,
+        "duration": 1100
+      },
+      {
+        "index": 354,
+        "text": "沒錯就是理論大家都知道低買高賣",
+        "offset": 581670,
+        "duration": 3340
+      },
+      {
+        "index": 355,
+        "text": "這個所有人都想要做到",
+        "offset": 585030,
+        "duration": 1550
+      },
+      {
+        "index": 356,
+        "text": "但是往往就是在低的時候",
+        "offset": 586590,
+        "duration": 1890
+      },
+      {
+        "index": 357,
+        "text": "大家都想要把它賣掉",
+        "offset": 588490,
+        "duration": 1030
+      },
+      {
+        "index": 358,
+        "text": "我依稀記得",
+        "offset": 589530,
+        "duration": 750
+      },
+      {
+        "index": 359,
+        "text": "就是那時候Tesla",
+        "offset": 590290,
+        "duration": 1190
+      },
+      {
+        "index": 360,
+        "text": "跌到100甚至甚至好像",
+        "offset": 591490,
+        "duration": 2270
+      },
+      {
+        "index": 361,
+        "text": "那時候大家都在唱衰他嘛",
+        "offset": 593770,
+        "duration": 1620
+      },
+      {
+        "index": 362,
+        "text": "短暫時間跌到跌破100",
+        "offset": 595410,
+        "duration": 1940
+      },
+      {
+        "index": 363,
+        "text": "這種通常就是當",
+        "offset": 597370,
+        "duration": 1230
+      },
+      {
+        "index": 364,
+        "text": "個股下跌的時候各種",
+        "offset": 598610,
+        "duration": 1070
+      },
+      {
+        "index": 365,
+        "text": "負面新聞就會出來",
+        "offset": 599690,
+        "duration": 1340
+      },
+      {
+        "index": 366,
+        "text": "對啊大家就整個",
+        "offset": 601050,
+        "duration": 1110
+      },
+      {
+        "index": 367,
+        "text": "市場恐慌加上所有",
+        "offset": 602170,
+        "duration": 1090
+      },
+      {
+        "index": 368,
+        "text": "人都來說Tesla要歸零了",
+        "offset": 603270,
+        "duration": 1460
+      },
+      {
+        "index": 369,
+        "text": "然後每個人都說我們",
+        "offset": 604750,
+        "duration": 1590
+      },
+      {
+        "index": 370,
+        "text": "60塊見50塊見這些",
+        "offset": 606350,
+        "duration": 1790
+      },
+      {
+        "index": 371,
+        "text": "就這種言論看到你一定會緊張",
+        "offset": 608150,
+        "duration": 1700
+      },
+      {
+        "index": 372,
+        "text": "然後你就會想要把你手上的給賣掉",
+        "offset": 609870,
+        "duration": 1820
+      },
+      {
+        "index": 373,
+        "text": "那這個時候其實就是看你",
+        "offset": 611710,
+        "duration": 2280
+      },
+      {
+        "index": 374,
+        "text": "這個時候就要",
+        "offset": 614010,
+        "duration": 550
+      },
+      {
+        "index": 375,
+        "text": "看Terry的",
+        "offset": 614570,
+        "duration": 470
+      },
+      {
+        "index": 376,
+        "text": "YouTube貫徹信念",
+        "offset": 615050,
+        "duration": 1820
+      },
+      {
+        "index": 377,
+        "text": "我我覺得能在那個",
+        "offset": 616890,
+        "duration": 1670
+      },
+      {
+        "index": 378,
+        "text": "時候加倉的人其實都是很狠的",
+        "offset": 618570,
+        "duration": 1820
+      },
+      {
+        "index": 379,
+        "text": "你要很狠敢願意去做這個事情",
+        "offset": 620410,
+        "duration": 1980
+      },
+      {
+        "index": 380,
+        "text": "就對可能大部分",
+        "offset": 622410,
+        "duration": 1390
+      },
+      {
+        "index": 381,
+        "text": "人比較難做到這個事情",
+        "offset": 623810,
+        "duration": 1580
+      },
+      {
+        "index": 382,
+        "text": "所以其實還是",
+        "offset": 625410,
+        "duration": 1390
+      },
+      {
+        "index": 383,
+        "text": "對於大部分人來說其實也",
+        "offset": 626810,
+        "duration": 1510
+      },
+      {
+        "index": 384,
+        "text": "是投資大盤ETF最穩健",
+        "offset": 628330,
+        "duration": 1460
+      },
+      {
+        "index": 385,
+        "text": "嗯嗯嗯",
+        "offset": 629810,
+        "duration": 700
+      },
+      {
+        "index": 386,
+        "text": "好那說到分散投資到不同的產業呢",
+        "offset": 630530,
+        "duration": 2180
+      },
+      {
+        "index": 387,
+        "text": "最近貴金屬的走勢也是非常的誇張",
+        "offset": 632730,
+        "duration": 2230
+      },
+      {
+        "index": 388,
+        "text": "六個月一年跟五",
+        "offset": 634970,
+        "duration": 1190
+      },
+      {
+        "index": 389,
+        "text": "年都是跑贏QQQ跟S&amp;P500",
+        "offset": 636170,
+        "duration": 2510
+      },
+      {
+        "index": 390,
+        "text": "儘管幾天前黃金",
+        "offset": 638690,
+        "duration": 1150
+      },
+      {
+        "index": 391,
+        "text": "稍微跌了一點但是",
+        "offset": 639850,
+        "duration": 1150
+      },
+      {
+        "index": 392,
+        "text": "看起來是又快回來了",
+        "offset": 641010,
+        "duration": 1580
+      },
+      {
+        "index": 393,
+        "text": "那大家如果有",
+        "offset": 642710,
+        "duration": 630
+      },
+      {
+        "index": 394,
+        "text": "興趣交易黃金白銀這些貴金屬的話",
+        "offset": 643350,
+        "duration": 2380
+      },
+      {
+        "index": 395,
+        "text": "這邊跟大家介紹一個",
+        "offset": 645750,
+        "duration": 910
+      },
+      {
+        "index": 396,
+        "text": "合規的交易平台Mitrade",
+        "offset": 646670,
+        "duration": 1740
+      },
+      {
+        "index": 397,
+        "text": "還可以交易比特幣",
+        "offset": 648430,
+        "duration": 1070
+      },
+      {
+        "index": 398,
+        "text": "美股，原油，外匯和",
+        "offset": 649510,
+        "duration": 1590
+      },
+      {
+        "index": 399,
+        "text": "各大指數等等超過",
+        "offset": 651110,
+        "duration": 1510
+      },
+      {
+        "index": 400,
+        "text": "900多種熱門的標的",
+        "offset": 652630,
+        "duration": 1500
+      },
+      {
+        "index": 401,
+        "text": "那他們也支持信用卡跟USDT",
+        "offset": 654240,
+        "duration": 1990
+      },
+      {
+        "index": 402,
+        "text": "加密貨幣出入金",
+        "offset": 656240,
+        "duration": 980
+      },
+      {
+        "index": 403,
+        "text": "我覺得對於沒有",
+        "offset": 657240,
+        "duration": 1030
+      },
+      {
+        "index": 404,
+        "text": "美金的朋友們來說也是非常的方便",
+        "offset": 658280,
+        "duration": 1780
+      },
+      {
+        "index": 405,
+        "text": "那平台本身沒有手續費",
+        "offset": 660080,
+        "duration": 1550
+      },
+      {
+        "index": 406,
+        "text": "主要是靠很低的點差來賺錢",
+        "offset": 661640,
+        "duration": 1820
+      },
+      {
+        "index": 407,
+        "text": "而且Mitrade也為每位用戶",
+        "offset": 663480,
+        "duration": 1790
+      },
+      {
+        "index": 408,
+        "text": "提供了100萬美金的資金安保政策",
+        "offset": 665280,
+        "duration": 2420
+      },
+      {
+        "index": 409,
+        "text": "好那現在Mitrade呢",
+        "offset": 667720,
+        "duration": 870
+      },
+      {
+        "index": 410,
+        "text": "要來免費送給頻道觀眾交易券",
+        "offset": 668600,
+        "duration": 2130
+      },
+      {
+        "index": 411,
+        "text": "交易券的話就是賺到的錢歸你的",
+        "offset": 670750,
+        "duration": 1870
+      },
+      {
+        "index": 412,
+        "text": "虧的話是歸平台的",
+        "offset": 672630,
+        "duration": 1220
+      },
+      {
+        "index": 413,
+        "text": "現在用我的影片底下連結註冊呢",
+        "offset": 673870,
+        "duration": 1990
+      },
+      {
+        "index": 414,
+        "text": "入金最多可以獲得$1300美元的交易券",
+        "offset": 675870,
+        "duration": 2780
+      },
+      {
+        "index": 415,
+        "text": "我會把具體活動辦法呢放在影片底下資訊欄",
+        "offset": 678670,
+        "duration": 2780
+      },
+      {
+        "index": 416,
+        "text": "如果不想錯過免費交易的話",
+        "offset": 681550,
+        "duration": 1430
+      },
+      {
+        "index": 417,
+        "text": "歡迎來試試看",
+        "offset": 682990,
+        "duration": 900
+      },
+      {
+        "index": 418,
+        "text": "另外一點就是我想要問波爾就是",
+        "offset": 683990,
+        "duration": 2620
+      },
+      {
+        "index": 419,
+        "text": "頻道觀眾大家也",
+        "offset": 686630,
+        "duration": 1190
+      },
+      {
+        "index": 420,
+        "text": "很多人都在tech工作嘛",
+        "offset": 687830,
+        "duration": 1540
+      },
+      {
+        "index": 421,
+        "text": "其實tech工作薪水是很不錯",
+        "offset": 689390,
+        "duration": 2820
+      },
+      {
+        "index": 422,
+        "text": "尤其是假如你是",
+        "offset": 692230,
+        "duration": 1190
+      },
+      {
+        "index": 423,
+        "text": "比如說過去五年十年",
+        "offset": 693430,
+        "duration": 1430
+      },
+      {
+        "index": 424,
+        "text": "都在tech的話",
+        "offset": 694870,
+        "duration": 780
+      },
+      {
+        "index": 425,
+        "text": "其實現在應該都過得不錯",
+        "offset": 695670,
+        "duration": 2230
+      },
+      {
+        "index": 426,
+        "text": "對但是也有",
+        "offset": 698080,
+        "duration": 1070
+      },
+      {
+        "index": 427,
+        "text": "很多人還是",
+        "offset": 699160,
+        "duration": 630
+      },
+      {
+        "index": 428,
+        "text": "在struggle存的沒有很多錢",
+        "offset": 699800,
+        "duration": 1900
+      },
+      {
+        "index": 429,
+        "text": "我們剛剛有聊到",
+        "offset": 701720,
+        "duration": 710
+      },
+      {
+        "index": 430,
+        "text": "就是假如你沒有家庭小孩的話",
+        "offset": 702440,
+        "duration": 1780
+      },
+      {
+        "index": 431,
+        "text": "其實早就超過fat FIRE",
+        "offset": 704240,
+        "duration": 1660
+      },
+      {
+        "index": 432,
+        "text": "嗯看在哪裡在",
+        "offset": 706370,
+        "duration": 1030
+      },
+      {
+        "index": 433,
+        "text": "灣區可能沒有可是",
+        "offset": 707410,
+        "duration": 1590
+      },
+      {
+        "index": 434,
+        "text": "如果比如說來日本的話應該有",
+        "offset": 709010,
+        "duration": 1910
+      },
+      {
+        "index": 435,
+        "text": "FIRE對你來講已經是達到了",
+        "offset": 710930,
+        "duration": 1900
+      },
+      {
+        "index": 436,
+        "text": "對就就是應該說你現在",
+        "offset": 712850,
+        "duration": 860
+      },
+      {
+        "index": 437,
+        "text": "我覺得",
+        "offset": 713730,
+        "duration": 270
+      },
+      {
+        "index": 438,
+        "text": "每個人的FIRE",
+        "offset": 714010,
+        "duration": 430
+      },
+      {
+        "index": 439,
+        "text": "number不一樣",
+        "offset": 714450,
+        "duration": 700
+      },
+      {
+        "index": 440,
+        "text": "對每",
+        "offset": 715170,
+        "duration": 230
+      },
+      {
+        "index": 441,
+        "text": "個人的FIRE number",
+        "offset": 715410,
+        "duration": 590
+      },
+      {
+        "index": 442,
+        "text": "不一樣但是以你的現在的狀態生活",
+        "offset": 716010,
+        "duration": 2910
+      },
+      {
+        "index": 443,
+        "text": "以我的支出來說差不多",
+        "offset": 718940,
+        "duration": 1660
+      },
+      {
+        "index": 444,
+        "text": "差不多對那假如",
+        "offset": 720620,
+        "duration": 1230
+      },
+      {
+        "index": 445,
+        "text": "再加上假如你沒有",
+        "offset": 721860,
+        "duration": 1110
+      },
+      {
+        "index": 446,
+        "text": "小孩沒有沒有家庭的話",
+        "offset": 722980,
+        "duration": 1460
+      },
+      {
+        "index": 447,
+        "text": "那可能早就已經",
+        "offset": 724460,
+        "duration": 1230
+      },
+      {
+        "index": 448,
+        "text": "可以退休了就是可以躺平對",
+        "offset": 725700,
+        "duration": 2260
+      },
+      {
+        "index": 449,
+        "text": "對啊那有沒有什麼建議啊",
+        "offset": 727980,
+        "duration": 2230
+      },
+      {
+        "index": 450,
+        "text": "工程師要怎麼樣可以早點去FIRE",
+        "offset": 730220,
+        "duration": 2500
+      },
+      {
+        "index": 451,
+        "text": "老實說最有",
+        "offset": 732740,
+        "duration": 1390
+      },
+      {
+        "index": 452,
+        "text": "最有用的建議通常就是最無聊的建議",
+        "offset": 734140,
+        "duration": 1940
+      },
+      {
+        "index": 453,
+        "text": "就像剛剛講的",
+        "offset": 736100,
+        "duration": 670
+      },
+      {
+        "index": 454,
+        "text": "如果你可以你知道",
+        "offset": 736780,
+        "duration": 1710
+      },
+      {
+        "index": 455,
+        "text": "什麼是對的事情然後",
+        "offset": 738500,
+        "duration": 830
+      },
+      {
+        "index": 456,
+        "text": "你貫徹你的紀律去做",
+        "offset": 739340,
+        "duration": 1540
+      },
+      {
+        "index": 457,
+        "text": "那其實就是基本上就是時間問題",
+        "offset": 741400,
+        "duration": 2620
+      },
+      {
+        "index": 458,
+        "text": "我覺得前幾年的話那時候利率很低",
+        "offset": 744040,
+        "duration": 2740
+      },
+      {
+        "index": 459,
+        "text": "那那時候如果你",
+        "offset": 746800,
+        "duration": 870
+      },
+      {
+        "index": 460,
+        "text": "可以去槓桿買房子",
+        "offset": 747680,
+        "duration": 1110
+      },
+      {
+        "index": 461,
+        "text": "那就是一個不錯的選擇",
+        "offset": 748800,
+        "duration": 1260
+      },
+      {
+        "index": 462,
+        "text": "我覺得很多時候就是怎麼講",
+        "offset": 750080,
+        "duration": 2380
+      },
+      {
+        "index": 463,
+        "text": "你要知道你要先知道一個",
+        "offset": 752480,
+        "duration": 1590
+      },
+      {
+        "index": 464,
+        "text": "對的principle",
+        "offset": 754080,
+        "duration": 990
+      },
+      {
+        "index": 465,
+        "text": "然後等待機會",
+        "offset": 755080,
+        "duration": 1020
+      },
+      {
+        "index": 466,
+        "text": "然後等到機會一來",
+        "offset": 756120,
+        "duration": 1270
+      },
+      {
+        "index": 467,
+        "text": "就不要猶豫立刻下手",
+        "offset": 757400,
+        "duration": 1340
+      },
+      {
+        "index": 468,
+        "text": "買賣股票也是像",
+        "offset": 758960,
+        "duration": 1670
+      },
+      {
+        "index": 469,
+        "text": "我剛剛講的利率的時機也是",
+        "offset": 760640,
+        "duration": 2220
+      },
+      {
+        "index": 470,
+        "text": "還有就是找工作的時機也是",
+        "offset": 762880,
+        "duration": 2260
+      },
+      {
+        "index": 471,
+        "text": "你找到一個對的",
+        "offset": 765160,
+        "duration": 830
+      },
+      {
+        "index": 472,
+        "text": "賽道然後剛好有這個",
+        "offset": 766000,
+        "duration": 1380
+      },
+      {
+        "index": 473,
+        "text": "機會你就不要回頭",
+        "offset": 767390,
+        "duration": 1230
+      },
+      {
+        "index": 474,
+        "text": "就進去就下去做這樣子",
+        "offset": 768630,
+        "duration": 1340
+      },
+      {
+        "index": 475,
+        "text": "對其實人生做",
+        "offset": 769990,
+        "duration": 1510
+      },
+      {
+        "index": 476,
+        "text": "這些決定都是在投資工作",
+        "offset": 771510,
+        "duration": 1580
+      },
+      {
+        "index": 477,
+        "text": "各種各種決定都是在投資",
+        "offset": 773270,
+        "duration": 1820
+      },
+      {
+        "index": 478,
+        "text": "對因為在對的時間",
+        "offset": 775110,
+        "duration": 1110
+      },
+      {
+        "index": 479,
+        "text": "做對的事情其實就是這麼簡單",
+        "offset": 776230,
+        "duration": 1700
+      },
+      {
+        "index": 480,
+        "text": "那你只要十個",
+        "offset": 778030,
+        "duration": 1110
+      },
+      {
+        "index": 481,
+        "text": "裡面有超過一半是對的決定的話",
+        "offset": 779150,
+        "duration": 2820
+      },
+      {
+        "index": 482,
+        "text": "其實你都不會過得太差",
+        "offset": 781990,
+        "duration": 1460
+      },
+      {
+        "index": 483,
+        "text": "還有一個很重要的就是",
+        "offset": 783470,
+        "duration": 1950
+      },
+      {
+        "index": 484,
+        "text": "我常常在英文",
+        "offset": 785430,
+        "duration": 910
+      },
+      {
+        "index": 485,
+        "text": "英文那些平台上網站看到就是",
+        "offset": 786350,
+        "duration": 1980
+      },
+      {
+        "index": 486,
+        "text": "你能不能FIRE是",
+        "offset": 788450,
+        "duration": 710
+      },
+      {
+        "index": 487,
+        "text": "取決於你的消費習慣嘛",
+        "offset": 789170,
+        "duration": 1140
+      },
+      {
+        "index": 488,
+        "text": "像像Terry這種",
+        "offset": 790330,
+        "duration": 1350
+      },
+      {
+        "index": 489,
+        "text": "這麼低物慾的",
+        "offset": 791690,
+        "duration": 990
+      },
+      {
+        "index": 490,
+        "text": "當然很快一下就FIRE了",
+        "offset": 792690,
+        "duration": 940
+      },
+      {
+        "index": 491,
+        "text": "如果是以消費來說的話",
+        "offset": 793650,
+        "duration": 1660
+      },
+      {
+        "index": 492,
+        "text": "你要小心就是",
+        "offset": 795330,
+        "duration": 910
+      },
+      {
+        "index": 493,
+        "text": "一些你有luxury expense creep in",
+        "offset": 796250,
+        "duration": 2420
+      },
+      {
+        "index": 494,
+        "text": "就是有些人可能覺得",
+        "offset": 798690,
+        "duration": 1620
+      },
+      {
+        "index": 495,
+        "text": "說我今天加薪了我就要換個大房子",
+        "offset": 800320,
+        "duration": 2180
+      },
+      {
+        "index": 496,
+        "text": "我就要買個新車",
+        "offset": 802520,
+        "duration": 1340
+      },
+      {
+        "index": 497,
+        "text": "像比如說有些東西",
+        "offset": 803880,
+        "duration": 950
+      },
+      {
+        "index": 498,
+        "text": "你也要分辨出分別出",
+        "offset": 804840,
+        "duration": 1390
+      },
+      {
+        "index": 499,
+        "text": "說什麼東西是liability",
+        "offset": 806240,
+        "duration": 1500
+      },
+      {
+        "index": 500,
+        "text": "什麼東西是asset",
+        "offset": 807760,
+        "duration": 910
+      },
+      {
+        "index": 501,
+        "text": "像車子就是liability",
+        "offset": 808680,
+        "duration": 1780
+      },
+      {
+        "index": 502,
+        "text": "那我很不理解",
+        "offset": 810660,
+        "duration": 990
+      },
+      {
+        "index": 503,
+        "text": "就是為什麼很多人喜歡買豪車",
+        "offset": 811660,
+        "duration": 1820
+      },
+      {
+        "index": 504,
+        "text": "因為車子本身是liability",
+        "offset": 813500,
+        "duration": 1420
+      },
+      {
+        "index": 505,
+        "text": "他買他從落地的一瞬間就開始貶值",
+        "offset": 814930,
+        "duration": 2910
+      },
+      {
+        "index": 506,
+        "text": "而且是大幅貶值",
+        "offset": 817860,
+        "duration": 1380
+      },
+      {
+        "index": 507,
+        "text": "那如果你當然",
+        "offset": 819260,
+        "duration": 910
+      },
+      {
+        "index": 508,
+        "text": "你如果這是買的東西",
+        "offset": 820180,
+        "duration": 1190
+      },
+      {
+        "index": 509,
+        "text": "可以讓你有幸福感",
+        "offset": 821380,
+        "duration": 1260
+      },
+      {
+        "index": 510,
+        "text": "然後你也是對",
+        "offset": 822660,
+        "duration": 790
+      },
+      {
+        "index": 511,
+        "text": "這方面有興趣那就另當別論",
+        "offset": 823460,
+        "duration": 1460
+      },
+      {
+        "index": 512,
+        "text": "但是如果是不是的",
+        "offset": 824940,
+        "duration": 1390
+      },
+      {
+        "index": 513,
+        "text": "話那你就要考量到說",
+        "offset": 826340,
+        "duration": 1220
+      },
+      {
+        "index": 514,
+        "text": "有些東西是會",
+        "offset": 827580,
+        "duration": 870
+      },
+      {
+        "index": 515,
+        "text": "自己是asset是它會自己增長",
+        "offset": 828460,
+        "duration": 1780
+      },
+      {
+        "index": 516,
+        "text": "有些東西是不會",
+        "offset": 830260,
+        "duration": 990
+      },
+      {
+        "index": 517,
+        "text": "增長那你就要在買之前要考慮清楚",
+        "offset": 831260,
+        "duration": 2900
+      },
+      {
+        "index": 518,
+        "text": "其實我覺得很多人",
+        "offset": 834240,
+        "duration": 750
+      },
+      {
+        "index": 519,
+        "text": "買豪車的原因我我我排除富豪之外",
+        "offset": 835000,
+        "duration": 3180
+      },
+      {
+        "index": 520,
+        "text": "就很有錢的人那他們買豪車就是正常",
+        "offset": 838200,
+        "duration": 2460
+      },
+      {
+        "index": 521,
+        "text": "那我說一般中產可能買豪車的原因是",
+        "offset": 840680,
+        "duration": 2580
+      },
+      {
+        "index": 522,
+        "text": "我覺得",
+        "offset": 843280,
+        "duration": 630
+      },
+      {
+        "index": 523,
+        "text": "我不知道是不是正確就是",
+        "offset": 843920,
+        "duration": 1190
+      },
+      {
+        "index": 524,
+        "text": "在那個圈子裡面",
+        "offset": 845120,
+        "duration": 1140
+      },
+      {
+        "index": 525,
+        "text": "你看到旁邊的人都在做這個事情",
+        "offset": 846280,
+        "duration": 2029.9999999999998
+      },
+      {
+        "index": 526,
+        "text": "或是可能大家會覺得",
+        "offset": 848330,
+        "duration": 1070
+      },
+      {
+        "index": 527,
+        "text": "這個是一個很棒的一個事情",
+        "offset": 849410,
+        "duration": 1780
+      },
+      {
+        "index": 528,
+        "text": "然後買車是一個讓你幸福感提升",
+        "offset": 851210,
+        "duration": 2460
+      },
+      {
+        "index": 529,
+        "text": "應該說我覺得很多人觀念會覺得說",
+        "offset": 854090,
+        "duration": 1950
+      },
+      {
+        "index": 530,
+        "text": "我這麼辛苦的賺錢為什麼",
+        "offset": 856050,
+        "duration": 2180
+      },
+      {
+        "index": 531,
+        "text": "為了就是可以讓生活過得好一點然後我",
+        "offset": 858250,
+        "duration": 2150
+      },
+      {
+        "index": 532,
+        "text": "可以把錢買到我自己想買的東西",
+        "offset": 860410,
+        "duration": 2180
+      },
+      {
+        "index": 533,
+        "text": "那我覺得這個東西是沒有錯",
+        "offset": 862670,
+        "duration": 1260
+      },
+      {
+        "index": 534,
+        "text": "完全沒有問題",
+        "offset": 863950,
+        "duration": 740
+      },
+      {
+        "index": 535,
+        "text": "完全沒有任何問題對",
+        "offset": 864710,
+        "duration": 910
+      },
+      {
+        "index": 536,
+        "text": "但問題是我覺得",
+        "offset": 865630,
+        "duration": 1630
+      },
+      {
+        "index": 537,
+        "text": "很多時候是做這個事情",
+        "offset": 867270,
+        "duration": 1620
+      },
+      {
+        "index": 538,
+        "text": "你得到的這個回報",
+        "offset": 868910,
+        "duration": 1270
+      },
+      {
+        "index": 539,
+        "text": "是不是真的可以讓你",
+        "offset": 870190,
+        "duration": 1350
+      },
+      {
+        "index": 540,
+        "text": "持續性的幸福感提升",
+        "offset": 871550,
+        "duration": 1990
+      },
+      {
+        "index": 541,
+        "text": "對你就想看說",
+        "offset": 873550,
+        "duration": 1110
+      },
+      {
+        "index": 542,
+        "text": "你的first principle嘛",
+        "offset": 874670,
+        "duration": 2250
+      },
+      {
+        "index": 543,
+        "text": "你的終極目標是什麼？",
+        "offset": 876940,
+        "duration": 1030
+      },
+      {
+        "index": 544,
+        "text": "我想要存更多錢",
+        "offset": 877980,
+        "duration": 1020
+      },
+      {
+        "index": 545,
+        "text": "那或許這個短",
+        "offset": 879020,
+        "duration": 1350
+      },
+      {
+        "index": 546,
+        "text": "這一筆消費或許沒有可以",
+        "offset": 880380,
+        "duration": 2630
+      },
+      {
+        "index": 547,
+        "text": "會讓你更難達成那個目標",
+        "offset": 883020,
+        "duration": 1460
+      },
+      {
+        "index": 548,
+        "text": "那你就要考慮清楚說這個是不是值得",
+        "offset": 884500,
+        "duration": 1780
+      },
+      {
+        "index": 549,
+        "text": "對因為因為我自己的想法是",
+        "offset": 886300,
+        "duration": 1490
+      },
+      {
+        "index": 550,
+        "text": "豪車對我來講確實是",
+        "offset": 887800,
+        "duration": 2020
+      },
+      {
+        "index": 551,
+        "text": "yeah我買一台很屌的車我覺得很爽",
+        "offset": 889840,
+        "duration": 2390
+      },
+      {
+        "index": 552,
+        "text": "那個爽只是一下子而已",
+        "offset": 892240,
+        "duration": 1100
+      },
+      {
+        "index": 553,
+        "text": "我真的要爽是什麼",
+        "offset": 893360,
+        "duration": 1430
+      },
+      {
+        "index": 554,
+        "text": "我真的想爽的是",
+        "offset": 894800,
+        "duration": 910
+      },
+      {
+        "index": 555,
+        "text": "我可以什麼事情都不做然後躺平",
+        "offset": 895720,
+        "duration": 1740
+      },
+      {
+        "index": 556,
+        "text": "然後或是早點退休",
+        "offset": 897480,
+        "duration": 910
+      },
+      {
+        "index": 557,
+        "text": "或是完全可以在人生比較早階段",
+        "offset": 898400,
+        "duration": 2220
+      },
+      {
+        "index": 558,
+        "text": "比如說30歲出頭",
+        "offset": 900640,
+        "duration": 1070
+      },
+      {
+        "index": 559,
+        "text": "或是35歲的時候",
+        "offset": 901790,
+        "duration": 950
+      },
+      {
+        "index": 560,
+        "text": "我就可以不要去為了錢而工作",
+        "offset": 902750,
+        "duration": 1940
+      },
+      {
+        "index": 561,
+        "text": "這是讓我覺得",
+        "offset": 904710,
+        "duration": 1190
+      },
+      {
+        "index": 562,
+        "text": "可以一直在接下來人生",
+        "offset": 905910,
+        "duration": 1710
+      },
+      {
+        "index": 563,
+        "text": "比較爽的一個事情",
+        "offset": 907630,
+        "duration": 1020
+      },
+      {
+        "index": 564,
+        "text": "那這是我知道我自己想要的",
+        "offset": 908670,
+        "duration": 1670
+      },
+      {
+        "index": 565,
+        "text": "所以我才可以用這個方式",
+        "offset": 910350,
+        "duration": 1430
+      },
+      {
+        "index": 566,
+        "text": "去控制我自己不要去",
+        "offset": 911790,
+        "duration": 1660
+      },
+      {
+        "index": 567,
+        "text": "可能要買一個豪車",
+        "offset": 913520,
+        "duration": 1350
+      },
+      {
+        "index": 568,
+        "text": "啊或是幹什麼之類的",
+        "offset": 914880,
+        "duration": 1020
+      },
+      {
+        "index": 569,
+        "text": "本身我對豪車也沒有什麼太大的興趣啦",
+        "offset": 915920,
+        "duration": 2060
+      },
+      {
+        "index": 570,
+        "text": "誰不喜歡那種",
+        "offset": 918080,
+        "duration": 870
+      },
+      {
+        "index": 571,
+        "text": "很fancy的東西對",
+        "offset": 918960,
+        "duration": 1190
+      },
+      {
+        "index": 572,
+        "text": "我覺得每個人都會喜歡",
+        "offset": 920160,
+        "duration": 980
+      },
+      {
+        "index": 573,
+        "text": "我當然",
+        "offset": 921160,
+        "duration": 670
+      },
+      {
+        "index": 574,
+        "text": "yeah這個東西放在",
+        "offset": 921840,
+        "duration": 550
+      },
+      {
+        "index": 575,
+        "text": "我面前我也覺得很爽",
+        "offset": 922400,
+        "duration": 1020
+      },
+      {
+        "index": 576,
+        "text": "但是那個爽感就是一下下而已",
+        "offset": 923440,
+        "duration": 2230
+      },
+      {
+        "index": 577,
+        "text": "對但這個也不是",
+        "offset": 925690,
+        "duration": 1030
+      },
+      {
+        "index": 578,
+        "text": "說你完全不能做任何消費",
+        "offset": 926730,
+        "duration": 1420
+      },
+      {
+        "index": 579,
+        "text": "我覺得只是說就",
+        "offset": 928170,
+        "duration": 2430
+      },
+      {
+        "index": 580,
+        "text": "像剛才講的任何決定",
+        "offset": 930610,
+        "duration": 1310
+      },
+      {
+        "index": 581,
+        "text": "都是一筆investment",
+        "offset": 931930,
+        "duration": 1020
+      },
+      {
+        "index": 582,
+        "text": "你就要考慮清楚",
+        "offset": 932970,
+        "duration": 830
+      },
+      {
+        "index": 583,
+        "text": "說這筆investment是不是worth it這樣子",
+        "offset": 933810,
+        "duration": 1700
+      },
+      {
+        "index": 584,
+        "text": "雖然說我可能",
+        "offset": 935530,
+        "duration": 990
+      },
+      {
+        "index": 585,
+        "text": "沒有什麼物慾但是我",
+        "offset": 936530,
+        "duration": 990
+      },
+      {
+        "index": 586,
+        "text": "覺得事實的去",
+        "offset": 937530,
+        "duration": 1270
+      },
+      {
+        "index": 587,
+        "text": "reward你自己還是蠻重要的",
+        "offset": 938810,
+        "duration": 2100
+      },
+      {
+        "index": 588,
+        "text": "那對我來講最",
+        "offset": 940930,
+        "duration": 1030
+      },
+      {
+        "index": 589,
+        "text": "快樂的事情可能是可以",
+        "offset": 941970,
+        "duration": 1350
+      },
+      {
+        "index": 590,
+        "text": "去吃一頓好吃的",
+        "offset": 943330,
+        "duration": 1180
+      },
+      {
+        "index": 591,
+        "text": "或是比如說偶爾做個",
+        "offset": 944530,
+        "duration": 1390
+      },
+      {
+        "index": 592,
+        "text": "商務艙這對我來",
+        "offset": 945930,
+        "duration": 990
+      },
+      {
+        "index": 593,
+        "text": "講就是一個蠻好的reward",
+        "offset": 946930,
+        "duration": 1350
+      },
+      {
+        "index": 594,
+        "text": "我就不需要就是",
+        "offset": 948290,
+        "duration": 910
+      },
+      {
+        "index": 595,
+        "text": "太多物質上面的東西",
+        "offset": 949210,
+        "duration": 1660
+      },
+      {
+        "index": 596,
+        "text": "也是因為這樣子",
+        "offset": 950950,
+        "duration": 790
+      },
+      {
+        "index": 597,
+        "text": "對我來講FIRE其實沒有那麼難啦",
+        "offset": 951750,
+        "duration": 2180
+      },
+      {
+        "index": 598,
+        "text": "現在對我來說我會",
+        "offset": 953950,
+        "duration": 1070
+      },
+      {
+        "index": 599,
+        "text": "願意正值的花錢是體驗和經驗上吧",
+        "offset": 955030,
+        "duration": 2900
+      },
+      {
+        "index": 600,
+        "text": "比如說跟小孩子一起去旅行啊",
+        "offset": 957950,
+        "duration": 2420
+      },
+      {
+        "index": 601,
+        "text": "還是說花錢省時間啊",
+        "offset": 960390,
+        "duration": 2820
+      },
+      {
+        "index": 602,
+        "text": "有些東西你花一點小錢可以省時間",
+        "offset": 963230,
+        "duration": 2580
+      },
+      {
+        "index": 603,
+        "text": "那我如果這個金額",
+        "offset": 965830,
+        "duration": 1870
+      },
+      {
+        "index": 604,
+        "text": "是我覺得合理那我就會毫不猶豫去做",
+        "offset": 967710,
+        "duration": 2380
+      },
+      {
+        "index": 605,
+        "text": "因為錢是買不回來時間的",
+        "offset": 970110,
+        "duration": 1740
+      },
+      {
+        "index": 606,
+        "text": "沒錯對時間是唯一一個有上限的",
+        "offset": 971870,
+        "duration": 3640
+      },
+      {
+        "index": 607,
+        "text": "錢永遠可以再賺時間是每個人都一樣",
+        "offset": 975530,
+        "duration": 2540
+      },
+      {
+        "index": 608,
+        "text": "對",
+        "offset": 978090,
+        "duration": 380
+      },
+      {
+        "index": 609,
+        "text": "我比較想問的是因為",
+        "offset": 978610,
+        "duration": 1190
+      },
+      {
+        "index": 610,
+        "text": "我們現在都蠻瘋的",
+        "offset": 979810,
+        "duration": 1180
+      },
+      {
+        "index": 611,
+        "text": "我們都是很大倉位都是在個股",
+        "offset": 981010,
+        "duration": 2300
+      },
+      {
+        "index": 612,
+        "text": "那你覺得在人生",
+        "offset": 983510,
+        "duration": 1550
+      },
+      {
+        "index": 613,
+        "text": "哪個階段你會把它慢慢轉為大盤",
+        "offset": 985070,
+        "duration": 3180
+      },
+      {
+        "index": 614,
+        "text": "就是S&amp;P500或是QQQ之類的",
+        "offset": 988270,
+        "duration": 2460
+      },
+      {
+        "index": 615,
+        "text": "還是你覺得你永遠都會一直在壓個股",
+        "offset": 990750,
+        "duration": 2540
+      },
+      {
+        "index": 616,
+        "text": "比例上來說可能隨著",
+        "offset": 993310,
+        "duration": 2380
+      },
+      {
+        "index": 617,
+        "text": "年紀變大可能會開始降低個股的比例",
+        "offset": 995700,
+        "duration": 3060
+      },
+      {
+        "index": 618,
+        "text": "因為畢竟你隨著年紀越來越大",
+        "offset": 998900,
+        "duration": 2500
+      },
+      {
+        "index": 619,
+        "text": "另外一方面來說就是",
+        "offset": 1001420,
+        "duration": 830
+      },
+      {
+        "index": 620,
+        "text": "你的時間越來越少",
+        "offset": 1002260,
+        "duration": 1220
+      },
+      {
+        "index": 621,
+        "text": "所以你你更難去承受說大的波動",
+        "offset": 1003500,
+        "duration": 2800
+      },
+      {
+        "index": 622,
+        "text": "一些波動因為有些",
+        "offset": 1006320,
+        "duration": 1310
+      },
+      {
+        "index": 623,
+        "text": "波動雖然很快就回來",
+        "offset": 1007640,
+        "duration": 1180
+      },
+      {
+        "index": 624,
+        "text": "但是那也是好幾年的時間",
+        "offset": 1008840,
+        "duration": 1500
+      },
+      {
+        "index": 625,
+        "text": "那你可能到時候好",
+        "offset": 1010360,
+        "duration": 1390
+      },
+      {
+        "index": 626,
+        "text": "幾年時間佔你人生",
+        "offset": 1011760,
+        "duration": 950
+      },
+      {
+        "index": 627,
+        "text": "只剩下只剩下百分之多少之類的",
+        "offset": 1012720,
+        "duration": 2110
+      },
+      {
+        "index": 628,
+        "text": "所以搞不好永遠回",
+        "offset": 1014840,
+        "duration": 1230
+      },
+      {
+        "index": 629,
+        "text": "不來就是在你有生之年搞不好回不來",
+        "offset": 1016080,
+        "duration": 2100
+      },
+      {
+        "index": 630,
+        "text": "對所以隨著年紀變大我可能",
+        "offset": 1018480,
+        "duration": 1950
+      },
+      {
+        "index": 631,
+        "text": "會allocate一些部分",
+        "offset": 1020440,
+        "duration": 2110
+      },
+      {
+        "index": 632,
+        "text": "到fix income",
+        "offset": 1022560,
+        "duration": 900
+      },
+      {
+        "index": 633,
+        "text": "就是那些fix income可以",
+        "offset": 1023480,
+        "duration": 1030
+      },
+      {
+        "index": 634,
+        "text": "支撐我的日常生活花費",
+        "offset": 1024520,
+        "duration": 1660
+      },
+      {
+        "index": 635,
+        "text": "然後可能再多",
+        "offset": 1026200,
+        "duration": 670
+      },
+      {
+        "index": 636,
+        "text": "一點一些容錯空間這樣子",
+        "offset": 1026880.0000000001,
+        "duration": 1980
+      },
+      {
+        "index": 637,
+        "text": "嗯嗯嗯",
+        "offset": 1028880.0000000001,
+        "duration": 1020
+      },
+      {
+        "index": 638,
+        "text": "對yeah that makes sense",
+        "offset": 1029920.0000000001,
+        "duration": 1140
+      },
+      {
+        "index": 639,
+        "text": "我覺得我還是會",
+        "offset": 1031160.0000000001,
+        "duration": 630
+      },
+      {
+        "index": 640,
+        "text": "有一部分的倉位",
+        "offset": 1031800,
+        "duration": 990
+      },
+      {
+        "index": 641,
+        "text": "是壓住在一些我自己很看好的",
+        "offset": 1032800,
+        "duration": 2100
+      },
+      {
+        "index": 642,
+        "text": "我至少會有",
+        "offset": 1034920.0000000001,
+        "duration": 590
+      },
+      {
+        "index": 643,
+        "text": "一小部分",
+        "offset": 1035520,
+        "duration": 430
+      },
+      {
+        "index": 644,
+        "text": "fix income是可以支撐我生活花費",
+        "offset": 1035960,
+        "duration": 2020
+      },
+      {
+        "index": 645,
+        "text": "那剩下可能就是equity這樣子",
+        "offset": 1038000,
+        "duration": 1700
+      },
+      {
+        "index": 646,
+        "text": "對我覺得我是想",
+        "offset": 1039720,
+        "duration": 1590
+      },
+      {
+        "index": 647,
+        "text": "把我的資產一部分",
+        "offset": 1041319.9999999999,
+        "duration": 1860
+      },
+      {
+        "index": 648,
+        "text": "是能給我一個",
+        "offset": 1043190,
+        "duration": 1350
+      },
+      {
+        "index": 649,
+        "text": "很充裕的生活expense這些",
+        "offset": 1044550,
+        "duration": 1860
+      },
+      {
+        "index": 650,
+        "text": "那剩下的錢我就",
+        "offset": 1046430.0000000001,
+        "duration": 1310
+      },
+      {
+        "index": 651,
+        "text": "可以把它壓在我覺得很有未來的公司",
+        "offset": 1047750,
+        "duration": 2380
+      },
+      {
+        "index": 652,
+        "text": "你知道有一個",
+        "offset": 1050150,
+        "duration": 590
+      },
+      {
+        "index": 653,
+        "text": "hack我不曉得",
+        "offset": 1050750,
+        "duration": 550
+      },
+      {
+        "index": 654,
+        "text": "有沒有在影片上面",
+        "offset": 1051310,
+        "duration": 990
+      },
+      {
+        "index": 655,
+        "text": "講叫buy borrow die",
+        "offset": 1052310,
+        "duration": 1310
+      },
+      {
+        "index": 656,
+        "text": "哦",
+        "offset": 1053630,
+        "duration": 770
+      },
+      {
+        "index": 657,
+        "text": "就是你把你的",
+        "offset": 1054420,
+        "duration": 950
+      },
+      {
+        "index": 658,
+        "text": "equity傳給你的小孩的時候",
+        "offset": 1055380,
+        "duration": 2700
+      },
+      {
+        "index": 659,
+        "text": "他的cost basis會重新調到他",
+        "offset": 1058100,
+        "duration": 2510
+      },
+      {
+        "index": 660,
+        "text": "接收時候的cost basis",
+        "offset": 1060620,
+        "duration": 1220
+      },
+      {
+        "index": 661,
+        "text": "所以他們沒有",
+        "offset": 1061860,
+        "duration": 630
+      },
+      {
+        "index": 662,
+        "text": "任何capital gain",
+        "offset": 1062500,
+        "duration": 900
+      },
+      {
+        "index": 663,
+        "text": "對那那那適用",
+        "offset": 1063420,
+        "duration": 1230
+      },
+      {
+        "index": 664,
+        "text": "在美國啦就是對",
+        "offset": 1064660,
+        "duration": 1550
+      },
+      {
+        "index": 665,
+        "text": "capital gain來講對",
+        "offset": 1066220,
+        "duration": 1020
+      },
+      {
+        "index": 666,
+        "text": "對因為美國",
+        "offset": 1067260,
+        "duration": 910
+      },
+      {
+        "index": 667,
+        "text": "有capital gain tax對",
+        "offset": 1068180,
+        "duration": 1470
+      },
+      {
+        "index": 668,
+        "text": "對那可能這個就",
+        "offset": 1069670,
+        "duration": 1270
+      },
+      {
+        "index": 669,
+        "text": "不一定每個國家都都適用",
+        "offset": 1070950,
+        "duration": 1540
+      },
+      {
+        "index": 670,
+        "text": "而且個股的話也",
+        "offset": 1072510,
+        "duration": 1270
+      },
+      {
+        "index": 671,
+        "text": "很難說你可以hold",
+        "offset": 1073790,
+        "duration": 1430
+      },
+      {
+        "index": 672,
+        "text": "到傳到小孩的時候",
+        "offset": 1075230,
+        "duration": 1420
+      },
+      {
+        "index": 673,
+        "text": "因為個股就是有",
+        "offset": 1076670,
+        "duration": 990
+      },
+      {
+        "index": 674,
+        "text": "這個缺點你要知道什麼時候要放手",
+        "offset": 1077670,
+        "duration": 1740
+      },
+      {
+        "index": 675,
+        "text": "不像大盤就無腦一直hold",
+        "offset": 1079640,
+        "duration": 1780
+      },
+      {
+        "index": 676,
+        "text": "對",
+        "offset": 1081440,
+        "duration": 300
+      },
+      {
+        "index": 677,
+        "text": "另外一點就是我想",
+        "offset": 1081760,
+        "duration": 1350
+      },
+      {
+        "index": 678,
+        "text": "問你是關於crypto",
+        "offset": 1083120,
+        "duration": 1100
+      },
+      {
+        "index": 679,
+        "text": "因為因為你是",
+        "offset": 1084240,
+        "duration": 710
+      },
+      {
+        "index": 680,
+        "text": "沒有投資任何",
+        "offset": 1084960,
+        "duration": 1030
+      },
+      {
+        "index": 681,
+        "text": "crypto相關的東西對吧",
+        "offset": 1086000,
+        "duration": 1580
+      },
+      {
+        "index": 682,
+        "text": "我之前有但是我後來就賣掉",
+        "offset": 1087600,
+        "duration": 2340
+      },
+      {
+        "index": 683,
+        "text": "因為那個波動實在太",
+        "offset": 1089960,
+        "duration": 710
+      },
+      {
+        "index": 684,
+        "text": "大到我當初可以承受的那個波動範圍",
+        "offset": 1090680,
+        "duration": 4080
+      },
+      {
+        "index": 685,
+        "text": "因為crypto",
+        "offset": 1095600,
+        "duration": 510
+      },
+      {
+        "index": 686,
+        "text": "跟stock market最",
+        "offset": 1096120,
+        "duration": 950
+      },
+      {
+        "index": 687,
+        "text": "大的差異是它是24小時",
+        "offset": 1097080,
+        "duration": 1980
+      },
+      {
+        "index": 688,
+        "text": "它可以隨時因為",
+        "offset": 1099200,
+        "duration": 1710
+      },
+      {
+        "index": 689,
+        "text": "一個一個消息面的東西",
+        "offset": 1100920,
+        "duration": 1750
+      },
+      {
+        "index": 690,
+        "text": "就開始就掉下去",
+        "offset": 1102680,
+        "duration": 1500
+      },
+      {
+        "index": 691,
+        "text": "然後也可以隨時",
+        "offset": 1104200,
+        "duration": 950
+      },
+      {
+        "index": 692,
+        "text": "因為一個消息面的東西就上來",
+        "offset": 1105160,
+        "duration": 1820
+      },
+      {
+        "index": 693,
+        "text": "而且它不",
+        "offset": 1107000,
+        "duration": 550
+      },
+      {
+        "index": 694,
+        "text": "像stock market",
+        "offset": 1107560,
+        "duration": 1270
+      },
+      {
+        "index": 695,
+        "text": "有open market",
+        "offset": 1108840,
+        "duration": 910
+      },
+      {
+        "index": 696,
+        "text": "跟close market",
+        "offset": 1109760,
+        "duration": 950
+      },
+      {
+        "index": 697,
+        "text": "它是隨時都有可能",
+        "offset": 1110720,
+        "duration": 1430
+      },
+      {
+        "index": 698,
+        "text": "波動所以它的對",
+        "offset": 1112160,
+        "duration": 1470
+      },
+      {
+        "index": 699,
+        "text": "我那時候來說我",
+        "offset": 1113640,
+        "duration": 1030
+      },
+      {
+        "index": 700,
+        "text": "心臟我沒辦法承受那個波動",
+        "offset": 1114680,
+        "duration": 1420
+      },
+      {
+        "index": 701,
+        "text": "所以我後來就全部",
+        "offset": 1116120,
+        "duration": 630
+      },
+      {
+        "index": 702,
+        "text": "賣掉但是我現在在找",
+        "offset": 1116760,
+        "duration": 1510
+      },
+      {
+        "index": 703,
+        "text": "我現在在找一個",
+        "offset": 1118280,
+        "duration": 1190
+      },
+      {
+        "index": 704,
+        "text": "時機可以買一點Bitcoin",
+        "offset": 1119480,
+        "duration": 1030
+      },
+      {
+        "index": 705,
+        "text": "哦我覺",
+        "offset": 1120760,
+        "duration": 1420
+      },
+      {
+        "index": 706,
+        "text": "買一點Bitcoin是還不錯",
+        "offset": 1122190,
+        "duration": 1220
+      },
+      {
+        "index": 707,
+        "text": "我有考慮買一點Bitcoin",
+        "offset": 1123550,
+        "duration": 1340
+      },
+      {
+        "index": 708,
+        "text": "小孩以後長大的時候",
+        "offset": 1124910,
+        "duration": 1750
+      },
+      {
+        "index": 709,
+        "text": "嗯我爸在那個時候是有買的",
+        "offset": 1126670,
+        "duration": 1860
+      },
+      {
+        "index": 710,
+        "text": "其實我那個時候",
+        "offset": 1128550,
+        "duration": 1230
+      },
+      {
+        "index": 711,
+        "text": "那時候大概十年前那",
+        "offset": 1129790,
+        "duration": 1510
+      },
+      {
+        "index": 712,
+        "text": "時候就有人在說要買Bitcoin",
+        "offset": 1131310,
+        "duration": 1340
+      },
+      {
+        "index": 713,
+        "text": "然後那時候大部分人",
+        "offset": 1132670,
+        "duration": 1270
+      },
+      {
+        "index": 714,
+        "text": "都覺得說這只是在",
+        "offset": 1133950,
+        "duration": 1190
+      },
+      {
+        "index": 715,
+        "text": "炒作所以我沒有去買",
+        "offset": 1135150,
+        "duration": 2170
+      },
+      {
+        "index": 716,
+        "text": "對而且說實話你十年前買",
+        "offset": 1137340,
+        "duration": 1990
+      },
+      {
+        "index": 717,
+        "text": "比如說我舉個例子",
+        "offset": 1139340,
+        "duration": 940
+      },
+      {
+        "index": 718,
+        "text": "比如說你10塊錢買Bitcoin",
+        "offset": 1140300,
+        "duration": 1550
+      },
+      {
+        "index": 719,
+        "text": "你能不能拿到現在也很難",
+        "offset": 1141860,
+        "duration": 1700
+      },
+      {
+        "index": 720,
+        "text": "除非你把那個account忘掉",
+        "offset": 1143660,
+        "duration": 1700
+      },
+      {
+        "index": 721,
+        "text": "對除非你忘掉",
+        "offset": 1145490,
+        "duration": 1140
+      },
+      {
+        "index": 722,
+        "text": "很多人會覺得",
+        "offset": 1146650,
+        "duration": 750
+      },
+      {
+        "index": 723,
+        "text": "說哦我如果十年前或是二十",
+        "offset": 1147410,
+        "duration": 2029.9999999999998
+      },
+      {
+        "index": 724,
+        "text": "年前就買Bitcoin",
+        "offset": 1149450,
+        "duration": 910
+      },
+      {
+        "index": 725,
+        "text": "二十年前",
+        "offset": 1150370,
+        "duration": 510
+      },
+      {
+        "index": 726,
+        "text": "還沒有Bitcoin",
+        "offset": 1150890,
+        "duration": 510
+      },
+      {
+        "index": 727,
+        "text": "十七八年前",
+        "offset": 1151410,
+        "duration": 950
+      },
+      {
+        "index": 728,
+        "text": "就是十年前那時候",
+        "offset": 1152370,
+        "duration": 790
+      },
+      {
+        "index": 729,
+        "text": "就有很多人在講Bitcoin",
+        "offset": 1153170,
+        "duration": 860
+      },
+      {
+        "index": 730,
+        "text": "對那問題是很多人會",
+        "offset": 1154050,
+        "duration": 2150
+      },
+      {
+        "index": 731,
+        "text": "想說我那時候",
+        "offset": 1156210,
+        "duration": 1020
+      },
+      {
+        "index": 732,
+        "text": "買我現在就怎麼樣怎麼樣",
+        "offset": 1157240,
+        "duration": 1140
+      },
+      {
+        "index": 733,
+        "text": "但其實現實不會是這樣",
+        "offset": 1158400,
+        "duration": 1590
+      },
+      {
+        "index": 734,
+        "text": "因為你可能十塊錢買",
+        "offset": 1160000,
+        "duration": 1260
+      },
+      {
+        "index": 735,
+        "text": "對你十塊錢買",
+        "offset": 1161280,
+        "duration": 1030
+      },
+      {
+        "index": 736,
+        "text": "你能拿到100我覺得就已經很屌了",
+        "offset": 1162320,
+        "duration": 2300
+      },
+      {
+        "index": 737,
+        "text": "對你翻十倍對不對",
+        "offset": 1164760,
+        "duration": 1390
+      },
+      {
+        "index": 738,
+        "text": "那很多人是可能翻一倍兩倍",
+        "offset": 1166160,
+        "duration": 1710
+      },
+      {
+        "index": 739,
+        "text": "他就把它賣掉了",
+        "offset": 1167880,
+        "duration": 820
+      },
+      {
+        "index": 740,
+        "text": "對那就是大部分",
+        "offset": 1168720,
+        "duration": 990
+      },
+      {
+        "index": 741,
+        "text": "散戶心態所以也是",
+        "offset": 1169720,
+        "duration": 1030
+      },
+      {
+        "index": 742,
+        "text": "為什麼很多人不適合主動投資",
+        "offset": 1170760,
+        "duration": 2820
+      },
+      {
+        "index": 743,
+        "text": "對沒錯所以說就是",
+        "offset": 1173600,
+        "duration": 1470
+      },
+      {
+        "index": 744,
+        "text": "要做一些非常反人性的東西",
+        "offset": 1175080,
+        "duration": 2300
+      },
+      {
+        "index": 745,
+        "text": "而且主動還有一個",
+        "offset": 1177400,
+        "duration": 990
+      },
+      {
+        "index": 746,
+        "text": "沒有主動還有一個特點就是",
+        "offset": 1178400,
+        "duration": 1860
+      },
+      {
+        "index": 747,
+        "text": "我們剛剛講的",
+        "offset": 1180340,
+        "duration": 550
+      },
+      {
+        "index": 748,
+        "text": "都是那些長期往上的個股",
+        "offset": 1180900,
+        "duration": 3190
+      },
+      {
+        "index": 749,
+        "text": "但是也有一些個股",
+        "offset": 1184100,
+        "duration": 1070
+      },
+      {
+        "index": 750,
+        "text": "是下來就回不來了",
+        "offset": 1185180,
+        "duration": 1110
+      },
+      {
+        "index": 751,
+        "text": "這也是主動投資的風險",
+        "offset": 1186300,
+        "duration": 1260
+      },
+      {
+        "index": 752,
+        "text": "對",
+        "offset": 1187580,
+        "duration": 620
+      },
+      {
+        "index": 753,
+        "text": "對",
+        "offset": 1188220,
+        "duration": 1260
+      },
+      {
+        "index": 754,
+        "text": "沒錯",
+        "offset": 1189580,
+        "duration": 510
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "transcript": [
+      {
+        "text": "開始了開始了是吧",
+        "offset": 10,
+        "duration": 1740
+      },
+      {
+        "text": "不用那麼緊張放鬆就好",
+        "offset": 1770,
+        "duration": 2420
+      },
+      {
+        "text": "我覺得你看起來",
+        "offset": 4610,
+        "duration": 870
+      },
+      {
+        "text": "你每次錄影都很ㄍㄧㄥ",
+        "offset": 5490,
+        "duration": 1140
+      },
+      {
+        "text": "因為我很不習慣啊",
+        "offset": 6650,
+        "duration": 1660
+      },
+      {
+        "text": "因為我對啊",
+        "offset": 8650,
+        "duration": 1180
+      },
+      {
+        "text": "放鬆就好",
+        "offset": 9850,
+        "duration": 660
+      },
+      {
+        "text": "大家不知道我跟博怎麼認識的",
+        "offset": 10530,
+        "duration": 2220
+      },
+      {
+        "text": "其實我們是網友啦",
+        "offset": 13170,
+        "duration": 1060
+      },
+      {
+        "text": "嗯主要是因為你跟我背景比較相近吧",
+        "offset": 14370,
+        "duration": 2140
+      },
+      {
+        "text": "因為你是疫情那時候開始錄影的",
+        "offset": 16730,
+        "duration": 1940
+      },
+      {
+        "text": "然後那時候疫情很無聊",
+        "offset": 19050,
+        "duration": 1090
+      },
+      {
+        "text": "就一直在看一堆YouTube",
+        "offset": 20160,
+        "duration": 1220
+      },
+      {
+        "text": "然後就被推薦你的影片",
+        "offset": 21400,
+        "duration": 1620
+      },
+      {
+        "text": "就看一下這個人在幹嘛這樣子",
+        "offset": 23040,
+        "duration": 790
+      },
+      {
+        "text": "對啊然後我們就認識了",
+        "offset": 23840,
+        "duration": 1700
+      },
+      {
+        "text": "然後然後你也很喜歡分享說",
+        "offset": 25560,
+        "duration": 2420
+      },
+      {
+        "text": "你的公司啊還有你的薪水啊",
+        "offset": 28000,
+        "duration": 2220
+      },
+      {
+        "text": "這種就點進去看一下這樣子",
+        "offset": 30240,
+        "duration": 1820
+      },
+      {
+        "text": "其實我覺得我分享的",
+        "offset": 32080,
+        "duration": 910
+      },
+      {
+        "text": "內容都是比較",
+        "offset": 33000,
+        "duration": 1580
+      },
+      {
+        "text": "很typical engineer",
+        "offset": 34590,
+        "duration": 1340
+      },
+      {
+        "text": "會想要分享的東西",
+        "offset": 35950,
+        "duration": 1580
+      },
+      {
+        "text": "或者說我們在做的事情其實差不多",
+        "offset": 37550,
+        "duration": 1860
+      },
+      {
+        "text": "我們也是就是工作，賺錢，然後投資",
+        "offset": 39430,
+        "duration": 2980
+      },
+      {
+        "text": "就其實很單純的",
+        "offset": 42430,
+        "duration": 1030
+      },
+      {
+        "text": "然後我是今天才跟你聊到才知道",
+        "offset": 43470,
+        "duration": 1980
+      },
+      {
+        "text": "你跟我投資基本上差不多",
+        "offset": 45470,
+        "duration": 1780
+      },
+      {
+        "text": "我主要重倉三家嘛",
+        "offset": 47270,
+        "duration": 1190
+      },
+      {
+        "text": "Tesla",
+        "offset": 48470,
+        "duration": 590
+      },
+      {
+        "text": "Nvidia跟Palantir",
+        "offset": 49170,
+        "duration": 1300
+      },
+      {
+        "text": "這三個是我最大倉位",
+        "offset": 50690,
+        "duration": 1620
+      },
+      {
+        "text": "然後其實你也是對不對",
+        "offset": 52330,
+        "duration": 980
+      },
+      {
+        "text": "這三個也是我目前最大倉位",
+        "offset": 53330,
+        "duration": 2060
+      },
+      {
+        "text": "還有再加上Meta",
+        "offset": 55410,
+        "duration": 1900
+      },
+      {
+        "text": "然後台積電 Sofi 這樣子",
+        "offset": 57330,
+        "duration": 2460
+      },
+      {
+        "text": "嗯嗯嗯 比較有趣的是",
+        "offset": 60050,
+        "duration": 2260
+      },
+      {
+        "text": "因為你有家庭有小孩兩個小孩",
+        "offset": 62330,
+        "duration": 2860
+      },
+      {
+        "text": "然後其實正常人在這樣的情況下",
+        "offset": 65330,
+        "duration": 2260
+      },
+      {
+        "text": "他不太會想要去重倉個股",
+        "offset": 67610,
+        "duration": 2780
+      },
+      {
+        "text": "那是什麼契機讓你去做這個事情?",
+        "offset": 70690,
+        "duration": 2640
+      },
+      {
+        "text": "因為你之前有跟我",
+        "offset": 73350,
+        "duration": 750
+      },
+      {
+        "text": "講說你之前也是都只是買大盤而已",
+        "offset": 74110,
+        "duration": 1980
+      },
+      {
+        "text": "其實我沒有真的買過大盤",
+        "offset": 76110,
+        "duration": 1990
+      },
+      {
+        "text": "OKOK",
+        "offset": 78110,
+        "duration": 700
+      },
+      {
+        "text": "我以前是剛工作前",
+        "offset": 78830,
+        "duration": 1950
+      },
+      {
+        "text": "幾年也是比較懵懂無知",
+        "offset": 80790,
+        "duration": 1540
+      },
+      {
+        "text": "就是拿到Google RSU就",
+        "offset": 82350,
+        "duration": 1470
+      },
+      {
+        "text": "放在那邊然後沒賣這樣子",
+        "offset": 83830,
+        "duration": 1700
+      },
+      {
+        "text": "然後其實收益也不錯",
+        "offset": 85550,
+        "duration": 2380
+      },
+      {
+        "text": "可是因為那時候RSU也不多",
+        "offset": 87950,
+        "duration": 1740
+      },
+      {
+        "text": "所以收益再多也就是那個樣子",
+        "offset": 89710,
+        "duration": 2100
+      },
+      {
+        "text": "對那之所以會想要投資個股主要是",
+        "offset": 92030,
+        "duration": 3460
+      },
+      {
+        "text": "應該說就特別看好這幾家公司",
+        "offset": 95510,
+        "duration": 1700
+      },
+      {
+        "text": "就覺得說這幾家公司在未來短時間內",
+        "offset": 97230,
+        "duration": 3730
+      },
+      {
+        "text": "比如說三年內",
+        "offset": 100980,
+        "duration": 790
+      },
+      {
+        "text": "我覺得可以表現得比大盤好",
+        "offset": 101780,
+        "duration": 2020
+      },
+      {
+        "text": "所以就把頭洗下去了這樣子",
+        "offset": 103820,
+        "duration": 2460
+      },
+      {
+        "text": "那Palantir比較像是無心插柳柳成枝",
+        "offset": 106300,
+        "duration": 3100
+      },
+      {
+        "text": "就是就是說那個時候",
+        "offset": 109420,
+        "duration": 2730
+      },
+      {
+        "text": "那時候他股價很低嘛",
+        "offset": 112170,
+        "duration": 1340
+      },
+      {
+        "text": "那時候我買的時候才25塊",
+        "offset": 113530,
+        "duration": 1940
+      },
+      {
+        "text": "那那個時候因為很多人都看好",
+        "offset": 115570,
+        "duration": 2260
+      },
+      {
+        "text": "有一些我在追蹤的一些財經網紅",
+        "offset": 117850,
+        "duration": 2860
+      },
+      {
+        "text": "他們就是都很看好",
+        "offset": 120730,
+        "duration": 1510
+      },
+      {
+        "text": "包含我嗎",
+        "offset": 122250,
+        "duration": 2110
+      },
+      {
+        "text": "對你",
+        "offset": 124380,
+        "duration": 950
+      },
+      {
+        "text": "他就覺得說不然就當成怎麼講",
+        "offset": 125340,
+        "duration": 3140
+      },
+      {
+        "text": "就投資嘛就放一點錢進去",
+        "offset": 128500,
+        "duration": 1940
+      },
+      {
+        "text": "那時候其實也不是佔我最大部位",
+        "offset": 130460.00000000001,
+        "duration": 1660
+      },
+      {
+        "text": "那時候就佔我很小部位想說放進去",
+        "offset": 132140,
+        "duration": 2100
+      },
+      {
+        "text": "然後給他放看看",
+        "offset": 134260,
+        "duration": 1110
+      },
+      {
+        "text": "不要理他看會不會長大這樣子",
+        "offset": 135380,
+        "duration": 1750
+      },
+      {
+        "text": "那沒想到就",
+        "offset": 137140,
+        "duration": 1190
+      },
+      {
+        "text": "去年幾次財報以後就長大",
+        "offset": 138340,
+        "duration": 1830
+      },
+      {
+        "text": "成我最大部位這樣子",
+        "offset": 140180,
+        "duration": 2100
+      },
+      {
+        "text": "OK了解",
+        "offset": 142500,
+        "duration": 980
+      },
+      {
+        "text": "然後Nvidia其實也算是經典啦",
+        "offset": 143500,
+        "duration": 2580
+      },
+      {
+        "text": "Nvidia我很晚才進場我是",
+        "offset": 146100,
+        "duration": 2540
+      },
+      {
+        "text": "今年初才大舉進場",
+        "offset": 148660,
+        "duration": 1540
+      },
+      {
+        "text": "就是那時候",
+        "offset": 150220,
+        "duration": 510
+      },
+      {
+        "text": "他因為deepseek",
+        "offset": 150740,
+        "duration": 1030
+      },
+      {
+        "text": "的新聞出來他大跌",
+        "offset": 151780,
+        "duration": 2020
+      },
+      {
+        "text": "我想說這是一個好買點",
+        "offset": 153820,
+        "duration": 1740
+      },
+      {
+        "text": "跌到120嗎還是100初的時候",
+        "offset": 155580,
+        "duration": 1390
+      },
+      {
+        "text": "110幾可是",
+        "offset": 156980,
+        "duration": 2009.9999999999998
+      },
+      {
+        "text": "那時候關稅戰有再跌到100以下",
+        "offset": 159000,
+        "duration": 1740
+      },
+      {
+        "text": "那時候我就沒有再加",
+        "offset": 160760,
+        "duration": 1060
+      },
+      {
+        "text": "但是那",
+        "offset": 161840,
+        "duration": 830
+      },
+      {
+        "text": "時候deepfake他短",
+        "offset": 162680,
+        "duration": 910
+      },
+      {
+        "text": "時間內一口氣跌了好像十幾趴吧",
+        "offset": 163600,
+        "duration": 3460
+      },
+      {
+        "text": "然後我想說這是一個不錯的買點",
+        "offset": 167080,
+        "duration": 1660
+      },
+      {
+        "text": "所以那時候就一次進場很多這樣子",
+        "offset": 168760,
+        "duration": 2820
+      },
+      {
+        "text": "我覺得Nvidia的邏輯",
+        "offset": 172080,
+        "duration": 950
+      },
+      {
+        "text": "其實蠻蠻簡單的",
+        "offset": 173040,
+        "duration": 1380
+      },
+      {
+        "text": "我覺得大家都懂",
+        "offset": 174440,
+        "duration": 660
+      },
+      {
+        "text": "找到好買點就上",
+        "offset": 175120,
+        "duration": 1060
+      },
+      {
+        "text": "對那金礦嘛",
+        "offset": 176200,
+        "duration": 1230
+      },
+      {
+        "text": "然後那Nvidia是做鏟子的",
+        "offset": 177440,
+        "duration": 2230
+      },
+      {
+        "text": "對這個東西大家都知道",
+        "offset": 179680,
+        "duration": 1540
+      },
+      {
+        "text": "我覺得Palantir",
+        "offset": 181240,
+        "duration": 830
+      },
+      {
+        "text": "很多人不懂到底這家公司在做什麼",
+        "offset": 182080,
+        "duration": 2300
+      },
+      {
+        "text": "老實說我也沒有百分之百理解",
+        "offset": 184400,
+        "duration": 1860
+      },
+      {
+        "text": "因為他們的產品",
+        "offset": 186280,
+        "duration": 790
+      },
+      {
+        "text": "主要不是面對end user",
+        "offset": 187150,
+        "duration": 2190
+      },
+      {
+        "text": "他的主要客戶都是國防部相關的",
+        "offset": 189350,
+        "duration": 3340
+      },
+      {
+        "text": "我分享一下我的投資",
+        "offset": 193030,
+        "duration": 1190
+      },
+      {
+        "text": "我自己投資Palantir的邏輯",
+        "offset": 194230,
+        "duration": 1460
+      },
+      {
+        "text": "在這個AI時代",
+        "offset": 195710,
+        "duration": 990
+      },
+      {
+        "text": "不只是Nvidia在做這個鏟子",
+        "offset": 196710,
+        "duration": 1390
+      },
+      {
+        "text": "我覺得Palantir也",
+        "offset": 198110,
+        "duration": 990
+      },
+      {
+        "text": "是在做這個鏟子",
+        "offset": 199110,
+        "duration": 1380
+      },
+      {
+        "text": "你覺得它的軟體",
+        "offset": 200670,
+        "duration": 1030
+      },
+      {
+        "text": "本身也是一個platform",
+        "offset": 201710,
+        "duration": 1260
+      },
+      {
+        "text": "對我覺得這是我的理解",
+        "offset": 202990,
+        "duration": 1500
+      },
+      {
+        "text": "因為我覺得大家",
+        "offset": 204510,
+        "duration": 1230
+      },
+      {
+        "text": "會rush要進去AI",
+        "offset": 205750,
+        "duration": 1430
+      },
+      {
+        "text": "然後要做AI轉型",
+        "offset": 207190,
+        "duration": 1060
+      },
+      {
+        "text": "那Palantir就是",
+        "offset": 208270,
+        "duration": 830
+      },
+      {
+        "text": "一個很好的一個",
+        "offset": 209110,
+        "duration": 1020
+      },
+      {
+        "text": "幫你去做AI轉型",
+        "offset": 210150,
+        "duration": 1190
+      },
+      {
+        "text": "幫enterprise做AI轉型的一家公司",
+        "offset": 211350,
+        "duration": 2300
+      },
+      {
+        "text": "他們提供的軟體就是",
+        "offset": 213670,
+        "duration": 1300
+      },
+      {
+        "text": "而且它是",
+        "offset": 214990,
+        "duration": 590
+      },
+      {
+        "text": "proven to work",
+        "offset": 215670,
+        "duration": 1140
+      },
+      {
+        "text": "對",
+        "offset": 216830,
+        "duration": 340
+      },
+      {
+        "text": "因為它實際上的業績也表現出來",
+        "offset": 217190,
+        "duration": 1860
+      },
+      {
+        "text": "就是它的成長率非常驚人",
+        "offset": 219070,
+        "duration": 1380
+      },
+      {
+        "text": "就代表說確實是有",
+        "offset": 220470,
+        "duration": 1870
+      },
+      {
+        "text": "很多企業在用它的solution",
+        "offset": 222350,
+        "duration": 1900
+      },
+      {
+        "text": "對而且它",
+        "offset": 224270,
+        "duration": 670
+      },
+      {
+        "text": "很多case study",
+        "offset": 224950,
+        "duration": 830
+      },
+      {
+        "text": "是真的是蠻驚人的",
+        "offset": 225790,
+        "duration": 1660
+      },
+      {
+        "text": "就是幫很多公司省",
+        "offset": 227520,
+        "duration": 1710
+      },
+      {
+        "text": "了非常非常非常多錢",
+        "offset": 229240,
+        "duration": 1140
+      },
+      {
+        "text": "而且這種企業單的revenue stream",
+        "offset": 230400,
+        "duration": 1830
+      },
+      {
+        "text": "是一上去就很難下來的",
+        "offset": 232240,
+        "duration": 1780
+      },
+      {
+        "text": "對Palantir最厲害",
+        "offset": 234040,
+        "duration": 1030
+      },
+      {
+        "text": "讓我覺得最強的點是",
+        "offset": 235240,
+        "duration": 1420
+      },
+      {
+        "text": "其實很多公司也",
+        "offset": 236680,
+        "duration": 910
+      },
+      {
+        "text": "可以做類似這樣的事情",
+        "offset": 237600,
+        "duration": 1260
+      },
+      {
+        "text": "但是因為他們有國防部的背書",
+        "offset": 238880,
+        "duration": 2180
+      },
+      {
+        "text": "他們對data這部分可以做到很好",
+        "offset": 241140,
+        "duration": 2580
+      },
+      {
+        "text": "也就是說一家公司要怎麼去信任",
+        "offset": 243820,
+        "duration": 3020
+      },
+      {
+        "text": "我把所有data都給你",
+        "offset": 246860,
+        "duration": 1460
+      },
+      {
+        "text": "我會去信任",
+        "offset": 248340,
+        "duration": 670
+      },
+      {
+        "text": "一個startup會",
+        "offset": 249020,
+        "duration": 790
+      },
+      {
+        "text": "信任一家random的一家公司",
+        "offset": 249820,
+        "duration": 1620
+      },
+      {
+        "text": "還是我信任一家已經有國防部背書",
+        "offset": 251460,
+        "duration": 2120
+      },
+      {
+        "text": "對就是他已經",
+        "offset": 253600,
+        "duration": 990
+      },
+      {
+        "text": "把國防部的所有data都收集起來",
+        "offset": 254600,
+        "duration": 1740
+      },
+      {
+        "text": "然後甚至美國其他",
+        "offset": 256360,
+        "duration": 990
+      },
+      {
+        "text": "部門的data都給他們",
+        "offset": 257360,
+        "duration": 1340
+      },
+      {
+        "text": "他可以把它做到這麼好",
+        "offset": 258720.00000000003,
+        "duration": 1300
+      },
+      {
+        "text": "那代表說",
+        "offset": 260040.00000000003,
+        "duration": 710
+      },
+      {
+        "text": "他data security這方面",
+        "offset": 260760,
+        "duration": 1190
+      },
+      {
+        "text": "可以做得很好",
+        "offset": 261959.99999999997,
+        "duration": 820
+      },
+      {
+        "text": "然後我可以把我的data給他",
+        "offset": 262800,
+        "duration": 1540
+      },
+      {
+        "text": "這點我是覺得是他",
+        "offset": 264500,
+        "duration": 1470
+      },
+      {
+        "text": "很大的一個moat",
+        "offset": 265980,
+        "duration": 1180
+      },
+      {
+        "text": "就很多公司做不到的",
+        "offset": 267180,
+        "duration": 1220
+      },
+      {
+        "text": "對這也是為什麼我",
+        "offset": 268420,
+        "duration": 790
+      },
+      {
+        "text": "可能十幾塊的",
+        "offset": 269220,
+        "duration": 870
+      },
+      {
+        "text": "時候就也是投資Palantir",
+        "offset": 270100,
+        "duration": 1700
+      },
+      {
+        "text": "然後現在慢慢的倉位",
+        "offset": 271820,
+        "duration": 1870
+      },
+      {
+        "text": "就移到越變越大這樣子",
+        "offset": 273700,
+        "duration": 1980
+      },
+      {
+        "text": "對然後第三個",
+        "offset": 275780,
+        "duration": 1150
+      },
+      {
+        "text": "就是我最重的倉位是Tesla啦",
+        "offset": 276940,
+        "duration": 1860
+      },
+      {
+        "text": "那大家都知道",
+        "offset": 278820,
+        "duration": 1340
+      },
+      {
+        "text": "對是一個事實",
+        "offset": 280180,
+        "duration": 1620
+      },
+      {
+        "text": "然後你自己也",
+        "offset": 282060,
+        "duration": 550
+      },
+      {
+        "text": "是Tesla是也蠻重的一個倉位",
+        "offset": 282620,
+        "duration": 2620
+      },
+      {
+        "text": "對",
+        "offset": 285260,
+        "duration": 500
+      },
+      {
+        "text": "你會投資Tesla的原因",
+        "offset": 285780,
+        "duration": 1300
+      },
+      {
+        "text": "投資Tesla我覺得最",
+        "offset": 287170,
+        "duration": 950
+      },
+      {
+        "text": "主要是就是相信Elon這個人",
+        "offset": 288130,
+        "duration": 2140
+      },
+      {
+        "text": "就是因為他現在",
+        "offset": 291090,
+        "duration": 1110
+      },
+      {
+        "text": "其實很多東西都在一個願景",
+        "offset": 292210,
+        "duration": 2460
+      },
+      {
+        "text": "就是你已經看到",
+        "offset": 294690,
+        "duration": 750
+      },
+      {
+        "text": "他的一些prototype",
+        "offset": 295450,
+        "duration": 1020
+      },
+      {
+        "text": "但是要等",
+        "offset": 296490,
+        "duration": 550
+      },
+      {
+        "text": "他大規模",
+        "offset": 297050,
+        "duration": 870
+      },
+      {
+        "text": "deployment你",
+        "offset": 297930,
+        "duration": 710
+      },
+      {
+        "text": "需要一個執行力",
+        "offset": 298650,
+        "duration": 940
+      },
+      {
+        "text": "那投資Tesla",
+        "offset": 299610,
+        "duration": 710
+      },
+      {
+        "text": "就是你相信Elon的執行力",
+        "offset": 300330,
+        "duration": 1820
+      },
+      {
+        "text": "他這些他",
+        "offset": 302170,
+        "duration": 990
+      },
+      {
+        "text": "envision的這些",
+        "offset": 303170,
+        "duration": 830
+      },
+      {
+        "text": "東西可以真的到時候全面展開",
+        "offset": 304010,
+        "duration": 2370
+      },
+      {
+        "text": "就是他的一些",
+        "offset": 306400,
+        "duration": 670
+      },
+      {
+        "text": "願景可以全部realize",
+        "offset": 307080,
+        "duration": 1260
+      },
+      {
+        "text": "那Elon的",
+        "offset": 308360,
+        "duration": 1070
+      },
+      {
+        "text": "一些track record",
+        "offset": 309440,
+        "duration": 830
+      },
+      {
+        "text": "是讓你覺得說",
+        "offset": 310280,
+        "duration": 1060
+      },
+      {
+        "text": "這個人我真的他真的可以做得到",
+        "offset": 311360,
+        "duration": 1500
+      },
+      {
+        "text": "就是像連Jensen都說",
+        "offset": 312880,
+        "duration": 1650
+      },
+      {
+        "text": "don&#39;t bet against Elon",
+        "offset": 314540,
+        "duration": 1400
+      },
+      {
+        "text": "就是基本上會",
+        "offset": 316100,
+        "duration": 1350
+      },
+      {
+        "text": "投資Elon的",
+        "offset": 317460,
+        "duration": 790
+      },
+      {
+        "text": "投資Tesla的股東就是",
+        "offset": 318260,
+        "duration": 1030
+      },
+      {
+        "text": "在bet on Elon的execute",
+        "offset": 319300,
+        "duration": 1860
+      },
+      {
+        "text": "對但是我要講的",
+        "offset": 321180,
+        "duration": 1190
+      },
+      {
+        "text": "是不得不說",
+        "offset": 322380,
+        "duration": 790
+      },
+      {
+        "text": "確實你投資Tesla這家公司",
+        "offset": 323180,
+        "duration": 1980
+      },
+      {
+        "text": "其實你是在有點",
+        "offset": 325180,
+        "duration": 1460
+      },
+      {
+        "text": "像是買一個美好的願景的概念",
+        "offset": 326650,
+        "duration": 2620
+      },
+      {
+        "text": "就是你絕對不是價值投資",
+        "offset": 329290,
+        "duration": 1500
+      },
+      {
+        "text": "對",
+        "offset": 330810,
+        "duration": 220
+      },
+      {
+        "text": "因為他公司本身還沒有到那個",
+        "offset": 331050,
+        "duration": 1460
+      },
+      {
+        "text": "已經完全跟基本面脫鉤對",
+        "offset": 332610,
+        "duration": 1700
+      },
+      {
+        "text": "對已經脫鉤了",
+        "offset": 334330,
+        "duration": 860
+      },
+      {
+        "text": "就是你願不願意",
+        "offset": 335210,
+        "duration": 1070
+      },
+      {
+        "text": "相信這家公司未來的這個發展",
+        "offset": 336290,
+        "duration": 2460
+      },
+      {
+        "text": "大概就是這個概念",
+        "offset": 338770,
+        "duration": 1180
+      },
+      {
+        "text": "那我知道這聽起來是蠻瘋的",
+        "offset": 340030,
+        "duration": 1500
+      },
+      {
+        "text": "因為你要去相信一家公司",
+        "offset": 341550,
+        "duration": 1380
+      },
+      {
+        "text": "然後你要把你的倉位全都賭上去",
+        "offset": 342950,
+        "duration": 2100
+      },
+      {
+        "text": "那確實是一個很難做到的一個事情",
+        "offset": 345070,
+        "duration": 2020
+      },
+      {
+        "text": "那我覺得你可以把Tesla變成",
+        "offset": 347110,
+        "duration": 1790
+      },
+      {
+        "text": "第三大倉位也是蠻厲害的",
+        "offset": 348910,
+        "duration": 1740
+      },
+      {
+        "text": "我猜你進去了也沒有到很早吧",
+        "offset": 350670,
+        "duration": 1900
+      },
+      {
+        "text": "我是在關稅戰的時候進去的",
+        "offset": 352660,
+        "duration": 1980
+      },
+      {
+        "text": "其實我以前也有進去過後來出來了",
+        "offset": 354660,
+        "duration": 2380
+      },
+      {
+        "text": "因為Tesla是一個波動很大的股票",
+        "offset": 357060,
+        "duration": 1820
+      },
+      {
+        "text": "那我最後一次進去是今年關稅戰",
+        "offset": 358900,
+        "duration": 2780
+      },
+      {
+        "text": "我做了一個sell put",
+        "offset": 362100,
+        "duration": 1030
+      },
+      {
+        "text": "然後後來被執行然後就放著",
+        "offset": 363140,
+        "duration": 2570
+      },
+      {
+        "text": "I see I see",
+        "offset": 365810,
+        "duration": 1540
+      },
+      {
+        "text": "那還OK啦那那個價格也是OK的",
+        "offset": 367370,
+        "duration": 2460
+      },
+      {
+        "text": "一直以來我們都",
+        "offset": 369850,
+        "duration": 950
+      },
+      {
+        "text": "覺得說很多人會聽大家講說",
+        "offset": 370810,
+        "duration": 2900
+      },
+      {
+        "text": "那其實買大盤就好了",
+        "offset": 373730,
+        "duration": 2020
+      },
+      {
+        "text": "然後其實我以前也是這個概念就是說",
+        "offset": 375770,
+        "duration": 2510
+      },
+      {
+        "text": "對於大部分人來",
+        "offset": 378300,
+        "duration": 870
+      },
+      {
+        "text": "講普遍99%的人來說",
+        "offset": 379180,
+        "duration": 1660
+      },
+      {
+        "text": "其實你就",
+        "offset": 380860,
+        "duration": 510
+      },
+      {
+        "text": "投資大盤就好",
+        "offset": 381380,
+        "duration": 670
+      },
+      {
+        "text": "投資S&amp;P500的大盤",
+        "offset": 382060,
+        "duration": 1670
+      },
+      {
+        "text": "比如說VOO這種ETF就可以了",
+        "offset": 383940,
+        "duration": 2260
+      },
+      {
+        "text": "但是我現在有一點",
+        "offset": 386220,
+        "duration": 1390
+      },
+      {
+        "text": "點改變這個觀念的原因是什麼呢",
+        "offset": 387620,
+        "duration": 2340
+      },
+      {
+        "text": "因為如果你去",
+        "offset": 389980,
+        "duration": 790
+      },
+      {
+        "text": "看整個現在美國經濟發展",
+        "offset": 390780,
+        "duration": 2250
+      },
+      {
+        "text": "其實S&amp;P500",
+        "offset": 393050,
+        "duration": 1510
+      },
+      {
+        "text": "的這個盈利大部分都",
+        "offset": 394570,
+        "duration": 1350
+      },
+      {
+        "text": "集中在前面幾家公司",
+        "offset": 395930,
+        "duration": 1260
+      },
+      {
+        "text": "後面的公司其實是沒有表現那麼好",
+        "offset": 397210,
+        "duration": 1740
+      },
+      {
+        "text": "然後未來已經很",
+        "offset": 399050,
+        "duration": 1670
+      },
+      {
+        "text": "明顯趨勢就是AI會",
+        "offset": 400730,
+        "duration": 1590
+      },
+      {
+        "text": "再繼續把這些公司的價值拉上去",
+        "offset": 402330,
+        "duration": 2840
+      },
+      {
+        "text": "那在這樣的情況",
+        "offset": 405190,
+        "duration": 990
+      },
+      {
+        "text": "下我個人覺得可能S&amp;P500",
+        "offset": 406190,
+        "duration": 2780
+      },
+      {
+        "text": "其實你如果",
+        "offset": 408990,
+        "duration": 950
+      },
+      {
+        "text": "只是單純投資S&amp;P500",
+        "offset": 409950,
+        "duration": 1550
+      },
+      {
+        "text": "這種比較被動的方式",
+        "offset": 411510,
+        "duration": 1340
+      },
+      {
+        "text": "很多機會是被稀釋掉了",
+        "offset": 412870,
+        "duration": 1470
+      },
+      {
+        "text": "你有這樣覺得嗎",
+        "offset": 414350,
+        "duration": 980
+      },
+      {
+        "text": "先說我覺得",
+        "offset": 415350,
+        "duration": 950
+      },
+      {
+        "text": "投資大盤還是適合大部分人",
+        "offset": 416310,
+        "duration": 1820
+      },
+      {
+        "text": "因為之所以沒有",
+        "offset": 418910,
+        "duration": 1670
+      },
+      {
+        "text": "90%的基金管理人沒辦法贏過大盤",
+        "offset": 420590,
+        "duration": 3020
+      },
+      {
+        "text": "這是數據擺在那邊大盤就是這麼強大",
+        "offset": 423630,
+        "duration": 3060
+      },
+      {
+        "text": "但是我也覺得說",
+        "offset": 427190,
+        "duration": 1790
+      },
+      {
+        "text": "在接下來幾年確實這些",
+        "offset": 428990,
+        "duration": 1510
+      },
+      {
+        "text": "在AI上佔盡優勢的這些幾大巨頭會",
+        "offset": 430510,
+        "duration": 4220
+      },
+      {
+        "text": "把市場上大部分的",
+        "offset": 434750,
+        "duration": 1870
+      },
+      {
+        "text": "獲利給端走這個我也是很看好的",
+        "offset": 436630,
+        "duration": 2740
+      },
+      {
+        "text": "但是之所以說投資",
+        "offset": 439390,
+        "duration": 1830
+      },
+      {
+        "text": "個股不是for everyone",
+        "offset": 441230,
+        "duration": 1060
+      },
+      {
+        "text": "是因為不是每個人都適用",
+        "offset": 442310,
+        "duration": 2160
+      },
+      {
+        "text": "是因為個股的波動會很就是會很大",
+        "offset": 444490,
+        "duration": 2420
+      },
+      {
+        "text": "比如說你看像",
+        "offset": 446930,
+        "duration": 1070
+      },
+      {
+        "text": "上禮拜上禮拜因為",
+        "offset": 448010,
+        "duration": 1830
+      },
+      {
+        "text": "美國政府關門的關係",
+        "offset": 449850,
+        "duration": 1460
+      },
+      {
+        "text": "那個還有",
+        "offset": 451330,
+        "duration": 910
+      },
+      {
+        "text": "就是因為",
+        "offset": 452250,
+        "duration": 470
+      },
+      {
+        "text": "Michael Burry",
+        "offset": 452730,
+        "duration": 590
+      },
+      {
+        "text": "那個空單的關係",
+        "offset": 453330,
+        "duration": 2029.9999999999998
+      },
+      {
+        "text": "Palantir跟",
+        "offset": 455810,
+        "duration": 190
+      },
+      {
+        "text": "Nvidia就大回調昨天又回來了",
+        "offset": 456010,
+        "duration": 2140
+      },
+      {
+        "text": "就是個股的波動就這麼大",
+        "offset": 458170,
+        "duration": 1580
+      },
+      {
+        "text": "所以基本上要投資個股",
+        "offset": 459770,
+        "duration": 1550
+      },
+      {
+        "text": "的人你必須要先",
+        "offset": 461330,
+        "duration": 750
+      },
+      {
+        "text": "知道說你接下來會經歷什麼東西",
+        "offset": 462090,
+        "duration": 2140
+      },
+      {
+        "text": "就是在你可能會經歷短時間內下跌",
+        "offset": 464250,
+        "duration": 2530
+      },
+      {
+        "text": "那在短時間下跌的",
+        "offset": 466800,
+        "duration": 910
+      },
+      {
+        "text": "時候你要心情不受影響",
+        "offset": 467720,
+        "duration": 2110
+      },
+      {
+        "text": "繼續hold住",
+        "offset": 470080,
+        "duration": 900
+      },
+      {
+        "text": "因為有很多人就是",
+        "offset": 471000,
+        "duration": 2150
+      },
+      {
+        "text": "當你在波動的時候你就抱不住了",
+        "offset": 473160,
+        "duration": 1860
+      },
+      {
+        "text": "然後可是當他回來的",
+        "offset": 475040,
+        "duration": 870
+      },
+      {
+        "text": "時候你又把它追回來",
+        "offset": 475920,
+        "duration": 1020
+      },
+      {
+        "text": "那這樣就變成你的獲利都被吃掉了",
+        "offset": 476960,
+        "duration": 2250
+      },
+      {
+        "text": "心理素質很重要",
+        "offset": 479230,
+        "duration": 660
+      },
+      {
+        "text": "對那其實而且",
+        "offset": 479910,
+        "duration": 910
+      },
+      {
+        "text": "其實大部分人都是這個樣子",
+        "offset": 480830,
+        "duration": 1100
+      },
+      {
+        "text": "我也是經歷過很多次這樣子",
+        "offset": 481950,
+        "duration": 1340
+      },
+      {
+        "text": "後來才意識到說啊我不能就是",
+        "offset": 483310,
+        "duration": 2500
+      },
+      {
+        "text": "你要在主動投資上",
+        "offset": 485830,
+        "duration": 1150
+      },
+      {
+        "text": "賺錢你就必須要",
+        "offset": 486990,
+        "duration": 1310
+      },
+      {
+        "text": "做一些違反人性的東西",
+        "offset": 488310,
+        "duration": 2009.9999999999998
+      },
+      {
+        "text": "你之前影片有講過就是",
+        "offset": 490660,
+        "duration": 2460
+      },
+      {
+        "text": "之所以為什麼不",
+        "offset": 493140,
+        "duration": 1150
+      },
+      {
+        "text": "推薦主動投資是因為就是說",
+        "offset": 494300,
+        "duration": 1700
+      },
+      {
+        "text": "因為它的波動性太大",
+        "offset": 496020,
+        "duration": 2420
+      },
+      {
+        "text": "然後而且再加上說",
+        "offset": 498460,
+        "duration": 2310
+      },
+      {
+        "text": "有很高的機率你",
+        "offset": 500860,
+        "duration": 910
+      },
+      {
+        "text": "可能還是沒辦法贏過大盤",
+        "offset": 501780,
+        "duration": 1300
+      },
+      {
+        "text": "就是那些你選的",
+        "offset": 503100,
+        "duration": 1470
+      },
+      {
+        "text": "股票最後加起來的",
+        "offset": 504580,
+        "duration": 1310
+      },
+      {
+        "text": "表現可能還是最後輸給大盤",
+        "offset": 505900,
+        "duration": 1980
+      },
+      {
+        "text": "還是說第三點就是說",
+        "offset": 507900,
+        "duration": 1980
+      },
+      {
+        "text": "因為你怕這個波動",
+        "offset": 509900,
+        "duration": 1070
+      },
+      {
+        "text": "性所以你不敢投太多本金在上面",
+        "offset": 510980,
+        "duration": 1820
+      },
+      {
+        "text": "那所以比起你願意",
+        "offset": 512880,
+        "duration": 1470
+      },
+      {
+        "text": "把全部的本金投在大盤上",
+        "offset": 514360,
+        "duration": 1420
+      },
+      {
+        "text": "你總獲利還是比較少，這也是其中一點",
+        "offset": 515799.99999999994,
+        "duration": 2500
+      },
+      {
+        "text": "所以各種原因就是",
+        "offset": 518320.00000000006,
+        "duration": 1110
+      },
+      {
+        "text": "你在做一些主動投資在選個股的時候",
+        "offset": 519440.00000000006,
+        "duration": 2940
+      },
+      {
+        "text": "你必須要很清楚自己在做什麼",
+        "offset": 522400,
+        "duration": 1540
+      },
+      {
+        "text": "然後就必須心態上不能受影響",
+        "offset": 523960.00000000006,
+        "duration": 2670
+      },
+      {
+        "text": "對我覺得你剛剛講的很好一點就是",
+        "offset": 526650,
+        "duration": 2300
+      },
+      {
+        "text": "其實大盤還是適合大多數的人",
+        "offset": 528970,
+        "duration": 1700
+      },
+      {
+        "text": "因為它是屬於被動投資",
+        "offset": 530690,
+        "duration": 1780
+      },
+      {
+        "text": "然後波動相對來講少很多對",
+        "offset": 532490,
+        "duration": 2140
+      },
+      {
+        "text": "甚至可以考慮的是",
+        "offset": 534650,
+        "duration": 1230
+      },
+      {
+        "text": "如果你覺得相信",
+        "offset": 535970,
+        "duration": 1470
+      },
+      {
+        "text": "未來的tech會",
+        "offset": 537450,
+        "duration": 1430
+      },
+      {
+        "text": "帶領接下來的趨勢的話",
+        "offset": 538890,
+        "duration": 1380
+      },
+      {
+        "text": "其實你可以可能allocate",
+        "offset": 540290,
+        "duration": 2070
+      },
+      {
+        "text": "部分的大盤是到QQQ上面",
+        "offset": 542370,
+        "duration": 2300
+      },
+      {
+        "text": "就比較tech driven的那些ETF",
+        "offset": 544690,
+        "duration": 1860
+      },
+      {
+        "text": "而不是單純就",
+        "offset": 546570,
+        "duration": 950
+      },
+      {
+        "text": "只是S&amp;P500的ETF這樣子",
+        "offset": 547530,
+        "duration": 2140
+      },
+      {
+        "text": "我覺得這個是一個",
+        "offset": 549690,
+        "duration": 870
+      },
+      {
+        "text": "還蠻不錯的一個選擇啦",
+        "offset": 550570,
+        "duration": 1340
+      },
+      {
+        "text": "那如果你像我們比較瘋一點的話",
+        "offset": 552090,
+        "duration": 2700
+      },
+      {
+        "text": "要做到像我們這樣然後然後還賺錢",
+        "offset": 554810,
+        "duration": 2220
+      },
+      {
+        "text": "就像你剛剛講的",
+        "offset": 557050,
+        "duration": 710
+      },
+      {
+        "text": "要做一些反人性，就比較反人性的操作",
+        "offset": 557770,
+        "duration": 2580
+      },
+      {
+        "text": "像在跌的時候你就反而要加倉",
+        "offset": 560370,
+        "duration": 2020
+      },
+      {
+        "text": "然後在漲的時候你",
+        "offset": 562480,
+        "duration": 750
+      },
+      {
+        "text": "就要克制自己的手不要去追高",
+        "offset": 563240,
+        "duration": 2260
+      },
+      {
+        "text": "對我覺得這個是最難的",
+        "offset": 565520,
+        "duration": 1470
+      },
+      {
+        "text": "就這個理論很簡單",
+        "offset": 567000,
+        "duration": 1460
+      },
+      {
+        "text": "我覺得這很考驗你的紀律",
+        "offset": 568480,
+        "duration": 1660
+      },
+      {
+        "text": "就是就像很多",
+        "offset": 570160,
+        "duration": 990
+      },
+      {
+        "text": "事情你知道說應該要怎麼做",
+        "offset": 571160,
+        "duration": 1660
+      },
+      {
+        "text": "可是能夠真的做到",
+        "offset": 572840,
+        "duration": 1110
+      },
+      {
+        "text": "的人很少就是還是少數",
+        "offset": 573960,
+        "duration": 1540
+      },
+      {
+        "text": "就是你知道說哪些",
+        "offset": 575520,
+        "duration": 1390
+      },
+      {
+        "text": "生活習慣可以讓你身體很健康",
+        "offset": 576920,
+        "duration": 1730
+      },
+      {
+        "text": "真的能夠從一而終貫徹",
+        "offset": 578670,
+        "duration": 1870
+      },
+      {
+        "text": "執行的人畢竟是少數",
+        "offset": 580550,
+        "duration": 1100
+      },
+      {
+        "text": "沒錯就是理論大家都知道低買高賣",
+        "offset": 581670,
+        "duration": 3340
+      },
+      {
+        "text": "這個所有人都想要做到",
+        "offset": 585030,
+        "duration": 1550
+      },
+      {
+        "text": "但是往往就是在低的時候",
+        "offset": 586590,
+        "duration": 1890
+      },
+      {
+        "text": "大家都想要把它賣掉",
+        "offset": 588490,
+        "duration": 1030
+      },
+      {
+        "text": "我依稀記得",
+        "offset": 589530,
+        "duration": 750
+      },
+      {
+        "text": "就是那時候Tesla",
+        "offset": 590290,
+        "duration": 1190
+      },
+      {
+        "text": "跌到100甚至甚至好像",
+        "offset": 591490,
+        "duration": 2270
+      },
+      {
+        "text": "那時候大家都在唱衰他嘛",
+        "offset": 593770,
+        "duration": 1620
+      },
+      {
+        "text": "短暫時間跌到跌破100",
+        "offset": 595410,
+        "duration": 1940
+      },
+      {
+        "text": "這種通常就是當",
+        "offset": 597370,
+        "duration": 1230
+      },
+      {
+        "text": "個股下跌的時候各種",
+        "offset": 598610,
+        "duration": 1070
+      },
+      {
+        "text": "負面新聞就會出來",
+        "offset": 599690,
+        "duration": 1340
+      },
+      {
+        "text": "對啊大家就整個",
+        "offset": 601050,
+        "duration": 1110
+      },
+      {
+        "text": "市場恐慌加上所有",
+        "offset": 602170,
+        "duration": 1090
+      },
+      {
+        "text": "人都來說Tesla要歸零了",
+        "offset": 603270,
+        "duration": 1460
+      },
+      {
+        "text": "然後每個人都說我們",
+        "offset": 604750,
+        "duration": 1590
+      },
+      {
+        "text": "60塊見50塊見這些",
+        "offset": 606350,
+        "duration": 1790
+      },
+      {
+        "text": "就這種言論看到你一定會緊張",
+        "offset": 608150,
+        "duration": 1700
+      },
+      {
+        "text": "然後你就會想要把你手上的給賣掉",
+        "offset": 609870,
+        "duration": 1820
+      },
+      {
+        "text": "那這個時候其實就是看你",
+        "offset": 611710,
+        "duration": 2280
+      },
+      {
+        "text": "這個時候就要",
+        "offset": 614010,
+        "duration": 550
+      },
+      {
+        "text": "看Terry的",
+        "offset": 614570,
+        "duration": 470
+      },
+      {
+        "text": "YouTube貫徹信念",
+        "offset": 615050,
+        "duration": 1820
+      },
+      {
+        "text": "我我覺得能在那個",
+        "offset": 616890,
+        "duration": 1670
+      },
+      {
+        "text": "時候加倉的人其實都是很狠的",
+        "offset": 618570,
+        "duration": 1820
+      },
+      {
+        "text": "你要很狠敢願意去做這個事情",
+        "offset": 620410,
+        "duration": 1980
+      },
+      {
+        "text": "就對可能大部分",
+        "offset": 622410,
+        "duration": 1390
+      },
+      {
+        "text": "人比較難做到這個事情",
+        "offset": 623810,
+        "duration": 1580
+      },
+      {
+        "text": "所以其實還是",
+        "offset": 625410,
+        "duration": 1390
+      },
+      {
+        "text": "對於大部分人來說其實也",
+        "offset": 626810,
+        "duration": 1510
+      },
+      {
+        "text": "是投資大盤ETF最穩健",
+        "offset": 628330,
+        "duration": 1460
+      },
+      {
+        "text": "嗯嗯嗯",
+        "offset": 629810,
+        "duration": 700
+      },
+      {
+        "text": "好那說到分散投資到不同的產業呢",
+        "offset": 630530,
+        "duration": 2180
+      },
+      {
+        "text": "最近貴金屬的走勢也是非常的誇張",
+        "offset": 632730,
+        "duration": 2230
+      },
+      {
+        "text": "六個月一年跟五",
+        "offset": 634970,
+        "duration": 1190
+      },
+      {
+        "text": "年都是跑贏QQQ跟S&amp;P500",
+        "offset": 636170,
+        "duration": 2510
+      },
+      {
+        "text": "儘管幾天前黃金",
+        "offset": 638690,
+        "duration": 1150
+      },
+      {
+        "text": "稍微跌了一點但是",
+        "offset": 639850,
+        "duration": 1150
+      },
+      {
+        "text": "看起來是又快回來了",
+        "offset": 641010,
+        "duration": 1580
+      },
+      {
+        "text": "那大家如果有",
+        "offset": 642710,
+        "duration": 630
+      },
+      {
+        "text": "興趣交易黃金白銀這些貴金屬的話",
+        "offset": 643350,
+        "duration": 2380
+      },
+      {
+        "text": "這邊跟大家介紹一個",
+        "offset": 645750,
+        "duration": 910
+      },
+      {
+        "text": "合規的交易平台Mitrade",
+        "offset": 646670,
+        "duration": 1740
+      },
+      {
+        "text": "還可以交易比特幣",
+        "offset": 648430,
+        "duration": 1070
+      },
+      {
+        "text": "美股，原油，外匯和",
+        "offset": 649510,
+        "duration": 1590
+      },
+      {
+        "text": "各大指數等等超過",
+        "offset": 651110,
+        "duration": 1510
+      },
+      {
+        "text": "900多種熱門的標的",
+        "offset": 652630,
+        "duration": 1500
+      },
+      {
+        "text": "那他們也支持信用卡跟USDT",
+        "offset": 654240,
+        "duration": 1990
+      },
+      {
+        "text": "加密貨幣出入金",
+        "offset": 656240,
+        "duration": 980
+      },
+      {
+        "text": "我覺得對於沒有",
+        "offset": 657240,
+        "duration": 1030
+      },
+      {
+        "text": "美金的朋友們來說也是非常的方便",
+        "offset": 658280,
+        "duration": 1780
+      },
+      {
+        "text": "那平台本身沒有手續費",
+        "offset": 660080,
+        "duration": 1550
+      },
+      {
+        "text": "主要是靠很低的點差來賺錢",
+        "offset": 661640,
+        "duration": 1820
+      },
+      {
+        "text": "而且Mitrade也為每位用戶",
+        "offset": 663480,
+        "duration": 1790
+      },
+      {
+        "text": "提供了100萬美金的資金安保政策",
+        "offset": 665280,
+        "duration": 2420
+      },
+      {
+        "text": "好那現在Mitrade呢",
+        "offset": 667720,
+        "duration": 870
+      },
+      {
+        "text": "要來免費送給頻道觀眾交易券",
+        "offset": 668600,
+        "duration": 2130
+      },
+      {
+        "text": "交易券的話就是賺到的錢歸你的",
+        "offset": 670750,
+        "duration": 1870
+      },
+      {
+        "text": "虧的話是歸平台的",
+        "offset": 672630,
+        "duration": 1220
+      },
+      {
+        "text": "現在用我的影片底下連結註冊呢",
+        "offset": 673870,
+        "duration": 1990
+      },
+      {
+        "text": "入金最多可以獲得$1300美元的交易券",
+        "offset": 675870,
+        "duration": 2780
+      },
+      {
+        "text": "我會把具體活動辦法呢放在影片底下資訊欄",
+        "offset": 678670,
+        "duration": 2780
+      },
+      {
+        "text": "如果不想錯過免費交易的話",
+        "offset": 681550,
+        "duration": 1430
+      },
+      {
+        "text": "歡迎來試試看",
+        "offset": 682990,
+        "duration": 900
+      },
+      {
+        "text": "另外一點就是我想要問波爾就是",
+        "offset": 683990,
+        "duration": 2620
+      },
+      {
+        "text": "頻道觀眾大家也",
+        "offset": 686630,
+        "duration": 1190
+      },
+      {
+        "text": "很多人都在tech工作嘛",
+        "offset": 687830,
+        "duration": 1540
+      },
+      {
+        "text": "其實tech工作薪水是很不錯",
+        "offset": 689390,
+        "duration": 2820
+      },
+      {
+        "text": "尤其是假如你是",
+        "offset": 692230,
+        "duration": 1190
+      },
+      {
+        "text": "比如說過去五年十年",
+        "offset": 693430,
+        "duration": 1430
+      },
+      {
+        "text": "都在tech的話",
+        "offset": 694870,
+        "duration": 780
+      },
+      {
+        "text": "其實現在應該都過得不錯",
+        "offset": 695670,
+        "duration": 2230
+      },
+      {
+        "text": "對但是也有",
+        "offset": 698080,
+        "duration": 1070
+      },
+      {
+        "text": "很多人還是",
+        "offset": 699160,
+        "duration": 630
+      },
+      {
+        "text": "在struggle存的沒有很多錢",
+        "offset": 699800,
+        "duration": 1900
+      },
+      {
+        "text": "我們剛剛有聊到",
+        "offset": 701720,
+        "duration": 710
+      },
+      {
+        "text": "就是假如你沒有家庭小孩的話",
+        "offset": 702440,
+        "duration": 1780
+      },
+      {
+        "text": "其實早就超過fat FIRE",
+        "offset": 704240,
+        "duration": 1660
+      },
+      {
+        "text": "嗯看在哪裡在",
+        "offset": 706370,
+        "duration": 1030
+      },
+      {
+        "text": "灣區可能沒有可是",
+        "offset": 707410,
+        "duration": 1590
+      },
+      {
+        "text": "如果比如說來日本的話應該有",
+        "offset": 709010,
+        "duration": 1910
+      },
+      {
+        "text": "FIRE對你來講已經是達到了",
+        "offset": 710930,
+        "duration": 1900
+      },
+      {
+        "text": "對就就是應該說你現在",
+        "offset": 712850,
+        "duration": 860
+      },
+      {
+        "text": "我覺得",
+        "offset": 713730,
+        "duration": 270
+      },
+      {
+        "text": "每個人的FIRE",
+        "offset": 714010,
+        "duration": 430
+      },
+      {
+        "text": "number不一樣",
+        "offset": 714450,
+        "duration": 700
+      },
+      {
+        "text": "對每",
+        "offset": 715170,
+        "duration": 230
+      },
+      {
+        "text": "個人的FIRE number",
+        "offset": 715410,
+        "duration": 590
+      },
+      {
+        "text": "不一樣但是以你的現在的狀態生活",
+        "offset": 716010,
+        "duration": 2910
+      },
+      {
+        "text": "以我的支出來說差不多",
+        "offset": 718940,
+        "duration": 1660
+      },
+      {
+        "text": "差不多對那假如",
+        "offset": 720620,
+        "duration": 1230
+      },
+      {
+        "text": "再加上假如你沒有",
+        "offset": 721860,
+        "duration": 1110
+      },
+      {
+        "text": "小孩沒有沒有家庭的話",
+        "offset": 722980,
+        "duration": 1460
+      },
+      {
+        "text": "那可能早就已經",
+        "offset": 724460,
+        "duration": 1230
+      },
+      {
+        "text": "可以退休了就是可以躺平對",
+        "offset": 725700,
+        "duration": 2260
+      },
+      {
+        "text": "對啊那有沒有什麼建議啊",
+        "offset": 727980,
+        "duration": 2230
+      },
+      {
+        "text": "工程師要怎麼樣可以早點去FIRE",
+        "offset": 730220,
+        "duration": 2500
+      },
+      {
+        "text": "老實說最有",
+        "offset": 732740,
+        "duration": 1390
+      },
+      {
+        "text": "最有用的建議通常就是最無聊的建議",
+        "offset": 734140,
+        "duration": 1940
+      },
+      {
+        "text": "就像剛剛講的",
+        "offset": 736100,
+        "duration": 670
+      },
+      {
+        "text": "如果你可以你知道",
+        "offset": 736780,
+        "duration": 1710
+      },
+      {
+        "text": "什麼是對的事情然後",
+        "offset": 738500,
+        "duration": 830
+      },
+      {
+        "text": "你貫徹你的紀律去做",
+        "offset": 739340,
+        "duration": 1540
+      },
+      {
+        "text": "那其實就是基本上就是時間問題",
+        "offset": 741400,
+        "duration": 2620
+      },
+      {
+        "text": "我覺得前幾年的話那時候利率很低",
+        "offset": 744040,
+        "duration": 2740
+      },
+      {
+        "text": "那那時候如果你",
+        "offset": 746800,
+        "duration": 870
+      },
+      {
+        "text": "可以去槓桿買房子",
+        "offset": 747680,
+        "duration": 1110
+      },
+      {
+        "text": "那就是一個不錯的選擇",
+        "offset": 748800,
+        "duration": 1260
+      },
+      {
+        "text": "我覺得很多時候就是怎麼講",
+        "offset": 750080,
+        "duration": 2380
+      },
+      {
+        "text": "你要知道你要先知道一個",
+        "offset": 752480,
+        "duration": 1590
+      },
+      {
+        "text": "對的principle",
+        "offset": 754080,
+        "duration": 990
+      },
+      {
+        "text": "然後等待機會",
+        "offset": 755080,
+        "duration": 1020
+      },
+      {
+        "text": "然後等到機會一來",
+        "offset": 756120,
+        "duration": 1270
+      },
+      {
+        "text": "就不要猶豫立刻下手",
+        "offset": 757400,
+        "duration": 1340
+      },
+      {
+        "text": "買賣股票也是像",
+        "offset": 758960,
+        "duration": 1670
+      },
+      {
+        "text": "我剛剛講的利率的時機也是",
+        "offset": 760640,
+        "duration": 2220
+      },
+      {
+        "text": "還有就是找工作的時機也是",
+        "offset": 762880,
+        "duration": 2260
+      },
+      {
+        "text": "你找到一個對的",
+        "offset": 765160,
+        "duration": 830
+      },
+      {
+        "text": "賽道然後剛好有這個",
+        "offset": 766000,
+        "duration": 1380
+      },
+      {
+        "text": "機會你就不要回頭",
+        "offset": 767390,
+        "duration": 1230
+      },
+      {
+        "text": "就進去就下去做這樣子",
+        "offset": 768630,
+        "duration": 1340
+      },
+      {
+        "text": "對其實人生做",
+        "offset": 769990,
+        "duration": 1510
+      },
+      {
+        "text": "這些決定都是在投資工作",
+        "offset": 771510,
+        "duration": 1580
+      },
+      {
+        "text": "各種各種決定都是在投資",
+        "offset": 773270,
+        "duration": 1820
+      },
+      {
+        "text": "對因為在對的時間",
+        "offset": 775110,
+        "duration": 1110
+      },
+      {
+        "text": "做對的事情其實就是這麼簡單",
+        "offset": 776230,
+        "duration": 1700
+      },
+      {
+        "text": "那你只要十個",
+        "offset": 778030,
+        "duration": 1110
+      },
+      {
+        "text": "裡面有超過一半是對的決定的話",
+        "offset": 779150,
+        "duration": 2820
+      },
+      {
+        "text": "其實你都不會過得太差",
+        "offset": 781990,
+        "duration": 1460
+      },
+      {
+        "text": "還有一個很重要的就是",
+        "offset": 783470,
+        "duration": 1950
+      },
+      {
+        "text": "我常常在英文",
+        "offset": 785430,
+        "duration": 910
+      },
+      {
+        "text": "英文那些平台上網站看到就是",
+        "offset": 786350,
+        "duration": 1980
+      },
+      {
+        "text": "你能不能FIRE是",
+        "offset": 788450,
+        "duration": 710
+      },
+      {
+        "text": "取決於你的消費習慣嘛",
+        "offset": 789170,
+        "duration": 1140
+      },
+      {
+        "text": "像像Terry這種",
+        "offset": 790330,
+        "duration": 1350
+      },
+      {
+        "text": "這麼低物慾的",
+        "offset": 791690,
+        "duration": 990
+      },
+      {
+        "text": "當然很快一下就FIRE了",
+        "offset": 792690,
+        "duration": 940
+      },
+      {
+        "text": "如果是以消費來說的話",
+        "offset": 793650,
+        "duration": 1660
+      },
+      {
+        "text": "你要小心就是",
+        "offset": 795330,
+        "duration": 910
+      },
+      {
+        "text": "一些你有luxury expense creep in",
+        "offset": 796250,
+        "duration": 2420
+      },
+      {
+        "text": "就是有些人可能覺得",
+        "offset": 798690,
+        "duration": 1620
+      },
+      {
+        "text": "說我今天加薪了我就要換個大房子",
+        "offset": 800320,
+        "duration": 2180
+      },
+      {
+        "text": "我就要買個新車",
+        "offset": 802520,
+        "duration": 1340
+      },
+      {
+        "text": "像比如說有些東西",
+        "offset": 803880,
+        "duration": 950
+      },
+      {
+        "text": "你也要分辨出分別出",
+        "offset": 804840,
+        "duration": 1390
+      },
+      {
+        "text": "說什麼東西是liability",
+        "offset": 806240,
+        "duration": 1500
+      },
+      {
+        "text": "什麼東西是asset",
+        "offset": 807760,
+        "duration": 910
+      },
+      {
+        "text": "像車子就是liability",
+        "offset": 808680,
+        "duration": 1780
+      },
+      {
+        "text": "那我很不理解",
+        "offset": 810660,
+        "duration": 990
+      },
+      {
+        "text": "就是為什麼很多人喜歡買豪車",
+        "offset": 811660,
+        "duration": 1820
+      },
+      {
+        "text": "因為車子本身是liability",
+        "offset": 813500,
+        "duration": 1420
+      },
+      {
+        "text": "他買他從落地的一瞬間就開始貶值",
+        "offset": 814930,
+        "duration": 2910
+      },
+      {
+        "text": "而且是大幅貶值",
+        "offset": 817860,
+        "duration": 1380
+      },
+      {
+        "text": "那如果你當然",
+        "offset": 819260,
+        "duration": 910
+      },
+      {
+        "text": "你如果這是買的東西",
+        "offset": 820180,
+        "duration": 1190
+      },
+      {
+        "text": "可以讓你有幸福感",
+        "offset": 821380,
+        "duration": 1260
+      },
+      {
+        "text": "然後你也是對",
+        "offset": 822660,
+        "duration": 790
+      },
+      {
+        "text": "這方面有興趣那就另當別論",
+        "offset": 823460,
+        "duration": 1460
+      },
+      {
+        "text": "但是如果是不是的",
+        "offset": 824940,
+        "duration": 1390
+      },
+      {
+        "text": "話那你就要考量到說",
+        "offset": 826340,
+        "duration": 1220
+      },
+      {
+        "text": "有些東西是會",
+        "offset": 827580,
+        "duration": 870
+      },
+      {
+        "text": "自己是asset是它會自己增長",
+        "offset": 828460,
+        "duration": 1780
+      },
+      {
+        "text": "有些東西是不會",
+        "offset": 830260,
+        "duration": 990
+      },
+      {
+        "text": "增長那你就要在買之前要考慮清楚",
+        "offset": 831260,
+        "duration": 2900
+      },
+      {
+        "text": "其實我覺得很多人",
+        "offset": 834240,
+        "duration": 750
+      },
+      {
+        "text": "買豪車的原因我我我排除富豪之外",
+        "offset": 835000,
+        "duration": 3180
+      },
+      {
+        "text": "就很有錢的人那他們買豪車就是正常",
+        "offset": 838200,
+        "duration": 2460
+      },
+      {
+        "text": "那我說一般中產可能買豪車的原因是",
+        "offset": 840680,
+        "duration": 2580
+      },
+      {
+        "text": "我覺得",
+        "offset": 843280,
+        "duration": 630
+      },
+      {
+        "text": "我不知道是不是正確就是",
+        "offset": 843920,
+        "duration": 1190
+      },
+      {
+        "text": "在那個圈子裡面",
+        "offset": 845120,
+        "duration": 1140
+      },
+      {
+        "text": "你看到旁邊的人都在做這個事情",
+        "offset": 846280,
+        "duration": 2029.9999999999998
+      },
+      {
+        "text": "或是可能大家會覺得",
+        "offset": 848330,
+        "duration": 1070
+      },
+      {
+        "text": "這個是一個很棒的一個事情",
+        "offset": 849410,
+        "duration": 1780
+      },
+      {
+        "text": "然後買車是一個讓你幸福感提升",
+        "offset": 851210,
+        "duration": 2460
+      },
+      {
+        "text": "應該說我覺得很多人觀念會覺得說",
+        "offset": 854090,
+        "duration": 1950
+      },
+      {
+        "text": "我這麼辛苦的賺錢為什麼",
+        "offset": 856050,
+        "duration": 2180
+      },
+      {
+        "text": "為了就是可以讓生活過得好一點然後我",
+        "offset": 858250,
+        "duration": 2150
+      },
+      {
+        "text": "可以把錢買到我自己想買的東西",
+        "offset": 860410,
+        "duration": 2180
+      },
+      {
+        "text": "那我覺得這個東西是沒有錯",
+        "offset": 862670,
+        "duration": 1260
+      },
+      {
+        "text": "完全沒有問題",
+        "offset": 863950,
+        "duration": 740
+      },
+      {
+        "text": "完全沒有任何問題對",
+        "offset": 864710,
+        "duration": 910
+      },
+      {
+        "text": "但問題是我覺得",
+        "offset": 865630,
+        "duration": 1630
+      },
+      {
+        "text": "很多時候是做這個事情",
+        "offset": 867270,
+        "duration": 1620
+      },
+      {
+        "text": "你得到的這個回報",
+        "offset": 868910,
+        "duration": 1270
+      },
+      {
+        "text": "是不是真的可以讓你",
+        "offset": 870190,
+        "duration": 1350
+      },
+      {
+        "text": "持續性的幸福感提升",
+        "offset": 871550,
+        "duration": 1990
+      },
+      {
+        "text": "對你就想看說",
+        "offset": 873550,
+        "duration": 1110
+      },
+      {
+        "text": "你的first principle嘛",
+        "offset": 874670,
+        "duration": 2250
+      },
+      {
+        "text": "你的終極目標是什麼？",
+        "offset": 876940,
+        "duration": 1030
+      },
+      {
+        "text": "我想要存更多錢",
+        "offset": 877980,
+        "duration": 1020
+      },
+      {
+        "text": "那或許這個短",
+        "offset": 879020,
+        "duration": 1350
+      },
+      {
+        "text": "這一筆消費或許沒有可以",
+        "offset": 880380,
+        "duration": 2630
+      },
+      {
+        "text": "會讓你更難達成那個目標",
+        "offset": 883020,
+        "duration": 1460
+      },
+      {
+        "text": "那你就要考慮清楚說這個是不是值得",
+        "offset": 884500,
+        "duration": 1780
+      },
+      {
+        "text": "對因為因為我自己的想法是",
+        "offset": 886300,
+        "duration": 1490
+      },
+      {
+        "text": "豪車對我來講確實是",
+        "offset": 887800,
+        "duration": 2020
+      },
+      {
+        "text": "yeah我買一台很屌的車我覺得很爽",
+        "offset": 889840,
+        "duration": 2390
+      },
+      {
+        "text": "那個爽只是一下子而已",
+        "offset": 892240,
+        "duration": 1100
+      },
+      {
+        "text": "我真的要爽是什麼",
+        "offset": 893360,
+        "duration": 1430
+      },
+      {
+        "text": "我真的想爽的是",
+        "offset": 894800,
+        "duration": 910
+      },
+      {
+        "text": "我可以什麼事情都不做然後躺平",
+        "offset": 895720,
+        "duration": 1740
+      },
+      {
+        "text": "然後或是早點退休",
+        "offset": 897480,
+        "duration": 910
+      },
+      {
+        "text": "或是完全可以在人生比較早階段",
+        "offset": 898400,
+        "duration": 2220
+      },
+      {
+        "text": "比如說30歲出頭",
+        "offset": 900640,
+        "duration": 1070
+      },
+      {
+        "text": "或是35歲的時候",
+        "offset": 901790,
+        "duration": 950
+      },
+      {
+        "text": "我就可以不要去為了錢而工作",
+        "offset": 902750,
+        "duration": 1940
+      },
+      {
+        "text": "這是讓我覺得",
+        "offset": 904710,
+        "duration": 1190
+      },
+      {
+        "text": "可以一直在接下來人生",
+        "offset": 905910,
+        "duration": 1710
+      },
+      {
+        "text": "比較爽的一個事情",
+        "offset": 907630,
+        "duration": 1020
+      },
+      {
+        "text": "那這是我知道我自己想要的",
+        "offset": 908670,
+        "duration": 1670
+      },
+      {
+        "text": "所以我才可以用這個方式",
+        "offset": 910350,
+        "duration": 1430
+      },
+      {
+        "text": "去控制我自己不要去",
+        "offset": 911790,
+        "duration": 1660
+      },
+      {
+        "text": "可能要買一個豪車",
+        "offset": 913520,
+        "duration": 1350
+      },
+      {
+        "text": "啊或是幹什麼之類的",
+        "offset": 914880,
+        "duration": 1020
+      },
+      {
+        "text": "本身我對豪車也沒有什麼太大的興趣啦",
+        "offset": 915920,
+        "duration": 2060
+      },
+      {
+        "text": "誰不喜歡那種",
+        "offset": 918080,
+        "duration": 870
+      },
+      {
+        "text": "很fancy的東西對",
+        "offset": 918960,
+        "duration": 1190
+      },
+      {
+        "text": "我覺得每個人都會喜歡",
+        "offset": 920160,
+        "duration": 980
+      },
+      {
+        "text": "我當然",
+        "offset": 921160,
+        "duration": 670
+      },
+      {
+        "text": "yeah這個東西放在",
+        "offset": 921840,
+        "duration": 550
+      },
+      {
+        "text": "我面前我也覺得很爽",
+        "offset": 922400,
+        "duration": 1020
+      },
+      {
+        "text": "但是那個爽感就是一下下而已",
+        "offset": 923440,
+        "duration": 2230
+      },
+      {
+        "text": "對但這個也不是",
+        "offset": 925690,
+        "duration": 1030
+      },
+      {
+        "text": "說你完全不能做任何消費",
+        "offset": 926730,
+        "duration": 1420
+      },
+      {
+        "text": "我覺得只是說就",
+        "offset": 928170,
+        "duration": 2430
+      },
+      {
+        "text": "像剛才講的任何決定",
+        "offset": 930610,
+        "duration": 1310
+      },
+      {
+        "text": "都是一筆investment",
+        "offset": 931930,
+        "duration": 1020
+      },
+      {
+        "text": "你就要考慮清楚",
+        "offset": 932970,
+        "duration": 830
+      },
+      {
+        "text": "說這筆investment是不是worth it這樣子",
+        "offset": 933810,
+        "duration": 1700
+      },
+      {
+        "text": "雖然說我可能",
+        "offset": 935530,
+        "duration": 990
+      },
+      {
+        "text": "沒有什麼物慾但是我",
+        "offset": 936530,
+        "duration": 990
+      },
+      {
+        "text": "覺得事實的去",
+        "offset": 937530,
+        "duration": 1270
+      },
+      {
+        "text": "reward你自己還是蠻重要的",
+        "offset": 938810,
+        "duration": 2100
+      },
+      {
+        "text": "那對我來講最",
+        "offset": 940930,
+        "duration": 1030
+      },
+      {
+        "text": "快樂的事情可能是可以",
+        "offset": 941970,
+        "duration": 1350
+      },
+      {
+        "text": "去吃一頓好吃的",
+        "offset": 943330,
+        "duration": 1180
+      },
+      {
+        "text": "或是比如說偶爾做個",
+        "offset": 944530,
+        "duration": 1390
+      },
+      {
+        "text": "商務艙這對我來",
+        "offset": 945930,
+        "duration": 990
+      },
+      {
+        "text": "講就是一個蠻好的reward",
+        "offset": 946930,
+        "duration": 1350
+      },
+      {
+        "text": "我就不需要就是",
+        "offset": 948290,
+        "duration": 910
+      },
+      {
+        "text": "太多物質上面的東西",
+        "offset": 949210,
+        "duration": 1660
+      },
+      {
+        "text": "也是因為這樣子",
+        "offset": 950950,
+        "duration": 790
+      },
+      {
+        "text": "對我來講FIRE其實沒有那麼難啦",
+        "offset": 951750,
+        "duration": 2180
+      },
+      {
+        "text": "現在對我來說我會",
+        "offset": 953950,
+        "duration": 1070
+      },
+      {
+        "text": "願意正值的花錢是體驗和經驗上吧",
+        "offset": 955030,
+        "duration": 2900
+      },
+      {
+        "text": "比如說跟小孩子一起去旅行啊",
+        "offset": 957950,
+        "duration": 2420
+      },
+      {
+        "text": "還是說花錢省時間啊",
+        "offset": 960390,
+        "duration": 2820
+      },
+      {
+        "text": "有些東西你花一點小錢可以省時間",
+        "offset": 963230,
+        "duration": 2580
+      },
+      {
+        "text": "那我如果這個金額",
+        "offset": 965830,
+        "duration": 1870
+      },
+      {
+        "text": "是我覺得合理那我就會毫不猶豫去做",
+        "offset": 967710,
+        "duration": 2380
+      },
+      {
+        "text": "因為錢是買不回來時間的",
+        "offset": 970110,
+        "duration": 1740
+      },
+      {
+        "text": "沒錯對時間是唯一一個有上限的",
+        "offset": 971870,
+        "duration": 3640
+      },
+      {
+        "text": "錢永遠可以再賺時間是每個人都一樣",
+        "offset": 975530,
+        "duration": 2540
+      },
+      {
+        "text": "對",
+        "offset": 978090,
+        "duration": 380
+      },
+      {
+        "text": "我比較想問的是因為",
+        "offset": 978610,
+        "duration": 1190
+      },
+      {
+        "text": "我們現在都蠻瘋的",
+        "offset": 979810,
+        "duration": 1180
+      },
+      {
+        "text": "我們都是很大倉位都是在個股",
+        "offset": 981010,
+        "duration": 2300
+      },
+      {
+        "text": "那你覺得在人生",
+        "offset": 983510,
+        "duration": 1550
+      },
+      {
+        "text": "哪個階段你會把它慢慢轉為大盤",
+        "offset": 985070,
+        "duration": 3180
+      },
+      {
+        "text": "就是S&amp;P500或是QQQ之類的",
+        "offset": 988270,
+        "duration": 2460
+      },
+      {
+        "text": "還是你覺得你永遠都會一直在壓個股",
+        "offset": 990750,
+        "duration": 2540
+      },
+      {
+        "text": "比例上來說可能隨著",
+        "offset": 993310,
+        "duration": 2380
+      },
+      {
+        "text": "年紀變大可能會開始降低個股的比例",
+        "offset": 995700,
+        "duration": 3060
+      },
+      {
+        "text": "因為畢竟你隨著年紀越來越大",
+        "offset": 998900,
+        "duration": 2500
+      },
+      {
+        "text": "另外一方面來說就是",
+        "offset": 1001420,
+        "duration": 830
+      },
+      {
+        "text": "你的時間越來越少",
+        "offset": 1002260,
+        "duration": 1220
+      },
+      {
+        "text": "所以你你更難去承受說大的波動",
+        "offset": 1003500,
+        "duration": 2800
+      },
+      {
+        "text": "一些波動因為有些",
+        "offset": 1006320,
+        "duration": 1310
+      },
+      {
+        "text": "波動雖然很快就回來",
+        "offset": 1007640,
+        "duration": 1180
+      },
+      {
+        "text": "但是那也是好幾年的時間",
+        "offset": 1008840,
+        "duration": 1500
+      },
+      {
+        "text": "那你可能到時候好",
+        "offset": 1010360,
+        "duration": 1390
+      },
+      {
+        "text": "幾年時間佔你人生",
+        "offset": 1011760,
+        "duration": 950
+      },
+      {
+        "text": "只剩下只剩下百分之多少之類的",
+        "offset": 1012720,
+        "duration": 2110
+      },
+      {
+        "text": "所以搞不好永遠回",
+        "offset": 1014840,
+        "duration": 1230
+      },
+      {
+        "text": "不來就是在你有生之年搞不好回不來",
+        "offset": 1016080,
+        "duration": 2100
+      },
+      {
+        "text": "對所以隨著年紀變大我可能",
+        "offset": 1018480,
+        "duration": 1950
+      },
+      {
+        "text": "會allocate一些部分",
+        "offset": 1020440,
+        "duration": 2110
+      },
+      {
+        "text": "到fix income",
+        "offset": 1022560,
+        "duration": 900
+      },
+      {
+        "text": "就是那些fix income可以",
+        "offset": 1023480,
+        "duration": 1030
+      },
+      {
+        "text": "支撐我的日常生活花費",
+        "offset": 1024520,
+        "duration": 1660
+      },
+      {
+        "text": "然後可能再多",
+        "offset": 1026200,
+        "duration": 670
+      },
+      {
+        "text": "一點一些容錯空間這樣子",
+        "offset": 1026880.0000000001,
+        "duration": 1980
+      },
+      {
+        "text": "嗯嗯嗯",
+        "offset": 1028880.0000000001,
+        "duration": 1020
+      },
+      {
+        "text": "對yeah that makes sense",
+        "offset": 1029920.0000000001,
+        "duration": 1140
+      },
+      {
+        "text": "我覺得我還是會",
+        "offset": 1031160.0000000001,
+        "duration": 630
+      },
+      {
+        "text": "有一部分的倉位",
+        "offset": 1031800,
+        "duration": 990
+      },
+      {
+        "text": "是壓住在一些我自己很看好的",
+        "offset": 1032800,
+        "duration": 2100
+      },
+      {
+        "text": "我至少會有",
+        "offset": 1034920.0000000001,
+        "duration": 590
+      },
+      {
+        "text": "一小部分",
+        "offset": 1035520,
+        "duration": 430
+      },
+      {
+        "text": "fix income是可以支撐我生活花費",
+        "offset": 1035960,
+        "duration": 2020
+      },
+      {
+        "text": "那剩下可能就是equity這樣子",
+        "offset": 1038000,
+        "duration": 1700
+      },
+      {
+        "text": "對我覺得我是想",
+        "offset": 1039720,
+        "duration": 1590
+      },
+      {
+        "text": "把我的資產一部分",
+        "offset": 1041319.9999999999,
+        "duration": 1860
+      },
+      {
+        "text": "是能給我一個",
+        "offset": 1043190,
+        "duration": 1350
+      },
+      {
+        "text": "很充裕的生活expense這些",
+        "offset": 1044550,
+        "duration": 1860
+      },
+      {
+        "text": "那剩下的錢我就",
+        "offset": 1046430.0000000001,
+        "duration": 1310
+      },
+      {
+        "text": "可以把它壓在我覺得很有未來的公司",
+        "offset": 1047750,
+        "duration": 2380
+      },
+      {
+        "text": "你知道有一個",
+        "offset": 1050150,
+        "duration": 590
+      },
+      {
+        "text": "hack我不曉得",
+        "offset": 1050750,
+        "duration": 550
+      },
+      {
+        "text": "有沒有在影片上面",
+        "offset": 1051310,
+        "duration": 990
+      },
+      {
+        "text": "講叫buy borrow die",
+        "offset": 1052310,
+        "duration": 1310
+      },
+      {
+        "text": "哦",
+        "offset": 1053630,
+        "duration": 770
+      },
+      {
+        "text": "就是你把你的",
+        "offset": 1054420,
+        "duration": 950
+      },
+      {
+        "text": "equity傳給你的小孩的時候",
+        "offset": 1055380,
+        "duration": 2700
+      },
+      {
+        "text": "他的cost basis會重新調到他",
+        "offset": 1058100,
+        "duration": 2510
+      },
+      {
+        "text": "接收時候的cost basis",
+        "offset": 1060620,
+        "duration": 1220
+      },
+      {
+        "text": "所以他們沒有",
+        "offset": 1061860,
+        "duration": 630
+      },
+      {
+        "text": "任何capital gain",
+        "offset": 1062500,
+        "duration": 900
+      },
+      {
+        "text": "對那那那適用",
+        "offset": 1063420,
+        "duration": 1230
+      },
+      {
+        "text": "在美國啦就是對",
+        "offset": 1064660,
+        "duration": 1550
+      },
+      {
+        "text": "capital gain來講對",
+        "offset": 1066220,
+        "duration": 1020
+      },
+      {
+        "text": "對因為美國",
+        "offset": 1067260,
+        "duration": 910
+      },
+      {
+        "text": "有capital gain tax對",
+        "offset": 1068180,
+        "duration": 1470
+      },
+      {
+        "text": "對那可能這個就",
+        "offset": 1069670,
+        "duration": 1270
+      },
+      {
+        "text": "不一定每個國家都都適用",
+        "offset": 1070950,
+        "duration": 1540
+      },
+      {
+        "text": "而且個股的話也",
+        "offset": 1072510,
+        "duration": 1270
+      },
+      {
+        "text": "很難說你可以hold",
+        "offset": 1073790,
+        "duration": 1430
+      },
+      {
+        "text": "到傳到小孩的時候",
+        "offset": 1075230,
+        "duration": 1420
+      },
+      {
+        "text": "因為個股就是有",
+        "offset": 1076670,
+        "duration": 990
+      },
+      {
+        "text": "這個缺點你要知道什麼時候要放手",
+        "offset": 1077670,
+        "duration": 1740
+      },
+      {
+        "text": "不像大盤就無腦一直hold",
+        "offset": 1079640,
+        "duration": 1780
+      },
+      {
+        "text": "對",
+        "offset": 1081440,
+        "duration": 300
+      },
+      {
+        "text": "另外一點就是我想",
+        "offset": 1081760,
+        "duration": 1350
+      },
+      {
+        "text": "問你是關於crypto",
+        "offset": 1083120,
+        "duration": 1100
+      },
+      {
+        "text": "因為因為你是",
+        "offset": 1084240,
+        "duration": 710
+      },
+      {
+        "text": "沒有投資任何",
+        "offset": 1084960,
+        "duration": 1030
+      },
+      {
+        "text": "crypto相關的東西對吧",
+        "offset": 1086000,
+        "duration": 1580
+      },
+      {
+        "text": "我之前有但是我後來就賣掉",
+        "offset": 1087600,
+        "duration": 2340
+      },
+      {
+        "text": "因為那個波動實在太",
+        "offset": 1089960,
+        "duration": 710
+      },
+      {
+        "text": "大到我當初可以承受的那個波動範圍",
+        "offset": 1090680,
+        "duration": 4080
+      },
+      {
+        "text": "因為crypto",
+        "offset": 1095600,
+        "duration": 510
+      },
+      {
+        "text": "跟stock market最",
+        "offset": 1096120,
+        "duration": 950
+      },
+      {
+        "text": "大的差異是它是24小時",
+        "offset": 1097080,
+        "duration": 1980
+      },
+      {
+        "text": "它可以隨時因為",
+        "offset": 1099200,
+        "duration": 1710
+      },
+      {
+        "text": "一個一個消息面的東西",
+        "offset": 1100920,
+        "duration": 1750
+      },
+      {
+        "text": "就開始就掉下去",
+        "offset": 1102680,
+        "duration": 1500
+      },
+      {
+        "text": "然後也可以隨時",
+        "offset": 1104200,
+        "duration": 950
+      },
+      {
+        "text": "因為一個消息面的東西就上來",
+        "offset": 1105160,
+        "duration": 1820
+      },
+      {
+        "text": "而且它不",
+        "offset": 1107000,
+        "duration": 550
+      },
+      {
+        "text": "像stock market",
+        "offset": 1107560,
+        "duration": 1270
+      },
+      {
+        "text": "有open market",
+        "offset": 1108840,
+        "duration": 910
+      },
+      {
+        "text": "跟close market",
+        "offset": 1109760,
+        "duration": 950
+      },
+      {
+        "text": "它是隨時都有可能",
+        "offset": 1110720,
+        "duration": 1430
+      },
+      {
+        "text": "波動所以它的對",
+        "offset": 1112160,
+        "duration": 1470
+      },
+      {
+        "text": "我那時候來說我",
+        "offset": 1113640,
+        "duration": 1030
+      },
+      {
+        "text": "心臟我沒辦法承受那個波動",
+        "offset": 1114680,
+        "duration": 1420
+      },
+      {
+        "text": "所以我後來就全部",
+        "offset": 1116120,
+        "duration": 630
+      },
+      {
+        "text": "賣掉但是我現在在找",
+        "offset": 1116760,
+        "duration": 1510
+      },
+      {
+        "text": "我現在在找一個",
+        "offset": 1118280,
+        "duration": 1190
+      },
+      {
+        "text": "時機可以買一點Bitcoin",
+        "offset": 1119480,
+        "duration": 1030
+      },
+      {
+        "text": "哦我覺",
+        "offset": 1120760,
+        "duration": 1420
+      },
+      {
+        "text": "買一點Bitcoin是還不錯",
+        "offset": 1122190,
+        "duration": 1220
+      },
+      {
+        "text": "我有考慮買一點Bitcoin",
+        "offset": 1123550,
+        "duration": 1340
+      },
+      {
+        "text": "小孩以後長大的時候",
+        "offset": 1124910,
+        "duration": 1750
+      },
+      {
+        "text": "嗯我爸在那個時候是有買的",
+        "offset": 1126670,
+        "duration": 1860
+      },
+      {
+        "text": "其實我那個時候",
+        "offset": 1128550,
+        "duration": 1230
+      },
+      {
+        "text": "那時候大概十年前那",
+        "offset": 1129790,
+        "duration": 1510
+      },
+      {
+        "text": "時候就有人在說要買Bitcoin",
+        "offset": 1131310,
+        "duration": 1340
+      },
+      {
+        "text": "然後那時候大部分人",
+        "offset": 1132670,
+        "duration": 1270
+      },
+      {
+        "text": "都覺得說這只是在",
+        "offset": 1133950,
+        "duration": 1190
+      },
+      {
+        "text": "炒作所以我沒有去買",
+        "offset": 1135150,
+        "duration": 2170
+      },
+      {
+        "text": "對而且說實話你十年前買",
+        "offset": 1137340,
+        "duration": 1990
+      },
+      {
+        "text": "比如說我舉個例子",
+        "offset": 1139340,
+        "duration": 940
+      },
+      {
+        "text": "比如說你10塊錢買Bitcoin",
+        "offset": 1140300,
+        "duration": 1550
+      },
+      {
+        "text": "你能不能拿到現在也很難",
+        "offset": 1141860,
+        "duration": 1700
+      },
+      {
+        "text": "除非你把那個account忘掉",
+        "offset": 1143660,
+        "duration": 1700
+      },
+      {
+        "text": "對除非你忘掉",
+        "offset": 1145490,
+        "duration": 1140
+      },
+      {
+        "text": "很多人會覺得",
+        "offset": 1146650,
+        "duration": 750
+      },
+      {
+        "text": "說哦我如果十年前或是二十",
+        "offset": 1147410,
+        "duration": 2029.9999999999998
+      },
+      {
+        "text": "年前就買Bitcoin",
+        "offset": 1149450,
+        "duration": 910
+      },
+      {
+        "text": "二十年前",
+        "offset": 1150370,
+        "duration": 510
+      },
+      {
+        "text": "還沒有Bitcoin",
+        "offset": 1150890,
+        "duration": 510
+      },
+      {
+        "text": "十七八年前",
+        "offset": 1151410,
+        "duration": 950
+      },
+      {
+        "text": "就是十年前那時候",
+        "offset": 1152370,
+        "duration": 790
+      },
+      {
+        "text": "就有很多人在講Bitcoin",
+        "offset": 1153170,
+        "duration": 860
+      },
+      {
+        "text": "對那問題是很多人會",
+        "offset": 1154050,
+        "duration": 2150
+      },
+      {
+        "text": "想說我那時候",
+        "offset": 1156210,
+        "duration": 1020
+      },
+      {
+        "text": "買我現在就怎麼樣怎麼樣",
+        "offset": 1157240,
+        "duration": 1140
+      },
+      {
+        "text": "但其實現實不會是這樣",
+        "offset": 1158400,
+        "duration": 1590
+      },
+      {
+        "text": "因為你可能十塊錢買",
+        "offset": 1160000,
+        "duration": 1260
+      },
+      {
+        "text": "對你十塊錢買",
+        "offset": 1161280,
+        "duration": 1030
+      },
+      {
+        "text": "你能拿到100我覺得就已經很屌了",
+        "offset": 1162320,
+        "duration": 2300
+      },
+      {
+        "text": "對你翻十倍對不對",
+        "offset": 1164760,
+        "duration": 1390
+      },
+      {
+        "text": "那很多人是可能翻一倍兩倍",
+        "offset": 1166160,
+        "duration": 1710
+      },
+      {
+        "text": "他就把它賣掉了",
+        "offset": 1167880,
+        "duration": 820
+      },
+      {
+        "text": "對那就是大部分",
+        "offset": 1168720,
+        "duration": 990
+      },
+      {
+        "text": "散戶心態所以也是",
+        "offset": 1169720,
+        "duration": 1030
+      },
+      {
+        "text": "為什麼很多人不適合主動投資",
+        "offset": 1170760,
+        "duration": 2820
+      },
+      {
+        "text": "對沒錯所以說就是",
+        "offset": 1173600,
+        "duration": 1470
+      },
+      {
+        "text": "要做一些非常反人性的東西",
+        "offset": 1175080,
+        "duration": 2300
+      },
+      {
+        "text": "而且主動還有一個",
+        "offset": 1177400,
+        "duration": 990
+      },
+      {
+        "text": "沒有主動還有一個特點就是",
+        "offset": 1178400,
+        "duration": 1860
+      },
+      {
+        "text": "我們剛剛講的",
+        "offset": 1180340,
+        "duration": 550
+      },
+      {
+        "text": "都是那些長期往上的個股",
+        "offset": 1180900,
+        "duration": 3190
+      },
+      {
+        "text": "但是也有一些個股",
+        "offset": 1184100,
+        "duration": 1070
+      },
+      {
+        "text": "是下來就回不來了",
+        "offset": 1185180,
+        "duration": 1110
+      },
+      {
+        "text": "這也是主動投資的風險",
+        "offset": 1186300,
+        "duration": 1260
+      },
+      {
+        "text": "對",
+        "offset": 1187580,
+        "duration": 620
+      },
+      {
+        "text": "對",
+        "offset": 1188220,
+        "duration": 1260
+      },
+      {
+        "text": "沒錯",
+        "offset": 1189580,
+        "duration": 510
+      }
+    ],
+    "source": "YouTube Transcript",
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "author": "Terry Chen 泰瑞",
+    "authorUrl": "https://www.youtube.com/@hackbearterry",
+    "views": "",
+    "date": "",
+    "avatar": "",
+    "subs": ""
+  }
+}

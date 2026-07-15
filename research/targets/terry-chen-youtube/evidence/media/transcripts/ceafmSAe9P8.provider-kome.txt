@@ -1,0 +1,1894 @@
+Hello大家好我是Terry
+今天呢邀請了特別來賓
+一個
+新創公司的CEO founder
+玉珊
+來到頻道
+跟大家聊一下關於startup
+還有一些她的經驗
+嗯
+那你覺得西雅圖怎麼樣
+你上次來西雅圖什麼時候
+我完全欸
+高中吧
+高中哦
+我高中的時候來過一個暑假學英文
+OK高中什麼時候
+我高中是17年前了
+很久很久以前
+OK
+玉珊你最近
+就是你們的startup新創公司
+剛結束了融資是最近嗎
+還是
+哦應該說
+10月的時候加入加速器
+然後那時候算結束
+去年10月的時候
+對對對
+然後現在加速器才剛開始
+嗯
+那我覺得蠻厲害的啦因為
+其實現在
+呃startup很競爭
+尤其是
+VC要給錢的情況下
+因為因為以前
+VC錢很多然後隨便砸
+尤其在疫情的時候
+那現在因為
+現在錢其實砸的地方很重要
+然後
+要看founder的一些特質
+還有看startup的一些特質
+要去砸錢
+我覺得現在這個環境下要融資是比較
+困難的相對來講比較困難
+你之前有融過資嗎還是這是第一次
+很多次
+很多次OK
+呃我一開始融資的時候
+是就是先Angel round
+Angel round
+是走的最順的
+因為那時候
+有friends
+and family
+然後跟人家介紹的天使投資人
+Angel round
+是在什麼時候
+呃我一開公司的時候就融了
+OK
+對那時候就融了46萬
+OK嗯嗯嗯
+OK
+所以開公司的時候是去年嗎
+沒有欸2024年5月
+哦OK所以大概一年多前
+對對對對
+然後你們公司
+是叫Mirror AI
+Mirror Mirror
+以前一直來都是這個名字嗎還是
+一直都是名字想過要改幾次
+可是不小心就會上了一些文章
+就發現不能改了
+你說已經有一些
+在不同的地方社群媒體報導
+然後你就覺得OK
+就是
+stick with the name
+對對對對對
+那你可以給我一個
+high level的
+一個pitch
+就是你的名字你的公司是做什麼
+嗯
+對
+我們現在在做的是
+專門幫時尚品牌做的
+一個生圖workflow
+嗯哼
+對那因為非常非常多的
+想要做類似事情的競品
+他們基本上是會
+呃用的還是很AI
+會跟你說你要自己先選擇模型啊
+要選擇生圖的各種方式調參數
+但是我們是把這些全部都
+讓使用者不用做決定
+OK
+對我們會自動根據這個
+衣品的特質
+還有你想要生圖的目標等等
+幫你自動生出來
+然後不用去做任何的手動控制
+生圖就是比如說我今天要
+用個雜誌封面
+或是我要有一個產品的宣傳
+那我可能有些model
+然後可以用你們的產品去把東西給
+生出來就那個圖片我不需要自己去拍
+是這個意思嗎
+是的是的是的那
+嗯其中有一部分我們現在還不能
+還不能公佈
+可是可以先公佈的就是我們在
+呃推出的品牌生成器
+所以就是單純就衣品來講的話
+嗯
+嗯因為大家看電商的時候
+都會看到衣服的
+品牌圖
+那其實那個品牌圖我們
+跟很多品牌採訪的時候
+他們都會抱怨說那個品牌圖
+很耗時然後其實也很耗錢
+而且就這些creative來講
+其實他們拍這個
+一點激發創意激發都沒有
+OK
+對所以我們用AI的方式
+來幫他們製造這樣子的圖
+然後基本上他們用
+drag and drop
+就可以去做這些事情
+回過來的時候
+幾百件衣服我們就幫你弄好了
+哦你說直接在衣服上面
+把品牌弄上去嗎
+還是它怎麼work
+哦嗯
+我今天是一個雜誌的編輯好了
+然後我來找你們
+然後我是怎麼樣去生成一個圖片
+從零到一
+嗯嗯嗯
+的一個過程
+我們用品牌舉例好了
+因為雜誌跟雜誌編輯
+跟品牌的use case
+還是不一樣
+嗯所以如果是品牌的話
+基本上他們的倉儲裡就會有已經
+manufacture好的衣服
+那可是如果要做初高質感的品牌圖
+以前其實是要請攝影師
+然後在攝影棚裡面拍好
+然後要完全有運燙好
+整個衣服要整理的整整齊齊
+事後還要再修圖
+嗯
+那versus我們現在提供的服務
+基本上品牌owner也好
+或者是他們的美編或是實習生
+他們拿手機就可以了
+然後手機基本上衣服簡單掛在人形上
+或是一架上正反兩面稍微拍
+光線也不用調也不用去做
+就是steaming啊
+也不用去把它用品
+然後放到我們品牌生成器之後
+就會自動生成漂亮的
+正反面圖
+跟商品敘述
+哦OK所以說直接就可以上到那個
+他們網站
+比如
+網站的product page
+對對對
+上面這樣子
+我們現在有提供就是
+可以讓他們直接
+跟商家必做integration
+嗯哼
+對然後我們下禮拜
+會推出
+Shopify的
+integration
+就像是美國的Shopline
+嗯哼
+嗯那另外我們在開發的
+這個月底要推出的就是
+這個其實可以用成API
+我們就API offering
+嗯哼
+那這樣
+最難的地方在哪裡
+因為我感覺好像
+會有很多的就是
+你們生成出來的東西
+需要fine tune
+就可能我也覺得顏色好像不太對
+或者是我可能光線或是
+身為一個customer
+我會想要就是
+網站上看到的東西跟實體寄到
+收到的東西不太一樣
+那這個是這我覺得會比較多的事情
+還是有一些其他的
+嗯嗯嗯
+對
+我們之前開始做的時候很大一個部分
+原本是精準度可是精準度如果你想成
+現在生圖模型就是一直在進步的話
+這其實漸漸是
+會被solve的problem
+所以如果講
+這個生成generation本身
+單一一個商品做生成的時候
+它準確度已經不是我們需要煩惱的
+反而是你一個商家
+有一整個collection
+你生成的時候的那個一致性很難
+OK
+對就是你要怎麼可以控制說
+我生成出來的商品
+他們的袖子角度也好
+然後或者商品呈現
+是要砰的還是要扁的
+那或者是他們的陰影
+是不是能夠都非常一致
+那我們要能確保說假設這次的
+collection有60件
+他們呈現出來的時候要很整齊
+OK
+I see
+所以這個是產品比較難的技術
+點嗎
+對技術點然後還有生圖的時候
+如果
+花很多很多步驟
+去做調整
+因為你可以做
+很多pre-processing
+很多
+post-processing
+其實對於客戶來講
+那個等待的latency很長
+那其實大家那個體驗就會很差
+所以我們要怎麼樣用聰明的方法
+保持品質同時又不會讓等待時間太長
+I see
+了解
+所以說你現在已經可以做到
+怎麼樣的程度就是可以讓
+客戶覺得欸
+做出來的時候就很滿意嗎
+還是說你會花大概多少時間
+去manually去做微調
+嗯其實我們
+一開始都會以自己的判斷去做微調
+但是我們現在發現
+還是直接聽客戶講比較重要
+所以我們有兩個客戶是會非常
+兩個品牌
+他們會非常的密切跟我們開會
+OK
+然後會告訴他們的反饋
+告訴我們哪裡做得不夠好
+那我們就要馬上的去iterate
+那其中一個商家比如說之前品牌圖
+他們因為
+人工跟資金有限
+所以他們一個月最多就是上
+上架500件
+OK
+對那他們因為跟我們合作之後
+他們現在
+他們的二手平台
+那他們就可以跟其他品牌合作
+說過季商品上來
+然後他們已經告訴我們下個月想要
+上架的數量是4000件
+嗯哼
+嗯
+所以如果是這樣講的話
+就是一個品質上的提升
+跟效率上的提升
+哦OKOK
+像我今天用完之後那
+東西出來了
+不是很滿意
+那我是直接給你feedback
+還是我可以在你的app上面就說
+OK我覺得這個東西不好
+然後就要重新generate
+我們現在還是先以直接溝通比較快
+因為我們想要
+有一個conversation
+當然未來
+客戶變多的時候
+還是要有bug report
+issue report
+所以我們現在暫時會直接
+我們在台灣
+就用LINELINE
+group chat
+跟他們聊
+OKOK
+那那你們是
+怎麼
+charge customer
+呃我們有一個公開的
+像
+subscription
+base的
+那那
+就是charge credits
+OK
+對可是如果是大一點的客戶
+大中一點的話我們就可以談條件
+看他們一下子要簽幾個月
+然後volume夠多的時候
+我們都會給discount
+還有想要簽認
+這種
+design partnership
+的公司
+我們也會再跟他們更便宜一點點
+哦OK了解
+因為畢竟反饋
+其實我們常常看那些反饋
+我們都覺得
+這應該是我們要花錢去買的
+嗯嗯
+可以問一下關於你們tech上面的
+就是你們技術方面
+因為我知道你背景是CS嘛
+也是tech
+那你你主要現在在做的事情是
+你的
+day to day
+operation是
+你也會做tech嗎
+還是你focus在
+比較high level
+可能公司的execution
+嗯最近加速器之前我比較
+少時間去做tech一開始寫
+我們的MVP的時候
+公司剛開始我會自己寫
+但是現在有工程團隊了嘛
+那我是因為到最近進加速器之後
+他們其實不想要我們founder
+在demo day前去融資
+所以我突然時間變很多所以
+我現在就是跟團隊一起開發
+哦所以你現在有寫code
+嗯嗯嗯
+OK好
+還蠻厲害的
+一直都寫啊
+一直都寫
+對啊我的我的career
+就是寫code
+OK你career寫code
+然後你也喜歡寫code
+喜歡啊
+真的OK
+OK那你覺得現在
+寫code
+跟以前寫code最大的區別
+你問的問題timing很好
+因為禮拜這個三個禮拜前嘛
+三個禮拜前
+Claude的code work
+才出來嘛
+然後我是我拖了到上禮拜一
+所以就是六天前才開始用
+對
+瞬間就有一種我以前
+因為我以前待過Amazon
+在那裡當
+applied scientist
+瞬間覺得以前做的工作完全被取代了
+真的
+嗯因為我那個時候做的
+就是在測試不同種的
+類神經網路模型然後
+看說
+老闆要的這個objective
+我們有沒有辦法一直提升
+假設
+減少退換率好了然後
+推薦尺寸的準確率提高等等
+那我現在跟Claude聊的時候
+覺得他可以想的比我廣
+多很多而且又想得很快
+然後可以很快的迭代
+不同種模型去測試
+所以
+我覺得跟現在寫code
+跟以前完全不一樣
+OK
+對啊我過去這這一周
+跟團隊合作的時候
+我也沒有親自去寫
+檔案裡面的code
+我全部都是agentic在做
+就是agentic AI在做
+對啊未來應該也都是
+agentic AI
+在幫大家去做所有的事情
+那你們公司產品
+技術方面
+也是用很多
+agentic AI的東西嗎
+還是
+沒有欸我其實train了
+train了團隊train蠻久我們在過去這
+幾個禮拜才開始用
+之前還是比較傳統一點
+就是我們的developer
+還是會比較
+傳統他會用會用chatbot
+就是用LLM然後去分開這樣子聊
+那有開始漸漸用cursor去做
+所以一點點的agentic
+可是沒有到現在
+這陣子的Claude code
+跟Claude
+code work
+這麼這麼agentic
+I see
+但但你們在
+image generation
+這部分是
+自己train model嗎還是
+你是用你們是用現成的
+我們一開始有train
+去年暑假的時候
+那時候還會把flux
+下來fine tune
+那我們那時候
+還沒有拿到加速器的資源
+燒了很多就是AWS的資源
+發現完全不值得就真的不值得
+然後我們2024年暑假的時候
+那時候也有train
+自己的一些
+lightweight的
+recommendation
+model等等
+那個還好可是train模型之後
+你真的覺得一個小小的公司
+尤其我們當時連九人都不到
+更少可能六人
+然後資金又不足的狀況下
+去train
+你過幾個禮拜其實就會有人
+推出更好的模型
+完全超過你可以達到的
+的能力那我們當時還會洗腦自己說
+沒關係
+我們是
+fashion specific
+還是需要自己train然後
+我覺得那個
+那個是我們
+就是一廂情願想要train
+所以我們
+我們正式在Nano Banana
+出來那天就停止了
+停止任何
+想要fine tune的想法
+我們當時做了
+很多fine tune
+也做了很多
+prompt optimization
+還有我們花很多時間
+做post editing
+就出來如果accuracy不高
+我們還會去segment
+那一個特定的region
+然後去做
+in painting等等的
+會把它給校正
+然後感動自己啊就覺得做得超好
+然後
+Nano Banana一drop
+就這些都變成non-issue
+嗯嗯嗯
+那我們先暫停一下
+跟大家分享一下
+我最近幾週的一個想法
+大家都在說AI呢會取代工程師
+但是我覺得AI時代呢
+有一個技能反而變得更有價值
+那就是跟人去connect
+我說的connect
+是人與人之間的交流
+文化，還有情感的傳達
+比如說你在一個
+stand up meeting裡面
+你可以更像一個native
+去表達你的想法
+那我最近呢
+在用一款叫做Speak的app
+用了一陣子之後呢
+想要跟大家分享一下
+這個是真的有效
+特別是如果你也像我一樣害羞
+不太喜歡跟陌生人講話
+在Speak上面呢
+可以直接跟AI練習對話的情境
+蠻猛的一個地方
+就是它在對話的當下呢
+就會修正我講錯的地方
+它不會含糊的說可以更好
+而是直接給我更自然的說法
+那它的核心呢是AI口說練習
+你可以自己自訂這個對話情境
+像我自己練的
+就是面試的self intro
+我可以設定說我自己是求職者
+然後AI是面試官
+而且它不是照稿子走
+會追問你然後挑戰你
+很接近真實面試的一個感覺
+Hi my name is Terry. I grew up in Taiwan. I'm a software engineer
+Nice to meet you Terry.
+What inspired you to become a software engineer
+I used to work in the legal patent space.
+We used AI to help our customers
+fight for patent infringement lawsuits
+That sounds interesting. How did you use AI in those cases
+那當你講完之後呢
+它還會自動生成一個專屬的複習課程
+專門整理你剛剛沒講好的部分
+所以你就不用自己回頭找了
+We used AI to help our customers fight patent infringement lawsuits
+We used AI to help our customers fight patent infringement lawsuits
+那如果你想要學新用法的話呢
+他們也有這個主題影片的課程
+這個就會比較有結構
+Hi there I'm Audrey the lead English teacher at Speak.
+Have we met before
+Have we met before
+Have we met before
+Wow have you practiced that before
+那Speak他們是
+拿到OpenAI的投資
+也有技術的合作
+他們在全球有超過4000萬個用戶
+口碑呢也完全是靠實力去累積的
+我自己用起來的體驗呢
+是真的蠻順的啦
+很適合像我這種I人
+不會主動跟陌生人搭話的這種人
+那現在
+訂閱Speak Premium呢
+有年方案299的折扣
+新用戶呢有免費7天可以試用
+連結在影片底下資訊欄
+你可以先試試看再決定
+英文口說呢真的就是純靠練習
+只要你願意開口沒有學不好的
+我會把連結全部放在影片底下資訊欄
+好那我們回到影片
+那會比較擔心說就像最近
+不知道你有沒有關注就是像CRM
+Salesforce這些公司
+Adobe
+他們市場
+對自己這些SaaS公司的產品
+比較悲觀的原因是因為
+大家覺得這些AI
+agentic AI這麼這麼厲害
+這麼強
+像像Claude他們
+最近出很多plugin嘛
+sales plugin
+還有一些
+legal tech
+的plugin
+那如果他們做一個
+fashion的plugin
+怎麼辦
+那你們會不會
+就是被他們給吃掉
+如果說我們公司真正要做東西
+就聽起來就是我現在講的話
+那絕對會被吃掉
+絕對絕對會被吃掉可是因為
+對我知道就是一直不能講到底要幹嘛
+可是我們後面有一整塊
+其實跟agentic
+跟SaaS是分開的
+哦
+對對我們真正的vision
+是above this
+OK
+對
+那才是我們保護自己的方法
+當然我們也pivot超多次
+然後才land到這個idea
+是因為這個idea才進加速器
+哦所以是因為這個idea
+才拿到你們A60Z的投資
+對那我們現在所有做的
+這些
+fashion workflow
+的software
+只是為了GTM就是要讓客戶上來
+那我們也希望真的幫他們解決痛點
+然後幫他們cost down
+幫他們speed up
+可是這些東西
+未來要帶到的那個vision
+跟agentic
+跟SaaS沒有關係
+真的所以是完全不一樣的產品嗎還是
+totally different
+我覺得像是一個
+layer on top of it
+嗯哼
+嗯
+OK那不能講的原因是什麼
+我原本是想講然後
+我原本想講可是因為
+我們4月15號是demo day
+那A60Z的C round
+跟我們聊過了
+想要大家
+stay in stealth as much as possible
+這樣子我們demo day那天
+正式launch
+然後我們的
+fund raise才會
+比較有辦法
+製造那個momentum
+demo day是什麼
+demo day
+真的像YC有demo day
+demo day有點像是
+大家
+accelerator到最後的
+那個成果發表會
+哦OK
+對對對
+所以是大家一起demo
+然後會有investor
+在下面看嗎
+嗯好像說什麼
+那個會場
+會邀1000多個investor
+OK
+可是每個公司只有120秒
+還是90秒很短很短
+哦很短哦
+嗯可是就是要講說我達到多少
+MRR ARR what's the traction
+等等等等等等
+所以說你們會在那個時候
+公佈你們的新的approach
+可是你們現在這個東西
+已經在build嗎
+還是已經ready
+哦對其實build好了
+而且我們也有在
+很hush hush的帶客戶上來
+OK
+嗯嗯只是就是還不能公開講
+對我原本以為可以
+就back and forth
+了幾次
+差點講然後就又沒講
+很值得期待的東西嗎
+我覺得超棒的
+我很想我現在超好奇這個東西
+OK你跟我講說
+你們之前有pivot過很多遍嘛
+然後你們
+有有Angel round
+就是Angel round
+是跟什麼
+outside
+investor嗎
+還是自己認識的朋友什麼
+呃當時有比如說前主管
+然後主管會推薦人
+然後我那裡很多
+尤其是AI
+因為AI賺很多錢的人
+所以他們其實
+they're like angel investing as a sport
+那這些人他們我聽過一個很神奇是
+他們有些人就是我的目標就是有一天
+我要投到400間公司
+那他們每個
+就是smoke check
+那他們其實沒有
+沒有興趣花時間去
+去screen太多的公司
+對對對
+他其實就是喜歡這個founder
+他們就會投
+那當時有
+tap into
+這樣子的network
+然後拿到融資
+嗯大概是這樣吧
+這樣子收集起來的
+天使輪
+OK然後你說
+天使輪大概融了4040幾萬
+46萬
+A60Z跟比如說Ycom
+他們拿的equity的部分大概是
+應該是8到8到10%嗎差不多
+嗯A60Z的話是100萬美金
+那100萬美金
+它分成兩個tranche
+那第一個tranche
+是50萬美金
+然後它就是完全
+拿10%
+所以是
+hard valuation at 5 million
+嗯那可是它的
+second tranche
+就是你下次要融的
+然後它會follow
+你那個時候的valuation
+OKI see
+family round
+一般他們會拿多少
+我當時就是直接
+我就說我的valuation
+是10 mil cap
+可是他們那個時候
+不是直接
+convert成equity
+要convert的是在
+C round才convert
+對他們是簽safe嘛
+對啊然後是
+是以10 mil的
+valuation
+去去拿的
+對對對
+OK
+然後我一開始天使輪是46萬
+然後可是因為到去年8月的時候
+我們等於8月
+hard pivot
+成新的這個idea
+那我當時其實是想說慘了
+就是錢已經快燒完了
+所以我當時就想說為了要
+做這個pivot
+我沒有想要申請A60Z
+我那時候是想說募一個
+bridge round
+因為pivot真的是沒辦法
+stick to the original plan
+所以我的bridge round
+原本要在
+raise another half million
+對那我那時候就在tap into
+之前還沒有投資過我的天使投資人
+其實那個時候
+我們現在這樣
+connect到
+Microsoft的CPO
+然後還有Zinga的前CTO
+然後他們的投資就剛好引薦我說
+因為我原本被
+A60Z seed round
+在去年4月拒絕過一次
+然後他們就叫我再投一次看看
+對然後在那個階段的時候
+我募到13萬5
+嗯哼
+13萬5然後我就
+因為accept被accept
+所以就提前結束
+沒有去募那個完整的50萬
+OKOKI see
+那你覺得現在募資有比較難嗎
+還是你覺得investor
+他們看重的是什麼東西
+我覺得要看誰去募
+要看誰去募
+那你覺得他們看重的是你的什麼
+我覺得當時我真的以為
+以我的founder背景
+就夠就完全不夠
+OK
+對然後我原本的idea
+完全就非常replaceable
+我也拿過
+virtual try on
+去募被拒到不行
+然後我一開始想要做B2C
+然後我那時候想要做的完全就是什麼
+fashion magazine for everyone
+就你現在網站上面的
+沒有現在的話我們現在應該是改成
+對現在應該是完全是flatlay
+就是品牌圖
+就對那原本那些比較可愛的idea
+就配我自己的背景其實很weak
+對所以我真的感覺到投資
+還有我覺得
+我的technical背景
+沒有達到投資人中那種
+可以完全de-risk的
+他們要
+什麼樣的technical背景
+我覺得是OpenAI出來
+DeepMind那種
+哦就
+那就是no-brainer對對對
+那對他們而言就
+而且因為那些人network很強
+他們一定
+they will make things work
+而且他們一定會覺得
+其他investor也會這樣想
+所以他們都會很容易就投下去
+那我當時很多人跟我說你沒有問題
+你一定會募很多錢結果我沒有
+我就非常struggle
+所以我發現
+是我的idea不夠好
+對我的idea
+沒有達到他們想要的那個樣子
+那idea好之後我覺得現在
+投資人另外一塊想要看的就是
+假設如果當時idea真的不夠好
+可是我就有辦法賺到錢的話
+假設我的revenue很強
+那他們也會投
+因為我聽過幾個也是
+可能背景比較普通
+那可是因為他們就非常
+就是genius型的
+可以crack GTM
+他們可以讓人就是會
+付錢
+對
+那這個投資人也會投
+OK
+對對對
+所以所以你們是你們是你們是怎麼樣
+我們當時進
+A60Z seed round
+完全是
+idea
+idea哦就是那個idea
+因為是
+pre-product pre-revenue
+哦哇那蠻厲害的
+所以好險pivot我覺得就是
+被逼急了就是公司要生存一定要
+不停的想然後我就我覺得有意識到
+還有因為
+Nano Banana Pro出來
+我那時候就有一種晴天霹靂的感覺
+覺得不能再往這個地方硬鑽
+還自己感動自己
+訓練模型幹嘛對啊
+所以我們就hard pivot
+然後就反而變成
+就是
+blessing in disguise
+真的
+OK
+我我猜
+你們還是有revenue對吧
+有有有嗯
+那你們現在burn rate
+大概可以到到什麼時候
+所以你們runway還有多久
+嗯就真的是
+就是差不多Q2
+Q2OK
+所以你Q2
+very tight very tight
+Q2之前
+就要在raise下一個round
+對這也是speed round的計畫
+他們基本上是全部參加的公司
+都會在那一天
+demo day開始的兩週
+raise
+OK所以下一個round就是
+就你剛剛講的那個
+在下一個
+就是我們的真正種子輪
+因為我們到現在
+我就
+I call it pre-seed
+我這樣全部收在一起
+so this is pre-seed round
+嗯那如果從頭再來一次
+你還會去A16Z嗎
+因為
+其實這些incubator他們
+除了給資源之外
+其實他們拿
+很多equity right
+我要拿很多equity嗯
+那
+我覺得兩兩個方向看
+第一個我當時就真的是
+I was desperate
+真的需要有人來幫我
+而且需要
+we need money
+Right
+另外一個是我因為
+這個program現在開始兩週
+我現在就是
+頭號粉絲我是A16Z的頭號粉絲
+我覺得
+進去加速器之後才有一種
+因為我也我等於創業到進加速器
+經過了一年半
+對
+然後我覺得該經過的
+struggle我都經過了
+OK
+然後公司那種
+求生存的那種我都經歷過
+所以
+我記得那個speedrun第一天
+他們orientation的時候
+我自己就蠻想哭的
+覺得有有人可以照顧我們
+那種感覺蠻好的
+而且他們的資源真的
+很厲害
+我覺得啦
+當然我覺得
+如果有一個founder
+你說資源很厲害是因為他們
+給你很多connection嗎
+還是給你很多resources
+嗯connection
+就是VC network很強
+然後我覺得他們有一套
+formula知道說
+一個startup
+要怎麼去做branding
+怎麼去launch
+怎麼製造fomo
+還有他們會一直
+他們的office hour
+其實很intense
+我們會跟其他的founder
+一起坐下
+他就會一直grill你的
+你的GTM
+你這個revenue不行
+然後我們每個禮拜都要重新整理
+revenue projection
+然後他們的partner
+都會進來看
+基本上
+就是
+yell in our face
+說你不夠ambitious
+嗯嗯嗯
+對我喜歡他們這樣子
+就是
+you got to do a real business
+我們不是要
+進來大家做一個cute idea
+然後就耶拍手結束
+就是show me你12個禮拜
+你就是可以達到怎麼樣的
+ARR我們再說你估值是多少
+哦OK
+我覺得他們幫我們逼得很緊
+in a good way
+嗯嗯嗯
+那你現在會覺得壓力很大嗎
+就是
+大啊大啊
+然後也把整個壓力
+transfer給整個team
+就是我覺得是需要的
+OK
+而且
+我覺得有壓力沒有關係
+可是如果有clarity就很好
+嗯嗯嗯
+因為人家會告訴我說
+我告訴你就是該這麼做
+我知道會很難
+可是至少你會知道不是好像
+不知道方向在哪裡的
+有時候我覺得最恐怖就是怕
+忙忙忙然後每天只告訴自己很忙
+然後自己很感動
+可是沒有覺得
+人家講什麼
+move the needle
+嗯嗯嗯嗯
+每天的day to day
+大概是怎麼樣
+我們因為speedrun
+它是禮拜二三四
+要去onsite
+有一些sessions
+OK
+對那因為我在上禮拜把我
+世界各地的team
+都colocate嘛
+Right
+對所以我禮拜一
+我們都準時九點到辦公室
+那們一定會
+就是先daily standup
+嗯哼
+對那突然不用
+take investor call
+的時間
+會突然白天會沒有很多這種
+investor meeting
+所以我就是跟team一起
+develop
+嗯一起做開發
+一起做開發對
+那
+你沒有
+你沒有其他founder對不對
+你就是唯一founder
+我是我是solo founder
+你是solo founder
+對對你做開發然後
+因為我們有designer
+然後也有幫忙做branding的
+所以不只是開發本身
+也會跟這些夥伴一起討論說
+我們最近有client可能有一些
+問題所以我們要怎麼address
+還有要討論content
+which我們是
+最近才開始做content
+對那我們
+還是說
+social media
+的content嗎
+還是什麼
+OK
+對對對那這樣一路忙
+其實我們都是忙到七點
+晚上七點
+對七點然後回家之後
+煮煮飯
+煮煮飯之後我跟台灣那邊
+或是日本的會都八點開始
+聽起來很intense
+很好玩very fun
+你如果做你喜歡的事情的話
+我覺得就是好玩
+對對對對對對
+而且因為我們跟台灣開會
+然後
+也會有越來越多inbound
+或是人家介紹的
+potential client
+或是real client
+那他們通常會在我隔天早上醒來前
+就會LINE上面會給我們很多反饋
+嗯嗯嗯
+所以我就知道說OK
+那我們早上九點又是
+要怎麼重新align
+嗯嗯嗯
+可是二三四就要去聽session
+OK
+可是你現在不能review你的
+新的那個pivot的idea
+那你要怎麼去
+pitch to你的client
+還是OK的
+我們可以想成兩塊啦
+就是第一塊如果是剛剛講的
+品牌生存的話我就是
+誰都可以sell to it
+對
+那可是第二塊的話
+如果這個人已經跟我們一陣子了
+我們會開始跟他講
+OK
+這個第二塊我們其實做得差不多了
+要不要來玩
+而且第二塊因為
+我看怎麼講
+第二塊不只involve品牌
+應該這樣講
+所以它有另外一端的
+fashion industry
+的人
+我們需要接洽
+所以另外一段我們就花很多時間
+也是去跟他們
+build relationship
+所以你自己是
+很喜歡fashion的東西
+算喜歡算喜歡
+因為我覺得你之前好像是做
+你是當model對不對
+嗯嗯嗯
+是因為這個原因
+你喜歡fashion嗎
+還是你一直以來都很喜歡
+我覺得是因為當model
+才喜歡fashion
+因為我覺得我之前
+不是特別
+fashionable的人
+嗯
+對然後是越做越覺得這個
+space很有趣
+然後你就覺得
+想要
+combine fashion
+跟AI
+去幫大家做一些事情
+蠻蠻蠻厲害
+因為我不是很懂fashion
+我覺得fashion
+有可能也是說既然都要做事情
+那螢幕上的東西會漂漂亮亮
+好像那種why not
+可是你不覺得
+fashion這種東西
+我自己的感覺是
+fashion這種東西
+一直在rotate嘛
+就是其實你可能十年前的東西
+現在流行一下
+然後可能過十年又會再流行
+就是它是一個東西一直在換
+然後都是根據這些
+應該說怎麼說
+就是這些celebrities
+或是這些influencers
+他們去穿搭什麼的
+帶動這個流行
+對啊那你不覺得這個東西就是
+一直在cycle同樣的東西
+然後隨著AI越來越普及
+然後大家對fashion的觀念
+就是比較
+我我感覺就是
+都是
+來自於social media
+可能TikTok然後穿什麼東西
+然後品牌其實並沒有像以前
+那樣子那麼的
+重要
+重要的是
+influencer
+去帶動這個fashion
+而不是品牌本身
+我完全同意
+嗯完全同意
+我覺得我對於
+fashion trend prediction
+這個題目就是完全失去熱情
+因為我寫過兩篇paper
+I'm never touching it again
+因為就真的是這樣子
+there's nothing to predict
+就其實就是
+其實都是被engineer出來
+我覺得trend都是
+把它engineer出來的
+不是因為真的有一個什麼
+大環境
+blah blah blah
+反正基本上
+有幾個big player
+他們可以決定這個東西
+決定fashion
+對啊就像其實音樂也是一樣
+對啊嗯
+我覺得你剛剛講的那個
+influencer
+會celebrity
+會把一個東西炒紅
+對
+這個是完全正確
+就像那個什麼
+拉餔餔還是什麼的
+對你根本沒辦法預測到
+拉餔餔會跑出來
+你現在因為你沒有CTO嗎
+還是沒有
+沒有
+所以所以你就是兼CEOCTO
+嗯
+CPO
+嗯對
+全部都是
+都是你嗎
+是對
+我們就只有我一個C啦
+只有你一個C
+所以你們team全部都是
+就是等於說比較偏向IC
+或是
+最近開始有其中一個人在
+哦沒有
+我有一個
+engineering manager
+要幫我管
+另外兩個developers
+OK
+嗯最近有一個
+幫我做branding的
+他有開始幫我管intern
+嗯哼
+對可是
+我覺得在startup
+就是每個人都
+wear multiple hats
+其實有點像
+互相在manage的感覺
+Right
+那你要怎麼去
+attract
+這些engineer
+或是product team
+來join你的公司
+First of all我要先講
+就是我之前一直以為我這個
+advice很好
+然後
+我在
+speedrun的
+office hour
+跟大家share
+然後才要被稍微講說這個
+it's not very applicable
+並不是每一個公司都能用
+所以我先打個預防針
+就我們的方法完全就是
+別人來pitch我
+OK
+嗯我從創公司開始的時候
+那時候
+小小的嘛也沒有什麼人
+然後那個時候
+都是透過Instagram
+有人就會想說他想要來
+跟我工作
+OK
+那我就會因為這樣
+然後去interview
+嗯哼
+對可是
+可以拿到interview的人
+其實也蠻少
+我一定要這個人也是
+technically strong
+嗯哼
+嗯那之後我們的
+嗯online presence
+開始漸漸發展之後
+那個時候還是比較多
+台灣或是亞洲人
+哦那時候是2024年嗎
+2024年5月對
+所以我那時候
+有先招到Berkeley的MLE
+嗯嗯嗯
+然後漸漸發展之後
+我是在2024年的秋天冬天
+那時候
+招到台灣的developers
+那也是從Instagram
+對對對那個時候
+我story也有提到說
+我想要developers
+哦所以是因為
+你的Instagram
+經常發你公司的東西嗎
+嗯嗯嗯
+然後你就用這種方式有人來加入
+對對對對對
+所以那個是一開始
+然後再來漸漸拓展
+也是因為我們有被
+A16Z的
+一個
+investment thesis
+他們另外一個partner
+寫了一個
+online shopping landscape
+然後他們就寫了一個
+叫
+startups to watch
+那時候我們被feature
+然後就有更多人
+是從LinkedIn過來
+哦
+嗯就那時候
+就有LinkedIn上面
+的人會pitch我
+可是at that point
+我不需要
+更多technical的人
+所以其實我通常也聊一聊
+然後並沒有覺得說
+這個會
+bring more value
+因為我已經有一個
+很strong的
+Berkeley MLE
+幫我管
+台灣三個developers
+對所以真正打動我的是到
+秋天的時候
+有一個在Kellogg
+念MBA的女生
+對然後他就pitch說
+他可以幫忙
+很多
+pricing strategy
+GTM strategy
+OK
+嗯那我那時候就在收了他
+哦還有在那之前還有
+開始有
+fashion industry
+的人
+想要transition
+到tech
+哦
+所以也在
+LinkedIn上pitch自己
+然後就有一個巴黎的女生
+跟一個倫敦的女生
+這樣子不會就是花很多時間
+要去filter掉一些
+不qualified的人嗎
+要要我
+我發現
+這也是沒辦法
+這就是founder該做的
+我意思說就是
+因為你如果在LinkedIn上面
+直接去
+outreach
+會稍微精準一點
+因為你在LinkedIn上面可以
+準確的指定說
+你要什麼skill set
+你要什麼樣的人
+對當然他們不一定會理你
+只是說就是
+會來reach out你的人
+應該是他們真的是有興趣嘛
+對你的產品
+或是對你的vision有興趣
+但是通常這樣子
+不代表說
+他們有這個skill set
+或是他們qualified
+是
+對啊
+所以說我比較好奇是你怎麼去
+組建你的
+founding team的
+因為我覺得
+founding team很重要
+而且而且
+founding team
+會直接shape
+你之後整個公司的文化
+嗯嗯嗯
+the culture
+你是怎麼樣的去execute
+這些我覺得
+都是founding team會
+帶來不太一樣的改變
+那founding team
+很強的話
+其實你在做事情也會效率會高很多
+對對對
+那你是怎麼去select
+或是你你會看重哪些人格特質
+或是哪些東西是你在乎的
+人格特質第一個如果說
+他們
+pitch themselves to me
+通常進來之後我可以感覺到態度很好
+對但是還有另外一個是
+進來之後我也會試用
+嗯哼
+嗯試用一定要過了才會繼續
+OK
+對那還有
+當然合作不愉快的話
+就要fire
+嗯
+嗯嗯嗯
+那我覺得
+有裁員這個
+動作的話其實
+對於團隊是好的
+嗯哼
+對因為團隊會意識到說
+你的工作態度一定要在那裡
+OK
+嗯嗯嗯
+OK
+對其實我這上禮拜
+大家來的時候
+聽起來很crazy
+可是我就是基本上跟大家講說
+這12週
+I want you to work as hard as you can
+probably the hardest in your life
+那我有跟團隊講說
+我加班的時候也要找到你
+我週末我需要找到你
+you have to be there
+如果你沒有想要
+take part in this kind of
+working
+environment的話
+禮拜五以前辭職
+我都會給你severance
+OK
+可是禮拜五之後
+I can't guarantee
+因為我們就沒有那個budget
+嗯
+對啊那
+那有人辭職嗎
+沒有
+開心對所以
+我覺得該嚴肅的時候還是要嚴肅
+那
+嗯對啊可是
+剛剛你講到說
+如果自己outreach
+其實outreach
+一定會有很好很好的talent
+對
+可是這些talent
+我其實一直都有在
+manage
+這些talent's
+relationship
+這些talent
+不是這麼快就點頭進來的
+嗯有幾個就是那種真的是
+要花很多錢才請得到的
+他們其實也在等我們什麼時候可以把
+母子母下來
+哦所以是你付不起他們
+你目前還付不起
+那你目前可以付得起的
+compensation structure
+就是給equity
+equity加salary
+沒有還是有還是有salary
+equity加salary嗎
+對對對
+我現在你們是我覺得你們用
+global team是說
+其實你們salary
+就相對來講很懂可以省很多錢對不對
+因為我自己
+也在APAC hiring過
+然後網路上有很多嘴
+就是說我們就是為了省錢去
+hire
+很多台灣的engineer
+或是在APAC
+越南的engineer
+對啊
+沒辦法啊
+對啊這是一個現實
+所以什麼就是
+你要要公司燒錢燒到沒錢嗎
+那也不對啊
+嗯
+對啊
+我覺得當時給的salary
+是蠻不錯的
+就是
+我知道我給得很好
+他們自己也說很好
+因為我問他們要不要
+我其實想說
+你們
+one year anniversary
+要不要調薪他們還說不用
+Oh really
+對啊
+我可能不小心給太好我不知道
+可是我自己知道我給得不錯
+OK你給多少可以透露嗎
+要剪掉
+engineer
+錄完再講
+OK
+對啊這個我知道
+OK那你
+hire engineer的時候
+你會考一些
+比較technical的東西嗎
+嗯其實我覺得這我做得沒有很好
+因為我從來都不是engineer
+我是scientist
+所以我當時不是
+可是你自己有寫code啊
+可是我不知道
+那些
+web development
+的東西
+哦OK
+我就是透過agent才會的
+OK
+嗯那我當時其實是
+叫他們給我看他們做過的東西
+OK
+他們會給我看
+他portfolio然後
+解釋給我聽
+OK
+這樣就OK
+這樣就OK
+對啊目前為止是OK啊
+感覺沒有出什麼事
+目前目前都OK對不對
+蠻滿意的
+OK
+可是我覺得
+global team這件事情
+還有我很多想法就是
+我覺得大家嘴什麼
+你這樣是省錢可是沒辦法
+就是物價這不是
+我們身為founder能控制的
+這個是世界就是這樣子
+但是我自己覺得
+我hire
+台灣的developers
+他們的work ethics
+非常非常非常好
+嗯
+這個我百分之百這麼覺得
+就是他們反而幫我的公司
+mirror-mirror
+set了很好的工作文化
+嗯
+嗯
+我覺得很幸運
+因為我自己的經驗是
+我hire的team應該說
+比較少人會有像
+就是就是還是要
+你要involve很多
+他們的我就比較多在做的事情
+就是怎麼樣去讓他們會可以
+把那個mindset轉到比較偏向
+Silicon Valley的
+這個
+working culture
+我的感覺是這樣子
+我覺得可能就很多東西要放在
+怎麼incentivize
+OK
+因為怎麼講比如說
+有一些東西不是這麼
+可以quantify的
+當然我講一個
+可以quantify的
+qualitative
+跟quantitative
+qualitative的話我們蠻
+我自己個人蠻在乎讓我的team
+都有機會接觸到客戶
+嗯哼
+然後讓他們知道他們做的事情
+對客戶而言意義有多重大
+所以我們之前去參觀過工廠
+參觀過品牌的辦公室
+我就帶我team去
+然後我讓他們跟客戶講
+然後客戶就跟他們說
+謝謝你啊等等等等
+我覺得那個是
+emotionally
+會很magical的事情
+另外一個是我們跟Vogue辦活動
+我也帶我的team去
+我就是想要讓他們知道說
+你們不是
+just another tech company
+今天我們達到了一個
+Vogue願意讓我們去你辦公室
+然後這麼多的品牌來聽
+這是一種就是一種pride
+對那另外一個是
+因為我們是startup
+所以有募資
+所以我會算得很清楚說
+你現在手上這麼多equity
+如果你認真的話
+我們可以convert
+成怎樣的revenue
+怎樣的revenue
+convert到
+怎樣的valuation
+所以當我們募到之後
+你想你會有多少錢
+畫餅畫餅
+對畫餅啊對啊
+就大家一起來算算白板上算數
+OK
+我覺得那個
+就會有motivation
+可是不能一直這樣子
+要短就是一次要一個
+短期衝刺
+OK
+一個sprint
+一個sprint的感覺
+對啊平常就是多帶我們吃飯
+他們很開心
+各種各種都要做啦
+聽起來
+那個startup life
+蠻開心的
+我是很開心啦
+真的哦
+對啊不知道搞不好你去訪問我員工
+我講另外一個故事
+我等你看
+有可能
+我自己本人很開心
+其實很多人在evaluate
+一個startup的
+offer的時候
+他們會看說
+我的base salary是多少
+然後可能我的comp
+就是可能equity的部分
+現在值多少錢
+那你會怎麼去convince他說
+其實你看equity現在值多少錢
+是沒什麼太大意義
+因為比如說
+你們現在value是10 mil
+或什麼之類的
+但你如果去算你equity的話
+其實你如果再分四年去算的話
+其實你的total comp
+會遠遠低於你可能去一個
+公司工作
+對啊
+那你怎麼去convince他們說
+這個是可以去做的事情
+我覺得我還沒有遇到那樣的問題
+就是因為那樣子的人
+你們team都太太天使了吧
+他們是天使沒錯啊
+等下給你看照片
+就是
+我覺得那樣子的人
+I'm still working on it
+那我們也還沒到那個階段
+哦所以就是你們還沒有
+真的就是遇到
+真的你們很想hire的人
+然後你需要去做這樣的事情
+對我覺得我們在expand的時候
+會是需要開始這樣
+可是目前為止
+我也不是說我們是一個小cult
+可是就是我覺得大家
+大家還有因為我們團隊感情非常好
+哦
+對然後我覺得大家有意識到說
+就算工作有時候很累
+可是因為他們很喜歡同事
+嗯然後我們
+很多東西他們會覺得說
+OK我可能從來沒有想過
+我可以去fashion品牌活動啊
+或是什麼樣的
+所以
+有可能我現在目前現階段吸引到的人
+他們不會特意去跟我聊這些東西
+但還是會
+negotiate salary
+也會討論說我們如果要
+種子輪之後大家加薪啊什麼
+這都還是會討論
+可是並沒有那麼多
+equity上面的
+這種conversation
+嗯嗯嗯
+我覺得大家蠻chill
+就是對於這個這個部分
+哦真的
+嗯嗯嗯
+OK
+因為因為我如果要去join一個
+這麼early stage
+的startup的話
+我應該會要很多的equity
+因為我覺得說要讓我的時間值得
+尤其是
+take on
+這麼大的一個risk
+的話
+可是我覺得因為你是
+ex-tech對吧
+你是待過tech company
+就是待過corporate
+呃算是對
+對啊
+對
+嗯我覺得目前為止
+為了我辭職的人
+當然台灣的工程師都為了我辭職
+可是他們不是待矽谷的
+公司那另外為了我辭職的
+巴黎跟倫敦的
+對啊他們的
+他們是離開fashion公司過來
+所以我覺得
+那個mindset有點不一樣
+哦
+嗯可是我完全可以理解
+如果待過
+尤其是
+Silicon Valley
+的公司
+那個要很多convincing
+嗯所以你們還沒有hire
+目前還沒有hire這樣的人
+就是
+還沒那樣子的人只有來實習的
+就是他在
+Silicon Valley
+實習過
+嗯
+對比如說之前有待過
+在Amazon Fashion
+跟我同時間的
+他是PhD實習生
+去年暑假來公司實習
+嗯
+那你們這樣子做產品
+iteration夠快嗎
+當然我當然一直都覺得不夠快
+真的
+我覺得嗯
+我覺得你剛剛講到就是
+大家感情都很好
+像一個family一樣
+我覺得這個是一個很好一個
+很好的一個事情
+但是我個人認為
+COVID前的
+startup的那種環境
+跟現在的startup環境
+有點不太一樣
+我覺得現在現在startup
+至少我自己
+過去兩三年待的startup
+感覺其實我們
+constantly
+就是在在在battle
+我們是在一個很高度壓力環境下
+然後其實
+culture-wise我覺得
+我們大家私底下都是還不錯
+但是會覺得說我們今天就是來
+完成任務
+然後我們是很dedicated
+要focus
+要完成事情要execute
+以前那種比較很nice
+大家都慢慢來
+然後可能很
+respect對方那種感覺
+就已經
+就
+cut that bullshit
+然後我們就會直接就是
+有什麼話都很直的去講
+然後
+這個feedback
+都很
+straightforward
+這種
+這是我覺得就是如果再下一個
+環境下要生存下來
+startup要生存下來
+需要有的文化
+公司文化
+我自己是覺得感情好跟
+講話很harsh不衝突
+因為我對員工很harsh
+Right
+對就是如果東西沒有做完
+那我一定是告訴他
+你今天這個delay的
+consequence有多嚴重
+你為因為我們會
+因為你這樣子失去客戶
+那每個人
+都會有他們
+responsible的東西
+那個人就會被我講
+OK
+對我覺得
+有可能我感情很好所以我很兇
+所以互相互相感情很好
+但我不覺得contradict
+對那我也知道
+員工的working hours
+也很長
+大家是七點離開
+是因為我們
+coworking space
+七點就關了可是大家回家還是繼續
+還是會繼續做
+對對對
+你們過蠻那個蠻認真的
+嗯
+很棒
+必須因為我
+我覺得我也讓他們意識到就是
+因為我們這麼早
+他們現在不認真公司萬一公司垮了呢
+那他們那些equity不就沒了嗎
+對啊對啊
+嗯
+回到之前你還會選擇去走創業這條路嗎
+我覺得會選擇但我還是覺得很累
+所以你還是會選擇去走這條路
+會會
+會比之前
+你在corporate工作
+還要好玩
+好玩很多可是很累
+很累對吧
+嗯
+需要擔心的事情太多了
+需要擔心的事情很多然後
+我平常我原本應該是一個睡很好的人
+可是我覺得就擔心到不行
+就真的會睡不著
+哇
+對啊然後去年是大爆痘啊
+就是我該有的都有
+就各種壓力很大
+嗯
+或是自我懷疑啊
+就覺得說我現在為員工負責了
+我是不是其實他們頭已經洗下去了
+我到底有沒有做對
+嗯嗯
+差不多這樣
+好啊
+那很感謝玉珊來今天
+來這邊跟大家分享關於
+矽谷新創
+早期新創的一個環境
+還有公司的一些內容
+我覺得很棒
+希望大家有學到一點東西
+然後也祝你們融資順利
+可以可以賺很多錢
+謝謝我也希望
+OK好那今天這集就到這邊了
+拜拜
+拜

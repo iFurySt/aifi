@@ -1,0 +1,3609 @@
+{
+  "source": "Online transcript provider: AI Video Summarizer",
+  "source_url": "https://www.youtube.com/watch?v=jpoMabs9t4s",
+  "provider": {
+    "name": "aivideosummarizer.io",
+    "endpoint": "https://aivideosummarizer.io/youtube-subtitle-downloader/",
+    "retrieved": "2026-07-14",
+    "route": "OBU browser page -> IndexedDB tr-history"
+  },
+  "video_index": 32,
+  "video": {
+    "index": 32,
+    "id": "jpoMabs9t4s",
+    "title": "進 OpenAI 有多難？如何通過面試？揭密高薪背後的：生存法則",
+    "url": "https://www.youtube.com/watch?v=jpoMabs9t4s",
+    "duration_seconds": 856.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "jpoMabs9t4s",
+    "title": "進 OpenAI 有多難？如何通過面試？揭密高薪背後的：生存法則",
+    "text": "Hello大家好我是Terry\n上集影片我跟波爾聊到他在OpenAI的薪水\n還有他放棄這個工作的一段心路歷程\n那今天這集影片會跟大家分享他在OpenAI的面試過程\n還有大家如果有興趣的話\n怎麼樣才可以\n比較有可能的可以拿到OpenAI的面試或者是去裡面工作\n我就幫大家問啦\n我覺得應該很多人會好奇\n是要怎麼樣才可以拿到OpenAI的offer\n我自己也有去面個 OpenAI\n然後我是沒過 沒有拿到 Offer\n可能每個面的 Team 不太一樣\n就是我當時面的是比較偏 Web 的 Team\n然後他考我一些就是 React\n然後再考我一些 CSS 東西\n我那時候就真的就是沒有準備這個部分\n你當時去面 OpenAI 的時候\n是哪一個 Team\n大概整個流程大概是什麼樣\n當初有兩個組同時對我有興趣\n因為裡面的人以前我有跟他工作過\n然後他們就跟他們Managers推薦我這樣子\n所以同時有兩個組對我有興趣\n就是跟Recruiter接下來上來以後\n基本上就是Follow他們面試的流程\n基本上就跟其他大公司的流程類似\n就是你會先有一個Phone Screen\nPhone Screen就是兩輪\n一輪Coding 一輪Design\nSystem Design\n那過了以後就是四輪Outsight\n那一樣是一輪Coding 一輪Design\n一輪Behaviour\n那另外一輪就是Technical Deep Dive\n那Coding跟System Design就是很典型\n就是跟其他公司一樣\n那Behaviour也是就是跟其他公司很類似\n那最後Deep Dive就是現在其實很多對於比較資深的Canada很多公司很類似最後第一段就是現在其實很多\n對於比較資深的Candidate\n很多公司會有這一輪\n就是有時候要準備一個slide deck\n有時候並不需要\n但自己準備以後比較容易做解釋\n主要就是根據你過去曾經\n深入做的一個Project\n從End to End去解釋說\n當初你們為什麼會這麼做\n你們如何去做\n然後你在推行Project的過程中\n需要跟哪些人合作\n然後最後這Project結果怎麼樣\n你從中間學到什麼\n有點像是就是一個Presentation\n冊中Technical Project的end to end的\nExecution的Presentation這個樣子\n嗯 我也看到\n欸它其實還滿多輪的\n從Screen兩輪\n兩輪\n然後On-site四輪\n一輪Coding跟一輪System之間\n先確保說你基本的功用\n之後就onsight\nonsight也是remote嘛\n那時候應該都是remote\n然後onsight就是四輪\n對\n有沒有說考的題目是很特別\n或是說它比較特別難之類的\n其實題目來講滿典型\n但是coding部分它要求的比較高一點\n就是它是一個問題\n但是它會有三個follow up\n那你要在實習內完成follow up\n其實也是滿緊的\n就是你必須要\n可以在短時間內快速的\ncome up with solution\n然後快速的把它implement出來\n就是對於Canada的算法\n跟Coding上的熟練度要求\n也是滿高的\n那System Design的部分就是\n也是一般就是在網路上\n可以看到類似的題目\n只是它問得比較細\n就是基本上這個面試官不是說只跟你走過場\n就是他會根據你提出的option\n然後去深挖說你為什麼要這麼做\n就是會問得更細一點\n那behavior的話就跟大公司一樣典型\n就是你去按照STAR模型去根據一個問題去敘事這樣子\n那第一代就是剛剛刚有说明过\n就是你自己要准备根据你\n一个比较完整的Project\n去从头到尾去说明这个Project\n从一开始到执行到最后Takeaway这样子\n那Coding的话\n还是就是比较偏向Lecal类型的\nCoding的话\n本身的问题类似Lecal\n只是它就是会有Follow Up\n其实现在很多公司也都是这种\n一样是算法\n但是它可能一開始\n先一個簡單的問題\n然後之後再去做follow up\n然後把你這個問題變得更複雜這樣子\n所以我之前跟Hank做的那個實戰癮\n我們也是教大家去練習D-code\n我聽到很多feedback\n就是我在promote這個\n我們實戰癮的時候\n其實很多人懷疑說\n為什麼現在這個AI時代\n還是在練習D-code\n好像有這個意義嗎\n在矽谷的人大家都知道\n就這個 interview process 還是差不多\n我平時在這種公司\n在做 AI 自己在做 AI\n但是 interview process\n還是之前那樣子\n就是我們還是 coding\n然後還是一個私生的\n還是比較這種\n比較偏八股的考法\n我覺得現在已經漸漸的\n變成一種 hybrid 的模式\n就是有些公司還是會考類似像Zcode的模式\n即使你在公司你用Vibe Coding\n最後你的Developer本身還是要做最後把關的程序\n相當於說你要最後Review AI產出的Code\n它是不是有問題\n是不是有Bug\n還是說它算法是不是最好的\n你在這種基本的算法跟Coding上理解\n還是要有一定的程度\n你才知道說AI它產出的Code\n是不是make sense這樣子\n那測驗說你是不是有這個能力\n那Coding interview還是必須的\n就我所知有一些公司\n比如說Meta已經在Pilot就是融合AI tool去做Coding\n比如說他今天面試會更Demanding\n就是說他今天給你一個Mini task\n你可以用AI tool\n那他會看考察說你如果用AI code\n去carry out the day to day work\n那這其實我覺得\n你還是需要這些基本常識\n像算法跟coding\n因為你才知道說\n你這AI寫出來的code\n如果不能跑的時候\n你要如何去debug\n所以我覺得Programming language\n跟Algorithm data structure\n這算是你的Foundation\n就是這個還是要有\n你才知道說今天AI是不是 是不是在做幻覺\n有沒有任何幻覺\n還是說它是不是在鬼打牆這樣子\n所以我覺得這個技能還是很重要\n對,LiCode 現在變成是 A Must\n最早以前譬如說還沒有 LiCode 出現前\n它可能會問你一些 Language 的特性\nLiCode 出現以後你這個 Language 特性\n變成你需要內化的東西\n你才可以去寫出 code\n那現在變成Liqo的東西是\n你需要去內化的東西\n你才知道說\nAI產出的東西是不是make sense\n而且我覺得有這個Foundation之後\n不只是去verify AI\n另外一個很重要的就是\n你知道怎麼去問問這個問題\n因為你有這個概念\n你才會把問題變得更精準\n就sharp prompt\n對沒錯\n會很重要\n那System Design這部分你覺得這幾年有什麼變化嗎還是其實都差不多我覺得變得更demanding更精準就下 prompt對沒錯會很重要對啊那 system design 這部分\n你覺得這幾年有什麼變化嗎\n還是其實都差不多\n我覺得變得更 demanding\n因為就像這種東西就是\nlead code 出來以後\ncoding 越來越 demanding\n那 system design 現在網路上也越來越多\n教人如何去 system design interview 的這種\n課程出現\n那還有更多 mark interview 的服務\n所以變成今天 borrow 越來越高\n因為今天變成大家程度同時\n一起慢慢被提升\nAverage的Calibre\n被提升到一个程度以后\n你就必须要更突出\n你才能够在其他Cannondale里面脱颖而出\n而且System Design比较难用AI去作弊\n难度高很多\n而且System Design的话\n我觉得你需要有一些经验\n就是像你刚刚讲的\n就是你要如何去下对的prompt\n就是现在你也可以直接丢给AI\n一个市场设计的问题\n但是它今天给你的解法\n很简单\n对要不然就是它给你解法\n会变得很偏门\n就是会给很多专有名词\n你不知道它背后在做什么\n还是说它会给你一个\n不是你真的想要的答案\n对\n你需要给它下正确的prompt\n去引导它\n你可能今天你已经有一定的概念\n可是你在細節上不同\n然後你再去問他\n然後他可以給你一個比較好的建議\n但是你基本的嘗試還是要有\n你才知道說他是不是今天在 bluffing\n還是說今天在幻覺這樣子\n好那就像上一集影片裡面講到的\n我跟波爾在過去幾個月花了非常多時間\n在設計跟規劃這個現代系統設計實戰營\n希望可以把目前這個最新的軟體設計概念\n很扎實的帶給大家\n另外我們還加碼了更多關於AI的內容\n包含了怎麼去設計LLM的Inference API\n怎麼去設計AI Support Agent\n還有怎麼去設計ChatGPT Task\n這些都是目前傳統的系統設計線上課程沒有提供的\n也是我們覺得在2026年\n所有的軟體工人士都應該需要有的概念\n如果你想要在科技業有一個很強的競爭力的話\n那這個實戰營除了我們的線上課程跟講義之外\nLive的部分還包含了大家一起在線上做cohort的workshop\n像比如說用RAC跟PromEngineering去做一個AI的chatbot\n或者是說針對一些設計的topic去做一些更深度更廣的deep dive\n這些我們全部都會在Zoom上面Live帶著大家一起做\n所以說這整整三個月的實戰營的offering其實是非常非常完整的\n而且也沒有任何一個人我知道啊在做這樣的bootcamp\n所以大家如果有興趣的話可以去報名一下\n因為波爾他自己本身之前就有免費在做線上 Camp所以大家如果有興趣的話可以去報名一下因為波爾他自己本身\n之前就有免費在做線上的諮詢\n然後也幫助過非常多科技業的同學\n所以當時我才去問他說\n欸你想不想幫助到更多人\n然後我們才一起開始開發這個實戰營\n那現在我們的找鳥優惠呢\n已經開始開跑了\n我會把連結放在影片底下的資訊欄\n大家可以去看一下\n而且之前有參與過我跟Hank\n在2025年的那個實戰營的同學呢\n也會有個特別的優惠\n那具體的細節呢\n都可以在我們的\nDiscord群組裡面找到\n我們來聊一下OpenAI好了\n你有遇到一些什麼\n你覺得是值得跟大家分享的一些\n比如說Culture Shock之類的\nCulture Shock我覺得它有點像是\nMeta跟Apple的結合\n跟Meta相似的地方就是它move very fast\n今天講一個東西\n我們馬上就是用LFM把東西給roll出來\n然後code review然後就check in這樣子\n就我現在所觀察OpenAI\n最近一年數的事情就是\n它在嘗試各種product idea\n它從Meta那邊招了很多PM跟engineer過來\n他們想要嘗試各種product idea\n就是利用LFM去快速的試各種不同的 Product\n哪一種可以快速的獲得很高的 Adoption\n譬如說他們最近推出的 Browser\n還有他們推出 ChatGPT for Apps\n所以他們現在在經歷一個快速 Iteration 過程\n所以需要很快的去把 Product Ship 出來\n那這在方面跟 Meta 很像\n因為 Meta 本身就是比較 Product Oriented\n然後 Move Fast\n那就是跟 Apple 很像的一點是說\n他們公司對於保密非常重視\n就是網路上做Patrol\n在巡邏非常的Aggressive\n就是他今天發現說你之前這個員工\n可能利用公司的名義在做什麼事情\n就是有任何洩露公司\n現在想要做的東西的可能\n他可能明天就幫你約談\n然後就Bye Bye這樣子\n你不可能做YouTube\n目前我好像還沒有看到\n有OpenAid的敢做YouTube的\n就是\n對\n其實很多大廠也是說\n你今天不能\n是一堆公司機密\n你一被抓就開除\n但是OpenAid可能會更嚴格一點\n就是你今天連在外面的場合\n公開場合提到公司的名字\n他們都是盡量去避免的\n因為這公司現在目前就是\n大家所有的目光聚集的地方\n所以他們一方面\n也不希望吸引太多不必要的目光\n一方面也是因為怕\n現在公司想要推出什麼東西\n然後馬上就讓其他競爭者知道\n然後他可能也會覺得不好這樣子\n如果說今天想要進OpenAI\n你有沒有什麼建議\n建議的話我覺得你要\n就像我剛剛講現在的试的caliber很高\n你要在所有的Canada突出\n你必须要有一些突出的地方\n跟别人宇宙不同的地方\n那我观察到的是说\nOpenAI最近这些年很喜欢找比较资深的Meta Engineer\n因为他们现在就是在各种尝试不同的产品\n所以如果你今天是已经在Meta待了幾年的話\n我覺得可以去試試看\n如果你今天如果不是在Meta的話\n會比較難突出\n你就必須要去走跟AI掛鉤的\n做跟AI有任何掛鉤的東西\n譬如說你去Google DeepMind\n幫他們去做一些Post-training的東西\n還是說你在Meta做Training Infra的東西\n如果你今天不是做Modeling的話\n就可能是做AI Infra\n就至少你的工作要跟AI搭上邊\n我看到他也之前招了一些不少\n從一些AI Startup招了一些人過來\n簡單來說就是你今天的技能數字\n最好要有跟AI有關係\n而且不是就單純做一些Toy Project\n可能就是你在那些公司\n實際上真的有碰到有規模的AI\n不管是Infrastructure還是Modeling\n還是Training\n不管是Training這塊\n還是Inference這塊\n還是Infra這一塊\n你如果跟AI有站邊\n然後你是在有一定體量的公司工作過\n那我覺得是OpenAI\n都對你的履歷有興趣\n當你的履歷通過他們的簡歷官的話\n那接下來就是面試\n就是跟其他公司不會差太多這樣子\n如果你不是做Deep Learning相關的話\nDeep Learning Research那就是另外一個賽道\n就是基本上是僱主捧著錢來找你\n譬如說像Meta Super Intelligence Lab\nMark Zuckerberg直接捧錢來找你\n可是你當時去的OpenAI是API Team\n對\n然後你之前有AI的經驗嗎\n沒有\n所以\n是因為那個時候可能招Product Team的\n哦\n崗位比較多\n那是因為你如果是Experience Engineer\n你的Reputation就很重要\n那個時候就是我在前公司Stripe\n有一些Reputation\n那後來那些人進去OpenAI就推薦我進去這樣子\n他們就跟他們Manager\n那時候Manager就問他們說\n你們有沒有認識一些\n一些合作過的Engineer可以推薦\n他們就推薦我這樣子\n哦\n所以就是你要不然就是有AI相關的經驗背景\n要不然就是要大神\n不是大神\n怎麼講就是我覺得今天個人的reputation\n就是你在業界工作\n覺得這種network connection也是很重要的一個capital之一\n非常的謙虛\n因為OpenAI它的辦公室在Synframe\n很多人都住在Bare Area就可能南灣\n那可能也不太適合\n就像你剛講的\n他工作強度很大\n有家庭也是OK\n應該是蠻多人也是有家庭\n我知道其實也是有不少有家庭\n然後比我住更遠的都可以去\n我覺得是看每個人的選擇\n他有什麼在工作上面跟其他公司\n不太一樣的process嗎\n就是比如說Oncall很crazy\n或是什麼壓力很大啊\n目前我看到就是我自己的体验\n跟我在网上看到的评论就是\n他的强度是非常非常高的\n就是绝对会比那些大公司到还要高\n可能是接近于startup的程度\n因为他就是move very fast\n然后再加上里面的人又都很聪明\n那他们公司本身文化也就是\nNo BS就是卷起袖子就做\n所以就是强度會非常高\n就今天可能討論一個product\n他可能要你下個月把它全部做出來\n對\n所以說很適合那種想要拼一下\n非常適合\n就像我講的有點像是早期的Meta這樣子\n因為Meta現在也是大的\n所以可能Process會比較多\n那OpenAI又可能像是早期的Meta\n保密防護做得更好的Meta這樣子\n非常感謝博爾今天跟我們分享OpenAI\n網路上面就很少人分享這東西\n對因為就像我講的\n你一分享隔天就被約談就被Five\n對\n像我這種自願離職的就沒差\n去OpenAI的也都是大神\n大神也不會像我這樣在這邊\n在YouTube上面分享那些東西\n基本上我看到去OpenAI就是\n我前公司認識我覺得比較厲害的\n都在OpenAI\n如果大家覺得這集影片對你有幫助的話\n記得要幫我影片點個讚\n然後也可以波爾點個讚\n因為這個東西真的是滿少人在分享的\n好 非常感謝波爾",
+    "segments": [
+      {
+        "time": "00:00",
+        "text": "Hello大家好我是Terry"
+      },
+      {
+        "time": "00:01",
+        "text": "上集影片我跟波爾聊到他在OpenAI的薪水"
+      },
+      {
+        "time": "00:04",
+        "text": "還有他放棄這個工作的一段心路歷程"
+      },
+      {
+        "time": "00:07",
+        "text": "那今天這集影片會跟大家分享他在OpenAI的面試過程"
+      },
+      {
+        "time": "00:11",
+        "text": "還有大家如果有興趣的話"
+      },
+      {
+        "time": "00:13",
+        "text": "怎麼樣才可以"
+      },
+      {
+        "time": "00:14",
+        "text": "比較有可能的可以拿到OpenAI的面試或者是去裡面工作"
+      },
+      {
+        "time": "00:18",
+        "text": "我就幫大家問啦"
+      },
+      {
+        "time": "00:19",
+        "text": "我覺得應該很多人會好奇"
+      },
+      {
+        "time": "00:21",
+        "text": "是要怎麼樣才可以拿到OpenAI的offer"
+      },
+      {
+        "time": "00:22",
+        "text": "我自己也有去面個 OpenAI"
+      },
+      {
+        "time": "00:25",
+        "text": "然後我是沒過 沒有拿到 Offer"
+      },
+      {
+        "time": "00:27",
+        "text": "可能每個面的 Team 不太一樣"
+      },
+      {
+        "time": "00:29",
+        "text": "就是我當時面的是比較偏 Web 的 Team"
+      },
+      {
+        "time": "00:31",
+        "text": "然後他考我一些就是 React"
+      },
+      {
+        "time": "00:34",
+        "text": "然後再考我一些 CSS 東西"
+      },
+      {
+        "time": "00:35",
+        "text": "我那時候就真的就是沒有準備這個部分"
+      },
+      {
+        "time": "00:37",
+        "text": "你當時去面 OpenAI 的時候"
+      },
+      {
+        "time": "00:40",
+        "text": "是哪一個 Team"
+      },
+      {
+        "time": "00:41",
+        "text": "大概整個流程大概是什麼樣"
+      },
+      {
+        "time": "00:43",
+        "text": "當初有兩個組同時對我有興趣"
+      },
+      {
+        "time": "00:47",
+        "text": "因為裡面的人以前我有跟他工作過"
+      },
+      {
+        "time": "00:50",
+        "text": "然後他們就跟他們Managers推薦我這樣子"
+      },
+      {
+        "time": "00:53",
+        "text": "所以同時有兩個組對我有興趣"
+      },
+      {
+        "time": "00:55",
+        "text": "就是跟Recruiter接下來上來以後"
+      },
+      {
+        "time": "00:57",
+        "text": "基本上就是Follow他們面試的流程"
+      },
+      {
+        "time": "00:58",
+        "text": "基本上就跟其他大公司的流程類似"
+      },
+      {
+        "time": "01:02",
+        "text": "就是你會先有一個Phone Screen"
+      },
+      {
+        "time": "01:04",
+        "text": "Phone Screen就是兩輪"
+      },
+      {
+        "time": "01:05",
+        "text": "一輪Coding 一輪Design"
+      },
+      {
+        "time": "01:07",
+        "text": "System Design"
+      },
+      {
+        "time": "01:08",
+        "text": "那過了以後就是四輪Outsight"
+      },
+      {
+        "time": "01:10",
+        "text": "那一樣是一輪Coding 一輪Design"
+      },
+      {
+        "time": "01:12",
+        "text": "一輪Behaviour"
+      },
+      {
+        "time": "01:13",
+        "text": "那另外一輪就是Technical Deep Dive"
+      },
+      {
+        "time": "01:15",
+        "text": "那Coding跟System Design就是很典型"
+      },
+      {
+        "time": "01:18",
+        "text": "就是跟其他公司一樣"
+      },
+      {
+        "time": "01:19",
+        "text": "那Behaviour也是就是跟其他公司很類似"
+      },
+      {
+        "time": "01:23",
+        "text": "那最後Deep Dive就是現在其實很多對於比較資深的Canada很多公司很類似最後第一段就是現在其實很多"
+      },
+      {
+        "time": "01:25",
+        "text": "對於比較資深的Candidate"
+      },
+      {
+        "time": "01:27",
+        "text": "很多公司會有這一輪"
+      },
+      {
+        "time": "01:28",
+        "text": "就是有時候要準備一個slide deck"
+      },
+      {
+        "time": "01:29",
+        "text": "有時候並不需要"
+      },
+      {
+        "time": "01:31",
+        "text": "但自己準備以後比較容易做解釋"
+      },
+      {
+        "time": "01:34",
+        "text": "主要就是根據你過去曾經"
+      },
+      {
+        "time": "01:36",
+        "text": "深入做的一個Project"
+      },
+      {
+        "time": "01:37",
+        "text": "從End to End去解釋說"
+      },
+      {
+        "time": "01:39",
+        "text": "當初你們為什麼會這麼做"
+      },
+      {
+        "time": "01:40",
+        "text": "你們如何去做"
+      },
+      {
+        "time": "01:42",
+        "text": "然後你在推行Project的過程中"
+      },
+      {
+        "time": "01:43",
+        "text": "需要跟哪些人合作"
+      },
+      {
+        "time": "01:45",
+        "text": "然後最後這Project結果怎麼樣"
+      },
+      {
+        "time": "01:46",
+        "text": "你從中間學到什麼"
+      },
+      {
+        "time": "01:48",
+        "text": "有點像是就是一個Presentation"
+      },
+      {
+        "time": "01:49",
+        "text": "冊中Technical Project的end to end的"
+      },
+      {
+        "time": "01:52",
+        "text": "Execution的Presentation這個樣子"
+      },
+      {
+        "time": "01:54",
+        "text": "嗯 我也看到"
+      },
+      {
+        "time": "01:56",
+        "text": "欸它其實還滿多輪的"
+      },
+      {
+        "time": "01:58",
+        "text": "從Screen兩輪"
+      },
+      {
+        "time": "01:59",
+        "text": "兩輪"
+      },
+      {
+        "time": "02:00",
+        "text": "然後On-site四輪"
+      },
+      {
+        "time": "02:01",
+        "text": "一輪Coding跟一輪System之間"
+      },
+      {
+        "time": "02:03",
+        "text": "先確保說你基本的功用"
+      },
+      {
+        "time": "02:05",
+        "text": "之後就onsight"
+      },
+      {
+        "time": "02:06",
+        "text": "onsight也是remote嘛"
+      },
+      {
+        "time": "02:07",
+        "text": "那時候應該都是remote"
+      },
+      {
+        "time": "02:08",
+        "text": "然後onsight就是四輪"
+      },
+      {
+        "time": "02:10",
+        "text": "對"
+      },
+      {
+        "time": "02:10",
+        "text": "有沒有說考的題目是很特別"
+      },
+      {
+        "time": "02:13",
+        "text": "或是說它比較特別難之類的"
+      },
+      {
+        "time": "02:15",
+        "text": "其實題目來講滿典型"
+      },
+      {
+        "time": "02:18",
+        "text": "但是coding部分它要求的比較高一點"
+      },
+      {
+        "time": "02:20",
+        "text": "就是它是一個問題"
+      },
+      {
+        "time": "02:22",
+        "text": "但是它會有三個follow up"
+      },
+      {
+        "time": "02:24",
+        "text": "那你要在實習內完成follow up"
+      },
+      {
+        "time": "02:26",
+        "text": "其實也是滿緊的"
+      },
+      {
+        "time": "02:27",
+        "text": "就是你必須要"
+      },
+      {
+        "time": "02:28",
+        "text": "可以在短時間內快速的"
+      },
+      {
+        "time": "02:30",
+        "text": "come up with solution"
+      },
+      {
+        "time": "02:31",
+        "text": "然後快速的把它implement出來"
+      },
+      {
+        "time": "02:34",
+        "text": "就是對於Canada的算法"
+      },
+      {
+        "time": "02:36",
+        "text": "跟Coding上的熟練度要求"
+      },
+      {
+        "time": "02:37",
+        "text": "也是滿高的"
+      },
+      {
+        "time": "02:38",
+        "text": "那System Design的部分就是"
+      },
+      {
+        "time": "02:40",
+        "text": "也是一般就是在網路上"
+      },
+      {
+        "time": "02:41",
+        "text": "可以看到類似的題目"
+      },
+      {
+        "time": "02:43",
+        "text": "只是它問得比較細"
+      },
+      {
+        "time": "02:44",
+        "text": "就是基本上這個面試官不是說只跟你走過場"
+      },
+      {
+        "time": "02:48",
+        "text": "就是他會根據你提出的option"
+      },
+      {
+        "time": "02:50",
+        "text": "然後去深挖說你為什麼要這麼做"
+      },
+      {
+        "time": "02:53",
+        "text": "就是會問得更細一點"
+      },
+      {
+        "time": "02:55",
+        "text": "那behavior的話就跟大公司一樣典型"
+      },
+      {
+        "time": "02:58",
+        "text": "就是你去按照STAR模型去根據一個問題去敘事這樣子"
+      },
+      {
+        "time": "03:03",
+        "text": "那第一代就是剛剛刚有说明过"
+      },
+      {
+        "time": "03:05",
+        "text": "就是你自己要准备根据你"
+      },
+      {
+        "time": "03:07",
+        "text": "一个比较完整的Project"
+      },
+      {
+        "time": "03:08",
+        "text": "去从头到尾去说明这个Project"
+      },
+      {
+        "time": "03:10",
+        "text": "从一开始到执行到最后Takeaway这样子"
+      },
+      {
+        "time": "03:13",
+        "text": "那Coding的话"
+      },
+      {
+        "time": "03:14",
+        "text": "还是就是比较偏向Lecal类型的"
+      },
+      {
+        "time": "03:17",
+        "text": "Coding的话"
+      },
+      {
+        "time": "03:18",
+        "text": "本身的问题类似Lecal"
+      },
+      {
+        "time": "03:20",
+        "text": "只是它就是会有Follow Up"
+      },
+      {
+        "time": "03:22",
+        "text": "其实现在很多公司也都是这种"
+      },
+      {
+        "time": "03:23",
+        "text": "一样是算法"
+      },
+      {
+        "time": "03:24",
+        "text": "但是它可能一開始"
+      },
+      {
+        "time": "03:25",
+        "text": "先一個簡單的問題"
+      },
+      {
+        "time": "03:26",
+        "text": "然後之後再去做follow up"
+      },
+      {
+        "time": "03:28",
+        "text": "然後把你這個問題變得更複雜這樣子"
+      },
+      {
+        "time": "03:30",
+        "text": "所以我之前跟Hank做的那個實戰癮"
+      },
+      {
+        "time": "03:33",
+        "text": "我們也是教大家去練習D-code"
+      },
+      {
+        "time": "03:36",
+        "text": "我聽到很多feedback"
+      },
+      {
+        "time": "03:37",
+        "text": "就是我在promote這個"
+      },
+      {
+        "time": "03:39",
+        "text": "我們實戰癮的時候"
+      },
+      {
+        "time": "03:40",
+        "text": "其實很多人懷疑說"
+      },
+      {
+        "time": "03:41",
+        "text": "為什麼現在這個AI時代"
+      },
+      {
+        "time": "03:43",
+        "text": "還是在練習D-code"
+      },
+      {
+        "time": "03:44",
+        "text": "好像有這個意義嗎"
+      },
+      {
+        "time": "03:46",
+        "text": "在矽谷的人大家都知道"
+      },
+      {
+        "time": "03:47",
+        "text": "就這個 interview process 還是差不多"
+      },
+      {
+        "time": "03:49",
+        "text": "我平時在這種公司"
+      },
+      {
+        "time": "03:50",
+        "text": "在做 AI 自己在做 AI"
+      },
+      {
+        "time": "03:52",
+        "text": "但是 interview process"
+      },
+      {
+        "time": "03:53",
+        "text": "還是之前那樣子"
+      },
+      {
+        "time": "03:54",
+        "text": "就是我們還是 coding"
+      },
+      {
+        "time": "03:55",
+        "text": "然後還是一個私生的"
+      },
+      {
+        "time": "03:56",
+        "text": "還是比較這種"
+      },
+      {
+        "time": "03:57",
+        "text": "比較偏八股的考法"
+      },
+      {
+        "time": "04:00",
+        "text": "我覺得現在已經漸漸的"
+      },
+      {
+        "time": "04:02",
+        "text": "變成一種 hybrid 的模式"
+      },
+      {
+        "time": "04:03",
+        "text": "就是有些公司還是會考類似像Zcode的模式"
+      },
+      {
+        "time": "04:07",
+        "text": "即使你在公司你用Vibe Coding"
+      },
+      {
+        "time": "04:09",
+        "text": "最後你的Developer本身還是要做最後把關的程序"
+      },
+      {
+        "time": "04:12",
+        "text": "相當於說你要最後Review AI產出的Code"
+      },
+      {
+        "time": "04:14",
+        "text": "它是不是有問題"
+      },
+      {
+        "time": "04:16",
+        "text": "是不是有Bug"
+      },
+      {
+        "time": "04:17",
+        "text": "還是說它算法是不是最好的"
+      },
+      {
+        "time": "04:19",
+        "text": "你在這種基本的算法跟Coding上理解"
+      },
+      {
+        "time": "04:21",
+        "text": "還是要有一定的程度"
+      },
+      {
+        "time": "04:22",
+        "text": "你才知道說AI它產出的Code"
+      },
+      {
+        "time": "04:24",
+        "text": "是不是make sense這樣子"
+      },
+      {
+        "time": "04:26",
+        "text": "那測驗說你是不是有這個能力"
+      },
+      {
+        "time": "04:28",
+        "text": "那Coding interview還是必須的"
+      },
+      {
+        "time": "04:30",
+        "text": "就我所知有一些公司"
+      },
+      {
+        "time": "04:32",
+        "text": "比如說Meta已經在Pilot就是融合AI tool去做Coding"
+      },
+      {
+        "time": "04:36",
+        "text": "比如說他今天面試會更Demanding"
+      },
+      {
+        "time": "04:38",
+        "text": "就是說他今天給你一個Mini task"
+      },
+      {
+        "time": "04:41",
+        "text": "你可以用AI tool"
+      },
+      {
+        "time": "04:43",
+        "text": "那他會看考察說你如果用AI code"
+      },
+      {
+        "time": "04:45",
+        "text": "去carry out the day to day work"
+      },
+      {
+        "time": "04:47",
+        "text": "那這其實我覺得"
+      },
+      {
+        "time": "04:48",
+        "text": "你還是需要這些基本常識"
+      },
+      {
+        "time": "04:50",
+        "text": "像算法跟coding"
+      },
+      {
+        "time": "04:51",
+        "text": "因為你才知道說"
+      },
+      {
+        "time": "04:52",
+        "text": "你這AI寫出來的code"
+      },
+      {
+        "time": "04:54",
+        "text": "如果不能跑的時候"
+      },
+      {
+        "time": "04:55",
+        "text": "你要如何去debug"
+      },
+      {
+        "time": "04:57",
+        "text": "所以我覺得Programming language"
+      },
+      {
+        "time": "04:59",
+        "text": "跟Algorithm data structure"
+      },
+      {
+        "time": "05:01",
+        "text": "這算是你的Foundation"
+      },
+      {
+        "time": "05:02",
+        "text": "就是這個還是要有"
+      },
+      {
+        "time": "05:04",
+        "text": "你才知道說今天AI是不是 是不是在做幻覺"
+      },
+      {
+        "time": "05:08",
+        "text": "有沒有任何幻覺"
+      },
+      {
+        "time": "05:09",
+        "text": "還是說它是不是在鬼打牆這樣子"
+      },
+      {
+        "time": "05:11",
+        "text": "所以我覺得這個技能還是很重要"
+      },
+      {
+        "time": "05:15",
+        "text": "對,LiCode 現在變成是 A Must"
+      },
+      {
+        "time": "05:16",
+        "text": "最早以前譬如說還沒有 LiCode 出現前"
+      },
+      {
+        "time": "05:19",
+        "text": "它可能會問你一些 Language 的特性"
+      },
+      {
+        "time": "05:21",
+        "text": "LiCode 出現以後你這個 Language 特性"
+      },
+      {
+        "time": "05:22",
+        "text": "變成你需要內化的東西"
+      },
+      {
+        "time": "05:24",
+        "text": "你才可以去寫出 code"
+      },
+      {
+        "time": "05:26",
+        "text": "那現在變成Liqo的東西是"
+      },
+      {
+        "time": "05:27",
+        "text": "你需要去內化的東西"
+      },
+      {
+        "time": "05:28",
+        "text": "你才知道說"
+      },
+      {
+        "time": "05:29",
+        "text": "AI產出的東西是不是make sense"
+      },
+      {
+        "time": "05:31",
+        "text": "而且我覺得有這個Foundation之後"
+      },
+      {
+        "time": "05:33",
+        "text": "不只是去verify AI"
+      },
+      {
+        "time": "05:35",
+        "text": "另外一個很重要的就是"
+      },
+      {
+        "time": "05:36",
+        "text": "你知道怎麼去問問這個問題"
+      },
+      {
+        "time": "05:37",
+        "text": "因為你有這個概念"
+      },
+      {
+        "time": "05:38",
+        "text": "你才會把問題變得更精準"
+      },
+      {
+        "time": "05:41",
+        "text": "就sharp prompt"
+      },
+      {
+        "time": "05:42",
+        "text": "對沒錯"
+      },
+      {
+        "time": "05:42",
+        "text": "會很重要"
+      },
+      {
+        "time": "05:43",
+        "text": "那System Design這部分你覺得這幾年有什麼變化嗎還是其實都差不多我覺得變得更demanding更精準就下 prompt對沒錯會很重要對啊那 system design 這部分"
+      },
+      {
+        "time": "05:45",
+        "text": "你覺得這幾年有什麼變化嗎"
+      },
+      {
+        "time": "05:47",
+        "text": "還是其實都差不多"
+      },
+      {
+        "time": "05:48",
+        "text": "我覺得變得更 demanding"
+      },
+      {
+        "time": "05:49",
+        "text": "因為就像這種東西就是"
+      },
+      {
+        "time": "05:51",
+        "text": "lead code 出來以後"
+      },
+      {
+        "time": "05:52",
+        "text": "coding 越來越 demanding"
+      },
+      {
+        "time": "05:53",
+        "text": "那 system design 現在網路上也越來越多"
+      },
+      {
+        "time": "05:56",
+        "text": "教人如何去 system design interview 的這種"
+      },
+      {
+        "time": "05:58",
+        "text": "課程出現"
+      },
+      {
+        "time": "05:59",
+        "text": "那還有更多 mark interview 的服務"
+      },
+      {
+        "time": "06:01",
+        "text": "所以變成今天 borrow 越來越高"
+      },
+      {
+        "time": "06:03",
+        "text": "因為今天變成大家程度同時"
+      },
+      {
+        "time": "06:04",
+        "text": "一起慢慢被提升"
+      },
+      {
+        "time": "06:05",
+        "text": "Average的Calibre"
+      },
+      {
+        "time": "06:07",
+        "text": "被提升到一个程度以后"
+      },
+      {
+        "time": "06:08",
+        "text": "你就必须要更突出"
+      },
+      {
+        "time": "06:09",
+        "text": "你才能够在其他Cannondale里面脱颖而出"
+      },
+      {
+        "time": "06:13",
+        "text": "而且System Design比较难用AI去作弊"
+      },
+      {
+        "time": "06:16",
+        "text": "难度高很多"
+      },
+      {
+        "time": "06:17",
+        "text": "而且System Design的话"
+      },
+      {
+        "time": "06:19",
+        "text": "我觉得你需要有一些经验"
+      },
+      {
+        "time": "06:22",
+        "text": "就是像你刚刚讲的"
+      },
+      {
+        "time": "06:24",
+        "text": "就是你要如何去下对的prompt"
+      },
+      {
+        "time": "06:25",
+        "text": "就是现在你也可以直接丢给AI"
+      },
+      {
+        "time": "06:27",
+        "text": "一个市场设计的问题"
+      },
+      {
+        "time": "06:28",
+        "text": "但是它今天给你的解法"
+      },
+      {
+        "time": "06:30",
+        "text": "很简单"
+      },
+      {
+        "time": "06:31",
+        "text": "对要不然就是它给你解法"
+      },
+      {
+        "time": "06:32",
+        "text": "会变得很偏门"
+      },
+      {
+        "time": "06:34",
+        "text": "就是会给很多专有名词"
+      },
+      {
+        "time": "06:35",
+        "text": "你不知道它背后在做什么"
+      },
+      {
+        "time": "06:37",
+        "text": "还是说它会给你一个"
+      },
+      {
+        "time": "06:38",
+        "text": "不是你真的想要的答案"
+      },
+      {
+        "time": "06:40",
+        "text": "对"
+      },
+      {
+        "time": "06:41",
+        "text": "你需要给它下正确的prompt"
+      },
+      {
+        "time": "06:43",
+        "text": "去引导它"
+      },
+      {
+        "time": "06:44",
+        "text": "你可能今天你已经有一定的概念"
+      },
+      {
+        "time": "06:45",
+        "text": "可是你在細節上不同"
+      },
+      {
+        "time": "06:47",
+        "text": "然後你再去問他"
+      },
+      {
+        "time": "06:48",
+        "text": "然後他可以給你一個比較好的建議"
+      },
+      {
+        "time": "06:50",
+        "text": "但是你基本的嘗試還是要有"
+      },
+      {
+        "time": "06:53",
+        "text": "你才知道說他是不是今天在 bluffing"
+      },
+      {
+        "time": "06:55",
+        "text": "還是說今天在幻覺這樣子"
+      },
+      {
+        "time": "06:56",
+        "text": "好那就像上一集影片裡面講到的"
+      },
+      {
+        "time": "06:58",
+        "text": "我跟波爾在過去幾個月花了非常多時間"
+      },
+      {
+        "time": "07:02",
+        "text": "在設計跟規劃這個現代系統設計實戰營"
+      },
+      {
+        "time": "07:05",
+        "text": "希望可以把目前這個最新的軟體設計概念"
+      },
+      {
+        "time": "07:08",
+        "text": "很扎實的帶給大家"
+      },
+      {
+        "time": "07:10",
+        "text": "另外我們還加碼了更多關於AI的內容"
+      },
+      {
+        "time": "07:13",
+        "text": "包含了怎麼去設計LLM的Inference API"
+      },
+      {
+        "time": "07:16",
+        "text": "怎麼去設計AI Support Agent"
+      },
+      {
+        "time": "07:18",
+        "text": "還有怎麼去設計ChatGPT Task"
+      },
+      {
+        "time": "07:20",
+        "text": "這些都是目前傳統的系統設計線上課程沒有提供的"
+      },
+      {
+        "time": "07:24",
+        "text": "也是我們覺得在2026年"
+      },
+      {
+        "time": "07:26",
+        "text": "所有的軟體工人士都應該需要有的概念"
+      },
+      {
+        "time": "07:29",
+        "text": "如果你想要在科技業有一個很強的競爭力的話"
+      },
+      {
+        "time": "07:32",
+        "text": "那這個實戰營除了我們的線上課程跟講義之外"
+      },
+      {
+        "time": "07:36",
+        "text": "Live的部分還包含了大家一起在線上做cohort的workshop"
+      },
+      {
+        "time": "07:40",
+        "text": "像比如說用RAC跟PromEngineering去做一個AI的chatbot"
+      },
+      {
+        "time": "07:45",
+        "text": "或者是說針對一些設計的topic去做一些更深度更廣的deep dive"
+      },
+      {
+        "time": "07:50",
+        "text": "這些我們全部都會在Zoom上面Live帶著大家一起做"
+      },
+      {
+        "time": "07:54",
+        "text": "所以說這整整三個月的實戰營的offering其實是非常非常完整的"
+      },
+      {
+        "time": "07:58",
+        "text": "而且也沒有任何一個人我知道啊在做這樣的bootcamp"
+      },
+      {
+        "time": "08:01",
+        "text": "所以大家如果有興趣的話可以去報名一下"
+      },
+      {
+        "time": "08:04",
+        "text": "因為波爾他自己本身之前就有免費在做線上 Camp所以大家如果有興趣的話可以去報名一下因為波爾他自己本身"
+      },
+      {
+        "time": "08:05",
+        "text": "之前就有免費在做線上的諮詢"
+      },
+      {
+        "time": "08:07",
+        "text": "然後也幫助過非常多科技業的同學"
+      },
+      {
+        "time": "08:10",
+        "text": "所以當時我才去問他說"
+      },
+      {
+        "time": "08:11",
+        "text": "欸你想不想幫助到更多人"
+      },
+      {
+        "time": "08:13",
+        "text": "然後我們才一起開始開發這個實戰營"
+      },
+      {
+        "time": "08:16",
+        "text": "那現在我們的找鳥優惠呢"
+      },
+      {
+        "time": "08:17",
+        "text": "已經開始開跑了"
+      },
+      {
+        "time": "08:19",
+        "text": "我會把連結放在影片底下的資訊欄"
+      },
+      {
+        "time": "08:21",
+        "text": "大家可以去看一下"
+      },
+      {
+        "time": "08:22",
+        "text": "而且之前有參與過我跟Hank"
+      },
+      {
+        "time": "08:24",
+        "text": "在2025年的那個實戰營的同學呢"
+      },
+      {
+        "time": "08:26",
+        "text": "也會有個特別的優惠"
+      },
+      {
+        "time": "08:28",
+        "text": "那具體的細節呢"
+      },
+      {
+        "time": "08:29",
+        "text": "都可以在我們的"
+      },
+      {
+        "time": "08:29",
+        "text": "Discord群組裡面找到"
+      },
+      {
+        "time": "08:31",
+        "text": "我們來聊一下OpenAI好了"
+      },
+      {
+        "time": "08:33",
+        "text": "你有遇到一些什麼"
+      },
+      {
+        "time": "08:34",
+        "text": "你覺得是值得跟大家分享的一些"
+      },
+      {
+        "time": "08:36",
+        "text": "比如說Culture Shock之類的"
+      },
+      {
+        "time": "08:38",
+        "text": "Culture Shock我覺得它有點像是"
+      },
+      {
+        "time": "08:40",
+        "text": "Meta跟Apple的結合"
+      },
+      {
+        "time": "08:43",
+        "text": "跟Meta相似的地方就是它move very fast"
+      },
+      {
+        "time": "08:46",
+        "text": "今天講一個東西"
+      },
+      {
+        "time": "08:47",
+        "text": "我們馬上就是用LFM把東西給roll出來"
+      },
+      {
+        "time": "08:50",
+        "text": "然後code review然後就check in這樣子"
+      },
+      {
+        "time": "08:52",
+        "text": "就我現在所觀察OpenAI"
+      },
+      {
+        "time": "08:54",
+        "text": "最近一年數的事情就是"
+      },
+      {
+        "time": "08:55",
+        "text": "它在嘗試各種product idea"
+      },
+      {
+        "time": "08:57",
+        "text": "它從Meta那邊招了很多PM跟engineer過來"
+      },
+      {
+        "time": "08:59",
+        "text": "他們想要嘗試各種product idea"
+      },
+      {
+        "time": "09:01",
+        "text": "就是利用LFM去快速的試各種不同的 Product"
+      },
+      {
+        "time": "09:05",
+        "text": "哪一種可以快速的獲得很高的 Adoption"
+      },
+      {
+        "time": "09:07",
+        "text": "譬如說他們最近推出的 Browser"
+      },
+      {
+        "time": "09:09",
+        "text": "還有他們推出 ChatGPT for Apps"
+      },
+      {
+        "time": "09:12",
+        "text": "所以他們現在在經歷一個快速 Iteration 過程"
+      },
+      {
+        "time": "09:16",
+        "text": "所以需要很快的去把 Product Ship 出來"
+      },
+      {
+        "time": "09:18",
+        "text": "那這在方面跟 Meta 很像"
+      },
+      {
+        "time": "09:20",
+        "text": "因為 Meta 本身就是比較 Product Oriented"
+      },
+      {
+        "time": "09:22",
+        "text": "然後 Move Fast"
+      },
+      {
+        "time": "09:22",
+        "text": "那就是跟 Apple 很像的一點是說"
+      },
+      {
+        "time": "09:25",
+        "text": "他們公司對於保密非常重視"
+      },
+      {
+        "time": "09:26",
+        "text": "就是網路上做Patrol"
+      },
+      {
+        "time": "09:29",
+        "text": "在巡邏非常的Aggressive"
+      },
+      {
+        "time": "09:31",
+        "text": "就是他今天發現說你之前這個員工"
+      },
+      {
+        "time": "09:33",
+        "text": "可能利用公司的名義在做什麼事情"
+      },
+      {
+        "time": "09:36",
+        "text": "就是有任何洩露公司"
+      },
+      {
+        "time": "09:37",
+        "text": "現在想要做的東西的可能"
+      },
+      {
+        "time": "09:39",
+        "text": "他可能明天就幫你約談"
+      },
+      {
+        "time": "09:41",
+        "text": "然後就Bye Bye這樣子"
+      },
+      {
+        "time": "09:43",
+        "text": "你不可能做YouTube"
+      },
+      {
+        "time": "09:44",
+        "text": "目前我好像還沒有看到"
+      },
+      {
+        "time": "09:45",
+        "text": "有OpenAid的敢做YouTube的"
+      },
+      {
+        "time": "09:47",
+        "text": "就是"
+      },
+      {
+        "time": "09:47",
+        "text": "對"
+      },
+      {
+        "time": "09:48",
+        "text": "其實很多大廠也是說"
+      },
+      {
+        "time": "09:50",
+        "text": "你今天不能"
+      },
+      {
+        "time": "09:51",
+        "text": "是一堆公司機密"
+      },
+      {
+        "time": "09:51",
+        "text": "你一被抓就開除"
+      },
+      {
+        "time": "09:52",
+        "text": "但是OpenAid可能會更嚴格一點"
+      },
+      {
+        "time": "09:54",
+        "text": "就是你今天連在外面的場合"
+      },
+      {
+        "time": "09:57",
+        "text": "公開場合提到公司的名字"
+      },
+      {
+        "time": "09:58",
+        "text": "他們都是盡量去避免的"
+      },
+      {
+        "time": "10:00",
+        "text": "因為這公司現在目前就是"
+      },
+      {
+        "time": "10:01",
+        "text": "大家所有的目光聚集的地方"
+      },
+      {
+        "time": "10:03",
+        "text": "所以他們一方面"
+      },
+      {
+        "time": "10:04",
+        "text": "也不希望吸引太多不必要的目光"
+      },
+      {
+        "time": "10:07",
+        "text": "一方面也是因為怕"
+      },
+      {
+        "time": "10:08",
+        "text": "現在公司想要推出什麼東西"
+      },
+      {
+        "time": "10:10",
+        "text": "然後馬上就讓其他競爭者知道"
+      },
+      {
+        "time": "10:13",
+        "text": "然後他可能也會覺得不好這樣子"
+      },
+      {
+        "time": "10:15",
+        "text": "如果說今天想要進OpenAI"
+      },
+      {
+        "time": "10:18",
+        "text": "你有沒有什麼建議"
+      },
+      {
+        "time": "10:20",
+        "text": "建議的話我覺得你要"
+      },
+      {
+        "time": "10:24",
+        "text": "就像我剛剛講現在的试的caliber很高"
+      },
+      {
+        "time": "10:28",
+        "text": "你要在所有的Canada突出"
+      },
+      {
+        "time": "10:30",
+        "text": "你必须要有一些突出的地方"
+      },
+      {
+        "time": "10:32",
+        "text": "跟别人宇宙不同的地方"
+      },
+      {
+        "time": "10:33",
+        "text": "那我观察到的是说"
+      },
+      {
+        "time": "10:35",
+        "text": "OpenAI最近这些年很喜欢找比较资深的Meta Engineer"
+      },
+      {
+        "time": "10:38",
+        "text": "因为他们现在就是在各种尝试不同的产品"
+      },
+      {
+        "time": "10:42",
+        "text": "所以如果你今天是已经在Meta待了幾年的話"
+      },
+      {
+        "time": "10:45",
+        "text": "我覺得可以去試試看"
+      },
+      {
+        "time": "10:47",
+        "text": "如果你今天如果不是在Meta的話"
+      },
+      {
+        "time": "10:50",
+        "text": "會比較難突出"
+      },
+      {
+        "time": "10:51",
+        "text": "你就必須要去走跟AI掛鉤的"
+      },
+      {
+        "time": "10:54",
+        "text": "做跟AI有任何掛鉤的東西"
+      },
+      {
+        "time": "10:56",
+        "text": "譬如說你去Google DeepMind"
+      },
+      {
+        "time": "10:57",
+        "text": "幫他們去做一些Post-training的東西"
+      },
+      {
+        "time": "10:59",
+        "text": "還是說你在Meta做Training Infra的東西"
+      },
+      {
+        "time": "11:01",
+        "text": "如果你今天不是做Modeling的話"
+      },
+      {
+        "time": "11:03",
+        "text": "就可能是做AI Infra"
+      },
+      {
+        "time": "11:05",
+        "text": "就至少你的工作要跟AI搭上邊"
+      },
+      {
+        "time": "11:08",
+        "text": "我看到他也之前招了一些不少"
+      },
+      {
+        "time": "11:10",
+        "text": "從一些AI Startup招了一些人過來"
+      },
+      {
+        "time": "11:12",
+        "text": "簡單來說就是你今天的技能數字"
+      },
+      {
+        "time": "11:14",
+        "text": "最好要有跟AI有關係"
+      },
+      {
+        "time": "11:16",
+        "text": "而且不是就單純做一些Toy Project"
+      },
+      {
+        "time": "11:18",
+        "text": "可能就是你在那些公司"
+      },
+      {
+        "time": "11:20",
+        "text": "實際上真的有碰到有規模的AI"
+      },
+      {
+        "time": "11:23",
+        "text": "不管是Infrastructure還是Modeling"
+      },
+      {
+        "time": "11:25",
+        "text": "還是Training"
+      },
+      {
+        "time": "11:25",
+        "text": "不管是Training這塊"
+      },
+      {
+        "time": "11:26",
+        "text": "還是Inference這塊"
+      },
+      {
+        "time": "11:27",
+        "text": "還是Infra這一塊"
+      },
+      {
+        "time": "11:28",
+        "text": "你如果跟AI有站邊"
+      },
+      {
+        "time": "11:30",
+        "text": "然後你是在有一定體量的公司工作過"
+      },
+      {
+        "time": "11:33",
+        "text": "那我覺得是OpenAI"
+      },
+      {
+        "time": "11:34",
+        "text": "都對你的履歷有興趣"
+      },
+      {
+        "time": "11:35",
+        "text": "當你的履歷通過他們的簡歷官的話"
+      },
+      {
+        "time": "11:38",
+        "text": "那接下來就是面試"
+      },
+      {
+        "time": "11:39",
+        "text": "就是跟其他公司不會差太多這樣子"
+      },
+      {
+        "time": "11:42",
+        "text": "如果你不是做Deep Learning相關的話"
+      },
+      {
+        "time": "11:45",
+        "text": "Deep Learning Research那就是另外一個賽道"
+      },
+      {
+        "time": "11:47",
+        "text": "就是基本上是僱主捧著錢來找你"
+      },
+      {
+        "time": "11:50",
+        "text": "譬如說像Meta Super Intelligence Lab"
+      },
+      {
+        "time": "11:53",
+        "text": "Mark Zuckerberg直接捧錢來找你"
+      },
+      {
+        "time": "11:55",
+        "text": "可是你當時去的OpenAI是API Team"
+      },
+      {
+        "time": "11:59",
+        "text": "對"
+      },
+      {
+        "time": "11:59",
+        "text": "然後你之前有AI的經驗嗎"
+      },
+      {
+        "time": "12:01",
+        "text": "沒有"
+      },
+      {
+        "time": "12:03",
+        "text": "所以"
+      },
+      {
+        "time": "12:03",
+        "text": "是因為那個時候可能招Product Team的"
+      },
+      {
+        "time": "12:06",
+        "text": "哦"
+      },
+      {
+        "time": "12:07",
+        "text": "崗位比較多"
+      },
+      {
+        "time": "12:07",
+        "text": "那是因為你如果是Experience Engineer"
+      },
+      {
+        "time": "12:10",
+        "text": "你的Reputation就很重要"
+      },
+      {
+        "time": "12:11",
+        "text": "那個時候就是我在前公司Stripe"
+      },
+      {
+        "time": "12:13",
+        "text": "有一些Reputation"
+      },
+      {
+        "time": "12:14",
+        "text": "那後來那些人進去OpenAI就推薦我進去這樣子"
+      },
+      {
+        "time": "12:17",
+        "text": "他們就跟他們Manager"
+      },
+      {
+        "time": "12:18",
+        "text": "那時候Manager就問他們說"
+      },
+      {
+        "time": "12:19",
+        "text": "你們有沒有認識一些"
+      },
+      {
+        "time": "12:21",
+        "text": "一些合作過的Engineer可以推薦"
+      },
+      {
+        "time": "12:22",
+        "text": "他們就推薦我這樣子"
+      },
+      {
+        "time": "12:24",
+        "text": "哦"
+      },
+      {
+        "time": "12:24",
+        "text": "所以就是你要不然就是有AI相關的經驗背景"
+      },
+      {
+        "time": "12:27",
+        "text": "要不然就是要大神"
+      },
+      {
+        "time": "12:29",
+        "text": "不是大神"
+      },
+      {
+        "time": "12:30",
+        "text": "怎麼講就是我覺得今天個人的reputation"
+      },
+      {
+        "time": "12:32",
+        "text": "就是你在業界工作"
+      },
+      {
+        "time": "12:33",
+        "text": "覺得這種network connection也是很重要的一個capital之一"
+      },
+      {
+        "time": "12:37",
+        "text": "非常的謙虛"
+      },
+      {
+        "time": "12:38",
+        "text": "因為OpenAI它的辦公室在Synframe"
+      },
+      {
+        "time": "12:42",
+        "text": "很多人都住在Bare Area就可能南灣"
+      },
+      {
+        "time": "12:44",
+        "text": "那可能也不太適合"
+      },
+      {
+        "time": "12:47",
+        "text": "就像你剛講的"
+      },
+      {
+        "time": "12:47",
+        "text": "他工作強度很大"
+      },
+      {
+        "time": "12:48",
+        "text": "有家庭也是OK"
+      },
+      {
+        "time": "12:49",
+        "text": "應該是蠻多人也是有家庭"
+      },
+      {
+        "time": "12:51",
+        "text": "我知道其實也是有不少有家庭"
+      },
+      {
+        "time": "12:53",
+        "text": "然後比我住更遠的都可以去"
+      },
+      {
+        "time": "12:55",
+        "text": "我覺得是看每個人的選擇"
+      },
+      {
+        "time": "12:57",
+        "text": "他有什麼在工作上面跟其他公司"
+      },
+      {
+        "time": "12:59",
+        "text": "不太一樣的process嗎"
+      },
+      {
+        "time": "13:01",
+        "text": "就是比如說Oncall很crazy"
+      },
+      {
+        "time": "13:03",
+        "text": "或是什麼壓力很大啊"
+      },
+      {
+        "time": "13:05",
+        "text": "目前我看到就是我自己的体验"
+      },
+      {
+        "time": "13:07",
+        "text": "跟我在网上看到的评论就是"
+      },
+      {
+        "time": "13:09",
+        "text": "他的强度是非常非常高的"
+      },
+      {
+        "time": "13:10",
+        "text": "就是绝对会比那些大公司到还要高"
+      },
+      {
+        "time": "13:13",
+        "text": "可能是接近于startup的程度"
+      },
+      {
+        "time": "13:15",
+        "text": "因为他就是move very fast"
+      },
+      {
+        "time": "13:17",
+        "text": "然后再加上里面的人又都很聪明"
+      },
+      {
+        "time": "13:19",
+        "text": "那他们公司本身文化也就是"
+      },
+      {
+        "time": "13:22",
+        "text": "No BS就是卷起袖子就做"
+      },
+      {
+        "time": "13:24",
+        "text": "所以就是强度會非常高"
+      },
+      {
+        "time": "13:27",
+        "text": "就今天可能討論一個product"
+      },
+      {
+        "time": "13:28",
+        "text": "他可能要你下個月把它全部做出來"
+      },
+      {
+        "time": "13:30",
+        "text": "對"
+      },
+      {
+        "time": "13:31",
+        "text": "所以說很適合那種想要拼一下"
+      },
+      {
+        "time": "13:33",
+        "text": "非常適合"
+      },
+      {
+        "time": "13:34",
+        "text": "就像我講的有點像是早期的Meta這樣子"
+      },
+      {
+        "time": "13:36",
+        "text": "因為Meta現在也是大的"
+      },
+      {
+        "time": "13:37",
+        "text": "所以可能Process會比較多"
+      },
+      {
+        "time": "13:39",
+        "text": "那OpenAI又可能像是早期的Meta"
+      },
+      {
+        "time": "13:41",
+        "text": "保密防護做得更好的Meta這樣子"
+      },
+      {
+        "time": "13:43",
+        "text": "非常感謝博爾今天跟我們分享OpenAI"
+      },
+      {
+        "time": "13:45",
+        "text": "網路上面就很少人分享這東西"
+      },
+      {
+        "time": "13:48",
+        "text": "對因為就像我講的"
+      },
+      {
+        "time": "13:49",
+        "text": "你一分享隔天就被約談就被Five"
+      },
+      {
+        "time": "13:51",
+        "text": "對"
+      },
+      {
+        "time": "13:52",
+        "text": "像我這種自願離職的就沒差"
+      },
+      {
+        "time": "13:55",
+        "text": "去OpenAI的也都是大神"
+      },
+      {
+        "time": "13:57",
+        "text": "大神也不會像我這樣在這邊"
+      },
+      {
+        "time": "13:59",
+        "text": "在YouTube上面分享那些東西"
+      },
+      {
+        "time": "14:01",
+        "text": "基本上我看到去OpenAI就是"
+      },
+      {
+        "time": "14:04",
+        "text": "我前公司認識我覺得比較厲害的"
+      },
+      {
+        "time": "14:06",
+        "text": "都在OpenAI"
+      },
+      {
+        "time": "14:07",
+        "text": "如果大家覺得這集影片對你有幫助的話"
+      },
+      {
+        "time": "14:10",
+        "text": "記得要幫我影片點個讚"
+      },
+      {
+        "time": "14:11",
+        "text": "然後也可以波爾點個讚"
+      },
+      {
+        "time": "14:12",
+        "text": "因為這個東西真的是滿少人在分享的"
+      },
+      {
+        "time": "14:14",
+        "text": "好 非常感謝波爾"
+      }
+    ]
+  },
+  "raw_provider_payload": {
+    "actual_url": "https://youtu.be/jpoMabs9t4s",
+    "content": "",
+    "conversation_id": "",
+    "cover": "https://i.ytimg.com/vi/jpoMabs9t4s/sddefault.jpg",
+    "createdAt": 1783959318994,
+    "expiresAt": 1784132122092,
+    "historyScope": "/youtube-subtitle-downloader/",
+    "id": "/youtube-subtitle-downloader/:1:1:jpoMabs9t4s",
+    "mindMap": "",
+    "notes": [],
+    "overviewData": {
+      "overview": "這集整理了 OpenAI 的面試流程與準備重點，包含 Phone Screen、On-site 多輪考核、Coding、System Design、Behavior 與 Technical Deep Dive，並解析各輪常見的評估方式與難度。內容也分享了進入 OpenAI 的關鍵條件：除了扎實的演算法與工程基本功，還要有能凸顯差異化的資歷、AI 相關經驗，以及業界人脈與推薦。",
+      "tags": [
+        "#OpenAI",
+        "#面試流程",
+        "#SystemDesign",
+        "#CodingInterview",
+        "#軟體工程師",
+        "#AI職涯",
+        "#科技業",
+        "#矽谷"
+      ]
+    },
+    "platform": "1",
+    "remoteNoteArtifactIds": {},
+    "routeType": "subtitle",
+    "sourceKey": "/youtube-subtitle-downloader/:1:1:jpoMabs9t4s",
+    "subtitles": [
+      {
+        "text": "Hello大家好我是Terry",
+        "time": "00:00"
+      },
+      {
+        "text": "上集影片我跟波爾聊到他在OpenAI的薪水",
+        "time": "00:01"
+      },
+      {
+        "text": "還有他放棄這個工作的一段心路歷程",
+        "time": "00:04"
+      },
+      {
+        "text": "那今天這集影片會跟大家分享他在OpenAI的面試過程",
+        "time": "00:07"
+      },
+      {
+        "text": "還有大家如果有興趣的話",
+        "time": "00:11"
+      },
+      {
+        "text": "怎麼樣才可以",
+        "time": "00:13"
+      },
+      {
+        "text": "比較有可能的可以拿到OpenAI的面試或者是去裡面工作",
+        "time": "00:14"
+      },
+      {
+        "text": "我就幫大家問啦",
+        "time": "00:18"
+      },
+      {
+        "text": "我覺得應該很多人會好奇",
+        "time": "00:19"
+      },
+      {
+        "text": "是要怎麼樣才可以拿到OpenAI的offer",
+        "time": "00:21"
+      },
+      {
+        "text": "我自己也有去面個 OpenAI",
+        "time": "00:22"
+      },
+      {
+        "text": "然後我是沒過 沒有拿到 Offer",
+        "time": "00:25"
+      },
+      {
+        "text": "可能每個面的 Team 不太一樣",
+        "time": "00:27"
+      },
+      {
+        "text": "就是我當時面的是比較偏 Web 的 Team",
+        "time": "00:29"
+      },
+      {
+        "text": "然後他考我一些就是 React",
+        "time": "00:31"
+      },
+      {
+        "text": "然後再考我一些 CSS 東西",
+        "time": "00:34"
+      },
+      {
+        "text": "我那時候就真的就是沒有準備這個部分",
+        "time": "00:35"
+      },
+      {
+        "text": "你當時去面 OpenAI 的時候",
+        "time": "00:37"
+      },
+      {
+        "text": "是哪一個 Team",
+        "time": "00:40"
+      },
+      {
+        "text": "大概整個流程大概是什麼樣",
+        "time": "00:41"
+      },
+      {
+        "text": "當初有兩個組同時對我有興趣",
+        "time": "00:43"
+      },
+      {
+        "text": "因為裡面的人以前我有跟他工作過",
+        "time": "00:47"
+      },
+      {
+        "text": "然後他們就跟他們Managers推薦我這樣子",
+        "time": "00:50"
+      },
+      {
+        "text": "所以同時有兩個組對我有興趣",
+        "time": "00:53"
+      },
+      {
+        "text": "就是跟Recruiter接下來上來以後",
+        "time": "00:55"
+      },
+      {
+        "text": "基本上就是Follow他們面試的流程",
+        "time": "00:57"
+      },
+      {
+        "text": "基本上就跟其他大公司的流程類似",
+        "time": "00:58"
+      },
+      {
+        "text": "就是你會先有一個Phone Screen",
+        "time": "01:02"
+      },
+      {
+        "text": "Phone Screen就是兩輪",
+        "time": "01:04"
+      },
+      {
+        "text": "一輪Coding 一輪Design",
+        "time": "01:05"
+      },
+      {
+        "text": "System Design",
+        "time": "01:07"
+      },
+      {
+        "text": "那過了以後就是四輪Outsight",
+        "time": "01:08"
+      },
+      {
+        "text": "那一樣是一輪Coding 一輪Design",
+        "time": "01:10"
+      },
+      {
+        "text": "一輪Behaviour",
+        "time": "01:12"
+      },
+      {
+        "text": "那另外一輪就是Technical Deep Dive",
+        "time": "01:13"
+      },
+      {
+        "text": "那Coding跟System Design就是很典型",
+        "time": "01:15"
+      },
+      {
+        "text": "就是跟其他公司一樣",
+        "time": "01:18"
+      },
+      {
+        "text": "那Behaviour也是就是跟其他公司很類似",
+        "time": "01:19"
+      },
+      {
+        "text": "那最後Deep Dive就是現在其實很多對於比較資深的Canada很多公司很類似最後第一段就是現在其實很多",
+        "time": "01:23"
+      },
+      {
+        "text": "對於比較資深的Candidate",
+        "time": "01:25"
+      },
+      {
+        "text": "很多公司會有這一輪",
+        "time": "01:27"
+      },
+      {
+        "text": "就是有時候要準備一個slide deck",
+        "time": "01:28"
+      },
+      {
+        "text": "有時候並不需要",
+        "time": "01:29"
+      },
+      {
+        "text": "但自己準備以後比較容易做解釋",
+        "time": "01:31"
+      },
+      {
+        "text": "主要就是根據你過去曾經",
+        "time": "01:34"
+      },
+      {
+        "text": "深入做的一個Project",
+        "time": "01:36"
+      },
+      {
+        "text": "從End to End去解釋說",
+        "time": "01:37"
+      },
+      {
+        "text": "當初你們為什麼會這麼做",
+        "time": "01:39"
+      },
+      {
+        "text": "你們如何去做",
+        "time": "01:40"
+      },
+      {
+        "text": "然後你在推行Project的過程中",
+        "time": "01:42"
+      },
+      {
+        "text": "需要跟哪些人合作",
+        "time": "01:43"
+      },
+      {
+        "text": "然後最後這Project結果怎麼樣",
+        "time": "01:45"
+      },
+      {
+        "text": "你從中間學到什麼",
+        "time": "01:46"
+      },
+      {
+        "text": "有點像是就是一個Presentation",
+        "time": "01:48"
+      },
+      {
+        "text": "冊中Technical Project的end to end的",
+        "time": "01:49"
+      },
+      {
+        "text": "Execution的Presentation這個樣子",
+        "time": "01:52"
+      },
+      {
+        "text": "嗯 我也看到",
+        "time": "01:54"
+      },
+      {
+        "text": "欸它其實還滿多輪的",
+        "time": "01:56"
+      },
+      {
+        "text": "從Screen兩輪",
+        "time": "01:58"
+      },
+      {
+        "text": "兩輪",
+        "time": "01:59"
+      },
+      {
+        "text": "然後On-site四輪",
+        "time": "02:00"
+      },
+      {
+        "text": "一輪Coding跟一輪System之間",
+        "time": "02:01"
+      },
+      {
+        "text": "先確保說你基本的功用",
+        "time": "02:03"
+      },
+      {
+        "text": "之後就onsight",
+        "time": "02:05"
+      },
+      {
+        "text": "onsight也是remote嘛",
+        "time": "02:06"
+      },
+      {
+        "text": "那時候應該都是remote",
+        "time": "02:07"
+      },
+      {
+        "text": "然後onsight就是四輪",
+        "time": "02:08"
+      },
+      {
+        "text": "對",
+        "time": "02:10"
+      },
+      {
+        "text": "有沒有說考的題目是很特別",
+        "time": "02:10"
+      },
+      {
+        "text": "或是說它比較特別難之類的",
+        "time": "02:13"
+      },
+      {
+        "text": "其實題目來講滿典型",
+        "time": "02:15"
+      },
+      {
+        "text": "但是coding部分它要求的比較高一點",
+        "time": "02:18"
+      },
+      {
+        "text": "就是它是一個問題",
+        "time": "02:20"
+      },
+      {
+        "text": "但是它會有三個follow up",
+        "time": "02:22"
+      },
+      {
+        "text": "那你要在實習內完成follow up",
+        "time": "02:24"
+      },
+      {
+        "text": "其實也是滿緊的",
+        "time": "02:26"
+      },
+      {
+        "text": "就是你必須要",
+        "time": "02:27"
+      },
+      {
+        "text": "可以在短時間內快速的",
+        "time": "02:28"
+      },
+      {
+        "text": "come up with solution",
+        "time": "02:30"
+      },
+      {
+        "text": "然後快速的把它implement出來",
+        "time": "02:31"
+      },
+      {
+        "text": "就是對於Canada的算法",
+        "time": "02:34"
+      },
+      {
+        "text": "跟Coding上的熟練度要求",
+        "time": "02:36"
+      },
+      {
+        "text": "也是滿高的",
+        "time": "02:37"
+      },
+      {
+        "text": "那System Design的部分就是",
+        "time": "02:38"
+      },
+      {
+        "text": "也是一般就是在網路上",
+        "time": "02:40"
+      },
+      {
+        "text": "可以看到類似的題目",
+        "time": "02:41"
+      },
+      {
+        "text": "只是它問得比較細",
+        "time": "02:43"
+      },
+      {
+        "text": "就是基本上這個面試官不是說只跟你走過場",
+        "time": "02:44"
+      },
+      {
+        "text": "就是他會根據你提出的option",
+        "time": "02:48"
+      },
+      {
+        "text": "然後去深挖說你為什麼要這麼做",
+        "time": "02:50"
+      },
+      {
+        "text": "就是會問得更細一點",
+        "time": "02:53"
+      },
+      {
+        "text": "那behavior的話就跟大公司一樣典型",
+        "time": "02:55"
+      },
+      {
+        "text": "就是你去按照STAR模型去根據一個問題去敘事這樣子",
+        "time": "02:58"
+      },
+      {
+        "text": "那第一代就是剛剛刚有说明过",
+        "time": "03:03"
+      },
+      {
+        "text": "就是你自己要准备根据你",
+        "time": "03:05"
+      },
+      {
+        "text": "一个比较完整的Project",
+        "time": "03:07"
+      },
+      {
+        "text": "去从头到尾去说明这个Project",
+        "time": "03:08"
+      },
+      {
+        "text": "从一开始到执行到最后Takeaway这样子",
+        "time": "03:10"
+      },
+      {
+        "text": "那Coding的话",
+        "time": "03:13"
+      },
+      {
+        "text": "还是就是比较偏向Lecal类型的",
+        "time": "03:14"
+      },
+      {
+        "text": "Coding的话",
+        "time": "03:17"
+      },
+      {
+        "text": "本身的问题类似Lecal",
+        "time": "03:18"
+      },
+      {
+        "text": "只是它就是会有Follow Up",
+        "time": "03:20"
+      },
+      {
+        "text": "其实现在很多公司也都是这种",
+        "time": "03:22"
+      },
+      {
+        "text": "一样是算法",
+        "time": "03:23"
+      },
+      {
+        "text": "但是它可能一開始",
+        "time": "03:24"
+      },
+      {
+        "text": "先一個簡單的問題",
+        "time": "03:25"
+      },
+      {
+        "text": "然後之後再去做follow up",
+        "time": "03:26"
+      },
+      {
+        "text": "然後把你這個問題變得更複雜這樣子",
+        "time": "03:28"
+      },
+      {
+        "text": "所以我之前跟Hank做的那個實戰癮",
+        "time": "03:30"
+      },
+      {
+        "text": "我們也是教大家去練習D-code",
+        "time": "03:33"
+      },
+      {
+        "text": "我聽到很多feedback",
+        "time": "03:36"
+      },
+      {
+        "text": "就是我在promote這個",
+        "time": "03:37"
+      },
+      {
+        "text": "我們實戰癮的時候",
+        "time": "03:39"
+      },
+      {
+        "text": "其實很多人懷疑說",
+        "time": "03:40"
+      },
+      {
+        "text": "為什麼現在這個AI時代",
+        "time": "03:41"
+      },
+      {
+        "text": "還是在練習D-code",
+        "time": "03:43"
+      },
+      {
+        "text": "好像有這個意義嗎",
+        "time": "03:44"
+      },
+      {
+        "text": "在矽谷的人大家都知道",
+        "time": "03:46"
+      },
+      {
+        "text": "就這個 interview process 還是差不多",
+        "time": "03:47"
+      },
+      {
+        "text": "我平時在這種公司",
+        "time": "03:49"
+      },
+      {
+        "text": "在做 AI 自己在做 AI",
+        "time": "03:50"
+      },
+      {
+        "text": "但是 interview process",
+        "time": "03:52"
+      },
+      {
+        "text": "還是之前那樣子",
+        "time": "03:53"
+      },
+      {
+        "text": "就是我們還是 coding",
+        "time": "03:54"
+      },
+      {
+        "text": "然後還是一個私生的",
+        "time": "03:55"
+      },
+      {
+        "text": "還是比較這種",
+        "time": "03:56"
+      },
+      {
+        "text": "比較偏八股的考法",
+        "time": "03:57"
+      },
+      {
+        "text": "我覺得現在已經漸漸的",
+        "time": "04:00"
+      },
+      {
+        "text": "變成一種 hybrid 的模式",
+        "time": "04:02"
+      },
+      {
+        "text": "就是有些公司還是會考類似像Zcode的模式",
+        "time": "04:03"
+      },
+      {
+        "text": "即使你在公司你用Vibe Coding",
+        "time": "04:07"
+      },
+      {
+        "text": "最後你的Developer本身還是要做最後把關的程序",
+        "time": "04:09"
+      },
+      {
+        "text": "相當於說你要最後Review AI產出的Code",
+        "time": "04:12"
+      },
+      {
+        "text": "它是不是有問題",
+        "time": "04:14"
+      },
+      {
+        "text": "是不是有Bug",
+        "time": "04:16"
+      },
+      {
+        "text": "還是說它算法是不是最好的",
+        "time": "04:17"
+      },
+      {
+        "text": "你在這種基本的算法跟Coding上理解",
+        "time": "04:19"
+      },
+      {
+        "text": "還是要有一定的程度",
+        "time": "04:21"
+      },
+      {
+        "text": "你才知道說AI它產出的Code",
+        "time": "04:22"
+      },
+      {
+        "text": "是不是make sense這樣子",
+        "time": "04:24"
+      },
+      {
+        "text": "那測驗說你是不是有這個能力",
+        "time": "04:26"
+      },
+      {
+        "text": "那Coding interview還是必須的",
+        "time": "04:28"
+      },
+      {
+        "text": "就我所知有一些公司",
+        "time": "04:30"
+      },
+      {
+        "text": "比如說Meta已經在Pilot就是融合AI tool去做Coding",
+        "time": "04:32"
+      },
+      {
+        "text": "比如說他今天面試會更Demanding",
+        "time": "04:36"
+      },
+      {
+        "text": "就是說他今天給你一個Mini task",
+        "time": "04:38"
+      },
+      {
+        "text": "你可以用AI tool",
+        "time": "04:41"
+      },
+      {
+        "text": "那他會看考察說你如果用AI code",
+        "time": "04:43"
+      },
+      {
+        "text": "去carry out the day to day work",
+        "time": "04:45"
+      },
+      {
+        "text": "那這其實我覺得",
+        "time": "04:47"
+      },
+      {
+        "text": "你還是需要這些基本常識",
+        "time": "04:48"
+      },
+      {
+        "text": "像算法跟coding",
+        "time": "04:50"
+      },
+      {
+        "text": "因為你才知道說",
+        "time": "04:51"
+      },
+      {
+        "text": "你這AI寫出來的code",
+        "time": "04:52"
+      },
+      {
+        "text": "如果不能跑的時候",
+        "time": "04:54"
+      },
+      {
+        "text": "你要如何去debug",
+        "time": "04:55"
+      },
+      {
+        "text": "所以我覺得Programming language",
+        "time": "04:57"
+      },
+      {
+        "text": "跟Algorithm data structure",
+        "time": "04:59"
+      },
+      {
+        "text": "這算是你的Foundation",
+        "time": "05:01"
+      },
+      {
+        "text": "就是這個還是要有",
+        "time": "05:02"
+      },
+      {
+        "text": "你才知道說今天AI是不是 是不是在做幻覺",
+        "time": "05:04"
+      },
+      {
+        "text": "有沒有任何幻覺",
+        "time": "05:08"
+      },
+      {
+        "text": "還是說它是不是在鬼打牆這樣子",
+        "time": "05:09"
+      },
+      {
+        "text": "所以我覺得這個技能還是很重要",
+        "time": "05:11"
+      },
+      {
+        "text": "對,LiCode 現在變成是 A Must",
+        "time": "05:15"
+      },
+      {
+        "text": "最早以前譬如說還沒有 LiCode 出現前",
+        "time": "05:16"
+      },
+      {
+        "text": "它可能會問你一些 Language 的特性",
+        "time": "05:19"
+      },
+      {
+        "text": "LiCode 出現以後你這個 Language 特性",
+        "time": "05:21"
+      },
+      {
+        "text": "變成你需要內化的東西",
+        "time": "05:22"
+      },
+      {
+        "text": "你才可以去寫出 code",
+        "time": "05:24"
+      },
+      {
+        "text": "那現在變成Liqo的東西是",
+        "time": "05:26"
+      },
+      {
+        "text": "你需要去內化的東西",
+        "time": "05:27"
+      },
+      {
+        "text": "你才知道說",
+        "time": "05:28"
+      },
+      {
+        "text": "AI產出的東西是不是make sense",
+        "time": "05:29"
+      },
+      {
+        "text": "而且我覺得有這個Foundation之後",
+        "time": "05:31"
+      },
+      {
+        "text": "不只是去verify AI",
+        "time": "05:33"
+      },
+      {
+        "text": "另外一個很重要的就是",
+        "time": "05:35"
+      },
+      {
+        "text": "你知道怎麼去問問這個問題",
+        "time": "05:36"
+      },
+      {
+        "text": "因為你有這個概念",
+        "time": "05:37"
+      },
+      {
+        "text": "你才會把問題變得更精準",
+        "time": "05:38"
+      },
+      {
+        "text": "就sharp prompt",
+        "time": "05:41"
+      },
+      {
+        "text": "對沒錯",
+        "time": "05:42"
+      },
+      {
+        "text": "會很重要",
+        "time": "05:42"
+      },
+      {
+        "text": "那System Design這部分你覺得這幾年有什麼變化嗎還是其實都差不多我覺得變得更demanding更精準就下 prompt對沒錯會很重要對啊那 system design 這部分",
+        "time": "05:43"
+      },
+      {
+        "text": "你覺得這幾年有什麼變化嗎",
+        "time": "05:45"
+      },
+      {
+        "text": "還是其實都差不多",
+        "time": "05:47"
+      },
+      {
+        "text": "我覺得變得更 demanding",
+        "time": "05:48"
+      },
+      {
+        "text": "因為就像這種東西就是",
+        "time": "05:49"
+      },
+      {
+        "text": "lead code 出來以後",
+        "time": "05:51"
+      },
+      {
+        "text": "coding 越來越 demanding",
+        "time": "05:52"
+      },
+      {
+        "text": "那 system design 現在網路上也越來越多",
+        "time": "05:53"
+      },
+      {
+        "text": "教人如何去 system design interview 的這種",
+        "time": "05:56"
+      },
+      {
+        "text": "課程出現",
+        "time": "05:58"
+      },
+      {
+        "text": "那還有更多 mark interview 的服務",
+        "time": "05:59"
+      },
+      {
+        "text": "所以變成今天 borrow 越來越高",
+        "time": "06:01"
+      },
+      {
+        "text": "因為今天變成大家程度同時",
+        "time": "06:03"
+      },
+      {
+        "text": "一起慢慢被提升",
+        "time": "06:04"
+      },
+      {
+        "text": "Average的Calibre",
+        "time": "06:05"
+      },
+      {
+        "text": "被提升到一个程度以后",
+        "time": "06:07"
+      },
+      {
+        "text": "你就必须要更突出",
+        "time": "06:08"
+      },
+      {
+        "text": "你才能够在其他Cannondale里面脱颖而出",
+        "time": "06:09"
+      },
+      {
+        "text": "而且System Design比较难用AI去作弊",
+        "time": "06:13"
+      },
+      {
+        "text": "难度高很多",
+        "time": "06:16"
+      },
+      {
+        "text": "而且System Design的话",
+        "time": "06:17"
+      },
+      {
+        "text": "我觉得你需要有一些经验",
+        "time": "06:19"
+      },
+      {
+        "text": "就是像你刚刚讲的",
+        "time": "06:22"
+      },
+      {
+        "text": "就是你要如何去下对的prompt",
+        "time": "06:24"
+      },
+      {
+        "text": "就是现在你也可以直接丢给AI",
+        "time": "06:25"
+      },
+      {
+        "text": "一个市场设计的问题",
+        "time": "06:27"
+      },
+      {
+        "text": "但是它今天给你的解法",
+        "time": "06:28"
+      },
+      {
+        "text": "很简单",
+        "time": "06:30"
+      },
+      {
+        "text": "对要不然就是它给你解法",
+        "time": "06:31"
+      },
+      {
+        "text": "会变得很偏门",
+        "time": "06:32"
+      },
+      {
+        "text": "就是会给很多专有名词",
+        "time": "06:34"
+      },
+      {
+        "text": "你不知道它背后在做什么",
+        "time": "06:35"
+      },
+      {
+        "text": "还是说它会给你一个",
+        "time": "06:37"
+      },
+      {
+        "text": "不是你真的想要的答案",
+        "time": "06:38"
+      },
+      {
+        "text": "对",
+        "time": "06:40"
+      },
+      {
+        "text": "你需要给它下正确的prompt",
+        "time": "06:41"
+      },
+      {
+        "text": "去引导它",
+        "time": "06:43"
+      },
+      {
+        "text": "你可能今天你已经有一定的概念",
+        "time": "06:44"
+      },
+      {
+        "text": "可是你在細節上不同",
+        "time": "06:45"
+      },
+      {
+        "text": "然後你再去問他",
+        "time": "06:47"
+      },
+      {
+        "text": "然後他可以給你一個比較好的建議",
+        "time": "06:48"
+      },
+      {
+        "text": "但是你基本的嘗試還是要有",
+        "time": "06:50"
+      },
+      {
+        "text": "你才知道說他是不是今天在 bluffing",
+        "time": "06:53"
+      },
+      {
+        "text": "還是說今天在幻覺這樣子",
+        "time": "06:55"
+      },
+      {
+        "text": "好那就像上一集影片裡面講到的",
+        "time": "06:56"
+      },
+      {
+        "text": "我跟波爾在過去幾個月花了非常多時間",
+        "time": "06:58"
+      },
+      {
+        "text": "在設計跟規劃這個現代系統設計實戰營",
+        "time": "07:02"
+      },
+      {
+        "text": "希望可以把目前這個最新的軟體設計概念",
+        "time": "07:05"
+      },
+      {
+        "text": "很扎實的帶給大家",
+        "time": "07:08"
+      },
+      {
+        "text": "另外我們還加碼了更多關於AI的內容",
+        "time": "07:10"
+      },
+      {
+        "text": "包含了怎麼去設計LLM的Inference API",
+        "time": "07:13"
+      },
+      {
+        "text": "怎麼去設計AI Support Agent",
+        "time": "07:16"
+      },
+      {
+        "text": "還有怎麼去設計ChatGPT Task",
+        "time": "07:18"
+      },
+      {
+        "text": "這些都是目前傳統的系統設計線上課程沒有提供的",
+        "time": "07:20"
+      },
+      {
+        "text": "也是我們覺得在2026年",
+        "time": "07:24"
+      },
+      {
+        "text": "所有的軟體工人士都應該需要有的概念",
+        "time": "07:26"
+      },
+      {
+        "text": "如果你想要在科技業有一個很強的競爭力的話",
+        "time": "07:29"
+      },
+      {
+        "text": "那這個實戰營除了我們的線上課程跟講義之外",
+        "time": "07:32"
+      },
+      {
+        "text": "Live的部分還包含了大家一起在線上做cohort的workshop",
+        "time": "07:36"
+      },
+      {
+        "text": "像比如說用RAC跟PromEngineering去做一個AI的chatbot",
+        "time": "07:40"
+      },
+      {
+        "text": "或者是說針對一些設計的topic去做一些更深度更廣的deep dive",
+        "time": "07:45"
+      },
+      {
+        "text": "這些我們全部都會在Zoom上面Live帶著大家一起做",
+        "time": "07:50"
+      },
+      {
+        "text": "所以說這整整三個月的實戰營的offering其實是非常非常完整的",
+        "time": "07:54"
+      },
+      {
+        "text": "而且也沒有任何一個人我知道啊在做這樣的bootcamp",
+        "time": "07:58"
+      },
+      {
+        "text": "所以大家如果有興趣的話可以去報名一下",
+        "time": "08:01"
+      },
+      {
+        "text": "因為波爾他自己本身之前就有免費在做線上 Camp所以大家如果有興趣的話可以去報名一下因為波爾他自己本身",
+        "time": "08:04"
+      },
+      {
+        "text": "之前就有免費在做線上的諮詢",
+        "time": "08:05"
+      },
+      {
+        "text": "然後也幫助過非常多科技業的同學",
+        "time": "08:07"
+      },
+      {
+        "text": "所以當時我才去問他說",
+        "time": "08:10"
+      },
+      {
+        "text": "欸你想不想幫助到更多人",
+        "time": "08:11"
+      },
+      {
+        "text": "然後我們才一起開始開發這個實戰營",
+        "time": "08:13"
+      },
+      {
+        "text": "那現在我們的找鳥優惠呢",
+        "time": "08:16"
+      },
+      {
+        "text": "已經開始開跑了",
+        "time": "08:17"
+      },
+      {
+        "text": "我會把連結放在影片底下的資訊欄",
+        "time": "08:19"
+      },
+      {
+        "text": "大家可以去看一下",
+        "time": "08:21"
+      },
+      {
+        "text": "而且之前有參與過我跟Hank",
+        "time": "08:22"
+      },
+      {
+        "text": "在2025年的那個實戰營的同學呢",
+        "time": "08:24"
+      },
+      {
+        "text": "也會有個特別的優惠",
+        "time": "08:26"
+      },
+      {
+        "text": "那具體的細節呢",
+        "time": "08:28"
+      },
+      {
+        "text": "都可以在我們的",
+        "time": "08:29"
+      },
+      {
+        "text": "Discord群組裡面找到",
+        "time": "08:29"
+      },
+      {
+        "text": "我們來聊一下OpenAI好了",
+        "time": "08:31"
+      },
+      {
+        "text": "你有遇到一些什麼",
+        "time": "08:33"
+      },
+      {
+        "text": "你覺得是值得跟大家分享的一些",
+        "time": "08:34"
+      },
+      {
+        "text": "比如說Culture Shock之類的",
+        "time": "08:36"
+      },
+      {
+        "text": "Culture Shock我覺得它有點像是",
+        "time": "08:38"
+      },
+      {
+        "text": "Meta跟Apple的結合",
+        "time": "08:40"
+      },
+      {
+        "text": "跟Meta相似的地方就是它move very fast",
+        "time": "08:43"
+      },
+      {
+        "text": "今天講一個東西",
+        "time": "08:46"
+      },
+      {
+        "text": "我們馬上就是用LFM把東西給roll出來",
+        "time": "08:47"
+      },
+      {
+        "text": "然後code review然後就check in這樣子",
+        "time": "08:50"
+      },
+      {
+        "text": "就我現在所觀察OpenAI",
+        "time": "08:52"
+      },
+      {
+        "text": "最近一年數的事情就是",
+        "time": "08:54"
+      },
+      {
+        "text": "它在嘗試各種product idea",
+        "time": "08:55"
+      },
+      {
+        "text": "它從Meta那邊招了很多PM跟engineer過來",
+        "time": "08:57"
+      },
+      {
+        "text": "他們想要嘗試各種product idea",
+        "time": "08:59"
+      },
+      {
+        "text": "就是利用LFM去快速的試各種不同的 Product",
+        "time": "09:01"
+      },
+      {
+        "text": "哪一種可以快速的獲得很高的 Adoption",
+        "time": "09:05"
+      },
+      {
+        "text": "譬如說他們最近推出的 Browser",
+        "time": "09:07"
+      },
+      {
+        "text": "還有他們推出 ChatGPT for Apps",
+        "time": "09:09"
+      },
+      {
+        "text": "所以他們現在在經歷一個快速 Iteration 過程",
+        "time": "09:12"
+      },
+      {
+        "text": "所以需要很快的去把 Product Ship 出來",
+        "time": "09:16"
+      },
+      {
+        "text": "那這在方面跟 Meta 很像",
+        "time": "09:18"
+      },
+      {
+        "text": "因為 Meta 本身就是比較 Product Oriented",
+        "time": "09:20"
+      },
+      {
+        "text": "然後 Move Fast",
+        "time": "09:22"
+      },
+      {
+        "text": "那就是跟 Apple 很像的一點是說",
+        "time": "09:22"
+      },
+      {
+        "text": "他們公司對於保密非常重視",
+        "time": "09:25"
+      },
+      {
+        "text": "就是網路上做Patrol",
+        "time": "09:26"
+      },
+      {
+        "text": "在巡邏非常的Aggressive",
+        "time": "09:29"
+      },
+      {
+        "text": "就是他今天發現說你之前這個員工",
+        "time": "09:31"
+      },
+      {
+        "text": "可能利用公司的名義在做什麼事情",
+        "time": "09:33"
+      },
+      {
+        "text": "就是有任何洩露公司",
+        "time": "09:36"
+      },
+      {
+        "text": "現在想要做的東西的可能",
+        "time": "09:37"
+      },
+      {
+        "text": "他可能明天就幫你約談",
+        "time": "09:39"
+      },
+      {
+        "text": "然後就Bye Bye這樣子",
+        "time": "09:41"
+      },
+      {
+        "text": "你不可能做YouTube",
+        "time": "09:43"
+      },
+      {
+        "text": "目前我好像還沒有看到",
+        "time": "09:44"
+      },
+      {
+        "text": "有OpenAid的敢做YouTube的",
+        "time": "09:45"
+      },
+      {
+        "text": "就是",
+        "time": "09:47"
+      },
+      {
+        "text": "對",
+        "time": "09:47"
+      },
+      {
+        "text": "其實很多大廠也是說",
+        "time": "09:48"
+      },
+      {
+        "text": "你今天不能",
+        "time": "09:50"
+      },
+      {
+        "text": "是一堆公司機密",
+        "time": "09:51"
+      },
+      {
+        "text": "你一被抓就開除",
+        "time": "09:51"
+      },
+      {
+        "text": "但是OpenAid可能會更嚴格一點",
+        "time": "09:52"
+      },
+      {
+        "text": "就是你今天連在外面的場合",
+        "time": "09:54"
+      },
+      {
+        "text": "公開場合提到公司的名字",
+        "time": "09:57"
+      },
+      {
+        "text": "他們都是盡量去避免的",
+        "time": "09:58"
+      },
+      {
+        "text": "因為這公司現在目前就是",
+        "time": "10:00"
+      },
+      {
+        "text": "大家所有的目光聚集的地方",
+        "time": "10:01"
+      },
+      {
+        "text": "所以他們一方面",
+        "time": "10:03"
+      },
+      {
+        "text": "也不希望吸引太多不必要的目光",
+        "time": "10:04"
+      },
+      {
+        "text": "一方面也是因為怕",
+        "time": "10:07"
+      },
+      {
+        "text": "現在公司想要推出什麼東西",
+        "time": "10:08"
+      },
+      {
+        "text": "然後馬上就讓其他競爭者知道",
+        "time": "10:10"
+      },
+      {
+        "text": "然後他可能也會覺得不好這樣子",
+        "time": "10:13"
+      },
+      {
+        "text": "如果說今天想要進OpenAI",
+        "time": "10:15"
+      },
+      {
+        "text": "你有沒有什麼建議",
+        "time": "10:18"
+      },
+      {
+        "text": "建議的話我覺得你要",
+        "time": "10:20"
+      },
+      {
+        "text": "就像我剛剛講現在的试的caliber很高",
+        "time": "10:24"
+      },
+      {
+        "text": "你要在所有的Canada突出",
+        "time": "10:28"
+      },
+      {
+        "text": "你必须要有一些突出的地方",
+        "time": "10:30"
+      },
+      {
+        "text": "跟别人宇宙不同的地方",
+        "time": "10:32"
+      },
+      {
+        "text": "那我观察到的是说",
+        "time": "10:33"
+      },
+      {
+        "text": "OpenAI最近这些年很喜欢找比较资深的Meta Engineer",
+        "time": "10:35"
+      },
+      {
+        "text": "因为他们现在就是在各种尝试不同的产品",
+        "time": "10:38"
+      },
+      {
+        "text": "所以如果你今天是已经在Meta待了幾年的話",
+        "time": "10:42"
+      },
+      {
+        "text": "我覺得可以去試試看",
+        "time": "10:45"
+      },
+      {
+        "text": "如果你今天如果不是在Meta的話",
+        "time": "10:47"
+      },
+      {
+        "text": "會比較難突出",
+        "time": "10:50"
+      },
+      {
+        "text": "你就必須要去走跟AI掛鉤的",
+        "time": "10:51"
+      },
+      {
+        "text": "做跟AI有任何掛鉤的東西",
+        "time": "10:54"
+      },
+      {
+        "text": "譬如說你去Google DeepMind",
+        "time": "10:56"
+      },
+      {
+        "text": "幫他們去做一些Post-training的東西",
+        "time": "10:57"
+      },
+      {
+        "text": "還是說你在Meta做Training Infra的東西",
+        "time": "10:59"
+      },
+      {
+        "text": "如果你今天不是做Modeling的話",
+        "time": "11:01"
+      },
+      {
+        "text": "就可能是做AI Infra",
+        "time": "11:03"
+      },
+      {
+        "text": "就至少你的工作要跟AI搭上邊",
+        "time": "11:05"
+      },
+      {
+        "text": "我看到他也之前招了一些不少",
+        "time": "11:08"
+      },
+      {
+        "text": "從一些AI Startup招了一些人過來",
+        "time": "11:10"
+      },
+      {
+        "text": "簡單來說就是你今天的技能數字",
+        "time": "11:12"
+      },
+      {
+        "text": "最好要有跟AI有關係",
+        "time": "11:14"
+      },
+      {
+        "text": "而且不是就單純做一些Toy Project",
+        "time": "11:16"
+      },
+      {
+        "text": "可能就是你在那些公司",
+        "time": "11:18"
+      },
+      {
+        "text": "實際上真的有碰到有規模的AI",
+        "time": "11:20"
+      },
+      {
+        "text": "不管是Infrastructure還是Modeling",
+        "time": "11:23"
+      },
+      {
+        "text": "還是Training",
+        "time": "11:25"
+      },
+      {
+        "text": "不管是Training這塊",
+        "time": "11:25"
+      },
+      {
+        "text": "還是Inference這塊",
+        "time": "11:26"
+      },
+      {
+        "text": "還是Infra這一塊",
+        "time": "11:27"
+      },
+      {
+        "text": "你如果跟AI有站邊",
+        "time": "11:28"
+      },
+      {
+        "text": "然後你是在有一定體量的公司工作過",
+        "time": "11:30"
+      },
+      {
+        "text": "那我覺得是OpenAI",
+        "time": "11:33"
+      },
+      {
+        "text": "都對你的履歷有興趣",
+        "time": "11:34"
+      },
+      {
+        "text": "當你的履歷通過他們的簡歷官的話",
+        "time": "11:35"
+      },
+      {
+        "text": "那接下來就是面試",
+        "time": "11:38"
+      },
+      {
+        "text": "就是跟其他公司不會差太多這樣子",
+        "time": "11:39"
+      },
+      {
+        "text": "如果你不是做Deep Learning相關的話",
+        "time": "11:42"
+      },
+      {
+        "text": "Deep Learning Research那就是另外一個賽道",
+        "time": "11:45"
+      },
+      {
+        "text": "就是基本上是僱主捧著錢來找你",
+        "time": "11:47"
+      },
+      {
+        "text": "譬如說像Meta Super Intelligence Lab",
+        "time": "11:50"
+      },
+      {
+        "text": "Mark Zuckerberg直接捧錢來找你",
+        "time": "11:53"
+      },
+      {
+        "text": "可是你當時去的OpenAI是API Team",
+        "time": "11:55"
+      },
+      {
+        "text": "對",
+        "time": "11:59"
+      },
+      {
+        "text": "然後你之前有AI的經驗嗎",
+        "time": "11:59"
+      },
+      {
+        "text": "沒有",
+        "time": "12:01"
+      },
+      {
+        "text": "所以",
+        "time": "12:03"
+      },
+      {
+        "text": "是因為那個時候可能招Product Team的",
+        "time": "12:03"
+      },
+      {
+        "text": "哦",
+        "time": "12:06"
+      },
+      {
+        "text": "崗位比較多",
+        "time": "12:07"
+      },
+      {
+        "text": "那是因為你如果是Experience Engineer",
+        "time": "12:07"
+      },
+      {
+        "text": "你的Reputation就很重要",
+        "time": "12:10"
+      },
+      {
+        "text": "那個時候就是我在前公司Stripe",
+        "time": "12:11"
+      },
+      {
+        "text": "有一些Reputation",
+        "time": "12:13"
+      },
+      {
+        "text": "那後來那些人進去OpenAI就推薦我進去這樣子",
+        "time": "12:14"
+      },
+      {
+        "text": "他們就跟他們Manager",
+        "time": "12:17"
+      },
+      {
+        "text": "那時候Manager就問他們說",
+        "time": "12:18"
+      },
+      {
+        "text": "你們有沒有認識一些",
+        "time": "12:19"
+      },
+      {
+        "text": "一些合作過的Engineer可以推薦",
+        "time": "12:21"
+      },
+      {
+        "text": "他們就推薦我這樣子",
+        "time": "12:22"
+      },
+      {
+        "text": "哦",
+        "time": "12:24"
+      },
+      {
+        "text": "所以就是你要不然就是有AI相關的經驗背景",
+        "time": "12:24"
+      },
+      {
+        "text": "要不然就是要大神",
+        "time": "12:27"
+      },
+      {
+        "text": "不是大神",
+        "time": "12:29"
+      },
+      {
+        "text": "怎麼講就是我覺得今天個人的reputation",
+        "time": "12:30"
+      },
+      {
+        "text": "就是你在業界工作",
+        "time": "12:32"
+      },
+      {
+        "text": "覺得這種network connection也是很重要的一個capital之一",
+        "time": "12:33"
+      },
+      {
+        "text": "非常的謙虛",
+        "time": "12:37"
+      },
+      {
+        "text": "因為OpenAI它的辦公室在Synframe",
+        "time": "12:38"
+      },
+      {
+        "text": "很多人都住在Bare Area就可能南灣",
+        "time": "12:42"
+      },
+      {
+        "text": "那可能也不太適合",
+        "time": "12:44"
+      },
+      {
+        "text": "就像你剛講的",
+        "time": "12:47"
+      },
+      {
+        "text": "他工作強度很大",
+        "time": "12:47"
+      },
+      {
+        "text": "有家庭也是OK",
+        "time": "12:48"
+      },
+      {
+        "text": "應該是蠻多人也是有家庭",
+        "time": "12:49"
+      },
+      {
+        "text": "我知道其實也是有不少有家庭",
+        "time": "12:51"
+      },
+      {
+        "text": "然後比我住更遠的都可以去",
+        "time": "12:53"
+      },
+      {
+        "text": "我覺得是看每個人的選擇",
+        "time": "12:55"
+      },
+      {
+        "text": "他有什麼在工作上面跟其他公司",
+        "time": "12:57"
+      },
+      {
+        "text": "不太一樣的process嗎",
+        "time": "12:59"
+      },
+      {
+        "text": "就是比如說Oncall很crazy",
+        "time": "13:01"
+      },
+      {
+        "text": "或是什麼壓力很大啊",
+        "time": "13:03"
+      },
+      {
+        "text": "目前我看到就是我自己的体验",
+        "time": "13:05"
+      },
+      {
+        "text": "跟我在网上看到的评论就是",
+        "time": "13:07"
+      },
+      {
+        "text": "他的强度是非常非常高的",
+        "time": "13:09"
+      },
+      {
+        "text": "就是绝对会比那些大公司到还要高",
+        "time": "13:10"
+      },
+      {
+        "text": "可能是接近于startup的程度",
+        "time": "13:13"
+      },
+      {
+        "text": "因为他就是move very fast",
+        "time": "13:15"
+      },
+      {
+        "text": "然后再加上里面的人又都很聪明",
+        "time": "13:17"
+      },
+      {
+        "text": "那他们公司本身文化也就是",
+        "time": "13:19"
+      },
+      {
+        "text": "No BS就是卷起袖子就做",
+        "time": "13:22"
+      },
+      {
+        "text": "所以就是强度會非常高",
+        "time": "13:24"
+      },
+      {
+        "text": "就今天可能討論一個product",
+        "time": "13:27"
+      },
+      {
+        "text": "他可能要你下個月把它全部做出來",
+        "time": "13:28"
+      },
+      {
+        "text": "對",
+        "time": "13:30"
+      },
+      {
+        "text": "所以說很適合那種想要拼一下",
+        "time": "13:31"
+      },
+      {
+        "text": "非常適合",
+        "time": "13:33"
+      },
+      {
+        "text": "就像我講的有點像是早期的Meta這樣子",
+        "time": "13:34"
+      },
+      {
+        "text": "因為Meta現在也是大的",
+        "time": "13:36"
+      },
+      {
+        "text": "所以可能Process會比較多",
+        "time": "13:37"
+      },
+      {
+        "text": "那OpenAI又可能像是早期的Meta",
+        "time": "13:39"
+      },
+      {
+        "text": "保密防護做得更好的Meta這樣子",
+        "time": "13:41"
+      },
+      {
+        "text": "非常感謝博爾今天跟我們分享OpenAI",
+        "time": "13:43"
+      },
+      {
+        "text": "網路上面就很少人分享這東西",
+        "time": "13:45"
+      },
+      {
+        "text": "對因為就像我講的",
+        "time": "13:48"
+      },
+      {
+        "text": "你一分享隔天就被約談就被Five",
+        "time": "13:49"
+      },
+      {
+        "text": "對",
+        "time": "13:51"
+      },
+      {
+        "text": "像我這種自願離職的就沒差",
+        "time": "13:52"
+      },
+      {
+        "text": "去OpenAI的也都是大神",
+        "time": "13:55"
+      },
+      {
+        "text": "大神也不會像我這樣在這邊",
+        "time": "13:57"
+      },
+      {
+        "text": "在YouTube上面分享那些東西",
+        "time": "13:59"
+      },
+      {
+        "text": "基本上我看到去OpenAI就是",
+        "time": "14:01"
+      },
+      {
+        "text": "我前公司認識我覺得比較厲害的",
+        "time": "14:04"
+      },
+      {
+        "text": "都在OpenAI",
+        "time": "14:06"
+      },
+      {
+        "text": "如果大家覺得這集影片對你有幫助的話",
+        "time": "14:07"
+      },
+      {
+        "text": "記得要幫我影片點個讚",
+        "time": "14:10"
+      },
+      {
+        "text": "然後也可以波爾點個讚",
+        "time": "14:11"
+      },
+      {
+        "text": "因為這個東西真的是滿少人在分享的",
+        "time": "14:12"
+      },
+      {
+        "text": "好 非常感謝波爾",
+        "time": "14:14"
+      }
+    ],
+    "task_id": "425d3d8e00344c5e90df8c0b1abfaead",
+    "title": "進 OpenAI 有多難？如何通過面試？揭密高薪背後的：生存法則",
+    "transcript": [],
+    "updatedAt": 1783959322092,
+    "url": "https://youtu.be/jpoMabs9t4s",
+    "video_url": ""
+  }
+}

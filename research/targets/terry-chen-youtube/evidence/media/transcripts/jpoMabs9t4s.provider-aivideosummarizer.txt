@@ -1,0 +1,443 @@
+Hello大家好我是Terry
+上集影片我跟波爾聊到他在OpenAI的薪水
+還有他放棄這個工作的一段心路歷程
+那今天這集影片會跟大家分享他在OpenAI的面試過程
+還有大家如果有興趣的話
+怎麼樣才可以
+比較有可能的可以拿到OpenAI的面試或者是去裡面工作
+我就幫大家問啦
+我覺得應該很多人會好奇
+是要怎麼樣才可以拿到OpenAI的offer
+我自己也有去面個 OpenAI
+然後我是沒過 沒有拿到 Offer
+可能每個面的 Team 不太一樣
+就是我當時面的是比較偏 Web 的 Team
+然後他考我一些就是 React
+然後再考我一些 CSS 東西
+我那時候就真的就是沒有準備這個部分
+你當時去面 OpenAI 的時候
+是哪一個 Team
+大概整個流程大概是什麼樣
+當初有兩個組同時對我有興趣
+因為裡面的人以前我有跟他工作過
+然後他們就跟他們Managers推薦我這樣子
+所以同時有兩個組對我有興趣
+就是跟Recruiter接下來上來以後
+基本上就是Follow他們面試的流程
+基本上就跟其他大公司的流程類似
+就是你會先有一個Phone Screen
+Phone Screen就是兩輪
+一輪Coding 一輪Design
+System Design
+那過了以後就是四輪Outsight
+那一樣是一輪Coding 一輪Design
+一輪Behaviour
+那另外一輪就是Technical Deep Dive
+那Coding跟System Design就是很典型
+就是跟其他公司一樣
+那Behaviour也是就是跟其他公司很類似
+那最後Deep Dive就是現在其實很多對於比較資深的Canada很多公司很類似最後第一段就是現在其實很多
+對於比較資深的Candidate
+很多公司會有這一輪
+就是有時候要準備一個slide deck
+有時候並不需要
+但自己準備以後比較容易做解釋
+主要就是根據你過去曾經
+深入做的一個Project
+從End to End去解釋說
+當初你們為什麼會這麼做
+你們如何去做
+然後你在推行Project的過程中
+需要跟哪些人合作
+然後最後這Project結果怎麼樣
+你從中間學到什麼
+有點像是就是一個Presentation
+冊中Technical Project的end to end的
+Execution的Presentation這個樣子
+嗯 我也看到
+欸它其實還滿多輪的
+從Screen兩輪
+兩輪
+然後On-site四輪
+一輪Coding跟一輪System之間
+先確保說你基本的功用
+之後就onsight
+onsight也是remote嘛
+那時候應該都是remote
+然後onsight就是四輪
+對
+有沒有說考的題目是很特別
+或是說它比較特別難之類的
+其實題目來講滿典型
+但是coding部分它要求的比較高一點
+就是它是一個問題
+但是它會有三個follow up
+那你要在實習內完成follow up
+其實也是滿緊的
+就是你必須要
+可以在短時間內快速的
+come up with solution
+然後快速的把它implement出來
+就是對於Canada的算法
+跟Coding上的熟練度要求
+也是滿高的
+那System Design的部分就是
+也是一般就是在網路上
+可以看到類似的題目
+只是它問得比較細
+就是基本上這個面試官不是說只跟你走過場
+就是他會根據你提出的option
+然後去深挖說你為什麼要這麼做
+就是會問得更細一點
+那behavior的話就跟大公司一樣典型
+就是你去按照STAR模型去根據一個問題去敘事這樣子
+那第一代就是剛剛刚有说明过
+就是你自己要准备根据你
+一个比较完整的Project
+去从头到尾去说明这个Project
+从一开始到执行到最后Takeaway这样子
+那Coding的话
+还是就是比较偏向Lecal类型的
+Coding的话
+本身的问题类似Lecal
+只是它就是会有Follow Up
+其实现在很多公司也都是这种
+一样是算法
+但是它可能一開始
+先一個簡單的問題
+然後之後再去做follow up
+然後把你這個問題變得更複雜這樣子
+所以我之前跟Hank做的那個實戰癮
+我們也是教大家去練習D-code
+我聽到很多feedback
+就是我在promote這個
+我們實戰癮的時候
+其實很多人懷疑說
+為什麼現在這個AI時代
+還是在練習D-code
+好像有這個意義嗎
+在矽谷的人大家都知道
+就這個 interview process 還是差不多
+我平時在這種公司
+在做 AI 自己在做 AI
+但是 interview process
+還是之前那樣子
+就是我們還是 coding
+然後還是一個私生的
+還是比較這種
+比較偏八股的考法
+我覺得現在已經漸漸的
+變成一種 hybrid 的模式
+就是有些公司還是會考類似像Zcode的模式
+即使你在公司你用Vibe Coding
+最後你的Developer本身還是要做最後把關的程序
+相當於說你要最後Review AI產出的Code
+它是不是有問題
+是不是有Bug
+還是說它算法是不是最好的
+你在這種基本的算法跟Coding上理解
+還是要有一定的程度
+你才知道說AI它產出的Code
+是不是make sense這樣子
+那測驗說你是不是有這個能力
+那Coding interview還是必須的
+就我所知有一些公司
+比如說Meta已經在Pilot就是融合AI tool去做Coding
+比如說他今天面試會更Demanding
+就是說他今天給你一個Mini task
+你可以用AI tool
+那他會看考察說你如果用AI code
+去carry out the day to day work
+那這其實我覺得
+你還是需要這些基本常識
+像算法跟coding
+因為你才知道說
+你這AI寫出來的code
+如果不能跑的時候
+你要如何去debug
+所以我覺得Programming language
+跟Algorithm data structure
+這算是你的Foundation
+就是這個還是要有
+你才知道說今天AI是不是 是不是在做幻覺
+有沒有任何幻覺
+還是說它是不是在鬼打牆這樣子
+所以我覺得這個技能還是很重要
+對,LiCode 現在變成是 A Must
+最早以前譬如說還沒有 LiCode 出現前
+它可能會問你一些 Language 的特性
+LiCode 出現以後你這個 Language 特性
+變成你需要內化的東西
+你才可以去寫出 code
+那現在變成Liqo的東西是
+你需要去內化的東西
+你才知道說
+AI產出的東西是不是make sense
+而且我覺得有這個Foundation之後
+不只是去verify AI
+另外一個很重要的就是
+你知道怎麼去問問這個問題
+因為你有這個概念
+你才會把問題變得更精準
+就sharp prompt
+對沒錯
+會很重要
+那System Design這部分你覺得這幾年有什麼變化嗎還是其實都差不多我覺得變得更demanding更精準就下 prompt對沒錯會很重要對啊那 system design 這部分
+你覺得這幾年有什麼變化嗎
+還是其實都差不多
+我覺得變得更 demanding
+因為就像這種東西就是
+lead code 出來以後
+coding 越來越 demanding
+那 system design 現在網路上也越來越多
+教人如何去 system design interview 的這種
+課程出現
+那還有更多 mark interview 的服務
+所以變成今天 borrow 越來越高
+因為今天變成大家程度同時
+一起慢慢被提升
+Average的Calibre
+被提升到一个程度以后
+你就必须要更突出
+你才能够在其他Cannondale里面脱颖而出
+而且System Design比较难用AI去作弊
+难度高很多
+而且System Design的话
+我觉得你需要有一些经验
+就是像你刚刚讲的
+就是你要如何去下对的prompt
+就是现在你也可以直接丢给AI
+一个市场设计的问题
+但是它今天给你的解法
+很简单
+对要不然就是它给你解法
+会变得很偏门
+就是会给很多专有名词
+你不知道它背后在做什么
+还是说它会给你一个
+不是你真的想要的答案
+对
+你需要给它下正确的prompt
+去引导它
+你可能今天你已经有一定的概念
+可是你在細節上不同
+然後你再去問他
+然後他可以給你一個比較好的建議
+但是你基本的嘗試還是要有
+你才知道說他是不是今天在 bluffing
+還是說今天在幻覺這樣子
+好那就像上一集影片裡面講到的
+我跟波爾在過去幾個月花了非常多時間
+在設計跟規劃這個現代系統設計實戰營
+希望可以把目前這個最新的軟體設計概念
+很扎實的帶給大家
+另外我們還加碼了更多關於AI的內容
+包含了怎麼去設計LLM的Inference API
+怎麼去設計AI Support Agent
+還有怎麼去設計ChatGPT Task
+這些都是目前傳統的系統設計線上課程沒有提供的
+也是我們覺得在2026年
+所有的軟體工人士都應該需要有的概念
+如果你想要在科技業有一個很強的競爭力的話
+那這個實戰營除了我們的線上課程跟講義之外
+Live的部分還包含了大家一起在線上做cohort的workshop
+像比如說用RAC跟PromEngineering去做一個AI的chatbot
+或者是說針對一些設計的topic去做一些更深度更廣的deep dive
+這些我們全部都會在Zoom上面Live帶著大家一起做
+所以說這整整三個月的實戰營的offering其實是非常非常完整的
+而且也沒有任何一個人我知道啊在做這樣的bootcamp
+所以大家如果有興趣的話可以去報名一下
+因為波爾他自己本身之前就有免費在做線上 Camp所以大家如果有興趣的話可以去報名一下因為波爾他自己本身
+之前就有免費在做線上的諮詢
+然後也幫助過非常多科技業的同學
+所以當時我才去問他說
+欸你想不想幫助到更多人
+然後我們才一起開始開發這個實戰營
+那現在我們的找鳥優惠呢
+已經開始開跑了
+我會把連結放在影片底下的資訊欄
+大家可以去看一下
+而且之前有參與過我跟Hank
+在2025年的那個實戰營的同學呢
+也會有個特別的優惠
+那具體的細節呢
+都可以在我們的
+Discord群組裡面找到
+我們來聊一下OpenAI好了
+你有遇到一些什麼
+你覺得是值得跟大家分享的一些
+比如說Culture Shock之類的
+Culture Shock我覺得它有點像是
+Meta跟Apple的結合
+跟Meta相似的地方就是它move very fast
+今天講一個東西
+我們馬上就是用LFM把東西給roll出來
+然後code review然後就check in這樣子
+就我現在所觀察OpenAI
+最近一年數的事情就是
+它在嘗試各種product idea
+它從Meta那邊招了很多PM跟engineer過來
+他們想要嘗試各種product idea
+就是利用LFM去快速的試各種不同的 Product
+哪一種可以快速的獲得很高的 Adoption
+譬如說他們最近推出的 Browser
+還有他們推出 ChatGPT for Apps
+所以他們現在在經歷一個快速 Iteration 過程
+所以需要很快的去把 Product Ship 出來
+那這在方面跟 Meta 很像
+因為 Meta 本身就是比較 Product Oriented
+然後 Move Fast
+那就是跟 Apple 很像的一點是說
+他們公司對於保密非常重視
+就是網路上做Patrol
+在巡邏非常的Aggressive
+就是他今天發現說你之前這個員工
+可能利用公司的名義在做什麼事情
+就是有任何洩露公司
+現在想要做的東西的可能
+他可能明天就幫你約談
+然後就Bye Bye這樣子
+你不可能做YouTube
+目前我好像還沒有看到
+有OpenAid的敢做YouTube的
+就是
+對
+其實很多大廠也是說
+你今天不能
+是一堆公司機密
+你一被抓就開除
+但是OpenAid可能會更嚴格一點
+就是你今天連在外面的場合
+公開場合提到公司的名字
+他們都是盡量去避免的
+因為這公司現在目前就是
+大家所有的目光聚集的地方
+所以他們一方面
+也不希望吸引太多不必要的目光
+一方面也是因為怕
+現在公司想要推出什麼東西
+然後馬上就讓其他競爭者知道
+然後他可能也會覺得不好這樣子
+如果說今天想要進OpenAI
+你有沒有什麼建議
+建議的話我覺得你要
+就像我剛剛講現在的试的caliber很高
+你要在所有的Canada突出
+你必须要有一些突出的地方
+跟别人宇宙不同的地方
+那我观察到的是说
+OpenAI最近这些年很喜欢找比较资深的Meta Engineer
+因为他们现在就是在各种尝试不同的产品
+所以如果你今天是已经在Meta待了幾年的話
+我覺得可以去試試看
+如果你今天如果不是在Meta的話
+會比較難突出
+你就必須要去走跟AI掛鉤的
+做跟AI有任何掛鉤的東西
+譬如說你去Google DeepMind
+幫他們去做一些Post-training的東西
+還是說你在Meta做Training Infra的東西
+如果你今天不是做Modeling的話
+就可能是做AI Infra
+就至少你的工作要跟AI搭上邊
+我看到他也之前招了一些不少
+從一些AI Startup招了一些人過來
+簡單來說就是你今天的技能數字
+最好要有跟AI有關係
+而且不是就單純做一些Toy Project
+可能就是你在那些公司
+實際上真的有碰到有規模的AI
+不管是Infrastructure還是Modeling
+還是Training
+不管是Training這塊
+還是Inference這塊
+還是Infra這一塊
+你如果跟AI有站邊
+然後你是在有一定體量的公司工作過
+那我覺得是OpenAI
+都對你的履歷有興趣
+當你的履歷通過他們的簡歷官的話
+那接下來就是面試
+就是跟其他公司不會差太多這樣子
+如果你不是做Deep Learning相關的話
+Deep Learning Research那就是另外一個賽道
+就是基本上是僱主捧著錢來找你
+譬如說像Meta Super Intelligence Lab
+Mark Zuckerberg直接捧錢來找你
+可是你當時去的OpenAI是API Team
+對
+然後你之前有AI的經驗嗎
+沒有
+所以
+是因為那個時候可能招Product Team的
+哦
+崗位比較多
+那是因為你如果是Experience Engineer
+你的Reputation就很重要
+那個時候就是我在前公司Stripe
+有一些Reputation
+那後來那些人進去OpenAI就推薦我進去這樣子
+他們就跟他們Manager
+那時候Manager就問他們說
+你們有沒有認識一些
+一些合作過的Engineer可以推薦
+他們就推薦我這樣子
+哦
+所以就是你要不然就是有AI相關的經驗背景
+要不然就是要大神
+不是大神
+怎麼講就是我覺得今天個人的reputation
+就是你在業界工作
+覺得這種network connection也是很重要的一個capital之一
+非常的謙虛
+因為OpenAI它的辦公室在Synframe
+很多人都住在Bare Area就可能南灣
+那可能也不太適合
+就像你剛講的
+他工作強度很大
+有家庭也是OK
+應該是蠻多人也是有家庭
+我知道其實也是有不少有家庭
+然後比我住更遠的都可以去
+我覺得是看每個人的選擇
+他有什麼在工作上面跟其他公司
+不太一樣的process嗎
+就是比如說Oncall很crazy
+或是什麼壓力很大啊
+目前我看到就是我自己的体验
+跟我在网上看到的评论就是
+他的强度是非常非常高的
+就是绝对会比那些大公司到还要高
+可能是接近于startup的程度
+因为他就是move very fast
+然后再加上里面的人又都很聪明
+那他们公司本身文化也就是
+No BS就是卷起袖子就做
+所以就是强度會非常高
+就今天可能討論一個product
+他可能要你下個月把它全部做出來
+對
+所以說很適合那種想要拼一下
+非常適合
+就像我講的有點像是早期的Meta這樣子
+因為Meta現在也是大的
+所以可能Process會比較多
+那OpenAI又可能像是早期的Meta
+保密防護做得更好的Meta這樣子
+非常感謝博爾今天跟我們分享OpenAI
+網路上面就很少人分享這東西
+對因為就像我講的
+你一分享隔天就被約談就被Five
+對
+像我這種自願離職的就沒差
+去OpenAI的也都是大神
+大神也不會像我這樣在這邊
+在YouTube上面分享那些東西
+基本上我看到去OpenAI就是
+我前公司認識我覺得比較厲害的
+都在OpenAI
+如果大家覺得這集影片對你有幫助的話
+記得要幫我影片點個讚
+然後也可以波爾點個讚
+因為這個東西真的是滿少人在分享的
+好 非常感謝波爾

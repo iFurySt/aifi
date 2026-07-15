@@ -1,0 +1,590 @@
+{
+  "source": "Online transcript provider: Kome",
+  "source_url": "https://www.youtube.com/watch?v=XWL5AgNh8K4",
+  "provider": {
+    "name": "Kome",
+    "endpoint": "https://kome.ai/api/transcript",
+    "retrieved": "2026-07-13"
+  },
+  "video_index": 33,
+  "video": {
+    "index": 33,
+    "id": "XWL5AgNh8K4",
+    "title": "拒絕年薪上億台幣的 Offer",
+    "url": "https://www.youtube.com/watch?v=XWL5AgNh8K4",
+    "duration_seconds": 664.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "XWL5AgNh8K4",
+    "title": "拒絕年薪上億台幣的 Offer",
+    "text": "I've seen this before. It's the most powerful TC. If I lose this\nmoney, I might not be able to buy it back. You're the most\npaid person in the channel. It's probably the highest offer you've ever received.\nI know you don't want to calculate it. But I just calculated it\nin my head. If you knew it would be like this today, you\nwould think you should weigh it again. Today we are\ngoing to share a data point with you guys. I think it's quite interesting.\nThis is the first time you guys have seen Paul. Paul is my friend. He\nis also a mentor of our last season of \"Street Fighter\" I think Bo is\nreally good. He has some experiences that are worth sharing with you. You\nstudied in Taiwan University. You graduated from Columbia University in\nthe United States. You studied Master's in CS. Is it because you can get a\nvisa or you want to study? I wanted to study abroad when I was in\ncollege. I applied for a mechanical program, including REE and CS. Most of\nthe time, I applied for CS. When I was choosing, I did some research.\nI found that CS is easier to find a job in the US. And the\nsalary is higher. So I chose CS program. After that, I think the whole\nresume is very typical. The name tags of major tech companies are all on your\nLinkedIn. Google, then Meta, Stripe. Stripe, Vercel, and now Airbnb. And in the middle is\nOpenAI. I didn't put it on the video. Because I only stay in OpenAI\nfor about a month or two. So I don't want to put my\nresume on it. I think this video is mainly to share with you about the\nopportunity of OpenAI. Because I think there are very few people who talk\nabout OpenAI on our website. And there are very few people who share OpenAI. I've\nseen this too. It's the best TC ever. At that time, your\nbase was... 310K. $310,000. The base was $310,000. Yes.\nAnd the stock... The stock was... 2.2 million,\nand it was 4 years. But... It's not an option or an RSU. It's a\nspecial structure called PPU. Profit Sharing Unit. It has more\nlimitations. OpenMap has just been transformed. It has a part that is not\nprofitable. So the shareholder is a special structure. As for PPU, I think its\nlimitation is 首先就是你在VEST前兩年是沒辦法轉賣 即使它有Tender Event\n然後可是它的優點是說 它的運作方式有點像Option 就是之後你賣掉的部分\n它的Gain是算你的Long Term Capital Gain 就比較一般的RSU\n就是如果你在VEST就賣掉的話 它就算成你的Ordinary Income\n其實跟Option有點像 Yes, it's similar to Option. But the company\nstructure is special. So the equity part has a special name. But the difference with\nOption is that Option has an exercise price. You can use your own money\nto buy an exercise price. But the PPU is like, this part is more like\nthe RSU, it's directly given to you. OK, so this is 2.2 million, 2.2\nmillion, and then divide by 4, which means that your annual option, the share part\nis about 550,000. Right. And then add up to 310,000, it's about 860,000.\n以當時的估值來說 對,以當時的估值來說\n然後80萬台幣的話,就是大概2500萬左右差不多 對,如果是...\n台幣現在大概30塊左右 對,這是來過頻道裡面最高薪水的\n你在奧姆佩奈多久? 做了一個多月而已 一個多月?\n然後就不做了? 主要原因是? 主要原因是家庭因素吧\n一開始其實我在... I hesitated for a long time before I went to the office.\nBecause they asked me to go to the office for three days\na week. I live in South Bay. The office is in San Francisco. If I\nhave to commute back and forth, it will take at least one hour\nto go to the office. Because there are many cars during the day and night.\nI have to go to the office for three days a week for five\ndays. So basically when I need to go to the office, I can't see my\nkids that day. I have two kids at home. Then I thought\nI lost my child because of this money. I was growing up and\nI was willing to let me see the light. I felt like it\nwas a bit slippery. Some things can't be bought with money. After\nthinking about it carefully, I felt that the other part is because OpenAI\nhas a lot of work. I feel that because I'm not young,\nI feel that I should prioritize my I think that these things, when I think\nabout it, if I lose these things, I might not be able to\nbuy them back. I'll think about it and when I see them, I'll\nthink about it and give up. Health and family. I think this is very\nimportant. I don't have kids. But I can understand. During the\ngrowth of children, if you miss something, you miss something. Yeah. They only\nhad this one time. I can totally understand why. Although there's a lot of money.\nThere's a lot of money. It's totally... It should be all your offers. The highest\ninitial offer you got. Yeah. Right? But to be honest, you\nwouldn't know if you didn't check the price. But the\nchance of it being good is pretty high. No one knows when\nit will be sold. And the money is also considered as\npaper money. Yes, that's right. Can it be sold?\n-\nBasically, the last time they only had 10 units. I remember when\nwe were talking, you went in in about March or March of 2024.\nI just checked, the valuation at that time was about 100B. What is 100B?\n1,000 billion US dollars. Now it's 500B. That's about 5,000 billion,\nabout five times the value. This is like when my stock\nmarket is down, I turn off the app and don't look at it. I\ntry not to follow the current market news. I know you don't want\nto count it, but I just counted it in my head. If you were to\nenter the industry, it would take you a year or less. TC would be\naround $3 million. $3 million per piece of TC. If you knew that\nit would be like this, would you have thought about it? No, I\nwouldn't. The first thing is that you shouldn't waste your time on\nregret. The second thing is that When you experience a lot of things\nin the investment market today, you will feel that some money is not enough\nfor you. Don't waste money to hold. You should say that. For example, now\nOpenAI says, \"Yo, Bull, I'll give you 3 mil when you come back.\" The same\noffer, the same package of 3 mil. Will you accept this offer? Unless\nthey open an office in the south today, I don't have to spend so much\ntime on the same thing. Because time is not enough to buy back with money.\nI see.\nIf you do Caltrain yourself and then switch to end-to-end, door-to-door, it will take\nyou more than an hour and a half. Okay, I understand. It does sound like\nit's not really suitable. You just told me that many of your friends\nhave got an OpenAI offer. Many people in Google DeepMind are also open\nAI diggers. I know that many people in Facebook's OpenAI diggers are also open\nAI diggers. There are some people who didn't get an offer for a similar reason.\nOf course, it's still very difficult to get an offer. Because I believe most\npeople still think that you give me so much money, it doesn't matter\nif I give you 24 hours. I'll ask everyone. I think a lot of\npeople will be curious to know how to get an open AIDA offer.\nI have a message for you. Paul and I have been planning a real-time camp\nfor the past few months. It's called Modern System Design. It's finally open\nfor everyone to sign up. The purpose of this real-time camp is to help you\nget your ideal offer. Let me tell you why. In 2026, software engineers are\nno longer simply writing code and using AI. The real-time design interview that\ncan show the strengths and values of engineers has become the main topic.\nWe have seen many interns and just graduated were tested in system design in the\ninterview. And this is also an interview that can't be replaced by AI.\nSo it will be the most basic threshold for all engineers to interview in\nthe future. Also because of AI, we all become 10x engineers. So the focus of\nhiring in the future will be on the engineering ability of engineers, technical balance, and\nthe hard work that can't be replaced by AI. In this demo, we also added\nthe application design of AI and Web3, such as how to design the ChatGP task,\nhow to design the Polymarket, how to design the AI Agent, and my favorite, how\nto design the Tesla Robotaxi app. Because we hope everyone can learn the app that\neveryone is using right now. This is designed for engineers and translators.\nBut if you want to know how a production grade system can meet the\ndemands of millions and tens of millions of users at the same time, you\nare welcome to sign up. This is what Vibe Coding can't give you. If\nyou have no foundation in system design, such as SQL, VectorDB, or RAC, you don't\nhave to worry. We have already sorted out all the system design concepts\nyou need to know from 0 to 1, so you can start learning from scratch.\nPersonally, If you are serious about software engineers, this real-world camp is definitely worth investing\nin. Because you can see the revenge right away. Let's take a look at\nthe data. In Taiwan, Google, Nvidia, Amazon, etc. The salary of about 6-7 years of\nexperience can reach 4-5 million Taiwan dollars. In the United States, companies like\nMeta and OpenAI can also charge millions of dollars a year for 6-7 years\nof experience. The link to register is in the information column below the video.\nOK, in the next video, Paul will share with you how he got the interview\nand offer for OpenAI and the interview process. And if you want to go\nto OpenAI, where do you want to go? Then we will talk about the\ntrend of software engineers. So if you don't want to miss it, remember to\nsubscribe to my channel. And remember to like this video. Because you know, we haven't\ninterviewed a engineer who is willing to openly publicize his salary for a\nlong time. OK, see you next time.",
+    "segments": [
+      {
+        "index": 0,
+        "text": "I've seen this before. It's the most powerful TC. If I lose this"
+      },
+      {
+        "index": 1,
+        "text": "money, I might not be able to buy it back. You're the most"
+      },
+      {
+        "index": 2,
+        "text": "paid person in the channel. It's probably the highest offer you've ever received."
+      },
+      {
+        "index": 3,
+        "text": "I know you don't want to calculate it. But I just calculated it"
+      },
+      {
+        "index": 4,
+        "text": "in my head. If you knew it would be like this today, you"
+      },
+      {
+        "index": 5,
+        "text": "would think you should weigh it again. Today we are"
+      },
+      {
+        "index": 6,
+        "text": "going to share a data point with you guys. I think it's quite interesting."
+      },
+      {
+        "index": 7,
+        "text": "This is the first time you guys have seen Paul. Paul is my friend. He"
+      },
+      {
+        "index": 8,
+        "text": "is also a mentor of our last season of \"Street Fighter\" I think Bo is"
+      },
+      {
+        "index": 9,
+        "text": "really good. He has some experiences that are worth sharing with you. You"
+      },
+      {
+        "index": 10,
+        "text": "studied in Taiwan University. You graduated from Columbia University in"
+      },
+      {
+        "index": 11,
+        "text": "the United States. You studied Master's in CS. Is it because you can get a"
+      },
+      {
+        "index": 12,
+        "text": "visa or you want to study? I wanted to study abroad when I was in"
+      },
+      {
+        "index": 13,
+        "text": "college. I applied for a mechanical program, including REE and CS. Most of"
+      },
+      {
+        "index": 14,
+        "text": "the time, I applied for CS. When I was choosing, I did some research."
+      },
+      {
+        "index": 15,
+        "text": "I found that CS is easier to find a job in the US. And the"
+      },
+      {
+        "index": 16,
+        "text": "salary is higher. So I chose CS program. After that, I think the whole"
+      },
+      {
+        "index": 17,
+        "text": "resume is very typical. The name tags of major tech companies are all on your"
+      },
+      {
+        "index": 18,
+        "text": "LinkedIn. Google, then Meta, Stripe. Stripe, Vercel, and now Airbnb. And in the middle is"
+      },
+      {
+        "index": 19,
+        "text": "OpenAI. I didn't put it on the video. Because I only stay in OpenAI"
+      },
+      {
+        "index": 20,
+        "text": "for about a month or two. So I don't want to put my"
+      },
+      {
+        "index": 21,
+        "text": "resume on it. I think this video is mainly to share with you about the"
+      },
+      {
+        "index": 22,
+        "text": "opportunity of OpenAI. Because I think there are very few people who talk"
+      },
+      {
+        "index": 23,
+        "text": "about OpenAI on our website. And there are very few people who share OpenAI. I've"
+      },
+      {
+        "index": 24,
+        "text": "seen this too. It's the best TC ever. At that time, your"
+      },
+      {
+        "index": 25,
+        "text": "base was... 310K. $310,000. The base was $310,000. Yes."
+      },
+      {
+        "index": 26,
+        "text": "And the stock... The stock was... 2.2 million,"
+      },
+      {
+        "index": 27,
+        "text": "and it was 4 years. But... It's not an option or an RSU. It's a"
+      },
+      {
+        "index": 28,
+        "text": "special structure called PPU. Profit Sharing Unit. It has more"
+      },
+      {
+        "index": 29,
+        "text": "limitations. OpenMap has just been transformed. It has a part that is not"
+      },
+      {
+        "index": 30,
+        "text": "profitable. So the shareholder is a special structure. As for PPU, I think its"
+      },
+      {
+        "index": 31,
+        "text": "limitation is 首先就是你在VEST前兩年是沒辦法轉賣 即使它有Tender Event"
+      },
+      {
+        "index": 32,
+        "text": "然後可是它的優點是說 它的運作方式有點像Option 就是之後你賣掉的部分"
+      },
+      {
+        "index": 33,
+        "text": "它的Gain是算你的Long Term Capital Gain 就比較一般的RSU"
+      },
+      {
+        "index": 34,
+        "text": "就是如果你在VEST就賣掉的話 它就算成你的Ordinary Income"
+      },
+      {
+        "index": 35,
+        "text": "其實跟Option有點像 Yes, it's similar to Option. But the company"
+      },
+      {
+        "index": 36,
+        "text": "structure is special. So the equity part has a special name. But the difference with"
+      },
+      {
+        "index": 37,
+        "text": "Option is that Option has an exercise price. You can use your own money"
+      },
+      {
+        "index": 38,
+        "text": "to buy an exercise price. But the PPU is like, this part is more like"
+      },
+      {
+        "index": 39,
+        "text": "the RSU, it's directly given to you. OK, so this is 2.2 million, 2.2"
+      },
+      {
+        "index": 40,
+        "text": "million, and then divide by 4, which means that your annual option, the share part"
+      },
+      {
+        "index": 41,
+        "text": "is about 550,000. Right. And then add up to 310,000, it's about 860,000."
+      },
+      {
+        "index": 42,
+        "text": "以當時的估值來說 對,以當時的估值來說"
+      },
+      {
+        "index": 43,
+        "text": "然後80萬台幣的話,就是大概2500萬左右差不多 對,如果是..."
+      },
+      {
+        "index": 44,
+        "text": "台幣現在大概30塊左右 對,這是來過頻道裡面最高薪水的"
+      },
+      {
+        "index": 45,
+        "text": "你在奧姆佩奈多久? 做了一個多月而已 一個多月?"
+      },
+      {
+        "index": 46,
+        "text": "然後就不做了? 主要原因是? 主要原因是家庭因素吧"
+      },
+      {
+        "index": 47,
+        "text": "一開始其實我在... I hesitated for a long time before I went to the office."
+      },
+      {
+        "index": 48,
+        "text": "Because they asked me to go to the office for three days"
+      },
+      {
+        "index": 49,
+        "text": "a week. I live in South Bay. The office is in San Francisco. If I"
+      },
+      {
+        "index": 50,
+        "text": "have to commute back and forth, it will take at least one hour"
+      },
+      {
+        "index": 51,
+        "text": "to go to the office. Because there are many cars during the day and night."
+      },
+      {
+        "index": 52,
+        "text": "I have to go to the office for three days a week for five"
+      },
+      {
+        "index": 53,
+        "text": "days. So basically when I need to go to the office, I can't see my"
+      },
+      {
+        "index": 54,
+        "text": "kids that day. I have two kids at home. Then I thought"
+      },
+      {
+        "index": 55,
+        "text": "I lost my child because of this money. I was growing up and"
+      },
+      {
+        "index": 56,
+        "text": "I was willing to let me see the light. I felt like it"
+      },
+      {
+        "index": 57,
+        "text": "was a bit slippery. Some things can't be bought with money. After"
+      },
+      {
+        "index": 58,
+        "text": "thinking about it carefully, I felt that the other part is because OpenAI"
+      },
+      {
+        "index": 59,
+        "text": "has a lot of work. I feel that because I'm not young,"
+      },
+      {
+        "index": 60,
+        "text": "I feel that I should prioritize my I think that these things, when I think"
+      },
+      {
+        "index": 61,
+        "text": "about it, if I lose these things, I might not be able to"
+      },
+      {
+        "index": 62,
+        "text": "buy them back. I'll think about it and when I see them, I'll"
+      },
+      {
+        "index": 63,
+        "text": "think about it and give up. Health and family. I think this is very"
+      },
+      {
+        "index": 64,
+        "text": "important. I don't have kids. But I can understand. During the"
+      },
+      {
+        "index": 65,
+        "text": "growth of children, if you miss something, you miss something. Yeah. They only"
+      },
+      {
+        "index": 66,
+        "text": "had this one time. I can totally understand why. Although there's a lot of money."
+      },
+      {
+        "index": 67,
+        "text": "There's a lot of money. It's totally... It should be all your offers. The highest"
+      },
+      {
+        "index": 68,
+        "text": "initial offer you got. Yeah. Right? But to be honest, you"
+      },
+      {
+        "index": 69,
+        "text": "wouldn't know if you didn't check the price. But the"
+      },
+      {
+        "index": 70,
+        "text": "chance of it being good is pretty high. No one knows when"
+      },
+      {
+        "index": 71,
+        "text": "it will be sold. And the money is also considered as"
+      },
+      {
+        "index": 72,
+        "text": "paper money. Yes, that's right. Can it be sold?"
+      },
+      {
+        "index": 73,
+        "text": "-"
+      },
+      {
+        "index": 74,
+        "text": "Basically, the last time they only had 10 units. I remember when"
+      },
+      {
+        "index": 75,
+        "text": "we were talking, you went in in about March or March of 2024."
+      },
+      {
+        "index": 76,
+        "text": "I just checked, the valuation at that time was about 100B. What is 100B?"
+      },
+      {
+        "index": 77,
+        "text": "1,000 billion US dollars. Now it's 500B. That's about 5,000 billion,"
+      },
+      {
+        "index": 78,
+        "text": "about five times the value. This is like when my stock"
+      },
+      {
+        "index": 79,
+        "text": "market is down, I turn off the app and don't look at it. I"
+      },
+      {
+        "index": 80,
+        "text": "try not to follow the current market news. I know you don't want"
+      },
+      {
+        "index": 81,
+        "text": "to count it, but I just counted it in my head. If you were to"
+      },
+      {
+        "index": 82,
+        "text": "enter the industry, it would take you a year or less. TC would be"
+      },
+      {
+        "index": 83,
+        "text": "around $3 million. $3 million per piece of TC. If you knew that"
+      },
+      {
+        "index": 84,
+        "text": "it would be like this, would you have thought about it? No, I"
+      },
+      {
+        "index": 85,
+        "text": "wouldn't. The first thing is that you shouldn't waste your time on"
+      },
+      {
+        "index": 86,
+        "text": "regret. The second thing is that When you experience a lot of things"
+      },
+      {
+        "index": 87,
+        "text": "in the investment market today, you will feel that some money is not enough"
+      },
+      {
+        "index": 88,
+        "text": "for you. Don't waste money to hold. You should say that. For example, now"
+      },
+      {
+        "index": 89,
+        "text": "OpenAI says, \"Yo, Bull, I'll give you 3 mil when you come back.\" The same"
+      },
+      {
+        "index": 90,
+        "text": "offer, the same package of 3 mil. Will you accept this offer? Unless"
+      },
+      {
+        "index": 91,
+        "text": "they open an office in the south today, I don't have to spend so much"
+      },
+      {
+        "index": 92,
+        "text": "time on the same thing. Because time is not enough to buy back with money."
+      },
+      {
+        "index": 93,
+        "text": "I see."
+      },
+      {
+        "index": 94,
+        "text": "If you do Caltrain yourself and then switch to end-to-end, door-to-door, it will take"
+      },
+      {
+        "index": 95,
+        "text": "you more than an hour and a half. Okay, I understand. It does sound like"
+      },
+      {
+        "index": 96,
+        "text": "it's not really suitable. You just told me that many of your friends"
+      },
+      {
+        "index": 97,
+        "text": "have got an OpenAI offer. Many people in Google DeepMind are also open"
+      },
+      {
+        "index": 98,
+        "text": "AI diggers. I know that many people in Facebook's OpenAI diggers are also open"
+      },
+      {
+        "index": 99,
+        "text": "AI diggers. There are some people who didn't get an offer for a similar reason."
+      },
+      {
+        "index": 100,
+        "text": "Of course, it's still very difficult to get an offer. Because I believe most"
+      },
+      {
+        "index": 101,
+        "text": "people still think that you give me so much money, it doesn't matter"
+      },
+      {
+        "index": 102,
+        "text": "if I give you 24 hours. I'll ask everyone. I think a lot of"
+      },
+      {
+        "index": 103,
+        "text": "people will be curious to know how to get an open AIDA offer."
+      },
+      {
+        "index": 104,
+        "text": "I have a message for you. Paul and I have been planning a real-time camp"
+      },
+      {
+        "index": 105,
+        "text": "for the past few months. It's called Modern System Design. It's finally open"
+      },
+      {
+        "index": 106,
+        "text": "for everyone to sign up. The purpose of this real-time camp is to help you"
+      },
+      {
+        "index": 107,
+        "text": "get your ideal offer. Let me tell you why. In 2026, software engineers are"
+      },
+      {
+        "index": 108,
+        "text": "no longer simply writing code and using AI. The real-time design interview that"
+      },
+      {
+        "index": 109,
+        "text": "can show the strengths and values of engineers has become the main topic."
+      },
+      {
+        "index": 110,
+        "text": "We have seen many interns and just graduated were tested in system design in the"
+      },
+      {
+        "index": 111,
+        "text": "interview. And this is also an interview that can't be replaced by AI."
+      },
+      {
+        "index": 112,
+        "text": "So it will be the most basic threshold for all engineers to interview in"
+      },
+      {
+        "index": 113,
+        "text": "the future. Also because of AI, we all become 10x engineers. So the focus of"
+      },
+      {
+        "index": 114,
+        "text": "hiring in the future will be on the engineering ability of engineers, technical balance, and"
+      },
+      {
+        "index": 115,
+        "text": "the hard work that can't be replaced by AI. In this demo, we also added"
+      },
+      {
+        "index": 116,
+        "text": "the application design of AI and Web3, such as how to design the ChatGP task,"
+      },
+      {
+        "index": 117,
+        "text": "how to design the Polymarket, how to design the AI Agent, and my favorite, how"
+      },
+      {
+        "index": 118,
+        "text": "to design the Tesla Robotaxi app. Because we hope everyone can learn the app that"
+      },
+      {
+        "index": 119,
+        "text": "everyone is using right now. This is designed for engineers and translators."
+      },
+      {
+        "index": 120,
+        "text": "But if you want to know how a production grade system can meet the"
+      },
+      {
+        "index": 121,
+        "text": "demands of millions and tens of millions of users at the same time, you"
+      },
+      {
+        "index": 122,
+        "text": "are welcome to sign up. This is what Vibe Coding can't give you. If"
+      },
+      {
+        "index": 123,
+        "text": "you have no foundation in system design, such as SQL, VectorDB, or RAC, you don't"
+      },
+      {
+        "index": 124,
+        "text": "have to worry. We have already sorted out all the system design concepts"
+      },
+      {
+        "index": 125,
+        "text": "you need to know from 0 to 1, so you can start learning from scratch."
+      },
+      {
+        "index": 126,
+        "text": "Personally, If you are serious about software engineers, this real-world camp is definitely worth investing"
+      },
+      {
+        "index": 127,
+        "text": "in. Because you can see the revenge right away. Let's take a look at"
+      },
+      {
+        "index": 128,
+        "text": "the data. In Taiwan, Google, Nvidia, Amazon, etc. The salary of about 6-7 years of"
+      },
+      {
+        "index": 129,
+        "text": "experience can reach 4-5 million Taiwan dollars. In the United States, companies like"
+      },
+      {
+        "index": 130,
+        "text": "Meta and OpenAI can also charge millions of dollars a year for 6-7 years"
+      },
+      {
+        "index": 131,
+        "text": "of experience. The link to register is in the information column below the video."
+      },
+      {
+        "index": 132,
+        "text": "OK, in the next video, Paul will share with you how he got the interview"
+      },
+      {
+        "index": 133,
+        "text": "and offer for OpenAI and the interview process. And if you want to go"
+      },
+      {
+        "index": 134,
+        "text": "to OpenAI, where do you want to go? Then we will talk about the"
+      },
+      {
+        "index": 135,
+        "text": "trend of software engineers. So if you don't want to miss it, remember to"
+      },
+      {
+        "index": 136,
+        "text": "subscribe to my channel. And remember to like this video. Because you know, we haven't"
+      },
+      {
+        "index": 137,
+        "text": "interviewed a engineer who is willing to openly publicize his salary for a"
+      },
+      {
+        "index": 138,
+        "text": "long time. OK, see you next time."
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "transcript": "I've seen this before. It's the most powerful TC. If I lose this\nmoney, I might not be able to buy it back. You're the most\npaid person in the channel. It's probably the highest offer you've ever received.\nI know you don't want to calculate it. But I just calculated it\nin my head. If you knew it would be like this today, you\nwould think you should weigh it again. Today we are\ngoing to share a data point with you guys. I think it's quite interesting.\nThis is the first time you guys have seen Paul. Paul is my friend. He\nis also a mentor of our last season of \"Street Fighter\" I think Bo is\nreally good. He has some experiences that are worth sharing with you. You\nstudied in Taiwan University. You graduated from Columbia University in\nthe United States. You studied Master's in CS. Is it because you can get a\nvisa or you want to study? I wanted to study abroad when I was in\ncollege. I applied for a mechanical program, including REE and CS. Most of\nthe time, I applied for CS. When I was choosing, I did some research.\nI found that CS is easier to find a job in the US. And the\nsalary is higher. So I chose CS program. After that, I think the whole\nresume is very typical. The name tags of major tech companies are all on your\nLinkedIn. Google, then Meta, Stripe. Stripe, Vercel, and now Airbnb. And in the middle is\nOpenAI. I didn't put it on the video. Because I only stay in OpenAI\nfor about a month or two. So I don't want to put my\nresume on it. I think this video is mainly to share with you about the\nopportunity of OpenAI. Because I think there are very few people who talk\nabout OpenAI on our website. And there are very few people who share OpenAI. I've\nseen this too. It's the best TC ever. At that time, your\nbase was... 310K. $310,000. The base was $310,000. Yes.\nAnd the stock... The stock was... 2.2 million,\nand it was 4 years. But... It's not an option or an RSU. It's a\nspecial structure called PPU. Profit Sharing Unit. It has more\nlimitations. OpenMap has just been transformed. It has a part that is not\nprofitable. So the shareholder is a special structure. As for PPU, I think its\nlimitation is 首先就是你在VEST前兩年是沒辦法轉賣 即使它有Tender Event\n然後可是它的優點是說 它的運作方式有點像Option 就是之後你賣掉的部分\n它的Gain是算你的Long Term Capital Gain 就比較一般的RSU\n就是如果你在VEST就賣掉的話 它就算成你的Ordinary Income\n其實跟Option有點像 Yes, it's similar to Option. But the company\nstructure is special. So the equity part has a special name. But the difference with\nOption is that Option has an exercise price. You can use your own money\nto buy an exercise price. But the PPU is like, this part is more like\nthe RSU, it's directly given to you. OK, so this is 2.2 million, 2.2\nmillion, and then divide by 4, which means that your annual option, the share part\nis about 550,000. Right. And then add up to 310,000, it's about 860,000.\n以當時的估值來說 對,以當時的估值來說\n然後80萬台幣的話,就是大概2500萬左右差不多 對,如果是...\n台幣現在大概30塊左右 對,這是來過頻道裡面最高薪水的\n你在奧姆佩奈多久? 做了一個多月而已 一個多月?\n然後就不做了? 主要原因是? 主要原因是家庭因素吧\n一開始其實我在... I hesitated for a long time before I went to the office.\nBecause they asked me to go to the office for three days\na week. I live in South Bay. The office is in San Francisco. If I\nhave to commute back and forth, it will take at least one hour\nto go to the office. Because there are many cars during the day and night.\nI have to go to the office for three days a week for five\ndays. So basically when I need to go to the office, I can't see my\nkids that day. I have two kids at home. Then I thought\nI lost my child because of this money. I was growing up and\nI was willing to let me see the light. I felt like it\nwas a bit slippery. Some things can't be bought with money. After\nthinking about it carefully, I felt that the other part is because OpenAI\nhas a lot of work. I feel that because I'm not young,\nI feel that I should prioritize my I think that these things, when I think\nabout it, if I lose these things, I might not be able to\nbuy them back. I'll think about it and when I see them, I'll\nthink about it and give up. Health and family. I think this is very\nimportant. I don't have kids. But I can understand. During the\ngrowth of children, if you miss something, you miss something. Yeah. They only\nhad this one time. I can totally understand why. Although there's a lot of money.\nThere's a lot of money. It's totally... It should be all your offers. The highest\ninitial offer you got. Yeah. Right? But to be honest, you\nwouldn't know if you didn't check the price. But the\nchance of it being good is pretty high. No one knows when\nit will be sold. And the money is also considered as\npaper money. Yes, that's right. Can it be sold?\n-\nBasically, the last time they only had 10 units. I remember when\nwe were talking, you went in in about March or March of 2024.\nI just checked, the valuation at that time was about 100B. What is 100B?\n1,000 billion US dollars. Now it's 500B. That's about 5,000 billion,\nabout five times the value. This is like when my stock\nmarket is down, I turn off the app and don't look at it. I\ntry not to follow the current market news. I know you don't want\nto count it, but I just counted it in my head. If you were to\nenter the industry, it would take you a year or less. TC would be\naround $3 million. $3 million per piece of TC. If you knew that\nit would be like this, would you have thought about it? No, I\nwouldn't. The first thing is that you shouldn't waste your time on\nregret. The second thing is that When you experience a lot of things\nin the investment market today, you will feel that some money is not enough\nfor you. Don't waste money to hold. You should say that. For example, now\nOpenAI says, \"Yo, Bull, I'll give you 3 mil when you come back.\" The same\noffer, the same package of 3 mil. Will you accept this offer? Unless\nthey open an office in the south today, I don't have to spend so much\ntime on the same thing. Because time is not enough to buy back with money.\nI see.\nIf you do Caltrain yourself and then switch to end-to-end, door-to-door, it will take\nyou more than an hour and a half. Okay, I understand. It does sound like\nit's not really suitable. You just told me that many of your friends\nhave got an OpenAI offer. Many people in Google DeepMind are also open\nAI diggers. I know that many people in Facebook's OpenAI diggers are also open\nAI diggers. There are some people who didn't get an offer for a similar reason.\nOf course, it's still very difficult to get an offer. Because I believe most\npeople still think that you give me so much money, it doesn't matter\nif I give you 24 hours. I'll ask everyone. I think a lot of\npeople will be curious to know how to get an open AIDA offer.\nI have a message for you. Paul and I have been planning a real-time camp\nfor the past few months. It's called Modern System Design. It's finally open\nfor everyone to sign up. The purpose of this real-time camp is to help you\nget your ideal offer. Let me tell you why. In 2026, software engineers are\nno longer simply writing code and using AI. The real-time design interview that\ncan show the strengths and values of engineers has become the main topic.\nWe have seen many interns and just graduated were tested in system design in the\ninterview. And this is also an interview that can't be replaced by AI.\nSo it will be the most basic threshold for all engineers to interview in\nthe future. Also because of AI, we all become 10x engineers. So the focus of\nhiring in the future will be on the engineering ability of engineers, technical balance, and\nthe hard work that can't be replaced by AI. In this demo, we also added\nthe application design of AI and Web3, such as how to design the ChatGP task,\nhow to design the Polymarket, how to design the AI Agent, and my favorite, how\nto design the Tesla Robotaxi app. Because we hope everyone can learn the app that\neveryone is using right now. This is designed for engineers and translators.\nBut if you want to know how a production grade system can meet the\ndemands of millions and tens of millions of users at the same time, you\nare welcome to sign up. This is what Vibe Coding can't give you. If\nyou have no foundation in system design, such as SQL, VectorDB, or RAC, you don't\nhave to worry. We have already sorted out all the system design concepts\nyou need to know from 0 to 1, so you can start learning from scratch.\nPersonally, If you are serious about software engineers, this real-world camp is definitely worth investing\nin. Because you can see the revenge right away. Let's take a look at\nthe data. In Taiwan, Google, Nvidia, Amazon, etc. The salary of about 6-7 years of\nexperience can reach 4-5 million Taiwan dollars. In the United States, companies like\nMeta and OpenAI can also charge millions of dollars a year for 6-7 years\nof experience. The link to register is in the information column below the video.\nOK, in the next video, Paul will share with you how he got the interview\nand offer for OpenAI and the interview process. And if you want to go\nto OpenAI, where do you want to go? Then we will talk about the\ntrend of software engineers. So if you don't want to miss it, remember to\nsubscribe to my channel. And remember to like this video. Because you know, we haven't\ninterviewed a engineer who is willing to openly publicize his salary for a\nlong time. OK, see you next time.",
+    "length": "11m 3s",
+    "hasMore": false,
+    "isPremium": false
+  }
+}

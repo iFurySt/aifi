@@ -1,0 +1,360 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=cMGT5XXAEWw",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 283,
+  "video": {
+    "index": 283,
+    "id": "cMGT5XXAEWw",
+    "title": "【Travel Vlog】墨西哥 猶加敦半島 自駕遊",
+    "url": "https://www.youtube.com/watch?v=cMGT5XXAEWw",
+    "duration_seconds": 798.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "cMGT5XXAEWw",
+    "title": "【Travel Vlog】墨西哥 猶加敦半島 自駕遊",
+    "text": "we don't give a fuck\n現在在去機場的路上在烏鵝裡面等一下就要換上這個比較好一點的口罩因為機場裡面可能比較危險一點\n今天天氣還不錯難得多很多12月底有這種天氣地上完全是乾的天氣晴朗完全沒有在下雪我本來還蠻擔心會因為下雪然後班機就要取消這種事情在12月底蠻常發生的這位哭藝人啊\n現在在多倫多的Pierce International Airport整個機場非常的空基本上看不到幾個人我們等一下在美國的Texas登機那從多倫多這邊出發到美國的話都要先在加拿大過美國的海關然後到了之後就可以直接出境海關人員超級空我們提早到機場玩 不知道幹嘛現在在註冊公司這邊\n剛剛跟他弄了很久因為我沒有那個信用卡保險的那個證明所以他就要硬幣我買他們的那個保險超貴的7天230美金大概是我租車價錢的兩倍這邊的租車行就這樣坑人但是因為現在時間是大概12點多我也沒辦法打電話去保險公司他們也沒辦法給我開證明現在來到第一天跟第二天晚上要住的Airbnb現在還不錯\n兩晚好像才150塊我記得我記得很便宜的然後它環境是蠻好玩的你看還有一個吊床然後現在是晚上大概12點已經快1點半了差不多大家去澡睡覺了明天好像行程要跑明天好像要去玩水還是什麼的當買了手機的卡我不小心把那個SIM卡那個Nano SIM直接塞到我iPhone裡超冷的現在拔不出來\n等一下還要去修一下這個肚子還蠻餓的吃一點餅乾好,我們明天見我們現在要去那個Skuba Diving去看海底的那個博物館這邊的人開車超恐怖的剛剛從Airbnb開過來到這邊路上的車基本上都不打方向燈就隨便亂開我都知道 雖然 偷看了你的身體\n♪ ♪\ni know you\n前面的超市人還蠻多的然後大家都戴口罩我覺得其實還蠻注重疫情的進來都要消毒然後量體溫然後大家都要戴口罩所以其實還不錯墨西哥這邊消毒的做得還蠻好的\n現在來到一家超屌的餐廳在King Queen這邊就是Navios他是專門賣海鮮海鮮\n現在在Tulun剛開了兩個小時的車從 Cancun 開到 Tulun剛check in 的我們在那邊住的Airbnb 現在還不錯它的整個感覺就蠻像那種luxury的hotel, condo 的感覺PCS on air\n好\n我們現在在一個小鎮在Tulum附近的一個小鎮叫做Okumo這個小鎮通常來這邊是看海龜然後這小鎮附近的房子其實都蠻特別的它上面畫得非常的漂亮畫的顏色都非常厚\n就感覺這邊現在都非常的安靜然後後面是人但我覺得這個小店的感覺是非常的舒服\n看起來像樹葉製作的他們開始在燒香求生應該是在求雨什麼之類的吃一個這個氣氛然後感受一下瑪雅文化的他們傳統的工藝還有做食物的方式\n具體好不好吃我覺得這個一人而已有些人吃不習慣但我覺得還OK的傳統的螞蟻文化他們有這種Human Sacrifice這種活人獻祭的意思就是把活的人獻給他們信奉的神啊上帝之類的現在在一個城市叫Rio de Almeida的海灣的一個地方\n這個地方其實跟Kan Koon還有Tulum比的話遊客比較少昨天晚上去吃個飯真的是一個人都沒有我們是唯一那家餐廳的遊客就是疫情對這邊整體的經濟大概影響還是蠻大的我覺得\n有一個耶穌基督像在這裡保佑了出海人民的安全我們現在在一個城市叫Val de Lourdes西班牙其實也有一個一模一樣的城市的名字你現在看到這個教堂它是西元1500多年建的已經有500年的歷史那時候西班牙人統治墨西哥的時候建的教堂還蠻屌的\n城市的建築物的顏色都非常的鮮豔漂亮\n那時候西班牙人殖民統治的時候他們蓋的這些建築物都保存到現在在這邊走就感覺不像在墨西哥感覺更像在歐洲那種感覺好啦 這次旅遊的總結就是千萬千萬不要在墨西哥吃日本料理",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:02",
+        "start": 2.02,
+        "duration": 21.42,
+        "text": "we don't give a fuck"
+      },
+      {
+        "index": 1,
+        "time": "00:25",
+        "start": 25.14,
+        "duration": 28.979999999999997,
+        "text": "現在在去機場的路上在烏鵝裡面等一下就要換上這個比較好一點的口罩因為機場裡面可能比較危險一點"
+      },
+      {
+        "index": 2,
+        "time": "00:54",
+        "start": 54.84,
+        "duration": 34.099999999999994,
+        "text": "今天天氣還不錯難得多很多12月底有這種天氣地上完全是乾的天氣晴朗完全沒有在下雪我本來還蠻擔心會因為下雪然後班機就要取消這種事情在12月底蠻常發生的這位哭藝人啊"
+      },
+      {
+        "index": 3,
+        "time": "01:31",
+        "start": 91.66,
+        "duration": 40.08000000000001,
+        "text": "現在在多倫多的Pierce International Airport整個機場非常的空基本上看不到幾個人我們等一下在美國的Texas登機那從多倫多這邊出發到美國的話都要先在加拿大過美國的海關然後到了之後就可以直接出境海關人員超級空我們提早到機場玩 不知道幹嘛現在在註冊公司這邊"
+      },
+      {
+        "index": 4,
+        "time": "02:14",
+        "start": 134.24,
+        "duration": 39.67999999999998,
+        "text": "剛剛跟他弄了很久因為我沒有那個信用卡保險的那個證明所以他就要硬幣我買他們的那個保險超貴的7天230美金大概是我租車價錢的兩倍這邊的租車行就這樣坑人但是因為現在時間是大概12點多我也沒辦法打電話去保險公司他們也沒辦法給我開證明現在來到第一天跟第二天晚上要住的Airbnb現在還不錯"
+      },
+      {
+        "index": 5,
+        "time": "02:54",
+        "start": 174.2,
+        "duration": 32.20000000000002,
+        "text": "兩晚好像才150塊我記得我記得很便宜的然後它環境是蠻好玩的你看還有一個吊床然後現在是晚上大概12點已經快1點半了差不多大家去澡睡覺了明天好像行程要跑明天好像要去玩水還是什麼的當買了手機的卡我不小心把那個SIM卡那個Nano SIM直接塞到我iPhone裡超冷的現在拔不出來"
+      },
+      {
+        "index": 6,
+        "time": "03:28",
+        "start": 208.5,
+        "duration": 36.41999999999999,
+        "text": "等一下還要去修一下這個肚子還蠻餓的吃一點餅乾好,我們明天見我們現在要去那個Skuba Diving去看海底的那個博物館這邊的人開車超恐怖的剛剛從Airbnb開過來到這邊路上的車基本上都不打方向燈就隨便亂開我都知道 雖然 偷看了你的身體"
+      },
+      {
+        "index": 7,
+        "time": "04:05",
+        "start": 245.32,
+        "duration": 39.22000000000003,
+        "text": "♪ ♪"
+      },
+      {
+        "index": 8,
+        "time": "04:46",
+        "start": 286.06,
+        "duration": 64.95999999999998,
+        "text": "i know you"
+      },
+      {
+        "index": 9,
+        "time": "05:53",
+        "start": 353.76,
+        "duration": 29.340000000000032,
+        "text": "前面的超市人還蠻多的然後大家都戴口罩我覺得其實還蠻注重疫情的進來都要消毒然後量體溫然後大家都要戴口罩所以其實還不錯墨西哥這邊消毒的做得還蠻好的"
+      },
+      {
+        "index": 10,
+        "time": "06:24",
+        "start": 384.06,
+        "duration": 25.680000000000007,
+        "text": "現在來到一家超屌的餐廳在King Queen這邊就是Navios他是專門賣海鮮海鮮"
+      },
+      {
+        "index": 11,
+        "time": "06:52",
+        "start": 412.12,
+        "duration": 88.18,
+        "text": "現在在Tulun剛開了兩個小時的車從 Cancun 開到 Tulun剛check in 的我們在那邊住的Airbnb 現在還不錯它的整個感覺就蠻像那種luxury的hotel, condo 的感覺PCS on air"
+      },
+      {
+        "index": 12,
+        "time": "08:20",
+        "start": 500.86,
+        "duration": 18.93999999999994,
+        "text": "好"
+      },
+      {
+        "index": 13,
+        "time": "08:40",
+        "start": 520,
+        "duration": 27.200000000000045,
+        "text": "我們現在在一個小鎮在Tulum附近的一個小鎮叫做Okumo這個小鎮通常來這邊是看海龜然後這小鎮附近的房子其實都蠻特別的它上面畫得非常的漂亮畫的顏色都非常厚"
+      },
+      {
+        "index": 14,
+        "time": "09:07",
+        "start": 547.36,
+        "duration": 30.600000000000023,
+        "text": "就感覺這邊現在都非常的安靜然後後面是人但我覺得這個小店的感覺是非常的舒服"
+      },
+      {
+        "index": 15,
+        "time": "09:39",
+        "start": 579.86,
+        "duration": 41.22000000000003,
+        "text": "看起來像樹葉製作的他們開始在燒香求生應該是在求雨什麼之類的吃一個這個氣氛然後感受一下瑪雅文化的他們傳統的工藝還有做食物的方式"
+      },
+      {
+        "index": 16,
+        "time": "10:22",
+        "start": 622.56,
+        "duration": 25.800000000000068,
+        "text": "具體好不好吃我覺得這個一人而已有些人吃不習慣但我覺得還OK的傳統的螞蟻文化他們有這種Human Sacrifice這種活人獻祭的意思就是把活的人獻給他們信奉的神啊上帝之類的現在在一個城市叫Rio de Almeida的海灣的一個地方"
+      },
+      {
+        "index": 17,
+        "time": "10:48",
+        "start": 648.58,
+        "duration": 29.139999999999986,
+        "text": "這個地方其實跟Kan Koon還有Tulum比的話遊客比較少昨天晚上去吃個飯真的是一個人都沒有我們是唯一那家餐廳的遊客就是疫情對這邊整體的經濟大概影響還是蠻大的我覺得"
+      },
+      {
+        "index": 18,
+        "time": "11:21",
+        "start": 681.08,
+        "duration": 50.59999999999991,
+        "text": "有一個耶穌基督像在這裡保佑了出海人民的安全我們現在在一個城市叫Val de Lourdes西班牙其實也有一個一模一樣的城市的名字你現在看到這個教堂它是西元1500多年建的已經有500年的歷史那時候西班牙人統治墨西哥的時候建的教堂還蠻屌的"
+      },
+      {
+        "index": 19,
+        "time": "12:11",
+        "start": 731.98,
+        "duration": 34.60000000000002,
+        "text": "城市的建築物的顏色都非常的鮮豔漂亮"
+      },
+      {
+        "index": 20,
+        "time": "12:48",
+        "start": 768.04,
+        "duration": 29.798000000000002,
+        "text": "那時候西班牙人殖民統治的時候他們蓋的這些建築物都保存到現在在這邊走就感覺不像在墨西哥感覺更像在歐洲那種感覺好啦 這次旅遊的總結就是千萬千萬不要在墨西哥吃日本料理"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": "whisper",
+    "fallback": false,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXFMP0CXGY51TSD20PYSTQ56",
+    "status": "completed",
+    "videoId": "cMGT5XXAEWw",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "we don't give a fuck",
+            "start": 2.02,
+            "duration": 21.42
+          },
+          {
+            "text": "現在在去機場的路上在烏鵝裡面等一下就要換上這個比較好一點的口罩因為機場裡面可能比較危險一點",
+            "start": 25.14,
+            "duration": 28.979999999999997
+          },
+          {
+            "text": "今天天氣還不錯難得多很多12月底有這種天氣地上完全是乾的天氣晴朗完全沒有在下雪我本來還蠻擔心會因為下雪然後班機就要取消這種事情在12月底蠻常發生的這位哭藝人啊",
+            "start": 54.84,
+            "duration": 34.099999999999994
+          },
+          {
+            "text": "現在在多倫多的Pierce International Airport整個機場非常的空基本上看不到幾個人我們等一下在美國的Texas登機那從多倫多這邊出發到美國的話都要先在加拿大過美國的海關然後到了之後就可以直接出境海關人員超級空我們提早到機場玩 不知道幹嘛現在在註冊公司這邊",
+            "start": 91.66,
+            "duration": 40.08000000000001
+          },
+          {
+            "text": "剛剛跟他弄了很久因為我沒有那個信用卡保險的那個證明所以他就要硬幣我買他們的那個保險超貴的7天230美金大概是我租車價錢的兩倍這邊的租車行就這樣坑人但是因為現在時間是大概12點多我也沒辦法打電話去保險公司他們也沒辦法給我開證明現在來到第一天跟第二天晚上要住的Airbnb現在還不錯",
+            "start": 134.24,
+            "duration": 39.67999999999998
+          },
+          {
+            "text": "兩晚好像才150塊我記得我記得很便宜的然後它環境是蠻好玩的你看還有一個吊床然後現在是晚上大概12點已經快1點半了差不多大家去澡睡覺了明天好像行程要跑明天好像要去玩水還是什麼的當買了手機的卡我不小心把那個SIM卡那個Nano SIM直接塞到我iPhone裡超冷的現在拔不出來",
+            "start": 174.2,
+            "duration": 32.20000000000002
+          },
+          {
+            "text": "等一下還要去修一下這個肚子還蠻餓的吃一點餅乾好,我們明天見我們現在要去那個Skuba Diving去看海底的那個博物館這邊的人開車超恐怖的剛剛從Airbnb開過來到這邊路上的車基本上都不打方向燈就隨便亂開我都知道 雖然 偷看了你的身體",
+            "start": 208.5,
+            "duration": 36.41999999999999
+          },
+          {
+            "text": "♪ ♪",
+            "start": 245.32,
+            "duration": 39.22000000000003
+          },
+          {
+            "text": "i know you",
+            "start": 286.06,
+            "duration": 64.95999999999998
+          },
+          {
+            "text": "前面的超市人還蠻多的然後大家都戴口罩我覺得其實還蠻注重疫情的進來都要消毒然後量體溫然後大家都要戴口罩所以其實還不錯墨西哥這邊消毒的做得還蠻好的",
+            "start": 353.76,
+            "duration": 29.340000000000032
+          },
+          {
+            "text": "現在來到一家超屌的餐廳在King Queen這邊就是Navios他是專門賣海鮮海鮮",
+            "start": 384.06,
+            "duration": 25.680000000000007
+          },
+          {
+            "text": "現在在Tulun剛開了兩個小時的車從 Cancun 開到 Tulun剛check in 的我們在那邊住的Airbnb 現在還不錯它的整個感覺就蠻像那種luxury的hotel, condo 的感覺PCS on air",
+            "start": 412.12,
+            "duration": 88.18
+          },
+          {
+            "text": "好",
+            "start": 500.86,
+            "duration": 18.93999999999994
+          },
+          {
+            "text": "我們現在在一個小鎮在Tulum附近的一個小鎮叫做Okumo這個小鎮通常來這邊是看海龜然後這小鎮附近的房子其實都蠻特別的它上面畫得非常的漂亮畫的顏色都非常厚",
+            "start": 520,
+            "duration": 27.200000000000045
+          },
+          {
+            "text": "就感覺這邊現在都非常的安靜然後後面是人但我覺得這個小店的感覺是非常的舒服",
+            "start": 547.36,
+            "duration": 30.600000000000023
+          },
+          {
+            "text": "看起來像樹葉製作的他們開始在燒香求生應該是在求雨什麼之類的吃一個這個氣氛然後感受一下瑪雅文化的他們傳統的工藝還有做食物的方式",
+            "start": 579.86,
+            "duration": 41.22000000000003
+          },
+          {
+            "text": "具體好不好吃我覺得這個一人而已有些人吃不習慣但我覺得還OK的傳統的螞蟻文化他們有這種Human Sacrifice這種活人獻祭的意思就是把活的人獻給他們信奉的神啊上帝之類的現在在一個城市叫Rio de Almeida的海灣的一個地方",
+            "start": 622.56,
+            "duration": 25.800000000000068
+          },
+          {
+            "text": "這個地方其實跟Kan Koon還有Tulum比的話遊客比較少昨天晚上去吃個飯真的是一個人都沒有我們是唯一那家餐廳的遊客就是疫情對這邊整體的經濟大概影響還是蠻大的我覺得",
+            "start": 648.58,
+            "duration": 29.139999999999986
+          },
+          {
+            "text": "有一個耶穌基督像在這裡保佑了出海人民的安全我們現在在一個城市叫Val de Lourdes西班牙其實也有一個一模一樣的城市的名字你現在看到這個教堂它是西元1500多年建的已經有500年的歷史那時候西班牙人統治墨西哥的時候建的教堂還蠻屌的",
+            "start": 681.08,
+            "duration": 50.59999999999991
+          },
+          {
+            "text": "城市的建築物的顏色都非常的鮮豔漂亮",
+            "start": 731.98,
+            "duration": 34.60000000000002
+          },
+          {
+            "text": "那時候西班牙人殖民統治的時候他們蓋的這些建築物都保存到現在在這邊走就感覺不像在墨西哥感覺更像在歐洲那種感覺好啦 這次旅遊的總結就是千萬千萬不要在墨西哥吃日本料理",
+            "start": 768.04,
+            "duration": 29.798000000000002
+          }
+        ],
+        "videoTitle": "【Travel Vlog】墨西哥 猶加敦半島 自駕遊",
+        "metadata": {
+          "title": "【Travel Vlog】墨西哥 猶加敦半島 自駕遊",
+          "description": "盈透證卷Interactive Brokers ❤️：https://hackbear.tv/ib\n\nDay 1,2 - Cancun\nDay 3 - Tulum, Akumal\nDay 4 - Cenote Suytun\nDay 5 - Río Lagartos\nDay 6 - Valladolid \n\n歡迎追蹤我的：\nInstagram: https://hackbear.tv/instagram\nEmail: hack.tech.entertainment@gmail.com\n\n#坎昆 #墨西哥 #猶加敦半島",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 798,
+          "viewCount": 48933,
+          "keywords": [
+            "mexico",
+            "travel",
+            "vlog",
+            "yucatan",
+            "yucatan peninsula",
+            "cancun",
+            "valladolid",
+            "scuba diving",
+            "Rio Lagartos",
+            "坎昆",
+            "墨西哥",
+            "自駕遊",
+            "租車",
+            "Video Log",
+            "陽光",
+            "海灘",
+            "瑪雅",
+            "文化",
+            "遺址",
+            "christmas break"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/cMGT5XXAEWw/maxresdefault.jpg",
+            "width": 0,
+            "height": 0
+          }
+        },
+        "source": "whisper",
+        "fallback": false,
+        "error": null,
+        "reason": null,
+        "timings": {
+          "downloadSeconds": 10.2,
+          "transcribeSeconds": 33.7,
+          "totalSeconds": 44,
+          "audioBytes": 4857186,
+          "videoDurationSeconds": 798,
+          "engine": "wizper"
+        }
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

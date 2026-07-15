@@ -1,0 +1,408 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=xMUjQKn13PA",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 180,
+  "video": {
+    "index": 180,
+    "id": "xMUjQKn13PA",
+    "title": "成為Top 1%工程師",
+    "url": "https://www.youtube.com/watch?v=xMUjQKn13PA",
+    "duration_seconds": 549.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "xMUjQKn13PA",
+    "title": "成為Top 1%工程師",
+    "text": "哈囉大家好我是Terry歡迎回到我的頻道已經有一段時間沒有聊工作上面的事情了那如果有關注我的頻道的話應該知道我現在在一家新創公司工作我大概是總指輪的時候加入他們的那現在已經大概過了半年的時間公司也算是擴張了一倍那因為最近一直都在幫公司面試招聘新的工程師也慢慢讓我開始思考除了基本的算法數據結構系統設計這種硬實力的面試題目可以在面試的時候去證明自己的實力\n那入职之後呢以公司的角度來看什麼樣的工程師思維是非常值得的就是一定要把這種人給留下來那因為我自己在矽谷的大公司跟小公司都待過也待過自己的團隊也跟一些非常非常厲害的工程師一起工作過\n所以就決定今天來做一集跟大家分享一下三個我接觸過Top 1%的工程師都有的特性或是一些工作上面的習慣或許看完了可以給你一些啟發可能也可以幫助你成為那些所謂的Top 1%的工程師或是你覺得說這個職業做到現在好像也沒有什麼進展或是你不知道怎麼樣再繼續提升自己往上走\n我觉得这一集绝对会对你有帮助而且我觉得这些观念不只是适用在工程师这个职业上面不管你是做PM数据还是商业分析只要你想要成为你们产业上面前面的那几个IC我觉得多少都可以适用那首先第一个就是One PR a day\n如果是在其他行业的话就是每天都要有可以去量化的Micro ProgressPR是Poll Request的缩写当工程师要修改代码的时候我们会上交一个PR然后团队就会有人给一些Feedback要求修改最后批准测试都跑过之后这个PR就可以进去这是一个比较标准的修改代码的流程那为什么要习惯每天至少给自己定一个小目标最少产出一个PR呢首先把大的PR拆成小的PR本身就是一个好习惯因为大的PR很难去review\n而小的PR愿意帮你review的人也比较多通常小的PR你会得到比较多有用的feedback这个观念所有的工程师应该都知道再来就是你可以尽早得到feedback通常在做一些比较大的改动或是结构性上面的refactoring可能我们的起始点不一定是在正确的道路\n会需要不少的feedback才可以拉正那一天一个小的PR可以让你incrementally早点得到feedback才不会浪费太多的时间最后发现很多东西都要重做比如说你可能花一个礼拜的时间把一个很大的PR给交上去之后发现一堆东西要改然后很多code都白想了白写了其实白写code不是很浪费时间很多时候是你投资了很多精力跟时间在一个错误的道路上面那这些时间跟精力最后都会浪费掉因为你一开始的方向就不对\n所以說假如我們養成這個好習慣的話諸如此類的問題就可以提早發現然後避免另外就是小的PR很適用在CICD的Pipeline上面你如果想要寫一個完善的測試小PR絕對是最容易的而且現在這些測試我都是讓ChatGPT來幫我寫\n再來就是我認為每天最少一個PR最大的好處就是你會有一個每天都完成事情的成就感不管這個事情是大是小至少你每天都會有非常明確的產出你會覺得很充實而且每天都會給自己定一個小目標最少要把這部分的code跟test給寫完才可以交上去今天的PR\n当你养成这个习惯之后呢你的工作效率就会自然慢慢的提高有一本书叫做The Progress Principle是哈佛商学院的一个教授写的他里面提到他们研究的结果显示如果你每天都有去完成一些事情然后你实际去记录并且acknowledge这些小小的进度\n很快就可以提升你自己内在的动力生产力还有创造力因为这些小的Progress会让你觉得你有一直在往前走而且你是需要去主动意识到你有完成这些Micro Progress很多时候我们会忽视我们自己每天完成的事情因为事情太小就感觉自己好像又浪费了一天的时间或是长时间下来几天觉得自己一事无成我觉得对软体工人师来说要实现最简单的方式就是每天一个PR那如果是在其他行业的话我会建议你可以把每天要完成的Micro Progress给记录下来\n你同样会得到相同的满足感跟继续前进的动力这也可以让你在做大project的时候更快速的去修正你的执行方向第二个就是有一个problem solving的mindset\n这边说的Problem solving的mindset不是说给你一个Ticket你会去找bug然后把这个bug给解决掉这只是一个Problem solving的skill举个例子讲我们今天有一个很笼统的需求我们要跟Southforce做Integration然后公司里面没有PM或者说其他的PM他们在忙自己的事情那现在的问题就是没有人知道要怎么开始下手如果你把这个requirement丢给开发者就是其他的Developer他们可能不知道怎么接手因为没有任何的Ticket也没有任何的Feature SPY\n那如果有Problem solving mindset 的話任何問題都可以是自己的問題我可以主動先去大概了解一下客戶的需求是什麼樣為什麼我們要做這個 integration然後需要把哪些重要的feature放在MVP的scope裡面之後去稍微研究一下 product spec 要交給誰去寫\nTaxback要怎麼去寫這些一般來說不是Developer需要擔心的工作但是可能因為現在人手短缺公司把PM都給炒了或是剛好就沒有PM來做這些事情那為了不讓這個Project遲遲沒辦法推進這些額外的事情我們都可以去做而且說真的這些東西沒有什麼難度\n很多時候就是有沒有人願意去做而已當你能夠了解客戶並且幫客戶解決問題的時候你就可以當一個Problem Manager當你能夠幫團隊解決問題的時候你就可以當一個Team Lead當你可以幫公司一整個Division解決問題的時候或許你就可以當一個VP\n這些人都有一個共同特徵,他們都有很強的problem solving mindset如果硬要說software engineer跟programmer或是developer最不一樣的地方就是在於software engineer不只要會寫程式你要參與整個project的initial planning、設計、PM你會想說PM不是PM應該做的工作嗎?是沒錯,PM這部分通常會有另外一個人專門來負責但是不代表說你就不能參與,因為這中間牽扯到timeline\n那PM通常也不清楚某些feature要花多少時間需要engineer去support他們而且你經常需要跟PM去溝通的是quality跟時間的一個trade off如果是設計一個比較複雜的系統你要怎麼樣去把MVP給scope出來在短時間內給出一個可行的版本然後考慮之後為了可以讓這個系統可以scale\n要做哪方面的优化还有更改这些都需要engineer事先跟PM沟通取舍这个时候problem solving的mindset就很重要因为绝大多数的developer都不愿意去做这些事情我前段时间在LinkedIn上面就有很多猎头要帮我介绍工作那我跟他们打电话的时候他们最常问我的问题就是你会Golan吗你会Python吗我的同意回答就是我会解决问题\n如果这个project需要我用Python去写我就用Python去写如果这个project需要我用Fortune去做我就会用Fortune去做如果只是以会不会某种语言来评判这个人适不适合这个岗位的话那他们要找的就只是工具人而已我觉得ChatGPT就可以完全做到了第三个就是要让你的manager知道你的career goal这样他才可以帮助你达成那个目标不用怀疑manager存在的用意就是让你去利用他也是你的宝贵资源之一\n很多人覺得說manager可能就是用來管理或是看你有沒有認真上班有沒有乖乖的按時打卡如果你能夠妥善的運用你的manager的話你在職場上面升遷的速度就會很快當你跟你的manager在one on one的時候我會建議你可以設一些比較aggressive的目標不要去害怕說你可能沒辦法把這些事情給做好\n比如说你想要从L3或L4升到L5就是升级到senior level那你可以跟你的manager说你想要own一些比较有impact的project来帮助你升迁然后你完全不需要害怕跟他说你的目标就是要在12个月后升上L5因为你越直接的跟他讲他才能越直接的帮助你达成你想要达到的目标假如说你的目标是在12个月后升上L5他知道如果想要帮你做promotion的话一般公司内部都会看什么重要的指标\n那他就可以在planning的时候把一些重要的ownership分给你然后随时给你一些feedback告诉你说哪些地方还需要加强有些时候不只是project上面要拿更多的ownership你可能还欠缺一些帮助其他团队的经验因为很多时候promotion的条件要满足同时会需要其他team的lead或是manager的支持才可以帮助你完成这些目标是你的manager的职责当然他们也不会主动去找你讨论这些事情\n因為Manager自己本身就很忙所以這些都是你需要主動去跟他們提出來他們才會想辦法去幫你而且我發現一個比較普遍的現象就是很多工程師都是埋頭苦幹很多事情然後他們可能也不會跟他們的Manager有太多的溝通關於Career Go這方面可能覺得說熬了一兩年之後Manager自然會看到他們的貢獻然後幫他們做Promotion是有這個可能\n不是說沒有可能,但是非常的少因為首先假如你從來沒有去提起這件事情那每個人都很忙,the manager肯定也很忙他也不會去特別幫你留意所以說你做的事情除非是真的非常大的impact那到頭來在他心裡面的印象你頂多就只是一個很好的工程師而已而且你做的很多事情也不一定能夠完全滿足promotion的條件其實很多條件都列得很清楚the manager都知道所以一定不要忘記利用你的manager來幫助你完成你的career goal\n好那今天这一集就到这边了如果你觉得这集对你有帮助的话记得一定要帮我点个赞也欢迎你在底下留言跟大家分享还有什么事情是你觉得工程师可以做的甚至是在任何行业都适用可以让你朝这个Top 1%前进那我们下次见咯",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:00",
+        "start": 0,
+        "duration": 25.16,
+        "text": "哈囉大家好我是Terry歡迎回到我的頻道已經有一段時間沒有聊工作上面的事情了那如果有關注我的頻道的話應該知道我現在在一家新創公司工作我大概是總指輪的時候加入他們的那現在已經大概過了半年的時間公司也算是擴張了一倍那因為最近一直都在幫公司面試招聘新的工程師也慢慢讓我開始思考除了基本的算法數據結構系統設計這種硬實力的面試題目可以在面試的時候去證明自己的實力"
+      },
+      {
+        "index": 1,
+        "time": "00:25",
+        "start": 25.16,
+        "duration": 14.440000000000001,
+        "text": "那入职之後呢以公司的角度來看什麼樣的工程師思維是非常值得的就是一定要把這種人給留下來那因為我自己在矽谷的大公司跟小公司都待過也待過自己的團隊也跟一些非常非常厲害的工程師一起工作過"
+      },
+      {
+        "index": 2,
+        "time": "00:39",
+        "start": 39.38,
+        "duration": 19.4,
+        "text": "所以就決定今天來做一集跟大家分享一下三個我接觸過Top 1%的工程師都有的特性或是一些工作上面的習慣或許看完了可以給你一些啟發可能也可以幫助你成為那些所謂的Top 1%的工程師或是你覺得說這個職業做到現在好像也沒有什麼進展或是你不知道怎麼樣再繼續提升自己往上走"
+      },
+      {
+        "index": 3,
+        "time": "00:58",
+        "start": 58.78,
+        "duration": 15.36,
+        "text": "我觉得这一集绝对会对你有帮助而且我觉得这些观念不只是适用在工程师这个职业上面不管你是做PM数据还是商业分析只要你想要成为你们产业上面前面的那几个IC我觉得多少都可以适用那首先第一个就是One PR a day"
+      },
+      {
+        "index": 4,
+        "time": "01:16",
+        "start": 76.7,
+        "duration": 28.86,
+        "text": "如果是在其他行业的话就是每天都要有可以去量化的Micro ProgressPR是Poll Request的缩写当工程师要修改代码的时候我们会上交一个PR然后团队就会有人给一些Feedback要求修改最后批准测试都跑过之后这个PR就可以进去这是一个比较标准的修改代码的流程那为什么要习惯每天至少给自己定一个小目标最少产出一个PR呢首先把大的PR拆成小的PR本身就是一个好习惯因为大的PR很难去review"
+      },
+      {
+        "index": 5,
+        "time": "01:45",
+        "start": 105.56,
+        "duration": 16.560000000000002,
+        "text": "而小的PR愿意帮你review的人也比较多通常小的PR你会得到比较多有用的feedback这个观念所有的工程师应该都知道再来就是你可以尽早得到feedback通常在做一些比较大的改动或是结构性上面的refactoring可能我们的起始点不一定是在正确的道路"
+      },
+      {
+        "index": 6,
+        "time": "02:02",
+        "start": 122.12,
+        "duration": 27,
+        "text": "会需要不少的feedback才可以拉正那一天一个小的PR可以让你incrementally早点得到feedback才不会浪费太多的时间最后发现很多东西都要重做比如说你可能花一个礼拜的时间把一个很大的PR给交上去之后发现一堆东西要改然后很多code都白想了白写了其实白写code不是很浪费时间很多时候是你投资了很多精力跟时间在一个错误的道路上面那这些时间跟精力最后都会浪费掉因为你一开始的方向就不对"
+      },
+      {
+        "index": 7,
+        "time": "02:29",
+        "start": 149.12,
+        "duration": 15.079999999999984,
+        "text": "所以說假如我們養成這個好習慣的話諸如此類的問題就可以提早發現然後避免另外就是小的PR很適用在CICD的Pipeline上面你如果想要寫一個完善的測試小PR絕對是最容易的而且現在這些測試我都是讓ChatGPT來幫我寫"
+      },
+      {
+        "index": 8,
+        "time": "02:44",
+        "start": 164.2,
+        "duration": 16.939999999999998,
+        "text": "再來就是我認為每天最少一個PR最大的好處就是你會有一個每天都完成事情的成就感不管這個事情是大是小至少你每天都會有非常明確的產出你會覺得很充實而且每天都會給自己定一個小目標最少要把這部分的code跟test給寫完才可以交上去今天的PR"
+      },
+      {
+        "index": 9,
+        "time": "03:01",
+        "start": 181.14,
+        "duration": 15.980000000000018,
+        "text": "当你养成这个习惯之后呢你的工作效率就会自然慢慢的提高有一本书叫做The Progress Principle是哈佛商学院的一个教授写的他里面提到他们研究的结果显示如果你每天都有去完成一些事情然后你实际去记录并且acknowledge这些小小的进度"
+      },
+      {
+        "index": 10,
+        "time": "03:17",
+        "start": 197.12,
+        "duration": 27.960000000000008,
+        "text": "很快就可以提升你自己内在的动力生产力还有创造力因为这些小的Progress会让你觉得你有一直在往前走而且你是需要去主动意识到你有完成这些Micro Progress很多时候我们会忽视我们自己每天完成的事情因为事情太小就感觉自己好像又浪费了一天的时间或是长时间下来几天觉得自己一事无成我觉得对软体工人师来说要实现最简单的方式就是每天一个PR那如果是在其他行业的话我会建议你可以把每天要完成的Micro Progress给记录下来"
+      },
+      {
+        "index": 11,
+        "time": "03:45",
+        "start": 225.08,
+        "duration": 10.339999999999975,
+        "text": "你同样会得到相同的满足感跟继续前进的动力这也可以让你在做大project的时候更快速的去修正你的执行方向第二个就是有一个problem solving的mindset"
+      },
+      {
+        "index": 12,
+        "time": "03:58",
+        "start": 238.14,
+        "duration": 27.680000000000007,
+        "text": "这边说的Problem solving的mindset不是说给你一个Ticket你会去找bug然后把这个bug给解决掉这只是一个Problem solving的skill举个例子讲我们今天有一个很笼统的需求我们要跟Southforce做Integration然后公司里面没有PM或者说其他的PM他们在忙自己的事情那现在的问题就是没有人知道要怎么开始下手如果你把这个requirement丢给开发者就是其他的Developer他们可能不知道怎么接手因为没有任何的Ticket也没有任何的Feature SPY"
+      },
+      {
+        "index": 13,
+        "time": "04:25",
+        "start": 265.82,
+        "duration": 15.78000000000003,
+        "text": "那如果有Problem solving mindset 的話任何問題都可以是自己的問題我可以主動先去大概了解一下客戶的需求是什麼樣為什麼我們要做這個 integration然後需要把哪些重要的feature放在MVP的scope裡面之後去稍微研究一下 product spec 要交給誰去寫"
+      },
+      {
+        "index": 14,
+        "time": "04:41",
+        "start": 281.6,
+        "duration": 17.079999999999984,
+        "text": "Taxback要怎麼去寫這些一般來說不是Developer需要擔心的工作但是可能因為現在人手短缺公司把PM都給炒了或是剛好就沒有PM來做這些事情那為了不讓這個Project遲遲沒辦法推進這些額外的事情我們都可以去做而且說真的這些東西沒有什麼難度"
+      },
+      {
+        "index": 15,
+        "time": "04:58",
+        "start": 298.68,
+        "duration": 15.319999999999993,
+        "text": "很多時候就是有沒有人願意去做而已當你能夠了解客戶並且幫客戶解決問題的時候你就可以當一個Problem Manager當你能夠幫團隊解決問題的時候你就可以當一個Team Lead當你可以幫公司一整個Division解決問題的時候或許你就可以當一個VP"
+      },
+      {
+        "index": 16,
+        "time": "05:14",
+        "start": 314,
+        "duration": 25.079999999999984,
+        "text": "這些人都有一個共同特徵,他們都有很強的problem solving mindset如果硬要說software engineer跟programmer或是developer最不一樣的地方就是在於software engineer不只要會寫程式你要參與整個project的initial planning、設計、PM你會想說PM不是PM應該做的工作嗎?是沒錯,PM這部分通常會有另外一個人專門來負責但是不代表說你就不能參與,因為這中間牽扯到timeline"
+      },
+      {
+        "index": 17,
+        "time": "05:39",
+        "start": 339.08,
+        "duration": 19.28000000000003,
+        "text": "那PM通常也不清楚某些feature要花多少時間需要engineer去support他們而且你經常需要跟PM去溝通的是quality跟時間的一個trade off如果是設計一個比較複雜的系統你要怎麼樣去把MVP給scope出來在短時間內給出一個可行的版本然後考慮之後為了可以讓這個系統可以scale"
+      },
+      {
+        "index": 18,
+        "time": "05:58",
+        "start": 358.36,
+        "duration": 22.539999999999964,
+        "text": "要做哪方面的优化还有更改这些都需要engineer事先跟PM沟通取舍这个时候problem solving的mindset就很重要因为绝大多数的developer都不愿意去做这些事情我前段时间在LinkedIn上面就有很多猎头要帮我介绍工作那我跟他们打电话的时候他们最常问我的问题就是你会Golan吗你会Python吗我的同意回答就是我会解决问题"
+      },
+      {
+        "index": 19,
+        "time": "06:20",
+        "start": 380.9,
+        "duration": 27.640000000000043,
+        "text": "如果这个project需要我用Python去写我就用Python去写如果这个project需要我用Fortune去做我就会用Fortune去做如果只是以会不会某种语言来评判这个人适不适合这个岗位的话那他们要找的就只是工具人而已我觉得ChatGPT就可以完全做到了第三个就是要让你的manager知道你的career goal这样他才可以帮助你达成那个目标不用怀疑manager存在的用意就是让你去利用他也是你的宝贵资源之一"
+      },
+      {
+        "index": 20,
+        "time": "06:51",
+        "start": 411.28,
+        "duration": 19.30000000000001,
+        "text": "很多人覺得說manager可能就是用來管理或是看你有沒有認真上班有沒有乖乖的按時打卡如果你能夠妥善的運用你的manager的話你在職場上面升遷的速度就會很快當你跟你的manager在one on one的時候我會建議你可以設一些比較aggressive的目標不要去害怕說你可能沒辦法把這些事情給做好"
+      },
+      {
+        "index": 21,
+        "time": "07:10",
+        "start": 430.2,
+        "duration": 28.420000000000016,
+        "text": "比如说你想要从L3或L4升到L5就是升级到senior level那你可以跟你的manager说你想要own一些比较有impact的project来帮助你升迁然后你完全不需要害怕跟他说你的目标就是要在12个月后升上L5因为你越直接的跟他讲他才能越直接的帮助你达成你想要达到的目标假如说你的目标是在12个月后升上L5他知道如果想要帮你做promotion的话一般公司内部都会看什么重要的指标"
+      },
+      {
+        "index": 22,
+        "time": "07:38",
+        "start": 458.62,
+        "duration": 25.339999999999975,
+        "text": "那他就可以在planning的时候把一些重要的ownership分给你然后随时给你一些feedback告诉你说哪些地方还需要加强有些时候不只是project上面要拿更多的ownership你可能还欠缺一些帮助其他团队的经验因为很多时候promotion的条件要满足同时会需要其他team的lead或是manager的支持才可以帮助你完成这些目标是你的manager的职责当然他们也不会主动去找你讨论这些事情"
+      },
+      {
+        "index": 23,
+        "time": "08:03",
+        "start": 483.96,
+        "duration": 22.060000000000002,
+        "text": "因為Manager自己本身就很忙所以這些都是你需要主動去跟他們提出來他們才會想辦法去幫你而且我發現一個比較普遍的現象就是很多工程師都是埋頭苦幹很多事情然後他們可能也不會跟他們的Manager有太多的溝通關於Career Go這方面可能覺得說熬了一兩年之後Manager自然會看到他們的貢獻然後幫他們做Promotion是有這個可能"
+      },
+      {
+        "index": 24,
+        "time": "08:26",
+        "start": 506.02,
+        "duration": 27.860000000000014,
+        "text": "不是說沒有可能,但是非常的少因為首先假如你從來沒有去提起這件事情那每個人都很忙,the manager肯定也很忙他也不會去特別幫你留意所以說你做的事情除非是真的非常大的impact那到頭來在他心裡面的印象你頂多就只是一個很好的工程師而已而且你做的很多事情也不一定能夠完全滿足promotion的條件其實很多條件都列得很清楚the manager都知道所以一定不要忘記利用你的manager來幫助你完成你的career goal"
+      },
+      {
+        "index": 25,
+        "time": "08:53",
+        "start": 533.88,
+        "duration": 15.133000000000038,
+        "text": "好那今天这一集就到这边了如果你觉得这集对你有帮助的话记得一定要帮我点个赞也欢迎你在底下留言跟大家分享还有什么事情是你觉得工程师可以做的甚至是在任何行业都适用可以让你朝这个Top 1%前进那我们下次见咯"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": "whisper",
+    "fallback": false,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXF0150HT1Y01SD0CF4W5QAK",
+    "status": "completed",
+    "videoId": "xMUjQKn13PA",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "哈囉大家好我是Terry歡迎回到我的頻道已經有一段時間沒有聊工作上面的事情了那如果有關注我的頻道的話應該知道我現在在一家新創公司工作我大概是總指輪的時候加入他們的那現在已經大概過了半年的時間公司也算是擴張了一倍那因為最近一直都在幫公司面試招聘新的工程師也慢慢讓我開始思考除了基本的算法數據結構系統設計這種硬實力的面試題目可以在面試的時候去證明自己的實力",
+            "start": 0,
+            "duration": 25.16
+          },
+          {
+            "text": "那入职之後呢以公司的角度來看什麼樣的工程師思維是非常值得的就是一定要把這種人給留下來那因為我自己在矽谷的大公司跟小公司都待過也待過自己的團隊也跟一些非常非常厲害的工程師一起工作過",
+            "start": 25.16,
+            "duration": 14.440000000000001
+          },
+          {
+            "text": "所以就決定今天來做一集跟大家分享一下三個我接觸過Top 1%的工程師都有的特性或是一些工作上面的習慣或許看完了可以給你一些啟發可能也可以幫助你成為那些所謂的Top 1%的工程師或是你覺得說這個職業做到現在好像也沒有什麼進展或是你不知道怎麼樣再繼續提升自己往上走",
+            "start": 39.38,
+            "duration": 19.4
+          },
+          {
+            "text": "我觉得这一集绝对会对你有帮助而且我觉得这些观念不只是适用在工程师这个职业上面不管你是做PM数据还是商业分析只要你想要成为你们产业上面前面的那几个IC我觉得多少都可以适用那首先第一个就是One PR a day",
+            "start": 58.78,
+            "duration": 15.36
+          },
+          {
+            "text": "如果是在其他行业的话就是每天都要有可以去量化的Micro ProgressPR是Poll Request的缩写当工程师要修改代码的时候我们会上交一个PR然后团队就会有人给一些Feedback要求修改最后批准测试都跑过之后这个PR就可以进去这是一个比较标准的修改代码的流程那为什么要习惯每天至少给自己定一个小目标最少产出一个PR呢首先把大的PR拆成小的PR本身就是一个好习惯因为大的PR很难去review",
+            "start": 76.7,
+            "duration": 28.86
+          },
+          {
+            "text": "而小的PR愿意帮你review的人也比较多通常小的PR你会得到比较多有用的feedback这个观念所有的工程师应该都知道再来就是你可以尽早得到feedback通常在做一些比较大的改动或是结构性上面的refactoring可能我们的起始点不一定是在正确的道路",
+            "start": 105.56,
+            "duration": 16.560000000000002
+          },
+          {
+            "text": "会需要不少的feedback才可以拉正那一天一个小的PR可以让你incrementally早点得到feedback才不会浪费太多的时间最后发现很多东西都要重做比如说你可能花一个礼拜的时间把一个很大的PR给交上去之后发现一堆东西要改然后很多code都白想了白写了其实白写code不是很浪费时间很多时候是你投资了很多精力跟时间在一个错误的道路上面那这些时间跟精力最后都会浪费掉因为你一开始的方向就不对",
+            "start": 122.12,
+            "duration": 27
+          },
+          {
+            "text": "所以說假如我們養成這個好習慣的話諸如此類的問題就可以提早發現然後避免另外就是小的PR很適用在CICD的Pipeline上面你如果想要寫一個完善的測試小PR絕對是最容易的而且現在這些測試我都是讓ChatGPT來幫我寫",
+            "start": 149.12,
+            "duration": 15.079999999999984
+          },
+          {
+            "text": "再來就是我認為每天最少一個PR最大的好處就是你會有一個每天都完成事情的成就感不管這個事情是大是小至少你每天都會有非常明確的產出你會覺得很充實而且每天都會給自己定一個小目標最少要把這部分的code跟test給寫完才可以交上去今天的PR",
+            "start": 164.2,
+            "duration": 16.939999999999998
+          },
+          {
+            "text": "当你养成这个习惯之后呢你的工作效率就会自然慢慢的提高有一本书叫做The Progress Principle是哈佛商学院的一个教授写的他里面提到他们研究的结果显示如果你每天都有去完成一些事情然后你实际去记录并且acknowledge这些小小的进度",
+            "start": 181.14,
+            "duration": 15.980000000000018
+          },
+          {
+            "text": "很快就可以提升你自己内在的动力生产力还有创造力因为这些小的Progress会让你觉得你有一直在往前走而且你是需要去主动意识到你有完成这些Micro Progress很多时候我们会忽视我们自己每天完成的事情因为事情太小就感觉自己好像又浪费了一天的时间或是长时间下来几天觉得自己一事无成我觉得对软体工人师来说要实现最简单的方式就是每天一个PR那如果是在其他行业的话我会建议你可以把每天要完成的Micro Progress给记录下来",
+            "start": 197.12,
+            "duration": 27.960000000000008
+          },
+          {
+            "text": "你同样会得到相同的满足感跟继续前进的动力这也可以让你在做大project的时候更快速的去修正你的执行方向第二个就是有一个problem solving的mindset",
+            "start": 225.08,
+            "duration": 10.339999999999975
+          },
+          {
+            "text": "这边说的Problem solving的mindset不是说给你一个Ticket你会去找bug然后把这个bug给解决掉这只是一个Problem solving的skill举个例子讲我们今天有一个很笼统的需求我们要跟Southforce做Integration然后公司里面没有PM或者说其他的PM他们在忙自己的事情那现在的问题就是没有人知道要怎么开始下手如果你把这个requirement丢给开发者就是其他的Developer他们可能不知道怎么接手因为没有任何的Ticket也没有任何的Feature SPY",
+            "start": 238.14,
+            "duration": 27.680000000000007
+          },
+          {
+            "text": "那如果有Problem solving mindset 的話任何問題都可以是自己的問題我可以主動先去大概了解一下客戶的需求是什麼樣為什麼我們要做這個 integration然後需要把哪些重要的feature放在MVP的scope裡面之後去稍微研究一下 product spec 要交給誰去寫",
+            "start": 265.82,
+            "duration": 15.78000000000003
+          },
+          {
+            "text": "Taxback要怎麼去寫這些一般來說不是Developer需要擔心的工作但是可能因為現在人手短缺公司把PM都給炒了或是剛好就沒有PM來做這些事情那為了不讓這個Project遲遲沒辦法推進這些額外的事情我們都可以去做而且說真的這些東西沒有什麼難度",
+            "start": 281.6,
+            "duration": 17.079999999999984
+          },
+          {
+            "text": "很多時候就是有沒有人願意去做而已當你能夠了解客戶並且幫客戶解決問題的時候你就可以當一個Problem Manager當你能夠幫團隊解決問題的時候你就可以當一個Team Lead當你可以幫公司一整個Division解決問題的時候或許你就可以當一個VP",
+            "start": 298.68,
+            "duration": 15.319999999999993
+          },
+          {
+            "text": "這些人都有一個共同特徵,他們都有很強的problem solving mindset如果硬要說software engineer跟programmer或是developer最不一樣的地方就是在於software engineer不只要會寫程式你要參與整個project的initial planning、設計、PM你會想說PM不是PM應該做的工作嗎?是沒錯,PM這部分通常會有另外一個人專門來負責但是不代表說你就不能參與,因為這中間牽扯到timeline",
+            "start": 314,
+            "duration": 25.079999999999984
+          },
+          {
+            "text": "那PM通常也不清楚某些feature要花多少時間需要engineer去support他們而且你經常需要跟PM去溝通的是quality跟時間的一個trade off如果是設計一個比較複雜的系統你要怎麼樣去把MVP給scope出來在短時間內給出一個可行的版本然後考慮之後為了可以讓這個系統可以scale",
+            "start": 339.08,
+            "duration": 19.28000000000003
+          },
+          {
+            "text": "要做哪方面的优化还有更改这些都需要engineer事先跟PM沟通取舍这个时候problem solving的mindset就很重要因为绝大多数的developer都不愿意去做这些事情我前段时间在LinkedIn上面就有很多猎头要帮我介绍工作那我跟他们打电话的时候他们最常问我的问题就是你会Golan吗你会Python吗我的同意回答就是我会解决问题",
+            "start": 358.36,
+            "duration": 22.539999999999964
+          },
+          {
+            "text": "如果这个project需要我用Python去写我就用Python去写如果这个project需要我用Fortune去做我就会用Fortune去做如果只是以会不会某种语言来评判这个人适不适合这个岗位的话那他们要找的就只是工具人而已我觉得ChatGPT就可以完全做到了第三个就是要让你的manager知道你的career goal这样他才可以帮助你达成那个目标不用怀疑manager存在的用意就是让你去利用他也是你的宝贵资源之一",
+            "start": 380.9,
+            "duration": 27.640000000000043
+          },
+          {
+            "text": "很多人覺得說manager可能就是用來管理或是看你有沒有認真上班有沒有乖乖的按時打卡如果你能夠妥善的運用你的manager的話你在職場上面升遷的速度就會很快當你跟你的manager在one on one的時候我會建議你可以設一些比較aggressive的目標不要去害怕說你可能沒辦法把這些事情給做好",
+            "start": 411.28,
+            "duration": 19.30000000000001
+          },
+          {
+            "text": "比如说你想要从L3或L4升到L5就是升级到senior level那你可以跟你的manager说你想要own一些比较有impact的project来帮助你升迁然后你完全不需要害怕跟他说你的目标就是要在12个月后升上L5因为你越直接的跟他讲他才能越直接的帮助你达成你想要达到的目标假如说你的目标是在12个月后升上L5他知道如果想要帮你做promotion的话一般公司内部都会看什么重要的指标",
+            "start": 430.2,
+            "duration": 28.420000000000016
+          },
+          {
+            "text": "那他就可以在planning的时候把一些重要的ownership分给你然后随时给你一些feedback告诉你说哪些地方还需要加强有些时候不只是project上面要拿更多的ownership你可能还欠缺一些帮助其他团队的经验因为很多时候promotion的条件要满足同时会需要其他team的lead或是manager的支持才可以帮助你完成这些目标是你的manager的职责当然他们也不会主动去找你讨论这些事情",
+            "start": 458.62,
+            "duration": 25.339999999999975
+          },
+          {
+            "text": "因為Manager自己本身就很忙所以這些都是你需要主動去跟他們提出來他們才會想辦法去幫你而且我發現一個比較普遍的現象就是很多工程師都是埋頭苦幹很多事情然後他們可能也不會跟他們的Manager有太多的溝通關於Career Go這方面可能覺得說熬了一兩年之後Manager自然會看到他們的貢獻然後幫他們做Promotion是有這個可能",
+            "start": 483.96,
+            "duration": 22.060000000000002
+          },
+          {
+            "text": "不是說沒有可能,但是非常的少因為首先假如你從來沒有去提起這件事情那每個人都很忙,the manager肯定也很忙他也不會去特別幫你留意所以說你做的事情除非是真的非常大的impact那到頭來在他心裡面的印象你頂多就只是一個很好的工程師而已而且你做的很多事情也不一定能夠完全滿足promotion的條件其實很多條件都列得很清楚the manager都知道所以一定不要忘記利用你的manager來幫助你完成你的career goal",
+            "start": 506.02,
+            "duration": 27.860000000000014
+          },
+          {
+            "text": "好那今天这一集就到这边了如果你觉得这集对你有帮助的话记得一定要帮我点个赞也欢迎你在底下留言跟大家分享还有什么事情是你觉得工程师可以做的甚至是在任何行业都适用可以让你朝这个Top 1%前进那我们下次见咯",
+            "start": 533.88,
+            "duration": 15.133000000000038
+          }
+        ],
+        "videoTitle": "成為Top 1%工程師",
+        "metadata": {
+          "title": "成為Top 1%工程師",
+          "description": "買賣美股用IB盈透證券❤️：https://hackbear.tv/ib\n幣安交易所買賣加密貨幣：https://hackbear.tv/binance\nOKX交易所買賣加密貨幣：https://hackbear.tv/okx\n我的Instagram: https://hackbear.tv/ig\n我的x.com: https://x.com/hackbearterry\n合作郵箱: hack.tech.entertainment@gmail.com\n--------------------------\n歡迎追蹤我的 Instagram: https://hackbear.tv/ig\n合作郵箱: hack.tech.entertainment@gmail.com\n#工程師 #職場 #矽谷",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 549,
+          "viewCount": 169910,
+          "keywords": [
+            "程序員",
+            "碼農",
+            "工程師",
+            "北美",
+            "職場",
+            "矽谷",
+            "成功",
+            "關鍵"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/xMUjQKn13PA/maxresdefault.jpg",
+            "width": 0,
+            "height": 0
+          }
+        },
+        "source": "whisper",
+        "fallback": false,
+        "error": null,
+        "reason": null,
+        "timings": {
+          "downloadSeconds": 21.8,
+          "transcribeSeconds": 5,
+          "totalSeconds": 26.9,
+          "audioBytes": 3342381,
+          "videoDurationSeconds": 549,
+          "engine": "wizper"
+        }
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

@@ -1,0 +1,3666 @@
+{
+  "source": "Online transcript provider: Kome",
+  "source_url": "https://www.youtube.com/watch?v=XGveb2bQhAI",
+  "provider": {
+    "name": "Kome",
+    "endpoint": "https://kome.ai/api/transcript",
+    "retrieved": "2026-07-13"
+  },
+  "video_index": 26,
+  "video": {
+    "index": 26,
+    "id": "XGveb2bQhAI",
+    "title": "AI 寫 Code 這麼強，工程師要怎麼生存？@kellytsaii",
+    "url": "https://www.youtube.com/watch?v=XGveb2bQhAI",
+    "duration_seconds": 1455.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "XGveb2bQhAI",
+    "title": "AI 寫 Code 這麼強，工程師要怎麼生存？@kellytsaii",
+    "text": "有沒有這麼隨性\n哈囉大家好我是Terry\n....對不起\n我真的嚇死好\n哈囉大家好我是Terry\n哈囉我是Kelly\nKelly大家應該都認識吧\n我我需要自我介紹嗎\n沒有沒有你不需要自我介紹\n因為每次你知道每次只要一發影片\n影片下面留言就會有人叫你名字\n哇我下去回下去跟大家打招呼\n我們的觀眾應該已經\n基本上都知道Kelly是誰了\n不知道的話那應該是蠻奇怪的\n代表你\n沒有在follow Terry\n沒錯好\n對啊今天今天主要\n是想要跟大家聊一下\n因為Kelly現在\n也在矽谷的tech大公司工作\n算算蠻大的公司\n中大型吧\n中大型對啊我覺得規模已經很大了\n那你也工作這麼久了也算是多久了\n三年半\n三年半所以畢業到現在三年半\n你也經歷了算是covid那段時間\n我相信你應該也\n有在幫公司做面試對不對\n嗯嗯嗯\n然後你應該\n也知道大概矽谷的tech公司\nhire人的方向大概是怎樣\n然後主要今天想要跟大家聊這個東西\n那你覺得so far現在三年半\n這個工作你認為可以一直做下去嗎\n哦欸這個也是大家\n現在很常在討論的問題\n因為我覺得就是工程師現在\n有一些coding skills就是可以\n被replace的地方越來越多了\n就大家可以看到AI進步得這麼快\n所以你好像\n那些basic coding的能力就是\n大家會覺得以後\nAI寫的代碼會越來越多\n但是我們會就是在講在講說哪些是\nAI沒有辦法被\nAI沒有辦法取代人類的地方\n其實一個我\n覺得比較好笑的就是AI\n沒有辦法背鍋\n就是如果出\n一個bug就是你還是\n需要一個人來負責這件事情\n你不能把這個鍋推到AI身上\n這是專案寫的\n這是專案寫的那你還是要\n就是會debug就是\n這還是工程師的錯\n你沒有看出來這個東西錯在哪\n然後除了這個之外\n我覺得就是一些design的東西\n客戶的需求就是你\n要知道你東西的痛點在哪\n然後去做like customer research\n然後這些我覺得\n還有一些就是比如說辦公室如果\n真的有politics或什麼\n你知道哪些\n事情會benefit哪些人\n這種事情是我\n覺得AI沒有辦法判斷的\n所以我覺得就算在之後\nAI的coding能力越來越強之後\n就是可以做這些決定知道就是\n怎麼樣是客戶想要怎麼樣是公司想要\n怎麼樣是對這個business\n最好的還是需要人來設計\n嗯對啊我我覺得\n你想法跟我一開始的想法也是蠻aligned的\n以前我們講到最早以前嘛\n大家在寫code的時候可能就是\n拿一個notepad\n就是很最基本的那時候沒有IDE\n那現在我們\n有比如說像VS Code\n對之前\n有VS Code然後\n更多這種plugin\n讓我們寫code更方便\n那現在有\nAI有cursor這些都\n會讓我們寫code更快速\n但之後呢不知道會怎麼樣\n但是永遠都還是\n需要有人的這個在裡面\n對而且我覺得面試的時候\n其實現在因為就是如果講\n到面試的AI\n其實有\n很多AI cheating的工具\n就是大家應該都有\n耳聞過那種\n什麼interview的AI\n就是他可以在你面試\n的時候就給\n你一些prompt一些答案\n所以大家就是\n對於coding這件事情\n就是有時候我我\n聽到的很多我們在面試人的時候\n你如果一開始就是\n給出一個完美的答案\n就反而會想說對\n對對你會就是\neither你有背過答案\n你就是剛好知道這\n一題或者你有AI的幫助\n所以就是你可能中間\n有展現你的思考過程\n或者是你稍微碰壁\n一點點然後才找出solution\n或是你可以講出你設計的邏輯\n不是就是哦我的code就是這樣\n就是反而比較能說服面試官\n嗯嗯嗯\n欸那你們\n現在interview process還是跟以前一樣嗎\n呃我覺得\n確實會有\nemphasize在就是\n更多coding以外的事情吧\n我就除了\n很general的coding之外\n我覺得會\n比較需要很\nspecific的skills\n就是我可能在找的這個職位\n我蠻確定它需要哪些東西\n然後我\n需要就是background either是match\n或者是我看到你之前經驗有這些\n或者是你在面試\n的時候就可以知道你\n是這方面的的專家\n比如說我們超\n需要一個很會AWS的某個東西的人\n那你就是之前做過\n或者是你面試的時候可以講很多\n我覺得除了\n這種很\nspecific skills之外\n還有culture fit可能也看得越來越多\n因為變成就是\n大家AI可以code之後\n你可能很需要更需要跟人協作的能力\n所以你跟\n這個company的culture\n你跟這個組能不能\n合得來我覺得變得越來越重要\n對我後來有發現\n就是現在是自從\n我們covid結束那一波開始\n開始大裁員之後\n所有公司他們hire人\n的那個requirement都是\n非常精準的\n大家都是\n要hire很specific的一個role\n一個角色進來做某一件事情\n嗯我覺得這完全有被AI影響\n就在可能很古早的年代嘛\n就很很久以前在\n找工作的時候其實不會聊太多這件事\n可能你到higher level還是會啦\n就是你還是\n要很match可是就是\n對於可能lower level\njunior engineers不會到\n那麼的要求\n但我覺得現在慢慢\n的也會變成大家都\n在找自己專精的東西\n對而且我覺得以前\n因為以往大公司很喜歡\n做一個就是general hire\n就你只要過那個bar進來之後\n你再去選組或者是幹嘛\n現在好像就是\n比較偏向有些team\n會特別找某些人\n對對對\n而且我覺得\n因為就是general這\n件事情太容易被取代了\n就是你如果什麼\n東西都會一點但什麼\n東西都沒有很專精的話\n那你就是就像一個AI coding assistant一樣\n然後我覺得可能面試的時候\n其實現在很多就是\n有些公司的policy\n可能會allow一點\n點就是AI的輔助\n在面試的時候所以\n可能也會考就是你\n能不能很好的運用AI\n比如說給你\n一題AI寫的code\n讓你去debug或者是之類\n就是你要知道這些協作的能力\n因為現在就說真的\n工程師在手寫代碼已經很少了\n很少對啊\n我覺得手寫代碼\n反而是效率不高的一個表現\n就是有點太老了\n就是你要展現你學習事情的速度吧\n跟你運用這個東西你是怎麼樣流程\n我覺得比較重要的\n是你有那個設計的mindset\n因為我覺得最就是\n最有效率的運用AI的方法是\n你所有的design\n都已經在腦袋裡面\n然後你可以一次breakdown說\n我要哪些東西\n然後你要講得越詳細越好\n不然AI會自己hallucinate\n你可能\n需要這個需要那個\n然後可能那些別的東西\n所以就是你能把\n你的所有requirements\n跟你怎麼怎麼想設計\n這個架構寫得很清楚的話\nAI才能很精準的meet你的需求\n對就像你\n剛剛講的那個下prompt\n我覺得是很重要\n那很多人會\n覺得說OK我們\n現在vibe coding\n每個人都可以build\n一個很fancy的app\n然後是不需要engineer來\n所有人都可以做這件事情\n但我覺得確實你\n要做一個很generic的東西\n就像你問AI很\n基本的問題他可以\n給你一個很\n很generic的一個答案\n但是你如果要build很specific的need\n或是你你真的是要build一個東西是給\n你的customer用的\n不是那麼簡單就是像大家想的\n就是engineer就可以\n一句話就好因為\n對我覺得如果\n大家只是\n自己vibe code一個\n網站或什麼\n你就是很多人\n其實可能不會在乎它背後\n用的架構是什麼\n因為你後續也就是\n不一定真的\n需要一直maintain它或什麼\n可是我覺得還蠻\n容易遇到的情況就是在\n工作中如果用AI\n然後你一開始沒有跟他講清楚的話\n他給你的東西會完全不是你要的\n就你至少要有\n辦法判斷說這個東西跟你要的架構\n跟你後續maintenance有哪些\npros and cons\n我覺得那些是\n就是coding以外你\n必須要自己很清楚\n對而且如果你\n一開始的path就就錯的話\n那其實後面你要再你\n會一直在你的錯\n上面一直再做更多奇怪的決定\n所以說你要\nmake the right call然後\n你要問正確的問題\n我覺得這是比較難的\n嗯嗯嗯\n對啊就比如說你\n現在去幫你們\n公司去hire人去面試\n你會考他大概哪些類型的題目啊\n還是還是跟以前\n一樣是比較\n偏向leetcode\n跟system design\n就比較傳統那種還是\n你會有一些比較不同的題型\n呃好像覺得\nleetcode\nsystem design這些就是\n會變成已經比較basic的東西\n就是你一定要過的東西\n就leetcode這種\n還是會因為面試\n畢竟很多rounds\n所以你coding\n的東西然後design的東西\n然後我覺得比較多\n的可能是如果真的已經到\n比如說是要\n面我們\nsister teams\n我們team之類的人的話\n就會變成\n是很specific的我們\n組有哪一個need\n就是比如說\n我們組現在\n這個project很需要\n一個這樣子的人\n然後會很\nspecific很\nspecific的問\n說這個tech stack\n你有什麼經驗\n然後或者是你會\n怎麼我覺得比較\n偏向design類的東西\n比較偏向\nsystem design的\n就是在很看\n你的skills有沒有match\n因為畢竟就\n我覺得senior level以上的都已經\n就不是說你來這裡學\n就是你在面試的\n時候就已經需要assess說\n你可能你們組的\n需求跟這個人有沒有match\n或者隔壁組的需求跟這個人\n嗯嗯嗯\n那你現在自己\n是在你們公司\n的scope大概是怎麼樣\n就工作的時候你\n會比較偏向是可能\n會帶一些\n比較junior的engineer\n還是你是比較偏向\n是你會去manage project多一點\n自己比較常做的事情\n都會呃協作的當然也有\n但我覺得我\n合作的可能senior以上更多\nSenior以上更多\n對對對因為我們我\n工作的算是還\n蠻senior heavy的組\n然後我覺得我也蠻infra蠻後端\n就我覺得大家我\n自己感受到就是\n可能偏向product team\n或者是這種\nweb full-stack的年輕人會多一點點\n就大家年輕人\n稍微更喜歡product\n稍微更喜歡\n那種很tangible的東西\n然後越硬核的\n越越後\n端越\ninfrastructure類的\n我看到的更senior的人更多\n因為那些很\nrequire就是你\n很懂整個system\n然後很懂各種\n就是而且有時候是比較無趣的東西\n就是年輕人比較不\n喜歡對所以我我\n覺得我自己協作的時候\n跟還蠻\n多可能principles\n或至少senior以上的在協作\n那你自己更喜歡\n哪項你喜歡\n做product還是你\n比較喜歡\nfocus在back-end\n我覺得我\n自己的experience\n很back-end\n但我沒有排斥\n就是就是試試看product\n因為我覺得就是你\n寫的東西你自己很看得到\n或者是你\n很看得到用戶impact\n這件事情還蠻有趣的\n就比如說你真的是寫web的話\n那你寫一個東西\n你就在公司網站\n上看到哦這個\nproduct有改動了\n我覺得這還是一個\n還蠻有成就感的地方\n或者是你就是你\n寫一個東西\n然後user engagement就上升了\n但這件事情\n在infra side比較難發生\n你可能寫一個東西\n是比如說\n你很tangible可能\n比如說cut cost\n這已經是一個很\n看得到可是你如果\n寫一個東西什麼優化\n了你內部用戶的使用體驗\n這種事情就有時候很難量化\n對所以嗯我我覺得我自己\n的experience很很後端\n但是我覺得沒有\n排斥就我覺得\nproduct也感覺是\n有它好玩的地方\n假如今天比如\n說你是new grad\n或是你現在在找工作\n你會怎麼樣去準備你下一輪的面試\n比如說你離職了\n然後你有\n一些interview lined up\n你會怎麼樣去\n把你機變成這個\n職場準備好的一個狀態\n哦我覺得好像一個\n是要先很知道你自己在找的是什麼嗎\n就你自己的專精的\n東西在哪裡然後\n你look for的是什麼\n當然這兩個東西不能差太多\n就我覺得可能\n很early on的那種stage\n很容易犯的錯就是哦我是來學習的可是我覺得這種在\n公司或者是\n在recruiter之類的角度\n就會覺得我hire\n你來就是你應該本來就要會\n就我不是hire\n你進來然後找你想要做什麼事情\n我覺得這已經是跟以前不太一樣\n對不太一樣嗯嗯以前是\n你可以表現出說我是想要來學習的\n你很junior但是現在的我覺得\n我知道我要什麼然後我這個東西很強\n所以你應該hire我是因為我會這個東西\n對然後或者是你\n頂多就是比如說\n這個這個job scope有100\n你可以說50\n是match\n50是哦 我interested\n想要explore的部分\n這樣可能還行\n但不能是就是哦這\n100都是我想學的東西這樣\n對但怎麼prepare也是一樣\n就在專精\n的部分之外show那個drive\n就我覺得因為你就是已經在專精\n已經已經對這個東西有興趣了\n所以你才會想要\n對這個公司contribute\n然後看到他們在你\n熟悉的那塊area\n可以加強的點是什麼\n就是可以講出你自己能做的貢獻吧\n我覺得就要很從\n公司的想法想說\n為什麼我們要hire你\n而不是我自我成長的想法所以說你剛剛\n講的那個是比較偏向就是\n比如說你跟這個hiring manager\n做一個technical deep dive的時候\n你去講說為什麼\n你要去sell你自己嗎\n嗯嗯我覺得也可以\n講說就是比如說\n問說time manager\n哦他們現在\n想要solve的一個challenge是什麼\n然後去看說\n你可以怎麼樣contribute to這個東西\n他們現在有一個obstacle\n或者是他們產品遇到一個什麼問題\n然後為什麼你的\n能力可以就是幫忙去解決這個問題\n對我覺得這\n是一個很容易stand out的一個point\n面試有一個round\n就是你\n跟hiring manager\n跟一個比較senior的\n可能是你未來\n的manager去聊天\n那你要在這個\n聊天過程中怎麼讓他喜歡你\n我覺得你剛剛講\n的就是一個很好的例子\n嗯嗯嗯\n對啊那如果是\n比較偏向hard skill你會大概怎麼準備\n怎麼準備哦呃\n就是leetcode當然要多刷\n就是coding關你還是要先過\n所以你還是要\n先把那些\n基礎的coding的東西弄好\n然後再來system design\n我覺得就是要你\n很廣泛的接觸很多東西嗎\n我自己可能比如說\n你上網看很多tutorials啊\n或者是你自己去看一些書準備或什麼\n就是我覺得要我自己\n的想法是還蠻從最basic的東西build up\n然後去看很多use case\n就是你動不動可能看到一個東西\n你就可以自己想像說哦我如果要\n設計這個東西我會怎麼講什麼\n然後多跟人mock我覺得\n就是有沒有有沒有練習還是有差\n就是你自己腦袋想跟你講出來\n或者是你coding round\n你自己知道怎麼code\n跟你真的邊解釋邊code出來是有差異\n就很容易緊張\n就失常所以就是除了就是準備\n就是不管是看書\n或者是你日常就自己想\n就是另外一個就是你要很多模擬\n嗯嗯嗯\n對\n我覺得system design\n其實還蠻吃經驗的\n嗯\n我如果去interview一個人\n其實他沒有任何經驗我是看得出來的\n但至少對一個系統\n是比較有很generic的一個了解\n我覺得OK那他可能比較沒那麼senior\n那我就說OK了\n以前的話可能比如\n說L3或是剛畢業的\n我們會覺得說那可能不需要太知道system design\n我們可以說那\n那可能就是coding也過了\n然後可能他coding\n很強那我覺得說OK了\n但現在我們會\n覺得說你今天進來\n然後我們全部都是\n用AI在寫code\n然後大家效率都非常的高\n為什麼我要hire你?\n全部人都是非常高效率的engineer\n那我hire你肯定是\n希望你進來就\n可以直接contribute\n對所以說我會想要\n看到對系統的一個了解程度\n而且這個是我\n覺得是很難用AI去做弊的\n我不知道你有沒有試\n過但是我曾經想過\n要是如果考system design\n我要用AI做弊怎麼去做\n我不知道欸可以怎麼做弊\n完全不可能就就你把那個問題給他\n就給你一個超級generic的一個答案\n然後而且是長篇大論\n等於說你要坐在那邊OK\n你等我讀五分鐘\n你看完讀完之後你再跟他講\n就就很難就完全\n不可能做弊不像coding\n因為你coding的話你給\n有正確答案\n還可以假裝寫錯什麼之類的對\n但是system design\n就完全就是靠你腦袋的東西\n就你有沒有經驗沒有\n經驗的話那你怎麼樣去補足\n你怎麼樣靠自己\n去讀那些case study\n對那像我們\n的就我跟Bohr出了那個\n我們就給了13 (現在增加到 14）\n個我們認為應該說大家\n都在用的一些app\n然後我們叫它\n現代系統設計\n跟傳統的\n系統設計比較不太一樣的是\n我們加入很多AI的東西\n哦\n很多AI還有一些Web3的東西\n嗯嗯嗯\n對那我覺得\n未來我們一定\n是engineer去利用AI\n然後我們要怎麼\n去design一個AI的flow\n這些我覺得都是還蠻重要的\n嗯確實這個我覺得就\n是它硬實力就是\n真的很容易就看得出來\n尤其就是如果你就是\n面試官可以一直follow up\n所以你對整個系統\n架構的每一個點你都要很了解\n你才不會\n在被deep dive\n某一個問題的時候被考倒\n對對那你會來上課嗎？\n而且之前有人邀請我去當助教欸\n好像有這麼一回事\n什麼時候我才能\n我才能來這個客串一下\n因為Kelly很厲害啦所以說\n對啊我覺得\n請不起是不是\n有點請不起\n因為我們那個\nbudget可能沒有那麼多\n因為我覺得我\n覺得我們課程很便宜\n我們真的就是我認為啦\n就是因為因為Bohr他\n他也不缺錢說實話他也不缺錢\n他他其實做這個\n東西是他自己想要做的事情\n因為他之前其實就有\n免費的幫大家做coaching在線上\n然後我我\n去approach他說我跟他聊說\n如果你自己在做\n這些東西的話要\n不要你可以把\n這個scope變大一點\n就是你可以reach的audience多一點\n然後我們一起來\n設計一個真的可以\n幫助到大家的一個系統設計\n然後他就說好然後\n我們才一起來做這件事情\n就做這個東西其實\n我個人覺得你從這\n裡面能得到的價值\n是絕對遠遠超過我們\n官網上面的那個價格\n而且如果你就\n是因為你把系統設計學好\n然後land一個更好的job那你的\n回報肯定是比那個價格要再多很多\n可能一兩天薪水\n就差別就是就可以對啊\n而且這個是你學\n完之後是可以一直apply到\n你rest of your career\n甚至甚至你自己\n在做一些project的時候\n你會有那些concept那些idea\n那完全不一樣的\n因為我自己以前\n也是可能\n沒有那個system design\n的概念的時候\n我自己要\n做一個project的\n時候我不會\n有一個\n很structured的一個開始\n但是我如果\n有那個concept的\n話有system design concept的話\n我很知道說我\n要問AI什麼問題\n然後我可以告訴AI說\n我現在第一步要做什麼\n然後第二步要做\n什麼對那這些\n就是你\n有沒有這個background\n有沒有這個context\n最大的區別\n有時候真的要從這種練習的經驗得來\n就沒有辦法\n你把什麼database什麼學好\n就就知道這些東西\n沒錯\n你會擔心說哪一天可能\n被layoff還是什麼之類的嗎?\n哦嗯layoff這件事情我就覺得它\n是一個很無法無法控制的情況\n就是你擔心也\n沒用所以就\n不如不要擔心所以我還沒有\n不過我覺得你們\n公司一直在hire人\n最近還在hire人\n嗯對對對所以會擔心嗎\n就是就覺得你\n掌控以外的事情你就不用去想\n還是你想要被layoff？\n沒有沒有欸我\n我熱愛我的工作\n有些人是有些人\n想說哦我被layoff就算\n了拿個severance\n拿個幾個月薪水然後\n就自己去爽一下或是休息一下\n好像不會我覺得\n我在我的career\n還是在一個還蠻想成長的階段\n所以嗯還蠻想\n就是會想要keep\n我的learning rate很高\n所以還想繼續工作\n所以你還是會想要繼續\n做engineering這個工作\n嗯我覺得就是\n如果有一天我達到我覺得哦一個\n就是我自己\n的skills到一個程度\n那maybe可以考慮到\nother options\n但我覺得我現在還在一個就是成長\n需要學習然後很想\n接觸很多新東西的階段\n那我猜你現在\n應該也差不多在一個位置就是\n因為三年嘛三年半\n那你應該差不多在一個位置就是\n你可以選\n比較偏management的path\n或是比較偏IC的path\n哦我覺得在大公司其實沒有那麼快啦\n小公司maybe\n但是大\n公司要到\nmanagement path還\n就experience\n還要再累積一段\n但是你問我的話\n我會覺得我可能\n還是比較想要technical\n因為我覺得\n我覺得\nmanagement\n要deal with的\n東西複雜很多\n他們就是你要考慮的\n事情會變得很不一樣\n就是你要考慮你要\n就是你要保護你的組的scope啊\n你要怎麼\n就是擴展你scope會\n變成就是跟\n那種technical能力\n完全不相關\n會我覺得很多政治上的東西\n政治上\n然後我不覺得暫時\n不覺得那會是我excel的地方\n哦嗯\n所以你還是\n覺得你做\ntechnical會比較強一點\n嗯對\n還是說你興趣\n會比較偏向在technical\n可能是哦或除非\n就是因為我\n覺得technical還有\n很多我可以學的地方\n除非我真的覺得那個\n地方我已經學得差不多了\n然後我想要學\n新的東西\nmaybe management是一個\n不知道但但現在\n是覺得沒有啊\ntechnical就是我覺得你的job輕鬆很多\n因為你把這個東西做好\n就好可是\nas a manager\n並不是一個project做好\n你的工作就結束了\n對沒錯\n就technical的\n你就是IC嘛\n那IC就是把\n你的project給\n做好把你該做的事情做好\n你不需要擔心是\n人的那些\nvariable不需要擔心\n就像其實\n做YouTube其實也蠻累的\n就是YouTube很累嘛\n你要跟很多人去講這個事情\n然後你要跟\n廠商談然後\n你要deal with酸民\n然後你有很多亂七八糟\n的人會來攻擊你\n而且manager我\n另外一個想到是就你一開始的時候\n你一定不會\n是很high level的management嘛\n你就是有點在中間很像夾心餅乾\n我覺得有時候你會\n很就是你要溝通\nIC的想法\n跟management的想法\n會有點被夾在\n中間要取得一個\n平衡我覺得那有時候也蠻難的\n因為就是可能你的\n上層的想法跟你管的工程師不一樣\n對而且我覺得現在manager很累很辛苦\n嗯嗯\n因為假如上面開始砍人的時候\n應該最先砍的是\nmiddle management\n哦\n就先從那種夾在中間的人開始砍\n就是要扁平化\n對我覺得是這樣子\n那因為IC還是要有人來做事情嘛\n所以說他們\n其實是比較\n偏向先把它middle management\n砍掉\n對那當然\ndirector VP\n那些level也會被砍啦\n但是就是相對來講已經做了那麼久\n就安全一點或者是\n你外面機會也會多很多\n就可能有人想挖你或什麼\n對對所以說做IC也是還不錯\n對啊我覺得\nIC的工作就是simple很多\n就是你要想的事情就是這樣子\n如果我可以一直做IC我會做IC\n我之前好像跟你聊過\n這件事因為\n你覺得做manager很麻煩好像\n我覺得做manager\n很累啊很辛苦而且真的\n是你的meeting是排滿的\n對真的很忙\n可能很多人會\n有一個\n迷思就是說哦manager好像\n就只要講話就好\n出一張嘴然後\n跟大家去meeting\n然後在meeting\n的時候去講話\n發言然後給\n人家feedback就可以\n但其實\n沒有我覺得\nmanager好不好很\n決定一個組的成敗\n就是他真的是一個決定性的角色\n對而且也會影響\n到很多人的career\n對對就是你有沒有\n跟到一個好的manager\n也是影響你自己的career很多\n嗯好啊\n那大家如果有興趣\n的話可以去\n追蹤一下Kelly的頻道\n然後還有Kelly\n最近有做職涯諮詢\n對有做\n一個next step然後\n就是有留學跟職涯的諮詢\n都有很專業的\n顧問可以\n跟大家one on one\n的解決問題\n對大家可以去看一下\n好謝謝大家\n拜拜",
+    "segments": [
+      {
+        "index": 0,
+        "text": "有沒有這麼隨性"
+      },
+      {
+        "index": 1,
+        "text": "哈囉大家好我是Terry"
+      },
+      {
+        "index": 2,
+        "text": "....對不起"
+      },
+      {
+        "index": 3,
+        "text": "我真的嚇死好"
+      },
+      {
+        "index": 4,
+        "text": "哈囉大家好我是Terry"
+      },
+      {
+        "index": 5,
+        "text": "哈囉我是Kelly"
+      },
+      {
+        "index": 6,
+        "text": "Kelly大家應該都認識吧"
+      },
+      {
+        "index": 7,
+        "text": "我我需要自我介紹嗎"
+      },
+      {
+        "index": 8,
+        "text": "沒有沒有你不需要自我介紹"
+      },
+      {
+        "index": 9,
+        "text": "因為每次你知道每次只要一發影片"
+      },
+      {
+        "index": 10,
+        "text": "影片下面留言就會有人叫你名字"
+      },
+      {
+        "index": 11,
+        "text": "哇我下去回下去跟大家打招呼"
+      },
+      {
+        "index": 12,
+        "text": "我們的觀眾應該已經"
+      },
+      {
+        "index": 13,
+        "text": "基本上都知道Kelly是誰了"
+      },
+      {
+        "index": 14,
+        "text": "不知道的話那應該是蠻奇怪的"
+      },
+      {
+        "index": 15,
+        "text": "代表你"
+      },
+      {
+        "index": 16,
+        "text": "沒有在follow Terry"
+      },
+      {
+        "index": 17,
+        "text": "沒錯好"
+      },
+      {
+        "index": 18,
+        "text": "對啊今天今天主要"
+      },
+      {
+        "index": 19,
+        "text": "是想要跟大家聊一下"
+      },
+      {
+        "index": 20,
+        "text": "因為Kelly現在"
+      },
+      {
+        "index": 21,
+        "text": "也在矽谷的tech大公司工作"
+      },
+      {
+        "index": 22,
+        "text": "算算蠻大的公司"
+      },
+      {
+        "index": 23,
+        "text": "中大型吧"
+      },
+      {
+        "index": 24,
+        "text": "中大型對啊我覺得規模已經很大了"
+      },
+      {
+        "index": 25,
+        "text": "那你也工作這麼久了也算是多久了"
+      },
+      {
+        "index": 26,
+        "text": "三年半"
+      },
+      {
+        "index": 27,
+        "text": "三年半所以畢業到現在三年半"
+      },
+      {
+        "index": 28,
+        "text": "你也經歷了算是covid那段時間"
+      },
+      {
+        "index": 29,
+        "text": "我相信你應該也"
+      },
+      {
+        "index": 30,
+        "text": "有在幫公司做面試對不對"
+      },
+      {
+        "index": 31,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 32,
+        "text": "然後你應該"
+      },
+      {
+        "index": 33,
+        "text": "也知道大概矽谷的tech公司"
+      },
+      {
+        "index": 34,
+        "text": "hire人的方向大概是怎樣"
+      },
+      {
+        "index": 35,
+        "text": "然後主要今天想要跟大家聊這個東西"
+      },
+      {
+        "index": 36,
+        "text": "那你覺得so far現在三年半"
+      },
+      {
+        "index": 37,
+        "text": "這個工作你認為可以一直做下去嗎"
+      },
+      {
+        "index": 38,
+        "text": "哦欸這個也是大家"
+      },
+      {
+        "index": 39,
+        "text": "現在很常在討論的問題"
+      },
+      {
+        "index": 40,
+        "text": "因為我覺得就是工程師現在"
+      },
+      {
+        "index": 41,
+        "text": "有一些coding skills就是可以"
+      },
+      {
+        "index": 42,
+        "text": "被replace的地方越來越多了"
+      },
+      {
+        "index": 43,
+        "text": "就大家可以看到AI進步得這麼快"
+      },
+      {
+        "index": 44,
+        "text": "所以你好像"
+      },
+      {
+        "index": 45,
+        "text": "那些basic coding的能力就是"
+      },
+      {
+        "index": 46,
+        "text": "大家會覺得以後"
+      },
+      {
+        "index": 47,
+        "text": "AI寫的代碼會越來越多"
+      },
+      {
+        "index": 48,
+        "text": "但是我們會就是在講在講說哪些是"
+      },
+      {
+        "index": 49,
+        "text": "AI沒有辦法被"
+      },
+      {
+        "index": 50,
+        "text": "AI沒有辦法取代人類的地方"
+      },
+      {
+        "index": 51,
+        "text": "其實一個我"
+      },
+      {
+        "index": 52,
+        "text": "覺得比較好笑的就是AI"
+      },
+      {
+        "index": 53,
+        "text": "沒有辦法背鍋"
+      },
+      {
+        "index": 54,
+        "text": "就是如果出"
+      },
+      {
+        "index": 55,
+        "text": "一個bug就是你還是"
+      },
+      {
+        "index": 56,
+        "text": "需要一個人來負責這件事情"
+      },
+      {
+        "index": 57,
+        "text": "你不能把這個鍋推到AI身上"
+      },
+      {
+        "index": 58,
+        "text": "這是專案寫的"
+      },
+      {
+        "index": 59,
+        "text": "這是專案寫的那你還是要"
+      },
+      {
+        "index": 60,
+        "text": "就是會debug就是"
+      },
+      {
+        "index": 61,
+        "text": "這還是工程師的錯"
+      },
+      {
+        "index": 62,
+        "text": "你沒有看出來這個東西錯在哪"
+      },
+      {
+        "index": 63,
+        "text": "然後除了這個之外"
+      },
+      {
+        "index": 64,
+        "text": "我覺得就是一些design的東西"
+      },
+      {
+        "index": 65,
+        "text": "客戶的需求就是你"
+      },
+      {
+        "index": 66,
+        "text": "要知道你東西的痛點在哪"
+      },
+      {
+        "index": 67,
+        "text": "然後去做like customer research"
+      },
+      {
+        "index": 68,
+        "text": "然後這些我覺得"
+      },
+      {
+        "index": 69,
+        "text": "還有一些就是比如說辦公室如果"
+      },
+      {
+        "index": 70,
+        "text": "真的有politics或什麼"
+      },
+      {
+        "index": 71,
+        "text": "你知道哪些"
+      },
+      {
+        "index": 72,
+        "text": "事情會benefit哪些人"
+      },
+      {
+        "index": 73,
+        "text": "這種事情是我"
+      },
+      {
+        "index": 74,
+        "text": "覺得AI沒有辦法判斷的"
+      },
+      {
+        "index": 75,
+        "text": "所以我覺得就算在之後"
+      },
+      {
+        "index": 76,
+        "text": "AI的coding能力越來越強之後"
+      },
+      {
+        "index": 77,
+        "text": "就是可以做這些決定知道就是"
+      },
+      {
+        "index": 78,
+        "text": "怎麼樣是客戶想要怎麼樣是公司想要"
+      },
+      {
+        "index": 79,
+        "text": "怎麼樣是對這個business"
+      },
+      {
+        "index": 80,
+        "text": "最好的還是需要人來設計"
+      },
+      {
+        "index": 81,
+        "text": "嗯對啊我我覺得"
+      },
+      {
+        "index": 82,
+        "text": "你想法跟我一開始的想法也是蠻aligned的"
+      },
+      {
+        "index": 83,
+        "text": "以前我們講到最早以前嘛"
+      },
+      {
+        "index": 84,
+        "text": "大家在寫code的時候可能就是"
+      },
+      {
+        "index": 85,
+        "text": "拿一個notepad"
+      },
+      {
+        "index": 86,
+        "text": "就是很最基本的那時候沒有IDE"
+      },
+      {
+        "index": 87,
+        "text": "那現在我們"
+      },
+      {
+        "index": 88,
+        "text": "有比如說像VS Code"
+      },
+      {
+        "index": 89,
+        "text": "對之前"
+      },
+      {
+        "index": 90,
+        "text": "有VS Code然後"
+      },
+      {
+        "index": 91,
+        "text": "更多這種plugin"
+      },
+      {
+        "index": 92,
+        "text": "讓我們寫code更方便"
+      },
+      {
+        "index": 93,
+        "text": "那現在有"
+      },
+      {
+        "index": 94,
+        "text": "AI有cursor這些都"
+      },
+      {
+        "index": 95,
+        "text": "會讓我們寫code更快速"
+      },
+      {
+        "index": 96,
+        "text": "但之後呢不知道會怎麼樣"
+      },
+      {
+        "index": 97,
+        "text": "但是永遠都還是"
+      },
+      {
+        "index": 98,
+        "text": "需要有人的這個在裡面"
+      },
+      {
+        "index": 99,
+        "text": "對而且我覺得面試的時候"
+      },
+      {
+        "index": 100,
+        "text": "其實現在因為就是如果講"
+      },
+      {
+        "index": 101,
+        "text": "到面試的AI"
+      },
+      {
+        "index": 102,
+        "text": "其實有"
+      },
+      {
+        "index": 103,
+        "text": "很多AI cheating的工具"
+      },
+      {
+        "index": 104,
+        "text": "就是大家應該都有"
+      },
+      {
+        "index": 105,
+        "text": "耳聞過那種"
+      },
+      {
+        "index": 106,
+        "text": "什麼interview的AI"
+      },
+      {
+        "index": 107,
+        "text": "就是他可以在你面試"
+      },
+      {
+        "index": 108,
+        "text": "的時候就給"
+      },
+      {
+        "index": 109,
+        "text": "你一些prompt一些答案"
+      },
+      {
+        "index": 110,
+        "text": "所以大家就是"
+      },
+      {
+        "index": 111,
+        "text": "對於coding這件事情"
+      },
+      {
+        "index": 112,
+        "text": "就是有時候我我"
+      },
+      {
+        "index": 113,
+        "text": "聽到的很多我們在面試人的時候"
+      },
+      {
+        "index": 114,
+        "text": "你如果一開始就是"
+      },
+      {
+        "index": 115,
+        "text": "給出一個完美的答案"
+      },
+      {
+        "index": 116,
+        "text": "就反而會想說對"
+      },
+      {
+        "index": 117,
+        "text": "對對你會就是"
+      },
+      {
+        "index": 118,
+        "text": "either你有背過答案"
+      },
+      {
+        "index": 119,
+        "text": "你就是剛好知道這"
+      },
+      {
+        "index": 120,
+        "text": "一題或者你有AI的幫助"
+      },
+      {
+        "index": 121,
+        "text": "所以就是你可能中間"
+      },
+      {
+        "index": 122,
+        "text": "有展現你的思考過程"
+      },
+      {
+        "index": 123,
+        "text": "或者是你稍微碰壁"
+      },
+      {
+        "index": 124,
+        "text": "一點點然後才找出solution"
+      },
+      {
+        "index": 125,
+        "text": "或是你可以講出你設計的邏輯"
+      },
+      {
+        "index": 126,
+        "text": "不是就是哦我的code就是這樣"
+      },
+      {
+        "index": 127,
+        "text": "就是反而比較能說服面試官"
+      },
+      {
+        "index": 128,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 129,
+        "text": "欸那你們"
+      },
+      {
+        "index": 130,
+        "text": "現在interview process還是跟以前一樣嗎"
+      },
+      {
+        "index": 131,
+        "text": "呃我覺得"
+      },
+      {
+        "index": 132,
+        "text": "確實會有"
+      },
+      {
+        "index": 133,
+        "text": "emphasize在就是"
+      },
+      {
+        "index": 134,
+        "text": "更多coding以外的事情吧"
+      },
+      {
+        "index": 135,
+        "text": "我就除了"
+      },
+      {
+        "index": 136,
+        "text": "很general的coding之外"
+      },
+      {
+        "index": 137,
+        "text": "我覺得會"
+      },
+      {
+        "index": 138,
+        "text": "比較需要很"
+      },
+      {
+        "index": 139,
+        "text": "specific的skills"
+      },
+      {
+        "index": 140,
+        "text": "就是我可能在找的這個職位"
+      },
+      {
+        "index": 141,
+        "text": "我蠻確定它需要哪些東西"
+      },
+      {
+        "index": 142,
+        "text": "然後我"
+      },
+      {
+        "index": 143,
+        "text": "需要就是background either是match"
+      },
+      {
+        "index": 144,
+        "text": "或者是我看到你之前經驗有這些"
+      },
+      {
+        "index": 145,
+        "text": "或者是你在面試"
+      },
+      {
+        "index": 146,
+        "text": "的時候就可以知道你"
+      },
+      {
+        "index": 147,
+        "text": "是這方面的的專家"
+      },
+      {
+        "index": 148,
+        "text": "比如說我們超"
+      },
+      {
+        "index": 149,
+        "text": "需要一個很會AWS的某個東西的人"
+      },
+      {
+        "index": 150,
+        "text": "那你就是之前做過"
+      },
+      {
+        "index": 151,
+        "text": "或者是你面試的時候可以講很多"
+      },
+      {
+        "index": 152,
+        "text": "我覺得除了"
+      },
+      {
+        "index": 153,
+        "text": "這種很"
+      },
+      {
+        "index": 154,
+        "text": "specific skills之外"
+      },
+      {
+        "index": 155,
+        "text": "還有culture fit可能也看得越來越多"
+      },
+      {
+        "index": 156,
+        "text": "因為變成就是"
+      },
+      {
+        "index": 157,
+        "text": "大家AI可以code之後"
+      },
+      {
+        "index": 158,
+        "text": "你可能很需要更需要跟人協作的能力"
+      },
+      {
+        "index": 159,
+        "text": "所以你跟"
+      },
+      {
+        "index": 160,
+        "text": "這個company的culture"
+      },
+      {
+        "index": 161,
+        "text": "你跟這個組能不能"
+      },
+      {
+        "index": 162,
+        "text": "合得來我覺得變得越來越重要"
+      },
+      {
+        "index": 163,
+        "text": "對我後來有發現"
+      },
+      {
+        "index": 164,
+        "text": "就是現在是自從"
+      },
+      {
+        "index": 165,
+        "text": "我們covid結束那一波開始"
+      },
+      {
+        "index": 166,
+        "text": "開始大裁員之後"
+      },
+      {
+        "index": 167,
+        "text": "所有公司他們hire人"
+      },
+      {
+        "index": 168,
+        "text": "的那個requirement都是"
+      },
+      {
+        "index": 169,
+        "text": "非常精準的"
+      },
+      {
+        "index": 170,
+        "text": "大家都是"
+      },
+      {
+        "index": 171,
+        "text": "要hire很specific的一個role"
+      },
+      {
+        "index": 172,
+        "text": "一個角色進來做某一件事情"
+      },
+      {
+        "index": 173,
+        "text": "嗯我覺得這完全有被AI影響"
+      },
+      {
+        "index": 174,
+        "text": "就在可能很古早的年代嘛"
+      },
+      {
+        "index": 175,
+        "text": "就很很久以前在"
+      },
+      {
+        "index": 176,
+        "text": "找工作的時候其實不會聊太多這件事"
+      },
+      {
+        "index": 177,
+        "text": "可能你到higher level還是會啦"
+      },
+      {
+        "index": 178,
+        "text": "就是你還是"
+      },
+      {
+        "index": 179,
+        "text": "要很match可是就是"
+      },
+      {
+        "index": 180,
+        "text": "對於可能lower level"
+      },
+      {
+        "index": 181,
+        "text": "junior engineers不會到"
+      },
+      {
+        "index": 182,
+        "text": "那麼的要求"
+      },
+      {
+        "index": 183,
+        "text": "但我覺得現在慢慢"
+      },
+      {
+        "index": 184,
+        "text": "的也會變成大家都"
+      },
+      {
+        "index": 185,
+        "text": "在找自己專精的東西"
+      },
+      {
+        "index": 186,
+        "text": "對而且我覺得以前"
+      },
+      {
+        "index": 187,
+        "text": "因為以往大公司很喜歡"
+      },
+      {
+        "index": 188,
+        "text": "做一個就是general hire"
+      },
+      {
+        "index": 189,
+        "text": "就你只要過那個bar進來之後"
+      },
+      {
+        "index": 190,
+        "text": "你再去選組或者是幹嘛"
+      },
+      {
+        "index": 191,
+        "text": "現在好像就是"
+      },
+      {
+        "index": 192,
+        "text": "比較偏向有些team"
+      },
+      {
+        "index": 193,
+        "text": "會特別找某些人"
+      },
+      {
+        "index": 194,
+        "text": "對對對"
+      },
+      {
+        "index": 195,
+        "text": "而且我覺得"
+      },
+      {
+        "index": 196,
+        "text": "因為就是general這"
+      },
+      {
+        "index": 197,
+        "text": "件事情太容易被取代了"
+      },
+      {
+        "index": 198,
+        "text": "就是你如果什麼"
+      },
+      {
+        "index": 199,
+        "text": "東西都會一點但什麼"
+      },
+      {
+        "index": 200,
+        "text": "東西都沒有很專精的話"
+      },
+      {
+        "index": 201,
+        "text": "那你就是就像一個AI coding assistant一樣"
+      },
+      {
+        "index": 202,
+        "text": "然後我覺得可能面試的時候"
+      },
+      {
+        "index": 203,
+        "text": "其實現在很多就是"
+      },
+      {
+        "index": 204,
+        "text": "有些公司的policy"
+      },
+      {
+        "index": 205,
+        "text": "可能會allow一點"
+      },
+      {
+        "index": 206,
+        "text": "點就是AI的輔助"
+      },
+      {
+        "index": 207,
+        "text": "在面試的時候所以"
+      },
+      {
+        "index": 208,
+        "text": "可能也會考就是你"
+      },
+      {
+        "index": 209,
+        "text": "能不能很好的運用AI"
+      },
+      {
+        "index": 210,
+        "text": "比如說給你"
+      },
+      {
+        "index": 211,
+        "text": "一題AI寫的code"
+      },
+      {
+        "index": 212,
+        "text": "讓你去debug或者是之類"
+      },
+      {
+        "index": 213,
+        "text": "就是你要知道這些協作的能力"
+      },
+      {
+        "index": 214,
+        "text": "因為現在就說真的"
+      },
+      {
+        "index": 215,
+        "text": "工程師在手寫代碼已經很少了"
+      },
+      {
+        "index": 216,
+        "text": "很少對啊"
+      },
+      {
+        "index": 217,
+        "text": "我覺得手寫代碼"
+      },
+      {
+        "index": 218,
+        "text": "反而是效率不高的一個表現"
+      },
+      {
+        "index": 219,
+        "text": "就是有點太老了"
+      },
+      {
+        "index": 220,
+        "text": "就是你要展現你學習事情的速度吧"
+      },
+      {
+        "index": 221,
+        "text": "跟你運用這個東西你是怎麼樣流程"
+      },
+      {
+        "index": 222,
+        "text": "我覺得比較重要的"
+      },
+      {
+        "index": 223,
+        "text": "是你有那個設計的mindset"
+      },
+      {
+        "index": 224,
+        "text": "因為我覺得最就是"
+      },
+      {
+        "index": 225,
+        "text": "最有效率的運用AI的方法是"
+      },
+      {
+        "index": 226,
+        "text": "你所有的design"
+      },
+      {
+        "index": 227,
+        "text": "都已經在腦袋裡面"
+      },
+      {
+        "index": 228,
+        "text": "然後你可以一次breakdown說"
+      },
+      {
+        "index": 229,
+        "text": "我要哪些東西"
+      },
+      {
+        "index": 230,
+        "text": "然後你要講得越詳細越好"
+      },
+      {
+        "index": 231,
+        "text": "不然AI會自己hallucinate"
+      },
+      {
+        "index": 232,
+        "text": "你可能"
+      },
+      {
+        "index": 233,
+        "text": "需要這個需要那個"
+      },
+      {
+        "index": 234,
+        "text": "然後可能那些別的東西"
+      },
+      {
+        "index": 235,
+        "text": "所以就是你能把"
+      },
+      {
+        "index": 236,
+        "text": "你的所有requirements"
+      },
+      {
+        "index": 237,
+        "text": "跟你怎麼怎麼想設計"
+      },
+      {
+        "index": 238,
+        "text": "這個架構寫得很清楚的話"
+      },
+      {
+        "index": 239,
+        "text": "AI才能很精準的meet你的需求"
+      },
+      {
+        "index": 240,
+        "text": "對就像你"
+      },
+      {
+        "index": 241,
+        "text": "剛剛講的那個下prompt"
+      },
+      {
+        "index": 242,
+        "text": "我覺得是很重要"
+      },
+      {
+        "index": 243,
+        "text": "那很多人會"
+      },
+      {
+        "index": 244,
+        "text": "覺得說OK我們"
+      },
+      {
+        "index": 245,
+        "text": "現在vibe coding"
+      },
+      {
+        "index": 246,
+        "text": "每個人都可以build"
+      },
+      {
+        "index": 247,
+        "text": "一個很fancy的app"
+      },
+      {
+        "index": 248,
+        "text": "然後是不需要engineer來"
+      },
+      {
+        "index": 249,
+        "text": "所有人都可以做這件事情"
+      },
+      {
+        "index": 250,
+        "text": "但我覺得確實你"
+      },
+      {
+        "index": 251,
+        "text": "要做一個很generic的東西"
+      },
+      {
+        "index": 252,
+        "text": "就像你問AI很"
+      },
+      {
+        "index": 253,
+        "text": "基本的問題他可以"
+      },
+      {
+        "index": 254,
+        "text": "給你一個很"
+      },
+      {
+        "index": 255,
+        "text": "很generic的一個答案"
+      },
+      {
+        "index": 256,
+        "text": "但是你如果要build很specific的need"
+      },
+      {
+        "index": 257,
+        "text": "或是你你真的是要build一個東西是給"
+      },
+      {
+        "index": 258,
+        "text": "你的customer用的"
+      },
+      {
+        "index": 259,
+        "text": "不是那麼簡單就是像大家想的"
+      },
+      {
+        "index": 260,
+        "text": "就是engineer就可以"
+      },
+      {
+        "index": 261,
+        "text": "一句話就好因為"
+      },
+      {
+        "index": 262,
+        "text": "對我覺得如果"
+      },
+      {
+        "index": 263,
+        "text": "大家只是"
+      },
+      {
+        "index": 264,
+        "text": "自己vibe code一個"
+      },
+      {
+        "index": 265,
+        "text": "網站或什麼"
+      },
+      {
+        "index": 266,
+        "text": "你就是很多人"
+      },
+      {
+        "index": 267,
+        "text": "其實可能不會在乎它背後"
+      },
+      {
+        "index": 268,
+        "text": "用的架構是什麼"
+      },
+      {
+        "index": 269,
+        "text": "因為你後續也就是"
+      },
+      {
+        "index": 270,
+        "text": "不一定真的"
+      },
+      {
+        "index": 271,
+        "text": "需要一直maintain它或什麼"
+      },
+      {
+        "index": 272,
+        "text": "可是我覺得還蠻"
+      },
+      {
+        "index": 273,
+        "text": "容易遇到的情況就是在"
+      },
+      {
+        "index": 274,
+        "text": "工作中如果用AI"
+      },
+      {
+        "index": 275,
+        "text": "然後你一開始沒有跟他講清楚的話"
+      },
+      {
+        "index": 276,
+        "text": "他給你的東西會完全不是你要的"
+      },
+      {
+        "index": 277,
+        "text": "就你至少要有"
+      },
+      {
+        "index": 278,
+        "text": "辦法判斷說這個東西跟你要的架構"
+      },
+      {
+        "index": 279,
+        "text": "跟你後續maintenance有哪些"
+      },
+      {
+        "index": 280,
+        "text": "pros and cons"
+      },
+      {
+        "index": 281,
+        "text": "我覺得那些是"
+      },
+      {
+        "index": 282,
+        "text": "就是coding以外你"
+      },
+      {
+        "index": 283,
+        "text": "必須要自己很清楚"
+      },
+      {
+        "index": 284,
+        "text": "對而且如果你"
+      },
+      {
+        "index": 285,
+        "text": "一開始的path就就錯的話"
+      },
+      {
+        "index": 286,
+        "text": "那其實後面你要再你"
+      },
+      {
+        "index": 287,
+        "text": "會一直在你的錯"
+      },
+      {
+        "index": 288,
+        "text": "上面一直再做更多奇怪的決定"
+      },
+      {
+        "index": 289,
+        "text": "所以說你要"
+      },
+      {
+        "index": 290,
+        "text": "make the right call然後"
+      },
+      {
+        "index": 291,
+        "text": "你要問正確的問題"
+      },
+      {
+        "index": 292,
+        "text": "我覺得這是比較難的"
+      },
+      {
+        "index": 293,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 294,
+        "text": "對啊就比如說你"
+      },
+      {
+        "index": 295,
+        "text": "現在去幫你們"
+      },
+      {
+        "index": 296,
+        "text": "公司去hire人去面試"
+      },
+      {
+        "index": 297,
+        "text": "你會考他大概哪些類型的題目啊"
+      },
+      {
+        "index": 298,
+        "text": "還是還是跟以前"
+      },
+      {
+        "index": 299,
+        "text": "一樣是比較"
+      },
+      {
+        "index": 300,
+        "text": "偏向leetcode"
+      },
+      {
+        "index": 301,
+        "text": "跟system design"
+      },
+      {
+        "index": 302,
+        "text": "就比較傳統那種還是"
+      },
+      {
+        "index": 303,
+        "text": "你會有一些比較不同的題型"
+      },
+      {
+        "index": 304,
+        "text": "呃好像覺得"
+      },
+      {
+        "index": 305,
+        "text": "leetcode"
+      },
+      {
+        "index": 306,
+        "text": "system design這些就是"
+      },
+      {
+        "index": 307,
+        "text": "會變成已經比較basic的東西"
+      },
+      {
+        "index": 308,
+        "text": "就是你一定要過的東西"
+      },
+      {
+        "index": 309,
+        "text": "就leetcode這種"
+      },
+      {
+        "index": 310,
+        "text": "還是會因為面試"
+      },
+      {
+        "index": 311,
+        "text": "畢竟很多rounds"
+      },
+      {
+        "index": 312,
+        "text": "所以你coding"
+      },
+      {
+        "index": 313,
+        "text": "的東西然後design的東西"
+      },
+      {
+        "index": 314,
+        "text": "然後我覺得比較多"
+      },
+      {
+        "index": 315,
+        "text": "的可能是如果真的已經到"
+      },
+      {
+        "index": 316,
+        "text": "比如說是要"
+      },
+      {
+        "index": 317,
+        "text": "面我們"
+      },
+      {
+        "index": 318,
+        "text": "sister teams"
+      },
+      {
+        "index": 319,
+        "text": "我們team之類的人的話"
+      },
+      {
+        "index": 320,
+        "text": "就會變成"
+      },
+      {
+        "index": 321,
+        "text": "是很specific的我們"
+      },
+      {
+        "index": 322,
+        "text": "組有哪一個need"
+      },
+      {
+        "index": 323,
+        "text": "就是比如說"
+      },
+      {
+        "index": 324,
+        "text": "我們組現在"
+      },
+      {
+        "index": 325,
+        "text": "這個project很需要"
+      },
+      {
+        "index": 326,
+        "text": "一個這樣子的人"
+      },
+      {
+        "index": 327,
+        "text": "然後會很"
+      },
+      {
+        "index": 328,
+        "text": "specific很"
+      },
+      {
+        "index": 329,
+        "text": "specific的問"
+      },
+      {
+        "index": 330,
+        "text": "說這個tech stack"
+      },
+      {
+        "index": 331,
+        "text": "你有什麼經驗"
+      },
+      {
+        "index": 332,
+        "text": "然後或者是你會"
+      },
+      {
+        "index": 333,
+        "text": "怎麼我覺得比較"
+      },
+      {
+        "index": 334,
+        "text": "偏向design類的東西"
+      },
+      {
+        "index": 335,
+        "text": "比較偏向"
+      },
+      {
+        "index": 336,
+        "text": "system design的"
+      },
+      {
+        "index": 337,
+        "text": "就是在很看"
+      },
+      {
+        "index": 338,
+        "text": "你的skills有沒有match"
+      },
+      {
+        "index": 339,
+        "text": "因為畢竟就"
+      },
+      {
+        "index": 340,
+        "text": "我覺得senior level以上的都已經"
+      },
+      {
+        "index": 341,
+        "text": "就不是說你來這裡學"
+      },
+      {
+        "index": 342,
+        "text": "就是你在面試的"
+      },
+      {
+        "index": 343,
+        "text": "時候就已經需要assess說"
+      },
+      {
+        "index": 344,
+        "text": "你可能你們組的"
+      },
+      {
+        "index": 345,
+        "text": "需求跟這個人有沒有match"
+      },
+      {
+        "index": 346,
+        "text": "或者隔壁組的需求跟這個人"
+      },
+      {
+        "index": 347,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 348,
+        "text": "那你現在自己"
+      },
+      {
+        "index": 349,
+        "text": "是在你們公司"
+      },
+      {
+        "index": 350,
+        "text": "的scope大概是怎麼樣"
+      },
+      {
+        "index": 351,
+        "text": "就工作的時候你"
+      },
+      {
+        "index": 352,
+        "text": "會比較偏向是可能"
+      },
+      {
+        "index": 353,
+        "text": "會帶一些"
+      },
+      {
+        "index": 354,
+        "text": "比較junior的engineer"
+      },
+      {
+        "index": 355,
+        "text": "還是你是比較偏向"
+      },
+      {
+        "index": 356,
+        "text": "是你會去manage project多一點"
+      },
+      {
+        "index": 357,
+        "text": "自己比較常做的事情"
+      },
+      {
+        "index": 358,
+        "text": "都會呃協作的當然也有"
+      },
+      {
+        "index": 359,
+        "text": "但我覺得我"
+      },
+      {
+        "index": 360,
+        "text": "合作的可能senior以上更多"
+      },
+      {
+        "index": 361,
+        "text": "Senior以上更多"
+      },
+      {
+        "index": 362,
+        "text": "對對對因為我們我"
+      },
+      {
+        "index": 363,
+        "text": "工作的算是還"
+      },
+      {
+        "index": 364,
+        "text": "蠻senior heavy的組"
+      },
+      {
+        "index": 365,
+        "text": "然後我覺得我也蠻infra蠻後端"
+      },
+      {
+        "index": 366,
+        "text": "就我覺得大家我"
+      },
+      {
+        "index": 367,
+        "text": "自己感受到就是"
+      },
+      {
+        "index": 368,
+        "text": "可能偏向product team"
+      },
+      {
+        "index": 369,
+        "text": "或者是這種"
+      },
+      {
+        "index": 370,
+        "text": "web full-stack的年輕人會多一點點"
+      },
+      {
+        "index": 371,
+        "text": "就大家年輕人"
+      },
+      {
+        "index": 372,
+        "text": "稍微更喜歡product"
+      },
+      {
+        "index": 373,
+        "text": "稍微更喜歡"
+      },
+      {
+        "index": 374,
+        "text": "那種很tangible的東西"
+      },
+      {
+        "index": 375,
+        "text": "然後越硬核的"
+      },
+      {
+        "index": 376,
+        "text": "越越後"
+      },
+      {
+        "index": 377,
+        "text": "端越"
+      },
+      {
+        "index": 378,
+        "text": "infrastructure類的"
+      },
+      {
+        "index": 379,
+        "text": "我看到的更senior的人更多"
+      },
+      {
+        "index": 380,
+        "text": "因為那些很"
+      },
+      {
+        "index": 381,
+        "text": "require就是你"
+      },
+      {
+        "index": 382,
+        "text": "很懂整個system"
+      },
+      {
+        "index": 383,
+        "text": "然後很懂各種"
+      },
+      {
+        "index": 384,
+        "text": "就是而且有時候是比較無趣的東西"
+      },
+      {
+        "index": 385,
+        "text": "就是年輕人比較不"
+      },
+      {
+        "index": 386,
+        "text": "喜歡對所以我我"
+      },
+      {
+        "index": 387,
+        "text": "覺得我自己協作的時候"
+      },
+      {
+        "index": 388,
+        "text": "跟還蠻"
+      },
+      {
+        "index": 389,
+        "text": "多可能principles"
+      },
+      {
+        "index": 390,
+        "text": "或至少senior以上的在協作"
+      },
+      {
+        "index": 391,
+        "text": "那你自己更喜歡"
+      },
+      {
+        "index": 392,
+        "text": "哪項你喜歡"
+      },
+      {
+        "index": 393,
+        "text": "做product還是你"
+      },
+      {
+        "index": 394,
+        "text": "比較喜歡"
+      },
+      {
+        "index": 395,
+        "text": "focus在back-end"
+      },
+      {
+        "index": 396,
+        "text": "我覺得我"
+      },
+      {
+        "index": 397,
+        "text": "自己的experience"
+      },
+      {
+        "index": 398,
+        "text": "很back-end"
+      },
+      {
+        "index": 399,
+        "text": "但我沒有排斥"
+      },
+      {
+        "index": 400,
+        "text": "就是就是試試看product"
+      },
+      {
+        "index": 401,
+        "text": "因為我覺得就是你"
+      },
+      {
+        "index": 402,
+        "text": "寫的東西你自己很看得到"
+      },
+      {
+        "index": 403,
+        "text": "或者是你"
+      },
+      {
+        "index": 404,
+        "text": "很看得到用戶impact"
+      },
+      {
+        "index": 405,
+        "text": "這件事情還蠻有趣的"
+      },
+      {
+        "index": 406,
+        "text": "就比如說你真的是寫web的話"
+      },
+      {
+        "index": 407,
+        "text": "那你寫一個東西"
+      },
+      {
+        "index": 408,
+        "text": "你就在公司網站"
+      },
+      {
+        "index": 409,
+        "text": "上看到哦這個"
+      },
+      {
+        "index": 410,
+        "text": "product有改動了"
+      },
+      {
+        "index": 411,
+        "text": "我覺得這還是一個"
+      },
+      {
+        "index": 412,
+        "text": "還蠻有成就感的地方"
+      },
+      {
+        "index": 413,
+        "text": "或者是你就是你"
+      },
+      {
+        "index": 414,
+        "text": "寫一個東西"
+      },
+      {
+        "index": 415,
+        "text": "然後user engagement就上升了"
+      },
+      {
+        "index": 416,
+        "text": "但這件事情"
+      },
+      {
+        "index": 417,
+        "text": "在infra side比較難發生"
+      },
+      {
+        "index": 418,
+        "text": "你可能寫一個東西"
+      },
+      {
+        "index": 419,
+        "text": "是比如說"
+      },
+      {
+        "index": 420,
+        "text": "你很tangible可能"
+      },
+      {
+        "index": 421,
+        "text": "比如說cut cost"
+      },
+      {
+        "index": 422,
+        "text": "這已經是一個很"
+      },
+      {
+        "index": 423,
+        "text": "看得到可是你如果"
+      },
+      {
+        "index": 424,
+        "text": "寫一個東西什麼優化"
+      },
+      {
+        "index": 425,
+        "text": "了你內部用戶的使用體驗"
+      },
+      {
+        "index": 426,
+        "text": "這種事情就有時候很難量化"
+      },
+      {
+        "index": 427,
+        "text": "對所以嗯我我覺得我自己"
+      },
+      {
+        "index": 428,
+        "text": "的experience很很後端"
+      },
+      {
+        "index": 429,
+        "text": "但是我覺得沒有"
+      },
+      {
+        "index": 430,
+        "text": "排斥就我覺得"
+      },
+      {
+        "index": 431,
+        "text": "product也感覺是"
+      },
+      {
+        "index": 432,
+        "text": "有它好玩的地方"
+      },
+      {
+        "index": 433,
+        "text": "假如今天比如"
+      },
+      {
+        "index": 434,
+        "text": "說你是new grad"
+      },
+      {
+        "index": 435,
+        "text": "或是你現在在找工作"
+      },
+      {
+        "index": 436,
+        "text": "你會怎麼樣去準備你下一輪的面試"
+      },
+      {
+        "index": 437,
+        "text": "比如說你離職了"
+      },
+      {
+        "index": 438,
+        "text": "然後你有"
+      },
+      {
+        "index": 439,
+        "text": "一些interview lined up"
+      },
+      {
+        "index": 440,
+        "text": "你會怎麼樣去"
+      },
+      {
+        "index": 441,
+        "text": "把你機變成這個"
+      },
+      {
+        "index": 442,
+        "text": "職場準備好的一個狀態"
+      },
+      {
+        "index": 443,
+        "text": "哦我覺得好像一個"
+      },
+      {
+        "index": 444,
+        "text": "是要先很知道你自己在找的是什麼嗎"
+      },
+      {
+        "index": 445,
+        "text": "就你自己的專精的"
+      },
+      {
+        "index": 446,
+        "text": "東西在哪裡然後"
+      },
+      {
+        "index": 447,
+        "text": "你look for的是什麼"
+      },
+      {
+        "index": 448,
+        "text": "當然這兩個東西不能差太多"
+      },
+      {
+        "index": 449,
+        "text": "就我覺得可能"
+      },
+      {
+        "index": 450,
+        "text": "很early on的那種stage"
+      },
+      {
+        "index": 451,
+        "text": "很容易犯的錯就是哦我是來學習的可是我覺得這種在"
+      },
+      {
+        "index": 452,
+        "text": "公司或者是"
+      },
+      {
+        "index": 453,
+        "text": "在recruiter之類的角度"
+      },
+      {
+        "index": 454,
+        "text": "就會覺得我hire"
+      },
+      {
+        "index": 455,
+        "text": "你來就是你應該本來就要會"
+      },
+      {
+        "index": 456,
+        "text": "就我不是hire"
+      },
+      {
+        "index": 457,
+        "text": "你進來然後找你想要做什麼事情"
+      },
+      {
+        "index": 458,
+        "text": "我覺得這已經是跟以前不太一樣"
+      },
+      {
+        "index": 459,
+        "text": "對不太一樣嗯嗯以前是"
+      },
+      {
+        "index": 460,
+        "text": "你可以表現出說我是想要來學習的"
+      },
+      {
+        "index": 461,
+        "text": "你很junior但是現在的我覺得"
+      },
+      {
+        "index": 462,
+        "text": "我知道我要什麼然後我這個東西很強"
+      },
+      {
+        "index": 463,
+        "text": "所以你應該hire我是因為我會這個東西"
+      },
+      {
+        "index": 464,
+        "text": "對然後或者是你"
+      },
+      {
+        "index": 465,
+        "text": "頂多就是比如說"
+      },
+      {
+        "index": 466,
+        "text": "這個這個job scope有100"
+      },
+      {
+        "index": 467,
+        "text": "你可以說50"
+      },
+      {
+        "index": 468,
+        "text": "是match"
+      },
+      {
+        "index": 469,
+        "text": "50是哦 我interested"
+      },
+      {
+        "index": 470,
+        "text": "想要explore的部分"
+      },
+      {
+        "index": 471,
+        "text": "這樣可能還行"
+      },
+      {
+        "index": 472,
+        "text": "但不能是就是哦這"
+      },
+      {
+        "index": 473,
+        "text": "100都是我想學的東西這樣"
+      },
+      {
+        "index": 474,
+        "text": "對但怎麼prepare也是一樣"
+      },
+      {
+        "index": 475,
+        "text": "就在專精"
+      },
+      {
+        "index": 476,
+        "text": "的部分之外show那個drive"
+      },
+      {
+        "index": 477,
+        "text": "就我覺得因為你就是已經在專精"
+      },
+      {
+        "index": 478,
+        "text": "已經已經對這個東西有興趣了"
+      },
+      {
+        "index": 479,
+        "text": "所以你才會想要"
+      },
+      {
+        "index": 480,
+        "text": "對這個公司contribute"
+      },
+      {
+        "index": 481,
+        "text": "然後看到他們在你"
+      },
+      {
+        "index": 482,
+        "text": "熟悉的那塊area"
+      },
+      {
+        "index": 483,
+        "text": "可以加強的點是什麼"
+      },
+      {
+        "index": 484,
+        "text": "就是可以講出你自己能做的貢獻吧"
+      },
+      {
+        "index": 485,
+        "text": "我覺得就要很從"
+      },
+      {
+        "index": 486,
+        "text": "公司的想法想說"
+      },
+      {
+        "index": 487,
+        "text": "為什麼我們要hire你"
+      },
+      {
+        "index": 488,
+        "text": "而不是我自我成長的想法所以說你剛剛"
+      },
+      {
+        "index": 489,
+        "text": "講的那個是比較偏向就是"
+      },
+      {
+        "index": 490,
+        "text": "比如說你跟這個hiring manager"
+      },
+      {
+        "index": 491,
+        "text": "做一個technical deep dive的時候"
+      },
+      {
+        "index": 492,
+        "text": "你去講說為什麼"
+      },
+      {
+        "index": 493,
+        "text": "你要去sell你自己嗎"
+      },
+      {
+        "index": 494,
+        "text": "嗯嗯我覺得也可以"
+      },
+      {
+        "index": 495,
+        "text": "講說就是比如說"
+      },
+      {
+        "index": 496,
+        "text": "問說time manager"
+      },
+      {
+        "index": 497,
+        "text": "哦他們現在"
+      },
+      {
+        "index": 498,
+        "text": "想要solve的一個challenge是什麼"
+      },
+      {
+        "index": 499,
+        "text": "然後去看說"
+      },
+      {
+        "index": 500,
+        "text": "你可以怎麼樣contribute to這個東西"
+      },
+      {
+        "index": 501,
+        "text": "他們現在有一個obstacle"
+      },
+      {
+        "index": 502,
+        "text": "或者是他們產品遇到一個什麼問題"
+      },
+      {
+        "index": 503,
+        "text": "然後為什麼你的"
+      },
+      {
+        "index": 504,
+        "text": "能力可以就是幫忙去解決這個問題"
+      },
+      {
+        "index": 505,
+        "text": "對我覺得這"
+      },
+      {
+        "index": 506,
+        "text": "是一個很容易stand out的一個point"
+      },
+      {
+        "index": 507,
+        "text": "面試有一個round"
+      },
+      {
+        "index": 508,
+        "text": "就是你"
+      },
+      {
+        "index": 509,
+        "text": "跟hiring manager"
+      },
+      {
+        "index": 510,
+        "text": "跟一個比較senior的"
+      },
+      {
+        "index": 511,
+        "text": "可能是你未來"
+      },
+      {
+        "index": 512,
+        "text": "的manager去聊天"
+      },
+      {
+        "index": 513,
+        "text": "那你要在這個"
+      },
+      {
+        "index": 514,
+        "text": "聊天過程中怎麼讓他喜歡你"
+      },
+      {
+        "index": 515,
+        "text": "我覺得你剛剛講"
+      },
+      {
+        "index": 516,
+        "text": "的就是一個很好的例子"
+      },
+      {
+        "index": 517,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 518,
+        "text": "對啊那如果是"
+      },
+      {
+        "index": 519,
+        "text": "比較偏向hard skill你會大概怎麼準備"
+      },
+      {
+        "index": 520,
+        "text": "怎麼準備哦呃"
+      },
+      {
+        "index": 521,
+        "text": "就是leetcode當然要多刷"
+      },
+      {
+        "index": 522,
+        "text": "就是coding關你還是要先過"
+      },
+      {
+        "index": 523,
+        "text": "所以你還是要"
+      },
+      {
+        "index": 524,
+        "text": "先把那些"
+      },
+      {
+        "index": 525,
+        "text": "基礎的coding的東西弄好"
+      },
+      {
+        "index": 526,
+        "text": "然後再來system design"
+      },
+      {
+        "index": 527,
+        "text": "我覺得就是要你"
+      },
+      {
+        "index": 528,
+        "text": "很廣泛的接觸很多東西嗎"
+      },
+      {
+        "index": 529,
+        "text": "我自己可能比如說"
+      },
+      {
+        "index": 530,
+        "text": "你上網看很多tutorials啊"
+      },
+      {
+        "index": 531,
+        "text": "或者是你自己去看一些書準備或什麼"
+      },
+      {
+        "index": 532,
+        "text": "就是我覺得要我自己"
+      },
+      {
+        "index": 533,
+        "text": "的想法是還蠻從最basic的東西build up"
+      },
+      {
+        "index": 534,
+        "text": "然後去看很多use case"
+      },
+      {
+        "index": 535,
+        "text": "就是你動不動可能看到一個東西"
+      },
+      {
+        "index": 536,
+        "text": "你就可以自己想像說哦我如果要"
+      },
+      {
+        "index": 537,
+        "text": "設計這個東西我會怎麼講什麼"
+      },
+      {
+        "index": 538,
+        "text": "然後多跟人mock我覺得"
+      },
+      {
+        "index": 539,
+        "text": "就是有沒有有沒有練習還是有差"
+      },
+      {
+        "index": 540,
+        "text": "就是你自己腦袋想跟你講出來"
+      },
+      {
+        "index": 541,
+        "text": "或者是你coding round"
+      },
+      {
+        "index": 542,
+        "text": "你自己知道怎麼code"
+      },
+      {
+        "index": 543,
+        "text": "跟你真的邊解釋邊code出來是有差異"
+      },
+      {
+        "index": 544,
+        "text": "就很容易緊張"
+      },
+      {
+        "index": 545,
+        "text": "就失常所以就是除了就是準備"
+      },
+      {
+        "index": 546,
+        "text": "就是不管是看書"
+      },
+      {
+        "index": 547,
+        "text": "或者是你日常就自己想"
+      },
+      {
+        "index": 548,
+        "text": "就是另外一個就是你要很多模擬"
+      },
+      {
+        "index": 549,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 550,
+        "text": "對"
+      },
+      {
+        "index": 551,
+        "text": "我覺得system design"
+      },
+      {
+        "index": 552,
+        "text": "其實還蠻吃經驗的"
+      },
+      {
+        "index": 553,
+        "text": "嗯"
+      },
+      {
+        "index": 554,
+        "text": "我如果去interview一個人"
+      },
+      {
+        "index": 555,
+        "text": "其實他沒有任何經驗我是看得出來的"
+      },
+      {
+        "index": 556,
+        "text": "但至少對一個系統"
+      },
+      {
+        "index": 557,
+        "text": "是比較有很generic的一個了解"
+      },
+      {
+        "index": 558,
+        "text": "我覺得OK那他可能比較沒那麼senior"
+      },
+      {
+        "index": 559,
+        "text": "那我就說OK了"
+      },
+      {
+        "index": 560,
+        "text": "以前的話可能比如"
+      },
+      {
+        "index": 561,
+        "text": "說L3或是剛畢業的"
+      },
+      {
+        "index": 562,
+        "text": "我們會覺得說那可能不需要太知道system design"
+      },
+      {
+        "index": 563,
+        "text": "我們可以說那"
+      },
+      {
+        "index": 564,
+        "text": "那可能就是coding也過了"
+      },
+      {
+        "index": 565,
+        "text": "然後可能他coding"
+      },
+      {
+        "index": 566,
+        "text": "很強那我覺得說OK了"
+      },
+      {
+        "index": 567,
+        "text": "但現在我們會"
+      },
+      {
+        "index": 568,
+        "text": "覺得說你今天進來"
+      },
+      {
+        "index": 569,
+        "text": "然後我們全部都是"
+      },
+      {
+        "index": 570,
+        "text": "用AI在寫code"
+      },
+      {
+        "index": 571,
+        "text": "然後大家效率都非常的高"
+      },
+      {
+        "index": 572,
+        "text": "為什麼我要hire你?"
+      },
+      {
+        "index": 573,
+        "text": "全部人都是非常高效率的engineer"
+      },
+      {
+        "index": 574,
+        "text": "那我hire你肯定是"
+      },
+      {
+        "index": 575,
+        "text": "希望你進來就"
+      },
+      {
+        "index": 576,
+        "text": "可以直接contribute"
+      },
+      {
+        "index": 577,
+        "text": "對所以說我會想要"
+      },
+      {
+        "index": 578,
+        "text": "看到對系統的一個了解程度"
+      },
+      {
+        "index": 579,
+        "text": "而且這個是我"
+      },
+      {
+        "index": 580,
+        "text": "覺得是很難用AI去做弊的"
+      },
+      {
+        "index": 581,
+        "text": "我不知道你有沒有試"
+      },
+      {
+        "index": 582,
+        "text": "過但是我曾經想過"
+      },
+      {
+        "index": 583,
+        "text": "要是如果考system design"
+      },
+      {
+        "index": 584,
+        "text": "我要用AI做弊怎麼去做"
+      },
+      {
+        "index": 585,
+        "text": "我不知道欸可以怎麼做弊"
+      },
+      {
+        "index": 586,
+        "text": "完全不可能就就你把那個問題給他"
+      },
+      {
+        "index": 587,
+        "text": "就給你一個超級generic的一個答案"
+      },
+      {
+        "index": 588,
+        "text": "然後而且是長篇大論"
+      },
+      {
+        "index": 589,
+        "text": "等於說你要坐在那邊OK"
+      },
+      {
+        "index": 590,
+        "text": "你等我讀五分鐘"
+      },
+      {
+        "index": 591,
+        "text": "你看完讀完之後你再跟他講"
+      },
+      {
+        "index": 592,
+        "text": "就就很難就完全"
+      },
+      {
+        "index": 593,
+        "text": "不可能做弊不像coding"
+      },
+      {
+        "index": 594,
+        "text": "因為你coding的話你給"
+      },
+      {
+        "index": 595,
+        "text": "有正確答案"
+      },
+      {
+        "index": 596,
+        "text": "還可以假裝寫錯什麼之類的對"
+      },
+      {
+        "index": 597,
+        "text": "但是system design"
+      },
+      {
+        "index": 598,
+        "text": "就完全就是靠你腦袋的東西"
+      },
+      {
+        "index": 599,
+        "text": "就你有沒有經驗沒有"
+      },
+      {
+        "index": 600,
+        "text": "經驗的話那你怎麼樣去補足"
+      },
+      {
+        "index": 601,
+        "text": "你怎麼樣靠自己"
+      },
+      {
+        "index": 602,
+        "text": "去讀那些case study"
+      },
+      {
+        "index": 603,
+        "text": "對那像我們"
+      },
+      {
+        "index": 604,
+        "text": "的就我跟Bohr出了那個"
+      },
+      {
+        "index": 605,
+        "text": "我們就給了13 (現在增加到 14）"
+      },
+      {
+        "index": 606,
+        "text": "個我們認為應該說大家"
+      },
+      {
+        "index": 607,
+        "text": "都在用的一些app"
+      },
+      {
+        "index": 608,
+        "text": "然後我們叫它"
+      },
+      {
+        "index": 609,
+        "text": "現代系統設計"
+      },
+      {
+        "index": 610,
+        "text": "跟傳統的"
+      },
+      {
+        "index": 611,
+        "text": "系統設計比較不太一樣的是"
+      },
+      {
+        "index": 612,
+        "text": "我們加入很多AI的東西"
+      },
+      {
+        "index": 613,
+        "text": "哦"
+      },
+      {
+        "index": 614,
+        "text": "很多AI還有一些Web3的東西"
+      },
+      {
+        "index": 615,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 616,
+        "text": "對那我覺得"
+      },
+      {
+        "index": 617,
+        "text": "未來我們一定"
+      },
+      {
+        "index": 618,
+        "text": "是engineer去利用AI"
+      },
+      {
+        "index": 619,
+        "text": "然後我們要怎麼"
+      },
+      {
+        "index": 620,
+        "text": "去design一個AI的flow"
+      },
+      {
+        "index": 621,
+        "text": "這些我覺得都是還蠻重要的"
+      },
+      {
+        "index": 622,
+        "text": "嗯確實這個我覺得就"
+      },
+      {
+        "index": 623,
+        "text": "是它硬實力就是"
+      },
+      {
+        "index": 624,
+        "text": "真的很容易就看得出來"
+      },
+      {
+        "index": 625,
+        "text": "尤其就是如果你就是"
+      },
+      {
+        "index": 626,
+        "text": "面試官可以一直follow up"
+      },
+      {
+        "index": 627,
+        "text": "所以你對整個系統"
+      },
+      {
+        "index": 628,
+        "text": "架構的每一個點你都要很了解"
+      },
+      {
+        "index": 629,
+        "text": "你才不會"
+      },
+      {
+        "index": 630,
+        "text": "在被deep dive"
+      },
+      {
+        "index": 631,
+        "text": "某一個問題的時候被考倒"
+      },
+      {
+        "index": 632,
+        "text": "對對那你會來上課嗎？"
+      },
+      {
+        "index": 633,
+        "text": "而且之前有人邀請我去當助教欸"
+      },
+      {
+        "index": 634,
+        "text": "好像有這麼一回事"
+      },
+      {
+        "index": 635,
+        "text": "什麼時候我才能"
+      },
+      {
+        "index": 636,
+        "text": "我才能來這個客串一下"
+      },
+      {
+        "index": 637,
+        "text": "因為Kelly很厲害啦所以說"
+      },
+      {
+        "index": 638,
+        "text": "對啊我覺得"
+      },
+      {
+        "index": 639,
+        "text": "請不起是不是"
+      },
+      {
+        "index": 640,
+        "text": "有點請不起"
+      },
+      {
+        "index": 641,
+        "text": "因為我們那個"
+      },
+      {
+        "index": 642,
+        "text": "budget可能沒有那麼多"
+      },
+      {
+        "index": 643,
+        "text": "因為我覺得我"
+      },
+      {
+        "index": 644,
+        "text": "覺得我們課程很便宜"
+      },
+      {
+        "index": 645,
+        "text": "我們真的就是我認為啦"
+      },
+      {
+        "index": 646,
+        "text": "就是因為因為Bohr他"
+      },
+      {
+        "index": 647,
+        "text": "他也不缺錢說實話他也不缺錢"
+      },
+      {
+        "index": 648,
+        "text": "他他其實做這個"
+      },
+      {
+        "index": 649,
+        "text": "東西是他自己想要做的事情"
+      },
+      {
+        "index": 650,
+        "text": "因為他之前其實就有"
+      },
+      {
+        "index": 651,
+        "text": "免費的幫大家做coaching在線上"
+      },
+      {
+        "index": 652,
+        "text": "然後我我"
+      },
+      {
+        "index": 653,
+        "text": "去approach他說我跟他聊說"
+      },
+      {
+        "index": 654,
+        "text": "如果你自己在做"
+      },
+      {
+        "index": 655,
+        "text": "這些東西的話要"
+      },
+      {
+        "index": 656,
+        "text": "不要你可以把"
+      },
+      {
+        "index": 657,
+        "text": "這個scope變大一點"
+      },
+      {
+        "index": 658,
+        "text": "就是你可以reach的audience多一點"
+      },
+      {
+        "index": 659,
+        "text": "然後我們一起來"
+      },
+      {
+        "index": 660,
+        "text": "設計一個真的可以"
+      },
+      {
+        "index": 661,
+        "text": "幫助到大家的一個系統設計"
+      },
+      {
+        "index": 662,
+        "text": "然後他就說好然後"
+      },
+      {
+        "index": 663,
+        "text": "我們才一起來做這件事情"
+      },
+      {
+        "index": 664,
+        "text": "就做這個東西其實"
+      },
+      {
+        "index": 665,
+        "text": "我個人覺得你從這"
+      },
+      {
+        "index": 666,
+        "text": "裡面能得到的價值"
+      },
+      {
+        "index": 667,
+        "text": "是絕對遠遠超過我們"
+      },
+      {
+        "index": 668,
+        "text": "官網上面的那個價格"
+      },
+      {
+        "index": 669,
+        "text": "而且如果你就"
+      },
+      {
+        "index": 670,
+        "text": "是因為你把系統設計學好"
+      },
+      {
+        "index": 671,
+        "text": "然後land一個更好的job那你的"
+      },
+      {
+        "index": 672,
+        "text": "回報肯定是比那個價格要再多很多"
+      },
+      {
+        "index": 673,
+        "text": "可能一兩天薪水"
+      },
+      {
+        "index": 674,
+        "text": "就差別就是就可以對啊"
+      },
+      {
+        "index": 675,
+        "text": "而且這個是你學"
+      },
+      {
+        "index": 676,
+        "text": "完之後是可以一直apply到"
+      },
+      {
+        "index": 677,
+        "text": "你rest of your career"
+      },
+      {
+        "index": 678,
+        "text": "甚至甚至你自己"
+      },
+      {
+        "index": 679,
+        "text": "在做一些project的時候"
+      },
+      {
+        "index": 680,
+        "text": "你會有那些concept那些idea"
+      },
+      {
+        "index": 681,
+        "text": "那完全不一樣的"
+      },
+      {
+        "index": 682,
+        "text": "因為我自己以前"
+      },
+      {
+        "index": 683,
+        "text": "也是可能"
+      },
+      {
+        "index": 684,
+        "text": "沒有那個system design"
+      },
+      {
+        "index": 685,
+        "text": "的概念的時候"
+      },
+      {
+        "index": 686,
+        "text": "我自己要"
+      },
+      {
+        "index": 687,
+        "text": "做一個project的"
+      },
+      {
+        "index": 688,
+        "text": "時候我不會"
+      },
+      {
+        "index": 689,
+        "text": "有一個"
+      },
+      {
+        "index": 690,
+        "text": "很structured的一個開始"
+      },
+      {
+        "index": 691,
+        "text": "但是我如果"
+      },
+      {
+        "index": 692,
+        "text": "有那個concept的"
+      },
+      {
+        "index": 693,
+        "text": "話有system design concept的話"
+      },
+      {
+        "index": 694,
+        "text": "我很知道說我"
+      },
+      {
+        "index": 695,
+        "text": "要問AI什麼問題"
+      },
+      {
+        "index": 696,
+        "text": "然後我可以告訴AI說"
+      },
+      {
+        "index": 697,
+        "text": "我現在第一步要做什麼"
+      },
+      {
+        "index": 698,
+        "text": "然後第二步要做"
+      },
+      {
+        "index": 699,
+        "text": "什麼對那這些"
+      },
+      {
+        "index": 700,
+        "text": "就是你"
+      },
+      {
+        "index": 701,
+        "text": "有沒有這個background"
+      },
+      {
+        "index": 702,
+        "text": "有沒有這個context"
+      },
+      {
+        "index": 703,
+        "text": "最大的區別"
+      },
+      {
+        "index": 704,
+        "text": "有時候真的要從這種練習的經驗得來"
+      },
+      {
+        "index": 705,
+        "text": "就沒有辦法"
+      },
+      {
+        "index": 706,
+        "text": "你把什麼database什麼學好"
+      },
+      {
+        "index": 707,
+        "text": "就就知道這些東西"
+      },
+      {
+        "index": 708,
+        "text": "沒錯"
+      },
+      {
+        "index": 709,
+        "text": "你會擔心說哪一天可能"
+      },
+      {
+        "index": 710,
+        "text": "被layoff還是什麼之類的嗎?"
+      },
+      {
+        "index": 711,
+        "text": "哦嗯layoff這件事情我就覺得它"
+      },
+      {
+        "index": 712,
+        "text": "是一個很無法無法控制的情況"
+      },
+      {
+        "index": 713,
+        "text": "就是你擔心也"
+      },
+      {
+        "index": 714,
+        "text": "沒用所以就"
+      },
+      {
+        "index": 715,
+        "text": "不如不要擔心所以我還沒有"
+      },
+      {
+        "index": 716,
+        "text": "不過我覺得你們"
+      },
+      {
+        "index": 717,
+        "text": "公司一直在hire人"
+      },
+      {
+        "index": 718,
+        "text": "最近還在hire人"
+      },
+      {
+        "index": 719,
+        "text": "嗯對對對所以會擔心嗎"
+      },
+      {
+        "index": 720,
+        "text": "就是就覺得你"
+      },
+      {
+        "index": 721,
+        "text": "掌控以外的事情你就不用去想"
+      },
+      {
+        "index": 722,
+        "text": "還是你想要被layoff？"
+      },
+      {
+        "index": 723,
+        "text": "沒有沒有欸我"
+      },
+      {
+        "index": 724,
+        "text": "我熱愛我的工作"
+      },
+      {
+        "index": 725,
+        "text": "有些人是有些人"
+      },
+      {
+        "index": 726,
+        "text": "想說哦我被layoff就算"
+      },
+      {
+        "index": 727,
+        "text": "了拿個severance"
+      },
+      {
+        "index": 728,
+        "text": "拿個幾個月薪水然後"
+      },
+      {
+        "index": 729,
+        "text": "就自己去爽一下或是休息一下"
+      },
+      {
+        "index": 730,
+        "text": "好像不會我覺得"
+      },
+      {
+        "index": 731,
+        "text": "我在我的career"
+      },
+      {
+        "index": 732,
+        "text": "還是在一個還蠻想成長的階段"
+      },
+      {
+        "index": 733,
+        "text": "所以嗯還蠻想"
+      },
+      {
+        "index": 734,
+        "text": "就是會想要keep"
+      },
+      {
+        "index": 735,
+        "text": "我的learning rate很高"
+      },
+      {
+        "index": 736,
+        "text": "所以還想繼續工作"
+      },
+      {
+        "index": 737,
+        "text": "所以你還是會想要繼續"
+      },
+      {
+        "index": 738,
+        "text": "做engineering這個工作"
+      },
+      {
+        "index": 739,
+        "text": "嗯我覺得就是"
+      },
+      {
+        "index": 740,
+        "text": "如果有一天我達到我覺得哦一個"
+      },
+      {
+        "index": 741,
+        "text": "就是我自己"
+      },
+      {
+        "index": 742,
+        "text": "的skills到一個程度"
+      },
+      {
+        "index": 743,
+        "text": "那maybe可以考慮到"
+      },
+      {
+        "index": 744,
+        "text": "other options"
+      },
+      {
+        "index": 745,
+        "text": "但我覺得我現在還在一個就是成長"
+      },
+      {
+        "index": 746,
+        "text": "需要學習然後很想"
+      },
+      {
+        "index": 747,
+        "text": "接觸很多新東西的階段"
+      },
+      {
+        "index": 748,
+        "text": "那我猜你現在"
+      },
+      {
+        "index": 749,
+        "text": "應該也差不多在一個位置就是"
+      },
+      {
+        "index": 750,
+        "text": "因為三年嘛三年半"
+      },
+      {
+        "index": 751,
+        "text": "那你應該差不多在一個位置就是"
+      },
+      {
+        "index": 752,
+        "text": "你可以選"
+      },
+      {
+        "index": 753,
+        "text": "比較偏management的path"
+      },
+      {
+        "index": 754,
+        "text": "或是比較偏IC的path"
+      },
+      {
+        "index": 755,
+        "text": "哦我覺得在大公司其實沒有那麼快啦"
+      },
+      {
+        "index": 756,
+        "text": "小公司maybe"
+      },
+      {
+        "index": 757,
+        "text": "但是大"
+      },
+      {
+        "index": 758,
+        "text": "公司要到"
+      },
+      {
+        "index": 759,
+        "text": "management path還"
+      },
+      {
+        "index": 760,
+        "text": "就experience"
+      },
+      {
+        "index": 761,
+        "text": "還要再累積一段"
+      },
+      {
+        "index": 762,
+        "text": "但是你問我的話"
+      },
+      {
+        "index": 763,
+        "text": "我會覺得我可能"
+      },
+      {
+        "index": 764,
+        "text": "還是比較想要technical"
+      },
+      {
+        "index": 765,
+        "text": "因為我覺得"
+      },
+      {
+        "index": 766,
+        "text": "我覺得"
+      },
+      {
+        "index": 767,
+        "text": "management"
+      },
+      {
+        "index": 768,
+        "text": "要deal with的"
+      },
+      {
+        "index": 769,
+        "text": "東西複雜很多"
+      },
+      {
+        "index": 770,
+        "text": "他們就是你要考慮的"
+      },
+      {
+        "index": 771,
+        "text": "事情會變得很不一樣"
+      },
+      {
+        "index": 772,
+        "text": "就是你要考慮你要"
+      },
+      {
+        "index": 773,
+        "text": "就是你要保護你的組的scope啊"
+      },
+      {
+        "index": 774,
+        "text": "你要怎麼"
+      },
+      {
+        "index": 775,
+        "text": "就是擴展你scope會"
+      },
+      {
+        "index": 776,
+        "text": "變成就是跟"
+      },
+      {
+        "index": 777,
+        "text": "那種technical能力"
+      },
+      {
+        "index": 778,
+        "text": "完全不相關"
+      },
+      {
+        "index": 779,
+        "text": "會我覺得很多政治上的東西"
+      },
+      {
+        "index": 780,
+        "text": "政治上"
+      },
+      {
+        "index": 781,
+        "text": "然後我不覺得暫時"
+      },
+      {
+        "index": 782,
+        "text": "不覺得那會是我excel的地方"
+      },
+      {
+        "index": 783,
+        "text": "哦嗯"
+      },
+      {
+        "index": 784,
+        "text": "所以你還是"
+      },
+      {
+        "index": 785,
+        "text": "覺得你做"
+      },
+      {
+        "index": 786,
+        "text": "technical會比較強一點"
+      },
+      {
+        "index": 787,
+        "text": "嗯對"
+      },
+      {
+        "index": 788,
+        "text": "還是說你興趣"
+      },
+      {
+        "index": 789,
+        "text": "會比較偏向在technical"
+      },
+      {
+        "index": 790,
+        "text": "可能是哦或除非"
+      },
+      {
+        "index": 791,
+        "text": "就是因為我"
+      },
+      {
+        "index": 792,
+        "text": "覺得technical還有"
+      },
+      {
+        "index": 793,
+        "text": "很多我可以學的地方"
+      },
+      {
+        "index": 794,
+        "text": "除非我真的覺得那個"
+      },
+      {
+        "index": 795,
+        "text": "地方我已經學得差不多了"
+      },
+      {
+        "index": 796,
+        "text": "然後我想要學"
+      },
+      {
+        "index": 797,
+        "text": "新的東西"
+      },
+      {
+        "index": 798,
+        "text": "maybe management是一個"
+      },
+      {
+        "index": 799,
+        "text": "不知道但但現在"
+      },
+      {
+        "index": 800,
+        "text": "是覺得沒有啊"
+      },
+      {
+        "index": 801,
+        "text": "technical就是我覺得你的job輕鬆很多"
+      },
+      {
+        "index": 802,
+        "text": "因為你把這個東西做好"
+      },
+      {
+        "index": 803,
+        "text": "就好可是"
+      },
+      {
+        "index": 804,
+        "text": "as a manager"
+      },
+      {
+        "index": 805,
+        "text": "並不是一個project做好"
+      },
+      {
+        "index": 806,
+        "text": "你的工作就結束了"
+      },
+      {
+        "index": 807,
+        "text": "對沒錯"
+      },
+      {
+        "index": 808,
+        "text": "就technical的"
+      },
+      {
+        "index": 809,
+        "text": "你就是IC嘛"
+      },
+      {
+        "index": 810,
+        "text": "那IC就是把"
+      },
+      {
+        "index": 811,
+        "text": "你的project給"
+      },
+      {
+        "index": 812,
+        "text": "做好把你該做的事情做好"
+      },
+      {
+        "index": 813,
+        "text": "你不需要擔心是"
+      },
+      {
+        "index": 814,
+        "text": "人的那些"
+      },
+      {
+        "index": 815,
+        "text": "variable不需要擔心"
+      },
+      {
+        "index": 816,
+        "text": "就像其實"
+      },
+      {
+        "index": 817,
+        "text": "做YouTube其實也蠻累的"
+      },
+      {
+        "index": 818,
+        "text": "就是YouTube很累嘛"
+      },
+      {
+        "index": 819,
+        "text": "你要跟很多人去講這個事情"
+      },
+      {
+        "index": 820,
+        "text": "然後你要跟"
+      },
+      {
+        "index": 821,
+        "text": "廠商談然後"
+      },
+      {
+        "index": 822,
+        "text": "你要deal with酸民"
+      },
+      {
+        "index": 823,
+        "text": "然後你有很多亂七八糟"
+      },
+      {
+        "index": 824,
+        "text": "的人會來攻擊你"
+      },
+      {
+        "index": 825,
+        "text": "而且manager我"
+      },
+      {
+        "index": 826,
+        "text": "另外一個想到是就你一開始的時候"
+      },
+      {
+        "index": 827,
+        "text": "你一定不會"
+      },
+      {
+        "index": 828,
+        "text": "是很high level的management嘛"
+      },
+      {
+        "index": 829,
+        "text": "你就是有點在中間很像夾心餅乾"
+      },
+      {
+        "index": 830,
+        "text": "我覺得有時候你會"
+      },
+      {
+        "index": 831,
+        "text": "很就是你要溝通"
+      },
+      {
+        "index": 832,
+        "text": "IC的想法"
+      },
+      {
+        "index": 833,
+        "text": "跟management的想法"
+      },
+      {
+        "index": 834,
+        "text": "會有點被夾在"
+      },
+      {
+        "index": 835,
+        "text": "中間要取得一個"
+      },
+      {
+        "index": 836,
+        "text": "平衡我覺得那有時候也蠻難的"
+      },
+      {
+        "index": 837,
+        "text": "因為就是可能你的"
+      },
+      {
+        "index": 838,
+        "text": "上層的想法跟你管的工程師不一樣"
+      },
+      {
+        "index": 839,
+        "text": "對而且我覺得現在manager很累很辛苦"
+      },
+      {
+        "index": 840,
+        "text": "嗯嗯"
+      },
+      {
+        "index": 841,
+        "text": "因為假如上面開始砍人的時候"
+      },
+      {
+        "index": 842,
+        "text": "應該最先砍的是"
+      },
+      {
+        "index": 843,
+        "text": "middle management"
+      },
+      {
+        "index": 844,
+        "text": "哦"
+      },
+      {
+        "index": 845,
+        "text": "就先從那種夾在中間的人開始砍"
+      },
+      {
+        "index": 846,
+        "text": "就是要扁平化"
+      },
+      {
+        "index": 847,
+        "text": "對我覺得是這樣子"
+      },
+      {
+        "index": 848,
+        "text": "那因為IC還是要有人來做事情嘛"
+      },
+      {
+        "index": 849,
+        "text": "所以說他們"
+      },
+      {
+        "index": 850,
+        "text": "其實是比較"
+      },
+      {
+        "index": 851,
+        "text": "偏向先把它middle management"
+      },
+      {
+        "index": 852,
+        "text": "砍掉"
+      },
+      {
+        "index": 853,
+        "text": "對那當然"
+      },
+      {
+        "index": 854,
+        "text": "director VP"
+      },
+      {
+        "index": 855,
+        "text": "那些level也會被砍啦"
+      },
+      {
+        "index": 856,
+        "text": "但是就是相對來講已經做了那麼久"
+      },
+      {
+        "index": 857,
+        "text": "就安全一點或者是"
+      },
+      {
+        "index": 858,
+        "text": "你外面機會也會多很多"
+      },
+      {
+        "index": 859,
+        "text": "就可能有人想挖你或什麼"
+      },
+      {
+        "index": 860,
+        "text": "對對所以說做IC也是還不錯"
+      },
+      {
+        "index": 861,
+        "text": "對啊我覺得"
+      },
+      {
+        "index": 862,
+        "text": "IC的工作就是simple很多"
+      },
+      {
+        "index": 863,
+        "text": "就是你要想的事情就是這樣子"
+      },
+      {
+        "index": 864,
+        "text": "如果我可以一直做IC我會做IC"
+      },
+      {
+        "index": 865,
+        "text": "我之前好像跟你聊過"
+      },
+      {
+        "index": 866,
+        "text": "這件事因為"
+      },
+      {
+        "index": 867,
+        "text": "你覺得做manager很麻煩好像"
+      },
+      {
+        "index": 868,
+        "text": "我覺得做manager"
+      },
+      {
+        "index": 869,
+        "text": "很累啊很辛苦而且真的"
+      },
+      {
+        "index": 870,
+        "text": "是你的meeting是排滿的"
+      },
+      {
+        "index": 871,
+        "text": "對真的很忙"
+      },
+      {
+        "index": 872,
+        "text": "可能很多人會"
+      },
+      {
+        "index": 873,
+        "text": "有一個"
+      },
+      {
+        "index": 874,
+        "text": "迷思就是說哦manager好像"
+      },
+      {
+        "index": 875,
+        "text": "就只要講話就好"
+      },
+      {
+        "index": 876,
+        "text": "出一張嘴然後"
+      },
+      {
+        "index": 877,
+        "text": "跟大家去meeting"
+      },
+      {
+        "index": 878,
+        "text": "然後在meeting"
+      },
+      {
+        "index": 879,
+        "text": "的時候去講話"
+      },
+      {
+        "index": 880,
+        "text": "發言然後給"
+      },
+      {
+        "index": 881,
+        "text": "人家feedback就可以"
+      },
+      {
+        "index": 882,
+        "text": "但其實"
+      },
+      {
+        "index": 883,
+        "text": "沒有我覺得"
+      },
+      {
+        "index": 884,
+        "text": "manager好不好很"
+      },
+      {
+        "index": 885,
+        "text": "決定一個組的成敗"
+      },
+      {
+        "index": 886,
+        "text": "就是他真的是一個決定性的角色"
+      },
+      {
+        "index": 887,
+        "text": "對而且也會影響"
+      },
+      {
+        "index": 888,
+        "text": "到很多人的career"
+      },
+      {
+        "index": 889,
+        "text": "對對就是你有沒有"
+      },
+      {
+        "index": 890,
+        "text": "跟到一個好的manager"
+      },
+      {
+        "index": 891,
+        "text": "也是影響你自己的career很多"
+      },
+      {
+        "index": 892,
+        "text": "嗯好啊"
+      },
+      {
+        "index": 893,
+        "text": "那大家如果有興趣"
+      },
+      {
+        "index": 894,
+        "text": "的話可以去"
+      },
+      {
+        "index": 895,
+        "text": "追蹤一下Kelly的頻道"
+      },
+      {
+        "index": 896,
+        "text": "然後還有Kelly"
+      },
+      {
+        "index": 897,
+        "text": "最近有做職涯諮詢"
+      },
+      {
+        "index": 898,
+        "text": "對有做"
+      },
+      {
+        "index": 899,
+        "text": "一個next step然後"
+      },
+      {
+        "index": 900,
+        "text": "就是有留學跟職涯的諮詢"
+      },
+      {
+        "index": 901,
+        "text": "都有很專業的"
+      },
+      {
+        "index": 902,
+        "text": "顧問可以"
+      },
+      {
+        "index": 903,
+        "text": "跟大家one on one"
+      },
+      {
+        "index": 904,
+        "text": "的解決問題"
+      },
+      {
+        "index": 905,
+        "text": "對大家可以去看一下"
+      },
+      {
+        "index": 906,
+        "text": "好謝謝大家"
+      },
+      {
+        "index": 907,
+        "text": "拜拜"
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "transcript": "有沒有這麼隨性\n哈囉大家好我是Terry\n....對不起\n我真的嚇死好\n哈囉大家好我是Terry\n哈囉我是Kelly\nKelly大家應該都認識吧\n我我需要自我介紹嗎\n沒有沒有你不需要自我介紹\n因為每次你知道每次只要一發影片\n影片下面留言就會有人叫你名字\n哇我下去回下去跟大家打招呼\n我們的觀眾應該已經\n基本上都知道Kelly是誰了\n不知道的話那應該是蠻奇怪的\n代表你\n沒有在follow Terry\n沒錯好\n對啊今天今天主要\n是想要跟大家聊一下\n因為Kelly現在\n也在矽谷的tech大公司工作\n算算蠻大的公司\n中大型吧\n中大型對啊我覺得規模已經很大了\n那你也工作這麼久了也算是多久了\n三年半\n三年半所以畢業到現在三年半\n你也經歷了算是covid那段時間\n我相信你應該也\n有在幫公司做面試對不對\n嗯嗯嗯\n然後你應該\n也知道大概矽谷的tech公司\nhire人的方向大概是怎樣\n然後主要今天想要跟大家聊這個東西\n那你覺得so far現在三年半\n這個工作你認為可以一直做下去嗎\n哦欸這個也是大家\n現在很常在討論的問題\n因為我覺得就是工程師現在\n有一些coding skills就是可以\n被replace的地方越來越多了\n就大家可以看到AI進步得這麼快\n所以你好像\n那些basic coding的能力就是\n大家會覺得以後\nAI寫的代碼會越來越多\n但是我們會就是在講在講說哪些是\nAI沒有辦法被\nAI沒有辦法取代人類的地方\n其實一個我\n覺得比較好笑的就是AI\n沒有辦法背鍋\n就是如果出\n一個bug就是你還是\n需要一個人來負責這件事情\n你不能把這個鍋推到AI身上\n這是專案寫的\n這是專案寫的那你還是要\n就是會debug就是\n這還是工程師的錯\n你沒有看出來這個東西錯在哪\n然後除了這個之外\n我覺得就是一些design的東西\n客戶的需求就是你\n要知道你東西的痛點在哪\n然後去做like customer research\n然後這些我覺得\n還有一些就是比如說辦公室如果\n真的有politics或什麼\n你知道哪些\n事情會benefit哪些人\n這種事情是我\n覺得AI沒有辦法判斷的\n所以我覺得就算在之後\nAI的coding能力越來越強之後\n就是可以做這些決定知道就是\n怎麼樣是客戶想要怎麼樣是公司想要\n怎麼樣是對這個business\n最好的還是需要人來設計\n嗯對啊我我覺得\n你想法跟我一開始的想法也是蠻aligned的\n以前我們講到最早以前嘛\n大家在寫code的時候可能就是\n拿一個notepad\n就是很最基本的那時候沒有IDE\n那現在我們\n有比如說像VS Code\n對之前\n有VS Code然後\n更多這種plugin\n讓我們寫code更方便\n那現在有\nAI有cursor這些都\n會讓我們寫code更快速\n但之後呢不知道會怎麼樣\n但是永遠都還是\n需要有人的這個在裡面\n對而且我覺得面試的時候\n其實現在因為就是如果講\n到面試的AI\n其實有\n很多AI cheating的工具\n就是大家應該都有\n耳聞過那種\n什麼interview的AI\n就是他可以在你面試\n的時候就給\n你一些prompt一些答案\n所以大家就是\n對於coding這件事情\n就是有時候我我\n聽到的很多我們在面試人的時候\n你如果一開始就是\n給出一個完美的答案\n就反而會想說對\n對對你會就是\neither你有背過答案\n你就是剛好知道這\n一題或者你有AI的幫助\n所以就是你可能中間\n有展現你的思考過程\n或者是你稍微碰壁\n一點點然後才找出solution\n或是你可以講出你設計的邏輯\n不是就是哦我的code就是這樣\n就是反而比較能說服面試官\n嗯嗯嗯\n欸那你們\n現在interview process還是跟以前一樣嗎\n呃我覺得\n確實會有\nemphasize在就是\n更多coding以外的事情吧\n我就除了\n很general的coding之外\n我覺得會\n比較需要很\nspecific的skills\n就是我可能在找的這個職位\n我蠻確定它需要哪些東西\n然後我\n需要就是background either是match\n或者是我看到你之前經驗有這些\n或者是你在面試\n的時候就可以知道你\n是這方面的的專家\n比如說我們超\n需要一個很會AWS的某個東西的人\n那你就是之前做過\n或者是你面試的時候可以講很多\n我覺得除了\n這種很\nspecific skills之外\n還有culture fit可能也看得越來越多\n因為變成就是\n大家AI可以code之後\n你可能很需要更需要跟人協作的能力\n所以你跟\n這個company的culture\n你跟這個組能不能\n合得來我覺得變得越來越重要\n對我後來有發現\n就是現在是自從\n我們covid結束那一波開始\n開始大裁員之後\n所有公司他們hire人\n的那個requirement都是\n非常精準的\n大家都是\n要hire很specific的一個role\n一個角色進來做某一件事情\n嗯我覺得這完全有被AI影響\n就在可能很古早的年代嘛\n就很很久以前在\n找工作的時候其實不會聊太多這件事\n可能你到higher level還是會啦\n就是你還是\n要很match可是就是\n對於可能lower level\njunior engineers不會到\n那麼的要求\n但我覺得現在慢慢\n的也會變成大家都\n在找自己專精的東西\n對而且我覺得以前\n因為以往大公司很喜歡\n做一個就是general hire\n就你只要過那個bar進來之後\n你再去選組或者是幹嘛\n現在好像就是\n比較偏向有些team\n會特別找某些人\n對對對\n而且我覺得\n因為就是general這\n件事情太容易被取代了\n就是你如果什麼\n東西都會一點但什麼\n東西都沒有很專精的話\n那你就是就像一個AI coding assistant一樣\n然後我覺得可能面試的時候\n其實現在很多就是\n有些公司的policy\n可能會allow一點\n點就是AI的輔助\n在面試的時候所以\n可能也會考就是你\n能不能很好的運用AI\n比如說給你\n一題AI寫的code\n讓你去debug或者是之類\n就是你要知道這些協作的能力\n因為現在就說真的\n工程師在手寫代碼已經很少了\n很少對啊\n我覺得手寫代碼\n反而是效率不高的一個表現\n就是有點太老了\n就是你要展現你學習事情的速度吧\n跟你運用這個東西你是怎麼樣流程\n我覺得比較重要的\n是你有那個設計的mindset\n因為我覺得最就是\n最有效率的運用AI的方法是\n你所有的design\n都已經在腦袋裡面\n然後你可以一次breakdown說\n我要哪些東西\n然後你要講得越詳細越好\n不然AI會自己hallucinate\n你可能\n需要這個需要那個\n然後可能那些別的東西\n所以就是你能把\n你的所有requirements\n跟你怎麼怎麼想設計\n這個架構寫得很清楚的話\nAI才能很精準的meet你的需求\n對就像你\n剛剛講的那個下prompt\n我覺得是很重要\n那很多人會\n覺得說OK我們\n現在vibe coding\n每個人都可以build\n一個很fancy的app\n然後是不需要engineer來\n所有人都可以做這件事情\n但我覺得確實你\n要做一個很generic的東西\n就像你問AI很\n基本的問題他可以\n給你一個很\n很generic的一個答案\n但是你如果要build很specific的need\n或是你你真的是要build一個東西是給\n你的customer用的\n不是那麼簡單就是像大家想的\n就是engineer就可以\n一句話就好因為\n對我覺得如果\n大家只是\n自己vibe code一個\n網站或什麼\n你就是很多人\n其實可能不會在乎它背後\n用的架構是什麼\n因為你後續也就是\n不一定真的\n需要一直maintain它或什麼\n可是我覺得還蠻\n容易遇到的情況就是在\n工作中如果用AI\n然後你一開始沒有跟他講清楚的話\n他給你的東西會完全不是你要的\n就你至少要有\n辦法判斷說這個東西跟你要的架構\n跟你後續maintenance有哪些\npros and cons\n我覺得那些是\n就是coding以外你\n必須要自己很清楚\n對而且如果你\n一開始的path就就錯的話\n那其實後面你要再你\n會一直在你的錯\n上面一直再做更多奇怪的決定\n所以說你要\nmake the right call然後\n你要問正確的問題\n我覺得這是比較難的\n嗯嗯嗯\n對啊就比如說你\n現在去幫你們\n公司去hire人去面試\n你會考他大概哪些類型的題目啊\n還是還是跟以前\n一樣是比較\n偏向leetcode\n跟system design\n就比較傳統那種還是\n你會有一些比較不同的題型\n呃好像覺得\nleetcode\nsystem design這些就是\n會變成已經比較basic的東西\n就是你一定要過的東西\n就leetcode這種\n還是會因為面試\n畢竟很多rounds\n所以你coding\n的東西然後design的東西\n然後我覺得比較多\n的可能是如果真的已經到\n比如說是要\n面我們\nsister teams\n我們team之類的人的話\n就會變成\n是很specific的我們\n組有哪一個need\n就是比如說\n我們組現在\n這個project很需要\n一個這樣子的人\n然後會很\nspecific很\nspecific的問\n說這個tech stack\n你有什麼經驗\n然後或者是你會\n怎麼我覺得比較\n偏向design類的東西\n比較偏向\nsystem design的\n就是在很看\n你的skills有沒有match\n因為畢竟就\n我覺得senior level以上的都已經\n就不是說你來這裡學\n就是你在面試的\n時候就已經需要assess說\n你可能你們組的\n需求跟這個人有沒有match\n或者隔壁組的需求跟這個人\n嗯嗯嗯\n那你現在自己\n是在你們公司\n的scope大概是怎麼樣\n就工作的時候你\n會比較偏向是可能\n會帶一些\n比較junior的engineer\n還是你是比較偏向\n是你會去manage project多一點\n自己比較常做的事情\n都會呃協作的當然也有\n但我覺得我\n合作的可能senior以上更多\nSenior以上更多\n對對對因為我們我\n工作的算是還\n蠻senior heavy的組\n然後我覺得我也蠻infra蠻後端\n就我覺得大家我\n自己感受到就是\n可能偏向product team\n或者是這種\nweb full-stack的年輕人會多一點點\n就大家年輕人\n稍微更喜歡product\n稍微更喜歡\n那種很tangible的東西\n然後越硬核的\n越越後\n端越\ninfrastructure類的\n我看到的更senior的人更多\n因為那些很\nrequire就是你\n很懂整個system\n然後很懂各種\n就是而且有時候是比較無趣的東西\n就是年輕人比較不\n喜歡對所以我我\n覺得我自己協作的時候\n跟還蠻\n多可能principles\n或至少senior以上的在協作\n那你自己更喜歡\n哪項你喜歡\n做product還是你\n比較喜歡\nfocus在back-end\n我覺得我\n自己的experience\n很back-end\n但我沒有排斥\n就是就是試試看product\n因為我覺得就是你\n寫的東西你自己很看得到\n或者是你\n很看得到用戶impact\n這件事情還蠻有趣的\n就比如說你真的是寫web的話\n那你寫一個東西\n你就在公司網站\n上看到哦這個\nproduct有改動了\n我覺得這還是一個\n還蠻有成就感的地方\n或者是你就是你\n寫一個東西\n然後user engagement就上升了\n但這件事情\n在infra side比較難發生\n你可能寫一個東西\n是比如說\n你很tangible可能\n比如說cut cost\n這已經是一個很\n看得到可是你如果\n寫一個東西什麼優化\n了你內部用戶的使用體驗\n這種事情就有時候很難量化\n對所以嗯我我覺得我自己\n的experience很很後端\n但是我覺得沒有\n排斥就我覺得\nproduct也感覺是\n有它好玩的地方\n假如今天比如\n說你是new grad\n或是你現在在找工作\n你會怎麼樣去準備你下一輪的面試\n比如說你離職了\n然後你有\n一些interview lined up\n你會怎麼樣去\n把你機變成這個\n職場準備好的一個狀態\n哦我覺得好像一個\n是要先很知道你自己在找的是什麼嗎\n就你自己的專精的\n東西在哪裡然後\n你look for的是什麼\n當然這兩個東西不能差太多\n就我覺得可能\n很early on的那種stage\n很容易犯的錯就是哦我是來學習的可是我覺得這種在\n公司或者是\n在recruiter之類的角度\n就會覺得我hire\n你來就是你應該本來就要會\n就我不是hire\n你進來然後找你想要做什麼事情\n我覺得這已經是跟以前不太一樣\n對不太一樣嗯嗯以前是\n你可以表現出說我是想要來學習的\n你很junior但是現在的我覺得\n我知道我要什麼然後我這個東西很強\n所以你應該hire我是因為我會這個東西\n對然後或者是你\n頂多就是比如說\n這個這個job scope有100\n你可以說50\n是match\n50是哦 我interested\n想要explore的部分\n這樣可能還行\n但不能是就是哦這\n100都是我想學的東西這樣\n對但怎麼prepare也是一樣\n就在專精\n的部分之外show那個drive\n就我覺得因為你就是已經在專精\n已經已經對這個東西有興趣了\n所以你才會想要\n對這個公司contribute\n然後看到他們在你\n熟悉的那塊area\n可以加強的點是什麼\n就是可以講出你自己能做的貢獻吧\n我覺得就要很從\n公司的想法想說\n為什麼我們要hire你\n而不是我自我成長的想法所以說你剛剛\n講的那個是比較偏向就是\n比如說你跟這個hiring manager\n做一個technical deep dive的時候\n你去講說為什麼\n你要去sell你自己嗎\n嗯嗯我覺得也可以\n講說就是比如說\n問說time manager\n哦他們現在\n想要solve的一個challenge是什麼\n然後去看說\n你可以怎麼樣contribute to這個東西\n他們現在有一個obstacle\n或者是他們產品遇到一個什麼問題\n然後為什麼你的\n能力可以就是幫忙去解決這個問題\n對我覺得這\n是一個很容易stand out的一個point\n面試有一個round\n就是你\n跟hiring manager\n跟一個比較senior的\n可能是你未來\n的manager去聊天\n那你要在這個\n聊天過程中怎麼讓他喜歡你\n我覺得你剛剛講\n的就是一個很好的例子\n嗯嗯嗯\n對啊那如果是\n比較偏向hard skill你會大概怎麼準備\n怎麼準備哦呃\n就是leetcode當然要多刷\n就是coding關你還是要先過\n所以你還是要\n先把那些\n基礎的coding的東西弄好\n然後再來system design\n我覺得就是要你\n很廣泛的接觸很多東西嗎\n我自己可能比如說\n你上網看很多tutorials啊\n或者是你自己去看一些書準備或什麼\n就是我覺得要我自己\n的想法是還蠻從最basic的東西build up\n然後去看很多use case\n就是你動不動可能看到一個東西\n你就可以自己想像說哦我如果要\n設計這個東西我會怎麼講什麼\n然後多跟人mock我覺得\n就是有沒有有沒有練習還是有差\n就是你自己腦袋想跟你講出來\n或者是你coding round\n你自己知道怎麼code\n跟你真的邊解釋邊code出來是有差異\n就很容易緊張\n就失常所以就是除了就是準備\n就是不管是看書\n或者是你日常就自己想\n就是另外一個就是你要很多模擬\n嗯嗯嗯\n對\n我覺得system design\n其實還蠻吃經驗的\n嗯\n我如果去interview一個人\n其實他沒有任何經驗我是看得出來的\n但至少對一個系統\n是比較有很generic的一個了解\n我覺得OK那他可能比較沒那麼senior\n那我就說OK了\n以前的話可能比如\n說L3或是剛畢業的\n我們會覺得說那可能不需要太知道system design\n我們可以說那\n那可能就是coding也過了\n然後可能他coding\n很強那我覺得說OK了\n但現在我們會\n覺得說你今天進來\n然後我們全部都是\n用AI在寫code\n然後大家效率都非常的高\n為什麼我要hire你?\n全部人都是非常高效率的engineer\n那我hire你肯定是\n希望你進來就\n可以直接contribute\n對所以說我會想要\n看到對系統的一個了解程度\n而且這個是我\n覺得是很難用AI去做弊的\n我不知道你有沒有試\n過但是我曾經想過\n要是如果考system design\n我要用AI做弊怎麼去做\n我不知道欸可以怎麼做弊\n完全不可能就就你把那個問題給他\n就給你一個超級generic的一個答案\n然後而且是長篇大論\n等於說你要坐在那邊OK\n你等我讀五分鐘\n你看完讀完之後你再跟他講\n就就很難就完全\n不可能做弊不像coding\n因為你coding的話你給\n有正確答案\n還可以假裝寫錯什麼之類的對\n但是system design\n就完全就是靠你腦袋的東西\n就你有沒有經驗沒有\n經驗的話那你怎麼樣去補足\n你怎麼樣靠自己\n去讀那些case study\n對那像我們\n的就我跟Bohr出了那個\n我們就給了13 (現在增加到 14）\n個我們認為應該說大家\n都在用的一些app\n然後我們叫它\n現代系統設計\n跟傳統的\n系統設計比較不太一樣的是\n我們加入很多AI的東西\n哦\n很多AI還有一些Web3的東西\n嗯嗯嗯\n對那我覺得\n未來我們一定\n是engineer去利用AI\n然後我們要怎麼\n去design一個AI的flow\n這些我覺得都是還蠻重要的\n嗯確實這個我覺得就\n是它硬實力就是\n真的很容易就看得出來\n尤其就是如果你就是\n面試官可以一直follow up\n所以你對整個系統\n架構的每一個點你都要很了解\n你才不會\n在被deep dive\n某一個問題的時候被考倒\n對對那你會來上課嗎？\n而且之前有人邀請我去當助教欸\n好像有這麼一回事\n什麼時候我才能\n我才能來這個客串一下\n因為Kelly很厲害啦所以說\n對啊我覺得\n請不起是不是\n有點請不起\n因為我們那個\nbudget可能沒有那麼多\n因為我覺得我\n覺得我們課程很便宜\n我們真的就是我認為啦\n就是因為因為Bohr他\n他也不缺錢說實話他也不缺錢\n他他其實做這個\n東西是他自己想要做的事情\n因為他之前其實就有\n免費的幫大家做coaching在線上\n然後我我\n去approach他說我跟他聊說\n如果你自己在做\n這些東西的話要\n不要你可以把\n這個scope變大一點\n就是你可以reach的audience多一點\n然後我們一起來\n設計一個真的可以\n幫助到大家的一個系統設計\n然後他就說好然後\n我們才一起來做這件事情\n就做這個東西其實\n我個人覺得你從這\n裡面能得到的價值\n是絕對遠遠超過我們\n官網上面的那個價格\n而且如果你就\n是因為你把系統設計學好\n然後land一個更好的job那你的\n回報肯定是比那個價格要再多很多\n可能一兩天薪水\n就差別就是就可以對啊\n而且這個是你學\n完之後是可以一直apply到\n你rest of your career\n甚至甚至你自己\n在做一些project的時候\n你會有那些concept那些idea\n那完全不一樣的\n因為我自己以前\n也是可能\n沒有那個system design\n的概念的時候\n我自己要\n做一個project的\n時候我不會\n有一個\n很structured的一個開始\n但是我如果\n有那個concept的\n話有system design concept的話\n我很知道說我\n要問AI什麼問題\n然後我可以告訴AI說\n我現在第一步要做什麼\n然後第二步要做\n什麼對那這些\n就是你\n有沒有這個background\n有沒有這個context\n最大的區別\n有時候真的要從這種練習的經驗得來\n就沒有辦法\n你把什麼database什麼學好\n就就知道這些東西\n沒錯\n你會擔心說哪一天可能\n被layoff還是什麼之類的嗎?\n哦嗯layoff這件事情我就覺得它\n是一個很無法無法控制的情況\n就是你擔心也\n沒用所以就\n不如不要擔心所以我還沒有\n不過我覺得你們\n公司一直在hire人\n最近還在hire人\n嗯對對對所以會擔心嗎\n就是就覺得你\n掌控以外的事情你就不用去想\n還是你想要被layoff？\n沒有沒有欸我\n我熱愛我的工作\n有些人是有些人\n想說哦我被layoff就算\n了拿個severance\n拿個幾個月薪水然後\n就自己去爽一下或是休息一下\n好像不會我覺得\n我在我的career\n還是在一個還蠻想成長的階段\n所以嗯還蠻想\n就是會想要keep\n我的learning rate很高\n所以還想繼續工作\n所以你還是會想要繼續\n做engineering這個工作\n嗯我覺得就是\n如果有一天我達到我覺得哦一個\n就是我自己\n的skills到一個程度\n那maybe可以考慮到\nother options\n但我覺得我現在還在一個就是成長\n需要學習然後很想\n接觸很多新東西的階段\n那我猜你現在\n應該也差不多在一個位置就是\n因為三年嘛三年半\n那你應該差不多在一個位置就是\n你可以選\n比較偏management的path\n或是比較偏IC的path\n哦我覺得在大公司其實沒有那麼快啦\n小公司maybe\n但是大\n公司要到\nmanagement path還\n就experience\n還要再累積一段\n但是你問我的話\n我會覺得我可能\n還是比較想要technical\n因為我覺得\n我覺得\nmanagement\n要deal with的\n東西複雜很多\n他們就是你要考慮的\n事情會變得很不一樣\n就是你要考慮你要\n就是你要保護你的組的scope啊\n你要怎麼\n就是擴展你scope會\n變成就是跟\n那種technical能力\n完全不相關\n會我覺得很多政治上的東西\n政治上\n然後我不覺得暫時\n不覺得那會是我excel的地方\n哦嗯\n所以你還是\n覺得你做\ntechnical會比較強一點\n嗯對\n還是說你興趣\n會比較偏向在technical\n可能是哦或除非\n就是因為我\n覺得technical還有\n很多我可以學的地方\n除非我真的覺得那個\n地方我已經學得差不多了\n然後我想要學\n新的東西\nmaybe management是一個\n不知道但但現在\n是覺得沒有啊\ntechnical就是我覺得你的job輕鬆很多\n因為你把這個東西做好\n就好可是\nas a manager\n並不是一個project做好\n你的工作就結束了\n對沒錯\n就technical的\n你就是IC嘛\n那IC就是把\n你的project給\n做好把你該做的事情做好\n你不需要擔心是\n人的那些\nvariable不需要擔心\n就像其實\n做YouTube其實也蠻累的\n就是YouTube很累嘛\n你要跟很多人去講這個事情\n然後你要跟\n廠商談然後\n你要deal with酸民\n然後你有很多亂七八糟\n的人會來攻擊你\n而且manager我\n另外一個想到是就你一開始的時候\n你一定不會\n是很high level的management嘛\n你就是有點在中間很像夾心餅乾\n我覺得有時候你會\n很就是你要溝通\nIC的想法\n跟management的想法\n會有點被夾在\n中間要取得一個\n平衡我覺得那有時候也蠻難的\n因為就是可能你的\n上層的想法跟你管的工程師不一樣\n對而且我覺得現在manager很累很辛苦\n嗯嗯\n因為假如上面開始砍人的時候\n應該最先砍的是\nmiddle management\n哦\n就先從那種夾在中間的人開始砍\n就是要扁平化\n對我覺得是這樣子\n那因為IC還是要有人來做事情嘛\n所以說他們\n其實是比較\n偏向先把它middle management\n砍掉\n對那當然\ndirector VP\n那些level也會被砍啦\n但是就是相對來講已經做了那麼久\n就安全一點或者是\n你外面機會也會多很多\n就可能有人想挖你或什麼\n對對所以說做IC也是還不錯\n對啊我覺得\nIC的工作就是simple很多\n就是你要想的事情就是這樣子\n如果我可以一直做IC我會做IC\n我之前好像跟你聊過\n這件事因為\n你覺得做manager很麻煩好像\n我覺得做manager\n很累啊很辛苦而且真的\n是你的meeting是排滿的\n對真的很忙\n可能很多人會\n有一個\n迷思就是說哦manager好像\n就只要講話就好\n出一張嘴然後\n跟大家去meeting\n然後在meeting\n的時候去講話\n發言然後給\n人家feedback就可以\n但其實\n沒有我覺得\nmanager好不好很\n決定一個組的成敗\n就是他真的是一個決定性的角色\n對而且也會影響\n到很多人的career\n對對就是你有沒有\n跟到一個好的manager\n也是影響你自己的career很多\n嗯好啊\n那大家如果有興趣\n的話可以去\n追蹤一下Kelly的頻道\n然後還有Kelly\n最近有做職涯諮詢\n對有做\n一個next step然後\n就是有留學跟職涯的諮詢\n都有很專業的\n顧問可以\n跟大家one on one\n的解決問題\n對大家可以去看一下\n好謝謝大家\n拜拜",
+    "length": "24m 7s",
+    "hasMore": false,
+    "isPremium": false
+  }
+}

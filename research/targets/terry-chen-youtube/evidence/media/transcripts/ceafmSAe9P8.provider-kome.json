@@ -1,0 +1,7610 @@
+{
+  "source": "Online transcript provider: Kome",
+  "source_url": "https://www.youtube.com/watch?v=ceafmSAe9P8",
+  "provider": {
+    "name": "Kome",
+    "endpoint": "https://kome.ai/api/transcript",
+    "retrieved": "2026-07-13"
+  },
+  "video_index": 18,
+  "video": {
+    "index": 18,
+    "id": "ceafmSAe9P8",
+    "title": "辭掉高薪：女神分享AI新創心路歷程，大推台灣工程師",
+    "url": "https://www.youtube.com/watch?v=ceafmSAe9P8",
+    "duration_seconds": 2897.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "ceafmSAe9P8",
+    "title": "辭掉高薪：女神分享AI新創心路歷程，大推台灣工程師",
+    "text": "Hello大家好我是Terry\n今天呢邀請了特別來賓\n一個\n新創公司的CEO founder\n玉珊\n來到頻道\n跟大家聊一下關於startup\n還有一些她的經驗\n嗯\n那你覺得西雅圖怎麼樣\n你上次來西雅圖什麼時候\n我完全欸\n高中吧\n高中哦\n我高中的時候來過一個暑假學英文\nOK高中什麼時候\n我高中是17年前了\n很久很久以前\nOK\n玉珊你最近\n就是你們的startup新創公司\n剛結束了融資是最近嗎\n還是\n哦應該說\n10月的時候加入加速器\n然後那時候算結束\n去年10月的時候\n對對對\n然後現在加速器才剛開始\n嗯\n那我覺得蠻厲害的啦因為\n其實現在\n呃startup很競爭\n尤其是\nVC要給錢的情況下\n因為因為以前\nVC錢很多然後隨便砸\n尤其在疫情的時候\n那現在因為\n現在錢其實砸的地方很重要\n然後\n要看founder的一些特質\n還有看startup的一些特質\n要去砸錢\n我覺得現在這個環境下要融資是比較\n困難的相對來講比較困難\n你之前有融過資嗎還是這是第一次\n很多次\n很多次OK\n呃我一開始融資的時候\n是就是先Angel round\nAngel round\n是走的最順的\n因為那時候\n有friends\nand family\n然後跟人家介紹的天使投資人\nAngel round\n是在什麼時候\n呃我一開公司的時候就融了\nOK\n對那時候就融了46萬\nOK嗯嗯嗯\nOK\n所以開公司的時候是去年嗎\n沒有欸2024年5月\n哦OK所以大概一年多前\n對對對對\n然後你們公司\n是叫Mirror AI\nMirror Mirror\n以前一直來都是這個名字嗎還是\n一直都是名字想過要改幾次\n可是不小心就會上了一些文章\n就發現不能改了\n你說已經有一些\n在不同的地方社群媒體報導\n然後你就覺得OK\n就是\nstick with the name\n對對對對對\n那你可以給我一個\nhigh level的\n一個pitch\n就是你的名字你的公司是做什麼\n嗯\n對\n我們現在在做的是\n專門幫時尚品牌做的\n一個生圖workflow\n嗯哼\n對那因為非常非常多的\n想要做類似事情的競品\n他們基本上是會\n呃用的還是很AI\n會跟你說你要自己先選擇模型啊\n要選擇生圖的各種方式調參數\n但是我們是把這些全部都\n讓使用者不用做決定\nOK\n對我們會自動根據這個\n衣品的特質\n還有你想要生圖的目標等等\n幫你自動生出來\n然後不用去做任何的手動控制\n生圖就是比如說我今天要\n用個雜誌封面\n或是我要有一個產品的宣傳\n那我可能有些model\n然後可以用你們的產品去把東西給\n生出來就那個圖片我不需要自己去拍\n是這個意思嗎\n是的是的是的那\n嗯其中有一部分我們現在還不能\n還不能公佈\n可是可以先公佈的就是我們在\n呃推出的品牌生成器\n所以就是單純就衣品來講的話\n嗯\n嗯因為大家看電商的時候\n都會看到衣服的\n品牌圖\n那其實那個品牌圖我們\n跟很多品牌採訪的時候\n他們都會抱怨說那個品牌圖\n很耗時然後其實也很耗錢\n而且就這些creative來講\n其實他們拍這個\n一點激發創意激發都沒有\nOK\n對所以我們用AI的方式\n來幫他們製造這樣子的圖\n然後基本上他們用\ndrag and drop\n就可以去做這些事情\n回過來的時候\n幾百件衣服我們就幫你弄好了\n哦你說直接在衣服上面\n把品牌弄上去嗎\n還是它怎麼work\n哦嗯\n我今天是一個雜誌的編輯好了\n然後我來找你們\n然後我是怎麼樣去生成一個圖片\n從零到一\n嗯嗯嗯\n的一個過程\n我們用品牌舉例好了\n因為雜誌跟雜誌編輯\n跟品牌的use case\n還是不一樣\n嗯所以如果是品牌的話\n基本上他們的倉儲裡就會有已經\nmanufacture好的衣服\n那可是如果要做初高質感的品牌圖\n以前其實是要請攝影師\n然後在攝影棚裡面拍好\n然後要完全有運燙好\n整個衣服要整理的整整齊齊\n事後還要再修圖\n嗯\n那versus我們現在提供的服務\n基本上品牌owner也好\n或者是他們的美編或是實習生\n他們拿手機就可以了\n然後手機基本上衣服簡單掛在人形上\n或是一架上正反兩面稍微拍\n光線也不用調也不用去做\n就是steaming啊\n也不用去把它用品\n然後放到我們品牌生成器之後\n就會自動生成漂亮的\n正反面圖\n跟商品敘述\n哦OK所以說直接就可以上到那個\n他們網站\n比如\n網站的product page\n對對對\n上面這樣子\n我們現在有提供就是\n可以讓他們直接\n跟商家必做integration\n嗯哼\n對然後我們下禮拜\n會推出\nShopify的\nintegration\n就像是美國的Shopline\n嗯哼\n嗯那另外我們在開發的\n這個月底要推出的就是\n這個其實可以用成API\n我們就API offering\n嗯哼\n那這樣\n最難的地方在哪裡\n因為我感覺好像\n會有很多的就是\n你們生成出來的東西\n需要fine tune\n就可能我也覺得顏色好像不太對\n或者是我可能光線或是\n身為一個customer\n我會想要就是\n網站上看到的東西跟實體寄到\n收到的東西不太一樣\n那這個是這我覺得會比較多的事情\n還是有一些其他的\n嗯嗯嗯\n對\n我們之前開始做的時候很大一個部分\n原本是精準度可是精準度如果你想成\n現在生圖模型就是一直在進步的話\n這其實漸漸是\n會被solve的problem\n所以如果講\n這個生成generation本身\n單一一個商品做生成的時候\n它準確度已經不是我們需要煩惱的\n反而是你一個商家\n有一整個collection\n你生成的時候的那個一致性很難\nOK\n對就是你要怎麼可以控制說\n我生成出來的商品\n他們的袖子角度也好\n然後或者商品呈現\n是要砰的還是要扁的\n那或者是他們的陰影\n是不是能夠都非常一致\n那我們要能確保說假設這次的\ncollection有60件\n他們呈現出來的時候要很整齊\nOK\nI see\n所以這個是產品比較難的技術\n點嗎\n對技術點然後還有生圖的時候\n如果\n花很多很多步驟\n去做調整\n因為你可以做\n很多pre-processing\n很多\npost-processing\n其實對於客戶來講\n那個等待的latency很長\n那其實大家那個體驗就會很差\n所以我們要怎麼樣用聰明的方法\n保持品質同時又不會讓等待時間太長\nI see\n了解\n所以說你現在已經可以做到\n怎麼樣的程度就是可以讓\n客戶覺得欸\n做出來的時候就很滿意嗎\n還是說你會花大概多少時間\n去manually去做微調\n嗯其實我們\n一開始都會以自己的判斷去做微調\n但是我們現在發現\n還是直接聽客戶講比較重要\n所以我們有兩個客戶是會非常\n兩個品牌\n他們會非常的密切跟我們開會\nOK\n然後會告訴他們的反饋\n告訴我們哪裡做得不夠好\n那我們就要馬上的去iterate\n那其中一個商家比如說之前品牌圖\n他們因為\n人工跟資金有限\n所以他們一個月最多就是上\n上架500件\nOK\n對那他們因為跟我們合作之後\n他們現在\n他們的二手平台\n那他們就可以跟其他品牌合作\n說過季商品上來\n然後他們已經告訴我們下個月想要\n上架的數量是4000件\n嗯哼\n嗯\n所以如果是這樣講的話\n就是一個品質上的提升\n跟效率上的提升\n哦OKOK\n像我今天用完之後那\n東西出來了\n不是很滿意\n那我是直接給你feedback\n還是我可以在你的app上面就說\nOK我覺得這個東西不好\n然後就要重新generate\n我們現在還是先以直接溝通比較快\n因為我們想要\n有一個conversation\n當然未來\n客戶變多的時候\n還是要有bug report\nissue report\n所以我們現在暫時會直接\n我們在台灣\n就用LINELINE\ngroup chat\n跟他們聊\nOKOK\n那那你們是\n怎麼\ncharge customer\n呃我們有一個公開的\n像\nsubscription\nbase的\n那那\n就是charge credits\nOK\n對可是如果是大一點的客戶\n大中一點的話我們就可以談條件\n看他們一下子要簽幾個月\n然後volume夠多的時候\n我們都會給discount\n還有想要簽認\n這種\ndesign partnership\n的公司\n我們也會再跟他們更便宜一點點\n哦OK了解\n因為畢竟反饋\n其實我們常常看那些反饋\n我們都覺得\n這應該是我們要花錢去買的\n嗯嗯\n可以問一下關於你們tech上面的\n就是你們技術方面\n因為我知道你背景是CS嘛\n也是tech\n那你你主要現在在做的事情是\n你的\nday to day\noperation是\n你也會做tech嗎\n還是你focus在\n比較high level\n可能公司的execution\n嗯最近加速器之前我比較\n少時間去做tech一開始寫\n我們的MVP的時候\n公司剛開始我會自己寫\n但是現在有工程團隊了嘛\n那我是因為到最近進加速器之後\n他們其實不想要我們founder\n在demo day前去融資\n所以我突然時間變很多所以\n我現在就是跟團隊一起開發\n哦所以你現在有寫code\n嗯嗯嗯\nOK好\n還蠻厲害的\n一直都寫啊\n一直都寫\n對啊我的我的career\n就是寫code\nOK你career寫code\n然後你也喜歡寫code\n喜歡啊\n真的OK\nOK那你覺得現在\n寫code\n跟以前寫code最大的區別\n你問的問題timing很好\n因為禮拜這個三個禮拜前嘛\n三個禮拜前\nClaude的code work\n才出來嘛\n然後我是我拖了到上禮拜一\n所以就是六天前才開始用\n對\n瞬間就有一種我以前\n因為我以前待過Amazon\n在那裡當\napplied scientist\n瞬間覺得以前做的工作完全被取代了\n真的\n嗯因為我那個時候做的\n就是在測試不同種的\n類神經網路模型然後\n看說\n老闆要的這個objective\n我們有沒有辦法一直提升\n假設\n減少退換率好了然後\n推薦尺寸的準確率提高等等\n那我現在跟Claude聊的時候\n覺得他可以想的比我廣\n多很多而且又想得很快\n然後可以很快的迭代\n不同種模型去測試\n所以\n我覺得跟現在寫code\n跟以前完全不一樣\nOK\n對啊我過去這這一周\n跟團隊合作的時候\n我也沒有親自去寫\n檔案裡面的code\n我全部都是agentic在做\n就是agentic AI在做\n對啊未來應該也都是\nagentic AI\n在幫大家去做所有的事情\n那你們公司產品\n技術方面\n也是用很多\nagentic AI的東西嗎\n還是\n沒有欸我其實train了\ntrain了團隊train蠻久我們在過去這\n幾個禮拜才開始用\n之前還是比較傳統一點\n就是我們的developer\n還是會比較\n傳統他會用會用chatbot\n就是用LLM然後去分開這樣子聊\n那有開始漸漸用cursor去做\n所以一點點的agentic\n可是沒有到現在\n這陣子的Claude code\n跟Claude\ncode work\n這麼這麼agentic\nI see\n但但你們在\nimage generation\n這部分是\n自己train model嗎還是\n你是用你們是用現成的\n我們一開始有train\n去年暑假的時候\n那時候還會把flux\n下來fine tune\n那我們那時候\n還沒有拿到加速器的資源\n燒了很多就是AWS的資源\n發現完全不值得就真的不值得\n然後我們2024年暑假的時候\n那時候也有train\n自己的一些\nlightweight的\nrecommendation\nmodel等等\n那個還好可是train模型之後\n你真的覺得一個小小的公司\n尤其我們當時連九人都不到\n更少可能六人\n然後資金又不足的狀況下\n去train\n你過幾個禮拜其實就會有人\n推出更好的模型\n完全超過你可以達到的\n的能力那我們當時還會洗腦自己說\n沒關係\n我們是\nfashion specific\n還是需要自己train然後\n我覺得那個\n那個是我們\n就是一廂情願想要train\n所以我們\n我們正式在Nano Banana\n出來那天就停止了\n停止任何\n想要fine tune的想法\n我們當時做了\n很多fine tune\n也做了很多\nprompt optimization\n還有我們花很多時間\n做post editing\n就出來如果accuracy不高\n我們還會去segment\n那一個特定的region\n然後去做\nin painting等等的\n會把它給校正\n然後感動自己啊就覺得做得超好\n然後\nNano Banana一drop\n就這些都變成non-issue\n嗯嗯嗯\n那我們先暫停一下\n跟大家分享一下\n我最近幾週的一個想法\n大家都在說AI呢會取代工程師\n但是我覺得AI時代呢\n有一個技能反而變得更有價值\n那就是跟人去connect\n我說的connect\n是人與人之間的交流\n文化，還有情感的傳達\n比如說你在一個\nstand up meeting裡面\n你可以更像一個native\n去表達你的想法\n那我最近呢\n在用一款叫做Speak的app\n用了一陣子之後呢\n想要跟大家分享一下\n這個是真的有效\n特別是如果你也像我一樣害羞\n不太喜歡跟陌生人講話\n在Speak上面呢\n可以直接跟AI練習對話的情境\n蠻猛的一個地方\n就是它在對話的當下呢\n就會修正我講錯的地方\n它不會含糊的說可以更好\n而是直接給我更自然的說法\n那它的核心呢是AI口說練習\n你可以自己自訂這個對話情境\n像我自己練的\n就是面試的self intro\n我可以設定說我自己是求職者\n然後AI是面試官\n而且它不是照稿子走\n會追問你然後挑戰你\n很接近真實面試的一個感覺\nHi my name is Terry. I grew up in Taiwan. I'm a software engineer\nNice to meet you Terry.\nWhat inspired you to become a software engineer\nI used to work in the legal patent space.\nWe used AI to help our customers\nfight for patent infringement lawsuits\nThat sounds interesting. How did you use AI in those cases\n那當你講完之後呢\n它還會自動生成一個專屬的複習課程\n專門整理你剛剛沒講好的部分\n所以你就不用自己回頭找了\nWe used AI to help our customers fight patent infringement lawsuits\nWe used AI to help our customers fight patent infringement lawsuits\n那如果你想要學新用法的話呢\n他們也有這個主題影片的課程\n這個就會比較有結構\nHi there I'm Audrey the lead English teacher at Speak.\nHave we met before\nHave we met before\nHave we met before\nWow have you practiced that before\n那Speak他們是\n拿到OpenAI的投資\n也有技術的合作\n他們在全球有超過4000萬個用戶\n口碑呢也完全是靠實力去累積的\n我自己用起來的體驗呢\n是真的蠻順的啦\n很適合像我這種I人\n不會主動跟陌生人搭話的這種人\n那現在\n訂閱Speak Premium呢\n有年方案299的折扣\n新用戶呢有免費7天可以試用\n連結在影片底下資訊欄\n你可以先試試看再決定\n英文口說呢真的就是純靠練習\n只要你願意開口沒有學不好的\n我會把連結全部放在影片底下資訊欄\n好那我們回到影片\n那會比較擔心說就像最近\n不知道你有沒有關注就是像CRM\nSalesforce這些公司\nAdobe\n他們市場\n對自己這些SaaS公司的產品\n比較悲觀的原因是因為\n大家覺得這些AI\nagentic AI這麼這麼厲害\n這麼強\n像像Claude他們\n最近出很多plugin嘛\nsales plugin\n還有一些\nlegal tech\n的plugin\n那如果他們做一個\nfashion的plugin\n怎麼辦\n那你們會不會\n就是被他們給吃掉\n如果說我們公司真正要做東西\n就聽起來就是我現在講的話\n那絕對會被吃掉\n絕對絕對會被吃掉可是因為\n對我知道就是一直不能講到底要幹嘛\n可是我們後面有一整塊\n其實跟agentic\n跟SaaS是分開的\n哦\n對對我們真正的vision\n是above this\nOK\n對\n那才是我們保護自己的方法\n當然我們也pivot超多次\n然後才land到這個idea\n是因為這個idea才進加速器\n哦所以是因為這個idea\n才拿到你們A60Z的投資\n對那我們現在所有做的\n這些\nfashion workflow\n的software\n只是為了GTM就是要讓客戶上來\n那我們也希望真的幫他們解決痛點\n然後幫他們cost down\n幫他們speed up\n可是這些東西\n未來要帶到的那個vision\n跟agentic\n跟SaaS沒有關係\n真的所以是完全不一樣的產品嗎還是\ntotally different\n我覺得像是一個\nlayer on top of it\n嗯哼\n嗯\nOK那不能講的原因是什麼\n我原本是想講然後\n我原本想講可是因為\n我們4月15號是demo day\n那A60Z的C round\n跟我們聊過了\n想要大家\nstay in stealth as much as possible\n這樣子我們demo day那天\n正式launch\n然後我們的\nfund raise才會\n比較有辦法\n製造那個momentum\ndemo day是什麼\ndemo day\n真的像YC有demo day\ndemo day有點像是\n大家\naccelerator到最後的\n那個成果發表會\n哦OK\n對對對\n所以是大家一起demo\n然後會有investor\n在下面看嗎\n嗯好像說什麼\n那個會場\n會邀1000多個investor\nOK\n可是每個公司只有120秒\n還是90秒很短很短\n哦很短哦\n嗯可是就是要講說我達到多少\nMRR ARR what's the traction\n等等等等等等\n所以說你們會在那個時候\n公佈你們的新的approach\n可是你們現在這個東西\n已經在build嗎\n還是已經ready\n哦對其實build好了\n而且我們也有在\n很hush hush的帶客戶上來\nOK\n嗯嗯只是就是還不能公開講\n對我原本以為可以\n就back and forth\n了幾次\n差點講然後就又沒講\n很值得期待的東西嗎\n我覺得超棒的\n我很想我現在超好奇這個東西\nOK你跟我講說\n你們之前有pivot過很多遍嘛\n然後你們\n有有Angel round\n就是Angel round\n是跟什麼\noutside\ninvestor嗎\n還是自己認識的朋友什麼\n呃當時有比如說前主管\n然後主管會推薦人\n然後我那裡很多\n尤其是AI\n因為AI賺很多錢的人\n所以他們其實\nthey're like angel investing as a sport\n那這些人他們我聽過一個很神奇是\n他們有些人就是我的目標就是有一天\n我要投到400間公司\n那他們每個\n就是smoke check\n那他們其實沒有\n沒有興趣花時間去\n去screen太多的公司\n對對對\n他其實就是喜歡這個founder\n他們就會投\n那當時有\ntap into\n這樣子的network\n然後拿到融資\n嗯大概是這樣吧\n這樣子收集起來的\n天使輪\nOK然後你說\n天使輪大概融了4040幾萬\n46萬\nA60Z跟比如說Ycom\n他們拿的equity的部分大概是\n應該是8到8到10%嗎差不多\n嗯A60Z的話是100萬美金\n那100萬美金\n它分成兩個tranche\n那第一個tranche\n是50萬美金\n然後它就是完全\n拿10%\n所以是\nhard valuation at 5 million\n嗯那可是它的\nsecond tranche\n就是你下次要融的\n然後它會follow\n你那個時候的valuation\nOKI see\nfamily round\n一般他們會拿多少\n我當時就是直接\n我就說我的valuation\n是10 mil cap\n可是他們那個時候\n不是直接\nconvert成equity\n要convert的是在\nC round才convert\n對他們是簽safe嘛\n對啊然後是\n是以10 mil的\nvaluation\n去去拿的\n對對對\nOK\n然後我一開始天使輪是46萬\n然後可是因為到去年8月的時候\n我們等於8月\nhard pivot\n成新的這個idea\n那我當時其實是想說慘了\n就是錢已經快燒完了\n所以我當時就想說為了要\n做這個pivot\n我沒有想要申請A60Z\n我那時候是想說募一個\nbridge round\n因為pivot真的是沒辦法\nstick to the original plan\n所以我的bridge round\n原本要在\nraise another half million\n對那我那時候就在tap into\n之前還沒有投資過我的天使投資人\n其實那個時候\n我們現在這樣\nconnect到\nMicrosoft的CPO\n然後還有Zinga的前CTO\n然後他們的投資就剛好引薦我說\n因為我原本被\nA60Z seed round\n在去年4月拒絕過一次\n然後他們就叫我再投一次看看\n對然後在那個階段的時候\n我募到13萬5\n嗯哼\n13萬5然後我就\n因為accept被accept\n所以就提前結束\n沒有去募那個完整的50萬\nOKOKI see\n那你覺得現在募資有比較難嗎\n還是你覺得investor\n他們看重的是什麼東西\n我覺得要看誰去募\n要看誰去募\n那你覺得他們看重的是你的什麼\n我覺得當時我真的以為\n以我的founder背景\n就夠就完全不夠\nOK\n對然後我原本的idea\n完全就非常replaceable\n我也拿過\nvirtual try on\n去募被拒到不行\n然後我一開始想要做B2C\n然後我那時候想要做的完全就是什麼\nfashion magazine for everyone\n就你現在網站上面的\n沒有現在的話我們現在應該是改成\n對現在應該是完全是flatlay\n就是品牌圖\n就對那原本那些比較可愛的idea\n就配我自己的背景其實很weak\n對所以我真的感覺到投資\n還有我覺得\n我的technical背景\n沒有達到投資人中那種\n可以完全de-risk的\n他們要\n什麼樣的technical背景\n我覺得是OpenAI出來\nDeepMind那種\n哦就\n那就是no-brainer對對對\n那對他們而言就\n而且因為那些人network很強\n他們一定\nthey will make things work\n而且他們一定會覺得\n其他investor也會這樣想\n所以他們都會很容易就投下去\n那我當時很多人跟我說你沒有問題\n你一定會募很多錢結果我沒有\n我就非常struggle\n所以我發現\n是我的idea不夠好\n對我的idea\n沒有達到他們想要的那個樣子\n那idea好之後我覺得現在\n投資人另外一塊想要看的就是\n假設如果當時idea真的不夠好\n可是我就有辦法賺到錢的話\n假設我的revenue很強\n那他們也會投\n因為我聽過幾個也是\n可能背景比較普通\n那可是因為他們就非常\n就是genius型的\n可以crack GTM\n他們可以讓人就是會\n付錢\n對\n那這個投資人也會投\nOK\n對對對\n所以所以你們是你們是你們是怎麼樣\n我們當時進\nA60Z seed round\n完全是\nidea\nidea哦就是那個idea\n因為是\npre-product pre-revenue\n哦哇那蠻厲害的\n所以好險pivot我覺得就是\n被逼急了就是公司要生存一定要\n不停的想然後我就我覺得有意識到\n還有因為\nNano Banana Pro出來\n我那時候就有一種晴天霹靂的感覺\n覺得不能再往這個地方硬鑽\n還自己感動自己\n訓練模型幹嘛對啊\n所以我們就hard pivot\n然後就反而變成\n就是\nblessing in disguise\n真的\nOK\n我我猜\n你們還是有revenue對吧\n有有有嗯\n那你們現在burn rate\n大概可以到到什麼時候\n所以你們runway還有多久\n嗯就真的是\n就是差不多Q2\nQ2OK\n所以你Q2\nvery tight very tight\nQ2之前\n就要在raise下一個round\n對這也是speed round的計畫\n他們基本上是全部參加的公司\n都會在那一天\ndemo day開始的兩週\nraise\nOK所以下一個round就是\n就你剛剛講的那個\n在下一個\n就是我們的真正種子輪\n因為我們到現在\n我就\nI call it pre-seed\n我這樣全部收在一起\nso this is pre-seed round\n嗯那如果從頭再來一次\n你還會去A16Z嗎\n因為\n其實這些incubator他們\n除了給資源之外\n其實他們拿\n很多equity right\n我要拿很多equity嗯\n那\n我覺得兩兩個方向看\n第一個我當時就真的是\nI was desperate\n真的需要有人來幫我\n而且需要\nwe need money\nRight\n另外一個是我因為\n這個program現在開始兩週\n我現在就是\n頭號粉絲我是A16Z的頭號粉絲\n我覺得\n進去加速器之後才有一種\n因為我也我等於創業到進加速器\n經過了一年半\n對\n然後我覺得該經過的\nstruggle我都經過了\nOK\n然後公司那種\n求生存的那種我都經歷過\n所以\n我記得那個speedrun第一天\n他們orientation的時候\n我自己就蠻想哭的\n覺得有有人可以照顧我們\n那種感覺蠻好的\n而且他們的資源真的\n很厲害\n我覺得啦\n當然我覺得\n如果有一個founder\n你說資源很厲害是因為他們\n給你很多connection嗎\n還是給你很多resources\n嗯connection\n就是VC network很強\n然後我覺得他們有一套\nformula知道說\n一個startup\n要怎麼去做branding\n怎麼去launch\n怎麼製造fomo\n還有他們會一直\n他們的office hour\n其實很intense\n我們會跟其他的founder\n一起坐下\n他就會一直grill你的\n你的GTM\n你這個revenue不行\n然後我們每個禮拜都要重新整理\nrevenue projection\n然後他們的partner\n都會進來看\n基本上\n就是\nyell in our face\n說你不夠ambitious\n嗯嗯嗯\n對我喜歡他們這樣子\n就是\nyou got to do a real business\n我們不是要\n進來大家做一個cute idea\n然後就耶拍手結束\n就是show me你12個禮拜\n你就是可以達到怎麼樣的\nARR我們再說你估值是多少\n哦OK\n我覺得他們幫我們逼得很緊\nin a good way\n嗯嗯嗯\n那你現在會覺得壓力很大嗎\n就是\n大啊大啊\n然後也把整個壓力\ntransfer給整個team\n就是我覺得是需要的\nOK\n而且\n我覺得有壓力沒有關係\n可是如果有clarity就很好\n嗯嗯嗯\n因為人家會告訴我說\n我告訴你就是該這麼做\n我知道會很難\n可是至少你會知道不是好像\n不知道方向在哪裡的\n有時候我覺得最恐怖就是怕\n忙忙忙然後每天只告訴自己很忙\n然後自己很感動\n可是沒有覺得\n人家講什麼\nmove the needle\n嗯嗯嗯嗯\n每天的day to day\n大概是怎麼樣\n我們因為speedrun\n它是禮拜二三四\n要去onsite\n有一些sessions\nOK\n對那因為我在上禮拜把我\n世界各地的team\n都colocate嘛\nRight\n對所以我禮拜一\n我們都準時九點到辦公室\n那們一定會\n就是先daily standup\n嗯哼\n對那突然不用\ntake investor call\n的時間\n會突然白天會沒有很多這種\ninvestor meeting\n所以我就是跟team一起\ndevelop\n嗯一起做開發\n一起做開發對\n那\n你沒有\n你沒有其他founder對不對\n你就是唯一founder\n我是我是solo founder\n你是solo founder\n對對你做開發然後\n因為我們有designer\n然後也有幫忙做branding的\n所以不只是開發本身\n也會跟這些夥伴一起討論說\n我們最近有client可能有一些\n問題所以我們要怎麼address\n還有要討論content\nwhich我們是\n最近才開始做content\n對那我們\n還是說\nsocial media\n的content嗎\n還是什麼\nOK\n對對對那這樣一路忙\n其實我們都是忙到七點\n晚上七點\n對七點然後回家之後\n煮煮飯\n煮煮飯之後我跟台灣那邊\n或是日本的會都八點開始\n聽起來很intense\n很好玩very fun\n你如果做你喜歡的事情的話\n我覺得就是好玩\n對對對對對對\n而且因為我們跟台灣開會\n然後\n也會有越來越多inbound\n或是人家介紹的\npotential client\n或是real client\n那他們通常會在我隔天早上醒來前\n就會LINE上面會給我們很多反饋\n嗯嗯嗯\n所以我就知道說OK\n那我們早上九點又是\n要怎麼重新align\n嗯嗯嗯\n可是二三四就要去聽session\nOK\n可是你現在不能review你的\n新的那個pivot的idea\n那你要怎麼去\npitch to你的client\n還是OK的\n我們可以想成兩塊啦\n就是第一塊如果是剛剛講的\n品牌生存的話我就是\n誰都可以sell to it\n對\n那可是第二塊的話\n如果這個人已經跟我們一陣子了\n我們會開始跟他講\nOK\n這個第二塊我們其實做得差不多了\n要不要來玩\n而且第二塊因為\n我看怎麼講\n第二塊不只involve品牌\n應該這樣講\n所以它有另外一端的\nfashion industry\n的人\n我們需要接洽\n所以另外一段我們就花很多時間\n也是去跟他們\nbuild relationship\n所以你自己是\n很喜歡fashion的東西\n算喜歡算喜歡\n因為我覺得你之前好像是做\n你是當model對不對\n嗯嗯嗯\n是因為這個原因\n你喜歡fashion嗎\n還是你一直以來都很喜歡\n我覺得是因為當model\n才喜歡fashion\n因為我覺得我之前\n不是特別\nfashionable的人\n嗯\n對然後是越做越覺得這個\nspace很有趣\n然後你就覺得\n想要\ncombine fashion\n跟AI\n去幫大家做一些事情\n蠻蠻蠻厲害\n因為我不是很懂fashion\n我覺得fashion\n有可能也是說既然都要做事情\n那螢幕上的東西會漂漂亮亮\n好像那種why not\n可是你不覺得\nfashion這種東西\n我自己的感覺是\nfashion這種東西\n一直在rotate嘛\n就是其實你可能十年前的東西\n現在流行一下\n然後可能過十年又會再流行\n就是它是一個東西一直在換\n然後都是根據這些\n應該說怎麼說\n就是這些celebrities\n或是這些influencers\n他們去穿搭什麼的\n帶動這個流行\n對啊那你不覺得這個東西就是\n一直在cycle同樣的東西\n然後隨著AI越來越普及\n然後大家對fashion的觀念\n就是比較\n我我感覺就是\n都是\n來自於social media\n可能TikTok然後穿什麼東西\n然後品牌其實並沒有像以前\n那樣子那麼的\n重要\n重要的是\ninfluencer\n去帶動這個fashion\n而不是品牌本身\n我完全同意\n嗯完全同意\n我覺得我對於\nfashion trend prediction\n這個題目就是完全失去熱情\n因為我寫過兩篇paper\nI'm never touching it again\n因為就真的是這樣子\nthere's nothing to predict\n就其實就是\n其實都是被engineer出來\n我覺得trend都是\n把它engineer出來的\n不是因為真的有一個什麼\n大環境\nblah blah blah\n反正基本上\n有幾個big player\n他們可以決定這個東西\n決定fashion\n對啊就像其實音樂也是一樣\n對啊嗯\n我覺得你剛剛講的那個\ninfluencer\n會celebrity\n會把一個東西炒紅\n對\n這個是完全正確\n就像那個什麼\n拉餔餔還是什麼的\n對你根本沒辦法預測到\n拉餔餔會跑出來\n你現在因為你沒有CTO嗎\n還是沒有\n沒有\n所以所以你就是兼CEOCTO\n嗯\nCPO\n嗯對\n全部都是\n都是你嗎\n是對\n我們就只有我一個C啦\n只有你一個C\n所以你們team全部都是\n就是等於說比較偏向IC\n或是\n最近開始有其中一個人在\n哦沒有\n我有一個\nengineering manager\n要幫我管\n另外兩個developers\nOK\n嗯最近有一個\n幫我做branding的\n他有開始幫我管intern\n嗯哼\n對可是\n我覺得在startup\n就是每個人都\nwear multiple hats\n其實有點像\n互相在manage的感覺\nRight\n那你要怎麼去\nattract\n這些engineer\n或是product team\n來join你的公司\nFirst of all我要先講\n就是我之前一直以為我這個\nadvice很好\n然後\n我在\nspeedrun的\noffice hour\n跟大家share\n然後才要被稍微講說這個\nit's not very applicable\n並不是每一個公司都能用\n所以我先打個預防針\n就我們的方法完全就是\n別人來pitch我\nOK\n嗯我從創公司開始的時候\n那時候\n小小的嘛也沒有什麼人\n然後那個時候\n都是透過Instagram\n有人就會想說他想要來\n跟我工作\nOK\n那我就會因為這樣\n然後去interview\n嗯哼\n對可是\n可以拿到interview的人\n其實也蠻少\n我一定要這個人也是\ntechnically strong\n嗯哼\n嗯那之後我們的\n嗯online presence\n開始漸漸發展之後\n那個時候還是比較多\n台灣或是亞洲人\n哦那時候是2024年嗎\n2024年5月對\n所以我那時候\n有先招到Berkeley的MLE\n嗯嗯嗯\n然後漸漸發展之後\n我是在2024年的秋天冬天\n那時候\n招到台灣的developers\n那也是從Instagram\n對對對那個時候\n我story也有提到說\n我想要developers\n哦所以是因為\n你的Instagram\n經常發你公司的東西嗎\n嗯嗯嗯\n然後你就用這種方式有人來加入\n對對對對對\n所以那個是一開始\n然後再來漸漸拓展\n也是因為我們有被\nA16Z的\n一個\ninvestment thesis\n他們另外一個partner\n寫了一個\nonline shopping landscape\n然後他們就寫了一個\n叫\nstartups to watch\n那時候我們被feature\n然後就有更多人\n是從LinkedIn過來\n哦\n嗯就那時候\n就有LinkedIn上面\n的人會pitch我\n可是at that point\n我不需要\n更多technical的人\n所以其實我通常也聊一聊\n然後並沒有覺得說\n這個會\nbring more value\n因為我已經有一個\n很strong的\nBerkeley MLE\n幫我管\n台灣三個developers\n對所以真正打動我的是到\n秋天的時候\n有一個在Kellogg\n念MBA的女生\n對然後他就pitch說\n他可以幫忙\n很多\npricing strategy\nGTM strategy\nOK\n嗯那我那時候就在收了他\n哦還有在那之前還有\n開始有\nfashion industry\n的人\n想要transition\n到tech\n哦\n所以也在\nLinkedIn上pitch自己\n然後就有一個巴黎的女生\n跟一個倫敦的女生\n這樣子不會就是花很多時間\n要去filter掉一些\n不qualified的人嗎\n要要我\n我發現\n這也是沒辦法\n這就是founder該做的\n我意思說就是\n因為你如果在LinkedIn上面\n直接去\noutreach\n會稍微精準一點\n因為你在LinkedIn上面可以\n準確的指定說\n你要什麼skill set\n你要什麼樣的人\n對當然他們不一定會理你\n只是說就是\n會來reach out你的人\n應該是他們真的是有興趣嘛\n對你的產品\n或是對你的vision有興趣\n但是通常這樣子\n不代表說\n他們有這個skill set\n或是他們qualified\n是\n對啊\n所以說我比較好奇是你怎麼去\n組建你的\nfounding team的\n因為我覺得\nfounding team很重要\n而且而且\nfounding team\n會直接shape\n你之後整個公司的文化\n嗯嗯嗯\nthe culture\n你是怎麼樣的去execute\n這些我覺得\n都是founding team會\n帶來不太一樣的改變\n那founding team\n很強的話\n其實你在做事情也會效率會高很多\n對對對\n那你是怎麼去select\n或是你你會看重哪些人格特質\n或是哪些東西是你在乎的\n人格特質第一個如果說\n他們\npitch themselves to me\n通常進來之後我可以感覺到態度很好\n對但是還有另外一個是\n進來之後我也會試用\n嗯哼\n嗯試用一定要過了才會繼續\nOK\n對那還有\n當然合作不愉快的話\n就要fire\n嗯\n嗯嗯嗯\n那我覺得\n有裁員這個\n動作的話其實\n對於團隊是好的\n嗯哼\n對因為團隊會意識到說\n你的工作態度一定要在那裡\nOK\n嗯嗯嗯\nOK\n對其實我這上禮拜\n大家來的時候\n聽起來很crazy\n可是我就是基本上跟大家講說\n這12週\nI want you to work as hard as you can\nprobably the hardest in your life\n那我有跟團隊講說\n我加班的時候也要找到你\n我週末我需要找到你\nyou have to be there\n如果你沒有想要\ntake part in this kind of\nworking\nenvironment的話\n禮拜五以前辭職\n我都會給你severance\nOK\n可是禮拜五之後\nI can't guarantee\n因為我們就沒有那個budget\n嗯\n對啊那\n那有人辭職嗎\n沒有\n開心對所以\n我覺得該嚴肅的時候還是要嚴肅\n那\n嗯對啊可是\n剛剛你講到說\n如果自己outreach\n其實outreach\n一定會有很好很好的talent\n對\n可是這些talent\n我其實一直都有在\nmanage\n這些talent's\nrelationship\n這些talent\n不是這麼快就點頭進來的\n嗯有幾個就是那種真的是\n要花很多錢才請得到的\n他們其實也在等我們什麼時候可以把\n母子母下來\n哦所以是你付不起他們\n你目前還付不起\n那你目前可以付得起的\ncompensation structure\n就是給equity\nequity加salary\n沒有還是有還是有salary\nequity加salary嗎\n對對對\n我現在你們是我覺得你們用\nglobal team是說\n其實你們salary\n就相對來講很懂可以省很多錢對不對\n因為我自己\n也在APAC hiring過\n然後網路上有很多嘴\n就是說我們就是為了省錢去\nhire\n很多台灣的engineer\n或是在APAC\n越南的engineer\n對啊\n沒辦法啊\n對啊這是一個現實\n所以什麼就是\n你要要公司燒錢燒到沒錢嗎\n那也不對啊\n嗯\n對啊\n我覺得當時給的salary\n是蠻不錯的\n就是\n我知道我給得很好\n他們自己也說很好\n因為我問他們要不要\n我其實想說\n你們\none year anniversary\n要不要調薪他們還說不用\nOh really\n對啊\n我可能不小心給太好我不知道\n可是我自己知道我給得不錯\nOK你給多少可以透露嗎\n要剪掉\nengineer\n錄完再講\nOK\n對啊這個我知道\nOK那你\nhire engineer的時候\n你會考一些\n比較technical的東西嗎\n嗯其實我覺得這我做得沒有很好\n因為我從來都不是engineer\n我是scientist\n所以我當時不是\n可是你自己有寫code啊\n可是我不知道\n那些\nweb development\n的東西\n哦OK\n我就是透過agent才會的\nOK\n嗯那我當時其實是\n叫他們給我看他們做過的東西\nOK\n他們會給我看\n他portfolio然後\n解釋給我聽\nOK\n這樣就OK\n這樣就OK\n對啊目前為止是OK啊\n感覺沒有出什麼事\n目前目前都OK對不對\n蠻滿意的\nOK\n可是我覺得\nglobal team這件事情\n還有我很多想法就是\n我覺得大家嘴什麼\n你這樣是省錢可是沒辦法\n就是物價這不是\n我們身為founder能控制的\n這個是世界就是這樣子\n但是我自己覺得\n我hire\n台灣的developers\n他們的work ethics\n非常非常非常好\n嗯\n這個我百分之百這麼覺得\n就是他們反而幫我的公司\nmirror-mirror\nset了很好的工作文化\n嗯\n嗯\n我覺得很幸運\n因為我自己的經驗是\n我hire的team應該說\n比較少人會有像\n就是就是還是要\n你要involve很多\n他們的我就比較多在做的事情\n就是怎麼樣去讓他們會可以\n把那個mindset轉到比較偏向\nSilicon Valley的\n這個\nworking culture\n我的感覺是這樣子\n我覺得可能就很多東西要放在\n怎麼incentivize\nOK\n因為怎麼講比如說\n有一些東西不是這麼\n可以quantify的\n當然我講一個\n可以quantify的\nqualitative\n跟quantitative\nqualitative的話我們蠻\n我自己個人蠻在乎讓我的team\n都有機會接觸到客戶\n嗯哼\n然後讓他們知道他們做的事情\n對客戶而言意義有多重大\n所以我們之前去參觀過工廠\n參觀過品牌的辦公室\n我就帶我team去\n然後我讓他們跟客戶講\n然後客戶就跟他們說\n謝謝你啊等等等等\n我覺得那個是\nemotionally\n會很magical的事情\n另外一個是我們跟Vogue辦活動\n我也帶我的team去\n我就是想要讓他們知道說\n你們不是\njust another tech company\n今天我們達到了一個\nVogue願意讓我們去你辦公室\n然後這麼多的品牌來聽\n這是一種就是一種pride\n對那另外一個是\n因為我們是startup\n所以有募資\n所以我會算得很清楚說\n你現在手上這麼多equity\n如果你認真的話\n我們可以convert\n成怎樣的revenue\n怎樣的revenue\nconvert到\n怎樣的valuation\n所以當我們募到之後\n你想你會有多少錢\n畫餅畫餅\n對畫餅啊對啊\n就大家一起來算算白板上算數\nOK\n我覺得那個\n就會有motivation\n可是不能一直這樣子\n要短就是一次要一個\n短期衝刺\nOK\n一個sprint\n一個sprint的感覺\n對啊平常就是多帶我們吃飯\n他們很開心\n各種各種都要做啦\n聽起來\n那個startup life\n蠻開心的\n我是很開心啦\n真的哦\n對啊不知道搞不好你去訪問我員工\n我講另外一個故事\n我等你看\n有可能\n我自己本人很開心\n其實很多人在evaluate\n一個startup的\noffer的時候\n他們會看說\n我的base salary是多少\n然後可能我的comp\n就是可能equity的部分\n現在值多少錢\n那你會怎麼去convince他說\n其實你看equity現在值多少錢\n是沒什麼太大意義\n因為比如說\n你們現在value是10 mil\n或什麼之類的\n但你如果去算你equity的話\n其實你如果再分四年去算的話\n其實你的total comp\n會遠遠低於你可能去一個\n公司工作\n對啊\n那你怎麼去convince他們說\n這個是可以去做的事情\n我覺得我還沒有遇到那樣的問題\n就是因為那樣子的人\n你們team都太太天使了吧\n他們是天使沒錯啊\n等下給你看照片\n就是\n我覺得那樣子的人\nI'm still working on it\n那我們也還沒到那個階段\n哦所以就是你們還沒有\n真的就是遇到\n真的你們很想hire的人\n然後你需要去做這樣的事情\n對我覺得我們在expand的時候\n會是需要開始這樣\n可是目前為止\n我也不是說我們是一個小cult\n可是就是我覺得大家\n大家還有因為我們團隊感情非常好\n哦\n對然後我覺得大家有意識到說\n就算工作有時候很累\n可是因為他們很喜歡同事\n嗯然後我們\n很多東西他們會覺得說\nOK我可能從來沒有想過\n我可以去fashion品牌活動啊\n或是什麼樣的\n所以\n有可能我現在目前現階段吸引到的人\n他們不會特意去跟我聊這些東西\n但還是會\nnegotiate salary\n也會討論說我們如果要\n種子輪之後大家加薪啊什麼\n這都還是會討論\n可是並沒有那麼多\nequity上面的\n這種conversation\n嗯嗯嗯\n我覺得大家蠻chill\n就是對於這個這個部分\n哦真的\n嗯嗯嗯\nOK\n因為因為我如果要去join一個\n這麼early stage\n的startup的話\n我應該會要很多的equity\n因為我覺得說要讓我的時間值得\n尤其是\ntake on\n這麼大的一個risk\n的話\n可是我覺得因為你是\nex-tech對吧\n你是待過tech company\n就是待過corporate\n呃算是對\n對啊\n對\n嗯我覺得目前為止\n為了我辭職的人\n當然台灣的工程師都為了我辭職\n可是他們不是待矽谷的\n公司那另外為了我辭職的\n巴黎跟倫敦的\n對啊他們的\n他們是離開fashion公司過來\n所以我覺得\n那個mindset有點不一樣\n哦\n嗯可是我完全可以理解\n如果待過\n尤其是\nSilicon Valley\n的公司\n那個要很多convincing\n嗯所以你們還沒有hire\n目前還沒有hire這樣的人\n就是\n還沒那樣子的人只有來實習的\n就是他在\nSilicon Valley\n實習過\n嗯\n對比如說之前有待過\n在Amazon Fashion\n跟我同時間的\n他是PhD實習生\n去年暑假來公司實習\n嗯\n那你們這樣子做產品\niteration夠快嗎\n當然我當然一直都覺得不夠快\n真的\n我覺得嗯\n我覺得你剛剛講到就是\n大家感情都很好\n像一個family一樣\n我覺得這個是一個很好一個\n很好的一個事情\n但是我個人認為\nCOVID前的\nstartup的那種環境\n跟現在的startup環境\n有點不太一樣\n我覺得現在現在startup\n至少我自己\n過去兩三年待的startup\n感覺其實我們\nconstantly\n就是在在在battle\n我們是在一個很高度壓力環境下\n然後其實\nculture-wise我覺得\n我們大家私底下都是還不錯\n但是會覺得說我們今天就是來\n完成任務\n然後我們是很dedicated\n要focus\n要完成事情要execute\n以前那種比較很nice\n大家都慢慢來\n然後可能很\nrespect對方那種感覺\n就已經\n就\ncut that bullshit\n然後我們就會直接就是\n有什麼話都很直的去講\n然後\n這個feedback\n都很\nstraightforward\n這種\n這是我覺得就是如果再下一個\n環境下要生存下來\nstartup要生存下來\n需要有的文化\n公司文化\n我自己是覺得感情好跟\n講話很harsh不衝突\n因為我對員工很harsh\nRight\n對就是如果東西沒有做完\n那我一定是告訴他\n你今天這個delay的\nconsequence有多嚴重\n你為因為我們會\n因為你這樣子失去客戶\n那每個人\n都會有他們\nresponsible的東西\n那個人就會被我講\nOK\n對我覺得\n有可能我感情很好所以我很兇\n所以互相互相感情很好\n但我不覺得contradict\n對那我也知道\n員工的working hours\n也很長\n大家是七點離開\n是因為我們\ncoworking space\n七點就關了可是大家回家還是繼續\n還是會繼續做\n對對對\n你們過蠻那個蠻認真的\n嗯\n很棒\n必須因為我\n我覺得我也讓他們意識到就是\n因為我們這麼早\n他們現在不認真公司萬一公司垮了呢\n那他們那些equity不就沒了嗎\n對啊對啊\n嗯\n回到之前你還會選擇去走創業這條路嗎\n我覺得會選擇但我還是覺得很累\n所以你還是會選擇去走這條路\n會會\n會比之前\n你在corporate工作\n還要好玩\n好玩很多可是很累\n很累對吧\n嗯\n需要擔心的事情太多了\n需要擔心的事情很多然後\n我平常我原本應該是一個睡很好的人\n可是我覺得就擔心到不行\n就真的會睡不著\n哇\n對啊然後去年是大爆痘啊\n就是我該有的都有\n就各種壓力很大\n嗯\n或是自我懷疑啊\n就覺得說我現在為員工負責了\n我是不是其實他們頭已經洗下去了\n我到底有沒有做對\n嗯嗯\n差不多這樣\n好啊\n那很感謝玉珊來今天\n來這邊跟大家分享關於\n矽谷新創\n早期新創的一個環境\n還有公司的一些內容\n我覺得很棒\n希望大家有學到一點東西\n然後也祝你們融資順利\n可以可以賺很多錢\n謝謝我也希望\nOK好那今天這集就到這邊了\n拜拜\n拜",
+    "segments": [
+      {
+        "index": 0,
+        "text": "Hello大家好我是Terry"
+      },
+      {
+        "index": 1,
+        "text": "今天呢邀請了特別來賓"
+      },
+      {
+        "index": 2,
+        "text": "一個"
+      },
+      {
+        "index": 3,
+        "text": "新創公司的CEO founder"
+      },
+      {
+        "index": 4,
+        "text": "玉珊"
+      },
+      {
+        "index": 5,
+        "text": "來到頻道"
+      },
+      {
+        "index": 6,
+        "text": "跟大家聊一下關於startup"
+      },
+      {
+        "index": 7,
+        "text": "還有一些她的經驗"
+      },
+      {
+        "index": 8,
+        "text": "嗯"
+      },
+      {
+        "index": 9,
+        "text": "那你覺得西雅圖怎麼樣"
+      },
+      {
+        "index": 10,
+        "text": "你上次來西雅圖什麼時候"
+      },
+      {
+        "index": 11,
+        "text": "我完全欸"
+      },
+      {
+        "index": 12,
+        "text": "高中吧"
+      },
+      {
+        "index": 13,
+        "text": "高中哦"
+      },
+      {
+        "index": 14,
+        "text": "我高中的時候來過一個暑假學英文"
+      },
+      {
+        "index": 15,
+        "text": "OK高中什麼時候"
+      },
+      {
+        "index": 16,
+        "text": "我高中是17年前了"
+      },
+      {
+        "index": 17,
+        "text": "很久很久以前"
+      },
+      {
+        "index": 18,
+        "text": "OK"
+      },
+      {
+        "index": 19,
+        "text": "玉珊你最近"
+      },
+      {
+        "index": 20,
+        "text": "就是你們的startup新創公司"
+      },
+      {
+        "index": 21,
+        "text": "剛結束了融資是最近嗎"
+      },
+      {
+        "index": 22,
+        "text": "還是"
+      },
+      {
+        "index": 23,
+        "text": "哦應該說"
+      },
+      {
+        "index": 24,
+        "text": "10月的時候加入加速器"
+      },
+      {
+        "index": 25,
+        "text": "然後那時候算結束"
+      },
+      {
+        "index": 26,
+        "text": "去年10月的時候"
+      },
+      {
+        "index": 27,
+        "text": "對對對"
+      },
+      {
+        "index": 28,
+        "text": "然後現在加速器才剛開始"
+      },
+      {
+        "index": 29,
+        "text": "嗯"
+      },
+      {
+        "index": 30,
+        "text": "那我覺得蠻厲害的啦因為"
+      },
+      {
+        "index": 31,
+        "text": "其實現在"
+      },
+      {
+        "index": 32,
+        "text": "呃startup很競爭"
+      },
+      {
+        "index": 33,
+        "text": "尤其是"
+      },
+      {
+        "index": 34,
+        "text": "VC要給錢的情況下"
+      },
+      {
+        "index": 35,
+        "text": "因為因為以前"
+      },
+      {
+        "index": 36,
+        "text": "VC錢很多然後隨便砸"
+      },
+      {
+        "index": 37,
+        "text": "尤其在疫情的時候"
+      },
+      {
+        "index": 38,
+        "text": "那現在因為"
+      },
+      {
+        "index": 39,
+        "text": "現在錢其實砸的地方很重要"
+      },
+      {
+        "index": 40,
+        "text": "然後"
+      },
+      {
+        "index": 41,
+        "text": "要看founder的一些特質"
+      },
+      {
+        "index": 42,
+        "text": "還有看startup的一些特質"
+      },
+      {
+        "index": 43,
+        "text": "要去砸錢"
+      },
+      {
+        "index": 44,
+        "text": "我覺得現在這個環境下要融資是比較"
+      },
+      {
+        "index": 45,
+        "text": "困難的相對來講比較困難"
+      },
+      {
+        "index": 46,
+        "text": "你之前有融過資嗎還是這是第一次"
+      },
+      {
+        "index": 47,
+        "text": "很多次"
+      },
+      {
+        "index": 48,
+        "text": "很多次OK"
+      },
+      {
+        "index": 49,
+        "text": "呃我一開始融資的時候"
+      },
+      {
+        "index": 50,
+        "text": "是就是先Angel round"
+      },
+      {
+        "index": 51,
+        "text": "Angel round"
+      },
+      {
+        "index": 52,
+        "text": "是走的最順的"
+      },
+      {
+        "index": 53,
+        "text": "因為那時候"
+      },
+      {
+        "index": 54,
+        "text": "有friends"
+      },
+      {
+        "index": 55,
+        "text": "and family"
+      },
+      {
+        "index": 56,
+        "text": "然後跟人家介紹的天使投資人"
+      },
+      {
+        "index": 57,
+        "text": "Angel round"
+      },
+      {
+        "index": 58,
+        "text": "是在什麼時候"
+      },
+      {
+        "index": 59,
+        "text": "呃我一開公司的時候就融了"
+      },
+      {
+        "index": 60,
+        "text": "OK"
+      },
+      {
+        "index": 61,
+        "text": "對那時候就融了46萬"
+      },
+      {
+        "index": 62,
+        "text": "OK嗯嗯嗯"
+      },
+      {
+        "index": 63,
+        "text": "OK"
+      },
+      {
+        "index": 64,
+        "text": "所以開公司的時候是去年嗎"
+      },
+      {
+        "index": 65,
+        "text": "沒有欸2024年5月"
+      },
+      {
+        "index": 66,
+        "text": "哦OK所以大概一年多前"
+      },
+      {
+        "index": 67,
+        "text": "對對對對"
+      },
+      {
+        "index": 68,
+        "text": "然後你們公司"
+      },
+      {
+        "index": 69,
+        "text": "是叫Mirror AI"
+      },
+      {
+        "index": 70,
+        "text": "Mirror Mirror"
+      },
+      {
+        "index": 71,
+        "text": "以前一直來都是這個名字嗎還是"
+      },
+      {
+        "index": 72,
+        "text": "一直都是名字想過要改幾次"
+      },
+      {
+        "index": 73,
+        "text": "可是不小心就會上了一些文章"
+      },
+      {
+        "index": 74,
+        "text": "就發現不能改了"
+      },
+      {
+        "index": 75,
+        "text": "你說已經有一些"
+      },
+      {
+        "index": 76,
+        "text": "在不同的地方社群媒體報導"
+      },
+      {
+        "index": 77,
+        "text": "然後你就覺得OK"
+      },
+      {
+        "index": 78,
+        "text": "就是"
+      },
+      {
+        "index": 79,
+        "text": "stick with the name"
+      },
+      {
+        "index": 80,
+        "text": "對對對對對"
+      },
+      {
+        "index": 81,
+        "text": "那你可以給我一個"
+      },
+      {
+        "index": 82,
+        "text": "high level的"
+      },
+      {
+        "index": 83,
+        "text": "一個pitch"
+      },
+      {
+        "index": 84,
+        "text": "就是你的名字你的公司是做什麼"
+      },
+      {
+        "index": 85,
+        "text": "嗯"
+      },
+      {
+        "index": 86,
+        "text": "對"
+      },
+      {
+        "index": 87,
+        "text": "我們現在在做的是"
+      },
+      {
+        "index": 88,
+        "text": "專門幫時尚品牌做的"
+      },
+      {
+        "index": 89,
+        "text": "一個生圖workflow"
+      },
+      {
+        "index": 90,
+        "text": "嗯哼"
+      },
+      {
+        "index": 91,
+        "text": "對那因為非常非常多的"
+      },
+      {
+        "index": 92,
+        "text": "想要做類似事情的競品"
+      },
+      {
+        "index": 93,
+        "text": "他們基本上是會"
+      },
+      {
+        "index": 94,
+        "text": "呃用的還是很AI"
+      },
+      {
+        "index": 95,
+        "text": "會跟你說你要自己先選擇模型啊"
+      },
+      {
+        "index": 96,
+        "text": "要選擇生圖的各種方式調參數"
+      },
+      {
+        "index": 97,
+        "text": "但是我們是把這些全部都"
+      },
+      {
+        "index": 98,
+        "text": "讓使用者不用做決定"
+      },
+      {
+        "index": 99,
+        "text": "OK"
+      },
+      {
+        "index": 100,
+        "text": "對我們會自動根據這個"
+      },
+      {
+        "index": 101,
+        "text": "衣品的特質"
+      },
+      {
+        "index": 102,
+        "text": "還有你想要生圖的目標等等"
+      },
+      {
+        "index": 103,
+        "text": "幫你自動生出來"
+      },
+      {
+        "index": 104,
+        "text": "然後不用去做任何的手動控制"
+      },
+      {
+        "index": 105,
+        "text": "生圖就是比如說我今天要"
+      },
+      {
+        "index": 106,
+        "text": "用個雜誌封面"
+      },
+      {
+        "index": 107,
+        "text": "或是我要有一個產品的宣傳"
+      },
+      {
+        "index": 108,
+        "text": "那我可能有些model"
+      },
+      {
+        "index": 109,
+        "text": "然後可以用你們的產品去把東西給"
+      },
+      {
+        "index": 110,
+        "text": "生出來就那個圖片我不需要自己去拍"
+      },
+      {
+        "index": 111,
+        "text": "是這個意思嗎"
+      },
+      {
+        "index": 112,
+        "text": "是的是的是的那"
+      },
+      {
+        "index": 113,
+        "text": "嗯其中有一部分我們現在還不能"
+      },
+      {
+        "index": 114,
+        "text": "還不能公佈"
+      },
+      {
+        "index": 115,
+        "text": "可是可以先公佈的就是我們在"
+      },
+      {
+        "index": 116,
+        "text": "呃推出的品牌生成器"
+      },
+      {
+        "index": 117,
+        "text": "所以就是單純就衣品來講的話"
+      },
+      {
+        "index": 118,
+        "text": "嗯"
+      },
+      {
+        "index": 119,
+        "text": "嗯因為大家看電商的時候"
+      },
+      {
+        "index": 120,
+        "text": "都會看到衣服的"
+      },
+      {
+        "index": 121,
+        "text": "品牌圖"
+      },
+      {
+        "index": 122,
+        "text": "那其實那個品牌圖我們"
+      },
+      {
+        "index": 123,
+        "text": "跟很多品牌採訪的時候"
+      },
+      {
+        "index": 124,
+        "text": "他們都會抱怨說那個品牌圖"
+      },
+      {
+        "index": 125,
+        "text": "很耗時然後其實也很耗錢"
+      },
+      {
+        "index": 126,
+        "text": "而且就這些creative來講"
+      },
+      {
+        "index": 127,
+        "text": "其實他們拍這個"
+      },
+      {
+        "index": 128,
+        "text": "一點激發創意激發都沒有"
+      },
+      {
+        "index": 129,
+        "text": "OK"
+      },
+      {
+        "index": 130,
+        "text": "對所以我們用AI的方式"
+      },
+      {
+        "index": 131,
+        "text": "來幫他們製造這樣子的圖"
+      },
+      {
+        "index": 132,
+        "text": "然後基本上他們用"
+      },
+      {
+        "index": 133,
+        "text": "drag and drop"
+      },
+      {
+        "index": 134,
+        "text": "就可以去做這些事情"
+      },
+      {
+        "index": 135,
+        "text": "回過來的時候"
+      },
+      {
+        "index": 136,
+        "text": "幾百件衣服我們就幫你弄好了"
+      },
+      {
+        "index": 137,
+        "text": "哦你說直接在衣服上面"
+      },
+      {
+        "index": 138,
+        "text": "把品牌弄上去嗎"
+      },
+      {
+        "index": 139,
+        "text": "還是它怎麼work"
+      },
+      {
+        "index": 140,
+        "text": "哦嗯"
+      },
+      {
+        "index": 141,
+        "text": "我今天是一個雜誌的編輯好了"
+      },
+      {
+        "index": 142,
+        "text": "然後我來找你們"
+      },
+      {
+        "index": 143,
+        "text": "然後我是怎麼樣去生成一個圖片"
+      },
+      {
+        "index": 144,
+        "text": "從零到一"
+      },
+      {
+        "index": 145,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 146,
+        "text": "的一個過程"
+      },
+      {
+        "index": 147,
+        "text": "我們用品牌舉例好了"
+      },
+      {
+        "index": 148,
+        "text": "因為雜誌跟雜誌編輯"
+      },
+      {
+        "index": 149,
+        "text": "跟品牌的use case"
+      },
+      {
+        "index": 150,
+        "text": "還是不一樣"
+      },
+      {
+        "index": 151,
+        "text": "嗯所以如果是品牌的話"
+      },
+      {
+        "index": 152,
+        "text": "基本上他們的倉儲裡就會有已經"
+      },
+      {
+        "index": 153,
+        "text": "manufacture好的衣服"
+      },
+      {
+        "index": 154,
+        "text": "那可是如果要做初高質感的品牌圖"
+      },
+      {
+        "index": 155,
+        "text": "以前其實是要請攝影師"
+      },
+      {
+        "index": 156,
+        "text": "然後在攝影棚裡面拍好"
+      },
+      {
+        "index": 157,
+        "text": "然後要完全有運燙好"
+      },
+      {
+        "index": 158,
+        "text": "整個衣服要整理的整整齊齊"
+      },
+      {
+        "index": 159,
+        "text": "事後還要再修圖"
+      },
+      {
+        "index": 160,
+        "text": "嗯"
+      },
+      {
+        "index": 161,
+        "text": "那versus我們現在提供的服務"
+      },
+      {
+        "index": 162,
+        "text": "基本上品牌owner也好"
+      },
+      {
+        "index": 163,
+        "text": "或者是他們的美編或是實習生"
+      },
+      {
+        "index": 164,
+        "text": "他們拿手機就可以了"
+      },
+      {
+        "index": 165,
+        "text": "然後手機基本上衣服簡單掛在人形上"
+      },
+      {
+        "index": 166,
+        "text": "或是一架上正反兩面稍微拍"
+      },
+      {
+        "index": 167,
+        "text": "光線也不用調也不用去做"
+      },
+      {
+        "index": 168,
+        "text": "就是steaming啊"
+      },
+      {
+        "index": 169,
+        "text": "也不用去把它用品"
+      },
+      {
+        "index": 170,
+        "text": "然後放到我們品牌生成器之後"
+      },
+      {
+        "index": 171,
+        "text": "就會自動生成漂亮的"
+      },
+      {
+        "index": 172,
+        "text": "正反面圖"
+      },
+      {
+        "index": 173,
+        "text": "跟商品敘述"
+      },
+      {
+        "index": 174,
+        "text": "哦OK所以說直接就可以上到那個"
+      },
+      {
+        "index": 175,
+        "text": "他們網站"
+      },
+      {
+        "index": 176,
+        "text": "比如"
+      },
+      {
+        "index": 177,
+        "text": "網站的product page"
+      },
+      {
+        "index": 178,
+        "text": "對對對"
+      },
+      {
+        "index": 179,
+        "text": "上面這樣子"
+      },
+      {
+        "index": 180,
+        "text": "我們現在有提供就是"
+      },
+      {
+        "index": 181,
+        "text": "可以讓他們直接"
+      },
+      {
+        "index": 182,
+        "text": "跟商家必做integration"
+      },
+      {
+        "index": 183,
+        "text": "嗯哼"
+      },
+      {
+        "index": 184,
+        "text": "對然後我們下禮拜"
+      },
+      {
+        "index": 185,
+        "text": "會推出"
+      },
+      {
+        "index": 186,
+        "text": "Shopify的"
+      },
+      {
+        "index": 187,
+        "text": "integration"
+      },
+      {
+        "index": 188,
+        "text": "就像是美國的Shopline"
+      },
+      {
+        "index": 189,
+        "text": "嗯哼"
+      },
+      {
+        "index": 190,
+        "text": "嗯那另外我們在開發的"
+      },
+      {
+        "index": 191,
+        "text": "這個月底要推出的就是"
+      },
+      {
+        "index": 192,
+        "text": "這個其實可以用成API"
+      },
+      {
+        "index": 193,
+        "text": "我們就API offering"
+      },
+      {
+        "index": 194,
+        "text": "嗯哼"
+      },
+      {
+        "index": 195,
+        "text": "那這樣"
+      },
+      {
+        "index": 196,
+        "text": "最難的地方在哪裡"
+      },
+      {
+        "index": 197,
+        "text": "因為我感覺好像"
+      },
+      {
+        "index": 198,
+        "text": "會有很多的就是"
+      },
+      {
+        "index": 199,
+        "text": "你們生成出來的東西"
+      },
+      {
+        "index": 200,
+        "text": "需要fine tune"
+      },
+      {
+        "index": 201,
+        "text": "就可能我也覺得顏色好像不太對"
+      },
+      {
+        "index": 202,
+        "text": "或者是我可能光線或是"
+      },
+      {
+        "index": 203,
+        "text": "身為一個customer"
+      },
+      {
+        "index": 204,
+        "text": "我會想要就是"
+      },
+      {
+        "index": 205,
+        "text": "網站上看到的東西跟實體寄到"
+      },
+      {
+        "index": 206,
+        "text": "收到的東西不太一樣"
+      },
+      {
+        "index": 207,
+        "text": "那這個是這我覺得會比較多的事情"
+      },
+      {
+        "index": 208,
+        "text": "還是有一些其他的"
+      },
+      {
+        "index": 209,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 210,
+        "text": "對"
+      },
+      {
+        "index": 211,
+        "text": "我們之前開始做的時候很大一個部分"
+      },
+      {
+        "index": 212,
+        "text": "原本是精準度可是精準度如果你想成"
+      },
+      {
+        "index": 213,
+        "text": "現在生圖模型就是一直在進步的話"
+      },
+      {
+        "index": 214,
+        "text": "這其實漸漸是"
+      },
+      {
+        "index": 215,
+        "text": "會被solve的problem"
+      },
+      {
+        "index": 216,
+        "text": "所以如果講"
+      },
+      {
+        "index": 217,
+        "text": "這個生成generation本身"
+      },
+      {
+        "index": 218,
+        "text": "單一一個商品做生成的時候"
+      },
+      {
+        "index": 219,
+        "text": "它準確度已經不是我們需要煩惱的"
+      },
+      {
+        "index": 220,
+        "text": "反而是你一個商家"
+      },
+      {
+        "index": 221,
+        "text": "有一整個collection"
+      },
+      {
+        "index": 222,
+        "text": "你生成的時候的那個一致性很難"
+      },
+      {
+        "index": 223,
+        "text": "OK"
+      },
+      {
+        "index": 224,
+        "text": "對就是你要怎麼可以控制說"
+      },
+      {
+        "index": 225,
+        "text": "我生成出來的商品"
+      },
+      {
+        "index": 226,
+        "text": "他們的袖子角度也好"
+      },
+      {
+        "index": 227,
+        "text": "然後或者商品呈現"
+      },
+      {
+        "index": 228,
+        "text": "是要砰的還是要扁的"
+      },
+      {
+        "index": 229,
+        "text": "那或者是他們的陰影"
+      },
+      {
+        "index": 230,
+        "text": "是不是能夠都非常一致"
+      },
+      {
+        "index": 231,
+        "text": "那我們要能確保說假設這次的"
+      },
+      {
+        "index": 232,
+        "text": "collection有60件"
+      },
+      {
+        "index": 233,
+        "text": "他們呈現出來的時候要很整齊"
+      },
+      {
+        "index": 234,
+        "text": "OK"
+      },
+      {
+        "index": 235,
+        "text": "I see"
+      },
+      {
+        "index": 236,
+        "text": "所以這個是產品比較難的技術"
+      },
+      {
+        "index": 237,
+        "text": "點嗎"
+      },
+      {
+        "index": 238,
+        "text": "對技術點然後還有生圖的時候"
+      },
+      {
+        "index": 239,
+        "text": "如果"
+      },
+      {
+        "index": 240,
+        "text": "花很多很多步驟"
+      },
+      {
+        "index": 241,
+        "text": "去做調整"
+      },
+      {
+        "index": 242,
+        "text": "因為你可以做"
+      },
+      {
+        "index": 243,
+        "text": "很多pre-processing"
+      },
+      {
+        "index": 244,
+        "text": "很多"
+      },
+      {
+        "index": 245,
+        "text": "post-processing"
+      },
+      {
+        "index": 246,
+        "text": "其實對於客戶來講"
+      },
+      {
+        "index": 247,
+        "text": "那個等待的latency很長"
+      },
+      {
+        "index": 248,
+        "text": "那其實大家那個體驗就會很差"
+      },
+      {
+        "index": 249,
+        "text": "所以我們要怎麼樣用聰明的方法"
+      },
+      {
+        "index": 250,
+        "text": "保持品質同時又不會讓等待時間太長"
+      },
+      {
+        "index": 251,
+        "text": "I see"
+      },
+      {
+        "index": 252,
+        "text": "了解"
+      },
+      {
+        "index": 253,
+        "text": "所以說你現在已經可以做到"
+      },
+      {
+        "index": 254,
+        "text": "怎麼樣的程度就是可以讓"
+      },
+      {
+        "index": 255,
+        "text": "客戶覺得欸"
+      },
+      {
+        "index": 256,
+        "text": "做出來的時候就很滿意嗎"
+      },
+      {
+        "index": 257,
+        "text": "還是說你會花大概多少時間"
+      },
+      {
+        "index": 258,
+        "text": "去manually去做微調"
+      },
+      {
+        "index": 259,
+        "text": "嗯其實我們"
+      },
+      {
+        "index": 260,
+        "text": "一開始都會以自己的判斷去做微調"
+      },
+      {
+        "index": 261,
+        "text": "但是我們現在發現"
+      },
+      {
+        "index": 262,
+        "text": "還是直接聽客戶講比較重要"
+      },
+      {
+        "index": 263,
+        "text": "所以我們有兩個客戶是會非常"
+      },
+      {
+        "index": 264,
+        "text": "兩個品牌"
+      },
+      {
+        "index": 265,
+        "text": "他們會非常的密切跟我們開會"
+      },
+      {
+        "index": 266,
+        "text": "OK"
+      },
+      {
+        "index": 267,
+        "text": "然後會告訴他們的反饋"
+      },
+      {
+        "index": 268,
+        "text": "告訴我們哪裡做得不夠好"
+      },
+      {
+        "index": 269,
+        "text": "那我們就要馬上的去iterate"
+      },
+      {
+        "index": 270,
+        "text": "那其中一個商家比如說之前品牌圖"
+      },
+      {
+        "index": 271,
+        "text": "他們因為"
+      },
+      {
+        "index": 272,
+        "text": "人工跟資金有限"
+      },
+      {
+        "index": 273,
+        "text": "所以他們一個月最多就是上"
+      },
+      {
+        "index": 274,
+        "text": "上架500件"
+      },
+      {
+        "index": 275,
+        "text": "OK"
+      },
+      {
+        "index": 276,
+        "text": "對那他們因為跟我們合作之後"
+      },
+      {
+        "index": 277,
+        "text": "他們現在"
+      },
+      {
+        "index": 278,
+        "text": "他們的二手平台"
+      },
+      {
+        "index": 279,
+        "text": "那他們就可以跟其他品牌合作"
+      },
+      {
+        "index": 280,
+        "text": "說過季商品上來"
+      },
+      {
+        "index": 281,
+        "text": "然後他們已經告訴我們下個月想要"
+      },
+      {
+        "index": 282,
+        "text": "上架的數量是4000件"
+      },
+      {
+        "index": 283,
+        "text": "嗯哼"
+      },
+      {
+        "index": 284,
+        "text": "嗯"
+      },
+      {
+        "index": 285,
+        "text": "所以如果是這樣講的話"
+      },
+      {
+        "index": 286,
+        "text": "就是一個品質上的提升"
+      },
+      {
+        "index": 287,
+        "text": "跟效率上的提升"
+      },
+      {
+        "index": 288,
+        "text": "哦OKOK"
+      },
+      {
+        "index": 289,
+        "text": "像我今天用完之後那"
+      },
+      {
+        "index": 290,
+        "text": "東西出來了"
+      },
+      {
+        "index": 291,
+        "text": "不是很滿意"
+      },
+      {
+        "index": 292,
+        "text": "那我是直接給你feedback"
+      },
+      {
+        "index": 293,
+        "text": "還是我可以在你的app上面就說"
+      },
+      {
+        "index": 294,
+        "text": "OK我覺得這個東西不好"
+      },
+      {
+        "index": 295,
+        "text": "然後就要重新generate"
+      },
+      {
+        "index": 296,
+        "text": "我們現在還是先以直接溝通比較快"
+      },
+      {
+        "index": 297,
+        "text": "因為我們想要"
+      },
+      {
+        "index": 298,
+        "text": "有一個conversation"
+      },
+      {
+        "index": 299,
+        "text": "當然未來"
+      },
+      {
+        "index": 300,
+        "text": "客戶變多的時候"
+      },
+      {
+        "index": 301,
+        "text": "還是要有bug report"
+      },
+      {
+        "index": 302,
+        "text": "issue report"
+      },
+      {
+        "index": 303,
+        "text": "所以我們現在暫時會直接"
+      },
+      {
+        "index": 304,
+        "text": "我們在台灣"
+      },
+      {
+        "index": 305,
+        "text": "就用LINELINE"
+      },
+      {
+        "index": 306,
+        "text": "group chat"
+      },
+      {
+        "index": 307,
+        "text": "跟他們聊"
+      },
+      {
+        "index": 308,
+        "text": "OKOK"
+      },
+      {
+        "index": 309,
+        "text": "那那你們是"
+      },
+      {
+        "index": 310,
+        "text": "怎麼"
+      },
+      {
+        "index": 311,
+        "text": "charge customer"
+      },
+      {
+        "index": 312,
+        "text": "呃我們有一個公開的"
+      },
+      {
+        "index": 313,
+        "text": "像"
+      },
+      {
+        "index": 314,
+        "text": "subscription"
+      },
+      {
+        "index": 315,
+        "text": "base的"
+      },
+      {
+        "index": 316,
+        "text": "那那"
+      },
+      {
+        "index": 317,
+        "text": "就是charge credits"
+      },
+      {
+        "index": 318,
+        "text": "OK"
+      },
+      {
+        "index": 319,
+        "text": "對可是如果是大一點的客戶"
+      },
+      {
+        "index": 320,
+        "text": "大中一點的話我們就可以談條件"
+      },
+      {
+        "index": 321,
+        "text": "看他們一下子要簽幾個月"
+      },
+      {
+        "index": 322,
+        "text": "然後volume夠多的時候"
+      },
+      {
+        "index": 323,
+        "text": "我們都會給discount"
+      },
+      {
+        "index": 324,
+        "text": "還有想要簽認"
+      },
+      {
+        "index": 325,
+        "text": "這種"
+      },
+      {
+        "index": 326,
+        "text": "design partnership"
+      },
+      {
+        "index": 327,
+        "text": "的公司"
+      },
+      {
+        "index": 328,
+        "text": "我們也會再跟他們更便宜一點點"
+      },
+      {
+        "index": 329,
+        "text": "哦OK了解"
+      },
+      {
+        "index": 330,
+        "text": "因為畢竟反饋"
+      },
+      {
+        "index": 331,
+        "text": "其實我們常常看那些反饋"
+      },
+      {
+        "index": 332,
+        "text": "我們都覺得"
+      },
+      {
+        "index": 333,
+        "text": "這應該是我們要花錢去買的"
+      },
+      {
+        "index": 334,
+        "text": "嗯嗯"
+      },
+      {
+        "index": 335,
+        "text": "可以問一下關於你們tech上面的"
+      },
+      {
+        "index": 336,
+        "text": "就是你們技術方面"
+      },
+      {
+        "index": 337,
+        "text": "因為我知道你背景是CS嘛"
+      },
+      {
+        "index": 338,
+        "text": "也是tech"
+      },
+      {
+        "index": 339,
+        "text": "那你你主要現在在做的事情是"
+      },
+      {
+        "index": 340,
+        "text": "你的"
+      },
+      {
+        "index": 341,
+        "text": "day to day"
+      },
+      {
+        "index": 342,
+        "text": "operation是"
+      },
+      {
+        "index": 343,
+        "text": "你也會做tech嗎"
+      },
+      {
+        "index": 344,
+        "text": "還是你focus在"
+      },
+      {
+        "index": 345,
+        "text": "比較high level"
+      },
+      {
+        "index": 346,
+        "text": "可能公司的execution"
+      },
+      {
+        "index": 347,
+        "text": "嗯最近加速器之前我比較"
+      },
+      {
+        "index": 348,
+        "text": "少時間去做tech一開始寫"
+      },
+      {
+        "index": 349,
+        "text": "我們的MVP的時候"
+      },
+      {
+        "index": 350,
+        "text": "公司剛開始我會自己寫"
+      },
+      {
+        "index": 351,
+        "text": "但是現在有工程團隊了嘛"
+      },
+      {
+        "index": 352,
+        "text": "那我是因為到最近進加速器之後"
+      },
+      {
+        "index": 353,
+        "text": "他們其實不想要我們founder"
+      },
+      {
+        "index": 354,
+        "text": "在demo day前去融資"
+      },
+      {
+        "index": 355,
+        "text": "所以我突然時間變很多所以"
+      },
+      {
+        "index": 356,
+        "text": "我現在就是跟團隊一起開發"
+      },
+      {
+        "index": 357,
+        "text": "哦所以你現在有寫code"
+      },
+      {
+        "index": 358,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 359,
+        "text": "OK好"
+      },
+      {
+        "index": 360,
+        "text": "還蠻厲害的"
+      },
+      {
+        "index": 361,
+        "text": "一直都寫啊"
+      },
+      {
+        "index": 362,
+        "text": "一直都寫"
+      },
+      {
+        "index": 363,
+        "text": "對啊我的我的career"
+      },
+      {
+        "index": 364,
+        "text": "就是寫code"
+      },
+      {
+        "index": 365,
+        "text": "OK你career寫code"
+      },
+      {
+        "index": 366,
+        "text": "然後你也喜歡寫code"
+      },
+      {
+        "index": 367,
+        "text": "喜歡啊"
+      },
+      {
+        "index": 368,
+        "text": "真的OK"
+      },
+      {
+        "index": 369,
+        "text": "OK那你覺得現在"
+      },
+      {
+        "index": 370,
+        "text": "寫code"
+      },
+      {
+        "index": 371,
+        "text": "跟以前寫code最大的區別"
+      },
+      {
+        "index": 372,
+        "text": "你問的問題timing很好"
+      },
+      {
+        "index": 373,
+        "text": "因為禮拜這個三個禮拜前嘛"
+      },
+      {
+        "index": 374,
+        "text": "三個禮拜前"
+      },
+      {
+        "index": 375,
+        "text": "Claude的code work"
+      },
+      {
+        "index": 376,
+        "text": "才出來嘛"
+      },
+      {
+        "index": 377,
+        "text": "然後我是我拖了到上禮拜一"
+      },
+      {
+        "index": 378,
+        "text": "所以就是六天前才開始用"
+      },
+      {
+        "index": 379,
+        "text": "對"
+      },
+      {
+        "index": 380,
+        "text": "瞬間就有一種我以前"
+      },
+      {
+        "index": 381,
+        "text": "因為我以前待過Amazon"
+      },
+      {
+        "index": 382,
+        "text": "在那裡當"
+      },
+      {
+        "index": 383,
+        "text": "applied scientist"
+      },
+      {
+        "index": 384,
+        "text": "瞬間覺得以前做的工作完全被取代了"
+      },
+      {
+        "index": 385,
+        "text": "真的"
+      },
+      {
+        "index": 386,
+        "text": "嗯因為我那個時候做的"
+      },
+      {
+        "index": 387,
+        "text": "就是在測試不同種的"
+      },
+      {
+        "index": 388,
+        "text": "類神經網路模型然後"
+      },
+      {
+        "index": 389,
+        "text": "看說"
+      },
+      {
+        "index": 390,
+        "text": "老闆要的這個objective"
+      },
+      {
+        "index": 391,
+        "text": "我們有沒有辦法一直提升"
+      },
+      {
+        "index": 392,
+        "text": "假設"
+      },
+      {
+        "index": 393,
+        "text": "減少退換率好了然後"
+      },
+      {
+        "index": 394,
+        "text": "推薦尺寸的準確率提高等等"
+      },
+      {
+        "index": 395,
+        "text": "那我現在跟Claude聊的時候"
+      },
+      {
+        "index": 396,
+        "text": "覺得他可以想的比我廣"
+      },
+      {
+        "index": 397,
+        "text": "多很多而且又想得很快"
+      },
+      {
+        "index": 398,
+        "text": "然後可以很快的迭代"
+      },
+      {
+        "index": 399,
+        "text": "不同種模型去測試"
+      },
+      {
+        "index": 400,
+        "text": "所以"
+      },
+      {
+        "index": 401,
+        "text": "我覺得跟現在寫code"
+      },
+      {
+        "index": 402,
+        "text": "跟以前完全不一樣"
+      },
+      {
+        "index": 403,
+        "text": "OK"
+      },
+      {
+        "index": 404,
+        "text": "對啊我過去這這一周"
+      },
+      {
+        "index": 405,
+        "text": "跟團隊合作的時候"
+      },
+      {
+        "index": 406,
+        "text": "我也沒有親自去寫"
+      },
+      {
+        "index": 407,
+        "text": "檔案裡面的code"
+      },
+      {
+        "index": 408,
+        "text": "我全部都是agentic在做"
+      },
+      {
+        "index": 409,
+        "text": "就是agentic AI在做"
+      },
+      {
+        "index": 410,
+        "text": "對啊未來應該也都是"
+      },
+      {
+        "index": 411,
+        "text": "agentic AI"
+      },
+      {
+        "index": 412,
+        "text": "在幫大家去做所有的事情"
+      },
+      {
+        "index": 413,
+        "text": "那你們公司產品"
+      },
+      {
+        "index": 414,
+        "text": "技術方面"
+      },
+      {
+        "index": 415,
+        "text": "也是用很多"
+      },
+      {
+        "index": 416,
+        "text": "agentic AI的東西嗎"
+      },
+      {
+        "index": 417,
+        "text": "還是"
+      },
+      {
+        "index": 418,
+        "text": "沒有欸我其實train了"
+      },
+      {
+        "index": 419,
+        "text": "train了團隊train蠻久我們在過去這"
+      },
+      {
+        "index": 420,
+        "text": "幾個禮拜才開始用"
+      },
+      {
+        "index": 421,
+        "text": "之前還是比較傳統一點"
+      },
+      {
+        "index": 422,
+        "text": "就是我們的developer"
+      },
+      {
+        "index": 423,
+        "text": "還是會比較"
+      },
+      {
+        "index": 424,
+        "text": "傳統他會用會用chatbot"
+      },
+      {
+        "index": 425,
+        "text": "就是用LLM然後去分開這樣子聊"
+      },
+      {
+        "index": 426,
+        "text": "那有開始漸漸用cursor去做"
+      },
+      {
+        "index": 427,
+        "text": "所以一點點的agentic"
+      },
+      {
+        "index": 428,
+        "text": "可是沒有到現在"
+      },
+      {
+        "index": 429,
+        "text": "這陣子的Claude code"
+      },
+      {
+        "index": 430,
+        "text": "跟Claude"
+      },
+      {
+        "index": 431,
+        "text": "code work"
+      },
+      {
+        "index": 432,
+        "text": "這麼這麼agentic"
+      },
+      {
+        "index": 433,
+        "text": "I see"
+      },
+      {
+        "index": 434,
+        "text": "但但你們在"
+      },
+      {
+        "index": 435,
+        "text": "image generation"
+      },
+      {
+        "index": 436,
+        "text": "這部分是"
+      },
+      {
+        "index": 437,
+        "text": "自己train model嗎還是"
+      },
+      {
+        "index": 438,
+        "text": "你是用你們是用現成的"
+      },
+      {
+        "index": 439,
+        "text": "我們一開始有train"
+      },
+      {
+        "index": 440,
+        "text": "去年暑假的時候"
+      },
+      {
+        "index": 441,
+        "text": "那時候還會把flux"
+      },
+      {
+        "index": 442,
+        "text": "下來fine tune"
+      },
+      {
+        "index": 443,
+        "text": "那我們那時候"
+      },
+      {
+        "index": 444,
+        "text": "還沒有拿到加速器的資源"
+      },
+      {
+        "index": 445,
+        "text": "燒了很多就是AWS的資源"
+      },
+      {
+        "index": 446,
+        "text": "發現完全不值得就真的不值得"
+      },
+      {
+        "index": 447,
+        "text": "然後我們2024年暑假的時候"
+      },
+      {
+        "index": 448,
+        "text": "那時候也有train"
+      },
+      {
+        "index": 449,
+        "text": "自己的一些"
+      },
+      {
+        "index": 450,
+        "text": "lightweight的"
+      },
+      {
+        "index": 451,
+        "text": "recommendation"
+      },
+      {
+        "index": 452,
+        "text": "model等等"
+      },
+      {
+        "index": 453,
+        "text": "那個還好可是train模型之後"
+      },
+      {
+        "index": 454,
+        "text": "你真的覺得一個小小的公司"
+      },
+      {
+        "index": 455,
+        "text": "尤其我們當時連九人都不到"
+      },
+      {
+        "index": 456,
+        "text": "更少可能六人"
+      },
+      {
+        "index": 457,
+        "text": "然後資金又不足的狀況下"
+      },
+      {
+        "index": 458,
+        "text": "去train"
+      },
+      {
+        "index": 459,
+        "text": "你過幾個禮拜其實就會有人"
+      },
+      {
+        "index": 460,
+        "text": "推出更好的模型"
+      },
+      {
+        "index": 461,
+        "text": "完全超過你可以達到的"
+      },
+      {
+        "index": 462,
+        "text": "的能力那我們當時還會洗腦自己說"
+      },
+      {
+        "index": 463,
+        "text": "沒關係"
+      },
+      {
+        "index": 464,
+        "text": "我們是"
+      },
+      {
+        "index": 465,
+        "text": "fashion specific"
+      },
+      {
+        "index": 466,
+        "text": "還是需要自己train然後"
+      },
+      {
+        "index": 467,
+        "text": "我覺得那個"
+      },
+      {
+        "index": 468,
+        "text": "那個是我們"
+      },
+      {
+        "index": 469,
+        "text": "就是一廂情願想要train"
+      },
+      {
+        "index": 470,
+        "text": "所以我們"
+      },
+      {
+        "index": 471,
+        "text": "我們正式在Nano Banana"
+      },
+      {
+        "index": 472,
+        "text": "出來那天就停止了"
+      },
+      {
+        "index": 473,
+        "text": "停止任何"
+      },
+      {
+        "index": 474,
+        "text": "想要fine tune的想法"
+      },
+      {
+        "index": 475,
+        "text": "我們當時做了"
+      },
+      {
+        "index": 476,
+        "text": "很多fine tune"
+      },
+      {
+        "index": 477,
+        "text": "也做了很多"
+      },
+      {
+        "index": 478,
+        "text": "prompt optimization"
+      },
+      {
+        "index": 479,
+        "text": "還有我們花很多時間"
+      },
+      {
+        "index": 480,
+        "text": "做post editing"
+      },
+      {
+        "index": 481,
+        "text": "就出來如果accuracy不高"
+      },
+      {
+        "index": 482,
+        "text": "我們還會去segment"
+      },
+      {
+        "index": 483,
+        "text": "那一個特定的region"
+      },
+      {
+        "index": 484,
+        "text": "然後去做"
+      },
+      {
+        "index": 485,
+        "text": "in painting等等的"
+      },
+      {
+        "index": 486,
+        "text": "會把它給校正"
+      },
+      {
+        "index": 487,
+        "text": "然後感動自己啊就覺得做得超好"
+      },
+      {
+        "index": 488,
+        "text": "然後"
+      },
+      {
+        "index": 489,
+        "text": "Nano Banana一drop"
+      },
+      {
+        "index": 490,
+        "text": "就這些都變成non-issue"
+      },
+      {
+        "index": 491,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 492,
+        "text": "那我們先暫停一下"
+      },
+      {
+        "index": 493,
+        "text": "跟大家分享一下"
+      },
+      {
+        "index": 494,
+        "text": "我最近幾週的一個想法"
+      },
+      {
+        "index": 495,
+        "text": "大家都在說AI呢會取代工程師"
+      },
+      {
+        "index": 496,
+        "text": "但是我覺得AI時代呢"
+      },
+      {
+        "index": 497,
+        "text": "有一個技能反而變得更有價值"
+      },
+      {
+        "index": 498,
+        "text": "那就是跟人去connect"
+      },
+      {
+        "index": 499,
+        "text": "我說的connect"
+      },
+      {
+        "index": 500,
+        "text": "是人與人之間的交流"
+      },
+      {
+        "index": 501,
+        "text": "文化，還有情感的傳達"
+      },
+      {
+        "index": 502,
+        "text": "比如說你在一個"
+      },
+      {
+        "index": 503,
+        "text": "stand up meeting裡面"
+      },
+      {
+        "index": 504,
+        "text": "你可以更像一個native"
+      },
+      {
+        "index": 505,
+        "text": "去表達你的想法"
+      },
+      {
+        "index": 506,
+        "text": "那我最近呢"
+      },
+      {
+        "index": 507,
+        "text": "在用一款叫做Speak的app"
+      },
+      {
+        "index": 508,
+        "text": "用了一陣子之後呢"
+      },
+      {
+        "index": 509,
+        "text": "想要跟大家分享一下"
+      },
+      {
+        "index": 510,
+        "text": "這個是真的有效"
+      },
+      {
+        "index": 511,
+        "text": "特別是如果你也像我一樣害羞"
+      },
+      {
+        "index": 512,
+        "text": "不太喜歡跟陌生人講話"
+      },
+      {
+        "index": 513,
+        "text": "在Speak上面呢"
+      },
+      {
+        "index": 514,
+        "text": "可以直接跟AI練習對話的情境"
+      },
+      {
+        "index": 515,
+        "text": "蠻猛的一個地方"
+      },
+      {
+        "index": 516,
+        "text": "就是它在對話的當下呢"
+      },
+      {
+        "index": 517,
+        "text": "就會修正我講錯的地方"
+      },
+      {
+        "index": 518,
+        "text": "它不會含糊的說可以更好"
+      },
+      {
+        "index": 519,
+        "text": "而是直接給我更自然的說法"
+      },
+      {
+        "index": 520,
+        "text": "那它的核心呢是AI口說練習"
+      },
+      {
+        "index": 521,
+        "text": "你可以自己自訂這個對話情境"
+      },
+      {
+        "index": 522,
+        "text": "像我自己練的"
+      },
+      {
+        "index": 523,
+        "text": "就是面試的self intro"
+      },
+      {
+        "index": 524,
+        "text": "我可以設定說我自己是求職者"
+      },
+      {
+        "index": 525,
+        "text": "然後AI是面試官"
+      },
+      {
+        "index": 526,
+        "text": "而且它不是照稿子走"
+      },
+      {
+        "index": 527,
+        "text": "會追問你然後挑戰你"
+      },
+      {
+        "index": 528,
+        "text": "很接近真實面試的一個感覺"
+      },
+      {
+        "index": 529,
+        "text": "Hi my name is Terry. I grew up in Taiwan. I'm a software engineer"
+      },
+      {
+        "index": 530,
+        "text": "Nice to meet you Terry."
+      },
+      {
+        "index": 531,
+        "text": "What inspired you to become a software engineer"
+      },
+      {
+        "index": 532,
+        "text": "I used to work in the legal patent space."
+      },
+      {
+        "index": 533,
+        "text": "We used AI to help our customers"
+      },
+      {
+        "index": 534,
+        "text": "fight for patent infringement lawsuits"
+      },
+      {
+        "index": 535,
+        "text": "That sounds interesting. How did you use AI in those cases"
+      },
+      {
+        "index": 536,
+        "text": "那當你講完之後呢"
+      },
+      {
+        "index": 537,
+        "text": "它還會自動生成一個專屬的複習課程"
+      },
+      {
+        "index": 538,
+        "text": "專門整理你剛剛沒講好的部分"
+      },
+      {
+        "index": 539,
+        "text": "所以你就不用自己回頭找了"
+      },
+      {
+        "index": 540,
+        "text": "We used AI to help our customers fight patent infringement lawsuits"
+      },
+      {
+        "index": 541,
+        "text": "We used AI to help our customers fight patent infringement lawsuits"
+      },
+      {
+        "index": 542,
+        "text": "那如果你想要學新用法的話呢"
+      },
+      {
+        "index": 543,
+        "text": "他們也有這個主題影片的課程"
+      },
+      {
+        "index": 544,
+        "text": "這個就會比較有結構"
+      },
+      {
+        "index": 545,
+        "text": "Hi there I'm Audrey the lead English teacher at Speak."
+      },
+      {
+        "index": 546,
+        "text": "Have we met before"
+      },
+      {
+        "index": 547,
+        "text": "Have we met before"
+      },
+      {
+        "index": 548,
+        "text": "Have we met before"
+      },
+      {
+        "index": 549,
+        "text": "Wow have you practiced that before"
+      },
+      {
+        "index": 550,
+        "text": "那Speak他們是"
+      },
+      {
+        "index": 551,
+        "text": "拿到OpenAI的投資"
+      },
+      {
+        "index": 552,
+        "text": "也有技術的合作"
+      },
+      {
+        "index": 553,
+        "text": "他們在全球有超過4000萬個用戶"
+      },
+      {
+        "index": 554,
+        "text": "口碑呢也完全是靠實力去累積的"
+      },
+      {
+        "index": 555,
+        "text": "我自己用起來的體驗呢"
+      },
+      {
+        "index": 556,
+        "text": "是真的蠻順的啦"
+      },
+      {
+        "index": 557,
+        "text": "很適合像我這種I人"
+      },
+      {
+        "index": 558,
+        "text": "不會主動跟陌生人搭話的這種人"
+      },
+      {
+        "index": 559,
+        "text": "那現在"
+      },
+      {
+        "index": 560,
+        "text": "訂閱Speak Premium呢"
+      },
+      {
+        "index": 561,
+        "text": "有年方案299的折扣"
+      },
+      {
+        "index": 562,
+        "text": "新用戶呢有免費7天可以試用"
+      },
+      {
+        "index": 563,
+        "text": "連結在影片底下資訊欄"
+      },
+      {
+        "index": 564,
+        "text": "你可以先試試看再決定"
+      },
+      {
+        "index": 565,
+        "text": "英文口說呢真的就是純靠練習"
+      },
+      {
+        "index": 566,
+        "text": "只要你願意開口沒有學不好的"
+      },
+      {
+        "index": 567,
+        "text": "我會把連結全部放在影片底下資訊欄"
+      },
+      {
+        "index": 568,
+        "text": "好那我們回到影片"
+      },
+      {
+        "index": 569,
+        "text": "那會比較擔心說就像最近"
+      },
+      {
+        "index": 570,
+        "text": "不知道你有沒有關注就是像CRM"
+      },
+      {
+        "index": 571,
+        "text": "Salesforce這些公司"
+      },
+      {
+        "index": 572,
+        "text": "Adobe"
+      },
+      {
+        "index": 573,
+        "text": "他們市場"
+      },
+      {
+        "index": 574,
+        "text": "對自己這些SaaS公司的產品"
+      },
+      {
+        "index": 575,
+        "text": "比較悲觀的原因是因為"
+      },
+      {
+        "index": 576,
+        "text": "大家覺得這些AI"
+      },
+      {
+        "index": 577,
+        "text": "agentic AI這麼這麼厲害"
+      },
+      {
+        "index": 578,
+        "text": "這麼強"
+      },
+      {
+        "index": 579,
+        "text": "像像Claude他們"
+      },
+      {
+        "index": 580,
+        "text": "最近出很多plugin嘛"
+      },
+      {
+        "index": 581,
+        "text": "sales plugin"
+      },
+      {
+        "index": 582,
+        "text": "還有一些"
+      },
+      {
+        "index": 583,
+        "text": "legal tech"
+      },
+      {
+        "index": 584,
+        "text": "的plugin"
+      },
+      {
+        "index": 585,
+        "text": "那如果他們做一個"
+      },
+      {
+        "index": 586,
+        "text": "fashion的plugin"
+      },
+      {
+        "index": 587,
+        "text": "怎麼辦"
+      },
+      {
+        "index": 588,
+        "text": "那你們會不會"
+      },
+      {
+        "index": 589,
+        "text": "就是被他們給吃掉"
+      },
+      {
+        "index": 590,
+        "text": "如果說我們公司真正要做東西"
+      },
+      {
+        "index": 591,
+        "text": "就聽起來就是我現在講的話"
+      },
+      {
+        "index": 592,
+        "text": "那絕對會被吃掉"
+      },
+      {
+        "index": 593,
+        "text": "絕對絕對會被吃掉可是因為"
+      },
+      {
+        "index": 594,
+        "text": "對我知道就是一直不能講到底要幹嘛"
+      },
+      {
+        "index": 595,
+        "text": "可是我們後面有一整塊"
+      },
+      {
+        "index": 596,
+        "text": "其實跟agentic"
+      },
+      {
+        "index": 597,
+        "text": "跟SaaS是分開的"
+      },
+      {
+        "index": 598,
+        "text": "哦"
+      },
+      {
+        "index": 599,
+        "text": "對對我們真正的vision"
+      },
+      {
+        "index": 600,
+        "text": "是above this"
+      },
+      {
+        "index": 601,
+        "text": "OK"
+      },
+      {
+        "index": 602,
+        "text": "對"
+      },
+      {
+        "index": 603,
+        "text": "那才是我們保護自己的方法"
+      },
+      {
+        "index": 604,
+        "text": "當然我們也pivot超多次"
+      },
+      {
+        "index": 605,
+        "text": "然後才land到這個idea"
+      },
+      {
+        "index": 606,
+        "text": "是因為這個idea才進加速器"
+      },
+      {
+        "index": 607,
+        "text": "哦所以是因為這個idea"
+      },
+      {
+        "index": 608,
+        "text": "才拿到你們A60Z的投資"
+      },
+      {
+        "index": 609,
+        "text": "對那我們現在所有做的"
+      },
+      {
+        "index": 610,
+        "text": "這些"
+      },
+      {
+        "index": 611,
+        "text": "fashion workflow"
+      },
+      {
+        "index": 612,
+        "text": "的software"
+      },
+      {
+        "index": 613,
+        "text": "只是為了GTM就是要讓客戶上來"
+      },
+      {
+        "index": 614,
+        "text": "那我們也希望真的幫他們解決痛點"
+      },
+      {
+        "index": 615,
+        "text": "然後幫他們cost down"
+      },
+      {
+        "index": 616,
+        "text": "幫他們speed up"
+      },
+      {
+        "index": 617,
+        "text": "可是這些東西"
+      },
+      {
+        "index": 618,
+        "text": "未來要帶到的那個vision"
+      },
+      {
+        "index": 619,
+        "text": "跟agentic"
+      },
+      {
+        "index": 620,
+        "text": "跟SaaS沒有關係"
+      },
+      {
+        "index": 621,
+        "text": "真的所以是完全不一樣的產品嗎還是"
+      },
+      {
+        "index": 622,
+        "text": "totally different"
+      },
+      {
+        "index": 623,
+        "text": "我覺得像是一個"
+      },
+      {
+        "index": 624,
+        "text": "layer on top of it"
+      },
+      {
+        "index": 625,
+        "text": "嗯哼"
+      },
+      {
+        "index": 626,
+        "text": "嗯"
+      },
+      {
+        "index": 627,
+        "text": "OK那不能講的原因是什麼"
+      },
+      {
+        "index": 628,
+        "text": "我原本是想講然後"
+      },
+      {
+        "index": 629,
+        "text": "我原本想講可是因為"
+      },
+      {
+        "index": 630,
+        "text": "我們4月15號是demo day"
+      },
+      {
+        "index": 631,
+        "text": "那A60Z的C round"
+      },
+      {
+        "index": 632,
+        "text": "跟我們聊過了"
+      },
+      {
+        "index": 633,
+        "text": "想要大家"
+      },
+      {
+        "index": 634,
+        "text": "stay in stealth as much as possible"
+      },
+      {
+        "index": 635,
+        "text": "這樣子我們demo day那天"
+      },
+      {
+        "index": 636,
+        "text": "正式launch"
+      },
+      {
+        "index": 637,
+        "text": "然後我們的"
+      },
+      {
+        "index": 638,
+        "text": "fund raise才會"
+      },
+      {
+        "index": 639,
+        "text": "比較有辦法"
+      },
+      {
+        "index": 640,
+        "text": "製造那個momentum"
+      },
+      {
+        "index": 641,
+        "text": "demo day是什麼"
+      },
+      {
+        "index": 642,
+        "text": "demo day"
+      },
+      {
+        "index": 643,
+        "text": "真的像YC有demo day"
+      },
+      {
+        "index": 644,
+        "text": "demo day有點像是"
+      },
+      {
+        "index": 645,
+        "text": "大家"
+      },
+      {
+        "index": 646,
+        "text": "accelerator到最後的"
+      },
+      {
+        "index": 647,
+        "text": "那個成果發表會"
+      },
+      {
+        "index": 648,
+        "text": "哦OK"
+      },
+      {
+        "index": 649,
+        "text": "對對對"
+      },
+      {
+        "index": 650,
+        "text": "所以是大家一起demo"
+      },
+      {
+        "index": 651,
+        "text": "然後會有investor"
+      },
+      {
+        "index": 652,
+        "text": "在下面看嗎"
+      },
+      {
+        "index": 653,
+        "text": "嗯好像說什麼"
+      },
+      {
+        "index": 654,
+        "text": "那個會場"
+      },
+      {
+        "index": 655,
+        "text": "會邀1000多個investor"
+      },
+      {
+        "index": 656,
+        "text": "OK"
+      },
+      {
+        "index": 657,
+        "text": "可是每個公司只有120秒"
+      },
+      {
+        "index": 658,
+        "text": "還是90秒很短很短"
+      },
+      {
+        "index": 659,
+        "text": "哦很短哦"
+      },
+      {
+        "index": 660,
+        "text": "嗯可是就是要講說我達到多少"
+      },
+      {
+        "index": 661,
+        "text": "MRR ARR what's the traction"
+      },
+      {
+        "index": 662,
+        "text": "等等等等等等"
+      },
+      {
+        "index": 663,
+        "text": "所以說你們會在那個時候"
+      },
+      {
+        "index": 664,
+        "text": "公佈你們的新的approach"
+      },
+      {
+        "index": 665,
+        "text": "可是你們現在這個東西"
+      },
+      {
+        "index": 666,
+        "text": "已經在build嗎"
+      },
+      {
+        "index": 667,
+        "text": "還是已經ready"
+      },
+      {
+        "index": 668,
+        "text": "哦對其實build好了"
+      },
+      {
+        "index": 669,
+        "text": "而且我們也有在"
+      },
+      {
+        "index": 670,
+        "text": "很hush hush的帶客戶上來"
+      },
+      {
+        "index": 671,
+        "text": "OK"
+      },
+      {
+        "index": 672,
+        "text": "嗯嗯只是就是還不能公開講"
+      },
+      {
+        "index": 673,
+        "text": "對我原本以為可以"
+      },
+      {
+        "index": 674,
+        "text": "就back and forth"
+      },
+      {
+        "index": 675,
+        "text": "了幾次"
+      },
+      {
+        "index": 676,
+        "text": "差點講然後就又沒講"
+      },
+      {
+        "index": 677,
+        "text": "很值得期待的東西嗎"
+      },
+      {
+        "index": 678,
+        "text": "我覺得超棒的"
+      },
+      {
+        "index": 679,
+        "text": "我很想我現在超好奇這個東西"
+      },
+      {
+        "index": 680,
+        "text": "OK你跟我講說"
+      },
+      {
+        "index": 681,
+        "text": "你們之前有pivot過很多遍嘛"
+      },
+      {
+        "index": 682,
+        "text": "然後你們"
+      },
+      {
+        "index": 683,
+        "text": "有有Angel round"
+      },
+      {
+        "index": 684,
+        "text": "就是Angel round"
+      },
+      {
+        "index": 685,
+        "text": "是跟什麼"
+      },
+      {
+        "index": 686,
+        "text": "outside"
+      },
+      {
+        "index": 687,
+        "text": "investor嗎"
+      },
+      {
+        "index": 688,
+        "text": "還是自己認識的朋友什麼"
+      },
+      {
+        "index": 689,
+        "text": "呃當時有比如說前主管"
+      },
+      {
+        "index": 690,
+        "text": "然後主管會推薦人"
+      },
+      {
+        "index": 691,
+        "text": "然後我那裡很多"
+      },
+      {
+        "index": 692,
+        "text": "尤其是AI"
+      },
+      {
+        "index": 693,
+        "text": "因為AI賺很多錢的人"
+      },
+      {
+        "index": 694,
+        "text": "所以他們其實"
+      },
+      {
+        "index": 695,
+        "text": "they're like angel investing as a sport"
+      },
+      {
+        "index": 696,
+        "text": "那這些人他們我聽過一個很神奇是"
+      },
+      {
+        "index": 697,
+        "text": "他們有些人就是我的目標就是有一天"
+      },
+      {
+        "index": 698,
+        "text": "我要投到400間公司"
+      },
+      {
+        "index": 699,
+        "text": "那他們每個"
+      },
+      {
+        "index": 700,
+        "text": "就是smoke check"
+      },
+      {
+        "index": 701,
+        "text": "那他們其實沒有"
+      },
+      {
+        "index": 702,
+        "text": "沒有興趣花時間去"
+      },
+      {
+        "index": 703,
+        "text": "去screen太多的公司"
+      },
+      {
+        "index": 704,
+        "text": "對對對"
+      },
+      {
+        "index": 705,
+        "text": "他其實就是喜歡這個founder"
+      },
+      {
+        "index": 706,
+        "text": "他們就會投"
+      },
+      {
+        "index": 707,
+        "text": "那當時有"
+      },
+      {
+        "index": 708,
+        "text": "tap into"
+      },
+      {
+        "index": 709,
+        "text": "這樣子的network"
+      },
+      {
+        "index": 710,
+        "text": "然後拿到融資"
+      },
+      {
+        "index": 711,
+        "text": "嗯大概是這樣吧"
+      },
+      {
+        "index": 712,
+        "text": "這樣子收集起來的"
+      },
+      {
+        "index": 713,
+        "text": "天使輪"
+      },
+      {
+        "index": 714,
+        "text": "OK然後你說"
+      },
+      {
+        "index": 715,
+        "text": "天使輪大概融了4040幾萬"
+      },
+      {
+        "index": 716,
+        "text": "46萬"
+      },
+      {
+        "index": 717,
+        "text": "A60Z跟比如說Ycom"
+      },
+      {
+        "index": 718,
+        "text": "他們拿的equity的部分大概是"
+      },
+      {
+        "index": 719,
+        "text": "應該是8到8到10%嗎差不多"
+      },
+      {
+        "index": 720,
+        "text": "嗯A60Z的話是100萬美金"
+      },
+      {
+        "index": 721,
+        "text": "那100萬美金"
+      },
+      {
+        "index": 722,
+        "text": "它分成兩個tranche"
+      },
+      {
+        "index": 723,
+        "text": "那第一個tranche"
+      },
+      {
+        "index": 724,
+        "text": "是50萬美金"
+      },
+      {
+        "index": 725,
+        "text": "然後它就是完全"
+      },
+      {
+        "index": 726,
+        "text": "拿10%"
+      },
+      {
+        "index": 727,
+        "text": "所以是"
+      },
+      {
+        "index": 728,
+        "text": "hard valuation at 5 million"
+      },
+      {
+        "index": 729,
+        "text": "嗯那可是它的"
+      },
+      {
+        "index": 730,
+        "text": "second tranche"
+      },
+      {
+        "index": 731,
+        "text": "就是你下次要融的"
+      },
+      {
+        "index": 732,
+        "text": "然後它會follow"
+      },
+      {
+        "index": 733,
+        "text": "你那個時候的valuation"
+      },
+      {
+        "index": 734,
+        "text": "OKI see"
+      },
+      {
+        "index": 735,
+        "text": "family round"
+      },
+      {
+        "index": 736,
+        "text": "一般他們會拿多少"
+      },
+      {
+        "index": 737,
+        "text": "我當時就是直接"
+      },
+      {
+        "index": 738,
+        "text": "我就說我的valuation"
+      },
+      {
+        "index": 739,
+        "text": "是10 mil cap"
+      },
+      {
+        "index": 740,
+        "text": "可是他們那個時候"
+      },
+      {
+        "index": 741,
+        "text": "不是直接"
+      },
+      {
+        "index": 742,
+        "text": "convert成equity"
+      },
+      {
+        "index": 743,
+        "text": "要convert的是在"
+      },
+      {
+        "index": 744,
+        "text": "C round才convert"
+      },
+      {
+        "index": 745,
+        "text": "對他們是簽safe嘛"
+      },
+      {
+        "index": 746,
+        "text": "對啊然後是"
+      },
+      {
+        "index": 747,
+        "text": "是以10 mil的"
+      },
+      {
+        "index": 748,
+        "text": "valuation"
+      },
+      {
+        "index": 749,
+        "text": "去去拿的"
+      },
+      {
+        "index": 750,
+        "text": "對對對"
+      },
+      {
+        "index": 751,
+        "text": "OK"
+      },
+      {
+        "index": 752,
+        "text": "然後我一開始天使輪是46萬"
+      },
+      {
+        "index": 753,
+        "text": "然後可是因為到去年8月的時候"
+      },
+      {
+        "index": 754,
+        "text": "我們等於8月"
+      },
+      {
+        "index": 755,
+        "text": "hard pivot"
+      },
+      {
+        "index": 756,
+        "text": "成新的這個idea"
+      },
+      {
+        "index": 757,
+        "text": "那我當時其實是想說慘了"
+      },
+      {
+        "index": 758,
+        "text": "就是錢已經快燒完了"
+      },
+      {
+        "index": 759,
+        "text": "所以我當時就想說為了要"
+      },
+      {
+        "index": 760,
+        "text": "做這個pivot"
+      },
+      {
+        "index": 761,
+        "text": "我沒有想要申請A60Z"
+      },
+      {
+        "index": 762,
+        "text": "我那時候是想說募一個"
+      },
+      {
+        "index": 763,
+        "text": "bridge round"
+      },
+      {
+        "index": 764,
+        "text": "因為pivot真的是沒辦法"
+      },
+      {
+        "index": 765,
+        "text": "stick to the original plan"
+      },
+      {
+        "index": 766,
+        "text": "所以我的bridge round"
+      },
+      {
+        "index": 767,
+        "text": "原本要在"
+      },
+      {
+        "index": 768,
+        "text": "raise another half million"
+      },
+      {
+        "index": 769,
+        "text": "對那我那時候就在tap into"
+      },
+      {
+        "index": 770,
+        "text": "之前還沒有投資過我的天使投資人"
+      },
+      {
+        "index": 771,
+        "text": "其實那個時候"
+      },
+      {
+        "index": 772,
+        "text": "我們現在這樣"
+      },
+      {
+        "index": 773,
+        "text": "connect到"
+      },
+      {
+        "index": 774,
+        "text": "Microsoft的CPO"
+      },
+      {
+        "index": 775,
+        "text": "然後還有Zinga的前CTO"
+      },
+      {
+        "index": 776,
+        "text": "然後他們的投資就剛好引薦我說"
+      },
+      {
+        "index": 777,
+        "text": "因為我原本被"
+      },
+      {
+        "index": 778,
+        "text": "A60Z seed round"
+      },
+      {
+        "index": 779,
+        "text": "在去年4月拒絕過一次"
+      },
+      {
+        "index": 780,
+        "text": "然後他們就叫我再投一次看看"
+      },
+      {
+        "index": 781,
+        "text": "對然後在那個階段的時候"
+      },
+      {
+        "index": 782,
+        "text": "我募到13萬5"
+      },
+      {
+        "index": 783,
+        "text": "嗯哼"
+      },
+      {
+        "index": 784,
+        "text": "13萬5然後我就"
+      },
+      {
+        "index": 785,
+        "text": "因為accept被accept"
+      },
+      {
+        "index": 786,
+        "text": "所以就提前結束"
+      },
+      {
+        "index": 787,
+        "text": "沒有去募那個完整的50萬"
+      },
+      {
+        "index": 788,
+        "text": "OKOKI see"
+      },
+      {
+        "index": 789,
+        "text": "那你覺得現在募資有比較難嗎"
+      },
+      {
+        "index": 790,
+        "text": "還是你覺得investor"
+      },
+      {
+        "index": 791,
+        "text": "他們看重的是什麼東西"
+      },
+      {
+        "index": 792,
+        "text": "我覺得要看誰去募"
+      },
+      {
+        "index": 793,
+        "text": "要看誰去募"
+      },
+      {
+        "index": 794,
+        "text": "那你覺得他們看重的是你的什麼"
+      },
+      {
+        "index": 795,
+        "text": "我覺得當時我真的以為"
+      },
+      {
+        "index": 796,
+        "text": "以我的founder背景"
+      },
+      {
+        "index": 797,
+        "text": "就夠就完全不夠"
+      },
+      {
+        "index": 798,
+        "text": "OK"
+      },
+      {
+        "index": 799,
+        "text": "對然後我原本的idea"
+      },
+      {
+        "index": 800,
+        "text": "完全就非常replaceable"
+      },
+      {
+        "index": 801,
+        "text": "我也拿過"
+      },
+      {
+        "index": 802,
+        "text": "virtual try on"
+      },
+      {
+        "index": 803,
+        "text": "去募被拒到不行"
+      },
+      {
+        "index": 804,
+        "text": "然後我一開始想要做B2C"
+      },
+      {
+        "index": 805,
+        "text": "然後我那時候想要做的完全就是什麼"
+      },
+      {
+        "index": 806,
+        "text": "fashion magazine for everyone"
+      },
+      {
+        "index": 807,
+        "text": "就你現在網站上面的"
+      },
+      {
+        "index": 808,
+        "text": "沒有現在的話我們現在應該是改成"
+      },
+      {
+        "index": 809,
+        "text": "對現在應該是完全是flatlay"
+      },
+      {
+        "index": 810,
+        "text": "就是品牌圖"
+      },
+      {
+        "index": 811,
+        "text": "就對那原本那些比較可愛的idea"
+      },
+      {
+        "index": 812,
+        "text": "就配我自己的背景其實很weak"
+      },
+      {
+        "index": 813,
+        "text": "對所以我真的感覺到投資"
+      },
+      {
+        "index": 814,
+        "text": "還有我覺得"
+      },
+      {
+        "index": 815,
+        "text": "我的technical背景"
+      },
+      {
+        "index": 816,
+        "text": "沒有達到投資人中那種"
+      },
+      {
+        "index": 817,
+        "text": "可以完全de-risk的"
+      },
+      {
+        "index": 818,
+        "text": "他們要"
+      },
+      {
+        "index": 819,
+        "text": "什麼樣的technical背景"
+      },
+      {
+        "index": 820,
+        "text": "我覺得是OpenAI出來"
+      },
+      {
+        "index": 821,
+        "text": "DeepMind那種"
+      },
+      {
+        "index": 822,
+        "text": "哦就"
+      },
+      {
+        "index": 823,
+        "text": "那就是no-brainer對對對"
+      },
+      {
+        "index": 824,
+        "text": "那對他們而言就"
+      },
+      {
+        "index": 825,
+        "text": "而且因為那些人network很強"
+      },
+      {
+        "index": 826,
+        "text": "他們一定"
+      },
+      {
+        "index": 827,
+        "text": "they will make things work"
+      },
+      {
+        "index": 828,
+        "text": "而且他們一定會覺得"
+      },
+      {
+        "index": 829,
+        "text": "其他investor也會這樣想"
+      },
+      {
+        "index": 830,
+        "text": "所以他們都會很容易就投下去"
+      },
+      {
+        "index": 831,
+        "text": "那我當時很多人跟我說你沒有問題"
+      },
+      {
+        "index": 832,
+        "text": "你一定會募很多錢結果我沒有"
+      },
+      {
+        "index": 833,
+        "text": "我就非常struggle"
+      },
+      {
+        "index": 834,
+        "text": "所以我發現"
+      },
+      {
+        "index": 835,
+        "text": "是我的idea不夠好"
+      },
+      {
+        "index": 836,
+        "text": "對我的idea"
+      },
+      {
+        "index": 837,
+        "text": "沒有達到他們想要的那個樣子"
+      },
+      {
+        "index": 838,
+        "text": "那idea好之後我覺得現在"
+      },
+      {
+        "index": 839,
+        "text": "投資人另外一塊想要看的就是"
+      },
+      {
+        "index": 840,
+        "text": "假設如果當時idea真的不夠好"
+      },
+      {
+        "index": 841,
+        "text": "可是我就有辦法賺到錢的話"
+      },
+      {
+        "index": 842,
+        "text": "假設我的revenue很強"
+      },
+      {
+        "index": 843,
+        "text": "那他們也會投"
+      },
+      {
+        "index": 844,
+        "text": "因為我聽過幾個也是"
+      },
+      {
+        "index": 845,
+        "text": "可能背景比較普通"
+      },
+      {
+        "index": 846,
+        "text": "那可是因為他們就非常"
+      },
+      {
+        "index": 847,
+        "text": "就是genius型的"
+      },
+      {
+        "index": 848,
+        "text": "可以crack GTM"
+      },
+      {
+        "index": 849,
+        "text": "他們可以讓人就是會"
+      },
+      {
+        "index": 850,
+        "text": "付錢"
+      },
+      {
+        "index": 851,
+        "text": "對"
+      },
+      {
+        "index": 852,
+        "text": "那這個投資人也會投"
+      },
+      {
+        "index": 853,
+        "text": "OK"
+      },
+      {
+        "index": 854,
+        "text": "對對對"
+      },
+      {
+        "index": 855,
+        "text": "所以所以你們是你們是你們是怎麼樣"
+      },
+      {
+        "index": 856,
+        "text": "我們當時進"
+      },
+      {
+        "index": 857,
+        "text": "A60Z seed round"
+      },
+      {
+        "index": 858,
+        "text": "完全是"
+      },
+      {
+        "index": 859,
+        "text": "idea"
+      },
+      {
+        "index": 860,
+        "text": "idea哦就是那個idea"
+      },
+      {
+        "index": 861,
+        "text": "因為是"
+      },
+      {
+        "index": 862,
+        "text": "pre-product pre-revenue"
+      },
+      {
+        "index": 863,
+        "text": "哦哇那蠻厲害的"
+      },
+      {
+        "index": 864,
+        "text": "所以好險pivot我覺得就是"
+      },
+      {
+        "index": 865,
+        "text": "被逼急了就是公司要生存一定要"
+      },
+      {
+        "index": 866,
+        "text": "不停的想然後我就我覺得有意識到"
+      },
+      {
+        "index": 867,
+        "text": "還有因為"
+      },
+      {
+        "index": 868,
+        "text": "Nano Banana Pro出來"
+      },
+      {
+        "index": 869,
+        "text": "我那時候就有一種晴天霹靂的感覺"
+      },
+      {
+        "index": 870,
+        "text": "覺得不能再往這個地方硬鑽"
+      },
+      {
+        "index": 871,
+        "text": "還自己感動自己"
+      },
+      {
+        "index": 872,
+        "text": "訓練模型幹嘛對啊"
+      },
+      {
+        "index": 873,
+        "text": "所以我們就hard pivot"
+      },
+      {
+        "index": 874,
+        "text": "然後就反而變成"
+      },
+      {
+        "index": 875,
+        "text": "就是"
+      },
+      {
+        "index": 876,
+        "text": "blessing in disguise"
+      },
+      {
+        "index": 877,
+        "text": "真的"
+      },
+      {
+        "index": 878,
+        "text": "OK"
+      },
+      {
+        "index": 879,
+        "text": "我我猜"
+      },
+      {
+        "index": 880,
+        "text": "你們還是有revenue對吧"
+      },
+      {
+        "index": 881,
+        "text": "有有有嗯"
+      },
+      {
+        "index": 882,
+        "text": "那你們現在burn rate"
+      },
+      {
+        "index": 883,
+        "text": "大概可以到到什麼時候"
+      },
+      {
+        "index": 884,
+        "text": "所以你們runway還有多久"
+      },
+      {
+        "index": 885,
+        "text": "嗯就真的是"
+      },
+      {
+        "index": 886,
+        "text": "就是差不多Q2"
+      },
+      {
+        "index": 887,
+        "text": "Q2OK"
+      },
+      {
+        "index": 888,
+        "text": "所以你Q2"
+      },
+      {
+        "index": 889,
+        "text": "very tight very tight"
+      },
+      {
+        "index": 890,
+        "text": "Q2之前"
+      },
+      {
+        "index": 891,
+        "text": "就要在raise下一個round"
+      },
+      {
+        "index": 892,
+        "text": "對這也是speed round的計畫"
+      },
+      {
+        "index": 893,
+        "text": "他們基本上是全部參加的公司"
+      },
+      {
+        "index": 894,
+        "text": "都會在那一天"
+      },
+      {
+        "index": 895,
+        "text": "demo day開始的兩週"
+      },
+      {
+        "index": 896,
+        "text": "raise"
+      },
+      {
+        "index": 897,
+        "text": "OK所以下一個round就是"
+      },
+      {
+        "index": 898,
+        "text": "就你剛剛講的那個"
+      },
+      {
+        "index": 899,
+        "text": "在下一個"
+      },
+      {
+        "index": 900,
+        "text": "就是我們的真正種子輪"
+      },
+      {
+        "index": 901,
+        "text": "因為我們到現在"
+      },
+      {
+        "index": 902,
+        "text": "我就"
+      },
+      {
+        "index": 903,
+        "text": "I call it pre-seed"
+      },
+      {
+        "index": 904,
+        "text": "我這樣全部收在一起"
+      },
+      {
+        "index": 905,
+        "text": "so this is pre-seed round"
+      },
+      {
+        "index": 906,
+        "text": "嗯那如果從頭再來一次"
+      },
+      {
+        "index": 907,
+        "text": "你還會去A16Z嗎"
+      },
+      {
+        "index": 908,
+        "text": "因為"
+      },
+      {
+        "index": 909,
+        "text": "其實這些incubator他們"
+      },
+      {
+        "index": 910,
+        "text": "除了給資源之外"
+      },
+      {
+        "index": 911,
+        "text": "其實他們拿"
+      },
+      {
+        "index": 912,
+        "text": "很多equity right"
+      },
+      {
+        "index": 913,
+        "text": "我要拿很多equity嗯"
+      },
+      {
+        "index": 914,
+        "text": "那"
+      },
+      {
+        "index": 915,
+        "text": "我覺得兩兩個方向看"
+      },
+      {
+        "index": 916,
+        "text": "第一個我當時就真的是"
+      },
+      {
+        "index": 917,
+        "text": "I was desperate"
+      },
+      {
+        "index": 918,
+        "text": "真的需要有人來幫我"
+      },
+      {
+        "index": 919,
+        "text": "而且需要"
+      },
+      {
+        "index": 920,
+        "text": "we need money"
+      },
+      {
+        "index": 921,
+        "text": "Right"
+      },
+      {
+        "index": 922,
+        "text": "另外一個是我因為"
+      },
+      {
+        "index": 923,
+        "text": "這個program現在開始兩週"
+      },
+      {
+        "index": 924,
+        "text": "我現在就是"
+      },
+      {
+        "index": 925,
+        "text": "頭號粉絲我是A16Z的頭號粉絲"
+      },
+      {
+        "index": 926,
+        "text": "我覺得"
+      },
+      {
+        "index": 927,
+        "text": "進去加速器之後才有一種"
+      },
+      {
+        "index": 928,
+        "text": "因為我也我等於創業到進加速器"
+      },
+      {
+        "index": 929,
+        "text": "經過了一年半"
+      },
+      {
+        "index": 930,
+        "text": "對"
+      },
+      {
+        "index": 931,
+        "text": "然後我覺得該經過的"
+      },
+      {
+        "index": 932,
+        "text": "struggle我都經過了"
+      },
+      {
+        "index": 933,
+        "text": "OK"
+      },
+      {
+        "index": 934,
+        "text": "然後公司那種"
+      },
+      {
+        "index": 935,
+        "text": "求生存的那種我都經歷過"
+      },
+      {
+        "index": 936,
+        "text": "所以"
+      },
+      {
+        "index": 937,
+        "text": "我記得那個speedrun第一天"
+      },
+      {
+        "index": 938,
+        "text": "他們orientation的時候"
+      },
+      {
+        "index": 939,
+        "text": "我自己就蠻想哭的"
+      },
+      {
+        "index": 940,
+        "text": "覺得有有人可以照顧我們"
+      },
+      {
+        "index": 941,
+        "text": "那種感覺蠻好的"
+      },
+      {
+        "index": 942,
+        "text": "而且他們的資源真的"
+      },
+      {
+        "index": 943,
+        "text": "很厲害"
+      },
+      {
+        "index": 944,
+        "text": "我覺得啦"
+      },
+      {
+        "index": 945,
+        "text": "當然我覺得"
+      },
+      {
+        "index": 946,
+        "text": "如果有一個founder"
+      },
+      {
+        "index": 947,
+        "text": "你說資源很厲害是因為他們"
+      },
+      {
+        "index": 948,
+        "text": "給你很多connection嗎"
+      },
+      {
+        "index": 949,
+        "text": "還是給你很多resources"
+      },
+      {
+        "index": 950,
+        "text": "嗯connection"
+      },
+      {
+        "index": 951,
+        "text": "就是VC network很強"
+      },
+      {
+        "index": 952,
+        "text": "然後我覺得他們有一套"
+      },
+      {
+        "index": 953,
+        "text": "formula知道說"
+      },
+      {
+        "index": 954,
+        "text": "一個startup"
+      },
+      {
+        "index": 955,
+        "text": "要怎麼去做branding"
+      },
+      {
+        "index": 956,
+        "text": "怎麼去launch"
+      },
+      {
+        "index": 957,
+        "text": "怎麼製造fomo"
+      },
+      {
+        "index": 958,
+        "text": "還有他們會一直"
+      },
+      {
+        "index": 959,
+        "text": "他們的office hour"
+      },
+      {
+        "index": 960,
+        "text": "其實很intense"
+      },
+      {
+        "index": 961,
+        "text": "我們會跟其他的founder"
+      },
+      {
+        "index": 962,
+        "text": "一起坐下"
+      },
+      {
+        "index": 963,
+        "text": "他就會一直grill你的"
+      },
+      {
+        "index": 964,
+        "text": "你的GTM"
+      },
+      {
+        "index": 965,
+        "text": "你這個revenue不行"
+      },
+      {
+        "index": 966,
+        "text": "然後我們每個禮拜都要重新整理"
+      },
+      {
+        "index": 967,
+        "text": "revenue projection"
+      },
+      {
+        "index": 968,
+        "text": "然後他們的partner"
+      },
+      {
+        "index": 969,
+        "text": "都會進來看"
+      },
+      {
+        "index": 970,
+        "text": "基本上"
+      },
+      {
+        "index": 971,
+        "text": "就是"
+      },
+      {
+        "index": 972,
+        "text": "yell in our face"
+      },
+      {
+        "index": 973,
+        "text": "說你不夠ambitious"
+      },
+      {
+        "index": 974,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 975,
+        "text": "對我喜歡他們這樣子"
+      },
+      {
+        "index": 976,
+        "text": "就是"
+      },
+      {
+        "index": 977,
+        "text": "you got to do a real business"
+      },
+      {
+        "index": 978,
+        "text": "我們不是要"
+      },
+      {
+        "index": 979,
+        "text": "進來大家做一個cute idea"
+      },
+      {
+        "index": 980,
+        "text": "然後就耶拍手結束"
+      },
+      {
+        "index": 981,
+        "text": "就是show me你12個禮拜"
+      },
+      {
+        "index": 982,
+        "text": "你就是可以達到怎麼樣的"
+      },
+      {
+        "index": 983,
+        "text": "ARR我們再說你估值是多少"
+      },
+      {
+        "index": 984,
+        "text": "哦OK"
+      },
+      {
+        "index": 985,
+        "text": "我覺得他們幫我們逼得很緊"
+      },
+      {
+        "index": 986,
+        "text": "in a good way"
+      },
+      {
+        "index": 987,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 988,
+        "text": "那你現在會覺得壓力很大嗎"
+      },
+      {
+        "index": 989,
+        "text": "就是"
+      },
+      {
+        "index": 990,
+        "text": "大啊大啊"
+      },
+      {
+        "index": 991,
+        "text": "然後也把整個壓力"
+      },
+      {
+        "index": 992,
+        "text": "transfer給整個team"
+      },
+      {
+        "index": 993,
+        "text": "就是我覺得是需要的"
+      },
+      {
+        "index": 994,
+        "text": "OK"
+      },
+      {
+        "index": 995,
+        "text": "而且"
+      },
+      {
+        "index": 996,
+        "text": "我覺得有壓力沒有關係"
+      },
+      {
+        "index": 997,
+        "text": "可是如果有clarity就很好"
+      },
+      {
+        "index": 998,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 999,
+        "text": "因為人家會告訴我說"
+      },
+      {
+        "index": 1000,
+        "text": "我告訴你就是該這麼做"
+      },
+      {
+        "index": 1001,
+        "text": "我知道會很難"
+      },
+      {
+        "index": 1002,
+        "text": "可是至少你會知道不是好像"
+      },
+      {
+        "index": 1003,
+        "text": "不知道方向在哪裡的"
+      },
+      {
+        "index": 1004,
+        "text": "有時候我覺得最恐怖就是怕"
+      },
+      {
+        "index": 1005,
+        "text": "忙忙忙然後每天只告訴自己很忙"
+      },
+      {
+        "index": 1006,
+        "text": "然後自己很感動"
+      },
+      {
+        "index": 1007,
+        "text": "可是沒有覺得"
+      },
+      {
+        "index": 1008,
+        "text": "人家講什麼"
+      },
+      {
+        "index": 1009,
+        "text": "move the needle"
+      },
+      {
+        "index": 1010,
+        "text": "嗯嗯嗯嗯"
+      },
+      {
+        "index": 1011,
+        "text": "每天的day to day"
+      },
+      {
+        "index": 1012,
+        "text": "大概是怎麼樣"
+      },
+      {
+        "index": 1013,
+        "text": "我們因為speedrun"
+      },
+      {
+        "index": 1014,
+        "text": "它是禮拜二三四"
+      },
+      {
+        "index": 1015,
+        "text": "要去onsite"
+      },
+      {
+        "index": 1016,
+        "text": "有一些sessions"
+      },
+      {
+        "index": 1017,
+        "text": "OK"
+      },
+      {
+        "index": 1018,
+        "text": "對那因為我在上禮拜把我"
+      },
+      {
+        "index": 1019,
+        "text": "世界各地的team"
+      },
+      {
+        "index": 1020,
+        "text": "都colocate嘛"
+      },
+      {
+        "index": 1021,
+        "text": "Right"
+      },
+      {
+        "index": 1022,
+        "text": "對所以我禮拜一"
+      },
+      {
+        "index": 1023,
+        "text": "我們都準時九點到辦公室"
+      },
+      {
+        "index": 1024,
+        "text": "那們一定會"
+      },
+      {
+        "index": 1025,
+        "text": "就是先daily standup"
+      },
+      {
+        "index": 1026,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1027,
+        "text": "對那突然不用"
+      },
+      {
+        "index": 1028,
+        "text": "take investor call"
+      },
+      {
+        "index": 1029,
+        "text": "的時間"
+      },
+      {
+        "index": 1030,
+        "text": "會突然白天會沒有很多這種"
+      },
+      {
+        "index": 1031,
+        "text": "investor meeting"
+      },
+      {
+        "index": 1032,
+        "text": "所以我就是跟team一起"
+      },
+      {
+        "index": 1033,
+        "text": "develop"
+      },
+      {
+        "index": 1034,
+        "text": "嗯一起做開發"
+      },
+      {
+        "index": 1035,
+        "text": "一起做開發對"
+      },
+      {
+        "index": 1036,
+        "text": "那"
+      },
+      {
+        "index": 1037,
+        "text": "你沒有"
+      },
+      {
+        "index": 1038,
+        "text": "你沒有其他founder對不對"
+      },
+      {
+        "index": 1039,
+        "text": "你就是唯一founder"
+      },
+      {
+        "index": 1040,
+        "text": "我是我是solo founder"
+      },
+      {
+        "index": 1041,
+        "text": "你是solo founder"
+      },
+      {
+        "index": 1042,
+        "text": "對對你做開發然後"
+      },
+      {
+        "index": 1043,
+        "text": "因為我們有designer"
+      },
+      {
+        "index": 1044,
+        "text": "然後也有幫忙做branding的"
+      },
+      {
+        "index": 1045,
+        "text": "所以不只是開發本身"
+      },
+      {
+        "index": 1046,
+        "text": "也會跟這些夥伴一起討論說"
+      },
+      {
+        "index": 1047,
+        "text": "我們最近有client可能有一些"
+      },
+      {
+        "index": 1048,
+        "text": "問題所以我們要怎麼address"
+      },
+      {
+        "index": 1049,
+        "text": "還有要討論content"
+      },
+      {
+        "index": 1050,
+        "text": "which我們是"
+      },
+      {
+        "index": 1051,
+        "text": "最近才開始做content"
+      },
+      {
+        "index": 1052,
+        "text": "對那我們"
+      },
+      {
+        "index": 1053,
+        "text": "還是說"
+      },
+      {
+        "index": 1054,
+        "text": "social media"
+      },
+      {
+        "index": 1055,
+        "text": "的content嗎"
+      },
+      {
+        "index": 1056,
+        "text": "還是什麼"
+      },
+      {
+        "index": 1057,
+        "text": "OK"
+      },
+      {
+        "index": 1058,
+        "text": "對對對那這樣一路忙"
+      },
+      {
+        "index": 1059,
+        "text": "其實我們都是忙到七點"
+      },
+      {
+        "index": 1060,
+        "text": "晚上七點"
+      },
+      {
+        "index": 1061,
+        "text": "對七點然後回家之後"
+      },
+      {
+        "index": 1062,
+        "text": "煮煮飯"
+      },
+      {
+        "index": 1063,
+        "text": "煮煮飯之後我跟台灣那邊"
+      },
+      {
+        "index": 1064,
+        "text": "或是日本的會都八點開始"
+      },
+      {
+        "index": 1065,
+        "text": "聽起來很intense"
+      },
+      {
+        "index": 1066,
+        "text": "很好玩very fun"
+      },
+      {
+        "index": 1067,
+        "text": "你如果做你喜歡的事情的話"
+      },
+      {
+        "index": 1068,
+        "text": "我覺得就是好玩"
+      },
+      {
+        "index": 1069,
+        "text": "對對對對對對"
+      },
+      {
+        "index": 1070,
+        "text": "而且因為我們跟台灣開會"
+      },
+      {
+        "index": 1071,
+        "text": "然後"
+      },
+      {
+        "index": 1072,
+        "text": "也會有越來越多inbound"
+      },
+      {
+        "index": 1073,
+        "text": "或是人家介紹的"
+      },
+      {
+        "index": 1074,
+        "text": "potential client"
+      },
+      {
+        "index": 1075,
+        "text": "或是real client"
+      },
+      {
+        "index": 1076,
+        "text": "那他們通常會在我隔天早上醒來前"
+      },
+      {
+        "index": 1077,
+        "text": "就會LINE上面會給我們很多反饋"
+      },
+      {
+        "index": 1078,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1079,
+        "text": "所以我就知道說OK"
+      },
+      {
+        "index": 1080,
+        "text": "那我們早上九點又是"
+      },
+      {
+        "index": 1081,
+        "text": "要怎麼重新align"
+      },
+      {
+        "index": 1082,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1083,
+        "text": "可是二三四就要去聽session"
+      },
+      {
+        "index": 1084,
+        "text": "OK"
+      },
+      {
+        "index": 1085,
+        "text": "可是你現在不能review你的"
+      },
+      {
+        "index": 1086,
+        "text": "新的那個pivot的idea"
+      },
+      {
+        "index": 1087,
+        "text": "那你要怎麼去"
+      },
+      {
+        "index": 1088,
+        "text": "pitch to你的client"
+      },
+      {
+        "index": 1089,
+        "text": "還是OK的"
+      },
+      {
+        "index": 1090,
+        "text": "我們可以想成兩塊啦"
+      },
+      {
+        "index": 1091,
+        "text": "就是第一塊如果是剛剛講的"
+      },
+      {
+        "index": 1092,
+        "text": "品牌生存的話我就是"
+      },
+      {
+        "index": 1093,
+        "text": "誰都可以sell to it"
+      },
+      {
+        "index": 1094,
+        "text": "對"
+      },
+      {
+        "index": 1095,
+        "text": "那可是第二塊的話"
+      },
+      {
+        "index": 1096,
+        "text": "如果這個人已經跟我們一陣子了"
+      },
+      {
+        "index": 1097,
+        "text": "我們會開始跟他講"
+      },
+      {
+        "index": 1098,
+        "text": "OK"
+      },
+      {
+        "index": 1099,
+        "text": "這個第二塊我們其實做得差不多了"
+      },
+      {
+        "index": 1100,
+        "text": "要不要來玩"
+      },
+      {
+        "index": 1101,
+        "text": "而且第二塊因為"
+      },
+      {
+        "index": 1102,
+        "text": "我看怎麼講"
+      },
+      {
+        "index": 1103,
+        "text": "第二塊不只involve品牌"
+      },
+      {
+        "index": 1104,
+        "text": "應該這樣講"
+      },
+      {
+        "index": 1105,
+        "text": "所以它有另外一端的"
+      },
+      {
+        "index": 1106,
+        "text": "fashion industry"
+      },
+      {
+        "index": 1107,
+        "text": "的人"
+      },
+      {
+        "index": 1108,
+        "text": "我們需要接洽"
+      },
+      {
+        "index": 1109,
+        "text": "所以另外一段我們就花很多時間"
+      },
+      {
+        "index": 1110,
+        "text": "也是去跟他們"
+      },
+      {
+        "index": 1111,
+        "text": "build relationship"
+      },
+      {
+        "index": 1112,
+        "text": "所以你自己是"
+      },
+      {
+        "index": 1113,
+        "text": "很喜歡fashion的東西"
+      },
+      {
+        "index": 1114,
+        "text": "算喜歡算喜歡"
+      },
+      {
+        "index": 1115,
+        "text": "因為我覺得你之前好像是做"
+      },
+      {
+        "index": 1116,
+        "text": "你是當model對不對"
+      },
+      {
+        "index": 1117,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1118,
+        "text": "是因為這個原因"
+      },
+      {
+        "index": 1119,
+        "text": "你喜歡fashion嗎"
+      },
+      {
+        "index": 1120,
+        "text": "還是你一直以來都很喜歡"
+      },
+      {
+        "index": 1121,
+        "text": "我覺得是因為當model"
+      },
+      {
+        "index": 1122,
+        "text": "才喜歡fashion"
+      },
+      {
+        "index": 1123,
+        "text": "因為我覺得我之前"
+      },
+      {
+        "index": 1124,
+        "text": "不是特別"
+      },
+      {
+        "index": 1125,
+        "text": "fashionable的人"
+      },
+      {
+        "index": 1126,
+        "text": "嗯"
+      },
+      {
+        "index": 1127,
+        "text": "對然後是越做越覺得這個"
+      },
+      {
+        "index": 1128,
+        "text": "space很有趣"
+      },
+      {
+        "index": 1129,
+        "text": "然後你就覺得"
+      },
+      {
+        "index": 1130,
+        "text": "想要"
+      },
+      {
+        "index": 1131,
+        "text": "combine fashion"
+      },
+      {
+        "index": 1132,
+        "text": "跟AI"
+      },
+      {
+        "index": 1133,
+        "text": "去幫大家做一些事情"
+      },
+      {
+        "index": 1134,
+        "text": "蠻蠻蠻厲害"
+      },
+      {
+        "index": 1135,
+        "text": "因為我不是很懂fashion"
+      },
+      {
+        "index": 1136,
+        "text": "我覺得fashion"
+      },
+      {
+        "index": 1137,
+        "text": "有可能也是說既然都要做事情"
+      },
+      {
+        "index": 1138,
+        "text": "那螢幕上的東西會漂漂亮亮"
+      },
+      {
+        "index": 1139,
+        "text": "好像那種why not"
+      },
+      {
+        "index": 1140,
+        "text": "可是你不覺得"
+      },
+      {
+        "index": 1141,
+        "text": "fashion這種東西"
+      },
+      {
+        "index": 1142,
+        "text": "我自己的感覺是"
+      },
+      {
+        "index": 1143,
+        "text": "fashion這種東西"
+      },
+      {
+        "index": 1144,
+        "text": "一直在rotate嘛"
+      },
+      {
+        "index": 1145,
+        "text": "就是其實你可能十年前的東西"
+      },
+      {
+        "index": 1146,
+        "text": "現在流行一下"
+      },
+      {
+        "index": 1147,
+        "text": "然後可能過十年又會再流行"
+      },
+      {
+        "index": 1148,
+        "text": "就是它是一個東西一直在換"
+      },
+      {
+        "index": 1149,
+        "text": "然後都是根據這些"
+      },
+      {
+        "index": 1150,
+        "text": "應該說怎麼說"
+      },
+      {
+        "index": 1151,
+        "text": "就是這些celebrities"
+      },
+      {
+        "index": 1152,
+        "text": "或是這些influencers"
+      },
+      {
+        "index": 1153,
+        "text": "他們去穿搭什麼的"
+      },
+      {
+        "index": 1154,
+        "text": "帶動這個流行"
+      },
+      {
+        "index": 1155,
+        "text": "對啊那你不覺得這個東西就是"
+      },
+      {
+        "index": 1156,
+        "text": "一直在cycle同樣的東西"
+      },
+      {
+        "index": 1157,
+        "text": "然後隨著AI越來越普及"
+      },
+      {
+        "index": 1158,
+        "text": "然後大家對fashion的觀念"
+      },
+      {
+        "index": 1159,
+        "text": "就是比較"
+      },
+      {
+        "index": 1160,
+        "text": "我我感覺就是"
+      },
+      {
+        "index": 1161,
+        "text": "都是"
+      },
+      {
+        "index": 1162,
+        "text": "來自於social media"
+      },
+      {
+        "index": 1163,
+        "text": "可能TikTok然後穿什麼東西"
+      },
+      {
+        "index": 1164,
+        "text": "然後品牌其實並沒有像以前"
+      },
+      {
+        "index": 1165,
+        "text": "那樣子那麼的"
+      },
+      {
+        "index": 1166,
+        "text": "重要"
+      },
+      {
+        "index": 1167,
+        "text": "重要的是"
+      },
+      {
+        "index": 1168,
+        "text": "influencer"
+      },
+      {
+        "index": 1169,
+        "text": "去帶動這個fashion"
+      },
+      {
+        "index": 1170,
+        "text": "而不是品牌本身"
+      },
+      {
+        "index": 1171,
+        "text": "我完全同意"
+      },
+      {
+        "index": 1172,
+        "text": "嗯完全同意"
+      },
+      {
+        "index": 1173,
+        "text": "我覺得我對於"
+      },
+      {
+        "index": 1174,
+        "text": "fashion trend prediction"
+      },
+      {
+        "index": 1175,
+        "text": "這個題目就是完全失去熱情"
+      },
+      {
+        "index": 1176,
+        "text": "因為我寫過兩篇paper"
+      },
+      {
+        "index": 1177,
+        "text": "I'm never touching it again"
+      },
+      {
+        "index": 1178,
+        "text": "因為就真的是這樣子"
+      },
+      {
+        "index": 1179,
+        "text": "there's nothing to predict"
+      },
+      {
+        "index": 1180,
+        "text": "就其實就是"
+      },
+      {
+        "index": 1181,
+        "text": "其實都是被engineer出來"
+      },
+      {
+        "index": 1182,
+        "text": "我覺得trend都是"
+      },
+      {
+        "index": 1183,
+        "text": "把它engineer出來的"
+      },
+      {
+        "index": 1184,
+        "text": "不是因為真的有一個什麼"
+      },
+      {
+        "index": 1185,
+        "text": "大環境"
+      },
+      {
+        "index": 1186,
+        "text": "blah blah blah"
+      },
+      {
+        "index": 1187,
+        "text": "反正基本上"
+      },
+      {
+        "index": 1188,
+        "text": "有幾個big player"
+      },
+      {
+        "index": 1189,
+        "text": "他們可以決定這個東西"
+      },
+      {
+        "index": 1190,
+        "text": "決定fashion"
+      },
+      {
+        "index": 1191,
+        "text": "對啊就像其實音樂也是一樣"
+      },
+      {
+        "index": 1192,
+        "text": "對啊嗯"
+      },
+      {
+        "index": 1193,
+        "text": "我覺得你剛剛講的那個"
+      },
+      {
+        "index": 1194,
+        "text": "influencer"
+      },
+      {
+        "index": 1195,
+        "text": "會celebrity"
+      },
+      {
+        "index": 1196,
+        "text": "會把一個東西炒紅"
+      },
+      {
+        "index": 1197,
+        "text": "對"
+      },
+      {
+        "index": 1198,
+        "text": "這個是完全正確"
+      },
+      {
+        "index": 1199,
+        "text": "就像那個什麼"
+      },
+      {
+        "index": 1200,
+        "text": "拉餔餔還是什麼的"
+      },
+      {
+        "index": 1201,
+        "text": "對你根本沒辦法預測到"
+      },
+      {
+        "index": 1202,
+        "text": "拉餔餔會跑出來"
+      },
+      {
+        "index": 1203,
+        "text": "你現在因為你沒有CTO嗎"
+      },
+      {
+        "index": 1204,
+        "text": "還是沒有"
+      },
+      {
+        "index": 1205,
+        "text": "沒有"
+      },
+      {
+        "index": 1206,
+        "text": "所以所以你就是兼CEOCTO"
+      },
+      {
+        "index": 1207,
+        "text": "嗯"
+      },
+      {
+        "index": 1208,
+        "text": "CPO"
+      },
+      {
+        "index": 1209,
+        "text": "嗯對"
+      },
+      {
+        "index": 1210,
+        "text": "全部都是"
+      },
+      {
+        "index": 1211,
+        "text": "都是你嗎"
+      },
+      {
+        "index": 1212,
+        "text": "是對"
+      },
+      {
+        "index": 1213,
+        "text": "我們就只有我一個C啦"
+      },
+      {
+        "index": 1214,
+        "text": "只有你一個C"
+      },
+      {
+        "index": 1215,
+        "text": "所以你們team全部都是"
+      },
+      {
+        "index": 1216,
+        "text": "就是等於說比較偏向IC"
+      },
+      {
+        "index": 1217,
+        "text": "或是"
+      },
+      {
+        "index": 1218,
+        "text": "最近開始有其中一個人在"
+      },
+      {
+        "index": 1219,
+        "text": "哦沒有"
+      },
+      {
+        "index": 1220,
+        "text": "我有一個"
+      },
+      {
+        "index": 1221,
+        "text": "engineering manager"
+      },
+      {
+        "index": 1222,
+        "text": "要幫我管"
+      },
+      {
+        "index": 1223,
+        "text": "另外兩個developers"
+      },
+      {
+        "index": 1224,
+        "text": "OK"
+      },
+      {
+        "index": 1225,
+        "text": "嗯最近有一個"
+      },
+      {
+        "index": 1226,
+        "text": "幫我做branding的"
+      },
+      {
+        "index": 1227,
+        "text": "他有開始幫我管intern"
+      },
+      {
+        "index": 1228,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1229,
+        "text": "對可是"
+      },
+      {
+        "index": 1230,
+        "text": "我覺得在startup"
+      },
+      {
+        "index": 1231,
+        "text": "就是每個人都"
+      },
+      {
+        "index": 1232,
+        "text": "wear multiple hats"
+      },
+      {
+        "index": 1233,
+        "text": "其實有點像"
+      },
+      {
+        "index": 1234,
+        "text": "互相在manage的感覺"
+      },
+      {
+        "index": 1235,
+        "text": "Right"
+      },
+      {
+        "index": 1236,
+        "text": "那你要怎麼去"
+      },
+      {
+        "index": 1237,
+        "text": "attract"
+      },
+      {
+        "index": 1238,
+        "text": "這些engineer"
+      },
+      {
+        "index": 1239,
+        "text": "或是product team"
+      },
+      {
+        "index": 1240,
+        "text": "來join你的公司"
+      },
+      {
+        "index": 1241,
+        "text": "First of all我要先講"
+      },
+      {
+        "index": 1242,
+        "text": "就是我之前一直以為我這個"
+      },
+      {
+        "index": 1243,
+        "text": "advice很好"
+      },
+      {
+        "index": 1244,
+        "text": "然後"
+      },
+      {
+        "index": 1245,
+        "text": "我在"
+      },
+      {
+        "index": 1246,
+        "text": "speedrun的"
+      },
+      {
+        "index": 1247,
+        "text": "office hour"
+      },
+      {
+        "index": 1248,
+        "text": "跟大家share"
+      },
+      {
+        "index": 1249,
+        "text": "然後才要被稍微講說這個"
+      },
+      {
+        "index": 1250,
+        "text": "it's not very applicable"
+      },
+      {
+        "index": 1251,
+        "text": "並不是每一個公司都能用"
+      },
+      {
+        "index": 1252,
+        "text": "所以我先打個預防針"
+      },
+      {
+        "index": 1253,
+        "text": "就我們的方法完全就是"
+      },
+      {
+        "index": 1254,
+        "text": "別人來pitch我"
+      },
+      {
+        "index": 1255,
+        "text": "OK"
+      },
+      {
+        "index": 1256,
+        "text": "嗯我從創公司開始的時候"
+      },
+      {
+        "index": 1257,
+        "text": "那時候"
+      },
+      {
+        "index": 1258,
+        "text": "小小的嘛也沒有什麼人"
+      },
+      {
+        "index": 1259,
+        "text": "然後那個時候"
+      },
+      {
+        "index": 1260,
+        "text": "都是透過Instagram"
+      },
+      {
+        "index": 1261,
+        "text": "有人就會想說他想要來"
+      },
+      {
+        "index": 1262,
+        "text": "跟我工作"
+      },
+      {
+        "index": 1263,
+        "text": "OK"
+      },
+      {
+        "index": 1264,
+        "text": "那我就會因為這樣"
+      },
+      {
+        "index": 1265,
+        "text": "然後去interview"
+      },
+      {
+        "index": 1266,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1267,
+        "text": "對可是"
+      },
+      {
+        "index": 1268,
+        "text": "可以拿到interview的人"
+      },
+      {
+        "index": 1269,
+        "text": "其實也蠻少"
+      },
+      {
+        "index": 1270,
+        "text": "我一定要這個人也是"
+      },
+      {
+        "index": 1271,
+        "text": "technically strong"
+      },
+      {
+        "index": 1272,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1273,
+        "text": "嗯那之後我們的"
+      },
+      {
+        "index": 1274,
+        "text": "嗯online presence"
+      },
+      {
+        "index": 1275,
+        "text": "開始漸漸發展之後"
+      },
+      {
+        "index": 1276,
+        "text": "那個時候還是比較多"
+      },
+      {
+        "index": 1277,
+        "text": "台灣或是亞洲人"
+      },
+      {
+        "index": 1278,
+        "text": "哦那時候是2024年嗎"
+      },
+      {
+        "index": 1279,
+        "text": "2024年5月對"
+      },
+      {
+        "index": 1280,
+        "text": "所以我那時候"
+      },
+      {
+        "index": 1281,
+        "text": "有先招到Berkeley的MLE"
+      },
+      {
+        "index": 1282,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1283,
+        "text": "然後漸漸發展之後"
+      },
+      {
+        "index": 1284,
+        "text": "我是在2024年的秋天冬天"
+      },
+      {
+        "index": 1285,
+        "text": "那時候"
+      },
+      {
+        "index": 1286,
+        "text": "招到台灣的developers"
+      },
+      {
+        "index": 1287,
+        "text": "那也是從Instagram"
+      },
+      {
+        "index": 1288,
+        "text": "對對對那個時候"
+      },
+      {
+        "index": 1289,
+        "text": "我story也有提到說"
+      },
+      {
+        "index": 1290,
+        "text": "我想要developers"
+      },
+      {
+        "index": 1291,
+        "text": "哦所以是因為"
+      },
+      {
+        "index": 1292,
+        "text": "你的Instagram"
+      },
+      {
+        "index": 1293,
+        "text": "經常發你公司的東西嗎"
+      },
+      {
+        "index": 1294,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1295,
+        "text": "然後你就用這種方式有人來加入"
+      },
+      {
+        "index": 1296,
+        "text": "對對對對對"
+      },
+      {
+        "index": 1297,
+        "text": "所以那個是一開始"
+      },
+      {
+        "index": 1298,
+        "text": "然後再來漸漸拓展"
+      },
+      {
+        "index": 1299,
+        "text": "也是因為我們有被"
+      },
+      {
+        "index": 1300,
+        "text": "A16Z的"
+      },
+      {
+        "index": 1301,
+        "text": "一個"
+      },
+      {
+        "index": 1302,
+        "text": "investment thesis"
+      },
+      {
+        "index": 1303,
+        "text": "他們另外一個partner"
+      },
+      {
+        "index": 1304,
+        "text": "寫了一個"
+      },
+      {
+        "index": 1305,
+        "text": "online shopping landscape"
+      },
+      {
+        "index": 1306,
+        "text": "然後他們就寫了一個"
+      },
+      {
+        "index": 1307,
+        "text": "叫"
+      },
+      {
+        "index": 1308,
+        "text": "startups to watch"
+      },
+      {
+        "index": 1309,
+        "text": "那時候我們被feature"
+      },
+      {
+        "index": 1310,
+        "text": "然後就有更多人"
+      },
+      {
+        "index": 1311,
+        "text": "是從LinkedIn過來"
+      },
+      {
+        "index": 1312,
+        "text": "哦"
+      },
+      {
+        "index": 1313,
+        "text": "嗯就那時候"
+      },
+      {
+        "index": 1314,
+        "text": "就有LinkedIn上面"
+      },
+      {
+        "index": 1315,
+        "text": "的人會pitch我"
+      },
+      {
+        "index": 1316,
+        "text": "可是at that point"
+      },
+      {
+        "index": 1317,
+        "text": "我不需要"
+      },
+      {
+        "index": 1318,
+        "text": "更多technical的人"
+      },
+      {
+        "index": 1319,
+        "text": "所以其實我通常也聊一聊"
+      },
+      {
+        "index": 1320,
+        "text": "然後並沒有覺得說"
+      },
+      {
+        "index": 1321,
+        "text": "這個會"
+      },
+      {
+        "index": 1322,
+        "text": "bring more value"
+      },
+      {
+        "index": 1323,
+        "text": "因為我已經有一個"
+      },
+      {
+        "index": 1324,
+        "text": "很strong的"
+      },
+      {
+        "index": 1325,
+        "text": "Berkeley MLE"
+      },
+      {
+        "index": 1326,
+        "text": "幫我管"
+      },
+      {
+        "index": 1327,
+        "text": "台灣三個developers"
+      },
+      {
+        "index": 1328,
+        "text": "對所以真正打動我的是到"
+      },
+      {
+        "index": 1329,
+        "text": "秋天的時候"
+      },
+      {
+        "index": 1330,
+        "text": "有一個在Kellogg"
+      },
+      {
+        "index": 1331,
+        "text": "念MBA的女生"
+      },
+      {
+        "index": 1332,
+        "text": "對然後他就pitch說"
+      },
+      {
+        "index": 1333,
+        "text": "他可以幫忙"
+      },
+      {
+        "index": 1334,
+        "text": "很多"
+      },
+      {
+        "index": 1335,
+        "text": "pricing strategy"
+      },
+      {
+        "index": 1336,
+        "text": "GTM strategy"
+      },
+      {
+        "index": 1337,
+        "text": "OK"
+      },
+      {
+        "index": 1338,
+        "text": "嗯那我那時候就在收了他"
+      },
+      {
+        "index": 1339,
+        "text": "哦還有在那之前還有"
+      },
+      {
+        "index": 1340,
+        "text": "開始有"
+      },
+      {
+        "index": 1341,
+        "text": "fashion industry"
+      },
+      {
+        "index": 1342,
+        "text": "的人"
+      },
+      {
+        "index": 1343,
+        "text": "想要transition"
+      },
+      {
+        "index": 1344,
+        "text": "到tech"
+      },
+      {
+        "index": 1345,
+        "text": "哦"
+      },
+      {
+        "index": 1346,
+        "text": "所以也在"
+      },
+      {
+        "index": 1347,
+        "text": "LinkedIn上pitch自己"
+      },
+      {
+        "index": 1348,
+        "text": "然後就有一個巴黎的女生"
+      },
+      {
+        "index": 1349,
+        "text": "跟一個倫敦的女生"
+      },
+      {
+        "index": 1350,
+        "text": "這樣子不會就是花很多時間"
+      },
+      {
+        "index": 1351,
+        "text": "要去filter掉一些"
+      },
+      {
+        "index": 1352,
+        "text": "不qualified的人嗎"
+      },
+      {
+        "index": 1353,
+        "text": "要要我"
+      },
+      {
+        "index": 1354,
+        "text": "我發現"
+      },
+      {
+        "index": 1355,
+        "text": "這也是沒辦法"
+      },
+      {
+        "index": 1356,
+        "text": "這就是founder該做的"
+      },
+      {
+        "index": 1357,
+        "text": "我意思說就是"
+      },
+      {
+        "index": 1358,
+        "text": "因為你如果在LinkedIn上面"
+      },
+      {
+        "index": 1359,
+        "text": "直接去"
+      },
+      {
+        "index": 1360,
+        "text": "outreach"
+      },
+      {
+        "index": 1361,
+        "text": "會稍微精準一點"
+      },
+      {
+        "index": 1362,
+        "text": "因為你在LinkedIn上面可以"
+      },
+      {
+        "index": 1363,
+        "text": "準確的指定說"
+      },
+      {
+        "index": 1364,
+        "text": "你要什麼skill set"
+      },
+      {
+        "index": 1365,
+        "text": "你要什麼樣的人"
+      },
+      {
+        "index": 1366,
+        "text": "對當然他們不一定會理你"
+      },
+      {
+        "index": 1367,
+        "text": "只是說就是"
+      },
+      {
+        "index": 1368,
+        "text": "會來reach out你的人"
+      },
+      {
+        "index": 1369,
+        "text": "應該是他們真的是有興趣嘛"
+      },
+      {
+        "index": 1370,
+        "text": "對你的產品"
+      },
+      {
+        "index": 1371,
+        "text": "或是對你的vision有興趣"
+      },
+      {
+        "index": 1372,
+        "text": "但是通常這樣子"
+      },
+      {
+        "index": 1373,
+        "text": "不代表說"
+      },
+      {
+        "index": 1374,
+        "text": "他們有這個skill set"
+      },
+      {
+        "index": 1375,
+        "text": "或是他們qualified"
+      },
+      {
+        "index": 1376,
+        "text": "是"
+      },
+      {
+        "index": 1377,
+        "text": "對啊"
+      },
+      {
+        "index": 1378,
+        "text": "所以說我比較好奇是你怎麼去"
+      },
+      {
+        "index": 1379,
+        "text": "組建你的"
+      },
+      {
+        "index": 1380,
+        "text": "founding team的"
+      },
+      {
+        "index": 1381,
+        "text": "因為我覺得"
+      },
+      {
+        "index": 1382,
+        "text": "founding team很重要"
+      },
+      {
+        "index": 1383,
+        "text": "而且而且"
+      },
+      {
+        "index": 1384,
+        "text": "founding team"
+      },
+      {
+        "index": 1385,
+        "text": "會直接shape"
+      },
+      {
+        "index": 1386,
+        "text": "你之後整個公司的文化"
+      },
+      {
+        "index": 1387,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1388,
+        "text": "the culture"
+      },
+      {
+        "index": 1389,
+        "text": "你是怎麼樣的去execute"
+      },
+      {
+        "index": 1390,
+        "text": "這些我覺得"
+      },
+      {
+        "index": 1391,
+        "text": "都是founding team會"
+      },
+      {
+        "index": 1392,
+        "text": "帶來不太一樣的改變"
+      },
+      {
+        "index": 1393,
+        "text": "那founding team"
+      },
+      {
+        "index": 1394,
+        "text": "很強的話"
+      },
+      {
+        "index": 1395,
+        "text": "其實你在做事情也會效率會高很多"
+      },
+      {
+        "index": 1396,
+        "text": "對對對"
+      },
+      {
+        "index": 1397,
+        "text": "那你是怎麼去select"
+      },
+      {
+        "index": 1398,
+        "text": "或是你你會看重哪些人格特質"
+      },
+      {
+        "index": 1399,
+        "text": "或是哪些東西是你在乎的"
+      },
+      {
+        "index": 1400,
+        "text": "人格特質第一個如果說"
+      },
+      {
+        "index": 1401,
+        "text": "他們"
+      },
+      {
+        "index": 1402,
+        "text": "pitch themselves to me"
+      },
+      {
+        "index": 1403,
+        "text": "通常進來之後我可以感覺到態度很好"
+      },
+      {
+        "index": 1404,
+        "text": "對但是還有另外一個是"
+      },
+      {
+        "index": 1405,
+        "text": "進來之後我也會試用"
+      },
+      {
+        "index": 1406,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1407,
+        "text": "嗯試用一定要過了才會繼續"
+      },
+      {
+        "index": 1408,
+        "text": "OK"
+      },
+      {
+        "index": 1409,
+        "text": "對那還有"
+      },
+      {
+        "index": 1410,
+        "text": "當然合作不愉快的話"
+      },
+      {
+        "index": 1411,
+        "text": "就要fire"
+      },
+      {
+        "index": 1412,
+        "text": "嗯"
+      },
+      {
+        "index": 1413,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1414,
+        "text": "那我覺得"
+      },
+      {
+        "index": 1415,
+        "text": "有裁員這個"
+      },
+      {
+        "index": 1416,
+        "text": "動作的話其實"
+      },
+      {
+        "index": 1417,
+        "text": "對於團隊是好的"
+      },
+      {
+        "index": 1418,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1419,
+        "text": "對因為團隊會意識到說"
+      },
+      {
+        "index": 1420,
+        "text": "你的工作態度一定要在那裡"
+      },
+      {
+        "index": 1421,
+        "text": "OK"
+      },
+      {
+        "index": 1422,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1423,
+        "text": "OK"
+      },
+      {
+        "index": 1424,
+        "text": "對其實我這上禮拜"
+      },
+      {
+        "index": 1425,
+        "text": "大家來的時候"
+      },
+      {
+        "index": 1426,
+        "text": "聽起來很crazy"
+      },
+      {
+        "index": 1427,
+        "text": "可是我就是基本上跟大家講說"
+      },
+      {
+        "index": 1428,
+        "text": "這12週"
+      },
+      {
+        "index": 1429,
+        "text": "I want you to work as hard as you can"
+      },
+      {
+        "index": 1430,
+        "text": "probably the hardest in your life"
+      },
+      {
+        "index": 1431,
+        "text": "那我有跟團隊講說"
+      },
+      {
+        "index": 1432,
+        "text": "我加班的時候也要找到你"
+      },
+      {
+        "index": 1433,
+        "text": "我週末我需要找到你"
+      },
+      {
+        "index": 1434,
+        "text": "you have to be there"
+      },
+      {
+        "index": 1435,
+        "text": "如果你沒有想要"
+      },
+      {
+        "index": 1436,
+        "text": "take part in this kind of"
+      },
+      {
+        "index": 1437,
+        "text": "working"
+      },
+      {
+        "index": 1438,
+        "text": "environment的話"
+      },
+      {
+        "index": 1439,
+        "text": "禮拜五以前辭職"
+      },
+      {
+        "index": 1440,
+        "text": "我都會給你severance"
+      },
+      {
+        "index": 1441,
+        "text": "OK"
+      },
+      {
+        "index": 1442,
+        "text": "可是禮拜五之後"
+      },
+      {
+        "index": 1443,
+        "text": "I can't guarantee"
+      },
+      {
+        "index": 1444,
+        "text": "因為我們就沒有那個budget"
+      },
+      {
+        "index": 1445,
+        "text": "嗯"
+      },
+      {
+        "index": 1446,
+        "text": "對啊那"
+      },
+      {
+        "index": 1447,
+        "text": "那有人辭職嗎"
+      },
+      {
+        "index": 1448,
+        "text": "沒有"
+      },
+      {
+        "index": 1449,
+        "text": "開心對所以"
+      },
+      {
+        "index": 1450,
+        "text": "我覺得該嚴肅的時候還是要嚴肅"
+      },
+      {
+        "index": 1451,
+        "text": "那"
+      },
+      {
+        "index": 1452,
+        "text": "嗯對啊可是"
+      },
+      {
+        "index": 1453,
+        "text": "剛剛你講到說"
+      },
+      {
+        "index": 1454,
+        "text": "如果自己outreach"
+      },
+      {
+        "index": 1455,
+        "text": "其實outreach"
+      },
+      {
+        "index": 1456,
+        "text": "一定會有很好很好的talent"
+      },
+      {
+        "index": 1457,
+        "text": "對"
+      },
+      {
+        "index": 1458,
+        "text": "可是這些talent"
+      },
+      {
+        "index": 1459,
+        "text": "我其實一直都有在"
+      },
+      {
+        "index": 1460,
+        "text": "manage"
+      },
+      {
+        "index": 1461,
+        "text": "這些talent's"
+      },
+      {
+        "index": 1462,
+        "text": "relationship"
+      },
+      {
+        "index": 1463,
+        "text": "這些talent"
+      },
+      {
+        "index": 1464,
+        "text": "不是這麼快就點頭進來的"
+      },
+      {
+        "index": 1465,
+        "text": "嗯有幾個就是那種真的是"
+      },
+      {
+        "index": 1466,
+        "text": "要花很多錢才請得到的"
+      },
+      {
+        "index": 1467,
+        "text": "他們其實也在等我們什麼時候可以把"
+      },
+      {
+        "index": 1468,
+        "text": "母子母下來"
+      },
+      {
+        "index": 1469,
+        "text": "哦所以是你付不起他們"
+      },
+      {
+        "index": 1470,
+        "text": "你目前還付不起"
+      },
+      {
+        "index": 1471,
+        "text": "那你目前可以付得起的"
+      },
+      {
+        "index": 1472,
+        "text": "compensation structure"
+      },
+      {
+        "index": 1473,
+        "text": "就是給equity"
+      },
+      {
+        "index": 1474,
+        "text": "equity加salary"
+      },
+      {
+        "index": 1475,
+        "text": "沒有還是有還是有salary"
+      },
+      {
+        "index": 1476,
+        "text": "equity加salary嗎"
+      },
+      {
+        "index": 1477,
+        "text": "對對對"
+      },
+      {
+        "index": 1478,
+        "text": "我現在你們是我覺得你們用"
+      },
+      {
+        "index": 1479,
+        "text": "global team是說"
+      },
+      {
+        "index": 1480,
+        "text": "其實你們salary"
+      },
+      {
+        "index": 1481,
+        "text": "就相對來講很懂可以省很多錢對不對"
+      },
+      {
+        "index": 1482,
+        "text": "因為我自己"
+      },
+      {
+        "index": 1483,
+        "text": "也在APAC hiring過"
+      },
+      {
+        "index": 1484,
+        "text": "然後網路上有很多嘴"
+      },
+      {
+        "index": 1485,
+        "text": "就是說我們就是為了省錢去"
+      },
+      {
+        "index": 1486,
+        "text": "hire"
+      },
+      {
+        "index": 1487,
+        "text": "很多台灣的engineer"
+      },
+      {
+        "index": 1488,
+        "text": "或是在APAC"
+      },
+      {
+        "index": 1489,
+        "text": "越南的engineer"
+      },
+      {
+        "index": 1490,
+        "text": "對啊"
+      },
+      {
+        "index": 1491,
+        "text": "沒辦法啊"
+      },
+      {
+        "index": 1492,
+        "text": "對啊這是一個現實"
+      },
+      {
+        "index": 1493,
+        "text": "所以什麼就是"
+      },
+      {
+        "index": 1494,
+        "text": "你要要公司燒錢燒到沒錢嗎"
+      },
+      {
+        "index": 1495,
+        "text": "那也不對啊"
+      },
+      {
+        "index": 1496,
+        "text": "嗯"
+      },
+      {
+        "index": 1497,
+        "text": "對啊"
+      },
+      {
+        "index": 1498,
+        "text": "我覺得當時給的salary"
+      },
+      {
+        "index": 1499,
+        "text": "是蠻不錯的"
+      },
+      {
+        "index": 1500,
+        "text": "就是"
+      },
+      {
+        "index": 1501,
+        "text": "我知道我給得很好"
+      },
+      {
+        "index": 1502,
+        "text": "他們自己也說很好"
+      },
+      {
+        "index": 1503,
+        "text": "因為我問他們要不要"
+      },
+      {
+        "index": 1504,
+        "text": "我其實想說"
+      },
+      {
+        "index": 1505,
+        "text": "你們"
+      },
+      {
+        "index": 1506,
+        "text": "one year anniversary"
+      },
+      {
+        "index": 1507,
+        "text": "要不要調薪他們還說不用"
+      },
+      {
+        "index": 1508,
+        "text": "Oh really"
+      },
+      {
+        "index": 1509,
+        "text": "對啊"
+      },
+      {
+        "index": 1510,
+        "text": "我可能不小心給太好我不知道"
+      },
+      {
+        "index": 1511,
+        "text": "可是我自己知道我給得不錯"
+      },
+      {
+        "index": 1512,
+        "text": "OK你給多少可以透露嗎"
+      },
+      {
+        "index": 1513,
+        "text": "要剪掉"
+      },
+      {
+        "index": 1514,
+        "text": "engineer"
+      },
+      {
+        "index": 1515,
+        "text": "錄完再講"
+      },
+      {
+        "index": 1516,
+        "text": "OK"
+      },
+      {
+        "index": 1517,
+        "text": "對啊這個我知道"
+      },
+      {
+        "index": 1518,
+        "text": "OK那你"
+      },
+      {
+        "index": 1519,
+        "text": "hire engineer的時候"
+      },
+      {
+        "index": 1520,
+        "text": "你會考一些"
+      },
+      {
+        "index": 1521,
+        "text": "比較technical的東西嗎"
+      },
+      {
+        "index": 1522,
+        "text": "嗯其實我覺得這我做得沒有很好"
+      },
+      {
+        "index": 1523,
+        "text": "因為我從來都不是engineer"
+      },
+      {
+        "index": 1524,
+        "text": "我是scientist"
+      },
+      {
+        "index": 1525,
+        "text": "所以我當時不是"
+      },
+      {
+        "index": 1526,
+        "text": "可是你自己有寫code啊"
+      },
+      {
+        "index": 1527,
+        "text": "可是我不知道"
+      },
+      {
+        "index": 1528,
+        "text": "那些"
+      },
+      {
+        "index": 1529,
+        "text": "web development"
+      },
+      {
+        "index": 1530,
+        "text": "的東西"
+      },
+      {
+        "index": 1531,
+        "text": "哦OK"
+      },
+      {
+        "index": 1532,
+        "text": "我就是透過agent才會的"
+      },
+      {
+        "index": 1533,
+        "text": "OK"
+      },
+      {
+        "index": 1534,
+        "text": "嗯那我當時其實是"
+      },
+      {
+        "index": 1535,
+        "text": "叫他們給我看他們做過的東西"
+      },
+      {
+        "index": 1536,
+        "text": "OK"
+      },
+      {
+        "index": 1537,
+        "text": "他們會給我看"
+      },
+      {
+        "index": 1538,
+        "text": "他portfolio然後"
+      },
+      {
+        "index": 1539,
+        "text": "解釋給我聽"
+      },
+      {
+        "index": 1540,
+        "text": "OK"
+      },
+      {
+        "index": 1541,
+        "text": "這樣就OK"
+      },
+      {
+        "index": 1542,
+        "text": "這樣就OK"
+      },
+      {
+        "index": 1543,
+        "text": "對啊目前為止是OK啊"
+      },
+      {
+        "index": 1544,
+        "text": "感覺沒有出什麼事"
+      },
+      {
+        "index": 1545,
+        "text": "目前目前都OK對不對"
+      },
+      {
+        "index": 1546,
+        "text": "蠻滿意的"
+      },
+      {
+        "index": 1547,
+        "text": "OK"
+      },
+      {
+        "index": 1548,
+        "text": "可是我覺得"
+      },
+      {
+        "index": 1549,
+        "text": "global team這件事情"
+      },
+      {
+        "index": 1550,
+        "text": "還有我很多想法就是"
+      },
+      {
+        "index": 1551,
+        "text": "我覺得大家嘴什麼"
+      },
+      {
+        "index": 1552,
+        "text": "你這樣是省錢可是沒辦法"
+      },
+      {
+        "index": 1553,
+        "text": "就是物價這不是"
+      },
+      {
+        "index": 1554,
+        "text": "我們身為founder能控制的"
+      },
+      {
+        "index": 1555,
+        "text": "這個是世界就是這樣子"
+      },
+      {
+        "index": 1556,
+        "text": "但是我自己覺得"
+      },
+      {
+        "index": 1557,
+        "text": "我hire"
+      },
+      {
+        "index": 1558,
+        "text": "台灣的developers"
+      },
+      {
+        "index": 1559,
+        "text": "他們的work ethics"
+      },
+      {
+        "index": 1560,
+        "text": "非常非常非常好"
+      },
+      {
+        "index": 1561,
+        "text": "嗯"
+      },
+      {
+        "index": 1562,
+        "text": "這個我百分之百這麼覺得"
+      },
+      {
+        "index": 1563,
+        "text": "就是他們反而幫我的公司"
+      },
+      {
+        "index": 1564,
+        "text": "mirror-mirror"
+      },
+      {
+        "index": 1565,
+        "text": "set了很好的工作文化"
+      },
+      {
+        "index": 1566,
+        "text": "嗯"
+      },
+      {
+        "index": 1567,
+        "text": "嗯"
+      },
+      {
+        "index": 1568,
+        "text": "我覺得很幸運"
+      },
+      {
+        "index": 1569,
+        "text": "因為我自己的經驗是"
+      },
+      {
+        "index": 1570,
+        "text": "我hire的team應該說"
+      },
+      {
+        "index": 1571,
+        "text": "比較少人會有像"
+      },
+      {
+        "index": 1572,
+        "text": "就是就是還是要"
+      },
+      {
+        "index": 1573,
+        "text": "你要involve很多"
+      },
+      {
+        "index": 1574,
+        "text": "他們的我就比較多在做的事情"
+      },
+      {
+        "index": 1575,
+        "text": "就是怎麼樣去讓他們會可以"
+      },
+      {
+        "index": 1576,
+        "text": "把那個mindset轉到比較偏向"
+      },
+      {
+        "index": 1577,
+        "text": "Silicon Valley的"
+      },
+      {
+        "index": 1578,
+        "text": "這個"
+      },
+      {
+        "index": 1579,
+        "text": "working culture"
+      },
+      {
+        "index": 1580,
+        "text": "我的感覺是這樣子"
+      },
+      {
+        "index": 1581,
+        "text": "我覺得可能就很多東西要放在"
+      },
+      {
+        "index": 1582,
+        "text": "怎麼incentivize"
+      },
+      {
+        "index": 1583,
+        "text": "OK"
+      },
+      {
+        "index": 1584,
+        "text": "因為怎麼講比如說"
+      },
+      {
+        "index": 1585,
+        "text": "有一些東西不是這麼"
+      },
+      {
+        "index": 1586,
+        "text": "可以quantify的"
+      },
+      {
+        "index": 1587,
+        "text": "當然我講一個"
+      },
+      {
+        "index": 1588,
+        "text": "可以quantify的"
+      },
+      {
+        "index": 1589,
+        "text": "qualitative"
+      },
+      {
+        "index": 1590,
+        "text": "跟quantitative"
+      },
+      {
+        "index": 1591,
+        "text": "qualitative的話我們蠻"
+      },
+      {
+        "index": 1592,
+        "text": "我自己個人蠻在乎讓我的team"
+      },
+      {
+        "index": 1593,
+        "text": "都有機會接觸到客戶"
+      },
+      {
+        "index": 1594,
+        "text": "嗯哼"
+      },
+      {
+        "index": 1595,
+        "text": "然後讓他們知道他們做的事情"
+      },
+      {
+        "index": 1596,
+        "text": "對客戶而言意義有多重大"
+      },
+      {
+        "index": 1597,
+        "text": "所以我們之前去參觀過工廠"
+      },
+      {
+        "index": 1598,
+        "text": "參觀過品牌的辦公室"
+      },
+      {
+        "index": 1599,
+        "text": "我就帶我team去"
+      },
+      {
+        "index": 1600,
+        "text": "然後我讓他們跟客戶講"
+      },
+      {
+        "index": 1601,
+        "text": "然後客戶就跟他們說"
+      },
+      {
+        "index": 1602,
+        "text": "謝謝你啊等等等等"
+      },
+      {
+        "index": 1603,
+        "text": "我覺得那個是"
+      },
+      {
+        "index": 1604,
+        "text": "emotionally"
+      },
+      {
+        "index": 1605,
+        "text": "會很magical的事情"
+      },
+      {
+        "index": 1606,
+        "text": "另外一個是我們跟Vogue辦活動"
+      },
+      {
+        "index": 1607,
+        "text": "我也帶我的team去"
+      },
+      {
+        "index": 1608,
+        "text": "我就是想要讓他們知道說"
+      },
+      {
+        "index": 1609,
+        "text": "你們不是"
+      },
+      {
+        "index": 1610,
+        "text": "just another tech company"
+      },
+      {
+        "index": 1611,
+        "text": "今天我們達到了一個"
+      },
+      {
+        "index": 1612,
+        "text": "Vogue願意讓我們去你辦公室"
+      },
+      {
+        "index": 1613,
+        "text": "然後這麼多的品牌來聽"
+      },
+      {
+        "index": 1614,
+        "text": "這是一種就是一種pride"
+      },
+      {
+        "index": 1615,
+        "text": "對那另外一個是"
+      },
+      {
+        "index": 1616,
+        "text": "因為我們是startup"
+      },
+      {
+        "index": 1617,
+        "text": "所以有募資"
+      },
+      {
+        "index": 1618,
+        "text": "所以我會算得很清楚說"
+      },
+      {
+        "index": 1619,
+        "text": "你現在手上這麼多equity"
+      },
+      {
+        "index": 1620,
+        "text": "如果你認真的話"
+      },
+      {
+        "index": 1621,
+        "text": "我們可以convert"
+      },
+      {
+        "index": 1622,
+        "text": "成怎樣的revenue"
+      },
+      {
+        "index": 1623,
+        "text": "怎樣的revenue"
+      },
+      {
+        "index": 1624,
+        "text": "convert到"
+      },
+      {
+        "index": 1625,
+        "text": "怎樣的valuation"
+      },
+      {
+        "index": 1626,
+        "text": "所以當我們募到之後"
+      },
+      {
+        "index": 1627,
+        "text": "你想你會有多少錢"
+      },
+      {
+        "index": 1628,
+        "text": "畫餅畫餅"
+      },
+      {
+        "index": 1629,
+        "text": "對畫餅啊對啊"
+      },
+      {
+        "index": 1630,
+        "text": "就大家一起來算算白板上算數"
+      },
+      {
+        "index": 1631,
+        "text": "OK"
+      },
+      {
+        "index": 1632,
+        "text": "我覺得那個"
+      },
+      {
+        "index": 1633,
+        "text": "就會有motivation"
+      },
+      {
+        "index": 1634,
+        "text": "可是不能一直這樣子"
+      },
+      {
+        "index": 1635,
+        "text": "要短就是一次要一個"
+      },
+      {
+        "index": 1636,
+        "text": "短期衝刺"
+      },
+      {
+        "index": 1637,
+        "text": "OK"
+      },
+      {
+        "index": 1638,
+        "text": "一個sprint"
+      },
+      {
+        "index": 1639,
+        "text": "一個sprint的感覺"
+      },
+      {
+        "index": 1640,
+        "text": "對啊平常就是多帶我們吃飯"
+      },
+      {
+        "index": 1641,
+        "text": "他們很開心"
+      },
+      {
+        "index": 1642,
+        "text": "各種各種都要做啦"
+      },
+      {
+        "index": 1643,
+        "text": "聽起來"
+      },
+      {
+        "index": 1644,
+        "text": "那個startup life"
+      },
+      {
+        "index": 1645,
+        "text": "蠻開心的"
+      },
+      {
+        "index": 1646,
+        "text": "我是很開心啦"
+      },
+      {
+        "index": 1647,
+        "text": "真的哦"
+      },
+      {
+        "index": 1648,
+        "text": "對啊不知道搞不好你去訪問我員工"
+      },
+      {
+        "index": 1649,
+        "text": "我講另外一個故事"
+      },
+      {
+        "index": 1650,
+        "text": "我等你看"
+      },
+      {
+        "index": 1651,
+        "text": "有可能"
+      },
+      {
+        "index": 1652,
+        "text": "我自己本人很開心"
+      },
+      {
+        "index": 1653,
+        "text": "其實很多人在evaluate"
+      },
+      {
+        "index": 1654,
+        "text": "一個startup的"
+      },
+      {
+        "index": 1655,
+        "text": "offer的時候"
+      },
+      {
+        "index": 1656,
+        "text": "他們會看說"
+      },
+      {
+        "index": 1657,
+        "text": "我的base salary是多少"
+      },
+      {
+        "index": 1658,
+        "text": "然後可能我的comp"
+      },
+      {
+        "index": 1659,
+        "text": "就是可能equity的部分"
+      },
+      {
+        "index": 1660,
+        "text": "現在值多少錢"
+      },
+      {
+        "index": 1661,
+        "text": "那你會怎麼去convince他說"
+      },
+      {
+        "index": 1662,
+        "text": "其實你看equity現在值多少錢"
+      },
+      {
+        "index": 1663,
+        "text": "是沒什麼太大意義"
+      },
+      {
+        "index": 1664,
+        "text": "因為比如說"
+      },
+      {
+        "index": 1665,
+        "text": "你們現在value是10 mil"
+      },
+      {
+        "index": 1666,
+        "text": "或什麼之類的"
+      },
+      {
+        "index": 1667,
+        "text": "但你如果去算你equity的話"
+      },
+      {
+        "index": 1668,
+        "text": "其實你如果再分四年去算的話"
+      },
+      {
+        "index": 1669,
+        "text": "其實你的total comp"
+      },
+      {
+        "index": 1670,
+        "text": "會遠遠低於你可能去一個"
+      },
+      {
+        "index": 1671,
+        "text": "公司工作"
+      },
+      {
+        "index": 1672,
+        "text": "對啊"
+      },
+      {
+        "index": 1673,
+        "text": "那你怎麼去convince他們說"
+      },
+      {
+        "index": 1674,
+        "text": "這個是可以去做的事情"
+      },
+      {
+        "index": 1675,
+        "text": "我覺得我還沒有遇到那樣的問題"
+      },
+      {
+        "index": 1676,
+        "text": "就是因為那樣子的人"
+      },
+      {
+        "index": 1677,
+        "text": "你們team都太太天使了吧"
+      },
+      {
+        "index": 1678,
+        "text": "他們是天使沒錯啊"
+      },
+      {
+        "index": 1679,
+        "text": "等下給你看照片"
+      },
+      {
+        "index": 1680,
+        "text": "就是"
+      },
+      {
+        "index": 1681,
+        "text": "我覺得那樣子的人"
+      },
+      {
+        "index": 1682,
+        "text": "I'm still working on it"
+      },
+      {
+        "index": 1683,
+        "text": "那我們也還沒到那個階段"
+      },
+      {
+        "index": 1684,
+        "text": "哦所以就是你們還沒有"
+      },
+      {
+        "index": 1685,
+        "text": "真的就是遇到"
+      },
+      {
+        "index": 1686,
+        "text": "真的你們很想hire的人"
+      },
+      {
+        "index": 1687,
+        "text": "然後你需要去做這樣的事情"
+      },
+      {
+        "index": 1688,
+        "text": "對我覺得我們在expand的時候"
+      },
+      {
+        "index": 1689,
+        "text": "會是需要開始這樣"
+      },
+      {
+        "index": 1690,
+        "text": "可是目前為止"
+      },
+      {
+        "index": 1691,
+        "text": "我也不是說我們是一個小cult"
+      },
+      {
+        "index": 1692,
+        "text": "可是就是我覺得大家"
+      },
+      {
+        "index": 1693,
+        "text": "大家還有因為我們團隊感情非常好"
+      },
+      {
+        "index": 1694,
+        "text": "哦"
+      },
+      {
+        "index": 1695,
+        "text": "對然後我覺得大家有意識到說"
+      },
+      {
+        "index": 1696,
+        "text": "就算工作有時候很累"
+      },
+      {
+        "index": 1697,
+        "text": "可是因為他們很喜歡同事"
+      },
+      {
+        "index": 1698,
+        "text": "嗯然後我們"
+      },
+      {
+        "index": 1699,
+        "text": "很多東西他們會覺得說"
+      },
+      {
+        "index": 1700,
+        "text": "OK我可能從來沒有想過"
+      },
+      {
+        "index": 1701,
+        "text": "我可以去fashion品牌活動啊"
+      },
+      {
+        "index": 1702,
+        "text": "或是什麼樣的"
+      },
+      {
+        "index": 1703,
+        "text": "所以"
+      },
+      {
+        "index": 1704,
+        "text": "有可能我現在目前現階段吸引到的人"
+      },
+      {
+        "index": 1705,
+        "text": "他們不會特意去跟我聊這些東西"
+      },
+      {
+        "index": 1706,
+        "text": "但還是會"
+      },
+      {
+        "index": 1707,
+        "text": "negotiate salary"
+      },
+      {
+        "index": 1708,
+        "text": "也會討論說我們如果要"
+      },
+      {
+        "index": 1709,
+        "text": "種子輪之後大家加薪啊什麼"
+      },
+      {
+        "index": 1710,
+        "text": "這都還是會討論"
+      },
+      {
+        "index": 1711,
+        "text": "可是並沒有那麼多"
+      },
+      {
+        "index": 1712,
+        "text": "equity上面的"
+      },
+      {
+        "index": 1713,
+        "text": "這種conversation"
+      },
+      {
+        "index": 1714,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1715,
+        "text": "我覺得大家蠻chill"
+      },
+      {
+        "index": 1716,
+        "text": "就是對於這個這個部分"
+      },
+      {
+        "index": 1717,
+        "text": "哦真的"
+      },
+      {
+        "index": 1718,
+        "text": "嗯嗯嗯"
+      },
+      {
+        "index": 1719,
+        "text": "OK"
+      },
+      {
+        "index": 1720,
+        "text": "因為因為我如果要去join一個"
+      },
+      {
+        "index": 1721,
+        "text": "這麼early stage"
+      },
+      {
+        "index": 1722,
+        "text": "的startup的話"
+      },
+      {
+        "index": 1723,
+        "text": "我應該會要很多的equity"
+      },
+      {
+        "index": 1724,
+        "text": "因為我覺得說要讓我的時間值得"
+      },
+      {
+        "index": 1725,
+        "text": "尤其是"
+      },
+      {
+        "index": 1726,
+        "text": "take on"
+      },
+      {
+        "index": 1727,
+        "text": "這麼大的一個risk"
+      },
+      {
+        "index": 1728,
+        "text": "的話"
+      },
+      {
+        "index": 1729,
+        "text": "可是我覺得因為你是"
+      },
+      {
+        "index": 1730,
+        "text": "ex-tech對吧"
+      },
+      {
+        "index": 1731,
+        "text": "你是待過tech company"
+      },
+      {
+        "index": 1732,
+        "text": "就是待過corporate"
+      },
+      {
+        "index": 1733,
+        "text": "呃算是對"
+      },
+      {
+        "index": 1734,
+        "text": "對啊"
+      },
+      {
+        "index": 1735,
+        "text": "對"
+      },
+      {
+        "index": 1736,
+        "text": "嗯我覺得目前為止"
+      },
+      {
+        "index": 1737,
+        "text": "為了我辭職的人"
+      },
+      {
+        "index": 1738,
+        "text": "當然台灣的工程師都為了我辭職"
+      },
+      {
+        "index": 1739,
+        "text": "可是他們不是待矽谷的"
+      },
+      {
+        "index": 1740,
+        "text": "公司那另外為了我辭職的"
+      },
+      {
+        "index": 1741,
+        "text": "巴黎跟倫敦的"
+      },
+      {
+        "index": 1742,
+        "text": "對啊他們的"
+      },
+      {
+        "index": 1743,
+        "text": "他們是離開fashion公司過來"
+      },
+      {
+        "index": 1744,
+        "text": "所以我覺得"
+      },
+      {
+        "index": 1745,
+        "text": "那個mindset有點不一樣"
+      },
+      {
+        "index": 1746,
+        "text": "哦"
+      },
+      {
+        "index": 1747,
+        "text": "嗯可是我完全可以理解"
+      },
+      {
+        "index": 1748,
+        "text": "如果待過"
+      },
+      {
+        "index": 1749,
+        "text": "尤其是"
+      },
+      {
+        "index": 1750,
+        "text": "Silicon Valley"
+      },
+      {
+        "index": 1751,
+        "text": "的公司"
+      },
+      {
+        "index": 1752,
+        "text": "那個要很多convincing"
+      },
+      {
+        "index": 1753,
+        "text": "嗯所以你們還沒有hire"
+      },
+      {
+        "index": 1754,
+        "text": "目前還沒有hire這樣的人"
+      },
+      {
+        "index": 1755,
+        "text": "就是"
+      },
+      {
+        "index": 1756,
+        "text": "還沒那樣子的人只有來實習的"
+      },
+      {
+        "index": 1757,
+        "text": "就是他在"
+      },
+      {
+        "index": 1758,
+        "text": "Silicon Valley"
+      },
+      {
+        "index": 1759,
+        "text": "實習過"
+      },
+      {
+        "index": 1760,
+        "text": "嗯"
+      },
+      {
+        "index": 1761,
+        "text": "對比如說之前有待過"
+      },
+      {
+        "index": 1762,
+        "text": "在Amazon Fashion"
+      },
+      {
+        "index": 1763,
+        "text": "跟我同時間的"
+      },
+      {
+        "index": 1764,
+        "text": "他是PhD實習生"
+      },
+      {
+        "index": 1765,
+        "text": "去年暑假來公司實習"
+      },
+      {
+        "index": 1766,
+        "text": "嗯"
+      },
+      {
+        "index": 1767,
+        "text": "那你們這樣子做產品"
+      },
+      {
+        "index": 1768,
+        "text": "iteration夠快嗎"
+      },
+      {
+        "index": 1769,
+        "text": "當然我當然一直都覺得不夠快"
+      },
+      {
+        "index": 1770,
+        "text": "真的"
+      },
+      {
+        "index": 1771,
+        "text": "我覺得嗯"
+      },
+      {
+        "index": 1772,
+        "text": "我覺得你剛剛講到就是"
+      },
+      {
+        "index": 1773,
+        "text": "大家感情都很好"
+      },
+      {
+        "index": 1774,
+        "text": "像一個family一樣"
+      },
+      {
+        "index": 1775,
+        "text": "我覺得這個是一個很好一個"
+      },
+      {
+        "index": 1776,
+        "text": "很好的一個事情"
+      },
+      {
+        "index": 1777,
+        "text": "但是我個人認為"
+      },
+      {
+        "index": 1778,
+        "text": "COVID前的"
+      },
+      {
+        "index": 1779,
+        "text": "startup的那種環境"
+      },
+      {
+        "index": 1780,
+        "text": "跟現在的startup環境"
+      },
+      {
+        "index": 1781,
+        "text": "有點不太一樣"
+      },
+      {
+        "index": 1782,
+        "text": "我覺得現在現在startup"
+      },
+      {
+        "index": 1783,
+        "text": "至少我自己"
+      },
+      {
+        "index": 1784,
+        "text": "過去兩三年待的startup"
+      },
+      {
+        "index": 1785,
+        "text": "感覺其實我們"
+      },
+      {
+        "index": 1786,
+        "text": "constantly"
+      },
+      {
+        "index": 1787,
+        "text": "就是在在在battle"
+      },
+      {
+        "index": 1788,
+        "text": "我們是在一個很高度壓力環境下"
+      },
+      {
+        "index": 1789,
+        "text": "然後其實"
+      },
+      {
+        "index": 1790,
+        "text": "culture-wise我覺得"
+      },
+      {
+        "index": 1791,
+        "text": "我們大家私底下都是還不錯"
+      },
+      {
+        "index": 1792,
+        "text": "但是會覺得說我們今天就是來"
+      },
+      {
+        "index": 1793,
+        "text": "完成任務"
+      },
+      {
+        "index": 1794,
+        "text": "然後我們是很dedicated"
+      },
+      {
+        "index": 1795,
+        "text": "要focus"
+      },
+      {
+        "index": 1796,
+        "text": "要完成事情要execute"
+      },
+      {
+        "index": 1797,
+        "text": "以前那種比較很nice"
+      },
+      {
+        "index": 1798,
+        "text": "大家都慢慢來"
+      },
+      {
+        "index": 1799,
+        "text": "然後可能很"
+      },
+      {
+        "index": 1800,
+        "text": "respect對方那種感覺"
+      },
+      {
+        "index": 1801,
+        "text": "就已經"
+      },
+      {
+        "index": 1802,
+        "text": "就"
+      },
+      {
+        "index": 1803,
+        "text": "cut that bullshit"
+      },
+      {
+        "index": 1804,
+        "text": "然後我們就會直接就是"
+      },
+      {
+        "index": 1805,
+        "text": "有什麼話都很直的去講"
+      },
+      {
+        "index": 1806,
+        "text": "然後"
+      },
+      {
+        "index": 1807,
+        "text": "這個feedback"
+      },
+      {
+        "index": 1808,
+        "text": "都很"
+      },
+      {
+        "index": 1809,
+        "text": "straightforward"
+      },
+      {
+        "index": 1810,
+        "text": "這種"
+      },
+      {
+        "index": 1811,
+        "text": "這是我覺得就是如果再下一個"
+      },
+      {
+        "index": 1812,
+        "text": "環境下要生存下來"
+      },
+      {
+        "index": 1813,
+        "text": "startup要生存下來"
+      },
+      {
+        "index": 1814,
+        "text": "需要有的文化"
+      },
+      {
+        "index": 1815,
+        "text": "公司文化"
+      },
+      {
+        "index": 1816,
+        "text": "我自己是覺得感情好跟"
+      },
+      {
+        "index": 1817,
+        "text": "講話很harsh不衝突"
+      },
+      {
+        "index": 1818,
+        "text": "因為我對員工很harsh"
+      },
+      {
+        "index": 1819,
+        "text": "Right"
+      },
+      {
+        "index": 1820,
+        "text": "對就是如果東西沒有做完"
+      },
+      {
+        "index": 1821,
+        "text": "那我一定是告訴他"
+      },
+      {
+        "index": 1822,
+        "text": "你今天這個delay的"
+      },
+      {
+        "index": 1823,
+        "text": "consequence有多嚴重"
+      },
+      {
+        "index": 1824,
+        "text": "你為因為我們會"
+      },
+      {
+        "index": 1825,
+        "text": "因為你這樣子失去客戶"
+      },
+      {
+        "index": 1826,
+        "text": "那每個人"
+      },
+      {
+        "index": 1827,
+        "text": "都會有他們"
+      },
+      {
+        "index": 1828,
+        "text": "responsible的東西"
+      },
+      {
+        "index": 1829,
+        "text": "那個人就會被我講"
+      },
+      {
+        "index": 1830,
+        "text": "OK"
+      },
+      {
+        "index": 1831,
+        "text": "對我覺得"
+      },
+      {
+        "index": 1832,
+        "text": "有可能我感情很好所以我很兇"
+      },
+      {
+        "index": 1833,
+        "text": "所以互相互相感情很好"
+      },
+      {
+        "index": 1834,
+        "text": "但我不覺得contradict"
+      },
+      {
+        "index": 1835,
+        "text": "對那我也知道"
+      },
+      {
+        "index": 1836,
+        "text": "員工的working hours"
+      },
+      {
+        "index": 1837,
+        "text": "也很長"
+      },
+      {
+        "index": 1838,
+        "text": "大家是七點離開"
+      },
+      {
+        "index": 1839,
+        "text": "是因為我們"
+      },
+      {
+        "index": 1840,
+        "text": "coworking space"
+      },
+      {
+        "index": 1841,
+        "text": "七點就關了可是大家回家還是繼續"
+      },
+      {
+        "index": 1842,
+        "text": "還是會繼續做"
+      },
+      {
+        "index": 1843,
+        "text": "對對對"
+      },
+      {
+        "index": 1844,
+        "text": "你們過蠻那個蠻認真的"
+      },
+      {
+        "index": 1845,
+        "text": "嗯"
+      },
+      {
+        "index": 1846,
+        "text": "很棒"
+      },
+      {
+        "index": 1847,
+        "text": "必須因為我"
+      },
+      {
+        "index": 1848,
+        "text": "我覺得我也讓他們意識到就是"
+      },
+      {
+        "index": 1849,
+        "text": "因為我們這麼早"
+      },
+      {
+        "index": 1850,
+        "text": "他們現在不認真公司萬一公司垮了呢"
+      },
+      {
+        "index": 1851,
+        "text": "那他們那些equity不就沒了嗎"
+      },
+      {
+        "index": 1852,
+        "text": "對啊對啊"
+      },
+      {
+        "index": 1853,
+        "text": "嗯"
+      },
+      {
+        "index": 1854,
+        "text": "回到之前你還會選擇去走創業這條路嗎"
+      },
+      {
+        "index": 1855,
+        "text": "我覺得會選擇但我還是覺得很累"
+      },
+      {
+        "index": 1856,
+        "text": "所以你還是會選擇去走這條路"
+      },
+      {
+        "index": 1857,
+        "text": "會會"
+      },
+      {
+        "index": 1858,
+        "text": "會比之前"
+      },
+      {
+        "index": 1859,
+        "text": "你在corporate工作"
+      },
+      {
+        "index": 1860,
+        "text": "還要好玩"
+      },
+      {
+        "index": 1861,
+        "text": "好玩很多可是很累"
+      },
+      {
+        "index": 1862,
+        "text": "很累對吧"
+      },
+      {
+        "index": 1863,
+        "text": "嗯"
+      },
+      {
+        "index": 1864,
+        "text": "需要擔心的事情太多了"
+      },
+      {
+        "index": 1865,
+        "text": "需要擔心的事情很多然後"
+      },
+      {
+        "index": 1866,
+        "text": "我平常我原本應該是一個睡很好的人"
+      },
+      {
+        "index": 1867,
+        "text": "可是我覺得就擔心到不行"
+      },
+      {
+        "index": 1868,
+        "text": "就真的會睡不著"
+      },
+      {
+        "index": 1869,
+        "text": "哇"
+      },
+      {
+        "index": 1870,
+        "text": "對啊然後去年是大爆痘啊"
+      },
+      {
+        "index": 1871,
+        "text": "就是我該有的都有"
+      },
+      {
+        "index": 1872,
+        "text": "就各種壓力很大"
+      },
+      {
+        "index": 1873,
+        "text": "嗯"
+      },
+      {
+        "index": 1874,
+        "text": "或是自我懷疑啊"
+      },
+      {
+        "index": 1875,
+        "text": "就覺得說我現在為員工負責了"
+      },
+      {
+        "index": 1876,
+        "text": "我是不是其實他們頭已經洗下去了"
+      },
+      {
+        "index": 1877,
+        "text": "我到底有沒有做對"
+      },
+      {
+        "index": 1878,
+        "text": "嗯嗯"
+      },
+      {
+        "index": 1879,
+        "text": "差不多這樣"
+      },
+      {
+        "index": 1880,
+        "text": "好啊"
+      },
+      {
+        "index": 1881,
+        "text": "那很感謝玉珊來今天"
+      },
+      {
+        "index": 1882,
+        "text": "來這邊跟大家分享關於"
+      },
+      {
+        "index": 1883,
+        "text": "矽谷新創"
+      },
+      {
+        "index": 1884,
+        "text": "早期新創的一個環境"
+      },
+      {
+        "index": 1885,
+        "text": "還有公司的一些內容"
+      },
+      {
+        "index": 1886,
+        "text": "我覺得很棒"
+      },
+      {
+        "index": 1887,
+        "text": "希望大家有學到一點東西"
+      },
+      {
+        "index": 1888,
+        "text": "然後也祝你們融資順利"
+      },
+      {
+        "index": 1889,
+        "text": "可以可以賺很多錢"
+      },
+      {
+        "index": 1890,
+        "text": "謝謝我也希望"
+      },
+      {
+        "index": 1891,
+        "text": "OK好那今天這集就到這邊了"
+      },
+      {
+        "index": 1892,
+        "text": "拜拜"
+      },
+      {
+        "index": 1893,
+        "text": "拜"
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "transcript": "Hello大家好我是Terry\n今天呢邀請了特別來賓\n一個\n新創公司的CEO founder\n玉珊\n來到頻道\n跟大家聊一下關於startup\n還有一些她的經驗\n嗯\n那你覺得西雅圖怎麼樣\n你上次來西雅圖什麼時候\n我完全欸\n高中吧\n高中哦\n我高中的時候來過一個暑假學英文\nOK高中什麼時候\n我高中是17年前了\n很久很久以前\nOK\n玉珊你最近\n就是你們的startup新創公司\n剛結束了融資是最近嗎\n還是\n哦應該說\n10月的時候加入加速器\n然後那時候算結束\n去年10月的時候\n對對對\n然後現在加速器才剛開始\n嗯\n那我覺得蠻厲害的啦因為\n其實現在\n呃startup很競爭\n尤其是\nVC要給錢的情況下\n因為因為以前\nVC錢很多然後隨便砸\n尤其在疫情的時候\n那現在因為\n現在錢其實砸的地方很重要\n然後\n要看founder的一些特質\n還有看startup的一些特質\n要去砸錢\n我覺得現在這個環境下要融資是比較\n困難的相對來講比較困難\n你之前有融過資嗎還是這是第一次\n很多次\n很多次OK\n呃我一開始融資的時候\n是就是先Angel round\nAngel round\n是走的最順的\n因為那時候\n有friends\nand family\n然後跟人家介紹的天使投資人\nAngel round\n是在什麼時候\n呃我一開公司的時候就融了\nOK\n對那時候就融了46萬\nOK嗯嗯嗯\nOK\n所以開公司的時候是去年嗎\n沒有欸2024年5月\n哦OK所以大概一年多前\n對對對對\n然後你們公司\n是叫Mirror AI\nMirror Mirror\n以前一直來都是這個名字嗎還是\n一直都是名字想過要改幾次\n可是不小心就會上了一些文章\n就發現不能改了\n你說已經有一些\n在不同的地方社群媒體報導\n然後你就覺得OK\n就是\nstick with the name\n對對對對對\n那你可以給我一個\nhigh level的\n一個pitch\n就是你的名字你的公司是做什麼\n嗯\n對\n我們現在在做的是\n專門幫時尚品牌做的\n一個生圖workflow\n嗯哼\n對那因為非常非常多的\n想要做類似事情的競品\n他們基本上是會\n呃用的還是很AI\n會跟你說你要自己先選擇模型啊\n要選擇生圖的各種方式調參數\n但是我們是把這些全部都\n讓使用者不用做決定\nOK\n對我們會自動根據這個\n衣品的特質\n還有你想要生圖的目標等等\n幫你自動生出來\n然後不用去做任何的手動控制\n生圖就是比如說我今天要\n用個雜誌封面\n或是我要有一個產品的宣傳\n那我可能有些model\n然後可以用你們的產品去把東西給\n生出來就那個圖片我不需要自己去拍\n是這個意思嗎\n是的是的是的那\n嗯其中有一部分我們現在還不能\n還不能公佈\n可是可以先公佈的就是我們在\n呃推出的品牌生成器\n所以就是單純就衣品來講的話\n嗯\n嗯因為大家看電商的時候\n都會看到衣服的\n品牌圖\n那其實那個品牌圖我們\n跟很多品牌採訪的時候\n他們都會抱怨說那個品牌圖\n很耗時然後其實也很耗錢\n而且就這些creative來講\n其實他們拍這個\n一點激發創意激發都沒有\nOK\n對所以我們用AI的方式\n來幫他們製造這樣子的圖\n然後基本上他們用\ndrag and drop\n就可以去做這些事情\n回過來的時候\n幾百件衣服我們就幫你弄好了\n哦你說直接在衣服上面\n把品牌弄上去嗎\n還是它怎麼work\n哦嗯\n我今天是一個雜誌的編輯好了\n然後我來找你們\n然後我是怎麼樣去生成一個圖片\n從零到一\n嗯嗯嗯\n的一個過程\n我們用品牌舉例好了\n因為雜誌跟雜誌編輯\n跟品牌的use case\n還是不一樣\n嗯所以如果是品牌的話\n基本上他們的倉儲裡就會有已經\nmanufacture好的衣服\n那可是如果要做初高質感的品牌圖\n以前其實是要請攝影師\n然後在攝影棚裡面拍好\n然後要完全有運燙好\n整個衣服要整理的整整齊齊\n事後還要再修圖\n嗯\n那versus我們現在提供的服務\n基本上品牌owner也好\n或者是他們的美編或是實習生\n他們拿手機就可以了\n然後手機基本上衣服簡單掛在人形上\n或是一架上正反兩面稍微拍\n光線也不用調也不用去做\n就是steaming啊\n也不用去把它用品\n然後放到我們品牌生成器之後\n就會自動生成漂亮的\n正反面圖\n跟商品敘述\n哦OK所以說直接就可以上到那個\n他們網站\n比如\n網站的product page\n對對對\n上面這樣子\n我們現在有提供就是\n可以讓他們直接\n跟商家必做integration\n嗯哼\n對然後我們下禮拜\n會推出\nShopify的\nintegration\n就像是美國的Shopline\n嗯哼\n嗯那另外我們在開發的\n這個月底要推出的就是\n這個其實可以用成API\n我們就API offering\n嗯哼\n那這樣\n最難的地方在哪裡\n因為我感覺好像\n會有很多的就是\n你們生成出來的東西\n需要fine tune\n就可能我也覺得顏色好像不太對\n或者是我可能光線或是\n身為一個customer\n我會想要就是\n網站上看到的東西跟實體寄到\n收到的東西不太一樣\n那這個是這我覺得會比較多的事情\n還是有一些其他的\n嗯嗯嗯\n對\n我們之前開始做的時候很大一個部分\n原本是精準度可是精準度如果你想成\n現在生圖模型就是一直在進步的話\n這其實漸漸是\n會被solve的problem\n所以如果講\n這個生成generation本身\n單一一個商品做生成的時候\n它準確度已經不是我們需要煩惱的\n反而是你一個商家\n有一整個collection\n你生成的時候的那個一致性很難\nOK\n對就是你要怎麼可以控制說\n我生成出來的商品\n他們的袖子角度也好\n然後或者商品呈現\n是要砰的還是要扁的\n那或者是他們的陰影\n是不是能夠都非常一致\n那我們要能確保說假設這次的\ncollection有60件\n他們呈現出來的時候要很整齊\nOK\nI see\n所以這個是產品比較難的技術\n點嗎\n對技術點然後還有生圖的時候\n如果\n花很多很多步驟\n去做調整\n因為你可以做\n很多pre-processing\n很多\npost-processing\n其實對於客戶來講\n那個等待的latency很長\n那其實大家那個體驗就會很差\n所以我們要怎麼樣用聰明的方法\n保持品質同時又不會讓等待時間太長\nI see\n了解\n所以說你現在已經可以做到\n怎麼樣的程度就是可以讓\n客戶覺得欸\n做出來的時候就很滿意嗎\n還是說你會花大概多少時間\n去manually去做微調\n嗯其實我們\n一開始都會以自己的判斷去做微調\n但是我們現在發現\n還是直接聽客戶講比較重要\n所以我們有兩個客戶是會非常\n兩個品牌\n他們會非常的密切跟我們開會\nOK\n然後會告訴他們的反饋\n告訴我們哪裡做得不夠好\n那我們就要馬上的去iterate\n那其中一個商家比如說之前品牌圖\n他們因為\n人工跟資金有限\n所以他們一個月最多就是上\n上架500件\nOK\n對那他們因為跟我們合作之後\n他們現在\n他們的二手平台\n那他們就可以跟其他品牌合作\n說過季商品上來\n然後他們已經告訴我們下個月想要\n上架的數量是4000件\n嗯哼\n嗯\n所以如果是這樣講的話\n就是一個品質上的提升\n跟效率上的提升\n哦OKOK\n像我今天用完之後那\n東西出來了\n不是很滿意\n那我是直接給你feedback\n還是我可以在你的app上面就說\nOK我覺得這個東西不好\n然後就要重新generate\n我們現在還是先以直接溝通比較快\n因為我們想要\n有一個conversation\n當然未來\n客戶變多的時候\n還是要有bug report\nissue report\n所以我們現在暫時會直接\n我們在台灣\n就用LINELINE\ngroup chat\n跟他們聊\nOKOK\n那那你們是\n怎麼\ncharge customer\n呃我們有一個公開的\n像\nsubscription\nbase的\n那那\n就是charge credits\nOK\n對可是如果是大一點的客戶\n大中一點的話我們就可以談條件\n看他們一下子要簽幾個月\n然後volume夠多的時候\n我們都會給discount\n還有想要簽認\n這種\ndesign partnership\n的公司\n我們也會再跟他們更便宜一點點\n哦OK了解\n因為畢竟反饋\n其實我們常常看那些反饋\n我們都覺得\n這應該是我們要花錢去買的\n嗯嗯\n可以問一下關於你們tech上面的\n就是你們技術方面\n因為我知道你背景是CS嘛\n也是tech\n那你你主要現在在做的事情是\n你的\nday to day\noperation是\n你也會做tech嗎\n還是你focus在\n比較high level\n可能公司的execution\n嗯最近加速器之前我比較\n少時間去做tech一開始寫\n我們的MVP的時候\n公司剛開始我會自己寫\n但是現在有工程團隊了嘛\n那我是因為到最近進加速器之後\n他們其實不想要我們founder\n在demo day前去融資\n所以我突然時間變很多所以\n我現在就是跟團隊一起開發\n哦所以你現在有寫code\n嗯嗯嗯\nOK好\n還蠻厲害的\n一直都寫啊\n一直都寫\n對啊我的我的career\n就是寫code\nOK你career寫code\n然後你也喜歡寫code\n喜歡啊\n真的OK\nOK那你覺得現在\n寫code\n跟以前寫code最大的區別\n你問的問題timing很好\n因為禮拜這個三個禮拜前嘛\n三個禮拜前\nClaude的code work\n才出來嘛\n然後我是我拖了到上禮拜一\n所以就是六天前才開始用\n對\n瞬間就有一種我以前\n因為我以前待過Amazon\n在那裡當\napplied scientist\n瞬間覺得以前做的工作完全被取代了\n真的\n嗯因為我那個時候做的\n就是在測試不同種的\n類神經網路模型然後\n看說\n老闆要的這個objective\n我們有沒有辦法一直提升\n假設\n減少退換率好了然後\n推薦尺寸的準確率提高等等\n那我現在跟Claude聊的時候\n覺得他可以想的比我廣\n多很多而且又想得很快\n然後可以很快的迭代\n不同種模型去測試\n所以\n我覺得跟現在寫code\n跟以前完全不一樣\nOK\n對啊我過去這這一周\n跟團隊合作的時候\n我也沒有親自去寫\n檔案裡面的code\n我全部都是agentic在做\n就是agentic AI在做\n對啊未來應該也都是\nagentic AI\n在幫大家去做所有的事情\n那你們公司產品\n技術方面\n也是用很多\nagentic AI的東西嗎\n還是\n沒有欸我其實train了\ntrain了團隊train蠻久我們在過去這\n幾個禮拜才開始用\n之前還是比較傳統一點\n就是我們的developer\n還是會比較\n傳統他會用會用chatbot\n就是用LLM然後去分開這樣子聊\n那有開始漸漸用cursor去做\n所以一點點的agentic\n可是沒有到現在\n這陣子的Claude code\n跟Claude\ncode work\n這麼這麼agentic\nI see\n但但你們在\nimage generation\n這部分是\n自己train model嗎還是\n你是用你們是用現成的\n我們一開始有train\n去年暑假的時候\n那時候還會把flux\n下來fine tune\n那我們那時候\n還沒有拿到加速器的資源\n燒了很多就是AWS的資源\n發現完全不值得就真的不值得\n然後我們2024年暑假的時候\n那時候也有train\n自己的一些\nlightweight的\nrecommendation\nmodel等等\n那個還好可是train模型之後\n你真的覺得一個小小的公司\n尤其我們當時連九人都不到\n更少可能六人\n然後資金又不足的狀況下\n去train\n你過幾個禮拜其實就會有人\n推出更好的模型\n完全超過你可以達到的\n的能力那我們當時還會洗腦自己說\n沒關係\n我們是\nfashion specific\n還是需要自己train然後\n我覺得那個\n那個是我們\n就是一廂情願想要train\n所以我們\n我們正式在Nano Banana\n出來那天就停止了\n停止任何\n想要fine tune的想法\n我們當時做了\n很多fine tune\n也做了很多\nprompt optimization\n還有我們花很多時間\n做post editing\n就出來如果accuracy不高\n我們還會去segment\n那一個特定的region\n然後去做\nin painting等等的\n會把它給校正\n然後感動自己啊就覺得做得超好\n然後\nNano Banana一drop\n就這些都變成non-issue\n嗯嗯嗯\n那我們先暫停一下\n跟大家分享一下\n我最近幾週的一個想法\n大家都在說AI呢會取代工程師\n但是我覺得AI時代呢\n有一個技能反而變得更有價值\n那就是跟人去connect\n我說的connect\n是人與人之間的交流\n文化，還有情感的傳達\n比如說你在一個\nstand up meeting裡面\n你可以更像一個native\n去表達你的想法\n那我最近呢\n在用一款叫做Speak的app\n用了一陣子之後呢\n想要跟大家分享一下\n這個是真的有效\n特別是如果你也像我一樣害羞\n不太喜歡跟陌生人講話\n在Speak上面呢\n可以直接跟AI練習對話的情境\n蠻猛的一個地方\n就是它在對話的當下呢\n就會修正我講錯的地方\n它不會含糊的說可以更好\n而是直接給我更自然的說法\n那它的核心呢是AI口說練習\n你可以自己自訂這個對話情境\n像我自己練的\n就是面試的self intro\n我可以設定說我自己是求職者\n然後AI是面試官\n而且它不是照稿子走\n會追問你然後挑戰你\n很接近真實面試的一個感覺\nHi my name is Terry. I grew up in Taiwan. I'm a software engineer\nNice to meet you Terry.\nWhat inspired you to become a software engineer\nI used to work in the legal patent space.\nWe used AI to help our customers\nfight for patent infringement lawsuits\nThat sounds interesting. How did you use AI in those cases\n那當你講完之後呢\n它還會自動生成一個專屬的複習課程\n專門整理你剛剛沒講好的部分\n所以你就不用自己回頭找了\nWe used AI to help our customers fight patent infringement lawsuits\nWe used AI to help our customers fight patent infringement lawsuits\n那如果你想要學新用法的話呢\n他們也有這個主題影片的課程\n這個就會比較有結構\nHi there I'm Audrey the lead English teacher at Speak.\nHave we met before\nHave we met before\nHave we met before\nWow have you practiced that before\n那Speak他們是\n拿到OpenAI的投資\n也有技術的合作\n他們在全球有超過4000萬個用戶\n口碑呢也完全是靠實力去累積的\n我自己用起來的體驗呢\n是真的蠻順的啦\n很適合像我這種I人\n不會主動跟陌生人搭話的這種人\n那現在\n訂閱Speak Premium呢\n有年方案299的折扣\n新用戶呢有免費7天可以試用\n連結在影片底下資訊欄\n你可以先試試看再決定\n英文口說呢真的就是純靠練習\n只要你願意開口沒有學不好的\n我會把連結全部放在影片底下資訊欄\n好那我們回到影片\n那會比較擔心說就像最近\n不知道你有沒有關注就是像CRM\nSalesforce這些公司\nAdobe\n他們市場\n對自己這些SaaS公司的產品\n比較悲觀的原因是因為\n大家覺得這些AI\nagentic AI這麼這麼厲害\n這麼強\n像像Claude他們\n最近出很多plugin嘛\nsales plugin\n還有一些\nlegal tech\n的plugin\n那如果他們做一個\nfashion的plugin\n怎麼辦\n那你們會不會\n就是被他們給吃掉\n如果說我們公司真正要做東西\n就聽起來就是我現在講的話\n那絕對會被吃掉\n絕對絕對會被吃掉可是因為\n對我知道就是一直不能講到底要幹嘛\n可是我們後面有一整塊\n其實跟agentic\n跟SaaS是分開的\n哦\n對對我們真正的vision\n是above this\nOK\n對\n那才是我們保護自己的方法\n當然我們也pivot超多次\n然後才land到這個idea\n是因為這個idea才進加速器\n哦所以是因為這個idea\n才拿到你們A60Z的投資\n對那我們現在所有做的\n這些\nfashion workflow\n的software\n只是為了GTM就是要讓客戶上來\n那我們也希望真的幫他們解決痛點\n然後幫他們cost down\n幫他們speed up\n可是這些東西\n未來要帶到的那個vision\n跟agentic\n跟SaaS沒有關係\n真的所以是完全不一樣的產品嗎還是\ntotally different\n我覺得像是一個\nlayer on top of it\n嗯哼\n嗯\nOK那不能講的原因是什麼\n我原本是想講然後\n我原本想講可是因為\n我們4月15號是demo day\n那A60Z的C round\n跟我們聊過了\n想要大家\nstay in stealth as much as possible\n這樣子我們demo day那天\n正式launch\n然後我們的\nfund raise才會\n比較有辦法\n製造那個momentum\ndemo day是什麼\ndemo day\n真的像YC有demo day\ndemo day有點像是\n大家\naccelerator到最後的\n那個成果發表會\n哦OK\n對對對\n所以是大家一起demo\n然後會有investor\n在下面看嗎\n嗯好像說什麼\n那個會場\n會邀1000多個investor\nOK\n可是每個公司只有120秒\n還是90秒很短很短\n哦很短哦\n嗯可是就是要講說我達到多少\nMRR ARR what's the traction\n等等等等等等\n所以說你們會在那個時候\n公佈你們的新的approach\n可是你們現在這個東西\n已經在build嗎\n還是已經ready\n哦對其實build好了\n而且我們也有在\n很hush hush的帶客戶上來\nOK\n嗯嗯只是就是還不能公開講\n對我原本以為可以\n就back and forth\n了幾次\n差點講然後就又沒講\n很值得期待的東西嗎\n我覺得超棒的\n我很想我現在超好奇這個東西\nOK你跟我講說\n你們之前有pivot過很多遍嘛\n然後你們\n有有Angel round\n就是Angel round\n是跟什麼\noutside\ninvestor嗎\n還是自己認識的朋友什麼\n呃當時有比如說前主管\n然後主管會推薦人\n然後我那裡很多\n尤其是AI\n因為AI賺很多錢的人\n所以他們其實\nthey're like angel investing as a sport\n那這些人他們我聽過一個很神奇是\n他們有些人就是我的目標就是有一天\n我要投到400間公司\n那他們每個\n就是smoke check\n那他們其實沒有\n沒有興趣花時間去\n去screen太多的公司\n對對對\n他其實就是喜歡這個founder\n他們就會投\n那當時有\ntap into\n這樣子的network\n然後拿到融資\n嗯大概是這樣吧\n這樣子收集起來的\n天使輪\nOK然後你說\n天使輪大概融了4040幾萬\n46萬\nA60Z跟比如說Ycom\n他們拿的equity的部分大概是\n應該是8到8到10%嗎差不多\n嗯A60Z的話是100萬美金\n那100萬美金\n它分成兩個tranche\n那第一個tranche\n是50萬美金\n然後它就是完全\n拿10%\n所以是\nhard valuation at 5 million\n嗯那可是它的\nsecond tranche\n就是你下次要融的\n然後它會follow\n你那個時候的valuation\nOKI see\nfamily round\n一般他們會拿多少\n我當時就是直接\n我就說我的valuation\n是10 mil cap\n可是他們那個時候\n不是直接\nconvert成equity\n要convert的是在\nC round才convert\n對他們是簽safe嘛\n對啊然後是\n是以10 mil的\nvaluation\n去去拿的\n對對對\nOK\n然後我一開始天使輪是46萬\n然後可是因為到去年8月的時候\n我們等於8月\nhard pivot\n成新的這個idea\n那我當時其實是想說慘了\n就是錢已經快燒完了\n所以我當時就想說為了要\n做這個pivot\n我沒有想要申請A60Z\n我那時候是想說募一個\nbridge round\n因為pivot真的是沒辦法\nstick to the original plan\n所以我的bridge round\n原本要在\nraise another half million\n對那我那時候就在tap into\n之前還沒有投資過我的天使投資人\n其實那個時候\n我們現在這樣\nconnect到\nMicrosoft的CPO\n然後還有Zinga的前CTO\n然後他們的投資就剛好引薦我說\n因為我原本被\nA60Z seed round\n在去年4月拒絕過一次\n然後他們就叫我再投一次看看\n對然後在那個階段的時候\n我募到13萬5\n嗯哼\n13萬5然後我就\n因為accept被accept\n所以就提前結束\n沒有去募那個完整的50萬\nOKOKI see\n那你覺得現在募資有比較難嗎\n還是你覺得investor\n他們看重的是什麼東西\n我覺得要看誰去募\n要看誰去募\n那你覺得他們看重的是你的什麼\n我覺得當時我真的以為\n以我的founder背景\n就夠就完全不夠\nOK\n對然後我原本的idea\n完全就非常replaceable\n我也拿過\nvirtual try on\n去募被拒到不行\n然後我一開始想要做B2C\n然後我那時候想要做的完全就是什麼\nfashion magazine for everyone\n就你現在網站上面的\n沒有現在的話我們現在應該是改成\n對現在應該是完全是flatlay\n就是品牌圖\n就對那原本那些比較可愛的idea\n就配我自己的背景其實很weak\n對所以我真的感覺到投資\n還有我覺得\n我的technical背景\n沒有達到投資人中那種\n可以完全de-risk的\n他們要\n什麼樣的technical背景\n我覺得是OpenAI出來\nDeepMind那種\n哦就\n那就是no-brainer對對對\n那對他們而言就\n而且因為那些人network很強\n他們一定\nthey will make things work\n而且他們一定會覺得\n其他investor也會這樣想\n所以他們都會很容易就投下去\n那我當時很多人跟我說你沒有問題\n你一定會募很多錢結果我沒有\n我就非常struggle\n所以我發現\n是我的idea不夠好\n對我的idea\n沒有達到他們想要的那個樣子\n那idea好之後我覺得現在\n投資人另外一塊想要看的就是\n假設如果當時idea真的不夠好\n可是我就有辦法賺到錢的話\n假設我的revenue很強\n那他們也會投\n因為我聽過幾個也是\n可能背景比較普通\n那可是因為他們就非常\n就是genius型的\n可以crack GTM\n他們可以讓人就是會\n付錢\n對\n那這個投資人也會投\nOK\n對對對\n所以所以你們是你們是你們是怎麼樣\n我們當時進\nA60Z seed round\n完全是\nidea\nidea哦就是那個idea\n因為是\npre-product pre-revenue\n哦哇那蠻厲害的\n所以好險pivot我覺得就是\n被逼急了就是公司要生存一定要\n不停的想然後我就我覺得有意識到\n還有因為\nNano Banana Pro出來\n我那時候就有一種晴天霹靂的感覺\n覺得不能再往這個地方硬鑽\n還自己感動自己\n訓練模型幹嘛對啊\n所以我們就hard pivot\n然後就反而變成\n就是\nblessing in disguise\n真的\nOK\n我我猜\n你們還是有revenue對吧\n有有有嗯\n那你們現在burn rate\n大概可以到到什麼時候\n所以你們runway還有多久\n嗯就真的是\n就是差不多Q2\nQ2OK\n所以你Q2\nvery tight very tight\nQ2之前\n就要在raise下一個round\n對這也是speed round的計畫\n他們基本上是全部參加的公司\n都會在那一天\ndemo day開始的兩週\nraise\nOK所以下一個round就是\n就你剛剛講的那個\n在下一個\n就是我們的真正種子輪\n因為我們到現在\n我就\nI call it pre-seed\n我這樣全部收在一起\nso this is pre-seed round\n嗯那如果從頭再來一次\n你還會去A16Z嗎\n因為\n其實這些incubator他們\n除了給資源之外\n其實他們拿\n很多equity right\n我要拿很多equity嗯\n那\n我覺得兩兩個方向看\n第一個我當時就真的是\nI was desperate\n真的需要有人來幫我\n而且需要\nwe need money\nRight\n另外一個是我因為\n這個program現在開始兩週\n我現在就是\n頭號粉絲我是A16Z的頭號粉絲\n我覺得\n進去加速器之後才有一種\n因為我也我等於創業到進加速器\n經過了一年半\n對\n然後我覺得該經過的\nstruggle我都經過了\nOK\n然後公司那種\n求生存的那種我都經歷過\n所以\n我記得那個speedrun第一天\n他們orientation的時候\n我自己就蠻想哭的\n覺得有有人可以照顧我們\n那種感覺蠻好的\n而且他們的資源真的\n很厲害\n我覺得啦\n當然我覺得\n如果有一個founder\n你說資源很厲害是因為他們\n給你很多connection嗎\n還是給你很多resources\n嗯connection\n就是VC network很強\n然後我覺得他們有一套\nformula知道說\n一個startup\n要怎麼去做branding\n怎麼去launch\n怎麼製造fomo\n還有他們會一直\n他們的office hour\n其實很intense\n我們會跟其他的founder\n一起坐下\n他就會一直grill你的\n你的GTM\n你這個revenue不行\n然後我們每個禮拜都要重新整理\nrevenue projection\n然後他們的partner\n都會進來看\n基本上\n就是\nyell in our face\n說你不夠ambitious\n嗯嗯嗯\n對我喜歡他們這樣子\n就是\nyou got to do a real business\n我們不是要\n進來大家做一個cute idea\n然後就耶拍手結束\n就是show me你12個禮拜\n你就是可以達到怎麼樣的\nARR我們再說你估值是多少\n哦OK\n我覺得他們幫我們逼得很緊\nin a good way\n嗯嗯嗯\n那你現在會覺得壓力很大嗎\n就是\n大啊大啊\n然後也把整個壓力\ntransfer給整個team\n就是我覺得是需要的\nOK\n而且\n我覺得有壓力沒有關係\n可是如果有clarity就很好\n嗯嗯嗯\n因為人家會告訴我說\n我告訴你就是該這麼做\n我知道會很難\n可是至少你會知道不是好像\n不知道方向在哪裡的\n有時候我覺得最恐怖就是怕\n忙忙忙然後每天只告訴自己很忙\n然後自己很感動\n可是沒有覺得\n人家講什麼\nmove the needle\n嗯嗯嗯嗯\n每天的day to day\n大概是怎麼樣\n我們因為speedrun\n它是禮拜二三四\n要去onsite\n有一些sessions\nOK\n對那因為我在上禮拜把我\n世界各地的team\n都colocate嘛\nRight\n對所以我禮拜一\n我們都準時九點到辦公室\n那們一定會\n就是先daily standup\n嗯哼\n對那突然不用\ntake investor call\n的時間\n會突然白天會沒有很多這種\ninvestor meeting\n所以我就是跟team一起\ndevelop\n嗯一起做開發\n一起做開發對\n那\n你沒有\n你沒有其他founder對不對\n你就是唯一founder\n我是我是solo founder\n你是solo founder\n對對你做開發然後\n因為我們有designer\n然後也有幫忙做branding的\n所以不只是開發本身\n也會跟這些夥伴一起討論說\n我們最近有client可能有一些\n問題所以我們要怎麼address\n還有要討論content\nwhich我們是\n最近才開始做content\n對那我們\n還是說\nsocial media\n的content嗎\n還是什麼\nOK\n對對對那這樣一路忙\n其實我們都是忙到七點\n晚上七點\n對七點然後回家之後\n煮煮飯\n煮煮飯之後我跟台灣那邊\n或是日本的會都八點開始\n聽起來很intense\n很好玩very fun\n你如果做你喜歡的事情的話\n我覺得就是好玩\n對對對對對對\n而且因為我們跟台灣開會\n然後\n也會有越來越多inbound\n或是人家介紹的\npotential client\n或是real client\n那他們通常會在我隔天早上醒來前\n就會LINE上面會給我們很多反饋\n嗯嗯嗯\n所以我就知道說OK\n那我們早上九點又是\n要怎麼重新align\n嗯嗯嗯\n可是二三四就要去聽session\nOK\n可是你現在不能review你的\n新的那個pivot的idea\n那你要怎麼去\npitch to你的client\n還是OK的\n我們可以想成兩塊啦\n就是第一塊如果是剛剛講的\n品牌生存的話我就是\n誰都可以sell to it\n對\n那可是第二塊的話\n如果這個人已經跟我們一陣子了\n我們會開始跟他講\nOK\n這個第二塊我們其實做得差不多了\n要不要來玩\n而且第二塊因為\n我看怎麼講\n第二塊不只involve品牌\n應該這樣講\n所以它有另外一端的\nfashion industry\n的人\n我們需要接洽\n所以另外一段我們就花很多時間\n也是去跟他們\nbuild relationship\n所以你自己是\n很喜歡fashion的東西\n算喜歡算喜歡\n因為我覺得你之前好像是做\n你是當model對不對\n嗯嗯嗯\n是因為這個原因\n你喜歡fashion嗎\n還是你一直以來都很喜歡\n我覺得是因為當model\n才喜歡fashion\n因為我覺得我之前\n不是特別\nfashionable的人\n嗯\n對然後是越做越覺得這個\nspace很有趣\n然後你就覺得\n想要\ncombine fashion\n跟AI\n去幫大家做一些事情\n蠻蠻蠻厲害\n因為我不是很懂fashion\n我覺得fashion\n有可能也是說既然都要做事情\n那螢幕上的東西會漂漂亮亮\n好像那種why not\n可是你不覺得\nfashion這種東西\n我自己的感覺是\nfashion這種東西\n一直在rotate嘛\n就是其實你可能十年前的東西\n現在流行一下\n然後可能過十年又會再流行\n就是它是一個東西一直在換\n然後都是根據這些\n應該說怎麼說\n就是這些celebrities\n或是這些influencers\n他們去穿搭什麼的\n帶動這個流行\n對啊那你不覺得這個東西就是\n一直在cycle同樣的東西\n然後隨著AI越來越普及\n然後大家對fashion的觀念\n就是比較\n我我感覺就是\n都是\n來自於social media\n可能TikTok然後穿什麼東西\n然後品牌其實並沒有像以前\n那樣子那麼的\n重要\n重要的是\ninfluencer\n去帶動這個fashion\n而不是品牌本身\n我完全同意\n嗯完全同意\n我覺得我對於\nfashion trend prediction\n這個題目就是完全失去熱情\n因為我寫過兩篇paper\nI'm never touching it again\n因為就真的是這樣子\nthere's nothing to predict\n就其實就是\n其實都是被engineer出來\n我覺得trend都是\n把它engineer出來的\n不是因為真的有一個什麼\n大環境\nblah blah blah\n反正基本上\n有幾個big player\n他們可以決定這個東西\n決定fashion\n對啊就像其實音樂也是一樣\n對啊嗯\n我覺得你剛剛講的那個\ninfluencer\n會celebrity\n會把一個東西炒紅\n對\n這個是完全正確\n就像那個什麼\n拉餔餔還是什麼的\n對你根本沒辦法預測到\n拉餔餔會跑出來\n你現在因為你沒有CTO嗎\n還是沒有\n沒有\n所以所以你就是兼CEOCTO\n嗯\nCPO\n嗯對\n全部都是\n都是你嗎\n是對\n我們就只有我一個C啦\n只有你一個C\n所以你們team全部都是\n就是等於說比較偏向IC\n或是\n最近開始有其中一個人在\n哦沒有\n我有一個\nengineering manager\n要幫我管\n另外兩個developers\nOK\n嗯最近有一個\n幫我做branding的\n他有開始幫我管intern\n嗯哼\n對可是\n我覺得在startup\n就是每個人都\nwear multiple hats\n其實有點像\n互相在manage的感覺\nRight\n那你要怎麼去\nattract\n這些engineer\n或是product team\n來join你的公司\nFirst of all我要先講\n就是我之前一直以為我這個\nadvice很好\n然後\n我在\nspeedrun的\noffice hour\n跟大家share\n然後才要被稍微講說這個\nit's not very applicable\n並不是每一個公司都能用\n所以我先打個預防針\n就我們的方法完全就是\n別人來pitch我\nOK\n嗯我從創公司開始的時候\n那時候\n小小的嘛也沒有什麼人\n然後那個時候\n都是透過Instagram\n有人就會想說他想要來\n跟我工作\nOK\n那我就會因為這樣\n然後去interview\n嗯哼\n對可是\n可以拿到interview的人\n其實也蠻少\n我一定要這個人也是\ntechnically strong\n嗯哼\n嗯那之後我們的\n嗯online presence\n開始漸漸發展之後\n那個時候還是比較多\n台灣或是亞洲人\n哦那時候是2024年嗎\n2024年5月對\n所以我那時候\n有先招到Berkeley的MLE\n嗯嗯嗯\n然後漸漸發展之後\n我是在2024年的秋天冬天\n那時候\n招到台灣的developers\n那也是從Instagram\n對對對那個時候\n我story也有提到說\n我想要developers\n哦所以是因為\n你的Instagram\n經常發你公司的東西嗎\n嗯嗯嗯\n然後你就用這種方式有人來加入\n對對對對對\n所以那個是一開始\n然後再來漸漸拓展\n也是因為我們有被\nA16Z的\n一個\ninvestment thesis\n他們另外一個partner\n寫了一個\nonline shopping landscape\n然後他們就寫了一個\n叫\nstartups to watch\n那時候我們被feature\n然後就有更多人\n是從LinkedIn過來\n哦\n嗯就那時候\n就有LinkedIn上面\n的人會pitch我\n可是at that point\n我不需要\n更多technical的人\n所以其實我通常也聊一聊\n然後並沒有覺得說\n這個會\nbring more value\n因為我已經有一個\n很strong的\nBerkeley MLE\n幫我管\n台灣三個developers\n對所以真正打動我的是到\n秋天的時候\n有一個在Kellogg\n念MBA的女生\n對然後他就pitch說\n他可以幫忙\n很多\npricing strategy\nGTM strategy\nOK\n嗯那我那時候就在收了他\n哦還有在那之前還有\n開始有\nfashion industry\n的人\n想要transition\n到tech\n哦\n所以也在\nLinkedIn上pitch自己\n然後就有一個巴黎的女生\n跟一個倫敦的女生\n這樣子不會就是花很多時間\n要去filter掉一些\n不qualified的人嗎\n要要我\n我發現\n這也是沒辦法\n這就是founder該做的\n我意思說就是\n因為你如果在LinkedIn上面\n直接去\noutreach\n會稍微精準一點\n因為你在LinkedIn上面可以\n準確的指定說\n你要什麼skill set\n你要什麼樣的人\n對當然他們不一定會理你\n只是說就是\n會來reach out你的人\n應該是他們真的是有興趣嘛\n對你的產品\n或是對你的vision有興趣\n但是通常這樣子\n不代表說\n他們有這個skill set\n或是他們qualified\n是\n對啊\n所以說我比較好奇是你怎麼去\n組建你的\nfounding team的\n因為我覺得\nfounding team很重要\n而且而且\nfounding team\n會直接shape\n你之後整個公司的文化\n嗯嗯嗯\nthe culture\n你是怎麼樣的去execute\n這些我覺得\n都是founding team會\n帶來不太一樣的改變\n那founding team\n很強的話\n其實你在做事情也會效率會高很多\n對對對\n那你是怎麼去select\n或是你你會看重哪些人格特質\n或是哪些東西是你在乎的\n人格特質第一個如果說\n他們\npitch themselves to me\n通常進來之後我可以感覺到態度很好\n對但是還有另外一個是\n進來之後我也會試用\n嗯哼\n嗯試用一定要過了才會繼續\nOK\n對那還有\n當然合作不愉快的話\n就要fire\n嗯\n嗯嗯嗯\n那我覺得\n有裁員這個\n動作的話其實\n對於團隊是好的\n嗯哼\n對因為團隊會意識到說\n你的工作態度一定要在那裡\nOK\n嗯嗯嗯\nOK\n對其實我這上禮拜\n大家來的時候\n聽起來很crazy\n可是我就是基本上跟大家講說\n這12週\nI want you to work as hard as you can\nprobably the hardest in your life\n那我有跟團隊講說\n我加班的時候也要找到你\n我週末我需要找到你\nyou have to be there\n如果你沒有想要\ntake part in this kind of\nworking\nenvironment的話\n禮拜五以前辭職\n我都會給你severance\nOK\n可是禮拜五之後\nI can't guarantee\n因為我們就沒有那個budget\n嗯\n對啊那\n那有人辭職嗎\n沒有\n開心對所以\n我覺得該嚴肅的時候還是要嚴肅\n那\n嗯對啊可是\n剛剛你講到說\n如果自己outreach\n其實outreach\n一定會有很好很好的talent\n對\n可是這些talent\n我其實一直都有在\nmanage\n這些talent's\nrelationship\n這些talent\n不是這麼快就點頭進來的\n嗯有幾個就是那種真的是\n要花很多錢才請得到的\n他們其實也在等我們什麼時候可以把\n母子母下來\n哦所以是你付不起他們\n你目前還付不起\n那你目前可以付得起的\ncompensation structure\n就是給equity\nequity加salary\n沒有還是有還是有salary\nequity加salary嗎\n對對對\n我現在你們是我覺得你們用\nglobal team是說\n其實你們salary\n就相對來講很懂可以省很多錢對不對\n因為我自己\n也在APAC hiring過\n然後網路上有很多嘴\n就是說我們就是為了省錢去\nhire\n很多台灣的engineer\n或是在APAC\n越南的engineer\n對啊\n沒辦法啊\n對啊這是一個現實\n所以什麼就是\n你要要公司燒錢燒到沒錢嗎\n那也不對啊\n嗯\n對啊\n我覺得當時給的salary\n是蠻不錯的\n就是\n我知道我給得很好\n他們自己也說很好\n因為我問他們要不要\n我其實想說\n你們\none year anniversary\n要不要調薪他們還說不用\nOh really\n對啊\n我可能不小心給太好我不知道\n可是我自己知道我給得不錯\nOK你給多少可以透露嗎\n要剪掉\nengineer\n錄完再講\nOK\n對啊這個我知道\nOK那你\nhire engineer的時候\n你會考一些\n比較technical的東西嗎\n嗯其實我覺得這我做得沒有很好\n因為我從來都不是engineer\n我是scientist\n所以我當時不是\n可是你自己有寫code啊\n可是我不知道\n那些\nweb development\n的東西\n哦OK\n我就是透過agent才會的\nOK\n嗯那我當時其實是\n叫他們給我看他們做過的東西\nOK\n他們會給我看\n他portfolio然後\n解釋給我聽\nOK\n這樣就OK\n這樣就OK\n對啊目前為止是OK啊\n感覺沒有出什麼事\n目前目前都OK對不對\n蠻滿意的\nOK\n可是我覺得\nglobal team這件事情\n還有我很多想法就是\n我覺得大家嘴什麼\n你這樣是省錢可是沒辦法\n就是物價這不是\n我們身為founder能控制的\n這個是世界就是這樣子\n但是我自己覺得\n我hire\n台灣的developers\n他們的work ethics\n非常非常非常好\n嗯\n這個我百分之百這麼覺得\n就是他們反而幫我的公司\nmirror-mirror\nset了很好的工作文化\n嗯\n嗯\n我覺得很幸運\n因為我自己的經驗是\n我hire的team應該說\n比較少人會有像\n就是就是還是要\n你要involve很多\n他們的我就比較多在做的事情\n就是怎麼樣去讓他們會可以\n把那個mindset轉到比較偏向\nSilicon Valley的\n這個\nworking culture\n我的感覺是這樣子\n我覺得可能就很多東西要放在\n怎麼incentivize\nOK\n因為怎麼講比如說\n有一些東西不是這麼\n可以quantify的\n當然我講一個\n可以quantify的\nqualitative\n跟quantitative\nqualitative的話我們蠻\n我自己個人蠻在乎讓我的team\n都有機會接觸到客戶\n嗯哼\n然後讓他們知道他們做的事情\n對客戶而言意義有多重大\n所以我們之前去參觀過工廠\n參觀過品牌的辦公室\n我就帶我team去\n然後我讓他們跟客戶講\n然後客戶就跟他們說\n謝謝你啊等等等等\n我覺得那個是\nemotionally\n會很magical的事情\n另外一個是我們跟Vogue辦活動\n我也帶我的team去\n我就是想要讓他們知道說\n你們不是\njust another tech company\n今天我們達到了一個\nVogue願意讓我們去你辦公室\n然後這麼多的品牌來聽\n這是一種就是一種pride\n對那另外一個是\n因為我們是startup\n所以有募資\n所以我會算得很清楚說\n你現在手上這麼多equity\n如果你認真的話\n我們可以convert\n成怎樣的revenue\n怎樣的revenue\nconvert到\n怎樣的valuation\n所以當我們募到之後\n你想你會有多少錢\n畫餅畫餅\n對畫餅啊對啊\n就大家一起來算算白板上算數\nOK\n我覺得那個\n就會有motivation\n可是不能一直這樣子\n要短就是一次要一個\n短期衝刺\nOK\n一個sprint\n一個sprint的感覺\n對啊平常就是多帶我們吃飯\n他們很開心\n各種各種都要做啦\n聽起來\n那個startup life\n蠻開心的\n我是很開心啦\n真的哦\n對啊不知道搞不好你去訪問我員工\n我講另外一個故事\n我等你看\n有可能\n我自己本人很開心\n其實很多人在evaluate\n一個startup的\noffer的時候\n他們會看說\n我的base salary是多少\n然後可能我的comp\n就是可能equity的部分\n現在值多少錢\n那你會怎麼去convince他說\n其實你看equity現在值多少錢\n是沒什麼太大意義\n因為比如說\n你們現在value是10 mil\n或什麼之類的\n但你如果去算你equity的話\n其實你如果再分四年去算的話\n其實你的total comp\n會遠遠低於你可能去一個\n公司工作\n對啊\n那你怎麼去convince他們說\n這個是可以去做的事情\n我覺得我還沒有遇到那樣的問題\n就是因為那樣子的人\n你們team都太太天使了吧\n他們是天使沒錯啊\n等下給你看照片\n就是\n我覺得那樣子的人\nI'm still working on it\n那我們也還沒到那個階段\n哦所以就是你們還沒有\n真的就是遇到\n真的你們很想hire的人\n然後你需要去做這樣的事情\n對我覺得我們在expand的時候\n會是需要開始這樣\n可是目前為止\n我也不是說我們是一個小cult\n可是就是我覺得大家\n大家還有因為我們團隊感情非常好\n哦\n對然後我覺得大家有意識到說\n就算工作有時候很累\n可是因為他們很喜歡同事\n嗯然後我們\n很多東西他們會覺得說\nOK我可能從來沒有想過\n我可以去fashion品牌活動啊\n或是什麼樣的\n所以\n有可能我現在目前現階段吸引到的人\n他們不會特意去跟我聊這些東西\n但還是會\nnegotiate salary\n也會討論說我們如果要\n種子輪之後大家加薪啊什麼\n這都還是會討論\n可是並沒有那麼多\nequity上面的\n這種conversation\n嗯嗯嗯\n我覺得大家蠻chill\n就是對於這個這個部分\n哦真的\n嗯嗯嗯\nOK\n因為因為我如果要去join一個\n這麼early stage\n的startup的話\n我應該會要很多的equity\n因為我覺得說要讓我的時間值得\n尤其是\ntake on\n這麼大的一個risk\n的話\n可是我覺得因為你是\nex-tech對吧\n你是待過tech company\n就是待過corporate\n呃算是對\n對啊\n對\n嗯我覺得目前為止\n為了我辭職的人\n當然台灣的工程師都為了我辭職\n可是他們不是待矽谷的\n公司那另外為了我辭職的\n巴黎跟倫敦的\n對啊他們的\n他們是離開fashion公司過來\n所以我覺得\n那個mindset有點不一樣\n哦\n嗯可是我完全可以理解\n如果待過\n尤其是\nSilicon Valley\n的公司\n那個要很多convincing\n嗯所以你們還沒有hire\n目前還沒有hire這樣的人\n就是\n還沒那樣子的人只有來實習的\n就是他在\nSilicon Valley\n實習過\n嗯\n對比如說之前有待過\n在Amazon Fashion\n跟我同時間的\n他是PhD實習生\n去年暑假來公司實習\n嗯\n那你們這樣子做產品\niteration夠快嗎\n當然我當然一直都覺得不夠快\n真的\n我覺得嗯\n我覺得你剛剛講到就是\n大家感情都很好\n像一個family一樣\n我覺得這個是一個很好一個\n很好的一個事情\n但是我個人認為\nCOVID前的\nstartup的那種環境\n跟現在的startup環境\n有點不太一樣\n我覺得現在現在startup\n至少我自己\n過去兩三年待的startup\n感覺其實我們\nconstantly\n就是在在在battle\n我們是在一個很高度壓力環境下\n然後其實\nculture-wise我覺得\n我們大家私底下都是還不錯\n但是會覺得說我們今天就是來\n完成任務\n然後我們是很dedicated\n要focus\n要完成事情要execute\n以前那種比較很nice\n大家都慢慢來\n然後可能很\nrespect對方那種感覺\n就已經\n就\ncut that bullshit\n然後我們就會直接就是\n有什麼話都很直的去講\n然後\n這個feedback\n都很\nstraightforward\n這種\n這是我覺得就是如果再下一個\n環境下要生存下來\nstartup要生存下來\n需要有的文化\n公司文化\n我自己是覺得感情好跟\n講話很harsh不衝突\n因為我對員工很harsh\nRight\n對就是如果東西沒有做完\n那我一定是告訴他\n你今天這個delay的\nconsequence有多嚴重\n你為因為我們會\n因為你這樣子失去客戶\n那每個人\n都會有他們\nresponsible的東西\n那個人就會被我講\nOK\n對我覺得\n有可能我感情很好所以我很兇\n所以互相互相感情很好\n但我不覺得contradict\n對那我也知道\n員工的working hours\n也很長\n大家是七點離開\n是因為我們\ncoworking space\n七點就關了可是大家回家還是繼續\n還是會繼續做\n對對對\n你們過蠻那個蠻認真的\n嗯\n很棒\n必須因為我\n我覺得我也讓他們意識到就是\n因為我們這麼早\n他們現在不認真公司萬一公司垮了呢\n那他們那些equity不就沒了嗎\n對啊對啊\n嗯\n回到之前你還會選擇去走創業這條路嗎\n我覺得會選擇但我還是覺得很累\n所以你還是會選擇去走這條路\n會會\n會比之前\n你在corporate工作\n還要好玩\n好玩很多可是很累\n很累對吧\n嗯\n需要擔心的事情太多了\n需要擔心的事情很多然後\n我平常我原本應該是一個睡很好的人\n可是我覺得就擔心到不行\n就真的會睡不著\n哇\n對啊然後去年是大爆痘啊\n就是我該有的都有\n就各種壓力很大\n嗯\n或是自我懷疑啊\n就覺得說我現在為員工負責了\n我是不是其實他們頭已經洗下去了\n我到底有沒有做對\n嗯嗯\n差不多這樣\n好啊\n那很感謝玉珊來今天\n來這邊跟大家分享關於\n矽谷新創\n早期新創的一個環境\n還有公司的一些內容\n我覺得很棒\n希望大家有學到一點東西\n然後也祝你們融資順利\n可以可以賺很多錢\n謝謝我也希望\nOK好那今天這集就到這邊了\n拜拜\n拜",
+    "length": "48m 16s",
+    "hasMore": false,
+    "isPremium": false
+  }
+}

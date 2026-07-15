@@ -1,0 +1,13 @@
+[
+  {
+    "video_id": "Q59J5roE5lM",
+    "video_index": 27,
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "provider": "WayinVideo",
+    "provider_page": "https://wayin.ai/tools/video-transcript-generator/youtube/",
+    "status": "blocked",
+    "retrieved": "2026-07-14",
+    "notes": "Direct page request returned HTTP 451 in this environment. Public page copy says it can generate transcripts even without captions, which indicates a cloud transcription route rather than a pure existing-caption extractor; keep it below link-to-caption providers unless the user explicitly accepts online cloud transcription."
+  }
+]

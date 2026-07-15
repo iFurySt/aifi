@@ -1,0 +1,982 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=5lXsYdh4sgI",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 115,
+  "video": {
+    "index": 115,
+    "id": "5lXsYdh4sgI",
+    "title": "揭秘投資鏈最頂層玩家：風險創投",
+    "url": "https://www.youtube.com/watch?v=5lXsYdh4sgI",
+    "duration_seconds": 1577.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "5lXsYdh4sgI",
+    "title": "揭秘投資鏈最頂層玩家：風險創投",
+    "text": "Hello大家好我是Terry今天這集影片邀請了我一個朋友Tim他是Essence VC創投公司的創辦人那因為VC的世界對很多人來說可能比較神秘然後如果沒有VC的話就沒有我們今天熟知的矽谷各種科技創新還有很多改變我們生活的公司\n所以說今天特別邀請Tim來跟大家分享一下VC一般是怎麼選擇投資的VC的錢是哪裡來的還有VC本身它的商業模式是什麼他們怎麼賺錢再來就是身為VC他們怎麼去幫助他們的Founder如果你也在科技業工作或是以後你想要加入新創公司甚至是自己創業有這個目標的話我相信今天這集影片一定會對你很有幫助你一般來講是投中資文對不對\n對,其實我們投Pre-C到C偶爾投一些A但是可能注重在Pre-C跟C在那Pre-C就是中資本更早就是Founder可能連Pro到還沒做出來其實C只是個名詞每一年每兩年都會一直換以前C round真的是什麼都沒有可最近C越來越大\nC搞到6-8M的美金之後現在很多人為了要投C之前再籠一個人叫Pre-C我覺得以前C很久以前可能C就Email了沒有以前的C就是現在的C以前的C就是現在的Pre-C像我當時2016年自己創業的時候我自己籠了C大概1.5而已那現在1.5就是個Pre-C\n就是這些名詞其實一直隨著年代一直在換但是我們信仰投第一輪的像你們一般來講投C Round就是中指輪你是怎麼決定這家公司要不要投的\n那是最难的一个问题因为其实大部分VC很多人可能都不太了解VC这个行业我们看多少个公司啊我们怎么去做决定其实我们看很多家我没有真的仔细去算过但是我们可能平均一个月一定会看到快四到五百个公司以上哇这么多对所以我一个月平均可能投一家一个月平均一家对而且就我一个人\n所以我不可能有那么多时间去真的很细心去看400个500个所以我会很快的筛选所以我第一通常来讲就先选我自己懂不懂这个行业跟这个领域如果完全不懂根本不可能说真的花那么多时间但是我至少有一定的了解所以我怎么做最终第一个决定就是先我有没有办法去决定说这家公司是最好的\n或這個團隊是最好的有沒有任何的因素是我夠了解過多知識過多背景去了解所以其實我通常在投任何一家公司之前可能都已經有做過一定的功課可能幾個月或幾年的時間看類似這個方面的東西所以當我再看到一家公司的時候\n这个我有办法去看说这个是不是有可能是一个很大的一个潜力对,所以可能第一个是看领域看完领域之后再看团队那你有一般指头就是infra focus的公司对,我的fund其实是focus在infra\n其实Infra也是个蛮广的一个领域对对对可能你刚刚我们讲到Cloud嘛Amazon这当然是其中一部分Dev2开发者用的工具都是其中一部分但其实以我来讲Infra其实是任何人可以Build on top of the platform都可以所以其实严格来讲每一个SaaS像Salesforce也好Workday也好到现在这个境界很多人都Build AppShopify也是\n所以這其實都是infra對所以就是以infra的眼光去看公司就是這個東西有沒有潛力讓人家給開發者建立一個ecosystem的方式我們來決定說我們要不要去投入這個公司那你會比較注重哪些方面比如說像是他的產品成熟度還是說他的這個目前已經有的這個用戶數量或他的盈利能力\n已經有了這個營利能力或是說你會看這個Founder的Quality就哪些你會比較去特別篩選對我比較特別因為我投很多最最最早期甚至Founder都還沒有離開公司的時候先去Raise他第一輪我通常都會在這個時候都已經開始了而且因為我是第一個輪就要投對所以很多時候可能至少一半以上是沒有任何數據可以看對沒有產品Nothing\n而且他的idea不一定是已经很确定但是我们就不想要等到一切全部都有再去投因为那个时候可能too late因为很好的团队有很好的方向有数据everything很多时候就变成seed run就变很大的一个run所以因为我想要focus在pre-seed为主的话\n我今天是在看团队看这个团队的quality他们做事的方式思想模式他们认识他们什么是他们motivation甚至都会去试着去探讨因为我做很多infrainfra其实这东西不是看revenue\n如果我们看Hashicorp比较知名的N法的公司它前面很多年是没有revenue的所以我其实是在看说它做的这个东西跟它的想法有没有办法去改变这个领域如果你有这个野心跟有这个能力的话我们是align你前面一两年专门做某一件事情那这个东西可能是没有办法请你可以赚Open source也好\nfreemium也好或者是something但是你可以做大這個東西你可以做到最好那是我比較care的你有沒有一樣東西你可以做到可以改變這個領域的潛力主要還是看那個產品有沒有那個潛力對 但是做那個產品之前因為很可能你沒有任何產品可以show給我看maybe prototype或者是有一些很簡單的一些rough sketch不是一個完整的產品我還沒有真的看過一家完整的產品是我偷的\n投资前就有所以我会用聊天的方式大部分的时候你说是pitch deck这些东西都是很一部分的资料而已很多就是通常沟通跟discussion好几轮之后我慢慢开始conclude说这个团队他的做事方式想法是有办法在这个领域里面可以成为一个disruption\n那你会投那些Founders他们有一个Track Record就是之前可能就已经有成功的Startup或成功的Exit还是你一般来讲你投的公司都是Founder比较年轻就是第一次那种都有耶当然我希望啦大部分的VC都会说当然要找那种卖过一堆钱的啊对但是实际上有很多VC的Round如果你找那种最成熟最多Credential的有背景的人他们的Round就很大\n像我们这种小的Fund像我的Fund大概三四个million所以我们如果都只投这种8-10 million的seat round我们可以占的那公司的股份就不多了而且每一家公司都可以大卖\n啊 卖几个billion的exit其实没有机率 没有那么大所以我们必须得选哪一些公司我们愿意take less ownership对因为我觉得这个潜力真的很大然后这公司的founder的成熟度everything是真的适合我们去own小一点的piece但这个是很大的一个机会但是相反的我们也必须take more risk第一次founder可能甚至是PhD没有出去做过很多工作经验的或者是anything我们也去考虑这些所以我大概基本上有快一半一半\nOK一半以上的Founder可能是有做過公司或做過蠻多工作經驗或something有一半的Founder可能有幾年的工作經驗或是Research為主或是可能甚至沒有出去做過Peer PhDProfessor我們都有投過\n但是我们就必须take more riskrisk就大很多了对对valuation就低一点然后我们就会做更多的事情去帮他们personally比较喜欢self model因为我觉得这是我们我们放的特点之一就是我们很了解怎么帮这些很technical的founder去找到product market fit我其实真的蛮多时间是花在这个group的\n所以我OK for both所以他come down to evaluation 啊 司機點啊跟所有東西 都全部是所有的因素我們考量\n你会跟其他的类似你们这样的VC一起合作,就在CEO或PRECIT的时候进去吗?有有有,我们很多的合作,因为其实大部分的VC,也不是大部分,很多知名的VC都是我们的LP,就是有back我们,像Saquare啊,Greason啊,十几个,因为他们都是我们下一轮的资金,对对对,所以我们有建立我们的品牌,就是我们是很常看到很好的PRECIT,对对对,\n所以他们有时候也会跟投,在那个时候都跟投,但是可能大部分都是跟我们保持联络,我们告诉他们说,这几家take it out,或者是帮每一家公司position好,怎么样去跟下一轮的资金去拿去投。所以我们会跟很多的知名的Fund一起到下一轮跟着我们的下一轮投。第一轮我们因为我们的Fund也不大,\n所以也蛮常跟很多pre-seed像soloGP是一个名词就是只有我们单独VCinvestor的fund或者angel啊都会蛮常合作所以其实每一次我们race如果我leadlocal lead我就会抓一堆朋友起来\n或甚至我的朋友说我们Leader你要不要一起进来就是很常有这种机会会出现说到这个Lead或者这个钱我觉得大家可能会很好奇说就是VC的钱是哪里来的其实VC就我了解了VC不是用自己的钱去投不是对\nTim可以跟大家分享一下自己没有那么有钱就是VC的这个Fund到底是你刚说30million这个Fund到底是哪里来的那我们先暂停一分钟你知道冲浪的时候遇到鲨鱼会怎么样吗没错我说的就是Surfshark大家对传统VPN的认知就是翻墙跟保护你的上网饮食但是VPN的品牌有非常的多为什么我会选择用Surfshark呢当然是因为他们的性价比很高\n除了基本的翻墙功能之外呢保护你的个职安全还有预防恶意城市也是他们一直在投资的技术我们最常见的IG或是Facebook被盗都是因为不小心点开了一个链接或是下载了恶意城市到你的电脑上面这些恶意城市呢又称病毒能够监视你的一举一\n包含每一个键盘滑鼠的点击跟你的浏览记录然后很有可能你的网路银行密码或是web3的钱包资讯呢就会被偷走而且不只是电脑手机上面也同样有非常高的风险尤其是在使用公共网路的时候Surfshark现在已经把VPN、个制保密、安全浏览、备用ID还有防毒软体这些功能全部整合在一个软体上面你只要订阅Surfshark One就可以开启所有的功能\n而且可以同时保护你所有的设备那现在使用我的专属链接购买呢就可以获得额外4个月免费的订阅平均每一个月不到一杯咖啡的价钱你还在等什么一杯咖啡的价钱就可以保护你一整个月上网的安全加上有VPN可以用而且如果你不满意的话30天内还可以随时退款\n我会把连结放在影片底下的资讯栏或是你也可以直接扫这个QR Code我觉得大家可能会好奇说就是VC的钱是哪里来的其实VC就我了解了VC不是用自己的钱去投不是对Tim可以跟大家分享一下自己没有那么有钱就是VC的这个Fund到底是你刚说30M这个Fund到底是哪里来的其实这是一个VC我们称之为Limited Partner就是LP的钱真的蛮广的\n每一个人开始VC Fund的那一批LP的钱可能都不太一样就跟我个人\n我第一个Found才一个million而已第二个Found七个million这个Found是Found3 30我的LP其实差蛮多的我刚开始的时候全部都是个人可能一两个VCFound但是基本上全部都是个人个人就是一些其他的Founder我以前工作过的Manager知名的YouTuber Engineer对Founder的兴趣有一些我以前拿的钱真的很少\n所以我的很多同事朋友就会跟着加进来然后第二个Fund也很多类似但是可能很多人没有知道的事情就是很多VC Fund都会成为LP就刚刚讲Square, Andreessen, Foundation, NEA几乎十几家为什么会成为我的LP因为他们其实都会拿一笔他们Rays的钱去投在VC Fund不是为了赚钱他们自己其实当然是赌他们自己的资金会赚\n我们就是有点他是他的小弟们我们告诉他我们看到很多什么类似的公司我们投的就是帮助他们可以看到一些知道一些好的公司在before他们raise的前我们就已经提早让他有一些insights所以大概有15%到20%现在我这fund都是VC funds的钱\n但是大部分啦其实只要你一定的数量的钱以上可能15、20 million以上你必须得找institutioninstitution就是可能很多美国我们讲family office就是有钱人真的很有钱的人有50、100个million或甚至billion dollar的一些直接卖石油的啊或Bill Gates啊或是他们都有一个family office把他们的钱拿去专门去投high risk我们就是high riskventure capital所以我们常被一些可能\n某某某Levi's的Founder啊或者是这个的Founder啊像我有Intel CEO啊我有一些其他的一些他们的Family Office会reach out说诶我们可以放一些钱到你的Found里面所以我一部分有钱是叫有钱人的Family Office投我\n另外一部分可能就是Fund of Funds就是有一些人会专门去raise他们的资金专门去投VC Fund所以我他可能50%以上都是叫Fund of Funds的这些就是一些钱我们上额钱其实很多不是自己有钱在投或者就是VC Fund\n要么就是真的是专门投VC Fund的Funds对,然后他们就是打说我可以有办法去知道哪一家VC Fund所以你不用去担心给我,我帮你找对,所以这种其实是我们主要的钱来源之一OK,其实就是一个资金链对,就看哪一个VC比较厉害找那个对,其实这真的都是打知名度的对,就是你的知名度真的非常的重要而且不是知名度这么广的知名度对\n是在這一圈子裡面這個圈子的生命力就非常的重要他如果沒有聽過你他不會同意你但是一定要有想辦法聽到你所以這是花五六年的時間就在慢慢慢慢滲透進去這個小小的LP這個圈子而且很多很屌的那種startup他們也會選VC對不對\n对对你其实如果到我的网站你如果不是engineer你不做infra你应该不会完全看不懂是所有的logo对但是很多喜欢infra的工程师或founder一看我的网站就是哇Tim你有这么多好公司就是怎么这么多好所以其实在我们的领域里面假如说你知道我们这个领域的话\n至少听过两三家以上所以Founder很多时候因为我自己也是Founder过我也raise过钱所以当你真的不认识一个VC Fund的时候你第一个就看到他带头过去但是你如果看到他\n这可能透过Snowflake,透过DataBricks,透过什么,就是那种很大出场的,然后你就会说,诶,这家的Quality都是这种,那我是不是有可能也可以成为,比较有可能成为那种,你就会有种比较心理投射的那种,Gravity,除了这个Quality,有这个VC Fund,他做的事情看着眼光也好,或者是他的有办法help,假如说都是这种类型的公司,对,这就是我们的品牌,\n所以其實這個我們很大一個marketing的一部分其實大部分就在看說我到底投過什麼東西VC網站好像大部分都是把那個name tag放進去以前我2016年Race總值的時候以前COVID之前你不可能在Zoom call上面打錢\n你必須得開車 開車到那個San Jorio上面那你到那個VC的office走進去Pinterest 推特有就是全部好的logo全部放在牆上而且故意放在你那個沙發等VC開完會前面就是一直走那個左馬燈在你前面你知道嗎其實蠻煩的但是同時他們就在賣你嘛\n就是你在进去跟他们聊之前你就已经大概心里面就想哇这个就是透过Turio这个是透过那个whatever的 Snap的透过Github的你就会有那种已经心里就觉得哇这个很屌当你有这种想法进去聊的时候就有不同的\nVC就走路好像有点疯这样子这是一个品牌建立的方式那VC Fund一般来讲你们的商业模式是什么样?就是你们自己公司是怎么赚钱?对,我们其实跟一般基金可能都蛮类似就是我们会有那种抽management fee就是某一种我也不知道中文叫什么\n管理费对对对手续费吗对算管理费因为不是一种手续的一种费用所以最通常听到可能叫2 and 20每一年这个VC Fund都会拿2%你Race的钱当作你的Budget包括你付你的薪水跟任何其他两种Marketing像我们也买SaaS Product所以就所有全部的Budget是从这个2%买\n所以我们就会allocate每年2%拿这个钱去付我们的自己薪水那当我们公司卖钱的时候IPO也好,被买啊通常过了一倍我们raise的钱之后我们就会抽20%的赚钱我只要return over 10 million,可能11个million那个1million开始以上所有赚到的钱,我们20%就从自己拿\n就拿200K然后800K给LP这样大概是这样给LP或是institution他们投你们的对对就跟着谁投我们用80%以那个ratio这个2%是跟他们拿吗还是说你是投这家公司之后你跟这家公司拿没有是用我们raise的钱用我们raise的钱对所以通常你看到一个VC犯人说我们raise了400个million但是很多人都不了解就是其实你raise400个million并不表示你真的把400个million的钱拿去投公司\n其實你必須先把2% 而且過10年的2%先拿出來對那個就是你的fees所以你真的投可能才330 320就每一家VC放都是這樣那你raise越多就越爽對啊所以這就是VC的vicious cycle很多人罵VC的就是你raise這麼大的fund但是你return不一定要好你只有那麼大的薪水這就是很多人在Twitter啊Ex上面罵的東西就是你專門只管fee你不管return\n这是一个business model嘛,只要你有办法去投到好的公司你的LP就会想投你,这是一个cycle这样子那我们刚刚聊到你们一般来讲是投seat round跟pre-seat的公司那你们一般的exit是在哪一个阶段?exit,我们通常因为有公司exit通常是根据他们想要exit的时候所以我们自己exit只有两种方式我们either公司被买\n或是IPO的时候那这可能你不会10$卖掉不长其实大部分的VC Fund尤其像我们这个Stage不会太早买因为你最大的Return都在5到7年之后所以你先卖了你入上Upside因为你知道VC Fund有个很著名的名字叫Powerwall就是你投30家你真的真的大赚的可能就只有一两家\n中間快三分之一全死中間一大半可能return 1-2X 可能只管你一點只夠 cover 那些死掉的或者甚至 cover 不良的死掉的但是通常就是那一家那一家可能叫 Google那一家可能叫 Facebook那可能就是排行好了可能有那種賣 2 billion 3 billion 10 billion 甚至以上的可能只有一家三年來就那一年加而且你要投到你只要投到 欸 這所有的錢\n你就5x 4x就whatever所以如果你太早卖而且你其实没有那么确定哪一家会成为那家大公司的前面很多公司前面都看起来有点像Snowflake有好几个round可能很多VC都不投了他觉得这个怪怪的不断不赚钱那为什么多钱你这个公司可以活吗\n所以有些questionable,一些rough的period,成为最重要的icon之一所以我们没有办法不想卖太快但是我们必须在一定的时间还是得卖一些通常我们的exit,我们像这种pre-CC fund exit的,我们叫secondary,tender offer通常选在我已经有办法,这个公司可能至少涨了20,30x以上\n就是已经cover够多我们的fund可能已经returned half the fund或1x the fund可能至少half the fund那在上面当然会更好但是我们可以先拿一下upside way对买个几%啊5%啊10%啊但是这通常以我来讲五六年之后的事情就是我投完到真的发生这样真的中间起码四五年以上\n有一些Lucky的case像我有一家被买了2 billion accident可能还3年了但是那个就是唯一的- 细到 - 细到卖掉 - 3年 - 2 billion - 对 - 哇那很厉害 - 叫Tabula在Techron上面有写的DevaGreggs也买那个就是比较特殊对对对就是Lucky我们就真的叫Lucky那我没有办法Bet on每一家都这么卖所以通常In most cases就是要打到快8年 4年的时间\n那假如你們投的公司死掉了你們會需要賠錢嗎?因為這個放不是你們的錢你們LP的錢這一筆錢沒了那你們需要賠他們嗎?還是?沒有沒有如果賠他們我也沒錢了我們就直接上銅去所以VC基本上是穩賺不賠的\n也不是這個意思如果你全部投的公司全死但就repetition很差對對你就沒有下一個fund了所以為什麼VC fund不好開始因為大部分的LP其實都不喜歡take這樣的risk但是大家都知道這個asset class top quartile是比S&P500賺得更多錢那top quartile是賺非常多錢\n所以你又不可能都不投有benchmark你不投你就少了10x的return所以这是一个很...有点像投...有点投Bitcoin的feel你知道就是like我知道这个东西有可能会大赚但是我也不太确定到底多少或者是哪一家所以我必须得要分散投资一点所以我们其实不会有majority的钱放在DC房因为这个太...太risky\n但是又不可能都不放因为我们的return的profile高很多我们的fund通常打的招牌是至少3-5x那好的fund甚至8-10x都有可能所以你赔几家公司其实是一部分的计划我们跟很多只要你肯投VC fund你就必须得要心里想ok我1/3投了他这个家讲的投的公司应该全管甚至更多\n但是没有差因为我们的parallelas long有一家甚至一两家往上冲就ok了对就ok了这是很奇怪的一家这是很奇怪的business其实公司死了不只是正常甚至有很多VC的朋友说我公司我的funds死的公司不够多因为我的risk太不够高他说怎么大家还活着\n对,那个人不会快的就是甚至有那种这样,I'm not taking a lot of risk我还第一次,以前没有听过这种,影响你公司死我后来,我后来其实有某种体会就是对啊,我们就是个risk taking asset class如果你标榜我四年公司全部没有挂但是你有办法说你有那么多家公司真的可以成为这么大的outcome最知名的VC fund也都一堆死对,所以这是一个很,it's part of the plan\n你就是sign up to就是做很risky的investment最后的问题是很多VC会帮就你们自己投的公司找工程师啊或者找那个technical team嘛像我自己也是会收到很多LinkedIn上面的那个message那你预发来讲是怎么去帮这些公司去找这些candidate\n一般你看的是什麼?其實因為我們不是專門幫他們決定Hire誰的人就是介紹而已我們其實可能一方面是幫他們想什麼樣的人最適合他們的公司然後也會開始做一些因為我們投的公司這麼早期可能真的就是兩個FounderThat's it\n前面几个hire很重要以前Airbnb的CEO就说他快六个月的时间去hire第一个人因为他需要这个culture line value line不是随便找的而且这东西不是你放在网站有个job description不是那么容易可以找到这么好match的通常前几个hire是我们最能做的前几个hire我们做的事情就是你是要做什么产品\n你是什么样的culture你要找什么样的人大概有个底子后因为我们有做一些podcast做一些technical community有很广的一些我们同一个公司是有很多engineer involved的project我们就利用这些社群我们去帮他search哪一些high possibility的人我觉得是会match但是那时候我们会我的工作不是去帮他\n我會幫他reach out 一部分的我們這家公司在找founding engineer什麼什麼之類的我通常啊 我的公司比較像是closer這個工程師已經有興趣了已經有在面試喜歡這家公司但是有好幾個offer或者甚至在考慮說要不要加入那麼risky的startup我就是 我打電話來告訴說這個公司可以好好考慮一下為什麼投這家公司為什麼你要去加入一個startup為什麼你要去考慮小公司跟大公司的好處跟壞處是什麼\n因為我自己也招募過快四家startup然後我自己也開過公司然後現在投那麼多所以我不同的經驗去分享說這個好與壞是什麼所以我就用這樣的東西去去close他們的candidates我覺得非常有幫助知道我學到很多東西\n不过不这样,就是蛮有趣的工作我从来以前没有,这不是我小时候的梦想这不是小时候的梦想因为我不知道这个行业你知道吗?对,想说我做Founder之后为什么那么喜欢做VC其实我觉得也是因为有办法去跟这么多的Founder有这种很密切接触的那种关系我觉得很难得,很少有这种工作可以让你on repeat这么有趣的项目跟公司可以一直在很密切合作\nOK 好那謝謝Tim來這邊跟大家分享這個VC的世界因為這個一般來講比較少人知道大家都是在另外一端嘛在公司裡面工作像我進startup之前其實我也會跟這個startup的VC聊一下這都是很不錯的資訊\n希望大家有帮助非常感谢Tim今天特别抽空来我家一起录影如果大家有什么问题想要问Tim或是关于VC或是任何你想要当Founder都可以在影片底下留言然后我尽量回复大家如果Tim有空的话然后之后如果大家有很多问题我们也可以再做第二集或是再看一下有什么反应大家可以在影片底下留言那我们就下次见",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:00",
+        "start": 0.12,
+        "duration": 16.959999999999997,
+        "text": "Hello大家好我是Terry今天這集影片邀請了我一個朋友Tim他是Essence VC創投公司的創辦人那因為VC的世界對很多人來說可能比較神秘然後如果沒有VC的話就沒有我們今天熟知的矽谷各種科技創新還有很多改變我們生活的公司"
+      },
+      {
+        "index": 1,
+        "time": "00:17",
+        "start": 17.08,
+        "duration": 23.880000000000003,
+        "text": "所以說今天特別邀請Tim來跟大家分享一下VC一般是怎麼選擇投資的VC的錢是哪裡來的還有VC本身它的商業模式是什麼他們怎麼賺錢再來就是身為VC他們怎麼去幫助他們的Founder如果你也在科技業工作或是以後你想要加入新創公司甚至是自己創業有這個目標的話我相信今天這集影片一定會對你很有幫助你一般來講是投中資文對不對"
+      },
+      {
+        "index": 2,
+        "time": "00:40",
+        "start": 40.96,
+        "duration": 18.699999999999996,
+        "text": "對,其實我們投Pre-C到C偶爾投一些A但是可能注重在Pre-C跟C在那Pre-C就是中資本更早就是Founder可能連Pro到還沒做出來其實C只是個名詞每一年每兩年都會一直換以前C round真的是什麼都沒有可最近C越來越大"
+      },
+      {
+        "index": 3,
+        "time": "00:59",
+        "start": 59.28,
+        "duration": 25.879999999999995,
+        "text": "C搞到6-8M的美金之後現在很多人為了要投C之前再籠一個人叫Pre-C我覺得以前C很久以前可能C就Email了沒有以前的C就是現在的C以前的C就是現在的Pre-C像我當時2016年自己創業的時候我自己籠了C大概1.5而已那現在1.5就是個Pre-C"
+      },
+      {
+        "index": 4,
+        "time": "01:25",
+        "start": 85.04,
+        "duration": 13.659999999999997,
+        "text": "就是這些名詞其實一直隨著年代一直在換但是我們信仰投第一輪的像你們一般來講投C Round就是中指輪你是怎麼決定這家公司要不要投的"
+      },
+      {
+        "index": 5,
+        "time": "01:38",
+        "start": 98.46,
+        "duration": 24,
+        "text": "那是最难的一个问题因为其实大部分VC很多人可能都不太了解VC这个行业我们看多少个公司啊我们怎么去做决定其实我们看很多家我没有真的仔细去算过但是我们可能平均一个月一定会看到快四到五百个公司以上哇这么多对所以我一个月平均可能投一家一个月平均一家对而且就我一个人"
+      },
+      {
+        "index": 6,
+        "time": "02:02",
+        "start": 122.46,
+        "duration": 24.940000000000012,
+        "text": "所以我不可能有那么多时间去真的很细心去看400个500个所以我会很快的筛选所以我第一通常来讲就先选我自己懂不懂这个行业跟这个领域如果完全不懂根本不可能说真的花那么多时间但是我至少有一定的了解所以我怎么做最终第一个决定就是先我有没有办法去决定说这家公司是最好的"
+      },
+      {
+        "index": 7,
+        "time": "02:27",
+        "start": 147.38,
+        "duration": 19.78,
+        "text": "或這個團隊是最好的有沒有任何的因素是我夠了解過多知識過多背景去了解所以其實我通常在投任何一家公司之前可能都已經有做過一定的功課可能幾個月或幾年的時間看類似這個方面的東西所以當我再看到一家公司的時候"
+      },
+      {
+        "index": 8,
+        "time": "02:47",
+        "start": 167.38,
+        "duration": 16.30000000000001,
+        "text": "这个我有办法去看说这个是不是有可能是一个很大的一个潜力对,所以可能第一个是看领域看完领域之后再看团队那你有一般指头就是infra focus的公司对,我的fund其实是focus在infra"
+      },
+      {
+        "index": 9,
+        "time": "03:03",
+        "start": 183.68,
+        "duration": 22.19999999999999,
+        "text": "其实Infra也是个蛮广的一个领域对对对可能你刚刚我们讲到Cloud嘛Amazon这当然是其中一部分Dev2开发者用的工具都是其中一部分但其实以我来讲Infra其实是任何人可以Build on top of the platform都可以所以其实严格来讲每一个SaaS像Salesforce也好Workday也好到现在这个境界很多人都Build AppShopify也是"
+      },
+      {
+        "index": 10,
+        "time": "03:25",
+        "start": 205.58,
+        "duration": 21.73999999999998,
+        "text": "所以這其實都是infra對所以就是以infra的眼光去看公司就是這個東西有沒有潛力讓人家給開發者建立一個ecosystem的方式我們來決定說我們要不要去投入這個公司那你會比較注重哪些方面比如說像是他的產品成熟度還是說他的這個目前已經有的這個用戶數量或他的盈利能力"
+      },
+      {
+        "index": 11,
+        "time": "03:47",
+        "start": 227.32,
+        "duration": 24.28,
+        "text": "已經有了這個營利能力或是說你會看這個Founder的Quality就哪些你會比較去特別篩選對我比較特別因為我投很多最最最早期甚至Founder都還沒有離開公司的時候先去Raise他第一輪我通常都會在這個時候都已經開始了而且因為我是第一個輪就要投對所以很多時候可能至少一半以上是沒有任何數據可以看對沒有產品Nothing"
+      },
+      {
+        "index": 12,
+        "time": "04:11",
+        "start": 251.28,
+        "duration": 17.200000000000017,
+        "text": "而且他的idea不一定是已经很确定但是我们就不想要等到一切全部都有再去投因为那个时候可能too late因为很好的团队有很好的方向有数据everything很多时候就变成seed run就变很大的一个run所以因为我想要focus在pre-seed为主的话"
+      },
+      {
+        "index": 13,
+        "time": "04:28",
+        "start": 268.48,
+        "duration": 14.680000000000007,
+        "text": "我今天是在看团队看这个团队的quality他们做事的方式思想模式他们认识他们什么是他们motivation甚至都会去试着去探讨因为我做很多infrainfra其实这东西不是看revenue"
+      },
+      {
+        "index": 14,
+        "time": "04:43",
+        "start": 283.16,
+        "duration": 22.19999999999999,
+        "text": "如果我们看Hashicorp比较知名的N法的公司它前面很多年是没有revenue的所以我其实是在看说它做的这个东西跟它的想法有没有办法去改变这个领域如果你有这个野心跟有这个能力的话我们是align你前面一两年专门做某一件事情那这个东西可能是没有办法请你可以赚Open source也好"
+      },
+      {
+        "index": 15,
+        "time": "05:04",
+        "start": 304.98,
+        "duration": 27.180000000000007,
+        "text": "freemium也好或者是something但是你可以做大這個東西你可以做到最好那是我比較care的你有沒有一樣東西你可以做到可以改變這個領域的潛力主要還是看那個產品有沒有那個潛力對 但是做那個產品之前因為很可能你沒有任何產品可以show給我看maybe prototype或者是有一些很簡單的一些rough sketch不是一個完整的產品我還沒有真的看過一家完整的產品是我偷的"
+      },
+      {
+        "index": 16,
+        "time": "05:32",
+        "start": 332.16,
+        "duration": 21.739999999999952,
+        "text": "投资前就有所以我会用聊天的方式大部分的时候你说是pitch deck这些东西都是很一部分的资料而已很多就是通常沟通跟discussion好几轮之后我慢慢开始conclude说这个团队他的做事方式想法是有办法在这个领域里面可以成为一个disruption"
+      },
+      {
+        "index": 17,
+        "time": "05:53",
+        "start": 353.9,
+        "duration": 28.180000000000007,
+        "text": "那你会投那些Founders他们有一个Track Record就是之前可能就已经有成功的Startup或成功的Exit还是你一般来讲你投的公司都是Founder比较年轻就是第一次那种都有耶当然我希望啦大部分的VC都会说当然要找那种卖过一堆钱的啊对但是实际上有很多VC的Round如果你找那种最成熟最多Credential的有背景的人他们的Round就很大"
+      },
+      {
+        "index": 18,
+        "time": "06:22",
+        "start": 382.7,
+        "duration": 12.639999999999986,
+        "text": "像我们这种小的Fund像我的Fund大概三四个million所以我们如果都只投这种8-10 million的seat round我们可以占的那公司的股份就不多了而且每一家公司都可以大卖"
+      },
+      {
+        "index": 19,
+        "time": "06:34",
+        "start": 394.96,
+        "duration": 28.180000000000007,
+        "text": "啊 卖几个billion的exit其实没有机率 没有那么大所以我们必须得选哪一些公司我们愿意take less ownership对因为我觉得这个潜力真的很大然后这公司的founder的成熟度everything是真的适合我们去own小一点的piece但这个是很大的一个机会但是相反的我们也必须take more risk第一次founder可能甚至是PhD没有出去做过很多工作经验的或者是anything我们也去考虑这些所以我大概基本上有快一半一半"
+      },
+      {
+        "index": 20,
+        "time": "07:03",
+        "start": 423.14,
+        "duration": 14.740000000000009,
+        "text": "OK一半以上的Founder可能是有做過公司或做過蠻多工作經驗或something有一半的Founder可能有幾年的工作經驗或是Research為主或是可能甚至沒有出去做過Peer PhDProfessor我們都有投過"
+      },
+      {
+        "index": 21,
+        "time": "07:17",
+        "start": 437.88,
+        "duration": 19.639999999999986,
+        "text": "但是我们就必须take more riskrisk就大很多了对对valuation就低一点然后我们就会做更多的事情去帮他们personally比较喜欢self model因为我觉得这是我们我们放的特点之一就是我们很了解怎么帮这些很technical的founder去找到product market fit我其实真的蛮多时间是花在这个group的"
+      },
+      {
+        "index": 22,
+        "time": "07:37",
+        "start": 457.52,
+        "duration": 10.319999999999993,
+        "text": "所以我OK for both所以他come down to evaluation 啊 司機點啊跟所有東西 都全部是所有的因素我們考量"
+      },
+      {
+        "index": 23,
+        "time": "07:47",
+        "start": 467.5,
+        "duration": 26,
+        "text": "你会跟其他的类似你们这样的VC一起合作,就在CEO或PRECIT的时候进去吗?有有有,我们很多的合作,因为其实大部分的VC,也不是大部分,很多知名的VC都是我们的LP,就是有back我们,像Saquare啊,Greason啊,十几个,因为他们都是我们下一轮的资金,对对对,所以我们有建立我们的品牌,就是我们是很常看到很好的PRECIT,对对对,"
+      },
+      {
+        "index": 24,
+        "time": "08:13",
+        "start": 493.32,
+        "duration": 21.939999999999998,
+        "text": "所以他们有时候也会跟投,在那个时候都跟投,但是可能大部分都是跟我们保持联络,我们告诉他们说,这几家take it out,或者是帮每一家公司position好,怎么样去跟下一轮的资金去拿去投。所以我们会跟很多的知名的Fund一起到下一轮跟着我们的下一轮投。第一轮我们因为我们的Fund也不大,"
+      },
+      {
+        "index": 25,
+        "time": "08:35",
+        "start": 515.04,
+        "duration": 14.120000000000005,
+        "text": "所以也蛮常跟很多pre-seed像soloGP是一个名词就是只有我们单独VCinvestor的fund或者angel啊都会蛮常合作所以其实每一次我们race如果我leadlocal lead我就会抓一堆朋友起来"
+      },
+      {
+        "index": 26,
+        "time": "08:49",
+        "start": 529.16,
+        "duration": 15.899999999999977,
+        "text": "或甚至我的朋友说我们Leader你要不要一起进来就是很常有这种机会会出现说到这个Lead或者这个钱我觉得大家可能会很好奇说就是VC的钱是哪里来的其实VC就我了解了VC不是用自己的钱去投不是对"
+      },
+      {
+        "index": 27,
+        "time": "09:04",
+        "start": 544.68,
+        "duration": 24.5,
+        "text": "Tim可以跟大家分享一下自己没有那么有钱就是VC的这个Fund到底是你刚说30million这个Fund到底是哪里来的那我们先暂停一分钟你知道冲浪的时候遇到鲨鱼会怎么样吗没错我说的就是Surfshark大家对传统VPN的认知就是翻墙跟保护你的上网饮食但是VPN的品牌有非常的多为什么我会选择用Surfshark呢当然是因为他们的性价比很高"
+      },
+      {
+        "index": 28,
+        "time": "09:29",
+        "start": 569.18,
+        "duration": 18.040000000000077,
+        "text": "除了基本的翻墙功能之外呢保护你的个职安全还有预防恶意城市也是他们一直在投资的技术我们最常见的IG或是Facebook被盗都是因为不小心点开了一个链接或是下载了恶意城市到你的电脑上面这些恶意城市呢又称病毒能够监视你的一举一"
+      },
+      {
+        "index": 29,
+        "time": "09:47",
+        "start": 587.22,
+        "duration": 25.839999999999918,
+        "text": "包含每一个键盘滑鼠的点击跟你的浏览记录然后很有可能你的网路银行密码或是web3的钱包资讯呢就会被偷走而且不只是电脑手机上面也同样有非常高的风险尤其是在使用公共网路的时候Surfshark现在已经把VPN、个制保密、安全浏览、备用ID还有防毒软体这些功能全部整合在一个软体上面你只要订阅Surfshark One就可以开启所有的功能"
+      },
+      {
+        "index": 30,
+        "time": "10:13",
+        "start": 613.06,
+        "duration": 18.720000000000027,
+        "text": "而且可以同时保护你所有的设备那现在使用我的专属链接购买呢就可以获得额外4个月免费的订阅平均每一个月不到一杯咖啡的价钱你还在等什么一杯咖啡的价钱就可以保护你一整个月上网的安全加上有VPN可以用而且如果你不满意的话30天内还可以随时退款"
+      },
+      {
+        "index": 31,
+        "time": "10:31",
+        "start": 631.78,
+        "duration": 26.800000000000068,
+        "text": "我会把连结放在影片底下的资讯栏或是你也可以直接扫这个QR Code我觉得大家可能会好奇说就是VC的钱是哪里来的其实VC就我了解了VC不是用自己的钱去投不是对Tim可以跟大家分享一下自己没有那么有钱就是VC的这个Fund到底是你刚说30M这个Fund到底是哪里来的其实这是一个VC我们称之为Limited Partner就是LP的钱真的蛮广的"
+      },
+      {
+        "index": 32,
+        "time": "10:58",
+        "start": 658.58,
+        "duration": 6.240000000000009,
+        "text": "每一个人开始VC Fund的那一批LP的钱可能都不太一样就跟我个人"
+      },
+      {
+        "index": 33,
+        "time": "11:05",
+        "start": 665.14,
+        "duration": 25.620000000000005,
+        "text": "我第一个Found才一个million而已第二个Found七个million这个Found是Found3 30我的LP其实差蛮多的我刚开始的时候全部都是个人可能一两个VCFound但是基本上全部都是个人个人就是一些其他的Founder我以前工作过的Manager知名的YouTuber Engineer对Founder的兴趣有一些我以前拿的钱真的很少"
+      },
+      {
+        "index": 34,
+        "time": "11:30",
+        "start": 690.38,
+        "duration": 26.120000000000005,
+        "text": "所以我的很多同事朋友就会跟着加进来然后第二个Fund也很多类似但是可能很多人没有知道的事情就是很多VC Fund都会成为LP就刚刚讲Square, Andreessen, Foundation, NEA几乎十几家为什么会成为我的LP因为他们其实都会拿一笔他们Rays的钱去投在VC Fund不是为了赚钱他们自己其实当然是赌他们自己的资金会赚"
+      },
+      {
+        "index": 35,
+        "time": "11:56",
+        "start": 716.5,
+        "duration": 21.74000000000001,
+        "text": "我们就是有点他是他的小弟们我们告诉他我们看到很多什么类似的公司我们投的就是帮助他们可以看到一些知道一些好的公司在before他们raise的前我们就已经提早让他有一些insights所以大概有15%到20%现在我这fund都是VC funds的钱"
+      },
+      {
+        "index": 36,
+        "time": "12:18",
+        "start": 738.02,
+        "duration": 28.74000000000001,
+        "text": "但是大部分啦其实只要你一定的数量的钱以上可能15、20 million以上你必须得找institutioninstitution就是可能很多美国我们讲family office就是有钱人真的很有钱的人有50、100个million或甚至billion dollar的一些直接卖石油的啊或Bill Gates啊或是他们都有一个family office把他们的钱拿去专门去投high risk我们就是high riskventure capital所以我们常被一些可能"
+      },
+      {
+        "index": 37,
+        "time": "12:46",
+        "start": 766.76,
+        "duration": 14.519999999999982,
+        "text": "某某某Levi's的Founder啊或者是这个的Founder啊像我有Intel CEO啊我有一些其他的一些他们的Family Office会reach out说诶我们可以放一些钱到你的Found里面所以我一部分有钱是叫有钱人的Family Office投我"
+      },
+      {
+        "index": 38,
+        "time": "13:01",
+        "start": 781.28,
+        "duration": 17.680000000000064,
+        "text": "另外一部分可能就是Fund of Funds就是有一些人会专门去raise他们的资金专门去投VC Fund所以我他可能50%以上都是叫Fund of Funds的这些就是一些钱我们上额钱其实很多不是自己有钱在投或者就是VC Fund"
+      },
+      {
+        "index": 39,
+        "time": "13:18",
+        "start": 798.72,
+        "duration": 27.279999999999973,
+        "text": "要么就是真的是专门投VC Fund的Funds对,然后他们就是打说我可以有办法去知道哪一家VC Fund所以你不用去担心给我,我帮你找对,所以这种其实是我们主要的钱来源之一OK,其实就是一个资金链对,就看哪一个VC比较厉害找那个对,其实这真的都是打知名度的对,就是你的知名度真的非常的重要而且不是知名度这么广的知名度对"
+      },
+      {
+        "index": 40,
+        "time": "13:46",
+        "start": 826,
+        "duration": 18.120000000000005,
+        "text": "是在這一圈子裡面這個圈子的生命力就非常的重要他如果沒有聽過你他不會同意你但是一定要有想辦法聽到你所以這是花五六年的時間就在慢慢慢慢滲透進去這個小小的LP這個圈子而且很多很屌的那種startup他們也會選VC對不對"
+      },
+      {
+        "index": 41,
+        "time": "14:03",
+        "start": 843.78,
+        "duration": 18.279999999999973,
+        "text": "对对你其实如果到我的网站你如果不是engineer你不做infra你应该不会完全看不懂是所有的logo对但是很多喜欢infra的工程师或founder一看我的网站就是哇Tim你有这么多好公司就是怎么这么多好所以其实在我们的领域里面假如说你知道我们这个领域的话"
+      },
+      {
+        "index": 42,
+        "time": "14:22",
+        "start": 862.06,
+        "duration": 12.860000000000014,
+        "text": "至少听过两三家以上所以Founder很多时候因为我自己也是Founder过我也raise过钱所以当你真的不认识一个VC Fund的时候你第一个就看到他带头过去但是你如果看到他"
+      },
+      {
+        "index": 43,
+        "time": "14:35",
+        "start": 875.16,
+        "duration": 25,
+        "text": "这可能透过Snowflake,透过DataBricks,透过什么,就是那种很大出场的,然后你就会说,诶,这家的Quality都是这种,那我是不是有可能也可以成为,比较有可能成为那种,你就会有种比较心理投射的那种,Gravity,除了这个Quality,有这个VC Fund,他做的事情看着眼光也好,或者是他的有办法help,假如说都是这种类型的公司,对,这就是我们的品牌,"
+      },
+      {
+        "index": 44,
+        "time": "15:00",
+        "start": 900.3,
+        "duration": 17.960000000000036,
+        "text": "所以其實這個我們很大一個marketing的一部分其實大部分就在看說我到底投過什麼東西VC網站好像大部分都是把那個name tag放進去以前我2016年Race總值的時候以前COVID之前你不可能在Zoom call上面打錢"
+      },
+      {
+        "index": 45,
+        "time": "15:18",
+        "start": 918.26,
+        "duration": 18.08000000000004,
+        "text": "你必須得開車 開車到那個San Jorio上面那你到那個VC的office走進去Pinterest 推特有就是全部好的logo全部放在牆上而且故意放在你那個沙發等VC開完會前面就是一直走那個左馬燈在你前面你知道嗎其實蠻煩的但是同時他們就在賣你嘛"
+      },
+      {
+        "index": 46,
+        "time": "15:36",
+        "start": 936.34,
+        "duration": 18.41999999999996,
+        "text": "就是你在进去跟他们聊之前你就已经大概心里面就想哇这个就是透过Turio这个是透过那个whatever的 Snap的透过Github的你就会有那种已经心里就觉得哇这个很屌当你有这种想法进去聊的时候就有不同的"
+      },
+      {
+        "index": 47,
+        "time": "15:54",
+        "start": 954.46,
+        "duration": 20.860000000000014,
+        "text": "VC就走路好像有点疯这样子这是一个品牌建立的方式那VC Fund一般来讲你们的商业模式是什么样?就是你们自己公司是怎么赚钱?对,我们其实跟一般基金可能都蛮类似就是我们会有那种抽management fee就是某一种我也不知道中文叫什么"
+      },
+      {
+        "index": 48,
+        "time": "16:15",
+        "start": 975.32,
+        "duration": 23.779999999999973,
+        "text": "管理费对对对手续费吗对算管理费因为不是一种手续的一种费用所以最通常听到可能叫2 and 20每一年这个VC Fund都会拿2%你Race的钱当作你的Budget包括你付你的薪水跟任何其他两种Marketing像我们也买SaaS Product所以就所有全部的Budget是从这个2%买"
+      },
+      {
+        "index": 49,
+        "time": "16:39",
+        "start": 999.1,
+        "duration": 23.67999999999995,
+        "text": "所以我们就会allocate每年2%拿这个钱去付我们的自己薪水那当我们公司卖钱的时候IPO也好,被买啊通常过了一倍我们raise的钱之后我们就会抽20%的赚钱我只要return over 10 million,可能11个million那个1million开始以上所有赚到的钱,我们20%就从自己拿"
+      },
+      {
+        "index": 50,
+        "time": "17:03",
+        "start": 1023.08,
+        "duration": 29.32000000000005,
+        "text": "就拿200K然后800K给LP这样大概是这样给LP或是institution他们投你们的对对就跟着谁投我们用80%以那个ratio这个2%是跟他们拿吗还是说你是投这家公司之后你跟这家公司拿没有是用我们raise的钱用我们raise的钱对所以通常你看到一个VC犯人说我们raise了400个million但是很多人都不了解就是其实你raise400个million并不表示你真的把400个million的钱拿去投公司"
+      },
+      {
+        "index": 51,
+        "time": "17:32",
+        "start": 1052.66,
+        "duration": 25.839999999999918,
+        "text": "其實你必須先把2% 而且過10年的2%先拿出來對那個就是你的fees所以你真的投可能才330 320就每一家VC放都是這樣那你raise越多就越爽對啊所以這就是VC的vicious cycle很多人罵VC的就是你raise這麼大的fund但是你return不一定要好你只有那麼大的薪水這就是很多人在Twitter啊Ex上面罵的東西就是你專門只管fee你不管return"
+      },
+      {
+        "index": 52,
+        "time": "17:58",
+        "start": 1078.12,
+        "duration": 26.62000000000012,
+        "text": "这是一个business model嘛,只要你有办法去投到好的公司你的LP就会想投你,这是一个cycle这样子那我们刚刚聊到你们一般来讲是投seat round跟pre-seat的公司那你们一般的exit是在哪一个阶段?exit,我们通常因为有公司exit通常是根据他们想要exit的时候所以我们自己exit只有两种方式我们either公司被买"
+      },
+      {
+        "index": 53,
+        "time": "18:24",
+        "start": 1104.74,
+        "duration": 21.5,
+        "text": "或是IPO的时候那这可能你不会10$卖掉不长其实大部分的VC Fund尤其像我们这个Stage不会太早买因为你最大的Return都在5到7年之后所以你先卖了你入上Upside因为你知道VC Fund有个很著名的名字叫Powerwall就是你投30家你真的真的大赚的可能就只有一两家"
+      },
+      {
+        "index": 54,
+        "time": "18:46",
+        "start": 1126.04,
+        "duration": 26.019999999999982,
+        "text": "中間快三分之一全死中間一大半可能return 1-2X 可能只管你一點只夠 cover 那些死掉的或者甚至 cover 不良的死掉的但是通常就是那一家那一家可能叫 Google那一家可能叫 Facebook那可能就是排行好了可能有那種賣 2 billion 3 billion 10 billion 甚至以上的可能只有一家三年來就那一年加而且你要投到你只要投到 欸 這所有的錢"
+      },
+      {
+        "index": 55,
+        "time": "19:12",
+        "start": 1152.06,
+        "duration": 20,
+        "text": "你就5x 4x就whatever所以如果你太早卖而且你其实没有那么确定哪一家会成为那家大公司的前面很多公司前面都看起来有点像Snowflake有好几个round可能很多VC都不投了他觉得这个怪怪的不断不赚钱那为什么多钱你这个公司可以活吗"
+      },
+      {
+        "index": 56,
+        "time": "19:31",
+        "start": 1171.68,
+        "duration": 23.61999999999989,
+        "text": "所以有些questionable,一些rough的period,成为最重要的icon之一所以我们没有办法不想卖太快但是我们必须在一定的时间还是得卖一些通常我们的exit,我们像这种pre-CC fund exit的,我们叫secondary,tender offer通常选在我已经有办法,这个公司可能至少涨了20,30x以上"
+      },
+      {
+        "index": 57,
+        "time": "19:55",
+        "start": 1195.48,
+        "duration": 23.200000000000045,
+        "text": "就是已经cover够多我们的fund可能已经returned half the fund或1x the fund可能至少half the fund那在上面当然会更好但是我们可以先拿一下upside way对买个几%啊5%啊10%啊但是这通常以我来讲五六年之后的事情就是我投完到真的发生这样真的中间起码四五年以上"
+      },
+      {
+        "index": 58,
+        "time": "20:18",
+        "start": 1218.36,
+        "duration": 27.700000000000045,
+        "text": "有一些Lucky的case像我有一家被买了2 billion accident可能还3年了但是那个就是唯一的- 细到 - 细到卖掉 - 3年 - 2 billion - 对 - 哇那很厉害 - 叫Tabula在Techron上面有写的DevaGreggs也买那个就是比较特殊对对对就是Lucky我们就真的叫Lucky那我没有办法Bet on每一家都这么卖所以通常In most cases就是要打到快8年 4年的时间"
+      },
+      {
+        "index": 59,
+        "time": "20:46",
+        "start": 1246.06,
+        "duration": 18.38000000000011,
+        "text": "那假如你們投的公司死掉了你們會需要賠錢嗎?因為這個放不是你們的錢你們LP的錢這一筆錢沒了那你們需要賠他們嗎?還是?沒有沒有如果賠他們我也沒錢了我們就直接上銅去所以VC基本上是穩賺不賠的"
+      },
+      {
+        "index": 60,
+        "time": "21:04",
+        "start": 1264.1,
+        "duration": 23.180000000000064,
+        "text": "也不是這個意思如果你全部投的公司全死但就repetition很差對對你就沒有下一個fund了所以為什麼VC fund不好開始因為大部分的LP其實都不喜歡take這樣的risk但是大家都知道這個asset class top quartile是比S&P500賺得更多錢那top quartile是賺非常多錢"
+      },
+      {
+        "index": 61,
+        "time": "21:27",
+        "start": 1287.28,
+        "duration": 21.720000000000027,
+        "text": "所以你又不可能都不投有benchmark你不投你就少了10x的return所以这是一个很...有点像投...有点投Bitcoin的feel你知道就是like我知道这个东西有可能会大赚但是我也不太确定到底多少或者是哪一家所以我必须得要分散投资一点所以我们其实不会有majority的钱放在DC房因为这个太...太risky"
+      },
+      {
+        "index": 62,
+        "time": "21:49",
+        "start": 1309,
+        "duration": 26.440000000000055,
+        "text": "但是又不可能都不放因为我们的return的profile高很多我们的fund通常打的招牌是至少3-5x那好的fund甚至8-10x都有可能所以你赔几家公司其实是一部分的计划我们跟很多只要你肯投VC fund你就必须得要心里想ok我1/3投了他这个家讲的投的公司应该全管甚至更多"
+      },
+      {
+        "index": 63,
+        "time": "22:15",
+        "start": 1335.44,
+        "duration": 21.700000000000045,
+        "text": "但是没有差因为我们的parallelas long有一家甚至一两家往上冲就ok了对就ok了这是很奇怪的一家这是很奇怪的business其实公司死了不只是正常甚至有很多VC的朋友说我公司我的funds死的公司不够多因为我的risk太不够高他说怎么大家还活着"
+      },
+      {
+        "index": 64,
+        "time": "22:37",
+        "start": 1357.14,
+        "duration": 24.95999999999981,
+        "text": "对,那个人不会快的就是甚至有那种这样,I'm not taking a lot of risk我还第一次,以前没有听过这种,影响你公司死我后来,我后来其实有某种体会就是对啊,我们就是个risk taking asset class如果你标榜我四年公司全部没有挂但是你有办法说你有那么多家公司真的可以成为这么大的outcome最知名的VC fund也都一堆死对,所以这是一个很,it's part of the plan"
+      },
+      {
+        "index": 65,
+        "time": "23:02",
+        "start": 1382.1,
+        "duration": 16.800000000000182,
+        "text": "你就是sign up to就是做很risky的investment最后的问题是很多VC会帮就你们自己投的公司找工程师啊或者找那个technical team嘛像我自己也是会收到很多LinkedIn上面的那个message那你预发来讲是怎么去帮这些公司去找这些candidate"
+      },
+      {
+        "index": 66,
+        "time": "23:18",
+        "start": 1398.9,
+        "duration": 18.939999999999827,
+        "text": "一般你看的是什麼?其實因為我們不是專門幫他們決定Hire誰的人就是介紹而已我們其實可能一方面是幫他們想什麼樣的人最適合他們的公司然後也會開始做一些因為我們投的公司這麼早期可能真的就是兩個FounderThat's it"
+      },
+      {
+        "index": 67,
+        "time": "23:37",
+        "start": 1417.84,
+        "duration": 22.25999999999999,
+        "text": "前面几个hire很重要以前Airbnb的CEO就说他快六个月的时间去hire第一个人因为他需要这个culture line value line不是随便找的而且这东西不是你放在网站有个job description不是那么容易可以找到这么好match的通常前几个hire是我们最能做的前几个hire我们做的事情就是你是要做什么产品"
+      },
+      {
+        "index": 68,
+        "time": "24:00",
+        "start": 1440.1,
+        "duration": 23.580000000000155,
+        "text": "你是什么样的culture你要找什么样的人大概有个底子后因为我们有做一些podcast做一些technical community有很广的一些我们同一个公司是有很多engineer involved的project我们就利用这些社群我们去帮他search哪一些high possibility的人我觉得是会match但是那时候我们会我的工作不是去帮他"
+      },
+      {
+        "index": 69,
+        "time": "24:23",
+        "start": 1463.68,
+        "duration": 28.139999999999873,
+        "text": "我會幫他reach out 一部分的我們這家公司在找founding engineer什麼什麼之類的我通常啊 我的公司比較像是closer這個工程師已經有興趣了已經有在面試喜歡這家公司但是有好幾個offer或者甚至在考慮說要不要加入那麼risky的startup我就是 我打電話來告訴說這個公司可以好好考慮一下為什麼投這家公司為什麼你要去加入一個startup為什麼你要去考慮小公司跟大公司的好處跟壞處是什麼"
+      },
+      {
+        "index": 70,
+        "time": "24:51",
+        "start": 1491.82,
+        "duration": 16.220000000000027,
+        "text": "因為我自己也招募過快四家startup然後我自己也開過公司然後現在投那麼多所以我不同的經驗去分享說這個好與壞是什麼所以我就用這樣的東西去去close他們的candidates我覺得非常有幫助知道我學到很多東西"
+      },
+      {
+        "index": 71,
+        "time": "25:08",
+        "start": 1508.04,
+        "duration": 24.660000000000082,
+        "text": "不过不这样,就是蛮有趣的工作我从来以前没有,这不是我小时候的梦想这不是小时候的梦想因为我不知道这个行业你知道吗?对,想说我做Founder之后为什么那么喜欢做VC其实我觉得也是因为有办法去跟这么多的Founder有这种很密切接触的那种关系我觉得很难得,很少有这种工作可以让你on repeat这么有趣的项目跟公司可以一直在很密切合作"
+      },
+      {
+        "index": 72,
+        "time": "25:32",
+        "start": 1532.7,
+        "duration": 19.839999999999918,
+        "text": "OK 好那謝謝Tim來這邊跟大家分享這個VC的世界因為這個一般來講比較少人知道大家都是在另外一端嘛在公司裡面工作像我進startup之前其實我也會跟這個startup的VC聊一下這都是很不錯的資訊"
+      },
+      {
+        "index": 73,
+        "time": "25:52",
+        "start": 1552.54,
+        "duration": 24.048999999999978,
+        "text": "希望大家有帮助非常感谢Tim今天特别抽空来我家一起录影如果大家有什么问题想要问Tim或是关于VC或是任何你想要当Founder都可以在影片底下留言然后我尽量回复大家如果Tim有空的话然后之后如果大家有很多问题我们也可以再做第二集或是再看一下有什么反应大家可以在影片底下留言那我们就下次见"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": "whisper",
+    "fallback": false,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXEPECB9P5NWTB6Y8G8KGBKJ",
+    "status": "completed",
+    "videoId": "5lXsYdh4sgI",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "Hello大家好我是Terry今天這集影片邀請了我一個朋友Tim他是Essence VC創投公司的創辦人那因為VC的世界對很多人來說可能比較神秘然後如果沒有VC的話就沒有我們今天熟知的矽谷各種科技創新還有很多改變我們生活的公司",
+            "start": 0.12,
+            "duration": 16.959999999999997
+          },
+          {
+            "text": "所以說今天特別邀請Tim來跟大家分享一下VC一般是怎麼選擇投資的VC的錢是哪裡來的還有VC本身它的商業模式是什麼他們怎麼賺錢再來就是身為VC他們怎麼去幫助他們的Founder如果你也在科技業工作或是以後你想要加入新創公司甚至是自己創業有這個目標的話我相信今天這集影片一定會對你很有幫助你一般來講是投中資文對不對",
+            "start": 17.08,
+            "duration": 23.880000000000003
+          },
+          {
+            "text": "對,其實我們投Pre-C到C偶爾投一些A但是可能注重在Pre-C跟C在那Pre-C就是中資本更早就是Founder可能連Pro到還沒做出來其實C只是個名詞每一年每兩年都會一直換以前C round真的是什麼都沒有可最近C越來越大",
+            "start": 40.96,
+            "duration": 18.699999999999996
+          },
+          {
+            "text": "C搞到6-8M的美金之後現在很多人為了要投C之前再籠一個人叫Pre-C我覺得以前C很久以前可能C就Email了沒有以前的C就是現在的C以前的C就是現在的Pre-C像我當時2016年自己創業的時候我自己籠了C大概1.5而已那現在1.5就是個Pre-C",
+            "start": 59.28,
+            "duration": 25.879999999999995
+          },
+          {
+            "text": "就是這些名詞其實一直隨著年代一直在換但是我們信仰投第一輪的像你們一般來講投C Round就是中指輪你是怎麼決定這家公司要不要投的",
+            "start": 85.04,
+            "duration": 13.659999999999997
+          },
+          {
+            "text": "那是最难的一个问题因为其实大部分VC很多人可能都不太了解VC这个行业我们看多少个公司啊我们怎么去做决定其实我们看很多家我没有真的仔细去算过但是我们可能平均一个月一定会看到快四到五百个公司以上哇这么多对所以我一个月平均可能投一家一个月平均一家对而且就我一个人",
+            "start": 98.46,
+            "duration": 24
+          },
+          {
+            "text": "所以我不可能有那么多时间去真的很细心去看400个500个所以我会很快的筛选所以我第一通常来讲就先选我自己懂不懂这个行业跟这个领域如果完全不懂根本不可能说真的花那么多时间但是我至少有一定的了解所以我怎么做最终第一个决定就是先我有没有办法去决定说这家公司是最好的",
+            "start": 122.46,
+            "duration": 24.940000000000012
+          },
+          {
+            "text": "或這個團隊是最好的有沒有任何的因素是我夠了解過多知識過多背景去了解所以其實我通常在投任何一家公司之前可能都已經有做過一定的功課可能幾個月或幾年的時間看類似這個方面的東西所以當我再看到一家公司的時候",
+            "start": 147.38,
+            "duration": 19.78
+          },
+          {
+            "text": "这个我有办法去看说这个是不是有可能是一个很大的一个潜力对,所以可能第一个是看领域看完领域之后再看团队那你有一般指头就是infra focus的公司对,我的fund其实是focus在infra",
+            "start": 167.38,
+            "duration": 16.30000000000001
+          },
+          {
+            "text": "其实Infra也是个蛮广的一个领域对对对可能你刚刚我们讲到Cloud嘛Amazon这当然是其中一部分Dev2开发者用的工具都是其中一部分但其实以我来讲Infra其实是任何人可以Build on top of the platform都可以所以其实严格来讲每一个SaaS像Salesforce也好Workday也好到现在这个境界很多人都Build AppShopify也是",
+            "start": 183.68,
+            "duration": 22.19999999999999
+          },
+          {
+            "text": "所以這其實都是infra對所以就是以infra的眼光去看公司就是這個東西有沒有潛力讓人家給開發者建立一個ecosystem的方式我們來決定說我們要不要去投入這個公司那你會比較注重哪些方面比如說像是他的產品成熟度還是說他的這個目前已經有的這個用戶數量或他的盈利能力",
+            "start": 205.58,
+            "duration": 21.73999999999998
+          },
+          {
+            "text": "已經有了這個營利能力或是說你會看這個Founder的Quality就哪些你會比較去特別篩選對我比較特別因為我投很多最最最早期甚至Founder都還沒有離開公司的時候先去Raise他第一輪我通常都會在這個時候都已經開始了而且因為我是第一個輪就要投對所以很多時候可能至少一半以上是沒有任何數據可以看對沒有產品Nothing",
+            "start": 227.32,
+            "duration": 24.28
+          },
+          {
+            "text": "而且他的idea不一定是已经很确定但是我们就不想要等到一切全部都有再去投因为那个时候可能too late因为很好的团队有很好的方向有数据everything很多时候就变成seed run就变很大的一个run所以因为我想要focus在pre-seed为主的话",
+            "start": 251.28,
+            "duration": 17.200000000000017
+          },
+          {
+            "text": "我今天是在看团队看这个团队的quality他们做事的方式思想模式他们认识他们什么是他们motivation甚至都会去试着去探讨因为我做很多infrainfra其实这东西不是看revenue",
+            "start": 268.48,
+            "duration": 14.680000000000007
+          },
+          {
+            "text": "如果我们看Hashicorp比较知名的N法的公司它前面很多年是没有revenue的所以我其实是在看说它做的这个东西跟它的想法有没有办法去改变这个领域如果你有这个野心跟有这个能力的话我们是align你前面一两年专门做某一件事情那这个东西可能是没有办法请你可以赚Open source也好",
+            "start": 283.16,
+            "duration": 22.19999999999999
+          },
+          {
+            "text": "freemium也好或者是something但是你可以做大這個東西你可以做到最好那是我比較care的你有沒有一樣東西你可以做到可以改變這個領域的潛力主要還是看那個產品有沒有那個潛力對 但是做那個產品之前因為很可能你沒有任何產品可以show給我看maybe prototype或者是有一些很簡單的一些rough sketch不是一個完整的產品我還沒有真的看過一家完整的產品是我偷的",
+            "start": 304.98,
+            "duration": 27.180000000000007
+          },
+          {
+            "text": "投资前就有所以我会用聊天的方式大部分的时候你说是pitch deck这些东西都是很一部分的资料而已很多就是通常沟通跟discussion好几轮之后我慢慢开始conclude说这个团队他的做事方式想法是有办法在这个领域里面可以成为一个disruption",
+            "start": 332.16,
+            "duration": 21.739999999999952
+          },
+          {
+            "text": "那你会投那些Founders他们有一个Track Record就是之前可能就已经有成功的Startup或成功的Exit还是你一般来讲你投的公司都是Founder比较年轻就是第一次那种都有耶当然我希望啦大部分的VC都会说当然要找那种卖过一堆钱的啊对但是实际上有很多VC的Round如果你找那种最成熟最多Credential的有背景的人他们的Round就很大",
+            "start": 353.9,
+            "duration": 28.180000000000007
+          },
+          {
+            "text": "像我们这种小的Fund像我的Fund大概三四个million所以我们如果都只投这种8-10 million的seat round我们可以占的那公司的股份就不多了而且每一家公司都可以大卖",
+            "start": 382.7,
+            "duration": 12.639999999999986
+          },
+          {
+            "text": "啊 卖几个billion的exit其实没有机率 没有那么大所以我们必须得选哪一些公司我们愿意take less ownership对因为我觉得这个潜力真的很大然后这公司的founder的成熟度everything是真的适合我们去own小一点的piece但这个是很大的一个机会但是相反的我们也必须take more risk第一次founder可能甚至是PhD没有出去做过很多工作经验的或者是anything我们也去考虑这些所以我大概基本上有快一半一半",
+            "start": 394.96,
+            "duration": 28.180000000000007
+          },
+          {
+            "text": "OK一半以上的Founder可能是有做過公司或做過蠻多工作經驗或something有一半的Founder可能有幾年的工作經驗或是Research為主或是可能甚至沒有出去做過Peer PhDProfessor我們都有投過",
+            "start": 423.14,
+            "duration": 14.740000000000009
+          },
+          {
+            "text": "但是我们就必须take more riskrisk就大很多了对对valuation就低一点然后我们就会做更多的事情去帮他们personally比较喜欢self model因为我觉得这是我们我们放的特点之一就是我们很了解怎么帮这些很technical的founder去找到product market fit我其实真的蛮多时间是花在这个group的",
+            "start": 437.88,
+            "duration": 19.639999999999986
+          },
+          {
+            "text": "所以我OK for both所以他come down to evaluation 啊 司機點啊跟所有東西 都全部是所有的因素我們考量",
+            "start": 457.52,
+            "duration": 10.319999999999993
+          },
+          {
+            "text": "你会跟其他的类似你们这样的VC一起合作,就在CEO或PRECIT的时候进去吗?有有有,我们很多的合作,因为其实大部分的VC,也不是大部分,很多知名的VC都是我们的LP,就是有back我们,像Saquare啊,Greason啊,十几个,因为他们都是我们下一轮的资金,对对对,所以我们有建立我们的品牌,就是我们是很常看到很好的PRECIT,对对对,",
+            "start": 467.5,
+            "duration": 26
+          },
+          {
+            "text": "所以他们有时候也会跟投,在那个时候都跟投,但是可能大部分都是跟我们保持联络,我们告诉他们说,这几家take it out,或者是帮每一家公司position好,怎么样去跟下一轮的资金去拿去投。所以我们会跟很多的知名的Fund一起到下一轮跟着我们的下一轮投。第一轮我们因为我们的Fund也不大,",
+            "start": 493.32,
+            "duration": 21.939999999999998
+          },
+          {
+            "text": "所以也蛮常跟很多pre-seed像soloGP是一个名词就是只有我们单独VCinvestor的fund或者angel啊都会蛮常合作所以其实每一次我们race如果我leadlocal lead我就会抓一堆朋友起来",
+            "start": 515.04,
+            "duration": 14.120000000000005
+          },
+          {
+            "text": "或甚至我的朋友说我们Leader你要不要一起进来就是很常有这种机会会出现说到这个Lead或者这个钱我觉得大家可能会很好奇说就是VC的钱是哪里来的其实VC就我了解了VC不是用自己的钱去投不是对",
+            "start": 529.16,
+            "duration": 15.899999999999977
+          },
+          {
+            "text": "Tim可以跟大家分享一下自己没有那么有钱就是VC的这个Fund到底是你刚说30million这个Fund到底是哪里来的那我们先暂停一分钟你知道冲浪的时候遇到鲨鱼会怎么样吗没错我说的就是Surfshark大家对传统VPN的认知就是翻墙跟保护你的上网饮食但是VPN的品牌有非常的多为什么我会选择用Surfshark呢当然是因为他们的性价比很高",
+            "start": 544.68,
+            "duration": 24.5
+          },
+          {
+            "text": "除了基本的翻墙功能之外呢保护你的个职安全还有预防恶意城市也是他们一直在投资的技术我们最常见的IG或是Facebook被盗都是因为不小心点开了一个链接或是下载了恶意城市到你的电脑上面这些恶意城市呢又称病毒能够监视你的一举一",
+            "start": 569.18,
+            "duration": 18.040000000000077
+          },
+          {
+            "text": "包含每一个键盘滑鼠的点击跟你的浏览记录然后很有可能你的网路银行密码或是web3的钱包资讯呢就会被偷走而且不只是电脑手机上面也同样有非常高的风险尤其是在使用公共网路的时候Surfshark现在已经把VPN、个制保密、安全浏览、备用ID还有防毒软体这些功能全部整合在一个软体上面你只要订阅Surfshark One就可以开启所有的功能",
+            "start": 587.22,
+            "duration": 25.839999999999918
+          },
+          {
+            "text": "而且可以同时保护你所有的设备那现在使用我的专属链接购买呢就可以获得额外4个月免费的订阅平均每一个月不到一杯咖啡的价钱你还在等什么一杯咖啡的价钱就可以保护你一整个月上网的安全加上有VPN可以用而且如果你不满意的话30天内还可以随时退款",
+            "start": 613.06,
+            "duration": 18.720000000000027
+          },
+          {
+            "text": "我会把连结放在影片底下的资讯栏或是你也可以直接扫这个QR Code我觉得大家可能会好奇说就是VC的钱是哪里来的其实VC就我了解了VC不是用自己的钱去投不是对Tim可以跟大家分享一下自己没有那么有钱就是VC的这个Fund到底是你刚说30M这个Fund到底是哪里来的其实这是一个VC我们称之为Limited Partner就是LP的钱真的蛮广的",
+            "start": 631.78,
+            "duration": 26.800000000000068
+          },
+          {
+            "text": "每一个人开始VC Fund的那一批LP的钱可能都不太一样就跟我个人",
+            "start": 658.58,
+            "duration": 6.240000000000009
+          },
+          {
+            "text": "我第一个Found才一个million而已第二个Found七个million这个Found是Found3 30我的LP其实差蛮多的我刚开始的时候全部都是个人可能一两个VCFound但是基本上全部都是个人个人就是一些其他的Founder我以前工作过的Manager知名的YouTuber Engineer对Founder的兴趣有一些我以前拿的钱真的很少",
+            "start": 665.14,
+            "duration": 25.620000000000005
+          },
+          {
+            "text": "所以我的很多同事朋友就会跟着加进来然后第二个Fund也很多类似但是可能很多人没有知道的事情就是很多VC Fund都会成为LP就刚刚讲Square, Andreessen, Foundation, NEA几乎十几家为什么会成为我的LP因为他们其实都会拿一笔他们Rays的钱去投在VC Fund不是为了赚钱他们自己其实当然是赌他们自己的资金会赚",
+            "start": 690.38,
+            "duration": 26.120000000000005
+          },
+          {
+            "text": "我们就是有点他是他的小弟们我们告诉他我们看到很多什么类似的公司我们投的就是帮助他们可以看到一些知道一些好的公司在before他们raise的前我们就已经提早让他有一些insights所以大概有15%到20%现在我这fund都是VC funds的钱",
+            "start": 716.5,
+            "duration": 21.74000000000001
+          },
+          {
+            "text": "但是大部分啦其实只要你一定的数量的钱以上可能15、20 million以上你必须得找institutioninstitution就是可能很多美国我们讲family office就是有钱人真的很有钱的人有50、100个million或甚至billion dollar的一些直接卖石油的啊或Bill Gates啊或是他们都有一个family office把他们的钱拿去专门去投high risk我们就是high riskventure capital所以我们常被一些可能",
+            "start": 738.02,
+            "duration": 28.74000000000001
+          },
+          {
+            "text": "某某某Levi's的Founder啊或者是这个的Founder啊像我有Intel CEO啊我有一些其他的一些他们的Family Office会reach out说诶我们可以放一些钱到你的Found里面所以我一部分有钱是叫有钱人的Family Office投我",
+            "start": 766.76,
+            "duration": 14.519999999999982
+          },
+          {
+            "text": "另外一部分可能就是Fund of Funds就是有一些人会专门去raise他们的资金专门去投VC Fund所以我他可能50%以上都是叫Fund of Funds的这些就是一些钱我们上额钱其实很多不是自己有钱在投或者就是VC Fund",
+            "start": 781.28,
+            "duration": 17.680000000000064
+          },
+          {
+            "text": "要么就是真的是专门投VC Fund的Funds对,然后他们就是打说我可以有办法去知道哪一家VC Fund所以你不用去担心给我,我帮你找对,所以这种其实是我们主要的钱来源之一OK,其实就是一个资金链对,就看哪一个VC比较厉害找那个对,其实这真的都是打知名度的对,就是你的知名度真的非常的重要而且不是知名度这么广的知名度对",
+            "start": 798.72,
+            "duration": 27.279999999999973
+          },
+          {
+            "text": "是在這一圈子裡面這個圈子的生命力就非常的重要他如果沒有聽過你他不會同意你但是一定要有想辦法聽到你所以這是花五六年的時間就在慢慢慢慢滲透進去這個小小的LP這個圈子而且很多很屌的那種startup他們也會選VC對不對",
+            "start": 826,
+            "duration": 18.120000000000005
+          },
+          {
+            "text": "对对你其实如果到我的网站你如果不是engineer你不做infra你应该不会完全看不懂是所有的logo对但是很多喜欢infra的工程师或founder一看我的网站就是哇Tim你有这么多好公司就是怎么这么多好所以其实在我们的领域里面假如说你知道我们这个领域的话",
+            "start": 843.78,
+            "duration": 18.279999999999973
+          },
+          {
+            "text": "至少听过两三家以上所以Founder很多时候因为我自己也是Founder过我也raise过钱所以当你真的不认识一个VC Fund的时候你第一个就看到他带头过去但是你如果看到他",
+            "start": 862.06,
+            "duration": 12.860000000000014
+          },
+          {
+            "text": "这可能透过Snowflake,透过DataBricks,透过什么,就是那种很大出场的,然后你就会说,诶,这家的Quality都是这种,那我是不是有可能也可以成为,比较有可能成为那种,你就会有种比较心理投射的那种,Gravity,除了这个Quality,有这个VC Fund,他做的事情看着眼光也好,或者是他的有办法help,假如说都是这种类型的公司,对,这就是我们的品牌,",
+            "start": 875.16,
+            "duration": 25
+          },
+          {
+            "text": "所以其實這個我們很大一個marketing的一部分其實大部分就在看說我到底投過什麼東西VC網站好像大部分都是把那個name tag放進去以前我2016年Race總值的時候以前COVID之前你不可能在Zoom call上面打錢",
+            "start": 900.3,
+            "duration": 17.960000000000036
+          },
+          {
+            "text": "你必須得開車 開車到那個San Jorio上面那你到那個VC的office走進去Pinterest 推特有就是全部好的logo全部放在牆上而且故意放在你那個沙發等VC開完會前面就是一直走那個左馬燈在你前面你知道嗎其實蠻煩的但是同時他們就在賣你嘛",
+            "start": 918.26,
+            "duration": 18.08000000000004
+          },
+          {
+            "text": "就是你在进去跟他们聊之前你就已经大概心里面就想哇这个就是透过Turio这个是透过那个whatever的 Snap的透过Github的你就会有那种已经心里就觉得哇这个很屌当你有这种想法进去聊的时候就有不同的",
+            "start": 936.34,
+            "duration": 18.41999999999996
+          },
+          {
+            "text": "VC就走路好像有点疯这样子这是一个品牌建立的方式那VC Fund一般来讲你们的商业模式是什么样?就是你们自己公司是怎么赚钱?对,我们其实跟一般基金可能都蛮类似就是我们会有那种抽management fee就是某一种我也不知道中文叫什么",
+            "start": 954.46,
+            "duration": 20.860000000000014
+          },
+          {
+            "text": "管理费对对对手续费吗对算管理费因为不是一种手续的一种费用所以最通常听到可能叫2 and 20每一年这个VC Fund都会拿2%你Race的钱当作你的Budget包括你付你的薪水跟任何其他两种Marketing像我们也买SaaS Product所以就所有全部的Budget是从这个2%买",
+            "start": 975.32,
+            "duration": 23.779999999999973
+          },
+          {
+            "text": "所以我们就会allocate每年2%拿这个钱去付我们的自己薪水那当我们公司卖钱的时候IPO也好,被买啊通常过了一倍我们raise的钱之后我们就会抽20%的赚钱我只要return over 10 million,可能11个million那个1million开始以上所有赚到的钱,我们20%就从自己拿",
+            "start": 999.1,
+            "duration": 23.67999999999995
+          },
+          {
+            "text": "就拿200K然后800K给LP这样大概是这样给LP或是institution他们投你们的对对就跟着谁投我们用80%以那个ratio这个2%是跟他们拿吗还是说你是投这家公司之后你跟这家公司拿没有是用我们raise的钱用我们raise的钱对所以通常你看到一个VC犯人说我们raise了400个million但是很多人都不了解就是其实你raise400个million并不表示你真的把400个million的钱拿去投公司",
+            "start": 1023.08,
+            "duration": 29.32000000000005
+          },
+          {
+            "text": "其實你必須先把2% 而且過10年的2%先拿出來對那個就是你的fees所以你真的投可能才330 320就每一家VC放都是這樣那你raise越多就越爽對啊所以這就是VC的vicious cycle很多人罵VC的就是你raise這麼大的fund但是你return不一定要好你只有那麼大的薪水這就是很多人在Twitter啊Ex上面罵的東西就是你專門只管fee你不管return",
+            "start": 1052.66,
+            "duration": 25.839999999999918
+          },
+          {
+            "text": "这是一个business model嘛,只要你有办法去投到好的公司你的LP就会想投你,这是一个cycle这样子那我们刚刚聊到你们一般来讲是投seat round跟pre-seat的公司那你们一般的exit是在哪一个阶段?exit,我们通常因为有公司exit通常是根据他们想要exit的时候所以我们自己exit只有两种方式我们either公司被买",
+            "start": 1078.12,
+            "duration": 26.62000000000012
+          },
+          {
+            "text": "或是IPO的时候那这可能你不会10$卖掉不长其实大部分的VC Fund尤其像我们这个Stage不会太早买因为你最大的Return都在5到7年之后所以你先卖了你入上Upside因为你知道VC Fund有个很著名的名字叫Powerwall就是你投30家你真的真的大赚的可能就只有一两家",
+            "start": 1104.74,
+            "duration": 21.5
+          },
+          {
+            "text": "中間快三分之一全死中間一大半可能return 1-2X 可能只管你一點只夠 cover 那些死掉的或者甚至 cover 不良的死掉的但是通常就是那一家那一家可能叫 Google那一家可能叫 Facebook那可能就是排行好了可能有那種賣 2 billion 3 billion 10 billion 甚至以上的可能只有一家三年來就那一年加而且你要投到你只要投到 欸 這所有的錢",
+            "start": 1126.04,
+            "duration": 26.019999999999982
+          },
+          {
+            "text": "你就5x 4x就whatever所以如果你太早卖而且你其实没有那么确定哪一家会成为那家大公司的前面很多公司前面都看起来有点像Snowflake有好几个round可能很多VC都不投了他觉得这个怪怪的不断不赚钱那为什么多钱你这个公司可以活吗",
+            "start": 1152.06,
+            "duration": 20
+          },
+          {
+            "text": "所以有些questionable,一些rough的period,成为最重要的icon之一所以我们没有办法不想卖太快但是我们必须在一定的时间还是得卖一些通常我们的exit,我们像这种pre-CC fund exit的,我们叫secondary,tender offer通常选在我已经有办法,这个公司可能至少涨了20,30x以上",
+            "start": 1171.68,
+            "duration": 23.61999999999989
+          },
+          {
+            "text": "就是已经cover够多我们的fund可能已经returned half the fund或1x the fund可能至少half the fund那在上面当然会更好但是我们可以先拿一下upside way对买个几%啊5%啊10%啊但是这通常以我来讲五六年之后的事情就是我投完到真的发生这样真的中间起码四五年以上",
+            "start": 1195.48,
+            "duration": 23.200000000000045
+          },
+          {
+            "text": "有一些Lucky的case像我有一家被买了2 billion accident可能还3年了但是那个就是唯一的- 细到 - 细到卖掉 - 3年 - 2 billion - 对 - 哇那很厉害 - 叫Tabula在Techron上面有写的DevaGreggs也买那个就是比较特殊对对对就是Lucky我们就真的叫Lucky那我没有办法Bet on每一家都这么卖所以通常In most cases就是要打到快8年 4年的时间",
+            "start": 1218.36,
+            "duration": 27.700000000000045
+          },
+          {
+            "text": "那假如你們投的公司死掉了你們會需要賠錢嗎?因為這個放不是你們的錢你們LP的錢這一筆錢沒了那你們需要賠他們嗎?還是?沒有沒有如果賠他們我也沒錢了我們就直接上銅去所以VC基本上是穩賺不賠的",
+            "start": 1246.06,
+            "duration": 18.38000000000011
+          },
+          {
+            "text": "也不是這個意思如果你全部投的公司全死但就repetition很差對對你就沒有下一個fund了所以為什麼VC fund不好開始因為大部分的LP其實都不喜歡take這樣的risk但是大家都知道這個asset class top quartile是比S&P500賺得更多錢那top quartile是賺非常多錢",
+            "start": 1264.1,
+            "duration": 23.180000000000064
+          },
+          {
+            "text": "所以你又不可能都不投有benchmark你不投你就少了10x的return所以这是一个很...有点像投...有点投Bitcoin的feel你知道就是like我知道这个东西有可能会大赚但是我也不太确定到底多少或者是哪一家所以我必须得要分散投资一点所以我们其实不会有majority的钱放在DC房因为这个太...太risky",
+            "start": 1287.28,
+            "duration": 21.720000000000027
+          },
+          {
+            "text": "但是又不可能都不放因为我们的return的profile高很多我们的fund通常打的招牌是至少3-5x那好的fund甚至8-10x都有可能所以你赔几家公司其实是一部分的计划我们跟很多只要你肯投VC fund你就必须得要心里想ok我1/3投了他这个家讲的投的公司应该全管甚至更多",
+            "start": 1309,
+            "duration": 26.440000000000055
+          },
+          {
+            "text": "但是没有差因为我们的parallelas long有一家甚至一两家往上冲就ok了对就ok了这是很奇怪的一家这是很奇怪的business其实公司死了不只是正常甚至有很多VC的朋友说我公司我的funds死的公司不够多因为我的risk太不够高他说怎么大家还活着",
+            "start": 1335.44,
+            "duration": 21.700000000000045
+          },
+          {
+            "text": "对,那个人不会快的就是甚至有那种这样,I'm not taking a lot of risk我还第一次,以前没有听过这种,影响你公司死我后来,我后来其实有某种体会就是对啊,我们就是个risk taking asset class如果你标榜我四年公司全部没有挂但是你有办法说你有那么多家公司真的可以成为这么大的outcome最知名的VC fund也都一堆死对,所以这是一个很,it's part of the plan",
+            "start": 1357.14,
+            "duration": 24.95999999999981
+          },
+          {
+            "text": "你就是sign up to就是做很risky的investment最后的问题是很多VC会帮就你们自己投的公司找工程师啊或者找那个technical team嘛像我自己也是会收到很多LinkedIn上面的那个message那你预发来讲是怎么去帮这些公司去找这些candidate",
+            "start": 1382.1,
+            "duration": 16.800000000000182
+          },
+          {
+            "text": "一般你看的是什麼?其實因為我們不是專門幫他們決定Hire誰的人就是介紹而已我們其實可能一方面是幫他們想什麼樣的人最適合他們的公司然後也會開始做一些因為我們投的公司這麼早期可能真的就是兩個FounderThat's it",
+            "start": 1398.9,
+            "duration": 18.939999999999827
+          },
+          {
+            "text": "前面几个hire很重要以前Airbnb的CEO就说他快六个月的时间去hire第一个人因为他需要这个culture line value line不是随便找的而且这东西不是你放在网站有个job description不是那么容易可以找到这么好match的通常前几个hire是我们最能做的前几个hire我们做的事情就是你是要做什么产品",
+            "start": 1417.84,
+            "duration": 22.25999999999999
+          },
+          {
+            "text": "你是什么样的culture你要找什么样的人大概有个底子后因为我们有做一些podcast做一些technical community有很广的一些我们同一个公司是有很多engineer involved的project我们就利用这些社群我们去帮他search哪一些high possibility的人我觉得是会match但是那时候我们会我的工作不是去帮他",
+            "start": 1440.1,
+            "duration": 23.580000000000155
+          },
+          {
+            "text": "我會幫他reach out 一部分的我們這家公司在找founding engineer什麼什麼之類的我通常啊 我的公司比較像是closer這個工程師已經有興趣了已經有在面試喜歡這家公司但是有好幾個offer或者甚至在考慮說要不要加入那麼risky的startup我就是 我打電話來告訴說這個公司可以好好考慮一下為什麼投這家公司為什麼你要去加入一個startup為什麼你要去考慮小公司跟大公司的好處跟壞處是什麼",
+            "start": 1463.68,
+            "duration": 28.139999999999873
+          },
+          {
+            "text": "因為我自己也招募過快四家startup然後我自己也開過公司然後現在投那麼多所以我不同的經驗去分享說這個好與壞是什麼所以我就用這樣的東西去去close他們的candidates我覺得非常有幫助知道我學到很多東西",
+            "start": 1491.82,
+            "duration": 16.220000000000027
+          },
+          {
+            "text": "不过不这样,就是蛮有趣的工作我从来以前没有,这不是我小时候的梦想这不是小时候的梦想因为我不知道这个行业你知道吗?对,想说我做Founder之后为什么那么喜欢做VC其实我觉得也是因为有办法去跟这么多的Founder有这种很密切接触的那种关系我觉得很难得,很少有这种工作可以让你on repeat这么有趣的项目跟公司可以一直在很密切合作",
+            "start": 1508.04,
+            "duration": 24.660000000000082
+          },
+          {
+            "text": "OK 好那謝謝Tim來這邊跟大家分享這個VC的世界因為這個一般來講比較少人知道大家都是在另外一端嘛在公司裡面工作像我進startup之前其實我也會跟這個startup的VC聊一下這都是很不錯的資訊",
+            "start": 1532.7,
+            "duration": 19.839999999999918
+          },
+          {
+            "text": "希望大家有帮助非常感谢Tim今天特别抽空来我家一起录影如果大家有什么问题想要问Tim或是关于VC或是任何你想要当Founder都可以在影片底下留言然后我尽量回复大家如果Tim有空的话然后之后如果大家有很多问题我们也可以再做第二集或是再看一下有什么反应大家可以在影片底下留言那我们就下次见",
+            "start": 1552.54,
+            "duration": 24.048999999999978
+          }
+        ],
+        "videoTitle": "揭秘投資鏈最頂層玩家：風險創投",
+        "metadata": {
+          "title": "揭秘投資鏈最頂層玩家：風險創投",
+          "description": "Surfshark VPN專屬優惠連結：https://hackbear.tv/surfshark\n輸入優惠代碼HACKBEAR，就可以有額外四個月：）\n--------------------------\n盈透證券Interactive Brokers ❤️：https://hackbear.tv/ib\n我的Instagram: https://hackbear.tv/ig\n我的x.com: https://x.com/hackbearterry\n合作郵箱: hack.tech.entertainment@gmail.com\n\n#VC #風險投資 #新創 #創業投資 #startup #創投 #投資 #天使投資 #矽谷 #創業 #科技業 #工程師",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 1577,
+          "viewCount": 53005,
+          "keywords": [
+            "VC",
+            "venture capital",
+            "風險投資",
+            "風險創投",
+            "創業",
+            "startup"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/5lXsYdh4sgI/maxresdefault.jpg",
+            "width": 0,
+            "height": 0
+          }
+        },
+        "source": "whisper",
+        "fallback": false,
+        "error": null,
+        "reason": null,
+        "timings": {
+          "downloadSeconds": 28.7,
+          "transcribeSeconds": 12.2,
+          "totalSeconds": 40.9,
+          "audioBytes": 9596275,
+          "videoDurationSeconds": 1577,
+          "engine": "wizper"
+        }
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

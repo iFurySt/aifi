@@ -1,0 +1,5250 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=z6wMUaErCxU",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 231,
+  "video": {
+    "index": 231,
+    "id": "z6wMUaErCxU",
+    "title": "矽谷大神來了｜Part1",
+    "url": "https://www.youtube.com/watch?v=z6wMUaErCxU",
+    "duration_seconds": 1108.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "z6wMUaErCxU",
+    "title": "矽谷大神來了｜Part1",
+    "text": "hi everyone welcome back to my channel\nthis is terry and today we have a very\nspecial guest uh stan chen stan is a\nvery strong engineering leader um my\nmentor and you know is also a very good\nfriend of mine\nuh right now he's uh he's an advisor for\nmany companies right yeah just in couple\nyeah especially i think he does a lot of\nlike polar road map technology and\nphilosophy and a bunch of other things\nyeah and i just feel very honored to\nhave him today so sam why don't you tell\nus a little bit about yourself did you\nbegin with oh that's why opening\nquestion back in 1995\nyeah hi guys um so i was born in hong\nkong um my family moved over\nhere when i was 12 years old\noh stan also went to walu oh yeah i also\nwent to waterloo uh it's the best\nengineering school in canada\nyou always say that because you're from\nhungary\nwe don't know one of who is like\nstanford in the us\nuh except they have co-op we do have a\nvery good um internship program\nuh it's actually one of the most\nimportant thing actually when you're\ngoing through like university to be able\nto\nsee different companies like um like we\ndid what i did i did six different work\nterms and so the year right so like it\nwas amazing like um um just being able\nto come out with that understanding\nsaying that i have seen how six\ndifferent company works yeah um and like\nknowing what to expect like mixed\ninterviews as well as getting your job\nso much easier um but yeah anyway so i\nwent through schooling in toronto and\nwaterloo and then i also eventually\ngot out as a studying electrical\nmechanical engineering uh at a program\ncalled mechatronics within science from\nengineering um so basically\na bunch of automation\nrobotics\nwent into um what is it manufacturing\nautomation so doing plc um\nand like i'm looking and studying and\nlike i'm trying to improve like\nmanufacturing processes with automation\nand i got an opportunity over at cbs\nradio like um from a from my friend and\ni just basically said that yeah why not\ntry it like we got over there and\nactually started my my korean software\nand then from there i moved over to san\nfrancisco and basically started going\ninto startup and and like did a lot of\ndifferent things like i messed up a lot\nof things and i also learned a lot so i\nended up like really enjoying that kind\nof career that kind of industry so have\nbeen there since and um right now i'm\njust like focusing on\nbuilding startups and and like helping\nto build teams and like build products\nkind of thing so\nyeah so you mentioned you went from\nmechatronics engineering to software\nengineering which is quite a transition\ni think i imagine it it's very different\nright mechatronics is you're building\nrobotics and\nmore hardware like you're not doing so\nmuch of software like did you find it\ndifficult or was it hard to transition\nno that's the funny thing um for us like\num megatron expo um engineering um we\nwere the first class in there so it\nconsists of\nthe first\nyeah we were the guinea pigs\nto be honest like you if you ask like\ndifferent professors like different\nprofessors is going to tell you\ndifferent things like one would say that\nlike this is about building robots like\nlike gundams um yeah that's what i love\nright\nor another one is kind of like no this\nis all about like automation like\nmanufacturing assembly line and whatnot\nso so there's a lot of different things\nthere's a lot of uncertainty and one of\nthe most interesting thing is that as we\nwere going through the program\nthe mindset of electrical engineering\nand the mindset of mechanical\nengineering is very very different\nwhen you're talking about electrical a\nlot of like um a lot of theories\nactually come in very specific things\nlike you're talking about all\nmathematical equations like proving\nthings from one one thing to another so\na lot of math is involved\nwhen you get into uh mechanical\nengineering there's a lot of looking up\ncharts a hands-on experience like a lot\nof things that you will do and then say\nthat i will multiply this\nby five for safety factors\nso basically you do all the specific\ncalculation and say that yeah we're just\ngoing to bump it up like five times\nit's going to be safe and not happening\nit's kind of like that so so like the\nmentality changes already happens in\nthere we did also do like a bit of\nprogramming during that time but it's\nvery low level\num we\ndid real-time operating systems i think\nall these things actually helped you\nactually realize that you need to think\ndifferently in different industries but\nmore importantly also during co-op you\nalso know that majority of the time that\nwhen whatever you study\nit's not going to directly apply to what\nyou're going to be working on anyway so\nbeing flexible is like actually the name\nof the game um so yeah i think that's a\nreally good point because i did\nmanagement engineering right yeah\nand we did a little bit of programming\nas well and it was a lot of theories on\nstats and understanding how you know how\nto optimize uh you know production plan\nand all that stuff oh i mean like yeah\nlike how much of those work do you like\nthose studies and those projects and\nthose programs that you learn actually\napply to your everyday work nowadays not\nreally exactly but i think school is\nreally good in a way that it helps you\nprepare for for the industry i think\ngives you an opportunity to learn how to\nsolve problems\nand i think that's the training where\nthe school provides exactly value it's\nit's kind of like um like i said don't\ndon't take things word for word for it\nlike it's not about the practice of like\nthe specific\nprocesses that you went through or\ncourses that you went through but the\npractice of like how you figure out\nproblems and research answers and making\ndecisions that is more important because\nthat's what you're going to end up doing\ni think that's what\n[Laughter]\nlooking at your linkedin and you look at\ncompanies like google before and also\nsmaller companies i'm curious like from\nyour perspective what's the difference\nbetween like you know smaller companies\nlike startups and versus like google and\nwhy do you like to work at startups so\nmuch\nvery good question man actually i i can\ndo a sales pitch for\nwaterloo internship program because the\nwhole thing is that like during my\ninternship programs like um the\ndifferent internship i get to see\ndifferent companies\nand it's just amazing like you can\nactually understand like do four months\nover at the manufacturing plan four\nmonths over at the giant corporation\nfour months at a startup kind of thing\nand you get to see so much about like um\npeople interaction and like coffee\nstructure and how things work for one\nthing like this it's structured like you\nget into a big company someone like\ngoogle or someplace like microsoft\nyou are going to be doing something\nrelatively specific a lot of times your\nyour goals and as well as like your your\ntargets that you're trying to hit is\nvery well put together\num you don't have to worry about\nbasically anything else like it's kind\nof like if you're a chef\ngoing to a big company is that you walk\nin and you say that i'm cooking the dish\nlike this dish and people are telling\nyou that like asking for you for this\ndish\neverything is there like all your\nutensils all like all the equipment you\ndon't have to worry about anything you\ngo and cook that stuff yeah even like\nthe raw material is prepared for your\nchocolate or whatever you just put\nbefore you cook and then you're done\nyeah right you go into a startup they\nsay that you're cooking um for this dish\nyou will be saying that so where is the\nstove oh we don't have one you may have\nto figure that out\nby yourself utensils and exactly like do\neverything yourself but at the same time\nyou also got the flexibility so like\nit's two type of person now one type is\nthat you go in they see they say that ah\nthere's no stove there's no nothing i\ncan't do this\nthe other one is like there is no stove\nthere is no kitchen i can do whatever i\nwant like it's it's kind of like um\nwhatever your personality actually gets\num gets you to\nto look at this like how you react to\nthese kind of things\nno structure is it uh something that\nyou're happy about or something that\nyou're not like versus like no structure\num uh like are you going to like put\nyour hands get your hands dirty and do\nall the other stuff or do you enjoy\nactually saying that i want to focus and\nbuilding the things that i want to build\nlike specifically that part amazingly\nthat's where the preferences are like\nthat's how the bigger companies versus\nsmaller companies work i see icic\nbecause you work at a couple different\nstartups and then some of them were\nquiet\nand and you definitely were part of\nthose\nacquisitions right seeing companies grow\nfrom zero to something and then acquire\neventually i assume that you probably\nhave reached\nsome level of financial freedom\nand your money isn't really a constraint\nanymore why do you still work\ni win because i want to and i want to\nsay that like\nwe should all work because we want to if\nwe are given the opportunity to do so i\nwould say you and i are very lucky on\nthis like um we we are blessed with like\num\nlike very clear minds we are blessed\nwith good health right we can actually\nproduce and function we got into a\nrelatively good school and got out with\nsomewhat of good experiences out in our\nindustry where our profession is\nactually making a lot of money\nright\nwe are not too worried about money at\nall right\nnot much financial burden and everything\nwhy do i still work this because i enjoy\nit like i\ni nowadays i work because well sometimes\ni tell people i'm bored therefore i work\nlike it's kind of like um when when i'm\nable to advise the company when they\nbring up questions and problems to me\nit's kind of like oh i haven't solved\nthis before i see or hey your your idea\nis amazing what you're trying to do to\nthe world is amazing right like like um\nlet me help to give you some ideas about\nwhat i failed on and trust me i failed\non a lot of things\nand and you know what like being able to\ndo that uh um gives me a lot of joy\nso\nso it's kind of like i wouldn't say that\ni'm quite like crazy well off and\nwhatnot um but i would say that i you're\ncomfortable i'm comfortable to to be\nable to enjoy my life and and like the\nmoney i think the money when it gets to\na certain point like\nit gives you freedom to decide it is\njust that and once you get to that point\nthe question is like for me i don't need\nmore for me to have more freedom to\ndecide like you can actually work your\nbutt off like for ages and accumulate a\nlot of wealth but if you don't take the\ntime to think about what you're happy\ndoing\nthen i don't know like it's going to be\nlike quite like this is your this is\nyour strongest years right like you're\nyou have the wealth you have the health\nand you have you have time\nyou should really spend time thinking\nabout like why you're doing work\nso i do it nowadays because i enjoy it\nand i do it now because i want to help\noh on the teams and companies that\nactually are trying to create do great\nthings yeah\nso yeah and that's why i have a lot of\nrespect to usa\num a lot of my audience are coming from\na different background right and they\nwant to do software engineering because\nthe industry is booming\nbut they have no idea how to get started\num so do you have any advice\nwhat advice would you give them\nreally depending on how people learn\nright like um i for example i learned by\ndoing yeah so for me\nwhen i started learning about software\nit was because i wanted to do something\nfirst professional experience i was an\nintern at um as a silencer company not\nthe gun silencer like a hvac silencer so\nlike just air conditioning silencers and\nstuff and they have to cuff things into\ntrucks because they are huge and giant\nstuff right so they hire interns to\nto go through excel and look at every\nsingle drawing and say that okay we're\ngoing to cut it this way and this way\nand then we can put it on a truck yeah\nand send it out and for me after two\nthree weeks of doing that i was like\nthere must be a better way of doing this\nlike they taught me like how to actually\nfigure out the formulas and like look at\nthe stuff these are all just rules\nthen that becomes a like something that\ni wanted to do so i basically say that i\nwant to figure out how to automate this\nso that i don't have to actually do all\nthese things yeah by the end of the work\nterm i like um we finished building this\nso that um a full day of work of like\njust like going through different excel\nand like checking all this stuff like\nbecomes half an hour for it for us yeah\nfor me it is about finding something\ninteresting something that i want to\nsolve and then say that here is the\ndestination here is where i am at now\nhow do i get there and make so many\ndifferent mistakes and like trying\ndifferent roles and say that would this\nwork with this not work this work this\nwould not work trying things and then\neventually just inching towards that\nbut yeah like um um if there is research\nand what not like you can do that other\nways that uh people can do there it's\nlike general assembly there's a lot of\ncoding bootcamps nowadays and tons of\ntutorials\num the main thing though is that like\npick something you want to do otherwise\nit becomes very boring for me at least\nlike if there is a sense of achievement\nby the end of it if you can do something\nthat you will be very proud of you will\nbe like hey this saves my time for doing\nthis or that or if you enjoy having um\nhaving your own website or whatnot and\nsay that now i can do this without\npaying other people\nother companies like i'm doing templates\nand stuff and i can do it more\nspecifically yeah right\nif those are worthwhile to you go for\nthose things someone that you're\npassionate about exactly yeah right like\nthat's for me at least\nyeah and i think that's how a lot of\npeople got started and the same for me\nlike i i was originally pretty\ninteresting you know building apps and\nthen my first\nparty was a writer yeah and\nthat's how i learned like php and learn\nhow to build about that and that's how i\ngot into software engineering were you\ndoing this by yourself what are you\ndoing with my roommate um that's even\nmore awesome like\nas you're doing this if you can actually\nget partners like doing this stuff like\nyeah it doesn't matter if he like he or\nshe uh was like they know how to program\nor not yeah it doesn't matter right it\ndoesn't really matter you you just get\nto be able to bounce ideas off of each\nother it's the same as entrepreneurship\nbut why why a lot of companies or a lot\nof startups like entrepreneurs they\nprefer to have a partner it's not just\nbecause you complement each other in\nskills but you actually also help each\nother in raising the morales of it\nbecause like so many times it's kind of\nlike i don't feel like doing this\nexactly i still remember the days and\nwe're just trying to figure out how to\nsend an email from kids on the screen\nand just copy the whole thing\nit works and\nforeign\ngeneral",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:52",
+        "start": 52.879,
+        "duration": 4.481,
+        "text": "hi everyone welcome back to my channel"
+      },
+      {
+        "index": 1,
+        "time": "00:55",
+        "start": 55.12,
+        "duration": 4.64,
+        "text": "this is terry and today we have a very"
+      },
+      {
+        "index": 2,
+        "time": "00:57",
+        "start": 57.36,
+        "duration": 5.039,
+        "text": "special guest uh stan chen stan is a"
+      },
+      {
+        "index": 3,
+        "time": "00:59",
+        "start": 59.76,
+        "duration": 5.2,
+        "text": "very strong engineering leader um my"
+      },
+      {
+        "index": 4,
+        "time": "01:02",
+        "start": 62.399,
+        "duration": 3.681,
+        "text": "mentor and you know is also a very good"
+      },
+      {
+        "index": 5,
+        "time": "01:04",
+        "start": 64.96,
+        "duration": 3.839,
+        "text": "friend of mine"
+      },
+      {
+        "index": 6,
+        "time": "01:06",
+        "start": 66.08,
+        "duration": 5.52,
+        "text": "uh right now he's uh he's an advisor for"
+      },
+      {
+        "index": 7,
+        "time": "01:08",
+        "start": 68.799,
+        "duration": 4.481,
+        "text": "many companies right yeah just in couple"
+      },
+      {
+        "index": 8,
+        "time": "01:11",
+        "start": 71.6,
+        "duration": 3.6,
+        "text": "yeah especially i think he does a lot of"
+      },
+      {
+        "index": 9,
+        "time": "01:13",
+        "start": 73.28,
+        "duration": 5.199,
+        "text": "like polar road map technology and"
+      },
+      {
+        "index": 10,
+        "time": "01:15",
+        "start": 75.2,
+        "duration": 5.12,
+        "text": "philosophy and a bunch of other things"
+      },
+      {
+        "index": 11,
+        "time": "01:18",
+        "start": 78.479,
+        "duration": 3.761,
+        "text": "yeah and i just feel very honored to"
+      },
+      {
+        "index": 12,
+        "time": "01:20",
+        "start": 80.32,
+        "duration": 3.36,
+        "text": "have him today so sam why don't you tell"
+      },
+      {
+        "index": 13,
+        "time": "01:22",
+        "start": 82.24,
+        "duration": 3.6,
+        "text": "us a little bit about yourself did you"
+      },
+      {
+        "index": 14,
+        "time": "01:23",
+        "start": 83.68,
+        "duration": 6.079,
+        "text": "begin with oh that's why opening"
+      },
+      {
+        "index": 15,
+        "time": "01:25",
+        "start": 85.84,
+        "duration": 6.48,
+        "text": "question back in 1995"
+      },
+      {
+        "index": 16,
+        "time": "01:29",
+        "start": 89.759,
+        "duration": 6,
+        "text": "yeah hi guys um so i was born in hong"
+      },
+      {
+        "index": 17,
+        "time": "01:32",
+        "start": 92.32,
+        "duration": 5.68,
+        "text": "kong um my family moved over"
+      },
+      {
+        "index": 18,
+        "time": "01:35",
+        "start": 95.759,
+        "duration": 4.641,
+        "text": "here when i was 12 years old"
+      },
+      {
+        "index": 19,
+        "time": "01:38",
+        "start": 98,
+        "duration": 4.159,
+        "text": "oh stan also went to walu oh yeah i also"
+      },
+      {
+        "index": 20,
+        "time": "01:40",
+        "start": 100.4,
+        "duration": 4.16,
+        "text": "went to waterloo uh it's the best"
+      },
+      {
+        "index": 21,
+        "time": "01:42",
+        "start": 102.159,
+        "duration": 4.081,
+        "text": "engineering school in canada"
+      },
+      {
+        "index": 22,
+        "time": "01:44",
+        "start": 104.56,
+        "duration": 3.519,
+        "text": "you always say that because you're from"
+      },
+      {
+        "index": 23,
+        "time": "01:46",
+        "start": 106.24,
+        "duration": 4,
+        "text": "hungary"
+      },
+      {
+        "index": 24,
+        "time": "01:48",
+        "start": 108.079,
+        "duration": 3.761,
+        "text": "we don't know one of who is like"
+      },
+      {
+        "index": 25,
+        "time": "01:50",
+        "start": 110.24,
+        "duration": 4.72,
+        "text": "stanford in the us"
+      },
+      {
+        "index": 26,
+        "time": "01:51",
+        "start": 111.84,
+        "duration": 6.239,
+        "text": "uh except they have co-op we do have a"
+      },
+      {
+        "index": 27,
+        "time": "01:54",
+        "start": 114.96,
+        "duration": 4.72,
+        "text": "very good um internship program"
+      },
+      {
+        "index": 28,
+        "time": "01:58",
+        "start": 118.079,
+        "duration": 3.601,
+        "text": "uh it's actually one of the most"
+      },
+      {
+        "index": 29,
+        "time": "01:59",
+        "start": 119.68,
+        "duration": 4.24,
+        "text": "important thing actually when you're"
+      },
+      {
+        "index": 30,
+        "time": "02:01",
+        "start": 121.68,
+        "duration": 3.2,
+        "text": "going through like university to be able"
+      },
+      {
+        "index": 31,
+        "time": "02:03",
+        "start": 123.92,
+        "duration": 3.68,
+        "text": "to"
+      },
+      {
+        "index": 32,
+        "time": "02:04",
+        "start": 124.88,
+        "duration": 5.2,
+        "text": "see different companies like um like we"
+      },
+      {
+        "index": 33,
+        "time": "02:07",
+        "start": 127.6,
+        "duration": 5.359,
+        "text": "did what i did i did six different work"
+      },
+      {
+        "index": 34,
+        "time": "02:10",
+        "start": 130.08,
+        "duration": 5.519,
+        "text": "terms and so the year right so like it"
+      },
+      {
+        "index": 35,
+        "time": "02:12",
+        "start": 132.959,
+        "duration": 5.121,
+        "text": "was amazing like um um just being able"
+      },
+      {
+        "index": 36,
+        "time": "02:15",
+        "start": 135.599,
+        "duration": 4.161,
+        "text": "to come out with that understanding"
+      },
+      {
+        "index": 37,
+        "time": "02:18",
+        "start": 138.08,
+        "duration": 4.48,
+        "text": "saying that i have seen how six"
+      },
+      {
+        "index": 38,
+        "time": "02:19",
+        "start": 139.76,
+        "duration": 4.72,
+        "text": "different company works yeah um and like"
+      },
+      {
+        "index": 39,
+        "time": "02:22",
+        "start": 142.56,
+        "duration": 3.6,
+        "text": "knowing what to expect like mixed"
+      },
+      {
+        "index": 40,
+        "time": "02:24",
+        "start": 144.48,
+        "duration": 4.479,
+        "text": "interviews as well as getting your job"
+      },
+      {
+        "index": 41,
+        "time": "02:26",
+        "start": 146.16,
+        "duration": 4.799,
+        "text": "so much easier um but yeah anyway so i"
+      },
+      {
+        "index": 42,
+        "time": "02:28",
+        "start": 148.959,
+        "duration": 5.121,
+        "text": "went through schooling in toronto and"
+      },
+      {
+        "index": 43,
+        "time": "02:30",
+        "start": 150.959,
+        "duration": 5.841,
+        "text": "waterloo and then i also eventually"
+      },
+      {
+        "index": 44,
+        "time": "02:34",
+        "start": 154.08,
+        "duration": 5.2,
+        "text": "got out as a studying electrical"
+      },
+      {
+        "index": 45,
+        "time": "02:36",
+        "start": 156.8,
+        "duration": 4.799,
+        "text": "mechanical engineering uh at a program"
+      },
+      {
+        "index": 46,
+        "time": "02:39",
+        "start": 159.28,
+        "duration": 5.12,
+        "text": "called mechatronics within science from"
+      },
+      {
+        "index": 47,
+        "time": "02:41",
+        "start": 161.599,
+        "duration": 4.801,
+        "text": "engineering um so basically"
+      },
+      {
+        "index": 48,
+        "time": "02:44",
+        "start": 164.4,
+        "duration": 3.36,
+        "text": "a bunch of automation"
+      },
+      {
+        "index": 49,
+        "time": "02:46",
+        "start": 166.4,
+        "duration": 4.64,
+        "text": "robotics"
+      },
+      {
+        "index": 50,
+        "time": "02:47",
+        "start": 167.76,
+        "duration": 6.479,
+        "text": "went into um what is it manufacturing"
+      },
+      {
+        "index": 51,
+        "time": "02:51",
+        "start": 171.04,
+        "duration": 5.36,
+        "text": "automation so doing plc um"
+      },
+      {
+        "index": 52,
+        "time": "02:54",
+        "start": 174.239,
+        "duration": 3.841,
+        "text": "and like i'm looking and studying and"
+      },
+      {
+        "index": 53,
+        "time": "02:56",
+        "start": 176.4,
+        "duration": 4.8,
+        "text": "like i'm trying to improve like"
+      },
+      {
+        "index": 54,
+        "time": "02:58",
+        "start": 178.08,
+        "duration": 5.439,
+        "text": "manufacturing processes with automation"
+      },
+      {
+        "index": 55,
+        "time": "03:01",
+        "start": 181.2,
+        "duration": 5.52,
+        "text": "and i got an opportunity over at cbs"
+      },
+      {
+        "index": 56,
+        "time": "03:03",
+        "start": 183.519,
+        "duration": 5.921,
+        "text": "radio like um from a from my friend and"
+      },
+      {
+        "index": 57,
+        "time": "03:06",
+        "start": 186.72,
+        "duration": 4.4,
+        "text": "i just basically said that yeah why not"
+      },
+      {
+        "index": 58,
+        "time": "03:09",
+        "start": 189.44,
+        "duration": 4.64,
+        "text": "try it like we got over there and"
+      },
+      {
+        "index": 59,
+        "time": "03:11",
+        "start": 191.12,
+        "duration": 5.28,
+        "text": "actually started my my korean software"
+      },
+      {
+        "index": 60,
+        "time": "03:14",
+        "start": 194.08,
+        "duration": 4.879,
+        "text": "and then from there i moved over to san"
+      },
+      {
+        "index": 61,
+        "time": "03:16",
+        "start": 196.4,
+        "duration": 5.919,
+        "text": "francisco and basically started going"
+      },
+      {
+        "index": 62,
+        "time": "03:18",
+        "start": 198.959,
+        "duration": 5.2,
+        "text": "into startup and and like did a lot of"
+      },
+      {
+        "index": 63,
+        "time": "03:22",
+        "start": 202.319,
+        "duration": 4.56,
+        "text": "different things like i messed up a lot"
+      },
+      {
+        "index": 64,
+        "time": "03:24",
+        "start": 204.159,
+        "duration": 4.881,
+        "text": "of things and i also learned a lot so i"
+      },
+      {
+        "index": 65,
+        "time": "03:26",
+        "start": 206.879,
+        "duration": 4.321,
+        "text": "ended up like really enjoying that kind"
+      },
+      {
+        "index": 66,
+        "time": "03:29",
+        "start": 209.04,
+        "duration": 4.479,
+        "text": "of career that kind of industry so have"
+      },
+      {
+        "index": 67,
+        "time": "03:31",
+        "start": 211.2,
+        "duration": 4,
+        "text": "been there since and um right now i'm"
+      },
+      {
+        "index": 68,
+        "time": "03:33",
+        "start": 213.519,
+        "duration": 4.321,
+        "text": "just like focusing on"
+      },
+      {
+        "index": 69,
+        "time": "03:35",
+        "start": 215.2,
+        "duration": 5.119,
+        "text": "building startups and and like helping"
+      },
+      {
+        "index": 70,
+        "time": "03:37",
+        "start": 217.84,
+        "duration": 4,
+        "text": "to build teams and like build products"
+      },
+      {
+        "index": 71,
+        "time": "03:40",
+        "start": 220.319,
+        "duration": 3.84,
+        "text": "kind of thing so"
+      },
+      {
+        "index": 72,
+        "time": "03:41",
+        "start": 221.84,
+        "duration": 4.24,
+        "text": "yeah so you mentioned you went from"
+      },
+      {
+        "index": 73,
+        "time": "03:44",
+        "start": 224.159,
+        "duration": 3.921,
+        "text": "mechatronics engineering to software"
+      },
+      {
+        "index": 74,
+        "time": "03:46",
+        "start": 226.08,
+        "duration": 4.48,
+        "text": "engineering which is quite a transition"
+      },
+      {
+        "index": 75,
+        "time": "03:48",
+        "start": 228.08,
+        "duration": 4.48,
+        "text": "i think i imagine it it's very different"
+      },
+      {
+        "index": 76,
+        "time": "03:50",
+        "start": 230.56,
+        "duration": 3.759,
+        "text": "right mechatronics is you're building"
+      },
+      {
+        "index": 77,
+        "time": "03:52",
+        "start": 232.56,
+        "duration": 4.399,
+        "text": "robotics and"
+      },
+      {
+        "index": 78,
+        "time": "03:54",
+        "start": 234.319,
+        "duration": 4.56,
+        "text": "more hardware like you're not doing so"
+      },
+      {
+        "index": 79,
+        "time": "03:56",
+        "start": 236.959,
+        "duration": 4.321,
+        "text": "much of software like did you find it"
+      },
+      {
+        "index": 80,
+        "time": "03:58",
+        "start": 238.879,
+        "duration": 4.801,
+        "text": "difficult or was it hard to transition"
+      },
+      {
+        "index": 81,
+        "time": "04:01",
+        "start": 241.28,
+        "duration": 5.12,
+        "text": "no that's the funny thing um for us like"
+      },
+      {
+        "index": 82,
+        "time": "04:03",
+        "start": 243.68,
+        "duration": 5.04,
+        "text": "um megatron expo um engineering um we"
+      },
+      {
+        "index": 83,
+        "time": "04:06",
+        "start": 246.4,
+        "duration": 3.36,
+        "text": "were the first class in there so it"
+      },
+      {
+        "index": 84,
+        "time": "04:08",
+        "start": 248.72,
+        "duration": 2,
+        "text": "consists of"
+      },
+      {
+        "index": 85,
+        "time": "04:09",
+        "start": 249.76,
+        "duration": 3.52,
+        "text": "the first"
+      },
+      {
+        "index": 86,
+        "time": "04:10",
+        "start": 250.72,
+        "duration": 4.32,
+        "text": "yeah we were the guinea pigs"
+      },
+      {
+        "index": 87,
+        "time": "04:13",
+        "start": 253.28,
+        "duration": 2.959,
+        "text": "to be honest like you if you ask like"
+      },
+      {
+        "index": 88,
+        "time": "04:15",
+        "start": 255.04,
+        "duration": 2.56,
+        "text": "different professors like different"
+      },
+      {
+        "index": 89,
+        "time": "04:16",
+        "start": 256.239,
+        "duration": 2.881,
+        "text": "professors is going to tell you"
+      },
+      {
+        "index": 90,
+        "time": "04:17",
+        "start": 257.6,
+        "duration": 3.68,
+        "text": "different things like one would say that"
+      },
+      {
+        "index": 91,
+        "time": "04:19",
+        "start": 259.12,
+        "duration": 6,
+        "text": "like this is about building robots like"
+      },
+      {
+        "index": 92,
+        "time": "04:21",
+        "start": 261.28,
+        "duration": 4.8,
+        "text": "like gundams um yeah that's what i love"
+      },
+      {
+        "index": 93,
+        "time": "04:25",
+        "start": 265.12,
+        "duration": 3.04,
+        "text": "right"
+      },
+      {
+        "index": 94,
+        "time": "04:26",
+        "start": 266.08,
+        "duration": 4.08,
+        "text": "or another one is kind of like no this"
+      },
+      {
+        "index": 95,
+        "time": "04:28",
+        "start": 268.16,
+        "duration": 4.24,
+        "text": "is all about like automation like"
+      },
+      {
+        "index": 96,
+        "time": "04:30",
+        "start": 270.16,
+        "duration": 4.08,
+        "text": "manufacturing assembly line and whatnot"
+      },
+      {
+        "index": 97,
+        "time": "04:32",
+        "start": 272.4,
+        "duration": 3.6,
+        "text": "so so there's a lot of different things"
+      },
+      {
+        "index": 98,
+        "time": "04:34",
+        "start": 274.24,
+        "duration": 4.239,
+        "text": "there's a lot of uncertainty and one of"
+      },
+      {
+        "index": 99,
+        "time": "04:36",
+        "start": 276,
+        "duration": 5.12,
+        "text": "the most interesting thing is that as we"
+      },
+      {
+        "index": 100,
+        "time": "04:38",
+        "start": 278.479,
+        "duration": 5.28,
+        "text": "were going through the program"
+      },
+      {
+        "index": 101,
+        "time": "04:41",
+        "start": 281.12,
+        "duration": 4,
+        "text": "the mindset of electrical engineering"
+      },
+      {
+        "index": 102,
+        "time": "04:43",
+        "start": 283.759,
+        "duration": 4.321,
+        "text": "and the mindset of mechanical"
+      },
+      {
+        "index": 103,
+        "time": "04:45",
+        "start": 285.12,
+        "duration": 4.88,
+        "text": "engineering is very very different"
+      },
+      {
+        "index": 104,
+        "time": "04:48",
+        "start": 288.08,
+        "duration": 3.76,
+        "text": "when you're talking about electrical a"
+      },
+      {
+        "index": 105,
+        "time": "04:50",
+        "start": 290,
+        "duration": 4.639,
+        "text": "lot of like um a lot of theories"
+      },
+      {
+        "index": 106,
+        "time": "04:51",
+        "start": 291.84,
+        "duration": 4.16,
+        "text": "actually come in very specific things"
+      },
+      {
+        "index": 107,
+        "time": "04:54",
+        "start": 294.639,
+        "duration": 3.601,
+        "text": "like you're talking about all"
+      },
+      {
+        "index": 108,
+        "time": "04:56",
+        "start": 296,
+        "duration": 4.32,
+        "text": "mathematical equations like proving"
+      },
+      {
+        "index": 109,
+        "time": "04:58",
+        "start": 298.24,
+        "duration": 4,
+        "text": "things from one one thing to another so"
+      },
+      {
+        "index": 110,
+        "time": "05:00",
+        "start": 300.32,
+        "duration": 3.84,
+        "text": "a lot of math is involved"
+      },
+      {
+        "index": 111,
+        "time": "05:02",
+        "start": 302.24,
+        "duration": 4.32,
+        "text": "when you get into uh mechanical"
+      },
+      {
+        "index": 112,
+        "time": "05:04",
+        "start": 304.16,
+        "duration": 6.64,
+        "text": "engineering there's a lot of looking up"
+      },
+      {
+        "index": 113,
+        "time": "05:06",
+        "start": 306.56,
+        "duration": 6.16,
+        "text": "charts a hands-on experience like a lot"
+      },
+      {
+        "index": 114,
+        "time": "05:10",
+        "start": 310.8,
+        "duration": 4,
+        "text": "of things that you will do and then say"
+      },
+      {
+        "index": 115,
+        "time": "05:12",
+        "start": 312.72,
+        "duration": 4.8,
+        "text": "that i will multiply this"
+      },
+      {
+        "index": 116,
+        "time": "05:14",
+        "start": 314.8,
+        "duration": 4.64,
+        "text": "by five for safety factors"
+      },
+      {
+        "index": 117,
+        "time": "05:17",
+        "start": 317.52,
+        "duration": 3.84,
+        "text": "so basically you do all the specific"
+      },
+      {
+        "index": 118,
+        "time": "05:19",
+        "start": 319.44,
+        "duration": 4.08,
+        "text": "calculation and say that yeah we're just"
+      },
+      {
+        "index": 119,
+        "time": "05:21",
+        "start": 321.36,
+        "duration": 4.48,
+        "text": "going to bump it up like five times"
+      },
+      {
+        "index": 120,
+        "time": "05:23",
+        "start": 323.52,
+        "duration": 4.239,
+        "text": "it's going to be safe and not happening"
+      },
+      {
+        "index": 121,
+        "time": "05:25",
+        "start": 325.84,
+        "duration": 4.639,
+        "text": "it's kind of like that so so like the"
+      },
+      {
+        "index": 122,
+        "time": "05:27",
+        "start": 327.759,
+        "duration": 4.88,
+        "text": "mentality changes already happens in"
+      },
+      {
+        "index": 123,
+        "time": "05:30",
+        "start": 330.479,
+        "duration": 3.681,
+        "text": "there we did also do like a bit of"
+      },
+      {
+        "index": 124,
+        "time": "05:32",
+        "start": 332.639,
+        "duration": 2.961,
+        "text": "programming during that time but it's"
+      },
+      {
+        "index": 125,
+        "time": "05:34",
+        "start": 334.16,
+        "duration": 2.64,
+        "text": "very low level"
+      },
+      {
+        "index": 126,
+        "time": "05:35",
+        "start": 335.6,
+        "duration": 3.439,
+        "text": "um we"
+      },
+      {
+        "index": 127,
+        "time": "05:36",
+        "start": 336.8,
+        "duration": 3.839,
+        "text": "did real-time operating systems i think"
+      },
+      {
+        "index": 128,
+        "time": "05:39",
+        "start": 339.039,
+        "duration": 3.761,
+        "text": "all these things actually helped you"
+      },
+      {
+        "index": 129,
+        "time": "05:40",
+        "start": 340.639,
+        "duration": 4.161,
+        "text": "actually realize that you need to think"
+      },
+      {
+        "index": 130,
+        "time": "05:42",
+        "start": 342.8,
+        "duration": 4.8,
+        "text": "differently in different industries but"
+      },
+      {
+        "index": 131,
+        "time": "05:44",
+        "start": 344.8,
+        "duration": 4.72,
+        "text": "more importantly also during co-op you"
+      },
+      {
+        "index": 132,
+        "time": "05:47",
+        "start": 347.6,
+        "duration": 3.76,
+        "text": "also know that majority of the time that"
+      },
+      {
+        "index": 133,
+        "time": "05:49",
+        "start": 349.52,
+        "duration": 4,
+        "text": "when whatever you study"
+      },
+      {
+        "index": 134,
+        "time": "05:51",
+        "start": 351.36,
+        "duration": 4.32,
+        "text": "it's not going to directly apply to what"
+      },
+      {
+        "index": 135,
+        "time": "05:53",
+        "start": 353.52,
+        "duration": 4.32,
+        "text": "you're going to be working on anyway so"
+      },
+      {
+        "index": 136,
+        "time": "05:55",
+        "start": 355.68,
+        "duration": 4.72,
+        "text": "being flexible is like actually the name"
+      },
+      {
+        "index": 137,
+        "time": "05:57",
+        "start": 357.84,
+        "duration": 4.32,
+        "text": "of the game um so yeah i think that's a"
+      },
+      {
+        "index": 138,
+        "time": "06:00",
+        "start": 360.4,
+        "duration": 4.4,
+        "text": "really good point because i did"
+      },
+      {
+        "index": 139,
+        "time": "06:02",
+        "start": 362.16,
+        "duration": 4.319,
+        "text": "management engineering right yeah"
+      },
+      {
+        "index": 140,
+        "time": "06:04",
+        "start": 364.8,
+        "duration": 4.32,
+        "text": "and we did a little bit of programming"
+      },
+      {
+        "index": 141,
+        "time": "06:06",
+        "start": 366.479,
+        "duration": 4.961,
+        "text": "as well and it was a lot of theories on"
+      },
+      {
+        "index": 142,
+        "time": "06:09",
+        "start": 369.12,
+        "duration": 4.639,
+        "text": "stats and understanding how you know how"
+      },
+      {
+        "index": 143,
+        "time": "06:11",
+        "start": 371.44,
+        "duration": 4.72,
+        "text": "to optimize uh you know production plan"
+      },
+      {
+        "index": 144,
+        "time": "06:13",
+        "start": 373.759,
+        "duration": 4.641,
+        "text": "and all that stuff oh i mean like yeah"
+      },
+      {
+        "index": 145,
+        "time": "06:16",
+        "start": 376.16,
+        "duration": 4.319,
+        "text": "like how much of those work do you like"
+      },
+      {
+        "index": 146,
+        "time": "06:18",
+        "start": 378.4,
+        "duration": 3.84,
+        "text": "those studies and those projects and"
+      },
+      {
+        "index": 147,
+        "time": "06:20",
+        "start": 380.479,
+        "duration": 3.761,
+        "text": "those programs that you learn actually"
+      },
+      {
+        "index": 148,
+        "time": "06:22",
+        "start": 382.24,
+        "duration": 4.239,
+        "text": "apply to your everyday work nowadays not"
+      },
+      {
+        "index": 149,
+        "time": "06:24",
+        "start": 384.24,
+        "duration": 4.32,
+        "text": "really exactly but i think school is"
+      },
+      {
+        "index": 150,
+        "time": "06:26",
+        "start": 386.479,
+        "duration": 3.921,
+        "text": "really good in a way that it helps you"
+      },
+      {
+        "index": 151,
+        "time": "06:28",
+        "start": 388.56,
+        "duration": 4.8,
+        "text": "prepare for for the industry i think"
+      },
+      {
+        "index": 152,
+        "time": "06:30",
+        "start": 390.4,
+        "duration": 4.4,
+        "text": "gives you an opportunity to learn how to"
+      },
+      {
+        "index": 153,
+        "time": "06:33",
+        "start": 393.36,
+        "duration": 2.72,
+        "text": "solve problems"
+      },
+      {
+        "index": 154,
+        "time": "06:34",
+        "start": 394.8,
+        "duration": 3.839,
+        "text": "and i think that's the training where"
+      },
+      {
+        "index": 155,
+        "time": "06:36",
+        "start": 396.08,
+        "duration": 4.959,
+        "text": "the school provides exactly value it's"
+      },
+      {
+        "index": 156,
+        "time": "06:38",
+        "start": 398.639,
+        "duration": 4.481,
+        "text": "it's kind of like um like i said don't"
+      },
+      {
+        "index": 157,
+        "time": "06:41",
+        "start": 401.039,
+        "duration": 4.801,
+        "text": "don't take things word for word for it"
+      },
+      {
+        "index": 158,
+        "time": "06:43",
+        "start": 403.12,
+        "duration": 4.639,
+        "text": "like it's not about the practice of like"
+      },
+      {
+        "index": 159,
+        "time": "06:45",
+        "start": 405.84,
+        "duration": 3.28,
+        "text": "the specific"
+      },
+      {
+        "index": 160,
+        "time": "06:47",
+        "start": 407.759,
+        "duration": 2.801,
+        "text": "processes that you went through or"
+      },
+      {
+        "index": 161,
+        "time": "06:49",
+        "start": 409.12,
+        "duration": 3.359,
+        "text": "courses that you went through but the"
+      },
+      {
+        "index": 162,
+        "time": "06:50",
+        "start": 410.56,
+        "duration": 4.72,
+        "text": "practice of like how you figure out"
+      },
+      {
+        "index": 163,
+        "time": "06:52",
+        "start": 412.479,
+        "duration": 5.28,
+        "text": "problems and research answers and making"
+      },
+      {
+        "index": 164,
+        "time": "06:55",
+        "start": 415.28,
+        "duration": 5.039,
+        "text": "decisions that is more important because"
+      },
+      {
+        "index": 165,
+        "time": "06:57",
+        "start": 417.759,
+        "duration": 3.991,
+        "text": "that's what you're going to end up doing"
+      },
+      {
+        "index": 166,
+        "time": "07:00",
+        "start": 420.319,
+        "duration": 5.46,
+        "text": "i think that's what"
+      },
+      {
+        "index": 167,
+        "time": "07:01",
+        "start": 421.75,
+        "duration": 4.029,
+        "text": "[Laughter]"
+      },
+      {
+        "index": 168,
+        "time": "08:19",
+        "start": 499.52,
+        "duration": 3.519,
+        "text": "looking at your linkedin and you look at"
+      },
+      {
+        "index": 169,
+        "time": "08:21",
+        "start": 501.28,
+        "duration": 3.759,
+        "text": "companies like google before and also"
+      },
+      {
+        "index": 170,
+        "time": "08:23",
+        "start": 503.039,
+        "duration": 3.521,
+        "text": "smaller companies i'm curious like from"
+      },
+      {
+        "index": 171,
+        "time": "08:25",
+        "start": 505.039,
+        "duration": 3.041,
+        "text": "your perspective what's the difference"
+      },
+      {
+        "index": 172,
+        "time": "08:26",
+        "start": 506.56,
+        "duration": 3.44,
+        "text": "between like you know smaller companies"
+      },
+      {
+        "index": 173,
+        "time": "08:28",
+        "start": 508.08,
+        "duration": 3.44,
+        "text": "like startups and versus like google and"
+      },
+      {
+        "index": 174,
+        "time": "08:30",
+        "start": 510,
+        "duration": 3.039,
+        "text": "why do you like to work at startups so"
+      },
+      {
+        "index": 175,
+        "time": "08:31",
+        "start": 511.52,
+        "duration": 3.84,
+        "text": "much"
+      },
+      {
+        "index": 176,
+        "time": "08:33",
+        "start": 513.039,
+        "duration": 4.161,
+        "text": "very good question man actually i i can"
+      },
+      {
+        "index": 177,
+        "time": "08:35",
+        "start": 515.36,
+        "duration": 4.159,
+        "text": "do a sales pitch for"
+      },
+      {
+        "index": 178,
+        "time": "08:37",
+        "start": 517.2,
+        "duration": 3.68,
+        "text": "waterloo internship program because the"
+      },
+      {
+        "index": 179,
+        "time": "08:39",
+        "start": 519.519,
+        "duration": 3.44,
+        "text": "whole thing is that like during my"
+      },
+      {
+        "index": 180,
+        "time": "08:40",
+        "start": 520.88,
+        "duration": 3.68,
+        "text": "internship programs like um the"
+      },
+      {
+        "index": 181,
+        "time": "08:42",
+        "start": 522.959,
+        "duration": 2.961,
+        "text": "different internship i get to see"
+      },
+      {
+        "index": 182,
+        "time": "08:44",
+        "start": 524.56,
+        "duration": 4,
+        "text": "different companies"
+      },
+      {
+        "index": 183,
+        "time": "08:45",
+        "start": 525.92,
+        "duration": 5.039,
+        "text": "and it's just amazing like you can"
+      },
+      {
+        "index": 184,
+        "time": "08:48",
+        "start": 528.56,
+        "duration": 4.16,
+        "text": "actually understand like do four months"
+      },
+      {
+        "index": 185,
+        "time": "08:50",
+        "start": 530.959,
+        "duration": 3.521,
+        "text": "over at the manufacturing plan four"
+      },
+      {
+        "index": 186,
+        "time": "08:52",
+        "start": 532.72,
+        "duration": 3.52,
+        "text": "months over at the giant corporation"
+      },
+      {
+        "index": 187,
+        "time": "08:54",
+        "start": 534.48,
+        "duration": 3.76,
+        "text": "four months at a startup kind of thing"
+      },
+      {
+        "index": 188,
+        "time": "08:56",
+        "start": 536.24,
+        "duration": 3.84,
+        "text": "and you get to see so much about like um"
+      },
+      {
+        "index": 189,
+        "time": "08:58",
+        "start": 538.24,
+        "duration": 4.48,
+        "text": "people interaction and like coffee"
+      },
+      {
+        "index": 190,
+        "time": "09:00",
+        "start": 540.08,
+        "duration": 4.56,
+        "text": "structure and how things work for one"
+      },
+      {
+        "index": 191,
+        "time": "09:02",
+        "start": 542.72,
+        "duration": 3.679,
+        "text": "thing like this it's structured like you"
+      },
+      {
+        "index": 192,
+        "time": "09:04",
+        "start": 544.64,
+        "duration": 4.4,
+        "text": "get into a big company someone like"
+      },
+      {
+        "index": 193,
+        "time": "09:06",
+        "start": 546.399,
+        "duration": 5.521,
+        "text": "google or someplace like microsoft"
+      },
+      {
+        "index": 194,
+        "time": "09:09",
+        "start": 549.04,
+        "duration": 6.08,
+        "text": "you are going to be doing something"
+      },
+      {
+        "index": 195,
+        "time": "09:11",
+        "start": 551.92,
+        "duration": 6.479,
+        "text": "relatively specific a lot of times your"
+      },
+      {
+        "index": 196,
+        "time": "09:15",
+        "start": 555.12,
+        "duration": 5.68,
+        "text": "your goals and as well as like your your"
+      },
+      {
+        "index": 197,
+        "time": "09:18",
+        "start": 558.399,
+        "duration": 4.88,
+        "text": "targets that you're trying to hit is"
+      },
+      {
+        "index": 198,
+        "time": "09:20",
+        "start": 560.8,
+        "duration": 4.159,
+        "text": "very well put together"
+      },
+      {
+        "index": 199,
+        "time": "09:23",
+        "start": 563.279,
+        "duration": 3.761,
+        "text": "um you don't have to worry about"
+      },
+      {
+        "index": 200,
+        "time": "09:24",
+        "start": 564.959,
+        "duration": 4.481,
+        "text": "basically anything else like it's kind"
+      },
+      {
+        "index": 201,
+        "time": "09:27",
+        "start": 567.04,
+        "duration": 5.04,
+        "text": "of like if you're a chef"
+      },
+      {
+        "index": 202,
+        "time": "09:29",
+        "start": 569.44,
+        "duration": 4.72,
+        "text": "going to a big company is that you walk"
+      },
+      {
+        "index": 203,
+        "time": "09:32",
+        "start": 572.08,
+        "duration": 4.4,
+        "text": "in and you say that i'm cooking the dish"
+      },
+      {
+        "index": 204,
+        "time": "09:34",
+        "start": 574.16,
+        "duration": 4.08,
+        "text": "like this dish and people are telling"
+      },
+      {
+        "index": 205,
+        "time": "09:36",
+        "start": 576.48,
+        "duration": 2.56,
+        "text": "you that like asking for you for this"
+      },
+      {
+        "index": 206,
+        "time": "09:38",
+        "start": 578.24,
+        "duration": 2.32,
+        "text": "dish"
+      },
+      {
+        "index": 207,
+        "time": "09:39",
+        "start": 579.04,
+        "duration": 4.56,
+        "text": "everything is there like all your"
+      },
+      {
+        "index": 208,
+        "time": "09:40",
+        "start": 580.56,
+        "duration": 4.88,
+        "text": "utensils all like all the equipment you"
+      },
+      {
+        "index": 209,
+        "time": "09:43",
+        "start": 583.6,
+        "duration": 4.56,
+        "text": "don't have to worry about anything you"
+      },
+      {
+        "index": 210,
+        "time": "09:45",
+        "start": 585.44,
+        "duration": 4.399,
+        "text": "go and cook that stuff yeah even like"
+      },
+      {
+        "index": 211,
+        "time": "09:48",
+        "start": 588.16,
+        "duration": 3.52,
+        "text": "the raw material is prepared for your"
+      },
+      {
+        "index": 212,
+        "time": "09:49",
+        "start": 589.839,
+        "duration": 3.521,
+        "text": "chocolate or whatever you just put"
+      },
+      {
+        "index": 213,
+        "time": "09:51",
+        "start": 591.68,
+        "duration": 4.08,
+        "text": "before you cook and then you're done"
+      },
+      {
+        "index": 214,
+        "time": "09:53",
+        "start": 593.36,
+        "duration": 5.12,
+        "text": "yeah right you go into a startup they"
+      },
+      {
+        "index": 215,
+        "time": "09:55",
+        "start": 595.76,
+        "duration": 5.28,
+        "text": "say that you're cooking um for this dish"
+      },
+      {
+        "index": 216,
+        "time": "09:58",
+        "start": 598.48,
+        "duration": 4.56,
+        "text": "you will be saying that so where is the"
+      },
+      {
+        "index": 217,
+        "time": "10:01",
+        "start": 601.04,
+        "duration": 3.52,
+        "text": "stove oh we don't have one you may have"
+      },
+      {
+        "index": 218,
+        "time": "10:03",
+        "start": 603.04,
+        "duration": 4.479,
+        "text": "to figure that out"
+      },
+      {
+        "index": 219,
+        "time": "10:04",
+        "start": 604.56,
+        "duration": 4.64,
+        "text": "by yourself utensils and exactly like do"
+      },
+      {
+        "index": 220,
+        "time": "10:07",
+        "start": 607.519,
+        "duration": 3.921,
+        "text": "everything yourself but at the same time"
+      },
+      {
+        "index": 221,
+        "time": "10:09",
+        "start": 609.2,
+        "duration": 4.56,
+        "text": "you also got the flexibility so like"
+      },
+      {
+        "index": 222,
+        "time": "10:11",
+        "start": 611.44,
+        "duration": 4.959,
+        "text": "it's two type of person now one type is"
+      },
+      {
+        "index": 223,
+        "time": "10:13",
+        "start": 613.76,
+        "duration": 4.319,
+        "text": "that you go in they see they say that ah"
+      },
+      {
+        "index": 224,
+        "time": "10:16",
+        "start": 616.399,
+        "duration": 2.961,
+        "text": "there's no stove there's no nothing i"
+      },
+      {
+        "index": 225,
+        "time": "10:18",
+        "start": 618.079,
+        "duration": 3.601,
+        "text": "can't do this"
+      },
+      {
+        "index": 226,
+        "time": "10:19",
+        "start": 619.36,
+        "duration": 4.56,
+        "text": "the other one is like there is no stove"
+      },
+      {
+        "index": 227,
+        "time": "10:21",
+        "start": 621.68,
+        "duration": 5.04,
+        "text": "there is no kitchen i can do whatever i"
+      },
+      {
+        "index": 228,
+        "time": "10:23",
+        "start": 623.92,
+        "duration": 5.76,
+        "text": "want like it's it's kind of like um"
+      },
+      {
+        "index": 229,
+        "time": "10:26",
+        "start": 626.72,
+        "duration": 4.64,
+        "text": "whatever your personality actually gets"
+      },
+      {
+        "index": 230,
+        "time": "10:29",
+        "start": 629.68,
+        "duration": 4.56,
+        "text": "um gets you to"
+      },
+      {
+        "index": 231,
+        "time": "10:31",
+        "start": 631.36,
+        "duration": 4.32,
+        "text": "to look at this like how you react to"
+      },
+      {
+        "index": 232,
+        "time": "10:34",
+        "start": 634.24,
+        "duration": 3.76,
+        "text": "these kind of things"
+      },
+      {
+        "index": 233,
+        "time": "10:35",
+        "start": 635.68,
+        "duration": 3.76,
+        "text": "no structure is it uh something that"
+      },
+      {
+        "index": 234,
+        "time": "10:38",
+        "start": 638,
+        "duration": 4.56,
+        "text": "you're happy about or something that"
+      },
+      {
+        "index": 235,
+        "time": "10:39",
+        "start": 639.44,
+        "duration": 5.28,
+        "text": "you're not like versus like no structure"
+      },
+      {
+        "index": 236,
+        "time": "10:42",
+        "start": 642.56,
+        "duration": 4.24,
+        "text": "um uh like are you going to like put"
+      },
+      {
+        "index": 237,
+        "time": "10:44",
+        "start": 644.72,
+        "duration": 4.4,
+        "text": "your hands get your hands dirty and do"
+      },
+      {
+        "index": 238,
+        "time": "10:46",
+        "start": 646.8,
+        "duration": 5.039,
+        "text": "all the other stuff or do you enjoy"
+      },
+      {
+        "index": 239,
+        "time": "10:49",
+        "start": 649.12,
+        "duration": 4.48,
+        "text": "actually saying that i want to focus and"
+      },
+      {
+        "index": 240,
+        "time": "10:51",
+        "start": 651.839,
+        "duration": 4.401,
+        "text": "building the things that i want to build"
+      },
+      {
+        "index": 241,
+        "time": "10:53",
+        "start": 653.6,
+        "duration": 4.4,
+        "text": "like specifically that part amazingly"
+      },
+      {
+        "index": 242,
+        "time": "10:56",
+        "start": 656.24,
+        "duration": 3.36,
+        "text": "that's where the preferences are like"
+      },
+      {
+        "index": 243,
+        "time": "10:58",
+        "start": 658,
+        "duration": 4.079,
+        "text": "that's how the bigger companies versus"
+      },
+      {
+        "index": 244,
+        "time": "10:59",
+        "start": 659.6,
+        "duration": 4.16,
+        "text": "smaller companies work i see icic"
+      },
+      {
+        "index": 245,
+        "time": "11:02",
+        "start": 662.079,
+        "duration": 3.281,
+        "text": "because you work at a couple different"
+      },
+      {
+        "index": 246,
+        "time": "11:03",
+        "start": 663.76,
+        "duration": 2.48,
+        "text": "startups and then some of them were"
+      },
+      {
+        "index": 247,
+        "time": "11:05",
+        "start": 665.36,
+        "duration": 2.8,
+        "text": "quiet"
+      },
+      {
+        "index": 248,
+        "time": "11:06",
+        "start": 666.24,
+        "duration": 2.88,
+        "text": "and and you definitely were part of"
+      },
+      {
+        "index": 249,
+        "time": "11:08",
+        "start": 668.16,
+        "duration": 2.799,
+        "text": "those"
+      },
+      {
+        "index": 250,
+        "time": "11:09",
+        "start": 669.12,
+        "duration": 4.719,
+        "text": "acquisitions right seeing companies grow"
+      },
+      {
+        "index": 251,
+        "time": "11:10",
+        "start": 670.959,
+        "duration": 4.961,
+        "text": "from zero to something and then acquire"
+      },
+      {
+        "index": 252,
+        "time": "11:13",
+        "start": 673.839,
+        "duration": 3.201,
+        "text": "eventually i assume that you probably"
+      },
+      {
+        "index": 253,
+        "time": "11:15",
+        "start": 675.92,
+        "duration": 3.28,
+        "text": "have reached"
+      },
+      {
+        "index": 254,
+        "time": "11:17",
+        "start": 677.04,
+        "duration": 4.08,
+        "text": "some level of financial freedom"
+      },
+      {
+        "index": 255,
+        "time": "11:19",
+        "start": 679.2,
+        "duration": 3.92,
+        "text": "and your money isn't really a constraint"
+      },
+      {
+        "index": 256,
+        "time": "11:21",
+        "start": 681.12,
+        "duration": 4.88,
+        "text": "anymore why do you still work"
+      },
+      {
+        "index": 257,
+        "time": "11:23",
+        "start": 683.12,
+        "duration": 4.159,
+        "text": "i win because i want to and i want to"
+      },
+      {
+        "index": 258,
+        "time": "11:26",
+        "start": 686,
+        "duration": 4.16,
+        "text": "say that like"
+      },
+      {
+        "index": 259,
+        "time": "11:27",
+        "start": 687.279,
+        "duration": 6,
+        "text": "we should all work because we want to if"
+      },
+      {
+        "index": 260,
+        "time": "11:30",
+        "start": 690.16,
+        "duration": 4.799,
+        "text": "we are given the opportunity to do so i"
+      },
+      {
+        "index": 261,
+        "time": "11:33",
+        "start": 693.279,
+        "duration": 4.881,
+        "text": "would say you and i are very lucky on"
+      },
+      {
+        "index": 262,
+        "time": "11:34",
+        "start": 694.959,
+        "duration": 4,
+        "text": "this like um we we are blessed with like"
+      },
+      {
+        "index": 263,
+        "time": "11:38",
+        "start": 698.16,
+        "duration": 3.28,
+        "text": "um"
+      },
+      {
+        "index": 264,
+        "time": "11:38",
+        "start": 698.959,
+        "duration": 5.201,
+        "text": "like very clear minds we are blessed"
+      },
+      {
+        "index": 265,
+        "time": "11:41",
+        "start": 701.44,
+        "duration": 5.36,
+        "text": "with good health right we can actually"
+      },
+      {
+        "index": 266,
+        "time": "11:44",
+        "start": 704.16,
+        "duration": 6.479,
+        "text": "produce and function we got into a"
+      },
+      {
+        "index": 267,
+        "time": "11:46",
+        "start": 706.8,
+        "duration": 7.039,
+        "text": "relatively good school and got out with"
+      },
+      {
+        "index": 268,
+        "time": "11:50",
+        "start": 710.639,
+        "duration": 5.841,
+        "text": "somewhat of good experiences out in our"
+      },
+      {
+        "index": 269,
+        "time": "11:53",
+        "start": 713.839,
+        "duration": 5.041,
+        "text": "industry where our profession is"
+      },
+      {
+        "index": 270,
+        "time": "11:56",
+        "start": 716.48,
+        "duration": 3.599,
+        "text": "actually making a lot of money"
+      },
+      {
+        "index": 271,
+        "time": "11:58",
+        "start": 718.88,
+        "duration": 4,
+        "text": "right"
+      },
+      {
+        "index": 272,
+        "time": "12:00",
+        "start": 720.079,
+        "duration": 4.56,
+        "text": "we are not too worried about money at"
+      },
+      {
+        "index": 273,
+        "time": "12:02",
+        "start": 722.88,
+        "duration": 5.28,
+        "text": "all right"
+      },
+      {
+        "index": 274,
+        "time": "12:04",
+        "start": 724.639,
+        "duration": 6.081,
+        "text": "not much financial burden and everything"
+      },
+      {
+        "index": 275,
+        "time": "12:08",
+        "start": 728.16,
+        "duration": 3.919,
+        "text": "why do i still work this because i enjoy"
+      },
+      {
+        "index": 276,
+        "time": "12:10",
+        "start": 730.72,
+        "duration": 4.96,
+        "text": "it like i"
+      },
+      {
+        "index": 277,
+        "time": "12:12",
+        "start": 732.079,
+        "duration": 6.32,
+        "text": "i nowadays i work because well sometimes"
+      },
+      {
+        "index": 278,
+        "time": "12:15",
+        "start": 735.68,
+        "duration": 5.2,
+        "text": "i tell people i'm bored therefore i work"
+      },
+      {
+        "index": 279,
+        "time": "12:18",
+        "start": 738.399,
+        "duration": 4.401,
+        "text": "like it's kind of like um when when i'm"
+      },
+      {
+        "index": 280,
+        "time": "12:20",
+        "start": 740.88,
+        "duration": 4.639,
+        "text": "able to advise the company when they"
+      },
+      {
+        "index": 281,
+        "time": "12:22",
+        "start": 742.8,
+        "duration": 4.64,
+        "text": "bring up questions and problems to me"
+      },
+      {
+        "index": 282,
+        "time": "12:25",
+        "start": 745.519,
+        "duration": 5.44,
+        "text": "it's kind of like oh i haven't solved"
+      },
+      {
+        "index": 283,
+        "time": "12:27",
+        "start": 747.44,
+        "duration": 5.44,
+        "text": "this before i see or hey your your idea"
+      },
+      {
+        "index": 284,
+        "time": "12:30",
+        "start": 750.959,
+        "duration": 5.281,
+        "text": "is amazing what you're trying to do to"
+      },
+      {
+        "index": 285,
+        "time": "12:32",
+        "start": 752.88,
+        "duration": 6.399,
+        "text": "the world is amazing right like like um"
+      },
+      {
+        "index": 286,
+        "time": "12:36",
+        "start": 756.24,
+        "duration": 5.599,
+        "text": "let me help to give you some ideas about"
+      },
+      {
+        "index": 287,
+        "time": "12:39",
+        "start": 759.279,
+        "duration": 4.721,
+        "text": "what i failed on and trust me i failed"
+      },
+      {
+        "index": 288,
+        "time": "12:41",
+        "start": 761.839,
+        "duration": 4.161,
+        "text": "on a lot of things"
+      },
+      {
+        "index": 289,
+        "time": "12:44",
+        "start": 764,
+        "duration": 4.959,
+        "text": "and and you know what like being able to"
+      },
+      {
+        "index": 290,
+        "time": "12:46",
+        "start": 766,
+        "duration": 3.76,
+        "text": "do that uh um gives me a lot of joy"
+      },
+      {
+        "index": 291,
+        "time": "12:48",
+        "start": 768.959,
+        "duration": 3.68,
+        "text": "so"
+      },
+      {
+        "index": 292,
+        "time": "12:49",
+        "start": 769.76,
+        "duration": 5.199,
+        "text": "so it's kind of like i wouldn't say that"
+      },
+      {
+        "index": 293,
+        "time": "12:52",
+        "start": 772.639,
+        "duration": 5.041,
+        "text": "i'm quite like crazy well off and"
+      },
+      {
+        "index": 294,
+        "time": "12:54",
+        "start": 774.959,
+        "duration": 5.201,
+        "text": "whatnot um but i would say that i you're"
+      },
+      {
+        "index": 295,
+        "time": "12:57",
+        "start": 777.68,
+        "duration": 5.52,
+        "text": "comfortable i'm comfortable to to be"
+      },
+      {
+        "index": 296,
+        "time": "13:00",
+        "start": 780.16,
+        "duration": 5.119,
+        "text": "able to enjoy my life and and like the"
+      },
+      {
+        "index": 297,
+        "time": "13:03",
+        "start": 783.2,
+        "duration": 4.079,
+        "text": "money i think the money when it gets to"
+      },
+      {
+        "index": 298,
+        "time": "13:05",
+        "start": 785.279,
+        "duration": 5.281,
+        "text": "a certain point like"
+      },
+      {
+        "index": 299,
+        "time": "13:07",
+        "start": 787.279,
+        "duration": 5.601,
+        "text": "it gives you freedom to decide it is"
+      },
+      {
+        "index": 300,
+        "time": "13:10",
+        "start": 790.56,
+        "duration": 4.64,
+        "text": "just that and once you get to that point"
+      },
+      {
+        "index": 301,
+        "time": "13:12",
+        "start": 792.88,
+        "duration": 4.399,
+        "text": "the question is like for me i don't need"
+      },
+      {
+        "index": 302,
+        "time": "13:15",
+        "start": 795.2,
+        "duration": 4.24,
+        "text": "more for me to have more freedom to"
+      },
+      {
+        "index": 303,
+        "time": "13:17",
+        "start": 797.279,
+        "duration": 5.441,
+        "text": "decide like you can actually work your"
+      },
+      {
+        "index": 304,
+        "time": "13:19",
+        "start": 799.44,
+        "duration": 5.199,
+        "text": "butt off like for ages and accumulate a"
+      },
+      {
+        "index": 305,
+        "time": "13:22",
+        "start": 802.72,
+        "duration": 3.84,
+        "text": "lot of wealth but if you don't take the"
+      },
+      {
+        "index": 306,
+        "time": "13:24",
+        "start": 804.639,
+        "duration": 3.601,
+        "text": "time to think about what you're happy"
+      },
+      {
+        "index": 307,
+        "time": "13:26",
+        "start": 806.56,
+        "duration": 4,
+        "text": "doing"
+      },
+      {
+        "index": 308,
+        "time": "13:28",
+        "start": 808.24,
+        "duration": 5.12,
+        "text": "then i don't know like it's going to be"
+      },
+      {
+        "index": 309,
+        "time": "13:30",
+        "start": 810.56,
+        "duration": 4.959,
+        "text": "like quite like this is your this is"
+      },
+      {
+        "index": 310,
+        "time": "13:33",
+        "start": 813.36,
+        "duration": 4.24,
+        "text": "your strongest years right like you're"
+      },
+      {
+        "index": 311,
+        "time": "13:35",
+        "start": 815.519,
+        "duration": 4.641,
+        "text": "you have the wealth you have the health"
+      },
+      {
+        "index": 312,
+        "time": "13:37",
+        "start": 817.6,
+        "duration": 4.16,
+        "text": "and you have you have time"
+      },
+      {
+        "index": 313,
+        "time": "13:40",
+        "start": 820.16,
+        "duration": 4.32,
+        "text": "you should really spend time thinking"
+      },
+      {
+        "index": 314,
+        "time": "13:41",
+        "start": 821.76,
+        "duration": 5.84,
+        "text": "about like why you're doing work"
+      },
+      {
+        "index": 315,
+        "time": "13:44",
+        "start": 824.48,
+        "duration": 5.76,
+        "text": "so i do it nowadays because i enjoy it"
+      },
+      {
+        "index": 316,
+        "time": "13:47",
+        "start": 827.6,
+        "duration": 5.12,
+        "text": "and i do it now because i want to help"
+      },
+      {
+        "index": 317,
+        "time": "13:50",
+        "start": 830.24,
+        "duration": 4.32,
+        "text": "oh on the teams and companies that"
+      },
+      {
+        "index": 318,
+        "time": "13:52",
+        "start": 832.72,
+        "duration": 3.84,
+        "text": "actually are trying to create do great"
+      },
+      {
+        "index": 319,
+        "time": "13:54",
+        "start": 834.56,
+        "duration": 4,
+        "text": "things yeah"
+      },
+      {
+        "index": 320,
+        "time": "13:56",
+        "start": 836.56,
+        "duration": 5.88,
+        "text": "so yeah and that's why i have a lot of"
+      },
+      {
+        "index": 321,
+        "time": "13:58",
+        "start": 838.56,
+        "duration": 3.88,
+        "text": "respect to usa"
+      },
+      {
+        "index": 322,
+        "time": "14:02",
+        "start": 842.639,
+        "duration": 4.401,
+        "text": "um a lot of my audience are coming from"
+      },
+      {
+        "index": 323,
+        "time": "14:05",
+        "start": 845.279,
+        "duration": 3.521,
+        "text": "a different background right and they"
+      },
+      {
+        "index": 324,
+        "time": "14:07",
+        "start": 847.04,
+        "duration": 5.12,
+        "text": "want to do software engineering because"
+      },
+      {
+        "index": 325,
+        "time": "14:08",
+        "start": 848.8,
+        "duration": 5.92,
+        "text": "the industry is booming"
+      },
+      {
+        "index": 326,
+        "time": "14:12",
+        "start": 852.16,
+        "duration": 5.039,
+        "text": "but they have no idea how to get started"
+      },
+      {
+        "index": 327,
+        "time": "14:14",
+        "start": 854.72,
+        "duration": 4.32,
+        "text": "um so do you have any advice"
+      },
+      {
+        "index": 328,
+        "time": "14:17",
+        "start": 857.199,
+        "duration": 4.401,
+        "text": "what advice would you give them"
+      },
+      {
+        "index": 329,
+        "time": "14:19",
+        "start": 859.04,
+        "duration": 5.2,
+        "text": "really depending on how people learn"
+      },
+      {
+        "index": 330,
+        "time": "14:21",
+        "start": 861.6,
+        "duration": 5.679,
+        "text": "right like um i for example i learned by"
+      },
+      {
+        "index": 331,
+        "time": "14:24",
+        "start": 864.24,
+        "duration": 5.68,
+        "text": "doing yeah so for me"
+      },
+      {
+        "index": 332,
+        "time": "14:27",
+        "start": 867.279,
+        "duration": 4.881,
+        "text": "when i started learning about software"
+      },
+      {
+        "index": 333,
+        "time": "14:29",
+        "start": 869.92,
+        "duration": 4.719,
+        "text": "it was because i wanted to do something"
+      },
+      {
+        "index": 334,
+        "time": "14:32",
+        "start": 872.16,
+        "duration": 5.679,
+        "text": "first professional experience i was an"
+      },
+      {
+        "index": 335,
+        "time": "14:34",
+        "start": 874.639,
+        "duration": 6.081,
+        "text": "intern at um as a silencer company not"
+      },
+      {
+        "index": 336,
+        "time": "14:37",
+        "start": 877.839,
+        "duration": 4.881,
+        "text": "the gun silencer like a hvac silencer so"
+      },
+      {
+        "index": 337,
+        "time": "14:40",
+        "start": 880.72,
+        "duration": 4.16,
+        "text": "like just air conditioning silencers and"
+      },
+      {
+        "index": 338,
+        "time": "14:42",
+        "start": 882.72,
+        "duration": 4.559,
+        "text": "stuff and they have to cuff things into"
+      },
+      {
+        "index": 339,
+        "time": "14:44",
+        "start": 884.88,
+        "duration": 5.36,
+        "text": "trucks because they are huge and giant"
+      },
+      {
+        "index": 340,
+        "time": "14:47",
+        "start": 887.279,
+        "duration": 5.441,
+        "text": "stuff right so they hire interns to"
+      },
+      {
+        "index": 341,
+        "time": "14:50",
+        "start": 890.24,
+        "duration": 4.32,
+        "text": "to go through excel and look at every"
+      },
+      {
+        "index": 342,
+        "time": "14:52",
+        "start": 892.72,
+        "duration": 3.52,
+        "text": "single drawing and say that okay we're"
+      },
+      {
+        "index": 343,
+        "time": "14:54",
+        "start": 894.56,
+        "duration": 3.519,
+        "text": "going to cut it this way and this way"
+      },
+      {
+        "index": 344,
+        "time": "14:56",
+        "start": 896.24,
+        "duration": 4.399,
+        "text": "and then we can put it on a truck yeah"
+      },
+      {
+        "index": 345,
+        "time": "14:58",
+        "start": 898.079,
+        "duration": 4.56,
+        "text": "and send it out and for me after two"
+      },
+      {
+        "index": 346,
+        "time": "15:00",
+        "start": 900.639,
+        "duration": 4.32,
+        "text": "three weeks of doing that i was like"
+      },
+      {
+        "index": 347,
+        "time": "15:02",
+        "start": 902.639,
+        "duration": 4.721,
+        "text": "there must be a better way of doing this"
+      },
+      {
+        "index": 348,
+        "time": "15:04",
+        "start": 904.959,
+        "duration": 4.481,
+        "text": "like they taught me like how to actually"
+      },
+      {
+        "index": 349,
+        "time": "15:07",
+        "start": 907.36,
+        "duration": 5.12,
+        "text": "figure out the formulas and like look at"
+      },
+      {
+        "index": 350,
+        "time": "15:09",
+        "start": 909.44,
+        "duration": 5.44,
+        "text": "the stuff these are all just rules"
+      },
+      {
+        "index": 351,
+        "time": "15:12",
+        "start": 912.48,
+        "duration": 5.359,
+        "text": "then that becomes a like something that"
+      },
+      {
+        "index": 352,
+        "time": "15:14",
+        "start": 914.88,
+        "duration": 5.68,
+        "text": "i wanted to do so i basically say that i"
+      },
+      {
+        "index": 353,
+        "time": "15:17",
+        "start": 917.839,
+        "duration": 4.961,
+        "text": "want to figure out how to automate this"
+      },
+      {
+        "index": 354,
+        "time": "15:20",
+        "start": 920.56,
+        "duration": 5.04,
+        "text": "so that i don't have to actually do all"
+      },
+      {
+        "index": 355,
+        "time": "15:22",
+        "start": 922.8,
+        "duration": 6.08,
+        "text": "these things yeah by the end of the work"
+      },
+      {
+        "index": 356,
+        "time": "15:25",
+        "start": 925.6,
+        "duration": 6.88,
+        "text": "term i like um we finished building this"
+      },
+      {
+        "index": 357,
+        "time": "15:28",
+        "start": 928.88,
+        "duration": 5.199,
+        "text": "so that um a full day of work of like"
+      },
+      {
+        "index": 358,
+        "time": "15:32",
+        "start": 932.48,
+        "duration": 3.359,
+        "text": "just like going through different excel"
+      },
+      {
+        "index": 359,
+        "time": "15:34",
+        "start": 934.079,
+        "duration": 4.88,
+        "text": "and like checking all this stuff like"
+      },
+      {
+        "index": 360,
+        "time": "15:35",
+        "start": 935.839,
+        "duration": 5.92,
+        "text": "becomes half an hour for it for us yeah"
+      },
+      {
+        "index": 361,
+        "time": "15:38",
+        "start": 938.959,
+        "duration": 4.32,
+        "text": "for me it is about finding something"
+      },
+      {
+        "index": 362,
+        "time": "15:41",
+        "start": 941.759,
+        "duration": 4.401,
+        "text": "interesting something that i want to"
+      },
+      {
+        "index": 363,
+        "time": "15:43",
+        "start": 943.279,
+        "duration": 5.841,
+        "text": "solve and then say that here is the"
+      },
+      {
+        "index": 364,
+        "time": "15:46",
+        "start": 946.16,
+        "duration": 5.52,
+        "text": "destination here is where i am at now"
+      },
+      {
+        "index": 365,
+        "time": "15:49",
+        "start": 949.12,
+        "duration": 4,
+        "text": "how do i get there and make so many"
+      },
+      {
+        "index": 366,
+        "time": "15:51",
+        "start": 951.68,
+        "duration": 2.88,
+        "text": "different mistakes and like trying"
+      },
+      {
+        "index": 367,
+        "time": "15:53",
+        "start": 953.12,
+        "duration": 3.04,
+        "text": "different roles and say that would this"
+      },
+      {
+        "index": 368,
+        "time": "15:54",
+        "start": 954.56,
+        "duration": 4,
+        "text": "work with this not work this work this"
+      },
+      {
+        "index": 369,
+        "time": "15:56",
+        "start": 956.16,
+        "duration": 5.119,
+        "text": "would not work trying things and then"
+      },
+      {
+        "index": 370,
+        "time": "15:58",
+        "start": 958.56,
+        "duration": 5.04,
+        "text": "eventually just inching towards that"
+      },
+      {
+        "index": 371,
+        "time": "16:01",
+        "start": 961.279,
+        "duration": 3.92,
+        "text": "but yeah like um um if there is research"
+      },
+      {
+        "index": 372,
+        "time": "16:03",
+        "start": 963.6,
+        "duration": 3.76,
+        "text": "and what not like you can do that other"
+      },
+      {
+        "index": 373,
+        "time": "16:05",
+        "start": 965.199,
+        "duration": 4.481,
+        "text": "ways that uh people can do there it's"
+      },
+      {
+        "index": 374,
+        "time": "16:07",
+        "start": 967.36,
+        "duration": 4.719,
+        "text": "like general assembly there's a lot of"
+      },
+      {
+        "index": 375,
+        "time": "16:09",
+        "start": 969.68,
+        "duration": 3.92,
+        "text": "coding bootcamps nowadays and tons of"
+      },
+      {
+        "index": 376,
+        "time": "16:12",
+        "start": 972.079,
+        "duration": 4.081,
+        "text": "tutorials"
+      },
+      {
+        "index": 377,
+        "time": "16:13",
+        "start": 973.6,
+        "duration": 4.799,
+        "text": "um the main thing though is that like"
+      },
+      {
+        "index": 378,
+        "time": "16:16",
+        "start": 976.16,
+        "duration": 4.32,
+        "text": "pick something you want to do otherwise"
+      },
+      {
+        "index": 379,
+        "time": "16:18",
+        "start": 978.399,
+        "duration": 4,
+        "text": "it becomes very boring for me at least"
+      },
+      {
+        "index": 380,
+        "time": "16:20",
+        "start": 980.48,
+        "duration": 4.479,
+        "text": "like if there is a sense of achievement"
+      },
+      {
+        "index": 381,
+        "time": "16:22",
+        "start": 982.399,
+        "duration": 4.321,
+        "text": "by the end of it if you can do something"
+      },
+      {
+        "index": 382,
+        "time": "16:24",
+        "start": 984.959,
+        "duration": 4.56,
+        "text": "that you will be very proud of you will"
+      },
+      {
+        "index": 383,
+        "time": "16:26",
+        "start": 986.72,
+        "duration": 5.44,
+        "text": "be like hey this saves my time for doing"
+      },
+      {
+        "index": 384,
+        "time": "16:29",
+        "start": 989.519,
+        "duration": 4.641,
+        "text": "this or that or if you enjoy having um"
+      },
+      {
+        "index": 385,
+        "time": "16:32",
+        "start": 992.16,
+        "duration": 4.239,
+        "text": "having your own website or whatnot and"
+      },
+      {
+        "index": 386,
+        "time": "16:34",
+        "start": 994.16,
+        "duration": 3.679,
+        "text": "say that now i can do this without"
+      },
+      {
+        "index": 387,
+        "time": "16:36",
+        "start": 996.399,
+        "duration": 3.68,
+        "text": "paying other people"
+      },
+      {
+        "index": 388,
+        "time": "16:37",
+        "start": 997.839,
+        "duration": 3.44,
+        "text": "other companies like i'm doing templates"
+      },
+      {
+        "index": 389,
+        "time": "16:40",
+        "start": 1000.079,
+        "duration": 3.361,
+        "text": "and stuff and i can do it more"
+      },
+      {
+        "index": 390,
+        "time": "16:41",
+        "start": 1001.279,
+        "duration": 4.48,
+        "text": "specifically yeah right"
+      },
+      {
+        "index": 391,
+        "time": "16:43",
+        "start": 1003.44,
+        "duration": 3.6,
+        "text": "if those are worthwhile to you go for"
+      },
+      {
+        "index": 392,
+        "time": "16:45",
+        "start": 1005.759,
+        "duration": 3.681,
+        "text": "those things someone that you're"
+      },
+      {
+        "index": 393,
+        "time": "16:47",
+        "start": 1007.04,
+        "duration": 4,
+        "text": "passionate about exactly yeah right like"
+      },
+      {
+        "index": 394,
+        "time": "16:49",
+        "start": 1009.44,
+        "duration": 2.959,
+        "text": "that's for me at least"
+      },
+      {
+        "index": 395,
+        "time": "16:51",
+        "start": 1011.04,
+        "duration": 2.799,
+        "text": "yeah and i think that's how a lot of"
+      },
+      {
+        "index": 396,
+        "time": "16:52",
+        "start": 1012.399,
+        "duration": 3.36,
+        "text": "people got started and the same for me"
+      },
+      {
+        "index": 397,
+        "time": "16:53",
+        "start": 1013.839,
+        "duration": 4.961,
+        "text": "like i i was originally pretty"
+      },
+      {
+        "index": 398,
+        "time": "16:55",
+        "start": 1015.759,
+        "duration": 4.241,
+        "text": "interesting you know building apps and"
+      },
+      {
+        "index": 399,
+        "time": "16:58",
+        "start": 1018.8,
+        "duration": 3.599,
+        "text": "then my first"
+      },
+      {
+        "index": 400,
+        "time": "17:00",
+        "start": 1020,
+        "duration": 4.16,
+        "text": "party was a writer yeah and"
+      },
+      {
+        "index": 401,
+        "time": "17:02",
+        "start": 1022.399,
+        "duration": 3.68,
+        "text": "that's how i learned like php and learn"
+      },
+      {
+        "index": 402,
+        "time": "17:04",
+        "start": 1024.16,
+        "duration": 3.6,
+        "text": "how to build about that and that's how i"
+      },
+      {
+        "index": 403,
+        "time": "17:06",
+        "start": 1026.079,
+        "duration": 3.201,
+        "text": "got into software engineering were you"
+      },
+      {
+        "index": 404,
+        "time": "17:07",
+        "start": 1027.76,
+        "duration": 3.679,
+        "text": "doing this by yourself what are you"
+      },
+      {
+        "index": 405,
+        "time": "17:09",
+        "start": 1029.28,
+        "duration": 3.6,
+        "text": "doing with my roommate um that's even"
+      },
+      {
+        "index": 406,
+        "time": "17:11",
+        "start": 1031.439,
+        "duration": 3.12,
+        "text": "more awesome like"
+      },
+      {
+        "index": 407,
+        "time": "17:12",
+        "start": 1032.88,
+        "duration": 3.6,
+        "text": "as you're doing this if you can actually"
+      },
+      {
+        "index": 408,
+        "time": "17:14",
+        "start": 1034.559,
+        "duration": 3.841,
+        "text": "get partners like doing this stuff like"
+      },
+      {
+        "index": 409,
+        "time": "17:16",
+        "start": 1036.48,
+        "duration": 4.64,
+        "text": "yeah it doesn't matter if he like he or"
+      },
+      {
+        "index": 410,
+        "time": "17:18",
+        "start": 1038.4,
+        "duration": 4.72,
+        "text": "she uh was like they know how to program"
+      },
+      {
+        "index": 411,
+        "time": "17:21",
+        "start": 1041.12,
+        "duration": 3.839,
+        "text": "or not yeah it doesn't matter right it"
+      },
+      {
+        "index": 412,
+        "time": "17:23",
+        "start": 1043.12,
+        "duration": 4,
+        "text": "doesn't really matter you you just get"
+      },
+      {
+        "index": 413,
+        "time": "17:24",
+        "start": 1044.959,
+        "duration": 4.001,
+        "text": "to be able to bounce ideas off of each"
+      },
+      {
+        "index": 414,
+        "time": "17:27",
+        "start": 1047.12,
+        "duration": 4.72,
+        "text": "other it's the same as entrepreneurship"
+      },
+      {
+        "index": 415,
+        "time": "17:28",
+        "start": 1048.96,
+        "duration": 5.04,
+        "text": "but why why a lot of companies or a lot"
+      },
+      {
+        "index": 416,
+        "time": "17:31",
+        "start": 1051.84,
+        "duration": 4.56,
+        "text": "of startups like entrepreneurs they"
+      },
+      {
+        "index": 417,
+        "time": "17:34",
+        "start": 1054,
+        "duration": 4.16,
+        "text": "prefer to have a partner it's not just"
+      },
+      {
+        "index": 418,
+        "time": "17:36",
+        "start": 1056.4,
+        "duration": 5.12,
+        "text": "because you complement each other in"
+      },
+      {
+        "index": 419,
+        "time": "17:38",
+        "start": 1058.16,
+        "duration": 6.399,
+        "text": "skills but you actually also help each"
+      },
+      {
+        "index": 420,
+        "time": "17:41",
+        "start": 1061.52,
+        "duration": 4.56,
+        "text": "other in raising the morales of it"
+      },
+      {
+        "index": 421,
+        "time": "17:44",
+        "start": 1064.559,
+        "duration": 4.881,
+        "text": "because like so many times it's kind of"
+      },
+      {
+        "index": 422,
+        "time": "17:46",
+        "start": 1066.08,
+        "duration": 5.76,
+        "text": "like i don't feel like doing this"
+      },
+      {
+        "index": 423,
+        "time": "17:49",
+        "start": 1069.44,
+        "duration": 3.52,
+        "text": "exactly i still remember the days and"
+      },
+      {
+        "index": 424,
+        "time": "17:51",
+        "start": 1071.84,
+        "duration": 4.24,
+        "text": "we're just trying to figure out how to"
+      },
+      {
+        "index": 425,
+        "time": "17:52",
+        "start": 1072.96,
+        "duration": 5.28,
+        "text": "send an email from kids on the screen"
+      },
+      {
+        "index": 426,
+        "time": "17:56",
+        "start": 1076.08,
+        "duration": 4.8,
+        "text": "and just copy the whole thing"
+      },
+      {
+        "index": 427,
+        "time": "17:58",
+        "start": 1078.24,
+        "duration": 2.64,
+        "text": "it works and"
+      },
+      {
+        "index": 428,
+        "time": "18:11",
+        "start": 1091.52,
+        "duration": 3,
+        "text": "foreign"
+      },
+      {
+        "index": 429,
+        "time": "18:26",
+        "start": 1106.4,
+        "duration": 2.48,
+        "text": "general"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": null,
+    "fallback": null,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXFM1T0MQG04Z9C9CHX3GNZF",
+    "status": "completed",
+    "videoId": "z6wMUaErCxU",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "hi everyone welcome back to my channel",
+            "start": 52.879,
+            "duration": 4.481
+          },
+          {
+            "text": "this is terry and today we have a very",
+            "start": 55.12,
+            "duration": 4.64
+          },
+          {
+            "text": "special guest uh stan chen stan is a",
+            "start": 57.36,
+            "duration": 5.039
+          },
+          {
+            "text": "very strong engineering leader um my",
+            "start": 59.76,
+            "duration": 5.2
+          },
+          {
+            "text": "mentor and you know is also a very good",
+            "start": 62.399,
+            "duration": 3.681
+          },
+          {
+            "text": "friend of mine",
+            "start": 64.96,
+            "duration": 3.839
+          },
+          {
+            "text": "uh right now he's uh he's an advisor for",
+            "start": 66.08,
+            "duration": 5.52
+          },
+          {
+            "text": "many companies right yeah just in couple",
+            "start": 68.799,
+            "duration": 4.481
+          },
+          {
+            "text": "yeah especially i think he does a lot of",
+            "start": 71.6,
+            "duration": 3.6
+          },
+          {
+            "text": "like polar road map technology and",
+            "start": 73.28,
+            "duration": 5.199
+          },
+          {
+            "text": "philosophy and a bunch of other things",
+            "start": 75.2,
+            "duration": 5.12
+          },
+          {
+            "text": "yeah and i just feel very honored to",
+            "start": 78.479,
+            "duration": 3.761
+          },
+          {
+            "text": "have him today so sam why don't you tell",
+            "start": 80.32,
+            "duration": 3.36
+          },
+          {
+            "text": "us a little bit about yourself did you",
+            "start": 82.24,
+            "duration": 3.6
+          },
+          {
+            "text": "begin with oh that's why opening",
+            "start": 83.68,
+            "duration": 6.079
+          },
+          {
+            "text": "question back in 1995",
+            "start": 85.84,
+            "duration": 6.48
+          },
+          {
+            "text": "yeah hi guys um so i was born in hong",
+            "start": 89.759,
+            "duration": 6
+          },
+          {
+            "text": "kong um my family moved over",
+            "start": 92.32,
+            "duration": 5.68
+          },
+          {
+            "text": "here when i was 12 years old",
+            "start": 95.759,
+            "duration": 4.641
+          },
+          {
+            "text": "oh stan also went to walu oh yeah i also",
+            "start": 98,
+            "duration": 4.159
+          },
+          {
+            "text": "went to waterloo uh it's the best",
+            "start": 100.4,
+            "duration": 4.16
+          },
+          {
+            "text": "engineering school in canada",
+            "start": 102.159,
+            "duration": 4.081
+          },
+          {
+            "text": "you always say that because you're from",
+            "start": 104.56,
+            "duration": 3.519
+          },
+          {
+            "text": "hungary",
+            "start": 106.24,
+            "duration": 4
+          },
+          {
+            "text": "we don't know one of who is like",
+            "start": 108.079,
+            "duration": 3.761
+          },
+          {
+            "text": "stanford in the us",
+            "start": 110.24,
+            "duration": 4.72
+          },
+          {
+            "text": "uh except they have co-op we do have a",
+            "start": 111.84,
+            "duration": 6.239
+          },
+          {
+            "text": "very good um internship program",
+            "start": 114.96,
+            "duration": 4.72
+          },
+          {
+            "text": "uh it's actually one of the most",
+            "start": 118.079,
+            "duration": 3.601
+          },
+          {
+            "text": "important thing actually when you're",
+            "start": 119.68,
+            "duration": 4.24
+          },
+          {
+            "text": "going through like university to be able",
+            "start": 121.68,
+            "duration": 3.2
+          },
+          {
+            "text": "to",
+            "start": 123.92,
+            "duration": 3.68
+          },
+          {
+            "text": "see different companies like um like we",
+            "start": 124.88,
+            "duration": 5.2
+          },
+          {
+            "text": "did what i did i did six different work",
+            "start": 127.6,
+            "duration": 5.359
+          },
+          {
+            "text": "terms and so the year right so like it",
+            "start": 130.08,
+            "duration": 5.519
+          },
+          {
+            "text": "was amazing like um um just being able",
+            "start": 132.959,
+            "duration": 5.121
+          },
+          {
+            "text": "to come out with that understanding",
+            "start": 135.599,
+            "duration": 4.161
+          },
+          {
+            "text": "saying that i have seen how six",
+            "start": 138.08,
+            "duration": 4.48
+          },
+          {
+            "text": "different company works yeah um and like",
+            "start": 139.76,
+            "duration": 4.72
+          },
+          {
+            "text": "knowing what to expect like mixed",
+            "start": 142.56,
+            "duration": 3.6
+          },
+          {
+            "text": "interviews as well as getting your job",
+            "start": 144.48,
+            "duration": 4.479
+          },
+          {
+            "text": "so much easier um but yeah anyway so i",
+            "start": 146.16,
+            "duration": 4.799
+          },
+          {
+            "text": "went through schooling in toronto and",
+            "start": 148.959,
+            "duration": 5.121
+          },
+          {
+            "text": "waterloo and then i also eventually",
+            "start": 150.959,
+            "duration": 5.841
+          },
+          {
+            "text": "got out as a studying electrical",
+            "start": 154.08,
+            "duration": 5.2
+          },
+          {
+            "text": "mechanical engineering uh at a program",
+            "start": 156.8,
+            "duration": 4.799
+          },
+          {
+            "text": "called mechatronics within science from",
+            "start": 159.28,
+            "duration": 5.12
+          },
+          {
+            "text": "engineering um so basically",
+            "start": 161.599,
+            "duration": 4.801
+          },
+          {
+            "text": "a bunch of automation",
+            "start": 164.4,
+            "duration": 3.36
+          },
+          {
+            "text": "robotics",
+            "start": 166.4,
+            "duration": 4.64
+          },
+          {
+            "text": "went into um what is it manufacturing",
+            "start": 167.76,
+            "duration": 6.479
+          },
+          {
+            "text": "automation so doing plc um",
+            "start": 171.04,
+            "duration": 5.36
+          },
+          {
+            "text": "and like i'm looking and studying and",
+            "start": 174.239,
+            "duration": 3.841
+          },
+          {
+            "text": "like i'm trying to improve like",
+            "start": 176.4,
+            "duration": 4.8
+          },
+          {
+            "text": "manufacturing processes with automation",
+            "start": 178.08,
+            "duration": 5.439
+          },
+          {
+            "text": "and i got an opportunity over at cbs",
+            "start": 181.2,
+            "duration": 5.52
+          },
+          {
+            "text": "radio like um from a from my friend and",
+            "start": 183.519,
+            "duration": 5.921
+          },
+          {
+            "text": "i just basically said that yeah why not",
+            "start": 186.72,
+            "duration": 4.4
+          },
+          {
+            "text": "try it like we got over there and",
+            "start": 189.44,
+            "duration": 4.64
+          },
+          {
+            "text": "actually started my my korean software",
+            "start": 191.12,
+            "duration": 5.28
+          },
+          {
+            "text": "and then from there i moved over to san",
+            "start": 194.08,
+            "duration": 4.879
+          },
+          {
+            "text": "francisco and basically started going",
+            "start": 196.4,
+            "duration": 5.919
+          },
+          {
+            "text": "into startup and and like did a lot of",
+            "start": 198.959,
+            "duration": 5.2
+          },
+          {
+            "text": "different things like i messed up a lot",
+            "start": 202.319,
+            "duration": 4.56
+          },
+          {
+            "text": "of things and i also learned a lot so i",
+            "start": 204.159,
+            "duration": 4.881
+          },
+          {
+            "text": "ended up like really enjoying that kind",
+            "start": 206.879,
+            "duration": 4.321
+          },
+          {
+            "text": "of career that kind of industry so have",
+            "start": 209.04,
+            "duration": 4.479
+          },
+          {
+            "text": "been there since and um right now i'm",
+            "start": 211.2,
+            "duration": 4
+          },
+          {
+            "text": "just like focusing on",
+            "start": 213.519,
+            "duration": 4.321
+          },
+          {
+            "text": "building startups and and like helping",
+            "start": 215.2,
+            "duration": 5.119
+          },
+          {
+            "text": "to build teams and like build products",
+            "start": 217.84,
+            "duration": 4
+          },
+          {
+            "text": "kind of thing so",
+            "start": 220.319,
+            "duration": 3.84
+          },
+          {
+            "text": "yeah so you mentioned you went from",
+            "start": 221.84,
+            "duration": 4.24
+          },
+          {
+            "text": "mechatronics engineering to software",
+            "start": 224.159,
+            "duration": 3.921
+          },
+          {
+            "text": "engineering which is quite a transition",
+            "start": 226.08,
+            "duration": 4.48
+          },
+          {
+            "text": "i think i imagine it it's very different",
+            "start": 228.08,
+            "duration": 4.48
+          },
+          {
+            "text": "right mechatronics is you're building",
+            "start": 230.56,
+            "duration": 3.759
+          },
+          {
+            "text": "robotics and",
+            "start": 232.56,
+            "duration": 4.399
+          },
+          {
+            "text": "more hardware like you're not doing so",
+            "start": 234.319,
+            "duration": 4.56
+          },
+          {
+            "text": "much of software like did you find it",
+            "start": 236.959,
+            "duration": 4.321
+          },
+          {
+            "text": "difficult or was it hard to transition",
+            "start": 238.879,
+            "duration": 4.801
+          },
+          {
+            "text": "no that's the funny thing um for us like",
+            "start": 241.28,
+            "duration": 5.12
+          },
+          {
+            "text": "um megatron expo um engineering um we",
+            "start": 243.68,
+            "duration": 5.04
+          },
+          {
+            "text": "were the first class in there so it",
+            "start": 246.4,
+            "duration": 3.36
+          },
+          {
+            "text": "consists of",
+            "start": 248.72,
+            "duration": 2
+          },
+          {
+            "text": "the first",
+            "start": 249.76,
+            "duration": 3.52
+          },
+          {
+            "text": "yeah we were the guinea pigs",
+            "start": 250.72,
+            "duration": 4.32
+          },
+          {
+            "text": "to be honest like you if you ask like",
+            "start": 253.28,
+            "duration": 2.959
+          },
+          {
+            "text": "different professors like different",
+            "start": 255.04,
+            "duration": 2.56
+          },
+          {
+            "text": "professors is going to tell you",
+            "start": 256.239,
+            "duration": 2.881
+          },
+          {
+            "text": "different things like one would say that",
+            "start": 257.6,
+            "duration": 3.68
+          },
+          {
+            "text": "like this is about building robots like",
+            "start": 259.12,
+            "duration": 6
+          },
+          {
+            "text": "like gundams um yeah that's what i love",
+            "start": 261.28,
+            "duration": 4.8
+          },
+          {
+            "text": "right",
+            "start": 265.12,
+            "duration": 3.04
+          },
+          {
+            "text": "or another one is kind of like no this",
+            "start": 266.08,
+            "duration": 4.08
+          },
+          {
+            "text": "is all about like automation like",
+            "start": 268.16,
+            "duration": 4.24
+          },
+          {
+            "text": "manufacturing assembly line and whatnot",
+            "start": 270.16,
+            "duration": 4.08
+          },
+          {
+            "text": "so so there's a lot of different things",
+            "start": 272.4,
+            "duration": 3.6
+          },
+          {
+            "text": "there's a lot of uncertainty and one of",
+            "start": 274.24,
+            "duration": 4.239
+          },
+          {
+            "text": "the most interesting thing is that as we",
+            "start": 276,
+            "duration": 5.12
+          },
+          {
+            "text": "were going through the program",
+            "start": 278.479,
+            "duration": 5.28
+          },
+          {
+            "text": "the mindset of electrical engineering",
+            "start": 281.12,
+            "duration": 4
+          },
+          {
+            "text": "and the mindset of mechanical",
+            "start": 283.759,
+            "duration": 4.321
+          },
+          {
+            "text": "engineering is very very different",
+            "start": 285.12,
+            "duration": 4.88
+          },
+          {
+            "text": "when you're talking about electrical a",
+            "start": 288.08,
+            "duration": 3.76
+          },
+          {
+            "text": "lot of like um a lot of theories",
+            "start": 290,
+            "duration": 4.639
+          },
+          {
+            "text": "actually come in very specific things",
+            "start": 291.84,
+            "duration": 4.16
+          },
+          {
+            "text": "like you're talking about all",
+            "start": 294.639,
+            "duration": 3.601
+          },
+          {
+            "text": "mathematical equations like proving",
+            "start": 296,
+            "duration": 4.32
+          },
+          {
+            "text": "things from one one thing to another so",
+            "start": 298.24,
+            "duration": 4
+          },
+          {
+            "text": "a lot of math is involved",
+            "start": 300.32,
+            "duration": 3.84
+          },
+          {
+            "text": "when you get into uh mechanical",
+            "start": 302.24,
+            "duration": 4.32
+          },
+          {
+            "text": "engineering there's a lot of looking up",
+            "start": 304.16,
+            "duration": 6.64
+          },
+          {
+            "text": "charts a hands-on experience like a lot",
+            "start": 306.56,
+            "duration": 6.16
+          },
+          {
+            "text": "of things that you will do and then say",
+            "start": 310.8,
+            "duration": 4
+          },
+          {
+            "text": "that i will multiply this",
+            "start": 312.72,
+            "duration": 4.8
+          },
+          {
+            "text": "by five for safety factors",
+            "start": 314.8,
+            "duration": 4.64
+          },
+          {
+            "text": "so basically you do all the specific",
+            "start": 317.52,
+            "duration": 3.84
+          },
+          {
+            "text": "calculation and say that yeah we're just",
+            "start": 319.44,
+            "duration": 4.08
+          },
+          {
+            "text": "going to bump it up like five times",
+            "start": 321.36,
+            "duration": 4.48
+          },
+          {
+            "text": "it's going to be safe and not happening",
+            "start": 323.52,
+            "duration": 4.239
+          },
+          {
+            "text": "it's kind of like that so so like the",
+            "start": 325.84,
+            "duration": 4.639
+          },
+          {
+            "text": "mentality changes already happens in",
+            "start": 327.759,
+            "duration": 4.88
+          },
+          {
+            "text": "there we did also do like a bit of",
+            "start": 330.479,
+            "duration": 3.681
+          },
+          {
+            "text": "programming during that time but it's",
+            "start": 332.639,
+            "duration": 2.961
+          },
+          {
+            "text": "very low level",
+            "start": 334.16,
+            "duration": 2.64
+          },
+          {
+            "text": "um we",
+            "start": 335.6,
+            "duration": 3.439
+          },
+          {
+            "text": "did real-time operating systems i think",
+            "start": 336.8,
+            "duration": 3.839
+          },
+          {
+            "text": "all these things actually helped you",
+            "start": 339.039,
+            "duration": 3.761
+          },
+          {
+            "text": "actually realize that you need to think",
+            "start": 340.639,
+            "duration": 4.161
+          },
+          {
+            "text": "differently in different industries but",
+            "start": 342.8,
+            "duration": 4.8
+          },
+          {
+            "text": "more importantly also during co-op you",
+            "start": 344.8,
+            "duration": 4.72
+          },
+          {
+            "text": "also know that majority of the time that",
+            "start": 347.6,
+            "duration": 3.76
+          },
+          {
+            "text": "when whatever you study",
+            "start": 349.52,
+            "duration": 4
+          },
+          {
+            "text": "it's not going to directly apply to what",
+            "start": 351.36,
+            "duration": 4.32
+          },
+          {
+            "text": "you're going to be working on anyway so",
+            "start": 353.52,
+            "duration": 4.32
+          },
+          {
+            "text": "being flexible is like actually the name",
+            "start": 355.68,
+            "duration": 4.72
+          },
+          {
+            "text": "of the game um so yeah i think that's a",
+            "start": 357.84,
+            "duration": 4.32
+          },
+          {
+            "text": "really good point because i did",
+            "start": 360.4,
+            "duration": 4.4
+          },
+          {
+            "text": "management engineering right yeah",
+            "start": 362.16,
+            "duration": 4.319
+          },
+          {
+            "text": "and we did a little bit of programming",
+            "start": 364.8,
+            "duration": 4.32
+          },
+          {
+            "text": "as well and it was a lot of theories on",
+            "start": 366.479,
+            "duration": 4.961
+          },
+          {
+            "text": "stats and understanding how you know how",
+            "start": 369.12,
+            "duration": 4.639
+          },
+          {
+            "text": "to optimize uh you know production plan",
+            "start": 371.44,
+            "duration": 4.72
+          },
+          {
+            "text": "and all that stuff oh i mean like yeah",
+            "start": 373.759,
+            "duration": 4.641
+          },
+          {
+            "text": "like how much of those work do you like",
+            "start": 376.16,
+            "duration": 4.319
+          },
+          {
+            "text": "those studies and those projects and",
+            "start": 378.4,
+            "duration": 3.84
+          },
+          {
+            "text": "those programs that you learn actually",
+            "start": 380.479,
+            "duration": 3.761
+          },
+          {
+            "text": "apply to your everyday work nowadays not",
+            "start": 382.24,
+            "duration": 4.239
+          },
+          {
+            "text": "really exactly but i think school is",
+            "start": 384.24,
+            "duration": 4.32
+          },
+          {
+            "text": "really good in a way that it helps you",
+            "start": 386.479,
+            "duration": 3.921
+          },
+          {
+            "text": "prepare for for the industry i think",
+            "start": 388.56,
+            "duration": 4.8
+          },
+          {
+            "text": "gives you an opportunity to learn how to",
+            "start": 390.4,
+            "duration": 4.4
+          },
+          {
+            "text": "solve problems",
+            "start": 393.36,
+            "duration": 2.72
+          },
+          {
+            "text": "and i think that's the training where",
+            "start": 394.8,
+            "duration": 3.839
+          },
+          {
+            "text": "the school provides exactly value it's",
+            "start": 396.08,
+            "duration": 4.959
+          },
+          {
+            "text": "it's kind of like um like i said don't",
+            "start": 398.639,
+            "duration": 4.481
+          },
+          {
+            "text": "don't take things word for word for it",
+            "start": 401.039,
+            "duration": 4.801
+          },
+          {
+            "text": "like it's not about the practice of like",
+            "start": 403.12,
+            "duration": 4.639
+          },
+          {
+            "text": "the specific",
+            "start": 405.84,
+            "duration": 3.28
+          },
+          {
+            "text": "processes that you went through or",
+            "start": 407.759,
+            "duration": 2.801
+          },
+          {
+            "text": "courses that you went through but the",
+            "start": 409.12,
+            "duration": 3.359
+          },
+          {
+            "text": "practice of like how you figure out",
+            "start": 410.56,
+            "duration": 4.72
+          },
+          {
+            "text": "problems and research answers and making",
+            "start": 412.479,
+            "duration": 5.28
+          },
+          {
+            "text": "decisions that is more important because",
+            "start": 415.28,
+            "duration": 5.039
+          },
+          {
+            "text": "that's what you're going to end up doing",
+            "start": 417.759,
+            "duration": 3.991
+          },
+          {
+            "text": "i think that's what",
+            "start": 420.319,
+            "duration": 5.46
+          },
+          {
+            "text": "[Laughter]",
+            "start": 421.75,
+            "duration": 4.029
+          },
+          {
+            "text": "looking at your linkedin and you look at",
+            "start": 499.52,
+            "duration": 3.519
+          },
+          {
+            "text": "companies like google before and also",
+            "start": 501.28,
+            "duration": 3.759
+          },
+          {
+            "text": "smaller companies i'm curious like from",
+            "start": 503.039,
+            "duration": 3.521
+          },
+          {
+            "text": "your perspective what's the difference",
+            "start": 505.039,
+            "duration": 3.041
+          },
+          {
+            "text": "between like you know smaller companies",
+            "start": 506.56,
+            "duration": 3.44
+          },
+          {
+            "text": "like startups and versus like google and",
+            "start": 508.08,
+            "duration": 3.44
+          },
+          {
+            "text": "why do you like to work at startups so",
+            "start": 510,
+            "duration": 3.039
+          },
+          {
+            "text": "much",
+            "start": 511.52,
+            "duration": 3.84
+          },
+          {
+            "text": "very good question man actually i i can",
+            "start": 513.039,
+            "duration": 4.161
+          },
+          {
+            "text": "do a sales pitch for",
+            "start": 515.36,
+            "duration": 4.159
+          },
+          {
+            "text": "waterloo internship program because the",
+            "start": 517.2,
+            "duration": 3.68
+          },
+          {
+            "text": "whole thing is that like during my",
+            "start": 519.519,
+            "duration": 3.44
+          },
+          {
+            "text": "internship programs like um the",
+            "start": 520.88,
+            "duration": 3.68
+          },
+          {
+            "text": "different internship i get to see",
+            "start": 522.959,
+            "duration": 2.961
+          },
+          {
+            "text": "different companies",
+            "start": 524.56,
+            "duration": 4
+          },
+          {
+            "text": "and it's just amazing like you can",
+            "start": 525.92,
+            "duration": 5.039
+          },
+          {
+            "text": "actually understand like do four months",
+            "start": 528.56,
+            "duration": 4.16
+          },
+          {
+            "text": "over at the manufacturing plan four",
+            "start": 530.959,
+            "duration": 3.521
+          },
+          {
+            "text": "months over at the giant corporation",
+            "start": 532.72,
+            "duration": 3.52
+          },
+          {
+            "text": "four months at a startup kind of thing",
+            "start": 534.48,
+            "duration": 3.76
+          },
+          {
+            "text": "and you get to see so much about like um",
+            "start": 536.24,
+            "duration": 3.84
+          },
+          {
+            "text": "people interaction and like coffee",
+            "start": 538.24,
+            "duration": 4.48
+          },
+          {
+            "text": "structure and how things work for one",
+            "start": 540.08,
+            "duration": 4.56
+          },
+          {
+            "text": "thing like this it's structured like you",
+            "start": 542.72,
+            "duration": 3.679
+          },
+          {
+            "text": "get into a big company someone like",
+            "start": 544.64,
+            "duration": 4.4
+          },
+          {
+            "text": "google or someplace like microsoft",
+            "start": 546.399,
+            "duration": 5.521
+          },
+          {
+            "text": "you are going to be doing something",
+            "start": 549.04,
+            "duration": 6.08
+          },
+          {
+            "text": "relatively specific a lot of times your",
+            "start": 551.92,
+            "duration": 6.479
+          },
+          {
+            "text": "your goals and as well as like your your",
+            "start": 555.12,
+            "duration": 5.68
+          },
+          {
+            "text": "targets that you're trying to hit is",
+            "start": 558.399,
+            "duration": 4.88
+          },
+          {
+            "text": "very well put together",
+            "start": 560.8,
+            "duration": 4.159
+          },
+          {
+            "text": "um you don't have to worry about",
+            "start": 563.279,
+            "duration": 3.761
+          },
+          {
+            "text": "basically anything else like it's kind",
+            "start": 564.959,
+            "duration": 4.481
+          },
+          {
+            "text": "of like if you're a chef",
+            "start": 567.04,
+            "duration": 5.04
+          },
+          {
+            "text": "going to a big company is that you walk",
+            "start": 569.44,
+            "duration": 4.72
+          },
+          {
+            "text": "in and you say that i'm cooking the dish",
+            "start": 572.08,
+            "duration": 4.4
+          },
+          {
+            "text": "like this dish and people are telling",
+            "start": 574.16,
+            "duration": 4.08
+          },
+          {
+            "text": "you that like asking for you for this",
+            "start": 576.48,
+            "duration": 2.56
+          },
+          {
+            "text": "dish",
+            "start": 578.24,
+            "duration": 2.32
+          },
+          {
+            "text": "everything is there like all your",
+            "start": 579.04,
+            "duration": 4.56
+          },
+          {
+            "text": "utensils all like all the equipment you",
+            "start": 580.56,
+            "duration": 4.88
+          },
+          {
+            "text": "don't have to worry about anything you",
+            "start": 583.6,
+            "duration": 4.56
+          },
+          {
+            "text": "go and cook that stuff yeah even like",
+            "start": 585.44,
+            "duration": 4.399
+          },
+          {
+            "text": "the raw material is prepared for your",
+            "start": 588.16,
+            "duration": 3.52
+          },
+          {
+            "text": "chocolate or whatever you just put",
+            "start": 589.839,
+            "duration": 3.521
+          },
+          {
+            "text": "before you cook and then you're done",
+            "start": 591.68,
+            "duration": 4.08
+          },
+          {
+            "text": "yeah right you go into a startup they",
+            "start": 593.36,
+            "duration": 5.12
+          },
+          {
+            "text": "say that you're cooking um for this dish",
+            "start": 595.76,
+            "duration": 5.28
+          },
+          {
+            "text": "you will be saying that so where is the",
+            "start": 598.48,
+            "duration": 4.56
+          },
+          {
+            "text": "stove oh we don't have one you may have",
+            "start": 601.04,
+            "duration": 3.52
+          },
+          {
+            "text": "to figure that out",
+            "start": 603.04,
+            "duration": 4.479
+          },
+          {
+            "text": "by yourself utensils and exactly like do",
+            "start": 604.56,
+            "duration": 4.64
+          },
+          {
+            "text": "everything yourself but at the same time",
+            "start": 607.519,
+            "duration": 3.921
+          },
+          {
+            "text": "you also got the flexibility so like",
+            "start": 609.2,
+            "duration": 4.56
+          },
+          {
+            "text": "it's two type of person now one type is",
+            "start": 611.44,
+            "duration": 4.959
+          },
+          {
+            "text": "that you go in they see they say that ah",
+            "start": 613.76,
+            "duration": 4.319
+          },
+          {
+            "text": "there's no stove there's no nothing i",
+            "start": 616.399,
+            "duration": 2.961
+          },
+          {
+            "text": "can't do this",
+            "start": 618.079,
+            "duration": 3.601
+          },
+          {
+            "text": "the other one is like there is no stove",
+            "start": 619.36,
+            "duration": 4.56
+          },
+          {
+            "text": "there is no kitchen i can do whatever i",
+            "start": 621.68,
+            "duration": 5.04
+          },
+          {
+            "text": "want like it's it's kind of like um",
+            "start": 623.92,
+            "duration": 5.76
+          },
+          {
+            "text": "whatever your personality actually gets",
+            "start": 626.72,
+            "duration": 4.64
+          },
+          {
+            "text": "um gets you to",
+            "start": 629.68,
+            "duration": 4.56
+          },
+          {
+            "text": "to look at this like how you react to",
+            "start": 631.36,
+            "duration": 4.32
+          },
+          {
+            "text": "these kind of things",
+            "start": 634.24,
+            "duration": 3.76
+          },
+          {
+            "text": "no structure is it uh something that",
+            "start": 635.68,
+            "duration": 3.76
+          },
+          {
+            "text": "you're happy about or something that",
+            "start": 638,
+            "duration": 4.56
+          },
+          {
+            "text": "you're not like versus like no structure",
+            "start": 639.44,
+            "duration": 5.28
+          },
+          {
+            "text": "um uh like are you going to like put",
+            "start": 642.56,
+            "duration": 4.24
+          },
+          {
+            "text": "your hands get your hands dirty and do",
+            "start": 644.72,
+            "duration": 4.4
+          },
+          {
+            "text": "all the other stuff or do you enjoy",
+            "start": 646.8,
+            "duration": 5.039
+          },
+          {
+            "text": "actually saying that i want to focus and",
+            "start": 649.12,
+            "duration": 4.48
+          },
+          {
+            "text": "building the things that i want to build",
+            "start": 651.839,
+            "duration": 4.401
+          },
+          {
+            "text": "like specifically that part amazingly",
+            "start": 653.6,
+            "duration": 4.4
+          },
+          {
+            "text": "that's where the preferences are like",
+            "start": 656.24,
+            "duration": 3.36
+          },
+          {
+            "text": "that's how the bigger companies versus",
+            "start": 658,
+            "duration": 4.079
+          },
+          {
+            "text": "smaller companies work i see icic",
+            "start": 659.6,
+            "duration": 4.16
+          },
+          {
+            "text": "because you work at a couple different",
+            "start": 662.079,
+            "duration": 3.281
+          },
+          {
+            "text": "startups and then some of them were",
+            "start": 663.76,
+            "duration": 2.48
+          },
+          {
+            "text": "quiet",
+            "start": 665.36,
+            "duration": 2.8
+          },
+          {
+            "text": "and and you definitely were part of",
+            "start": 666.24,
+            "duration": 2.88
+          },
+          {
+            "text": "those",
+            "start": 668.16,
+            "duration": 2.799
+          },
+          {
+            "text": "acquisitions right seeing companies grow",
+            "start": 669.12,
+            "duration": 4.719
+          },
+          {
+            "text": "from zero to something and then acquire",
+            "start": 670.959,
+            "duration": 4.961
+          },
+          {
+            "text": "eventually i assume that you probably",
+            "start": 673.839,
+            "duration": 3.201
+          },
+          {
+            "text": "have reached",
+            "start": 675.92,
+            "duration": 3.28
+          },
+          {
+            "text": "some level of financial freedom",
+            "start": 677.04,
+            "duration": 4.08
+          },
+          {
+            "text": "and your money isn't really a constraint",
+            "start": 679.2,
+            "duration": 3.92
+          },
+          {
+            "text": "anymore why do you still work",
+            "start": 681.12,
+            "duration": 4.88
+          },
+          {
+            "text": "i win because i want to and i want to",
+            "start": 683.12,
+            "duration": 4.159
+          },
+          {
+            "text": "say that like",
+            "start": 686,
+            "duration": 4.16
+          },
+          {
+            "text": "we should all work because we want to if",
+            "start": 687.279,
+            "duration": 6
+          },
+          {
+            "text": "we are given the opportunity to do so i",
+            "start": 690.16,
+            "duration": 4.799
+          },
+          {
+            "text": "would say you and i are very lucky on",
+            "start": 693.279,
+            "duration": 4.881
+          },
+          {
+            "text": "this like um we we are blessed with like",
+            "start": 694.959,
+            "duration": 4
+          },
+          {
+            "text": "um",
+            "start": 698.16,
+            "duration": 3.28
+          },
+          {
+            "text": "like very clear minds we are blessed",
+            "start": 698.959,
+            "duration": 5.201
+          },
+          {
+            "text": "with good health right we can actually",
+            "start": 701.44,
+            "duration": 5.36
+          },
+          {
+            "text": "produce and function we got into a",
+            "start": 704.16,
+            "duration": 6.479
+          },
+          {
+            "text": "relatively good school and got out with",
+            "start": 706.8,
+            "duration": 7.039
+          },
+          {
+            "text": "somewhat of good experiences out in our",
+            "start": 710.639,
+            "duration": 5.841
+          },
+          {
+            "text": "industry where our profession is",
+            "start": 713.839,
+            "duration": 5.041
+          },
+          {
+            "text": "actually making a lot of money",
+            "start": 716.48,
+            "duration": 3.599
+          },
+          {
+            "text": "right",
+            "start": 718.88,
+            "duration": 4
+          },
+          {
+            "text": "we are not too worried about money at",
+            "start": 720.079,
+            "duration": 4.56
+          },
+          {
+            "text": "all right",
+            "start": 722.88,
+            "duration": 5.28
+          },
+          {
+            "text": "not much financial burden and everything",
+            "start": 724.639,
+            "duration": 6.081
+          },
+          {
+            "text": "why do i still work this because i enjoy",
+            "start": 728.16,
+            "duration": 3.919
+          },
+          {
+            "text": "it like i",
+            "start": 730.72,
+            "duration": 4.96
+          },
+          {
+            "text": "i nowadays i work because well sometimes",
+            "start": 732.079,
+            "duration": 6.32
+          },
+          {
+            "text": "i tell people i'm bored therefore i work",
+            "start": 735.68,
+            "duration": 5.2
+          },
+          {
+            "text": "like it's kind of like um when when i'm",
+            "start": 738.399,
+            "duration": 4.401
+          },
+          {
+            "text": "able to advise the company when they",
+            "start": 740.88,
+            "duration": 4.639
+          },
+          {
+            "text": "bring up questions and problems to me",
+            "start": 742.8,
+            "duration": 4.64
+          },
+          {
+            "text": "it's kind of like oh i haven't solved",
+            "start": 745.519,
+            "duration": 5.44
+          },
+          {
+            "text": "this before i see or hey your your idea",
+            "start": 747.44,
+            "duration": 5.44
+          },
+          {
+            "text": "is amazing what you're trying to do to",
+            "start": 750.959,
+            "duration": 5.281
+          },
+          {
+            "text": "the world is amazing right like like um",
+            "start": 752.88,
+            "duration": 6.399
+          },
+          {
+            "text": "let me help to give you some ideas about",
+            "start": 756.24,
+            "duration": 5.599
+          },
+          {
+            "text": "what i failed on and trust me i failed",
+            "start": 759.279,
+            "duration": 4.721
+          },
+          {
+            "text": "on a lot of things",
+            "start": 761.839,
+            "duration": 4.161
+          },
+          {
+            "text": "and and you know what like being able to",
+            "start": 764,
+            "duration": 4.959
+          },
+          {
+            "text": "do that uh um gives me a lot of joy",
+            "start": 766,
+            "duration": 3.76
+          },
+          {
+            "text": "so",
+            "start": 768.959,
+            "duration": 3.68
+          },
+          {
+            "text": "so it's kind of like i wouldn't say that",
+            "start": 769.76,
+            "duration": 5.199
+          },
+          {
+            "text": "i'm quite like crazy well off and",
+            "start": 772.639,
+            "duration": 5.041
+          },
+          {
+            "text": "whatnot um but i would say that i you're",
+            "start": 774.959,
+            "duration": 5.201
+          },
+          {
+            "text": "comfortable i'm comfortable to to be",
+            "start": 777.68,
+            "duration": 5.52
+          },
+          {
+            "text": "able to enjoy my life and and like the",
+            "start": 780.16,
+            "duration": 5.119
+          },
+          {
+            "text": "money i think the money when it gets to",
+            "start": 783.2,
+            "duration": 4.079
+          },
+          {
+            "text": "a certain point like",
+            "start": 785.279,
+            "duration": 5.281
+          },
+          {
+            "text": "it gives you freedom to decide it is",
+            "start": 787.279,
+            "duration": 5.601
+          },
+          {
+            "text": "just that and once you get to that point",
+            "start": 790.56,
+            "duration": 4.64
+          },
+          {
+            "text": "the question is like for me i don't need",
+            "start": 792.88,
+            "duration": 4.399
+          },
+          {
+            "text": "more for me to have more freedom to",
+            "start": 795.2,
+            "duration": 4.24
+          },
+          {
+            "text": "decide like you can actually work your",
+            "start": 797.279,
+            "duration": 5.441
+          },
+          {
+            "text": "butt off like for ages and accumulate a",
+            "start": 799.44,
+            "duration": 5.199
+          },
+          {
+            "text": "lot of wealth but if you don't take the",
+            "start": 802.72,
+            "duration": 3.84
+          },
+          {
+            "text": "time to think about what you're happy",
+            "start": 804.639,
+            "duration": 3.601
+          },
+          {
+            "text": "doing",
+            "start": 806.56,
+            "duration": 4
+          },
+          {
+            "text": "then i don't know like it's going to be",
+            "start": 808.24,
+            "duration": 5.12
+          },
+          {
+            "text": "like quite like this is your this is",
+            "start": 810.56,
+            "duration": 4.959
+          },
+          {
+            "text": "your strongest years right like you're",
+            "start": 813.36,
+            "duration": 4.24
+          },
+          {
+            "text": "you have the wealth you have the health",
+            "start": 815.519,
+            "duration": 4.641
+          },
+          {
+            "text": "and you have you have time",
+            "start": 817.6,
+            "duration": 4.16
+          },
+          {
+            "text": "you should really spend time thinking",
+            "start": 820.16,
+            "duration": 4.32
+          },
+          {
+            "text": "about like why you're doing work",
+            "start": 821.76,
+            "duration": 5.84
+          },
+          {
+            "text": "so i do it nowadays because i enjoy it",
+            "start": 824.48,
+            "duration": 5.76
+          },
+          {
+            "text": "and i do it now because i want to help",
+            "start": 827.6,
+            "duration": 5.12
+          },
+          {
+            "text": "oh on the teams and companies that",
+            "start": 830.24,
+            "duration": 4.32
+          },
+          {
+            "text": "actually are trying to create do great",
+            "start": 832.72,
+            "duration": 3.84
+          },
+          {
+            "text": "things yeah",
+            "start": 834.56,
+            "duration": 4
+          },
+          {
+            "text": "so yeah and that's why i have a lot of",
+            "start": 836.56,
+            "duration": 5.88
+          },
+          {
+            "text": "respect to usa",
+            "start": 838.56,
+            "duration": 3.88
+          },
+          {
+            "text": "um a lot of my audience are coming from",
+            "start": 842.639,
+            "duration": 4.401
+          },
+          {
+            "text": "a different background right and they",
+            "start": 845.279,
+            "duration": 3.521
+          },
+          {
+            "text": "want to do software engineering because",
+            "start": 847.04,
+            "duration": 5.12
+          },
+          {
+            "text": "the industry is booming",
+            "start": 848.8,
+            "duration": 5.92
+          },
+          {
+            "text": "but they have no idea how to get started",
+            "start": 852.16,
+            "duration": 5.039
+          },
+          {
+            "text": "um so do you have any advice",
+            "start": 854.72,
+            "duration": 4.32
+          },
+          {
+            "text": "what advice would you give them",
+            "start": 857.199,
+            "duration": 4.401
+          },
+          {
+            "text": "really depending on how people learn",
+            "start": 859.04,
+            "duration": 5.2
+          },
+          {
+            "text": "right like um i for example i learned by",
+            "start": 861.6,
+            "duration": 5.679
+          },
+          {
+            "text": "doing yeah so for me",
+            "start": 864.24,
+            "duration": 5.68
+          },
+          {
+            "text": "when i started learning about software",
+            "start": 867.279,
+            "duration": 4.881
+          },
+          {
+            "text": "it was because i wanted to do something",
+            "start": 869.92,
+            "duration": 4.719
+          },
+          {
+            "text": "first professional experience i was an",
+            "start": 872.16,
+            "duration": 5.679
+          },
+          {
+            "text": "intern at um as a silencer company not",
+            "start": 874.639,
+            "duration": 6.081
+          },
+          {
+            "text": "the gun silencer like a hvac silencer so",
+            "start": 877.839,
+            "duration": 4.881
+          },
+          {
+            "text": "like just air conditioning silencers and",
+            "start": 880.72,
+            "duration": 4.16
+          },
+          {
+            "text": "stuff and they have to cuff things into",
+            "start": 882.72,
+            "duration": 4.559
+          },
+          {
+            "text": "trucks because they are huge and giant",
+            "start": 884.88,
+            "duration": 5.36
+          },
+          {
+            "text": "stuff right so they hire interns to",
+            "start": 887.279,
+            "duration": 5.441
+          },
+          {
+            "text": "to go through excel and look at every",
+            "start": 890.24,
+            "duration": 4.32
+          },
+          {
+            "text": "single drawing and say that okay we're",
+            "start": 892.72,
+            "duration": 3.52
+          },
+          {
+            "text": "going to cut it this way and this way",
+            "start": 894.56,
+            "duration": 3.519
+          },
+          {
+            "text": "and then we can put it on a truck yeah",
+            "start": 896.24,
+            "duration": 4.399
+          },
+          {
+            "text": "and send it out and for me after two",
+            "start": 898.079,
+            "duration": 4.56
+          },
+          {
+            "text": "three weeks of doing that i was like",
+            "start": 900.639,
+            "duration": 4.32
+          },
+          {
+            "text": "there must be a better way of doing this",
+            "start": 902.639,
+            "duration": 4.721
+          },
+          {
+            "text": "like they taught me like how to actually",
+            "start": 904.959,
+            "duration": 4.481
+          },
+          {
+            "text": "figure out the formulas and like look at",
+            "start": 907.36,
+            "duration": 5.12
+          },
+          {
+            "text": "the stuff these are all just rules",
+            "start": 909.44,
+            "duration": 5.44
+          },
+          {
+            "text": "then that becomes a like something that",
+            "start": 912.48,
+            "duration": 5.359
+          },
+          {
+            "text": "i wanted to do so i basically say that i",
+            "start": 914.88,
+            "duration": 5.68
+          },
+          {
+            "text": "want to figure out how to automate this",
+            "start": 917.839,
+            "duration": 4.961
+          },
+          {
+            "text": "so that i don't have to actually do all",
+            "start": 920.56,
+            "duration": 5.04
+          },
+          {
+            "text": "these things yeah by the end of the work",
+            "start": 922.8,
+            "duration": 6.08
+          },
+          {
+            "text": "term i like um we finished building this",
+            "start": 925.6,
+            "duration": 6.88
+          },
+          {
+            "text": "so that um a full day of work of like",
+            "start": 928.88,
+            "duration": 5.199
+          },
+          {
+            "text": "just like going through different excel",
+            "start": 932.48,
+            "duration": 3.359
+          },
+          {
+            "text": "and like checking all this stuff like",
+            "start": 934.079,
+            "duration": 4.88
+          },
+          {
+            "text": "becomes half an hour for it for us yeah",
+            "start": 935.839,
+            "duration": 5.92
+          },
+          {
+            "text": "for me it is about finding something",
+            "start": 938.959,
+            "duration": 4.32
+          },
+          {
+            "text": "interesting something that i want to",
+            "start": 941.759,
+            "duration": 4.401
+          },
+          {
+            "text": "solve and then say that here is the",
+            "start": 943.279,
+            "duration": 5.841
+          },
+          {
+            "text": "destination here is where i am at now",
+            "start": 946.16,
+            "duration": 5.52
+          },
+          {
+            "text": "how do i get there and make so many",
+            "start": 949.12,
+            "duration": 4
+          },
+          {
+            "text": "different mistakes and like trying",
+            "start": 951.68,
+            "duration": 2.88
+          },
+          {
+            "text": "different roles and say that would this",
+            "start": 953.12,
+            "duration": 3.04
+          },
+          {
+            "text": "work with this not work this work this",
+            "start": 954.56,
+            "duration": 4
+          },
+          {
+            "text": "would not work trying things and then",
+            "start": 956.16,
+            "duration": 5.119
+          },
+          {
+            "text": "eventually just inching towards that",
+            "start": 958.56,
+            "duration": 5.04
+          },
+          {
+            "text": "but yeah like um um if there is research",
+            "start": 961.279,
+            "duration": 3.92
+          },
+          {
+            "text": "and what not like you can do that other",
+            "start": 963.6,
+            "duration": 3.76
+          },
+          {
+            "text": "ways that uh people can do there it's",
+            "start": 965.199,
+            "duration": 4.481
+          },
+          {
+            "text": "like general assembly there's a lot of",
+            "start": 967.36,
+            "duration": 4.719
+          },
+          {
+            "text": "coding bootcamps nowadays and tons of",
+            "start": 969.68,
+            "duration": 3.92
+          },
+          {
+            "text": "tutorials",
+            "start": 972.079,
+            "duration": 4.081
+          },
+          {
+            "text": "um the main thing though is that like",
+            "start": 973.6,
+            "duration": 4.799
+          },
+          {
+            "text": "pick something you want to do otherwise",
+            "start": 976.16,
+            "duration": 4.32
+          },
+          {
+            "text": "it becomes very boring for me at least",
+            "start": 978.399,
+            "duration": 4
+          },
+          {
+            "text": "like if there is a sense of achievement",
+            "start": 980.48,
+            "duration": 4.479
+          },
+          {
+            "text": "by the end of it if you can do something",
+            "start": 982.399,
+            "duration": 4.321
+          },
+          {
+            "text": "that you will be very proud of you will",
+            "start": 984.959,
+            "duration": 4.56
+          },
+          {
+            "text": "be like hey this saves my time for doing",
+            "start": 986.72,
+            "duration": 5.44
+          },
+          {
+            "text": "this or that or if you enjoy having um",
+            "start": 989.519,
+            "duration": 4.641
+          },
+          {
+            "text": "having your own website or whatnot and",
+            "start": 992.16,
+            "duration": 4.239
+          },
+          {
+            "text": "say that now i can do this without",
+            "start": 994.16,
+            "duration": 3.679
+          },
+          {
+            "text": "paying other people",
+            "start": 996.399,
+            "duration": 3.68
+          },
+          {
+            "text": "other companies like i'm doing templates",
+            "start": 997.839,
+            "duration": 3.44
+          },
+          {
+            "text": "and stuff and i can do it more",
+            "start": 1000.079,
+            "duration": 3.361
+          },
+          {
+            "text": "specifically yeah right",
+            "start": 1001.279,
+            "duration": 4.48
+          },
+          {
+            "text": "if those are worthwhile to you go for",
+            "start": 1003.44,
+            "duration": 3.6
+          },
+          {
+            "text": "those things someone that you're",
+            "start": 1005.759,
+            "duration": 3.681
+          },
+          {
+            "text": "passionate about exactly yeah right like",
+            "start": 1007.04,
+            "duration": 4
+          },
+          {
+            "text": "that's for me at least",
+            "start": 1009.44,
+            "duration": 2.959
+          },
+          {
+            "text": "yeah and i think that's how a lot of",
+            "start": 1011.04,
+            "duration": 2.799
+          },
+          {
+            "text": "people got started and the same for me",
+            "start": 1012.399,
+            "duration": 3.36
+          },
+          {
+            "text": "like i i was originally pretty",
+            "start": 1013.839,
+            "duration": 4.961
+          },
+          {
+            "text": "interesting you know building apps and",
+            "start": 1015.759,
+            "duration": 4.241
+          },
+          {
+            "text": "then my first",
+            "start": 1018.8,
+            "duration": 3.599
+          },
+          {
+            "text": "party was a writer yeah and",
+            "start": 1020,
+            "duration": 4.16
+          },
+          {
+            "text": "that's how i learned like php and learn",
+            "start": 1022.399,
+            "duration": 3.68
+          },
+          {
+            "text": "how to build about that and that's how i",
+            "start": 1024.16,
+            "duration": 3.6
+          },
+          {
+            "text": "got into software engineering were you",
+            "start": 1026.079,
+            "duration": 3.201
+          },
+          {
+            "text": "doing this by yourself what are you",
+            "start": 1027.76,
+            "duration": 3.679
+          },
+          {
+            "text": "doing with my roommate um that's even",
+            "start": 1029.28,
+            "duration": 3.6
+          },
+          {
+            "text": "more awesome like",
+            "start": 1031.439,
+            "duration": 3.12
+          },
+          {
+            "text": "as you're doing this if you can actually",
+            "start": 1032.88,
+            "duration": 3.6
+          },
+          {
+            "text": "get partners like doing this stuff like",
+            "start": 1034.559,
+            "duration": 3.841
+          },
+          {
+            "text": "yeah it doesn't matter if he like he or",
+            "start": 1036.48,
+            "duration": 4.64
+          },
+          {
+            "text": "she uh was like they know how to program",
+            "start": 1038.4,
+            "duration": 4.72
+          },
+          {
+            "text": "or not yeah it doesn't matter right it",
+            "start": 1041.12,
+            "duration": 3.839
+          },
+          {
+            "text": "doesn't really matter you you just get",
+            "start": 1043.12,
+            "duration": 4
+          },
+          {
+            "text": "to be able to bounce ideas off of each",
+            "start": 1044.959,
+            "duration": 4.001
+          },
+          {
+            "text": "other it's the same as entrepreneurship",
+            "start": 1047.12,
+            "duration": 4.72
+          },
+          {
+            "text": "but why why a lot of companies or a lot",
+            "start": 1048.96,
+            "duration": 5.04
+          },
+          {
+            "text": "of startups like entrepreneurs they",
+            "start": 1051.84,
+            "duration": 4.56
+          },
+          {
+            "text": "prefer to have a partner it's not just",
+            "start": 1054,
+            "duration": 4.16
+          },
+          {
+            "text": "because you complement each other in",
+            "start": 1056.4,
+            "duration": 5.12
+          },
+          {
+            "text": "skills but you actually also help each",
+            "start": 1058.16,
+            "duration": 6.399
+          },
+          {
+            "text": "other in raising the morales of it",
+            "start": 1061.52,
+            "duration": 4.56
+          },
+          {
+            "text": "because like so many times it's kind of",
+            "start": 1064.559,
+            "duration": 4.881
+          },
+          {
+            "text": "like i don't feel like doing this",
+            "start": 1066.08,
+            "duration": 5.76
+          },
+          {
+            "text": "exactly i still remember the days and",
+            "start": 1069.44,
+            "duration": 3.52
+          },
+          {
+            "text": "we're just trying to figure out how to",
+            "start": 1071.84,
+            "duration": 4.24
+          },
+          {
+            "text": "send an email from kids on the screen",
+            "start": 1072.96,
+            "duration": 5.28
+          },
+          {
+            "text": "and just copy the whole thing",
+            "start": 1076.08,
+            "duration": 4.8
+          },
+          {
+            "text": "it works and",
+            "start": 1078.24,
+            "duration": 2.64
+          },
+          {
+            "text": "foreign",
+            "start": 1091.52,
+            "duration": 3
+          },
+          {
+            "text": "general",
+            "start": 1106.4,
+            "duration": 2.48
+          }
+        ],
+        "videoTitle": "矽谷大神來了｜Part1",
+        "metadata": {
+          "title": "矽谷大神來了｜Part1",
+          "description": "感謝Surfshark VPN贊助今天這一集影片：）\nSurfshark VPN優惠連結：https://hackbear.tv/surfshark\n或輸入優惠代碼HACKBEAR，就可以有一七折優惠，訂閱兩年方案免費加送三個月。\n---------------\n買美股，加密貨幣，黃金，盈透證卷Interactive Brokers ❤️：https://hackbear.tv/ib\n---------------\n#矽谷 #軟體工程師 #轉職 \n歡迎追蹤我的 Instagram: https://www.instagram.com/master.terry.chen\n合作的話: hack.tech.entertainment@gmail.com",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 1107,
+          "viewCount": 127380,
+          "keywords": [
+            "software",
+            "silicon valley",
+            "software engineering",
+            "mentor",
+            "矽谷",
+            "大神",
+            "職涯",
+            "導師",
+            "硅谷",
+            "軟體工程",
+            "轉職",
+            "程序員",
+            "碼農"
+          ],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/z6wMUaErCxU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "clientUsed": "ANDROID"
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

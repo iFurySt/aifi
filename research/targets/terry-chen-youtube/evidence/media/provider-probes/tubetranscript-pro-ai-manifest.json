@@ -1,0 +1,44 @@
+[
+  {
+    "id": "erlOBf7auSE",
+    "index": 255,
+    "title": "我婉拒了Google資深工程師的offer",
+    "url": "https://www.youtube.com/watch?v=erlOBf7auSE",
+    "provider": "tubetranscript-pro-ai",
+    "endpoint": "https://yt-to-text.com/api/p/v1/GetTranscripts",
+    "http_status": 200,
+    "provider_status": "READY",
+    "segments": 287,
+    "text_chars": 4549,
+    "output_txt": "research/targets/terry-chen-youtube/evidence/media/transcripts/erlOBf7auSE.provider-tubetranscript-pro-ai.txt",
+    "output_json": "research/targets/terry-chen-youtube/evidence/media/transcripts/erlOBf7auSE.provider-tubetranscript-pro-ai.json"
+  },
+  {
+    "id": "xeEd1DEizNE",
+    "index": 273,
+    "title": "比特幣從月亮跌回地球了",
+    "url": "https://www.youtube.com/watch?v=xeEd1DEizNE",
+    "provider": "tubetranscript-pro-ai",
+    "endpoint": "https://yt-to-text.com/api/p/v1/GetTranscripts",
+    "http_status": 200,
+    "provider_status": "READY",
+    "segments": 267,
+    "text_chars": 4961,
+    "output_txt": "research/targets/terry-chen-youtube/evidence/media/transcripts/xeEd1DEizNE.provider-tubetranscript-pro-ai.txt",
+    "output_json": "research/targets/terry-chen-youtube/evidence/media/transcripts/xeEd1DEizNE.provider-tubetranscript-pro-ai.json"
+  },
+  {
+    "id": "e32UtIo0C3c",
+    "index": 284,
+    "title": "【矽谷薪水】我拒絕了年薪1700萬台幣的工作｜60萬美金",
+    "url": "https://www.youtube.com/watch?v=e32UtIo0C3c",
+    "provider": "tubetranscript-pro-ai",
+    "endpoint": "https://yt-to-text.com/api/p/v1/GetTranscripts",
+    "http_status": 200,
+    "provider_status": "READY",
+    "segments": 248,
+    "text_chars": 3737,
+    "output_txt": "research/targets/terry-chen-youtube/evidence/media/transcripts/e32UtIo0C3c.provider-tubetranscript-pro-ai.txt",
+    "output_json": "research/targets/terry-chen-youtube/evidence/media/transcripts/e32UtIo0C3c.provider-tubetranscript-pro-ai.json"
+  }
+]

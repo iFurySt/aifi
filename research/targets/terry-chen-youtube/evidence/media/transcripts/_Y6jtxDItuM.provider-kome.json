@@ -1,0 +1,1394 @@
+{
+  "source": "Online transcript provider: Kome",
+  "source_url": "https://www.youtube.com/watch?v=_Y6jtxDItuM",
+  "provider": {
+    "name": "Kome",
+    "endpoint": "https://kome.ai/api/transcript",
+    "retrieved": "2026-07-13"
+  },
+  "video_index": 3,
+  "video": {
+    "index": 3,
+    "id": "_Y6jtxDItuM",
+    "title": "SpaceX 砸 600 億收購 Cursor？揭露 Elon 背後的神操作",
+    "url": "https://www.youtube.com/watch?v=_Y6jtxDItuM",
+    "duration_seconds": 738.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "_Y6jtxDItuM",
+    "title": "SpaceX 砸 600 億收購 Cursor？揭露 Elon 背後的神操作",
+    "text": "哈囉大家好我是 Terry\n今天這支影片呢要跟大家聊一下\n為什麼 SpaceX 要收購 Cursor\n而且這個收購金額呢\n高達 600 億美金\n也是目前為止呢史上最大一筆\n創投支持的新創公司的收購案\n你要知道\n當年 Facebook 是花了 220 億美金去收購 WhatsApp\n那個時候呢也是創了紀錄\n那現在這一次呢是三倍的價格\n而且我認為\n這個收購案呢是非常非常的重要\n特別是如果你以後想要投資 SpaceX\n或者是說你現在已經是 SpaceX 的股東\n你一定要看完這支影片\n好那首先我們先來講一下 Cursor 是什麼呢\nCursor 它是一個編碼器\n在 Tech 工作的網友應該都知道\n它是從微軟開發的那個編碼器\nVS Code fork 出來的一個\n讓你可以用自然語言呢去快速的生成\n跟編輯程式碼的一個工具\n你要知道在 Claude Code 跟 Codex 出來之前呢\nCursor 可是最早把 multi-agent 的體驗\n做到成熟\n而且最容易使用的 IDE 工具\n讓開發者能真正像管理團隊一樣\n用一群 AI 呢去做開發的神級別產品\n但是也因為 Claude Code 跟 Codex 的產品出來\n最後讓 Cursor 的這個市佔率慢慢流失\nOK 那為什麼 SpaceX\n一家火箭公司呢要花 600 億美金\n收購一個給軟體工程師使用的工具\n大家不是現在都在說 SaaS 已經死掉了\n不是應該每個人都可以 vibe coding 一個 Cursor 出來\n那為什麼 SpaceX 還要花這麼多錢去買呢？\n那在講為什麼要收購之前呢\n我們先去看一下數字\nSpaceX 是不是買貴了？\n就根據現在最新的一個資訊啦\nCursor 在今年 6 月份他們的 ARR 大概是有到 40 億美金左右\n所以說你要以 600 億去收購的話\n大概就是 revenue 15 倍的價格\n相比之下啦 2026 年的時候 Google 收購了 Wiz\n是以 32 倍的 revenue 去收購的\n然後 Salesforce 呢 CRM 在 2020 年的時候以\n這個 26 倍的 revenue 去收購 Slack\n然後 Microsoft 微軟是在 2016 年的時候呢\n收購 LinkedIn\n當時的 revenue 是 9 倍左右\n然後微軟呢是在 2018 年的時候收購 GitHub\n那個時候是大概 30 倍左右的 revenue\n那以這些過往大型的\n這個新創公司收購案\n去看的話\n其實不算貴\n而且以現在這麼熱門的 AI 產業收購案去看的話\n這個收購案其實真的不算貴\n而且重點是這個收購案\n它收購的方式可屌了\n特別是選在 SpaceX 剛 IPO 之後呢\n用全數的 SpaceX 股權去收購\n什麼意思呢？\n這個 600 億美金的價格呢\n會以 100% 股權的方式去購買\n它的算法就是按照交割日的前七天\nSpaceX 股價的這個加權平均值去算\n也就是說假如 SpaceX 的市值呢\n在交割的時候還是一樣\n維持現在大概 2.5 trillion 的市值\n然後你也知道我們之前影片有講\nSpaceX IPO 的市值呢是 1.77 trillion\n所以這中間啊從 IPO 到現在也才幾天的時間呢\n已經賺了大概有 730 billion 的這個溢價\n那這個 730 billion 的溢價呢\n單純就是市場把 SpaceX 捧上天賺到的這個錢\n而他們去買 Cursor 呢只需要花 60 billion\n也就是說這個溢價的 8% 而已\n那換句話說呢 Elon 其實就只是把這個溢價中的一小部分\n8% 拿去買 Cursor\n基本上這個 600 億美金呢\n對 SpaceX 的股東整體股東來說\n犧牲是非常非常的小的\n你可以想像它基本上\n差不多等同於一個免費送來的東西\n假如股價能夠維持的話啦\n那 Elon 現在要做的事情呢其實很簡單\n就是把 SpaceX 的股價繼續維持著\n或者是說讓它再創新高\n這個收購案呢就會越來越劃算\n因為只要 SpaceX 的股價繼續往上漲\n那 Cursor 的收購呢就會稀釋更少的這個 SpaceX 的股權\n這也是為什麼我覺得 Elon 這個收購案呢\n選在這個時間點\n真的是非常屌的一個 move\n等於是直接讓市場幫你買單\n你自己不用掏任何一毛錢\n那除了錢之外呢\n最重要的就是 SpaceX 收購 Cursor 的目的\n我們都知道 SpaceX 擁有全世界最屌的 AI cluster 算力\n但是他們的 AI 模型 Grok 一直以來\n都不如 Anthropic 跟 OpenAI 的模型\nGrok 的 coding 能力呢一直以來都是公認比較偏弱的\n所以說它在 frontier model 裡面呢\n變現能力也是最差的一個\n他們沒有像 Claude Code 跟 Codex 這樣的平台\n可以讓開發者去使用\n當然也不是沒有努力的去嘗試啦\n有一個東西叫做 Grok Build\n那這個東西呢也是剛 launch 不久啦\n但是好像也沒有什麼人在用\n我猜就是 Elon Musk 他自己的公司員工在用而已\n那要怎麼樣讓 Grok 可以超越 Claude 跟 OpenAI 呢？\n目前最關鍵也是最後一片拼圖呢\n就是 Cursor\n你可以透過這一次的收購案看出來\n現在這個時代呢\n除了算力之外\n記得 SpaceX 擁有全世界最頂尖的算力 clusters\n他們有超過 33 萬張的 Nvidia GPU\n算力呢是多到可以租給 Google 跟 Anthropic\n所以代表說在這個時代呢\n有算力還是不夠的\n一個頂尖的 AI 模型呢\n需要的是\n工作流程中真實的那個互動數據\n這個才是 Grok 能夠超越 Anthropic 跟 OpenAI\n最後也是最重要的一個拼圖\n他們需要把現有的這個算力\n轉換成數據的這個飛輪給建起來\n等一下我會講這個飛輪是什麼\n我先說一下 Cursor 之前呢就已經有跟 SpaceX 簽約\n去租他們的算力\n然後由 SpaceX 提供給他們 GPU 的容量\n而且其實他們也已經有合作\n一起去訓練 Grok 的模型迭代\n然後 SpaceX 發現這個合作的方式呢\n非常的有效\n你如果沒有 Cursor 這些真實工作流的數據的話\n你是很難把模型迭代到更好的\n那這個飛輪\n到底要怎麼樣才開始轉起來呢？\n第一個部分呢\n就是從算力到工作流的\n這個真實使用量\nSpaceX 它擁有全世界最頂尖的算力\n那現在 Cursor 一進來呢\n等於是直接幫 SpaceX 塞了一個超級大\n而且付費意願超高的用戶進去\n現在有超過 100 萬個開發者\n每天在 Cursor 上面跑 inference 跑 agent\nSpaceX 可以直接把他們的 clusters 算力的使用率呢\n直接拉滿\n好那當算力給 Cursor 這些無限的燃料之後呢\n這些開發者在 Cursor 上面所有做的事情\n不只是單純的寫程式而已\n如果你有用過 Cursor 的話應該知道\nAI 給你一個修改的建議\n你要按 accept 或是 reject？\n然後你怎麼去改它生成的 code？\n你在 debug 的時候怎麼去一步一步 trace 下去的？\n你在一個 monorepo 的 project 裡面怎麼去跳來跳去的？\n你都用了哪些 tools 怎麼去 switch context？\n你怎麼去 set up 你的 agentic workflow？\n這些數據呢\n跟你去 GitHub 上面爬一些 open source 的 code\n是完全不同等級的\nGitHub 還有 Stack Overflow 上面\n那些的所有代碼呢\n叫做靜態的程式碼\n那些數據呢全世界每一個做 AI 模型的公司呢\n都可以爬得到\n大家手上都有這些免費的資源\n所以它一點都不稀缺\n但是 Cursor 能夠給到的是動態的行為軌跡\n是一個真實的工程師\n在一個真實的環境下\n真正的去告訴這個模型說\n你這個答案寫的是對的\n或者說這邊是錯的\n或是這個可以這樣做更好\n那這些所有的行為數據呢\n就是一個超大的 label data\n你可以想像\n等於是每天有超過 100 萬個人呢\n不停的在幫 SpaceX\n去做 reinforcement learning\nby human feedback\n這個才是真正稀缺的價值\n就像為什麼現在很多 big tech 公司呢\n開始 track 員工的這個 prompt\n收集他們跟 AI 的這個 feedback loop\n還有 interaction\n他們想要員工 document 所有他們的工作流程\n因為如果你想要訓練一個更好的 AI 模型\n你不可能只靠那些靜態的程式碼數據\n那些呢是上一個時代啦\n我們把 ChatGPT 打開之後呢\n給它一個 prompt\n然後它就把我們的 code 代碼給寫出來的一個流程\n那現在這個時代需要的是什麼呢\n現在這個時代需要的是 AI agent 之間密切的合作\n就是 agent 它怎麼檢查出它的這個 sub-agent\n有沒有在幻覺\n有沒有在做錯的事情\n那需要靠的就是這些數據\n工程師跟 AI 一起工作\n還有流程的這些所有的真實數據\n拿去訓練\n那當 Cursor 拿到這些數據之後呢\n就可以回去餵給 Grok\n把這個模型訓練得更強\nGrok 目前最弱的地方就是 coding 嘛\n但是 Cursor 的用戶呢\n可以提供全世界最高品質的 coding 行為數據\n直接補上它最缺的那一塊\n然後呢就是這整個飛輪啟動的時候\n更強的這個 AI 模型呢就會帶來更大的需求\n你想要是今天 Grok 變得比 Opus 4.8 還要強\n比 GPT-5.5 還要更強的時候\n再搭上 Cursor 的 IDE 呢\n就可以在軟體開發上面\n跟這個 Claude Code 還有 Codex 平行競爭\n然後 Cursor 的用戶呢在 Cursor 上面用 Grok\n也會用的比其他模型還要更多\n甚至還可以更省錢\n那用得多了之後呢\n自然這個數據也會越來越多\n那數據越來越多呢\n就可以繼續讓這個飛輪轉得更快\n等於是說呢可以帶動整體 Grok 在未來的需求\n也直接影響到 SpaceX 未來的現金流\n對於 SpaceX 來說這是一個非常重要的收購案\n這才是 Elon 真正想要買的東西\n不是 Cursor 的技術有多強啦\n而是它已經有\n每天超過 100 萬個用戶\n可以提供的這個數據護城河\n就像為什麼 Tesla 的自動駕駛這麼強\n因為車子是他們造的\n數據也是他們自己去收集的\n所有的駕駛員經歷這麼多年來累積\n好幾千億英里的這個真實駕駛數據\n駕駛的每一個動作每一個 feedback\n在每一個不同的場景\n都是珍貴的訓練數據\n這個數據的護城河呢\n不是用什麼模擬數據\n就可以蒙混過關的\n那這也是我認為為什麼啦\n總有一天呢我們全部人都會失業\n也是為什麼最終 AI 的模型呢會開始自我迭代\n因為人類的所作所為呢\n最終全部都會變成數據\n餵進去訓練這些 AI\n那當人類的行為已經不夠讓 AI 模型的迭代變得更好的時候呢\nAI 就會需要開始從 AI 自我行為所產生的這些數據\n去進行迭代\n我想那個時候應該就是所謂的 AGI 的時代\n也是 Anthropic 他們之前發的一篇文章裡面講到的場景\n當 AI 開始自我迭代的時候\n也就是 recursive self-improvement\n遞迴式的這個自我改進的時代\n想想還是非常的期待啦\n但是也是蠻可怕的\n那你可能心裡會有一個問號\n到時候人類會做什麼呢？\n我現在能夠想到的就是兩件事情\n第一件事情呢\n就是去做你真正自己想要做的事情\n你喜歡什麼就去學去做\n不用考慮說為了賺錢而去學什麼技能\n你做的所有事情呢\n都不是以賺錢為第一考量\n那第二個呢就是資產配置 asset allocation\n你要怎麼樣去管理你的資產\n要投資在哪裡\n我覺得這些會是\n未來普通人真正剩下來的工作啦\n好那說到投資呢\n最近美股呢也是一直在創新高\n那要怎麼樣去保護\n你長期的投資倉位呢\n適時的去做對沖\n我個人覺得最好的方法之一呢就是用 CFD\n我之前在影片裡面已經有介紹過 CFD\n期權還有反向 ETF 的一些比較\n大家有興趣的話可以去看一下\n在 Mitrade 上面呢可以做交易的不只是黃金\n還包含了原油美股 ETF 還有各大指數\n那用 CFD 最大的優勢呢\n我覺得就是可以做短期的對沖\n或者是說我要做短線的交易呢就會用 CFD\n至於期權的話呢我自己主要是用來賣 covered call\n然後就是 sell put 做一些長期的資產配置\n那 CFD 的優勢呢就是沒有期權那個複雜的時間價值\n所以在操作起來呢更簡單更容易\n你可以直接做多或是做空\n然後也可以設定槓桿\n再來就是 Mitrade 的出入金呢真的非常的方便\n你可以直接用 Apple Pay 信用卡入金\n像我這邊選入金 3 萬塊台幣的話\n它實際到帳的額度呢\n跟這個中間價換匯是差不多的\n而且你還可以用 USDT 或是 USDC 來入金\n或是直接美元電匯\n所以我自己長期投資啦\n還是會用美股的券商\n但是短期的交易跟操作呢會用到 Mitrade\n大家如果有興趣的話可以去看一下啦\n我也把連結呢\n還有新用戶開戶的優惠獎勵呢\n全部都放在影片底下的資訊欄\n如果你對交易感興趣的話呢\n也歡迎來加入我的 TG 群組\n在那邊呢\n我有提供很多\n完全免費的交易學習資源\n好啦那希望今天這支影片呢\n有幫助到你\n我覺得這些資訊呢最大價值是\n讓我們了解到說現在整體 AI 模型市場的一個發展方向\n還有它未來的一個走向\nCursor 這個 IDE 如果今天沒有被收購的話\n我覺得它本身的價值呢\n是永遠不到 600 億美金的\n但是因為加入 SpaceX\n我相信它長遠未來的價值呢\n是遠遠超過這個收購價的\n這也給 Grok 一個\n可以直接跟 OpenAI 還有 Anthropic 對幹的\n一個機會\n所以說我自己也是長期的看好 SpaceX\n也打算在接下來下跌的這個趨勢裡面\n慢慢去建倉\n好那也歡迎你在影片底下留言\n分享你對這個收購案的看法\n你會不會因此呢更想要投資 SpaceX？\nOK 那我們下次見囉",
+    "segments": [
+      {
+        "index": 0,
+        "text": "哈囉大家好我是 Terry"
+      },
+      {
+        "index": 1,
+        "text": "今天這支影片呢要跟大家聊一下"
+      },
+      {
+        "index": 2,
+        "text": "為什麼 SpaceX 要收購 Cursor"
+      },
+      {
+        "index": 3,
+        "text": "而且這個收購金額呢"
+      },
+      {
+        "index": 4,
+        "text": "高達 600 億美金"
+      },
+      {
+        "index": 5,
+        "text": "也是目前為止呢史上最大一筆"
+      },
+      {
+        "index": 6,
+        "text": "創投支持的新創公司的收購案"
+      },
+      {
+        "index": 7,
+        "text": "你要知道"
+      },
+      {
+        "index": 8,
+        "text": "當年 Facebook 是花了 220 億美金去收購 WhatsApp"
+      },
+      {
+        "index": 9,
+        "text": "那個時候呢也是創了紀錄"
+      },
+      {
+        "index": 10,
+        "text": "那現在這一次呢是三倍的價格"
+      },
+      {
+        "index": 11,
+        "text": "而且我認為"
+      },
+      {
+        "index": 12,
+        "text": "這個收購案呢是非常非常的重要"
+      },
+      {
+        "index": 13,
+        "text": "特別是如果你以後想要投資 SpaceX"
+      },
+      {
+        "index": 14,
+        "text": "或者是說你現在已經是 SpaceX 的股東"
+      },
+      {
+        "index": 15,
+        "text": "你一定要看完這支影片"
+      },
+      {
+        "index": 16,
+        "text": "好那首先我們先來講一下 Cursor 是什麼呢"
+      },
+      {
+        "index": 17,
+        "text": "Cursor 它是一個編碼器"
+      },
+      {
+        "index": 18,
+        "text": "在 Tech 工作的網友應該都知道"
+      },
+      {
+        "index": 19,
+        "text": "它是從微軟開發的那個編碼器"
+      },
+      {
+        "index": 20,
+        "text": "VS Code fork 出來的一個"
+      },
+      {
+        "index": 21,
+        "text": "讓你可以用自然語言呢去快速的生成"
+      },
+      {
+        "index": 22,
+        "text": "跟編輯程式碼的一個工具"
+      },
+      {
+        "index": 23,
+        "text": "你要知道在 Claude Code 跟 Codex 出來之前呢"
+      },
+      {
+        "index": 24,
+        "text": "Cursor 可是最早把 multi-agent 的體驗"
+      },
+      {
+        "index": 25,
+        "text": "做到成熟"
+      },
+      {
+        "index": 26,
+        "text": "而且最容易使用的 IDE 工具"
+      },
+      {
+        "index": 27,
+        "text": "讓開發者能真正像管理團隊一樣"
+      },
+      {
+        "index": 28,
+        "text": "用一群 AI 呢去做開發的神級別產品"
+      },
+      {
+        "index": 29,
+        "text": "但是也因為 Claude Code 跟 Codex 的產品出來"
+      },
+      {
+        "index": 30,
+        "text": "最後讓 Cursor 的這個市佔率慢慢流失"
+      },
+      {
+        "index": 31,
+        "text": "OK 那為什麼 SpaceX"
+      },
+      {
+        "index": 32,
+        "text": "一家火箭公司呢要花 600 億美金"
+      },
+      {
+        "index": 33,
+        "text": "收購一個給軟體工程師使用的工具"
+      },
+      {
+        "index": 34,
+        "text": "大家不是現在都在說 SaaS 已經死掉了"
+      },
+      {
+        "index": 35,
+        "text": "不是應該每個人都可以 vibe coding 一個 Cursor 出來"
+      },
+      {
+        "index": 36,
+        "text": "那為什麼 SpaceX 還要花這麼多錢去買呢？"
+      },
+      {
+        "index": 37,
+        "text": "那在講為什麼要收購之前呢"
+      },
+      {
+        "index": 38,
+        "text": "我們先去看一下數字"
+      },
+      {
+        "index": 39,
+        "text": "SpaceX 是不是買貴了？"
+      },
+      {
+        "index": 40,
+        "text": "就根據現在最新的一個資訊啦"
+      },
+      {
+        "index": 41,
+        "text": "Cursor 在今年 6 月份他們的 ARR 大概是有到 40 億美金左右"
+      },
+      {
+        "index": 42,
+        "text": "所以說你要以 600 億去收購的話"
+      },
+      {
+        "index": 43,
+        "text": "大概就是 revenue 15 倍的價格"
+      },
+      {
+        "index": 44,
+        "text": "相比之下啦 2026 年的時候 Google 收購了 Wiz"
+      },
+      {
+        "index": 45,
+        "text": "是以 32 倍的 revenue 去收購的"
+      },
+      {
+        "index": 46,
+        "text": "然後 Salesforce 呢 CRM 在 2020 年的時候以"
+      },
+      {
+        "index": 47,
+        "text": "這個 26 倍的 revenue 去收購 Slack"
+      },
+      {
+        "index": 48,
+        "text": "然後 Microsoft 微軟是在 2016 年的時候呢"
+      },
+      {
+        "index": 49,
+        "text": "收購 LinkedIn"
+      },
+      {
+        "index": 50,
+        "text": "當時的 revenue 是 9 倍左右"
+      },
+      {
+        "index": 51,
+        "text": "然後微軟呢是在 2018 年的時候收購 GitHub"
+      },
+      {
+        "index": 52,
+        "text": "那個時候是大概 30 倍左右的 revenue"
+      },
+      {
+        "index": 53,
+        "text": "那以這些過往大型的"
+      },
+      {
+        "index": 54,
+        "text": "這個新創公司收購案"
+      },
+      {
+        "index": 55,
+        "text": "去看的話"
+      },
+      {
+        "index": 56,
+        "text": "其實不算貴"
+      },
+      {
+        "index": 57,
+        "text": "而且以現在這麼熱門的 AI 產業收購案去看的話"
+      },
+      {
+        "index": 58,
+        "text": "這個收購案其實真的不算貴"
+      },
+      {
+        "index": 59,
+        "text": "而且重點是這個收購案"
+      },
+      {
+        "index": 60,
+        "text": "它收購的方式可屌了"
+      },
+      {
+        "index": 61,
+        "text": "特別是選在 SpaceX 剛 IPO 之後呢"
+      },
+      {
+        "index": 62,
+        "text": "用全數的 SpaceX 股權去收購"
+      },
+      {
+        "index": 63,
+        "text": "什麼意思呢？"
+      },
+      {
+        "index": 64,
+        "text": "這個 600 億美金的價格呢"
+      },
+      {
+        "index": 65,
+        "text": "會以 100% 股權的方式去購買"
+      },
+      {
+        "index": 66,
+        "text": "它的算法就是按照交割日的前七天"
+      },
+      {
+        "index": 67,
+        "text": "SpaceX 股價的這個加權平均值去算"
+      },
+      {
+        "index": 68,
+        "text": "也就是說假如 SpaceX 的市值呢"
+      },
+      {
+        "index": 69,
+        "text": "在交割的時候還是一樣"
+      },
+      {
+        "index": 70,
+        "text": "維持現在大概 2.5 trillion 的市值"
+      },
+      {
+        "index": 71,
+        "text": "然後你也知道我們之前影片有講"
+      },
+      {
+        "index": 72,
+        "text": "SpaceX IPO 的市值呢是 1.77 trillion"
+      },
+      {
+        "index": 73,
+        "text": "所以這中間啊從 IPO 到現在也才幾天的時間呢"
+      },
+      {
+        "index": 74,
+        "text": "已經賺了大概有 730 billion 的這個溢價"
+      },
+      {
+        "index": 75,
+        "text": "那這個 730 billion 的溢價呢"
+      },
+      {
+        "index": 76,
+        "text": "單純就是市場把 SpaceX 捧上天賺到的這個錢"
+      },
+      {
+        "index": 77,
+        "text": "而他們去買 Cursor 呢只需要花 60 billion"
+      },
+      {
+        "index": 78,
+        "text": "也就是說這個溢價的 8% 而已"
+      },
+      {
+        "index": 79,
+        "text": "那換句話說呢 Elon 其實就只是把這個溢價中的一小部分"
+      },
+      {
+        "index": 80,
+        "text": "8% 拿去買 Cursor"
+      },
+      {
+        "index": 81,
+        "text": "基本上這個 600 億美金呢"
+      },
+      {
+        "index": 82,
+        "text": "對 SpaceX 的股東整體股東來說"
+      },
+      {
+        "index": 83,
+        "text": "犧牲是非常非常的小的"
+      },
+      {
+        "index": 84,
+        "text": "你可以想像它基本上"
+      },
+      {
+        "index": 85,
+        "text": "差不多等同於一個免費送來的東西"
+      },
+      {
+        "index": 86,
+        "text": "假如股價能夠維持的話啦"
+      },
+      {
+        "index": 87,
+        "text": "那 Elon 現在要做的事情呢其實很簡單"
+      },
+      {
+        "index": 88,
+        "text": "就是把 SpaceX 的股價繼續維持著"
+      },
+      {
+        "index": 89,
+        "text": "或者是說讓它再創新高"
+      },
+      {
+        "index": 90,
+        "text": "這個收購案呢就會越來越劃算"
+      },
+      {
+        "index": 91,
+        "text": "因為只要 SpaceX 的股價繼續往上漲"
+      },
+      {
+        "index": 92,
+        "text": "那 Cursor 的收購呢就會稀釋更少的這個 SpaceX 的股權"
+      },
+      {
+        "index": 93,
+        "text": "這也是為什麼我覺得 Elon 這個收購案呢"
+      },
+      {
+        "index": 94,
+        "text": "選在這個時間點"
+      },
+      {
+        "index": 95,
+        "text": "真的是非常屌的一個 move"
+      },
+      {
+        "index": 96,
+        "text": "等於是直接讓市場幫你買單"
+      },
+      {
+        "index": 97,
+        "text": "你自己不用掏任何一毛錢"
+      },
+      {
+        "index": 98,
+        "text": "那除了錢之外呢"
+      },
+      {
+        "index": 99,
+        "text": "最重要的就是 SpaceX 收購 Cursor 的目的"
+      },
+      {
+        "index": 100,
+        "text": "我們都知道 SpaceX 擁有全世界最屌的 AI cluster 算力"
+      },
+      {
+        "index": 101,
+        "text": "但是他們的 AI 模型 Grok 一直以來"
+      },
+      {
+        "index": 102,
+        "text": "都不如 Anthropic 跟 OpenAI 的模型"
+      },
+      {
+        "index": 103,
+        "text": "Grok 的 coding 能力呢一直以來都是公認比較偏弱的"
+      },
+      {
+        "index": 104,
+        "text": "所以說它在 frontier model 裡面呢"
+      },
+      {
+        "index": 105,
+        "text": "變現能力也是最差的一個"
+      },
+      {
+        "index": 106,
+        "text": "他們沒有像 Claude Code 跟 Codex 這樣的平台"
+      },
+      {
+        "index": 107,
+        "text": "可以讓開發者去使用"
+      },
+      {
+        "index": 108,
+        "text": "當然也不是沒有努力的去嘗試啦"
+      },
+      {
+        "index": 109,
+        "text": "有一個東西叫做 Grok Build"
+      },
+      {
+        "index": 110,
+        "text": "那這個東西呢也是剛 launch 不久啦"
+      },
+      {
+        "index": 111,
+        "text": "但是好像也沒有什麼人在用"
+      },
+      {
+        "index": 112,
+        "text": "我猜就是 Elon Musk 他自己的公司員工在用而已"
+      },
+      {
+        "index": 113,
+        "text": "那要怎麼樣讓 Grok 可以超越 Claude 跟 OpenAI 呢？"
+      },
+      {
+        "index": 114,
+        "text": "目前最關鍵也是最後一片拼圖呢"
+      },
+      {
+        "index": 115,
+        "text": "就是 Cursor"
+      },
+      {
+        "index": 116,
+        "text": "你可以透過這一次的收購案看出來"
+      },
+      {
+        "index": 117,
+        "text": "現在這個時代呢"
+      },
+      {
+        "index": 118,
+        "text": "除了算力之外"
+      },
+      {
+        "index": 119,
+        "text": "記得 SpaceX 擁有全世界最頂尖的算力 clusters"
+      },
+      {
+        "index": 120,
+        "text": "他們有超過 33 萬張的 Nvidia GPU"
+      },
+      {
+        "index": 121,
+        "text": "算力呢是多到可以租給 Google 跟 Anthropic"
+      },
+      {
+        "index": 122,
+        "text": "所以代表說在這個時代呢"
+      },
+      {
+        "index": 123,
+        "text": "有算力還是不夠的"
+      },
+      {
+        "index": 124,
+        "text": "一個頂尖的 AI 模型呢"
+      },
+      {
+        "index": 125,
+        "text": "需要的是"
+      },
+      {
+        "index": 126,
+        "text": "工作流程中真實的那個互動數據"
+      },
+      {
+        "index": 127,
+        "text": "這個才是 Grok 能夠超越 Anthropic 跟 OpenAI"
+      },
+      {
+        "index": 128,
+        "text": "最後也是最重要的一個拼圖"
+      },
+      {
+        "index": 129,
+        "text": "他們需要把現有的這個算力"
+      },
+      {
+        "index": 130,
+        "text": "轉換成數據的這個飛輪給建起來"
+      },
+      {
+        "index": 131,
+        "text": "等一下我會講這個飛輪是什麼"
+      },
+      {
+        "index": 132,
+        "text": "我先說一下 Cursor 之前呢就已經有跟 SpaceX 簽約"
+      },
+      {
+        "index": 133,
+        "text": "去租他們的算力"
+      },
+      {
+        "index": 134,
+        "text": "然後由 SpaceX 提供給他們 GPU 的容量"
+      },
+      {
+        "index": 135,
+        "text": "而且其實他們也已經有合作"
+      },
+      {
+        "index": 136,
+        "text": "一起去訓練 Grok 的模型迭代"
+      },
+      {
+        "index": 137,
+        "text": "然後 SpaceX 發現這個合作的方式呢"
+      },
+      {
+        "index": 138,
+        "text": "非常的有效"
+      },
+      {
+        "index": 139,
+        "text": "你如果沒有 Cursor 這些真實工作流的數據的話"
+      },
+      {
+        "index": 140,
+        "text": "你是很難把模型迭代到更好的"
+      },
+      {
+        "index": 141,
+        "text": "那這個飛輪"
+      },
+      {
+        "index": 142,
+        "text": "到底要怎麼樣才開始轉起來呢？"
+      },
+      {
+        "index": 143,
+        "text": "第一個部分呢"
+      },
+      {
+        "index": 144,
+        "text": "就是從算力到工作流的"
+      },
+      {
+        "index": 145,
+        "text": "這個真實使用量"
+      },
+      {
+        "index": 146,
+        "text": "SpaceX 它擁有全世界最頂尖的算力"
+      },
+      {
+        "index": 147,
+        "text": "那現在 Cursor 一進來呢"
+      },
+      {
+        "index": 148,
+        "text": "等於是直接幫 SpaceX 塞了一個超級大"
+      },
+      {
+        "index": 149,
+        "text": "而且付費意願超高的用戶進去"
+      },
+      {
+        "index": 150,
+        "text": "現在有超過 100 萬個開發者"
+      },
+      {
+        "index": 151,
+        "text": "每天在 Cursor 上面跑 inference 跑 agent"
+      },
+      {
+        "index": 152,
+        "text": "SpaceX 可以直接把他們的 clusters 算力的使用率呢"
+      },
+      {
+        "index": 153,
+        "text": "直接拉滿"
+      },
+      {
+        "index": 154,
+        "text": "好那當算力給 Cursor 這些無限的燃料之後呢"
+      },
+      {
+        "index": 155,
+        "text": "這些開發者在 Cursor 上面所有做的事情"
+      },
+      {
+        "index": 156,
+        "text": "不只是單純的寫程式而已"
+      },
+      {
+        "index": 157,
+        "text": "如果你有用過 Cursor 的話應該知道"
+      },
+      {
+        "index": 158,
+        "text": "AI 給你一個修改的建議"
+      },
+      {
+        "index": 159,
+        "text": "你要按 accept 或是 reject？"
+      },
+      {
+        "index": 160,
+        "text": "然後你怎麼去改它生成的 code？"
+      },
+      {
+        "index": 161,
+        "text": "你在 debug 的時候怎麼去一步一步 trace 下去的？"
+      },
+      {
+        "index": 162,
+        "text": "你在一個 monorepo 的 project 裡面怎麼去跳來跳去的？"
+      },
+      {
+        "index": 163,
+        "text": "你都用了哪些 tools 怎麼去 switch context？"
+      },
+      {
+        "index": 164,
+        "text": "你怎麼去 set up 你的 agentic workflow？"
+      },
+      {
+        "index": 165,
+        "text": "這些數據呢"
+      },
+      {
+        "index": 166,
+        "text": "跟你去 GitHub 上面爬一些 open source 的 code"
+      },
+      {
+        "index": 167,
+        "text": "是完全不同等級的"
+      },
+      {
+        "index": 168,
+        "text": "GitHub 還有 Stack Overflow 上面"
+      },
+      {
+        "index": 169,
+        "text": "那些的所有代碼呢"
+      },
+      {
+        "index": 170,
+        "text": "叫做靜態的程式碼"
+      },
+      {
+        "index": 171,
+        "text": "那些數據呢全世界每一個做 AI 模型的公司呢"
+      },
+      {
+        "index": 172,
+        "text": "都可以爬得到"
+      },
+      {
+        "index": 173,
+        "text": "大家手上都有這些免費的資源"
+      },
+      {
+        "index": 174,
+        "text": "所以它一點都不稀缺"
+      },
+      {
+        "index": 175,
+        "text": "但是 Cursor 能夠給到的是動態的行為軌跡"
+      },
+      {
+        "index": 176,
+        "text": "是一個真實的工程師"
+      },
+      {
+        "index": 177,
+        "text": "在一個真實的環境下"
+      },
+      {
+        "index": 178,
+        "text": "真正的去告訴這個模型說"
+      },
+      {
+        "index": 179,
+        "text": "你這個答案寫的是對的"
+      },
+      {
+        "index": 180,
+        "text": "或者說這邊是錯的"
+      },
+      {
+        "index": 181,
+        "text": "或是這個可以這樣做更好"
+      },
+      {
+        "index": 182,
+        "text": "那這些所有的行為數據呢"
+      },
+      {
+        "index": 183,
+        "text": "就是一個超大的 label data"
+      },
+      {
+        "index": 184,
+        "text": "你可以想像"
+      },
+      {
+        "index": 185,
+        "text": "等於是每天有超過 100 萬個人呢"
+      },
+      {
+        "index": 186,
+        "text": "不停的在幫 SpaceX"
+      },
+      {
+        "index": 187,
+        "text": "去做 reinforcement learning"
+      },
+      {
+        "index": 188,
+        "text": "by human feedback"
+      },
+      {
+        "index": 189,
+        "text": "這個才是真正稀缺的價值"
+      },
+      {
+        "index": 190,
+        "text": "就像為什麼現在很多 big tech 公司呢"
+      },
+      {
+        "index": 191,
+        "text": "開始 track 員工的這個 prompt"
+      },
+      {
+        "index": 192,
+        "text": "收集他們跟 AI 的這個 feedback loop"
+      },
+      {
+        "index": 193,
+        "text": "還有 interaction"
+      },
+      {
+        "index": 194,
+        "text": "他們想要員工 document 所有他們的工作流程"
+      },
+      {
+        "index": 195,
+        "text": "因為如果你想要訓練一個更好的 AI 模型"
+      },
+      {
+        "index": 196,
+        "text": "你不可能只靠那些靜態的程式碼數據"
+      },
+      {
+        "index": 197,
+        "text": "那些呢是上一個時代啦"
+      },
+      {
+        "index": 198,
+        "text": "我們把 ChatGPT 打開之後呢"
+      },
+      {
+        "index": 199,
+        "text": "給它一個 prompt"
+      },
+      {
+        "index": 200,
+        "text": "然後它就把我們的 code 代碼給寫出來的一個流程"
+      },
+      {
+        "index": 201,
+        "text": "那現在這個時代需要的是什麼呢"
+      },
+      {
+        "index": 202,
+        "text": "現在這個時代需要的是 AI agent 之間密切的合作"
+      },
+      {
+        "index": 203,
+        "text": "就是 agent 它怎麼檢查出它的這個 sub-agent"
+      },
+      {
+        "index": 204,
+        "text": "有沒有在幻覺"
+      },
+      {
+        "index": 205,
+        "text": "有沒有在做錯的事情"
+      },
+      {
+        "index": 206,
+        "text": "那需要靠的就是這些數據"
+      },
+      {
+        "index": 207,
+        "text": "工程師跟 AI 一起工作"
+      },
+      {
+        "index": 208,
+        "text": "還有流程的這些所有的真實數據"
+      },
+      {
+        "index": 209,
+        "text": "拿去訓練"
+      },
+      {
+        "index": 210,
+        "text": "那當 Cursor 拿到這些數據之後呢"
+      },
+      {
+        "index": 211,
+        "text": "就可以回去餵給 Grok"
+      },
+      {
+        "index": 212,
+        "text": "把這個模型訓練得更強"
+      },
+      {
+        "index": 213,
+        "text": "Grok 目前最弱的地方就是 coding 嘛"
+      },
+      {
+        "index": 214,
+        "text": "但是 Cursor 的用戶呢"
+      },
+      {
+        "index": 215,
+        "text": "可以提供全世界最高品質的 coding 行為數據"
+      },
+      {
+        "index": 216,
+        "text": "直接補上它最缺的那一塊"
+      },
+      {
+        "index": 217,
+        "text": "然後呢就是這整個飛輪啟動的時候"
+      },
+      {
+        "index": 218,
+        "text": "更強的這個 AI 模型呢就會帶來更大的需求"
+      },
+      {
+        "index": 219,
+        "text": "你想要是今天 Grok 變得比 Opus 4.8 還要強"
+      },
+      {
+        "index": 220,
+        "text": "比 GPT-5.5 還要更強的時候"
+      },
+      {
+        "index": 221,
+        "text": "再搭上 Cursor 的 IDE 呢"
+      },
+      {
+        "index": 222,
+        "text": "就可以在軟體開發上面"
+      },
+      {
+        "index": 223,
+        "text": "跟這個 Claude Code 還有 Codex 平行競爭"
+      },
+      {
+        "index": 224,
+        "text": "然後 Cursor 的用戶呢在 Cursor 上面用 Grok"
+      },
+      {
+        "index": 225,
+        "text": "也會用的比其他模型還要更多"
+      },
+      {
+        "index": 226,
+        "text": "甚至還可以更省錢"
+      },
+      {
+        "index": 227,
+        "text": "那用得多了之後呢"
+      },
+      {
+        "index": 228,
+        "text": "自然這個數據也會越來越多"
+      },
+      {
+        "index": 229,
+        "text": "那數據越來越多呢"
+      },
+      {
+        "index": 230,
+        "text": "就可以繼續讓這個飛輪轉得更快"
+      },
+      {
+        "index": 231,
+        "text": "等於是說呢可以帶動整體 Grok 在未來的需求"
+      },
+      {
+        "index": 232,
+        "text": "也直接影響到 SpaceX 未來的現金流"
+      },
+      {
+        "index": 233,
+        "text": "對於 SpaceX 來說這是一個非常重要的收購案"
+      },
+      {
+        "index": 234,
+        "text": "這才是 Elon 真正想要買的東西"
+      },
+      {
+        "index": 235,
+        "text": "不是 Cursor 的技術有多強啦"
+      },
+      {
+        "index": 236,
+        "text": "而是它已經有"
+      },
+      {
+        "index": 237,
+        "text": "每天超過 100 萬個用戶"
+      },
+      {
+        "index": 238,
+        "text": "可以提供的這個數據護城河"
+      },
+      {
+        "index": 239,
+        "text": "就像為什麼 Tesla 的自動駕駛這麼強"
+      },
+      {
+        "index": 240,
+        "text": "因為車子是他們造的"
+      },
+      {
+        "index": 241,
+        "text": "數據也是他們自己去收集的"
+      },
+      {
+        "index": 242,
+        "text": "所有的駕駛員經歷這麼多年來累積"
+      },
+      {
+        "index": 243,
+        "text": "好幾千億英里的這個真實駕駛數據"
+      },
+      {
+        "index": 244,
+        "text": "駕駛的每一個動作每一個 feedback"
+      },
+      {
+        "index": 245,
+        "text": "在每一個不同的場景"
+      },
+      {
+        "index": 246,
+        "text": "都是珍貴的訓練數據"
+      },
+      {
+        "index": 247,
+        "text": "這個數據的護城河呢"
+      },
+      {
+        "index": 248,
+        "text": "不是用什麼模擬數據"
+      },
+      {
+        "index": 249,
+        "text": "就可以蒙混過關的"
+      },
+      {
+        "index": 250,
+        "text": "那這也是我認為為什麼啦"
+      },
+      {
+        "index": 251,
+        "text": "總有一天呢我們全部人都會失業"
+      },
+      {
+        "index": 252,
+        "text": "也是為什麼最終 AI 的模型呢會開始自我迭代"
+      },
+      {
+        "index": 253,
+        "text": "因為人類的所作所為呢"
+      },
+      {
+        "index": 254,
+        "text": "最終全部都會變成數據"
+      },
+      {
+        "index": 255,
+        "text": "餵進去訓練這些 AI"
+      },
+      {
+        "index": 256,
+        "text": "那當人類的行為已經不夠讓 AI 模型的迭代變得更好的時候呢"
+      },
+      {
+        "index": 257,
+        "text": "AI 就會需要開始從 AI 自我行為所產生的這些數據"
+      },
+      {
+        "index": 258,
+        "text": "去進行迭代"
+      },
+      {
+        "index": 259,
+        "text": "我想那個時候應該就是所謂的 AGI 的時代"
+      },
+      {
+        "index": 260,
+        "text": "也是 Anthropic 他們之前發的一篇文章裡面講到的場景"
+      },
+      {
+        "index": 261,
+        "text": "當 AI 開始自我迭代的時候"
+      },
+      {
+        "index": 262,
+        "text": "也就是 recursive self-improvement"
+      },
+      {
+        "index": 263,
+        "text": "遞迴式的這個自我改進的時代"
+      },
+      {
+        "index": 264,
+        "text": "想想還是非常的期待啦"
+      },
+      {
+        "index": 265,
+        "text": "但是也是蠻可怕的"
+      },
+      {
+        "index": 266,
+        "text": "那你可能心裡會有一個問號"
+      },
+      {
+        "index": 267,
+        "text": "到時候人類會做什麼呢？"
+      },
+      {
+        "index": 268,
+        "text": "我現在能夠想到的就是兩件事情"
+      },
+      {
+        "index": 269,
+        "text": "第一件事情呢"
+      },
+      {
+        "index": 270,
+        "text": "就是去做你真正自己想要做的事情"
+      },
+      {
+        "index": 271,
+        "text": "你喜歡什麼就去學去做"
+      },
+      {
+        "index": 272,
+        "text": "不用考慮說為了賺錢而去學什麼技能"
+      },
+      {
+        "index": 273,
+        "text": "你做的所有事情呢"
+      },
+      {
+        "index": 274,
+        "text": "都不是以賺錢為第一考量"
+      },
+      {
+        "index": 275,
+        "text": "那第二個呢就是資產配置 asset allocation"
+      },
+      {
+        "index": 276,
+        "text": "你要怎麼樣去管理你的資產"
+      },
+      {
+        "index": 277,
+        "text": "要投資在哪裡"
+      },
+      {
+        "index": 278,
+        "text": "我覺得這些會是"
+      },
+      {
+        "index": 279,
+        "text": "未來普通人真正剩下來的工作啦"
+      },
+      {
+        "index": 280,
+        "text": "好那說到投資呢"
+      },
+      {
+        "index": 281,
+        "text": "最近美股呢也是一直在創新高"
+      },
+      {
+        "index": 282,
+        "text": "那要怎麼樣去保護"
+      },
+      {
+        "index": 283,
+        "text": "你長期的投資倉位呢"
+      },
+      {
+        "index": 284,
+        "text": "適時的去做對沖"
+      },
+      {
+        "index": 285,
+        "text": "我個人覺得最好的方法之一呢就是用 CFD"
+      },
+      {
+        "index": 286,
+        "text": "我之前在影片裡面已經有介紹過 CFD"
+      },
+      {
+        "index": 287,
+        "text": "期權還有反向 ETF 的一些比較"
+      },
+      {
+        "index": 288,
+        "text": "大家有興趣的話可以去看一下"
+      },
+      {
+        "index": 289,
+        "text": "在 Mitrade 上面呢可以做交易的不只是黃金"
+      },
+      {
+        "index": 290,
+        "text": "還包含了原油美股 ETF 還有各大指數"
+      },
+      {
+        "index": 291,
+        "text": "那用 CFD 最大的優勢呢"
+      },
+      {
+        "index": 292,
+        "text": "我覺得就是可以做短期的對沖"
+      },
+      {
+        "index": 293,
+        "text": "或者是說我要做短線的交易呢就會用 CFD"
+      },
+      {
+        "index": 294,
+        "text": "至於期權的話呢我自己主要是用來賣 covered call"
+      },
+      {
+        "index": 295,
+        "text": "然後就是 sell put 做一些長期的資產配置"
+      },
+      {
+        "index": 296,
+        "text": "那 CFD 的優勢呢就是沒有期權那個複雜的時間價值"
+      },
+      {
+        "index": 297,
+        "text": "所以在操作起來呢更簡單更容易"
+      },
+      {
+        "index": 298,
+        "text": "你可以直接做多或是做空"
+      },
+      {
+        "index": 299,
+        "text": "然後也可以設定槓桿"
+      },
+      {
+        "index": 300,
+        "text": "再來就是 Mitrade 的出入金呢真的非常的方便"
+      },
+      {
+        "index": 301,
+        "text": "你可以直接用 Apple Pay 信用卡入金"
+      },
+      {
+        "index": 302,
+        "text": "像我這邊選入金 3 萬塊台幣的話"
+      },
+      {
+        "index": 303,
+        "text": "它實際到帳的額度呢"
+      },
+      {
+        "index": 304,
+        "text": "跟這個中間價換匯是差不多的"
+      },
+      {
+        "index": 305,
+        "text": "而且你還可以用 USDT 或是 USDC 來入金"
+      },
+      {
+        "index": 306,
+        "text": "或是直接美元電匯"
+      },
+      {
+        "index": 307,
+        "text": "所以我自己長期投資啦"
+      },
+      {
+        "index": 308,
+        "text": "還是會用美股的券商"
+      },
+      {
+        "index": 309,
+        "text": "但是短期的交易跟操作呢會用到 Mitrade"
+      },
+      {
+        "index": 310,
+        "text": "大家如果有興趣的話可以去看一下啦"
+      },
+      {
+        "index": 311,
+        "text": "我也把連結呢"
+      },
+      {
+        "index": 312,
+        "text": "還有新用戶開戶的優惠獎勵呢"
+      },
+      {
+        "index": 313,
+        "text": "全部都放在影片底下的資訊欄"
+      },
+      {
+        "index": 314,
+        "text": "如果你對交易感興趣的話呢"
+      },
+      {
+        "index": 315,
+        "text": "也歡迎來加入我的 TG 群組"
+      },
+      {
+        "index": 316,
+        "text": "在那邊呢"
+      },
+      {
+        "index": 317,
+        "text": "我有提供很多"
+      },
+      {
+        "index": 318,
+        "text": "完全免費的交易學習資源"
+      },
+      {
+        "index": 319,
+        "text": "好啦那希望今天這支影片呢"
+      },
+      {
+        "index": 320,
+        "text": "有幫助到你"
+      },
+      {
+        "index": 321,
+        "text": "我覺得這些資訊呢最大價值是"
+      },
+      {
+        "index": 322,
+        "text": "讓我們了解到說現在整體 AI 模型市場的一個發展方向"
+      },
+      {
+        "index": 323,
+        "text": "還有它未來的一個走向"
+      },
+      {
+        "index": 324,
+        "text": "Cursor 這個 IDE 如果今天沒有被收購的話"
+      },
+      {
+        "index": 325,
+        "text": "我覺得它本身的價值呢"
+      },
+      {
+        "index": 326,
+        "text": "是永遠不到 600 億美金的"
+      },
+      {
+        "index": 327,
+        "text": "但是因為加入 SpaceX"
+      },
+      {
+        "index": 328,
+        "text": "我相信它長遠未來的價值呢"
+      },
+      {
+        "index": 329,
+        "text": "是遠遠超過這個收購價的"
+      },
+      {
+        "index": 330,
+        "text": "這也給 Grok 一個"
+      },
+      {
+        "index": 331,
+        "text": "可以直接跟 OpenAI 還有 Anthropic 對幹的"
+      },
+      {
+        "index": 332,
+        "text": "一個機會"
+      },
+      {
+        "index": 333,
+        "text": "所以說我自己也是長期的看好 SpaceX"
+      },
+      {
+        "index": 334,
+        "text": "也打算在接下來下跌的這個趨勢裡面"
+      },
+      {
+        "index": 335,
+        "text": "慢慢去建倉"
+      },
+      {
+        "index": 336,
+        "text": "好那也歡迎你在影片底下留言"
+      },
+      {
+        "index": 337,
+        "text": "分享你對這個收購案的看法"
+      },
+      {
+        "index": 338,
+        "text": "你會不會因此呢更想要投資 SpaceX？"
+      },
+      {
+        "index": 339,
+        "text": "OK 那我們下次見囉"
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "transcript": "哈囉大家好我是 Terry\n今天這支影片呢要跟大家聊一下\n為什麼 SpaceX 要收購 Cursor\n而且這個收購金額呢\n高達 600 億美金\n也是目前為止呢史上最大一筆\n創投支持的新創公司的收購案\n你要知道\n當年 Facebook 是花了 220 億美金去收購 WhatsApp\n那個時候呢也是創了紀錄\n那現在這一次呢是三倍的價格\n而且我認為\n這個收購案呢是非常非常的重要\n特別是如果你以後想要投資 SpaceX\n或者是說你現在已經是 SpaceX 的股東\n你一定要看完這支影片\n好那首先我們先來講一下 Cursor 是什麼呢\nCursor 它是一個編碼器\n在 Tech 工作的網友應該都知道\n它是從微軟開發的那個編碼器\nVS Code fork 出來的一個\n讓你可以用自然語言呢去快速的生成\n跟編輯程式碼的一個工具\n你要知道在 Claude Code 跟 Codex 出來之前呢\nCursor 可是最早把 multi-agent 的體驗\n做到成熟\n而且最容易使用的 IDE 工具\n讓開發者能真正像管理團隊一樣\n用一群 AI 呢去做開發的神級別產品\n但是也因為 Claude Code 跟 Codex 的產品出來\n最後讓 Cursor 的這個市佔率慢慢流失\nOK 那為什麼 SpaceX\n一家火箭公司呢要花 600 億美金\n收購一個給軟體工程師使用的工具\n大家不是現在都在說 SaaS 已經死掉了\n不是應該每個人都可以 vibe coding 一個 Cursor 出來\n那為什麼 SpaceX 還要花這麼多錢去買呢？\n那在講為什麼要收購之前呢\n我們先去看一下數字\nSpaceX 是不是買貴了？\n就根據現在最新的一個資訊啦\nCursor 在今年 6 月份他們的 ARR 大概是有到 40 億美金左右\n所以說你要以 600 億去收購的話\n大概就是 revenue 15 倍的價格\n相比之下啦 2026 年的時候 Google 收購了 Wiz\n是以 32 倍的 revenue 去收購的\n然後 Salesforce 呢 CRM 在 2020 年的時候以\n這個 26 倍的 revenue 去收購 Slack\n然後 Microsoft 微軟是在 2016 年的時候呢\n收購 LinkedIn\n當時的 revenue 是 9 倍左右\n然後微軟呢是在 2018 年的時候收購 GitHub\n那個時候是大概 30 倍左右的 revenue\n那以這些過往大型的\n這個新創公司收購案\n去看的話\n其實不算貴\n而且以現在這麼熱門的 AI 產業收購案去看的話\n這個收購案其實真的不算貴\n而且重點是這個收購案\n它收購的方式可屌了\n特別是選在 SpaceX 剛 IPO 之後呢\n用全數的 SpaceX 股權去收購\n什麼意思呢？\n這個 600 億美金的價格呢\n會以 100% 股權的方式去購買\n它的算法就是按照交割日的前七天\nSpaceX 股價的這個加權平均值去算\n也就是說假如 SpaceX 的市值呢\n在交割的時候還是一樣\n維持現在大概 2.5 trillion 的市值\n然後你也知道我們之前影片有講\nSpaceX IPO 的市值呢是 1.77 trillion\n所以這中間啊從 IPO 到現在也才幾天的時間呢\n已經賺了大概有 730 billion 的這個溢價\n那這個 730 billion 的溢價呢\n單純就是市場把 SpaceX 捧上天賺到的這個錢\n而他們去買 Cursor 呢只需要花 60 billion\n也就是說這個溢價的 8% 而已\n那換句話說呢 Elon 其實就只是把這個溢價中的一小部分\n8% 拿去買 Cursor\n基本上這個 600 億美金呢\n對 SpaceX 的股東整體股東來說\n犧牲是非常非常的小的\n你可以想像它基本上\n差不多等同於一個免費送來的東西\n假如股價能夠維持的話啦\n那 Elon 現在要做的事情呢其實很簡單\n就是把 SpaceX 的股價繼續維持著\n或者是說讓它再創新高\n這個收購案呢就會越來越劃算\n因為只要 SpaceX 的股價繼續往上漲\n那 Cursor 的收購呢就會稀釋更少的這個 SpaceX 的股權\n這也是為什麼我覺得 Elon 這個收購案呢\n選在這個時間點\n真的是非常屌的一個 move\n等於是直接讓市場幫你買單\n你自己不用掏任何一毛錢\n那除了錢之外呢\n最重要的就是 SpaceX 收購 Cursor 的目的\n我們都知道 SpaceX 擁有全世界最屌的 AI cluster 算力\n但是他們的 AI 模型 Grok 一直以來\n都不如 Anthropic 跟 OpenAI 的模型\nGrok 的 coding 能力呢一直以來都是公認比較偏弱的\n所以說它在 frontier model 裡面呢\n變現能力也是最差的一個\n他們沒有像 Claude Code 跟 Codex 這樣的平台\n可以讓開發者去使用\n當然也不是沒有努力的去嘗試啦\n有一個東西叫做 Grok Build\n那這個東西呢也是剛 launch 不久啦\n但是好像也沒有什麼人在用\n我猜就是 Elon Musk 他自己的公司員工在用而已\n那要怎麼樣讓 Grok 可以超越 Claude 跟 OpenAI 呢？\n目前最關鍵也是最後一片拼圖呢\n就是 Cursor\n你可以透過這一次的收購案看出來\n現在這個時代呢\n除了算力之外\n記得 SpaceX 擁有全世界最頂尖的算力 clusters\n他們有超過 33 萬張的 Nvidia GPU\n算力呢是多到可以租給 Google 跟 Anthropic\n所以代表說在這個時代呢\n有算力還是不夠的\n一個頂尖的 AI 模型呢\n需要的是\n工作流程中真實的那個互動數據\n這個才是 Grok 能夠超越 Anthropic 跟 OpenAI\n最後也是最重要的一個拼圖\n他們需要把現有的這個算力\n轉換成數據的這個飛輪給建起來\n等一下我會講這個飛輪是什麼\n我先說一下 Cursor 之前呢就已經有跟 SpaceX 簽約\n去租他們的算力\n然後由 SpaceX 提供給他們 GPU 的容量\n而且其實他們也已經有合作\n一起去訓練 Grok 的模型迭代\n然後 SpaceX 發現這個合作的方式呢\n非常的有效\n你如果沒有 Cursor 這些真實工作流的數據的話\n你是很難把模型迭代到更好的\n那這個飛輪\n到底要怎麼樣才開始轉起來呢？\n第一個部分呢\n就是從算力到工作流的\n這個真實使用量\nSpaceX 它擁有全世界最頂尖的算力\n那現在 Cursor 一進來呢\n等於是直接幫 SpaceX 塞了一個超級大\n而且付費意願超高的用戶進去\n現在有超過 100 萬個開發者\n每天在 Cursor 上面跑 inference 跑 agent\nSpaceX 可以直接把他們的 clusters 算力的使用率呢\n直接拉滿\n好那當算力給 Cursor 這些無限的燃料之後呢\n這些開發者在 Cursor 上面所有做的事情\n不只是單純的寫程式而已\n如果你有用過 Cursor 的話應該知道\nAI 給你一個修改的建議\n你要按 accept 或是 reject？\n然後你怎麼去改它生成的 code？\n你在 debug 的時候怎麼去一步一步 trace 下去的？\n你在一個 monorepo 的 project 裡面怎麼去跳來跳去的？\n你都用了哪些 tools 怎麼去 switch context？\n你怎麼去 set up 你的 agentic workflow？\n這些數據呢\n跟你去 GitHub 上面爬一些 open source 的 code\n是完全不同等級的\nGitHub 還有 Stack Overflow 上面\n那些的所有代碼呢\n叫做靜態的程式碼\n那些數據呢全世界每一個做 AI 模型的公司呢\n都可以爬得到\n大家手上都有這些免費的資源\n所以它一點都不稀缺\n但是 Cursor 能夠給到的是動態的行為軌跡\n是一個真實的工程師\n在一個真實的環境下\n真正的去告訴這個模型說\n你這個答案寫的是對的\n或者說這邊是錯的\n或是這個可以這樣做更好\n那這些所有的行為數據呢\n就是一個超大的 label data\n你可以想像\n等於是每天有超過 100 萬個人呢\n不停的在幫 SpaceX\n去做 reinforcement learning\nby human feedback\n這個才是真正稀缺的價值\n就像為什麼現在很多 big tech 公司呢\n開始 track 員工的這個 prompt\n收集他們跟 AI 的這個 feedback loop\n還有 interaction\n他們想要員工 document 所有他們的工作流程\n因為如果你想要訓練一個更好的 AI 模型\n你不可能只靠那些靜態的程式碼數據\n那些呢是上一個時代啦\n我們把 ChatGPT 打開之後呢\n給它一個 prompt\n然後它就把我們的 code 代碼給寫出來的一個流程\n那現在這個時代需要的是什麼呢\n現在這個時代需要的是 AI agent 之間密切的合作\n就是 agent 它怎麼檢查出它的這個 sub-agent\n有沒有在幻覺\n有沒有在做錯的事情\n那需要靠的就是這些數據\n工程師跟 AI 一起工作\n還有流程的這些所有的真實數據\n拿去訓練\n那當 Cursor 拿到這些數據之後呢\n就可以回去餵給 Grok\n把這個模型訓練得更強\nGrok 目前最弱的地方就是 coding 嘛\n但是 Cursor 的用戶呢\n可以提供全世界最高品質的 coding 行為數據\n直接補上它最缺的那一塊\n然後呢就是這整個飛輪啟動的時候\n更強的這個 AI 模型呢就會帶來更大的需求\n你想要是今天 Grok 變得比 Opus 4.8 還要強\n比 GPT-5.5 還要更強的時候\n再搭上 Cursor 的 IDE 呢\n就可以在軟體開發上面\n跟這個 Claude Code 還有 Codex 平行競爭\n然後 Cursor 的用戶呢在 Cursor 上面用 Grok\n也會用的比其他模型還要更多\n甚至還可以更省錢\n那用得多了之後呢\n自然這個數據也會越來越多\n那數據越來越多呢\n就可以繼續讓這個飛輪轉得更快\n等於是說呢可以帶動整體 Grok 在未來的需求\n也直接影響到 SpaceX 未來的現金流\n對於 SpaceX 來說這是一個非常重要的收購案\n這才是 Elon 真正想要買的東西\n不是 Cursor 的技術有多強啦\n而是它已經有\n每天超過 100 萬個用戶\n可以提供的這個數據護城河\n就像為什麼 Tesla 的自動駕駛這麼強\n因為車子是他們造的\n數據也是他們自己去收集的\n所有的駕駛員經歷這麼多年來累積\n好幾千億英里的這個真實駕駛數據\n駕駛的每一個動作每一個 feedback\n在每一個不同的場景\n都是珍貴的訓練數據\n這個數據的護城河呢\n不是用什麼模擬數據\n就可以蒙混過關的\n那這也是我認為為什麼啦\n總有一天呢我們全部人都會失業\n也是為什麼最終 AI 的模型呢會開始自我迭代\n因為人類的所作所為呢\n最終全部都會變成數據\n餵進去訓練這些 AI\n那當人類的行為已經不夠讓 AI 模型的迭代變得更好的時候呢\nAI 就會需要開始從 AI 自我行為所產生的這些數據\n去進行迭代\n我想那個時候應該就是所謂的 AGI 的時代\n也是 Anthropic 他們之前發的一篇文章裡面講到的場景\n當 AI 開始自我迭代的時候\n也就是 recursive self-improvement\n遞迴式的這個自我改進的時代\n想想還是非常的期待啦\n但是也是蠻可怕的\n那你可能心裡會有一個問號\n到時候人類會做什麼呢？\n我現在能夠想到的就是兩件事情\n第一件事情呢\n就是去做你真正自己想要做的事情\n你喜歡什麼就去學去做\n不用考慮說為了賺錢而去學什麼技能\n你做的所有事情呢\n都不是以賺錢為第一考量\n那第二個呢就是資產配置 asset allocation\n你要怎麼樣去管理你的資產\n要投資在哪裡\n我覺得這些會是\n未來普通人真正剩下來的工作啦\n好那說到投資呢\n最近美股呢也是一直在創新高\n那要怎麼樣去保護\n你長期的投資倉位呢\n適時的去做對沖\n我個人覺得最好的方法之一呢就是用 CFD\n我之前在影片裡面已經有介紹過 CFD\n期權還有反向 ETF 的一些比較\n大家有興趣的話可以去看一下\n在 Mitrade 上面呢可以做交易的不只是黃金\n還包含了原油美股 ETF 還有各大指數\n那用 CFD 最大的優勢呢\n我覺得就是可以做短期的對沖\n或者是說我要做短線的交易呢就會用 CFD\n至於期權的話呢我自己主要是用來賣 covered call\n然後就是 sell put 做一些長期的資產配置\n那 CFD 的優勢呢就是沒有期權那個複雜的時間價值\n所以在操作起來呢更簡單更容易\n你可以直接做多或是做空\n然後也可以設定槓桿\n再來就是 Mitrade 的出入金呢真的非常的方便\n你可以直接用 Apple Pay 信用卡入金\n像我這邊選入金 3 萬塊台幣的話\n它實際到帳的額度呢\n跟這個中間價換匯是差不多的\n而且你還可以用 USDT 或是 USDC 來入金\n或是直接美元電匯\n所以我自己長期投資啦\n還是會用美股的券商\n但是短期的交易跟操作呢會用到 Mitrade\n大家如果有興趣的話可以去看一下啦\n我也把連結呢\n還有新用戶開戶的優惠獎勵呢\n全部都放在影片底下的資訊欄\n如果你對交易感興趣的話呢\n也歡迎來加入我的 TG 群組\n在那邊呢\n我有提供很多\n完全免費的交易學習資源\n好啦那希望今天這支影片呢\n有幫助到你\n我覺得這些資訊呢最大價值是\n讓我們了解到說現在整體 AI 模型市場的一個發展方向\n還有它未來的一個走向\nCursor 這個 IDE 如果今天沒有被收購的話\n我覺得它本身的價值呢\n是永遠不到 600 億美金的\n但是因為加入 SpaceX\n我相信它長遠未來的價值呢\n是遠遠超過這個收購價的\n這也給 Grok 一個\n可以直接跟 OpenAI 還有 Anthropic 對幹的\n一個機會\n所以說我自己也是長期的看好 SpaceX\n也打算在接下來下跌的這個趨勢裡面\n慢慢去建倉\n好那也歡迎你在影片底下留言\n分享你對這個收購案的看法\n你會不會因此呢更想要投資 SpaceX？\nOK 那我們下次見囉",
+    "length": "12m 17s",
+    "hasMore": false,
+    "isPremium": false
+  }
+}

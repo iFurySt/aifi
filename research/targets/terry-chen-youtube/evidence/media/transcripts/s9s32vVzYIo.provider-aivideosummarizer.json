@@ -1,0 +1,5928 @@
+{
+  "source": "Online transcript provider: AI Video Summarizer",
+  "source_url": "https://www.youtube.com/watch?v=s9s32vVzYIo",
+  "provider": {
+    "name": "aivideosummarizer.io",
+    "endpoint": "https://aivideosummarizer.io/youtube-subtitle-downloader/",
+    "retrieved": "2026-07-13",
+    "route": "OBU browser page -> IndexedDB tr-history"
+  },
+  "video_index": 70,
+  "video": {
+    "index": 70,
+    "id": "s9s32vVzYIo",
+    "title": "我能通過 G公司 工程師出的面試嗎？",
+    "url": "https://www.youtube.com/watch?v=s9s32vVzYIo",
+    "duration_seconds": 1321.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "s9s32vVzYIo",
+    "title": "我能通過 G公司 工程師出的面試嗎？",
+    "text": "哈囉大家好我是Terry\n今天這集影片非常的特別\n大概8個月前吧\n我出了一道工程師的面試題目\n去考在Google工作\n然後又是算法競賽冠軍的Hank\n那其實不只是Hank啦\n我對Nick也做過類似的事情\n然後大家也有在留言區說\n想要看我被考\n想要看我被虐\n我記得還有人在Thread上面說\n我是什麼裝逼仔\n沒有料\n還不會寫code\n那既然大家那麼想看\n剛好這次Hank來東京玩\n我就就要現場考我面試\n說實話啦\n我已經兩年多沒有面試了\n而且這兩年呢\n我完全都沒有練習\n而且Hank在考我之前呢\n我也完全沒有準備\n我就是想要最真實的\n呈現我的狀態給大家看\n儘管出糗也沒關係\n那我知道酸民可能會說\n欸 Hank可以先跟我Re過一遍\n或是事先把這個問題告訴我\n我可以跟你保證這些都沒有\n而且他的問題也是當下才去想的\n如果以上我有說謊\n或是我面試的時候有作弊的話\n我的雞雞短一半好了\n那另外我也有一個很重大的事情要跟大家宣布\n在影片後面 所以記得要看到最後\n最真實呈現\n想要看我被虐的那個\n那個情況\n對 但我要說就是\n我是真的很久沒有做算法題了\n超久超久\n我已經想不到上一次\n我被考面試是什麼時候了\n就看也不知道要考什麼\n就剛剛才想的\n對 我剛剛想的\nOK\n我主要是進來你房間\n然後我就想到一個問題\n就是有關火災逃生的問題\n假設你在一個房間上\n那我們把問題簡化一點\n就是我們在一個grid上\n假設每個grid是一個房間\n那你可以移動到前後左右的房間\n你可以花一單位的時間移動到前後左右的房間\n假設就是你在最左上角\n我畫一個表格\n對這是\n我有一個不祥的預感\n對這是你\n然後可能中間有一些牆\n比如說這是牆\n好那假設有個地方發生火災了\n對那它跟你一樣就是你會先移動一格\n譬如說你可以往右移動一格\n然後同時火也會往外擴散一格\n那它擴散就是一次往上下左右四個方向都擴散\nOK\n對那譬如說你現在往右移動一格你跑到這裡了\n我就延伸到這裡\n對 那我想\n但它不會燒到牆對不對\n它不會燒到牆\n牆不會被燒破\n對 那這個信號是牆\n假設出口在右下角\n出口一定都在右下角\n對 那你再對左上角\n然後出口在右下角\n那我們保證左上角跟右下角不會有牆\n對 然後我想問\n有沒有辦法逃生出去\n喔 就回復一個玻璃是吧對喔 糟了那我們題目簡單一點就是不會有下腳不會有牆對然後我想問有沒有辦法逃生出去喔就return一個 boolean 是吧\n對\noh shit\n呵呵呵呵\n那我們題目簡單一點就是\n假設起火點就是一個\n然後你也\n就是你就一個位置這樣子\n嗯\n然後起火點也是一個 input 是吧\n等於說我輸入可能會是\n譬如說點就代表\n可能會有個 u 是你\n嗯\n對然後點就代表你可以走的路\nF5 就代表是起火點\n然後會是就代表這整張地圖\n然後 exit 也會標在上面嗎?\n對 exit 會標在上面\n那 exit 用 e 表示?\n對\nexit 不一定會在右下角吧?\n對 我們可以假設不一定在右下角\n我們以一個最 brute force 的方法去想\n一開始我們要每一次都是往外移動一格\n從我的那個點開始上下左右移動那 fire 也會上下左右移動一格從我的那個點開始上下左右移動\n那Fire也會上下左右移動\n看是我先找到逃生點\n還是我先被Fire燒死\nFire燒到的地方我就不能走了\n對Fire燒\n因為其實你可以繞過Fire去走\n因為你可能走\n原本走很短的那條路徑\n到出口你會被燒到\n但是你可以繞一個路走\n可能Fire燒不到那裡\n我覺得這就是一個比較典型的用BFS去看我能不能找到路口\n那假如最後就是End Condition要是我找不到Exit的話代表說False\n對\n那我想一下在什麼樣情況我會去結束這個\n因為BFS的話就是用一個Queue去存我接下來還可以走的路線\n但是最大問題是說我這個Q可能會變\n還是你先想一下就是你怎麼判斷你在這一格的時候會不會被火燒到\nOK就是我在這一格這個位置當下會不會被火燒到\n對\n因為你逃到這一格你會有個時間點\n你會辦法知道你在這個時間點在這一格火會不會燒到你\n或是這個格是不是已經被燒起來了\n我會知道喔\n因為火會一直 expand 啊\n所以說在那個 moment 的時候\n那你要怎麼知道這件事情\n所以我讓火先走\n對讓火先走\n然後我再去判斷我下一個路可以走哪裡\n嗯對\n那我在我的 queue 裡面就存我下一個 point\n下一個的那個 gridrid裡面的Reference\nX Y 是OK的\n等於是說每一次先Expand火一遍\n然後再存下一個\n就我把Cue裡面抓出來\n就是下一個Breath裡面抓出來\n然後每一個去測下一個才可以走哪裡\n這就是我的Solution\n那這樣複雜度\n這樣複雜度的話就是All of MN\nSize 這個Grid的Size\n對\n可以嗎 面試館\n對 我覺得聽起來是個可行的作法\n但寫不寫出來是另外一回事\n對好\n哈哈哈哈\n那現在就開始Coding環節\n理想宏大但是\n這個\n啊Coding喔\nOK好\n我超久沒有寫教吧\n我覺得比較\n教的好處就是比較清楚\nType就寫得很清楚\n好\nPublic\nCan Terry Survive\n哈哈哈哈\n然後這是一個Boolean\n然後我的In 是一個 grid\n這樣子\n應該是一個 stream 吧\n哈哈哈哈\n喔喔喔 對對\n裡面是一些字眼\n喔對\n我真的很\n好像不是這樣寫\n哈哈哈哈\n等一下好像不是這樣寫\n等一下不是這樣寫嗎\n不是這樣寫\n教完應該不是這樣寫\n等一下\n哈哈哈哈\n喔\nok\n不要緊張不要緊張\n應該是一圍而已,因為String就是代表一圍了\n因為String的話就只要開一圍就好\n因為你每一串都要一圍\n那我開二圍好了\n這make sense吧\n這都可以啦,我覺得這兩個都ok\n因為我要找我的點嘛\n還是我assume我在左上\n我們找一下我們自己在哪里\nok 然后那我先开一个 queue\nqueue 的话是\n我用这个 integer array 来 reference\n在在 Python 就是个 tuple\n嗯对我记得 Java 的 queue 是 linked list\n哎我真的超久没写 Java\n两年没有写 Java\n但我觉得就是这个这个还好\nok 我们现在有个 queue 吗\n嗯那我们先找我們自己的 Starting Point\n然後我把它放在 Queue 裡面\n我也要有個 Queue 囉\n那我這個 Queue 叫 Terry Queue\nFire Queue\nTerry Queue 的話\n我們先從 M equals to Grid\n好那我現在就\n先做一個最基本的邊界 Check\n說我們可以有順這個 Grid 是一個 Valid 嗎\n可以就是它一定會有 u 有 f 有 e\n它的大小應該至少是三個\n就是可能一乘三這樣或是至少二乘二這樣子\n所以不用去 check 了\n不用去 check 是吧\nok 好我們有個 m n\n好一個 for 回圈裡面再加一個 for loop\n這樣子我就可以 loop 整個 grid 一遍\nif grid ij 等於 u\n這個就是代表說我找到了我\n嗯\ncherryq\ninq\noffer new int ij\n我教的還蠻屌的\n哈哈\n這還沒有忘記\nelse if grid ij\n等於f\n的話\noffer new int ij\n嗯\n這樣的話我就可以把我跟fire的一开始location\n先存到q里面\n下一步呢要开始走了\n然后exit的话是\n其实不需要存exit\n我们一定会有一个exit\n对一定会有\n那最后的end condition就是假如terryq\n是被清空了\n然后还没有遇到exit\n那我们就fail了\n我们就死掉了\n嗯对\n好那我们就开始呃我们的 bfs\nbfs 要怎么写\nwell terryq is not empty\nabout fireq 去做 process\n嗯他如果烧完的话他就结束了\n嗯对啊我不知道这个有没有必要\n但是我就可以说 if fireq is empty\n然后我就 return false\n但我觉得可能不用这样子 check\n但是我先这样写出来好了\n嗯 for 那我先我先 loop 一遍FyreQ裡面已經有的值\nFyreQ.size\n就是我先把FyreQ下一個\n然後這樣子會有另外一個問題就是\n因為你BFS\n所以相當於你就是你直接\n把自己分身成四個方向去走\n你四個方向都分身一次\n但你走這四個方向\n你的Fyre只往外Extend一次對啊,就是我要先Extend Fyre然後我才走四個方向都分身一次但你走這四個方向你的 fire 只往外 extend 一次對啊\n就是我要先 extend fire\n然後我才走四個方向\n嗯\n對我先把我現在\nq 裡面的東西拿出來\n嗯\nindra k\nequals to 0\n然後 k 小於\n30q\n的 size k++\n等於說這個 for loop 裡面\n我會 loop 過一遍\n下一個 potential 的值\n但在做這個之前呢\n我要先把 fireloop 過一遍嗯對potential的值但是在做这个之前呢我要先把fire loop过一遍\n等于说这个是在这上面这样子\nif fireq is empty then return false\n然后把fireq expand一遍\n然后再把我的terraq再去做一遍\n我知道很多外附的这个很乱\n但是我先这样写\nso fireq四面\nintra k equals to fireq.size\n这样子\n嗯\n然后\n啊变数不够\n哈哈哈哈\nk equals to fireq\n这样子\n等下我在fireq里面loop过一遍\n嗯\n对\nfireq next equals fireq pull\n这样子\n我把next抓出来\n我写一個dy dx好了\ndx equals to\n就讓我有一個簡單的方式可以loop\n嗯算是一個很常見的做法\n對有時候我離口人應該都要這樣\n不然你要寫四個if or else\n對我已經夠多if還有夠多for loop\n我覺得要精簡\n這要用超多variable\npass pass\n喔對我的grid我可以在上面mark吗\n可以\n那我就是在grid上面\n这个grid是muteable\n如果是不行的话我就开一个新的\nnext\nplus dxb\n这variable真的很乱\nnew y equals next e\nplus dy b\nifnext xnew y equals next e plus dy bif\nok I'll call it next x\nnext y\nif next x 小于 0\nor next x 大于等于 m\nor next y 小于 0\nor next y 大于等于 n\ncontinue 对\n这样子\nok 好但是还有一些条件next y 等於 ncontinue 對 這樣子\nOK 好\n但是還有一些條件譬如說\n像是 read next x next y\n等於 應該說不等於空格\n如果是強的話直接 continue\n對 因為出口也可以燒\n當然你燒到出口你可以直接 return false 沒錯\n對 其實這是一個很好碰\n因為其實你全部燒完你還是找不到\n對 這也是題目一開始就是其實出口也是可以燒起來\n嗯出口也是可以燒起來\nOK好那就是只要是搶的話就\n就continue\n對那make sense\n因為出口燒起來的話\n你就等於說你把出口也蓋掉\n如果是這樣的話就是continue\n然後是end if\nOK然後我grid\nnext x 跟 next y 等於 fire\n這樣子\n對grid x next 跟 y 等於Fire這樣子對\nGrid X跟Next Y等於信號\n在這樣的情況下\n我們就要continue\n然後otherwise\nGrid X\nGrid XY\n就是我上下左右都expand了\n然後我要把新的location放回Q裡面\n對\nFire Q offer Next Next X\nOK這樣寫會有什麼問題\ngrid要不能是fire\n應該說在這邊我要把filter掉\n對這樣子的話就continue\n然後像我新還有fire\n然後是我的話可以燒\n然後門x也可以燒\n這樣我們就所有continue都cover到了\n接下來等於說我要開始\nloop我的那個queue terry queue\n然後k等於Teri Q size\n用同一个variable\nA等于0 A小于Teri Q size\nA小于K A++\n现在进入我的那个环节\nnext x 跟 next y\n先把next给pull出来\nnext equals to Teri Q pullull然後Next 0的話就下一個\nOK DX DY\n接下來就是這個的編輯條件\n我先把這個copy下來好了\n我其實可以不用check會不會碰到火\n要是沒有的話我就直接continue\n遇到火我不能走\n遇到牆我不能走\n遇到X就return true\nGreed X Y\n如果是新\n先是牆壁\n新叫牆\n然後如果是File的話就是�壁新叫墙\n如果是File的话就是continue\n对\nIf gridX gridNext\nXXY equals to exit的话\nReturn true\n这些都check过一遍之后\n我就可以把它放到Terraqueue里面\nTerraqueue offer\n我先要mark一下\nGridNext X\nNext Y equals to U\nTerraqueue offer我mark然后下一个步骤走然后GridXNext XNext YEquals to U然後 Turkey Offer\nOne Mark\n然後下一個步驟走\n然後 Grid X\n那如果是人的話我要 Continue\n嗯\n對\n所以有 Check 人\nCheck 火\nCheck 心\n嗯\n我現在不是很確定說\nOK 火如果燒到我本身的人的話\n其實沒有什麼太大的關係\n應該說\n應該說\n我覺得這條件都無妨\n就是人先走跟火先走都無妨但我想確定你這邊寫的Assum,就是人先走跟火先走都無妨\n但我想確定你這邊寫的Assumption是人先走還是火先走\nAssumption是火先走,因為我有這個while loop,然後我先走火\n但如果照你現在的寫法的話,你人還是走得出去\n我人還是走得出去\n因為你現在火在Q裡面,人在Q裡面\n你火燒到Q裡面那個人,那就 照你的說法人應該走不出去對不對\n照我們剛剛對題目的 assumption\n你現在人應該走不出去\n但你的人現在還在Q裡面\n他現在還是會走出去\n對 但是我讓火先走的原因是\n我想讓火先走\n然後我看人的option是什麼\n那如果說他卡在火裡面\n因為假如一個情況就是火烧到人的地方嘛\n但是因为我现在在这里\n等于说我先逃离了\n然后他再烧过来\n所以这是OK的\n但是如果他上下左右都已经被火包围了\n那你还是走不了\n所以说你那个location\n那个queue\n那个element就废掉了\n我虽然是火走先走\n但是其实我主要是这样可以预判\n这样子的话最后因为我有一个end condition in check如果他走到exit就结束我雖然是活走先走但是其實我主要是這樣可以預判這樣子的話最後\n因為我有一個end condition in check\n如果他走到exit就結束\n那如果最後都沒有的話\n外回圈結束之後就是return false\n我想一下有沒有一些奇怪的一些condition\n我沒有cover到的\n如果你的室內不聯通的話\n你這個城市會不會有問題\n室內不聯通\n你說新有可能把他中間給全擋住那就要看你exit在哪囉如果你的室內不連通的話你這個城市會不會有問題室內不連通哦你說\n心有可能把它中間給全打住\n那就要看你 exit 在哪囉\n如果 exit 在火那個防衛的話\n那你也永遠找不到\n反正你人跟 exit\n如果被隔開來就走不到\n對你也是會 exhaust 掉\n所以說你也不能\n那如果我把火跟人分開\n但人跟 exit 在同一個地方\n他一定走得到\n一定走得到\n只要人跟 exitet不同的地方的話\n他永遠會找不到\n他最後會exhaust完\n我覺得這個condition應該是沒有問題的\n你在fireterryq的時候\n下面那個condition會不會有問題\nfireterryq\n就是if fireq then is empty\n我懂你的意思了\n就是假如說他們隔開的話\n那fireq可能已經找完了他已经烧完了\n然后其实我是走到的\n然后我就把我把return false掉了\n如果是这样子的话\n我如果把fireq is anti拿掉\n因为k就是0的嘛\n如果是这样的情况下的话\n那我fire就没办法继续撑\n那我这边还是会继续走\n所以说其实是ok的\n所以说我把这个condition拿掉其实是ok的\n这样就可以解决掉你刚说那个edge case我想一下还有什么edge case所以说其实是ok的所以说我把这个condition拿掉其实是ok的\n这样就可以解决掉你刚刚说的那个edge case\n我想一下还有什么edge case\n我们现在把你觉得会有问题的edge case都列出来\nfire war separates u and f\n这个的话我想一下\n它如果separate的话\n我跟fire\n像我们刚才已经解决了\nfire它没办法grow\n但我还是可以继续找到exit的一个问题\n那如果exit在Fire那边的话那也没有关系\n我会我还是会去expand\n然后最后我也是找不到任何东西\n然后结束了\n所以这个condition是ok的\n还有什么edge case\n我跟Fire在同一个地方就side by side\n反正我们不会一开始我就跟Fire在同一个点嘛\n不会他一定会分开两个点unf side by side反正我們不會一開始我就跟fire在同一個點不會\n它一定會分開兩個點\nunf side by side\n如果是這樣的話\n舉例子一個小的grid\n譬如說就我跟fire兩個\n然後可能火在某個地方\n那一開始fire會先燒到exit\n還是燒到我自己本身\n但是因為是我先走\n所以我可以先逃離那個點\nfire再走\nfire再燒過來\n那我也找不到,因為它已經燒到 exit 了\n所以這個 condition 其實是 ok 的\n等於說它會是一個 you fire exit\n這樣的話是 ok 的,這樣我也 return false\n因為火也先把 exit 燒掉\n那如果現在火跟你同時到 exit 你會 return true 還是 false\n火跟我同時到 exit 的話\n題目好像是我先走對不對\n對啊\n所以說如果今天假如最後的 condition 是這樣子\nexit 然後我在這裡\n然後 fire 在這裡\n那因為我先走 所以說我會先到 exit\n然後 fire 才燒\n所以這樣應該是 return true\n那你的 code 會 return true as false\n對 我 code return false\n因為 fire 會先 expand\n燒到 exit 對\n我們當然可以做一个\n一个preemptive的check\n先check我下一步会不会成功完成\n如果完成我们就return true\n然后不能完成的话\n我们就开始火线烧\n在toll这边我先加一个condition\n先做一个preemptive check\n这样子\n这可以deal with这种condition\n对对对\n我先把它写下\nu escapes first还有什么情况Check 這樣子這可以 deal with 這種 condition對對對我先把它寫下You escaped first\n還有什麼情況\n好像 base case 基本上都 cover 了\n嗯 對\n那我們要 dry run 一下\n看你 我覺得不太好 dry run\n我想就這樣\nOK 好\n這個15選是 OK 的吧\n這個15選 OK 啊\n我不知道你要考那麼難的呢\n我覺得這個算是比較稍微難一點\n就是它比較\n你說它難不難\n但它蠻複雜的\n所以你要很清楚你現在在幹嘛\n所以我覺得你表現得很好一點\n是你非常清楚你現在在幹嘛\n我基本上給一點Hint\n你大概就知道哪裡會有問題\n我其實還蠻訝異我可以寫出來的\n剛剛在想有那個新\n然後又有Five又有X這個東西\n而且我覺得這個題應該算是\nMedium比較偏難一點點\n其實我覺得說不定有到hard\n對啊我覺得表現算滿好的\n我有出乎我自己的意料之外\n因為我覺得我太久沒做題\n不過我覺得你算是\n你在這邊做了一個\n算是把你自己推入一個陷阱裡\n如果是我寫這一題的話\n我會先讓火走完\n然後我就知道火走到這一步\n的Time Step是多少\n然後我直接看我在這個Time Step有沒有到一點點塔\n喔你說一開始在設定的Condition\n對所以我就多記一個Array是火燒到這個點的時間\n但因為我那時候想說面試的時候通常都以面試的想法為主\n我覺得你那想法也是可以Work\n但是我覺得你會把自己推進去一個洞裡面\n但是我覺得我其實蠻驚訝喔你最後從這個洞裡面但是我覺得我其實滿驚訝\n你最後從這個洞裡面爬出來把Code寫出來\n而且因為我的寫法也是火先走\n然後又\n但其實實際上是我先走\n對\n就是一個很亂的一個\n對對對\n我覺得還不錯啦\n就是你說到很Outstanding\n但是我可能還是有一點\n但是我覺得到標準的Standard已經算很好了\n嗯\n對啊\n因為我其實這題原本還有follow up\n但是你這個寫法其實把\n我那麼想問的follow up有算解決掉了\n嗯假設多個起火點\n哦多個起火點\n對但是裡面你直接就把火放進去了\n所以多個起火點也是一樣\n就是把火一起放進去而已\n哦OK\n因為因為這道題比較難\n所以通常標準就不會拉那麼高\n因為你大概預期\ncandidate會到哪一個程度\n哦對\n然後你在那邊試上指點\n一下能爬出來\n我就覺得是一個很好的指標\n所以算是一個OK HIGH\n我覺得算HIGH\n就是如果以網路上那些標準來講\n到高於HIGH了\n高於HIGH了\n好啦那希望今天這集影片\n看到我被算法競賽大神考面試\n有讓你學到一點東西\n如果喜歡的話\n記得一定要幫我把影片點個讚\n最後跟大家公布一個消息\n我跟Hank設計了一個職亞護城河實戰營\n現在可以開始報名了\n我們都知道軟體工程師的痛點在哪裡\n也知道公司在招人的時候想要看到什麼樣的價值\n而且其實很多工程師不知道自己真正的potential在哪裡\n像比如說好了Google L4的工程師\n在台灣的總薪資\n可以達到快400萬台幣\n而Meta E4的薪水\n在美國將近可以達到\n60萬美金一年\n這些都是可行的\n他們有很厲害嗎?\n其實也沒有\n很多人當了好幾年的工程師\n薪資還是卡在那裡\n那我們這個實戰贏的目標很簡單\n第一個就是\n讓你變成一個更強的工程師\nFocus在解決問題的能力上面\n尤其是對於轉職的朋友來說\n可能基礎能力比較差\n另外就是幫你打造你的職壓護城河\n不論你今天是要去面試\n要跳槽\n還是怕被layoff\n怕被AI淘汰\n只要你願意跟我們一起準備\n跟我們一起練習\n我相信你也可以把你的Mode給Build起來\n那這個實戰儀具體到底在做什麼\n第一個就是模擬實戰\n跟重點整理講解的部分\n我們透過LiCode題目作為載體\n因為LiCode是最簡單最快速的方式\n用真實面試的方式去展現給大家看\n我們是怎麼解決問題的\n因為我們相信觀察就是最好的學習方式\n然後每一個章節我們會做重點整理\n去講解所有核心的概念\n包含掌握面試的節奏\n拆解題目\n解析需求\n算法跟數據結構的應用\n測試解決方案\n變種情境還有如何應對follow up\n那第二個部分呢\n也是我覺得最重要的一個\n就是我跟Hank每週固定時間呢\n會直接Live\n用直播的方式在線上\n帶大家手把手的一起做實戰演練\n等於是說所有參與實戰營的朋友\n大家都會一起參加\n目的就是要拉著你跟我們一起練習\n既然你都已經付錢了\n有什麼理由不出現\n然後在每一次Live的實戰演練最後\n我們也會做Live的講解\n所以這絕對不是一個那種買了心安\n看完就沒什麼用的那種線上課程\n那最後一部分\n我們還有Live直播的專業分享\n每過幾週我們會請一些國內外的大咖\n比如說矽谷的資深工程師或是Team Lead\n或者是說哪一家大廠的這個Hiring Manager\n來跟大家分享一下最新的這個實戰經驗\n或是整體就業市場的一個趨勢\n所以說不管你是現役軟體工程師\n或是說你正在找工作\n或者是說你是轉職者\n正在成為軟體工程師的路上\n都歡迎你來加入我們\n我覺得這會是你人生一個最簡單\n最無腦\n最高CP值的一個投資\n而且呢現在我們有一個找鳥優惠\n可以到我們的官網\nbuildmode.org去看一下\n我會把連結放在影片底下的資訊欄\n那我們下次見囉",
+    "segments": [
+      {
+        "time": "00:00",
+        "text": "哈囉大家好我是Terry"
+      },
+      {
+        "time": "00:01",
+        "text": "今天這集影片非常的特別"
+      },
+      {
+        "time": "00:02",
+        "text": "大概8個月前吧"
+      },
+      {
+        "time": "00:04",
+        "text": "我出了一道工程師的面試題目"
+      },
+      {
+        "time": "00:06",
+        "text": "去考在Google工作"
+      },
+      {
+        "time": "00:07",
+        "text": "然後又是算法競賽冠軍的Hank"
+      },
+      {
+        "time": "00:09",
+        "text": "那其實不只是Hank啦"
+      },
+      {
+        "time": "00:10",
+        "text": "我對Nick也做過類似的事情"
+      },
+      {
+        "time": "00:12",
+        "text": "然後大家也有在留言區說"
+      },
+      {
+        "time": "00:14",
+        "text": "想要看我被考"
+      },
+      {
+        "time": "00:15",
+        "text": "想要看我被虐"
+      },
+      {
+        "time": "00:16",
+        "text": "我記得還有人在Thread上面說"
+      },
+      {
+        "time": "00:18",
+        "text": "我是什麼裝逼仔"
+      },
+      {
+        "time": "00:20",
+        "text": "沒有料"
+      },
+      {
+        "time": "00:20",
+        "text": "還不會寫code"
+      },
+      {
+        "time": "00:21",
+        "text": "那既然大家那麼想看"
+      },
+      {
+        "time": "00:23",
+        "text": "剛好這次Hank來東京玩"
+      },
+      {
+        "time": "00:25",
+        "text": "我就就要現場考我面試"
+      },
+      {
+        "time": "00:26",
+        "text": "說實話啦"
+      },
+      {
+        "time": "00:27",
+        "text": "我已經兩年多沒有面試了"
+      },
+      {
+        "time": "00:29",
+        "text": "而且這兩年呢"
+      },
+      {
+        "time": "00:30",
+        "text": "我完全都沒有練習"
+      },
+      {
+        "time": "00:31",
+        "text": "而且Hank在考我之前呢"
+      },
+      {
+        "time": "00:33",
+        "text": "我也完全沒有準備"
+      },
+      {
+        "time": "00:34",
+        "text": "我就是想要最真實的"
+      },
+      {
+        "time": "00:35",
+        "text": "呈現我的狀態給大家看"
+      },
+      {
+        "time": "00:37",
+        "text": "儘管出糗也沒關係"
+      },
+      {
+        "time": "00:39",
+        "text": "那我知道酸民可能會說"
+      },
+      {
+        "time": "00:40",
+        "text": "欸 Hank可以先跟我Re過一遍"
+      },
+      {
+        "time": "00:42",
+        "text": "或是事先把這個問題告訴我"
+      },
+      {
+        "time": "00:44",
+        "text": "我可以跟你保證這些都沒有"
+      },
+      {
+        "time": "00:45",
+        "text": "而且他的問題也是當下才去想的"
+      },
+      {
+        "time": "00:47",
+        "text": "如果以上我有說謊"
+      },
+      {
+        "time": "00:49",
+        "text": "或是我面試的時候有作弊的話"
+      },
+      {
+        "time": "00:51",
+        "text": "我的雞雞短一半好了"
+      },
+      {
+        "time": "00:53",
+        "text": "那另外我也有一個很重大的事情要跟大家宣布"
+      },
+      {
+        "time": "00:56",
+        "text": "在影片後面 所以記得要看到最後"
+      },
+      {
+        "time": "00:58",
+        "text": "最真實呈現"
+      },
+      {
+        "time": "01:00",
+        "text": "想要看我被虐的那個"
+      },
+      {
+        "time": "01:02",
+        "text": "那個情況"
+      },
+      {
+        "time": "01:03",
+        "text": "對 但我要說就是"
+      },
+      {
+        "time": "01:04",
+        "text": "我是真的很久沒有做算法題了"
+      },
+      {
+        "time": "01:07",
+        "text": "超久超久"
+      },
+      {
+        "time": "01:08",
+        "text": "我已經想不到上一次"
+      },
+      {
+        "time": "01:09",
+        "text": "我被考面試是什麼時候了"
+      },
+      {
+        "time": "01:11",
+        "text": "就看也不知道要考什麼"
+      },
+      {
+        "time": "01:13",
+        "text": "就剛剛才想的"
+      },
+      {
+        "time": "01:14",
+        "text": "對 我剛剛想的"
+      },
+      {
+        "time": "01:15",
+        "text": "OK"
+      },
+      {
+        "time": "01:17",
+        "text": "我主要是進來你房間"
+      },
+      {
+        "time": "01:18",
+        "text": "然後我就想到一個問題"
+      },
+      {
+        "time": "01:20",
+        "text": "就是有關火災逃生的問題"
+      },
+      {
+        "time": "01:22",
+        "text": "假設你在一個房間上"
+      },
+      {
+        "time": "01:25",
+        "text": "那我們把問題簡化一點"
+      },
+      {
+        "time": "01:26",
+        "text": "就是我們在一個grid上"
+      },
+      {
+        "time": "01:28",
+        "text": "假設每個grid是一個房間"
+      },
+      {
+        "time": "01:31",
+        "text": "那你可以移動到前後左右的房間"
+      },
+      {
+        "time": "01:34",
+        "text": "你可以花一單位的時間移動到前後左右的房間"
+      },
+      {
+        "time": "01:37",
+        "text": "假設就是你在最左上角"
+      },
+      {
+        "time": "01:40",
+        "text": "我畫一個表格"
+      },
+      {
+        "time": "01:41",
+        "text": "對這是"
+      },
+      {
+        "time": "01:41",
+        "text": "我有一個不祥的預感"
+      },
+      {
+        "time": "01:43",
+        "text": "對這是你"
+      },
+      {
+        "time": "01:44",
+        "text": "然後可能中間有一些牆"
+      },
+      {
+        "time": "01:46",
+        "text": "比如說這是牆"
+      },
+      {
+        "time": "01:47",
+        "text": "好那假設有個地方發生火災了"
+      },
+      {
+        "time": "01:50",
+        "text": "對那它跟你一樣就是你會先移動一格"
+      },
+      {
+        "time": "01:53",
+        "text": "譬如說你可以往右移動一格"
+      },
+      {
+        "time": "01:56",
+        "text": "然後同時火也會往外擴散一格"
+      },
+      {
+        "time": "01:59",
+        "text": "那它擴散就是一次往上下左右四個方向都擴散"
+      },
+      {
+        "time": "02:02",
+        "text": "OK"
+      },
+      {
+        "time": "02:02",
+        "text": "對那譬如說你現在往右移動一格你跑到這裡了"
+      },
+      {
+        "time": "02:05",
+        "text": "我就延伸到這裡"
+      },
+      {
+        "time": "02:07",
+        "text": "對 那我想"
+      },
+      {
+        "time": "02:07",
+        "text": "但它不會燒到牆對不對"
+      },
+      {
+        "time": "02:09",
+        "text": "它不會燒到牆"
+      },
+      {
+        "time": "02:10",
+        "text": "牆不會被燒破"
+      },
+      {
+        "time": "02:11",
+        "text": "對 那這個信號是牆"
+      },
+      {
+        "time": "02:12",
+        "text": "假設出口在右下角"
+      },
+      {
+        "time": "02:14",
+        "text": "出口一定都在右下角"
+      },
+      {
+        "time": "02:15",
+        "text": "對 那你再對左上角"
+      },
+      {
+        "time": "02:17",
+        "text": "然後出口在右下角"
+      },
+      {
+        "time": "02:18",
+        "text": "那我們保證左上角跟右下角不會有牆"
+      },
+      {
+        "time": "02:21",
+        "text": "對 然後我想問"
+      },
+      {
+        "time": "02:22",
+        "text": "有沒有辦法逃生出去"
+      },
+      {
+        "time": "02:24",
+        "text": "喔 就回復一個玻璃是吧對喔 糟了那我們題目簡單一點就是不會有下腳不會有牆對然後我想問有沒有辦法逃生出去喔就return一個 boolean 是吧"
+      },
+      {
+        "time": "02:25",
+        "text": "對"
+      },
+      {
+        "time": "02:25",
+        "text": "oh shit"
+      },
+      {
+        "time": "02:26",
+        "text": "呵呵呵呵"
+      },
+      {
+        "time": "02:27",
+        "text": "那我們題目簡單一點就是"
+      },
+      {
+        "time": "02:29",
+        "text": "假設起火點就是一個"
+      },
+      {
+        "time": "02:30",
+        "text": "然後你也"
+      },
+      {
+        "time": "02:31",
+        "text": "就是你就一個位置這樣子"
+      },
+      {
+        "time": "02:33",
+        "text": "嗯"
+      },
+      {
+        "time": "02:33",
+        "text": "然後起火點也是一個 input 是吧"
+      },
+      {
+        "time": "02:35",
+        "text": "等於說我輸入可能會是"
+      },
+      {
+        "time": "02:37",
+        "text": "譬如說點就代表"
+      },
+      {
+        "time": "02:38",
+        "text": "可能會有個 u 是你"
+      },
+      {
+        "time": "02:40",
+        "text": "嗯"
+      },
+      {
+        "time": "02:40",
+        "text": "對然後點就代表你可以走的路"
+      },
+      {
+        "time": "02:42",
+        "text": "F5 就代表是起火點"
+      },
+      {
+        "time": "02:44",
+        "text": "然後會是就代表這整張地圖"
+      },
+      {
+        "time": "02:46",
+        "text": "然後 exit 也會標在上面嗎?"
+      },
+      {
+        "time": "02:48",
+        "text": "對 exit 會標在上面"
+      },
+      {
+        "time": "02:49",
+        "text": "那 exit 用 e 表示?"
+      },
+      {
+        "time": "02:50",
+        "text": "對"
+      },
+      {
+        "time": "02:51",
+        "text": "exit 不一定會在右下角吧?"
+      },
+      {
+        "time": "02:52",
+        "text": "對 我們可以假設不一定在右下角"
+      },
+      {
+        "time": "02:54",
+        "text": "我們以一個最 brute force 的方法去想"
+      },
+      {
+        "time": "02:57",
+        "text": "一開始我們要每一次都是往外移動一格"
+      },
+      {
+        "time": "03:02",
+        "text": "從我的那個點開始上下左右移動那 fire 也會上下左右移動一格從我的那個點開始上下左右移動"
+      },
+      {
+        "time": "03:05",
+        "text": "那Fire也會上下左右移動"
+      },
+      {
+        "time": "03:07",
+        "text": "看是我先找到逃生點"
+      },
+      {
+        "time": "03:09",
+        "text": "還是我先被Fire燒死"
+      },
+      {
+        "time": "03:11",
+        "text": "Fire燒到的地方我就不能走了"
+      },
+      {
+        "time": "03:13",
+        "text": "對Fire燒"
+      },
+      {
+        "time": "03:14",
+        "text": "因為其實你可以繞過Fire去走"
+      },
+      {
+        "time": "03:16",
+        "text": "因為你可能走"
+      },
+      {
+        "time": "03:17",
+        "text": "原本走很短的那條路徑"
+      },
+      {
+        "time": "03:19",
+        "text": "到出口你會被燒到"
+      },
+      {
+        "time": "03:21",
+        "text": "但是你可以繞一個路走"
+      },
+      {
+        "time": "03:22",
+        "text": "可能Fire燒不到那裡"
+      },
+      {
+        "time": "03:23",
+        "text": "我覺得這就是一個比較典型的用BFS去看我能不能找到路口"
+      },
+      {
+        "time": "03:30",
+        "text": "那假如最後就是End Condition要是我找不到Exit的話代表說False"
+      },
+      {
+        "time": "03:36",
+        "text": "對"
+      },
+      {
+        "time": "03:37",
+        "text": "那我想一下在什麼樣情況我會去結束這個"
+      },
+      {
+        "time": "03:40",
+        "text": "因為BFS的話就是用一個Queue去存我接下來還可以走的路線"
+      },
+      {
+        "time": "03:46",
+        "text": "但是最大問題是說我這個Q可能會變"
+      },
+      {
+        "time": "03:50",
+        "text": "還是你先想一下就是你怎麼判斷你在這一格的時候會不會被火燒到"
+      },
+      {
+        "time": "03:54",
+        "text": "OK就是我在這一格這個位置當下會不會被火燒到"
+      },
+      {
+        "time": "03:58",
+        "text": "對"
+      },
+      {
+        "time": "03:58",
+        "text": "因為你逃到這一格你會有個時間點"
+      },
+      {
+        "time": "04:01",
+        "text": "你會辦法知道你在這個時間點在這一格火會不會燒到你"
+      },
+      {
+        "time": "04:06",
+        "text": "或是這個格是不是已經被燒起來了"
+      },
+      {
+        "time": "04:07",
+        "text": "我會知道喔"
+      },
+      {
+        "time": "04:08",
+        "text": "因為火會一直 expand 啊"
+      },
+      {
+        "time": "04:09",
+        "text": "所以說在那個 moment 的時候"
+      },
+      {
+        "time": "04:11",
+        "text": "那你要怎麼知道這件事情"
+      },
+      {
+        "time": "04:13",
+        "text": "所以我讓火先走"
+      },
+      {
+        "time": "04:15",
+        "text": "對讓火先走"
+      },
+      {
+        "time": "04:16",
+        "text": "然後我再去判斷我下一個路可以走哪裡"
+      },
+      {
+        "time": "04:18",
+        "text": "嗯對"
+      },
+      {
+        "time": "04:19",
+        "text": "那我在我的 queue 裡面就存我下一個 point"
+      },
+      {
+        "time": "04:23",
+        "text": "下一個的那個 gridrid裡面的Reference"
+      },
+      {
+        "time": "04:25",
+        "text": "X Y 是OK的"
+      },
+      {
+        "time": "04:26",
+        "text": "等於是說每一次先Expand火一遍"
+      },
+      {
+        "time": "04:29",
+        "text": "然後再存下一個"
+      },
+      {
+        "time": "04:30",
+        "text": "就我把Cue裡面抓出來"
+      },
+      {
+        "time": "04:31",
+        "text": "就是下一個Breath裡面抓出來"
+      },
+      {
+        "time": "04:33",
+        "text": "然後每一個去測下一個才可以走哪裡"
+      },
+      {
+        "time": "04:36",
+        "text": "這就是我的Solution"
+      },
+      {
+        "time": "04:37",
+        "text": "那這樣複雜度"
+      },
+      {
+        "time": "04:38",
+        "text": "這樣複雜度的話就是All of MN"
+      },
+      {
+        "time": "04:41",
+        "text": "Size 這個Grid的Size"
+      },
+      {
+        "time": "04:43",
+        "text": "對"
+      },
+      {
+        "time": "04:43",
+        "text": "可以嗎 面試館"
+      },
+      {
+        "time": "04:44",
+        "text": "對 我覺得聽起來是個可行的作法"
+      },
+      {
+        "time": "04:46",
+        "text": "但寫不寫出來是另外一回事"
+      },
+      {
+        "time": "04:48",
+        "text": "對好"
+      },
+      {
+        "time": "04:48",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "04:49",
+        "text": "那現在就開始Coding環節"
+      },
+      {
+        "time": "04:51",
+        "text": "理想宏大但是"
+      },
+      {
+        "time": "04:52",
+        "text": "這個"
+      },
+      {
+        "time": "04:53",
+        "text": "啊Coding喔"
+      },
+      {
+        "time": "04:54",
+        "text": "OK好"
+      },
+      {
+        "time": "04:54",
+        "text": "我超久沒有寫教吧"
+      },
+      {
+        "time": "04:55",
+        "text": "我覺得比較"
+      },
+      {
+        "time": "04:56",
+        "text": "教的好處就是比較清楚"
+      },
+      {
+        "time": "04:57",
+        "text": "Type就寫得很清楚"
+      },
+      {
+        "time": "04:59",
+        "text": "好"
+      },
+      {
+        "time": "04:59",
+        "text": "Public"
+      },
+      {
+        "time": "05:00",
+        "text": "Can Terry Survive"
+      },
+      {
+        "time": "05:02",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "05:03",
+        "text": "然後這是一個Boolean"
+      },
+      {
+        "time": "05:04",
+        "text": "然後我的In 是一個 grid"
+      },
+      {
+        "time": "05:06",
+        "text": "這樣子"
+      },
+      {
+        "time": "05:07",
+        "text": "應該是一個 stream 吧"
+      },
+      {
+        "time": "05:09",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "05:10",
+        "text": "喔喔喔 對對"
+      },
+      {
+        "time": "05:12",
+        "text": "裡面是一些字眼"
+      },
+      {
+        "time": "05:13",
+        "text": "喔對"
+      },
+      {
+        "time": "05:14",
+        "text": "我真的很"
+      },
+      {
+        "time": "05:15",
+        "text": "好像不是這樣寫"
+      },
+      {
+        "time": "05:16",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "05:17",
+        "text": "等一下好像不是這樣寫"
+      },
+      {
+        "time": "05:18",
+        "text": "等一下不是這樣寫嗎"
+      },
+      {
+        "time": "05:18",
+        "text": "不是這樣寫"
+      },
+      {
+        "time": "05:19",
+        "text": "教完應該不是這樣寫"
+      },
+      {
+        "time": "05:20",
+        "text": "等一下"
+      },
+      {
+        "time": "05:20",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "05:22",
+        "text": "喔"
+      },
+      {
+        "time": "05:23",
+        "text": "ok"
+      },
+      {
+        "time": "05:23",
+        "text": "不要緊張不要緊張"
+      },
+      {
+        "time": "05:26",
+        "text": "應該是一圍而已,因為String就是代表一圍了"
+      },
+      {
+        "time": "05:29",
+        "text": "因為String的話就只要開一圍就好"
+      },
+      {
+        "time": "05:31",
+        "text": "因為你每一串都要一圍"
+      },
+      {
+        "time": "05:33",
+        "text": "那我開二圍好了"
+      },
+      {
+        "time": "05:35",
+        "text": "這make sense吧"
+      },
+      {
+        "time": "05:37",
+        "text": "這都可以啦,我覺得這兩個都ok"
+      },
+      {
+        "time": "05:39",
+        "text": "因為我要找我的點嘛"
+      },
+      {
+        "time": "05:41",
+        "text": "還是我assume我在左上"
+      },
+      {
+        "time": "05:43",
+        "text": "我們找一下我們自己在哪里"
+      },
+      {
+        "time": "05:45",
+        "text": "ok 然后那我先开一个 queue"
+      },
+      {
+        "time": "05:47",
+        "text": "queue 的话是"
+      },
+      {
+        "time": "05:49",
+        "text": "我用这个 integer array 来 reference"
+      },
+      {
+        "time": "05:52",
+        "text": "在在 Python 就是个 tuple"
+      },
+      {
+        "time": "05:53",
+        "text": "嗯对我记得 Java 的 queue 是 linked list"
+      },
+      {
+        "time": "05:56",
+        "text": "哎我真的超久没写 Java"
+      },
+      {
+        "time": "05:58",
+        "text": "两年没有写 Java"
+      },
+      {
+        "time": "06:00",
+        "text": "但我觉得就是这个这个还好"
+      },
+      {
+        "time": "06:01",
+        "text": "ok 我们现在有个 queue 吗"
+      },
+      {
+        "time": "06:03",
+        "text": "嗯那我们先找我們自己的 Starting Point"
+      },
+      {
+        "time": "06:05",
+        "text": "然後我把它放在 Queue 裡面"
+      },
+      {
+        "time": "06:07",
+        "text": "我也要有個 Queue 囉"
+      },
+      {
+        "time": "06:08",
+        "text": "那我這個 Queue 叫 Terry Queue"
+      },
+      {
+        "time": "06:10",
+        "text": "Fire Queue"
+      },
+      {
+        "time": "06:11",
+        "text": "Terry Queue 的話"
+      },
+      {
+        "time": "06:12",
+        "text": "我們先從 M equals to Grid"
+      },
+      {
+        "time": "06:16",
+        "text": "好那我現在就"
+      },
+      {
+        "time": "06:17",
+        "text": "先做一個最基本的邊界 Check"
+      },
+      {
+        "time": "06:20",
+        "text": "說我們可以有順這個 Grid 是一個 Valid 嗎"
+      },
+      {
+        "time": "06:22",
+        "text": "可以就是它一定會有 u 有 f 有 e"
+      },
+      {
+        "time": "06:25",
+        "text": "它的大小應該至少是三個"
+      },
+      {
+        "time": "06:28",
+        "text": "就是可能一乘三這樣或是至少二乘二這樣子"
+      },
+      {
+        "time": "06:30",
+        "text": "所以不用去 check 了"
+      },
+      {
+        "time": "06:31",
+        "text": "不用去 check 是吧"
+      },
+      {
+        "time": "06:32",
+        "text": "ok 好我們有個 m n"
+      },
+      {
+        "time": "06:34",
+        "text": "好一個 for 回圈裡面再加一個 for loop"
+      },
+      {
+        "time": "06:38",
+        "text": "這樣子我就可以 loop 整個 grid 一遍"
+      },
+      {
+        "time": "06:40",
+        "text": "if grid ij 等於 u"
+      },
+      {
+        "time": "06:44",
+        "text": "這個就是代表說我找到了我"
+      },
+      {
+        "time": "06:47",
+        "text": "嗯"
+      },
+      {
+        "time": "06:47",
+        "text": "cherryq"
+      },
+      {
+        "time": "06:49",
+        "text": "inq"
+      },
+      {
+        "time": "06:50",
+        "text": "offer new int ij"
+      },
+      {
+        "time": "06:53",
+        "text": "我教的還蠻屌的"
+      },
+      {
+        "time": "06:54",
+        "text": "哈哈"
+      },
+      {
+        "time": "06:55",
+        "text": "這還沒有忘記"
+      },
+      {
+        "time": "06:55",
+        "text": "else if grid ij"
+      },
+      {
+        "time": "06:58",
+        "text": "等於f"
+      },
+      {
+        "time": "07:00",
+        "text": "的話"
+      },
+      {
+        "time": "07:01",
+        "text": "offer new int ij"
+      },
+      {
+        "time": "07:03",
+        "text": "嗯"
+      },
+      {
+        "time": "07:03",
+        "text": "這樣的話我就可以把我跟fire的一开始location"
+      },
+      {
+        "time": "07:07",
+        "text": "先存到q里面"
+      },
+      {
+        "time": "07:08",
+        "text": "下一步呢要开始走了"
+      },
+      {
+        "time": "07:10",
+        "text": "然后exit的话是"
+      },
+      {
+        "time": "07:12",
+        "text": "其实不需要存exit"
+      },
+      {
+        "time": "07:13",
+        "text": "我们一定会有一个exit"
+      },
+      {
+        "time": "07:14",
+        "text": "对一定会有"
+      },
+      {
+        "time": "07:15",
+        "text": "那最后的end condition就是假如terryq"
+      },
+      {
+        "time": "07:17",
+        "text": "是被清空了"
+      },
+      {
+        "time": "07:19",
+        "text": "然后还没有遇到exit"
+      },
+      {
+        "time": "07:21",
+        "text": "那我们就fail了"
+      },
+      {
+        "time": "07:21",
+        "text": "我们就死掉了"
+      },
+      {
+        "time": "07:22",
+        "text": "嗯对"
+      },
+      {
+        "time": "07:23",
+        "text": "好那我们就开始呃我们的 bfs"
+      },
+      {
+        "time": "07:26",
+        "text": "bfs 要怎么写"
+      },
+      {
+        "time": "07:27",
+        "text": "well terryq is not empty"
+      },
+      {
+        "time": "07:30",
+        "text": "about fireq 去做 process"
+      },
+      {
+        "time": "07:32",
+        "text": "嗯他如果烧完的话他就结束了"
+      },
+      {
+        "time": "07:34",
+        "text": "嗯对啊我不知道这个有没有必要"
+      },
+      {
+        "time": "07:35",
+        "text": "但是我就可以说 if fireq is empty"
+      },
+      {
+        "time": "07:39",
+        "text": "然后我就 return false"
+      },
+      {
+        "time": "07:40",
+        "text": "但我觉得可能不用这样子 check"
+      },
+      {
+        "time": "07:41",
+        "text": "但是我先这样写出来好了"
+      },
+      {
+        "time": "07:43",
+        "text": "嗯 for 那我先我先 loop 一遍FyreQ裡面已經有的值"
+      },
+      {
+        "time": "07:48",
+        "text": "FyreQ.size"
+      },
+      {
+        "time": "07:49",
+        "text": "就是我先把FyreQ下一個"
+      },
+      {
+        "time": "07:51",
+        "text": "然後這樣子會有另外一個問題就是"
+      },
+      {
+        "time": "07:53",
+        "text": "因為你BFS"
+      },
+      {
+        "time": "07:55",
+        "text": "所以相當於你就是你直接"
+      },
+      {
+        "time": "07:57",
+        "text": "把自己分身成四個方向去走"
+      },
+      {
+        "time": "08:00",
+        "text": "你四個方向都分身一次"
+      },
+      {
+        "time": "08:01",
+        "text": "但你走這四個方向"
+      },
+      {
+        "time": "08:02",
+        "text": "你的Fyre只往外Extend一次對啊,就是我要先Extend Fyre然後我才走四個方向都分身一次但你走這四個方向你的 fire 只往外 extend 一次對啊"
+      },
+      {
+        "time": "08:05",
+        "text": "就是我要先 extend fire"
+      },
+      {
+        "time": "08:06",
+        "text": "然後我才走四個方向"
+      },
+      {
+        "time": "08:07",
+        "text": "嗯"
+      },
+      {
+        "time": "08:07",
+        "text": "對我先把我現在"
+      },
+      {
+        "time": "08:09",
+        "text": "q 裡面的東西拿出來"
+      },
+      {
+        "time": "08:10",
+        "text": "嗯"
+      },
+      {
+        "time": "08:11",
+        "text": "indra k"
+      },
+      {
+        "time": "08:12",
+        "text": "equals to 0"
+      },
+      {
+        "time": "08:13",
+        "text": "然後 k 小於"
+      },
+      {
+        "time": "08:15",
+        "text": "30q"
+      },
+      {
+        "time": "08:16",
+        "text": "的 size k++"
+      },
+      {
+        "time": "08:18",
+        "text": "等於說這個 for loop 裡面"
+      },
+      {
+        "time": "08:19",
+        "text": "我會 loop 過一遍"
+      },
+      {
+        "time": "08:20",
+        "text": "下一個 potential 的值"
+      },
+      {
+        "time": "08:22",
+        "text": "但在做這個之前呢"
+      },
+      {
+        "time": "08:24",
+        "text": "我要先把 fireloop 過一遍嗯對potential的值但是在做这个之前呢我要先把fire loop过一遍"
+      },
+      {
+        "time": "08:27",
+        "text": "等于说这个是在这上面这样子"
+      },
+      {
+        "time": "08:30",
+        "text": "if fireq is empty then return false"
+      },
+      {
+        "time": "08:32",
+        "text": "然后把fireq expand一遍"
+      },
+      {
+        "time": "08:35",
+        "text": "然后再把我的terraq再去做一遍"
+      },
+      {
+        "time": "08:37",
+        "text": "我知道很多外附的这个很乱"
+      },
+      {
+        "time": "08:39",
+        "text": "但是我先这样写"
+      },
+      {
+        "time": "08:41",
+        "text": "so fireq四面"
+      },
+      {
+        "time": "08:42",
+        "text": "intra k equals to fireq.size"
+      },
+      {
+        "time": "08:46",
+        "text": "这样子"
+      },
+      {
+        "time": "08:46",
+        "text": "嗯"
+      },
+      {
+        "time": "08:47",
+        "text": "然后"
+      },
+      {
+        "time": "08:48",
+        "text": "啊变数不够"
+      },
+      {
+        "time": "08:49",
+        "text": "哈哈哈哈"
+      },
+      {
+        "time": "08:50",
+        "text": "k equals to fireq"
+      },
+      {
+        "time": "08:53",
+        "text": "这样子"
+      },
+      {
+        "time": "08:54",
+        "text": "等下我在fireq里面loop过一遍"
+      },
+      {
+        "time": "08:57",
+        "text": "嗯"
+      },
+      {
+        "time": "08:58",
+        "text": "对"
+      },
+      {
+        "time": "08:58",
+        "text": "fireq next equals fireq pull"
+      },
+      {
+        "time": "09:01",
+        "text": "这样子"
+      },
+      {
+        "time": "09:02",
+        "text": "我把next抓出来"
+      },
+      {
+        "time": "09:03",
+        "text": "我写一個dy dx好了"
+      },
+      {
+        "time": "09:05",
+        "text": "dx equals to"
+      },
+      {
+        "time": "09:07",
+        "text": "就讓我有一個簡單的方式可以loop"
+      },
+      {
+        "time": "09:10",
+        "text": "嗯算是一個很常見的做法"
+      },
+      {
+        "time": "09:13",
+        "text": "對有時候我離口人應該都要這樣"
+      },
+      {
+        "time": "09:16",
+        "text": "不然你要寫四個if or else"
+      },
+      {
+        "time": "09:17",
+        "text": "對我已經夠多if還有夠多for loop"
+      },
+      {
+        "time": "09:20",
+        "text": "我覺得要精簡"
+      },
+      {
+        "time": "09:22",
+        "text": "這要用超多variable"
+      },
+      {
+        "time": "09:23",
+        "text": "pass pass"
+      },
+      {
+        "time": "09:24",
+        "text": "喔對我的grid我可以在上面mark吗"
+      },
+      {
+        "time": "09:26",
+        "text": "可以"
+      },
+      {
+        "time": "09:28",
+        "text": "那我就是在grid上面"
+      },
+      {
+        "time": "09:30",
+        "text": "这个grid是muteable"
+      },
+      {
+        "time": "09:32",
+        "text": "如果是不行的话我就开一个新的"
+      },
+      {
+        "time": "09:34",
+        "text": "next"
+      },
+      {
+        "time": "09:36",
+        "text": "plus dxb"
+      },
+      {
+        "time": "09:38",
+        "text": "这variable真的很乱"
+      },
+      {
+        "time": "09:40",
+        "text": "new y equals next e"
+      },
+      {
+        "time": "09:42",
+        "text": "plus dy b"
+      },
+      {
+        "time": "09:44",
+        "text": "ifnext xnew y equals next e plus dy bif"
+      },
+      {
+        "time": "09:45",
+        "text": "ok I'll call it next x"
+      },
+      {
+        "time": "09:48",
+        "text": "next y"
+      },
+      {
+        "time": "09:49",
+        "text": "if next x 小于 0"
+      },
+      {
+        "time": "09:52",
+        "text": "or next x 大于等于 m"
+      },
+      {
+        "time": "09:55",
+        "text": "or next y 小于 0"
+      },
+      {
+        "time": "09:59",
+        "text": "or next y 大于等于 n"
+      },
+      {
+        "time": "10:03",
+        "text": "continue 对"
+      },
+      {
+        "time": "10:04",
+        "text": "这样子"
+      },
+      {
+        "time": "10:04",
+        "text": "ok 好但是还有一些条件next y 等於 ncontinue 對 這樣子"
+      },
+      {
+        "time": "10:05",
+        "text": "OK 好"
+      },
+      {
+        "time": "10:05",
+        "text": "但是還有一些條件譬如說"
+      },
+      {
+        "time": "10:07",
+        "text": "像是 read next x next y"
+      },
+      {
+        "time": "10:11",
+        "text": "等於 應該說不等於空格"
+      },
+      {
+        "time": "10:13",
+        "text": "如果是強的話直接 continue"
+      },
+      {
+        "time": "10:15",
+        "text": "對 因為出口也可以燒"
+      },
+      {
+        "time": "10:17",
+        "text": "當然你燒到出口你可以直接 return false 沒錯"
+      },
+      {
+        "time": "10:19",
+        "text": "對 其實這是一個很好碰"
+      },
+      {
+        "time": "10:21",
+        "text": "因為其實你全部燒完你還是找不到"
+      },
+      {
+        "time": "10:23",
+        "text": "對 這也是題目一開始就是其實出口也是可以燒起來"
+      },
+      {
+        "time": "10:26",
+        "text": "嗯出口也是可以燒起來"
+      },
+      {
+        "time": "10:27",
+        "text": "OK好那就是只要是搶的話就"
+      },
+      {
+        "time": "10:30",
+        "text": "就continue"
+      },
+      {
+        "time": "10:30",
+        "text": "對那make sense"
+      },
+      {
+        "time": "10:31",
+        "text": "因為出口燒起來的話"
+      },
+      {
+        "time": "10:32",
+        "text": "你就等於說你把出口也蓋掉"
+      },
+      {
+        "time": "10:34",
+        "text": "如果是這樣的話就是continue"
+      },
+      {
+        "time": "10:36",
+        "text": "然後是end if"
+      },
+      {
+        "time": "10:38",
+        "text": "OK然後我grid"
+      },
+      {
+        "time": "10:39",
+        "text": "next x 跟 next y 等於 fire"
+      },
+      {
+        "time": "10:44",
+        "text": "這樣子"
+      },
+      {
+        "time": "10:44",
+        "text": "對grid x next 跟 y 等於Fire這樣子對"
+      },
+      {
+        "time": "10:45",
+        "text": "Grid X跟Next Y等於信號"
+      },
+      {
+        "time": "10:49",
+        "text": "在這樣的情況下"
+      },
+      {
+        "time": "10:51",
+        "text": "我們就要continue"
+      },
+      {
+        "time": "10:51",
+        "text": "然後otherwise"
+      },
+      {
+        "time": "10:52",
+        "text": "Grid X"
+      },
+      {
+        "time": "10:53",
+        "text": "Grid XY"
+      },
+      {
+        "time": "10:54",
+        "text": "就是我上下左右都expand了"
+      },
+      {
+        "time": "10:58",
+        "text": "然後我要把新的location放回Q裡面"
+      },
+      {
+        "time": "11:00",
+        "text": "對"
+      },
+      {
+        "time": "11:00",
+        "text": "Fire Q offer Next Next X"
+      },
+      {
+        "time": "11:04",
+        "text": "OK這樣寫會有什麼問題"
+      },
+      {
+        "time": "11:06",
+        "text": "grid要不能是fire"
+      },
+      {
+        "time": "11:07",
+        "text": "應該說在這邊我要把filter掉"
+      },
+      {
+        "time": "11:09",
+        "text": "對這樣子的話就continue"
+      },
+      {
+        "time": "11:11",
+        "text": "然後像我新還有fire"
+      },
+      {
+        "time": "11:12",
+        "text": "然後是我的話可以燒"
+      },
+      {
+        "time": "11:14",
+        "text": "然後門x也可以燒"
+      },
+      {
+        "time": "11:15",
+        "text": "這樣我們就所有continue都cover到了"
+      },
+      {
+        "time": "11:17",
+        "text": "接下來等於說我要開始"
+      },
+      {
+        "time": "11:19",
+        "text": "loop我的那個queue terry queue"
+      },
+      {
+        "time": "11:21",
+        "text": "然後k等於Teri Q size"
+      },
+      {
+        "time": "11:25",
+        "text": "用同一个variable"
+      },
+      {
+        "time": "11:27",
+        "text": "A等于0 A小于Teri Q size"
+      },
+      {
+        "time": "11:31",
+        "text": "A小于K A++"
+      },
+      {
+        "time": "11:33",
+        "text": "现在进入我的那个环节"
+      },
+      {
+        "time": "11:35",
+        "text": "next x 跟 next y"
+      },
+      {
+        "time": "11:38",
+        "text": "先把next给pull出来"
+      },
+      {
+        "time": "11:41",
+        "text": "next equals to Teri Q pullull然後Next 0的話就下一個"
+      },
+      {
+        "time": "11:48",
+        "text": "OK DX DY"
+      },
+      {
+        "time": "11:49",
+        "text": "接下來就是這個的編輯條件"
+      },
+      {
+        "time": "11:50",
+        "text": "我先把這個copy下來好了"
+      },
+      {
+        "time": "11:52",
+        "text": "我其實可以不用check會不會碰到火"
+      },
+      {
+        "time": "11:55",
+        "text": "要是沒有的話我就直接continue"
+      },
+      {
+        "time": "11:56",
+        "text": "遇到火我不能走"
+      },
+      {
+        "time": "11:57",
+        "text": "遇到牆我不能走"
+      },
+      {
+        "time": "11:58",
+        "text": "遇到X就return true"
+      },
+      {
+        "time": "11:59",
+        "text": "Greed X Y"
+      },
+      {
+        "time": "12:02",
+        "text": "如果是新"
+      },
+      {
+        "time": "12:03",
+        "text": "先是牆壁"
+      },
+      {
+        "time": "12:03",
+        "text": "新叫牆"
+      },
+      {
+        "time": "12:04",
+        "text": "然後如果是File的話就是�壁新叫墙"
+      },
+      {
+        "time": "12:05",
+        "text": "如果是File的话就是continue"
+      },
+      {
+        "time": "12:06",
+        "text": "对"
+      },
+      {
+        "time": "12:07",
+        "text": "If gridX gridNext"
+      },
+      {
+        "time": "12:09",
+        "text": "XXY equals to exit的话"
+      },
+      {
+        "time": "12:12",
+        "text": "Return true"
+      },
+      {
+        "time": "12:13",
+        "text": "这些都check过一遍之后"
+      },
+      {
+        "time": "12:15",
+        "text": "我就可以把它放到Terraqueue里面"
+      },
+      {
+        "time": "12:17",
+        "text": "Terraqueue offer"
+      },
+      {
+        "time": "12:18",
+        "text": "我先要mark一下"
+      },
+      {
+        "time": "12:20",
+        "text": "GridNext X"
+      },
+      {
+        "time": "12:21",
+        "text": "Next Y equals to U"
+      },
+      {
+        "time": "12:24",
+        "text": "Terraqueue offer我mark然后下一个步骤走然后GridXNext XNext YEquals to U然後 Turkey Offer"
+      },
+      {
+        "time": "12:26",
+        "text": "One Mark"
+      },
+      {
+        "time": "12:26",
+        "text": "然後下一個步驟走"
+      },
+      {
+        "time": "12:28",
+        "text": "然後 Grid X"
+      },
+      {
+        "time": "12:29",
+        "text": "那如果是人的話我要 Continue"
+      },
+      {
+        "time": "12:30",
+        "text": "嗯"
+      },
+      {
+        "time": "12:31",
+        "text": "對"
+      },
+      {
+        "time": "12:31",
+        "text": "所以有 Check 人"
+      },
+      {
+        "time": "12:32",
+        "text": "Check 火"
+      },
+      {
+        "time": "12:34",
+        "text": "Check 心"
+      },
+      {
+        "time": "12:35",
+        "text": "嗯"
+      },
+      {
+        "time": "12:35",
+        "text": "我現在不是很確定說"
+      },
+      {
+        "time": "12:36",
+        "text": "OK 火如果燒到我本身的人的話"
+      },
+      {
+        "time": "12:38",
+        "text": "其實沒有什麼太大的關係"
+      },
+      {
+        "time": "12:41",
+        "text": "應該說"
+      },
+      {
+        "time": "12:41",
+        "text": "應該說"
+      },
+      {
+        "time": "12:42",
+        "text": "我覺得這條件都無妨"
+      },
+      {
+        "time": "12:44",
+        "text": "就是人先走跟火先走都無妨但我想確定你這邊寫的Assum,就是人先走跟火先走都無妨"
+      },
+      {
+        "time": "12:46",
+        "text": "但我想確定你這邊寫的Assumption是人先走還是火先走"
+      },
+      {
+        "time": "12:50",
+        "text": "Assumption是火先走,因為我有這個while loop,然後我先走火"
+      },
+      {
+        "time": "12:53",
+        "text": "但如果照你現在的寫法的話,你人還是走得出去"
+      },
+      {
+        "time": "12:57",
+        "text": "我人還是走得出去"
+      },
+      {
+        "time": "12:58",
+        "text": "因為你現在火在Q裡面,人在Q裡面"
+      },
+      {
+        "time": "13:01",
+        "text": "你火燒到Q裡面那個人,那就 照你的說法人應該走不出去對不對"
+      },
+      {
+        "time": "13:08",
+        "text": "照我們剛剛對題目的 assumption"
+      },
+      {
+        "time": "13:11",
+        "text": "你現在人應該走不出去"
+      },
+      {
+        "time": "13:12",
+        "text": "但你的人現在還在Q裡面"
+      },
+      {
+        "time": "13:14",
+        "text": "他現在還是會走出去"
+      },
+      {
+        "time": "13:16",
+        "text": "對 但是我讓火先走的原因是"
+      },
+      {
+        "time": "13:18",
+        "text": "我想讓火先走"
+      },
+      {
+        "time": "13:19",
+        "text": "然後我看人的option是什麼"
+      },
+      {
+        "time": "13:20",
+        "text": "那如果說他卡在火裡面"
+      },
+      {
+        "time": "13:23",
+        "text": "因為假如一個情況就是火烧到人的地方嘛"
+      },
+      {
+        "time": "13:25",
+        "text": "但是因为我现在在这里"
+      },
+      {
+        "time": "13:27",
+        "text": "等于说我先逃离了"
+      },
+      {
+        "time": "13:28",
+        "text": "然后他再烧过来"
+      },
+      {
+        "time": "13:30",
+        "text": "所以这是OK的"
+      },
+      {
+        "time": "13:30",
+        "text": "但是如果他上下左右都已经被火包围了"
+      },
+      {
+        "time": "13:33",
+        "text": "那你还是走不了"
+      },
+      {
+        "time": "13:35",
+        "text": "所以说你那个location"
+      },
+      {
+        "time": "13:37",
+        "text": "那个queue"
+      },
+      {
+        "time": "13:38",
+        "text": "那个element就废掉了"
+      },
+      {
+        "time": "13:39",
+        "text": "我虽然是火走先走"
+      },
+      {
+        "time": "13:41",
+        "text": "但是其实我主要是这样可以预判"
+      },
+      {
+        "time": "13:43",
+        "text": "这样子的话最后因为我有一个end condition in check如果他走到exit就结束我雖然是活走先走但是其實我主要是這樣可以預判這樣子的話最後"
+      },
+      {
+        "time": "13:46",
+        "text": "因為我有一個end condition in check"
+      },
+      {
+        "time": "13:48",
+        "text": "如果他走到exit就結束"
+      },
+      {
+        "time": "13:49",
+        "text": "那如果最後都沒有的話"
+      },
+      {
+        "time": "13:52",
+        "text": "外回圈結束之後就是return false"
+      },
+      {
+        "time": "13:55",
+        "text": "我想一下有沒有一些奇怪的一些condition"
+      },
+      {
+        "time": "13:58",
+        "text": "我沒有cover到的"
+      },
+      {
+        "time": "13:59",
+        "text": "如果你的室內不聯通的話"
+      },
+      {
+        "time": "14:02",
+        "text": "你這個城市會不會有問題"
+      },
+      {
+        "time": "14:03",
+        "text": "室內不聯通"
+      },
+      {
+        "time": "14:04",
+        "text": "你說新有可能把他中間給全擋住那就要看你exit在哪囉如果你的室內不連通的話你這個城市會不會有問題室內不連通哦你說"
+      },
+      {
+        "time": "14:05",
+        "text": "心有可能把它中間給全打住"
+      },
+      {
+        "time": "14:07",
+        "text": "那就要看你 exit 在哪囉"
+      },
+      {
+        "time": "14:09",
+        "text": "如果 exit 在火那個防衛的話"
+      },
+      {
+        "time": "14:11",
+        "text": "那你也永遠找不到"
+      },
+      {
+        "time": "14:13",
+        "text": "反正你人跟 exit"
+      },
+      {
+        "time": "14:14",
+        "text": "如果被隔開來就走不到"
+      },
+      {
+        "time": "14:16",
+        "text": "對你也是會 exhaust 掉"
+      },
+      {
+        "time": "14:17",
+        "text": "所以說你也不能"
+      },
+      {
+        "time": "14:18",
+        "text": "那如果我把火跟人分開"
+      },
+      {
+        "time": "14:20",
+        "text": "但人跟 exit 在同一個地方"
+      },
+      {
+        "time": "14:22",
+        "text": "他一定走得到"
+      },
+      {
+        "time": "14:23",
+        "text": "一定走得到"
+      },
+      {
+        "time": "14:23",
+        "text": "只要人跟 exitet不同的地方的話"
+      },
+      {
+        "time": "14:26",
+        "text": "他永遠會找不到"
+      },
+      {
+        "time": "14:27",
+        "text": "他最後會exhaust完"
+      },
+      {
+        "time": "14:28",
+        "text": "我覺得這個condition應該是沒有問題的"
+      },
+      {
+        "time": "14:30",
+        "text": "你在fireterryq的時候"
+      },
+      {
+        "time": "14:33",
+        "text": "下面那個condition會不會有問題"
+      },
+      {
+        "time": "14:36",
+        "text": "fireterryq"
+      },
+      {
+        "time": "14:37",
+        "text": "就是if fireq then is empty"
+      },
+      {
+        "time": "14:40",
+        "text": "我懂你的意思了"
+      },
+      {
+        "time": "14:41",
+        "text": "就是假如說他們隔開的話"
+      },
+      {
+        "time": "14:43",
+        "text": "那fireq可能已經找完了他已经烧完了"
+      },
+      {
+        "time": "14:45",
+        "text": "然后其实我是走到的"
+      },
+      {
+        "time": "14:47",
+        "text": "然后我就把我把return false掉了"
+      },
+      {
+        "time": "14:49",
+        "text": "如果是这样子的话"
+      },
+      {
+        "time": "14:51",
+        "text": "我如果把fireq is anti拿掉"
+      },
+      {
+        "time": "14:53",
+        "text": "因为k就是0的嘛"
+      },
+      {
+        "time": "14:55",
+        "text": "如果是这样的情况下的话"
+      },
+      {
+        "time": "14:56",
+        "text": "那我fire就没办法继续撑"
+      },
+      {
+        "time": "14:58",
+        "text": "那我这边还是会继续走"
+      },
+      {
+        "time": "15:00",
+        "text": "所以说其实是ok的"
+      },
+      {
+        "time": "15:02",
+        "text": "所以说我把这个condition拿掉其实是ok的"
+      },
+      {
+        "time": "15:04",
+        "text": "这样就可以解决掉你刚说那个edge case我想一下还有什么edge case所以说其实是ok的所以说我把这个condition拿掉其实是ok的"
+      },
+      {
+        "time": "15:05",
+        "text": "这样就可以解决掉你刚刚说的那个edge case"
+      },
+      {
+        "time": "15:07",
+        "text": "我想一下还有什么edge case"
+      },
+      {
+        "time": "15:09",
+        "text": "我们现在把你觉得会有问题的edge case都列出来"
+      },
+      {
+        "time": "15:13",
+        "text": "fire war separates u and f"
+      },
+      {
+        "time": "15:18",
+        "text": "这个的话我想一下"
+      },
+      {
+        "time": "15:20",
+        "text": "它如果separate的话"
+      },
+      {
+        "time": "15:21",
+        "text": "我跟fire"
+      },
+      {
+        "time": "15:22",
+        "text": "像我们刚才已经解决了"
+      },
+      {
+        "time": "15:23",
+        "text": "fire它没办法grow"
+      },
+      {
+        "time": "15:25",
+        "text": "但我还是可以继续找到exit的一个问题"
+      },
+      {
+        "time": "15:27",
+        "text": "那如果exit在Fire那边的话那也没有关系"
+      },
+      {
+        "time": "15:30",
+        "text": "我会我还是会去expand"
+      },
+      {
+        "time": "15:32",
+        "text": "然后最后我也是找不到任何东西"
+      },
+      {
+        "time": "15:34",
+        "text": "然后结束了"
+      },
+      {
+        "time": "15:35",
+        "text": "所以这个condition是ok的"
+      },
+      {
+        "time": "15:36",
+        "text": "还有什么edge case"
+      },
+      {
+        "time": "15:38",
+        "text": "我跟Fire在同一个地方就side by side"
+      },
+      {
+        "time": "15:41",
+        "text": "反正我们不会一开始我就跟Fire在同一个点嘛"
+      },
+      {
+        "time": "15:44",
+        "text": "不会他一定会分开两个点unf side by side反正我們不會一開始我就跟fire在同一個點不會"
+      },
+      {
+        "time": "15:45",
+        "text": "它一定會分開兩個點"
+      },
+      {
+        "time": "15:47",
+        "text": "unf side by side"
+      },
+      {
+        "time": "15:49",
+        "text": "如果是這樣的話"
+      },
+      {
+        "time": "15:50",
+        "text": "舉例子一個小的grid"
+      },
+      {
+        "time": "15:52",
+        "text": "譬如說就我跟fire兩個"
+      },
+      {
+        "time": "15:53",
+        "text": "然後可能火在某個地方"
+      },
+      {
+        "time": "15:55",
+        "text": "那一開始fire會先燒到exit"
+      },
+      {
+        "time": "15:58",
+        "text": "還是燒到我自己本身"
+      },
+      {
+        "time": "15:59",
+        "text": "但是因為是我先走"
+      },
+      {
+        "time": "16:01",
+        "text": "所以我可以先逃離那個點"
+      },
+      {
+        "time": "16:02",
+        "text": "fire再走"
+      },
+      {
+        "time": "16:03",
+        "text": "fire再燒過來"
+      },
+      {
+        "time": "16:05",
+        "text": "那我也找不到,因為它已經燒到 exit 了"
+      },
+      {
+        "time": "16:07",
+        "text": "所以這個 condition 其實是 ok 的"
+      },
+      {
+        "time": "16:09",
+        "text": "等於說它會是一個 you fire exit"
+      },
+      {
+        "time": "16:13",
+        "text": "這樣的話是 ok 的,這樣我也 return false"
+      },
+      {
+        "time": "16:15",
+        "text": "因為火也先把 exit 燒掉"
+      },
+      {
+        "time": "16:18",
+        "text": "那如果現在火跟你同時到 exit 你會 return true 還是 false"
+      },
+      {
+        "time": "16:22",
+        "text": "火跟我同時到 exit 的話"
+      },
+      {
+        "time": "16:24",
+        "text": "題目好像是我先走對不對"
+      },
+      {
+        "time": "16:26",
+        "text": "對啊"
+      },
+      {
+        "time": "16:26",
+        "text": "所以說如果今天假如最後的 condition 是這樣子"
+      },
+      {
+        "time": "16:29",
+        "text": "exit 然後我在這裡"
+      },
+      {
+        "time": "16:30",
+        "text": "然後 fire 在這裡"
+      },
+      {
+        "time": "16:31",
+        "text": "那因為我先走 所以說我會先到 exit"
+      },
+      {
+        "time": "16:35",
+        "text": "然後 fire 才燒"
+      },
+      {
+        "time": "16:36",
+        "text": "所以這樣應該是 return true"
+      },
+      {
+        "time": "16:38",
+        "text": "那你的 code 會 return true as false"
+      },
+      {
+        "time": "16:39",
+        "text": "對 我 code return false"
+      },
+      {
+        "time": "16:41",
+        "text": "因為 fire 會先 expand"
+      },
+      {
+        "time": "16:42",
+        "text": "燒到 exit 對"
+      },
+      {
+        "time": "16:44",
+        "text": "我們當然可以做一个"
+      },
+      {
+        "time": "16:45",
+        "text": "一个preemptive的check"
+      },
+      {
+        "time": "16:47",
+        "text": "先check我下一步会不会成功完成"
+      },
+      {
+        "time": "16:49",
+        "text": "如果完成我们就return true"
+      },
+      {
+        "time": "16:52",
+        "text": "然后不能完成的话"
+      },
+      {
+        "time": "16:53",
+        "text": "我们就开始火线烧"
+      },
+      {
+        "time": "16:54",
+        "text": "在toll这边我先加一个condition"
+      },
+      {
+        "time": "16:58",
+        "text": "先做一个preemptive check"
+      },
+      {
+        "time": "17:00",
+        "text": "这样子"
+      },
+      {
+        "time": "17:01",
+        "text": "这可以deal with这种condition"
+      },
+      {
+        "time": "17:02",
+        "text": "对对对"
+      },
+      {
+        "time": "17:03",
+        "text": "我先把它写下"
+      },
+      {
+        "time": "17:04",
+        "text": "u escapes first还有什么情况Check 這樣子這可以 deal with 這種 condition對對對我先把它寫下You escaped first"
+      },
+      {
+        "time": "17:07",
+        "text": "還有什麼情況"
+      },
+      {
+        "time": "17:09",
+        "text": "好像 base case 基本上都 cover 了"
+      },
+      {
+        "time": "17:11",
+        "text": "嗯 對"
+      },
+      {
+        "time": "17:12",
+        "text": "那我們要 dry run 一下"
+      },
+      {
+        "time": "17:14",
+        "text": "看你 我覺得不太好 dry run"
+      },
+      {
+        "time": "17:16",
+        "text": "我想就這樣"
+      },
+      {
+        "time": "17:18",
+        "text": "OK 好"
+      },
+      {
+        "time": "17:19",
+        "text": "這個15選是 OK 的吧"
+      },
+      {
+        "time": "17:20",
+        "text": "這個15選 OK 啊"
+      },
+      {
+        "time": "17:21",
+        "text": "我不知道你要考那麼難的呢"
+      },
+      {
+        "time": "17:23",
+        "text": "我覺得這個算是比較稍微難一點"
+      },
+      {
+        "time": "17:25",
+        "text": "就是它比較"
+      },
+      {
+        "time": "17:26",
+        "text": "你說它難不難"
+      },
+      {
+        "time": "17:27",
+        "text": "但它蠻複雜的"
+      },
+      {
+        "time": "17:28",
+        "text": "所以你要很清楚你現在在幹嘛"
+      },
+      {
+        "time": "17:30",
+        "text": "所以我覺得你表現得很好一點"
+      },
+      {
+        "time": "17:32",
+        "text": "是你非常清楚你現在在幹嘛"
+      },
+      {
+        "time": "17:33",
+        "text": "我基本上給一點Hint"
+      },
+      {
+        "time": "17:35",
+        "text": "你大概就知道哪裡會有問題"
+      },
+      {
+        "time": "17:36",
+        "text": "我其實還蠻訝異我可以寫出來的"
+      },
+      {
+        "time": "17:38",
+        "text": "剛剛在想有那個新"
+      },
+      {
+        "time": "17:40",
+        "text": "然後又有Five又有X這個東西"
+      },
+      {
+        "time": "17:41",
+        "text": "而且我覺得這個題應該算是"
+      },
+      {
+        "time": "17:43",
+        "text": "Medium比較偏難一點點"
+      },
+      {
+        "time": "17:45",
+        "text": "其實我覺得說不定有到hard"
+      },
+      {
+        "time": "17:47",
+        "text": "對啊我覺得表現算滿好的"
+      },
+      {
+        "time": "17:49",
+        "text": "我有出乎我自己的意料之外"
+      },
+      {
+        "time": "17:51",
+        "text": "因為我覺得我太久沒做題"
+      },
+      {
+        "time": "17:53",
+        "text": "不過我覺得你算是"
+      },
+      {
+        "time": "17:54",
+        "text": "你在這邊做了一個"
+      },
+      {
+        "time": "17:55",
+        "text": "算是把你自己推入一個陷阱裡"
+      },
+      {
+        "time": "17:57",
+        "text": "如果是我寫這一題的話"
+      },
+      {
+        "time": "17:58",
+        "text": "我會先讓火走完"
+      },
+      {
+        "time": "18:00",
+        "text": "然後我就知道火走到這一步"
+      },
+      {
+        "time": "18:02",
+        "text": "的Time Step是多少"
+      },
+      {
+        "time": "18:03",
+        "text": "然後我直接看我在這個Time Step有沒有到一點點塔"
+      },
+      {
+        "time": "18:07",
+        "text": "喔你說一開始在設定的Condition"
+      },
+      {
+        "time": "18:09",
+        "text": "對所以我就多記一個Array是火燒到這個點的時間"
+      },
+      {
+        "time": "18:14",
+        "text": "但因為我那時候想說面試的時候通常都以面試的想法為主"
+      },
+      {
+        "time": "18:18",
+        "text": "我覺得你那想法也是可以Work"
+      },
+      {
+        "time": "18:20",
+        "text": "但是我覺得你會把自己推進去一個洞裡面"
+      },
+      {
+        "time": "18:23",
+        "text": "但是我覺得我其實蠻驚訝喔你最後從這個洞裡面但是我覺得我其實滿驚訝"
+      },
+      {
+        "time": "18:25",
+        "text": "你最後從這個洞裡面爬出來把Code寫出來"
+      },
+      {
+        "time": "18:27",
+        "text": "而且因為我的寫法也是火先走"
+      },
+      {
+        "time": "18:29",
+        "text": "然後又"
+      },
+      {
+        "time": "18:30",
+        "text": "但其實實際上是我先走"
+      },
+      {
+        "time": "18:32",
+        "text": "對"
+      },
+      {
+        "time": "18:32",
+        "text": "就是一個很亂的一個"
+      },
+      {
+        "time": "18:33",
+        "text": "對對對"
+      },
+      {
+        "time": "18:34",
+        "text": "我覺得還不錯啦"
+      },
+      {
+        "time": "18:35",
+        "text": "就是你說到很Outstanding"
+      },
+      {
+        "time": "18:38",
+        "text": "但是我可能還是有一點"
+      },
+      {
+        "time": "18:39",
+        "text": "但是我覺得到標準的Standard已經算很好了"
+      },
+      {
+        "time": "18:42",
+        "text": "嗯"
+      },
+      {
+        "time": "18:43",
+        "text": "對啊"
+      },
+      {
+        "time": "18:43",
+        "text": "因為我其實這題原本還有follow up"
+      },
+      {
+        "time": "18:45",
+        "text": "但是你這個寫法其實把"
+      },
+      {
+        "time": "18:46",
+        "text": "我那麼想問的follow up有算解決掉了"
+      },
+      {
+        "time": "18:49",
+        "text": "嗯假設多個起火點"
+      },
+      {
+        "time": "18:51",
+        "text": "哦多個起火點"
+      },
+      {
+        "time": "18:52",
+        "text": "對但是裡面你直接就把火放進去了"
+      },
+      {
+        "time": "18:54",
+        "text": "所以多個起火點也是一樣"
+      },
+      {
+        "time": "18:55",
+        "text": "就是把火一起放進去而已"
+      },
+      {
+        "time": "18:57",
+        "text": "哦OK"
+      },
+      {
+        "time": "18:58",
+        "text": "因為因為這道題比較難"
+      },
+      {
+        "time": "18:59",
+        "text": "所以通常標準就不會拉那麼高"
+      },
+      {
+        "time": "19:01",
+        "text": "因為你大概預期"
+      },
+      {
+        "time": "19:02",
+        "text": "candidate會到哪一個程度"
+      },
+      {
+        "time": "19:04",
+        "text": "哦對"
+      },
+      {
+        "time": "19:04",
+        "text": "然後你在那邊試上指點"
+      },
+      {
+        "time": "19:06",
+        "text": "一下能爬出來"
+      },
+      {
+        "time": "19:07",
+        "text": "我就覺得是一個很好的指標"
+      },
+      {
+        "time": "19:09",
+        "text": "所以算是一個OK HIGH"
+      },
+      {
+        "time": "19:11",
+        "text": "我覺得算HIGH"
+      },
+      {
+        "time": "19:12",
+        "text": "就是如果以網路上那些標準來講"
+      },
+      {
+        "time": "19:15",
+        "text": "到高於HIGH了"
+      },
+      {
+        "time": "19:16",
+        "text": "高於HIGH了"
+      },
+      {
+        "time": "19:17",
+        "text": "好啦那希望今天這集影片"
+      },
+      {
+        "time": "19:19",
+        "text": "看到我被算法競賽大神考面試"
+      },
+      {
+        "time": "19:21",
+        "text": "有讓你學到一點東西"
+      },
+      {
+        "time": "19:22",
+        "text": "如果喜歡的話"
+      },
+      {
+        "time": "19:23",
+        "text": "記得一定要幫我把影片點個讚"
+      },
+      {
+        "time": "19:25",
+        "text": "最後跟大家公布一個消息"
+      },
+      {
+        "time": "19:27",
+        "text": "我跟Hank設計了一個職亞護城河實戰營"
+      },
+      {
+        "time": "19:30",
+        "text": "現在可以開始報名了"
+      },
+      {
+        "time": "19:31",
+        "text": "我們都知道軟體工程師的痛點在哪裡"
+      },
+      {
+        "time": "19:34",
+        "text": "也知道公司在招人的時候想要看到什麼樣的價值"
+      },
+      {
+        "time": "19:37",
+        "text": "而且其實很多工程師不知道自己真正的potential在哪裡"
+      },
+      {
+        "time": "19:41",
+        "text": "像比如說好了Google L4的工程師"
+      },
+      {
+        "time": "19:44",
+        "text": "在台灣的總薪資"
+      },
+      {
+        "time": "19:45",
+        "text": "可以達到快400萬台幣"
+      },
+      {
+        "time": "19:47",
+        "text": "而Meta E4的薪水"
+      },
+      {
+        "time": "19:48",
+        "text": "在美國將近可以達到"
+      },
+      {
+        "time": "19:49",
+        "text": "60萬美金一年"
+      },
+      {
+        "time": "19:51",
+        "text": "這些都是可行的"
+      },
+      {
+        "time": "19:52",
+        "text": "他們有很厲害嗎?"
+      },
+      {
+        "time": "19:53",
+        "text": "其實也沒有"
+      },
+      {
+        "time": "19:54",
+        "text": "很多人當了好幾年的工程師"
+      },
+      {
+        "time": "19:56",
+        "text": "薪資還是卡在那裡"
+      },
+      {
+        "time": "19:57",
+        "text": "那我們這個實戰贏的目標很簡單"
+      },
+      {
+        "time": "20:00",
+        "text": "第一個就是"
+      },
+      {
+        "time": "20:00",
+        "text": "讓你變成一個更強的工程師"
+      },
+      {
+        "time": "20:02",
+        "text": "Focus在解決問題的能力上面"
+      },
+      {
+        "time": "20:05",
+        "text": "尤其是對於轉職的朋友來說"
+      },
+      {
+        "time": "20:07",
+        "text": "可能基礎能力比較差"
+      },
+      {
+        "time": "20:08",
+        "text": "另外就是幫你打造你的職壓護城河"
+      },
+      {
+        "time": "20:11",
+        "text": "不論你今天是要去面試"
+      },
+      {
+        "time": "20:13",
+        "text": "要跳槽"
+      },
+      {
+        "time": "20:13",
+        "text": "還是怕被layoff"
+      },
+      {
+        "time": "20:14",
+        "text": "怕被AI淘汰"
+      },
+      {
+        "time": "20:16",
+        "text": "只要你願意跟我們一起準備"
+      },
+      {
+        "time": "20:17",
+        "text": "跟我們一起練習"
+      },
+      {
+        "time": "20:18",
+        "text": "我相信你也可以把你的Mode給Build起來"
+      },
+      {
+        "time": "20:21",
+        "text": "那這個實戰儀具體到底在做什麼"
+      },
+      {
+        "time": "20:23",
+        "text": "第一個就是模擬實戰"
+      },
+      {
+        "time": "20:25",
+        "text": "跟重點整理講解的部分"
+      },
+      {
+        "time": "20:27",
+        "text": "我們透過LiCode題目作為載體"
+      },
+      {
+        "time": "20:29",
+        "text": "因為LiCode是最簡單最快速的方式"
+      },
+      {
+        "time": "20:31",
+        "text": "用真實面試的方式去展現給大家看"
+      },
+      {
+        "time": "20:34",
+        "text": "我們是怎麼解決問題的"
+      },
+      {
+        "time": "20:35",
+        "text": "因為我們相信觀察就是最好的學習方式"
+      },
+      {
+        "time": "20:38",
+        "text": "然後每一個章節我們會做重點整理"
+      },
+      {
+        "time": "20:41",
+        "text": "去講解所有核心的概念"
+      },
+      {
+        "time": "20:43",
+        "text": "包含掌握面試的節奏"
+      },
+      {
+        "time": "20:45",
+        "text": "拆解題目"
+      },
+      {
+        "time": "20:46",
+        "text": "解析需求"
+      },
+      {
+        "time": "20:47",
+        "text": "算法跟數據結構的應用"
+      },
+      {
+        "time": "20:48",
+        "text": "測試解決方案"
+      },
+      {
+        "time": "20:50",
+        "text": "變種情境還有如何應對follow up"
+      },
+      {
+        "time": "20:52",
+        "text": "那第二個部分呢"
+      },
+      {
+        "time": "20:53",
+        "text": "也是我覺得最重要的一個"
+      },
+      {
+        "time": "20:55",
+        "text": "就是我跟Hank每週固定時間呢"
+      },
+      {
+        "time": "20:57",
+        "text": "會直接Live"
+      },
+      {
+        "time": "20:58",
+        "text": "用直播的方式在線上"
+      },
+      {
+        "time": "21:00",
+        "text": "帶大家手把手的一起做實戰演練"
+      },
+      {
+        "time": "21:02",
+        "text": "等於是說所有參與實戰營的朋友"
+      },
+      {
+        "time": "21:05",
+        "text": "大家都會一起參加"
+      },
+      {
+        "time": "21:06",
+        "text": "目的就是要拉著你跟我們一起練習"
+      },
+      {
+        "time": "21:08",
+        "text": "既然你都已經付錢了"
+      },
+      {
+        "time": "21:10",
+        "text": "有什麼理由不出現"
+      },
+      {
+        "time": "21:11",
+        "text": "然後在每一次Live的實戰演練最後"
+      },
+      {
+        "time": "21:14",
+        "text": "我們也會做Live的講解"
+      },
+      {
+        "time": "21:15",
+        "text": "所以這絕對不是一個那種買了心安"
+      },
+      {
+        "time": "21:18",
+        "text": "看完就沒什麼用的那種線上課程"
+      },
+      {
+        "time": "21:20",
+        "text": "那最後一部分"
+      },
+      {
+        "time": "21:21",
+        "text": "我們還有Live直播的專業分享"
+      },
+      {
+        "time": "21:23",
+        "text": "每過幾週我們會請一些國內外的大咖"
+      },
+      {
+        "time": "21:26",
+        "text": "比如說矽谷的資深工程師或是Team Lead"
+      },
+      {
+        "time": "21:29",
+        "text": "或者是說哪一家大廠的這個Hiring Manager"
+      },
+      {
+        "time": "21:32",
+        "text": "來跟大家分享一下最新的這個實戰經驗"
+      },
+      {
+        "time": "21:34",
+        "text": "或是整體就業市場的一個趨勢"
+      },
+      {
+        "time": "21:37",
+        "text": "所以說不管你是現役軟體工程師"
+      },
+      {
+        "time": "21:39",
+        "text": "或是說你正在找工作"
+      },
+      {
+        "time": "21:41",
+        "text": "或者是說你是轉職者"
+      },
+      {
+        "time": "21:42",
+        "text": "正在成為軟體工程師的路上"
+      },
+      {
+        "time": "21:44",
+        "text": "都歡迎你來加入我們"
+      },
+      {
+        "time": "21:46",
+        "text": "我覺得這會是你人生一個最簡單"
+      },
+      {
+        "time": "21:48",
+        "text": "最無腦"
+      },
+      {
+        "time": "21:49",
+        "text": "最高CP值的一個投資"
+      },
+      {
+        "time": "21:51",
+        "text": "而且呢現在我們有一個找鳥優惠"
+      },
+      {
+        "time": "21:53",
+        "text": "可以到我們的官網"
+      },
+      {
+        "time": "21:54",
+        "text": "buildmode.org去看一下"
+      },
+      {
+        "time": "21:56",
+        "text": "我會把連結放在影片底下的資訊欄"
+      },
+      {
+        "time": "21:58",
+        "text": "那我們下次見囉"
+      }
+    ]
+  },
+  "raw_provider_payload": {
+    "actual_url": "https://youtu.be/s9s32vVzYIo",
+    "content": "",
+    "conversation_id": "",
+    "cover": "https://i.ytimg.com/vi/s9s32vVzYIo/sddefault.jpg",
+    "createdAt": 1783958130791,
+    "expiresAt": 1784130934406,
+    "historyScope": "/youtube-subtitle-downloader/",
+    "id": "/youtube-subtitle-downloader/:1:1:s9s32vVzYIo",
+    "mindMap": "",
+    "notes": [],
+    "overviewData": {
+      "overview": "影片中，Terry 以現場模擬面試的方式，接受算法競賽冠軍 Hank 出題，挑戰一題「火災逃生」的 grid BFS 問題，過程中一路推敲火勢擴散、人員移動、邊界與終止條件，並實作出可行解法。整段內容真實呈現工程師面試現場的思考流程、除錯與 edge case 討論，最後也順勢公布與 Hank 合作的職涯實戰營招生訊息。",
+      "tags": [
+        "#程式面試",
+        "#BFS",
+        "#算法題",
+        "#FireEscape",
+        "#Grid",
+        "#直播實戰營",
+        "#軟體工程師"
+      ]
+    },
+    "platform": "1",
+    "remoteNoteArtifactIds": {},
+    "routeType": "subtitle",
+    "sourceKey": "/youtube-subtitle-downloader/:1:1:s9s32vVzYIo",
+    "subtitles": [
+      {
+        "text": "哈囉大家好我是Terry",
+        "time": "00:00"
+      },
+      {
+        "text": "今天這集影片非常的特別",
+        "time": "00:01"
+      },
+      {
+        "text": "大概8個月前吧",
+        "time": "00:02"
+      },
+      {
+        "text": "我出了一道工程師的面試題目",
+        "time": "00:04"
+      },
+      {
+        "text": "去考在Google工作",
+        "time": "00:06"
+      },
+      {
+        "text": "然後又是算法競賽冠軍的Hank",
+        "time": "00:07"
+      },
+      {
+        "text": "那其實不只是Hank啦",
+        "time": "00:09"
+      },
+      {
+        "text": "我對Nick也做過類似的事情",
+        "time": "00:10"
+      },
+      {
+        "text": "然後大家也有在留言區說",
+        "time": "00:12"
+      },
+      {
+        "text": "想要看我被考",
+        "time": "00:14"
+      },
+      {
+        "text": "想要看我被虐",
+        "time": "00:15"
+      },
+      {
+        "text": "我記得還有人在Thread上面說",
+        "time": "00:16"
+      },
+      {
+        "text": "我是什麼裝逼仔",
+        "time": "00:18"
+      },
+      {
+        "text": "沒有料",
+        "time": "00:20"
+      },
+      {
+        "text": "還不會寫code",
+        "time": "00:20"
+      },
+      {
+        "text": "那既然大家那麼想看",
+        "time": "00:21"
+      },
+      {
+        "text": "剛好這次Hank來東京玩",
+        "time": "00:23"
+      },
+      {
+        "text": "我就就要現場考我面試",
+        "time": "00:25"
+      },
+      {
+        "text": "說實話啦",
+        "time": "00:26"
+      },
+      {
+        "text": "我已經兩年多沒有面試了",
+        "time": "00:27"
+      },
+      {
+        "text": "而且這兩年呢",
+        "time": "00:29"
+      },
+      {
+        "text": "我完全都沒有練習",
+        "time": "00:30"
+      },
+      {
+        "text": "而且Hank在考我之前呢",
+        "time": "00:31"
+      },
+      {
+        "text": "我也完全沒有準備",
+        "time": "00:33"
+      },
+      {
+        "text": "我就是想要最真實的",
+        "time": "00:34"
+      },
+      {
+        "text": "呈現我的狀態給大家看",
+        "time": "00:35"
+      },
+      {
+        "text": "儘管出糗也沒關係",
+        "time": "00:37"
+      },
+      {
+        "text": "那我知道酸民可能會說",
+        "time": "00:39"
+      },
+      {
+        "text": "欸 Hank可以先跟我Re過一遍",
+        "time": "00:40"
+      },
+      {
+        "text": "或是事先把這個問題告訴我",
+        "time": "00:42"
+      },
+      {
+        "text": "我可以跟你保證這些都沒有",
+        "time": "00:44"
+      },
+      {
+        "text": "而且他的問題也是當下才去想的",
+        "time": "00:45"
+      },
+      {
+        "text": "如果以上我有說謊",
+        "time": "00:47"
+      },
+      {
+        "text": "或是我面試的時候有作弊的話",
+        "time": "00:49"
+      },
+      {
+        "text": "我的雞雞短一半好了",
+        "time": "00:51"
+      },
+      {
+        "text": "那另外我也有一個很重大的事情要跟大家宣布",
+        "time": "00:53"
+      },
+      {
+        "text": "在影片後面 所以記得要看到最後",
+        "time": "00:56"
+      },
+      {
+        "text": "最真實呈現",
+        "time": "00:58"
+      },
+      {
+        "text": "想要看我被虐的那個",
+        "time": "01:00"
+      },
+      {
+        "text": "那個情況",
+        "time": "01:02"
+      },
+      {
+        "text": "對 但我要說就是",
+        "time": "01:03"
+      },
+      {
+        "text": "我是真的很久沒有做算法題了",
+        "time": "01:04"
+      },
+      {
+        "text": "超久超久",
+        "time": "01:07"
+      },
+      {
+        "text": "我已經想不到上一次",
+        "time": "01:08"
+      },
+      {
+        "text": "我被考面試是什麼時候了",
+        "time": "01:09"
+      },
+      {
+        "text": "就看也不知道要考什麼",
+        "time": "01:11"
+      },
+      {
+        "text": "就剛剛才想的",
+        "time": "01:13"
+      },
+      {
+        "text": "對 我剛剛想的",
+        "time": "01:14"
+      },
+      {
+        "text": "OK",
+        "time": "01:15"
+      },
+      {
+        "text": "我主要是進來你房間",
+        "time": "01:17"
+      },
+      {
+        "text": "然後我就想到一個問題",
+        "time": "01:18"
+      },
+      {
+        "text": "就是有關火災逃生的問題",
+        "time": "01:20"
+      },
+      {
+        "text": "假設你在一個房間上",
+        "time": "01:22"
+      },
+      {
+        "text": "那我們把問題簡化一點",
+        "time": "01:25"
+      },
+      {
+        "text": "就是我們在一個grid上",
+        "time": "01:26"
+      },
+      {
+        "text": "假設每個grid是一個房間",
+        "time": "01:28"
+      },
+      {
+        "text": "那你可以移動到前後左右的房間",
+        "time": "01:31"
+      },
+      {
+        "text": "你可以花一單位的時間移動到前後左右的房間",
+        "time": "01:34"
+      },
+      {
+        "text": "假設就是你在最左上角",
+        "time": "01:37"
+      },
+      {
+        "text": "我畫一個表格",
+        "time": "01:40"
+      },
+      {
+        "text": "對這是",
+        "time": "01:41"
+      },
+      {
+        "text": "我有一個不祥的預感",
+        "time": "01:41"
+      },
+      {
+        "text": "對這是你",
+        "time": "01:43"
+      },
+      {
+        "text": "然後可能中間有一些牆",
+        "time": "01:44"
+      },
+      {
+        "text": "比如說這是牆",
+        "time": "01:46"
+      },
+      {
+        "text": "好那假設有個地方發生火災了",
+        "time": "01:47"
+      },
+      {
+        "text": "對那它跟你一樣就是你會先移動一格",
+        "time": "01:50"
+      },
+      {
+        "text": "譬如說你可以往右移動一格",
+        "time": "01:53"
+      },
+      {
+        "text": "然後同時火也會往外擴散一格",
+        "time": "01:56"
+      },
+      {
+        "text": "那它擴散就是一次往上下左右四個方向都擴散",
+        "time": "01:59"
+      },
+      {
+        "text": "OK",
+        "time": "02:02"
+      },
+      {
+        "text": "對那譬如說你現在往右移動一格你跑到這裡了",
+        "time": "02:02"
+      },
+      {
+        "text": "我就延伸到這裡",
+        "time": "02:05"
+      },
+      {
+        "text": "對 那我想",
+        "time": "02:07"
+      },
+      {
+        "text": "但它不會燒到牆對不對",
+        "time": "02:07"
+      },
+      {
+        "text": "它不會燒到牆",
+        "time": "02:09"
+      },
+      {
+        "text": "牆不會被燒破",
+        "time": "02:10"
+      },
+      {
+        "text": "對 那這個信號是牆",
+        "time": "02:11"
+      },
+      {
+        "text": "假設出口在右下角",
+        "time": "02:12"
+      },
+      {
+        "text": "出口一定都在右下角",
+        "time": "02:14"
+      },
+      {
+        "text": "對 那你再對左上角",
+        "time": "02:15"
+      },
+      {
+        "text": "然後出口在右下角",
+        "time": "02:17"
+      },
+      {
+        "text": "那我們保證左上角跟右下角不會有牆",
+        "time": "02:18"
+      },
+      {
+        "text": "對 然後我想問",
+        "time": "02:21"
+      },
+      {
+        "text": "有沒有辦法逃生出去",
+        "time": "02:22"
+      },
+      {
+        "text": "喔 就回復一個玻璃是吧對喔 糟了那我們題目簡單一點就是不會有下腳不會有牆對然後我想問有沒有辦法逃生出去喔就return一個 boolean 是吧",
+        "time": "02:24"
+      },
+      {
+        "text": "對",
+        "time": "02:25"
+      },
+      {
+        "text": "oh shit",
+        "time": "02:25"
+      },
+      {
+        "text": "呵呵呵呵",
+        "time": "02:26"
+      },
+      {
+        "text": "那我們題目簡單一點就是",
+        "time": "02:27"
+      },
+      {
+        "text": "假設起火點就是一個",
+        "time": "02:29"
+      },
+      {
+        "text": "然後你也",
+        "time": "02:30"
+      },
+      {
+        "text": "就是你就一個位置這樣子",
+        "time": "02:31"
+      },
+      {
+        "text": "嗯",
+        "time": "02:33"
+      },
+      {
+        "text": "然後起火點也是一個 input 是吧",
+        "time": "02:33"
+      },
+      {
+        "text": "等於說我輸入可能會是",
+        "time": "02:35"
+      },
+      {
+        "text": "譬如說點就代表",
+        "time": "02:37"
+      },
+      {
+        "text": "可能會有個 u 是你",
+        "time": "02:38"
+      },
+      {
+        "text": "嗯",
+        "time": "02:40"
+      },
+      {
+        "text": "對然後點就代表你可以走的路",
+        "time": "02:40"
+      },
+      {
+        "text": "F5 就代表是起火點",
+        "time": "02:42"
+      },
+      {
+        "text": "然後會是就代表這整張地圖",
+        "time": "02:44"
+      },
+      {
+        "text": "然後 exit 也會標在上面嗎?",
+        "time": "02:46"
+      },
+      {
+        "text": "對 exit 會標在上面",
+        "time": "02:48"
+      },
+      {
+        "text": "那 exit 用 e 表示?",
+        "time": "02:49"
+      },
+      {
+        "text": "對",
+        "time": "02:50"
+      },
+      {
+        "text": "exit 不一定會在右下角吧?",
+        "time": "02:51"
+      },
+      {
+        "text": "對 我們可以假設不一定在右下角",
+        "time": "02:52"
+      },
+      {
+        "text": "我們以一個最 brute force 的方法去想",
+        "time": "02:54"
+      },
+      {
+        "text": "一開始我們要每一次都是往外移動一格",
+        "time": "02:57"
+      },
+      {
+        "text": "從我的那個點開始上下左右移動那 fire 也會上下左右移動一格從我的那個點開始上下左右移動",
+        "time": "03:02"
+      },
+      {
+        "text": "那Fire也會上下左右移動",
+        "time": "03:05"
+      },
+      {
+        "text": "看是我先找到逃生點",
+        "time": "03:07"
+      },
+      {
+        "text": "還是我先被Fire燒死",
+        "time": "03:09"
+      },
+      {
+        "text": "Fire燒到的地方我就不能走了",
+        "time": "03:11"
+      },
+      {
+        "text": "對Fire燒",
+        "time": "03:13"
+      },
+      {
+        "text": "因為其實你可以繞過Fire去走",
+        "time": "03:14"
+      },
+      {
+        "text": "因為你可能走",
+        "time": "03:16"
+      },
+      {
+        "text": "原本走很短的那條路徑",
+        "time": "03:17"
+      },
+      {
+        "text": "到出口你會被燒到",
+        "time": "03:19"
+      },
+      {
+        "text": "但是你可以繞一個路走",
+        "time": "03:21"
+      },
+      {
+        "text": "可能Fire燒不到那裡",
+        "time": "03:22"
+      },
+      {
+        "text": "我覺得這就是一個比較典型的用BFS去看我能不能找到路口",
+        "time": "03:23"
+      },
+      {
+        "text": "那假如最後就是End Condition要是我找不到Exit的話代表說False",
+        "time": "03:30"
+      },
+      {
+        "text": "對",
+        "time": "03:36"
+      },
+      {
+        "text": "那我想一下在什麼樣情況我會去結束這個",
+        "time": "03:37"
+      },
+      {
+        "text": "因為BFS的話就是用一個Queue去存我接下來還可以走的路線",
+        "time": "03:40"
+      },
+      {
+        "text": "但是最大問題是說我這個Q可能會變",
+        "time": "03:46"
+      },
+      {
+        "text": "還是你先想一下就是你怎麼判斷你在這一格的時候會不會被火燒到",
+        "time": "03:50"
+      },
+      {
+        "text": "OK就是我在這一格這個位置當下會不會被火燒到",
+        "time": "03:54"
+      },
+      {
+        "text": "對",
+        "time": "03:58"
+      },
+      {
+        "text": "因為你逃到這一格你會有個時間點",
+        "time": "03:58"
+      },
+      {
+        "text": "你會辦法知道你在這個時間點在這一格火會不會燒到你",
+        "time": "04:01"
+      },
+      {
+        "text": "或是這個格是不是已經被燒起來了",
+        "time": "04:06"
+      },
+      {
+        "text": "我會知道喔",
+        "time": "04:07"
+      },
+      {
+        "text": "因為火會一直 expand 啊",
+        "time": "04:08"
+      },
+      {
+        "text": "所以說在那個 moment 的時候",
+        "time": "04:09"
+      },
+      {
+        "text": "那你要怎麼知道這件事情",
+        "time": "04:11"
+      },
+      {
+        "text": "所以我讓火先走",
+        "time": "04:13"
+      },
+      {
+        "text": "對讓火先走",
+        "time": "04:15"
+      },
+      {
+        "text": "然後我再去判斷我下一個路可以走哪裡",
+        "time": "04:16"
+      },
+      {
+        "text": "嗯對",
+        "time": "04:18"
+      },
+      {
+        "text": "那我在我的 queue 裡面就存我下一個 point",
+        "time": "04:19"
+      },
+      {
+        "text": "下一個的那個 gridrid裡面的Reference",
+        "time": "04:23"
+      },
+      {
+        "text": "X Y 是OK的",
+        "time": "04:25"
+      },
+      {
+        "text": "等於是說每一次先Expand火一遍",
+        "time": "04:26"
+      },
+      {
+        "text": "然後再存下一個",
+        "time": "04:29"
+      },
+      {
+        "text": "就我把Cue裡面抓出來",
+        "time": "04:30"
+      },
+      {
+        "text": "就是下一個Breath裡面抓出來",
+        "time": "04:31"
+      },
+      {
+        "text": "然後每一個去測下一個才可以走哪裡",
+        "time": "04:33"
+      },
+      {
+        "text": "這就是我的Solution",
+        "time": "04:36"
+      },
+      {
+        "text": "那這樣複雜度",
+        "time": "04:37"
+      },
+      {
+        "text": "這樣複雜度的話就是All of MN",
+        "time": "04:38"
+      },
+      {
+        "text": "Size 這個Grid的Size",
+        "time": "04:41"
+      },
+      {
+        "text": "對",
+        "time": "04:43"
+      },
+      {
+        "text": "可以嗎 面試館",
+        "time": "04:43"
+      },
+      {
+        "text": "對 我覺得聽起來是個可行的作法",
+        "time": "04:44"
+      },
+      {
+        "text": "但寫不寫出來是另外一回事",
+        "time": "04:46"
+      },
+      {
+        "text": "對好",
+        "time": "04:48"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "04:48"
+      },
+      {
+        "text": "那現在就開始Coding環節",
+        "time": "04:49"
+      },
+      {
+        "text": "理想宏大但是",
+        "time": "04:51"
+      },
+      {
+        "text": "這個",
+        "time": "04:52"
+      },
+      {
+        "text": "啊Coding喔",
+        "time": "04:53"
+      },
+      {
+        "text": "OK好",
+        "time": "04:54"
+      },
+      {
+        "text": "我超久沒有寫教吧",
+        "time": "04:54"
+      },
+      {
+        "text": "我覺得比較",
+        "time": "04:55"
+      },
+      {
+        "text": "教的好處就是比較清楚",
+        "time": "04:56"
+      },
+      {
+        "text": "Type就寫得很清楚",
+        "time": "04:57"
+      },
+      {
+        "text": "好",
+        "time": "04:59"
+      },
+      {
+        "text": "Public",
+        "time": "04:59"
+      },
+      {
+        "text": "Can Terry Survive",
+        "time": "05:00"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "05:02"
+      },
+      {
+        "text": "然後這是一個Boolean",
+        "time": "05:03"
+      },
+      {
+        "text": "然後我的In 是一個 grid",
+        "time": "05:04"
+      },
+      {
+        "text": "這樣子",
+        "time": "05:06"
+      },
+      {
+        "text": "應該是一個 stream 吧",
+        "time": "05:07"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "05:09"
+      },
+      {
+        "text": "喔喔喔 對對",
+        "time": "05:10"
+      },
+      {
+        "text": "裡面是一些字眼",
+        "time": "05:12"
+      },
+      {
+        "text": "喔對",
+        "time": "05:13"
+      },
+      {
+        "text": "我真的很",
+        "time": "05:14"
+      },
+      {
+        "text": "好像不是這樣寫",
+        "time": "05:15"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "05:16"
+      },
+      {
+        "text": "等一下好像不是這樣寫",
+        "time": "05:17"
+      },
+      {
+        "text": "等一下不是這樣寫嗎",
+        "time": "05:18"
+      },
+      {
+        "text": "不是這樣寫",
+        "time": "05:18"
+      },
+      {
+        "text": "教完應該不是這樣寫",
+        "time": "05:19"
+      },
+      {
+        "text": "等一下",
+        "time": "05:20"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "05:20"
+      },
+      {
+        "text": "喔",
+        "time": "05:22"
+      },
+      {
+        "text": "ok",
+        "time": "05:23"
+      },
+      {
+        "text": "不要緊張不要緊張",
+        "time": "05:23"
+      },
+      {
+        "text": "應該是一圍而已,因為String就是代表一圍了",
+        "time": "05:26"
+      },
+      {
+        "text": "因為String的話就只要開一圍就好",
+        "time": "05:29"
+      },
+      {
+        "text": "因為你每一串都要一圍",
+        "time": "05:31"
+      },
+      {
+        "text": "那我開二圍好了",
+        "time": "05:33"
+      },
+      {
+        "text": "這make sense吧",
+        "time": "05:35"
+      },
+      {
+        "text": "這都可以啦,我覺得這兩個都ok",
+        "time": "05:37"
+      },
+      {
+        "text": "因為我要找我的點嘛",
+        "time": "05:39"
+      },
+      {
+        "text": "還是我assume我在左上",
+        "time": "05:41"
+      },
+      {
+        "text": "我們找一下我們自己在哪里",
+        "time": "05:43"
+      },
+      {
+        "text": "ok 然后那我先开一个 queue",
+        "time": "05:45"
+      },
+      {
+        "text": "queue 的话是",
+        "time": "05:47"
+      },
+      {
+        "text": "我用这个 integer array 来 reference",
+        "time": "05:49"
+      },
+      {
+        "text": "在在 Python 就是个 tuple",
+        "time": "05:52"
+      },
+      {
+        "text": "嗯对我记得 Java 的 queue 是 linked list",
+        "time": "05:53"
+      },
+      {
+        "text": "哎我真的超久没写 Java",
+        "time": "05:56"
+      },
+      {
+        "text": "两年没有写 Java",
+        "time": "05:58"
+      },
+      {
+        "text": "但我觉得就是这个这个还好",
+        "time": "06:00"
+      },
+      {
+        "text": "ok 我们现在有个 queue 吗",
+        "time": "06:01"
+      },
+      {
+        "text": "嗯那我们先找我們自己的 Starting Point",
+        "time": "06:03"
+      },
+      {
+        "text": "然後我把它放在 Queue 裡面",
+        "time": "06:05"
+      },
+      {
+        "text": "我也要有個 Queue 囉",
+        "time": "06:07"
+      },
+      {
+        "text": "那我這個 Queue 叫 Terry Queue",
+        "time": "06:08"
+      },
+      {
+        "text": "Fire Queue",
+        "time": "06:10"
+      },
+      {
+        "text": "Terry Queue 的話",
+        "time": "06:11"
+      },
+      {
+        "text": "我們先從 M equals to Grid",
+        "time": "06:12"
+      },
+      {
+        "text": "好那我現在就",
+        "time": "06:16"
+      },
+      {
+        "text": "先做一個最基本的邊界 Check",
+        "time": "06:17"
+      },
+      {
+        "text": "說我們可以有順這個 Grid 是一個 Valid 嗎",
+        "time": "06:20"
+      },
+      {
+        "text": "可以就是它一定會有 u 有 f 有 e",
+        "time": "06:22"
+      },
+      {
+        "text": "它的大小應該至少是三個",
+        "time": "06:25"
+      },
+      {
+        "text": "就是可能一乘三這樣或是至少二乘二這樣子",
+        "time": "06:28"
+      },
+      {
+        "text": "所以不用去 check 了",
+        "time": "06:30"
+      },
+      {
+        "text": "不用去 check 是吧",
+        "time": "06:31"
+      },
+      {
+        "text": "ok 好我們有個 m n",
+        "time": "06:32"
+      },
+      {
+        "text": "好一個 for 回圈裡面再加一個 for loop",
+        "time": "06:34"
+      },
+      {
+        "text": "這樣子我就可以 loop 整個 grid 一遍",
+        "time": "06:38"
+      },
+      {
+        "text": "if grid ij 等於 u",
+        "time": "06:40"
+      },
+      {
+        "text": "這個就是代表說我找到了我",
+        "time": "06:44"
+      },
+      {
+        "text": "嗯",
+        "time": "06:47"
+      },
+      {
+        "text": "cherryq",
+        "time": "06:47"
+      },
+      {
+        "text": "inq",
+        "time": "06:49"
+      },
+      {
+        "text": "offer new int ij",
+        "time": "06:50"
+      },
+      {
+        "text": "我教的還蠻屌的",
+        "time": "06:53"
+      },
+      {
+        "text": "哈哈",
+        "time": "06:54"
+      },
+      {
+        "text": "這還沒有忘記",
+        "time": "06:55"
+      },
+      {
+        "text": "else if grid ij",
+        "time": "06:55"
+      },
+      {
+        "text": "等於f",
+        "time": "06:58"
+      },
+      {
+        "text": "的話",
+        "time": "07:00"
+      },
+      {
+        "text": "offer new int ij",
+        "time": "07:01"
+      },
+      {
+        "text": "嗯",
+        "time": "07:03"
+      },
+      {
+        "text": "這樣的話我就可以把我跟fire的一开始location",
+        "time": "07:03"
+      },
+      {
+        "text": "先存到q里面",
+        "time": "07:07"
+      },
+      {
+        "text": "下一步呢要开始走了",
+        "time": "07:08"
+      },
+      {
+        "text": "然后exit的话是",
+        "time": "07:10"
+      },
+      {
+        "text": "其实不需要存exit",
+        "time": "07:12"
+      },
+      {
+        "text": "我们一定会有一个exit",
+        "time": "07:13"
+      },
+      {
+        "text": "对一定会有",
+        "time": "07:14"
+      },
+      {
+        "text": "那最后的end condition就是假如terryq",
+        "time": "07:15"
+      },
+      {
+        "text": "是被清空了",
+        "time": "07:17"
+      },
+      {
+        "text": "然后还没有遇到exit",
+        "time": "07:19"
+      },
+      {
+        "text": "那我们就fail了",
+        "time": "07:21"
+      },
+      {
+        "text": "我们就死掉了",
+        "time": "07:21"
+      },
+      {
+        "text": "嗯对",
+        "time": "07:22"
+      },
+      {
+        "text": "好那我们就开始呃我们的 bfs",
+        "time": "07:23"
+      },
+      {
+        "text": "bfs 要怎么写",
+        "time": "07:26"
+      },
+      {
+        "text": "well terryq is not empty",
+        "time": "07:27"
+      },
+      {
+        "text": "about fireq 去做 process",
+        "time": "07:30"
+      },
+      {
+        "text": "嗯他如果烧完的话他就结束了",
+        "time": "07:32"
+      },
+      {
+        "text": "嗯对啊我不知道这个有没有必要",
+        "time": "07:34"
+      },
+      {
+        "text": "但是我就可以说 if fireq is empty",
+        "time": "07:35"
+      },
+      {
+        "text": "然后我就 return false",
+        "time": "07:39"
+      },
+      {
+        "text": "但我觉得可能不用这样子 check",
+        "time": "07:40"
+      },
+      {
+        "text": "但是我先这样写出来好了",
+        "time": "07:41"
+      },
+      {
+        "text": "嗯 for 那我先我先 loop 一遍FyreQ裡面已經有的值",
+        "time": "07:43"
+      },
+      {
+        "text": "FyreQ.size",
+        "time": "07:48"
+      },
+      {
+        "text": "就是我先把FyreQ下一個",
+        "time": "07:49"
+      },
+      {
+        "text": "然後這樣子會有另外一個問題就是",
+        "time": "07:51"
+      },
+      {
+        "text": "因為你BFS",
+        "time": "07:53"
+      },
+      {
+        "text": "所以相當於你就是你直接",
+        "time": "07:55"
+      },
+      {
+        "text": "把自己分身成四個方向去走",
+        "time": "07:57"
+      },
+      {
+        "text": "你四個方向都分身一次",
+        "time": "08:00"
+      },
+      {
+        "text": "但你走這四個方向",
+        "time": "08:01"
+      },
+      {
+        "text": "你的Fyre只往外Extend一次對啊,就是我要先Extend Fyre然後我才走四個方向都分身一次但你走這四個方向你的 fire 只往外 extend 一次對啊",
+        "time": "08:02"
+      },
+      {
+        "text": "就是我要先 extend fire",
+        "time": "08:05"
+      },
+      {
+        "text": "然後我才走四個方向",
+        "time": "08:06"
+      },
+      {
+        "text": "嗯",
+        "time": "08:07"
+      },
+      {
+        "text": "對我先把我現在",
+        "time": "08:07"
+      },
+      {
+        "text": "q 裡面的東西拿出來",
+        "time": "08:09"
+      },
+      {
+        "text": "嗯",
+        "time": "08:10"
+      },
+      {
+        "text": "indra k",
+        "time": "08:11"
+      },
+      {
+        "text": "equals to 0",
+        "time": "08:12"
+      },
+      {
+        "text": "然後 k 小於",
+        "time": "08:13"
+      },
+      {
+        "text": "30q",
+        "time": "08:15"
+      },
+      {
+        "text": "的 size k++",
+        "time": "08:16"
+      },
+      {
+        "text": "等於說這個 for loop 裡面",
+        "time": "08:18"
+      },
+      {
+        "text": "我會 loop 過一遍",
+        "time": "08:19"
+      },
+      {
+        "text": "下一個 potential 的值",
+        "time": "08:20"
+      },
+      {
+        "text": "但在做這個之前呢",
+        "time": "08:22"
+      },
+      {
+        "text": "我要先把 fireloop 過一遍嗯對potential的值但是在做这个之前呢我要先把fire loop过一遍",
+        "time": "08:24"
+      },
+      {
+        "text": "等于说这个是在这上面这样子",
+        "time": "08:27"
+      },
+      {
+        "text": "if fireq is empty then return false",
+        "time": "08:30"
+      },
+      {
+        "text": "然后把fireq expand一遍",
+        "time": "08:32"
+      },
+      {
+        "text": "然后再把我的terraq再去做一遍",
+        "time": "08:35"
+      },
+      {
+        "text": "我知道很多外附的这个很乱",
+        "time": "08:37"
+      },
+      {
+        "text": "但是我先这样写",
+        "time": "08:39"
+      },
+      {
+        "text": "so fireq四面",
+        "time": "08:41"
+      },
+      {
+        "text": "intra k equals to fireq.size",
+        "time": "08:42"
+      },
+      {
+        "text": "这样子",
+        "time": "08:46"
+      },
+      {
+        "text": "嗯",
+        "time": "08:46"
+      },
+      {
+        "text": "然后",
+        "time": "08:47"
+      },
+      {
+        "text": "啊变数不够",
+        "time": "08:48"
+      },
+      {
+        "text": "哈哈哈哈",
+        "time": "08:49"
+      },
+      {
+        "text": "k equals to fireq",
+        "time": "08:50"
+      },
+      {
+        "text": "这样子",
+        "time": "08:53"
+      },
+      {
+        "text": "等下我在fireq里面loop过一遍",
+        "time": "08:54"
+      },
+      {
+        "text": "嗯",
+        "time": "08:57"
+      },
+      {
+        "text": "对",
+        "time": "08:58"
+      },
+      {
+        "text": "fireq next equals fireq pull",
+        "time": "08:58"
+      },
+      {
+        "text": "这样子",
+        "time": "09:01"
+      },
+      {
+        "text": "我把next抓出来",
+        "time": "09:02"
+      },
+      {
+        "text": "我写一個dy dx好了",
+        "time": "09:03"
+      },
+      {
+        "text": "dx equals to",
+        "time": "09:05"
+      },
+      {
+        "text": "就讓我有一個簡單的方式可以loop",
+        "time": "09:07"
+      },
+      {
+        "text": "嗯算是一個很常見的做法",
+        "time": "09:10"
+      },
+      {
+        "text": "對有時候我離口人應該都要這樣",
+        "time": "09:13"
+      },
+      {
+        "text": "不然你要寫四個if or else",
+        "time": "09:16"
+      },
+      {
+        "text": "對我已經夠多if還有夠多for loop",
+        "time": "09:17"
+      },
+      {
+        "text": "我覺得要精簡",
+        "time": "09:20"
+      },
+      {
+        "text": "這要用超多variable",
+        "time": "09:22"
+      },
+      {
+        "text": "pass pass",
+        "time": "09:23"
+      },
+      {
+        "text": "喔對我的grid我可以在上面mark吗",
+        "time": "09:24"
+      },
+      {
+        "text": "可以",
+        "time": "09:26"
+      },
+      {
+        "text": "那我就是在grid上面",
+        "time": "09:28"
+      },
+      {
+        "text": "这个grid是muteable",
+        "time": "09:30"
+      },
+      {
+        "text": "如果是不行的话我就开一个新的",
+        "time": "09:32"
+      },
+      {
+        "text": "next",
+        "time": "09:34"
+      },
+      {
+        "text": "plus dxb",
+        "time": "09:36"
+      },
+      {
+        "text": "这variable真的很乱",
+        "time": "09:38"
+      },
+      {
+        "text": "new y equals next e",
+        "time": "09:40"
+      },
+      {
+        "text": "plus dy b",
+        "time": "09:42"
+      },
+      {
+        "text": "ifnext xnew y equals next e plus dy bif",
+        "time": "09:44"
+      },
+      {
+        "text": "ok I'll call it next x",
+        "time": "09:45"
+      },
+      {
+        "text": "next y",
+        "time": "09:48"
+      },
+      {
+        "text": "if next x 小于 0",
+        "time": "09:49"
+      },
+      {
+        "text": "or next x 大于等于 m",
+        "time": "09:52"
+      },
+      {
+        "text": "or next y 小于 0",
+        "time": "09:55"
+      },
+      {
+        "text": "or next y 大于等于 n",
+        "time": "09:59"
+      },
+      {
+        "text": "continue 对",
+        "time": "10:03"
+      },
+      {
+        "text": "这样子",
+        "time": "10:04"
+      },
+      {
+        "text": "ok 好但是还有一些条件next y 等於 ncontinue 對 這樣子",
+        "time": "10:04"
+      },
+      {
+        "text": "OK 好",
+        "time": "10:05"
+      },
+      {
+        "text": "但是還有一些條件譬如說",
+        "time": "10:05"
+      },
+      {
+        "text": "像是 read next x next y",
+        "time": "10:07"
+      },
+      {
+        "text": "等於 應該說不等於空格",
+        "time": "10:11"
+      },
+      {
+        "text": "如果是強的話直接 continue",
+        "time": "10:13"
+      },
+      {
+        "text": "對 因為出口也可以燒",
+        "time": "10:15"
+      },
+      {
+        "text": "當然你燒到出口你可以直接 return false 沒錯",
+        "time": "10:17"
+      },
+      {
+        "text": "對 其實這是一個很好碰",
+        "time": "10:19"
+      },
+      {
+        "text": "因為其實你全部燒完你還是找不到",
+        "time": "10:21"
+      },
+      {
+        "text": "對 這也是題目一開始就是其實出口也是可以燒起來",
+        "time": "10:23"
+      },
+      {
+        "text": "嗯出口也是可以燒起來",
+        "time": "10:26"
+      },
+      {
+        "text": "OK好那就是只要是搶的話就",
+        "time": "10:27"
+      },
+      {
+        "text": "就continue",
+        "time": "10:30"
+      },
+      {
+        "text": "對那make sense",
+        "time": "10:30"
+      },
+      {
+        "text": "因為出口燒起來的話",
+        "time": "10:31"
+      },
+      {
+        "text": "你就等於說你把出口也蓋掉",
+        "time": "10:32"
+      },
+      {
+        "text": "如果是這樣的話就是continue",
+        "time": "10:34"
+      },
+      {
+        "text": "然後是end if",
+        "time": "10:36"
+      },
+      {
+        "text": "OK然後我grid",
+        "time": "10:38"
+      },
+      {
+        "text": "next x 跟 next y 等於 fire",
+        "time": "10:39"
+      },
+      {
+        "text": "這樣子",
+        "time": "10:44"
+      },
+      {
+        "text": "對grid x next 跟 y 等於Fire這樣子對",
+        "time": "10:44"
+      },
+      {
+        "text": "Grid X跟Next Y等於信號",
+        "time": "10:45"
+      },
+      {
+        "text": "在這樣的情況下",
+        "time": "10:49"
+      },
+      {
+        "text": "我們就要continue",
+        "time": "10:51"
+      },
+      {
+        "text": "然後otherwise",
+        "time": "10:51"
+      },
+      {
+        "text": "Grid X",
+        "time": "10:52"
+      },
+      {
+        "text": "Grid XY",
+        "time": "10:53"
+      },
+      {
+        "text": "就是我上下左右都expand了",
+        "time": "10:54"
+      },
+      {
+        "text": "然後我要把新的location放回Q裡面",
+        "time": "10:58"
+      },
+      {
+        "text": "對",
+        "time": "11:00"
+      },
+      {
+        "text": "Fire Q offer Next Next X",
+        "time": "11:00"
+      },
+      {
+        "text": "OK這樣寫會有什麼問題",
+        "time": "11:04"
+      },
+      {
+        "text": "grid要不能是fire",
+        "time": "11:06"
+      },
+      {
+        "text": "應該說在這邊我要把filter掉",
+        "time": "11:07"
+      },
+      {
+        "text": "對這樣子的話就continue",
+        "time": "11:09"
+      },
+      {
+        "text": "然後像我新還有fire",
+        "time": "11:11"
+      },
+      {
+        "text": "然後是我的話可以燒",
+        "time": "11:12"
+      },
+      {
+        "text": "然後門x也可以燒",
+        "time": "11:14"
+      },
+      {
+        "text": "這樣我們就所有continue都cover到了",
+        "time": "11:15"
+      },
+      {
+        "text": "接下來等於說我要開始",
+        "time": "11:17"
+      },
+      {
+        "text": "loop我的那個queue terry queue",
+        "time": "11:19"
+      },
+      {
+        "text": "然後k等於Teri Q size",
+        "time": "11:21"
+      },
+      {
+        "text": "用同一个variable",
+        "time": "11:25"
+      },
+      {
+        "text": "A等于0 A小于Teri Q size",
+        "time": "11:27"
+      },
+      {
+        "text": "A小于K A++",
+        "time": "11:31"
+      },
+      {
+        "text": "现在进入我的那个环节",
+        "time": "11:33"
+      },
+      {
+        "text": "next x 跟 next y",
+        "time": "11:35"
+      },
+      {
+        "text": "先把next给pull出来",
+        "time": "11:38"
+      },
+      {
+        "text": "next equals to Teri Q pullull然後Next 0的話就下一個",
+        "time": "11:41"
+      },
+      {
+        "text": "OK DX DY",
+        "time": "11:48"
+      },
+      {
+        "text": "接下來就是這個的編輯條件",
+        "time": "11:49"
+      },
+      {
+        "text": "我先把這個copy下來好了",
+        "time": "11:50"
+      },
+      {
+        "text": "我其實可以不用check會不會碰到火",
+        "time": "11:52"
+      },
+      {
+        "text": "要是沒有的話我就直接continue",
+        "time": "11:55"
+      },
+      {
+        "text": "遇到火我不能走",
+        "time": "11:56"
+      },
+      {
+        "text": "遇到牆我不能走",
+        "time": "11:57"
+      },
+      {
+        "text": "遇到X就return true",
+        "time": "11:58"
+      },
+      {
+        "text": "Greed X Y",
+        "time": "11:59"
+      },
+      {
+        "text": "如果是新",
+        "time": "12:02"
+      },
+      {
+        "text": "先是牆壁",
+        "time": "12:03"
+      },
+      {
+        "text": "新叫牆",
+        "time": "12:03"
+      },
+      {
+        "text": "然後如果是File的話就是�壁新叫墙",
+        "time": "12:04"
+      },
+      {
+        "text": "如果是File的话就是continue",
+        "time": "12:05"
+      },
+      {
+        "text": "对",
+        "time": "12:06"
+      },
+      {
+        "text": "If gridX gridNext",
+        "time": "12:07"
+      },
+      {
+        "text": "XXY equals to exit的话",
+        "time": "12:09"
+      },
+      {
+        "text": "Return true",
+        "time": "12:12"
+      },
+      {
+        "text": "这些都check过一遍之后",
+        "time": "12:13"
+      },
+      {
+        "text": "我就可以把它放到Terraqueue里面",
+        "time": "12:15"
+      },
+      {
+        "text": "Terraqueue offer",
+        "time": "12:17"
+      },
+      {
+        "text": "我先要mark一下",
+        "time": "12:18"
+      },
+      {
+        "text": "GridNext X",
+        "time": "12:20"
+      },
+      {
+        "text": "Next Y equals to U",
+        "time": "12:21"
+      },
+      {
+        "text": "Terraqueue offer我mark然后下一个步骤走然后GridXNext XNext YEquals to U然後 Turkey Offer",
+        "time": "12:24"
+      },
+      {
+        "text": "One Mark",
+        "time": "12:26"
+      },
+      {
+        "text": "然後下一個步驟走",
+        "time": "12:26"
+      },
+      {
+        "text": "然後 Grid X",
+        "time": "12:28"
+      },
+      {
+        "text": "那如果是人的話我要 Continue",
+        "time": "12:29"
+      },
+      {
+        "text": "嗯",
+        "time": "12:30"
+      },
+      {
+        "text": "對",
+        "time": "12:31"
+      },
+      {
+        "text": "所以有 Check 人",
+        "time": "12:31"
+      },
+      {
+        "text": "Check 火",
+        "time": "12:32"
+      },
+      {
+        "text": "Check 心",
+        "time": "12:34"
+      },
+      {
+        "text": "嗯",
+        "time": "12:35"
+      },
+      {
+        "text": "我現在不是很確定說",
+        "time": "12:35"
+      },
+      {
+        "text": "OK 火如果燒到我本身的人的話",
+        "time": "12:36"
+      },
+      {
+        "text": "其實沒有什麼太大的關係",
+        "time": "12:38"
+      },
+      {
+        "text": "應該說",
+        "time": "12:41"
+      },
+      {
+        "text": "應該說",
+        "time": "12:41"
+      },
+      {
+        "text": "我覺得這條件都無妨",
+        "time": "12:42"
+      },
+      {
+        "text": "就是人先走跟火先走都無妨但我想確定你這邊寫的Assum,就是人先走跟火先走都無妨",
+        "time": "12:44"
+      },
+      {
+        "text": "但我想確定你這邊寫的Assumption是人先走還是火先走",
+        "time": "12:46"
+      },
+      {
+        "text": "Assumption是火先走,因為我有這個while loop,然後我先走火",
+        "time": "12:50"
+      },
+      {
+        "text": "但如果照你現在的寫法的話,你人還是走得出去",
+        "time": "12:53"
+      },
+      {
+        "text": "我人還是走得出去",
+        "time": "12:57"
+      },
+      {
+        "text": "因為你現在火在Q裡面,人在Q裡面",
+        "time": "12:58"
+      },
+      {
+        "text": "你火燒到Q裡面那個人,那就 照你的說法人應該走不出去對不對",
+        "time": "13:01"
+      },
+      {
+        "text": "照我們剛剛對題目的 assumption",
+        "time": "13:08"
+      },
+      {
+        "text": "你現在人應該走不出去",
+        "time": "13:11"
+      },
+      {
+        "text": "但你的人現在還在Q裡面",
+        "time": "13:12"
+      },
+      {
+        "text": "他現在還是會走出去",
+        "time": "13:14"
+      },
+      {
+        "text": "對 但是我讓火先走的原因是",
+        "time": "13:16"
+      },
+      {
+        "text": "我想讓火先走",
+        "time": "13:18"
+      },
+      {
+        "text": "然後我看人的option是什麼",
+        "time": "13:19"
+      },
+      {
+        "text": "那如果說他卡在火裡面",
+        "time": "13:20"
+      },
+      {
+        "text": "因為假如一個情況就是火烧到人的地方嘛",
+        "time": "13:23"
+      },
+      {
+        "text": "但是因为我现在在这里",
+        "time": "13:25"
+      },
+      {
+        "text": "等于说我先逃离了",
+        "time": "13:27"
+      },
+      {
+        "text": "然后他再烧过来",
+        "time": "13:28"
+      },
+      {
+        "text": "所以这是OK的",
+        "time": "13:30"
+      },
+      {
+        "text": "但是如果他上下左右都已经被火包围了",
+        "time": "13:30"
+      },
+      {
+        "text": "那你还是走不了",
+        "time": "13:33"
+      },
+      {
+        "text": "所以说你那个location",
+        "time": "13:35"
+      },
+      {
+        "text": "那个queue",
+        "time": "13:37"
+      },
+      {
+        "text": "那个element就废掉了",
+        "time": "13:38"
+      },
+      {
+        "text": "我虽然是火走先走",
+        "time": "13:39"
+      },
+      {
+        "text": "但是其实我主要是这样可以预判",
+        "time": "13:41"
+      },
+      {
+        "text": "这样子的话最后因为我有一个end condition in check如果他走到exit就结束我雖然是活走先走但是其實我主要是這樣可以預判這樣子的話最後",
+        "time": "13:43"
+      },
+      {
+        "text": "因為我有一個end condition in check",
+        "time": "13:46"
+      },
+      {
+        "text": "如果他走到exit就結束",
+        "time": "13:48"
+      },
+      {
+        "text": "那如果最後都沒有的話",
+        "time": "13:49"
+      },
+      {
+        "text": "外回圈結束之後就是return false",
+        "time": "13:52"
+      },
+      {
+        "text": "我想一下有沒有一些奇怪的一些condition",
+        "time": "13:55"
+      },
+      {
+        "text": "我沒有cover到的",
+        "time": "13:58"
+      },
+      {
+        "text": "如果你的室內不聯通的話",
+        "time": "13:59"
+      },
+      {
+        "text": "你這個城市會不會有問題",
+        "time": "14:02"
+      },
+      {
+        "text": "室內不聯通",
+        "time": "14:03"
+      },
+      {
+        "text": "你說新有可能把他中間給全擋住那就要看你exit在哪囉如果你的室內不連通的話你這個城市會不會有問題室內不連通哦你說",
+        "time": "14:04"
+      },
+      {
+        "text": "心有可能把它中間給全打住",
+        "time": "14:05"
+      },
+      {
+        "text": "那就要看你 exit 在哪囉",
+        "time": "14:07"
+      },
+      {
+        "text": "如果 exit 在火那個防衛的話",
+        "time": "14:09"
+      },
+      {
+        "text": "那你也永遠找不到",
+        "time": "14:11"
+      },
+      {
+        "text": "反正你人跟 exit",
+        "time": "14:13"
+      },
+      {
+        "text": "如果被隔開來就走不到",
+        "time": "14:14"
+      },
+      {
+        "text": "對你也是會 exhaust 掉",
+        "time": "14:16"
+      },
+      {
+        "text": "所以說你也不能",
+        "time": "14:17"
+      },
+      {
+        "text": "那如果我把火跟人分開",
+        "time": "14:18"
+      },
+      {
+        "text": "但人跟 exit 在同一個地方",
+        "time": "14:20"
+      },
+      {
+        "text": "他一定走得到",
+        "time": "14:22"
+      },
+      {
+        "text": "一定走得到",
+        "time": "14:23"
+      },
+      {
+        "text": "只要人跟 exitet不同的地方的話",
+        "time": "14:23"
+      },
+      {
+        "text": "他永遠會找不到",
+        "time": "14:26"
+      },
+      {
+        "text": "他最後會exhaust完",
+        "time": "14:27"
+      },
+      {
+        "text": "我覺得這個condition應該是沒有問題的",
+        "time": "14:28"
+      },
+      {
+        "text": "你在fireterryq的時候",
+        "time": "14:30"
+      },
+      {
+        "text": "下面那個condition會不會有問題",
+        "time": "14:33"
+      },
+      {
+        "text": "fireterryq",
+        "time": "14:36"
+      },
+      {
+        "text": "就是if fireq then is empty",
+        "time": "14:37"
+      },
+      {
+        "text": "我懂你的意思了",
+        "time": "14:40"
+      },
+      {
+        "text": "就是假如說他們隔開的話",
+        "time": "14:41"
+      },
+      {
+        "text": "那fireq可能已經找完了他已经烧完了",
+        "time": "14:43"
+      },
+      {
+        "text": "然后其实我是走到的",
+        "time": "14:45"
+      },
+      {
+        "text": "然后我就把我把return false掉了",
+        "time": "14:47"
+      },
+      {
+        "text": "如果是这样子的话",
+        "time": "14:49"
+      },
+      {
+        "text": "我如果把fireq is anti拿掉",
+        "time": "14:51"
+      },
+      {
+        "text": "因为k就是0的嘛",
+        "time": "14:53"
+      },
+      {
+        "text": "如果是这样的情况下的话",
+        "time": "14:55"
+      },
+      {
+        "text": "那我fire就没办法继续撑",
+        "time": "14:56"
+      },
+      {
+        "text": "那我这边还是会继续走",
+        "time": "14:58"
+      },
+      {
+        "text": "所以说其实是ok的",
+        "time": "15:00"
+      },
+      {
+        "text": "所以说我把这个condition拿掉其实是ok的",
+        "time": "15:02"
+      },
+      {
+        "text": "这样就可以解决掉你刚说那个edge case我想一下还有什么edge case所以说其实是ok的所以说我把这个condition拿掉其实是ok的",
+        "time": "15:04"
+      },
+      {
+        "text": "这样就可以解决掉你刚刚说的那个edge case",
+        "time": "15:05"
+      },
+      {
+        "text": "我想一下还有什么edge case",
+        "time": "15:07"
+      },
+      {
+        "text": "我们现在把你觉得会有问题的edge case都列出来",
+        "time": "15:09"
+      },
+      {
+        "text": "fire war separates u and f",
+        "time": "15:13"
+      },
+      {
+        "text": "这个的话我想一下",
+        "time": "15:18"
+      },
+      {
+        "text": "它如果separate的话",
+        "time": "15:20"
+      },
+      {
+        "text": "我跟fire",
+        "time": "15:21"
+      },
+      {
+        "text": "像我们刚才已经解决了",
+        "time": "15:22"
+      },
+      {
+        "text": "fire它没办法grow",
+        "time": "15:23"
+      },
+      {
+        "text": "但我还是可以继续找到exit的一个问题",
+        "time": "15:25"
+      },
+      {
+        "text": "那如果exit在Fire那边的话那也没有关系",
+        "time": "15:27"
+      },
+      {
+        "text": "我会我还是会去expand",
+        "time": "15:30"
+      },
+      {
+        "text": "然后最后我也是找不到任何东西",
+        "time": "15:32"
+      },
+      {
+        "text": "然后结束了",
+        "time": "15:34"
+      },
+      {
+        "text": "所以这个condition是ok的",
+        "time": "15:35"
+      },
+      {
+        "text": "还有什么edge case",
+        "time": "15:36"
+      },
+      {
+        "text": "我跟Fire在同一个地方就side by side",
+        "time": "15:38"
+      },
+      {
+        "text": "反正我们不会一开始我就跟Fire在同一个点嘛",
+        "time": "15:41"
+      },
+      {
+        "text": "不会他一定会分开两个点unf side by side反正我們不會一開始我就跟fire在同一個點不會",
+        "time": "15:44"
+      },
+      {
+        "text": "它一定會分開兩個點",
+        "time": "15:45"
+      },
+      {
+        "text": "unf side by side",
+        "time": "15:47"
+      },
+      {
+        "text": "如果是這樣的話",
+        "time": "15:49"
+      },
+      {
+        "text": "舉例子一個小的grid",
+        "time": "15:50"
+      },
+      {
+        "text": "譬如說就我跟fire兩個",
+        "time": "15:52"
+      },
+      {
+        "text": "然後可能火在某個地方",
+        "time": "15:53"
+      },
+      {
+        "text": "那一開始fire會先燒到exit",
+        "time": "15:55"
+      },
+      {
+        "text": "還是燒到我自己本身",
+        "time": "15:58"
+      },
+      {
+        "text": "但是因為是我先走",
+        "time": "15:59"
+      },
+      {
+        "text": "所以我可以先逃離那個點",
+        "time": "16:01"
+      },
+      {
+        "text": "fire再走",
+        "time": "16:02"
+      },
+      {
+        "text": "fire再燒過來",
+        "time": "16:03"
+      },
+      {
+        "text": "那我也找不到,因為它已經燒到 exit 了",
+        "time": "16:05"
+      },
+      {
+        "text": "所以這個 condition 其實是 ok 的",
+        "time": "16:07"
+      },
+      {
+        "text": "等於說它會是一個 you fire exit",
+        "time": "16:09"
+      },
+      {
+        "text": "這樣的話是 ok 的,這樣我也 return false",
+        "time": "16:13"
+      },
+      {
+        "text": "因為火也先把 exit 燒掉",
+        "time": "16:15"
+      },
+      {
+        "text": "那如果現在火跟你同時到 exit 你會 return true 還是 false",
+        "time": "16:18"
+      },
+      {
+        "text": "火跟我同時到 exit 的話",
+        "time": "16:22"
+      },
+      {
+        "text": "題目好像是我先走對不對",
+        "time": "16:24"
+      },
+      {
+        "text": "對啊",
+        "time": "16:26"
+      },
+      {
+        "text": "所以說如果今天假如最後的 condition 是這樣子",
+        "time": "16:26"
+      },
+      {
+        "text": "exit 然後我在這裡",
+        "time": "16:29"
+      },
+      {
+        "text": "然後 fire 在這裡",
+        "time": "16:30"
+      },
+      {
+        "text": "那因為我先走 所以說我會先到 exit",
+        "time": "16:31"
+      },
+      {
+        "text": "然後 fire 才燒",
+        "time": "16:35"
+      },
+      {
+        "text": "所以這樣應該是 return true",
+        "time": "16:36"
+      },
+      {
+        "text": "那你的 code 會 return true as false",
+        "time": "16:38"
+      },
+      {
+        "text": "對 我 code return false",
+        "time": "16:39"
+      },
+      {
+        "text": "因為 fire 會先 expand",
+        "time": "16:41"
+      },
+      {
+        "text": "燒到 exit 對",
+        "time": "16:42"
+      },
+      {
+        "text": "我們當然可以做一个",
+        "time": "16:44"
+      },
+      {
+        "text": "一个preemptive的check",
+        "time": "16:45"
+      },
+      {
+        "text": "先check我下一步会不会成功完成",
+        "time": "16:47"
+      },
+      {
+        "text": "如果完成我们就return true",
+        "time": "16:49"
+      },
+      {
+        "text": "然后不能完成的话",
+        "time": "16:52"
+      },
+      {
+        "text": "我们就开始火线烧",
+        "time": "16:53"
+      },
+      {
+        "text": "在toll这边我先加一个condition",
+        "time": "16:54"
+      },
+      {
+        "text": "先做一个preemptive check",
+        "time": "16:58"
+      },
+      {
+        "text": "这样子",
+        "time": "17:00"
+      },
+      {
+        "text": "这可以deal with这种condition",
+        "time": "17:01"
+      },
+      {
+        "text": "对对对",
+        "time": "17:02"
+      },
+      {
+        "text": "我先把它写下",
+        "time": "17:03"
+      },
+      {
+        "text": "u escapes first还有什么情况Check 這樣子這可以 deal with 這種 condition對對對我先把它寫下You escaped first",
+        "time": "17:04"
+      },
+      {
+        "text": "還有什麼情況",
+        "time": "17:07"
+      },
+      {
+        "text": "好像 base case 基本上都 cover 了",
+        "time": "17:09"
+      },
+      {
+        "text": "嗯 對",
+        "time": "17:11"
+      },
+      {
+        "text": "那我們要 dry run 一下",
+        "time": "17:12"
+      },
+      {
+        "text": "看你 我覺得不太好 dry run",
+        "time": "17:14"
+      },
+      {
+        "text": "我想就這樣",
+        "time": "17:16"
+      },
+      {
+        "text": "OK 好",
+        "time": "17:18"
+      },
+      {
+        "text": "這個15選是 OK 的吧",
+        "time": "17:19"
+      },
+      {
+        "text": "這個15選 OK 啊",
+        "time": "17:20"
+      },
+      {
+        "text": "我不知道你要考那麼難的呢",
+        "time": "17:21"
+      },
+      {
+        "text": "我覺得這個算是比較稍微難一點",
+        "time": "17:23"
+      },
+      {
+        "text": "就是它比較",
+        "time": "17:25"
+      },
+      {
+        "text": "你說它難不難",
+        "time": "17:26"
+      },
+      {
+        "text": "但它蠻複雜的",
+        "time": "17:27"
+      },
+      {
+        "text": "所以你要很清楚你現在在幹嘛",
+        "time": "17:28"
+      },
+      {
+        "text": "所以我覺得你表現得很好一點",
+        "time": "17:30"
+      },
+      {
+        "text": "是你非常清楚你現在在幹嘛",
+        "time": "17:32"
+      },
+      {
+        "text": "我基本上給一點Hint",
+        "time": "17:33"
+      },
+      {
+        "text": "你大概就知道哪裡會有問題",
+        "time": "17:35"
+      },
+      {
+        "text": "我其實還蠻訝異我可以寫出來的",
+        "time": "17:36"
+      },
+      {
+        "text": "剛剛在想有那個新",
+        "time": "17:38"
+      },
+      {
+        "text": "然後又有Five又有X這個東西",
+        "time": "17:40"
+      },
+      {
+        "text": "而且我覺得這個題應該算是",
+        "time": "17:41"
+      },
+      {
+        "text": "Medium比較偏難一點點",
+        "time": "17:43"
+      },
+      {
+        "text": "其實我覺得說不定有到hard",
+        "time": "17:45"
+      },
+      {
+        "text": "對啊我覺得表現算滿好的",
+        "time": "17:47"
+      },
+      {
+        "text": "我有出乎我自己的意料之外",
+        "time": "17:49"
+      },
+      {
+        "text": "因為我覺得我太久沒做題",
+        "time": "17:51"
+      },
+      {
+        "text": "不過我覺得你算是",
+        "time": "17:53"
+      },
+      {
+        "text": "你在這邊做了一個",
+        "time": "17:54"
+      },
+      {
+        "text": "算是把你自己推入一個陷阱裡",
+        "time": "17:55"
+      },
+      {
+        "text": "如果是我寫這一題的話",
+        "time": "17:57"
+      },
+      {
+        "text": "我會先讓火走完",
+        "time": "17:58"
+      },
+      {
+        "text": "然後我就知道火走到這一步",
+        "time": "18:00"
+      },
+      {
+        "text": "的Time Step是多少",
+        "time": "18:02"
+      },
+      {
+        "text": "然後我直接看我在這個Time Step有沒有到一點點塔",
+        "time": "18:03"
+      },
+      {
+        "text": "喔你說一開始在設定的Condition",
+        "time": "18:07"
+      },
+      {
+        "text": "對所以我就多記一個Array是火燒到這個點的時間",
+        "time": "18:09"
+      },
+      {
+        "text": "但因為我那時候想說面試的時候通常都以面試的想法為主",
+        "time": "18:14"
+      },
+      {
+        "text": "我覺得你那想法也是可以Work",
+        "time": "18:18"
+      },
+      {
+        "text": "但是我覺得你會把自己推進去一個洞裡面",
+        "time": "18:20"
+      },
+      {
+        "text": "但是我覺得我其實蠻驚訝喔你最後從這個洞裡面但是我覺得我其實滿驚訝",
+        "time": "18:23"
+      },
+      {
+        "text": "你最後從這個洞裡面爬出來把Code寫出來",
+        "time": "18:25"
+      },
+      {
+        "text": "而且因為我的寫法也是火先走",
+        "time": "18:27"
+      },
+      {
+        "text": "然後又",
+        "time": "18:29"
+      },
+      {
+        "text": "但其實實際上是我先走",
+        "time": "18:30"
+      },
+      {
+        "text": "對",
+        "time": "18:32"
+      },
+      {
+        "text": "就是一個很亂的一個",
+        "time": "18:32"
+      },
+      {
+        "text": "對對對",
+        "time": "18:33"
+      },
+      {
+        "text": "我覺得還不錯啦",
+        "time": "18:34"
+      },
+      {
+        "text": "就是你說到很Outstanding",
+        "time": "18:35"
+      },
+      {
+        "text": "但是我可能還是有一點",
+        "time": "18:38"
+      },
+      {
+        "text": "但是我覺得到標準的Standard已經算很好了",
+        "time": "18:39"
+      },
+      {
+        "text": "嗯",
+        "time": "18:42"
+      },
+      {
+        "text": "對啊",
+        "time": "18:43"
+      },
+      {
+        "text": "因為我其實這題原本還有follow up",
+        "time": "18:43"
+      },
+      {
+        "text": "但是你這個寫法其實把",
+        "time": "18:45"
+      },
+      {
+        "text": "我那麼想問的follow up有算解決掉了",
+        "time": "18:46"
+      },
+      {
+        "text": "嗯假設多個起火點",
+        "time": "18:49"
+      },
+      {
+        "text": "哦多個起火點",
+        "time": "18:51"
+      },
+      {
+        "text": "對但是裡面你直接就把火放進去了",
+        "time": "18:52"
+      },
+      {
+        "text": "所以多個起火點也是一樣",
+        "time": "18:54"
+      },
+      {
+        "text": "就是把火一起放進去而已",
+        "time": "18:55"
+      },
+      {
+        "text": "哦OK",
+        "time": "18:57"
+      },
+      {
+        "text": "因為因為這道題比較難",
+        "time": "18:58"
+      },
+      {
+        "text": "所以通常標準就不會拉那麼高",
+        "time": "18:59"
+      },
+      {
+        "text": "因為你大概預期",
+        "time": "19:01"
+      },
+      {
+        "text": "candidate會到哪一個程度",
+        "time": "19:02"
+      },
+      {
+        "text": "哦對",
+        "time": "19:04"
+      },
+      {
+        "text": "然後你在那邊試上指點",
+        "time": "19:04"
+      },
+      {
+        "text": "一下能爬出來",
+        "time": "19:06"
+      },
+      {
+        "text": "我就覺得是一個很好的指標",
+        "time": "19:07"
+      },
+      {
+        "text": "所以算是一個OK HIGH",
+        "time": "19:09"
+      },
+      {
+        "text": "我覺得算HIGH",
+        "time": "19:11"
+      },
+      {
+        "text": "就是如果以網路上那些標準來講",
+        "time": "19:12"
+      },
+      {
+        "text": "到高於HIGH了",
+        "time": "19:15"
+      },
+      {
+        "text": "高於HIGH了",
+        "time": "19:16"
+      },
+      {
+        "text": "好啦那希望今天這集影片",
+        "time": "19:17"
+      },
+      {
+        "text": "看到我被算法競賽大神考面試",
+        "time": "19:19"
+      },
+      {
+        "text": "有讓你學到一點東西",
+        "time": "19:21"
+      },
+      {
+        "text": "如果喜歡的話",
+        "time": "19:22"
+      },
+      {
+        "text": "記得一定要幫我把影片點個讚",
+        "time": "19:23"
+      },
+      {
+        "text": "最後跟大家公布一個消息",
+        "time": "19:25"
+      },
+      {
+        "text": "我跟Hank設計了一個職亞護城河實戰營",
+        "time": "19:27"
+      },
+      {
+        "text": "現在可以開始報名了",
+        "time": "19:30"
+      },
+      {
+        "text": "我們都知道軟體工程師的痛點在哪裡",
+        "time": "19:31"
+      },
+      {
+        "text": "也知道公司在招人的時候想要看到什麼樣的價值",
+        "time": "19:34"
+      },
+      {
+        "text": "而且其實很多工程師不知道自己真正的potential在哪裡",
+        "time": "19:37"
+      },
+      {
+        "text": "像比如說好了Google L4的工程師",
+        "time": "19:41"
+      },
+      {
+        "text": "在台灣的總薪資",
+        "time": "19:44"
+      },
+      {
+        "text": "可以達到快400萬台幣",
+        "time": "19:45"
+      },
+      {
+        "text": "而Meta E4的薪水",
+        "time": "19:47"
+      },
+      {
+        "text": "在美國將近可以達到",
+        "time": "19:48"
+      },
+      {
+        "text": "60萬美金一年",
+        "time": "19:49"
+      },
+      {
+        "text": "這些都是可行的",
+        "time": "19:51"
+      },
+      {
+        "text": "他們有很厲害嗎?",
+        "time": "19:52"
+      },
+      {
+        "text": "其實也沒有",
+        "time": "19:53"
+      },
+      {
+        "text": "很多人當了好幾年的工程師",
+        "time": "19:54"
+      },
+      {
+        "text": "薪資還是卡在那裡",
+        "time": "19:56"
+      },
+      {
+        "text": "那我們這個實戰贏的目標很簡單",
+        "time": "19:57"
+      },
+      {
+        "text": "第一個就是",
+        "time": "20:00"
+      },
+      {
+        "text": "讓你變成一個更強的工程師",
+        "time": "20:00"
+      },
+      {
+        "text": "Focus在解決問題的能力上面",
+        "time": "20:02"
+      },
+      {
+        "text": "尤其是對於轉職的朋友來說",
+        "time": "20:05"
+      },
+      {
+        "text": "可能基礎能力比較差",
+        "time": "20:07"
+      },
+      {
+        "text": "另外就是幫你打造你的職壓護城河",
+        "time": "20:08"
+      },
+      {
+        "text": "不論你今天是要去面試",
+        "time": "20:11"
+      },
+      {
+        "text": "要跳槽",
+        "time": "20:13"
+      },
+      {
+        "text": "還是怕被layoff",
+        "time": "20:13"
+      },
+      {
+        "text": "怕被AI淘汰",
+        "time": "20:14"
+      },
+      {
+        "text": "只要你願意跟我們一起準備",
+        "time": "20:16"
+      },
+      {
+        "text": "跟我們一起練習",
+        "time": "20:17"
+      },
+      {
+        "text": "我相信你也可以把你的Mode給Build起來",
+        "time": "20:18"
+      },
+      {
+        "text": "那這個實戰儀具體到底在做什麼",
+        "time": "20:21"
+      },
+      {
+        "text": "第一個就是模擬實戰",
+        "time": "20:23"
+      },
+      {
+        "text": "跟重點整理講解的部分",
+        "time": "20:25"
+      },
+      {
+        "text": "我們透過LiCode題目作為載體",
+        "time": "20:27"
+      },
+      {
+        "text": "因為LiCode是最簡單最快速的方式",
+        "time": "20:29"
+      },
+      {
+        "text": "用真實面試的方式去展現給大家看",
+        "time": "20:31"
+      },
+      {
+        "text": "我們是怎麼解決問題的",
+        "time": "20:34"
+      },
+      {
+        "text": "因為我們相信觀察就是最好的學習方式",
+        "time": "20:35"
+      },
+      {
+        "text": "然後每一個章節我們會做重點整理",
+        "time": "20:38"
+      },
+      {
+        "text": "去講解所有核心的概念",
+        "time": "20:41"
+      },
+      {
+        "text": "包含掌握面試的節奏",
+        "time": "20:43"
+      },
+      {
+        "text": "拆解題目",
+        "time": "20:45"
+      },
+      {
+        "text": "解析需求",
+        "time": "20:46"
+      },
+      {
+        "text": "算法跟數據結構的應用",
+        "time": "20:47"
+      },
+      {
+        "text": "測試解決方案",
+        "time": "20:48"
+      },
+      {
+        "text": "變種情境還有如何應對follow up",
+        "time": "20:50"
+      },
+      {
+        "text": "那第二個部分呢",
+        "time": "20:52"
+      },
+      {
+        "text": "也是我覺得最重要的一個",
+        "time": "20:53"
+      },
+      {
+        "text": "就是我跟Hank每週固定時間呢",
+        "time": "20:55"
+      },
+      {
+        "text": "會直接Live",
+        "time": "20:57"
+      },
+      {
+        "text": "用直播的方式在線上",
+        "time": "20:58"
+      },
+      {
+        "text": "帶大家手把手的一起做實戰演練",
+        "time": "21:00"
+      },
+      {
+        "text": "等於是說所有參與實戰營的朋友",
+        "time": "21:02"
+      },
+      {
+        "text": "大家都會一起參加",
+        "time": "21:05"
+      },
+      {
+        "text": "目的就是要拉著你跟我們一起練習",
+        "time": "21:06"
+      },
+      {
+        "text": "既然你都已經付錢了",
+        "time": "21:08"
+      },
+      {
+        "text": "有什麼理由不出現",
+        "time": "21:10"
+      },
+      {
+        "text": "然後在每一次Live的實戰演練最後",
+        "time": "21:11"
+      },
+      {
+        "text": "我們也會做Live的講解",
+        "time": "21:14"
+      },
+      {
+        "text": "所以這絕對不是一個那種買了心安",
+        "time": "21:15"
+      },
+      {
+        "text": "看完就沒什麼用的那種線上課程",
+        "time": "21:18"
+      },
+      {
+        "text": "那最後一部分",
+        "time": "21:20"
+      },
+      {
+        "text": "我們還有Live直播的專業分享",
+        "time": "21:21"
+      },
+      {
+        "text": "每過幾週我們會請一些國內外的大咖",
+        "time": "21:23"
+      },
+      {
+        "text": "比如說矽谷的資深工程師或是Team Lead",
+        "time": "21:26"
+      },
+      {
+        "text": "或者是說哪一家大廠的這個Hiring Manager",
+        "time": "21:29"
+      },
+      {
+        "text": "來跟大家分享一下最新的這個實戰經驗",
+        "time": "21:32"
+      },
+      {
+        "text": "或是整體就業市場的一個趨勢",
+        "time": "21:34"
+      },
+      {
+        "text": "所以說不管你是現役軟體工程師",
+        "time": "21:37"
+      },
+      {
+        "text": "或是說你正在找工作",
+        "time": "21:39"
+      },
+      {
+        "text": "或者是說你是轉職者",
+        "time": "21:41"
+      },
+      {
+        "text": "正在成為軟體工程師的路上",
+        "time": "21:42"
+      },
+      {
+        "text": "都歡迎你來加入我們",
+        "time": "21:44"
+      },
+      {
+        "text": "我覺得這會是你人生一個最簡單",
+        "time": "21:46"
+      },
+      {
+        "text": "最無腦",
+        "time": "21:48"
+      },
+      {
+        "text": "最高CP值的一個投資",
+        "time": "21:49"
+      },
+      {
+        "text": "而且呢現在我們有一個找鳥優惠",
+        "time": "21:51"
+      },
+      {
+        "text": "可以到我們的官網",
+        "time": "21:53"
+      },
+      {
+        "text": "buildmode.org去看一下",
+        "time": "21:54"
+      },
+      {
+        "text": "我會把連結放在影片底下的資訊欄",
+        "time": "21:56"
+      },
+      {
+        "text": "那我們下次見囉",
+        "time": "21:58"
+      }
+    ],
+    "task_id": "5fe7c3f903bb46119a158ce5d17b3d64",
+    "title": "我能通過 G公司 工程師出的面試嗎？",
+    "transcript": [],
+    "updatedAt": 1783958134406,
+    "url": "https://youtu.be/s9s32vVzYIo",
+    "video_url": ""
+  }
+}

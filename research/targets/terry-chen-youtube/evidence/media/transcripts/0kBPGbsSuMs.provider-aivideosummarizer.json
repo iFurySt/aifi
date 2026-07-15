@@ -1,0 +1,4908 @@
+{
+  "source": "Online transcript provider: AI Video Summarizer",
+  "source_url": "https://www.youtube.com/watch?v=0kBPGbsSuMs",
+  "provider": {
+    "name": "aivideosummarizer.io",
+    "endpoint": "https://aivideosummarizer.io/youtube-subtitle-downloader/",
+    "retrieved": "2026-07-14",
+    "route": "OBU browser page -> IndexedDB tr-history"
+  },
+  "video_index": 68,
+  "video": {
+    "index": 68,
+    "id": "0kBPGbsSuMs",
+    "title": "矽谷女神 Kelly 能通過我的面試嗎？",
+    "url": "https://www.youtube.com/watch?v=0kBPGbsSuMs",
+    "duration_seconds": 1242.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "0kBPGbsSuMs",
+    "title": "矽谷女神 Kelly 能通過我的面試嗎？",
+    "text": "Hello大家好我是Terry\n今天呢我們的矽谷女神 Kelly來東京玩了\n那按照慣例呢我們是不是要來做一些什麼\n沒錯我們就是要來寫Code\n因為大家也知道最近矽谷是蠻多公司\n把招人的這個專注呢\n放在比較偏向Mid-Senior Level的工程師上面\n那Kelly身為一個也算是\n大學剛畢業沒有太久的一個工程師\n我們就來看一下Kelly有沒有辦法通過這個簡單的Coding面試\n那這個面試\n那這個面試的難度呢也是通常我在幫我們公司招人的時候呢\n會去考的一個稍微偏簡單一點的題目\n可以準備好了嗎\n我們開頭先簡單聊兩句啦\n所以怎麼樣\n超緊張\n很緊張\n真的很緊張嗎\n超緊張真的很緊張\n那你對我們公司有沒有什麼期許\n希望錢給得多一點\n錢\n對嗎\n我在面什麼職位啊\n我們沒有找副職位我們只有找副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副�我們CEO都會需要知道怎麼做離口好好很神奇的公司好 錢給到位都可以\n我們是有心意\n有心意\n我到底來了什麼黑心的面試\nOK 好 準備好了嗎\n那不要緊張\n這是一個很好玩的一個\n體育\nexercise\n喔 好\n體育不好玩\n體育不好玩\nexercise很好玩\n好好\n沒有想到在東京會做這個事情對不對沒有我在東京我是來玩的我們題目不好玩題目不好玩誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒我剛剛是開玩笑我突然想說你那個comments裡面會不會在那邊Kelly拜金啊\nKelly\n這個這個這個\n錢什麼\n沒事\nKelly沒有拜金\nKelly是我看過最\n那叫什麼 樸實\n樸實無華的女生\n謝謝\n謝謝\n對 你不拜金吧\n還好吧\n我只是想說我剛剛開玩笑\n在那邊說什麼\n錢給到位什麼\n我不是這種人\n沒有 我覺得錢要給到位啊\n走公路不是為了錢\n對啊 這不是拜金\n這叫做為自己的前程負責\n嗯 謝謝 謝謝 Terry\nOK 好\n那這道題呢\n算是一個比較經典的一道題啦\n對 然後我們就假設\n你的input是一個\nArray of coins 的denomination\n好\n對 那你想coins可能會有1 1 3 5\n或是1塊2塊3塊\n它可以是任何的denomination\n可以是100 1000 10000\n對\n那你的input就是\ncoin\nnation\n好\n是一個Array\n對 是一個Array\n好\n然後TargetNumber\n嗯\n對 這是一個Integer\n嗯\n那TargetNumber就是你要用這個Coin去Match\n想辦法湊到那個錢\n對 像比如說\nOK 我今天Target是100\n好\n那你有你的Denomination是1塊跟10塊\n嗯\n那你可以給它十个十块\n或是你可以给他一百个一块\n或是你也可以mix and match\n那今天我们要找的是\n举个例子好了比如说你的input是\n1,3,5好了\n那我的target是\n11,距离\n如果是11个1的话\n但是这不是最优的\n因为我们要找minimum number of coins\n就是几个单位\n所以说我们这道題的solution是\n5加5加1對吧\n那等於說你要3\n等於說你有3個coin\n你就可以把它湊成這個target\n好\n了解\nok好那雖然這個題目蠻simple\n但我還是clarify一下\n我們現在input 你會給我一個\ncoin denomination 是一個 array of\n它有拿幾種硬幣\n跟一個 target number\n然後我要 return 的就是\n我最少需要幾個硬幣\n來 make up 到這個 target amount\n對\n好 那這聽起來就是一個\ndynamic programming 的題目\n可以用一個 dp array 來解\n我現在想的是\n我建一个array\n然后我array的每一个index去存\n就是我到这个target amount\n需要多少个硬币\n就是比如说我如果\n你的target amount是10的话\n那我就建一个\n有11个items的一个array\n然后每一个去存\n就是0要多少1要多少一直到11\n然後我可以去就是用一個for loop來update這些amounts\n所以說你的array size是\namount plus 1\n因為從0開始嘛\n然後我如果要到10的話就會0 1 2 3 4 5 6 7 8 9 10\n哦 ok\n對\n就是你的target是11的話就是\n就是12個\n12個\nok 懂了ok哦OK就是你的目標是C的話就是12個\nOK懂了\n那所以我一開始會先initialize一個很大的數字\n因為一開始我不知道minimum number是多少\n所以我先用一個大的數字\n然後每一個position都放這個數字\n然後我從0開始\n然後因為makeup amount 0一定是0嘛\n所以第一個就會是0\n然後我再來從1開始去\n用一個for loop\n就是外層的for loop要先\ngo over每一個coin的denomination\n然後呢從coin value到target value之中間去看\n就是每一個position update的\neither是它現在存的這個minimum value\n或者是就是dp的xgen coin\n因為你現在已經有這個coin value了\n然後再加一個就是我 current coin\n所以就是 DP 的 Xgen coin 加 1\n這樣然後看哪一個比較小\n然後去 update 這個 value\n然後一路到就是 target amount\n然後最後 target amount\n如果是就是小於我 initialize 的那個 max value\n那就代表我可以就是 make up 這個 combination\n可是如果它完全沒有被 update 到\n它還是一開始我 initialize 的那個\n很大的數字就是不ize的那個很大的數字\n就是不合理的很大的數字的話\n那就代表它沒有辦法make up這個value\n就是這個題目有可能是不合理的嘛\n因為你給的不一定是可以剛好那個數字\n那我就要\n如果沒有辦法make up要return是嗎\n你可以return-1\n-1 好 那我就\n那你剛剛講的這個DP approach是\n對\nbottom up的 approach嗯\n對\n從小的開始\n從小的開始\nok 沒問題\n好 那我就開始寫了\n我用Python寫\n可以啊\n對\n這個題目要叫什麼\n沒關係 你不用管那個大小寫\n你Google Doc管就是\n然後要給我的是\ncoin.num\n那我那個就會叫coin\n然後後面就target number\n那就target amount嘛嗯哼這樣子然後呢我要initialize一個max value那我這個就會叫Coin然後後面就Target Number那就Target Amount嘛\n這樣子\n然後呢我要Initialize一個Max Value\n就是一開始那個最大的\n我就Initialize一個\n如果你的Target Amount\n然後你Target Amount大的話\n那就是不合理嘛\n那個就是Basically無限大\n因為我只是要Make up 10的話\n你給11\n那就是不合理了\n因為Coin應該一定是大於1的吧\n不可能有小數點的quint\n對 我們就assume是integer\n好 所以那我這個就\n比如說initialize amount加1\n這樣子就是已經是比合理的還要再大了\n因為不可能最後return amount加1\n好 然後我initialize這個dp array\n那我就用就是我的max value\nmax valuemax value\n然后我要乘以\n我要store从0到我们的target amount\n所以是amount加1\n这样\n然后呢\n我们initialize了这个dp array之后\n要先从第一个开始\n所以第一个就是makeup amount 0就是0\ndp array的0我要先initialize第一个吗\n0会是0\n因为makeup amount 0就是0\n聪明\n然后呢我们就要开始写for loop\n所以第一个我们应该要go through那个coin的denominations\n所以呢\n这个我把它改成coins好了因为它是一个list of coin的denominations所以呢这个我把它改成coins好了\n它是一个list of coin的denominations\n然后for coin in coins这样\n嗯\n然后呢里面还要一个for loop\n好for\n我们外层的for loop是for coin in coins\n然后内层的for i in range\n我想一下它的range要是多少\n因为我们要一路到amount\n就一路到我们的target amount\n但是从哪一个开始是\n最小的会是就是我们现在的coin是多少\n因为假设你这边给135好了\n那我现在在1的话\n我最小就是只能从1开始\n因为比1小的不可能\n就是前面我就已经不用考虑了\n我就只有这个coin的话它就只能从这里开始因为比1小的不可能就是前面我就已经不用考虑了我就只有这个Coin的话\n它就只能从这里开始\n所以这应该是从Coin开始的\n然后到Amount\n所以要Amount加1\n因为Range是不会\n就是include最后那个数字\n然后呢\n我们现在就要update这个DP Array\n所以DP Array的i\n我们要把它update成\nminimum of什么东西\nminimum of现在DP array currently是多少\n就是看它现在Stored的\n所以DP array的i跟什么呢\n就是DP array的\n我们现在的current coin\n我们要加这个current coin\n所以加1因为多这个\n然后我们去减掉i\n减掉这个coin value\n因为我们现在的dpi\n减掉current coin value\n然后去看那个position是多少\n然后再加上我现在current coin的这个数量\n所以加1\n对\n所以这个minimum\n然后呢\n这for loop跑完\n我们就已经update所有dp array每个positionminimum然后呢这for loop跑完我们就已经update所有\ndparray每一个position\nminimum是要多少\n所以我们最后return的数字就会是\n要看就是有被update到的话\n就是可以到那个amount\n没有的话就要return-1\n所以dparray的amount\n然后这是if\nif dp array amount\n小於我們一開始 initialize 的 max value\n如果是等於的話\n那就要 return 負1\n這樣\nOK 結束\n那妳要不要 dry run 一下一些 test case\n好啊\n那給個簡單的 input\n還是我用你一開始給的這個\n可以好\n可以用哪個\n好\n那我就不額外型\ninput 135 然後\ntarget amount 是 11 的話\nmax value 我們這裡就會 initialize 成\namount 加 1 12\n然後 dp array 現在就會是max value 就會 12 12 12 12amount加1 12然后dparray现在就会是\nmax value就会12 12 12 12\n然后有12个12\n嗯哼\n对\n然后呢\n我们把它update成第一个是0\n所以现在变成0\n然后后面都是12\n嗯哼\n后面有11个12这样\n然后for coin and coins\n所以好我们第一个\nfor coin and coins第一个我們第一個for coin and coins\n第一個是1嘛\n我們先用1來看\n然後再來for i and range\n從coin到amount\n所以我們從1開始看\n然後會一路看到11\n就從1開始這樣loop\n然後dparray的第一個\n就是這個它會標記嗎\n嗯?\n我mark它不會mark\nOK\n喔欸喔\n它沒有就是顯示我一個在這邊喔\nInteresting\n你是\n就是\n剛剛有顯示我不知道為什麼不見了\n但是它還是在同步\n有有同步\nOK\n好\nfor coin and coins\n對\n然後現在的range\nE\n然後DP array的第一個所以我們來看minimum的DP array现在的range是1,dp array是1\n所以我们来看minimum的dp array\n现在这个dp array的i是12\n然后呢,dp array的i-coin加1\n所以会变成是dp array的乘以dp就好\n所以是dp的i 1-coin 1-1 0\n然后加1,会变成这样所以dp的0就是0-0-1-1-0-1會變成這樣\n所以DP的0就是0\n所以這樣子就會變成是0加1\n所以就是1\n所以這一項就被update成1了\n然後呢\n再來進入到第二個\n我們這一個就要\n就是說在1的位置\n你有一種解法\n對\nOK\n然後再來for ion range所以我們這個就要再增加\n變成2\n然後我們來看第二個\n第二個現在也是minimum\n它前面還是12\n然後後面的我們變成dp的i-coin\n所以2減掉1\n就是dp的1然後加1\n所以就會是2\n因為我們現在dp的1是1嘛\n然後這一個就再被update成2\n我們要整個run完嗎\n我們要run到最後一個嗎\n有點多\n你可以快速run一下沒關係\n好\n那再來3\n然後就會變成minimum of 12\n加上後面這一個\n所以我這邊加個豆好了\n這樣就看得出來\n然後這樣子就會是\nDP的i-coin 3-1\n加1\n所以是DP的2\n然後加1\n所以就會是3\n所以這邊我們第三個就update成3\n這樣子\n然後因為我現在的coin就是1嘛\n所以其實就會一直就是4\n然後5然後blablablablablablablabl這個 loop 在找的就是所有用1可能最小\n然後再換下一個\n所以我們下一個就還要再看再來3的情況會是怎麼樣\n然後又要重來一次就是3的話\n因為3不可能每個比3小的數字\n所以我們只能從3開始\n所以 for i in the range 我們就要從3開始的話\n然後從315到11\n那我換一行\n就會變成MINIMUM OF DP ARRAY的i\n我們現在在3\n所以3在這邊\n它會是MINIMUM OF 3跟DP的\n現在3減COIN是0\n然後加1這樣\n所以就是MINIMum的3跟1\n所以會變成1\n因為用3一個Coin就可以make up 3\n對然後再來就會變成到4\n然後4的話我們就變成minimum of\n我們4這個position就是4嘛\n然後跟DP的4減Coin\n所以4減3是1\nDP的1然後加1\n所以就會是\nDP的1是1所以這裡就是2\n對然後再這樣子1次\n累推\n然後再到5\n然後我們就會從5開始\n然後因為5就會再被update成1嘛\n因為你就只需要一個5就好\n對然後最後\n我們loop完每一個coin denomination之後\n這整個array就已經被update成minimum amount了\n然後最後再return\n所以這樣這個code\n我目前run下來應該是對的\nok\n嗯\n那你可不可以想到一些比較邊際的一些edge case\nedge case嗎 我想一下喔\n比如說找不到可能return-free的一個情況\n那比如說你可以舉一個簡單eturn-1的一個情況那比如說Input\n你可以舉一個簡單的例子\n很小一個例子\n比如說Input如果給\n不能有1 因為1什麼都可以\n那我們就給3 5\n然後你的Target的Amount是\n比如說4\n4就出不來\n那這個就應該要Return-1\n或者是Edge Case\n這個題目沒有特別講\n但就是Coin不能有0\n這個之類\n或者是它也是0的話\n其實我們就是Return就是0\n一開始我也有問的\n就是它一定要是整數啊什麼這些\n就是如果它故意給你一個不是整數的\n那這個也會沒有辦法解\n那你可以Dry Run一下這個Test Case\n喔好啊\n我把這些Comment先清掉\n不然有點亂\n不然你直接寫下面也可以\n好\n那一開始的Max Value我們會把它Initial來乘負喔好啊我把這些comments先清掉不然有點亂不然你直接寫下面好\n那一開始的max value\n我們會把它initial x 乘5\n然後呢我們的dp array一開始就會是5\n然後呢第一個被update成0\n再來for coin and coins\n我們有3跟5\n所以第一個oin是3\n然后For i and range\n所以我们的i现在是从Coin开始\n所以i也是3\n然后呢\nDP Array的i\n所以我们现在在看的是0 1 2 3\n就是这一个5\nMinimum\n所以我们现在看Minimum of\n它现在DP Array的i就是5\n然后跟DP的i-coin\n所以3-3是0\n然后加1这样\n所以呢就会是minimum 5跟1所以是1\n那我们就把第三个这个改成1\n然后再来下一个\n我们就会变成Coin 3 i 4\n然后变成Minimum of\nDP的i现在是5\n然后DP的1加1\n然后呢再来我们的Coin就要到下一个\n5\n然后我们的i就会从\nRange就会变成从 5 到 5\n所以它不会 loop anything\n对,因为它不会 include 你后面摆的那个数字\n所以我们这个 loop 就根本不会进去\n所以你最后得到的 dp array\n就还是会 stay 05515\n那你最后再 return dp array 的 amount 格\n就是最后一个的话\n它就是5\n就是跟你Initialize的MaxValue是一樣的\n所以它會回復-1\n嗯\nOK\n那這個的Space跟Runtime\n嗯\nRuntime的話\n因為我們有兩層Four Loop嘛\n然後第一個是Coin and Coins\n所以我們是Length of Coins\n然後去乘以\n因為在Four裡面\n然後就是乘Amount\n因為我們就是L through那個amount\n所以應該是這樣子\n這個是time complexity\n這樣子\n然後space的話\n我們就是存那個dp array\n然後dp array的長度\n我們就是max value乘以amount\n所以它就是o of amount\n這樣子\n這是space\nOK\nperfect\n我有過這個面試嗎?\n可以給我導演嗎?\n你可以當CTO\n謝謝謝謝\n就是希望Terry有再一日的合作\n我覺得不錯\n可以\n超緊張\n就是Terry可以證明我剛剛有多緊張\n有有剛剛很緊張\n差點就是很想趕快直接逃離了\n直接是逃跑\n我到底來這邊幹嘛呢?\n來東京找贅獸\nOK那不知道大家覺得女神的表現怎麼樣\n可以在影片底下留言\n我是覺得還不錯啦\n基本的底質是一定有的\n而且一定比看兩個臭宅男\n在那邊寫扣還要優美\n那如果你覺得你的這個軟體工程師的基礎比較差\n或者是說你想要認真的在軟體工程這個行業發展的話\n也非常歡迎你來加入我們的這個資鴉護城河實戰營\n這個是我跟大神Hank一起共同設計跟製作了8個月的時間\n目的呢也是希望可以幫助大家拿到心儀的offer\n也希望可以透過實戰營來訓練\n並且提升你的這個工程師最基礎的解決問題的能力\n很多人可能會有一個誤解說\n我們這個實戰營呢好像就只是為了幫助你去通過面試而已\n對確實這個實戰營對於面試來講是有\n百分之百的這個變強的效果\n參加完之後呢\n你在面對任何形式的Coding面試呢\n你都會有非常明顯的這個實力的提升\n但是我覺得另外一點非常重要\n就是可能大家會miss掉的就是\n其實你如果真的系統性的練習過一遍之後\n你就會發現你整體的實力力都有非常大幅度的提升\n不管是幫別人做Code Review\n或者說看AI生成的這個代碼\n還是說當你遇到了複雜的問題之後\n能不能有這個工程師思維\n把問題從非常複雜非常難的問題\n拆解變成小而簡單的問題\n這些都是在我們的實戰營訓練完之後\n你可以得到的而且你可以馬上的感受出來不同變成小而簡單的問題這些都是在我們的這個實戰營訓練完之後呢\n你可以得到的\n而且你可以馬上的感受出來不同\n因為我自己曾經也經歷過那段時間\n所以我非常非常的清楚\n而且我們的實戰營呢\n也會線上帶著大家一起去做這些實戰演練\n所以說絕對會遠比那些坊間的線上課程呢\n還要來得有效很多\n因為我們是真的希望你可以透過這個實戰營\n打造屬於你的護城河然後變得更強\n那我們其實也非常的歡迎那些可能基礎比較差\n或是在轉職\n或是正在成為軟體工程師的朋友們\n因為我們有特別為這些同學準備一個更基礎的一個指南\n讓你可以自己先去練習\n然後可以快速的跟上大家的腳步\n而且我跟Hank還有我們的助教Alan\n也會在我們的學員專屬的Discord群組裡面\n去特別幫助大家\n那大家如果有興趣的話\n可以去我們的實戰營的官網\nbuildmode.org上面看一下\n也歡迎來加入我們的公共Discord群組\n這個群組也是開放給所有人都可以來加入\n我會把連結放在影片底下的資訊欄\n那我們下次見囉",
+    "segments": [
+      {
+        "time": "00:00",
+        "text": "Hello大家好我是Terry"
+      },
+      {
+        "time": "00:01",
+        "text": "今天呢我們的矽谷女神 Kelly來東京玩了"
+      },
+      {
+        "time": "00:04",
+        "text": "那按照慣例呢我們是不是要來做一些什麼"
+      },
+      {
+        "time": "00:07",
+        "text": "沒錯我們就是要來寫Code"
+      },
+      {
+        "time": "00:09",
+        "text": "因為大家也知道最近矽谷是蠻多公司"
+      },
+      {
+        "time": "00:11",
+        "text": "把招人的這個專注呢"
+      },
+      {
+        "time": "00:13",
+        "text": "放在比較偏向Mid-Senior Level的工程師上面"
+      },
+      {
+        "time": "00:16",
+        "text": "那Kelly身為一個也算是"
+      },
+      {
+        "time": "00:18",
+        "text": "大學剛畢業沒有太久的一個工程師"
+      },
+      {
+        "time": "00:20",
+        "text": "我們就來看一下Kelly有沒有辦法通過這個簡單的Coding面試"
+      },
+      {
+        "time": "00:24",
+        "text": "那這個面試"
+      },
+      {
+        "time": "00:25",
+        "text": "那這個面試的難度呢也是通常我在幫我們公司招人的時候呢"
+      },
+      {
+        "time": "00:29",
+        "text": "會去考的一個稍微偏簡單一點的題目"
+      },
+      {
+        "time": "00:32",
+        "text": "可以準備好了嗎"
+      },
+      {
+        "time": "00:34",
+        "text": "我們開頭先簡單聊兩句啦"
+      },
+      {
+        "time": "00:37",
+        "text": "所以怎麼樣"
+      },
+      {
+        "time": "00:38",
+        "text": "超緊張"
+      },
+      {
+        "time": "00:40",
+        "text": "很緊張"
+      },
+      {
+        "time": "00:41",
+        "text": "真的很緊張嗎"
+      },
+      {
+        "time": "00:42",
+        "text": "超緊張真的很緊張"
+      },
+      {
+        "time": "00:43",
+        "text": "那你對我們公司有沒有什麼期許"
+      },
+      {
+        "time": "00:46",
+        "text": "希望錢給得多一點"
+      },
+      {
+        "time": "00:48",
+        "text": "錢"
+      },
+      {
+        "time": "00:50",
+        "text": "對嗎"
+      },
+      {
+        "time": "00:52",
+        "text": "我在面什麼職位啊"
+      },
+      {
+        "time": "00:54",
+        "text": "我們沒有找副職位我們只有找副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副�我們CEO都會需要知道怎麼做離口好好很神奇的公司好 錢給到位都可以"
+      },
+      {
+        "time": "01:05",
+        "text": "我們是有心意"
+      },
+      {
+        "time": "01:07",
+        "text": "有心意"
+      },
+      {
+        "time": "01:09",
+        "text": "我到底來了什麼黑心的面試"
+      },
+      {
+        "time": "01:11",
+        "text": "OK 好 準備好了嗎"
+      },
+      {
+        "time": "01:13",
+        "text": "那不要緊張"
+      },
+      {
+        "time": "01:15",
+        "text": "這是一個很好玩的一個"
+      },
+      {
+        "time": "01:18",
+        "text": "體育"
+      },
+      {
+        "time": "01:18",
+        "text": "exercise"
+      },
+      {
+        "time": "01:19",
+        "text": "喔 好"
+      },
+      {
+        "time": "01:20",
+        "text": "體育不好玩"
+      },
+      {
+        "time": "01:20",
+        "text": "體育不好玩"
+      },
+      {
+        "time": "01:21",
+        "text": "exercise很好玩"
+      },
+      {
+        "time": "01:22",
+        "text": "好好"
+      },
+      {
+        "time": "01:23",
+        "text": "沒有想到在東京會做這個事情對不對沒有我在東京我是來玩的我們題目不好玩題目不好玩誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒我剛剛是開玩笑我突然想說你那個comments裡面會不會在那邊Kelly拜金啊"
+      },
+      {
+        "time": "01:46",
+        "text": "Kelly"
+      },
+      {
+        "time": "01:47",
+        "text": "這個這個這個"
+      },
+      {
+        "time": "01:48",
+        "text": "錢什麼"
+      },
+      {
+        "time": "01:49",
+        "text": "沒事"
+      },
+      {
+        "time": "01:50",
+        "text": "Kelly沒有拜金"
+      },
+      {
+        "time": "01:51",
+        "text": "Kelly是我看過最"
+      },
+      {
+        "time": "01:52",
+        "text": "那叫什麼 樸實"
+      },
+      {
+        "time": "01:53",
+        "text": "樸實無華的女生"
+      },
+      {
+        "time": "01:55",
+        "text": "謝謝"
+      },
+      {
+        "time": "01:56",
+        "text": "謝謝"
+      },
+      {
+        "time": "01:58",
+        "text": "對 你不拜金吧"
+      },
+      {
+        "time": "01:59",
+        "text": "還好吧"
+      },
+      {
+        "time": "02:00",
+        "text": "我只是想說我剛剛開玩笑"
+      },
+      {
+        "time": "02:01",
+        "text": "在那邊說什麼"
+      },
+      {
+        "time": "02:02",
+        "text": "錢給到位什麼"
+      },
+      {
+        "time": "02:03",
+        "text": "我不是這種人"
+      },
+      {
+        "time": "02:04",
+        "text": "沒有 我覺得錢要給到位啊"
+      },
+      {
+        "time": "02:06",
+        "text": "走公路不是為了錢"
+      },
+      {
+        "time": "02:07",
+        "text": "對啊 這不是拜金"
+      },
+      {
+        "time": "02:08",
+        "text": "這叫做為自己的前程負責"
+      },
+      {
+        "time": "02:10",
+        "text": "嗯 謝謝 謝謝 Terry"
+      },
+      {
+        "time": "02:14",
+        "text": "OK 好"
+      },
+      {
+        "time": "02:15",
+        "text": "那這道題呢"
+      },
+      {
+        "time": "02:18",
+        "text": "算是一個比較經典的一道題啦"
+      },
+      {
+        "time": "02:21",
+        "text": "對 然後我們就假設"
+      },
+      {
+        "time": "02:24",
+        "text": "你的input是一個"
+      },
+      {
+        "time": "02:26",
+        "text": "Array of coins 的denomination"
+      },
+      {
+        "time": "02:30",
+        "text": "好"
+      },
+      {
+        "time": "02:30",
+        "text": "對 那你想coins可能會有1 1 3 5"
+      },
+      {
+        "time": "02:32",
+        "text": "或是1塊2塊3塊"
+      },
+      {
+        "time": "02:34",
+        "text": "它可以是任何的denomination"
+      },
+      {
+        "time": "02:35",
+        "text": "可以是100 1000 10000"
+      },
+      {
+        "time": "02:37",
+        "text": "對"
+      },
+      {
+        "time": "02:38",
+        "text": "那你的input就是"
+      },
+      {
+        "time": "02:40",
+        "text": "coin"
+      },
+      {
+        "time": "02:41",
+        "text": "nation"
+      },
+      {
+        "time": "02:42",
+        "text": "好"
+      },
+      {
+        "time": "02:43",
+        "text": "是一個Array"
+      },
+      {
+        "time": "02:44",
+        "text": "對 是一個Array"
+      },
+      {
+        "time": "02:45",
+        "text": "好"
+      },
+      {
+        "time": "02:46",
+        "text": "然後TargetNumber"
+      },
+      {
+        "time": "02:48",
+        "text": "嗯"
+      },
+      {
+        "time": "02:49",
+        "text": "對 這是一個Integer"
+      },
+      {
+        "time": "02:50",
+        "text": "嗯"
+      },
+      {
+        "time": "02:51",
+        "text": "那TargetNumber就是你要用這個Coin去Match"
+      },
+      {
+        "time": "02:54",
+        "text": "想辦法湊到那個錢"
+      },
+      {
+        "time": "02:56",
+        "text": "對 像比如說"
+      },
+      {
+        "time": "02:57",
+        "text": "OK 我今天Target是100"
+      },
+      {
+        "time": "02:59",
+        "text": "好"
+      },
+      {
+        "time": "03:00",
+        "text": "那你有你的Denomination是1塊跟10塊"
+      },
+      {
+        "time": "03:03",
+        "text": "嗯"
+      },
+      {
+        "time": "03:04",
+        "text": "那你可以給它十个十块"
+      },
+      {
+        "time": "03:06",
+        "text": "或是你可以给他一百个一块"
+      },
+      {
+        "time": "03:08",
+        "text": "或是你也可以mix and match"
+      },
+      {
+        "time": "03:10",
+        "text": "那今天我们要找的是"
+      },
+      {
+        "time": "03:26",
+        "text": "举个例子好了比如说你的input是"
+      },
+      {
+        "time": "03:28",
+        "text": "1,3,5好了"
+      },
+      {
+        "time": "03:31",
+        "text": "那我的target是"
+      },
+      {
+        "time": "03:34",
+        "text": "11,距离"
+      },
+      {
+        "time": "03:36",
+        "text": "如果是11个1的话"
+      },
+      {
+        "time": "03:37",
+        "text": "但是这不是最优的"
+      },
+      {
+        "time": "03:39",
+        "text": "因为我们要找minimum number of coins"
+      },
+      {
+        "time": "03:43",
+        "text": "就是几个单位"
+      },
+      {
+        "time": "03:44",
+        "text": "所以说我们这道題的solution是"
+      },
+      {
+        "time": "03:48",
+        "text": "5加5加1對吧"
+      },
+      {
+        "time": "03:50",
+        "text": "那等於說你要3"
+      },
+      {
+        "time": "03:52",
+        "text": "等於說你有3個coin"
+      },
+      {
+        "time": "03:54",
+        "text": "你就可以把它湊成這個target"
+      },
+      {
+        "time": "03:56",
+        "text": "好"
+      },
+      {
+        "time": "03:57",
+        "text": "了解"
+      },
+      {
+        "time": "03:58",
+        "text": "ok好那雖然這個題目蠻simple"
+      },
+      {
+        "time": "04:00",
+        "text": "但我還是clarify一下"
+      },
+      {
+        "time": "04:02",
+        "text": "我們現在input 你會給我一個"
+      },
+      {
+        "time": "04:05",
+        "text": "coin denomination 是一個 array of"
+      },
+      {
+        "time": "04:07",
+        "text": "它有拿幾種硬幣"
+      },
+      {
+        "time": "04:09",
+        "text": "跟一個 target number"
+      },
+      {
+        "time": "04:10",
+        "text": "然後我要 return 的就是"
+      },
+      {
+        "time": "04:11",
+        "text": "我最少需要幾個硬幣"
+      },
+      {
+        "time": "04:13",
+        "text": "來 make up 到這個 target amount"
+      },
+      {
+        "time": "04:15",
+        "text": "對"
+      },
+      {
+        "time": "04:16",
+        "text": "好 那這聽起來就是一個"
+      },
+      {
+        "time": "04:18",
+        "text": "dynamic programming 的題目"
+      },
+      {
+        "time": "04:20",
+        "text": "可以用一個 dp array 來解"
+      },
+      {
+        "time": "04:23",
+        "text": "我現在想的是"
+      },
+      {
+        "time": "04:25",
+        "text": "我建一个array"
+      },
+      {
+        "time": "04:26",
+        "text": "然后我array的每一个index去存"
+      },
+      {
+        "time": "04:30",
+        "text": "就是我到这个target amount"
+      },
+      {
+        "time": "04:32",
+        "text": "需要多少个硬币"
+      },
+      {
+        "time": "04:34",
+        "text": "就是比如说我如果"
+      },
+      {
+        "time": "04:36",
+        "text": "你的target amount是10的话"
+      },
+      {
+        "time": "04:38",
+        "text": "那我就建一个"
+      },
+      {
+        "time": "04:40",
+        "text": "有11个items的一个array"
+      },
+      {
+        "time": "04:43",
+        "text": "然后每一个去存"
+      },
+      {
+        "time": "04:44",
+        "text": "就是0要多少1要多少一直到11"
+      },
+      {
+        "time": "04:46",
+        "text": "然後我可以去就是用一個for loop來update這些amounts"
+      },
+      {
+        "time": "04:51",
+        "text": "所以說你的array size是"
+      },
+      {
+        "time": "04:53",
+        "text": "amount plus 1"
+      },
+      {
+        "time": "04:54",
+        "text": "因為從0開始嘛"
+      },
+      {
+        "time": "04:56",
+        "text": "然後我如果要到10的話就會0 1 2 3 4 5 6 7 8 9 10"
+      },
+      {
+        "time": "05:00",
+        "text": "哦 ok"
+      },
+      {
+        "time": "05:00",
+        "text": "對"
+      },
+      {
+        "time": "05:01",
+        "text": "就是你的target是11的話就是"
+      },
+      {
+        "time": "05:03",
+        "text": "就是12個"
+      },
+      {
+        "time": "05:04",
+        "text": "12個"
+      },
+      {
+        "time": "05:04",
+        "text": "ok 懂了ok哦OK就是你的目標是C的話就是12個"
+      },
+      {
+        "time": "05:05",
+        "text": "OK懂了"
+      },
+      {
+        "time": "05:06",
+        "text": "那所以我一開始會先initialize一個很大的數字"
+      },
+      {
+        "time": "05:11",
+        "text": "因為一開始我不知道minimum number是多少"
+      },
+      {
+        "time": "05:13",
+        "text": "所以我先用一個大的數字"
+      },
+      {
+        "time": "05:15",
+        "text": "然後每一個position都放這個數字"
+      },
+      {
+        "time": "05:17",
+        "text": "然後我從0開始"
+      },
+      {
+        "time": "05:18",
+        "text": "然後因為makeup amount 0一定是0嘛"
+      },
+      {
+        "time": "05:20",
+        "text": "所以第一個就會是0"
+      },
+      {
+        "time": "05:21",
+        "text": "然後我再來從1開始去"
+      },
+      {
+        "time": "05:23",
+        "text": "用一個for loop"
+      },
+      {
+        "time": "05:24",
+        "text": "就是外層的for loop要先"
+      },
+      {
+        "time": "05:26",
+        "text": "go over每一個coin的denomination"
+      },
+      {
+        "time": "05:29",
+        "text": "然後呢從coin value到target value之中間去看"
+      },
+      {
+        "time": "05:33",
+        "text": "就是每一個position update的"
+      },
+      {
+        "time": "05:35",
+        "text": "either是它現在存的這個minimum value"
+      },
+      {
+        "time": "05:38",
+        "text": "或者是就是dp的xgen coin"
+      },
+      {
+        "time": "05:41",
+        "text": "因為你現在已經有這個coin value了"
+      },
+      {
+        "time": "05:43",
+        "text": "然後再加一個就是我 current coin"
+      },
+      {
+        "time": "05:45",
+        "text": "所以就是 DP 的 Xgen coin 加 1"
+      },
+      {
+        "time": "05:47",
+        "text": "這樣然後看哪一個比較小"
+      },
+      {
+        "time": "05:48",
+        "text": "然後去 update 這個 value"
+      },
+      {
+        "time": "05:50",
+        "text": "然後一路到就是 target amount"
+      },
+      {
+        "time": "05:52",
+        "text": "然後最後 target amount"
+      },
+      {
+        "time": "05:54",
+        "text": "如果是就是小於我 initialize 的那個 max value"
+      },
+      {
+        "time": "05:57",
+        "text": "那就代表我可以就是 make up 這個 combination"
+      },
+      {
+        "time": "06:00",
+        "text": "可是如果它完全沒有被 update 到"
+      },
+      {
+        "time": "06:02",
+        "text": "它還是一開始我 initialize 的那個"
+      },
+      {
+        "time": "06:04",
+        "text": "很大的數字就是不ize的那個很大的數字"
+      },
+      {
+        "time": "06:05",
+        "text": "就是不合理的很大的數字的話"
+      },
+      {
+        "time": "06:07",
+        "text": "那就代表它沒有辦法make up這個value"
+      },
+      {
+        "time": "06:10",
+        "text": "就是這個題目有可能是不合理的嘛"
+      },
+      {
+        "time": "06:12",
+        "text": "因為你給的不一定是可以剛好那個數字"
+      },
+      {
+        "time": "06:15",
+        "text": "那我就要"
+      },
+      {
+        "time": "06:16",
+        "text": "如果沒有辦法make up要return是嗎"
+      },
+      {
+        "time": "06:18",
+        "text": "你可以return-1"
+      },
+      {
+        "time": "06:19",
+        "text": "-1 好 那我就"
+      },
+      {
+        "time": "06:21",
+        "text": "那你剛剛講的這個DP approach是"
+      },
+      {
+        "time": "06:23",
+        "text": "對"
+      },
+      {
+        "time": "06:24",
+        "text": "bottom up的 approach嗯"
+      },
+      {
+        "time": "06:25",
+        "text": "對"
+      },
+      {
+        "time": "06:26",
+        "text": "從小的開始"
+      },
+      {
+        "time": "06:26",
+        "text": "從小的開始"
+      },
+      {
+        "time": "06:27",
+        "text": "ok 沒問題"
+      },
+      {
+        "time": "06:28",
+        "text": "好 那我就開始寫了"
+      },
+      {
+        "time": "06:30",
+        "text": "我用Python寫"
+      },
+      {
+        "time": "06:31",
+        "text": "可以啊"
+      },
+      {
+        "time": "06:32",
+        "text": "對"
+      },
+      {
+        "time": "06:33",
+        "text": "這個題目要叫什麼"
+      },
+      {
+        "time": "06:34",
+        "text": "沒關係 你不用管那個大小寫"
+      },
+      {
+        "time": "06:36",
+        "text": "你Google Doc管就是"
+      },
+      {
+        "time": "06:37",
+        "text": "然後要給我的是"
+      },
+      {
+        "time": "06:39",
+        "text": "coin.num"
+      },
+      {
+        "time": "06:40",
+        "text": "那我那個就會叫coin"
+      },
+      {
+        "time": "06:41",
+        "text": "然後後面就target number"
+      },
+      {
+        "time": "06:43",
+        "text": "那就target amount嘛嗯哼這樣子然後呢我要initialize一個max value那我這個就會叫Coin然後後面就Target Number那就Target Amount嘛"
+      },
+      {
+        "time": "06:45",
+        "text": "這樣子"
+      },
+      {
+        "time": "06:47",
+        "text": "然後呢我要Initialize一個Max Value"
+      },
+      {
+        "time": "06:49",
+        "text": "就是一開始那個最大的"
+      },
+      {
+        "time": "06:51",
+        "text": "我就Initialize一個"
+      },
+      {
+        "time": "06:53",
+        "text": "如果你的Target Amount"
+      },
+      {
+        "time": "06:54",
+        "text": "然後你Target Amount大的話"
+      },
+      {
+        "time": "06:56",
+        "text": "那就是不合理嘛"
+      },
+      {
+        "time": "06:57",
+        "text": "那個就是Basically無限大"
+      },
+      {
+        "time": "06:59",
+        "text": "因為我只是要Make up 10的話"
+      },
+      {
+        "time": "07:01",
+        "text": "你給11"
+      },
+      {
+        "time": "07:02",
+        "text": "那就是不合理了"
+      },
+      {
+        "time": "07:03",
+        "text": "因為Coin應該一定是大於1的吧"
+      },
+      {
+        "time": "07:05",
+        "text": "不可能有小數點的quint"
+      },
+      {
+        "time": "07:06",
+        "text": "對 我們就assume是integer"
+      },
+      {
+        "time": "07:08",
+        "text": "好 所以那我這個就"
+      },
+      {
+        "time": "07:10",
+        "text": "比如說initialize amount加1"
+      },
+      {
+        "time": "07:12",
+        "text": "這樣子就是已經是比合理的還要再大了"
+      },
+      {
+        "time": "07:15",
+        "text": "因為不可能最後return amount加1"
+      },
+      {
+        "time": "07:17",
+        "text": "好 然後我initialize這個dp array"
+      },
+      {
+        "time": "07:20",
+        "text": "那我就用就是我的max value"
+      },
+      {
+        "time": "07:24",
+        "text": "max valuemax value"
+      },
+      {
+        "time": "07:25",
+        "text": "然后我要乘以"
+      },
+      {
+        "time": "07:27",
+        "text": "我要store从0到我们的target amount"
+      },
+      {
+        "time": "07:30",
+        "text": "所以是amount加1"
+      },
+      {
+        "time": "07:32",
+        "text": "这样"
+      },
+      {
+        "time": "07:33",
+        "text": "然后呢"
+      },
+      {
+        "time": "07:35",
+        "text": "我们initialize了这个dp array之后"
+      },
+      {
+        "time": "07:38",
+        "text": "要先从第一个开始"
+      },
+      {
+        "time": "07:40",
+        "text": "所以第一个就是makeup amount 0就是0"
+      },
+      {
+        "time": "07:43",
+        "text": "dp array的0我要先initialize第一个吗"
+      },
+      {
+        "time": "07:46",
+        "text": "0会是0"
+      },
+      {
+        "time": "07:48",
+        "text": "因为makeup amount 0就是0"
+      },
+      {
+        "time": "07:50",
+        "text": "聪明"
+      },
+      {
+        "time": "07:53",
+        "text": "然后呢我们就要开始写for loop"
+      },
+      {
+        "time": "07:56",
+        "text": "所以第一个我们应该要go through那个coin的denominations"
+      },
+      {
+        "time": "08:02",
+        "text": "所以呢"
+      },
+      {
+        "time": "08:03",
+        "text": "这个我把它改成coins好了因为它是一个list of coin的denominations所以呢这个我把它改成coins好了"
+      },
+      {
+        "time": "08:06",
+        "text": "它是一个list of coin的denominations"
+      },
+      {
+        "time": "08:08",
+        "text": "然后for coin in coins这样"
+      },
+      {
+        "time": "08:11",
+        "text": "嗯"
+      },
+      {
+        "time": "08:12",
+        "text": "然后呢里面还要一个for loop"
+      },
+      {
+        "time": "08:14",
+        "text": "好for"
+      },
+      {
+        "time": "08:15",
+        "text": "我们外层的for loop是for coin in coins"
+      },
+      {
+        "time": "08:18",
+        "text": "然后内层的for i in range"
+      },
+      {
+        "time": "08:22",
+        "text": "我想一下它的range要是多少"
+      },
+      {
+        "time": "08:24",
+        "text": "因为我们要一路到amount"
+      },
+      {
+        "time": "08:28",
+        "text": "就一路到我们的target amount"
+      },
+      {
+        "time": "08:29",
+        "text": "但是从哪一个开始是"
+      },
+      {
+        "time": "08:31",
+        "text": "最小的会是就是我们现在的coin是多少"
+      },
+      {
+        "time": "08:34",
+        "text": "因为假设你这边给135好了"
+      },
+      {
+        "time": "08:38",
+        "text": "那我现在在1的话"
+      },
+      {
+        "time": "08:40",
+        "text": "我最小就是只能从1开始"
+      },
+      {
+        "time": "08:41",
+        "text": "因为比1小的不可能"
+      },
+      {
+        "time": "08:43",
+        "text": "就是前面我就已经不用考虑了"
+      },
+      {
+        "time": "08:44",
+        "text": "我就只有这个coin的话它就只能从这里开始因为比1小的不可能就是前面我就已经不用考虑了我就只有这个Coin的话"
+      },
+      {
+        "time": "08:45",
+        "text": "它就只能从这里开始"
+      },
+      {
+        "time": "08:46",
+        "text": "所以这应该是从Coin开始的"
+      },
+      {
+        "time": "08:49",
+        "text": "然后到Amount"
+      },
+      {
+        "time": "08:50",
+        "text": "所以要Amount加1"
+      },
+      {
+        "time": "08:51",
+        "text": "因为Range是不会"
+      },
+      {
+        "time": "08:53",
+        "text": "就是include最后那个数字"
+      },
+      {
+        "time": "08:56",
+        "text": "然后呢"
+      },
+      {
+        "time": "08:57",
+        "text": "我们现在就要update这个DP Array"
+      },
+      {
+        "time": "08:59",
+        "text": "所以DP Array的i"
+      },
+      {
+        "time": "09:03",
+        "text": "我们要把它update成"
+      },
+      {
+        "time": "09:06",
+        "text": "minimum of什么东西"
+      },
+      {
+        "time": "09:08",
+        "text": "minimum of现在DP array currently是多少"
+      },
+      {
+        "time": "09:11",
+        "text": "就是看它现在Stored的"
+      },
+      {
+        "time": "09:13",
+        "text": "所以DP array的i跟什么呢"
+      },
+      {
+        "time": "09:17",
+        "text": "就是DP array的"
+      },
+      {
+        "time": "09:19",
+        "text": "我们现在的current coin"
+      },
+      {
+        "time": "09:20",
+        "text": "我们要加这个current coin"
+      },
+      {
+        "time": "09:21",
+        "text": "所以加1因为多这个"
+      },
+      {
+        "time": "09:24",
+        "text": "然后我们去减掉i"
+      },
+      {
+        "time": "09:27",
+        "text": "减掉这个coin value"
+      },
+      {
+        "time": "09:30",
+        "text": "因为我们现在的dpi"
+      },
+      {
+        "time": "09:33",
+        "text": "减掉current coin value"
+      },
+      {
+        "time": "09:35",
+        "text": "然后去看那个position是多少"
+      },
+      {
+        "time": "09:36",
+        "text": "然后再加上我现在current coin的这个数量"
+      },
+      {
+        "time": "09:38",
+        "text": "所以加1"
+      },
+      {
+        "time": "09:39",
+        "text": "对"
+      },
+      {
+        "time": "09:40",
+        "text": "所以这个minimum"
+      },
+      {
+        "time": "09:41",
+        "text": "然后呢"
+      },
+      {
+        "time": "09:42",
+        "text": "这for loop跑完"
+      },
+      {
+        "time": "09:43",
+        "text": "我们就已经update所有dp array每个positionminimum然后呢这for loop跑完我们就已经update所有"
+      },
+      {
+        "time": "09:45",
+        "text": "dparray每一个position"
+      },
+      {
+        "time": "09:46",
+        "text": "minimum是要多少"
+      },
+      {
+        "time": "09:47",
+        "text": "所以我们最后return的数字就会是"
+      },
+      {
+        "time": "09:51",
+        "text": "要看就是有被update到的话"
+      },
+      {
+        "time": "09:53",
+        "text": "就是可以到那个amount"
+      },
+      {
+        "time": "09:54",
+        "text": "没有的话就要return-1"
+      },
+      {
+        "time": "09:57",
+        "text": "所以dparray的amount"
+      },
+      {
+        "time": "10:02",
+        "text": "然后这是if"
+      },
+      {
+        "time": "10:04",
+        "text": "if dp array amount"
+      },
+      {
+        "time": "10:08",
+        "text": "小於我們一開始 initialize 的 max value"
+      },
+      {
+        "time": "10:12",
+        "text": "如果是等於的話"
+      },
+      {
+        "time": "10:14",
+        "text": "那就要 return 負1"
+      },
+      {
+        "time": "10:15",
+        "text": "這樣"
+      },
+      {
+        "time": "10:17",
+        "text": "OK 結束"
+      },
+      {
+        "time": "10:18",
+        "text": "那妳要不要 dry run 一下一些 test case"
+      },
+      {
+        "time": "10:22",
+        "text": "好啊"
+      },
+      {
+        "time": "10:22",
+        "text": "那給個簡單的 input"
+      },
+      {
+        "time": "10:26",
+        "text": "還是我用你一開始給的這個"
+      },
+      {
+        "time": "10:29",
+        "text": "可以好"
+      },
+      {
+        "time": "10:29",
+        "text": "可以用哪個"
+      },
+      {
+        "time": "10:30",
+        "text": "好"
+      },
+      {
+        "time": "10:31",
+        "text": "那我就不額外型"
+      },
+      {
+        "time": "10:32",
+        "text": "input 135 然後"
+      },
+      {
+        "time": "10:34",
+        "text": "target amount 是 11 的話"
+      },
+      {
+        "time": "10:36",
+        "text": "max value 我們這裡就會 initialize 成"
+      },
+      {
+        "time": "10:40",
+        "text": "amount 加 1 12"
+      },
+      {
+        "time": "10:42",
+        "text": "然後 dp array 現在就會是max value 就會 12 12 12 12amount加1 12然后dparray现在就会是"
+      },
+      {
+        "time": "10:45",
+        "text": "max value就会12 12 12 12"
+      },
+      {
+        "time": "10:47",
+        "text": "然后有12个12"
+      },
+      {
+        "time": "10:51",
+        "text": "嗯哼"
+      },
+      {
+        "time": "10:51",
+        "text": "对"
+      },
+      {
+        "time": "10:52",
+        "text": "然后呢"
+      },
+      {
+        "time": "10:53",
+        "text": "我们把它update成第一个是0"
+      },
+      {
+        "time": "10:56",
+        "text": "所以现在变成0"
+      },
+      {
+        "time": "10:58",
+        "text": "然后后面都是12"
+      },
+      {
+        "time": "10:59",
+        "text": "嗯哼"
+      },
+      {
+        "time": "11:00",
+        "text": "后面有11个12这样"
+      },
+      {
+        "time": "11:01",
+        "text": "然后for coin and coins"
+      },
+      {
+        "time": "11:03",
+        "text": "所以好我们第一个"
+      },
+      {
+        "time": "11:04",
+        "text": "for coin and coins第一个我們第一個for coin and coins"
+      },
+      {
+        "time": "11:06",
+        "text": "第一個是1嘛"
+      },
+      {
+        "time": "11:08",
+        "text": "我們先用1來看"
+      },
+      {
+        "time": "11:10",
+        "text": "然後再來for i and range"
+      },
+      {
+        "time": "11:12",
+        "text": "從coin到amount"
+      },
+      {
+        "time": "11:14",
+        "text": "所以我們從1開始看"
+      },
+      {
+        "time": "11:16",
+        "text": "然後會一路看到11"
+      },
+      {
+        "time": "11:18",
+        "text": "就從1開始這樣loop"
+      },
+      {
+        "time": "11:20",
+        "text": "然後dparray的第一個"
+      },
+      {
+        "time": "11:24",
+        "text": "就是這個它會標記嗎"
+      },
+      {
+        "time": "11:25",
+        "text": "嗯?"
+      },
+      {
+        "time": "11:27",
+        "text": "我mark它不會mark"
+      },
+      {
+        "time": "11:28",
+        "text": "OK"
+      },
+      {
+        "time": "11:30",
+        "text": "喔欸喔"
+      },
+      {
+        "time": "11:30",
+        "text": "它沒有就是顯示我一個在這邊喔"
+      },
+      {
+        "time": "11:32",
+        "text": "Interesting"
+      },
+      {
+        "time": "11:33",
+        "text": "你是"
+      },
+      {
+        "time": "11:33",
+        "text": "就是"
+      },
+      {
+        "time": "11:34",
+        "text": "剛剛有顯示我不知道為什麼不見了"
+      },
+      {
+        "time": "11:35",
+        "text": "但是它還是在同步"
+      },
+      {
+        "time": "11:37",
+        "text": "有有同步"
+      },
+      {
+        "time": "11:38",
+        "text": "OK"
+      },
+      {
+        "time": "11:38",
+        "text": "好"
+      },
+      {
+        "time": "11:39",
+        "text": "for coin and coins"
+      },
+      {
+        "time": "11:40",
+        "text": "對"
+      },
+      {
+        "time": "11:41",
+        "text": "然後現在的range"
+      },
+      {
+        "time": "11:43",
+        "text": "E"
+      },
+      {
+        "time": "11:44",
+        "text": "然後DP array的第一個所以我們來看minimum的DP array现在的range是1,dp array是1"
+      },
+      {
+        "time": "11:45",
+        "text": "所以我们来看minimum的dp array"
+      },
+      {
+        "time": "11:48",
+        "text": "现在这个dp array的i是12"
+      },
+      {
+        "time": "11:51",
+        "text": "然后呢,dp array的i-coin加1"
+      },
+      {
+        "time": "11:54",
+        "text": "所以会变成是dp array的乘以dp就好"
+      },
+      {
+        "time": "11:58",
+        "text": "所以是dp的i 1-coin 1-1 0"
+      },
+      {
+        "time": "12:02",
+        "text": "然后加1,会变成这样所以dp的0就是0-0-1-1-0-1會變成這樣"
+      },
+      {
+        "time": "12:05",
+        "text": "所以DP的0就是0"
+      },
+      {
+        "time": "12:07",
+        "text": "所以這樣子就會變成是0加1"
+      },
+      {
+        "time": "12:11",
+        "text": "所以就是1"
+      },
+      {
+        "time": "12:12",
+        "text": "所以這一項就被update成1了"
+      },
+      {
+        "time": "12:15",
+        "text": "然後呢"
+      },
+      {
+        "time": "12:16",
+        "text": "再來進入到第二個"
+      },
+      {
+        "time": "12:18",
+        "text": "我們這一個就要"
+      },
+      {
+        "time": "12:19",
+        "text": "就是說在1的位置"
+      },
+      {
+        "time": "12:20",
+        "text": "你有一種解法"
+      },
+      {
+        "time": "12:21",
+        "text": "對"
+      },
+      {
+        "time": "12:22",
+        "text": "OK"
+      },
+      {
+        "time": "12:23",
+        "text": "然後再來for ion range所以我們這個就要再增加"
+      },
+      {
+        "time": "12:26",
+        "text": "變成2"
+      },
+      {
+        "time": "12:27",
+        "text": "然後我們來看第二個"
+      },
+      {
+        "time": "12:29",
+        "text": "第二個現在也是minimum"
+      },
+      {
+        "time": "12:30",
+        "text": "它前面還是12"
+      },
+      {
+        "time": "12:32",
+        "text": "然後後面的我們變成dp的i-coin"
+      },
+      {
+        "time": "12:36",
+        "text": "所以2減掉1"
+      },
+      {
+        "time": "12:38",
+        "text": "就是dp的1然後加1"
+      },
+      {
+        "time": "12:41",
+        "text": "所以就會是2"
+      },
+      {
+        "time": "12:43",
+        "text": "因為我們現在dp的1是1嘛"
+      },
+      {
+        "time": "12:46",
+        "text": "然後這一個就再被update成2"
+      },
+      {
+        "time": "12:48",
+        "text": "我們要整個run完嗎"
+      },
+      {
+        "time": "12:50",
+        "text": "我們要run到最後一個嗎"
+      },
+      {
+        "time": "12:52",
+        "text": "有點多"
+      },
+      {
+        "time": "12:53",
+        "text": "你可以快速run一下沒關係"
+      },
+      {
+        "time": "12:54",
+        "text": "好"
+      },
+      {
+        "time": "12:55",
+        "text": "那再來3"
+      },
+      {
+        "time": "12:57",
+        "text": "然後就會變成minimum of 12"
+      },
+      {
+        "time": "13:00",
+        "text": "加上後面這一個"
+      },
+      {
+        "time": "13:01",
+        "text": "所以我這邊加個豆好了"
+      },
+      {
+        "time": "13:03",
+        "text": "這樣就看得出來"
+      },
+      {
+        "time": "13:04",
+        "text": "然後這樣子就會是"
+      },
+      {
+        "time": "13:06",
+        "text": "DP的i-coin 3-1"
+      },
+      {
+        "time": "13:09",
+        "text": "加1"
+      },
+      {
+        "time": "13:10",
+        "text": "所以是DP的2"
+      },
+      {
+        "time": "13:11",
+        "text": "然後加1"
+      },
+      {
+        "time": "13:13",
+        "text": "所以就會是3"
+      },
+      {
+        "time": "13:15",
+        "text": "所以這邊我們第三個就update成3"
+      },
+      {
+        "time": "13:17",
+        "text": "這樣子"
+      },
+      {
+        "time": "13:18",
+        "text": "然後因為我現在的coin就是1嘛"
+      },
+      {
+        "time": "13:20",
+        "text": "所以其實就會一直就是4"
+      },
+      {
+        "time": "13:22",
+        "text": "然後5然後blablablablablablablabl這個 loop 在找的就是所有用1可能最小"
+      },
+      {
+        "time": "13:28",
+        "text": "然後再換下一個"
+      },
+      {
+        "time": "13:29",
+        "text": "所以我們下一個就還要再看再來3的情況會是怎麼樣"
+      },
+      {
+        "time": "13:34",
+        "text": "然後又要重來一次就是3的話"
+      },
+      {
+        "time": "13:37",
+        "text": "因為3不可能每個比3小的數字"
+      },
+      {
+        "time": "13:39",
+        "text": "所以我們只能從3開始"
+      },
+      {
+        "time": "13:41",
+        "text": "所以 for i in the range 我們就要從3開始的話"
+      },
+      {
+        "time": "13:44",
+        "text": "然後從315到11"
+      },
+      {
+        "time": "13:46",
+        "text": "那我換一行"
+      },
+      {
+        "time": "13:47",
+        "text": "就會變成MINIMUM OF DP ARRAY的i"
+      },
+      {
+        "time": "13:50",
+        "text": "我們現在在3"
+      },
+      {
+        "time": "13:51",
+        "text": "所以3在這邊"
+      },
+      {
+        "time": "13:53",
+        "text": "它會是MINIMUM OF 3跟DP的"
+      },
+      {
+        "time": "13:57",
+        "text": "現在3減COIN是0"
+      },
+      {
+        "time": "13:59",
+        "text": "然後加1這樣"
+      },
+      {
+        "time": "14:02",
+        "text": "所以就是MINIMum的3跟1"
+      },
+      {
+        "time": "14:06",
+        "text": "所以會變成1"
+      },
+      {
+        "time": "14:08",
+        "text": "因為用3一個Coin就可以make up 3"
+      },
+      {
+        "time": "14:11",
+        "text": "對然後再來就會變成到4"
+      },
+      {
+        "time": "14:14",
+        "text": "然後4的話我們就變成minimum of"
+      },
+      {
+        "time": "14:18",
+        "text": "我們4這個position就是4嘛"
+      },
+      {
+        "time": "14:20",
+        "text": "然後跟DP的4減Coin"
+      },
+      {
+        "time": "14:23",
+        "text": "所以4減3是1"
+      },
+      {
+        "time": "14:24",
+        "text": "DP的1然後加1"
+      },
+      {
+        "time": "14:26",
+        "text": "所以就會是"
+      },
+      {
+        "time": "14:29",
+        "text": "DP的1是1所以這裡就是2"
+      },
+      {
+        "time": "14:31",
+        "text": "對然後再這樣子1次"
+      },
+      {
+        "time": "14:34",
+        "text": "累推"
+      },
+      {
+        "time": "14:35",
+        "text": "然後再到5"
+      },
+      {
+        "time": "14:36",
+        "text": "然後我們就會從5開始"
+      },
+      {
+        "time": "14:37",
+        "text": "然後因為5就會再被update成1嘛"
+      },
+      {
+        "time": "14:39",
+        "text": "因為你就只需要一個5就好"
+      },
+      {
+        "time": "14:42",
+        "text": "對然後最後"
+      },
+      {
+        "time": "14:43",
+        "text": "我們loop完每一個coin denomination之後"
+      },
+      {
+        "time": "14:46",
+        "text": "這整個array就已經被update成minimum amount了"
+      },
+      {
+        "time": "14:49",
+        "text": "然後最後再return"
+      },
+      {
+        "time": "14:51",
+        "text": "所以這樣這個code"
+      },
+      {
+        "time": "14:52",
+        "text": "我目前run下來應該是對的"
+      },
+      {
+        "time": "14:54",
+        "text": "ok"
+      },
+      {
+        "time": "14:54",
+        "text": "嗯"
+      },
+      {
+        "time": "14:55",
+        "text": "那你可不可以想到一些比較邊際的一些edge case"
+      },
+      {
+        "time": "14:59",
+        "text": "edge case嗎 我想一下喔"
+      },
+      {
+        "time": "15:01",
+        "text": "比如說找不到可能return-free的一個情況"
+      },
+      {
+        "time": "15:04",
+        "text": "那比如說你可以舉一個簡單eturn-1的一個情況那比如說Input"
+      },
+      {
+        "time": "15:05",
+        "text": "你可以舉一個簡單的例子"
+      },
+      {
+        "time": "15:06",
+        "text": "很小一個例子"
+      },
+      {
+        "time": "15:07",
+        "text": "比如說Input如果給"
+      },
+      {
+        "time": "15:09",
+        "text": "不能有1 因為1什麼都可以"
+      },
+      {
+        "time": "15:11",
+        "text": "那我們就給3 5"
+      },
+      {
+        "time": "15:13",
+        "text": "然後你的Target的Amount是"
+      },
+      {
+        "time": "15:17",
+        "text": "比如說4"
+      },
+      {
+        "time": "15:18",
+        "text": "4就出不來"
+      },
+      {
+        "time": "15:19",
+        "text": "那這個就應該要Return-1"
+      },
+      {
+        "time": "15:21",
+        "text": "或者是Edge Case"
+      },
+      {
+        "time": "15:24",
+        "text": "這個題目沒有特別講"
+      },
+      {
+        "time": "15:25",
+        "text": "但就是Coin不能有0"
+      },
+      {
+        "time": "15:27",
+        "text": "這個之類"
+      },
+      {
+        "time": "15:28",
+        "text": "或者是它也是0的話"
+      },
+      {
+        "time": "15:29",
+        "text": "其實我們就是Return就是0"
+      },
+      {
+        "time": "15:31",
+        "text": "一開始我也有問的"
+      },
+      {
+        "time": "15:32",
+        "text": "就是它一定要是整數啊什麼這些"
+      },
+      {
+        "time": "15:34",
+        "text": "就是如果它故意給你一個不是整數的"
+      },
+      {
+        "time": "15:36",
+        "text": "那這個也會沒有辦法解"
+      },
+      {
+        "time": "15:38",
+        "text": "那你可以Dry Run一下這個Test Case"
+      },
+      {
+        "time": "15:40",
+        "text": "喔好啊"
+      },
+      {
+        "time": "15:41",
+        "text": "我把這些Comment先清掉"
+      },
+      {
+        "time": "15:42",
+        "text": "不然有點亂"
+      },
+      {
+        "time": "15:43",
+        "text": "不然你直接寫下面也可以"
+      },
+      {
+        "time": "15:44",
+        "text": "好"
+      },
+      {
+        "time": "15:44",
+        "text": "那一開始的Max Value我們會把它Initial來乘負喔好啊我把這些comments先清掉不然有點亂不然你直接寫下面好"
+      },
+      {
+        "time": "15:45",
+        "text": "那一開始的max value"
+      },
+      {
+        "time": "15:47",
+        "text": "我們會把它initial x 乘5"
+      },
+      {
+        "time": "15:49",
+        "text": "然後呢我們的dp array一開始就會是5"
+      },
+      {
+        "time": "15:54",
+        "text": "然後呢第一個被update成0"
+      },
+      {
+        "time": "15:58",
+        "text": "再來for coin and coins"
+      },
+      {
+        "time": "16:01",
+        "text": "我們有3跟5"
+      },
+      {
+        "time": "16:03",
+        "text": "所以第一個oin是3"
+      },
+      {
+        "time": "16:05",
+        "text": "然后For i and range"
+      },
+      {
+        "time": "16:07",
+        "text": "所以我们的i现在是从Coin开始"
+      },
+      {
+        "time": "16:09",
+        "text": "所以i也是3"
+      },
+      {
+        "time": "16:11",
+        "text": "然后呢"
+      },
+      {
+        "time": "16:12",
+        "text": "DP Array的i"
+      },
+      {
+        "time": "16:13",
+        "text": "所以我们现在在看的是0 1 2 3"
+      },
+      {
+        "time": "16:15",
+        "text": "就是这一个5"
+      },
+      {
+        "time": "16:17",
+        "text": "Minimum"
+      },
+      {
+        "time": "16:17",
+        "text": "所以我们现在看Minimum of"
+      },
+      {
+        "time": "16:20",
+        "text": "它现在DP Array的i就是5"
+      },
+      {
+        "time": "16:24",
+        "text": "然后跟DP的i-coin"
+      },
+      {
+        "time": "16:28",
+        "text": "所以3-3是0"
+      },
+      {
+        "time": "16:30",
+        "text": "然后加1这样"
+      },
+      {
+        "time": "16:33",
+        "text": "所以呢就会是minimum 5跟1所以是1"
+      },
+      {
+        "time": "16:37",
+        "text": "那我们就把第三个这个改成1"
+      },
+      {
+        "time": "16:40",
+        "text": "然后再来下一个"
+      },
+      {
+        "time": "16:42",
+        "text": "我们就会变成Coin 3 i 4"
+      },
+      {
+        "time": "16:47",
+        "text": "然后变成Minimum of"
+      },
+      {
+        "time": "16:51",
+        "text": "DP的i现在是5"
+      },
+      {
+        "time": "16:54",
+        "text": "然后DP的1加1"
+      },
+      {
+        "time": "16:57",
+        "text": "然后呢再来我们的Coin就要到下一个"
+      },
+      {
+        "time": "17:01",
+        "text": "5"
+      },
+      {
+        "time": "17:02",
+        "text": "然后我们的i就会从"
+      },
+      {
+        "time": "17:04",
+        "text": "Range就会变成从 5 到 5"
+      },
+      {
+        "time": "17:07",
+        "text": "所以它不会 loop anything"
+      },
+      {
+        "time": "17:10",
+        "text": "对,因为它不会 include 你后面摆的那个数字"
+      },
+      {
+        "time": "17:13",
+        "text": "所以我们这个 loop 就根本不会进去"
+      },
+      {
+        "time": "17:15",
+        "text": "所以你最后得到的 dp array"
+      },
+      {
+        "time": "17:17",
+        "text": "就还是会 stay 05515"
+      },
+      {
+        "time": "17:20",
+        "text": "那你最后再 return dp array 的 amount 格"
+      },
+      {
+        "time": "17:23",
+        "text": "就是最后一个的话"
+      },
+      {
+        "time": "17:24",
+        "text": "它就是5"
+      },
+      {
+        "time": "17:25",
+        "text": "就是跟你Initialize的MaxValue是一樣的"
+      },
+      {
+        "time": "17:27",
+        "text": "所以它會回復-1"
+      },
+      {
+        "time": "17:28",
+        "text": "嗯"
+      },
+      {
+        "time": "17:29",
+        "text": "OK"
+      },
+      {
+        "time": "17:30",
+        "text": "那這個的Space跟Runtime"
+      },
+      {
+        "time": "17:32",
+        "text": "嗯"
+      },
+      {
+        "time": "17:33",
+        "text": "Runtime的話"
+      },
+      {
+        "time": "17:34",
+        "text": "因為我們有兩層Four Loop嘛"
+      },
+      {
+        "time": "17:36",
+        "text": "然後第一個是Coin and Coins"
+      },
+      {
+        "time": "17:38",
+        "text": "所以我們是Length of Coins"
+      },
+      {
+        "time": "17:40",
+        "text": "然後去乘以"
+      },
+      {
+        "time": "17:42",
+        "text": "因為在Four裡面"
+      },
+      {
+        "time": "17:43",
+        "text": "然後就是乘Amount"
+      },
+      {
+        "time": "17:44",
+        "text": "因為我們就是L through那個amount"
+      },
+      {
+        "time": "17:46",
+        "text": "所以應該是這樣子"
+      },
+      {
+        "time": "17:48",
+        "text": "這個是time complexity"
+      },
+      {
+        "time": "17:50",
+        "text": "這樣子"
+      },
+      {
+        "time": "17:51",
+        "text": "然後space的話"
+      },
+      {
+        "time": "17:53",
+        "text": "我們就是存那個dp array"
+      },
+      {
+        "time": "17:55",
+        "text": "然後dp array的長度"
+      },
+      {
+        "time": "17:57",
+        "text": "我們就是max value乘以amount"
+      },
+      {
+        "time": "17:58",
+        "text": "所以它就是o of amount"
+      },
+      {
+        "time": "17:59",
+        "text": "這樣子"
+      },
+      {
+        "time": "18:00",
+        "text": "這是space"
+      },
+      {
+        "time": "18:01",
+        "text": "OK"
+      },
+      {
+        "time": "18:02",
+        "text": "perfect"
+      },
+      {
+        "time": "18:03",
+        "text": "我有過這個面試嗎?"
+      },
+      {
+        "time": "18:05",
+        "text": "可以給我導演嗎?"
+      },
+      {
+        "time": "18:07",
+        "text": "你可以當CTO"
+      },
+      {
+        "time": "18:09",
+        "text": "謝謝謝謝"
+      },
+      {
+        "time": "18:10",
+        "text": "就是希望Terry有再一日的合作"
+      },
+      {
+        "time": "18:12",
+        "text": "我覺得不錯"
+      },
+      {
+        "time": "18:13",
+        "text": "可以"
+      },
+      {
+        "time": "18:14",
+        "text": "超緊張"
+      },
+      {
+        "time": "18:14",
+        "text": "就是Terry可以證明我剛剛有多緊張"
+      },
+      {
+        "time": "18:17",
+        "text": "有有剛剛很緊張"
+      },
+      {
+        "time": "18:18",
+        "text": "差點就是很想趕快直接逃離了"
+      },
+      {
+        "time": "18:21",
+        "text": "直接是逃跑"
+      },
+      {
+        "time": "18:22",
+        "text": "我到底來這邊幹嘛呢?"
+      },
+      {
+        "time": "18:23",
+        "text": "來東京找贅獸"
+      },
+      {
+        "time": "18:26",
+        "text": "OK那不知道大家覺得女神的表現怎麼樣"
+      },
+      {
+        "time": "18:28",
+        "text": "可以在影片底下留言"
+      },
+      {
+        "time": "18:29",
+        "text": "我是覺得還不錯啦"
+      },
+      {
+        "time": "18:30",
+        "text": "基本的底質是一定有的"
+      },
+      {
+        "time": "18:32",
+        "text": "而且一定比看兩個臭宅男"
+      },
+      {
+        "time": "18:34",
+        "text": "在那邊寫扣還要優美"
+      },
+      {
+        "time": "18:35",
+        "text": "那如果你覺得你的這個軟體工程師的基礎比較差"
+      },
+      {
+        "time": "18:39",
+        "text": "或者是說你想要認真的在軟體工程這個行業發展的話"
+      },
+      {
+        "time": "18:43",
+        "text": "也非常歡迎你來加入我們的這個資鴉護城河實戰營"
+      },
+      {
+        "time": "18:47",
+        "text": "這個是我跟大神Hank一起共同設計跟製作了8個月的時間"
+      },
+      {
+        "time": "18:51",
+        "text": "目的呢也是希望可以幫助大家拿到心儀的offer"
+      },
+      {
+        "time": "18:55",
+        "text": "也希望可以透過實戰營來訓練"
+      },
+      {
+        "time": "18:57",
+        "text": "並且提升你的這個工程師最基礎的解決問題的能力"
+      },
+      {
+        "time": "19:01",
+        "text": "很多人可能會有一個誤解說"
+      },
+      {
+        "time": "19:03",
+        "text": "我們這個實戰營呢好像就只是為了幫助你去通過面試而已"
+      },
+      {
+        "time": "19:07",
+        "text": "對確實這個實戰營對於面試來講是有"
+      },
+      {
+        "time": "19:10",
+        "text": "百分之百的這個變強的效果"
+      },
+      {
+        "time": "19:12",
+        "text": "參加完之後呢"
+      },
+      {
+        "time": "19:13",
+        "text": "你在面對任何形式的Coding面試呢"
+      },
+      {
+        "time": "19:15",
+        "text": "你都會有非常明顯的這個實力的提升"
+      },
+      {
+        "time": "19:18",
+        "text": "但是我覺得另外一點非常重要"
+      },
+      {
+        "time": "19:19",
+        "text": "就是可能大家會miss掉的就是"
+      },
+      {
+        "time": "19:21",
+        "text": "其實你如果真的系統性的練習過一遍之後"
+      },
+      {
+        "time": "19:24",
+        "text": "你就會發現你整體的實力力都有非常大幅度的提升"
+      },
+      {
+        "time": "19:28",
+        "text": "不管是幫別人做Code Review"
+      },
+      {
+        "time": "19:29",
+        "text": "或者說看AI生成的這個代碼"
+      },
+      {
+        "time": "19:32",
+        "text": "還是說當你遇到了複雜的問題之後"
+      },
+      {
+        "time": "19:34",
+        "text": "能不能有這個工程師思維"
+      },
+      {
+        "time": "19:36",
+        "text": "把問題從非常複雜非常難的問題"
+      },
+      {
+        "time": "19:39",
+        "text": "拆解變成小而簡單的問題"
+      },
+      {
+        "time": "19:42",
+        "text": "這些都是在我們的實戰營訓練完之後"
+      },
+      {
+        "time": "19:44",
+        "text": "你可以得到的而且你可以馬上的感受出來不同變成小而簡單的問題這些都是在我們的這個實戰營訓練完之後呢"
+      },
+      {
+        "time": "19:45",
+        "text": "你可以得到的"
+      },
+      {
+        "time": "19:46",
+        "text": "而且你可以馬上的感受出來不同"
+      },
+      {
+        "time": "19:48",
+        "text": "因為我自己曾經也經歷過那段時間"
+      },
+      {
+        "time": "19:50",
+        "text": "所以我非常非常的清楚"
+      },
+      {
+        "time": "19:52",
+        "text": "而且我們的實戰營呢"
+      },
+      {
+        "time": "19:53",
+        "text": "也會線上帶著大家一起去做這些實戰演練"
+      },
+      {
+        "time": "19:56",
+        "text": "所以說絕對會遠比那些坊間的線上課程呢"
+      },
+      {
+        "time": "19:59",
+        "text": "還要來得有效很多"
+      },
+      {
+        "time": "20:00",
+        "text": "因為我們是真的希望你可以透過這個實戰營"
+      },
+      {
+        "time": "20:03",
+        "text": "打造屬於你的護城河然後變得更強"
+      },
+      {
+        "time": "20:05",
+        "text": "那我們其實也非常的歡迎那些可能基礎比較差"
+      },
+      {
+        "time": "20:09",
+        "text": "或是在轉職"
+      },
+      {
+        "time": "20:10",
+        "text": "或是正在成為軟體工程師的朋友們"
+      },
+      {
+        "time": "20:12",
+        "text": "因為我們有特別為這些同學準備一個更基礎的一個指南"
+      },
+      {
+        "time": "20:16",
+        "text": "讓你可以自己先去練習"
+      },
+      {
+        "time": "20:18",
+        "text": "然後可以快速的跟上大家的腳步"
+      },
+      {
+        "time": "20:20",
+        "text": "而且我跟Hank還有我們的助教Alan"
+      },
+      {
+        "time": "20:22",
+        "text": "也會在我們的學員專屬的Discord群組裡面"
+      },
+      {
+        "time": "20:25",
+        "text": "去特別幫助大家"
+      },
+      {
+        "time": "20:27",
+        "text": "那大家如果有興趣的話"
+      },
+      {
+        "time": "20:28",
+        "text": "可以去我們的實戰營的官網"
+      },
+      {
+        "time": "20:30",
+        "text": "buildmode.org上面看一下"
+      },
+      {
+        "time": "20:32",
+        "text": "也歡迎來加入我們的公共Discord群組"
+      },
+      {
+        "time": "20:35",
+        "text": "這個群組也是開放給所有人都可以來加入"
+      },
+      {
+        "time": "20:38",
+        "text": "我會把連結放在影片底下的資訊欄"
+      },
+      {
+        "time": "20:40",
+        "text": "那我們下次見囉"
+      }
+    ]
+  },
+  "raw_provider_payload": {
+    "actual_url": "https://youtu.be/0kBPGbsSuMs",
+    "content": "",
+    "conversation_id": "",
+    "cover": "https://i.ytimg.com/vi/0kBPGbsSuMs/sddefault.jpg",
+    "createdAt": 1783958465466,
+    "expiresAt": 1784131265466,
+    "historyScope": "/youtube-subtitle-downloader/",
+    "id": "/youtube-subtitle-downloader/:1:1:0kBPGbsSuMs",
+    "mindMap": "",
+    "notes": [],
+    "overviewData": null,
+    "platform": "1",
+    "remoteNoteArtifactIds": {},
+    "sourceKey": "/youtube-subtitle-downloader/:1:1:0kBPGbsSuMs",
+    "subtitles": [
+      {
+        "text": "Hello大家好我是Terry",
+        "time": "00:00"
+      },
+      {
+        "text": "今天呢我們的矽谷女神 Kelly來東京玩了",
+        "time": "00:01"
+      },
+      {
+        "text": "那按照慣例呢我們是不是要來做一些什麼",
+        "time": "00:04"
+      },
+      {
+        "text": "沒錯我們就是要來寫Code",
+        "time": "00:07"
+      },
+      {
+        "text": "因為大家也知道最近矽谷是蠻多公司",
+        "time": "00:09"
+      },
+      {
+        "text": "把招人的這個專注呢",
+        "time": "00:11"
+      },
+      {
+        "text": "放在比較偏向Mid-Senior Level的工程師上面",
+        "time": "00:13"
+      },
+      {
+        "text": "那Kelly身為一個也算是",
+        "time": "00:16"
+      },
+      {
+        "text": "大學剛畢業沒有太久的一個工程師",
+        "time": "00:18"
+      },
+      {
+        "text": "我們就來看一下Kelly有沒有辦法通過這個簡單的Coding面試",
+        "time": "00:20"
+      },
+      {
+        "text": "那這個面試",
+        "time": "00:24"
+      },
+      {
+        "text": "那這個面試的難度呢也是通常我在幫我們公司招人的時候呢",
+        "time": "00:25"
+      },
+      {
+        "text": "會去考的一個稍微偏簡單一點的題目",
+        "time": "00:29"
+      },
+      {
+        "text": "可以準備好了嗎",
+        "time": "00:32"
+      },
+      {
+        "text": "我們開頭先簡單聊兩句啦",
+        "time": "00:34"
+      },
+      {
+        "text": "所以怎麼樣",
+        "time": "00:37"
+      },
+      {
+        "text": "超緊張",
+        "time": "00:38"
+      },
+      {
+        "text": "很緊張",
+        "time": "00:40"
+      },
+      {
+        "text": "真的很緊張嗎",
+        "time": "00:41"
+      },
+      {
+        "text": "超緊張真的很緊張",
+        "time": "00:42"
+      },
+      {
+        "text": "那你對我們公司有沒有什麼期許",
+        "time": "00:43"
+      },
+      {
+        "text": "希望錢給得多一點",
+        "time": "00:46"
+      },
+      {
+        "text": "錢",
+        "time": "00:48"
+      },
+      {
+        "text": "對嗎",
+        "time": "00:50"
+      },
+      {
+        "text": "我在面什麼職位啊",
+        "time": "00:52"
+      },
+      {
+        "text": "我們沒有找副職位我們只有找副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副副�我們CEO都會需要知道怎麼做離口好好很神奇的公司好 錢給到位都可以",
+        "time": "00:54"
+      },
+      {
+        "text": "我們是有心意",
+        "time": "01:05"
+      },
+      {
+        "text": "有心意",
+        "time": "01:07"
+      },
+      {
+        "text": "我到底來了什麼黑心的面試",
+        "time": "01:09"
+      },
+      {
+        "text": "OK 好 準備好了嗎",
+        "time": "01:11"
+      },
+      {
+        "text": "那不要緊張",
+        "time": "01:13"
+      },
+      {
+        "text": "這是一個很好玩的一個",
+        "time": "01:15"
+      },
+      {
+        "text": "體育",
+        "time": "01:18"
+      },
+      {
+        "text": "exercise",
+        "time": "01:18"
+      },
+      {
+        "text": "喔 好",
+        "time": "01:19"
+      },
+      {
+        "text": "體育不好玩",
+        "time": "01:20"
+      },
+      {
+        "text": "體育不好玩",
+        "time": "01:20"
+      },
+      {
+        "text": "exercise很好玩",
+        "time": "01:21"
+      },
+      {
+        "text": "好好",
+        "time": "01:22"
+      },
+      {
+        "text": "沒有想到在東京會做這個事情對不對沒有我在東京我是來玩的我們題目不好玩題目不好玩誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒 誒我剛剛是開玩笑我突然想說你那個comments裡面會不會在那邊Kelly拜金啊",
+        "time": "01:23"
+      },
+      {
+        "text": "Kelly",
+        "time": "01:46"
+      },
+      {
+        "text": "這個這個這個",
+        "time": "01:47"
+      },
+      {
+        "text": "錢什麼",
+        "time": "01:48"
+      },
+      {
+        "text": "沒事",
+        "time": "01:49"
+      },
+      {
+        "text": "Kelly沒有拜金",
+        "time": "01:50"
+      },
+      {
+        "text": "Kelly是我看過最",
+        "time": "01:51"
+      },
+      {
+        "text": "那叫什麼 樸實",
+        "time": "01:52"
+      },
+      {
+        "text": "樸實無華的女生",
+        "time": "01:53"
+      },
+      {
+        "text": "謝謝",
+        "time": "01:55"
+      },
+      {
+        "text": "謝謝",
+        "time": "01:56"
+      },
+      {
+        "text": "對 你不拜金吧",
+        "time": "01:58"
+      },
+      {
+        "text": "還好吧",
+        "time": "01:59"
+      },
+      {
+        "text": "我只是想說我剛剛開玩笑",
+        "time": "02:00"
+      },
+      {
+        "text": "在那邊說什麼",
+        "time": "02:01"
+      },
+      {
+        "text": "錢給到位什麼",
+        "time": "02:02"
+      },
+      {
+        "text": "我不是這種人",
+        "time": "02:03"
+      },
+      {
+        "text": "沒有 我覺得錢要給到位啊",
+        "time": "02:04"
+      },
+      {
+        "text": "走公路不是為了錢",
+        "time": "02:06"
+      },
+      {
+        "text": "對啊 這不是拜金",
+        "time": "02:07"
+      },
+      {
+        "text": "這叫做為自己的前程負責",
+        "time": "02:08"
+      },
+      {
+        "text": "嗯 謝謝 謝謝 Terry",
+        "time": "02:10"
+      },
+      {
+        "text": "OK 好",
+        "time": "02:14"
+      },
+      {
+        "text": "那這道題呢",
+        "time": "02:15"
+      },
+      {
+        "text": "算是一個比較經典的一道題啦",
+        "time": "02:18"
+      },
+      {
+        "text": "對 然後我們就假設",
+        "time": "02:21"
+      },
+      {
+        "text": "你的input是一個",
+        "time": "02:24"
+      },
+      {
+        "text": "Array of coins 的denomination",
+        "time": "02:26"
+      },
+      {
+        "text": "好",
+        "time": "02:30"
+      },
+      {
+        "text": "對 那你想coins可能會有1 1 3 5",
+        "time": "02:30"
+      },
+      {
+        "text": "或是1塊2塊3塊",
+        "time": "02:32"
+      },
+      {
+        "text": "它可以是任何的denomination",
+        "time": "02:34"
+      },
+      {
+        "text": "可以是100 1000 10000",
+        "time": "02:35"
+      },
+      {
+        "text": "對",
+        "time": "02:37"
+      },
+      {
+        "text": "那你的input就是",
+        "time": "02:38"
+      },
+      {
+        "text": "coin",
+        "time": "02:40"
+      },
+      {
+        "text": "nation",
+        "time": "02:41"
+      },
+      {
+        "text": "好",
+        "time": "02:42"
+      },
+      {
+        "text": "是一個Array",
+        "time": "02:43"
+      },
+      {
+        "text": "對 是一個Array",
+        "time": "02:44"
+      },
+      {
+        "text": "好",
+        "time": "02:45"
+      },
+      {
+        "text": "然後TargetNumber",
+        "time": "02:46"
+      },
+      {
+        "text": "嗯",
+        "time": "02:48"
+      },
+      {
+        "text": "對 這是一個Integer",
+        "time": "02:49"
+      },
+      {
+        "text": "嗯",
+        "time": "02:50"
+      },
+      {
+        "text": "那TargetNumber就是你要用這個Coin去Match",
+        "time": "02:51"
+      },
+      {
+        "text": "想辦法湊到那個錢",
+        "time": "02:54"
+      },
+      {
+        "text": "對 像比如說",
+        "time": "02:56"
+      },
+      {
+        "text": "OK 我今天Target是100",
+        "time": "02:57"
+      },
+      {
+        "text": "好",
+        "time": "02:59"
+      },
+      {
+        "text": "那你有你的Denomination是1塊跟10塊",
+        "time": "03:00"
+      },
+      {
+        "text": "嗯",
+        "time": "03:03"
+      },
+      {
+        "text": "那你可以給它十个十块",
+        "time": "03:04"
+      },
+      {
+        "text": "或是你可以给他一百个一块",
+        "time": "03:06"
+      },
+      {
+        "text": "或是你也可以mix and match",
+        "time": "03:08"
+      },
+      {
+        "text": "那今天我们要找的是",
+        "time": "03:10"
+      },
+      {
+        "text": "举个例子好了比如说你的input是",
+        "time": "03:26"
+      },
+      {
+        "text": "1,3,5好了",
+        "time": "03:28"
+      },
+      {
+        "text": "那我的target是",
+        "time": "03:31"
+      },
+      {
+        "text": "11,距离",
+        "time": "03:34"
+      },
+      {
+        "text": "如果是11个1的话",
+        "time": "03:36"
+      },
+      {
+        "text": "但是这不是最优的",
+        "time": "03:37"
+      },
+      {
+        "text": "因为我们要找minimum number of coins",
+        "time": "03:39"
+      },
+      {
+        "text": "就是几个单位",
+        "time": "03:43"
+      },
+      {
+        "text": "所以说我们这道題的solution是",
+        "time": "03:44"
+      },
+      {
+        "text": "5加5加1對吧",
+        "time": "03:48"
+      },
+      {
+        "text": "那等於說你要3",
+        "time": "03:50"
+      },
+      {
+        "text": "等於說你有3個coin",
+        "time": "03:52"
+      },
+      {
+        "text": "你就可以把它湊成這個target",
+        "time": "03:54"
+      },
+      {
+        "text": "好",
+        "time": "03:56"
+      },
+      {
+        "text": "了解",
+        "time": "03:57"
+      },
+      {
+        "text": "ok好那雖然這個題目蠻simple",
+        "time": "03:58"
+      },
+      {
+        "text": "但我還是clarify一下",
+        "time": "04:00"
+      },
+      {
+        "text": "我們現在input 你會給我一個",
+        "time": "04:02"
+      },
+      {
+        "text": "coin denomination 是一個 array of",
+        "time": "04:05"
+      },
+      {
+        "text": "它有拿幾種硬幣",
+        "time": "04:07"
+      },
+      {
+        "text": "跟一個 target number",
+        "time": "04:09"
+      },
+      {
+        "text": "然後我要 return 的就是",
+        "time": "04:10"
+      },
+      {
+        "text": "我最少需要幾個硬幣",
+        "time": "04:11"
+      },
+      {
+        "text": "來 make up 到這個 target amount",
+        "time": "04:13"
+      },
+      {
+        "text": "對",
+        "time": "04:15"
+      },
+      {
+        "text": "好 那這聽起來就是一個",
+        "time": "04:16"
+      },
+      {
+        "text": "dynamic programming 的題目",
+        "time": "04:18"
+      },
+      {
+        "text": "可以用一個 dp array 來解",
+        "time": "04:20"
+      },
+      {
+        "text": "我現在想的是",
+        "time": "04:23"
+      },
+      {
+        "text": "我建一个array",
+        "time": "04:25"
+      },
+      {
+        "text": "然后我array的每一个index去存",
+        "time": "04:26"
+      },
+      {
+        "text": "就是我到这个target amount",
+        "time": "04:30"
+      },
+      {
+        "text": "需要多少个硬币",
+        "time": "04:32"
+      },
+      {
+        "text": "就是比如说我如果",
+        "time": "04:34"
+      },
+      {
+        "text": "你的target amount是10的话",
+        "time": "04:36"
+      },
+      {
+        "text": "那我就建一个",
+        "time": "04:38"
+      },
+      {
+        "text": "有11个items的一个array",
+        "time": "04:40"
+      },
+      {
+        "text": "然后每一个去存",
+        "time": "04:43"
+      },
+      {
+        "text": "就是0要多少1要多少一直到11",
+        "time": "04:44"
+      },
+      {
+        "text": "然後我可以去就是用一個for loop來update這些amounts",
+        "time": "04:46"
+      },
+      {
+        "text": "所以說你的array size是",
+        "time": "04:51"
+      },
+      {
+        "text": "amount plus 1",
+        "time": "04:53"
+      },
+      {
+        "text": "因為從0開始嘛",
+        "time": "04:54"
+      },
+      {
+        "text": "然後我如果要到10的話就會0 1 2 3 4 5 6 7 8 9 10",
+        "time": "04:56"
+      },
+      {
+        "text": "哦 ok",
+        "time": "05:00"
+      },
+      {
+        "text": "對",
+        "time": "05:00"
+      },
+      {
+        "text": "就是你的target是11的話就是",
+        "time": "05:01"
+      },
+      {
+        "text": "就是12個",
+        "time": "05:03"
+      },
+      {
+        "text": "12個",
+        "time": "05:04"
+      },
+      {
+        "text": "ok 懂了ok哦OK就是你的目標是C的話就是12個",
+        "time": "05:04"
+      },
+      {
+        "text": "OK懂了",
+        "time": "05:05"
+      },
+      {
+        "text": "那所以我一開始會先initialize一個很大的數字",
+        "time": "05:06"
+      },
+      {
+        "text": "因為一開始我不知道minimum number是多少",
+        "time": "05:11"
+      },
+      {
+        "text": "所以我先用一個大的數字",
+        "time": "05:13"
+      },
+      {
+        "text": "然後每一個position都放這個數字",
+        "time": "05:15"
+      },
+      {
+        "text": "然後我從0開始",
+        "time": "05:17"
+      },
+      {
+        "text": "然後因為makeup amount 0一定是0嘛",
+        "time": "05:18"
+      },
+      {
+        "text": "所以第一個就會是0",
+        "time": "05:20"
+      },
+      {
+        "text": "然後我再來從1開始去",
+        "time": "05:21"
+      },
+      {
+        "text": "用一個for loop",
+        "time": "05:23"
+      },
+      {
+        "text": "就是外層的for loop要先",
+        "time": "05:24"
+      },
+      {
+        "text": "go over每一個coin的denomination",
+        "time": "05:26"
+      },
+      {
+        "text": "然後呢從coin value到target value之中間去看",
+        "time": "05:29"
+      },
+      {
+        "text": "就是每一個position update的",
+        "time": "05:33"
+      },
+      {
+        "text": "either是它現在存的這個minimum value",
+        "time": "05:35"
+      },
+      {
+        "text": "或者是就是dp的xgen coin",
+        "time": "05:38"
+      },
+      {
+        "text": "因為你現在已經有這個coin value了",
+        "time": "05:41"
+      },
+      {
+        "text": "然後再加一個就是我 current coin",
+        "time": "05:43"
+      },
+      {
+        "text": "所以就是 DP 的 Xgen coin 加 1",
+        "time": "05:45"
+      },
+      {
+        "text": "這樣然後看哪一個比較小",
+        "time": "05:47"
+      },
+      {
+        "text": "然後去 update 這個 value",
+        "time": "05:48"
+      },
+      {
+        "text": "然後一路到就是 target amount",
+        "time": "05:50"
+      },
+      {
+        "text": "然後最後 target amount",
+        "time": "05:52"
+      },
+      {
+        "text": "如果是就是小於我 initialize 的那個 max value",
+        "time": "05:54"
+      },
+      {
+        "text": "那就代表我可以就是 make up 這個 combination",
+        "time": "05:57"
+      },
+      {
+        "text": "可是如果它完全沒有被 update 到",
+        "time": "06:00"
+      },
+      {
+        "text": "它還是一開始我 initialize 的那個",
+        "time": "06:02"
+      },
+      {
+        "text": "很大的數字就是不ize的那個很大的數字",
+        "time": "06:04"
+      },
+      {
+        "text": "就是不合理的很大的數字的話",
+        "time": "06:05"
+      },
+      {
+        "text": "那就代表它沒有辦法make up這個value",
+        "time": "06:07"
+      },
+      {
+        "text": "就是這個題目有可能是不合理的嘛",
+        "time": "06:10"
+      },
+      {
+        "text": "因為你給的不一定是可以剛好那個數字",
+        "time": "06:12"
+      },
+      {
+        "text": "那我就要",
+        "time": "06:15"
+      },
+      {
+        "text": "如果沒有辦法make up要return是嗎",
+        "time": "06:16"
+      },
+      {
+        "text": "你可以return-1",
+        "time": "06:18"
+      },
+      {
+        "text": "-1 好 那我就",
+        "time": "06:19"
+      },
+      {
+        "text": "那你剛剛講的這個DP approach是",
+        "time": "06:21"
+      },
+      {
+        "text": "對",
+        "time": "06:23"
+      },
+      {
+        "text": "bottom up的 approach嗯",
+        "time": "06:24"
+      },
+      {
+        "text": "對",
+        "time": "06:25"
+      },
+      {
+        "text": "從小的開始",
+        "time": "06:26"
+      },
+      {
+        "text": "從小的開始",
+        "time": "06:26"
+      },
+      {
+        "text": "ok 沒問題",
+        "time": "06:27"
+      },
+      {
+        "text": "好 那我就開始寫了",
+        "time": "06:28"
+      },
+      {
+        "text": "我用Python寫",
+        "time": "06:30"
+      },
+      {
+        "text": "可以啊",
+        "time": "06:31"
+      },
+      {
+        "text": "對",
+        "time": "06:32"
+      },
+      {
+        "text": "這個題目要叫什麼",
+        "time": "06:33"
+      },
+      {
+        "text": "沒關係 你不用管那個大小寫",
+        "time": "06:34"
+      },
+      {
+        "text": "你Google Doc管就是",
+        "time": "06:36"
+      },
+      {
+        "text": "然後要給我的是",
+        "time": "06:37"
+      },
+      {
+        "text": "coin.num",
+        "time": "06:39"
+      },
+      {
+        "text": "那我那個就會叫coin",
+        "time": "06:40"
+      },
+      {
+        "text": "然後後面就target number",
+        "time": "06:41"
+      },
+      {
+        "text": "那就target amount嘛嗯哼這樣子然後呢我要initialize一個max value那我這個就會叫Coin然後後面就Target Number那就Target Amount嘛",
+        "time": "06:43"
+      },
+      {
+        "text": "這樣子",
+        "time": "06:45"
+      },
+      {
+        "text": "然後呢我要Initialize一個Max Value",
+        "time": "06:47"
+      },
+      {
+        "text": "就是一開始那個最大的",
+        "time": "06:49"
+      },
+      {
+        "text": "我就Initialize一個",
+        "time": "06:51"
+      },
+      {
+        "text": "如果你的Target Amount",
+        "time": "06:53"
+      },
+      {
+        "text": "然後你Target Amount大的話",
+        "time": "06:54"
+      },
+      {
+        "text": "那就是不合理嘛",
+        "time": "06:56"
+      },
+      {
+        "text": "那個就是Basically無限大",
+        "time": "06:57"
+      },
+      {
+        "text": "因為我只是要Make up 10的話",
+        "time": "06:59"
+      },
+      {
+        "text": "你給11",
+        "time": "07:01"
+      },
+      {
+        "text": "那就是不合理了",
+        "time": "07:02"
+      },
+      {
+        "text": "因為Coin應該一定是大於1的吧",
+        "time": "07:03"
+      },
+      {
+        "text": "不可能有小數點的quint",
+        "time": "07:05"
+      },
+      {
+        "text": "對 我們就assume是integer",
+        "time": "07:06"
+      },
+      {
+        "text": "好 所以那我這個就",
+        "time": "07:08"
+      },
+      {
+        "text": "比如說initialize amount加1",
+        "time": "07:10"
+      },
+      {
+        "text": "這樣子就是已經是比合理的還要再大了",
+        "time": "07:12"
+      },
+      {
+        "text": "因為不可能最後return amount加1",
+        "time": "07:15"
+      },
+      {
+        "text": "好 然後我initialize這個dp array",
+        "time": "07:17"
+      },
+      {
+        "text": "那我就用就是我的max value",
+        "time": "07:20"
+      },
+      {
+        "text": "max valuemax value",
+        "time": "07:24"
+      },
+      {
+        "text": "然后我要乘以",
+        "time": "07:25"
+      },
+      {
+        "text": "我要store从0到我们的target amount",
+        "time": "07:27"
+      },
+      {
+        "text": "所以是amount加1",
+        "time": "07:30"
+      },
+      {
+        "text": "这样",
+        "time": "07:32"
+      },
+      {
+        "text": "然后呢",
+        "time": "07:33"
+      },
+      {
+        "text": "我们initialize了这个dp array之后",
+        "time": "07:35"
+      },
+      {
+        "text": "要先从第一个开始",
+        "time": "07:38"
+      },
+      {
+        "text": "所以第一个就是makeup amount 0就是0",
+        "time": "07:40"
+      },
+      {
+        "text": "dp array的0我要先initialize第一个吗",
+        "time": "07:43"
+      },
+      {
+        "text": "0会是0",
+        "time": "07:46"
+      },
+      {
+        "text": "因为makeup amount 0就是0",
+        "time": "07:48"
+      },
+      {
+        "text": "聪明",
+        "time": "07:50"
+      },
+      {
+        "text": "然后呢我们就要开始写for loop",
+        "time": "07:53"
+      },
+      {
+        "text": "所以第一个我们应该要go through那个coin的denominations",
+        "time": "07:56"
+      },
+      {
+        "text": "所以呢",
+        "time": "08:02"
+      },
+      {
+        "text": "这个我把它改成coins好了因为它是一个list of coin的denominations所以呢这个我把它改成coins好了",
+        "time": "08:03"
+      },
+      {
+        "text": "它是一个list of coin的denominations",
+        "time": "08:06"
+      },
+      {
+        "text": "然后for coin in coins这样",
+        "time": "08:08"
+      },
+      {
+        "text": "嗯",
+        "time": "08:11"
+      },
+      {
+        "text": "然后呢里面还要一个for loop",
+        "time": "08:12"
+      },
+      {
+        "text": "好for",
+        "time": "08:14"
+      },
+      {
+        "text": "我们外层的for loop是for coin in coins",
+        "time": "08:15"
+      },
+      {
+        "text": "然后内层的for i in range",
+        "time": "08:18"
+      },
+      {
+        "text": "我想一下它的range要是多少",
+        "time": "08:22"
+      },
+      {
+        "text": "因为我们要一路到amount",
+        "time": "08:24"
+      },
+      {
+        "text": "就一路到我们的target amount",
+        "time": "08:28"
+      },
+      {
+        "text": "但是从哪一个开始是",
+        "time": "08:29"
+      },
+      {
+        "text": "最小的会是就是我们现在的coin是多少",
+        "time": "08:31"
+      },
+      {
+        "text": "因为假设你这边给135好了",
+        "time": "08:34"
+      },
+      {
+        "text": "那我现在在1的话",
+        "time": "08:38"
+      },
+      {
+        "text": "我最小就是只能从1开始",
+        "time": "08:40"
+      },
+      {
+        "text": "因为比1小的不可能",
+        "time": "08:41"
+      },
+      {
+        "text": "就是前面我就已经不用考虑了",
+        "time": "08:43"
+      },
+      {
+        "text": "我就只有这个coin的话它就只能从这里开始因为比1小的不可能就是前面我就已经不用考虑了我就只有这个Coin的话",
+        "time": "08:44"
+      },
+      {
+        "text": "它就只能从这里开始",
+        "time": "08:45"
+      },
+      {
+        "text": "所以这应该是从Coin开始的",
+        "time": "08:46"
+      },
+      {
+        "text": "然后到Amount",
+        "time": "08:49"
+      },
+      {
+        "text": "所以要Amount加1",
+        "time": "08:50"
+      },
+      {
+        "text": "因为Range是不会",
+        "time": "08:51"
+      },
+      {
+        "text": "就是include最后那个数字",
+        "time": "08:53"
+      },
+      {
+        "text": "然后呢",
+        "time": "08:56"
+      },
+      {
+        "text": "我们现在就要update这个DP Array",
+        "time": "08:57"
+      },
+      {
+        "text": "所以DP Array的i",
+        "time": "08:59"
+      },
+      {
+        "text": "我们要把它update成",
+        "time": "09:03"
+      },
+      {
+        "text": "minimum of什么东西",
+        "time": "09:06"
+      },
+      {
+        "text": "minimum of现在DP array currently是多少",
+        "time": "09:08"
+      },
+      {
+        "text": "就是看它现在Stored的",
+        "time": "09:11"
+      },
+      {
+        "text": "所以DP array的i跟什么呢",
+        "time": "09:13"
+      },
+      {
+        "text": "就是DP array的",
+        "time": "09:17"
+      },
+      {
+        "text": "我们现在的current coin",
+        "time": "09:19"
+      },
+      {
+        "text": "我们要加这个current coin",
+        "time": "09:20"
+      },
+      {
+        "text": "所以加1因为多这个",
+        "time": "09:21"
+      },
+      {
+        "text": "然后我们去减掉i",
+        "time": "09:24"
+      },
+      {
+        "text": "减掉这个coin value",
+        "time": "09:27"
+      },
+      {
+        "text": "因为我们现在的dpi",
+        "time": "09:30"
+      },
+      {
+        "text": "减掉current coin value",
+        "time": "09:33"
+      },
+      {
+        "text": "然后去看那个position是多少",
+        "time": "09:35"
+      },
+      {
+        "text": "然后再加上我现在current coin的这个数量",
+        "time": "09:36"
+      },
+      {
+        "text": "所以加1",
+        "time": "09:38"
+      },
+      {
+        "text": "对",
+        "time": "09:39"
+      },
+      {
+        "text": "所以这个minimum",
+        "time": "09:40"
+      },
+      {
+        "text": "然后呢",
+        "time": "09:41"
+      },
+      {
+        "text": "这for loop跑完",
+        "time": "09:42"
+      },
+      {
+        "text": "我们就已经update所有dp array每个positionminimum然后呢这for loop跑完我们就已经update所有",
+        "time": "09:43"
+      },
+      {
+        "text": "dparray每一个position",
+        "time": "09:45"
+      },
+      {
+        "text": "minimum是要多少",
+        "time": "09:46"
+      },
+      {
+        "text": "所以我们最后return的数字就会是",
+        "time": "09:47"
+      },
+      {
+        "text": "要看就是有被update到的话",
+        "time": "09:51"
+      },
+      {
+        "text": "就是可以到那个amount",
+        "time": "09:53"
+      },
+      {
+        "text": "没有的话就要return-1",
+        "time": "09:54"
+      },
+      {
+        "text": "所以dparray的amount",
+        "time": "09:57"
+      },
+      {
+        "text": "然后这是if",
+        "time": "10:02"
+      },
+      {
+        "text": "if dp array amount",
+        "time": "10:04"
+      },
+      {
+        "text": "小於我們一開始 initialize 的 max value",
+        "time": "10:08"
+      },
+      {
+        "text": "如果是等於的話",
+        "time": "10:12"
+      },
+      {
+        "text": "那就要 return 負1",
+        "time": "10:14"
+      },
+      {
+        "text": "這樣",
+        "time": "10:15"
+      },
+      {
+        "text": "OK 結束",
+        "time": "10:17"
+      },
+      {
+        "text": "那妳要不要 dry run 一下一些 test case",
+        "time": "10:18"
+      },
+      {
+        "text": "好啊",
+        "time": "10:22"
+      },
+      {
+        "text": "那給個簡單的 input",
+        "time": "10:22"
+      },
+      {
+        "text": "還是我用你一開始給的這個",
+        "time": "10:26"
+      },
+      {
+        "text": "可以好",
+        "time": "10:29"
+      },
+      {
+        "text": "可以用哪個",
+        "time": "10:29"
+      },
+      {
+        "text": "好",
+        "time": "10:30"
+      },
+      {
+        "text": "那我就不額外型",
+        "time": "10:31"
+      },
+      {
+        "text": "input 135 然後",
+        "time": "10:32"
+      },
+      {
+        "text": "target amount 是 11 的話",
+        "time": "10:34"
+      },
+      {
+        "text": "max value 我們這裡就會 initialize 成",
+        "time": "10:36"
+      },
+      {
+        "text": "amount 加 1 12",
+        "time": "10:40"
+      },
+      {
+        "text": "然後 dp array 現在就會是max value 就會 12 12 12 12amount加1 12然后dparray现在就会是",
+        "time": "10:42"
+      },
+      {
+        "text": "max value就会12 12 12 12",
+        "time": "10:45"
+      },
+      {
+        "text": "然后有12个12",
+        "time": "10:47"
+      },
+      {
+        "text": "嗯哼",
+        "time": "10:51"
+      },
+      {
+        "text": "对",
+        "time": "10:51"
+      },
+      {
+        "text": "然后呢",
+        "time": "10:52"
+      },
+      {
+        "text": "我们把它update成第一个是0",
+        "time": "10:53"
+      },
+      {
+        "text": "所以现在变成0",
+        "time": "10:56"
+      },
+      {
+        "text": "然后后面都是12",
+        "time": "10:58"
+      },
+      {
+        "text": "嗯哼",
+        "time": "10:59"
+      },
+      {
+        "text": "后面有11个12这样",
+        "time": "11:00"
+      },
+      {
+        "text": "然后for coin and coins",
+        "time": "11:01"
+      },
+      {
+        "text": "所以好我们第一个",
+        "time": "11:03"
+      },
+      {
+        "text": "for coin and coins第一个我們第一個for coin and coins",
+        "time": "11:04"
+      },
+      {
+        "text": "第一個是1嘛",
+        "time": "11:06"
+      },
+      {
+        "text": "我們先用1來看",
+        "time": "11:08"
+      },
+      {
+        "text": "然後再來for i and range",
+        "time": "11:10"
+      },
+      {
+        "text": "從coin到amount",
+        "time": "11:12"
+      },
+      {
+        "text": "所以我們從1開始看",
+        "time": "11:14"
+      },
+      {
+        "text": "然後會一路看到11",
+        "time": "11:16"
+      },
+      {
+        "text": "就從1開始這樣loop",
+        "time": "11:18"
+      },
+      {
+        "text": "然後dparray的第一個",
+        "time": "11:20"
+      },
+      {
+        "text": "就是這個它會標記嗎",
+        "time": "11:24"
+      },
+      {
+        "text": "嗯?",
+        "time": "11:25"
+      },
+      {
+        "text": "我mark它不會mark",
+        "time": "11:27"
+      },
+      {
+        "text": "OK",
+        "time": "11:28"
+      },
+      {
+        "text": "喔欸喔",
+        "time": "11:30"
+      },
+      {
+        "text": "它沒有就是顯示我一個在這邊喔",
+        "time": "11:30"
+      },
+      {
+        "text": "Interesting",
+        "time": "11:32"
+      },
+      {
+        "text": "你是",
+        "time": "11:33"
+      },
+      {
+        "text": "就是",
+        "time": "11:33"
+      },
+      {
+        "text": "剛剛有顯示我不知道為什麼不見了",
+        "time": "11:34"
+      },
+      {
+        "text": "但是它還是在同步",
+        "time": "11:35"
+      },
+      {
+        "text": "有有同步",
+        "time": "11:37"
+      },
+      {
+        "text": "OK",
+        "time": "11:38"
+      },
+      {
+        "text": "好",
+        "time": "11:38"
+      },
+      {
+        "text": "for coin and coins",
+        "time": "11:39"
+      },
+      {
+        "text": "對",
+        "time": "11:40"
+      },
+      {
+        "text": "然後現在的range",
+        "time": "11:41"
+      },
+      {
+        "text": "E",
+        "time": "11:43"
+      },
+      {
+        "text": "然後DP array的第一個所以我們來看minimum的DP array现在的range是1,dp array是1",
+        "time": "11:44"
+      },
+      {
+        "text": "所以我们来看minimum的dp array",
+        "time": "11:45"
+      },
+      {
+        "text": "现在这个dp array的i是12",
+        "time": "11:48"
+      },
+      {
+        "text": "然后呢,dp array的i-coin加1",
+        "time": "11:51"
+      },
+      {
+        "text": "所以会变成是dp array的乘以dp就好",
+        "time": "11:54"
+      },
+      {
+        "text": "所以是dp的i 1-coin 1-1 0",
+        "time": "11:58"
+      },
+      {
+        "text": "然后加1,会变成这样所以dp的0就是0-0-1-1-0-1會變成這樣",
+        "time": "12:02"
+      },
+      {
+        "text": "所以DP的0就是0",
+        "time": "12:05"
+      },
+      {
+        "text": "所以這樣子就會變成是0加1",
+        "time": "12:07"
+      },
+      {
+        "text": "所以就是1",
+        "time": "12:11"
+      },
+      {
+        "text": "所以這一項就被update成1了",
+        "time": "12:12"
+      },
+      {
+        "text": "然後呢",
+        "time": "12:15"
+      },
+      {
+        "text": "再來進入到第二個",
+        "time": "12:16"
+      },
+      {
+        "text": "我們這一個就要",
+        "time": "12:18"
+      },
+      {
+        "text": "就是說在1的位置",
+        "time": "12:19"
+      },
+      {
+        "text": "你有一種解法",
+        "time": "12:20"
+      },
+      {
+        "text": "對",
+        "time": "12:21"
+      },
+      {
+        "text": "OK",
+        "time": "12:22"
+      },
+      {
+        "text": "然後再來for ion range所以我們這個就要再增加",
+        "time": "12:23"
+      },
+      {
+        "text": "變成2",
+        "time": "12:26"
+      },
+      {
+        "text": "然後我們來看第二個",
+        "time": "12:27"
+      },
+      {
+        "text": "第二個現在也是minimum",
+        "time": "12:29"
+      },
+      {
+        "text": "它前面還是12",
+        "time": "12:30"
+      },
+      {
+        "text": "然後後面的我們變成dp的i-coin",
+        "time": "12:32"
+      },
+      {
+        "text": "所以2減掉1",
+        "time": "12:36"
+      },
+      {
+        "text": "就是dp的1然後加1",
+        "time": "12:38"
+      },
+      {
+        "text": "所以就會是2",
+        "time": "12:41"
+      },
+      {
+        "text": "因為我們現在dp的1是1嘛",
+        "time": "12:43"
+      },
+      {
+        "text": "然後這一個就再被update成2",
+        "time": "12:46"
+      },
+      {
+        "text": "我們要整個run完嗎",
+        "time": "12:48"
+      },
+      {
+        "text": "我們要run到最後一個嗎",
+        "time": "12:50"
+      },
+      {
+        "text": "有點多",
+        "time": "12:52"
+      },
+      {
+        "text": "你可以快速run一下沒關係",
+        "time": "12:53"
+      },
+      {
+        "text": "好",
+        "time": "12:54"
+      },
+      {
+        "text": "那再來3",
+        "time": "12:55"
+      },
+      {
+        "text": "然後就會變成minimum of 12",
+        "time": "12:57"
+      },
+      {
+        "text": "加上後面這一個",
+        "time": "13:00"
+      },
+      {
+        "text": "所以我這邊加個豆好了",
+        "time": "13:01"
+      },
+      {
+        "text": "這樣就看得出來",
+        "time": "13:03"
+      },
+      {
+        "text": "然後這樣子就會是",
+        "time": "13:04"
+      },
+      {
+        "text": "DP的i-coin 3-1",
+        "time": "13:06"
+      },
+      {
+        "text": "加1",
+        "time": "13:09"
+      },
+      {
+        "text": "所以是DP的2",
+        "time": "13:10"
+      },
+      {
+        "text": "然後加1",
+        "time": "13:11"
+      },
+      {
+        "text": "所以就會是3",
+        "time": "13:13"
+      },
+      {
+        "text": "所以這邊我們第三個就update成3",
+        "time": "13:15"
+      },
+      {
+        "text": "這樣子",
+        "time": "13:17"
+      },
+      {
+        "text": "然後因為我現在的coin就是1嘛",
+        "time": "13:18"
+      },
+      {
+        "text": "所以其實就會一直就是4",
+        "time": "13:20"
+      },
+      {
+        "text": "然後5然後blablablablablablablabl這個 loop 在找的就是所有用1可能最小",
+        "time": "13:22"
+      },
+      {
+        "text": "然後再換下一個",
+        "time": "13:28"
+      },
+      {
+        "text": "所以我們下一個就還要再看再來3的情況會是怎麼樣",
+        "time": "13:29"
+      },
+      {
+        "text": "然後又要重來一次就是3的話",
+        "time": "13:34"
+      },
+      {
+        "text": "因為3不可能每個比3小的數字",
+        "time": "13:37"
+      },
+      {
+        "text": "所以我們只能從3開始",
+        "time": "13:39"
+      },
+      {
+        "text": "所以 for i in the range 我們就要從3開始的話",
+        "time": "13:41"
+      },
+      {
+        "text": "然後從315到11",
+        "time": "13:44"
+      },
+      {
+        "text": "那我換一行",
+        "time": "13:46"
+      },
+      {
+        "text": "就會變成MINIMUM OF DP ARRAY的i",
+        "time": "13:47"
+      },
+      {
+        "text": "我們現在在3",
+        "time": "13:50"
+      },
+      {
+        "text": "所以3在這邊",
+        "time": "13:51"
+      },
+      {
+        "text": "它會是MINIMUM OF 3跟DP的",
+        "time": "13:53"
+      },
+      {
+        "text": "現在3減COIN是0",
+        "time": "13:57"
+      },
+      {
+        "text": "然後加1這樣",
+        "time": "13:59"
+      },
+      {
+        "text": "所以就是MINIMum的3跟1",
+        "time": "14:02"
+      },
+      {
+        "text": "所以會變成1",
+        "time": "14:06"
+      },
+      {
+        "text": "因為用3一個Coin就可以make up 3",
+        "time": "14:08"
+      },
+      {
+        "text": "對然後再來就會變成到4",
+        "time": "14:11"
+      },
+      {
+        "text": "然後4的話我們就變成minimum of",
+        "time": "14:14"
+      },
+      {
+        "text": "我們4這個position就是4嘛",
+        "time": "14:18"
+      },
+      {
+        "text": "然後跟DP的4減Coin",
+        "time": "14:20"
+      },
+      {
+        "text": "所以4減3是1",
+        "time": "14:23"
+      },
+      {
+        "text": "DP的1然後加1",
+        "time": "14:24"
+      },
+      {
+        "text": "所以就會是",
+        "time": "14:26"
+      },
+      {
+        "text": "DP的1是1所以這裡就是2",
+        "time": "14:29"
+      },
+      {
+        "text": "對然後再這樣子1次",
+        "time": "14:31"
+      },
+      {
+        "text": "累推",
+        "time": "14:34"
+      },
+      {
+        "text": "然後再到5",
+        "time": "14:35"
+      },
+      {
+        "text": "然後我們就會從5開始",
+        "time": "14:36"
+      },
+      {
+        "text": "然後因為5就會再被update成1嘛",
+        "time": "14:37"
+      },
+      {
+        "text": "因為你就只需要一個5就好",
+        "time": "14:39"
+      },
+      {
+        "text": "對然後最後",
+        "time": "14:42"
+      },
+      {
+        "text": "我們loop完每一個coin denomination之後",
+        "time": "14:43"
+      },
+      {
+        "text": "這整個array就已經被update成minimum amount了",
+        "time": "14:46"
+      },
+      {
+        "text": "然後最後再return",
+        "time": "14:49"
+      },
+      {
+        "text": "所以這樣這個code",
+        "time": "14:51"
+      },
+      {
+        "text": "我目前run下來應該是對的",
+        "time": "14:52"
+      },
+      {
+        "text": "ok",
+        "time": "14:54"
+      },
+      {
+        "text": "嗯",
+        "time": "14:54"
+      },
+      {
+        "text": "那你可不可以想到一些比較邊際的一些edge case",
+        "time": "14:55"
+      },
+      {
+        "text": "edge case嗎 我想一下喔",
+        "time": "14:59"
+      },
+      {
+        "text": "比如說找不到可能return-free的一個情況",
+        "time": "15:01"
+      },
+      {
+        "text": "那比如說你可以舉一個簡單eturn-1的一個情況那比如說Input",
+        "time": "15:04"
+      },
+      {
+        "text": "你可以舉一個簡單的例子",
+        "time": "15:05"
+      },
+      {
+        "text": "很小一個例子",
+        "time": "15:06"
+      },
+      {
+        "text": "比如說Input如果給",
+        "time": "15:07"
+      },
+      {
+        "text": "不能有1 因為1什麼都可以",
+        "time": "15:09"
+      },
+      {
+        "text": "那我們就給3 5",
+        "time": "15:11"
+      },
+      {
+        "text": "然後你的Target的Amount是",
+        "time": "15:13"
+      },
+      {
+        "text": "比如說4",
+        "time": "15:17"
+      },
+      {
+        "text": "4就出不來",
+        "time": "15:18"
+      },
+      {
+        "text": "那這個就應該要Return-1",
+        "time": "15:19"
+      },
+      {
+        "text": "或者是Edge Case",
+        "time": "15:21"
+      },
+      {
+        "text": "這個題目沒有特別講",
+        "time": "15:24"
+      },
+      {
+        "text": "但就是Coin不能有0",
+        "time": "15:25"
+      },
+      {
+        "text": "這個之類",
+        "time": "15:27"
+      },
+      {
+        "text": "或者是它也是0的話",
+        "time": "15:28"
+      },
+      {
+        "text": "其實我們就是Return就是0",
+        "time": "15:29"
+      },
+      {
+        "text": "一開始我也有問的",
+        "time": "15:31"
+      },
+      {
+        "text": "就是它一定要是整數啊什麼這些",
+        "time": "15:32"
+      },
+      {
+        "text": "就是如果它故意給你一個不是整數的",
+        "time": "15:34"
+      },
+      {
+        "text": "那這個也會沒有辦法解",
+        "time": "15:36"
+      },
+      {
+        "text": "那你可以Dry Run一下這個Test Case",
+        "time": "15:38"
+      },
+      {
+        "text": "喔好啊",
+        "time": "15:40"
+      },
+      {
+        "text": "我把這些Comment先清掉",
+        "time": "15:41"
+      },
+      {
+        "text": "不然有點亂",
+        "time": "15:42"
+      },
+      {
+        "text": "不然你直接寫下面也可以",
+        "time": "15:43"
+      },
+      {
+        "text": "好",
+        "time": "15:44"
+      },
+      {
+        "text": "那一開始的Max Value我們會把它Initial來乘負喔好啊我把這些comments先清掉不然有點亂不然你直接寫下面好",
+        "time": "15:44"
+      },
+      {
+        "text": "那一開始的max value",
+        "time": "15:45"
+      },
+      {
+        "text": "我們會把它initial x 乘5",
+        "time": "15:47"
+      },
+      {
+        "text": "然後呢我們的dp array一開始就會是5",
+        "time": "15:49"
+      },
+      {
+        "text": "然後呢第一個被update成0",
+        "time": "15:54"
+      },
+      {
+        "text": "再來for coin and coins",
+        "time": "15:58"
+      },
+      {
+        "text": "我們有3跟5",
+        "time": "16:01"
+      },
+      {
+        "text": "所以第一個oin是3",
+        "time": "16:03"
+      },
+      {
+        "text": "然后For i and range",
+        "time": "16:05"
+      },
+      {
+        "text": "所以我们的i现在是从Coin开始",
+        "time": "16:07"
+      },
+      {
+        "text": "所以i也是3",
+        "time": "16:09"
+      },
+      {
+        "text": "然后呢",
+        "time": "16:11"
+      },
+      {
+        "text": "DP Array的i",
+        "time": "16:12"
+      },
+      {
+        "text": "所以我们现在在看的是0 1 2 3",
+        "time": "16:13"
+      },
+      {
+        "text": "就是这一个5",
+        "time": "16:15"
+      },
+      {
+        "text": "Minimum",
+        "time": "16:17"
+      },
+      {
+        "text": "所以我们现在看Minimum of",
+        "time": "16:17"
+      },
+      {
+        "text": "它现在DP Array的i就是5",
+        "time": "16:20"
+      },
+      {
+        "text": "然后跟DP的i-coin",
+        "time": "16:24"
+      },
+      {
+        "text": "所以3-3是0",
+        "time": "16:28"
+      },
+      {
+        "text": "然后加1这样",
+        "time": "16:30"
+      },
+      {
+        "text": "所以呢就会是minimum 5跟1所以是1",
+        "time": "16:33"
+      },
+      {
+        "text": "那我们就把第三个这个改成1",
+        "time": "16:37"
+      },
+      {
+        "text": "然后再来下一个",
+        "time": "16:40"
+      },
+      {
+        "text": "我们就会变成Coin 3 i 4",
+        "time": "16:42"
+      },
+      {
+        "text": "然后变成Minimum of",
+        "time": "16:47"
+      },
+      {
+        "text": "DP的i现在是5",
+        "time": "16:51"
+      },
+      {
+        "text": "然后DP的1加1",
+        "time": "16:54"
+      },
+      {
+        "text": "然后呢再来我们的Coin就要到下一个",
+        "time": "16:57"
+      },
+      {
+        "text": "5",
+        "time": "17:01"
+      },
+      {
+        "text": "然后我们的i就会从",
+        "time": "17:02"
+      },
+      {
+        "text": "Range就会变成从 5 到 5",
+        "time": "17:04"
+      },
+      {
+        "text": "所以它不会 loop anything",
+        "time": "17:07"
+      },
+      {
+        "text": "对,因为它不会 include 你后面摆的那个数字",
+        "time": "17:10"
+      },
+      {
+        "text": "所以我们这个 loop 就根本不会进去",
+        "time": "17:13"
+      },
+      {
+        "text": "所以你最后得到的 dp array",
+        "time": "17:15"
+      },
+      {
+        "text": "就还是会 stay 05515",
+        "time": "17:17"
+      },
+      {
+        "text": "那你最后再 return dp array 的 amount 格",
+        "time": "17:20"
+      },
+      {
+        "text": "就是最后一个的话",
+        "time": "17:23"
+      },
+      {
+        "text": "它就是5",
+        "time": "17:24"
+      },
+      {
+        "text": "就是跟你Initialize的MaxValue是一樣的",
+        "time": "17:25"
+      },
+      {
+        "text": "所以它會回復-1",
+        "time": "17:27"
+      },
+      {
+        "text": "嗯",
+        "time": "17:28"
+      },
+      {
+        "text": "OK",
+        "time": "17:29"
+      },
+      {
+        "text": "那這個的Space跟Runtime",
+        "time": "17:30"
+      },
+      {
+        "text": "嗯",
+        "time": "17:32"
+      },
+      {
+        "text": "Runtime的話",
+        "time": "17:33"
+      },
+      {
+        "text": "因為我們有兩層Four Loop嘛",
+        "time": "17:34"
+      },
+      {
+        "text": "然後第一個是Coin and Coins",
+        "time": "17:36"
+      },
+      {
+        "text": "所以我們是Length of Coins",
+        "time": "17:38"
+      },
+      {
+        "text": "然後去乘以",
+        "time": "17:40"
+      },
+      {
+        "text": "因為在Four裡面",
+        "time": "17:42"
+      },
+      {
+        "text": "然後就是乘Amount",
+        "time": "17:43"
+      },
+      {
+        "text": "因為我們就是L through那個amount",
+        "time": "17:44"
+      },
+      {
+        "text": "所以應該是這樣子",
+        "time": "17:46"
+      },
+      {
+        "text": "這個是time complexity",
+        "time": "17:48"
+      },
+      {
+        "text": "這樣子",
+        "time": "17:50"
+      },
+      {
+        "text": "然後space的話",
+        "time": "17:51"
+      },
+      {
+        "text": "我們就是存那個dp array",
+        "time": "17:53"
+      },
+      {
+        "text": "然後dp array的長度",
+        "time": "17:55"
+      },
+      {
+        "text": "我們就是max value乘以amount",
+        "time": "17:57"
+      },
+      {
+        "text": "所以它就是o of amount",
+        "time": "17:58"
+      },
+      {
+        "text": "這樣子",
+        "time": "17:59"
+      },
+      {
+        "text": "這是space",
+        "time": "18:00"
+      },
+      {
+        "text": "OK",
+        "time": "18:01"
+      },
+      {
+        "text": "perfect",
+        "time": "18:02"
+      },
+      {
+        "text": "我有過這個面試嗎?",
+        "time": "18:03"
+      },
+      {
+        "text": "可以給我導演嗎?",
+        "time": "18:05"
+      },
+      {
+        "text": "你可以當CTO",
+        "time": "18:07"
+      },
+      {
+        "text": "謝謝謝謝",
+        "time": "18:09"
+      },
+      {
+        "text": "就是希望Terry有再一日的合作",
+        "time": "18:10"
+      },
+      {
+        "text": "我覺得不錯",
+        "time": "18:12"
+      },
+      {
+        "text": "可以",
+        "time": "18:13"
+      },
+      {
+        "text": "超緊張",
+        "time": "18:14"
+      },
+      {
+        "text": "就是Terry可以證明我剛剛有多緊張",
+        "time": "18:14"
+      },
+      {
+        "text": "有有剛剛很緊張",
+        "time": "18:17"
+      },
+      {
+        "text": "差點就是很想趕快直接逃離了",
+        "time": "18:18"
+      },
+      {
+        "text": "直接是逃跑",
+        "time": "18:21"
+      },
+      {
+        "text": "我到底來這邊幹嘛呢?",
+        "time": "18:22"
+      },
+      {
+        "text": "來東京找贅獸",
+        "time": "18:23"
+      },
+      {
+        "text": "OK那不知道大家覺得女神的表現怎麼樣",
+        "time": "18:26"
+      },
+      {
+        "text": "可以在影片底下留言",
+        "time": "18:28"
+      },
+      {
+        "text": "我是覺得還不錯啦",
+        "time": "18:29"
+      },
+      {
+        "text": "基本的底質是一定有的",
+        "time": "18:30"
+      },
+      {
+        "text": "而且一定比看兩個臭宅男",
+        "time": "18:32"
+      },
+      {
+        "text": "在那邊寫扣還要優美",
+        "time": "18:34"
+      },
+      {
+        "text": "那如果你覺得你的這個軟體工程師的基礎比較差",
+        "time": "18:35"
+      },
+      {
+        "text": "或者是說你想要認真的在軟體工程這個行業發展的話",
+        "time": "18:39"
+      },
+      {
+        "text": "也非常歡迎你來加入我們的這個資鴉護城河實戰營",
+        "time": "18:43"
+      },
+      {
+        "text": "這個是我跟大神Hank一起共同設計跟製作了8個月的時間",
+        "time": "18:47"
+      },
+      {
+        "text": "目的呢也是希望可以幫助大家拿到心儀的offer",
+        "time": "18:51"
+      },
+      {
+        "text": "也希望可以透過實戰營來訓練",
+        "time": "18:55"
+      },
+      {
+        "text": "並且提升你的這個工程師最基礎的解決問題的能力",
+        "time": "18:57"
+      },
+      {
+        "text": "很多人可能會有一個誤解說",
+        "time": "19:01"
+      },
+      {
+        "text": "我們這個實戰營呢好像就只是為了幫助你去通過面試而已",
+        "time": "19:03"
+      },
+      {
+        "text": "對確實這個實戰營對於面試來講是有",
+        "time": "19:07"
+      },
+      {
+        "text": "百分之百的這個變強的效果",
+        "time": "19:10"
+      },
+      {
+        "text": "參加完之後呢",
+        "time": "19:12"
+      },
+      {
+        "text": "你在面對任何形式的Coding面試呢",
+        "time": "19:13"
+      },
+      {
+        "text": "你都會有非常明顯的這個實力的提升",
+        "time": "19:15"
+      },
+      {
+        "text": "但是我覺得另外一點非常重要",
+        "time": "19:18"
+      },
+      {
+        "text": "就是可能大家會miss掉的就是",
+        "time": "19:19"
+      },
+      {
+        "text": "其實你如果真的系統性的練習過一遍之後",
+        "time": "19:21"
+      },
+      {
+        "text": "你就會發現你整體的實力力都有非常大幅度的提升",
+        "time": "19:24"
+      },
+      {
+        "text": "不管是幫別人做Code Review",
+        "time": "19:28"
+      },
+      {
+        "text": "或者說看AI生成的這個代碼",
+        "time": "19:29"
+      },
+      {
+        "text": "還是說當你遇到了複雜的問題之後",
+        "time": "19:32"
+      },
+      {
+        "text": "能不能有這個工程師思維",
+        "time": "19:34"
+      },
+      {
+        "text": "把問題從非常複雜非常難的問題",
+        "time": "19:36"
+      },
+      {
+        "text": "拆解變成小而簡單的問題",
+        "time": "19:39"
+      },
+      {
+        "text": "這些都是在我們的實戰營訓練完之後",
+        "time": "19:42"
+      },
+      {
+        "text": "你可以得到的而且你可以馬上的感受出來不同變成小而簡單的問題這些都是在我們的這個實戰營訓練完之後呢",
+        "time": "19:44"
+      },
+      {
+        "text": "你可以得到的",
+        "time": "19:45"
+      },
+      {
+        "text": "而且你可以馬上的感受出來不同",
+        "time": "19:46"
+      },
+      {
+        "text": "因為我自己曾經也經歷過那段時間",
+        "time": "19:48"
+      },
+      {
+        "text": "所以我非常非常的清楚",
+        "time": "19:50"
+      },
+      {
+        "text": "而且我們的實戰營呢",
+        "time": "19:52"
+      },
+      {
+        "text": "也會線上帶著大家一起去做這些實戰演練",
+        "time": "19:53"
+      },
+      {
+        "text": "所以說絕對會遠比那些坊間的線上課程呢",
+        "time": "19:56"
+      },
+      {
+        "text": "還要來得有效很多",
+        "time": "19:59"
+      },
+      {
+        "text": "因為我們是真的希望你可以透過這個實戰營",
+        "time": "20:00"
+      },
+      {
+        "text": "打造屬於你的護城河然後變得更強",
+        "time": "20:03"
+      },
+      {
+        "text": "那我們其實也非常的歡迎那些可能基礎比較差",
+        "time": "20:05"
+      },
+      {
+        "text": "或是在轉職",
+        "time": "20:09"
+      },
+      {
+        "text": "或是正在成為軟體工程師的朋友們",
+        "time": "20:10"
+      },
+      {
+        "text": "因為我們有特別為這些同學準備一個更基礎的一個指南",
+        "time": "20:12"
+      },
+      {
+        "text": "讓你可以自己先去練習",
+        "time": "20:16"
+      },
+      {
+        "text": "然後可以快速的跟上大家的腳步",
+        "time": "20:18"
+      },
+      {
+        "text": "而且我跟Hank還有我們的助教Alan",
+        "time": "20:20"
+      },
+      {
+        "text": "也會在我們的學員專屬的Discord群組裡面",
+        "time": "20:22"
+      },
+      {
+        "text": "去特別幫助大家",
+        "time": "20:25"
+      },
+      {
+        "text": "那大家如果有興趣的話",
+        "time": "20:27"
+      },
+      {
+        "text": "可以去我們的實戰營的官網",
+        "time": "20:28"
+      },
+      {
+        "text": "buildmode.org上面看一下",
+        "time": "20:30"
+      },
+      {
+        "text": "也歡迎來加入我們的公共Discord群組",
+        "time": "20:32"
+      },
+      {
+        "text": "這個群組也是開放給所有人都可以來加入",
+        "time": "20:35"
+      },
+      {
+        "text": "我會把連結放在影片底下的資訊欄",
+        "time": "20:38"
+      },
+      {
+        "text": "那我們下次見囉",
+        "time": "20:40"
+      }
+    ],
+    "task_id": "969e761d3b5b43cca32bd3986531c1eb",
+    "title": "矽谷女神 Kelly 能通過我的面試嗎？",
+    "transcript": [],
+    "updatedAt": 1783958465466,
+    "url": "https://youtu.be/0kBPGbsSuMs",
+    "video_url": ""
+  }
+}

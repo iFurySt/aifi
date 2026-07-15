@@ -1,0 +1,13 @@
+[
+  {
+    "video_id": "Q59J5roE5lM",
+    "video_index": 27,
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "provider": "NoteLM.ai",
+    "provider_page": "https://www.notelm.ai/youtube-transcript-generator",
+    "status": "error",
+    "retrieved": "2026-07-14",
+    "notes": "OBU browser page loaded successfully and front-end chunks exposed /api/youtube-video-info plus /api/youtube-transcript. Browser-origin Q59 positive-control fetches to both endpoints timed out / aborted after 8 seconds, so no repeatable transcript payload was captured in this session."
+  }
+]

@@ -1,0 +1,430 @@
+hi everyone welcome back to my channel
+this is terry and today we have a very
+special guest uh stan chen stan is a
+very strong engineering leader um my
+mentor and you know is also a very good
+friend of mine
+uh right now he's uh he's an advisor for
+many companies right yeah just in couple
+yeah especially i think he does a lot of
+like polar road map technology and
+philosophy and a bunch of other things
+yeah and i just feel very honored to
+have him today so sam why don't you tell
+us a little bit about yourself did you
+begin with oh that's why opening
+question back in 1995
+yeah hi guys um so i was born in hong
+kong um my family moved over
+here when i was 12 years old
+oh stan also went to walu oh yeah i also
+went to waterloo uh it's the best
+engineering school in canada
+you always say that because you're from
+hungary
+we don't know one of who is like
+stanford in the us
+uh except they have co-op we do have a
+very good um internship program
+uh it's actually one of the most
+important thing actually when you're
+going through like university to be able
+to
+see different companies like um like we
+did what i did i did six different work
+terms and so the year right so like it
+was amazing like um um just being able
+to come out with that understanding
+saying that i have seen how six
+different company works yeah um and like
+knowing what to expect like mixed
+interviews as well as getting your job
+so much easier um but yeah anyway so i
+went through schooling in toronto and
+waterloo and then i also eventually
+got out as a studying electrical
+mechanical engineering uh at a program
+called mechatronics within science from
+engineering um so basically
+a bunch of automation
+robotics
+went into um what is it manufacturing
+automation so doing plc um
+and like i'm looking and studying and
+like i'm trying to improve like
+manufacturing processes with automation
+and i got an opportunity over at cbs
+radio like um from a from my friend and
+i just basically said that yeah why not
+try it like we got over there and
+actually started my my korean software
+and then from there i moved over to san
+francisco and basically started going
+into startup and and like did a lot of
+different things like i messed up a lot
+of things and i also learned a lot so i
+ended up like really enjoying that kind
+of career that kind of industry so have
+been there since and um right now i'm
+just like focusing on
+building startups and and like helping
+to build teams and like build products
+kind of thing so
+yeah so you mentioned you went from
+mechatronics engineering to software
+engineering which is quite a transition
+i think i imagine it it's very different
+right mechatronics is you're building
+robotics and
+more hardware like you're not doing so
+much of software like did you find it
+difficult or was it hard to transition
+no that's the funny thing um for us like
+um megatron expo um engineering um we
+were the first class in there so it
+consists of
+the first
+yeah we were the guinea pigs
+to be honest like you if you ask like
+different professors like different
+professors is going to tell you
+different things like one would say that
+like this is about building robots like
+like gundams um yeah that's what i love
+right
+or another one is kind of like no this
+is all about like automation like
+manufacturing assembly line and whatnot
+so so there's a lot of different things
+there's a lot of uncertainty and one of
+the most interesting thing is that as we
+were going through the program
+the mindset of electrical engineering
+and the mindset of mechanical
+engineering is very very different
+when you're talking about electrical a
+lot of like um a lot of theories
+actually come in very specific things
+like you're talking about all
+mathematical equations like proving
+things from one one thing to another so
+a lot of math is involved
+when you get into uh mechanical
+engineering there's a lot of looking up
+charts a hands-on experience like a lot
+of things that you will do and then say
+that i will multiply this
+by five for safety factors
+so basically you do all the specific
+calculation and say that yeah we're just
+going to bump it up like five times
+it's going to be safe and not happening
+it's kind of like that so so like the
+mentality changes already happens in
+there we did also do like a bit of
+programming during that time but it's
+very low level
+um we
+did real-time operating systems i think
+all these things actually helped you
+actually realize that you need to think
+differently in different industries but
+more importantly also during co-op you
+also know that majority of the time that
+when whatever you study
+it's not going to directly apply to what
+you're going to be working on anyway so
+being flexible is like actually the name
+of the game um so yeah i think that's a
+really good point because i did
+management engineering right yeah
+and we did a little bit of programming
+as well and it was a lot of theories on
+stats and understanding how you know how
+to optimize uh you know production plan
+and all that stuff oh i mean like yeah
+like how much of those work do you like
+those studies and those projects and
+those programs that you learn actually
+apply to your everyday work nowadays not
+really exactly but i think school is
+really good in a way that it helps you
+prepare for for the industry i think
+gives you an opportunity to learn how to
+solve problems
+and i think that's the training where
+the school provides exactly value it's
+it's kind of like um like i said don't
+don't take things word for word for it
+like it's not about the practice of like
+the specific
+processes that you went through or
+courses that you went through but the
+practice of like how you figure out
+problems and research answers and making
+decisions that is more important because
+that's what you're going to end up doing
+i think that's what
+[Laughter]
+looking at your linkedin and you look at
+companies like google before and also
+smaller companies i'm curious like from
+your perspective what's the difference
+between like you know smaller companies
+like startups and versus like google and
+why do you like to work at startups so
+much
+very good question man actually i i can
+do a sales pitch for
+waterloo internship program because the
+whole thing is that like during my
+internship programs like um the
+different internship i get to see
+different companies
+and it's just amazing like you can
+actually understand like do four months
+over at the manufacturing plan four
+months over at the giant corporation
+four months at a startup kind of thing
+and you get to see so much about like um
+people interaction and like coffee
+structure and how things work for one
+thing like this it's structured like you
+get into a big company someone like
+google or someplace like microsoft
+you are going to be doing something
+relatively specific a lot of times your
+your goals and as well as like your your
+targets that you're trying to hit is
+very well put together
+um you don't have to worry about
+basically anything else like it's kind
+of like if you're a chef
+going to a big company is that you walk
+in and you say that i'm cooking the dish
+like this dish and people are telling
+you that like asking for you for this
+dish
+everything is there like all your
+utensils all like all the equipment you
+don't have to worry about anything you
+go and cook that stuff yeah even like
+the raw material is prepared for your
+chocolate or whatever you just put
+before you cook and then you're done
+yeah right you go into a startup they
+say that you're cooking um for this dish
+you will be saying that so where is the
+stove oh we don't have one you may have
+to figure that out
+by yourself utensils and exactly like do
+everything yourself but at the same time
+you also got the flexibility so like
+it's two type of person now one type is
+that you go in they see they say that ah
+there's no stove there's no nothing i
+can't do this
+the other one is like there is no stove
+there is no kitchen i can do whatever i
+want like it's it's kind of like um
+whatever your personality actually gets
+um gets you to
+to look at this like how you react to
+these kind of things
+no structure is it uh something that
+you're happy about or something that
+you're not like versus like no structure
+um uh like are you going to like put
+your hands get your hands dirty and do
+all the other stuff or do you enjoy
+actually saying that i want to focus and
+building the things that i want to build
+like specifically that part amazingly
+that's where the preferences are like
+that's how the bigger companies versus
+smaller companies work i see icic
+because you work at a couple different
+startups and then some of them were
+quiet
+and and you definitely were part of
+those
+acquisitions right seeing companies grow
+from zero to something and then acquire
+eventually i assume that you probably
+have reached
+some level of financial freedom
+and your money isn't really a constraint
+anymore why do you still work
+i win because i want to and i want to
+say that like
+we should all work because we want to if
+we are given the opportunity to do so i
+would say you and i are very lucky on
+this like um we we are blessed with like
+um
+like very clear minds we are blessed
+with good health right we can actually
+produce and function we got into a
+relatively good school and got out with
+somewhat of good experiences out in our
+industry where our profession is
+actually making a lot of money
+right
+we are not too worried about money at
+all right
+not much financial burden and everything
+why do i still work this because i enjoy
+it like i
+i nowadays i work because well sometimes
+i tell people i'm bored therefore i work
+like it's kind of like um when when i'm
+able to advise the company when they
+bring up questions and problems to me
+it's kind of like oh i haven't solved
+this before i see or hey your your idea
+is amazing what you're trying to do to
+the world is amazing right like like um
+let me help to give you some ideas about
+what i failed on and trust me i failed
+on a lot of things
+and and you know what like being able to
+do that uh um gives me a lot of joy
+so
+so it's kind of like i wouldn't say that
+i'm quite like crazy well off and
+whatnot um but i would say that i you're
+comfortable i'm comfortable to to be
+able to enjoy my life and and like the
+money i think the money when it gets to
+a certain point like
+it gives you freedom to decide it is
+just that and once you get to that point
+the question is like for me i don't need
+more for me to have more freedom to
+decide like you can actually work your
+butt off like for ages and accumulate a
+lot of wealth but if you don't take the
+time to think about what you're happy
+doing
+then i don't know like it's going to be
+like quite like this is your this is
+your strongest years right like you're
+you have the wealth you have the health
+and you have you have time
+you should really spend time thinking
+about like why you're doing work
+so i do it nowadays because i enjoy it
+and i do it now because i want to help
+oh on the teams and companies that
+actually are trying to create do great
+things yeah
+so yeah and that's why i have a lot of
+respect to usa
+um a lot of my audience are coming from
+a different background right and they
+want to do software engineering because
+the industry is booming
+but they have no idea how to get started
+um so do you have any advice
+what advice would you give them
+really depending on how people learn
+right like um i for example i learned by
+doing yeah so for me
+when i started learning about software
+it was because i wanted to do something
+first professional experience i was an
+intern at um as a silencer company not
+the gun silencer like a hvac silencer so
+like just air conditioning silencers and
+stuff and they have to cuff things into
+trucks because they are huge and giant
+stuff right so they hire interns to
+to go through excel and look at every
+single drawing and say that okay we're
+going to cut it this way and this way
+and then we can put it on a truck yeah
+and send it out and for me after two
+three weeks of doing that i was like
+there must be a better way of doing this
+like they taught me like how to actually
+figure out the formulas and like look at
+the stuff these are all just rules
+then that becomes a like something that
+i wanted to do so i basically say that i
+want to figure out how to automate this
+so that i don't have to actually do all
+these things yeah by the end of the work
+term i like um we finished building this
+so that um a full day of work of like
+just like going through different excel
+and like checking all this stuff like
+becomes half an hour for it for us yeah
+for me it is about finding something
+interesting something that i want to
+solve and then say that here is the
+destination here is where i am at now
+how do i get there and make so many
+different mistakes and like trying
+different roles and say that would this
+work with this not work this work this
+would not work trying things and then
+eventually just inching towards that
+but yeah like um um if there is research
+and what not like you can do that other
+ways that uh people can do there it's
+like general assembly there's a lot of
+coding bootcamps nowadays and tons of
+tutorials
+um the main thing though is that like
+pick something you want to do otherwise
+it becomes very boring for me at least
+like if there is a sense of achievement
+by the end of it if you can do something
+that you will be very proud of you will
+be like hey this saves my time for doing
+this or that or if you enjoy having um
+having your own website or whatnot and
+say that now i can do this without
+paying other people
+other companies like i'm doing templates
+and stuff and i can do it more
+specifically yeah right
+if those are worthwhile to you go for
+those things someone that you're
+passionate about exactly yeah right like
+that's for me at least
+yeah and i think that's how a lot of
+people got started and the same for me
+like i i was originally pretty
+interesting you know building apps and
+then my first
+party was a writer yeah and
+that's how i learned like php and learn
+how to build about that and that's how i
+got into software engineering were you
+doing this by yourself what are you
+doing with my roommate um that's even
+more awesome like
+as you're doing this if you can actually
+get partners like doing this stuff like
+yeah it doesn't matter if he like he or
+she uh was like they know how to program
+or not yeah it doesn't matter right it
+doesn't really matter you you just get
+to be able to bounce ideas off of each
+other it's the same as entrepreneurship
+but why why a lot of companies or a lot
+of startups like entrepreneurs they
+prefer to have a partner it's not just
+because you complement each other in
+skills but you actually also help each
+other in raising the morales of it
+because like so many times it's kind of
+like i don't feel like doing this
+exactly i still remember the days and
+we're just trying to figure out how to
+send an email from kids on the screen
+and just copy the whole thing
+it works and
+foreign
+general

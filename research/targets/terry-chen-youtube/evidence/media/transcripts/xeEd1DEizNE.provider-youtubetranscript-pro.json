@@ -1,0 +1,145 @@
+{
+  "source": "Online transcript provider: youtubetranscript.pro",
+  "source_url": "https://www.youtube.com/watch?v=xeEd1DEizNE",
+  "provider": {
+    "name": "youtubetranscript.pro",
+    "endpoint": "https://youtubetranscript.pro",
+    "retrieved": "2026-07-14"
+  },
+  "video_index": 273,
+  "video": {
+    "index": 273,
+    "id": "xeEd1DEizNE",
+    "title": "比特幣從月亮跌回地球了",
+    "url": "https://www.youtube.com/watch?v=xeEd1DEizNE",
+    "duration_seconds": 508.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "xeEd1DEizNE",
+    "title": "比特幣從月亮跌回地球了",
+    "text": "hey guys welcome back to my channel this\nis terry what the\nheck is going on in the crypto market\n[Music]\nforeign\n[Music]\n[Music]\n[Music]",
+    "segments": [
+      {
+        "text": "hey guys welcome back to my channel this",
+        "offset": 0.08,
+        "duration": 3.04,
+        "lang": "en",
+        "time": "0:00"
+      },
+      {
+        "text": "is terry what the",
+        "offset": 2,
+        "duration": 5.44,
+        "lang": "en",
+        "time": "0:02"
+      },
+      {
+        "text": "heck is going on in the crypto market",
+        "offset": 3.12,
+        "duration": 4.32,
+        "lang": "en",
+        "time": "0:03"
+      },
+      {
+        "text": "[Music]",
+        "offset": 126.02,
+        "duration": 3.049,
+        "lang": "en",
+        "time": "2:06"
+      },
+      {
+        "text": "foreign",
+        "offset": 252.84,
+        "duration": 3,
+        "lang": "en",
+        "time": "4:12"
+      },
+      {
+        "text": "[Music]",
+        "offset": 343.09,
+        "duration": 3.14,
+        "lang": "en",
+        "time": "5:43"
+      },
+      {
+        "text": "[Music]",
+        "offset": 381.92,
+        "duration": 3.099,
+        "lang": "en",
+        "time": "6:21"
+      },
+      {
+        "text": "[Music]",
+        "offset": 417.74,
+        "duration": 3.039,
+        "lang": "en",
+        "time": "6:57"
+      }
+    ],
+    "confidence": "online provider transcript; cross-check against another provider or YouTube panel when possible"
+  },
+  "raw_provider_payload": {
+    "success": true,
+    "data": {
+      "error": false,
+      "message": "Transcript extracted successful",
+      "response": [
+        {
+          "text": "hey guys welcome back to my channel this",
+          "duration": 3.04,
+          "offset": 0.08,
+          "lang": "en"
+        },
+        {
+          "text": "is terry what the",
+          "duration": 5.44,
+          "offset": 2,
+          "lang": "en"
+        },
+        {
+          "text": "heck is going on in the crypto market",
+          "duration": 4.32,
+          "offset": 3.12,
+          "lang": "en"
+        },
+        {
+          "text": "[Music]",
+          "duration": 3.049,
+          "offset": 126.02,
+          "lang": "en"
+        },
+        {
+          "text": "foreign",
+          "duration": 3,
+          "offset": 252.84,
+          "lang": "en"
+        },
+        {
+          "text": "[Music]",
+          "duration": 3.14,
+          "offset": 343.09,
+          "lang": "en"
+        },
+        {
+          "text": "[Music]",
+          "duration": 3.099,
+          "offset": 381.92,
+          "lang": "en"
+        },
+        {
+          "text": "[Music]",
+          "duration": 3.039,
+          "offset": 417.74,
+          "lang": "en"
+        }
+      ]
+    },
+    "creditsRemaining": 9999,
+    "isAnonymous": true,
+    "processingTime": 2749,
+    "message": "9999 free credits remaining"
+  }
+}

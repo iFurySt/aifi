@@ -1,0 +1,507 @@
+{
+  "source": "Online transcript provider: YouTLDR",
+  "source_url": "https://www.youtube.com/watch?v=R7zAMgiawks",
+  "provider": {
+    "name": "YouTLDR",
+    "page_url": "https://you-tldr.com/",
+    "endpoint": "https://you-tldr.com/api/ingestions",
+    "retrieved": "2026-07-14",
+    "extraction": "Anonymous URL ingestion endpoint; may use provider-side Whisper fallback for no-caption videos"
+  },
+  "video_index": 44,
+  "video": {
+    "index": 44,
+    "id": "R7zAMgiawks",
+    "title": "我在越南每天要花多少錢？",
+    "url": "https://www.youtube.com/watch?v=R7zAMgiawks",
+    "duration_seconds": 941.0,
+    "channel": "Terry Chen 泰瑞",
+    "channel_id": "UC_whOg3XES3Fihic53fvo4Q",
+    "source_playlist_url": "https://www.youtube.com/@hackbearterry/videos"
+  },
+  "transcript": {
+    "videoId": "R7zAMgiawks",
+    "title": "我在越南每天要花多少錢？",
+    "text": "在越南呢我其實一般會自己泡咖啡\n我知道你可能会想说外面这么多咖啡店对越南确实是随便走在路上都是咖啡店但是因为说实话到现在我还没有喝到一家咖啡是我真的觉得很好喝的观光客会喜欢喝什么椰子咖啡或者什么淡奶咖啡我觉得都还不错但是也不会想要每天喝\n就偶爾喝一次我覺得還OK在越南喝咖啡我覺得大家本身都說太甜了那我自己其實還嘗試過各種不同的手沖咖啡在越南像這種是吉隆式的咖啡然後這個就比較甜一點點好 這個是第一的那個Drip Coffee那so far在越南目前我喝到最好喝的是這個我覺得啦 是叫Wiso Coffee它好像就是一種越南特色咖啡叫貓屎咖啡還是什麼\n雕的還是什麼的反正就是這種動物的排泄物做成的一個咖啡那這一包呢其實還蠻貴的這一包要大概20\n就是1塊多美金的價格那他這個也是用熱水去滴的那個咖啡那我一開始也是抱著懷疑的態度就這個東西排泄物有什麼好喝的但其實他真的很香有一點巧克力味然後也有一點甜味我覺得還蠻好喝的推薦大家如果來越南的話一定要來試試看\n那我還特別去買了這個是沒有乳糖的牛奶就是美國那種Nectar Street大概八分滿的位置就是為什麼我會喜歡住Airbnb的原因是因為Airbnb有提供這些所有的東西微波爐熱水壺所以說要充咖啡是很方便的這個有些Hotel也會有但是微波爐好像大部分Hotel都沒有它裡面會有一個糖包糖包是直接丟掉\n味道真的蠻香的其實我喝咖啡也沒有特別懂就是嘗試不同種咖啡然後找自己喜歡的味道還有喝的方式那我自己喜歡喝咖啡的方式就是很多人牛奶牛奶的比例大概佔80%咖啡呢大概佔20%左右因為牛奶它有甜味嘛所以咖啡就不會變得那麼苦這就是我自己特製的CappuccinoCheers\n好來帶大家看一下我在胡志明住的地方其實我還蠻喜歡我現在住的Airbnb的而且我也推薦大家來胡志明的話可以去住Airbnb因為說真的好的Airbnb真的蠻多的然後就是價格真的很便宜像我現在住的地方呢一個晚上如果你算上Airbnb的service fee是不到30塊美金而且我覺得空間非常非常的大\n我現在在的地方就是一個房間房間進來床然後有一個辦公桌然後床的話這個木側應該是queensize的床然後旁邊有一個沙發還有衣櫃小桌子然後有一個電視\n然後這邊進來呢是這個就是進來的門進來這邊呢會有一個客廳廚房的一個概念那廚房的話該有的東西都有像如果你想要煮飯還可以有這個灶台浴室的話也不錯洗衣機在這裡然後浴缸那我特別挑了有浴缸的Airbnb主要是因為我想要泡澡\n這個unit它的頂壓很高所以說我覺得住起來其實也蠻舒服的啦唯一一個缺點我覺得就是可能稍微比較吵一點因為它跟它的鄰居都蠻近的而且這個unit呢是在District 1那這邊呢就是相對來講比較熱鬧一點也算是一個比較老的區吧房子都比較老但是這個AirBnb呢它就是裡面重新全部裝修一遍所以住起來是很舒服的啦不會感覺到有很老的感覺我覺得最有特色的是它的小陽台就這個地方\n就可以感覺出來這棟樓是很有歷史的而且它跟鄰居都貼超級近等一下我們去樓下你就知道我在講什麼了住在這種地方絕對不會給你什麼奢華的體驗很像在跟local人一起生活的感覺鄰居就在對面在修冷氣\n就我感覺它缺少了一個邊際感但是呢同時也很有這種人間煙火的感覺就好像真的就是融入當地然後跟當地人住在一起這種感覺我覺得還蠻有趣的我覺得旅居對我來講最大的意義就是可以去了解當地人的生活吃當地人吃的東西做當地人做的事情然後去了解說原來當地人的習俗還有當地人的文化是這樣子我覺得是很有趣啦\nOK那我們現在就去吃一下午飯午餐的話我一般就在樓下隨便吃一點東西對這邊呢確實是不太適合如果你行動不方便或是你沒辦法爬樓梯的話這個這種樓都是沒有電梯的因為它就是那種有點像是眷村很老很老的樓那種概念看這個\n我不知道這是什麼設計感覺有點像是以前法國殖民的時候蓋的對啊 缺點就是我當時拿行李的時候爬了四樓如果你行動不方便或者是不想要爬樓梯的話這邊就不太適合出來進來\n現在應該算是胡志明的雨季基本上每天會下個兩三次雨吧HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello\n剛剛一共吃了九萬四九萬四呢不到四塊錢美金現在回家避雨吃完飯回來繼續當社畜好那我們先暫停一下這幾天呢因為我人在越南基本上就是靠VPN在生存不管我是在Airbnb還是在飯店還是在機場那保護我的上網隱私跟資訊安全呢我覺得是最重要的OK那大家應該都聽過Surfshark VPN那為什麼我自己會使用Surfshark\n因為它其實不只是一個VPN更是一套完整的資訊安全防護軟體除了能夠幫我解鎖各種不同國家的線上內容之外他們的團隊還投入了大量研發專注在保護客戶的資訊安全還有防範惡意程式\n像我們很常聽到有人說IG、Facebook或是LINE被盜甚至說可能銀行密碼外洩很多都是因為不小心點了一個奇怪的連結那那個惡意程式呢就會在你的電腦裡面背後的偷偷監控你的鍵盤、滑鼠還有瀏覽記錄甚至是你的錢包的資訊而且用公共Wi-Fi的風險呢還是蠻高的那現在SubShark已經把VPN、防堵軟體\n來健身囉\n這邊跟大家分享一個省錢的好妙招絕對不是業配因為我經常在各地旅居所以健身房我是By Anytime Fitness他們的會員能夠在全世界的Anytime都可以使用而且日本也是超多分店的價錢都不太一樣然後在胡志明應該是全世界最便宜的\n那沒錯 我就是在這邊辦的而且辦的時候還可以刷卡我那個時候辦的是15個月的會員一共花了1350萬越南盾也就大概是500多美金而已等於是說平均一個月不到35塊美元我自己是覺得還蠻划算的啦大家如果有來胡志明的話可以去辦一下I wanna be the greatestEverybody on that fake shitI look around and feel like everybody is the fakerI make thisEveryday and I'm impatientHoping one day I blow up from the basementStay mintThe top is so vacantOut on your shit that I think is amazingWaitingFor my day when I'm playingSold out shows for a time\n越南下班時間車給我多多\n我們現在去找一點東西吃超餓看有沒有肉可以吃肉有在上嗎?\n九萬塊大概是三塊多美金沒吃飽 等一下晚一點再去吃宵夜好了叫個車回家先但是下班高中期用帽子的好處就是 天然的保險套當你在做Grab的時候可以不用直接接觸安全帽\n中文字幕提供\n終於到家 坐了快半個小時日明下班 尖峰時刻真的要到處亂跑整個城市都是車 超級塞 人爆多我吸了大概半個小時的廢氣\n現在是凌晨12點然後剛剛工作完先去曬一下衣服等一下去吃一下宵夜因為我晚餐吃得還蠻早的所以說肚子有點餓然後有一間餐廳是開到滿晚好像到凌晨4點是朋友推薦的我們等一下就打Grab去吃一下正宗的越南古志明宵夜下雨之後又不容易乾所以趁現在沒有下雨就快點拿個曬曬\n希望等一下半夜不要下暴雨不然明天就沒有衣服穿了那家店叫做5KU Station是在大名鼎鼎的胡志明日本街然後現在坐Grab過去的話大概是五萬Bike的話大概是兩萬九其實我有時候喜歡坐摩托車因為摩托車會比較快但是現在這個時間應該沒什麼差路上的車子應該也沒有很多\n我們來到福治林大名鼎鼎的日本街這邊有一個口罩大家如果來過我還不知道然後直接去餐廳海鮮炒麵超大一盤這一盤要200K超大一盤外面旅遊就很容易吃不到青菜它是炒得還滿好吃的\nYou are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube, YouTube.YouTube, yeah, YouTube, YouTube, YouTube, YouTube.YouTube, yeah, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube\n34万8千叫个摩托我们就可以回家开开心心睡个觉今天大概就到这边了吃好饱住在塞冈其实还蛮爽的在东京基本上没有这样的店晚上餐厅八九点就关了这边的话还蛮多吃的宵夜\n好啦,那我在胡志明旅居一整天的開銷呢就整個列出來給大家看總共是不到60塊美金也就差不多不到1800塊台幣\n那這其中呢包含我的住宿費到哪裡呢都是打Grab那吃東西呢我也是隨便吃大家覺得這個價格合理嗎也歡迎你在影片底下留言告訴我喔對了當然這個是精簡版另外一個版本完整的影片呢我會放在會員頻道上面大家如果有興趣的話呢也可以去那邊看OK那如果你喜歡今天這集影片的話也記得一定要幫我點個讚因為你知道百度來了\nZither Harp",
+    "segments": [
+      {
+        "index": 0,
+        "time": "00:00",
+        "start": 0.04,
+        "duration": 18.6,
+        "text": "在越南呢我其實一般會自己泡咖啡"
+      },
+      {
+        "index": 1,
+        "time": "00:18",
+        "start": 18.76,
+        "duration": 17.599999999999998,
+        "text": "我知道你可能会想说外面这么多咖啡店对越南确实是随便走在路上都是咖啡店但是因为说实话到现在我还没有喝到一家咖啡是我真的觉得很好喝的观光客会喜欢喝什么椰子咖啡或者什么淡奶咖啡我觉得都还不错但是也不会想要每天喝"
+      },
+      {
+        "index": 2,
+        "time": "00:36",
+        "start": 36.36,
+        "duration": 29.340000000000003,
+        "text": "就偶爾喝一次我覺得還OK在越南喝咖啡我覺得大家本身都說太甜了那我自己其實還嘗試過各種不同的手沖咖啡在越南像這種是吉隆式的咖啡然後這個就比較甜一點點好 這個是第一的那個Drip Coffee那so far在越南目前我喝到最好喝的是這個我覺得啦 是叫Wiso Coffee它好像就是一種越南特色咖啡叫貓屎咖啡還是什麼"
+      },
+      {
+        "index": 3,
+        "time": "01:05",
+        "start": 65.92,
+        "duration": 8.36,
+        "text": "雕的還是什麼的反正就是這種動物的排泄物做成的一個咖啡那這一包呢其實還蠻貴的這一包要大概20"
+      },
+      {
+        "index": 4,
+        "time": "01:14",
+        "start": 74.52,
+        "duration": 24.340000000000003,
+        "text": "就是1塊多美金的價格那他這個也是用熱水去滴的那個咖啡那我一開始也是抱著懷疑的態度就這個東西排泄物有什麼好喝的但其實他真的很香有一點巧克力味然後也有一點甜味我覺得還蠻好喝的推薦大家如果來越南的話一定要來試試看"
+      },
+      {
+        "index": 5,
+        "time": "01:38",
+        "start": 98.5,
+        "duration": 31.400000000000006,
+        "text": "那我還特別去買了這個是沒有乳糖的牛奶就是美國那種Nectar Street大概八分滿的位置就是為什麼我會喜歡住Airbnb的原因是因為Airbnb有提供這些所有的東西微波爐熱水壺所以說要充咖啡是很方便的這個有些Hotel也會有但是微波爐好像大部分Hotel都沒有它裡面會有一個糖包糖包是直接丟掉"
+      },
+      {
+        "index": 6,
+        "time": "02:10",
+        "start": 130.76,
+        "duration": 43,
+        "text": "味道真的蠻香的其實我喝咖啡也沒有特別懂就是嘗試不同種咖啡然後找自己喜歡的味道還有喝的方式那我自己喜歡喝咖啡的方式就是很多人牛奶牛奶的比例大概佔80%咖啡呢大概佔20%左右因為牛奶它有甜味嘛所以咖啡就不會變得那麼苦這就是我自己特製的CappuccinoCheers"
+      },
+      {
+        "index": 7,
+        "time": "02:55",
+        "start": 175.78,
+        "duration": 21.939999999999998,
+        "text": "好來帶大家看一下我在胡志明住的地方其實我還蠻喜歡我現在住的Airbnb的而且我也推薦大家來胡志明的話可以去住Airbnb因為說真的好的Airbnb真的蠻多的然後就是價格真的很便宜像我現在住的地方呢一個晚上如果你算上Airbnb的service fee是不到30塊美金而且我覺得空間非常非常的大"
+      },
+      {
+        "index": 8,
+        "time": "03:17",
+        "start": 197.72,
+        "duration": 14.280000000000001,
+        "text": "我現在在的地方就是一個房間房間進來床然後有一個辦公桌然後床的話這個木側應該是queensize的床然後旁邊有一個沙發還有衣櫃小桌子然後有一個電視"
+      },
+      {
+        "index": 9,
+        "time": "03:32",
+        "start": 212.66,
+        "duration": 20.620000000000005,
+        "text": "然後這邊進來呢是這個就是進來的門進來這邊呢會有一個客廳廚房的一個概念那廚房的話該有的東西都有像如果你想要煮飯還可以有這個灶台浴室的話也不錯洗衣機在這裡然後浴缸那我特別挑了有浴缸的Airbnb主要是因為我想要泡澡"
+      },
+      {
+        "index": 10,
+        "time": "03:52",
+        "start": 232.92,
+        "duration": 29.78,
+        "text": "這個unit它的頂壓很高所以說我覺得住起來其實也蠻舒服的啦唯一一個缺點我覺得就是可能稍微比較吵一點因為它跟它的鄰居都蠻近的而且這個unit呢是在District 1那這邊呢就是相對來講比較熱鬧一點也算是一個比較老的區吧房子都比較老但是這個AirBnb呢它就是裡面重新全部裝修一遍所以住起來是很舒服的啦不會感覺到有很老的感覺我覺得最有特色的是它的小陽台就這個地方"
+      },
+      {
+        "index": 11,
+        "time": "04:30",
+        "start": 270.94,
+        "duration": 18.74000000000001,
+        "text": "就可以感覺出來這棟樓是很有歷史的而且它跟鄰居都貼超級近等一下我們去樓下你就知道我在講什麼了住在這種地方絕對不會給你什麼奢華的體驗很像在跟local人一起生活的感覺鄰居就在對面在修冷氣"
+      },
+      {
+        "index": 12,
+        "time": "04:49",
+        "start": 289.3,
+        "duration": 25.139999999999986,
+        "text": "就我感覺它缺少了一個邊際感但是呢同時也很有這種人間煙火的感覺就好像真的就是融入當地然後跟當地人住在一起這種感覺我覺得還蠻有趣的我覺得旅居對我來講最大的意義就是可以去了解當地人的生活吃當地人吃的東西做當地人做的事情然後去了解說原來當地人的習俗還有當地人的文化是這樣子我覺得是很有趣啦"
+      },
+      {
+        "index": 13,
+        "time": "05:14",
+        "start": 314.6,
+        "duration": 31.299999999999955,
+        "text": "OK那我們現在就去吃一下午飯午餐的話我一般就在樓下隨便吃一點東西對這邊呢確實是不太適合如果你行動不方便或是你沒辦法爬樓梯的話這個這種樓都是沒有電梯的因為它就是那種有點像是眷村很老很老的樓那種概念看這個"
+      },
+      {
+        "index": 14,
+        "time": "05:46",
+        "start": 346.1,
+        "duration": 38.27999999999997,
+        "text": "我不知道這是什麼設計感覺有點像是以前法國殖民的時候蓋的對啊 缺點就是我當時拿行李的時候爬了四樓如果你行動不方便或者是不想要爬樓梯的話這邊就不太適合出來進來"
+      },
+      {
+        "index": 15,
+        "time": "06:26",
+        "start": 386.86,
+        "duration": 50.360000000000014,
+        "text": "現在應該算是胡志明的雨季基本上每天會下個兩三次雨吧HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello"
+      },
+      {
+        "index": 16,
+        "time": "07:31",
+        "start": 451.22,
+        "duration": 38.89999999999998,
+        "text": "剛剛一共吃了九萬四九萬四呢不到四塊錢美金現在回家避雨吃完飯回來繼續當社畜好那我們先暫停一下這幾天呢因為我人在越南基本上就是靠VPN在生存不管我是在Airbnb還是在飯店還是在機場那保護我的上網隱私跟資訊安全呢我覺得是最重要的OK那大家應該都聽過Surfshark VPN那為什麼我自己會使用Surfshark"
+      },
+      {
+        "index": 17,
+        "time": "08:10",
+        "start": 490.12,
+        "duration": 14.939999999999998,
+        "text": "因為它其實不只是一個VPN更是一套完整的資訊安全防護軟體除了能夠幫我解鎖各種不同國家的線上內容之外他們的團隊還投入了大量研發專注在保護客戶的資訊安全還有防範惡意程式"
+      },
+      {
+        "index": 18,
+        "time": "08:25",
+        "start": 505.06,
+        "duration": 21.599999999999966,
+        "text": "像我們很常聽到有人說IG、Facebook或是LINE被盜甚至說可能銀行密碼外洩很多都是因為不小心點了一個奇怪的連結那那個惡意程式呢就會在你的電腦裡面背後的偷偷監控你的鍵盤、滑鼠還有瀏覽記錄甚至是你的錢包的資訊而且用公共Wi-Fi的風險呢還是蠻高的那現在SubShark已經把VPN、防堵軟體"
+      },
+      {
+        "index": 19,
+        "time": "08:46",
+        "start": 526.66,
+        "duration": 30.960000000000036,
+        "text": "來健身囉"
+      },
+      {
+        "index": 20,
+        "time": "09:18",
+        "start": 558.7,
+        "duration": 14.799999999999955,
+        "text": "這邊跟大家分享一個省錢的好妙招絕對不是業配因為我經常在各地旅居所以健身房我是By Anytime Fitness他們的會員能夠在全世界的Anytime都可以使用而且日本也是超多分店的價錢都不太一樣然後在胡志明應該是全世界最便宜的"
+      },
+      {
+        "index": 21,
+        "time": "09:33",
+        "start": 573.5,
+        "duration": 28.460000000000036,
+        "text": "那沒錯 我就是在這邊辦的而且辦的時候還可以刷卡我那個時候辦的是15個月的會員一共花了1350萬越南盾也就大概是500多美金而已等於是說平均一個月不到35塊美元我自己是覺得還蠻划算的啦大家如果有來胡志明的話可以去辦一下I wanna be the greatestEverybody on that fake shitI look around and feel like everybody is the fakerI make thisEveryday and I'm impatientHoping one day I blow up from the basementStay mintThe top is so vacantOut on your shit that I think is amazingWaitingFor my day when I'm playingSold out shows for a time"
+      },
+      {
+        "index": 22,
+        "time": "10:02",
+        "start": 602.72,
+        "duration": 33.379999999999995,
+        "text": "越南下班時間車給我多多"
+      },
+      {
+        "index": 23,
+        "time": "10:41",
+        "start": 641.84,
+        "duration": 36.879999999999995,
+        "text": "我們現在去找一點東西吃超餓看有沒有肉可以吃肉有在上嗎?"
+      },
+      {
+        "index": 24,
+        "time": "11:22",
+        "start": 682.18,
+        "duration": 20.379999999999995,
+        "text": "九萬塊大概是三塊多美金沒吃飽 等一下晚一點再去吃宵夜好了叫個車回家先但是下班高中期用帽子的好處就是 天然的保險套當你在做Grab的時候可以不用直接接觸安全帽"
+      },
+      {
+        "index": 25,
+        "time": "11:45",
+        "start": 705.8,
+        "duration": 22.879999999999995,
+        "text": "中文字幕提供"
+      },
+      {
+        "index": 26,
+        "time": "12:11",
+        "start": 731,
+        "duration": 13.220000000000027,
+        "text": "終於到家 坐了快半個小時日明下班 尖峰時刻真的要到處亂跑整個城市都是車 超級塞 人爆多我吸了大概半個小時的廢氣"
+      },
+      {
+        "index": 27,
+        "time": "12:24",
+        "start": 744.94,
+        "duration": 26,
+        "text": "現在是凌晨12點然後剛剛工作完先去曬一下衣服等一下去吃一下宵夜因為我晚餐吃得還蠻早的所以說肚子有點餓然後有一間餐廳是開到滿晚好像到凌晨4點是朋友推薦的我們等一下就打Grab去吃一下正宗的越南古志明宵夜下雨之後又不容易乾所以趁現在沒有下雨就快點拿個曬曬"
+      },
+      {
+        "index": 28,
+        "time": "12:52",
+        "start": 772.42,
+        "duration": 27.280000000000086,
+        "text": "希望等一下半夜不要下暴雨不然明天就沒有衣服穿了那家店叫做5KU Station是在大名鼎鼎的胡志明日本街然後現在坐Grab過去的話大概是五萬Bike的話大概是兩萬九其實我有時候喜歡坐摩托車因為摩托車會比較快但是現在這個時間應該沒什麼差路上的車子應該也沒有很多"
+      },
+      {
+        "index": 29,
+        "time": "13:21",
+        "start": 801.04,
+        "duration": 30.960000000000036,
+        "text": "我們來到福治林大名鼎鼎的日本街這邊有一個口罩大家如果來過我還不知道然後直接去餐廳海鮮炒麵超大一盤這一盤要200K超大一盤外面旅遊就很容易吃不到青菜它是炒得還滿好吃的"
+      },
+      {
+        "index": 30,
+        "time": "13:52",
+        "start": 832.8,
+        "duration": 27.32000000000005,
+        "text": "You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube, YouTube.YouTube, yeah, YouTube, YouTube, YouTube, YouTube.YouTube, yeah, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube"
+      },
+      {
+        "index": 31,
+        "time": "14:21",
+        "start": 861.14,
+        "duration": 21.620000000000005,
+        "text": "34万8千叫个摩托我们就可以回家开开心心睡个觉今天大概就到这边了吃好饱住在塞冈其实还蛮爽的在东京基本上没有这样的店晚上餐厅八九点就关了这边的话还蛮多吃的宵夜"
+      },
+      {
+        "index": 32,
+        "time": "14:49",
+        "start": 889.6,
+        "duration": 9.199999999999932,
+        "text": "好啦,那我在胡志明旅居一整天的開銷呢就整個列出來給大家看總共是不到60塊美金也就差不多不到1800塊台幣"
+      },
+      {
+        "index": 33,
+        "time": "14:58",
+        "start": 898.42,
+        "duration": 27.620000000000005,
+        "text": "那這其中呢包含我的住宿費到哪裡呢都是打Grab那吃東西呢我也是隨便吃大家覺得這個價格合理嗎也歡迎你在影片底下留言告訴我喔對了當然這個是精簡版另外一個版本完整的影片呢我會放在會員頻道上面大家如果有興趣的話呢也可以去那邊看OK那如果你喜歡今天這集影片的話也記得一定要幫我點個讚因為你知道百度來了"
+      },
+      {
+        "index": 34,
+        "time": "15:26",
+        "start": 926.04,
+        "duration": 12.840000000000032,
+        "text": "Zither Harp"
+      }
+    ],
+    "language": {
+      "requested": "zh",
+      "used": "zh"
+    },
+    "source": "whisper",
+    "fallback": false,
+    "confidence": "online provider transcript; provider-side cloud transcription should be cross-checked when another source appears"
+  },
+  "raw_provider_payload": {
+    "runId": "wrun_01KXFCFEJY8NPMZ7SP72K44NAJ",
+    "status": "completed",
+    "videoId": "R7zAMgiawks",
+    "languageCode": "zh",
+    "usedLanguageCode": "zh",
+    "result": {
+      "jobId": null,
+      "transcriptJobId": null,
+      "libraryItemId": null,
+      "response": {
+        "transcript": [
+          {
+            "text": "在越南呢我其實一般會自己泡咖啡",
+            "start": 0.04,
+            "duration": 18.6
+          },
+          {
+            "text": "我知道你可能会想说外面这么多咖啡店对越南确实是随便走在路上都是咖啡店但是因为说实话到现在我还没有喝到一家咖啡是我真的觉得很好喝的观光客会喜欢喝什么椰子咖啡或者什么淡奶咖啡我觉得都还不错但是也不会想要每天喝",
+            "start": 18.76,
+            "duration": 17.599999999999998
+          },
+          {
+            "text": "就偶爾喝一次我覺得還OK在越南喝咖啡我覺得大家本身都說太甜了那我自己其實還嘗試過各種不同的手沖咖啡在越南像這種是吉隆式的咖啡然後這個就比較甜一點點好 這個是第一的那個Drip Coffee那so far在越南目前我喝到最好喝的是這個我覺得啦 是叫Wiso Coffee它好像就是一種越南特色咖啡叫貓屎咖啡還是什麼",
+            "start": 36.36,
+            "duration": 29.340000000000003
+          },
+          {
+            "text": "雕的還是什麼的反正就是這種動物的排泄物做成的一個咖啡那這一包呢其實還蠻貴的這一包要大概20",
+            "start": 65.92,
+            "duration": 8.36
+          },
+          {
+            "text": "就是1塊多美金的價格那他這個也是用熱水去滴的那個咖啡那我一開始也是抱著懷疑的態度就這個東西排泄物有什麼好喝的但其實他真的很香有一點巧克力味然後也有一點甜味我覺得還蠻好喝的推薦大家如果來越南的話一定要來試試看",
+            "start": 74.52,
+            "duration": 24.340000000000003
+          },
+          {
+            "text": "那我還特別去買了這個是沒有乳糖的牛奶就是美國那種Nectar Street大概八分滿的位置就是為什麼我會喜歡住Airbnb的原因是因為Airbnb有提供這些所有的東西微波爐熱水壺所以說要充咖啡是很方便的這個有些Hotel也會有但是微波爐好像大部分Hotel都沒有它裡面會有一個糖包糖包是直接丟掉",
+            "start": 98.5,
+            "duration": 31.400000000000006
+          },
+          {
+            "text": "味道真的蠻香的其實我喝咖啡也沒有特別懂就是嘗試不同種咖啡然後找自己喜歡的味道還有喝的方式那我自己喜歡喝咖啡的方式就是很多人牛奶牛奶的比例大概佔80%咖啡呢大概佔20%左右因為牛奶它有甜味嘛所以咖啡就不會變得那麼苦這就是我自己特製的CappuccinoCheers",
+            "start": 130.76,
+            "duration": 43
+          },
+          {
+            "text": "好來帶大家看一下我在胡志明住的地方其實我還蠻喜歡我現在住的Airbnb的而且我也推薦大家來胡志明的話可以去住Airbnb因為說真的好的Airbnb真的蠻多的然後就是價格真的很便宜像我現在住的地方呢一個晚上如果你算上Airbnb的service fee是不到30塊美金而且我覺得空間非常非常的大",
+            "start": 175.78,
+            "duration": 21.939999999999998
+          },
+          {
+            "text": "我現在在的地方就是一個房間房間進來床然後有一個辦公桌然後床的話這個木側應該是queensize的床然後旁邊有一個沙發還有衣櫃小桌子然後有一個電視",
+            "start": 197.72,
+            "duration": 14.280000000000001
+          },
+          {
+            "text": "然後這邊進來呢是這個就是進來的門進來這邊呢會有一個客廳廚房的一個概念那廚房的話該有的東西都有像如果你想要煮飯還可以有這個灶台浴室的話也不錯洗衣機在這裡然後浴缸那我特別挑了有浴缸的Airbnb主要是因為我想要泡澡",
+            "start": 212.66,
+            "duration": 20.620000000000005
+          },
+          {
+            "text": "這個unit它的頂壓很高所以說我覺得住起來其實也蠻舒服的啦唯一一個缺點我覺得就是可能稍微比較吵一點因為它跟它的鄰居都蠻近的而且這個unit呢是在District 1那這邊呢就是相對來講比較熱鬧一點也算是一個比較老的區吧房子都比較老但是這個AirBnb呢它就是裡面重新全部裝修一遍所以住起來是很舒服的啦不會感覺到有很老的感覺我覺得最有特色的是它的小陽台就這個地方",
+            "start": 232.92,
+            "duration": 29.78
+          },
+          {
+            "text": "就可以感覺出來這棟樓是很有歷史的而且它跟鄰居都貼超級近等一下我們去樓下你就知道我在講什麼了住在這種地方絕對不會給你什麼奢華的體驗很像在跟local人一起生活的感覺鄰居就在對面在修冷氣",
+            "start": 270.94,
+            "duration": 18.74000000000001
+          },
+          {
+            "text": "就我感覺它缺少了一個邊際感但是呢同時也很有這種人間煙火的感覺就好像真的就是融入當地然後跟當地人住在一起這種感覺我覺得還蠻有趣的我覺得旅居對我來講最大的意義就是可以去了解當地人的生活吃當地人吃的東西做當地人做的事情然後去了解說原來當地人的習俗還有當地人的文化是這樣子我覺得是很有趣啦",
+            "start": 289.3,
+            "duration": 25.139999999999986
+          },
+          {
+            "text": "OK那我們現在就去吃一下午飯午餐的話我一般就在樓下隨便吃一點東西對這邊呢確實是不太適合如果你行動不方便或是你沒辦法爬樓梯的話這個這種樓都是沒有電梯的因為它就是那種有點像是眷村很老很老的樓那種概念看這個",
+            "start": 314.6,
+            "duration": 31.299999999999955
+          },
+          {
+            "text": "我不知道這是什麼設計感覺有點像是以前法國殖民的時候蓋的對啊 缺點就是我當時拿行李的時候爬了四樓如果你行動不方便或者是不想要爬樓梯的話這邊就不太適合出來進來",
+            "start": 346.1,
+            "duration": 38.27999999999997
+          },
+          {
+            "text": "現在應該算是胡志明的雨季基本上每天會下個兩三次雨吧HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello",
+            "start": 386.86,
+            "duration": 50.360000000000014
+          },
+          {
+            "text": "剛剛一共吃了九萬四九萬四呢不到四塊錢美金現在回家避雨吃完飯回來繼續當社畜好那我們先暫停一下這幾天呢因為我人在越南基本上就是靠VPN在生存不管我是在Airbnb還是在飯店還是在機場那保護我的上網隱私跟資訊安全呢我覺得是最重要的OK那大家應該都聽過Surfshark VPN那為什麼我自己會使用Surfshark",
+            "start": 451.22,
+            "duration": 38.89999999999998
+          },
+          {
+            "text": "因為它其實不只是一個VPN更是一套完整的資訊安全防護軟體除了能夠幫我解鎖各種不同國家的線上內容之外他們的團隊還投入了大量研發專注在保護客戶的資訊安全還有防範惡意程式",
+            "start": 490.12,
+            "duration": 14.939999999999998
+          },
+          {
+            "text": "像我們很常聽到有人說IG、Facebook或是LINE被盜甚至說可能銀行密碼外洩很多都是因為不小心點了一個奇怪的連結那那個惡意程式呢就會在你的電腦裡面背後的偷偷監控你的鍵盤、滑鼠還有瀏覽記錄甚至是你的錢包的資訊而且用公共Wi-Fi的風險呢還是蠻高的那現在SubShark已經把VPN、防堵軟體",
+            "start": 505.06,
+            "duration": 21.599999999999966
+          },
+          {
+            "text": "來健身囉",
+            "start": 526.66,
+            "duration": 30.960000000000036
+          },
+          {
+            "text": "這邊跟大家分享一個省錢的好妙招絕對不是業配因為我經常在各地旅居所以健身房我是By Anytime Fitness他們的會員能夠在全世界的Anytime都可以使用而且日本也是超多分店的價錢都不太一樣然後在胡志明應該是全世界最便宜的",
+            "start": 558.7,
+            "duration": 14.799999999999955
+          },
+          {
+            "text": "那沒錯 我就是在這邊辦的而且辦的時候還可以刷卡我那個時候辦的是15個月的會員一共花了1350萬越南盾也就大概是500多美金而已等於是說平均一個月不到35塊美元我自己是覺得還蠻划算的啦大家如果有來胡志明的話可以去辦一下I wanna be the greatestEverybody on that fake shitI look around and feel like everybody is the fakerI make thisEveryday and I'm impatientHoping one day I blow up from the basementStay mintThe top is so vacantOut on your shit that I think is amazingWaitingFor my day when I'm playingSold out shows for a time",
+            "start": 573.5,
+            "duration": 28.460000000000036
+          },
+          {
+            "text": "越南下班時間車給我多多",
+            "start": 602.72,
+            "duration": 33.379999999999995
+          },
+          {
+            "text": "我們現在去找一點東西吃超餓看有沒有肉可以吃肉有在上嗎?",
+            "start": 641.84,
+            "duration": 36.879999999999995
+          },
+          {
+            "text": "九萬塊大概是三塊多美金沒吃飽 等一下晚一點再去吃宵夜好了叫個車回家先但是下班高中期用帽子的好處就是 天然的保險套當你在做Grab的時候可以不用直接接觸安全帽",
+            "start": 682.18,
+            "duration": 20.379999999999995
+          },
+          {
+            "text": "中文字幕提供",
+            "start": 705.8,
+            "duration": 22.879999999999995
+          },
+          {
+            "text": "終於到家 坐了快半個小時日明下班 尖峰時刻真的要到處亂跑整個城市都是車 超級塞 人爆多我吸了大概半個小時的廢氣",
+            "start": 731,
+            "duration": 13.220000000000027
+          },
+          {
+            "text": "現在是凌晨12點然後剛剛工作完先去曬一下衣服等一下去吃一下宵夜因為我晚餐吃得還蠻早的所以說肚子有點餓然後有一間餐廳是開到滿晚好像到凌晨4點是朋友推薦的我們等一下就打Grab去吃一下正宗的越南古志明宵夜下雨之後又不容易乾所以趁現在沒有下雨就快點拿個曬曬",
+            "start": 744.94,
+            "duration": 26
+          },
+          {
+            "text": "希望等一下半夜不要下暴雨不然明天就沒有衣服穿了那家店叫做5KU Station是在大名鼎鼎的胡志明日本街然後現在坐Grab過去的話大概是五萬Bike的話大概是兩萬九其實我有時候喜歡坐摩托車因為摩托車會比較快但是現在這個時間應該沒什麼差路上的車子應該也沒有很多",
+            "start": 772.42,
+            "duration": 27.280000000000086
+          },
+          {
+            "text": "我們來到福治林大名鼎鼎的日本街這邊有一個口罩大家如果來過我還不知道然後直接去餐廳海鮮炒麵超大一盤這一盤要200K超大一盤外面旅遊就很容易吃不到青菜它是炒得還滿好吃的",
+            "start": 801.04,
+            "duration": 30.960000000000036
+          },
+          {
+            "text": "You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.YouTube, yeah, YouTube.You are both on YouTube right?YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube.YouTube, yeah, YouTube, YouTube.YouTube, yeah, YouTube, YouTube, YouTube, YouTube.YouTube, yeah, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube, YouTube",
+            "start": 832.8,
+            "duration": 27.32000000000005
+          },
+          {
+            "text": "34万8千叫个摩托我们就可以回家开开心心睡个觉今天大概就到这边了吃好饱住在塞冈其实还蛮爽的在东京基本上没有这样的店晚上餐厅八九点就关了这边的话还蛮多吃的宵夜",
+            "start": 861.14,
+            "duration": 21.620000000000005
+          },
+          {
+            "text": "好啦,那我在胡志明旅居一整天的開銷呢就整個列出來給大家看總共是不到60塊美金也就差不多不到1800塊台幣",
+            "start": 889.6,
+            "duration": 9.199999999999932
+          },
+          {
+            "text": "那這其中呢包含我的住宿費到哪裡呢都是打Grab那吃東西呢我也是隨便吃大家覺得這個價格合理嗎也歡迎你在影片底下留言告訴我喔對了當然這個是精簡版另外一個版本完整的影片呢我會放在會員頻道上面大家如果有興趣的話呢也可以去那邊看OK那如果你喜歡今天這集影片的話也記得一定要幫我點個讚因為你知道百度來了",
+            "start": 898.42,
+            "duration": 27.620000000000005
+          },
+          {
+            "text": "Zither Harp",
+            "start": 926.04,
+            "duration": 12.840000000000032
+          }
+        ],
+        "videoTitle": "我在越南每天要花多少錢？",
+        "metadata": {
+          "title": "我在越南每天要花多少錢？",
+          "description": "Surfshark VPN專屬優惠連結：https://surfshark.com/hackbear\n輸入優惠代碼『HACKBEAR』，就可以有優惠外加額外四個月\n----------------------------------------------------\n買賣美股我用IB盈透證券❤️：https://hackbear.tv/ib\nIB註冊出入金教學：https://alphalab.site/ib\n\n最適合新手的美股券商Firstrade：https://hackbear.tv/firstrade\nFirstrade註冊出入金教學：https://alphalab.site/firstrade\n\n有美國SSN的網友可以來拿Moomoo專屬福利：https://hackbear.tv/moomoo\n\n用SeekingAlpha來分析美股：https://hackbear.tv/seeking-alpha\n能跑贏大盤的量化團隊AlphaPicks：https://hackbear.tv/alpha-picks\n\n我的唯一個官方TG社群：https://t.me/alphalab_live\n阿爾發實驗室（我的官方網站）：https://alphalab.site/\n----------------------------------------------------\n幣安交易所買賣加密貨幣：https://hackbear.tv/binance\n幣安註冊/出入金教學：https://alphalab.site/binance\n\nOKX交易所買賣加密貨幣：https://hackbear.tv/okx\nOKX註冊/出入金教學：https://alphalab.site/okx\n\nNexo穩定理財註冊連結：https://hackbear.tv/nexo\nNexo註冊使用教學：https://alphalab.site/nexo\n\n我用派網交易所做網格策略：https://hackbear.tv/pionex\n\n冷錢包我只用Ledger：https://hackbear.tv/ledger\nLedger使用教學：https://alphalab.site/ledger\n\nEtherFi幣圈神卡註冊連結：https://hackbear.tv/etherfi\nEtherFi幣圈神卡註冊教學：https://alphalab.site/etherfi\n----------------------------------------------------\n我的Instagram: https://hackbear.tv/ig\n我的x.com: https://x.com/hackbearterry\n合作郵箱: hack.tech.entertainment@gmail.com\n\n#越南 #胡志明 #旅居 #數位遊牧 #旅行 #開銷 #vlog",
+          "channelTitle": "Terry Chen 泰瑞",
+          "channelId": "UC_whOg3XES3Fihic53fvo4Q",
+          "duration": 941,
+          "viewCount": 119513,
+          "keywords": [],
+          "thumbnail": {
+            "url": "https://i.ytimg.com/vi/R7zAMgiawks/maxresdefault.jpg",
+            "width": 0,
+            "height": 0
+          }
+        },
+        "source": "whisper",
+        "fallback": false,
+        "error": null,
+        "reason": null,
+        "timings": {
+          "downloadSeconds": 26.9,
+          "transcribeSeconds": 15.4,
+          "totalSeconds": 42.4,
+          "audioBytes": 5725900,
+          "videoDurationSeconds": 941,
+          "engine": "wizper"
+        }
+      },
+      "fallbackToEnglish": false,
+      "transcriptUnavailable": false,
+      "cacheHit": false,
+      "libraryLimitReached": false,
+      "librarySaveFailed": false,
+      "tldrSummary": null
+    },
+    "error": null,
+    "retryAfterMs": null
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "Q59J5roE5lM",
+    "index": 27,
+    "title": "為什麼你投資賺不到錢？該選股還是投大盤？",
+    "url": "https://www.youtube.com/watch?v=Q59J5roE5lM",
+    "provider": "YTVidHub",
+    "provider_url": "https://ytvidhub.com/api/subtitle/guest-download/",
+    "http_status": 200,
+    "status": "ok",
+    "error": null,
+    "provider_error": null,
+    "provider_lang": "en",
+    "provider_format": "txt",
+    "quota_attempts_left": 1,
+    "quota_attempts_used": 1,
+    "quota_daily_limit": 2,
+    "quota_reset_in_seconds": 0,
+    "text_chars": 8555,
+    "segments_returned": 754,
+    "output_txt": "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-ytvidhub.txt",
+    "output_json": "research/targets/terry-chen-youtube/evidence/media/transcripts/Q59J5roE5lM.provider-ytvidhub.json",
+    "segments": 754,
+    "characters": 8555
+  },
+  {
+    "id": "5TDTxHZXiLE",
+    "index": 275,
+    "title": "為什麼投資比特幣",
+    "url": "https://www.youtube.com/watch?v=5TDTxHZXiLE",
+    "provider": "YTVidHub",
+    "provider_url": "https://ytvidhub.com/api/subtitle/guest-download/",
+    "http_status": 404,
+    "status": "provider_failed",
+    "error": null,
+    "provider_error": "No subtitles found. Available languages: ",
+    "provider_lang": null,
+    "provider_format": null
+  }
+]
