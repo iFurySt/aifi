@@ -11,6 +11,29 @@ evidence, then saves the work under `research/` so future analysis can reuse it.
 It is for research and decision support, not autonomous trading or financial
 advice.
 
+## Local app preview
+
+The local Web and Electron apps share one React interface. The first version
+uses demo data; model calls, broker connections, and background agents come later.
+
+Requires Node.js 24+ and pnpm 10.13.1.
+
+```sh
+pnpm install
+pnpm dev             # Web: http://127.0.0.1:5173
+pnpm dev:desktop     # Electron + local Web server; use instead of pnpm dev
+```
+
+```sh
+pnpm build
+pnpm desktop         # Run the built desktop app
+make ci
+```
+
+The first desktop launch downloads the Electron runtime. See
+[frontend development](docs/FRONTEND.md), [architecture](docs/ARCHITECTURE.md),
+and the shared [design system](DESIGN.md).
+
 ## Usage
 
 ```sh

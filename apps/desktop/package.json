@@ -1,0 +1,12 @@
+{
+  "name": "@aifi/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/main.cjs",
+  "scripts": {
+    "build": "node ../../scripts/build-desktop.mjs",
+    "dev": "node ../../scripts/dev-desktop.mjs",
+    "start": "electron .",
+    "smoke": "electron . --smoke"
+  }
+}

@@ -1,7 +1,6 @@
 # CI/CD Guide
 
-This repository keeps CI/CD intentionally small while AIFi is still a
-skills-driven research workspace rather than a deployable application.
+CI covers both the research workspace and the local Web/Electron app foundation.
 
 ## What Exists By Default
 
@@ -9,11 +8,14 @@ skills-driven research workspace rather than a deployable application.
   Action pinning, shell validity, and Python script syntax.
 - `scripts/ci.sh`: the local entry point used by GitHub Actions and by
   contributors through `make ci`.
+- Node 24 and pinned pnpm dependencies: TypeScript and Web/Electron builds.
+  CI installs with lifecycle scripts disabled; an Electron launch is a separate
+  local smoke check.
 
 ## Design Principle
 
-CI should protect repository legibility without pretending there is a real
-application build, deploy target, dependency graph, or release artifact.
+CI protects repository legibility and the runnable local application. There is
+no cloud deployment target, signed installer, or automatic release pipeline.
 
 Style-only document checks are intentionally not part of CI. This repository
 stores skill instructions, planning docs, and raw research evidence; source URLs

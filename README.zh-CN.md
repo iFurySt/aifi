@@ -9,6 +9,29 @@ AIFi 是一个 agent-first 的投资研究工作区。它用一组可复用的 A
 
 它用于研究和决策辅助，不做自动交易，也不是财务建议。
 
+## 本地应用预览
+
+Web 和 Electron 复用同一套 React 界面。第一版使用示例数据，模型调用、
+券商接入和后台 Agent 将在后续实现。
+
+需要 Node.js 24+、pnpm 10.13.1。
+
+```sh
+pnpm install
+pnpm dev             # Web：http://127.0.0.1:5173
+pnpm dev:desktop     # Electron + 本地 Web 服务，与 pnpm dev 二选一
+```
+
+```sh
+pnpm build
+pnpm desktop         # 启动构建后的桌面应用
+make ci
+```
+
+首次启动桌面端会下载 Electron 运行时。目录边界见
+[架构文档](docs/ARCHITECTURE.md)，开发命令见
+[前端指南](docs/FRONTEND.md)，界面规范见 [DESIGN.md](DESIGN.md)。
+
 ## 用法
 
 ```sh

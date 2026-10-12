@@ -23,4 +23,8 @@ compile(path.read_text(encoding="utf-8"), str(path), "exec")
 PY
 done < <(find "${repo_root}/scripts" "${repo_root}/skills" -type f -name '*.py' | sort)
 
+if [[ -f "${repo_root}/package.json" ]]; then
+  (cd "${repo_root}" && pnpm check && pnpm build)
+fi
+
 echo "aifi CI checks passed"

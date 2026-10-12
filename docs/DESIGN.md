@@ -1,10 +1,10 @@
 # Design
 
-Use this document to capture product-wide design principles that should stay stable across features.
+The root [DESIGN.md](../DESIGN.md) is the visual source of truth for the shared
+Web and Electron renderer. It defines the AIFi adaptation of ChatGPT's shell and
+Rallies' agent/update organization, with tokens, components, and responsive rules.
 
-Suggested contents:
-
-- Visual principles and interaction goals.
-- Typography, color, spacing, and component system choices.
-- Accessibility and responsive design expectations.
-- Guidelines for when to extend versus reuse shared components.
+Use neutral surfaces, clear type, compact financial evidence, and visible local
+demo status. Extend shared components in packages/ui rather than styling each
+application independently. Update the root design system before changing a
+reusable visual rule discovered during browser validation.

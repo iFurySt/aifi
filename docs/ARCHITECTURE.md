@@ -4,7 +4,24 @@ This file is the top-level map for AIFi: an agent-first investment research
 workspace where reusable AI skills collect, normalize, critique, and synthesize
 market information into decision-ready research.
 
-## Intended Repository Shape
+## Local Application Topology
+
+The first executable surface is a local Web/Electron workspace:
+
+- apps/web mounts the shared React renderer through Vite.
+- apps/desktop owns Electron main and sandboxed preload; production loads the
+  Web app's built HTML and assets.
+- packages/ui owns shared pages, components, and Tailwind design tokens.
+- packages/core owns domain contracts independently of UI and host APIs.
+- packages/platform adapts browser storage and narrowly exposed desktop metadata.
+- apps/cli reserves a possible Go/Cobra utility when a host binary is needed.
+
+Dependency direction: applications compose ui; ui consumes core and platform.
+Core never imports React or Electron. Renderer code has no Node or unrestricted
+filesystem access. Mock state stays local; live research runners and provider
+connections remain future work.
+
+## Repository Shape
 
 - `apps/`: deployable applications or entry points, such as a research console,
   scheduled research runner, or portfolio review surface.

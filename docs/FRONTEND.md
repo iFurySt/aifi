@@ -1,11 +1,46 @@
 # Frontend Guide
 
-Read this file for frontend-heavy tasks once the repository includes a UI surface.
+The local workspace uses React, TypeScript, Tailwind CSS, and Vite. Electron
+loads the same renderer; there is no second desktop UI or cloud backend.
 
-Suggested areas to maintain here:
+## Local Commands
 
-- Local dev and build commands.
-- Browser-driven verification flows.
-- Shared component boundaries.
-- Design system usage and CSS/token conventions.
-- Frontend testing strategy.
+Use Node 24+ and pnpm 10.13.1:
+
+~~~sh
+pnpm install
+pnpm dev
+pnpm dev:desktop
+pnpm check
+pnpm build
+pnpm preview
+pnpm desktop
+make ci
+~~~
+
+Web development binds to 127.0.0.1:5173. Run web development or desktop
+development, not both on that port. Desktop development starts and owns Vite.
+pnpm desktop loads the production renderer after pnpm build.
+
+## Boundaries
+
+- apps/web: HTML/bootstrap and Vite configuration.
+- apps/desktop: sandboxed Electron main/preload and narrow host metadata.
+- packages/ui: shared components, page layouts, and design tokens.
+- packages/core: platform-independent domain contracts and demo data rules.
+- packages/platform: browser/local storage and desktop capability adaptation.
+- apps/cli: documented future Go/Cobra direction; no binary exists yet.
+
+Root DESIGN.md defines the visual system. Use Radix for dialog/menu accessibility
+and Lucide for icons. Avoid a large visual component library and duplicate page
+trees. Fonts and icons are local; no remote font or telemetry service is required.
+
+## Verification
+
+make ci runs repository gates, TypeScript, and production builds. Once domain
+interactions exist, include their tests in that same entry point. Use the local
+app for desktop and mobile visual checks. Validate the actual Electron renderer,
+not only the browser build, before claiming desktop support.
+
+Work in an isolated checkout for UI verification. Screenshots and smoke output
+belong in the ignored .artifacts directory unless curated into documentation.

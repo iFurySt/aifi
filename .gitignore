@@ -34,6 +34,8 @@ obj/
 
 # Local upstream reference checkouts; never vendor these into AIFi
 /.reference-repos/
+/.artifacts/
+/release/
 
 # Python
 __pycache__/
