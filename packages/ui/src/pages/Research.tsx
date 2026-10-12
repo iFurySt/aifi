@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { demoAnswer } from "@aifi/core";
 import { useWorkspace, uid } from "../workspace-context";
-import { Button, IconButton, Logo, Tag } from "../components/primitives";
+import { Button, Logo, Tag } from "../components/primitives";
 const starters = [
   {
     icon: FileText,
@@ -57,7 +57,7 @@ export function Research({
       notify("Keep your research question under 2,000 characters.");
       return;
     }
-    if ((conversation?.messages.length ?? 0) >= 100) {
+    if ((conversation?.messages.length ?? 0) > 98) {
       notify("Start a new research conversation to continue.");
       return;
     }

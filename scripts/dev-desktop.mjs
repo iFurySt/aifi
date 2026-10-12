@@ -7,10 +7,24 @@ import { resolve } from "node:path";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const require = createRequire(import.meta.url);
 await import("./build-desktop.mjs");
-const web = spawn("pnpm", ["--filter", "@aifi/web", "dev"], {
-  cwd: root,
-  stdio: "inherit",
-});
+// Resolve/download Electron before starting a server we would otherwise orphan.
+const electronPath = require("electron");
+// Spawn Vite directly so this process owns the server on all supported hosts.
+const web = spawn(
+  process.execPath,
+  [
+    resolve(root, "node_modules/vite/bin/vite.js"),
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "5173",
+    "--strictPort",
+  ],
+  {
+    cwd: resolve(root, "apps/web"),
+    stdio: "inherit",
+  },
+);
 let desktop;
 let stopping = false;
 function stop(code = 0) {
@@ -30,8 +44,10 @@ web.on("exit", (code) => stop(code ?? 1));
 let ready = false;
 for (let attempt = 0; attempt < 100 && !stopping; attempt++) {
   try {
-    const response = await fetch("http://127.0.0.1:5173");
-    if (response.ok) {
+    const response = await fetch("http://127.0.0.1:5173", {
+      signal: AbortSignal.timeout(500),
+    });
+    if (response.ok && !stopping) {
       ready = true;
       break;
     }
@@ -40,11 +56,11 @@ for (let attempt = 0; attempt < 100 && !stopping; attempt++) {
   }
   await delay(100);
 }
-if (!ready) {
-  console.error("The local renderer did not start within 10 seconds.");
+if (!ready && !stopping) {
+  console.error("The local renderer did not start within the startup window.");
   stop(1);
 } else if (!stopping) {
-  desktop = spawn(require("electron"), [resolve(root, "apps/desktop")], {
+  desktop = spawn(electronPath, [resolve(root, "apps/desktop")], {
     cwd: root,
     stdio: "inherit",
     env: { ...process.env, AIFI_DEV_URL: "http://127.0.0.1:5173" },

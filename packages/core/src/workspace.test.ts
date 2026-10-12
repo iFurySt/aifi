@@ -61,5 +61,13 @@ describe("local workspace contracts", () => {
         JSON.stringify({ ...state, watchlist: ["AAPL", "AAPL"] }),
       ),
     ).toThrow("duplicate");
+    expect(() =>
+      decodeWorkspace(
+        JSON.stringify({
+          ...state,
+          events: [{ ...state.events[0], agentId: "missing" }],
+        }),
+      ),
+    ).toThrow("missing agent");
   });
 });

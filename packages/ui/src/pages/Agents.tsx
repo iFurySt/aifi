@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {
-  ArrowUp,
   ArrowUpRight,
   BellRing,
   Bot,
@@ -15,7 +14,6 @@ import {
   Plus,
   Radar,
   Sparkles,
-  X,
 } from "lucide-react";
 import {
   agentTemplates,

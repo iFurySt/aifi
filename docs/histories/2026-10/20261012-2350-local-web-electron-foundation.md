@@ -48,3 +48,18 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
 - Updated security, reliability, architecture, quality targets, and release notes.
 - Fixed trailing punctuation in explicit ticker extraction, caught by a domain test.
 
+
+### Final Verification Milestone (2026-10-13)
+
+- Verified all six mobile layouts without page overflow, navigation drawer,
+  search, library filters, saved conversations, deletion, reset, and corrupt-data
+  recovery. Checked production CSP and fixed dialog keyboard focus restoration.
+- Improved mobile touch targets, long-text wrapping, strict unused-code checks,
+  persisted preview references, and the chat history bound.
+- Added a real Electron smoke command with a disposable profile, startup timeout,
+  denied permissions, runtime bridge/isolation checks, navigation, local save,
+  screenshot evidence, and profile cleanup. macOS smoke passed.
+- Made desktop development own Vite directly and resolve Electron first so
+  startup failures do not leave a server behind.
+- Recorded remaining storage, research execution, and distribution work; updated
+  README previews with an original demo-only screenshot.

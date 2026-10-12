@@ -1,7 +1,7 @@
 import { ArrowUpRight, Layers, ShieldCheck } from "lucide-react";
 import { samplePositions, sampleQuotes } from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
-import { Button, PageHeading, Tag, TextLink } from "../components/primitives";
+import { PageHeading, Tag, TextLink } from "../components/primitives";
 export function Portfolio() {
   const { research, navigate } = useWorkspace();
   const rows = samplePositions.map((p) => ({

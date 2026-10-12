@@ -50,4 +50,8 @@ codex "Compare Intel with AMD, Nvidia, and TSMC, then summarize the bull, base, 
 
 ## Preview
 
+![AIFi local app preview](./docs/assets/readme/aifi-app-preview.png)
+
+### Research artifact example
+
 ![AIFi research result preview](./docs/assets/readme/aifi-preview-en.png)

@@ -1,6 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { MoreHorizontal, X, ArrowUpRight, Sparkles } from "lucide-react";
+import { useRef } from "react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 export function Logo({ small = false }: { small?: boolean }) {
   return (
@@ -92,13 +93,25 @@ export function Modal({
   children: ReactNode;
   sheet?: boolean;
 }) {
+  const previousFocus = useRef<HTMLElement | null>(null);
+  const wasOpen = useRef(false);
+  // Capture before descendants mount: an autoFocus input may otherwise replace
+  // the launcher before Radix emits its opening autofocus event.
+  if (open && !wasOpen.current)
+    previousFocus.current = document.activeElement as HTMLElement;
+  wasOpen.current = open;
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="dialog-overlay" />
         <Dialog.Content
           className={sheet ? "dialog-content detail-sheet" : "dialog-content"}
-          aria-describedby={description ? undefined : undefined}
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            if (previousFocus.current?.isConnected)
+              previousFocus.current.focus();
+            else document.getElementById("main-content")?.focus();
+          }}
           onOpenAutoFocus={(event) => {
             // Let form fields receive focus; otherwise focus the close control.
             const content = event.currentTarget as HTMLElement;

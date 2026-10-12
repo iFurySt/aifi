@@ -34,7 +34,8 @@ There is no hosted backend, model credential handling, or broker connection.
 
 - Electron renderer: sandbox, context isolation, no Node integration, and a
   preload bridge exposing only runtime metadata.
-- New windows and navigation away from the app are denied.
+- New windows, navigation/redirects away from the app, and permission requests
+  are denied.
 - Production CSP allows local assets and denies network connections/frames;
   development permits the fixed localhost Vite origin and its HMR socket.
 - Local storage contains demo research state, not credentials. Do not add tokens

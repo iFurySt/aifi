@@ -15,7 +15,10 @@ Storage denial/quota failure leaves the session usable and displays a notice.
 ## Verification And Diagnostics
 
 make ci includes repository checks, TypeScript, domain/storage contracts, and
-production builds. Frontend browser/Electron verification lives in
+production builds. pnpm smoke:desktop separately checks a real native launch,
+local persistence, renderer isolation, and the shared renderer with a timeout.
+It uses a throwaway profile and saves diagnostics in .artifacts. Frontend
+browser/Electron verification lives in
 [the frontend guide](FRONTEND.md). Vite and Electron diagnostics appear in the
 launching terminal; the app exposes user-facing storage/startup failures.
 

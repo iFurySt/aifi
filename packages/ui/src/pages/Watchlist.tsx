@@ -9,7 +9,6 @@ import {
   Modal,
   PageHeading,
   Sparkline,
-  Tag,
 } from "../components/primitives";
 export function Watchlist() {
   const { workspace, update, notify, research } = useWorkspace();

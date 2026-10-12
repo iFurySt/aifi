@@ -82,6 +82,7 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 button {
+  color: var(--text);
   cursor: pointer;
 }
 button:disabled {
@@ -96,7 +97,7 @@ a {
     border-color 140ms;
 }
 a {
-  color: inherit;
+  color: var(--text);
   text-decoration: none;
 }
 :focus-visible {
@@ -1874,5 +1875,26 @@ kbd {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.message-content,
+.detail-prompt,
+.agent-card-body h3,
+.agent-card-body p,
+.dialog-header h2,
+.conversation-header h1 {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 599px) {
+  .segmented-control button,
+  .template-chips button {
+    min-height: 40px;
+  }
+  .agent-card-footer button {
+    min-height: 40px;
+  }
+  .agent-card-footer {
+    padding: 6px 0;
   }
 }

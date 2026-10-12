@@ -192,3 +192,9 @@ light surfaces; AIFi's dark palette is an inferred complementary implementation.
 - Short prompt: Build a local investment research workspace with ChatGPT's
   readable shell and Rallies' agent/update organization. Follow these tokens,
   use original AIFi content, and implement all visible primary actions locally.
+
+Validation note (2026-10-13): reviewed the rendered app in Chrome at desktop and
+390px mobile widths, plus the actual Electron renderer. Keep financial tables
+inside a scroll wrapper, wrap long user text, provide 40px mobile controls, and
+restore the opening control's focus after dialogs. Still screenshots disable
+motion so transient navigation colors are not mistaken for final states.

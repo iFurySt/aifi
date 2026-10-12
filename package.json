@@ -15,7 +15,9 @@
     "check": "tsc --noEmit",
     "preview": "pnpm --filter @aifi/web preview",
     "desktop": "pnpm --filter @aifi/desktop start",
-    "test": "vitest run packages/core/src packages/platform/src"
+    "test": "vitest run packages/core/src packages/platform/src",
+    "smoke:desktop": "pnpm --filter @aifi/desktop smoke",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json,css}\" \"scripts/*.mjs\" package.json tsconfig.json"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.3",

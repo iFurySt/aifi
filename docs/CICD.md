@@ -8,7 +8,8 @@ CI covers both the research workspace and the local Web/Electron app foundation.
   Action pinning, shell validity, and Python script syntax.
 - `scripts/ci.sh`: the local entry point used by GitHub Actions and by
   contributors through `make ci`.
-- Node 24 and pinned pnpm dependencies: TypeScript and Web/Electron builds.
+- Node 24 and pinned pnpm dependencies: TypeScript, domain/storage tests, and
+  Web/Electron builds.
   CI installs with lifecycle scripts disabled; an Electron launch is a separate
   local smoke check.
 
@@ -29,10 +30,9 @@ when updating actions.
 1. Keep `ci.yml` as the only always-on repository gate.
 2. Extend `scripts/check-skills.sh` when skill metadata or reference structure
    becomes stricter.
-3. Extend `scripts/ci.sh` with project-specific verification once there is a
-   runnable package, workflow engine, or app surface.
-4. Add dependency scanning only after the repository has real manifests and
-   lockfiles.
+3. Keep app checks in `scripts/ci.sh`; add runner verification there when
+   research execution arrives.
+4. Add dependency scanning for the manifests and lockfile now present.
 5. Add release or deployment automation only after the project has a real build
    artifact and target environment.
 

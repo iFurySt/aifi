@@ -162,8 +162,15 @@ export function decodeWorkspace(raw: string): Workspace {
       workspace.agents.length ||
     new Set(workspace.conversations.map((c) => c.id)).size !==
       workspace.conversations.length ||
-    new Set(workspace.watchlist).size !== workspace.watchlist.length
+    new Set(workspace.watchlist).size !== workspace.watchlist.length ||
+    new Set(workspace.events.map((e) => e.id)).size !== workspace.events.length
   )
     throw new Error("Saved workspace contains duplicate entries.");
+  if (
+    workspace.events.some(
+      (event) => !workspace.agents.some((agent) => agent.id === event.agentId),
+    )
+  )
+    throw new Error("Saved previews refer to a missing agent.");
   return workspace;
 }

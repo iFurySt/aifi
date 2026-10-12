@@ -48,4 +48,8 @@ codex "对比 Intel、AMD、Nvidia 和 TSMC，并总结 bull/base/bear case"
 
 ## 效果预览
 
+![AIFi local app preview](./docs/assets/readme/aifi-app-preview.png)
+
+### 研究产物示例
+
 ![AIFi 研究结果预览](./docs/assets/readme/aifi-preview-zh-CN.png)
