@@ -32,6 +32,13 @@ There is no deployed service, package dependency graph, or release artifact yet.
 
 ## Future Runtime Work
 
+If ChatGPT plan access is implemented, use AIFi's official OAuth registration
+and protect its account-specific tokens in local or user-controlled runtime
+storage. Keep model permission separate from application sessions and Schwab or
+Plaid authorization. The researched requirements and current availability are
+recorded in [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md);
+no credential handling is implemented yet.
+
 When AIFi gains application code or infrastructure, update this file with:
 
 - authentication and authorization boundaries

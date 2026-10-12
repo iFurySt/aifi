@@ -61,6 +61,26 @@ coverage, and unresolved questions visible.
 - Require research artifacts to link back to evidence items; synthesis without
   provenance should be treated as draft-only.
 
+## Deferred Brokerage Connectivity
+
+Future account connectivity should prioritize direct Schwab access for the
+maintainer's portfolio and preserve Plaid as an optional aggregation path for
+other self-hosted users. Portfolio data, market data, and order execution should
+have separate capability boundaries. This is a recorded direction, not a
+runtime implementation or first-wave commitment. See the
+[Schwab and Plaid connectivity direction](design-docs/broker-connectivity-direction.md).
+
+## Future Model Access and Identity
+
+The local research runtime may offer ChatGPT plan usage through the official
+open-source OAuth flow as an optional model access path alongside user-supplied
+API keys and other providers. Keep application identity, inference permissions,
+and brokerage authorization separate. The plan route needs its own capability
+adapter; it does not support every ordinary API feature. Website identity-only
+login and a company-operated hosted service require separate eligibility
+decisions. No authentication runtime is implemented. See
+[ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
+
 ## To Fill In For A New Project
 
 - Primary product surfaces and runtime topology.

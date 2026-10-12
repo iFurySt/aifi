@@ -48,3 +48,16 @@ questions, and optional watchlist alerts.
 Do not start with broker integration, autonomous trading, portfolio rebalancing,
 or opaque buy/sell signals. Those require stronger compliance, audit, and
 runtime controls than the early product should assume.
+
+For a later phase, preserve direct Schwab connectivity as the initial broker
+priority and Plaid as an optional path for account aggregation. People who clone
+AIFi should be able to choose their own provider. Personal use is the initial
+context; a possible company-operated commercial offering remains a separate
+future decision. See the
+[deferred connectivity direction](design-docs/broker-connectivity-direction.md).
+
+An optional ChatGPT plan connection could reduce API-key setup for eligible
+users of a future local research runtime. Preserve other model access choices,
+make the active funding path visible, and keep plan usage independent of broker
+access. This researched option adds no first-wave implementation requirement;
+see [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
