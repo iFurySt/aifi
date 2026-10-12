@@ -1,7 +1,7 @@
 # Security
 
-AIFi's current security posture is documentation- and research-archive focused.
-There is no deployed service, package dependency graph, or release artifact yet.
+AIFi now includes a local Web/Electron demo and a pinned dependency lockfile.
+There is no hosted backend, model credential handling, or broker connection.
 
 ## Current Defaults
 
@@ -15,8 +15,8 @@ There is no deployed service, package dependency graph, or release artifact yet.
   stale data, or conflicting sources.
 - Keep scripts explicit and reviewable. Avoid hidden network calls, destructive
   defaults, or unbounded filesystem operations.
-- Add dependency scanning only after the repository has real dependency manifests
-  and lockfiles.
+- Review dependency updates against the pinned lockfile; automated vulnerability
+  scanning remains a follow-up.
 
 ## External Sources And Integrations
 
@@ -30,6 +30,18 @@ There is no deployed service, package dependency graph, or release artifact yet.
 - If a connector writes to external systems, document whether the action is
   read-only, creates drafts, or publishes user-visible content.
 
+## Local Application Boundaries
+
+- Electron renderer: sandbox, context isolation, no Node integration, and a
+  preload bridge exposing only runtime metadata.
+- New windows and navigation away from the app are denied.
+- Production CSP allows local assets and denies network connections/frames;
+  development permits the fixed localhost Vite origin and its HMR socket.
+- Local storage contains demo research state, not credentials. Do not add tokens
+  to this storage adapter; future secrets need a separate protected capability.
+- Saved data is validated before use and rendered as text, without raw HTML.
+- Browser and desktop data remain separate; reset replaces only AIFi's state.
+
 ## Future Runtime Work
 
 If ChatGPT plan access is implemented, use AIFi's official OAuth registration
@@ -39,7 +51,7 @@ Plaid authorization. The researched requirements and current availability are
 recorded in [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md);
 no credential handling is implemented yet.
 
-When AIFi gains application code or infrastructure, update this file with:
+Before live provider access or infrastructure, extend this file with:
 
 - authentication and authorization boundaries
 - secret storage and rotation rules

@@ -13,8 +13,8 @@ Track quality by product area and architectural layer so agents can prioritize t
 
 | Area | Score | Why | Next Step |
 | --- | --- | --- | --- |
-| Product surface | C | First AIFi company research workflow is defined and seed skills exist, but there is no executable runner yet. | Turn `skills/company-research-workflow` into an executable prototype. |
-| Architecture docs | C | AIFi domain objects, skill directory, and research archive direction are drafted; package boundaries and data flow are still pending. | Define package layering, evidence storage, and workflow orchestration contracts. |
-| Testing | D | No stack-specific tests yet. | Add a minimal smoke path with one real command. |
-| Observability | D | No local stack or conventions yet. | Document logs, metrics, traces, and local access. |
-| Security | C | Defaults are documented, implementation is pending. | Add real auth, secret, and dependency rules. |
+| Product surface | C | Six local demo pages and persistent interactions work; real research execution remains pending. | Connect the company research workflow to a sourced local runner. |
+| Architecture docs | B | Web/Electron share one renderer; domain/platform/UI boundaries and demo persistence are documented. | Specify evidence storage and runner contracts before integration. |
+| Testing | B | TypeScript, nine domain/storage tests, and both builds run in make ci; browser interactions were checked. | Add and verify a repeatable Electron smoke path. |
+| Observability | C | Terminal startup/build diagnostics and visible storage errors exist; there is no research runner yet. | Add structured run diagnostics when execution is implemented. |
+| Security | B | Renderer sandbox, narrow preload, CSP, validated demo state, and pinned dependencies are implemented. | Add dependency scanning and protected token storage before live access. |

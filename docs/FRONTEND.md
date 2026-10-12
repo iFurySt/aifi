@@ -12,6 +12,7 @@ pnpm install
 pnpm dev
 pnpm dev:desktop
 pnpm check
+pnpm test
 pnpm build
 pnpm preview
 pnpm desktop
@@ -37,10 +38,24 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, and production builds. Once domain
-interactions exist, include their tests in that same entry point. Use the local
+make ci runs repository gates, TypeScript, nine domain/storage tests, and both
+production builds. Use the local
 app for desktop and mobile visual checks. Validate the actual Electron renderer,
 not only the browser build, before claiming desktop support.
 
 Work in an isolated checkout for UI verification. Screenshots and smoke output
 belong in the ignored .artifacts directory unless curated into documentation.
+
+## Local Demo Behavior
+
+Agents can be created, filtered, paused/resumed, deleted, and given an explicit
+sample check. Research conversations contain deterministic illustrative responses.
+Watchlists support adding/removing symbols; unknown symbols have no invented
+quote. Portfolio numbers and charts are fixed examples. Library cards preview
+existing repository skills without executing them. Settings controls theme and
+local reset; provider cards describe future connections.
+
+State is validated against schema v1 and saved under aifi.workspace.v1 in local
+storage. Invalid saved data opens a temporary demo without overwriting the raw
+value; reset is the explicit recovery action. Storage failures show a persistent
+notice. Browser and Electron data are independent, with no synchronization.

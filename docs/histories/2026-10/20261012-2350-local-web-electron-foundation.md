@@ -36,4 +36,15 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
 ### Validation
 
 - Foundation: make ci passed, including TypeScript and both production builds.
-- Browser, domain, persistence, and Electron verification follow in later milestones.
+- Demo milestone: nine domain/storage tests and make ci passed.
+- Chrome Default via OBU: prompt validation, agent create/pause/resume/check,
+  paused filter, ticker addition without fabricated quotes, research, theme,
+  and persisted state passed. Electron/mobile validation follows.
+
+### Demo Milestone
+
+- Added six working demo pages, shared shell, accessible dialogs/menus, search,
+  local state recovery, light/dark themes, and original vector visual assets.
+- Updated security, reliability, architecture, quality targets, and release notes.
+- Fixed trailing punctuation in explicit ticker extraction, caught by a domain test.
+

@@ -1,5 +1,11 @@
 # Feature Release Notes
 
+## 2026-10
+
+| Date | Area | User Impact | Change Summary |
+| --- | --- | --- | --- |
+| 2026-10-12 | Local app | Preview a coherent research workspace in Web and Electron, create demo agents, keep a watchlist, and explore sample research and portfolio views. | Added a shared React/Tailwind renderer, six pages, local persistence, light/dark themes, and design documentation. Live AI, broker access, and background monitoring remain planned. |
+
 ## 2026-05
 
 | Date | Area | User Impact | Change Summary |

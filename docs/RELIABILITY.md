@@ -1,13 +1,24 @@
 # Reliability
 
-Define the operational bar for the repository here.
+## Current Local Runtime
 
-Suggested areas:
+Web starts on the fixed loopback origin 127.0.0.1:5173. Desktop development owns
+its Vite process; a conflicting port causes startup to fail rather than silently
+choosing another origin. Production desktop loads bundled assets without a server.
+The first desktop launch downloads Electron if the binary is not cached.
 
-- Startup and health expectations.
-- Logging, metrics, and tracing conventions.
-- Timeouts, retries, and backoff rules.
-- Local and CI validation for critical paths.
-- Incident notes, common failure modes, and recovery steps.
+The demo has no network data sources, background schedules, or cloud services.
+Local state is bounded and validated. Invalid or unsupported state opens a
+recoverable temporary demo and preserves the stored value until explicit reset.
+Storage denial/quota failure leaves the session usable and displays a notice.
 
-CI workflow structure and deferred release automation guidance live in `docs/CICD.md`.
+## Verification And Diagnostics
+
+make ci includes repository checks, TypeScript, domain/storage contracts, and
+production builds. Frontend browser/Electron verification lives in
+[the frontend guide](FRONTEND.md). Vite and Electron diagnostics appear in the
+launching terminal; the app exposes user-facing storage/startup failures.
+
+Multi-window editing, schema migrations, backups, live-source retry policies,
+and research-runner observability remain future work. CI workflow and release
+automation guidance live in [CICD.md](CICD.md).

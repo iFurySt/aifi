@@ -49,7 +49,16 @@ The product is investment decision support, not autonomous trading or regulated
 financial advice. The system should make uncertainty, source quality, date
 coverage, and unresolved questions visible.
 
-## Core Domain Objects
+## Local Demo Data Flow
+
+The renderer loads a versioned workspace through packages/platform, validates it
+through packages/core, and supplies it to page components through one context.
+User actions update immutable state; changes persist locally. Core rules validate
+agent prompts, ticker symbols, paused checks, and stored shapes. Demo quotes and
+positions are static, and chat responses are illustrative. These contracts are
+separate from the future evidence/workflow domain below. No scheduler exists.
+
+## Intended Research Domain Objects
 
 - `Skill`: a bounded AI-capable operation with declared inputs, outputs, source
   requirements, cost profile, and quality checks.
@@ -71,7 +80,7 @@ coverage, and unresolved questions visible.
 
 - Put business logic in reusable packages before spreading it across apps.
 - Keep infrastructure and runtime orchestration explicit and versioned.
-- Avoid hidden cross-package coupling; document allowed dependency directions once the stack is real.
+- Avoid hidden cross-package coupling; follow the dependency direction above.
 - When the architecture changes, update this file in the same task.
 - Keep source collection, evidence normalization, reasoning, and presentation as
   separate layers so failures and hallucinations can be isolated.
@@ -98,10 +107,7 @@ login and a company-operated hosted service require separate eligibility
 decisions. No authentication runtime is implemented. See
 [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
 
-## To Fill In For A New Project
-
-- Primary product surfaces and runtime topology.
-- Package layering and import boundaries.
+## Deferred Architecture Work
 - Data flow and persistence model for evidence, generated artifacts, and user
   decisions.
 - Observability stack and local development model.

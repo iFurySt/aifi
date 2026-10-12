@@ -13,6 +13,11 @@
     "types": ["node", "vite/client"],
     "verbatimModuleSyntax": true
   },
-  "include": ["apps/**/*.ts", "apps/**/*.tsx", "packages/**/*.ts", "packages/**/*.tsx"],
+  "include": [
+    "apps/**/*.ts",
+    "apps/**/*.tsx",
+    "packages/**/*.ts",
+    "packages/**/*.tsx"
+  ],
   "exclude": ["**/dist", "**/node_modules"]
 }

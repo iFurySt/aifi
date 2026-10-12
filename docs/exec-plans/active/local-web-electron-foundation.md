@@ -45,8 +45,9 @@ responsive interface with representative demo data before live integrations.
 
 - [x] Prior research committed and pushed as 3eae982.
 - [x] Inspected accessible reference surfaces and adjacent design collection.
-- [x] Shared runtime shell builds and passes make ci; ready for milestone push.
-- [ ] Demo pages and local interactions built and pushed.
+- [x] Shared runtime shell built and pushed as f7ab203.
+- [x] Six demo pages and local interactions built; nine contract tests and basic
+  Chrome interaction checks passed before milestone push.
 - [ ] Visual/functional validation, documentation, and final push complete.
 
 ## Decision Log
