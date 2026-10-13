@@ -32,3 +32,6 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 - [US stock data sources](us-stock-data-providers.md) compares personal free API
   options, primary documentation, actual keyless probes, and implementation
   lessons from the three reference projects, reviewed on 2026-10-13.
+
+- [Stock directory sources](stock-directory-sources.md): selected keyless bulk
+  directory, pinned-project comparison, actual requests, and classification limits.
