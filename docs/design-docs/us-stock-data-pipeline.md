@@ -15,7 +15,9 @@ this design task.
   compressed raw responses on disk. No cloud, Redis, Kafka, or required Python.
 - React reads a local data contract. Pages do not fetch providers or start
   scheduling loops. Research agents consume the stored data later.
-- Use four initial tabs: Overview, Chart, Financials, Filings. Exclude trading,
+- The shared UI exposes Chart, Financials, Funds, Politicians, Insiders, Analyst.
+  Filings is inside Financials. First live coverage remains bars/facts/filings;
+  other sections use explicit placeholders. Exclude trading,
   ratings, politician activity, full news ingestion, and AI conclusions.
 
 Provider facts, primary links, probe results, quota limits, and upstream source

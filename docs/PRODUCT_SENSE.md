@@ -40,12 +40,15 @@ about uncertainty.
 
 ## Current Local Preview
 
-The first app establishes the six-page workspace and demonstrates local research
-routines with sample data. Its purpose is to review navigation and interaction
-before provider work. Demo status stays visible; simulated briefs never claim
-real source retrieval. The next foundation is traceable local stock data,
-followed by the research runner described below; neither is a feature of this preview. See the
-[stock data design](design-docs/us-stock-data-pipeline.md).
+The first app establishes the seven-page workspace, including six stock-detail
+tabs and demonstrates local research routines with sample data. Its purpose is
+to review navigation and interaction before provider work. Demo status stays
+visible; simulated briefs never claim real source retrieval. Stock data fixtures
+and explicit empty panels make the whole page reviewable; missing provider
+coverage does not invent values. The next foundation is traceable local stock
+data, followed by the research runner described below; neither is a feature of
+this preview. See the [stock data design](design-docs/us-stock-data-
+pipeline.md).
 
 Product copy should help users act with minimal reading. Keep internal planning,
 implementation details, and development conversations in repository docs. Use a
@@ -67,11 +70,12 @@ For a later phase, preserve direct Schwab connectivity as the initial broker
 priority and Plaid as an optional path for account aggregation. People who clone
 AIFi should be able to choose their own provider. Personal use is the initial
 context; a possible company-operated commercial offering remains a separate
-future decision. See the
-[deferred connectivity direction](design-docs/broker-connectivity-direction.md).
+future decision. See the [deferred connectivity direction](design-docs/broker-
+connectivity-direction.md).
 
 An optional ChatGPT plan connection could reduce API-key setup for eligible
 users of a future local research runtime. Preserve other model access choices,
 make the active funding path visible, and keep plan usage independent of broker
 access. This researched option adds no first-wave implementation requirement;
-see [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
+see [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-
+usage.md).

@@ -1,6 +1,13 @@
 export type WorkspacePage =
-  "agents" | "research" | "watchlist" | "portfolio" | "library" | "settings";
+  | "stocks"
+  | "agents"
+  | "research"
+  | "watchlist"
+  | "portfolio"
+  | "library"
+  | "settings";
 export const workspacePages: WorkspacePage[] = [
+  "stocks",
   "agents",
   "research",
   "watchlist",

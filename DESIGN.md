@@ -80,11 +80,11 @@ Chart colors are semantic; they do not indicate recommendations.
 
 ### Buttons
 
-Primary: dark pill, 36–40px high, 16px horizontal padding. Secondary: transparent
-or surface fill, 1px border, same height. Icon buttons: 32–36px square, 8px radius,
-muted text, named accessible label. Hover uses surface-muted; keyboard focus uses
-neutral hover-like feedback with no outline. Disabled buttons keep a clear
-disabled appearance.
+Primary: dark pill, 36–40px high, 16px horizontal padding. Secondary:
+transparent or surface fill, 1px border, same height. Icon buttons: 32–36px
+square, 8px radius, muted text, named accessible label. Hover uses surface-
+muted; keyboard focus uses neutral hover-like feedback with no outline. Disabled
+buttons keep a clear disabled appearance.
 
 ### Cards & Containers
 
@@ -102,12 +102,14 @@ Selected ticker chips are small outlined pills. Forms show validation inline.
 
 ### Navigation
 
-56px outer tool rail and a 248px sidebar inside the workspace panel. Rail
-buttons are 40px squares with 10px radius. The sidebar has 40px rows and 8px
-active-state radius. A visible toolbar control collapses/restores it. Group the six
-primary destinations: Research, Agents, Watchlist, Portfolio, Library, Settings.
-Agents is the starting route. Place the local workspace identity at the bottom.
-Use a small wordmark and original SVG symbol; do not reuse reference logos.
+80px outer tool rail and a 248px stock sidebar inside the workspace panel. Rail
+buttons are 64×56px with an icon and short label. Stocks, Chat, Agents,
+Watchlist, Portfolio, and Library live only in that single column; Settings
+lives in the avatar popup. Stocks is the starting route. The inner sidebar
+contains searchable stock rows with ticker/name and sample quote, never a second
+app menu. A visible toolbar control collapses/restores it. Keep the avatar at
+the rail bottom. Use a small wordmark and original SVG symbol; do not reuse
+reference logos.
 
 ### Badges / Tags
 
@@ -126,7 +128,7 @@ Use Radix primitives for those behaviors, not a large visual component library.
 
 ### Page Composition
 
-- App shell: neutral outer chrome, 56px tool rail, and a single inset panel
+- App shell: neutral outer chrome, 80px tool rail, and a single inset panel
   containing sidebar and main canvas. Panel radius 16px, outline 1px, outer gap
   8px. The frame and sidebar stay still while main content scrolls internally.
 - Electron: 48px draggable outer toolbar with native Mac traffic lights,
@@ -165,15 +167,16 @@ dialogs. 999px: pill buttons and ticker chips.
 
 ### Workspace Menu
 
-Keep the sidebar focused on navigation and recent research. The bottom outer-rail
-avatar opens a 264px popup with workspace identity, Settings, and theme switching.
-Use a 40px trigger, 16px popup radius, and 40px menu rows. At mobile widths move
-the same avatar menu into the page toolbar; avoid duplicating sidebar footers.
-Menus support keyboard navigation, Escape, outside dismissal, and focus return.
-All controls suppress browser/default focus outlines. Keyboard focus uses the
-existing neutral hover background, text, underline, or form-border treatment.
-Keep Tab navigation, focused inputs, menu selection, and Escape focus return.
-Never add blue outlines or ring utilities to individual components.
+Keep the sidebar focused on stock selection; chats remain selectable inside
+Chat. The bottom outer-rail avatar opens a 264px popup with workspace identity,
+Settings, and theme switching. Use a 40px trigger, 16px popup radius, and 40px
+menu rows. At mobile widths move the same avatar menu into the page toolbar;
+avoid duplicating sidebar footers. Menus support keyboard navigation, Escape,
+outside dismissal, and focus return. All controls suppress browser/default focus
+outlines. Keyboard focus uses the existing neutral hover background, text,
+underline, or form-border treatment. Keep Tab navigation, focused inputs, menu
+selection, and Escape focus return. Never add blue outlines or ring utilities to
+individual components.
 
 ## 6. Depth & Elevation
 
@@ -223,7 +226,7 @@ light surfaces; AIFi's dark palette is an inferred complementary implementation.
 - Key type rules: system sans, 14px body, 32px hero, tabular numeric values.
 - Core components: thin borders, 16px cards, 20px composer, dark pill action.
 - Page structure: outer chrome surrounds an inset sidebar/document panel;
-  Agents is the entry.
+  Stocks is the entry; the rail owns global navigation.
 - Short prompt: Build a local investment research workspace with ChatGPT's
   readable shell and Rallies' agent/update organization. Follow these tokens,
   use original AIFi content, and implement all visible primary actions locally.
@@ -247,34 +250,33 @@ motion so transient navigation colors are not mistaken for final states.
 - Seed copy can improve for new workspaces; never rewrite saved user content or
   conversations to enforce a new writing style.
 
-## 11. Stock Detail Page (Proposed)
+## 11. Stock Detail Page
 
-Reference reviewed on 2026-10-13: Rallies AAPL Chart view. Its observed company
-header, three-column data layout, 15px underline tabs (2px active line), and
-price/volume chart inform AIFi. Financials content did not load in the inspection;
-AIFi statement tables and responsive rearrangement below are inferred.
+Reference reviewed on 2026-10-13 through Chrome Default / OBU: Rallies AAPL has
+six underline tabs, a three-column Chart view, and Financials with a Metrics
+selector plus Quarter/Yearly controls. Missing-data layouts and responsive
+rearrangement below are AIFi choices.
 
-- Reuse the outer frame, rail, 248px sidebar, and avatar treatment. Keep Stocks
-  separate from conversational Research. Standalone prototypes can limit the
-  sidebar to Stocks and development-target selection.
-- Company header: monogram/name/ticker/exchange, search, Watchlist. One status
-  entry gives source/session freshness; a fixture preview says Sample data.
-- Four initial tabs: Overview, Chart, Financials, Filings. Tabs are 15px/500,
-  selected 600 with a 2px text-color underline, 24px gap and 40px minimum height.
-- Overview: max 1,180px; 240px identity + 220–260px metrics + flexible chart,
-  separated by 20–24px gaps/thin dividers. Close is 32px, data 13px, labels 11px.
-- Use container width for data layout: below 1,050px combine identity/metrics
-  beside the chart; below 760px stack quote, chart, metrics, and filings. At
-  narrow viewport widths keep the established shell collapse rules.
-- Charts: daily ranges 1M/3M/1Y/2Y, line/candle, volume, named adjustment basis.
-  Use green/red only for financial movement, 1px subtle grids, and no live-tick
-  animation. Keep chart labels legible on mobile: size the SVG viewBox to the
-  rendered plot, retaining 10px label text instead of scaling a desktop plot.
-- Financials: Income/Balance/Cash flow and annual/quarter controls; period/unit
-  labels, tabular figures, internally scrolling tables. Missing is an em dash.
-- Filings: compact form/period/filed rows and original sources. All previews
-  identify fixtures; never use a sample filing link as evidence of retrieval.
-- Dark/light use the existing tokens. Prototype charts/monograms are original
-  local SVG/CSS approximations, with no vendor asset or backend dependency.
+- Reuse the shared frame, rail, stock sidebar, avatar, and native toolbar.
+- Company header: monogram/name/ticker/exchange, search, Watchlist toggle.
+- Six main tabs: Chart, Financials, Funds, Politicians, Insiders, Analyst. Tabs
+  are 15px/500, selected 600 with a 2px underline and 40px minimum height.
+  Filings is a Financials view; no separate Overview tab.
+- Chart: quote/company/analyst/earnings column; metrics/peers column; wide
+  daily price/volume chart followed by Digest and recent filings. Thin vertical
+  dividers separate columns. Quote is 32px; metrics use tabular figures.
+- At content widths below 1,000px move metrics below identity beside the chart;
+  below 660px prioritize quote, chart, metrics. Tabs and tables scroll internally.
+- Chart controls: 1M/3M/1Y/2Y and Line/Candle; hover/keyboard details use the same
+  daily OHLCV fixtures. SVG dimensions follow rendered width to keep labels legible.
+- Financials: Metrics/Income/Balance/Cash flow/Filings selector, Quarter/Yearly,
+  period/unit labels, sparse tables. Fixtures say Sample financials.
+- Funds, Politicians, Insiders: relevant summary metrics, filters, disclosure
+  table, concise empty state. Analyst: targets, unmarked rating scale, rating table.
+  Unsupported values stay an em dash; no fictional holdings/trades/ratings/news.
+- Short missing-data copy replaces explanatory roadmap text. Unknown tickers can
+  be bookmarked but have no invented company, exchange, quote, or financials.
+- All hosts use one React implementation; the former standalone preview is an
+  entry link. Preserve neutral keyboard focus and native window controls.
 
-Detailed scope and states: [stock page design](docs/design-docs/stock-research-page.md).
+Detailed scope: [stock page design](docs/design-docs/stock-research-page.md).

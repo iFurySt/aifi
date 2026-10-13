@@ -165,3 +165,26 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   calls or persistence-schema change.
 - Meaningful route round-trip and invalid-input tests bring the suite to eleven.
   TypeScript, repository CI, and both builds pass in the UI integration checkout.
+
+### Shared Stock Workspace — 2026-10-13
+
+- Added Stocks as the default shared renderer page with six primary tabs matching
+  the reference navigation: Chart, Financials, Funds, Politicians, Insiders, Analyst.
+- Chart has company/quote/analyst/earnings, metrics/peers, and price/volume/Digest
+  columns. Financials has statement and Quarter/Yearly controls. Missing datasets
+  have relevant summaries, filters, table columns, and concise empty states.
+- Moved app destinations into the outer single rail. The inner sidebar selects
+  stocks; Chat history stays selectable inside Chat/search. Existing schema v1
+  content is preserved. Stock and Watchlist navigation share the same routes.
+- Added deterministic local bars and clearly marked financial examples. Unknown
+  symbols have no invented company, exchange, quote, or statements. No live
+  collector, provider calls, model access, or host privileges were added.
+- Replaced the duplicate standalone stock prototype with an entry to the shared
+  renderer; updated design, architecture, frontend, product/quality, release notes,
+  screenshots, and the data plan without marking live ingestion complete.
+- Validation: make ci passed with eleven tests and both builds. Chrome Default
+  via OBU checked six desktop/mobile tabs, chart modes/ranges, financial controls,
+  missing symbols, watched-state persistence, Chat history, mobile stock/menu
+  selection, route reload, themes, sidebar collapse, and neutral focus/menu Escape.
+  Actual macOS Electron smoke passed stock tabs/placeholders, renderer isolation,
+  local assets, local save, bounded history/branching, and shell controls.

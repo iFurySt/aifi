@@ -1,28 +1,27 @@
-# Stock Research Concept
+# Stock Workspace Preview
 
-Open [preview.html](preview.html) directly in a browser. For local HTTP review:
+The original standalone concept graduated into the shared React Web/Electron
+renderer. There is one stock-page implementation in packages/ui, not two UIs.
 
 ```sh
-python3 -m http.server 5184 --bind 127.0.0.1 --directory docs/prototypes/stock-research
+pnpm install
+pnpm dev             # http://127.0.0.1:5173/#/stocks/AAPL?tab=chart
+pnpm dev:desktop     # alternative: Electron with the same renderer
 ```
 
-Then open http://127.0.0.1:5184/preview.html. No build or dependency is needed.
+[preview.html](preview.html) is a compatibility entry that opens the running
+local app. It needs that app to be started; it is no longer a build-free demo.
+The original four tabs are replaced by Chart, Financials, Funds, Politicians,
+Insiders, Analyst. Known quotes/chart/financials are marked samples; unsupported
+holdings, disclosures, earnings, ratings, news, and filings have empty structures.
+Watchlist and Chat use the normal local workspace storage.
 
-The page exercises four tabs, chart range/type, three ticker fixtures, financial
-statement/period selection, filing filters, watchlist state, sample-data help, and
-light/dark themes. Values and filing records are examples; nothing is collected
-from providers or persisted to the product workspace. The CSP denies network data
-connections; fonts, monograms, and charts are local.
-
-Reviewed in Chrome Default through OBU at 1440×1100 and 390×844 on 2026-10-13,
-including keyboard tabs, dialog focus return, controls, theme, and table overflow.
-Mobile SVGs use rendered dimensions so labels remain readable.
+Reviewed in Chrome Default through OBU at 1440×1100 and 390×844 and in actual
+macOS Electron on 2026-10-13. Tables scroll internally and keyboard focus stays
+neutral while Tab/Escape and tab arrow keys remain functional.
 
 Design: [stock page](../../design-docs/stock-research-page.md),
 [data pipeline](../../design-docs/us-stock-data-pipeline.md), and
 [root DESIGN.md](../../../DESIGN.md).
 
-![Stock research sample-data concept](overview.png)
-
-Keyboard focus follows the shared neutral styling: no outlines, with background/
-text/underline feedback and working Tab/Escape navigation.
+![Shared stock workspace with sample data](overview.png)

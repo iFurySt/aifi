@@ -1,6 +1,6 @@
 # Stock Workspace UI Alignment
 
-Created 2026-10-13. In progress.
+Created and completed 2026-10-13.
 
 ## Goal
 
@@ -20,11 +20,11 @@ React renderer, with useful empty structures for datasets not connected yet.
 
 ## Milestones
 
-Route parsing/building and tests are complete; UI integration is under review.
+Route/domain milestone and shared UI integration are complete.
 
-- [ ] Shared stock route/context and one-column application navigation.
-- [ ] Stock page with six populated/empty layouts, fixtures, and local controls.
-- [ ] Browser/mobile/native verification and documentation refresh.
+- [x] Shared stock route/context and one-column application navigation.
+- [x] Stock page with six populated/empty layouts, fixtures, and local controls.
+- [x] Browser/mobile/native verification and documentation refresh.
 
 ## Validation
 
@@ -41,3 +41,12 @@ mobile drawers, native route history, and neutral keyboard focus.
   The document sidebar contains stocks. Existing conversations remain selectable
   inside Chat and via search, rather than being erased with the old sidebar.
 - Reuse one shared React stock page for Web/Electron and the prototype entry.
+
+## Outcome
+
+Shared Web/Electron implementation replaced the separate prototype. make ci
+passed with eleven tests and both production builds. OBU reviewed desktop/mobile
+tabs, data absence, stock/watchlist controls, Chat history, theme, route reload,
+neutral focus/menu dismissal, and navigation. Actual macOS Electron smoke passed.
+The live data foundation remains an active independent plan; no credentials or
+collection runtime were added.

@@ -3,8 +3,15 @@ import {
   createDemoWorkspace,
   decodeWorkspace,
   workspacePages,
+  parseStockRoute,
+  stockHref,
 } from "@aifi/core";
-import type { Conversation, Workspace, WorkspacePage } from "@aifi/core";
+import type {
+  Conversation,
+  Workspace,
+  WorkspacePage,
+  StockTab,
+} from "@aifi/core";
 import { getRuntimeInfo, readWorkspace, writeWorkspace } from "@aifi/platform";
 import type { StoragePort } from "@aifi/platform";
 import { WorkspaceContext } from "./workspace-context";
@@ -15,16 +22,20 @@ import { Watchlist } from "./pages/Watchlist";
 import { Portfolio } from "./pages/Portfolio";
 import { Library } from "./pages/Library";
 import { Settings } from "./pages/Settings";
+import { Stocks } from "./pages/Stocks";
 const storage: StoragePort = {
   getItem: (key) => window.localStorage.getItem(key),
   setItem: (key, value) => window.localStorage.setItem(key, value),
   removeItem: (key) => window.localStorage.removeItem(key),
 };
 function currentPage(): WorkspacePage {
-  const candidate = location.hash.replace(/^#\/?/, "").split("?")[0];
+  const candidate = location.hash
+    .replace(/^#\/?/, "")
+    .split("?")[0]
+    ?.split("/")[0];
   return workspacePages.includes(candidate as WorkspacePage)
     ? (candidate as WorkspacePage)
-    : "agents";
+    : "stocks";
 }
 export function App() {
   const [loaded] = useState(() =>
@@ -35,16 +46,28 @@ export function App() {
   const blocked = useRef(!!loaded.error);
   const dirty = useRef(false);
   const [page, setPage] = useState(currentPage);
+  const [stockRoute, setStockRoute] = useState(() =>
+    parseStockRoute(location.hash),
+  );
+  const openStock = useCallback((symbol: string, tab?: StockTab) => {
+    location.hash = stockHref(symbol, tab).slice(1);
+  }, []);
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [draft, setDraft] = useState("");
   const [toast, setToast] = useState("");
   const toastTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
     undefined,
   );
-  const navigate = useCallback((target: WorkspacePage) => {
-    location.hash = `/${target}`;
-    setPage(target);
-  }, []);
+  const navigate = useCallback(
+    (target: WorkspacePage) => {
+      location.hash =
+        target === "stocks"
+          ? stockHref(stockRoute.symbol, stockRoute.tab).slice(1)
+          : `/${target}`;
+      setPage(target);
+    },
+    [stockRoute],
+  );
   const notify = useCallback((message: string) => {
     clearTimeout(toastTimer.current);
     setToast(message);
@@ -87,7 +110,11 @@ export function App() {
     );
   }
   useEffect(() => {
-    const change = () => setPage(currentPage());
+    const change = () => {
+      const nextPage = currentPage();
+      setPage(nextPage);
+      if (nextPage === "stocks") setStockRoute(parseStockRoute(location.hash));
+    };
     window.addEventListener("hashchange", change);
     return () => window.removeEventListener("hashchange", change);
   }, []);
@@ -112,6 +139,8 @@ export function App() {
         update,
         page,
         navigate,
+        stockRoute,
+        openStock,
         notify,
         research,
         conversationId,
@@ -131,6 +160,7 @@ export function App() {
         Skip to content
       </a>
       <Shell>
+        {page === "stocks" && <Stocks />}
         {page === "agents" && <Agents />}
         {page === "research" && (
           <Research draft={draft} clearDraft={clearDraft} />

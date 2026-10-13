@@ -22,9 +22,11 @@ filesystem access. Mock state stays local; live research runners and provider
 connections remain future work.
 
 The shared Shell separates outer application chrome from the inset sidebar and
-scrolling document panel. Host metadata chooses native desktop versus browser
-headers. The desktop toolbar uses browser route history with session bounds;
-window controls remain native and no additional host IPC is exposed.
+scrolling document panel. The outer rail owns application navigation; the inner
+sidebar owns stock selection. Stored conversations stay selectable inside Chat.
+Host metadata chooses native desktop versus browser headers. The desktop toolbar
+uses browser route history with session bounds; window controls remain native
+and no additional host IPC is exposed.
 
 ## Repository Shape
 
@@ -58,10 +60,13 @@ coverage, and unresolved questions visible.
 
 The renderer loads a versioned workspace through packages/platform, validates it
 through packages/core, and supplies it to page components through one context.
-User actions update immutable state; changes persist locally. Core rules validate
-agent prompts, ticker symbols, paused checks, and stored shapes. Demo quotes and
-positions are static, and chat responses are illustrative. These contracts are
-separate from the future evidence/workflow domain below. No scheduler exists.
+User actions update immutable state; changes persist locally. Core rules
+validate agent prompts, ticker symbols, paused checks, and stored shapes. Seven
+pages share this state. Stocks uses symbol/tab hash routes, deterministic local
+OHLCV/statement fixtures, and empty structures for unsupported datasets. Quotes
+and positions are examples, and chat responses are illustrative. These contracts
+are separate from the future evidence/workflow domain below. No scheduler
+exists.
 
 ## Intended Research Domain Objects
 
@@ -115,10 +120,12 @@ decisions. No authentication runtime is implemented. See
 ## Proposed Stock Data Foundation
 
 The next live capability is a local Go/Cobra collector with durable SQLite jobs,
-EOD bars, source provenance, and cached reads for a four-tab stock page. The
-[design](design-docs/us-stock-data-pipeline.md) and
+EOD bars, source provenance, and cached reads for the stock page. Six stock tabs
+already exist with sample/empty content; they do not imply six live provider
+integrations. The [design](design-docs/us-stock-data-pipeline.md) and
 [implementation plan](exec-plans/active/us-stock-data-foundation.md) define the
-proposed boundaries; the current application still has no collector or scheduler.
+proposed boundaries; the current application still has no collector or
+scheduler.
 
 ## Deferred Architecture Work
 - Data flow and persistence model for evidence, generated artifacts, and user

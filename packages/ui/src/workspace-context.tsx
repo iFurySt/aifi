@@ -1,10 +1,18 @@
 import { createContext, useContext } from "react";
-import type { Conversation, Workspace, WorkspacePage } from "@aifi/core";
+import type {
+  Conversation,
+  Workspace,
+  WorkspacePage,
+  StockTab,
+  StockRoute,
+} from "@aifi/core";
 export interface WorkspaceContextValue {
   workspace: Workspace;
   update: (change: (current: Workspace) => Workspace) => void;
   page: WorkspacePage;
   navigate: (page: WorkspacePage) => void;
+  stockRoute: StockRoute;
+  openStock: (symbol: string, tab?: StockTab) => void;
   notify: (message: string) => void;
   research: (prompt?: string) => void;
   conversationId: string | null;
@@ -22,8 +30,9 @@ export function useWorkspace() {
 }
 export const uid = () => crypto.randomUUID();
 export const pageLabels: Record<WorkspacePage, string> = {
+  stocks: "Stocks",
   agents: "Agents",
-  research: "Research",
+  research: "Chat",
   watchlist: "Watchlist",
   portfolio: "Portfolio",
   library: "Library",

@@ -11,7 +11,7 @@ import {
   Sparkline,
 } from "../components/primitives";
 export function Watchlist() {
-  const { workspace, update, notify, research } = useWorkspace();
+  const { workspace, update, notify, research, openStock } = useWorkspace();
   const [query, setQuery] = useState("");
   const [adding, setAdding] = useState(false);
   const [symbol, setSymbol] = useState("");
@@ -86,9 +86,7 @@ export function Watchlist() {
                     <td>
                       <button
                         className="company-cell"
-                        onClick={() =>
-                          research(`Build a research outline for ${s}.`)
-                        }
+                        onClick={() => openStock(s)}
                       >
                         <span
                           className={`company-monogram tone-${s === "NVDA" ? "mint" : s === "AAPL" ? "peach" : "blue"}`}

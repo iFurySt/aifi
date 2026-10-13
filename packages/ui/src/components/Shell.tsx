@@ -4,97 +4,84 @@ import {
   Star,
   PieChart,
   BookOpen,
-  Settings,
   Search,
-  Plus,
   Menu,
   Sun,
   Moon,
   FolderOpen,
-  Home,
+  ChartNoAxesCombined,
   ArrowLeft,
   ArrowRight,
   PanelLeft,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { workspacePages } from "@aifi/core";
+import { workspacePages, sampleQuotes, stockHref } from "@aifi/core";
 import { useWorkspace, pageLabels } from "../workspace-context";
 import { IconButton, Logo, Modal } from "./primitives";
 import type { ReactNode } from "react";
 import { useWorkspaceHistory } from "./useWorkspaceHistory";
 import { ProfileMenu } from "./ProfileMenu";
+import { StockSidebar } from "./StockSidebar";
 const destinations = [
+  { page: "stocks", icon: ChartNoAxesCombined },
   { page: "research", icon: MessageCircle },
   { page: "agents", icon: Bot },
   { page: "watchlist", icon: Star },
   { page: "portfolio", icon: PieChart },
   { page: "library", icon: BookOpen },
 ] as const;
-function Navigation({ onNavigate }: { onNavigate?: () => void }) {
-  const { workspace, page, openConversation, research } = useWorkspace();
+function AppNavigation({
+  mobile = false,
+  onNavigate,
+}: {
+  mobile?: boolean;
+  onNavigate?: () => void;
+}) {
+  const { page, stockRoute } = useWorkspace();
   return (
-    <div className="sidebar-inner">
-      <div className="sidebar-brand">
-        <Logo />
-        <IconButton
-          label="New research"
-          onClick={() => {
-            research();
-            onNavigate?.();
-          }}
+    <nav
+      className={mobile ? "mobile-app-navigation" : "rail-destinations"}
+      aria-label="Main navigation"
+    >
+      {destinations.map(({ page: target, icon: Icon }) => (
+        <a
+          key={target}
+          href={
+            target === "stocks"
+              ? stockHref(stockRoute.symbol, stockRoute.tab)
+              : `#/${target}`
+          }
+          className={`rail-button ${page === target ? "selected" : ""}`}
+          title={pageLabels[target]}
+          aria-label={pageLabels[target]}
+          aria-current={page === target ? "page" : undefined}
+          onClick={onNavigate}
         >
-          <Plus size={19} />
-        </IconButton>
-      </div>
-      <nav aria-label="Main navigation">
-        {destinations.map(({ page: target, icon: Icon }) => (
-          <a
-            key={target}
-            href={`#/${target}`}
-            className={`nav-link ${page === target ? "selected" : ""}`}
-            aria-current={page === target ? "page" : undefined}
-            onClick={() => onNavigate?.()}
-          >
-            <Icon size={19} strokeWidth={1.7} />
-            {pageLabels[target]}
-            {target === "agents" && (
-              <span className="nav-count">{workspace.agents.length}</span>
-            )}
-          </a>
-        ))}
-      </nav>
-      <div className="sidebar-recents">
-        <p className="sidebar-label">Your research</p>
-        {workspace.conversations.length === 0 ? (
-          <p className="sidebar-hint">No research yet.</p>
-        ) : (
-          workspace.conversations.slice(0, 6).map((conversation) => (
-            <button
-              key={conversation.id}
-              className="recent-link"
-              onClick={() => {
-                openConversation(conversation);
-                onNavigate?.();
-              }}
-              title={conversation.title}
-            >
-              {conversation.title}
-            </button>
-          ))
-        )}
-      </div>
-    </div>
+          <Icon size={21} strokeWidth={1.7} />
+          <span>{pageLabels[target]}</span>
+        </a>
+      ))}
+    </nav>
   );
 }
 export function Shell({ children }: { children: ReactNode }) {
-  const { workspace, update, page, navigate, storageError } = useWorkspace();
+  const {
+    workspace,
+    update,
+    page,
+    navigate,
+    storageError,
+    openStock,
+    stockRoute,
+    openConversation,
+  } = useWorkspace();
   const desktop = !!window.aifiDesktop;
   useEffect(() => {
     if (page !== "research")
       document
         .getElementById("main-content")
         ?.scrollTo({ top: 0, behavior: "instant" });
-  }, [page]);
+  }, [page, stockRoute.symbol, stockRoute.tab]);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const routeHistory = useWorkspaceHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -209,48 +196,29 @@ export function Shell({ children }: { children: ReactNode }) {
         </header>
       )}
       <div className="workspace-body">
-        <nav className="tool-rail" aria-label="Workspace tools">
+        <div className="tool-rail" aria-label="Workspace tools">
+          <div className="rail-brand">
+            <Logo small />
+          </div>
+          <AppNavigation />
+          <span className="rail-separator" />
           <button
-            className={`rail-button ${page === "agents" ? "selected" : ""}`}
-            aria-label="Workspace home"
-            title="Workspace home"
-            onClick={() => navigate("agents")}
-          >
-            <Home size={21} strokeWidth={1.7} />
-          </button>
-          <button
-            className="rail-button"
+            className="rail-button rail-search"
             aria-label="Search the workspace"
-            title="Search the workspace"
+            title="Search"
             onClick={() => {
               setSearch("");
               setSearchOpen(true);
             }}
           >
-            <Search size={20} strokeWidth={1.7} />
-          </button>
-          <button
-            className={`rail-button ${page === "library" ? "selected" : ""}`}
-            aria-label="Open library"
-            title="Open library"
-            onClick={() => navigate("library")}
-          >
-            <BookOpen size={20} strokeWidth={1.7} />
-          </button>
-          <span className="rail-separator" />
-          <button
-            className={`rail-button ${page === "settings" ? "selected" : ""}`}
-            aria-label="Open settings"
-            title="Open settings"
-            onClick={() => navigate("settings")}
-          >
-            <Settings size={20} strokeWidth={1.7} />
+            <Search size={20} />
+            <span>Search</span>
           </button>
           <ProfileMenu />
-        </nav>
+        </div>
         <div className="workspace-panel">
           <aside className="sidebar" id="workspace-sidebar">
-            <Navigation />
+            <StockSidebar />
           </aside>
           <div className="main-shell">
             {!desktop && (
@@ -274,7 +242,7 @@ export function Shell({ children }: { children: ReactNode }) {
             <main
               tabIndex={-1}
               id="main-content"
-              className={`main-content ${page === "research" ? "research-main" : ""}`}
+              className={`main-content ${page === "research" ? "research-main" : page === "stocks" ? "stock-main" : ""}`}
             >
               {children}
             </main>
@@ -302,7 +270,8 @@ export function Shell({ children }: { children: ReactNode }) {
         title="Navigation"
         sheet
       >
-        <Navigation onNavigate={() => setMobileOpen(false)} />
+        <AppNavigation mobile onNavigate={() => setMobileOpen(false)} />
+        <StockSidebar onSelect={() => setMobileOpen(false)} />
       </Modal>
       <Modal
         open={searchOpen}
@@ -315,11 +284,48 @@ export function Shell({ children }: { children: ReactNode }) {
             autoFocus
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Pages, agents…"
-            aria-label="Search pages and agents"
+            placeholder="Stocks, chats, agents…"
+            aria-label="Search workspace content"
           />
         </label>
         <div className="search-results">
+          {Object.entries(sampleQuotes)
+            .filter(([symbol, quote]) =>
+              `${symbol} ${quote.name}`
+                .toLowerCase()
+                .includes(search.toLowerCase()),
+            )
+            .map(([symbol, quote]) => (
+              <button
+                key={symbol}
+                onClick={() => {
+                  openStock(symbol);
+                  setSearchOpen(false);
+                }}
+              >
+                <ChartNoAxesCombined size={17} />
+                <span>
+                  {symbol} · {quote.name}
+                </span>
+                <small>Stock</small>
+              </button>
+            ))}
+          {workspace.conversations
+            .filter((c) => c.title.toLowerCase().includes(search.toLowerCase()))
+            .slice(0, 6)
+            .map((c) => (
+              <button
+                key={c.id}
+                onClick={() => {
+                  openConversation(c);
+                  setSearchOpen(false);
+                }}
+              >
+                <MessageCircle size={17} />
+                <span>{c.title}</span>
+                <small>Chat</small>
+              </button>
+            ))}
           {matches.map((target) => (
             <button
               key={target}
@@ -350,6 +356,14 @@ export function Shell({ children }: { children: ReactNode }) {
               </button>
             ))}
           {matches.length === 0 &&
+            !Object.entries(sampleQuotes).some(([symbol, q]) =>
+              `${symbol} ${q.name}`
+                .toLowerCase()
+                .includes(search.toLowerCase()),
+            ) &&
+            !workspace.conversations.some((c) =>
+              c.title.toLowerCase().includes(search.toLowerCase()),
+            ) &&
             !workspace.agents.some((a) =>
               a.name.toLowerCase().includes(search.toLowerCase()),
             ) && <p className="muted">No matches.</p>}

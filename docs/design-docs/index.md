@@ -24,7 +24,7 @@ Suggested conventions:
 
 - [Local US stock data pipeline](us-stock-data-pipeline.md) — proposed Go/local
   collection design, source boundaries, durable jobs, and correctness rules.
-- [Stock research page](stock-research-page.md) — proposed four-tab company UI
-  with a standalone sample-data prototype; live integration is not implemented.
+- [Stock research page](stock-research-page.md) — shared six-tab Web/Electron company UI
+  with sample/empty structures; provider integration is not implemented.
 - [Execution plan](../exec-plans/active/us-stock-data-foundation.md) — design first,
   then provider verification, local collection, scheduling, UI, and scale.

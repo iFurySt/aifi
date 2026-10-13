@@ -57,3 +57,11 @@ visible. The prototype is a review artifact, with no claim of live data.
 - make ci passed: repository gates, TypeScript, nine domain/storage tests, and
   both production builds. Live provider and scheduler verification remain staged
   in the implementation plan.
+
+### UI Alignment Follow-up — 2026-10-13
+
+The initial four-tab standalone concept is superseded by the shared six-tab
+React Web/Electron stock page. Its old entry redirects to the local app; design
+docs and screenshots now describe that implementation. Missing datasets have
+explicit UI structures while provider collection remains pending. Code/validation
+are recorded in the existing local Web/Electron foundation history.

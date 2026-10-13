@@ -44,10 +44,10 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, nine domain/storage tests, and both
-production builds. Use the local
-app for desktop and mobile visual checks. Validate the actual Electron renderer,
-not only the browser build, before claiming desktop support.
+make ci runs repository gates, TypeScript, eleven domain/storage/route tests,
+and both production builds. Use the local app for desktop and mobile visual
+checks. Validate the actual Electron renderer, not only the browser build,
+before claiming desktop support.
 
 Work in an isolated checkout for UI verification. Screenshots and smoke output
 belong in the ignored .artifacts directory unless curated into documentation.
@@ -73,10 +73,12 @@ notice. Browser and Electron data are independent, with no synchronization.
 After pnpm build, pnpm smoke:desktop launches the actual Electron app with a
 throwaway profile, checks the bundled renderer and metadata bridge, confirms
 renderer Node access is absent, navigates to Watchlist, saves a theme locally,
-and returns to Agents. It also checks the framed desktop toolbar, sidebar collapse,
-back/forward bounds, and forward-history invalidation after a new route. It exits with a nonzero status on failure or timeout.
-Evidence is written to .artifacts/electron-smoke.json and aifi-electron.png.
-The smoke profile is removed on normal exit; no personal workspace is used.
+and returns to Stocks. It checks all six stock tabs and a dataset placeholder.
+It also checks the framed desktop toolbar, sidebar collapse, back/forward
+bounds, and forward-history invalidation after a new route. It exits with a
+nonzero status on failure or timeout. Evidence is written to
+.artifacts/electron-smoke.json and aifi-electron.png. The smoke profile is
+removed on normal exit; no personal workspace is used.
 
 Review the local app in Chrome at desktop and mobile widths: create an agent,
 pause/resume it, create a preview, filter/delete it, add/remove a ticker,
@@ -91,10 +93,11 @@ installer packaging, signing, and updates remain follow-ups.
 
 ## Shared Window And Document Shell
 
-The outer neutral frame owns a 56px tool rail. A single rounded inset panel holds
-the 248px sidebar and document. Only main content scrolls; the frame, toolbar, and
-sidebar stay in place. Collapsing the sidebar expands the document. At tablet
-widths navigation becomes a drawer; mobile hides the rail and keeps an 8px inset.
+The outer neutral frame owns an 80px tool rail. A single rounded inset panel
+holds the 248px sidebar and document. Only main content scrolls; the frame,
+toolbar, and sidebar stay in place. Collapsing the sidebar expands the document.
+At tablet widths navigation becomes a drawer; mobile hides the rail and keeps an
+8px inset.
 
 Electron renders a 48px draggable outer toolbar. macOS uses real native traffic
 lights at x=14/y=17, with reserved space before back/forward and sidebar controls.
@@ -108,11 +111,13 @@ The refinement was checked against the user-provided Codex/ChatGPT screenshots,
 using OBU in Chrome Default for Web and the real macOS Electron window for native
 controls. Native close/minimize/full-screen controls remain owned by the OS.
 
-The sidebar contains navigation and recent research only. The outer-rail avatar
-opens the shared Radix workspace menu for Settings and theme switching. Below
-600px the rail is hidden and the same menu appears in the page toolbar. Check
-keyboard selection, Escape/focus return, outside dismissal, popup viewport bounds,
-and settings access with the sidebar collapsed as well as on mobile.
+The outer rail contains application navigation; the sidebar contains stocks
+only. Chat history remains selectable inside Chat and searchable from the
+toolbar. The outer-rail avatar opens the shared Radix workspace menu for
+Settings and theme switching. Below 600px the rail is hidden and the same menu
+appears in the page toolbar. Check keyboard selection, Escape/focus return,
+outside dismissal, popup viewport bounds, and settings access with the sidebar
+collapsed as well as on mobile.
 
 Keyboard focus across the renderer and stock prototype uses neutral backgrounds,
 text/underlines, and form borders instead of outlines. The shared CSS suppresses
@@ -120,10 +125,22 @@ browser focus outlines; no blue focus token/ring remains. Tab navigation and
 Escape focus return stay enabled. Do not blur controls or intercept Tab to hide
 focus styling.
 
-## Stock Data Design Preview
+## Stock Workspace
 
-The [stock page specification](design-docs/stock-research-page.md) and
-[standalone prototype](prototypes/stock-research/preview.html) define the proposed
-four-tab stock detail. The preview uses sample fixtures and makes no provider
-calls. It is separate from the current renderer; live Go transport and the Stocks
-route are staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
+The shared renderer starts at Stocks. Routes such as
+`#/stocks/AAPL?tab=financials` preserve ticker/tab across reload and native
+history. Chart, Financials, Funds, Politicians, Insiders, and Analyst all have
+their own content structure. Unsupported datasets have relevant empty
+tables/metrics. Filings lives inside Financials. Unknown tickers have no
+invented quotes.
+
+The sidebar includes sample symbols, saved watchlist symbols, and the selected
+stock. Its search filters that list; company search can open a ticker directly.
+Watchlist company links open Stocks, while Ask actions open Chat. The schema v1
+workspace and saved conversations are unchanged.
+
+The [stock page specification](design-docs/stock-research-page.md) describes
+this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
+opens the shared app, avoiding a second UI tree. Live Go transport and provider
+collection remain staged in the [data plan](exec-plans/active/us-stock-data-
+foundation.md).

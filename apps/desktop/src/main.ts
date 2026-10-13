@@ -64,7 +64,7 @@ async function createWindow() {
         const deadline = Date.now() + 4000;
         while (!check()) { if (Date.now() > deadline) throw Error('Renderer did not settle'); await new Promise(resolve => setTimeout(resolve, 20)); }
       };
-      await waitFor(() => !!document.querySelector('.agents-page') && document.documentElement.dataset.runtime === 'desktop');
+      await waitFor(() => !!document.querySelector('.stocks-page') && document.documentElement.dataset.runtime === 'desktop');
       const initialHistory = document.querySelector('[aria-label="Go back"]').disabled && document.querySelector('[aria-label="Go forward"]').disabled;
       document.querySelector('a[href="#/watchlist"]').click();
       await waitFor(() => !!document.querySelector('.watchlist-table'));
@@ -72,14 +72,14 @@ async function createWindow() {
       const back = document.querySelector('[aria-label="Go back"]');
       await waitFor(() => !back.disabled);
       back.click();
-      await waitFor(() => !!document.querySelector('.agents-page'));
+      await waitFor(() => !!document.querySelector('.stocks-page'));
       const forward = document.querySelector('[aria-label="Go forward"]');
       await waitFor(() => !forward.disabled);
       forward.click();
       await waitFor(() => !!document.querySelector('.watchlist-table'));
       const historyControls = !document.querySelector('[aria-label="Go back"]').disabled;
       back.click();
-      await waitFor(() => !!document.querySelector('.agents-page'));
+      await waitFor(() => !!document.querySelector('.stocks-page'));
       document.querySelector('a[href="#/library"]').click();
       await waitFor(() => !!document.querySelector('.library-grid') && document.querySelector('[aria-label="Go forward"]').disabled);
       const branchingHistory = document.querySelector('[aria-label="Go forward"]').disabled;
@@ -92,10 +92,17 @@ async function createWindow() {
       await waitFor(() => document.documentElement.dataset.theme === 'dark' && !!localStorage.getItem('aifi.workspace.v1'));
       const localSave = JSON.parse(localStorage.getItem('aifi.workspace.v1')).theme === 'dark';
       document.querySelector('[aria-label="Switch to light theme"]').click();
-      document.querySelector('a[href="#/agents"]').click();
-      await waitFor(() => !!document.querySelector('.agents-page') && document.documentElement.dataset.theme === 'light');
-      return { runtime, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
-        rendered: !!document.querySelector('.agents-page'),
+      document.querySelector('.rail-destinations a[href^="#/stocks/"]').click();
+      await waitFor(() => !!document.querySelector('.stocks-page') && document.documentElement.dataset.theme === 'light');
+      const stockTabs = [...document.querySelectorAll('[role="tab"]')].map(el => el.textContent).join(',') === 'Chart,Financials,Funds,Politicians,Insiders,Analyst';
+      const stockSidebar = !!document.querySelector('.stock-sidebar') && document.querySelectorAll('.rail-destinations a').length === 6;
+      document.querySelector('[role="tab"][id="stock-tab-funds"]').click();
+      await waitFor(() => !!document.querySelector('#stock-panel-funds .stock-table-empty'));
+      const stockPlaceholders = document.body.innerText.includes('No holdings data');
+      document.querySelector('[role="tab"][id="stock-tab-chart"]').click();
+      await waitFor(() => !!document.querySelector('#stock-panel-chart .stock-price-chart'));
+      return { runtime, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
+        rendered: !!document.querySelector('.stocks-page'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
         externalAssets: [...document.querySelectorAll('script[src],link[href]')]
@@ -105,6 +112,9 @@ async function createWindow() {
       result.runtime?.kind !== "desktop" ||
       !result.isolated ||
       !result.navigation ||
+      !result.stockTabs ||
+      !result.stockSidebar ||
+      !result.stockPlaceholders ||
       !result.initialHistory ||
       !result.historyControls ||
       !result.branchingHistory ||

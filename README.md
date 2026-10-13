@@ -16,6 +16,10 @@ advice.
 The local Web and Electron apps share one React interface. The first version
 uses demo data; model calls, broker connections, and background agents come later.
 
+Stocks opens with a stock list and six research tabs. Chart/financial examples
+are marked as samples; holdings, trades, ratings, and news have empty structures
+until data is connected. Existing chats remain available inside Chat.
+
 Requires Node.js 24+ and pnpm 10.13.1.
 
 ```sh

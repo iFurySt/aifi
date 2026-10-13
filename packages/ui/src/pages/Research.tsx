@@ -80,6 +80,28 @@ export function Research({
   }
   return (
     <div className={`research-page ${conversation ? "has-conversation" : ""}`}>
+      {workspace.conversations.length > 0 && (
+        <label className="chat-history-picker">
+          <span>Chats</span>
+          <select
+            aria-label="Chat history"
+            value={conversationId ?? ""}
+            onChange={(e) =>
+              openConversation(
+                workspace.conversations.find((c) => c.id === e.target.value) ??
+                  null,
+              )
+            }
+          >
+            <option value="">New chat</option>
+            {workspace.conversations.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.title}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       {conversation ? (
         <>
           <div className="conversation-header">

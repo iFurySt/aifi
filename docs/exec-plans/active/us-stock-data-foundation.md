@@ -12,7 +12,8 @@ Present cached data in a shared Web/Electron company page.
 ## Scope
 
 In scope: directory/identity, EOD bars, basic filing/fact metadata, durable local
-Go jobs, SQLite/raw provenance, bounded read API, and four stock-detail tabs.
+Go jobs, SQLite/raw provenance, bounded read API, and cached stock-detail data. The six-tab shared UI already
+exists with fixtures/empty panels; live collection coverage remains narrower.
 
 Out of scope: cloud hosting, trading, broker OAuth, live ticks, paid analyst or
 politician data, complete normalized global statements, and AI report generation.
@@ -79,12 +80,13 @@ Commit: durable asynchronous EOD collection with status/diagnostics.
 ### M4 — Local Transport And Stock UI
 
 - [ ] Add authenticated loopback reads/sync/events and restricted desktop lifecycle.
-- [ ] Implement Stocks directory/detail routes and four tabs against cached data.
+- [x] Implement shared stock routes, six-tab layouts, and sample/empty panels.
+- [ ] Connect validated directory membership and cached bars/facts/filings.
 - [ ] Keep conversation Research separate; use sources/date/basis labels and
   correct empty/partial/error states. Preserve existing user state.
 - [ ] Validate Web/Electron, mobile, source links, and offline cached viewing.
 
-Commits: transport/bridge first, then stock page.
+Commits: sample UI landed independently; transport/bridge and cached reads follow.
 
 ### M5 — Coverage Expansion
 
@@ -114,4 +116,6 @@ verify source/sample labels, table/tab overflow, theme, and keyboard behavior.
 - 2026-10-13: use SQLite for jobs and normalized reads, raw evidence separately;
   Go goroutines are bounded execution, not the persistence layer.
 - 2026-10-13: define a standalone visual concept before changing the live renderer.
-  Current task delivers the design, source review, and prototype; M1–M5 remain work.
+  The design task delivered source review and a prototype; live M1–M5 remain work.
+- 2026-10-13: shared Web/Electron stock UI now replaces the standalone prototype.
+  Six primary tabs include empty datasets as requested; collection is still pending.
