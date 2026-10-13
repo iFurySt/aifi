@@ -55,11 +55,13 @@ belong in the ignored .artifacts directory unless curated into documentation.
 ## Local Demo Behavior
 
 Agents can be created, filtered, paused/resumed, deleted, and given an explicit
-sample check. Research conversations contain deterministic illustrative responses.
+preview. Research conversations contain deterministic illustrative responses.
 Watchlists support adding/removing symbols; unknown symbols have no invented
 quote. Portfolio numbers and charts are fixed examples. Library cards preview
 existing repository skills without executing them. Settings controls theme and
-local reset; provider cards describe future connections.
+local reset. A single Demo toolbar entry explains the sample-mode limits on
+demand. Page copy uses short functional labels; provider roadmaps and repository
+paths remain in developer documentation, following DESIGN.md.
 
 State is validated against schema v1 and saved under aifi.workspace.v1 in local
 storage. Invalid saved data opens a temporary demo without overwriting the raw
@@ -77,7 +79,7 @@ Evidence is written to .artifacts/electron-smoke.json and aifi-electron.png.
 The smoke profile is removed on normal exit; no personal workspace is used.
 
 Review the local app in Chrome at desktop and mobile widths: create an agent,
-pause/resume it, create a sample check, filter/delete it, add/remove a ticker,
+pause/resume it, create a preview, filter/delete it, add/remove a ticker,
 submit/reopen research, filter the library, use search and Escape, switch themes,
 reload for persistence, and reset data. Corrupt state should retain its stored
 value until reset. Financial tables should scroll internally on narrow screens.

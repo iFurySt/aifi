@@ -8,9 +8,8 @@ export function createDemoWorkspace(): Workspace {
     agents: [
       {
         id: "earnings",
-        name: "Earnings, without the noise",
-        prompt:
-          "Track earnings and guidance changes for $NVDA and $AMD. Highlight what changed in the investment thesis.",
+        name: "Earnings tracker",
+        prompt: "Track earnings and guidance for $NVDA and $AMD.",
         symbols: ["NVDA", "AMD"],
         cadence: "Daily",
         active: true,
@@ -18,9 +17,8 @@ export function createDemoWorkspace(): Workspace {
       },
       {
         id: "portfolio",
-        name: "A second look at my portfolio",
-        prompt:
-          "Review concentration, overlap, and the biggest unanswered questions across my portfolio.",
+        name: "Portfolio review",
+        prompt: "Review concentration across $AAPL, $MSFT and $GOOGL.",
         symbols: ["AAPL", "MSFT", "GOOGL"],
         cadence: "Weekly",
         active: true,
@@ -28,9 +26,8 @@ export function createDemoWorkspace(): Workspace {
       },
       {
         id: "thesis",
-        name: "Keep the thesis honest",
-        prompt:
-          "Look for new evidence that challenges the long-term thesis for $AAPL. Separate signal from headlines.",
+        name: "Thesis watch",
+        prompt: "Track evidence against the $AAPL thesis.",
         symbols: ["AAPL"],
         cadence: "Daily",
         active: true,
@@ -38,9 +35,8 @@ export function createDemoWorkspace(): Workspace {
       },
       {
         id: "semis",
-        name: "The semiconductor landscape",
-        prompt:
-          "Compare competitive developments for $NVDA and $AMD, with a focus on demand and margins.",
+        name: "Semiconductor watch",
+        prompt: "Compare $NVDA and $AMD demand and margins.",
         symbols: ["NVDA", "AMD"],
         cadence: "Weekly",
         active: false,
@@ -51,17 +47,15 @@ export function createDemoWorkspace(): Workspace {
       {
         id: "sample-1",
         agentId: "earnings",
-        title: "An earnings brief, in one place",
-        summary:
-          "Sample brief: revenue drivers, guidance changes, and three questions to revisit after the next earnings call.",
+        title: "Earnings review",
+        summary: "Revenue drivers, guidance and open questions.",
         createdAt: "2026-10-12T08:30:00.000Z",
       },
       {
         id: "sample-2",
         agentId: "portfolio",
-        title: "See the connections in your portfolio",
-        summary:
-          "Sample review: shared exposure to cloud spending and AI infrastructure. Check concentration before changing a position.",
+        title: "Portfolio exposure",
+        summary: "Shared exposure to cloud and AI spending.",
         createdAt: "2026-10-11T08:30:00.000Z",
       },
     ],
@@ -122,30 +116,26 @@ export const samplePositions = [
 export const agentTemplates = [
   {
     label: "Earnings & guidance",
-    prompt:
-      "Track earnings and guidance for $NVDA and $AMD. Tell me what changed and why it matters.",
+    prompt: "Track earnings and guidance for $NVDA and $AMD.",
   },
   {
     label: "Portfolio risk",
-    prompt:
-      "Review my portfolio for concentration and overlapping exposures. Surface the risks I might have missed.",
+    prompt: "Review portfolio concentration and shared exposures.",
   },
   {
     label: "Thesis changes",
-    prompt:
-      "Watch for evidence that challenges my thesis for $AAPL. Keep a list of open questions.",
+    prompt: "Track evidence against my $AAPL thesis.",
   },
   {
     label: "Industry shifts",
-    prompt:
-      "Follow competitive shifts for $MSFT and $GOOGL. Focus on cloud demand and capital spending.",
+    prompt: "Compare $MSFT and $GOOGL cloud demand.",
   },
 ];
 export const librarySkills = [
   {
     name: "Company research",
     category: "Research",
-    description: "From filings and earnings to a thesis you can revisit.",
+    description: "Business, earnings and risks.",
     path: "skills/company-research-workflow",
     sections: [
       "Build a company snapshot",
@@ -156,7 +146,7 @@ export const librarySkills = [
   {
     name: "Earnings review",
     category: "Research",
-    description: "Understand the quarter beyond the headline numbers.",
+    description: "Results, guidance and cash flow.",
     path: "skills/earnings-call-analysis",
     sections: [
       "Compare results with prior guidance",
@@ -167,7 +157,7 @@ export const librarySkills = [
   {
     name: "Valuation scenarios",
     category: "Valuation",
-    description: "Make assumptions explicit. See what changes the outcome.",
+    description: "Compare bull, base and bear cases.",
     path: "skills/valuation-scenario-analysis",
     sections: [
       "Set a base-case narrative",
@@ -178,7 +168,7 @@ export const librarySkills = [
   {
     name: "Portfolio exposure",
     category: "Portfolio",
-    description: "Look across positions to find shared drivers and risks.",
+    description: "Concentration and shared drivers.",
     path: "skills/portfolio-exposure-review",
     sections: [
       "Review position sizing",

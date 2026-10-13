@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  ArrowUpRight,
-  BookOpen,
-  FileText,
-  Search,
-  Sparkles,
-} from "lucide-react";
+import { ArrowUpRight, BookOpen, Search } from "lucide-react";
 import { librarySkills } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import {
@@ -29,10 +23,7 @@ export function Library() {
   );
   return (
     <div className="page-container">
-      <PageHeading
-        title="Good research is reusable."
-        description="A collection of research routines, built to make the next question easier."
-      />
+      <PageHeading title="Library" />
       <div className="data-toolbar">
         <div className="segmented-control" aria-label="Filter library">
           {["All", "Research", "Valuation", "Portfolio"].map((c) => (
@@ -74,10 +65,6 @@ export function Library() {
             <Tag>{skill.category}</Tag>
             <h2>{skill.name}</h2>
             <p>{skill.description}</p>
-            <span className="library-card-footer">
-              Workflow preview
-              <ArrowUpRight size={14} />
-            </span>
           </button>
         ))}
       </div>
@@ -87,43 +74,21 @@ export function Library() {
           description="Try another category or search term."
         />
       )}
-      <section className="library-about panel">
-        <span className="agent-icon tone-mint">
-          <Sparkles size={21} />
-        </span>
-        <div>
-          <h2>A workspace that remembers the work.</h2>
-          <p>
-            AIFi’s repository already contains reusable research skills and
-            saved artifacts. These cards preview a few workflows; running skills
-            and opening repository reports from the app come next.
-          </p>
-        </div>
-      </section>
       <Modal
         open={!!selected}
         onOpenChange={(open) => {
           if (!open) setSelected(null);
         }}
         title={selected?.name ?? "Research routine"}
-        description="An outline of a repository skill. This preview does not execute it."
+        description="Workflow preview"
       >
         {selected && (
           <>
-            <Tag>{selected.category}</Tag>
-            <p className="library-description">{selected.description}</p>
             <ol className="workflow-steps">
               {selected.sections.map((section) => (
                 <li key={section}>{section}</li>
               ))}
             </ol>
-            <div className="inset-note">
-              <FileText size={18} />
-              <div>
-                <strong>Repository reference</strong>
-                <code>{selected.path}/SKILL.md</code>
-              </div>
-            </div>
             <div className="dialog-actions">
               <Button
                 variant="primary"
@@ -134,7 +99,7 @@ export function Library() {
                   setSelected(null);
                 }}
               >
-                Explore in Research
+                Research
                 <ArrowUpRight size={15} />
               </Button>
             </div>

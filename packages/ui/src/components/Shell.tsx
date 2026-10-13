@@ -67,7 +67,7 @@ function Navigation({ onNavigate }: { onNavigate?: () => void }) {
       <div className="sidebar-recents">
         <p className="sidebar-label">Your research</p>
         {workspace.conversations.length === 0 ? (
-          <p className="sidebar-hint">A place for your next idea.</p>
+          <p className="sidebar-hint">No research yet.</p>
         ) : (
           workspace.conversations.slice(0, 6).map((conversation) => (
             <button
@@ -125,6 +125,7 @@ export function Shell({ children }: { children: ReactNode }) {
   const routeHistory = useWorkspaceHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
   const [search, setSearch] = useState("");
   useEffect(() => {
     function keydown(event: KeyboardEvent) {
@@ -138,6 +139,15 @@ export function Shell({ children }: { children: ReactNode }) {
   }, []);
   const matches = workspacePages.filter((p) =>
     pageLabels[p].toLowerCase().includes(search.toLowerCase()),
+  );
+  const demoBadge = (
+    <button
+      className="demo-badge"
+      aria-label="About demo data"
+      onClick={() => setDemoOpen(true)}
+    >
+      Demo
+    </button>
   );
   const toolbarActions = (
     <div className="topbar-actions">
@@ -218,7 +228,7 @@ export function Shell({ children }: { children: ReactNode }) {
             <span>AIFi</span>
             <span className="breadcrumb-divider">/</span>
             <span>{pageLabels[page]}</span>
-            <span className="demo-badge">Demo workspace</span>
+            {demoBadge}
           </div>
           {toolbarActions}
         </header>
@@ -280,7 +290,7 @@ export function Shell({ children }: { children: ReactNode }) {
                 <div className="topbar-left">
                   {navigationToggle}
                   <span className="page-label">{pageLabels[page]}</span>
-                  <span className="demo-badge">Demo workspace</span>
+                  {demoBadge}
                 </div>
                 {toolbarActions}
               </header>
@@ -304,10 +314,24 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
       </div>
       <Modal
+        open={demoOpen}
+        onOpenChange={setDemoOpen}
+        title="Demo data"
+        description="Sample quotes, holdings and replies. No live research, account sync or background monitoring."
+      >
+        <div className="dialog-actions">
+          <button
+            className="button button-primary"
+            onClick={() => setDemoOpen(false)}
+          >
+            Got it
+          </button>
+        </div>
+      </Modal>
+      <Modal
         open={mobileOpen}
         onOpenChange={setMobileOpen}
         title="Navigation"
-        description="Move between your workspace pages."
         sheet
       >
         <Navigation onNavigate={() => setMobileOpen(false)} />
@@ -316,7 +340,6 @@ export function Shell({ children }: { children: ReactNode }) {
         open={searchOpen}
         onOpenChange={setSearchOpen}
         title="Search workspace"
-        description="Find a page or an agent."
       >
         <label className="search-field">
           <Search size={18} />
@@ -361,9 +384,7 @@ export function Shell({ children }: { children: ReactNode }) {
           {matches.length === 0 &&
             !workspace.agents.some((a) =>
               a.name.toLowerCase().includes(search.toLowerCase()),
-            ) && (
-              <p className="muted">No matches. Try “Research” or “Earnings”.</p>
-            )}
+            ) && <p className="muted">No matches.</p>}
         </div>
       </Modal>
     </div>

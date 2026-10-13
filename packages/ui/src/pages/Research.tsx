@@ -13,17 +13,17 @@ import { Button, Logo, Tag } from "../components/primitives";
 const starters = [
   {
     icon: FileText,
-    title: "Understand a company",
+    title: "Company overview",
     text: "Build a research outline for NVIDIA.",
   },
   {
     icon: ChartNoAxesCombined,
-    title: "Pressure-test a thesis",
+    title: "Thesis risks",
     text: "What could challenge my long-term thesis for Apple?",
   },
   {
     icon: BookOpen,
-    title: "Prepare for earnings",
+    title: "Earnings prep",
     text: "What should I look for in Microsoft’s next earnings call?",
   },
 ];
@@ -54,11 +54,11 @@ export function Research({
     const text = prompt.trim();
     if (!text) return;
     if (text.length > 2000) {
-      notify("Keep your research question under 2,000 characters.");
+      notify("Limit: 2,000 characters.");
       return;
     }
     if ((conversation?.messages.length ?? 0) > 98) {
-      notify("Start a new research conversation to continue.");
+      notify("Start a new conversation to continue.");
       return;
     }
     const messages = [
@@ -95,7 +95,7 @@ export function Research({
                 {message.role === "assistant" && (
                   <div className="assistant-label">
                     <Logo small />
-                    <Tag>Illustrative response</Tag>
+                    <Tag>Sample response</Tag>
                   </div>
                 )}
                 <div className="message-content">
@@ -114,7 +114,6 @@ export function Research({
             <Sparkles size={27} strokeWidth={1.5} />
           </span>
           <h1>What are you researching?</h1>
-          <p>A clearer view starts with a better question.</p>
         </div>
       )}
       <div className="research-composer-area">
@@ -127,7 +126,7 @@ export function Research({
         >
           <textarea
             aria-label="Research question"
-            placeholder="Ask about a company, a thesis, or your next research idea…"
+            placeholder="Ask about a company or idea…"
             maxLength={2000}
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
@@ -145,7 +144,7 @@ export function Research({
           <div className="composer-footer">
             <span className="composer-mode">
               <Sparkles size={15} />
-              Research preview
+              Research
             </span>
             <button
               className="send-button"
@@ -157,10 +156,6 @@ export function Research({
             </button>
           </div>
         </form>
-        <p className="composer-disclaimer">
-          Demo responses only. No model is connected and no live sources are
-          fetched.
-        </p>
       </div>
       {!conversation && (
         <div className="research-starters">
@@ -178,7 +173,6 @@ export function Research({
             >
               <Icon size={19} strokeWidth={1.5} />
               <strong>{title}</strong>
-              <span>{text}</span>
             </button>
           ))}
         </div>

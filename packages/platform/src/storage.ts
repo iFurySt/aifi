@@ -17,7 +17,7 @@ export function readWorkspace<T>(
     return {
       value: fallback(),
       error:
-        "Saved data could not be loaded. A temporary demo is open. Reset local data in Settings to save again.",
+        "Saved data couldn't load. This temporary demo won't save. Reset in Settings to save again.",
     };
   }
 }
@@ -29,6 +29,6 @@ export function writeWorkspace(
     storage.setItem(workspaceKey, JSON.stringify(value));
     return undefined;
   } catch {
-    return "Changes could not be saved on this device. Your current session still works.";
+    return "Changes could not be saved. This session still works.";
   }
 }

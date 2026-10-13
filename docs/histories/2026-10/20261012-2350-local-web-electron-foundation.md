@@ -85,3 +85,25 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   collapse/restore, rail search, dark theme, all six mobile layouts, and drawer
   navigation. Actual macOS window inspection confirmed native controls and
   working back navigation. make ci and Electron smoke passed.
+
+### Copy Refinement (2026-10-13)
+
+> Reduce redundant page copy and remove development conversation and internal
+> planning details that ordinary users do not need.
+
+- Replaced marketing titles and repeated subtitles with functional labels across
+  all six pages. Shortened agent templates, sample previews, and research replies.
+- Added one visible Demo toolbar entry with on-demand help. Retained sample-data
+  labels, useful recovery messages, and explicit destructive-action consequences.
+- Removed model/broker roadmap cards from Settings and repository paths/planning
+  panels from Library. Research and integration decisions remain in docs.
+- Kept saved user content and conversations intact; new seed wording applies to
+  new/reset workspaces. Recorded product-copy rules in DESIGN.md and product docs.
+- Removed styles for deleted panels and compacted research starter buttons.
+  Anchored hidden table action labels to their scroll container to prevent
+  mobile viewport expansion after shortening table headers.
+- Validation: make ci passed (nine domain/storage tests and both builds). OBU in
+  Chrome Default checked all six desktop/mobile pages, Demo help/focus, agent
+  create/preview/pause/resume, research starters/replies, library preview, theme,
+  and reset. The actual macOS Electron smoke passed with a disposable profile.
+  Updated the README preview with the simplified interface.

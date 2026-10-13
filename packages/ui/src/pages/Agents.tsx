@@ -5,7 +5,6 @@ import {
   Bot,
   CalendarDays,
   ChevronRight,
-  CircleHelp,
   Clock3,
   FileText,
   Layers,
@@ -60,16 +59,13 @@ export function Agents() {
   const selected = workspace.agents.find((a) => a.id === selectedId);
   function submit() {
     try {
-      if (workspace.agents.length >= 100)
-        throw new Error("This preview supports up to 100 agents.");
+      if (workspace.agents.length >= 100) throw new Error("Limit: 100 agents.");
       const agent = createAgent(prompt, cadence, uid());
       update((w) => ({ ...w, agents: [agent, ...w.agents] }));
       setPrompt("");
       setError("");
       setFilter("All");
-      notify(
-        "Agent saved locally. Monitoring will be available in a later version.",
-      );
+      notify("Agent created.");
     } catch (e) {
       setError((e as Error).message);
     }
@@ -81,17 +77,13 @@ export function Agents() {
         a.id === agent.id ? { ...a, active: !a.active } : a,
       ),
     }));
-    notify(
-      agent.active
-        ? "Agent paused."
-        : "Agent resumed. This workspace still uses demo previews.",
-    );
+    notify(agent.active ? "Agent paused." : "Agent resumed.");
   }
   function run(agent: Agent) {
     try {
       const event = previewAgent(agent, uid(), new Date().toISOString());
       update((w) => ({ ...w, events: [event, ...w.events].slice(0, 100) }));
-      notify("Sample check added to recent previews.");
+      notify("Preview created.");
     } catch (e) {
       notify((e as Error).message);
     }
@@ -108,10 +100,7 @@ export function Agents() {
             <Sparkles size={12} />
           </span>
         </div>
-        <h1>Keep an eye on what matters.</h1>
-        <p>
-          Turn your investment questions into a repeatable research routine.
-        </p>
+        <h1>Create an agent</h1>
         <form
           className="composer agent-composer"
           onSubmit={(e) => {
@@ -121,7 +110,7 @@ export function Agents() {
         >
           <textarea
             aria-label="Describe your agent"
-            placeholder="What would you like your agent to follow?"
+            placeholder="Describe what to follow…"
             value={prompt}
             maxLength={500}
             onChange={(e) => {
@@ -181,10 +170,6 @@ export function Agents() {
             );
           })}
         </div>
-        <p className="hero-note">
-          Start with a template, or write your own. All checks in this version
-          are previews.
-        </p>
       </section>
       <section className="agents-section">
         <div className="section-heading">
@@ -227,7 +212,7 @@ export function Agents() {
                           action: () => toggle(agent),
                         },
                         {
-                          label: "Create sample check",
+                          label: "Create preview",
                           disabled: !agent.active,
                           action: () => run(agent),
                         },
@@ -272,13 +257,13 @@ export function Agents() {
           <EmptyState
             title={
               filter === "All"
-                ? "Your first agent starts here"
+                ? "No agents yet"
                 : `No ${filter.toLowerCase()} agents`
             }
             description={
               filter === "All"
-                ? "Describe a question above, or choose a template to get started."
-                : "Try another filter to see the rest of your agents."
+                ? "Create an agent above."
+                : "Try another filter."
             }
           />
         )}
@@ -286,7 +271,6 @@ export function Agents() {
       <section className="updates-section">
         <div className="section-heading">
           <h2>Recent previews</h2>
-          <span className="section-meta">Illustrative research briefs</span>
         </div>
         <div className="updates-list">
           {workspace.events.slice(0, 4).map((event) => (
@@ -312,17 +296,10 @@ export function Agents() {
             </button>
           ))}
           {workspace.events.length === 0 && (
-            <p className="muted">
-              Create a sample check from an active agent to preview a research
-              brief.
-            </p>
+            <p className="muted">No previews yet.</p>
           )}
         </div>
       </section>
-      <div className="page-footnote">
-        <CircleHelp size={14} />
-        Agents are saved on this device. No background monitoring is running.
-      </div>
       <Modal
         open={!!selected}
         onOpenChange={(open) => {
@@ -332,7 +309,6 @@ export function Agents() {
           }
         }}
         title={selected?.name ?? "Agent"}
-        description="Your research routine, saved locally."
         sheet
       >
         {selected && (
@@ -340,25 +316,13 @@ export function Agents() {
             <div className="detail-meta">
               <Status active={selected.active} />
               <Tag>{selected.cadence}</Tag>
-              <Tag>Demo agent</Tag>
             </div>
-            <h3>What this agent follows</h3>
+            <h3>Instructions</h3>
             <p className="detail-prompt">{selected.prompt}</p>
             <div className="ticker-tags">
               {selected.symbols.map((s) => (
                 <Tag key={s}>{s}</Tag>
               ))}
-            </div>
-            <div className="inset-note">
-              <Sparkles size={18} />
-              <div>
-                <strong>A preview of the workflow</strong>
-                <p>
-                  Future checks will gather sources, compare new evidence, and
-                  save a brief. Creating a sample check below only adds
-                  illustrative content.
-                </p>
-              </div>
             </div>
             <div className="detail-actions">
               <Button
@@ -367,21 +331,20 @@ export function Agents() {
                 onClick={() => run(selected)}
               >
                 <Play size={14} />
-                Create sample check
+                Create preview
               </Button>
               <Button onClick={() => toggle(selected)}>
                 {selected.active ? <Pause size={14} /> : <Play size={14} />}
                 {selected.active ? "Pause" : "Resume"}
               </Button>
             </div>
-            <h3>Saved previews</h3>
+            <h3>Previews</h3>
             {workspace.events
               .filter((e) => e.agentId === selected.id)
               .map((event) => (
                 <article className="preview-brief" key={event.id}>
                   <small>
-                    Sample brief ·{" "}
-                    {new Date(event.createdAt).toLocaleDateString()}
+                    Preview · {new Date(event.createdAt).toLocaleDateString()}
                   </small>
                   <h4>{event.title}</h4>
                   <p>{event.summary}</p>
@@ -396,7 +359,7 @@ export function Agents() {
                 research(selected.prompt);
               }}
             >
-              Explore in Research
+              Research
             </TextLink>
           </div>
         )}
@@ -407,7 +370,7 @@ export function Agents() {
           if (!open) setDeleting(null);
         }}
         title="Delete this agent?"
-        description="The agent and its saved previews will be removed from this device."
+        description="Removes the agent and its previews."
       >
         <p className="delete-name">{deleting?.name}</p>
         <div className="dialog-actions">

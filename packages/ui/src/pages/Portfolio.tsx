@@ -1,9 +1,9 @@
-import { ArrowUpRight, Layers, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Layers } from "lucide-react";
 import { samplePositions, sampleQuotes } from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
 import { PageHeading, Tag, TextLink } from "../components/primitives";
 export function Portfolio() {
-  const { research, navigate } = useWorkspace();
+  const { research } = useWorkspace();
   const rows = samplePositions.map((p) => ({
     ...p,
     name: sampleQuotes[p.symbol]!.name,
@@ -15,39 +15,35 @@ export function Portfolio() {
   let start = 0;
   return (
     <div className="page-container">
-      <PageHeading
-        title="See the whole picture."
-        description="Understand your positions, the overlap, and what deserves another look."
-        action={<Tag>Sample portfolio</Tag>}
-      />
+      <PageHeading title="Portfolio" action={<Tag>Sample portfolio</Tag>} />
       <div className="portfolio-stats">
         <div>
-          <span>Illustrative portfolio value</span>
+          <span>Value</span>
           <strong>{money(total)}</strong>
-          <small>4 sample positions · USD</small>
+          <small>4 positions · USD</small>
         </div>
         <div>
-          <span>Sample unrealized return</span>
+          <span>Unrealized return</span>
           <strong className="positive">+{money(gain)}</strong>
           <small className="positive">
-            {percent((gain / (total - gain)) * 100)} from sample cost basis
+            {percent((gain / (total - gain)) * 100)}
           </small>
         </div>
         <div>
-          <span>Largest sample position</span>
+          <span>Largest position</span>
           <strong>MSFT</strong>
           <small>
             {(
               (rows.find((p) => p.symbol === "MSFT")!.value / total) *
               100
             ).toFixed(1)}
-            % of sample portfolio
+            %
           </small>
         </div>
       </div>
       <div className="portfolio-overview">
         <section className="panel allocation-panel">
-          <h2>Allocation at a glance</h2>
+          <h2>Allocation</h2>
           <div className="allocation-content">
             <svg
               className="allocation-chart"
@@ -107,11 +103,7 @@ export function Portfolio() {
           <span className="agent-icon tone-blue">
             <Layers size={21} />
           </span>
-          <h2>Different names, shared drivers.</h2>
-          <p>
-            These sample positions share exposure to technology spending. A
-            portfolio review should look beyond the number of companies.
-          </p>
+          <h2>Shared exposure</h2>
           <div className="ticker-tags">
             <Tag>Cloud demand</Tag>
             <Tag>AI infrastructure</Tag>
@@ -124,15 +116,12 @@ export function Portfolio() {
               )
             }
           >
-            Explore portfolio exposure
+            Research exposure
           </TextLink>
         </section>
       </div>
       <div className="section-heading">
-        <h2>Sample positions</h2>
-        <span className="section-meta">
-          Illustrative holdings · not linked to a broker
-        </span>
+        <h2>Positions</h2>
       </div>
       <div className="table-panel">
         <div className="table-scroll">
@@ -141,8 +130,8 @@ export function Portfolio() {
               <tr>
                 <th>Company</th>
                 <th className="number">Shares</th>
-                <th className="number">Sample value</th>
-                <th className="number">Sample return</th>
+                <th className="number">Value</th>
+                <th className="number">Return</th>
                 <th className="number">Weight</th>
                 <th>
                   <span className="sr-only">Research</span>
@@ -180,13 +169,6 @@ export function Portfolio() {
             </tbody>
           </table>
         </div>
-      </div>
-      <div className="page-footnote">
-        <ShieldCheck size={15} />
-        Broker access is planned.{" "}
-        <button onClick={() => navigate("settings")}>
-          View connection roadmap
-        </button>
       </div>
     </div>
   );

@@ -55,7 +55,7 @@ export function createAgent(
 ): Agent {
   const text = prompt.trim();
   if (text.length < 8 || text.length > 500)
-    throw new Error("Describe your agent in 8–500 characters.");
+    throw new Error("Use 8–500 characters.");
   if (!cadences.includes(cadence)) throw new Error("Choose a valid cadence.");
   const symbols = [
     ...new Set(
@@ -80,30 +80,26 @@ export function previewAgent(
   id: string,
   now: string,
 ): PreviewEvent {
-  if (!agent.active)
-    throw new Error("Resume this agent before creating a preview.");
+  if (!agent.active) throw new Error("Resume this agent to preview.");
   return {
     id,
     agentId: agent.id,
-    title: `${agent.name} · sample check`,
+    title: `${agent.name} · preview`,
     createdAt: now,
-    summary: `Illustrative preview for ${agent.symbols.length ? agent.symbols.join(", ") : "your research scope"}. A future check will compare new evidence with your thesis and highlight what changed. No sources were fetched and no monitoring ran.`,
+    summary: `Sample brief for ${agent.symbols.length ? agent.symbols.join(", ") : "this agent"}. No sources were fetched.`,
   };
 }
 export function addWatchSymbol(symbols: string[], input: string) {
   const symbol = normalizeSymbol(input);
   if (!validSymbol(symbol))
-    throw new Error(
-      "Use a ticker such as AAPL or BRK.B (up to 10 characters).",
-    );
+    throw new Error("Enter a valid ticker (max 10 characters).");
   if (symbols.includes(symbol))
     throw new Error(`${symbol} is already in your watchlist.`);
-  if (symbols.length >= 50)
-    throw new Error("This preview supports up to 50 watchlist symbols.");
+  if (symbols.length >= 50) throw new Error("Limit: 50 symbols.");
   return [...symbols, symbol];
 }
-export function demoAnswer(prompt: string) {
-  return `This is an illustrative research outline for “${prompt.trim()}”. No live model or market data is connected.\n\nStart with the thesis\nWhat has the market priced in, and what would make that view wrong? Separate business performance from the share-price narrative.\n\nGather evidence\nReview the latest filing, earnings call, segment trends, and competitive context. Save each source with its date and the claim it supports.\n\nTrack the open questions\nCompare a bull, base, and bear case. Identify the next event that could change your view and the risks you still cannot resolve.`;
+export function demoAnswer(_prompt: string) {
+  return "Thesis\nWhat would confirm or challenge your view?\n\nEvidence\nReview filings, earnings and competitors.\n\nRisks\nList key assumptions and the next event to watch.";
 }
 const isRecord = (v: unknown): v is Record<string, unknown> =>
   typeof v === "object" && v !== null && !Array.isArray(v);

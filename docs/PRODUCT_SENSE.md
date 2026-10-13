@@ -46,6 +46,11 @@ before provider work. Demo status stays visible; simulated briefs never claim
 real source retrieval. The research runner described below is the next product
 capability, not a feature of this preview.
 
+Product copy should help users act with minimal reading. Keep internal planning,
+implementation details, and development conversations in repository docs. Use a
+single visible Demo entry with optional details, concise sample-data labels, and
+clear confirmations for data loss.
+
 ## Early Product Focus
 
 Start with a single company research workflow: "What is the recent situation for

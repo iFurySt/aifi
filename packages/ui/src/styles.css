@@ -285,6 +285,7 @@ svg {
   color: var(--muted);
 }
 .window-title .demo-badge {
+  min-height: 28px;
   margin-left: 7px;
   font-weight: 400;
 }
@@ -460,6 +461,10 @@ nav {
   border-radius: 6px;
   padding: 2px 7px;
 }
+.demo-badge:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
 .search-trigger {
   display: flex;
   align-items: center;
@@ -566,9 +571,8 @@ kbd {
   display: grid;
   place-items: center;
 }
-.agent-hero > p:first-of-type {
-  color: var(--secondary);
-  margin: 12px 0 26px;
+.agent-hero .composer {
+  margin-top: 24px;
 }
 .composer {
   border: 1px solid var(--border);
@@ -633,11 +637,6 @@ kbd {
 .template-chips button:hover {
   background: var(--surface-muted);
   color: var(--text);
-}
-.hero-note {
-  font-size: 11px;
-  color: var(--muted);
-  margin-top: 12px;
 }
 .section-heading {
   display: flex;
@@ -865,20 +864,6 @@ kbd {
 .update-row > svg {
   color: var(--muted);
 }
-.page-footnote {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 30px;
-  font-size: 10px;
-  color: var(--muted);
-}
-.page-footnote button {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 .page-heading {
   display: flex;
   align-items: flex-start;
@@ -938,6 +923,7 @@ kbd {
   background: var(--surface);
 }
 .table-scroll {
+  position: relative;
   overflow-x: auto;
 }
 .data-table {
@@ -995,29 +981,6 @@ kbd {
   width: 100px;
   height: 32px;
   display: block;
-}
-.inset-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  background: var(--surface-muted);
-  border-radius: 12px;
-  padding: 18px;
-  margin-top: 24px;
-  color: var(--secondary);
-}
-.inset-note > svg {
-  margin-top: 2px;
-}
-.inset-note strong {
-  color: var(--text);
-  font-size: 12px;
-  font-weight: 550;
-}
-.inset-note p {
-  font-size: 12px;
-  margin-top: 4px;
-  line-height: 1.6;
 }
 .portfolio-stats {
   display: grid;
@@ -1163,26 +1126,6 @@ kbd {
   color: var(--secondary);
   margin-top: 5px;
 }
-.library-card-footer {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  color: var(--muted);
-  margin-top: 24px;
-}
-.library-about {
-  margin-top: 28px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.library-about p {
-  font-size: 12px;
-  color: var(--secondary);
-  margin-top: 6px;
-  max-width: 65ch;
-}
 .settings-page {
   max-width: 850px;
 }
@@ -1204,13 +1147,8 @@ kbd {
 .settings-section-title h2 {
   font-size: 16px;
 }
-.settings-section > p {
-  color: var(--secondary);
-  font-size: 12px;
-  margin-top: 8px;
-  margin-bottom: 18px;
-}
 .theme-options {
+  margin-top: 18px;
   display: flex;
   gap: 14px;
 }
@@ -1272,51 +1210,6 @@ kbd {
 .theme-option-label > svg:last-child:not(:first-child) {
   margin-left: auto;
 }
-.connection-card {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 17px;
-  margin-top: 10px;
-}
-.connection-card > div {
-  flex: 1;
-  min-width: 0;
-}
-.connection-card strong {
-  font-weight: 550;
-  font-size: 13px;
-}
-.connection-card p {
-  font-size: 11px;
-  line-height: 1.6;
-  color: var(--secondary);
-  margin-top: 3px;
-  max-width: 58ch;
-}
-.connection-icon,
-.broker-mark {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-.broker-mark {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--blue-text);
-  background: var(--blue);
-  border: none;
-}
-.plaid-mark {
-  background: var(--surface-muted);
-  color: var(--text);
-}
 .local-data-row {
   display: flex;
   gap: 28px;
@@ -1359,10 +1252,6 @@ kbd {
   font-weight: 500;
   letter-spacing: -0.7px;
 }
-.research-welcome p {
-  margin: 11px 0 28px;
-  color: var(--secondary);
-}
 .research-composer-area {
   margin-top: 20px;
 }
@@ -1382,12 +1271,6 @@ kbd {
   background: var(--primary);
   color: var(--on-primary);
 }
-.composer-disclaimer {
-  color: var(--muted);
-  font-size: 10px;
-  text-align: center;
-  margin-top: 10px;
-}
 .research-starters {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1395,6 +1278,9 @@ kbd {
   margin-top: 30px;
 }
 .research-starters button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-align: left;
   padding: 17px;
   border: 1px solid var(--border);
@@ -1405,19 +1291,12 @@ kbd {
 }
 .research-starters svg {
   color: var(--secondary);
-  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 .research-starters strong {
   display: block;
   font-size: 12px;
   font-weight: 550;
-}
-.research-starters span {
-  display: block;
-  font-size: 11px;
-  color: var(--muted);
-  margin-top: 6px;
-  line-height: 1.6;
 }
 .research-page.has-conversation {
   padding-top: 24px;
@@ -1645,10 +1524,6 @@ kbd {
   color: var(--muted);
   font-size: 10px;
 }
-.library-description {
-  margin-top: 16px;
-  color: var(--secondary);
-}
 .workflow-steps {
   margin: 22px 0;
   padding-left: 20px;
@@ -1658,12 +1533,6 @@ kbd {
 .workflow-steps li {
   margin-bottom: 12px;
   padding-left: 5px;
-}
-.inset-note code {
-  display: block;
-  font-size: 10px;
-  margin-top: 6px;
-  overflow-wrap: anywhere;
 }
 .empty-state {
   text-align: center;
@@ -1764,9 +1633,6 @@ kbd {
   .window-navigation {
     flex-basis: auto;
   }
-  .window-title .demo-badge {
-    display: none;
-  }
   .sidebar {
     display: none;
   }
@@ -1830,6 +1696,8 @@ kbd {
     gap: 5px;
   }
   .demo-badge {
+    min-height: 40px;
+    min-width: 40px;
     font-size: 9px;
     padding: 2px 5px;
   }
@@ -1843,13 +1711,6 @@ kbd {
   h1,
   .page-heading h1 {
     font-size: 26px;
-  }
-  .agent-hero > p:first-of-type {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-  .hero-note {
-    font-size: 10px;
   }
   .hero-symbol {
     width: 48px;
@@ -1935,20 +1796,6 @@ kbd {
   .library-grid {
     grid-template-columns: 1fr;
   }
-  .library-about {
-    flex-direction: column;
-  }
-  .connection-card {
-    flex-wrap: wrap;
-    padding: 15px;
-    gap: 10px;
-  }
-  .connection-card > div {
-    min-width: calc(100% - 60px);
-  }
-  .connection-card > .tag {
-    margin-left: 44px;
-  }
   .local-data-row {
     flex-direction: column;
     align-items: flex-start;
@@ -1966,22 +1813,11 @@ kbd {
   .research-welcome h1 {
     font-size: 26px;
   }
-  .research-welcome p {
-    font-size: 13px;
-  }
   .research-starters {
     grid-template-columns: 1fr;
   }
   .research-starters button {
     padding: 15px;
-  }
-  .research-starters svg {
-    float: left;
-    margin-right: 12px;
-    margin-top: 2px;
-  }
-  .research-starters span {
-    margin-left: 31px;
   }
   .conversation-header {
     align-items: flex-start;
@@ -2002,9 +1838,6 @@ kbd {
   }
   .detail-actions {
     flex-wrap: wrap;
-  }
-  .composer-disclaimer {
-    line-height: 1.6;
   }
   .storage-warning {
     padding: 12px 20px;

@@ -82,8 +82,8 @@ export function App() {
     setDraft("");
     notify(
       error
-        ? "Demo restored for this session. Local saving is unavailable."
-        : "Local workspace reset.",
+        ? "Reset for this session. Saving is unavailable."
+        : "Workspace reset.",
     );
   }
   useEffect(() => {
@@ -102,11 +102,7 @@ export function App() {
         document.documentElement.dataset.runtime = info.kind;
         document.documentElement.dataset.platform = info.platform;
       })
-      .catch(() =>
-        notify(
-          "Desktop information is unavailable. The workspace still works.",
-        ),
-      );
+      .catch(() => notify("Window controls may be limited."));
     return () => clearTimeout(toastTimer.current);
   }, [notify]);
   return (

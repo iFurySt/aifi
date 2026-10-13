@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Plus, Search, Star, X } from "lucide-react";
+import { ArrowUpRight, Plus, Search, X } from "lucide-react";
 import { addWatchSymbol, sampleQuotes } from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
 import {
@@ -36,8 +36,7 @@ export function Watchlist() {
   return (
     <div className="page-container">
       <PageHeading
-        title="A little closer to the companies you follow."
-        description="Keep your ideas in view. Build the research before the conviction."
+        title="Watchlist"
         action={
           <Button
             variant="primary"
@@ -71,9 +70,9 @@ export function Watchlist() {
             <thead>
               <tr>
                 <th>Company</th>
-                <th className="number">Sample price</th>
-                <th className="number">Sample change</th>
-                <th>Illustrative trend</th>
+                <th className="number">Price</th>
+                <th className="number">Change</th>
+                <th>Trend</th>
                 <th>
                   <span className="sr-only">Actions</span>
                 </th>
@@ -156,13 +155,9 @@ export function Watchlist() {
         </div>
         {filtered.length === 0 && (
           <EmptyState
-            title={
-              query ? "No matching companies" : "Make room for your next idea"
-            }
+            title={query ? "No matching companies" : "Your watchlist is empty"}
             description={
-              query
-                ? "Try another ticker or company name."
-                : "Add a symbol to start a watchlist on this device."
+              query ? "Try another ticker." : "Add a symbol to get started."
             }
             action={
               !query && (
@@ -175,21 +170,11 @@ export function Watchlist() {
           />
         )}
       </div>
-      <div className="inset-note">
-        <Star size={19} />
-        <div>
-          <strong>From a ticker to a thesis</strong>
-          <p>
-            Choose a company to start a research conversation. Prices and trends
-            here are fixed examples, not current market data.
-          </p>
-        </div>
-      </div>
       <Modal
         open={adding}
         onOpenChange={setAdding}
         title="Add to your watchlist"
-        description="Save a ticker locally. New symbols do not receive live prices."
+        description="New symbols have no price data."
       >
         <form
           onSubmit={(e) => {

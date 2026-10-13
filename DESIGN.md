@@ -134,14 +134,14 @@ Use Radix primitives for those behaviors, not a large visual component library.
   left on macOS; interactive controls are no-drag. Do not draw traffic lights.
 - Web: 8px top gap, no desktop window toolbar; a 52px page toolbar lives inside
   the main panel with sidebar toggle, page title, search, and theme.
-- Agents: heading and subtitle, natural-language composer, template chips,
+- Agents: short functional heading, natural-language composer, template chips,
   agent filters, agent cards, and a compact recent-update feed.
 - Research: centered welcome and composer; after submission show a conversation
   and an explicitly illustrative response with evidence-shaped sections.
 - Watchlist: compact ticker list, sparklines, and local add/remove controls.
 - Portfolio: illustrative allocation chart and position table.
 - Library: reusable skill categories and mock report previews.
-- Settings: theme/local-data controls and clearly planned model/broker access.
+- Settings: theme and local-data controls.
 
 ### Spacing System
 
@@ -221,3 +221,16 @@ Validation note (2026-10-13): reviewed the rendered app in Chrome at desktop and
 inside a scroll wrapper, wrap long user text, provide 40px mobile controls, and
 restore the opening control's focus after dialogs. Still screenshots disable
 motion so transient navigation colors are not mistaken for final states.
+
+## 10. Product Copy
+
+- Use short, functional titles and action labels. Add help only when it changes
+  what the user should do; avoid automatic page subtitles and repeated summaries.
+- Keep one visible Demo entry in the toolbar, with details available on demand.
+  Label financial examples and sample replies where their provenance matters.
+- Keep roadmap, provider eligibility, repository paths, implementation details,
+  and development conversations in repository docs, outside routine product UI.
+- Errors explain the impact and recovery action. Destructive confirmations name
+  what will be removed or replaced.
+- Seed copy can improve for new workspaces; never rewrite saved user content or
+  conversations to enforce a new writing style.
