@@ -19,3 +19,12 @@ Suggested conventions:
 - [ChatGPT sign-in and plan usage](chatgpt-auth-and-plan-usage.md) - researched
   local runtime option, website login availability, OAuth flow, and current
   inference restrictions; implementation remains deferred.
+
+## Stock Data Foundation
+
+- [Local US stock data pipeline](us-stock-data-pipeline.md) — proposed Go/local
+  collection design, source boundaries, durable jobs, and correctness rules.
+- [Stock research page](stock-research-page.md) — proposed four-tab company UI
+  with a standalone sample-data prototype; live integration is not implemented.
+- [Execution plan](../exec-plans/active/us-stock-data-foundation.md) — design first,
+  then provider verification, local collection, scheduling, UI, and scale.

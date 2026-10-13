@@ -112,6 +112,14 @@ login and a company-operated hosted service require separate eligibility
 decisions. No authentication runtime is implemented. See
 [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
 
+## Proposed Stock Data Foundation
+
+The next live capability is a local Go/Cobra collector with durable SQLite jobs,
+EOD bars, source provenance, and cached reads for a four-tab stock page. The
+[design](design-docs/us-stock-data-pipeline.md) and
+[implementation plan](exec-plans/active/us-stock-data-foundation.md) define the
+proposed boundaries; the current application still has no collector or scheduler.
+
 ## Deferred Architecture Work
 - Data flow and persistence model for evidence, generated artifacts, and user
   decisions.

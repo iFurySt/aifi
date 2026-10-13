@@ -43,8 +43,9 @@ about uncertainty.
 The first app establishes the six-page workspace and demonstrates local research
 routines with sample data. Its purpose is to review navigation and interaction
 before provider work. Demo status stays visible; simulated briefs never claim
-real source retrieval. The research runner described below is the next product
-capability, not a feature of this preview.
+real source retrieval. The next foundation is traceable local stock data,
+followed by the research runner described below; neither is a feature of this preview. See the
+[stock data design](design-docs/us-stock-data-pipeline.md).
 
 Product copy should help users act with minimal reading. Keep internal planning,
 implementation details, and development conversations in repository docs. Use a

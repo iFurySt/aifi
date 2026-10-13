@@ -26,3 +26,9 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
   records the official open-source flow, website identity availability, account
   limits, and request restrictions, with linked OpenAI documentation reviewed on
   2026-10-12.
+
+## Stock Data
+
+- [US stock data sources](us-stock-data-providers.md) compares personal free API
+  options, primary documentation, actual keyless probes, and implementation
+  lessons from the three reference projects, reviewed on 2026-10-13.
