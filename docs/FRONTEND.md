@@ -142,5 +142,4 @@ workspace and saved conversations are unchanged.
 The [stock page specification](design-docs/stock-research-page.md) describes
 this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
 opens the shared app, avoiding a second UI tree. Live Go transport and provider
-collection remain staged in the [data plan](exec-plans/active/us-stock-data-
-foundation.md).
+collection remain staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
