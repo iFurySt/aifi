@@ -61,7 +61,11 @@ importers:
 
   packages/core: {}
 
-  packages/platform: {}
+  packages/platform:
+    dependencies:
+      '@aifi/core':
+        specifier: workspace:*
+        version: link:../core
 
   packages/ui:
     dependencies:

@@ -17,7 +17,7 @@ Web 和 Electron 复用同一套 React 界面。第一版使用示例数据，�
 默认打开 Stocks，内侧栏是股票列表，个股页包含六个研究标签。行情和财务示例
 标注为样例；持仓、交易、评级和新闻暂时显示空状态。原有会话仍可在 Chat 中打开。
 
-需要 Node.js 24+、pnpm 10.13.1。
+需要 Node.js 24+、Go 1.26.1+、pnpm 10.13.1。
 
 ```sh
 pnpm install
@@ -38,7 +38,8 @@ make ci
 ## 股票目录采集
 
 首个真实采集器已接入 Nasdaq Trader 官方证券目录，写入本地 SQLite。
-需要 Go 1.26.1+，无需 API Key。Web／Electron 暂时仍用样例，后续接本地读取。
+需要 Go 1.26.1+，无需 API Key。应用启动时会启动 Go 服务，设置中可管理数据源、同步周期和本机凭据。
+行情和财务页面仍使用样例。
 
 ```sh
 make check-go

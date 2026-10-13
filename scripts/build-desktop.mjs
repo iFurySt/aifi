@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
+await import("./build-data-service.mjs");
 await build({
   entryPoints: {
     main: resolve(root, "apps/desktop/src/main.ts"),

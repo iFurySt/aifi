@@ -20,7 +20,7 @@ Stocks opens with a stock list and six research tabs. Chart/financial examples
 are marked as samples; holdings, trades, ratings, and news have empty structures
 until data is connected. Existing chats remain available inside Chat.
 
-Requires Node.js 24+ and pnpm 10.13.1.
+Requires Node.js 24+, Go 1.26.1+ and pnpm 10.13.1.
 
 ```sh
 pnpm install
@@ -41,8 +41,8 @@ and the shared [design system](DESIGN.md).
 ## Stock directory collector
 
 The first live collector downloads Nasdaq Trader's official security directory
-into a local SQLite store. It needs Go 1.26.1+ and no API key. The app UI still
-uses sample data until local transport is connected.
+into a local SQLite store. It needs Go 1.26.1+ and no API key. App launch starts the Go sidecar. Settings manages source enablement, sync
+frequency, manual requests and locally encrypted credentials; charts remain samples.
 
 ```sh
 make check-go

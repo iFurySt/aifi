@@ -13,22 +13,23 @@ The first executable surface is a local Web/Electron workspace:
   Web app's built HTML and assets.
 - packages/ui owns shared pages, components, and Tailwind design tokens.
 - packages/core owns domain contracts independently of UI and host APIs.
-- packages/platform adapts browser storage and narrowly exposed desktop metadata.
+- packages/platform adapts browser storage and allowlisted local data capabilities. Node-only packages/host owns child lifecycle,
+  local transport and credential encryption; it never enters the renderer bundle.
 - apps/cli owns the Go/Cobra collector: Nasdaq directory requests, SQLite
   snapshots, and cached CLI reads. Its internal directory/store packages are
   shared by commands; future scheduling/transport can compose the same packages.
 
 Dependency direction: applications compose ui; ui consumes core and platform.
 Core never imports React or Electron. Renderer code has no Node or unrestricted
-filesystem access. Mock state stays local; live research runners and provider
-connections remain future work.
+filesystem access. Workspace state stays local. Directory collection/settings run through the Go
+host; model, price/fundamental and broker adapters remain future work.
 
 The shared Shell separates outer application chrome from the inset sidebar and
 scrolling document panel. The outer rail owns application navigation; the inner
 sidebar owns stock selection. Stored conversations stay selectable inside Chat.
 Host metadata chooses native desktop versus browser headers. The desktop toolbar
-uses browser route history with session bounds; window controls remain native
-and no additional host IPC is exposed.
+uses browser route history with session bounds; window controls remain native. A narrow top-frame data IPC allowlist reaches the
+app-owned Go child without exposing process/filesystem APIs.
 
 ## Repository Shape
 
@@ -67,8 +68,8 @@ validate agent prompts, ticker symbols, paused checks, and stored shapes. Seven
 pages share this state. Stocks uses symbol/tab hash routes, deterministic local
 OHLCV/statement fixtures, and empty structures for unsupported datasets. Quotes
 and positions are examples, and chat responses are illustrative. These contracts
-are separate from the future evidence/workflow domain below. No scheduler
-exists.
+are separate from live directory settings/scheduling below. Market charts and
+financials remain fixtures; directory scheduling is now implemented.
 
 ## Intended Research Domain Objects
 
@@ -123,9 +124,13 @@ decisions. No authentication runtime is implemented. See
 
 The first live collector is implemented in apps/cli: two official Nasdaq Trader
 files, validated source blobs, atomic SQLite directory snapshots, sync outcomes,
-and cached manual list/status reads. A bounded persisted lease protects concurrent
-sync and crash recovery. No scheduler, market bars, SEC data, or UI transport exists
-yet. The shared renderer still uses sample/empty content.
+and cached reads. App hosts now start a private-stdio Go service with a configurable
+directory schedule, durable requests, bounded retry and existing sync leases.
+SQLite v2 preserves v1 data and adds revisioned settings/encrypted credential blobs.
+Electron uses a narrow IPC bridge; local Web uses an authenticated same-origin
+loopback bridge. Node encrypts credentials before Go storage; status never returns
+saved plaintext. The shared renderer manages sources/sync settings, while market
+bars and SEC adapters remain unimplemented and stock content remains sample-based.
 The [design](design-docs/us-stock-data-pipeline.md) and
 [implementation plan](exec-plans/active/us-stock-data-foundation.md) define the
 remaining boundaries; see [directory commands](../apps/cli/README.md) and
@@ -137,3 +142,6 @@ remaining boundaries; see [directory commands](../apps/cli/README.md) and
 - Observability stack and local development model.
 - Compliance posture for investment disclaimers, source retention, audit trails,
   and human approval points.
+
+See [app-owned service](design-docs/app-data-service.md) for lifecycle, transport,
+credential boundaries, settings and remaining scope.

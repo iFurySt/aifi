@@ -4,8 +4,8 @@ Status: directory collection implemented; broader pipeline remains proposed,
 2026-10-13. The user confirmed daily/closing data first. This document specifies the first live data capability; the
 current React/Electron application remains a demo until the implementation
 milestones pass. The first Go/Cobra directory collector and SQLite snapshots now
-exist; automatic scheduling, prices, SEC facts, and local UI transport remain
-unimplemented.
+exist; directory scheduling and settings/status transport now exist. Prices, SEC facts
+and stock-page data reads remain unimplemented.
 [Directory runtime](../../apps/cli/README.md) specifies the narrower shipped scope.
 
 ## Decisions

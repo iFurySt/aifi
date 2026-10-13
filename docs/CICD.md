@@ -9,9 +9,10 @@ CI covers both the research workspace and the local Web/Electron app foundation.
 - `scripts/ci.sh`: the local entry point used by GitHub Actions and by
   contributors through `make ci`.
 - Go from apps/cli/go.mod, pinned module sums, gofmt/vet/race tests, and a
-  CGO-disabled CLI build through scripts/check-go.sh.
+  CGO-disabled CLI build, including service/scheduler/config contracts through scripts/check-go.sh.
 - Node 24 and pinned pnpm dependencies: TypeScript, domain/storage tests, and
-  Web/Electron builds.
+  Web/Electron builds with the bundled Go sidecar. Host crypto/transport tests
+  use temporary profiles and local HTTP servers without live provider calls.
   CI installs with lifecycle scripts disabled; an Electron launch is a separate
   local smoke check.
 

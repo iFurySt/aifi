@@ -143,7 +143,8 @@ Use Radix primitives for those behaviors, not a large visual component library.
 - Watchlist: compact ticker list, sparklines, and local add/remove controls.
 - Portfolio: illustrative allocation chart and position table.
 - Library: reusable skill categories and mock report previews.
-- Settings: theme and local-data controls.
+- Settings: category sidebar and centered grouped rows for General, Appearance,
+  Data sources, Sync, Storage; short labels and neutral switches.
 
 ### Spacing System
 
@@ -280,3 +281,21 @@ rearrangement below are AIFi choices.
   entry link. Preserve neutral keyboard focus and native window controls.
 
 Detailed scope: [stock page design](docs/design-docs/stock-research-page.md).
+
+## 12. Settings
+
+Use the supplied 2026-10-13 settings screenshot as the layout reference. Preserve
+the outer frame/rail; replace the inner stock sidebar with category search and
+Personal/Data groups. Document width 920px with 48px desktop padding, 28px tablet,
+20px mobile; title 28px/550 with 48px space before content.
+
+Each section uses a 14px title and a 16px rounded bordered group. Rows have 18px
+vertical padding, 14px labels and optional 12px functional descriptions. Controls
+align right: neutral switches, selects, compact buttons, and inline inputs. Tables
+or cards must not overflow on mobile; use the existing drawer for categories.
+Settings represents real local controls and has no Demo badge.
+
+Saved credentials show only presence; blank password inputs replace values on
+explicit Save, and Remove clears saved fields. Data adapters that are not active
+say Not syncing; do not imply remote authentication success. Keep neutral focus,
+Escape/dismissal, and actual enabled/disabled states.

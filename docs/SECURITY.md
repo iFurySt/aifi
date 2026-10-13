@@ -3,6 +3,7 @@
 AIFi includes a local Web/Electron demo, a Go directory collector, and pinned
 JavaScript/Go dependencies.
 There is no hosted backend, model credential handling, or broker connection.
+Local future market-provider credentials can now be configured.
 
 ## Current Defaults
 
@@ -34,11 +35,13 @@ There is no hosted backend, model credential handling, or broker connection.
 ## Local Application Boundaries
 
 - Electron renderer: sandbox, context isolation, no Node integration, and a
-  preload bridge exposing only runtime metadata.
+  preload bridge exposing metadata and allowlisted data actions only.
 - New windows, navigation/redirects away from the app, and permission requests
   are denied.
-- Production CSP allows local assets and denies network connections/frames;
-  development permits the fixed localhost Vite origin and its HMR socket.
+- Production Web CSP permits same-origin local requests/assets and denies frames;
+  development also permits fixed localhost HMR. Electron intercepts resource
+  requests: production files are restricted to built app assets, private key/DB
+  files are denied, and remote provider requests stay in the Go host.
 - Local storage contains demo research state, not credentials. Do not add tokens
   to this storage adapter; future secrets need a separate protected capability.
 - Saved data is validated before use and rendered as text, without raw HTML.
@@ -48,13 +51,22 @@ There is no hosted backend, model credential handling, or broker connection.
 
 The CLI issues read-only requests to two fixed official Nasdaq HTTPS endpoints;
 redirects cannot leave those hosts or downgrade TLS. Requests/bodies are bounded.
-No dynamic external endpoint or provider credential is exposed to the renderer.
+No dynamic external endpoint or saved plaintext credential is exposed to the renderer.
 Public source fields remain data, stored with original attribution and hashes.
 Parameterized SQLite queries and escaped literal search prevent query injection.
 The DB is outside tracked source, with restrictive permissions for newly created
 files/directories. Source data and SQLite sidecars must not be committed.
-Directory collection does not add Electron privileges, a listener, broker access,
-or cloud calls. The full security/transport plan still applies before local HTTP.
+Directory collection adds no broker access or cloud calls. Go has no TCP listener;
+Electron owns a private stdio child and narrow IPC. Local Web exposes only a bounded,
+same-origin loopback bridge with exact Host/Origin/session/method checks.
+
+Provider credentials are encrypted in the Node host with AES-GCM and a private
+0600 local key before SQLite persistence. Metadata reads expose only configured
+fields. No plaintext retrieval route exists; keys are absent from localStorage,
+child arguments, URLs and logs. This file vault does not protect against same-user
+filesystem access; back up the private key with the DB when needed. Vite denies
+key, SQLite and artifact files, and Electron file access is asset-scoped.
+See [service design](design-docs/app-data-service.md) for boundaries and follow-ups.
 
 ## Future Runtime Work
 

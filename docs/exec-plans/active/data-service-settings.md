@@ -29,7 +29,7 @@ General, Appearance, Data sources, Sync, Storage.
 ## Milestones
 
 - [x] SQLite/config migration, due-work scheduler, bounded stdio RPC and tests.
-- [ ] App-owned host/vault/bridge, shared contracts, settings/sidebar integration.
+- [x] App-owned host/vault/bridge, shared contracts, settings/sidebar integration.
 - [ ] Browser/mobile/native validation, lifecycle/security checks, docs and staged
   commits/pushes. Existing directory/history checks remain in CI.
 

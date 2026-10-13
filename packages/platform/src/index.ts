@@ -6,7 +6,13 @@ export interface RuntimeInfo {
 
 declare global {
   interface Window {
-    aifiDesktop?: { getRuntimeInfo(): Promise<RuntimeInfo> };
+    aifiDesktop?: {
+      getRuntimeInfo(): Promise<RuntimeInfo>;
+      requestData(
+        method: import("@aifi/core").DataMethod,
+        params?: unknown,
+      ): Promise<unknown>;
+    };
   }
 }
 
@@ -20,3 +26,5 @@ export async function getRuntimeInfo(): Promise<RuntimeInfo> {
   );
 }
 export * from "./storage";
+
+export * from "./data-service";

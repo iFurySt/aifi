@@ -5,6 +5,7 @@ import {
   workspacePages,
   parseStockRoute,
   stockHref,
+  parseSettingsSection,
 } from "@aifi/core";
 import type {
   Conversation,
@@ -48,6 +49,9 @@ export function App() {
   const [page, setPage] = useState(currentPage);
   const [stockRoute, setStockRoute] = useState(() =>
     parseStockRoute(location.hash),
+  );
+  const [settingsSection, setSettingsSection] = useState(() =>
+    parseSettingsSection(location.hash),
   );
   const openStock = useCallback((symbol: string, tab?: StockTab) => {
     location.hash = stockHref(symbol, tab).slice(1);
@@ -113,6 +117,8 @@ export function App() {
     const change = () => {
       const nextPage = currentPage();
       setPage(nextPage);
+      if (nextPage === "settings")
+        setSettingsSection(parseSettingsSection(location.hash));
       if (nextPage === "stocks") setStockRoute(parseStockRoute(location.hash));
     };
     window.addEventListener("hashchange", change);
@@ -140,6 +146,7 @@ export function App() {
         page,
         navigate,
         stockRoute,
+        settingsSection,
         openStock,
         notify,
         research,

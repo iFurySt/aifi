@@ -1,6 +1,6 @@
 # App-Owned Data Service
 
-Status: Go scheduler implemented; host/settings integration in this task.
+Status: shared Web/Electron host and settings integration implemented, 2026-10-13.
 
 ## Lifecycle And Schedule
 
@@ -27,7 +27,7 @@ Stdin EOF or parent cancellation cancels network work, waits for outcome cleanup
 and ends the process. A queued manual request is retained through shutdown if it
 has not completed. macOS closing its last window keeps the app alive; normal Quit
 ends the child. Unexpected child exit is surfaced as unavailable until the host
-reconnects/restarts. No always-on background collection after app/server exit.
+restarts. No always-on background collection after app/server exit.
 
 ## Persistence
 

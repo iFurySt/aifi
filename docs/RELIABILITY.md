@@ -7,9 +7,10 @@ its Vite process; a conflicting port causes startup to fail rather than silently
 choosing another origin. Production desktop loads bundled assets without a server.
 The first desktop launch downloads Electron if the binary is not cached.
 
-The renderer has no network data sources, background schedules, or cloud services.
-The separate Go CLI now reads the two official directory files on explicit sync;
-cached reads do not fetch. See [CLI guardrails](../apps/cli/README.md).
+App-owned Go now schedules directory checks/downloads while the host runs.
+Electron starts a private child; local Web dev/preview starts an equivalent child.
+The renderer uses local settings/status transport and has no direct provider calls
+or cloud dependency. Cached reads do not fetch. See [CLI guardrails](../apps/cli/README.md).
 Local state is bounded and validated. Invalid or unsupported state opens a
 recoverable temporary demo and preserves the stored value until explicit reset.
 Storage denial/quota failure leaves the session usable and displays a notice.
@@ -26,8 +27,15 @@ launching terminal; the app exposes user-facing storage/startup failures.
 
 Directory collection has bounded requests, persisted outcomes/leases, atomic
 snapshot writes, stale-source/shrink guards, and last-good cache retention. SQLite
-v1 is explicitly versioned; an unknown future schema is rejected.
+v2 migrates v1 in place and is explicitly versioned; an unknown future schema is rejected.
 
 Multi-window editing, UI schema migrations, backups, broader live-source retry policies,
 and research-runner observability remain future work. CI workflow and release
 automation guidance live in [CICD.md](CICD.md).
+
+Directory settings use revision checks; source disabling cancels owned work,
+automation/interval changes recompute due time, and manual requests persist.
+Failures back off 15/30/60 minutes; wake checks catch up using stored outcomes.
+EOF/quit cancels downloads and waits for cleanup, with a host kill deadline.
+Unexpected process exit is visible as unavailable and needs host reconnect/restart.
+Directory history retention remains a follow-up; Storage exposes DB size.

@@ -1,7 +1,19 @@
+import { DataHost } from "../../../packages/host/src/runtime";
+import {
+  dataMethods,
+  type DataMethod,
+} from "../../../packages/core/src/data-service";
 import { app, BrowserWindow, ipcMain, session } from "electron";
-import { join } from "node:path";
-import { mkdirSync, mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import { join, sep, basename } from "node:path";
+import {
+  mkdirSync,
+  mkdtempSync,
+  writeFileSync,
+  rmSync,
+  realpathSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
+import { pathToFileURL, fileURLToPath } from "node:url";
 import { setTimeout as delay } from "node:timers/promises";
 
 app.setName("AIFi");
@@ -25,6 +37,14 @@ if (smokeProfile) {
   });
 }
 
+let dataHost: DataHost;
+let quitting = false;
+app.on("before-quit", (event) => {
+  if (quitting || !dataHost) return;
+  event.preventDefault();
+  quitting = true;
+  void dataHost.stop().finally(() => app.quit());
+});
 async function createWindow() {
   const window = new BrowserWindow({
     title: "AIFi",
@@ -101,8 +121,20 @@ async function createWindow() {
       const stockPlaceholders = document.body.innerText.includes('No holdings data');
       document.querySelector('[role="tab"][id="stock-tab-chart"]').click();
       await waitFor(() => !!document.querySelector('#stock-panel-chart .stock-price-chart'));
-      return { runtime, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
-        rendered: !!document.querySelector('.stocks-page'),
+      const initialData = await window.aifiDesktop.requestData('status');
+      const saved = await window.aifiDesktop.requestData('settings.save', {...initialData.settings, intervalHours:6, automatic:false});
+      await window.aifiDesktop.requestData('credentials.set', {provider:'massive',values:{apiKey:'synthetic-native-test-key'}});
+      const configured = await window.aifiDesktop.requestData('status');
+      const dataService = configured.settings.intervalHours === 6 && !configured.settings.automatic && configured.offline === true;
+      let privateFilesBlocked = false;
+      try { await fetch('file://' + configured.dataDir + '/aifi-vault.key'); } catch { privateFilesBlocked = true; }
+      const credentials = privateFilesBlocked && configured.credentials.some(x => x.provider === 'massive') && !JSON.stringify(configured).includes('synthetic-native-test-key');
+      await window.aifiDesktop.requestData('credentials.remove', {provider:'massive'});
+      location.hash = '/settings/sync';
+      await waitFor(() => !!document.querySelector('.settings-content') && document.querySelector('[aria-label="Directory interval hours"]')?.value === '6');
+      const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 5;
+      return { runtime, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
+        rendered: !!document.querySelector('.settings-content'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
         externalAssets: [...document.querySelectorAll('script[src],link[href]')]
@@ -112,6 +144,9 @@ async function createWindow() {
       result.runtime?.kind !== "desktop" ||
       !result.isolated ||
       !result.navigation ||
+      !result.dataService ||
+      !result.credentials ||
+      !result.settingsUI ||
       !result.stockTabs ||
       !result.stockSidebar ||
       !result.stockPlaceholders ||
@@ -142,7 +177,7 @@ async function createWindow() {
     writeFileSync(join(output, "aifi-electron.png"), screenshot.toPNG());
     writeFileSync(
       join(output, "electron-smoke.json"),
-      JSON.stringify(result, null, 2),
+      JSON.stringify({ ...result, goPid: dataHost.pid }, null, 2),
     );
     console.log(
       "AIFi desktop smoke passed: bundled renderer, isolated bridge, local assets.",
@@ -164,11 +199,67 @@ void app
       (_contents, _permission, callback) => callback(false),
     );
     session.defaultSession.setPermissionCheckHandler(() => false);
+    const assetRoot = realpathSync(join(__dirname, "../../web/dist"));
+    session.defaultSession.webRequest.onBeforeRequest(
+      { urls: ["<all_urls>"] },
+      (details, callback) => {
+        let allowed = false;
+        try {
+          const target = new URL(details.url);
+          if (
+            devUrl &&
+            ["http://127.0.0.1:5173", "ws://127.0.0.1:5173"].includes(
+              target.origin,
+            )
+          )
+            allowed = true;
+          else if (!devUrl && target.protocol === "file:") {
+            const path = realpathSync(fileURLToPath(target));
+            allowed =
+              path.startsWith(assetRoot + sep) &&
+              !basename(path).startsWith("aifi-vault.") &&
+              !/\.sqlite(?:-wal|-shm)?$/.test(path);
+          } else if (target.protocol === "data:") allowed = true;
+        } catch {
+          /* Invalid or out-of-scope resources remain denied. */
+        }
+        callback({ cancel: !allowed });
+      },
+    );
     ipcMain.handle("aifi:runtime-info", () => ({
       kind: "desktop",
       version: app.getVersion(),
       platform: process.platform,
     }));
+    dataHost = new DataHost(
+      join(__dirname, process.platform === "win32" ? "aifi.exe" : "aifi"),
+      smokeProfile ? join(smokeProfile, "data") : undefined,
+      smoke,
+    );
+    try {
+      await dataHost.start();
+    } catch {
+      console.error("AIFi data service could not start.");
+    }
+    ipcMain.handle(
+      "aifi:data",
+      (event, method: DataMethod, params?: unknown) => {
+        const frame = event.senderFrame;
+        const url = frame?.url.split("#")[0];
+        const expected =
+          devUrl ||
+          pathToFileURL(join(__dirname, "../../web/dist/index.html")).href;
+        if (
+          frame !== event.sender.mainFrame ||
+          (devUrl
+            ? url !== expected + "/" && url !== expected
+            : url !== expected) ||
+          !dataMethods.includes(method)
+        )
+          throw Error("Data access denied.");
+        return dataHost.request(method, params);
+      },
+    );
     await createWindow();
     if (smokeTimeout) clearTimeout(smokeTimeout);
     app.on("activate", () => {

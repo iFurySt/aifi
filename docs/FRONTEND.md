@@ -5,7 +5,7 @@ loads the same renderer; there is no second desktop UI or cloud backend.
 
 ## Local Commands
 
-Use Node 24+ and pnpm 10.13.1:
+Use Node 24+, Go 1.26.1+ and pnpm 10.13.1:
 
 ~~~sh
 pnpm install
@@ -26,18 +26,20 @@ development, not both on that port. Desktop development starts and owns Vite.
 pnpm desktop loads the production renderer after pnpm build. The first desktop
 launch downloads Electron if needed, as described in the
 [official installation guide](https://www.electronjs.org/docs/latest/tutorial/installation).
-No environment variables are required. The desktop launcher sets AIFI_DEV_URL
+No environment variables are required. App launch builds/starts the Go service;
+AIFI_DATA_DIR optionally chooses its local SQLite/vault directory. The desktop launcher sets AIFI_DEV_URL
 internally to the one allowed development origin; production leaves it unset.
 
 ## Boundaries
 
 - apps/web: HTML/bootstrap and Vite configuration.
-- apps/desktop: sandboxed Electron main/preload and narrow host metadata.
+- apps/desktop: sandboxed Electron main/preload, app-owned Go lifecycle and allowlisted data IPC.
 - packages/ui: shared components, page layouts, and design tokens.
 - packages/core: platform-independent domain contracts and demo data rules.
 - packages/platform: browser/local storage and desktop capability adaptation.
-- apps/cli: Go/Cobra directory collector and SQLite cache; not connected to the
-  renderer yet. See its README for manual sync/list/status.
+- apps/cli: Go/Cobra directory collector, scheduler, SQLite and private stdio RPC.
+- packages/host: Node-only child/vault/loopback adapter, never imported by UI.
+  The platform adapter exposes typed settings/status operations to the renderer.
 
 Root DESIGN.md defines the visual system. Use Radix for dialog/menu accessibility
 and Lucide for icons. Avoid a large visual component library and duplicate page
@@ -45,8 +47,8 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, eleven domain/storage/route tests,
-and both production builds. Use the local app for desktop and mobile visual
+make ci runs repository gates, TypeScript, fifteen domain/storage/route/host tests,
+Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
 
@@ -59,8 +61,8 @@ Agents can be created, filtered, paused/resumed, deleted, and given an explicit
 preview. Research conversations contain deterministic illustrative responses.
 Watchlists support adding/removing symbols; unknown symbols have no invented
 quote. Portfolio numbers and charts are fixed examples. Library cards preview
-existing repository skills without executing them. Settings controls theme and
-local reset. A single Demo toolbar entry explains the sample-mode limits on
+existing repository skills without executing them. Settings uses categories and grouped rows for appearance, sources, scheduling
+and storage, with real local settings and encrypted credential configuration. A single Demo toolbar entry explains the sample-mode limits on
 demand. Page copy uses short functional labels; provider roadmaps and repository
 paths remain in developer documentation, following DESIGN.md.
 
@@ -104,7 +106,7 @@ Electron renders a 48px draggable outer toolbar. macOS uses real native traffic
 lights at x=14/y=17, with reserved space before back/forward and sidebar controls.
 Controls, menus, and dialogs are no-drag. App back/forward is bounded to the
 current route session, including same-hash traversal; a new route truncates the
-forward branch. No new host privileges or IPC methods are required.
+forward branch. Window controls use route history; data IPC is an allowlisted separate capability.
 
 Web relies on browser window controls and places a 52px page toolbar inside the
 workspace panel. Both hosts share the rail, sidebar, pages, theme, and shell CSS.
@@ -112,8 +114,8 @@ The refinement was checked against the user-provided Codex/ChatGPT screenshots,
 using OBU in Chrome Default for Web and the real macOS Electron window for native
 controls. Native close/minimize/full-screen controls remain owned by the OS.
 
-The outer rail contains application navigation; the sidebar contains stocks
-only. Chat history remains selectable inside Chat and searchable from the
+The outer rail contains application navigation; the inner sidebar selects stocks,
+or settings categories while Settings is open. Chat history remains selectable inside Chat and searchable from the
 toolbar. The outer-rail avatar opens the shared Radix workspace menu for
 Settings and theme switching. Below 600px the rail is hidden and the same menu
 appears in the page toolbar. Check keyboard selection, Escape/focus return,
@@ -142,5 +144,25 @@ workspace and saved conversations are unchanged.
 
 The [stock page specification](design-docs/stock-research-page.md) describes
 this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
-opens the shared app, avoiding a second UI tree. Live Go transport and provider
-collection remain staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
+opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Stock data
+reads and remaining provider collection stay staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
+## Data Settings And Runtime
+
+General, Appearance, Data sources, Sync, Storage use the supplied screenshot's
+category sidebar, centered title, bordered groups and short rows. Desktop/mobile
+share the same page; the drawer exposes settings categories on narrow screens.
+Settings has no Demo badge because its service controls are real.
+
+Both local app hosts start a Go child. Fresh directories skip startup download;
+default sync interval is 24 hours, editable 1–720 hours. Enable/automation/interval
+changes persist and affect the worker. Manual sync, counts, outcomes, cache size,
+and source credential presence are real; market/SEC adapters say Not syncing.
+
+Credentials are submitted transiently to the host, cleared after save/close, and
+never placed in browser workspace storage or returned as saved values. The Web
+bridge uses same-origin authenticated requests; Electron uses private IPC. The
+service ends with the host; no independent OS daemon is installed.
+
+Native smoke now checks service startup, saved interval, credential ciphertext
+redaction, settings UI and child cleanup using an isolated offline profile.
+See [service design](design-docs/app-data-service.md) for exact boundaries.

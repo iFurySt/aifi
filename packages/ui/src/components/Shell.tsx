@@ -21,6 +21,7 @@ import { IconButton, Logo, Modal } from "./primitives";
 import type { ReactNode } from "react";
 import { useWorkspaceHistory } from "./useWorkspaceHistory";
 import { ProfileMenu } from "./ProfileMenu";
+import { SettingsSidebar } from "./SettingsSidebar";
 import { StockSidebar } from "./StockSidebar";
 const destinations = [
   { page: "stocks", icon: ChartNoAxesCombined },
@@ -73,6 +74,7 @@ export function Shell({ children }: { children: ReactNode }) {
     storageError,
     openStock,
     stockRoute,
+    settingsSection,
     openConversation,
   } = useWorkspace();
   const desktop = !!window.aifiDesktop;
@@ -81,7 +83,7 @@ export function Shell({ children }: { children: ReactNode }) {
       document
         .getElementById("main-content")
         ?.scrollTo({ top: 0, behavior: "instant" });
-  }, [page, stockRoute.symbol, stockRoute.tab]);
+  }, [page, stockRoute.symbol, stockRoute.tab, settingsSection]);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const routeHistory = useWorkspaceHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -101,15 +103,16 @@ export function Shell({ children }: { children: ReactNode }) {
   const matches = workspacePages.filter((p) =>
     pageLabels[p].toLowerCase().includes(search.toLowerCase()),
   );
-  const demoBadge = (
-    <button
-      className="demo-badge"
-      aria-label="About demo data"
-      onClick={() => setDemoOpen(true)}
-    >
-      Demo
-    </button>
-  );
+  const demoBadge =
+    page === "settings" ? null : (
+      <button
+        className="demo-badge"
+        aria-label="About demo data"
+        onClick={() => setDemoOpen(true)}
+      >
+        Demo
+      </button>
+    );
   const toolbarActions = (
     <div className="topbar-actions">
       <button
@@ -218,7 +221,7 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
         <div className="workspace-panel">
           <aside className="sidebar" id="workspace-sidebar">
-            <StockSidebar />
+            {page === "settings" ? <SettingsSidebar /> : <StockSidebar />}
           </aside>
           <div className="main-shell">
             {!desktop && (
@@ -242,7 +245,7 @@ export function Shell({ children }: { children: ReactNode }) {
             <main
               tabIndex={-1}
               id="main-content"
-              className={`main-content ${page === "research" ? "research-main" : page === "stocks" ? "stock-main" : ""}`}
+              className={`main-content ${page === "research" ? "research-main" : page === "stocks" ? "stock-main" : page === "settings" ? "settings-main" : ""}`}
             >
               {children}
             </main>
@@ -253,7 +256,7 @@ export function Shell({ children }: { children: ReactNode }) {
         open={demoOpen}
         onOpenChange={setDemoOpen}
         title="Demo data"
-        description="Sample quotes, holdings and replies. No live research, account sync or background monitoring."
+        description="Quotes, holdings and replies are samples. Directory sync uses local data."
       >
         <div className="dialog-actions">
           <button
@@ -271,7 +274,11 @@ export function Shell({ children }: { children: ReactNode }) {
         sheet
       >
         <AppNavigation mobile onNavigate={() => setMobileOpen(false)} />
-        <StockSidebar onSelect={() => setMobileOpen(false)} />
+        {page === "settings" ? (
+          <SettingsSidebar onSelect={() => setMobileOpen(false)} />
+        ) : (
+          <StockSidebar onSelect={() => setMobileOpen(false)} />
+        )}
       </Modal>
       <Modal
         open={searchOpen}

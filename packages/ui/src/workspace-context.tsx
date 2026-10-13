@@ -5,6 +5,7 @@ import type {
   WorkspacePage,
   StockTab,
   StockRoute,
+  SettingsSection,
 } from "@aifi/core";
 export interface WorkspaceContextValue {
   workspace: Workspace;
@@ -12,6 +13,7 @@ export interface WorkspaceContextValue {
   page: WorkspacePage;
   navigate: (page: WorkspacePage) => void;
   stockRoute: StockRoute;
+  settingsSection: SettingsSection;
   openStock: (symbol: string, tab?: StockTab) => void;
   notify: (message: string) => void;
   research: (prompt?: string) => void;

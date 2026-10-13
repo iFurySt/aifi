@@ -1,7 +1,7 @@
 # US Stock Data Foundation
 
-Status: directory CLI/SQLite milestone complete; prices, SEC, scheduler, and
-transport remain pending. Created 2026-10-13.
+Status: directory collection, app-owned scheduling, settings/status transport and
+credential configuration implemented; prices, SEC and stock-page reads pending. Created 2026-10-13.
 
 ## Goal
 
@@ -128,3 +128,9 @@ verify source/sample labels, table/tab overflow, theme, and keyboard behavior.
   manual-sync lease, atomic cache switch, and cached CLI reads. No automatic
   scheduler/market data/SEC ingestion/UI transport yet. See
   [directory milestone](../completed/stock-directory-foundation.md).
+
+- 2026-10-13: app-owned directory service ships startup/freshness checks, persisted
+  settings/manual requests, existing leases, retry timing and wake catch-up.
+  Electron/Web settings reach it through narrow host transport; future provider
+  secrets are locally encrypted. This does not complete the broader market-calendar,
+  multi-dataset scheduling or cached stock-page milestones.
