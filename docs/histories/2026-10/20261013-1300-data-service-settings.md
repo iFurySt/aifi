@@ -62,3 +62,8 @@
   save/history and renderer isolation. The Go child was absent after smoke exit.
 - Native Windows/Linux runtime, installers, OS-vault integration, directory history
   retention, broader adapters and stock-data UI reads remain follow-ups.
+
+The final transport check also rejects malformed non-ASCII session headers without
+throwing from constant-time comparison. New bridge requests require a loopback
+peer as well as local Host/Origin. The completed execution plan records shipped
+scope and remaining work.

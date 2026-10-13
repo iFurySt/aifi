@@ -53,6 +53,24 @@ it("requires loopback Host, same-origin session and an allowlisted bounded reque
         })
       ).status,
     ).toBe(403);
+    const malformedToken = await new Promise<number>((resolve) => {
+      const req = rawRequest(
+        base + "/api/local/request",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-AIFi-Session": "é".repeat(64),
+          },
+        },
+        (res) => {
+          res.resume();
+          resolve(res.statusCode!);
+        },
+      );
+      req.end(JSON.stringify({ method: "status" }));
+    });
+    expect(malformedToken).toBe(403);
     const headers = {
       "Content-Type": "application/json",
       "X-AIFi-Session": token,
