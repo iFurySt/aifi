@@ -1,8 +1,8 @@
 # Local Data CLI
 
 The first live collector imports Nasdaq Trader's official symbol-directory files
-into SQLite. It needs no provider key. The Web/Electron renderer still uses
-fixtures until local transport is implemented.
+into SQLite. It needs no provider key. Market charts/financials still use fixtures. The app-owned service can now
+manage directory scheduling/settings through private stdio.
 
 Requires Go 1.26.1+ (module version), alongside the existing Node/pnpm toolchain.
 Cobra and the CGO-free modernc SQLite driver are pinned in go.mod/go.sum.
@@ -30,7 +30,7 @@ The store is `aifi.sqlite`, with SQLite WAL/SHM sidecars. New directories use
 0700 and the DB 0600 where the OS supports Unix modes. No credentials are needed
 or saved. Stores/source responses must stay outside tracked repository files.
 
-The v1 migration stores immutable source bytes/hashes, directory snapshots,
+The directory schema stores immutable source bytes/hashes, directory snapshots,
 source metadata, listing IDs, per-snapshot memberships/aliases, and sync runs.
 These two small directory blobs are stored directly in SQLite; larger future
 price/filing payloads may use the pipeline's separate compressed blob store.
@@ -51,6 +51,21 @@ The provider creation marker is a raw, timezone-unspecified string; `fetchedAt`
 is an actual UTC timestamp. Repeated identical source hashes reuse the snapshot;
 recent sync runs record successful checks even if source content did not change.
 
+## App-Owned Scheduler
+
+`aifi service` runs the private stdio scheduler used by local app hosts. Startup
+checks due work; default automatic frequency is 24 hours, adjustable 1–720 hours.
+Settings, revision conflicts, requests and sync outcomes persist in SQLite v2;
+v1 directory data is migrated in place. A disabled source also prevents CLI sync.
+`--offline` keeps settings/cache available without network collection.
+
+Manual work can run with automation paused. The worker checks every 30 seconds,
+reacts to configuration changes, and catches up after wake. Failed overdue work
+backs off 15/30/60 minutes. Stdin EOF/cancellation ends the process and preserves
+unfinished manual requests. There is no always-on OS background service.
+
+See [service contracts](../../docs/design-docs/app-data-service.md).
+
 ## Failure And Concurrency
 
 - At most two sequential source requests per sync, 30 seconds per HTTP request,
@@ -67,9 +82,10 @@ recent sync runs record successful checks even if source content did not change.
   Failed/interrupted outcomes remain visible in status. WAL, foreign keys,
   a five-second busy timeout, and one connection per store keep writes explicit.
 
-Retention/backup/compaction commands, automatic schedules, durable multi-dataset
-jobs, prices/financial facts, local HTTP/desktop transport, and UI connection are
-not implemented in this milestone. Existing UI Reset does not delete this DB.
+Retention/backup/compaction commands, broader multi-dataset jobs, price/fact
+adapters and stock-chart data reads remain follow-ups. Directory scheduling and
+settings use the app-owned service; credential validation against remote vendors
+is not implemented. Existing UI Reset does not delete this DB.
 
 Design/source selection: [directory sources](../../docs/references/stock-directory-sources.md),
 [pipeline](../../docs/design-docs/us-stock-data-pipeline.md), and

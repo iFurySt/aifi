@@ -36,3 +36,9 @@ CREATE TABLE IF NOT EXISTS directory_head(
  singleton INTEGER PRIMARY KEY CHECK(singleton=1), snapshot_id TEXT NOT NULL REFERENCES directory_snapshots(id)
 );
 INSERT OR IGNORE INTO schema_migrations(version) VALUES(1);
+CREATE TABLE IF NOT EXISTS service_settings(singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL, settings_json TEXT NOT NULL);
+INSERT OR IGNORE INTO service_settings VALUES(1,0,'{"directoryEnabled":true,"automatic":true,"intervalHours":24,"secUserAgent":""}');
+CREATE TABLE IF NOT EXISTS directory_requests(singleton INTEGER PRIMARY KEY CHECK(singleton=1), requested INTEGER NOT NULL CHECK(requested IN (0,1)));
+INSERT OR IGNORE INTO directory_requests VALUES(1,0);
+CREATE TABLE IF NOT EXISTS credential_blobs(provider TEXT NOT NULL, field TEXT NOT NULL, ciphertext TEXT NOT NULL, PRIMARY KEY(provider,field));
+INSERT OR IGNORE INTO schema_migrations(version) VALUES(2);

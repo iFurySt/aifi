@@ -28,3 +28,6 @@ Suggested conventions:
   with sample/empty structures; provider integration is not implemented.
 - [Execution plan](../exec-plans/active/us-stock-data-foundation.md) — design first,
   then provider verification, local collection, scheduling, UI, and scale.
+
+- [App-owned data service](app-data-service.md) — directory scheduling, local
+  settings/credential boundaries, and app-owned lifecycle.

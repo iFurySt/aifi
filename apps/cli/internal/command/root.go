@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/ifuryst/aifi/apps/cli/internal/directory"
+	"github.com/ifuryst/aifi/apps/cli/internal/service"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
 	"github.com/spf13/cobra"
 	"os"
@@ -42,7 +43,16 @@ func New() *cobra.Command {
 		return encoder.Encode(value)
 	}
 	sync := &cobra.Command{Use: "sync", Short: "Fetch both official files and atomically update SQLite", Args: cobra.NoArgs, RunE: func(cmd *cobra.Command, _ []string) error {
-		return withStore(cmd, func(ctx context.Context, s *store.Store) (any, error) { return s.Sync(ctx, directory.NewClient()) })
+		return withStore(cmd, func(ctx context.Context, s *store.Store) (any, error) {
+			cfg, err := s.Settings(ctx)
+			if err != nil {
+				return nil, err
+			}
+			if !cfg.DirectoryEnabled {
+				return nil, fmt.Errorf("directory source is disabled")
+			}
+			return s.Sync(ctx, directory.NewClient())
+		})
 	}}
 	status := &cobra.Command{Use: "status", Short: "Read source provenance and recent sync outcomes", Args: cobra.NoArgs, RunE: func(cmd *cobra.Command, _ []string) error {
 		return withStore(cmd, func(ctx context.Context, s *store.Store) (any, error) { return s.Status(ctx) })
@@ -61,6 +71,29 @@ func New() *cobra.Command {
 	list.Flags().StringVar(&scope, "scope", "candidates", "candidates excludes test issues and ETFs; all includes every source row")
 	list.Flags().IntVar(&limit, "limit", 20, "Page size (1–200)")
 	list.Flags().IntVar(&offset, "offset", 0, "Offset (0–100000)")
+	var offline bool
+	daemon := &cobra.Command{Use: "service", Short: "Run the app-owned data scheduler over private stdio", Args: cobra.NoArgs, RunE: func(cmd *cobra.Command, _ []string) error {
+		path := dataDir
+		if path == "" {
+			base, e := os.UserConfigDir()
+			if e != nil {
+				return e
+			}
+			path = filepath.Join(base, "aifi", "data")
+		}
+		absolute, e := filepath.Abs(path)
+		if e != nil {
+			return e
+		}
+		db, e := store.Open(cmd.Context(), absolute)
+		if e != nil {
+			return e
+		}
+		defer db.Close()
+		return service.New(db, directory.NewClient(), absolute, offline).Serve(cmd.Context(), cmd.InOrStdin(), cmd.OutOrStdout())
+	}}
+	daemon.Flags().BoolVar(&offline, "offline", false, "Pause network work while keeping settings/cache available")
+	root.AddCommand(daemon)
 	dir.AddCommand(sync, list, status)
 	return root
 }

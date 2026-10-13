@@ -1,0 +1,173 @@
+package service
+
+import (
+	"context"
+	"encoding/json"
+	"github.com/ifuryst/aifi/apps/cli/internal/directory"
+	"github.com/ifuryst/aifi/apps/cli/internal/store"
+	"io"
+	"strings"
+	"sync/atomic"
+	"testing"
+	"time"
+)
+
+type fakeFetcher struct {
+	calls atomic.Int32
+	fail  bool
+}
+
+func (f *fakeFetcher) Fetch(ctx context.Context) ([]directory.File, error) {
+	f.calls.Add(1)
+	texts := []string{"Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares\nEXAMPLE|Example security|Q|N|N|100|N|N\nFile Creation Time: 1012202621:31|||||||\n", "ACT Symbol|Security Name|Exchange|CQS Symbol|ETF|Round Lot Size|Test Issue|NASDAQ Symbol\nOTHER|Other security|N|OTHER|N|100|N|OTHER\nFile Creation Time: 1012202621:31||||||\n"}
+	var files []directory.File
+	for i, text := range texts {
+		file, e := directory.Parse([]string{"nasdaqlisted", "otherlisted"}[i], []byte(text))
+		if e != nil {
+			return nil, e
+		}
+		file.FetchedAt = time.Now()
+		file.URL = "https://example.invalid/directory"
+		files = append(files, file)
+	}
+	return files, ctx.Err()
+}
+func setup(t *testing.T) (*Service, *fakeFetcher) {
+	t.Helper()
+	path := t.TempDir()
+	db, e := store.Open(context.Background(), path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	t.Cleanup(func() { db.Close() })
+	fetch := &fakeFetcher{}
+	return New(db, fetch, path, false), fetch
+}
+func TestFreshStartupAndDynamicInterval(t *testing.T) {
+	ctx := context.Background()
+	s, f := setup(t)
+	if _, e := s.DB.Sync(ctx, f); e != nil {
+		t.Fatal(e)
+	}
+	f.calls.Store(0)
+	last, _ := s.DB.LastSuccess(ctx)
+	s.Now = func() time.Time { return last.Add(8 * time.Hour) }
+	if e := s.Tick(ctx); e != nil {
+		t.Fatal(e)
+	}
+	if f.calls.Load() != 0 {
+		t.Fatal("fresh startup spent network calls")
+	}
+	cfg, _ := s.DB.Settings(ctx)
+	cfg.IntervalHours = 6
+	if _, e := s.Save(ctx, cfg); e != nil {
+		t.Fatal(e)
+	}
+	if e := s.Tick(ctx); e != nil {
+		t.Fatal(e)
+	}
+	s.work.Wait()
+	if f.calls.Load() != 1 {
+		t.Fatal("new interval did not take effect")
+	}
+	cfg, _ = s.DB.Settings(ctx)
+	cfg.Automatic = false
+	if _, e := s.Save(ctx, cfg); e != nil {
+		t.Fatal(e)
+	}
+	if e := s.Tick(ctx); e != nil {
+		t.Fatal(e)
+	}
+	s.work.Wait()
+	if f.calls.Load() != 1 {
+		t.Fatal("disabled schedule still fetched")
+	}
+}
+func TestManualRequestPersistsAndSourceDisable(t *testing.T) {
+	ctx := context.Background()
+	s, f := setup(t)
+	cfg, _ := s.DB.Settings(ctx)
+	cfg.Automatic = false
+	s.Save(ctx, cfg)
+	if e := s.Request(ctx); e != nil {
+		t.Fatal(e)
+	}
+	again := New(s.DB, f, s.DataDir, false)
+	state, e := again.State(ctx)
+	if e != nil || !state.Queued {
+		t.Fatal("lost request across service recreation")
+	}
+	if e = again.Tick(ctx); e != nil {
+		t.Fatal(e)
+	}
+	again.work.Wait()
+	state, _ = again.State(ctx)
+	if state.Queued || f.calls.Load() != 1 {
+		t.Fatal("manual request did not complete")
+	}
+	cfg, _ = s.DB.Settings(ctx)
+	cfg.DirectoryEnabled = false
+	s.Save(ctx, cfg)
+	if e = s.Request(ctx); e == nil {
+		t.Fatal("disabled source accepted request")
+	}
+	again.Tick(ctx)
+	again.work.Wait()
+	if f.calls.Load() != 1 {
+		t.Fatal("disabled source fetched")
+	}
+}
+func TestEOFShutdownAndProtocolRedaction(t *testing.T) {
+	s, _ := setup(t)
+	s.Offline = true
+	input := strings.NewReader("{\"id\":1,\"method\":\"status\"}\n{\"id\":2,\"method\":\"arbitrary.shell\",\"params\":{\"secret\":\"never-echo-this\"}}\n")
+	var output strings.Builder
+	if e := s.Serve(context.Background(), input, &output); e != nil {
+		t.Fatal(e)
+	}
+	if strings.Contains(output.String(), "never-echo-this") {
+		t.Fatal("protocol echoed request data")
+	}
+	decoder := json.NewDecoder(strings.NewReader(output.String()))
+	var messages []map[string]any
+	for {
+		var value map[string]any
+		e := decoder.Decode(&value)
+		if e == io.EOF {
+			break
+		}
+		if e != nil {
+			t.Fatal(e)
+		}
+		messages = append(messages, value)
+	}
+	if len(messages) != 3 || messages[0]["event"] != "ready" || messages[2]["error"] == nil {
+		t.Fatal("bad protocol/EOF completion")
+	}
+}
+func TestRetryAndOffline(t *testing.T) {
+	ctx := context.Background()
+	s, f := setup(t)
+	run, e := s.DB.Start(ctx, time.Now())
+	if e != nil {
+		t.Fatal(e)
+	}
+	s.DB.Fail(ctx, run, io.ErrUnexpectedEOF)
+	state, e := s.State(ctx)
+	if e != nil {
+		t.Fatal(e)
+	}
+	at, _ := time.Parse(time.RFC3339Nano, state.NextSync)
+	if !at.After(time.Now().Add(14 * time.Minute)) {
+		t.Fatal("failed request immediately retried")
+	}
+	s.Tick(ctx)
+	s.work.Wait()
+	if f.calls.Load() != 0 {
+		t.Fatal("backoff ignored")
+	}
+	s.Offline = true
+	if e = s.Request(ctx); e == nil {
+		t.Fatal("offline accepted network request")
+	}
+}

@@ -68,7 +68,7 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 		return fail(err)
 	}
 	defer tx.Rollback()
-	// Future versions must be migrated explicitly, never silently opened as v1.
+	// Future versions must be migrated explicitly, never silently opened as the current version.
 	if _, err = tx.ExecContext(ctx, "CREATE TABLE IF NOT EXISTS schema_migrations(version INTEGER PRIMARY KEY)"); err != nil {
 		return fail(err)
 	}
@@ -76,7 +76,7 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 	if err = tx.QueryRowContext(ctx, "SELECT COALESCE(MAX(version),0) FROM schema_migrations").Scan(&version); err != nil {
 		return fail(err)
 	}
-	if version > 1 {
+	if version > 2 {
 		return fail(fmt.Errorf("unsupported SQLite schema version %d", version))
 	}
 	if _, err = tx.ExecContext(ctx, schema); err != nil {
