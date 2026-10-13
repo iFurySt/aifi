@@ -10,6 +10,11 @@ import {
   type DataSettings,
 } from "../../core/src/data-service.ts";
 
+import {
+  validateDirectoryQuery,
+  validDirectorySymbol,
+} from "../../core/src/stock-directory.ts";
+
 export function defaultDataDir() {
   return (
     process.env.AIFI_DATA_DIR ||
@@ -188,6 +193,17 @@ export class DataHost {
   }
   async request(method: DataMethod, params?: unknown): Promise<unknown> {
     if (!dataMethods.includes(method)) throw Error("Unsupported data action.");
+    if (method === "directory.list") validateDirectoryQuery(params);
+    if (method === "directory.get") {
+      const p = params as { symbol?: unknown };
+      if (
+        !p ||
+        Object.keys(p).length !== 1 ||
+        typeof p.symbol !== "string" ||
+        !validDirectorySymbol(p.symbol)
+      )
+        throw Error("Invalid directory symbol.");
+    }
     if (method === "settings.save") validateSettings(params);
     if (method === "credentials.set") {
       const input = params as {

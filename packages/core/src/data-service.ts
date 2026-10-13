@@ -53,12 +53,16 @@ export type DataMethod =
   | "status"
   | "settings.save"
   | "directory.sync"
+  | "directory.list"
+  | "directory.get"
   | "credentials.set"
   | "credentials.remove";
 export const dataMethods: readonly DataMethod[] = [
   "status",
   "settings.save",
   "directory.sync",
+  "directory.list",
+  "directory.get",
   "credentials.set",
   "credentials.remove",
 ];

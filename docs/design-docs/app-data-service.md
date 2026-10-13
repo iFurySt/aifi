@@ -82,3 +82,16 @@ Store tests cover v1 migration, data preservation, revision conflicts, and crede
 metadata. Host tests cover authenticated encryption/key permissions, input bounds,
 loopback session/Host/Origin and method/body checks. Native smoke uses an isolated,
 offline Go child and synthetic credentials; public sync/UI checks use isolated data.
+
+## Stock Directory Read Port
+
+`StockDirectoryRepository` in core defines bounded `search` and exact `get` reads.
+The platform local adapter uses allowlisted directory.list/directory.get methods.
+Electron main forwards to the Go child; Go owns SQLite and returns a snapshot ID,
+filtered result count, stable listing ID, source symbol/name and exchange code.
+Reads do not trigger a provider download. Source symbols remain opaque in routes;
+watchlist persistence retains its stricter existing validation.
+
+The UI will receive this repository at application composition. A future cloud
+adapter can implement the same domain contract with its own authenticated
+transport; no cloud URL or authentication support is added by this change.

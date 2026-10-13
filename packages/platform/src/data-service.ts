@@ -5,7 +5,7 @@ import type {
   CredentialProvider,
 } from "@aifi/core";
 let session: string | undefined;
-async function request(
+export async function requestLocalData(
   method: DataMethod,
   params?: unknown,
   retry = true,
@@ -27,21 +27,22 @@ async function request(
   });
   if (response.status === 403 && retry) {
     session = undefined;
-    return request(method, params, false);
+    return requestLocalData(method, params, false);
   }
   const value = await response.json();
   if (!response.ok || value.error)
     throw Error(value.error || "Local data request failed.");
   return value.result;
 }
-export const readDataStatus = () => request("status") as Promise<DataStatus>;
+export const readDataStatus = () =>
+  requestLocalData("status") as Promise<DataStatus>;
 export const saveDataSettings = (value: DataSettings) =>
-  request("settings.save", value) as Promise<DataSettings>;
+  requestLocalData("settings.save", value) as Promise<DataSettings>;
 export const syncDirectory = () =>
-  request("directory.sync") as Promise<DataStatus>;
+  requestLocalData("directory.sync") as Promise<DataStatus>;
 export const saveCredentials = (
   provider: CredentialProvider,
   values: Record<string, string>,
-) => request("credentials.set", { provider, values });
+) => requestLocalData("credentials.set", { provider, values });
 export const removeCredentials = (provider: CredentialProvider) =>
-  request("credentials.remove", { provider });
+  requestLocalData("credentials.remove", { provider });

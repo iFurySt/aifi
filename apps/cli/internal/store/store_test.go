@@ -254,3 +254,38 @@ func TestShrinkAndIntegrityGuard(t *testing.T) {
 	}
 	s.Fail(ctx, run, e)
 }
+
+func TestDirectoryPaginationAndExactLookup(t *testing.T) {
+	s := openTest(t)
+	ctx := context.Background()
+	empty, err := s.Get(ctx, "AAPL")
+	if err != nil || empty.Item != nil || empty.SnapshotID != "" {
+		t.Fatal("empty store lookup", empty, err)
+	}
+	commitTest(t, s, fixtures(t, "1012202621:31", true))
+	first, err := s.List(ctx, "", 1, 0, false)
+	second, e := s.List(ctx, "", 1, 1, false)
+	if err != nil || e != nil || first.Total != 3 || second.Total != 3 || len(first.Items) != 1 || len(second.Items) != 1 || first.Items[0].ID == second.Items[0].ID {
+		t.Fatal("bad pagination", first, second, err, e)
+	}
+	byName, err := s.List(ctx, "software", 10, 0, false)
+	if err != nil || byName.Total != 1 || byName.Items[0].Symbol != "MSFT" {
+		t.Fatal("name search", byName, err)
+	}
+	for _, sym := range []string{"msft", "CLASS.B"} {
+		found, err := s.Get(ctx, sym)
+		if err != nil || found.Item == nil || found.SnapshotID != first.SnapshotID {
+			t.Fatal("exact lookup", found, err)
+		}
+	}
+	for _, sym := range []string{"software", "MS", "EXETF", "ZTEST", "UNKNOWN"} {
+		found, err := s.Get(ctx, sym)
+		if err != nil || found.Item != nil {
+			t.Fatal("partial, name, excluded or unknown symbol resolved", sym, found, err)
+		}
+	}
+	beyond, err := s.List(ctx, "", 10, 3, false)
+	if err != nil || beyond.Total != 3 || len(beyond.Items) != 0 {
+		t.Fatal("end of pagination", beyond, err)
+	}
+}

@@ -171,3 +171,32 @@ func TestRetryAndOffline(t *testing.T) {
 		t.Fatal("offline accepted network request")
 	}
 }
+
+func TestDirectoryReadRPC(t *testing.T) {
+	s, f := setup(t)
+	ctx := context.Background()
+	if _, e := s.DB.Sync(ctx, f); e != nil {
+		t.Fatal(e)
+	}
+	f.calls.Store(0)
+	value, e := s.Dispatch(ctx, Request{Method: "directory.list", Params: json.RawMessage(`{"query":"Example","limit":1,"offset":0}`)})
+	if e != nil || value.(store.Page).Total != 1 || len(value.(store.Page).Items) != 1 {
+		t.Fatal("list RPC", value, e)
+	}
+	value, e = s.Dispatch(ctx, Request{Method: "directory.get", Params: json.RawMessage(`{"symbol":"EXAMPLE"}`)})
+	if e != nil || value.(store.Lookup).Item == nil {
+		t.Fatal("lookup RPC", value, e)
+	}
+	for _, req := range []Request{
+		{Method: "directory.list", Params: json.RawMessage(`{"query":"","limit":10000,"offset":0}`)},
+		{Method: "directory.get", Params: json.RawMessage(`{"symbol":""}`)},
+		{Method: "directory.get", Params: json.RawMessage(`{"symbol":"EXAMPLE","path":"/private"}`)},
+	} {
+		if _, e = s.Dispatch(ctx, req); e == nil {
+			t.Fatal("invalid read accepted", req.Method)
+		}
+	}
+	if f.calls.Load() != 0 {
+		t.Fatal("cached reads spent network calls")
+	}
+}

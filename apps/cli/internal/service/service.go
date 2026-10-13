@@ -10,6 +10,7 @@ import (
 	"github.com/ifuryst/aifi/apps/cli/internal/directory"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
 	"io"
+	"strings"
 	"sync"
 	"time"
 )
@@ -258,6 +259,22 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 			return nil, e
 		}
 		return s.DB.List(ctx, value.Query, value.Limit, value.Offset, false)
+	case "directory.get":
+		var value struct {
+			Symbol string `json:"symbol"`
+		}
+		if e := decode(req.Params, &value); e != nil {
+			return nil, e
+		}
+		if len(value.Symbol) == 0 || len(value.Symbol) > 14 || strings.TrimSpace(value.Symbol) != value.Symbol {
+			return nil, errors.New("invalid directory symbol")
+		}
+		for _, r := range value.Symbol {
+			if r < 33 || r > 126 || r == '|' {
+				return nil, errors.New("invalid directory symbol")
+			}
+		}
+		return s.DB.Get(ctx, value.Symbol)
 	case "vault.put":
 		var value struct {
 			Provider string            `json:"provider"`

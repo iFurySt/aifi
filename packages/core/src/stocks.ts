@@ -1,4 +1,5 @@
-import { normalizeSymbol, validSymbol } from "./workspace";
+import { normalizeSymbol } from "./workspace";
+import { validDirectorySymbol } from "./stock-directory";
 
 export const stockTabs = [
   "chart",
@@ -20,7 +21,7 @@ export function parseStockRoute(hash: string): StockRoute {
     const candidate = normalizeSymbol(
       decodeURIComponent(path?.split("/")[1] ?? "AAPL"),
     );
-    if (validSymbol(candidate)) symbol = candidate;
+    if (validDirectorySymbol(candidate)) symbol = candidate;
   } catch {
     /* Invalid URL escapes fall back to the initial development target. */
   }
@@ -29,7 +30,8 @@ export function parseStockRoute(hash: string): StockRoute {
 }
 export function stockHref(symbol: string, tab: StockTab = "chart") {
   const normalized = normalizeSymbol(symbol);
-  if (!validSymbol(normalized)) throw new Error("Invalid stock symbol.");
+  if (!validDirectorySymbol(normalized))
+    throw new Error("Invalid stock symbol.");
   return `#/stocks/${encodeURIComponent(normalized)}?tab=${tab}`;
 }
 

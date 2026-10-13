@@ -258,6 +258,7 @@ type ListingView struct {
 	Fields   map[string]string `json:"sourceFields"`
 }
 type Page struct {
+	Total      int           `json:"total"`
 	SnapshotID string        `json:"snapshotId"`
 	Scope      string        `json:"scope"`
 	Offset     int           `json:"offset"`
@@ -265,6 +266,23 @@ type Page struct {
 }
 
 func (s *Store) List(ctx context.Context, query string, limit, offset int, all bool) (Page, error) {
+	return s.list(ctx, query, limit, offset, all, false)
+}
+
+type Lookup struct {
+	SnapshotID string       `json:"snapshotId"`
+	Item       *ListingView `json:"item"`
+}
+
+func (s *Store) Get(ctx context.Context, symbol string) (Lookup, error) {
+	p, err := s.list(ctx, symbol, 1, 0, false, true)
+	value := Lookup{SnapshotID: p.SnapshotID}
+	if len(p.Items) > 0 {
+		value.Item = &p.Items[0]
+	}
+	return value, err
+}
+func (s *Store) list(ctx context.Context, query string, limit, offset int, all, exact bool) (Page, error) {
 	p := Page{Items: []ListingView{}, Scope: "candidates", Offset: offset}
 	if all {
 		p.Scope = "all"
@@ -285,7 +303,22 @@ func (s *Store) List(ctx context.Context, query string, limit, offset int, all b
 	if !all {
 		filter = " AND m.test=0 AND m.etf=0"
 	}
-	rows, err := s.db.QueryContext(ctx, `SELECT l.id,l.source_symbol,m.name,l.source,l.exchange_code,m.etf,m.test,m.security_type,m.fields_json FROM directory_memberships m JOIN listings l ON l.id=m.listing_id WHERE m.snapshot_id=?`+filter+` AND (l.source_symbol LIKE ? ESCAPE '\' OR m.name LIKE ? ESCAPE '\') ORDER BY l.source_symbol,l.source,l.exchange_code LIMIT ? OFFSET ?`, p.SnapshotID, "%"+escaped+"%", "%"+escaped+"%", limit, offset)
+	where := ` FROM directory_memberships m JOIN listings l ON l.id=m.listing_id WHERE m.snapshot_id=?` + filter
+	args := []any{p.SnapshotID}
+	if exact {
+		where += ` AND l.source_symbol = ? COLLATE NOCASE`
+		args = append(args, query)
+	} else {
+		where += ` AND (l.source_symbol LIKE ? ESCAPE '\' OR m.name LIKE ? ESCAPE '\')`
+		args = append(args, "%"+escaped+"%", "%"+escaped+"%")
+	}
+	if err = s.db.QueryRowContext(ctx, `SELECT count(*)`+where, args...).Scan(&p.Total); err != nil {
+		return p, err
+	}
+	// Exact tickers lead search results even when many security names match.
+	order := ` ORDER BY CASE WHEN l.source_symbol = ? COLLATE NOCASE THEN 0 ELSE 1 END,l.source_symbol,l.source,l.exchange_code LIMIT ? OFFSET ?`
+	args = append(args, query, limit, offset)
+	rows, err := s.db.QueryContext(ctx, `SELECT l.id,l.source_symbol,m.name,l.source,l.exchange_code,m.etf,m.test,m.security_type,m.fields_json`+where+order, args...)
 	if err != nil {
 		return p, err
 	}
