@@ -113,3 +113,7 @@ opens the shared Radix workspace menu for Settings and theme switching. Below
 600px the rail is hidden and the same menu appears in the page toolbar. Check
 keyboard selection, Escape/focus return, outside dismissal, popup viewport bounds,
 and settings access with the sidebar collapsed as well as on mobile.
+
+The avatar's keyboard focus uses its neutral background instead of the global
+blue outline. Escape still returns focus to the trigger, allowing immediate
+keyboard reopening; other controls keep their standard focus indicator.

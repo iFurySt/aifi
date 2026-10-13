@@ -242,8 +242,12 @@ svg {
   border-radius: 10px;
 }
 .profile-trigger:hover,
+.profile-trigger:focus-visible,
 .profile-trigger[data-state="open"] {
   background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+.profile-trigger:focus-visible {
+  outline: none;
 }
 .profile-avatar {
   display: grid;

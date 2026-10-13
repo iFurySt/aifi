@@ -125,3 +125,16 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   mobile menu bounds, Settings/theme selection, keyboard opening, Escape/focus
   return, outside dismissal, collapsed-sidebar access, and all six mobile pages.
   Updated the README screenshot to show the simplified sidebar.
+
+### Avatar Focus Refinement (2026-10-13)
+
+> Remove the blue outline shown around the avatar after closing its menu with Esc.
+
+- Scoped the avatar focus indicator to its neutral background instead of the
+  global outline. Retained Radix focus restoration, keyboard reopening, and
+  standard focus rings on other controls.
+- Updated the design and frontend rules for this trigger.
+- Validation: make ci passed (nine tests and both builds). Chrome Default via OBU
+  confirmed desktop/mobile Escape closes the menu, restores keyboard focus with
+  no outline, retains neutral feedback, and allows reopening; Search retains
+  its standard keyboard focus ring.

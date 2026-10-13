@@ -170,6 +170,8 @@ avatar opens a 264px popup with workspace identity, Settings, and theme switchin
 Use a 40px trigger, 16px popup radius, and 40px menu rows. At mobile widths move
 the same avatar menu into the page toolbar; avoid duplicating sidebar footers.
 Menus support keyboard navigation, Escape, outside dismissal, and focus return.
+The avatar uses a neutral background for keyboard focus, with no blue outline
+after Escape; other controls keep their standard focus ring.
 
 ## 6. Depth & Elevation
 
