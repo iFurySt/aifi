@@ -121,6 +121,10 @@ async function createWindow() {
       const stockPlaceholders = document.body.innerText.includes('No holdings data');
       document.querySelector('[role="tab"][id="stock-tab-chart"]').click();
       await waitFor(() => !!document.querySelector('#stock-panel-chart .stock-price-chart'));
+      const directoryPage = await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0});
+      const directoryLookup = await window.aifiDesktop.requestData('directory.get', {symbol:'AAPL'});
+      await waitFor(() => document.querySelector('.stock-list')?.getAttribute('aria-busy') === 'false');
+      const directoryReads = directoryPage.total === 0 && directoryPage.items.length === 0 && directoryLookup.item === null && document.querySelector('.stock-list').innerText.includes('No directory yet') && document.querySelector('.stock-company-header h1').textContent === 'AAPL';
       const initialData = await window.aifiDesktop.requestData('status');
       const saved = await window.aifiDesktop.requestData('settings.save', {...initialData.settings, intervalHours:6, automatic:false});
       await window.aifiDesktop.requestData('credentials.set', {provider:'massive',values:{apiKey:'synthetic-native-test-key'}});
@@ -133,7 +137,7 @@ async function createWindow() {
       location.hash = '/settings/sync';
       await waitFor(() => !!document.querySelector('.settings-content') && document.querySelector('[aria-label="Directory interval hours"]')?.value === '6');
       const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 5;
-      return { runtime, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
+      return { runtime, directoryReads, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
         rendered: !!document.querySelector('.settings-content'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
@@ -145,6 +149,7 @@ async function createWindow() {
       !result.isolated ||
       !result.navigation ||
       !result.dataService ||
+      !result.directoryReads ||
       !result.credentials ||
       !result.settingsUI ||
       !result.stockTabs ||

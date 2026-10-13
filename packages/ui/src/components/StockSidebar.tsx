@@ -1,31 +1,24 @@
 import { useState } from "react";
-import { Search } from "lucide-react";
-import { sampleQuotes } from "@aifi/core";
-import { useWorkspace, money, percent } from "../workspace-context";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { validDirectorySymbol } from "@aifi/core";
+import { useWorkspace } from "../workspace-context";
+import {
+  useDirectorySearch,
+  directoryExchange,
+} from "../stock-directory-context";
 
 export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
-  const { workspace, stockRoute, openStock, page } = useWorkspace();
+  const { stockRoute, openStock, page } = useWorkspace();
   const [query, setQuery] = useState("");
-  const symbols = [
-    ...new Set([
-      "AAPL",
-      "MSFT",
-      "NVDA",
-      ...Object.keys(sampleQuotes),
-      ...workspace.watchlist,
-      ...(page === "stocks" ? [stockRoute.symbol] : []),
-    ]),
-  ];
-  const matches = symbols.filter((s) =>
-    `${s} ${sampleQuotes[s]?.name ?? ""}`
-      .toLowerCase()
-      .includes(query.toLowerCase()),
-  );
+  const [offset, setOffset] = useState(0);
+  const { data, loading, error, retry } = useDirectorySearch(query, 50, offset);
   return (
     <div className="sidebar-inner stock-sidebar">
       <div className="stock-sidebar-heading">
         <h2>Stocks</h2>
-        <span className="count-badge">{symbols.length}</span>
+        {data.snapshotId && (
+          <span className="count-badge">{data.total.toLocaleString()}</span>
+        )}
       </div>
       <label className="search-field stock-list-search">
         <Search size={15} />
@@ -33,51 +26,82 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
           aria-label="Filter stocks"
           placeholder="Find a stock…"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          maxLength={80}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setOffset(0);
+          }}
         />
       </label>
-      <nav className="stock-list" aria-label="Stock list">
-        {matches.map((symbol) => {
-          const quote = sampleQuotes[symbol];
-          return (
-            <button
-              key={symbol}
-              className={`stock-list-row ${page === "stocks" && stockRoute.symbol === symbol ? "selected" : ""}`}
-              aria-current={
-                page === "stocks" && stockRoute.symbol === symbol
-                  ? "page"
-                  : undefined
-              }
-              onClick={() => {
-                openStock(symbol, stockRoute.tab);
-                onSelect?.();
-              }}
-            >
-              <span className="stock-monogram">{symbol.slice(0, 1)}</span>
-              <span className="stock-list-name">
-                <strong>{symbol}</strong>
-                <small>{quote?.name ?? "Custom symbol"}</small>
-              </span>
-              <span className="stock-list-quote">
-                {quote ? (
-                  <>
-                    <strong>{money(quote.price)}</strong>
-                    <small
-                      className={quote.change >= 0 ? "positive" : "negative"}
-                    >
-                      {percent(quote.change)}
-                    </small>
-                  </>
-                ) : (
-                  <small>—</small>
-                )}
-              </span>
+      <nav className="stock-list" aria-label="Stock list" aria-busy={loading}>
+        {data.items.map((entry) => (
+          <button
+            key={entry.id}
+            disabled={!validDirectorySymbol(entry.symbol)}
+            className={`stock-list-row ${page === "stocks" && stockRoute.symbol === entry.symbol ? "selected" : ""}`}
+            aria-current={
+              page === "stocks" && stockRoute.symbol === entry.symbol
+                ? "page"
+                : undefined
+            }
+            onClick={() => {
+              openStock(entry.symbol, stockRoute.tab);
+              onSelect?.();
+            }}
+          >
+            <span className="stock-monogram">{entry.symbol.slice(0, 1)}</span>
+            <span className="stock-list-name">
+              <strong>{entry.symbol}</strong>
+              <small title={entry.name}>{entry.name}</small>
+            </span>
+            <span className="stock-list-quote">
+              <small>{directoryExchange(entry)}</small>
+            </span>
+          </button>
+        ))}
+        {loading && !data.items.length && (
+          <p className="sidebar-hint" role="status">
+            Loading stocks…
+          </p>
+        )}
+        {error && (
+          <p className="sidebar-hint" role="status">
+            {error}.{" "}
+            <button className="text-link" onClick={retry}>
+              Retry
             </button>
-          );
-        })}
-        {!matches.length && <p className="sidebar-hint">No matches.</p>}
+          </p>
+        )}
+        {!loading && !error && !data.items.length && (
+          <p className="sidebar-hint">
+            {data.snapshotId
+              ? "No matches."
+              : "No directory yet. Sync in Settings."}
+          </p>
+        )}
       </nav>
-      <small className="stock-list-note">Sample quotes</small>
+      <div className="stock-list-pagination">
+        <button
+          aria-label="Previous stocks"
+          disabled={loading || offset === 0}
+          onClick={() => setOffset(Math.max(0, offset - 50))}
+        >
+          <ChevronLeft size={15} />
+        </button>
+        <small>
+          {data.items.length
+            ? `${offset + 1}–${offset + data.items.length}`
+            : "—"}
+        </small>
+        <button
+          aria-label="Next stocks"
+          disabled={loading || offset + data.items.length >= data.total}
+          onClick={() => setOffset(offset + 50)}
+        >
+          <ChevronRight size={15} />
+        </button>
+      </div>
+      <small className="stock-list-note">Nasdaq directory</small>
     </div>
   );
 }

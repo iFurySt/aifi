@@ -1,15 +1,22 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Search, Star, MessageCircle } from "lucide-react";
 import {
   addWatchSymbol,
   sampleQuotes,
   stockTabs,
   validSymbol,
+  validDirectorySymbol,
 } from "@aifi/core";
 import type { StockTab } from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
 import { Button } from "../components/primitives";
 import { StockChart } from "../components/StockChart";
+import {
+  useStockDirectory,
+  useDirectoryEntry,
+  useDirectorySearch,
+  directoryExchange,
+} from "../stock-directory-context";
 import { sampleBars, stockProfiles } from "./stock-fixtures";
 const labels: Record<StockTab, string> = {
   chart: "Chart",
@@ -273,23 +280,45 @@ export function Stocks() {
   const quote = sampleQuotes[symbol],
     profile = stockProfiles[symbol];
   const [query, setQuery] = useState("");
+  const directory = useStockDirectory();
+  const identity = useDirectoryEntry(symbol);
+  const listing = identity.data.item;
+  const suggestions = useDirectorySearch(query, 20);
+  const searchSequence = useRef(0);
+  useEffect(() => {
+    searchSequence.current++;
+    return () => {
+      searchSequence.current++;
+    };
+  }, [symbol]);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const watched = workspace.watchlist.includes(symbol);
   const bars = sampleBars(symbol);
-  function findStock(e: React.FormEvent) {
+  async function findStock(e: React.FormEvent) {
     e.preventDefault();
-    const input = query.trim(),
-      matches = Object.entries(sampleQuotes).filter(
-        ([s, q]) =>
-          s.toLowerCase() === input.toLowerCase() ||
-          q.name.toLowerCase() === input.toLowerCase(),
-      );
-    const target = matches[0]?.[0] ?? input.toUpperCase();
-    if (validSymbol(target)) {
-      openStock(target, tab);
-      setQuery("");
-    } else notify("Enter a ticker.");
+    const request = ++searchSequence.current;
+    const input = query.trim();
+    if (!input) return;
+    try {
+      const exact = validDirectorySymbol(input)
+        ? await directory.get(input.toUpperCase())
+        : null;
+      const matches = exact?.item
+        ? null
+        : await directory.search({ query: input, limit: 20, offset: 0 });
+      if (request !== searchSequence.current) return;
+      const target =
+        exact?.item?.symbol ?? matches?.items[0]?.symbol ?? input.toUpperCase();
+      if (validDirectorySymbol(target)) {
+        openStock(target, tab);
+        setQuery("");
+      } else notify("Choose a stock or enter a ticker.");
+    } catch {
+      if (request === searchSequence.current)
+        notify("Directory unavailable. Try again.");
+    }
   }
+
   function toggleWatch() {
     try {
       const watchlist = watched
@@ -353,11 +382,21 @@ export function Stocks() {
       <header className="stock-company-header">
         <span className="stock-company-mark">{symbol[0]}</span>
         <div>
-          <h1>{quote?.name ?? symbol}</h1>
+          <h1 title={listing?.name}>{listing?.name ?? symbol}</h1>
           <small>
             {symbol}
-            {quote ? " · NASDAQ" : ""}
+            {listing ? ` · ${directoryExchange(listing)}` : ""}
           </small>
+          {!listing && (
+            <small className="directory-status" role="status">
+              {identity.loading
+                ? "Loading…"
+                : identity.error ||
+                  (!identity.data.snapshotId
+                    ? "No directory yet"
+                    : "Not in directory")}
+            </small>
+          )}
         </div>
         <form className="stock-company-search" onSubmit={findStock}>
           <Search size={16} />
@@ -365,18 +404,31 @@ export function Stocks() {
             aria-label="Search a stock"
             placeholder="Search a stock"
             list="stock-suggestions"
+            maxLength={80}
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              searchSequence.current++;
+              setQuery(e.target.value);
+            }}
           />
           <datalist id="stock-suggestions">
-            {Object.keys(sampleQuotes).map((s) => (
-              <option value={s} key={s}>
-                {sampleQuotes[s]!.name}
+            {suggestions.data.items.map((entry) => (
+              <option value={entry.symbol} key={entry.id}>
+                {entry.name}
               </option>
             ))}
           </datalist>
         </form>
-        <Button aria-pressed={watched} onClick={toggleWatch}>
+        <Button
+          aria-pressed={watched}
+          disabled={!validSymbol(symbol)}
+          title={
+            !validSymbol(symbol)
+              ? "This symbol format is not supported in watchlists yet"
+              : undefined
+          }
+          onClick={toggleWatch}
+        >
           <Star size={15} fill={watched ? "currentColor" : "none"} />
           {watched ? "Watching" : "Watchlist"}
         </Button>
@@ -422,7 +474,7 @@ export function Stocks() {
           <div className="stock-chart-layout">
             <div className="stock-identity-column">
               <section className="stock-quote">
-                <small>Latest close · Sample</small>
+                <small>Latest close{quote ? " · Sample" : ""}</small>
                 <strong>{quote ? money(quote.price) : "—"}</strong>
                 {quote && (
                   <p className={quote.change >= 0 ? "positive" : "negative"}>
@@ -435,7 +487,10 @@ export function Stocks() {
                 <small>{quote ? "Oct 12, 2026 · USD" : "No price data"}</small>
               </section>
               <section className="stock-about">
-                <h2>About {quote?.name ?? symbol}</h2>
+                <h2>
+                  About {quote?.name ?? symbol}{" "}
+                  {profile && <small className="muted">Sample</small>}
+                </h2>
                 <p>{profile?.description ?? "No company data"}</p>
                 <button
                   className="text-link"
@@ -468,7 +523,9 @@ export function Stocks() {
                 ))}
               </dl>
               <section className="stock-peers">
-                <h2>Peers</h2>
+                <h2>
+                  Peers <small className="muted">Sample</small>
+                </h2>
                 {Object.entries(sampleQuotes)
                   .filter(([s]) => s !== symbol)
                   .map(([s, q]) => (

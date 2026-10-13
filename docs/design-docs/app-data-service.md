@@ -92,6 +92,6 @@ filtered result count, stable listing ID, source symbol/name and exchange code.
 Reads do not trigger a provider download. Source symbols remain opaque in routes;
 watchlist persistence retains its stricter existing validation.
 
-The UI will receive this repository at application composition. A future cloud
+The UI receives this repository at application composition. A future cloud
 adapter can implement the same domain contract with its own authenticated
 transport; no cloud URL or authentication support is added by this change.

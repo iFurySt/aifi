@@ -47,7 +47,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, fifteen domain/storage/route/host tests,
+make ci runs repository gates, TypeScript, nineteen domain/storage/route/host tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -137,15 +137,20 @@ their own content structure. Unsupported datasets have relevant empty
 tables/metrics. Filings lives inside Financials. Unknown tickers have no
 invented quotes.
 
-The sidebar includes sample symbols, saved watchlist symbols, and the selected
-stock. Its search filters that list; company search can open a ticker directly.
+The sidebar reads the cached Nasdaq candidate directory in pages of 50. Ticker
+and security-name search runs against SQLite, not a fixed fixture list. The
+company header and workspace search share these source-backed reads. Raw exchange
+codes receive display labels without inventing exchange MIC or company identity.
+Search is debounced, superseded responses are ignored, and visible readers refresh
+every minute/on window focus to discover background imports. Empty/error states
+never fall back to fixture companies. App accepts an injected directory repository.
+
 Watchlist company links open Stocks, while Ask actions open Chat. The schema v1
 workspace and saved conversations are unchanged.
 
 The [stock page specification](design-docs/stock-research-page.md) describes
 this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
-opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Stock data
-reads and remaining provider collection stay staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
+opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Market-data reads and remaining provider collection stay staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
 ## Data Settings And Runtime
 
 General, Appearance, Data sources, Sync, Storage use the supplied screenshot's
@@ -166,3 +171,8 @@ service ends with the host; no independent OS daemon is installed.
 Native smoke now checks service startup, saved interval, credential ciphertext
 redaction, settings UI and child cleanup using an isolated offline profile.
 See [service design](design-docs/app-data-service.md) for exact boundaries.
+
+Directory routes preserve source punctuation such as `BRK.B` and `ABR$D`.
+Watchlist persistence retains its existing ticker grammar; unsupported formats
+can be viewed but cannot be added yet. Native smoke now checks offline directory
+reads and verifies that an empty store never shows the sample stock list.

@@ -106,7 +106,7 @@ Selected ticker chips are small outlined pills. Forms show validation inline.
 buttons are 64×56px with an icon and short label. Stocks, Chat, Agents,
 Watchlist, Portfolio, and Library live only in that single column; Settings
 lives in the avatar popup. Stocks is the starting route. The inner sidebar
-contains searchable stock rows with ticker/name and sample quote, never a second
+contains searchable stock rows with ticker/security name and exchange label, never a second
 app menu. A visible toolbar control collapses/restores it. Keep the avatar at
 the rail bottom. Use a small wordmark and original SVG symbol; do not reuse
 reference logos.

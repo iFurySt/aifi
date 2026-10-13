@@ -69,7 +69,7 @@ pages share this state. Stocks uses symbol/tab hash routes, deterministic local
 OHLCV/statement fixtures, and empty structures for unsupported datasets. Quotes
 and positions are examples, and chat responses are illustrative. These contracts
 are separate from live directory settings/scheduling below. Market charts and
-financials remain fixtures; directory scheduling is now implemented.
+financials remain fixtures; directory scheduling and paged directory reads are implemented.
 
 ## Intended Research Domain Objects
 
@@ -130,7 +130,8 @@ SQLite v2 preserves v1 data and adds revisioned settings/encrypted credential bl
 Electron uses a narrow IPC bridge; local Web uses an authenticated same-origin
 loopback bridge. Node encrypts credentials before Go storage; status never returns
 saved plaintext. The shared renderer manages sources/sync settings, while market
-bars and SEC adapters remain unimplemented and stock content remains sample-based.
+bars and SEC adapters remain unimplemented. Stocks reads real cached directory names,
+exchange codes and membership; quotes/profiles/financials remain samples.
 The [design](design-docs/us-stock-data-pipeline.md) and
 [implementation plan](exec-plans/active/us-stock-data-foundation.md) define the
 remaining boundaries; see [directory commands](../apps/cli/README.md) and
@@ -145,3 +146,13 @@ remaining boundaries; see [directory commands](../apps/cli/README.md) and
 
 See [app-owned service](design-docs/app-data-service.md) for lifecycle, transport,
 credential boundaries, settings and remaining scope.
+
+## Replaceable Stock Reads
+
+Core `StockDirectoryRepository` defines search/get without host APIs. Platform
+provides the local adapter; App injects it into shared UI context. Electron reads
+through preload/main/private Go RPC, while Web uses the authenticated loopback
+bridge. Main owns the service capability; Go remains the SQLite owner. A future
+cloud implementation can satisfy the same domain contract or preserve the bridge
+and delegate host reads to cloud transport. The UI does not choose SQL/URLs/auth.
+See [directory read contract](design-docs/stock-directory-reads.md).

@@ -15,13 +15,14 @@ import {
   PanelLeft,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { workspacePages, sampleQuotes, stockHref } from "@aifi/core";
+import { workspacePages, stockHref, validDirectorySymbol } from "@aifi/core";
 import { useWorkspace, pageLabels } from "../workspace-context";
 import { IconButton, Logo, Modal } from "./primitives";
 import type { ReactNode } from "react";
 import { useWorkspaceHistory } from "./useWorkspaceHistory";
 import { ProfileMenu } from "./ProfileMenu";
 import { SettingsSidebar } from "./SettingsSidebar";
+import { useDirectorySearch } from "../stock-directory-context";
 import { StockSidebar } from "./StockSidebar";
 const destinations = [
   { page: "stocks", icon: ChartNoAxesCombined },
@@ -90,6 +91,7 @@ export function Shell({ children }: { children: ReactNode }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const directoryResults = useDirectorySearch(search, 12, 0, searchOpen);
   useEffect(() => {
     function keydown(event: KeyboardEvent) {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
@@ -256,7 +258,7 @@ export function Shell({ children }: { children: ReactNode }) {
         open={demoOpen}
         onOpenChange={setDemoOpen}
         title="Demo data"
-        description="Quotes, holdings and replies are samples. Directory sync uses local data."
+        description="Stock names and exchanges use the Nasdaq directory. Quotes, financials, holdings and replies are samples."
       >
         <div className="dialog-actions">
           <button
@@ -296,27 +298,35 @@ export function Shell({ children }: { children: ReactNode }) {
           />
         </label>
         <div className="search-results">
-          {Object.entries(sampleQuotes)
-            .filter(([symbol, quote]) =>
-              `${symbol} ${quote.name}`
-                .toLowerCase()
-                .includes(search.toLowerCase()),
-            )
-            .map(([symbol, quote]) => (
-              <button
-                key={symbol}
-                onClick={() => {
-                  openStock(symbol);
-                  setSearchOpen(false);
-                }}
-              >
-                <ChartNoAxesCombined size={17} />
-                <span>
-                  {symbol} · {quote.name}
-                </span>
-                <small>Stock</small>
+          {directoryResults.loading && (
+            <p className="muted" role="status">
+              Loading stocks…
+            </p>
+          )}
+          {directoryResults.error && (
+            <p className="muted" role="status">
+              {directoryResults.error}.{" "}
+              <button className="text-link" onClick={directoryResults.retry}>
+                Retry
               </button>
-            ))}
+            </p>
+          )}
+          {directoryResults.data.items.map((entry) => (
+            <button
+              disabled={!validDirectorySymbol(entry.symbol)}
+              key={entry.id}
+              onClick={() => {
+                openStock(entry.symbol);
+                setSearchOpen(false);
+              }}
+            >
+              <ChartNoAxesCombined size={17} />
+              <span>
+                {entry.symbol} · {entry.name}
+              </span>
+              <small>Stock</small>
+            </button>
+          ))}
           {workspace.conversations
             .filter((c) => c.title.toLowerCase().includes(search.toLowerCase()))
             .slice(0, 6)
@@ -363,11 +373,9 @@ export function Shell({ children }: { children: ReactNode }) {
               </button>
             ))}
           {matches.length === 0 &&
-            !Object.entries(sampleQuotes).some(([symbol, q]) =>
-              `${symbol} ${q.name}`
-                .toLowerCase()
-                .includes(search.toLowerCase()),
-            ) &&
+            !directoryResults.loading &&
+            !directoryResults.error &&
+            directoryResults.data.items.length === 0 &&
             !workspace.conversations.some((c) =>
               c.title.toLowerCase().includes(search.toLowerCase()),
             ) &&

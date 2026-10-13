@@ -2800,3 +2800,67 @@ kbd {
     font-size: 12px;
   }
 }
+
+.stock-list-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 4px;
+  color: var(--muted);
+}
+.stock-list-pagination button {
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+}
+.stock-list-pagination button:hover:not(:disabled),
+.stock-list-pagination button:focus-visible {
+  background: var(--surface-muted);
+}
+.stock-company-header > div {
+  min-width: 0;
+}
+.stock-company-header h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.directory-status {
+  display: block;
+}
+
+.stock-company-search {
+  flex-shrink: 0;
+}
+.stock-list {
+  grid-template-columns: minmax(0, 1fr);
+  overflow-x: hidden;
+  min-width: 0;
+}
+.stock-list-row {
+  min-width: 0;
+}
+/* Keep directory pagination reachable when the mobile drawer lists a full page. */
+.dialog-content.detail-sheet:has(.stock-sidebar) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dialog-content.detail-sheet:has(.stock-sidebar) > .dialog-header,
+.dialog-content.detail-sheet:has(.stock-sidebar) > .mobile-app-navigation {
+  flex-shrink: 0;
+}
+.dialog-content.detail-sheet .sidebar-inner.stock-sidebar {
+  height: auto;
+  flex: 1;
+  min-height: 0;
+}
+.stock-sidebar > :not(.stock-list) {
+  flex-shrink: 0;
+}
+.stock-list {
+  min-height: 0;
+}

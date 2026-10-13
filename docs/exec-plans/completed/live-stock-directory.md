@@ -25,8 +25,8 @@ No cloud service or new credentials are added.
 ## Milestones
 
 - [x] Typed repository and bounded local transports, exact read, result counts.
-- [ ] Shared UI integration, real company identity and paged search.
-- [ ] Tests, Chrome/Electron checks, documentation and staged commits.
+- [x] Shared UI integration, real company identity and paged search.
+- [x] Tests, Chrome/Electron checks, documentation and staged commits.
 
 ## Validation
 
@@ -40,3 +40,7 @@ Chrome desktop/mobile checks via OBU and native Electron smoke.
   default to the platform local adapter, no ambient provider override or cloud URL.
 
 - 2026-10-13: TypeScript tests (18) and Go store/service tests pass for read contracts, bounds, exact lookup and pagination.
+
+- 2026-10-13: Real cached 7,488 candidate rows verified in Chrome; company/ticker/global search, pagination, NYSE names, opaque routes and cached error recovery pass. Full snapshot contains no unsupported route symbols. Mobile drawer pagination was made reachable.
+
+- 2026-10-13: Final make ci and actual macOS Electron smoke pass; 19 TypeScript tests, Go vet/race/build and Chrome 1440×1100/390×844 review complete. Documentation and history updated.

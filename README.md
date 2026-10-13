@@ -14,9 +14,10 @@ advice.
 ## Local app preview
 
 The local Web and Electron apps share one React interface. The first version
-uses demo data; model calls, broker connections, and background agents come later.
+uses a real cached stock directory and sample research data; model calls, broker
+connections, and background agents come later.
 
-Stocks opens with a stock list and six research tabs. Chart/financial examples
+Stocks opens with a searchable Nasdaq directory and six research tabs. Chart/financial examples
 are marked as samples; holdings, trades, ratings, and news have empty structures
 until data is connected. Existing chats remain available inside Chat.
 

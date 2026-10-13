@@ -1,7 +1,7 @@
 # US Stock Data Foundation
 
 Status: directory collection, app-owned scheduling, settings/status transport and
-credential configuration implemented; prices, SEC and stock-page reads pending. Created 2026-10-13.
+credential configuration and stock directory UI reads implemented; prices and SEC pending. Created 2026-10-13.
 
 ## Goal
 
@@ -82,9 +82,11 @@ Commit: durable asynchronous EOD collection with status/diagnostics.
 
 ### M4 — Local Transport And Stock UI
 
-- [ ] Add authenticated loopback reads/sync/events and restricted desktop lifecycle.
+- [x] Add authenticated loopback reads/sync and restricted desktop lifecycle.
+  Live directory readers refresh periodically; push events remain deferred.
 - [x] Implement shared stock routes, six-tab layouts, and sample/empty panels.
-- [ ] Connect validated directory membership and cached bars/facts/filings.
+- [x] Connect cached candidate directory membership, names, exchange labels and search.
+- [ ] Connect cached bars/facts/filings.
 - [ ] Keep conversation Research separate; use sources/date/basis labels and
   correct empty/partial/error states. Preserve existing user state.
 - [ ] Validate Web/Electron, mobile, source links, and offline cached viewing.
@@ -134,3 +136,7 @@ verify source/sample labels, table/tab overflow, theme, and keyboard behavior.
   Electron/Web settings reach it through narrow host transport; future provider
   secrets are locally encrypted. This does not complete the broader market-calendar,
   multi-dataset scheduling or cached stock-page milestones.
+
+- 2026-10-13: Stocks/sidebar/workspace search now read cached directory data using
+  a replaceable StockDirectoryRepository. Market/facts/filings still require their
+  provider collection paths. See [read contract](../../design-docs/stock-directory-reads.md).

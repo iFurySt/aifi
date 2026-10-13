@@ -1,6 +1,7 @@
 # Stock Research Page
 
-Status: shared Web/Electron sample UI implemented, 2026-10-13. Live provider data
+Status: shared Web/Electron UI and cached Nasdaq directory reads implemented,
+2026-10-13. Live market/fundamental data
 is still pending in [the data pipeline](us-stock-data-pipeline.md) and
 [data plan](../exec-plans/active/us-stock-data-foundation.md).
 
@@ -24,16 +25,18 @@ opens this app rather than keeping a second UI tree.
 - The 80px outer rail contains Stocks, Chat, Agents, Watchlist, Portfolio, Library.
   Settings and appearance remain in the avatar popup.
 - The 248px inner sidebar contains a searchable stock list, not app destinations
-  or conversations. It includes fixture symbols, saved watchlist symbols, and the
-  currently selected ticker. Below 900px it becomes a drawer; below 600px the
+  or conversations. It reads the cached Nasdaq candidate directory, 50 rows per
+  page, with ticker/security-name search and Previous/Next controls. Below 900px it becomes a drawer; below 600px the
   drawer also supplies app navigation because the outer rail is hidden.
 - Stocks is the default page. `#/stocks/AAPL?tab=chart` encodes ticker and tab;
   reload and native back/forward preserve them. A malformed ticker falls back to
   AAPL; unknown tabs fall back to Chart.
-- Company search accepts a known sample company name or syntactically valid ticker.
-  An unknown ticker may open an empty page or be watched; this does not validate
-  listing membership. Live directory integration must resolve identity/type and
-  aliases before presenting source-backed stock metadata.
+- Company search resolves exact source symbols first, then security-name matches.
+  Headers use cached directory names and exchange codes, with no sample identity
+  fallback. Missing membership shows an explicit status and may retain a valid
+  custom symbol route. Search does not prove common-stock type or corporate identity.
+- Source punctuation survives encoded routes. The existing watchlist grammar is
+  separate; unsupported formats remain viewable with the watch button disabled.
 - Watchlist company links open Stocks; Ask actions open Chat with a draft.
   Existing schema v1 conversations are kept and selectable inside Chat or search.
 
@@ -109,6 +112,10 @@ Electron smoke. Checked stock search/selection, missing symbols, local watchlist
 persistence, chart type/ranges, statements/periods, Chat history, drawer navigation,
 light/dark, internally scrolling tables, route tests, and neutral focus.
 
-Live directory membership, validated market calendars, source-backed OHLCV/facts,
+Validated market calendars, source-backed OHLCV/facts,
 original filing links, provenance popups, offline cached reads, and provider error
 recovery remain in the data plan. Windows/Linux native checks remain separate.
+
+Directory read behavior, failure handling and cloud replacement boundaries are
+specified in [directory reads](stock-directory-reads.md). The directory omits ETFs
+and test issues; remaining records are candidates, not verified common shares.

@@ -5,7 +5,8 @@ Status: directory collection implemented; broader pipeline remains proposed,
 current React/Electron application remains a demo until the implementation
 milestones pass. The first Go/Cobra directory collector and SQLite snapshots now
 exist; directory scheduling and settings/status transport now exist. Prices, SEC facts
-and stock-page data reads remain unimplemented.
+remain unimplemented. Stock list/search/header now read the cached directory through
+a replaceable domain repository; market/financial stock-page reads remain pending.
 [Directory runtime](../../apps/cli/README.md) specifies the narrower shipped scope.
 
 ## Decisions
@@ -254,14 +255,15 @@ local service and exposes typed dataset reads/sync requests through a restricted
 bridge. Provider secrets stay in the host; preserve renderer sandbox/no Node.
 No hosted backend, broker OAuth, trading permissions, or model account is needed.
 
-Before transport implementation: bind loopback, validate Host and Origin, reject
-cross-site mutations/DNS rebinding, establish a per-run authenticated local
-session/nonce, bound requests, and restrict methods/routes. Never use permissive
+The implemented local transport binds loopback, validates Host and Origin, rejects
+cross-site requests/DNS rebinding, establishes a per-run authenticated local
+session, bounds requests, and restricts methods/routes. Never use permissive
 CORS as the SEC workaround. Extend the current production CSP only for the exact
 local transport if needed; do not add provider domains to the renderer.
 
-Configuration names are reserved, not implemented: `MASSIVE_API_KEY`,
-`SEC_USER_AGENT`, `AIFI_DATA_DIR`; optional Alpaca key/secret. Supply credentials
+`AIFI_DATA_DIR` selects the implemented local store. Provider credentials and SEC
+identification are configurable in Settings; `MASSIVE_API_KEY`/`SEC_USER_AGENT`
+environment support remains reserved rather than implemented. Supply credentials
 outside Git and renderer bundles. Public filing links in Electron need a narrow
 validated external-link capability when implemented; current external navigation
 remains denied. Read-only data access does not grant order execution.

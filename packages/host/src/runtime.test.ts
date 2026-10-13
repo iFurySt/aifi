@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, statSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { createDecipheriv } from "node:crypto";
-import { encryptCredential, validateSettings } from "./runtime";
+import { DataHost, encryptCredential, validateSettings } from "./runtime";
 describe("host credential boundary", () => {
   it("encrypts with authenticated ciphertext and a private device key", () => {
     const dir = mkdtempSync(join(tmpdir(), "aifi-vault-test-"));
@@ -47,4 +47,17 @@ describe("host credential boundary", () => {
     ).toThrow();
     expect(() => validateSettings({ ...settings, automatic: "yes" })).toThrow();
   });
+});
+
+it("rejects invalid directory reads before starting any child or RPC", async () => {
+  const host = new DataHost("unused-test-binary");
+  await expect(
+    host.request("directory.list", { query: "", limit: 1000, offset: 0 }),
+  ).rejects.toThrow("Invalid directory query");
+  await expect(
+    host.request("directory.get", { symbol: "AAPL", path: "/private" }),
+  ).rejects.toThrow("Invalid directory symbol");
+  await expect(host.request("directory.get", { symbol: 42 })).rejects.toThrow(
+    "Invalid directory symbol",
+  );
 });
