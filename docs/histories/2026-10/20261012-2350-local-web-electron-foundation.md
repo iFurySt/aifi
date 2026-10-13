@@ -154,3 +154,14 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   Chrome Default via OBU swept visible focusable controls across six app pages
   and four prototype tabs with no outlines. Esc then Tab, focus restoration,
   mobile layouts, and primary-button contrast passed; reviewed ticker/tab visuals.
+
+### Stock Route Milestone — 2026-10-13
+
+> Align the stock tabs with Rallies, including empty datasets; move application
+> navigation to the outer rail and stocks into the document sidebar.
+
+- Added provider-independent ticker/tab routes with malformed-URL fallbacks and
+  share-class ticker support. This preparatory domain milestone adds no provider
+  calls or persistence-schema change.
+- Meaningful route round-trip and invalid-input tests bring the suite to eleven.
+  TypeScript, repository CI, and both builds pass in the UI integration checkout.
