@@ -117,3 +117,11 @@ and settings access with the sidebar collapsed as well as on mobile.
 The avatar's keyboard focus uses its neutral background instead of the global
 blue outline. Escape still returns focus to the trigger, allowing immediate
 keyboard reopening; other controls keep their standard focus indicator.
+
+## Stock Data Design Preview
+
+The [stock page specification](design-docs/stock-research-page.md) and
+[standalone prototype](prototypes/stock-research/preview.html) define the proposed
+four-tab stock detail. The preview uses sample fixtures and makes no provider
+calls. It is separate from the current renderer; live Go transport and the Stocks
+route are staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).

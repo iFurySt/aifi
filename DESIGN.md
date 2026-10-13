@@ -244,3 +244,35 @@ motion so transient navigation colors are not mistaken for final states.
   what will be removed or replaced.
 - Seed copy can improve for new workspaces; never rewrite saved user content or
   conversations to enforce a new writing style.
+
+## 11. Stock Detail Page (Proposed)
+
+Reference reviewed on 2026-10-13: Rallies AAPL Chart view. Its observed company
+header, three-column data layout, 15px underline tabs (2px active line), and
+price/volume chart inform AIFi. Financials content did not load in the inspection;
+AIFi statement tables and responsive rearrangement below are inferred.
+
+- Reuse the outer frame, rail, 248px sidebar, and avatar treatment. Keep Stocks
+  separate from conversational Research. Standalone prototypes can limit the
+  sidebar to Stocks and development-target selection.
+- Company header: monogram/name/ticker/exchange, search, Watchlist. One status
+  entry gives source/session freshness; a fixture preview says Sample data.
+- Four initial tabs: Overview, Chart, Financials, Filings. Tabs are 15px/500,
+  selected 600 with a 2px text-color underline, 24px gap and 40px minimum height.
+- Overview: max 1,180px; 240px identity + 220–260px metrics + flexible chart,
+  separated by 20–24px gaps/thin dividers. Close is 32px, data 13px, labels 11px.
+- Use container width for data layout: below 1,050px combine identity/metrics
+  beside the chart; below 760px stack quote, chart, metrics, and filings. At
+  narrow viewport widths keep the established shell collapse rules.
+- Charts: daily ranges 1M/3M/1Y/2Y, line/candle, volume, named adjustment basis.
+  Use green/red only for financial movement, 1px subtle grids, and no live-tick
+  animation. Keep chart labels legible on mobile: size the SVG viewBox to the
+  rendered plot, retaining 10px label text instead of scaling a desktop plot.
+- Financials: Income/Balance/Cash flow and annual/quarter controls; period/unit
+  labels, tabular figures, internally scrolling tables. Missing is an em dash.
+- Filings: compact form/period/filed rows and original sources. All previews
+  identify fixtures; never use a sample filing link as evidence of retrieval.
+- Dark/light use the existing tokens. Prototype charts/monograms are original
+  local SVG/CSS approximations, with no vendor asset or backend dependency.
+
+Detailed scope and states: [stock page design](docs/design-docs/stock-research-page.md).

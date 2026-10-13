@@ -1,0 +1,1531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; connect-src 'none'"
+    />
+    <title>AIFi · Stock research concept</title>
+    <style>
+      :root {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color-scheme: light;
+        --frame: #f0f0f0;
+        --canvas: #fff;
+        --sidebar: #f8f8f8;
+        --surface: #fff;
+        --muted-surface: #f5f5f5;
+        --text: #202020;
+        --secondary: #636363;
+        --muted: #777;
+        --border: #e8e8e8;
+        --positive: #217a54;
+        --negative: #b34c47;
+        --focus: #608bce;
+        --primary: #202020;
+        --on-primary: #fff;
+      }
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+        --frame: #161616;
+        --canvas: #191919;
+        --sidebar: #212121;
+        --surface: #242424;
+        --muted-surface: #2c2c2c;
+        --text: #ececec;
+        --secondary: #b5b5b5;
+        --muted: #a0a0a0;
+        --border: #393939;
+        --positive: #83cca7;
+        --negative: #ec9c97;
+        --focus: #98b6ea;
+        --primary: #ececec;
+        --on-primary: #202020;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--frame);
+        font-size: 14px;
+        line-height: 1.6;
+        overflow: hidden;
+      }
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+      button {
+        color: inherit;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+      }
+      button:focus-visible,
+      a:focus-visible,
+      select:focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 3px;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h2 {
+        font-size: 16px;
+        letter-spacing: -0.2px;
+      }
+      h3 {
+        font-size: 13px;
+      }
+      small,
+      .muted {
+        color: var(--muted);
+      }
+      svg {
+        display: block;
+        flex-shrink: 0;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .shell {
+        display: flex;
+        height: 100dvh;
+        padding: 8px 8px 8px 0;
+      }
+      .rail {
+        width: 56px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        padding: 4px 8px;
+      }
+      .rail-mark {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        background: var(--border);
+        border-radius: 10px;
+      }
+      .avatar {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: var(--canvas);
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+      }
+      .rail .avatar {
+        margin-top: auto;
+        margin-bottom: 4px;
+      }
+      .workspace {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--canvas);
+      }
+      .sidebar {
+        width: 248px;
+        flex-shrink: 0;
+        padding: 24px 12px;
+        background: var(--sidebar);
+        border-right: 1px solid var(--border);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 0 12px;
+        font-size: 23px;
+        font-weight: 620;
+        letter-spacing: -0.8px;
+      }
+      .nav-label {
+        margin: 32px 12px 10px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .nav-row {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-weight: 500;
+      }
+      .nav-row.current {
+        background: var(--border);
+      }
+      .ticker-link {
+        width: 100%;
+        text-align: left;
+        padding: 10px 12px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border-radius: 8px;
+      }
+      .ticker-link:hover {
+        background: var(--muted-surface);
+      }
+      .ticker-link strong {
+        font-size: 12px;
+      }
+      .ticker-link small {
+        display: block;
+        font-size: 11px;
+      }
+      .ticker-icon {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        font-weight: 500;
+      }
+      .document {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .toolbar {
+        height: 52px;
+        flex-shrink: 0;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 0 32px;
+        border-bottom: 1px solid var(--border);
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .toolbar .spacer {
+        flex: 1;
+      }
+      .status {
+        font-size: 11px;
+        font-weight: 400;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 3px 8px;
+        color: var(--muted);
+      }
+      .icon-button {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+      }
+      .icon-button:hover {
+        background: var(--muted-surface);
+      }
+      .content {
+        overflow: auto;
+        flex: 1;
+        min-height: 0;
+        container-type: inline-size;
+      }
+      .stock-page {
+        padding: 26px 32px 40px;
+        max-width: 1244px;
+        margin: auto;
+      }
+      .company-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .company-mark {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: var(--muted-surface);
+        font-size: 20px;
+        font-weight: 550;
+      }
+      .company-header h1 {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+      .company-header small {
+        font-size: 11px;
+      }
+      .company-header .spacer {
+        flex: 1;
+      }
+      .select-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .stock-select {
+        background: var(--muted-surface);
+        border: 0;
+        border-radius: 999px;
+        padding: 9px 15px;
+        color: var(--text);
+        max-width: 190px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 9px 15px;
+        border-radius: 999px;
+        min-height: 40px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      .button.selected,
+      .button.primary {
+        background: var(--primary);
+        color: var(--on-primary);
+        border-color: var(--primary);
+      }
+      .tabs {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 28px;
+        scrollbar-width: thin;
+      }
+      .tabs button {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--muted);
+        min-height: 40px;
+        padding: 0 0 10px;
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+      }
+      .tabs button[aria-selected="true"] {
+        color: var(--text);
+        font-weight: 600;
+        border-bottom-color: var(--text);
+      }
+      .overview-grid {
+        display: grid;
+        grid-template-columns: 240px 220px minmax(0, 1fr);
+        gap: 22px;
+      }
+      .identity {
+        grid-area: 1/1;
+      }
+      .quote .price {
+        font-size: 32px;
+        font-weight: 550;
+        line-height: 1.25;
+        letter-spacing: -1px;
+        font-variant-numeric: tabular-nums;
+        margin-top: 8px;
+      }
+      .quote .delta {
+        color: var(--positive);
+        font-size: 13px;
+        margin: 7px 0;
+      }
+      .source-line {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .company-facts {
+        border-top: 1px solid var(--border);
+        margin-top: 22px;
+        padding-top: 18px;
+      }
+      .company-facts p {
+        font-size: 12px;
+        color: var(--secondary);
+        line-height: 1.8;
+        margin-top: 9px;
+        max-width: 36ch;
+      }
+      .identity dl {
+        margin: 20px 0 0;
+      }
+      .identity dl div {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 10px;
+        font-size: 11px;
+      }
+      .identity dt {
+        color: var(--muted);
+      }
+      .identity dd {
+        margin: 0;
+        text-align: right;
+      }
+      .metrics {
+        grid-area: 1/2;
+        border-left: 1px solid var(--border);
+        padding-left: 22px;
+      }
+      .metrics dl {
+        margin: 0;
+      }
+      .metric {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .metric:first-child {
+        padding-top: 0;
+      }
+      .metric dt {
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .metric dd {
+        margin: 3px 0 0;
+        font-size: 14px;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+      }
+      .metric dd small {
+        font-size: 10px;
+        font-weight: 400;
+      }
+      .visuals {
+        grid-area: 1/3;
+        min-width: 0;
+      }
+      .chart-box {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        background: var(--surface);
+      }
+      .chart-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .chart-title strong {
+        font-size: 16px;
+        font-variant-numeric: tabular-nums;
+      }
+      .chart-title small {
+        font-size: 11px;
+      }
+      .stock-chart {
+        width: 100%;
+        height: 240px;
+      }
+      .chart-controls {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .segmented {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        padding: 3px;
+        border-radius: 8px;
+        background: var(--muted-surface);
+        max-width: 100%;
+        overflow: auto;
+      }
+      .segmented button {
+        white-space: nowrap;
+        padding: 5px 9px;
+        border-radius: 6px;
+        font-size: 11px;
+        min-height: 30px;
+        color: var(--secondary);
+      }
+      .segmented button[aria-pressed="true"] {
+        background: var(--surface);
+        color: var(--text);
+        box-shadow: 0 1px 3px #0000000d;
+      }
+      .basis {
+        font-size: 10px;
+        color: var(--muted);
+        margin-top: 10px;
+      }
+      .recent-filings {
+        margin-top: 24px;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+      .text-link {
+        font-size: 11px;
+        color: var(--secondary);
+      }
+      .text-link:hover {
+        text-decoration: underline;
+      }
+      .filing-row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .filing-form {
+        font-size: 11px;
+        border: 1px solid var(--border);
+        padding: 4px 7px;
+        border-radius: 6px;
+        min-width: 47px;
+        text-align: center;
+      }
+      .filing-body {
+        flex: 1;
+        font-size: 12px;
+      }
+      .filing-body small {
+        display: block;
+        font-size: 10px;
+      }
+      .wide-chart .stock-chart {
+        height: 390px;
+      }
+      .wide-chart {
+        max-width: 100%;
+      }
+      .financial-toolbar {
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+      .table-panel {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--surface);
+      }
+      .table-scroll {
+        position: relative;
+        overflow: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        white-space: nowrap;
+      }
+      th,
+      td {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--border);
+        text-align: right;
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+      th {
+        background: var(--muted-surface);
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 400;
+      }
+      th:first-child,
+      td:first-child {
+        text-align: left;
+      }
+      tr:last-child td {
+        border: 0;
+      }
+      .table-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 12px;
+      }
+      .filings-table td button {
+        padding: 0;
+        font-size: 12px;
+      }
+      .mobile-nav {
+        display: none;
+      }
+      dialog {
+        color: var(--text);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 24px;
+        border-radius: 20px;
+        max-width: calc(100vw - 40px);
+        width: 360px;
+        box-shadow: 0 20px 70px #00000029;
+      }
+      dialog::backdrop {
+        background: #00000038;
+      }
+      dialog h2 {
+        font-size: 18px;
+      }
+      dialog p {
+        font-size: 13px;
+        color: var(--secondary);
+        margin: 12px 0 22px;
+      }
+      dialog .button {
+        float: right;
+      }
+      dialog small {
+        display: block;
+        font-size: 11px;
+      }
+      .drawer-content {
+        display: grid;
+        gap: 8px;
+      }
+      .drawer-content button {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 13px;
+      }
+      .drawer-content button:hover {
+        background: var(--muted-surface);
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      @container (max-width:1050px) {
+        .overview-grid {
+          grid-template-columns: 260px minmax(0, 1fr);
+        }
+        .identity {
+          grid-area: 1/1;
+        }
+        .metrics {
+          grid-area: 2/1;
+          border-left: 0;
+          border-top: 1px solid var(--border);
+          padding: 18px 0 0;
+        }
+        .visuals {
+          grid-area: 1/2/3/3;
+        }
+        .stock-chart {
+          height: 260px;
+        }
+      }
+      @container (max-width:760px) {
+        .stock-page {
+          padding: 22px 20px 32px;
+        }
+        .overview-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 22px;
+        }
+        .identity {
+          order: 0;
+        }
+        .visuals {
+          order: 1;
+        }
+        .metrics {
+          order: 2;
+        }
+        .company-facts {
+          margin-top: 18px;
+        }
+        .company-facts p {
+          max-width: 65ch;
+        }
+        .identity dl {
+          display: none;
+        }
+        .metrics dl {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0 20px;
+        }
+        .metric:first-child {
+          padding-top: 12px;
+        }
+        .stock-chart {
+          height: 220px;
+        }
+        .wide-chart .stock-chart {
+          height: 320px;
+        }
+        .company-header {
+          flex-wrap: wrap;
+        }
+        .company-header .spacer {
+          display: none;
+        }
+        .select-label {
+          margin-left: auto;
+        }
+        .company-header .button {
+          margin-left: 52px;
+        }
+        .tabs {
+          gap: 23px;
+        }
+        .chart-box {
+          padding: 16px;
+        }
+        .chart-title strong {
+          font-size: 15px;
+        }
+        .chart-title small {
+          font-size: 10px;
+        }
+        .financial-toolbar {
+          gap: 12px;
+        }
+      }
+      @media (max-width: 899px) {
+        .sidebar {
+          display: none;
+        }
+        .mobile-nav {
+          display: grid;
+        }
+        .toolbar {
+          padding: 0 16px;
+        }
+        .stock-select {
+          max-width: 150px;
+        }
+      }
+      @media (max-width: 599px) {
+        .rail {
+          display: none;
+        }
+        .shell {
+          padding: 8px;
+        }
+        .workspace {
+          border-radius: 12px;
+        }
+        .toolbar {
+          gap: 8px;
+        }
+        .company-header h1 {
+          font-size: 19px;
+        }
+        .select-label {
+          width: 100%;
+          margin: 4px 0 0;
+        }
+        .stock-select {
+          max-width: none;
+          width: 100%;
+        }
+        .company-header .button {
+          margin-left: 0;
+        }
+        .segmented button {
+          min-height: 40px;
+        }
+        .tabs button {
+          min-height: 44px;
+        }
+        .stock-chart {
+          height: 225px;
+        }
+        .chart-controls {
+          gap: 10px;
+        }
+        .button {
+          min-height: 40px;
+        }
+        .stock-page {
+          padding: 20px;
+        }
+        .filings-table {
+          min-width: 560px;
+        }
+        .statement-table {
+          min-width: 610px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="rail" aria-label="Application frame">
+        <span class="rail-mark" aria-hidden="true"
+          ><svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path d="M3 10 12 3l9 7v10H3Z" />
+            <path d="M9 20v-7h6v7" /></svg></span
+        ><span class="avatar" aria-hidden="true">A</span>
+      </aside>
+      <div class="workspace">
+        <aside class="sidebar">
+          <div class="brand">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="m3 20 9-17 9 17M7 13h10M5 17h14" /></svg
+            >aifi
+          </div>
+          <div class="nav-label">Workspace</div>
+          <a href="#overview" class="nav-row current">Stocks</a>
+          <div class="nav-label">Stocks</div>
+          <div id="target-list"></div>
+        </aside>
+        <div class="document">
+          <header class="toolbar">
+            <button
+              class="icon-button mobile-nav"
+              id="open-targets"
+              aria-label="Select a stock"
+            >
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg></button
+            ><span>Stocks</span
+            ><button class="status" id="sample-status">Sample data</button
+            ><span class="spacer"></span
+            ><button
+              class="icon-button"
+              id="theme-toggle"
+              aria-label="Switch theme"
+            >
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M20 13A8 8 0 0 1 11 4a8 8 0 1 0 9 9Z" />
+              </svg>
+            </button>
+          </header>
+          <main class="content">
+            <div class="stock-page">
+              <header class="company-header">
+                <span class="company-mark" id="company-mark">A</span>
+                <div>
+                  <h1 id="company-name">Apple</h1>
+                  <small id="company-symbol">AAPL · NASDAQ</small>
+                </div>
+                <span class="spacer"></span
+                ><label class="select-label"
+                  ><span class="sr-only">Select stock</span
+                  ><select class="stock-select" id="stock-select">
+                    <option value="AAPL">AAPL · Apple</option>
+                    <option value="MSFT">MSFT · Microsoft</option>
+                    <option value="NVDA">NVDA · NVIDIA</option>
+                  </select></label
+                ><button class="button" id="watch-toggle" aria-pressed="false">
+                  ☆ Watchlist
+                </button>
+              </header>
+              <div class="tabs" role="tablist" aria-label="Stock research">
+                <button
+                  id="tab-overview"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-overview"
+                  tabindex="0"
+                  data-tab="overview"
+                >
+                  Overview</button
+                ><button
+                  id="tab-chart"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-chart"
+                  tabindex="-1"
+                  data-tab="chart"
+                >
+                  Chart</button
+                ><button
+                  id="tab-financials"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-financials"
+                  tabindex="-1"
+                  data-tab="financials"
+                >
+                  Financials</button
+                ><button
+                  id="tab-filings"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-filings"
+                  tabindex="-1"
+                  data-tab="filings"
+                >
+                  Filings
+                </button>
+              </div>
+              <section
+                id="panel-overview"
+                role="tabpanel"
+                aria-labelledby="tab-overview"
+                tabindex="0"
+              >
+                <div class="overview-grid">
+                  <section class="identity">
+                    <div class="quote">
+                      <small>Latest close</small>
+                      <div class="price" data-value="price">$230.00</div>
+                      <div class="delta" data-value="change">
+                        +$2.00 (+0.88%)
+                      </div>
+                      <div class="source-line">Oct 12, 2026 · USD</div>
+                    </div>
+                    <div class="company-facts">
+                      <h2>About <span data-value="name">Apple</span></h2>
+                      <p id="company-description"></p>
+                    </div>
+                    <dl>
+                      <div>
+                        <dt>Exchange</dt>
+                        <dd>NASDAQ</dd>
+                      </div>
+                      <div>
+                        <dt>Country</dt>
+                        <dd>United States</dd>
+                      </div>
+                      <div>
+                        <dt>CIK</dt>
+                        <dd id="company-cik"></dd>
+                      </div>
+                    </dl>
+                  </section>
+                  <section class="metrics" aria-label="Key metrics">
+                    <dl id="key-metrics"></dl>
+                  </section>
+                  <div class="visuals">
+                    <div class="chart-box">
+                      <div class="chart-title">
+                        <strong>Price history</strong><small>Daily close</small>
+                      </div>
+                      <svg
+                        class="stock-chart"
+                        id="overview-chart"
+                        viewBox="0 0 620 260"
+                        role="img"
+                        aria-label="Sample daily stock prices and volume"
+                      ></svg>
+                      <div class="chart-controls">
+                        <div
+                          class="segmented range-controls"
+                          aria-label="Chart range"
+                        >
+                          <button data-range="1M" aria-pressed="false">
+                            1M</button
+                          ><button data-range="3M" aria-pressed="false">
+                            3M</button
+                          ><button data-range="1Y" aria-pressed="true">
+                            1Y</button
+                          ><button data-range="2Y" aria-pressed="false">
+                            2Y
+                          </button>
+                        </div>
+                        <div
+                          class="segmented type-controls"
+                          aria-label="Chart style"
+                        >
+                          <button data-type="line" aria-pressed="true">
+                            Line</button
+                          ><button data-type="candle" aria-pressed="false">
+                            Candle
+                          </button>
+                        </div>
+                      </div>
+                      <div class="basis">Split-adjusted · Sample data</div>
+                    </div>
+                    <section class="recent-filings">
+                      <div class="section-title">
+                        <h2>Recent filings</h2>
+                        <button class="text-link" id="view-filings">
+                          View all ↗
+                        </button>
+                      </div>
+                      <div id="recent-filings"></div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+              <section
+                id="panel-chart"
+                class="wide-chart"
+                role="tabpanel"
+                aria-labelledby="tab-chart"
+                tabindex="0"
+                hidden
+              >
+                <div class="chart-box">
+                  <div class="chart-title">
+                    <strong data-value="price">$230.00</strong
+                    ><small>Daily OHLCV</small>
+                  </div>
+                  <svg
+                    class="stock-chart"
+                    id="detail-chart"
+                    viewBox="0 0 620 260"
+                    role="img"
+                    aria-label="Sample daily stock prices and volume"
+                  ></svg>
+                  <div class="chart-controls">
+                    <div
+                      class="segmented range-controls"
+                      aria-label="Chart range"
+                    >
+                      <button data-range="1M" aria-pressed="false">1M</button
+                      ><button data-range="3M" aria-pressed="false">3M</button
+                      ><button data-range="1Y" aria-pressed="true">1Y</button
+                      ><button data-range="2Y" aria-pressed="false">2Y</button>
+                    </div>
+                    <div
+                      class="segmented type-controls"
+                      aria-label="Chart style"
+                    >
+                      <button data-type="line" aria-pressed="true">Line</button
+                      ><button data-type="candle" aria-pressed="false">
+                        Candle
+                      </button>
+                    </div>
+                  </div>
+                  <div class="basis">Split-adjusted · Sample data</div>
+                </div>
+              </section>
+              <section
+                id="panel-financials"
+                role="tabpanel"
+                aria-labelledby="tab-financials"
+                tabindex="0"
+                hidden
+              >
+                <div class="financial-toolbar">
+                  <div
+                    class="segmented"
+                    id="statement-controls"
+                    aria-label="Financial statement"
+                  >
+                    <button data-statement="income" aria-pressed="true">
+                      Income</button
+                    ><button data-statement="balance" aria-pressed="false">
+                      Balance</button
+                    ><button data-statement="cash" aria-pressed="false">
+                      Cash flow
+                    </button>
+                  </div>
+                  <div
+                    class="segmented"
+                    id="period-controls"
+                    aria-label="Reporting period"
+                  >
+                    <button data-period="annual" aria-pressed="true">
+                      Annual</button
+                    ><button data-period="quarter" aria-pressed="false">
+                      Quarterly
+                    </button>
+                  </div>
+                </div>
+                <div class="table-panel">
+                  <div class="table-scroll">
+                    <table class="statement-table" id="financial-table"></table>
+                  </div>
+                </div>
+                <p class="table-note">USD billions · Sample data</p>
+              </section>
+              <section
+                id="panel-filings"
+                role="tabpanel"
+                aria-labelledby="tab-filings"
+                tabindex="0"
+                hidden
+              >
+                <div class="financial-toolbar">
+                  <div
+                    class="segmented"
+                    id="filing-filters"
+                    aria-label="Filter filings"
+                  >
+                    <button data-form="all" aria-pressed="true">All</button
+                    ><button data-form="10-K" aria-pressed="false">10-K</button
+                    ><button data-form="10-Q" aria-pressed="false">10-Q</button
+                    ><button data-form="8-K" aria-pressed="false">8-K</button>
+                  </div>
+                  <small>Sample filings</small>
+                </div>
+                <div class="table-panel">
+                  <div class="table-scroll">
+                    <table class="filings-table">
+                      <thead>
+                        <tr>
+                          <th>Form</th>
+                          <th>Report period</th>
+                          <th>Filed</th>
+                          <th>Document</th>
+                        </tr>
+                      </thead>
+                      <tbody id="filings-table"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <dialog id="sample-dialog">
+      <h2>Sample data</h2>
+      <p>
+        Prices, charts, financials and filings in this preview are examples.
+      </p>
+      <form method="dialog">
+        <button class="button primary">Got it</button>
+      </form>
+    </dialog>
+    <dialog id="target-dialog">
+      <h2>Select a stock</h2>
+      <div class="drawer-content" id="mobile-targets"></div>
+      <form method="dialog"><button class="button">Close</button></form>
+    </dialog>
+    <script>
+      const companies = {
+        AAPL: {
+          name: "Apple",
+          description: "Consumer devices, software and services.",
+          cik: "0000320193",
+          price: 230,
+          previous: 228,
+          open: 228.5,
+          volume: "42.0M",
+          high: 242,
+          low: 172,
+          revenue: 400,
+          income: 95,
+          seed: 2,
+        },
+        MSFT: {
+          name: "Microsoft",
+          description:
+            "Productivity software, cloud infrastructure and computing.",
+          cik: "0000789019",
+          price: 420,
+          previous: 417,
+          open: 418,
+          volume: "21.0M",
+          high: 448,
+          low: 310,
+          revenue: 260,
+          income: 90,
+          seed: 5,
+        },
+        NVDA: {
+          name: "NVIDIA",
+          description: "Accelerated computing and graphics platforms.",
+          cik: "0001045810",
+          price: 125,
+          previous: 123.5,
+          open: 124,
+          volume: "180.0M",
+          high: 149,
+          low: 78,
+          revenue: 130,
+          income: 65,
+          seed: 8,
+        },
+      };
+      const filings = [
+        {
+          form: "10-Q",
+          period: "Jun 30, 2026",
+          filed: "Aug 1, 2026",
+          label: "Quarterly report",
+        },
+        {
+          form: "8-K",
+          period: "—",
+          filed: "Jul 30, 2026",
+          label: "Current report",
+        },
+        {
+          form: "10-K",
+          period: "Sep 27, 2025",
+          filed: "Oct 31, 2025",
+          label: "Annual report",
+        },
+      ];
+      let symbol = "AAPL",
+        range = "1Y",
+        type = "line",
+        statement = "income",
+        period = "annual",
+        form = "all";
+      const watched = new Set();
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => [...document.querySelectorAll(s)];
+      const dollars = (n) => "$" + n.toFixed(2);
+      let returnFocus;
+      function showSample() {
+        returnFocus = document.activeElement;
+        $("#sample-dialog").showModal();
+      }
+      $("#sample-dialog").addEventListener("close", () => returnFocus?.focus());
+      $("#sample-status").onclick = showSample;
+      function activateTab(tab, focus = false) {
+        if (!["overview", "chart", "financials", "filings"].includes(tab))
+          tab = "overview";
+        $$("[role=tab]").forEach((b) => {
+          const selected = b.dataset.tab === tab;
+          b.setAttribute("aria-selected", selected);
+          b.tabIndex = selected ? 0 : -1;
+          if (selected && focus) b.focus();
+        });
+        $$("[role=tabpanel]").forEach(
+          (p) => (p.hidden = p.id !== "panel-" + tab),
+        );
+        history.replaceState(null, "", "#" + tab);
+        drawCharts();
+      }
+      $$("[role=tab]").forEach((b) => {
+        b.onclick = () => activateTab(b.dataset.tab);
+        b.onkeydown = (ev) => {
+          const tabs = $$("[role=tab]"),
+            i = tabs.indexOf(b);
+          let next;
+          if (ev.key === "ArrowRight") next = (i + 1) % tabs.length;
+          else if (ev.key === "ArrowLeft")
+            next = (i + tabs.length - 1) % tabs.length;
+          else if (ev.key === "Home") next = 0;
+          else if (ev.key === "End") next = tabs.length - 1;
+          else return;
+          ev.preventDefault();
+          activateTab(tabs[next].dataset.tab, true);
+        };
+      });
+      window.addEventListener("hashchange", () =>
+        activateTab(location.hash.slice(1)),
+      );
+      window.addEventListener("resize", drawCharts);
+      $("#view-filings").onclick = () => activateTab("filings", true);
+      function drawCharts() {
+        const c = companies[symbol],
+          count = { "1M": 22, "3M": 65, "1Y": 252, "2Y": 504 }[range];
+        const values = Array.from(
+          { length: count },
+          (_, i) =>
+            c.price *
+            (0.72 +
+              (0.27 * i) / (count - 1) +
+              0.025 * Math.sin(i * 0.12 + c.seed) +
+              0.015 * Math.cos(i * 0.47)),
+        );
+        const shift = c.price - values.at(-1);
+        const bars = values.map((v, i) => ({
+          close: v + shift,
+          open: v + shift + Math.sin(i * 0.6) * c.price * 0.007,
+          volume: 20 + Math.abs(Math.sin(i * 0.71 + c.seed)) * 60,
+        }));
+        const min =
+            Math.min(...bars.map((b) => Math.min(b.open, b.close))) * 0.97,
+          max = Math.max(...bars.map((b) => Math.max(b.open, b.close))) * 1.03;
+        $$(".stock-chart").forEach((svg) => {
+          const width = svg.clientWidth || 620;
+          const height = svg.clientHeight || 260;
+          const right = width - 58;
+          const bottom = height - 75;
+          const x = (i) => 18 + (i / (count - 1)) * (right - 18);
+          const y = (v) => bottom - ((v - min) / (max - min)) * (bottom - 20);
+          svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+          let content = "";
+          for (let i = 0; i < 5; i++) {
+            const yy = 20 + (i * (bottom - 20)) / 4;
+            const value = max - ((max - min) * i) / 4;
+            content += `<path d="M18 ${yy}H${right}" stroke="var(--border)" stroke-dasharray="3 5"/><text x="${right + 12}" y="${yy + 4}" fill="var(--muted)" font-size="10">${value.toFixed(0)}</text>`;
+          }
+          const stride = Math.max(1, Math.ceil(count / 70));
+          bars.forEach((b, i) => {
+            if (i % stride) return;
+            content += `<rect x="${x(i)}" y="${height - 22 - b.volume * 0.4}" width="${Math.max(2, ((right - 18) / (count / stride)) * 0.65)}" height="${b.volume * 0.4}" fill="var(--secondary)" opacity=".2"/>`;
+            if (type === "candle") {
+              const color =
+                b.close >= b.open ? "var(--positive)" : "var(--negative)";
+              const top = y(Math.max(b.close, b.open));
+              const h = Math.max(2, Math.abs(y(b.close) - y(b.open)));
+              content += `<path d="M${x(i)} ${top - 3}v${h + 6}" stroke="${color}"/><rect x="${x(i) - 2}" y="${top}" width="4" height="${h}" fill="${color}"/>`;
+            }
+          });
+          if (type === "line")
+            content += `<polyline points="${bars.map((b, i) => x(i) + "," + y(b.close)).join(" ")}" fill="none" stroke="var(--positive)" stroke-width="2" stroke-linejoin="round"/>`;
+          content += `<text x="18" y="${height - 2}" fill="var(--muted)" font-size="10">${range} ago</text><text x="${right - 42}" y="${height - 2}" fill="var(--muted)" font-size="10">Oct 12</text>`;
+          svg.innerHTML = content;
+        });
+        $$("[data-range]").forEach((b) =>
+          b.setAttribute("aria-pressed", b.dataset.range === range),
+        );
+        $$("[data-type]").forEach((b) =>
+          b.setAttribute("aria-pressed", b.dataset.type === type),
+        );
+      }
+      $$("[data-range]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            range = b.dataset.range;
+            drawCharts();
+          }),
+      );
+      $$("[data-type]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            type = b.dataset.type;
+            drawCharts();
+          }),
+      );
+      function renderFinancials() {
+        const c = companies[symbol],
+          rows = {
+            income: [
+              ["Revenue", c.revenue],
+              ["Gross profit", c.revenue * 0.45],
+              ["Operating income", c.income * 1.2],
+              ["Net income", c.income],
+            ],
+            balance: [
+              ["Cash and equivalents", c.revenue * 0.12],
+              ["Total assets", c.revenue * 0.9],
+              ["Total liabilities", c.revenue * 0.55],
+              ["Shareholders’ equity", c.revenue * 0.35],
+            ],
+            cash: [
+              ["Operating cash flow", c.income * 1.2],
+              ["Capital expenditures", c.income * 0.16],
+              ["Free cash flow", c.income * 1.04],
+            ],
+          }[statement];
+        const headers =
+          period === "annual"
+            ? ["FY 2025", "FY 2024", "FY 2023"]
+            : ["Q3 FY26", "Q2 FY26", "Q1 FY26"];
+        const factor =
+          period === "quarter" && statement !== "balance" ? 0.25 : 1;
+        $("#financial-table").innerHTML =
+          "<thead><tr><th>Metric</th>" +
+          headers.map((h) => "<th>" + h + "</th>").join("") +
+          "</tr></thead><tbody>" +
+          rows
+            .map(
+              ([name, value]) =>
+                "<tr><td>" +
+                name +
+                "</td>" +
+                [1, 0.94, 0.88]
+                  .map((f) => "<td>" + dollars(value * factor * f) + "</td>")
+                  .join("") +
+                "</tr>",
+            )
+            .join("") +
+          "</tbody>";
+        $$("[data-statement]").forEach((b) =>
+          b.setAttribute("aria-pressed", b.dataset.statement === statement),
+        );
+        $$("[data-period]").forEach((b) =>
+          b.setAttribute("aria-pressed", b.dataset.period === period),
+        );
+      }
+      $$("[data-statement]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            statement = b.dataset.statement;
+            renderFinancials();
+          }),
+      );
+      $$("[data-period]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            period = b.dataset.period;
+            renderFinancials();
+          }),
+      );
+      function renderFilings() {
+        $("#recent-filings").innerHTML = filings
+          .slice(0, 2)
+          .map(
+            (f) =>
+              `<div class="filing-row"><span class="filing-form">${f.form}</span><div class="filing-body">${f.label}<small>${f.filed}</small></div><button class="text-link sample-document" aria-label="View sample ${f.form}">↗</button></div>`,
+          )
+          .join("");
+        $("#filings-table").innerHTML = filings
+          .filter((f) => form === "all" || f.form === form)
+          .map(
+            (f) =>
+              `<tr><td>${f.form}</td><td>${f.period}</td><td>${f.filed}</td><td><button class="text-link sample-document">${f.label} ↗</button></td></tr>`,
+          )
+          .join("");
+        $$(".sample-document").forEach((b) => (b.onclick = showSample));
+        $$("[data-form]").forEach((b) =>
+          b.setAttribute("aria-pressed", b.dataset.form === form),
+        );
+      }
+      $$("[data-form]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            form = b.dataset.form;
+            renderFilings();
+          }),
+      );
+      function renderCompany() {
+        const c = companies[symbol];
+        $("#company-name").textContent = c.name;
+        $("#company-symbol").textContent = symbol + " · NASDAQ";
+        $("#company-mark").textContent = c.name[0];
+        $("#company-description").textContent = c.description;
+        $("#company-cik").textContent = c.cik;
+        $$("[data-value=name]").forEach((e) => (e.textContent = c.name));
+        $$("[data-value=price]").forEach(
+          (e) => (e.textContent = dollars(c.price)),
+        );
+        $$("[data-value=change]").forEach(
+          (e) =>
+            (e.textContent =
+              "+" +
+              dollars(c.price - c.previous) +
+              " (+" +
+              ((c.price / c.previous - 1) * 100).toFixed(2) +
+              "%)"),
+        );
+        const metrics = [
+          ["Open", dollars(c.open)],
+          ["Previous close", dollars(c.previous)],
+          ["Volume", c.volume],
+          ["52-week range", dollars(c.low) + " – " + dollars(c.high)],
+          ["Revenue", `$${c.revenue.toFixed(1)}B <small>FY 2025</small>`],
+          ["Net income", `$${c.income.toFixed(1)}B <small>FY 2025</small>`],
+        ];
+        $("#key-metrics").innerHTML = metrics
+          .map(
+            ([label, value]) =>
+              `<div class="metric"><dt>${label}</dt><dd>${value}</dd></div>`,
+          )
+          .join("");
+        $("#stock-select").value = symbol;
+        $("#watch-toggle").setAttribute("aria-pressed", watched.has(symbol));
+        $("#watch-toggle").classList.toggle("selected", watched.has(symbol));
+        $("#watch-toggle").textContent = watched.has(symbol)
+          ? "✓ Watchlisted"
+          : "☆ Watchlist";
+        drawCharts();
+        renderFinancials();
+        renderFilings();
+      }
+      $("#stock-select").onchange = (e) => {
+        symbol = e.target.value;
+        renderCompany();
+      };
+      $("#watch-toggle").onclick = () => {
+        watched.has(symbol) ? watched.delete(symbol) : watched.add(symbol);
+        renderCompany();
+      };
+      $("#theme-toggle").onclick = () => {
+        document.documentElement.dataset.theme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      };
+      function renderTargets() {
+        const html = Object.entries(companies)
+          .map(
+            ([s, c]) =>
+              `<button class="ticker-link" data-symbol="${s}"><span class="ticker-icon">${c.name[0]}</span><span><strong>${s}</strong><small>${c.name}</small></span></button>`,
+          )
+          .join("");
+        $("#target-list").innerHTML = html;
+        $("#mobile-targets").innerHTML = html;
+        $$("[data-symbol]").forEach(
+          (b) =>
+            (b.onclick = () => {
+              symbol = b.dataset.symbol;
+              renderCompany();
+              if ($("#target-dialog").open) $("#target-dialog").close();
+            }),
+        );
+      }
+      $("#open-targets").onclick = () => {
+        returnFocus = document.activeElement;
+        $("#target-dialog").showModal();
+      };
+      $("#target-dialog").addEventListener("close", () => returnFocus?.focus());
+      renderTargets();
+      renderCompany();
+      activateTab(location.hash.slice(1) || "overview");
+    </script>
+  </body>
+</html>
