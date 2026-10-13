@@ -107,3 +107,9 @@ workspace panel. Both hosts share the rail, sidebar, pages, theme, and shell CSS
 The refinement was checked against the user-provided Codex/ChatGPT screenshots,
 using OBU in Chrome Default for Web and the real macOS Electron window for native
 controls. Native close/minimize/full-screen controls remain owned by the OS.
+
+The sidebar contains navigation and recent research only. The outer-rail avatar
+opens the shared Radix workspace menu for Settings and theme switching. Below
+600px the rail is hidden and the same menu appears in the page toolbar. Check
+keyboard selection, Escape/focus return, outside dismissal, popup viewport bounds,
+and settings access with the sidebar collapsed as well as on mobile.

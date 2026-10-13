@@ -10,7 +10,6 @@ import {
   Menu,
   Sun,
   Moon,
-  ChevronDown,
   FolderOpen,
   Home,
   ArrowLeft,
@@ -23,6 +22,7 @@ import { useWorkspace, pageLabels } from "../workspace-context";
 import { IconButton, Logo, Modal } from "./primitives";
 import type { ReactNode } from "react";
 import { useWorkspaceHistory } from "./useWorkspaceHistory";
+import { ProfileMenu } from "./ProfileMenu";
 const destinations = [
   { page: "research", icon: MessageCircle },
   { page: "agents", icon: Bot },
@@ -31,8 +31,7 @@ const destinations = [
   { page: "library", icon: BookOpen },
 ] as const;
 function Navigation({ onNavigate }: { onNavigate?: () => void }) {
-  const { workspace, page, navigate, openConversation, research } =
-    useWorkspace();
+  const { workspace, page, openConversation, research } = useWorkspace();
   return (
     <div className="sidebar-inner">
       <div className="sidebar-brand">
@@ -83,31 +82,6 @@ function Navigation({ onNavigate }: { onNavigate?: () => void }) {
             </button>
           ))
         )}
-      </div>
-      <div className="sidebar-bottom">
-        <a
-          href="#/settings"
-          className={`nav-link ${page === "settings" ? "selected" : ""}`}
-          aria-current={page === "settings" ? "page" : undefined}
-          onClick={() => onNavigate?.()}
-        >
-          <Settings size={19} strokeWidth={1.7} />
-          Settings
-        </a>
-        <button
-          className="workspace-switch"
-          onClick={() => {
-            navigate("settings");
-            onNavigate?.();
-          }}
-        >
-          <span className="workspace-avatar">A</span>
-          <span>
-            <strong>Personal workspace</strong>
-            <small>Saved on this device</small>
-          </span>
-          <ChevronDown size={14} />
-        </button>
       </div>
     </div>
   );
@@ -178,6 +152,7 @@ export function Shell({ children }: { children: ReactNode }) {
       >
         {workspace.theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
       </IconButton>
+      <ProfileMenu mobile />
     </div>
   );
   const navigationToggle = (
@@ -271,14 +246,7 @@ export function Shell({ children }: { children: ReactNode }) {
           >
             <Settings size={20} strokeWidth={1.7} />
           </button>
-          <button
-            className="rail-profile"
-            aria-label="Personal workspace settings"
-            title="Personal workspace"
-            onClick={() => navigate("settings")}
-          >
-            A
-          </button>
+          <ProfileMenu />
         </nav>
         <div className="workspace-panel">
           <aside className="sidebar" id="workspace-sidebar">

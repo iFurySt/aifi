@@ -234,15 +234,68 @@ svg {
   background: var(--frame-border);
   margin: 6px 0;
 }
-.rail-profile {
-  margin-top: auto;
-  margin-bottom: 8px;
+.profile-trigger {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+.profile-trigger:hover,
+.profile-trigger[data-state="open"] {
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+.profile-avatar {
+  display: grid;
+  place-items: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid var(--frame-border);
   background: var(--canvas);
   font-size: 12px;
+  font-weight: 500;
+}
+.rail-profile {
+  margin-top: auto;
+  margin-bottom: 4px;
+}
+.mobile-profile {
+  display: none;
+}
+.dropdown-menu.workspace-menu {
+  width: 264px;
+  max-width: calc(100vw - 24px);
+  padding: 8px;
+  border-radius: 16px;
+}
+.workspace-menu-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.workspace-menu-identity .profile-avatar {
+  width: 36px;
+  height: 36px;
+}
+.workspace-menu-separator {
+  height: 1px;
+  background: var(--border);
+  margin: 6px 4px;
+}
+.workspace-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.workspace-menu .dropdown-item svg {
+  color: var(--secondary);
 }
 .window-toolbar {
   display: flex;
@@ -388,43 +441,6 @@ nav {
   margin-left: -8px;
   border-radius: 7px;
   font-size: 12px;
-}
-.sidebar-bottom {
-  margin-top: auto;
-  padding-top: 32px;
-}
-.workspace-switch {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 10px 4px;
-  margin-top: 10px;
-  border-top: 1px solid var(--border);
-  text-align: left;
-}
-.workspace-switch > span:nth-child(2) {
-  flex: 1;
-}
-.workspace-avatar {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--canvas);
-  font-size: 13px;
-}
-.workspace-switch strong {
-  display: block;
-  font-weight: 500;
-  font-size: 12px;
-}
-.workspace-switch small {
-  display: block;
-  color: var(--muted);
-  font-size: 11px;
 }
 .main-shell {
   display: flex;
@@ -1669,6 +1685,9 @@ kbd {
   }
 }
 @media (max-width: 599px) {
+  .mobile-profile {
+    display: grid;
+  }
   .app-shell {
     --rail-width: 0px;
     padding: 8px;

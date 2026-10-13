@@ -107,3 +107,21 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   create/preview/pause/resume, research starters/replies, library preview, theme,
   and reset. The actual macOS Electron smoke passed with a disposable profile.
   Updated the README preview with the simplified interface.
+
+### Workspace Menu Refinement (2026-10-13)
+
+> Remove the sidebar Settings and Personal workspace footer, and open a popup
+> from the outer avatar in the supplied Codex-style reference.
+
+- Removed both sidebar footer rows and their unused styles. The outer avatar
+  now opens a shared Radix menu with workspace identity, Settings, and theme
+  switching. All visible actions work locally.
+- Kept the rail shortcut for Settings; mobile uses a toolbar avatar so settings
+  remain accessible when the rail is hidden. Menu contents adapt to the theme
+  and stay separate from desktop drag regions.
+- Updated the design specification and frontend guidance.
+- Validation: make ci passed with nine domain/storage tests and both builds;
+  macOS Electron smoke passed. Chrome Default via OBU verified desktop/tablet/
+  mobile menu bounds, Settings/theme selection, keyboard opening, Escape/focus
+  return, outside dismissal, collapsed-sidebar access, and all six mobile pages.
+  Updated the README screenshot to show the simplified sidebar.

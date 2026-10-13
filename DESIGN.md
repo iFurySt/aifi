@@ -163,6 +163,14 @@ Hero to composer: 24px. Composer to content: 32px. Card gaps: 16px. Data section
 8px: navigation and menus. 12px: small panels. 16px: cards. 20px: composer and
 dialogs. 999px: pill buttons and ticker chips.
 
+### Workspace Menu
+
+Keep the sidebar focused on navigation and recent research. The bottom outer-rail
+avatar opens a 264px popup with workspace identity, Settings, and theme switching.
+Use a 40px trigger, 16px popup radius, and 40px menu rows. At mobile widths move
+the same avatar menu into the page toolbar; avoid duplicating sidebar footers.
+Menus support keyboard navigation, Escape, outside dismissal, and focus return.
+
 ## 6. Depth & Elevation
 
 | Level | Treatment | Use |
