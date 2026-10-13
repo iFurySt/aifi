@@ -63,3 +63,25 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   startup failures do not leave a server behind.
 - Recorded remaining storage, research execution, and distribution work; updated
   README previews with an original demo-only screenshot.
+
+### Shell Refinement (2026-10-13)
+
+> Adapt the supplied Codex desktop/ChatGPT Web screenshots: a left/top outer
+> frame and a wrapped document panel, with native desktop traffic lights and
+> back controls and a compatible Web layout.
+
+- Added a neutral frame, tool rail, rounded workspace panel, independent document
+  scrolling, and collapsible sidebar. Web keeps its page toolbar inside the
+  panel; Electron moves it into the outer draggable header.
+- Reserved space and positioned the actual macOS traffic lights. Added bounded
+  back/forward route controls without expanding the preload bridge.
+- Preserved history metadata on agent detail close and handled same-hash
+  traversals. New navigation resets document scroll, with chat scroll handled
+  by the conversation component.
+- Updated the shared design specification, architecture, frontend workflow, and
+  preview. Extended Electron smoke coverage for native shell geometry, sidebar,
+  history bounds/traversal, and forward branch invalidation.
+- OBU checks passed for desktop frame geometry, independent scrolling, sidebar
+  collapse/restore, rail search, dark theme, all six mobile layouts, and drawer
+  navigation. Actual macOS window inspection confirmed native controls and
+  working back navigation. make ci and Electron smoke passed.

@@ -328,7 +328,7 @@ export function Agents() {
         onOpenChange={(open) => {
           if (!open) {
             setSelectedId(null);
-            history.replaceState(null, "", "#/agents");
+            history.replaceState(history.state, "", "#/agents");
           }
         }}
         title={selected?.name ?? "Agent"}

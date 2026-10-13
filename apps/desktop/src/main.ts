@@ -32,8 +32,11 @@ async function createWindow() {
     height: 1000,
     minWidth: 760,
     minHeight: 600,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#f0f0f0",
     titleBarStyle: process.platform === "darwin" ? "hiddenInset" : "default",
+    ...(process.platform === "darwin"
+      ? { trafficLightPosition: { x: 14, y: 17 } }
+      : {}),
     webPreferences: {
       preload: join(__dirname, "preload.cjs"),
       contextIsolation: true,
@@ -62,16 +65,36 @@ async function createWindow() {
         while (!check()) { if (Date.now() > deadline) throw Error('Renderer did not settle'); await new Promise(resolve => setTimeout(resolve, 20)); }
       };
       await waitFor(() => !!document.querySelector('.agents-page') && document.documentElement.dataset.runtime === 'desktop');
+      const initialHistory = document.querySelector('[aria-label="Go back"]').disabled && document.querySelector('[aria-label="Go forward"]').disabled;
       document.querySelector('a[href="#/watchlist"]').click();
       await waitFor(() => !!document.querySelector('.watchlist-table'));
       const navigation = document.querySelectorAll('.watchlist-table tbody tr').length === 5;
+      const back = document.querySelector('[aria-label="Go back"]');
+      await waitFor(() => !back.disabled);
+      back.click();
+      await waitFor(() => !!document.querySelector('.agents-page'));
+      const forward = document.querySelector('[aria-label="Go forward"]');
+      await waitFor(() => !forward.disabled);
+      forward.click();
+      await waitFor(() => !!document.querySelector('.watchlist-table'));
+      const historyControls = !document.querySelector('[aria-label="Go back"]').disabled;
+      back.click();
+      await waitFor(() => !!document.querySelector('.agents-page'));
+      document.querySelector('a[href="#/library"]').click();
+      await waitFor(() => !!document.querySelector('.library-grid') && document.querySelector('[aria-label="Go forward"]').disabled);
+      const branchingHistory = document.querySelector('[aria-label="Go forward"]').disabled;
+      document.querySelector('[aria-label="Collapse sidebar"]').click();
+      await waitFor(() => getComputedStyle(document.querySelector('.sidebar')).display === 'none');
+      document.querySelector('[aria-label="Expand sidebar"]').click();
+      await waitFor(() => getComputedStyle(document.querySelector('.sidebar')).display !== 'none');
+      const framedShell = !!document.querySelector('.window-toolbar') && getComputedStyle(document.querySelector('.workspace-panel')).borderTopLeftRadius === '16px';
       document.querySelector('[aria-label="Switch to dark theme"]').click();
       await waitFor(() => document.documentElement.dataset.theme === 'dark' && !!localStorage.getItem('aifi.workspace.v1'));
       const localSave = JSON.parse(localStorage.getItem('aifi.workspace.v1')).theme === 'dark';
       document.querySelector('[aria-label="Switch to light theme"]').click();
       document.querySelector('a[href="#/agents"]').click();
       await waitFor(() => !!document.querySelector('.agents-page') && document.documentElement.dataset.theme === 'light');
-      return { runtime, navigation, localSave, isolated: typeof require === 'undefined',
+      return { runtime, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
         rendered: !!document.querySelector('.agents-page'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
@@ -82,6 +105,10 @@ async function createWindow() {
       result.runtime?.kind !== "desktop" ||
       !result.isolated ||
       !result.navigation ||
+      !result.initialHistory ||
+      !result.historyControls ||
+      !result.branchingHistory ||
+      !result.framedShell ||
       !result.localSave ||
       !result.rendered ||
       result.desktop !== "desktop" ||
@@ -92,6 +119,11 @@ async function createWindow() {
     const output = join(__dirname, "../../../.artifacts");
     mkdirSync(output, { recursive: true });
     // Wait for the last route/theme transition to paint before taking evidence.
+    await window.webContents.executeJavaScript(`(() => {
+      const still = document.createElement('style');
+      still.textContent = '*,*::before,*::after{transition:none!important;animation:none!important}';
+      document.head.append(still);
+    })()`);
     await delay(180);
     await window.webContents.executeJavaScript(
       "new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))",

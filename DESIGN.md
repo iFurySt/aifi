@@ -1,6 +1,7 @@
 # Design System Inspiration of AIFi
 
-Reference review: 2026-10-12. Apply this system to the shared React renderer.
+Reference review: 2026-10-12; shell refined from user screenshots on 2026-10-13.
+Apply this system to the shared React renderer.
 
 ## 1. Visual Theme & Atmosphere
 
@@ -8,6 +9,13 @@ A quiet investment research workspace: white canvas, a soft neutral sidebar,
 clear typography, rounded inputs, and compact research cards. Combine ChatGPT's
 conversation-first shell with Rallies' agents and financial activity surfaces.
 Use AIFi's own navigation, copy, icons, and data; this is a style application.
+
+Observed in the supplied Codex desktop and ChatGPT Web screenshots: a neutral
+outer frame wraps the left tool rail and native desktop toolbar. A single inset
+rounded panel contains the sidebar and white document canvas. Desktop places
+traffic lights and back/forward controls outside that panel; Web uses its own
+browser chrome. Apply this hierarchy to AIFi without copying private screenshot
+content. Exact dimensions below are AIFi choices.
 
 Observed: ChatGPT's public desktop shell has a 260px sidebar, system sans-serif
 text, a 24px regular empty-state heading, dark pill actions, and generous space.
@@ -27,6 +35,8 @@ third product's branding. Values below are AIFi choices unless marked observed.
 
 | Token | Light | Dark | Role |
 | --- | --- | --- | --- |
+| frame | #F0F0F0 | #161616 | Outer application chrome |
+| frame-border | #E3E3E3 | #363636 | Inset workspace outline |
 | canvas | #FFFFFF | #191919 | Main page |
 | sidebar | #F8F8F8 | #212121 | Navigation |
 | surface | #FFFFFF | #242424 | Cards and dialogs |
@@ -92,7 +102,9 @@ Selected ticker chips are small outlined pills. Forms show validation inline.
 
 ### Navigation
 
-248px left sidebar, with 40px rows and 8px active-state radius. Group the six
+56px outer tool rail and a 248px sidebar inside the workspace panel. Rail
+buttons are 40px squares with 10px radius. The sidebar has 40px rows and 8px
+active-state radius. A visible toolbar control collapses/restores it. Group the six
 primary destinations: Research, Agents, Watchlist, Portfolio, Library, Settings.
 Agents is the starting route. Place the local workspace identity at the bottom.
 Use a small wordmark and original SVG symbol; do not reuse reference logos.
@@ -114,7 +126,14 @@ Use Radix primitives for those behaviors, not a large visual component library.
 
 ### Page Composition
 
-- App shell: sidebar, 60px top toolbar, scrolling main canvas.
+- App shell: neutral outer chrome, 56px tool rail, and a single inset panel
+  containing sidebar and main canvas. Panel radius 16px, outline 1px, outer gap
+  8px. The frame and sidebar stay still while main content scrolls internally.
+- Electron: 48px draggable outer toolbar with native Mac traffic lights,
+  back/forward, sidebar toggle, page title, search, and theme. Reserve 96px before navigation at the
+  left on macOS; interactive controls are no-drag. Do not draw traffic lights.
+- Web: 8px top gap, no desktop window toolbar; a 52px page toolbar lives inside
+  the main panel with sidebar toggle, page title, search, and theme.
 - Agents: heading and subtitle, natural-language composer, template chips,
   agent filters, agent cards, and a compact recent-update feed.
 - Research: centered welcome and composer; after submission show a conversation
@@ -177,6 +196,9 @@ entry 160ms. Never animate prices or imply a live market feed.
 Inferred AIFi adaptation: below 900px use a collapsible sidebar drawer and one
 column of agent cards. Below 600px reduce hero type to 26px, stack settings
 controls, and let chip rows wrap. Touch targets should be at least 40px.
+Below 600px hide the outer tool rail, keep an 8px inset and a 12px workspace
+radius, and retain drawer navigation in the page toolbar. The body never scrolls;
+main content and financial table wrappers scroll inside the workspace.
 Tables scroll inside their panel without causing page overflow. Dialogs retain
 20px viewport margins; detail drawers become full-width on mobile.
 
@@ -188,7 +210,8 @@ light surfaces; AIFi's dark palette is an inferred complementary implementation.
 - Primary colors: neutral white/charcoal; green and red only for state/data.
 - Key type rules: system sans, 14px body, 32px hero, tabular numeric values.
 - Core components: thin borders, 16px cards, 20px composer, dark pill action.
-- Page structure: sidebar plus a quiet reading canvas; Agents is the entry.
+- Page structure: outer chrome surrounds an inset sidebar/document panel;
+  Agents is the entry.
 - Short prompt: Build a local investment research workspace with ChatGPT's
   readable shell and Rallies' agent/update organization. Follow these tokens,
   use original AIFi content, and implement all visible primary actions locally.

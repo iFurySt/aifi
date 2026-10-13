@@ -21,6 +21,11 @@ Core never imports React or Electron. Renderer code has no Node or unrestricted
 filesystem access. Mock state stays local; live research runners and provider
 connections remain future work.
 
+The shared Shell separates outer application chrome from the inset sidebar and
+scrolling document panel. Host metadata chooses native desktop versus browser
+headers. The desktop toolbar uses browser route history with session bounds;
+window controls remain native and no additional host IPC is exposed.
+
 ## Repository Shape
 
 - `apps/`: deployable applications or entry points, such as a research console,

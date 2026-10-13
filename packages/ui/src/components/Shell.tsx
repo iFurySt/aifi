@@ -12,12 +12,17 @@ import {
   Moon,
   ChevronDown,
   FolderOpen,
+  Home,
+  ArrowLeft,
+  ArrowRight,
+  PanelLeft,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import type { WorkspacePage } from "@aifi/core";
+import { workspacePages } from "@aifi/core";
 import { useWorkspace, pageLabels } from "../workspace-context";
 import { IconButton, Logo, Modal } from "./primitives";
 import type { ReactNode } from "react";
+import { useWorkspaceHistory } from "./useWorkspaceHistory";
 const destinations = [
   { page: "research", icon: MessageCircle },
   { page: "agents", icon: Bot },
@@ -109,6 +114,15 @@ function Navigation({ onNavigate }: { onNavigate?: () => void }) {
 }
 export function Shell({ children }: { children: ReactNode }) {
   const { workspace, update, page, navigate, storageError } = useWorkspace();
+  const desktop = !!window.aifiDesktop;
+  useEffect(() => {
+    if (page !== "research")
+      document
+        .getElementById("main-content")
+        ?.scrollTo({ top: 0, behavior: "instant" });
+  }, [page]);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const routeHistory = useWorkspaceHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -122,83 +136,172 @@ export function Shell({ children }: { children: ReactNode }) {
     window.addEventListener("keydown", keydown);
     return () => window.removeEventListener("keydown", keydown);
   }, []);
-  const matches = (
-    [
-      "agents",
-      "research",
-      "watchlist",
-      "portfolio",
-      "library",
-      "settings",
-    ] as WorkspacePage[]
-  ).filter((p) => pageLabels[p].toLowerCase().includes(search.toLowerCase()));
+  const matches = workspacePages.filter((p) =>
+    pageLabels[p].toLowerCase().includes(search.toLowerCase()),
+  );
+  const toolbarActions = (
+    <div className="topbar-actions">
+      <button
+        className="search-trigger"
+        onClick={() => {
+          setSearch("");
+          setSearchOpen(true);
+        }}
+        aria-label="Search workspace"
+      >
+        <Search size={17} />
+        <span>Search</span>
+        <kbd>⌘ K</kbd>
+      </button>
+      <IconButton
+        label={
+          workspace.theme === "light"
+            ? "Switch to dark theme"
+            : "Switch to light theme"
+        }
+        onClick={() =>
+          update((w) => ({
+            ...w,
+            theme: w.theme === "light" ? "dark" : "light",
+          }))
+        }
+      >
+        {workspace.theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+      </IconButton>
+    </div>
+  );
+  const navigationToggle = (
+    <>
+      <span className="sidebar-toggle">
+        <IconButton
+          label={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+          aria-expanded={!sidebarCollapsed}
+          aria-controls="workspace-sidebar"
+          onClick={() => setSidebarCollapsed((value) => !value)}
+        >
+          <PanelLeft size={18} />
+        </IconButton>
+      </span>
+      <span className="mobile-menu">
+        <IconButton label="Open navigation" onClick={() => setMobileOpen(true)}>
+          <Menu size={19} />
+        </IconButton>
+      </span>
+    </>
+  );
   return (
-    <div className="app-shell">
-      <div className="desktop-drag" aria-hidden="true" />
-      <aside className="sidebar">
-        <Navigation />
-      </aside>
-      <div className="main-shell">
-        <header className="topbar">
-          <div className="topbar-left">
-            <span className="mobile-menu">
-              <IconButton
-                label="Open navigation"
-                onClick={() => setMobileOpen(true)}
-              >
-                <Menu size={19} />
-              </IconButton>
-            </span>
-            <span className="page-label">{pageLabels[page]}</span>
+    <div
+      className={`app-shell ${sidebarCollapsed ? "sidebar-collapsed" : ""} ${desktop ? "desktop-shell" : "web-shell"}`}
+    >
+      {desktop && (
+        <header className="window-toolbar">
+          <div className="window-navigation">
+            <span className="native-window-space" aria-hidden="true" />
+            <IconButton
+              label="Go back"
+              disabled={!routeHistory.canGoBack}
+              onClick={routeHistory.back}
+            >
+              <ArrowLeft size={18} />
+            </IconButton>
+            <IconButton
+              label="Go forward"
+              disabled={!routeHistory.canGoForward}
+              onClick={routeHistory.forward}
+            >
+              <ArrowRight size={18} />
+            </IconButton>
+            {navigationToggle}
+          </div>
+          <div className="window-title">
+            <FolderOpen size={16} />
+            <span>AIFi</span>
+            <span className="breadcrumb-divider">/</span>
+            <span>{pageLabels[page]}</span>
             <span className="demo-badge">Demo workspace</span>
           </div>
-          <div className="topbar-actions">
-            <button
-              className="search-trigger"
-              onClick={() => {
-                setSearch("");
-                setSearchOpen(true);
-              }}
-              aria-label="Search workspace"
-            >
-              <Search size={17} />
-              <span>Search</span>
-              <kbd>⌘ K</kbd>
-            </button>
-            <IconButton
-              label={
-                workspace.theme === "light"
-                  ? "Switch to dark theme"
-                  : "Switch to light theme"
-              }
-              onClick={() =>
-                update((w) => ({
-                  ...w,
-                  theme: w.theme === "light" ? "dark" : "light",
-                }))
-              }
-            >
-              {workspace.theme === "light" ? (
-                <Moon size={18} />
-              ) : (
-                <Sun size={18} />
-              )}
-            </IconButton>
-          </div>
+          {toolbarActions}
         </header>
-        {storageError && (
-          <div className="storage-warning" role="alert">
-            {storageError}
-            <button onClick={() => navigate("settings")}>Open Settings</button>
+      )}
+      <div className="workspace-body">
+        <nav className="tool-rail" aria-label="Workspace tools">
+          <button
+            className={`rail-button ${page === "agents" ? "selected" : ""}`}
+            aria-label="Workspace home"
+            title="Workspace home"
+            onClick={() => navigate("agents")}
+          >
+            <Home size={21} strokeWidth={1.7} />
+          </button>
+          <button
+            className="rail-button"
+            aria-label="Search the workspace"
+            title="Search the workspace"
+            onClick={() => {
+              setSearch("");
+              setSearchOpen(true);
+            }}
+          >
+            <Search size={20} strokeWidth={1.7} />
+          </button>
+          <button
+            className={`rail-button ${page === "library" ? "selected" : ""}`}
+            aria-label="Open library"
+            title="Open library"
+            onClick={() => navigate("library")}
+          >
+            <BookOpen size={20} strokeWidth={1.7} />
+          </button>
+          <span className="rail-separator" />
+          <button
+            className={`rail-button ${page === "settings" ? "selected" : ""}`}
+            aria-label="Open settings"
+            title="Open settings"
+            onClick={() => navigate("settings")}
+          >
+            <Settings size={20} strokeWidth={1.7} />
+          </button>
+          <button
+            className="rail-profile"
+            aria-label="Personal workspace settings"
+            title="Personal workspace"
+            onClick={() => navigate("settings")}
+          >
+            A
+          </button>
+        </nav>
+        <div className="workspace-panel">
+          <aside className="sidebar" id="workspace-sidebar">
+            <Navigation />
+          </aside>
+          <div className="main-shell">
+            {!desktop && (
+              <header className="topbar">
+                <div className="topbar-left">
+                  {navigationToggle}
+                  <span className="page-label">{pageLabels[page]}</span>
+                  <span className="demo-badge">Demo workspace</span>
+                </div>
+                {toolbarActions}
+              </header>
+            )}
+            {storageError && (
+              <div className="storage-warning" role="alert">
+                {storageError}
+                <button onClick={() => navigate("settings")}>
+                  Open Settings
+                </button>
+              </div>
+            )}
+            <main
+              tabIndex={-1}
+              id="main-content"
+              className={`main-content ${page === "research" ? "research-main" : ""}`}
+            >
+              {children}
+            </main>
           </div>
-        )}
-        <main
-          tabIndex={-1}
-          id="main-content"
-          className={`main-content ${page === "research" ? "research-main" : ""}`}
-        >
-          {children}
-        </main>
+        </div>
       </div>
       <Modal
         open={mobileOpen}

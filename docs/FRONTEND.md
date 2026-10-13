@@ -71,7 +71,8 @@ notice. Browser and Electron data are independent, with no synchronization.
 After pnpm build, pnpm smoke:desktop launches the actual Electron app with a
 throwaway profile, checks the bundled renderer and metadata bridge, confirms
 renderer Node access is absent, navigates to Watchlist, saves a theme locally,
-and returns to Agents. It exits with a nonzero status on failure or timeout.
+and returns to Agents. It also checks the framed desktop toolbar, sidebar collapse,
+back/forward bounds, and forward-history invalidation after a new route. It exits with a nonzero status on failure or timeout.
 Evidence is written to .artifacts/electron-smoke.json and aifi-electron.png.
 The smoke profile is removed on normal exit; no personal workspace is used.
 
@@ -85,3 +86,22 @@ The initial validation used Chrome Default through OBU at 1440×1100 and 390×84
 including all six mobile pages, production CSP, and dialog focus restoration.
 The actual desktop smoke ran on macOS. Native Windows/Linux launch checks,
 installer packaging, signing, and updates remain follow-ups.
+
+## Shared Window And Document Shell
+
+The outer neutral frame owns a 56px tool rail. A single rounded inset panel holds
+the 248px sidebar and document. Only main content scrolls; the frame, toolbar, and
+sidebar stay in place. Collapsing the sidebar expands the document. At tablet
+widths navigation becomes a drawer; mobile hides the rail and keeps an 8px inset.
+
+Electron renders a 48px draggable outer toolbar. macOS uses real native traffic
+lights at x=14/y=17, with reserved space before back/forward and sidebar controls.
+Controls, menus, and dialogs are no-drag. App back/forward is bounded to the
+current route session, including same-hash traversal; a new route truncates the
+forward branch. No new host privileges or IPC methods are required.
+
+Web relies on browser window controls and places a 52px page toolbar inside the
+workspace panel. Both hosts share the rail, sidebar, pages, theme, and shell CSS.
+The refinement was checked against the user-provided Codex/ChatGPT screenshots,
+using OBU in Chrome Default for Web and the real macOS Electron window for native
+controls. Native close/minimize/full-screen controls remain owned by the OS.
