@@ -36,7 +36,8 @@ internally to the one allowed development origin; production leaves it unset.
 - packages/ui: shared components, page layouts, and design tokens.
 - packages/core: platform-independent domain contracts and demo data rules.
 - packages/platform: browser/local storage and desktop capability adaptation.
-- apps/cli: documented future Go/Cobra direction; no binary exists yet.
+- apps/cli: Go/Cobra directory collector and SQLite cache; not connected to the
+  renderer yet. See its README for manual sync/list/status.
 
 Root DESIGN.md defines the visual system. Use Radix for dialog/menu accessibility
 and Lucide for icons. Avoid a large visual component library and duplicate page

@@ -1,6 +1,6 @@
 # Stock Directory Foundation
 
-Created 2026-10-13. In progress.
+Created and completed 2026-10-13.
 
 ## Goal And Scope
 
@@ -27,9 +27,9 @@ transport, or renderer connection in this milestone.
 ## Milestones
 
 - [x] Review primary docs, three pinned projects, and actual directory requests.
-- [ ] Implement Go module, directory client/parser, SQLite migrations/snapshots,
+- [x] Implement Go module, directory client/parser, SQLite migrations/snapshots,
   and manual sync/list/status commands.
-- [ ] Verify failures/repeated snapshots/history/concurrent sync, live downloads,
+- [x] Verify failures/repeated snapshots/history/concurrent sync, live downloads,
   pure-Go builds, and repository CI; update docs and history.
 
 ## Validation
@@ -38,3 +38,19 @@ Tests use authored small fixtures and local HTTP servers, not public live APIs.
 Cover truncation/HTML/invalid rows/timestamps/duplicates, HTTP errors and bounds,
 atomic rollback, snapshot deduplication, absence/reappearance, cached-only reads,
 and concurrent sync. Actual public fetch evidence and DB stay outside Git.
+
+## Outcome
+
+- Actual pure-Go collector imported 13,296 security rows, 7,488 non-test/non-ETF
+  candidates, 28,630 convention-specific aliases, and two raw source blobs.
+  AAPL/MSFT/NVDA were found in cached queries.
+- Repeated actual download returned changed=false and kept one snapshot. SQLite
+  integrity_check returned ok and foreign_key_check returned no violations. The
+  initial database measured 17,649,664 bytes; retention/compaction needs sizing
+  before automatic daily history is enabled.
+- Go vet/race tests, authored fixture failures, leases/rollback/reappearance, and
+  cached CLI checks passed. make ci includes Go checks and the unchanged frontend
+  tests/builds. CGO-free macOS/Linux/Windows builds passed; only macOS execution
+  was tested. No claims of native Windows/Linux runtime validation.
+- Broader source enrichment, directory UI transport, automatic scheduling, prices,
+  and SEC remain in the active stock data plan.

@@ -1,6 +1,6 @@
 SLUG ?=
 
-.PHONY: check-docs check-repo check-skills ci new-history new-plan
+.PHONY: check-docs check-repo check-skills check-go ci new-history new-plan
 
 check-docs:
 	./scripts/check-docs.sh
@@ -11,6 +11,9 @@ check-repo:
 
 check-skills:
 	./scripts/check-skills.sh
+
+check-go:
+	./scripts/check-go.sh
 
 ci:
 	./scripts/ci.sh

@@ -38,6 +38,20 @@ The first desktop launch downloads the Electron runtime. See
 [frontend development](docs/FRONTEND.md), [architecture](docs/ARCHITECTURE.md),
 and the shared [design system](DESIGN.md).
 
+## Stock directory collector
+
+The first live collector downloads Nasdaq Trader's official security directory
+into a local SQLite store. It needs Go 1.26.1+ and no API key. The app UI still
+uses sample data until local transport is connected.
+
+```sh
+make check-go
+./bin/aifi data directory sync
+./bin/aifi data directory list --query AAPL
+```
+
+See [CLI commands and storage](apps/cli/README.md).
+
 ## Usage
 
 ```sh

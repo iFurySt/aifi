@@ -29,6 +29,9 @@ and recording source age. Its raw timestamp has no explicit UTC offset in the
 field documentation; do not silently convert it into a UTC availability instant.
 Current otherlisted has eight header/data columns but a legacy seven-field
 creation trailer. The parser accepts that shape or the full-width trailer.
+The live otherlisted file also contains exchange code F, absent from the inspected
+field page. Preserve alphabetic provider codes without inventing exchange names
+or MIC mappings; do not discard otherwise valid rows when the enum evolves.
 
 ## Findings From The Three Pinned Projects
 
@@ -70,4 +73,4 @@ No paid dataset, user key, private account, or upstream application was accessed
 
 Related: [runtime commands](../../apps/cli/README.md),
 [pipeline](../design-docs/us-stock-data-pipeline.md), and
-[directory plan](../exec-plans/active/stock-directory-foundation.md).
+[directory plan](../exec-plans/completed/stock-directory-foundation.md).

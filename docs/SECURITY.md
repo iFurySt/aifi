@@ -1,6 +1,7 @@
 # Security
 
-AIFi now includes a local Web/Electron demo and a pinned dependency lockfile.
+AIFi includes a local Web/Electron demo, a Go directory collector, and pinned
+JavaScript/Go dependencies.
 There is no hosted backend, model credential handling, or broker connection.
 
 ## Current Defaults
@@ -42,6 +43,18 @@ There is no hosted backend, model credential handling, or broker connection.
   to this storage adapter; future secrets need a separate protected capability.
 - Saved data is validated before use and rendered as text, without raw HTML.
 - Browser and desktop data remain separate; reset replaces only AIFi's state.
+
+## Directory Collector
+
+The CLI issues read-only requests to two fixed official Nasdaq HTTPS endpoints;
+redirects cannot leave those hosts or downgrade TLS. Requests/bodies are bounded.
+No dynamic external endpoint or provider credential is exposed to the renderer.
+Public source fields remain data, stored with original attribution and hashes.
+Parameterized SQLite queries and escaped literal search prevent query injection.
+The DB is outside tracked source, with restrictive permissions for newly created
+files/directories. Source data and SQLite sidecars must not be committed.
+Directory collection does not add Electron privileges, a listener, broker access,
+or cloud calls. The full security/transport plan still applies before local HTTP.
 
 ## Future Runtime Work
 

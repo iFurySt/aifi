@@ -1,10 +1,12 @@
 # Local US Stock Data Pipeline
 
-Status: proposed implementation design, 2026-10-13. The user confirmed daily /
-closing data first. This document specifies the first live data capability; the
+Status: directory collection implemented; broader pipeline remains proposed,
+2026-10-13. The user confirmed daily/closing data first. This document specifies the first live data capability; the
 current React/Electron application remains a demo until the implementation
-milestones pass. No collector, scheduler, Go module, or provider key is added by
-this design task.
+milestones pass. The first Go/Cobra directory collector and SQLite snapshots now
+exist; automatic scheduling, prices, SEC facts, and local UI transport remain
+unimplemented.
+[Directory runtime](../../apps/cli/README.md) specifies the narrower shipped scope.
 
 ## Decisions
 
@@ -87,7 +89,11 @@ packages/ui/               stock page and components
 apps/desktop/              child-process lifecycle and restricted bridge
 ```
 
-Commands (planned): `aifi doctor`, `aifi data sync --symbols AAPL,MSFT,NVDA`,
+Directory commands (implemented): `aifi data directory sync`, `list`, `status`.
+The directory stores its small source blobs inside SQLite and uses a bounded
+manual-sync lease. It is not the general job queue below.
+
+Broader commands (planned): `aifi doctor`, `aifi data sync --symbols AAPL,MSFT,NVDA`,
 `aifi data backfill --from ... --to ...`, `aifi data status`, `aifi serve`.
 Provider selection is configurable by dataset; avoid one enormous provider
 interface that implies every vendor supports every feature.

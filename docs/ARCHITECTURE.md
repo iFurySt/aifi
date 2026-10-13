@@ -14,7 +14,9 @@ The first executable surface is a local Web/Electron workspace:
 - packages/ui owns shared pages, components, and Tailwind design tokens.
 - packages/core owns domain contracts independently of UI and host APIs.
 - packages/platform adapts browser storage and narrowly exposed desktop metadata.
-- apps/cli reserves a possible Go/Cobra utility when a host binary is needed.
+- apps/cli owns the Go/Cobra collector: Nasdaq directory requests, SQLite
+  snapshots, and cached CLI reads. Its internal directory/store packages are
+  shared by commands; future scheduling/transport can compose the same packages.
 
 Dependency direction: applications compose ui; ui consumes core and platform.
 Core never imports React or Electron. Renderer code has no Node or unrestricted
@@ -117,15 +119,17 @@ login and a company-operated hosted service require separate eligibility
 decisions. No authentication runtime is implemented. See
 [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
 
-## Proposed Stock Data Foundation
+## Stock Data Foundation
 
-The next live capability is a local Go/Cobra collector with durable SQLite jobs,
-EOD bars, source provenance, and cached reads for the stock page. Six stock tabs
-already exist with sample/empty content; they do not imply six live provider
-integrations. The [design](design-docs/us-stock-data-pipeline.md) and
+The first live collector is implemented in apps/cli: two official Nasdaq Trader
+files, validated source blobs, atomic SQLite directory snapshots, sync outcomes,
+and cached manual list/status reads. A bounded persisted lease protects concurrent
+sync and crash recovery. No scheduler, market bars, SEC data, or UI transport exists
+yet. The shared renderer still uses sample/empty content.
+The [design](design-docs/us-stock-data-pipeline.md) and
 [implementation plan](exec-plans/active/us-stock-data-foundation.md) define the
-proposed boundaries; the current application still has no collector or
-scheduler.
+remaining boundaries; see [directory commands](../apps/cli/README.md) and
+[source selection](references/stock-directory-sources.md).
 
 ## Deferred Architecture Work
 - Data flow and persistence model for evidence, generated artifacts, and user

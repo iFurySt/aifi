@@ -35,6 +35,19 @@ make ci
 [架构文档](docs/ARCHITECTURE.md)，开发命令见
 [前端指南](docs/FRONTEND.md)，界面规范见 [DESIGN.md](DESIGN.md)。
 
+## 股票目录采集
+
+首个真实采集器已接入 Nasdaq Trader 官方证券目录，写入本地 SQLite。
+需要 Go 1.26.1+，无需 API Key。Web／Electron 暂时仍用样例，后续接本地读取。
+
+```sh
+make check-go
+./bin/aifi data directory sync
+./bin/aifi data directory list --query AAPL
+```
+
+详见 [CLI 命令与存储](apps/cli/README.md)。
+
 ## 用法
 
 ```sh

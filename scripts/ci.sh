@@ -27,4 +27,8 @@ if [[ -f "${repo_root}/package.json" ]]; then
   (cd "${repo_root}" && pnpm check && pnpm test && pnpm build)
 fi
 
+if [[ -f "${repo_root}/apps/cli/go.mod" ]]; then
+  "${repo_root}/scripts/check-go.sh"
+fi
+
 echo "aifi CI checks passed"

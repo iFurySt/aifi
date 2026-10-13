@@ -7,7 +7,9 @@ its Vite process; a conflicting port causes startup to fail rather than silently
 choosing another origin. Production desktop loads bundled assets without a server.
 The first desktop launch downloads Electron if the binary is not cached.
 
-The demo has no network data sources, background schedules, or cloud services.
+The renderer has no network data sources, background schedules, or cloud services.
+The separate Go CLI now reads the two official directory files on explicit sync;
+cached reads do not fetch. See [CLI guardrails](../apps/cli/README.md).
 Local state is bounded and validated. Invalid or unsupported state opens a
 recoverable temporary demo and preserves the stored value until explicit reset.
 Storage denial/quota failure leaves the session usable and displays a notice.
@@ -22,6 +24,10 @@ browser/Electron verification lives in
 [the frontend guide](FRONTEND.md). Vite and Electron diagnostics appear in the
 launching terminal; the app exposes user-facing storage/startup failures.
 
-Multi-window editing, schema migrations, backups, live-source retry policies,
+Directory collection has bounded requests, persisted outcomes/leases, atomic
+snapshot writes, stale-source/shrink guards, and last-good cache retention. SQLite
+v1 is explicitly versioned; an unknown future schema is rejected.
+
+Multi-window editing, UI schema migrations, backups, broader live-source retry policies,
 and research-runner observability remain future work. CI workflow and release
 automation guidance live in [CICD.md](CICD.md).

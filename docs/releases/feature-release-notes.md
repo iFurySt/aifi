@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-13 | Directory collection | Collect and search a real US-listed security directory locally without an API key. | Added Go/Cobra sync/list/status, official Nasdaq files, atomic SQLite snapshots, provenance and failure recovery. The renderer remains sample-based. |
 | 2026-10-13 | Stocks | Browse stocks from the inner sidebar and review six company tabs in Web/Electron. | Moved the app menu into the outer rail; added sample charts/financials and dataset-specific empty panels; kept saved chats available in Chat. |
 | 2026-10-13 | Keyboard focus | Tab/Escape navigation now uses the app’s neutral styling throughout. | Removed blue focus outlines from the shared renderer and stock prototype; retained keyboard navigation and focus restoration. |
 | 2026-10-13 | Workspace menu | A quieter sidebar with Settings and appearance available from the avatar. | Replaced sidebar footer rows with an avatar popup shared by Web/Electron and a mobile toolbar entry. |

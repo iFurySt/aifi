@@ -1,6 +1,7 @@
 # US Stock Data Foundation
 
-Status: design complete; live implementation not started. Created 2026-10-13.
+Status: directory CLI/SQLite milestone complete; prices, SEC, scheduler, and
+transport remain pending. Created 2026-10-13.
 
 ## Goal
 
@@ -61,7 +62,9 @@ Commit: provider adapters and directory identity validation, with redacted fixtu
 
 ### M2 — Local Store And Manual Sync
 
-- [ ] Add Go/Cobra, migrations, user-data directory, provenance blobs, and status.
+- [x] Add Go/Cobra, directory schema v1, user-data directory, source blobs, and
+  manual sync/list/status.
+- [ ] Extend storage/status to price and financial datasets.
 - [ ] Run bounded manual sync for the three targets; preserve raw responses,
   feed/basis/periods and filing links; do not commit provider datasets.
 - [ ] Verify duplicates, write rollback, validation failures, and correction history.
@@ -119,3 +122,9 @@ verify source/sample labels, table/tab overflow, theme, and keyboard behavior.
   The design task delivered source review and a prototype; live M1–M5 remain work.
 - 2026-10-13: shared Web/Electron stock UI now replaces the standalone prototype.
   Six primary tabs include empty datasets as requested; collection is still pending.
+
+- 2026-10-13: directory collection implemented independently of key-based M1:
+  Nasdaq Trader requests, preserved source conventions, SQLite snapshots, bounded
+  manual-sync lease, atomic cache switch, and cached CLI reads. No automatic
+  scheduler/market data/SEC ingestion/UI transport yet. See
+  [directory milestone](../completed/stock-directory-foundation.md).
