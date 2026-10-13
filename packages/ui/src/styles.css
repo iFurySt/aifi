@@ -2033,11 +2033,7 @@ kbd {
   display: block;
   font-size: 9px;
 }
-.stock-list-note {
-  color: var(--muted);
-  font-size: 10px;
-  margin: 18px 12px 0;
-}
+
 .chat-history-picker {
   display: flex;
   align-items: center;
@@ -2863,4 +2859,36 @@ kbd {
 }
 .stock-list {
   min-height: 0;
+}
+
+.stock-source-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+  padding: 3px 4px;
+  margin: -3px -4px;
+  font: inherit;
+}
+.stock-source-trigger svg {
+  color: var(--muted);
+  transition: transform 120ms;
+}
+.stock-source-trigger[data-state="open"] svg {
+  transform: rotate(180deg);
+}
+.stock-source-trigger:hover,
+.stock-source-trigger:focus-visible,
+.stock-source-trigger[data-state="open"] {
+  background: var(--surface-muted);
+}
+.stock-source-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.stock-source-option [data-state="checked"] {
+  display: grid;
+  place-items: center;
 }

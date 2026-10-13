@@ -32,6 +32,8 @@ schedule downloads. Configuration/sync remains a separate existing capability.
   Exact symbol matches lead results; remaining rows use deterministic source
   symbol/source/exchange ordering. Company form submit resolves exact symbols
   first, then the first name-search result. The datalist permits explicit choice.
+- Stocks heading opens a source selector; Nasdaq directory is the only current
+  option and is checked. No footer attribution label or unavailable source choice.
 - Sidebar reads 50 rows per page; company suggestions use 20, workspace search 12.
   Counts reflect the filtered candidate scope, not whole-market common-stock coverage.
 - ETFs/test issues are excluded. Type remains unknown, including warrants,

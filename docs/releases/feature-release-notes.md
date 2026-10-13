@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-13 | Stock source menu | View the active directory from Stocks without a footer label. | Added a heading dropdown with Nasdaq directory selected; desktop/mobile share the same menu. |
 | 2026-10-13 | Stock directory | Search the full cached directory, browse paged securities and see source-backed names/exchanges in both apps. | Connected directory reads through a replaceable repository; added loading/error/retry states and kept market data explicitly sample-based. |
 | 2026-10-13 | Data settings | Directory updates run with the app, with adjustable frequency and device-local source credentials. | Added app-owned Go scheduling and General/Appearance/Data sources/Sync/Storage settings, local encrypted credentials and preserved cached data. |
 | 2026-10-13 | Directory collection | Collect and search a real US-listed security directory locally without an API key. | Added Go/Cobra sync/list/status, official Nasdaq files, atomic SQLite snapshots, provenance and failure recovery. The renderer remains sample-based. |

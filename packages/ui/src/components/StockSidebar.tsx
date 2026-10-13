@@ -1,5 +1,12 @@
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { useState } from "react";
-import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Search,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  Check,
+} from "lucide-react";
 import { validDirectorySymbol } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import {
@@ -15,7 +22,40 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
   return (
     <div className="sidebar-inner stock-sidebar">
       <div className="stock-sidebar-heading">
-        <h2>Stocks</h2>
+        <h2>
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger asChild>
+              <button
+                className="stock-source-trigger"
+                aria-label="Stock directory source"
+                title="Nasdaq directory"
+              >
+                Stocks <ChevronDown size={14} aria-hidden="true" />
+              </button>
+            </DropdownMenu.Trigger>
+            <DropdownMenu.Portal>
+              <DropdownMenu.Content
+                className="dropdown-menu stock-source-menu"
+                align="start"
+                sideOffset={8}
+                collisionPadding={12}
+                aria-label="Stock directories"
+              >
+                <DropdownMenu.RadioGroup value="nasdaq">
+                  <DropdownMenu.RadioItem
+                    value="nasdaq"
+                    className="dropdown-item stock-source-option"
+                  >
+                    Nasdaq directory
+                    <DropdownMenu.ItemIndicator>
+                      <Check size={15} aria-hidden="true" />
+                    </DropdownMenu.ItemIndicator>
+                  </DropdownMenu.RadioItem>
+                </DropdownMenu.RadioGroup>
+              </DropdownMenu.Content>
+            </DropdownMenu.Portal>
+          </DropdownMenu.Root>
+        </h2>
         {data.snapshotId && (
           <span className="count-badge">{data.total.toLocaleString()}</span>
         )}
@@ -101,7 +141,6 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
           <ChevronRight size={15} />
         </button>
       </div>
-      <small className="stock-list-note">Nasdaq directory</small>
     </div>
   );
 }
