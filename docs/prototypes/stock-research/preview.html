@@ -28,7 +28,6 @@
         --border: #e8e8e8;
         --positive: #217a54;
         --negative: #b34c47;
-        --focus: #608bce;
         --primary: #202020;
         --on-primary: #fff;
       }
@@ -45,7 +44,6 @@
         --border: #393939;
         --positive: #83cca7;
         --negative: #ec9c97;
-        --focus: #98b6ea;
         --primary: #ececec;
         --on-primary: #202020;
       }
@@ -71,11 +69,9 @@
         background: transparent;
         border: 0;
       }
-      button:focus-visible,
-      a:focus-visible,
-      select:focus-visible {
-        outline: 2px solid var(--focus);
-        outline-offset: 3px;
+      :focus,
+      :focus-visible {
+        outline: none;
       }
       h1,
       h2,
@@ -191,7 +187,8 @@
         align-items: center;
         border-radius: 8px;
       }
-      .ticker-link:hover {
+      .ticker-link:hover,
+      .ticker-link:focus-visible {
         background: var(--muted-surface);
       }
       .ticker-link strong {
@@ -245,7 +242,8 @@
         display: grid;
         place-items: center;
       }
-      .icon-button:hover {
+      .icon-button:hover,
+      .icon-button:focus-visible {
         background: var(--muted-surface);
       }
       .content {
@@ -311,6 +309,22 @@
         font-size: 12px;
         font-weight: 500;
         white-space: nowrap;
+      }
+      .button:focus-visible,
+      .stock-select:focus-visible {
+        background: color-mix(in srgb, var(--text) 6%, var(--muted-surface));
+      }
+      .tabs button:focus-visible {
+        color: var(--text);
+        border-bottom-color: var(--text);
+      }
+      .segmented button:focus-visible {
+        color: var(--text);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .status:focus-visible {
+        background: var(--muted-surface);
       }
       .button.selected,
       .button.primary {
@@ -500,7 +514,8 @@
         font-size: 11px;
         color: var(--secondary);
       }
-      .text-link:hover {
+      .text-link:hover,
+      .text-link:focus-visible {
         text-decoration: underline;
       }
       .filing-row {
@@ -626,7 +641,8 @@
         border-radius: 8px;
         font-size: 13px;
       }
-      .drawer-content button:hover {
+      .drawer-content button:hover,
+      .drawer-content button:focus-visible {
         background: var(--muted-surface);
       }
       .sr-only {

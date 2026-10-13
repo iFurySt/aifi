@@ -23,7 +23,6 @@
   --positive: #217a54;
   --positive-soft: #edf6f0;
   --negative: #b34c47;
-  --focus: #608bce;
   --overlay: rgb(0 0 0 / 22%);
   --mint: #edf4ee;
   --mint-text: #567b61;
@@ -51,7 +50,6 @@
   --positive: #83cca7;
   --positive-soft: #263a2f;
   --negative: #ec9c97;
-  --focus: #98b6ea;
   --overlay: rgb(0 0 0 / 48%);
   --mint: #2c3b30;
   --mint-text: #96bba0;
@@ -105,9 +103,9 @@ a {
   color: var(--text);
   text-decoration: none;
 }
+:focus,
 :focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 3px;
+  outline: none;
 }
 input,
 textarea {
@@ -221,6 +219,7 @@ svg {
   color: var(--muted);
 }
 .rail-button:hover,
+.rail-button:focus-visible,
 .rail-button.selected {
   background: color-mix(in srgb, var(--text) 6%, transparent);
   color: var(--text);
@@ -245,9 +244,6 @@ svg {
 .profile-trigger:focus-visible,
 .profile-trigger[data-state="open"] {
   background: color-mix(in srgb, var(--text) 6%, transparent);
-}
-.profile-trigger:focus-visible {
-  outline: none;
 }
 .profile-avatar {
   display: grid;
@@ -405,7 +401,9 @@ nav {
   color: var(--secondary);
 }
 .nav-link:hover,
-.recent-link:hover {
+.nav-link:focus-visible,
+.recent-link:hover,
+.recent-link:focus-visible {
   background: var(--surface-muted);
 }
 .nav-link.selected {
@@ -481,7 +479,8 @@ nav {
   border-radius: 6px;
   padding: 2px 7px;
 }
-.demo-badge:hover {
+.demo-badge:hover,
+.demo-badge:focus-visible {
   background: var(--surface-muted);
   color: var(--text);
 }
@@ -494,7 +493,8 @@ nav {
   padding: 6px 8px;
   border-radius: 6px;
 }
-.search-trigger:hover {
+.search-trigger:hover,
+.search-trigger:focus-visible {
   background: var(--surface-muted);
 }
 kbd {
@@ -516,7 +516,8 @@ kbd {
   background: transparent;
   border-radius: 8px;
 }
-.icon-button:hover {
+.icon-button:hover,
+.icon-button:focus-visible {
   color: var(--text);
   background: var(--surface-muted);
 }
@@ -551,7 +552,8 @@ kbd {
   color: var(--on-primary);
   background: var(--primary);
 }
-.button-primary:hover {
+.button-primary:hover,
+.button-primary:focus-visible {
   opacity: 0.86;
 }
 .button-secondary {
@@ -559,7 +561,9 @@ kbd {
   border-color: var(--border);
 }
 .button-secondary:hover,
-.button-ghost:hover {
+.button-secondary:focus-visible,
+.button-ghost:hover,
+.button-ghost:focus-visible {
   background: var(--surface-muted);
 }
 .button-ghost {
@@ -654,7 +658,8 @@ kbd {
   color: var(--secondary);
   font-size: 11px;
 }
-.template-chips button:hover {
+.template-chips button:hover,
+.template-chips button:focus-visible {
   background: var(--surface-muted);
   color: var(--text);
 }
@@ -710,7 +715,8 @@ kbd {
   min-width: 0;
   overflow: hidden;
 }
-.agent-card:hover {
+.agent-card:hover,
+.agent-card:focus-within {
   border-color: color-mix(in srgb, var(--text) 18%, var(--border));
 }
 .agent-card-top,
@@ -816,7 +822,8 @@ kbd {
   align-items: center;
   gap: 5px;
 }
-.agent-card-footer button:hover {
+.agent-card-footer button:hover,
+.agent-card-footer button:focus-visible {
   color: var(--text);
 }
 .updates-section {
@@ -846,7 +853,8 @@ kbd {
 .update-row:last-child {
   border: none;
 }
-.update-row:hover {
+.update-row:hover,
+.update-row:focus-visible {
   background: var(--surface-muted);
 }
 .update-icon {
@@ -1111,7 +1119,8 @@ kbd {
   font-weight: 500;
   margin-top: 20px;
 }
-.text-link:hover {
+.text-link:hover,
+.text-link:focus-visible {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1127,7 +1136,8 @@ kbd {
   padding: 22px;
   background: var(--surface);
 }
-.library-card:hover {
+.library-card:hover,
+.library-card:focus-visible {
   border-color: color-mix(in srgb, var(--text) 20%, var(--border));
 }
 .library-card-top {
@@ -1306,7 +1316,8 @@ kbd {
   border: 1px solid var(--border);
   border-radius: 14px;
 }
-.research-starters button:hover {
+.research-starters button:hover,
+.research-starters button:focus-visible {
   background: var(--surface-muted);
 }
 .research-starters svg {
@@ -1533,7 +1544,8 @@ kbd {
   border-radius: 8px;
   text-align: left;
 }
-.search-results button:hover {
+.search-results button:hover,
+.search-results button:focus-visible {
   background: var(--surface-muted);
 }
 .search-results button span {
@@ -1895,4 +1907,20 @@ kbd {
   .agent-card-footer {
     padding: 6px 0;
   }
+}
+
+/* Neutral keyboard feedback; focus navigation and restoration remain enabled. */
+.search-field:focus-within,
+.text-input:focus-visible,
+.theme-option:focus-visible {
+  border-color: color-mix(in srgb, var(--text) 30%, var(--border));
+}
+.company-cell:focus-visible,
+.cadence-control select:focus-visible {
+  background: var(--surface-muted);
+}
+.segmented-control button:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

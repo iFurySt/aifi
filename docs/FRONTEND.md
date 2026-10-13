@@ -114,9 +114,11 @@ opens the shared Radix workspace menu for Settings and theme switching. Below
 keyboard selection, Escape/focus return, outside dismissal, popup viewport bounds,
 and settings access with the sidebar collapsed as well as on mobile.
 
-The avatar's keyboard focus uses its neutral background instead of the global
-blue outline. Escape still returns focus to the trigger, allowing immediate
-keyboard reopening; other controls keep their standard focus indicator.
+Keyboard focus across the renderer and stock prototype uses neutral backgrounds,
+text/underlines, and form borders instead of outlines. The shared CSS suppresses
+browser focus outlines; no blue focus token/ring remains. Tab navigation and
+Escape focus return stay enabled. Do not blur controls or intercept Tab to hide
+focus styling.
 
 ## Stock Data Design Preview
 

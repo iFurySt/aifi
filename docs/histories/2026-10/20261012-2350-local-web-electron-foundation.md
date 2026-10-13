@@ -138,3 +138,19 @@ primitives. Reserve Go/Cobra until an actual host capability requires it.
   confirmed desktop/mobile Escape closes the menu, restores keyboard focus with
   no outline, retains neutral feedback, and allows reopening; Search retains
   its standard keyboard focus ring.
+
+### Shared Focus Styling Refinement (2026-10-13)
+
+> Remove the blue frames reached by Esc then Tab throughout the app and stock
+> prototype, not just the avatar.
+
+- Found the blue outline in project-authored global focus-visible CSS, including
+  a separately styled standalone prototype; it was not supplied by Radix.
+- Removed the blue focus tokens/outlines in both surfaces. Keyboard focus uses
+  existing neutral hover styles, text/underlines, and form borders.
+- Preserved Tab/Shift+Tab, menu/tab selection, input editing, and Escape focus
+  restoration. Updated design/frontend/prototype guidance to prevent recurrence.
+- Validation: CI (nine tests and both builds) and macOS Electron smoke passed.
+  Chrome Default via OBU swept visible focusable controls across six app pages
+  and four prototype tabs with no outlines. Esc then Tab, focus restoration,
+  mobile layouts, and primary-button contrast passed; reviewed ticker/tab visuals.

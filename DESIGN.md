@@ -50,7 +50,6 @@ third product's branding. Values below are AIFi choices unless marked observed.
 | positive | #217A54 | #83CCA7 | Positive movement and active status |
 | positive-soft | #EDF6F0 | #263A2F | Positive badge background |
 | negative | #B34C47 | #EC9C97 | Negative movement |
-| focus | #608BCE | #98B6EA | Keyboard focus only |
 
 No decorative gradients, blue navigation rails, or colored page backgrounds.
 Use green and red for financial direction or explicit states, paired with text.
@@ -83,8 +82,9 @@ Chart colors are semantic; they do not indicate recommendations.
 
 Primary: dark pill, 36–40px high, 16px horizontal padding. Secondary: transparent
 or surface fill, 1px border, same height. Icon buttons: 32–36px square, 8px radius,
-muted text, named accessible label. Hover uses surface-muted; focus uses a visible
-2px focus ring. Disabled buttons keep a clear disabled appearance.
+muted text, named accessible label. Hover uses surface-muted; keyboard focus uses
+neutral hover-like feedback with no outline. Disabled buttons keep a clear
+disabled appearance.
 
 ### Cards & Containers
 
@@ -170,8 +170,10 @@ avatar opens a 264px popup with workspace identity, Settings, and theme switchin
 Use a 40px trigger, 16px popup radius, and 40px menu rows. At mobile widths move
 the same avatar menu into the page toolbar; avoid duplicating sidebar footers.
 Menus support keyboard navigation, Escape, outside dismissal, and focus return.
-The avatar uses a neutral background for keyboard focus, with no blue outline
-after Escape; other controls keep their standard focus ring.
+All controls suppress browser/default focus outlines. Keyboard focus uses the
+existing neutral hover background, text, underline, or form-border treatment.
+Keep Tab navigation, focused inputs, menu selection, and Escape focus return.
+Never add blue outlines or ring utilities to individual components.
 
 ## 6. Depth & Elevation
 

@@ -23,3 +23,6 @@ Design: [stock page](../../design-docs/stock-research-page.md),
 [root DESIGN.md](../../../DESIGN.md).
 
 ![Stock research sample-data concept](overview.png)
+
+Keyboard focus follows the shared neutral styling: no outlines, with background/
+text/underline feedback and working Tab/Escape navigation.
