@@ -5,23 +5,9 @@ import { useRef } from "react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 export function Logo({ small = false }: { small?: boolean }) {
   return (
-    <span className="brand">
-      <svg
-        width={small ? 24 : 29}
-        height={small ? 24 : 29}
-        viewBox="0 0 32 32"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M5 25 15 6a1.1 1.1 0 0 1 2 0l10 19M9 18h14M12 25l4-7 4 7"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span>aifi</span>
+    <span className={`brand${small ? " brand-small" : ""}`}>
+      <i className="brand-mark" aria-hidden="true" />
+      <span>AIFi</span>
     </span>
   );
 }

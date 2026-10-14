@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-14 | Branding | New three-part Logo across the workspace and AIFi desktop identity. | Added reusable color/background assets, theme-aware marks, browser icons and a named local macOS runtime. |
 | 2026-10-14 | Company logos | Prefer reviewed company images, including shared logos for warrants/units, while retaining the existing provider fallback. | Added bundled catalog metadata, daily background checks, checksum validation and source-aware device caching. |
 | 2026-10-14 | Stock browsing | Load more stocks by scrolling and see available company logos. | Removed page controls, clarified Nasdaq Trader source coverage, and added lazy device-cached PNG avatars with letter fallback. |
 | 2026-10-13 | Stock source menu | View the active directory from Stocks without a footer label. | Added a heading dropdown with Nasdaq directory selected; desktop/mobile share the same menu. |

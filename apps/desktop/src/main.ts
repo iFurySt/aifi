@@ -3,7 +3,14 @@ import {
   dataMethods,
   type DataMethod,
 } from "../../../packages/core/src/data-service";
-import { app, BrowserWindow, ipcMain, session } from "electron";
+import {
+  app,
+  BrowserWindow,
+  ipcMain,
+  session,
+  Menu,
+  nativeImage,
+} from "electron";
 import { join, sep, basename } from "node:path";
 import {
   mkdirSync,
@@ -48,6 +55,7 @@ app.on("before-quit", (event) => {
 async function createWindow() {
   const window = new BrowserWindow({
     title: "AIFi",
+    icon: join(__dirname, "brand/app-icon.png"),
     width: 1360,
     height: 1000,
     minWidth: 760,
@@ -137,7 +145,12 @@ async function createWindow() {
       location.hash = '/settings/sync';
       await waitFor(() => !!document.querySelector('.settings-content') && document.querySelector('[aria-label="Directory interval hours"]')?.value === '6');
       const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 5;
-      return { runtime, directoryReads, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
+      const brand = document.querySelector('.brand-mark');
+      const maskImage = brand && getComputedStyle(brand).maskImage;
+      const maskURL = maskImage?.startsWith('url(') ? maskImage.slice(4, -1).replaceAll('"', '').replaceAll("'", '') : null;
+      const brandLoaded = maskURL ? await new Promise(resolve => { const image = new Image(); image.onload = () => resolve(image.naturalWidth > 0); image.onerror = () => resolve(false); image.src = maskURL; }) : false;
+      const branding = document.title === 'AIFi' && !!brand && brandLoaded && brand.getBoundingClientRect().width > 0;
+      return { runtime, branding, directoryReads, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
         rendered: !!document.querySelector('.settings-content'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
@@ -147,6 +160,7 @@ async function createWindow() {
     if (
       result.runtime?.kind !== "desktop" ||
       !result.isolated ||
+      !result.branding ||
       !result.navigation ||
       !result.dataService ||
       !result.directoryReads ||
@@ -200,6 +214,41 @@ const smokeTimeout = smoke
 void app
   .whenReady()
   .then(async () => {
+    const iconPath = join(__dirname, "brand/app-icon.png");
+    const brandIcon = nativeImage.createFromPath(iconPath);
+    if (brandIcon.isEmpty()) throw Error("AIFi app icon is unavailable.");
+    app.dock?.setIcon(brandIcon);
+    app.setAboutPanelOptions({
+      applicationName: "AIFi",
+      applicationVersion: app.getVersion(),
+      iconPath,
+    });
+    Menu.setApplicationMenu(
+      Menu.buildFromTemplate([
+        ...(process.platform === "darwin"
+          ? [
+              {
+                label: "AIFi",
+                submenu: [
+                  { role: "about" as const },
+                  { type: "separator" as const },
+                  { role: "services" as const },
+                  { type: "separator" as const },
+                  { role: "hide" as const },
+                  { role: "hideOthers" as const },
+                  { role: "unhide" as const },
+                  { type: "separator" as const },
+                  { role: "quit" as const },
+                ],
+              },
+            ]
+          : []),
+        { role: "fileMenu" },
+        { role: "editMenu" },
+        { role: "viewMenu" },
+        { role: "windowMenu" },
+      ]),
+    );
     session.defaultSession.setPermissionRequestHandler(
       (_contents, _permission, callback) => callback(false),
     );

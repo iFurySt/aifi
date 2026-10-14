@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node ../../scripts/build-desktop.mjs",
     "dev": "node ../../scripts/dev-desktop.mjs",
-    "start": "electron .",
-    "smoke": "electron . --smoke"
-  }
+    "start": "node ../../scripts/start-desktop.mjs",
+    "smoke": "node ../../scripts/start-desktop.mjs --smoke"
+  },
+  "productName": "AIFi"
 }

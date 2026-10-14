@@ -5,7 +5,9 @@
 Web starts on the fixed loopback origin 127.0.0.1:5173. Desktop development owns
 its Vite process; a conflicting port causes startup to fail rather than silently
 choosing another origin. Production desktop loads bundled assets without a server.
-The first desktop launch downloads Electron if the binary is not cached.
+The first desktop launch downloads Electron if the binary is not cached. On
+macOS, a cached local AIFi-named runtime is prepared from that pinned distribution,
+with an icon and ad-hoc signature; source dependencies are left pristine.
 
 App-owned Go now schedules directory checks/downloads while the host runs.
 Electron starts a private child; local Web dev/preview starts an equivalent child.

@@ -26,6 +26,12 @@ development, not both on that port. Desktop development starts and owns Vite.
 pnpm desktop loads the production renderer after pnpm build. The first desktop
 launch downloads Electron if needed, as described in the
 [official installation guide](https://www.electronjs.org/docs/latest/tutorial/installation).
+On macOS, the launcher copies the pinned runtime into the ignored
+`apps/desktop/dist/AIFi.app`, gives it the AIFi name/icon, and applies a local
+ad-hoc signature while preserving runtime flags/entitlements. Its local entry loads the
+checkout's desktop code; this is a development app, not a portable
+installer. Package-manager Electron files remain unchanged. Other hosts launch
+the pinned runtime directly and receive the shared window icon/name.
 No environment variables are required. App launch builds/starts the Go service;
 AIFI_DATA_DIR optionally chooses its local SQLite/vault directory. The desktop launcher sets AIFI_DEV_URL
 internally to the one allowed development origin; production leaves it unset.
@@ -77,6 +83,7 @@ After pnpm build, pnpm smoke:desktop launches the actual Electron app with a
 throwaway profile, checks the bundled renderer and metadata bridge, confirms
 renderer Node access is absent, navigates to Watchlist, saves a theme locally,
 and returns to Stocks. It checks all six stock tabs and a dataset placeholder.
+It also decodes the local brand mask and checks the AIFi document title.
 It also checks the framed desktop toolbar, sidebar collapse, back/forward
 bounds, and forward-history invalidation after a new route. It exits with a
 nonzero status on failure or timeout. Evidence is written to
@@ -184,3 +191,12 @@ header request local host PNGs; unavailable images use letters. White transparen
 marks get contrast on light surfaces. Directory reads never wait for logo HTTP
 requests. Public asset source/cache limits are documented in
 [stock logos](design-docs/stock-logos.md).
+
+## Brand Identity
+
+The selected three-part symbol and AIFi wordmark are shared by the rail and chat
+identity. One compact alpha mask inherits the theme color, with 32px rail and
+24px compact marks. Browser icons and native icons use the dedicated dark tile.
+See [brand assets/provenance](../packages/ui/src/assets/brand/README.md) and
+[identity boundaries](design-docs/brand-identity.md). No remote assets or fonts
+are required. Name/icon changes preserve the existing app name and data paths.

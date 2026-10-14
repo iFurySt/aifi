@@ -1,14 +1,13 @@
 import { spawn } from "node:child_process";
-import { createRequire } from "node:module";
+import { desktopRuntime } from "./desktop-runtime.mjs";
 import { setTimeout as delay } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const require = createRequire(import.meta.url);
 await import("./build-desktop.mjs");
 // Resolve/download Electron before starting a server we would otherwise orphan.
-const electronPath = require("electron");
+const electronPath = desktopRuntime();
 // Spawn Vite directly so this process owns the server on all supported hosts.
 const web = spawn(
   process.execPath,

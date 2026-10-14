@@ -379,6 +379,18 @@ svg {
   gap: 8px;
   color: var(--text);
 }
+.brand-mark {
+  display: inline-block;
+  flex: none;
+  background-color: currentColor;
+  width: 29px;
+  height: 29px;
+  mask: url("./assets/brand/symbol-mask.png") center / contain no-repeat;
+}
+.brand-small .brand-mark {
+  width: 24px;
+  height: 24px;
+}
 .brand > span {
   font-size: 23px;
   letter-spacing: -0.8px;
@@ -1934,6 +1946,10 @@ kbd {
   display: grid;
   place-items: center;
   margin-bottom: 12px;
+}
+.rail-brand .brand-mark {
+  width: 32px;
+  height: 32px;
 }
 .rail-brand .brand > span {
   display: none;

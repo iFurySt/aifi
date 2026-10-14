@@ -108,8 +108,10 @@ Watchlist, Portfolio, and Library live only in that single column; Settings
 lives in the avatar popup. Stocks is the starting route. The inner sidebar
 contains searchable stock rows with ticker/security name and exchange label, never a second
 app menu. A visible toolbar control collapses/restores it. Keep the avatar at
-the rail bottom. Use a small wordmark and original SVG symbol; do not reuse
-reference logos.
+the rail bottom. Use the selected original three-part symbol and the exact wordmark AIFi. The
+shared alpha mask inherits the theme foreground; rail marks are 32px, compact
+marks 24px. Use the dark rounded tile for native/browser app icons. Do not reuse
+reference product logos. See [brand assets](packages/ui/src/assets/brand/README.md).
 
 ### Badges / Tags
 
