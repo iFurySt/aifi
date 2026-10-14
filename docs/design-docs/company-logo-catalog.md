@@ -1,6 +1,11 @@
 # Reviewed Company Logo Catalog
 
-Status: proposal, 2026-10-14. No new remote catalog or runtime adapter is deployed.
+Status: public catalog established, 2026-10-14. AIFi runtime integration remains pending.
+
+Repository: [ifuryst/company-logo-catalog](https://github.com/ifuryst/company-logo-catalog).
+The initial catalog has 14 companies, 31 securities, 37 exact symbol/alias keys,
+eight verified logo sources and six candidate sources withheld by its resolver.
+It publishes URL metadata, evidence and checksums; no third-party image pack is bundled.
 
 ## Decision Direction
 
@@ -8,16 +13,17 @@ Use a reviewed company/issuer catalog to supplement automatic providers. A Gist
 is suitable for a small JSON URL/alias list. Prefer a regular Git repository for
 an image collection: contribution PRs, per-entry history, source metadata,
 release versions and individual asset notices are easier to maintain together.
-Start under AIFi if desired; extract to an independent public repository when
-other projects need it. Repository creation/publication is a separate decision.
+The user authorized a public independent repository; the catalog is now kept
+there. Use versioned catalog releases as the future integration boundary.
 
 ## Suggested Shape
 
 ```text
-manifest.json               # catalog version and company records
-symbols.json                # market + symbol → issuer id
-assets/<issuer-id>/logo.png  # optional, only for reviewed redistribution
-sources/<issuer-id>.json    # origin, evidence, license/usage notes, checksum
+data/companies/<id>.json    # editable company, security and logo source records
+catalog.json                # generated companies + exact market:symbol index
+schemas/company.schema.json # record format
+scripts/catalog.py          # validate, build, resolve, summary
+assets/README.md            # future image-file contribution policy
 ```
 
 Example issuer mapping supported by the Abony SEC filing:
@@ -72,8 +78,9 @@ image download is needed.
 
 ## Scope To Implement Later
 
-- Reviewed catalog schema/versioning, local overrides and resolver order.
-- Correct issuer/security mappings and validity dates.
+- AIFi adapter for the public catalog, local overrides and resolver order.
+- Expand reviewed issuer/security mappings and image checks; schema/versioning
+  and the offline catalog resolver are implemented in the public repository.
 - Provider settings, retrieval diagnostics and retries for queue/network failures.
 - Asset contribution validation and versioned delivery.
 

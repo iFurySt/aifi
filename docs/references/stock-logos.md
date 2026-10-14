@@ -52,3 +52,7 @@ The [2026-10-14 coverage audit](company-logo-coverage-audit.md) compares all cur
 candidate symbols with three GitHub collections, tests a bounded FMP sample and
 records incorrect/missing mappings. The [catalog proposal](../design-docs/company-logo-catalog.md)
 explains reviewed aliases, URL lists, optional images and Gist/repository choices.
+
+Public follow-up: [company-logo-catalog](https://github.com/ifuryst/company-logo-catalog)
+now holds the first reviewed batch, exact issuer aliases and validation tooling.
+AIFi still uses its FMP adapter; no automatic remote catalog reads are implemented.
