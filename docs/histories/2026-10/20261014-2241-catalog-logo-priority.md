@@ -41,6 +41,8 @@ issuer identities from suffixes or expand into bulk image acquisition.
   AACOW, PCG$X, QRED.R and TREO; AACG used the original FMP source.
 - Actual Electron review in the isolated checkout confirmed shared Abony logos
   for AACO/AACOU/AACOW and the official Tactical Resources logo for TREO.
+- Main was rebuilt and the native app restarted from the primary checkout; the
+  delivered app remains open with the AACO filter and all three reviewed logos.
 
 ### Files Modified
 

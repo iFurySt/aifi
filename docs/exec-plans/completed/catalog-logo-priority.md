@@ -26,7 +26,7 @@ choices, transient network failures, and excessive cumulative fallback latency.
 - [x] Catalog parser/cache/refresh and pinned seed.
 - [x] Catalog-first image retrieval/fallback/migration with focused tests.
 - [x] Checks, native smoke/visual validation and documentation.
-- [ ] Commit/push staged changes; main build and native app restart.
+- [x] Commit/push staged changes; main build and native app restart.
 
 ## Validation
 
@@ -47,3 +47,10 @@ and native screenshots; normal isolated offline smoke remains network-free.
   and TREO displays the official mark. Old missing caches no longer block aliases.
 - Real image latency was 9–12 seconds in this environment. Removed an overly
   short catalog attempt cap; the original 15-second total lookup budget remains.
+
+## Delivery
+
+Implementation committed and pushed; main was fast-forwarded and rebuilt. The
+native app was restarted from the primary checkout and left open with the AACO
+filter, showing identical reviewed logos for AACO, AACOU and AACOW. QA artifacts
+were preserved in the primary checkout's ignored directory before worktree cleanup.
