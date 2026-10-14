@@ -32,9 +32,10 @@ schedule downloads. Configuration/sync remains a separate existing capability.
   Exact symbol matches lead results; remaining rows use deterministic source
   symbol/source/exchange ordering. Company form submit resolves exact symbols
   first, then the first name-search result. The datalist permits explicit choice.
-- Stocks heading opens a source selector; Nasdaq directory is the only current
+- Stocks heading opens a source selector; Nasdaq Trader is the only current
   option and is checked. No footer attribution label or unavailable source choice.
-- Sidebar reads 50 rows per page; company suggestions use 20, workspace search 12.
+- Sidebar loads 50 rows initially and appends batches when its bottom sentinel
+  enters the scroll viewport; company suggestions use 20, workspace search 12.
   Counts reflect the filtered candidate scope, not whole-market common-stock coverage.
 - ETFs/test issues are excluded. Type remains unknown, including warrants,
   preferred securities, units or ADRs until explicit enrichment arrives.
@@ -51,7 +52,9 @@ schedule downloads. Configuration/sync remains a separate existing capability.
 
 Readers debounce search by 180ms, discard superseded responses, and refresh every
 60 seconds/on window focus while mounted to discover background imports. Query
-changes reset paging. Refresh errors retain the same query's cached real rows and
+changes reset the feed. One in-flight batch per feed prevents duplicate reads;
+changed snapshot IDs rebase rather than mixing versions. Unchanged background
+refreshes preserve all loaded rows. Refresh errors retain the same query's cached real rows and
 show Retry; new failed queries never substitute sample companies. Empty imports
 and unmatched searches have distinct short messages. Native offline smoke checks
 that the empty store cannot show the former five-symbol fixture list.

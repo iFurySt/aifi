@@ -4,7 +4,9 @@ import {
   useCallback,
   useEffect,
   useState,
+  useRef,
 } from "react";
+import { DirectoryFeed, emptyDirectoryFeed } from "@aifi/core";
 import type {
   StockDirectoryRepository,
   DirectoryPage,
@@ -122,4 +124,34 @@ export function directoryExchange(entry: { exchangeCode: string }) {
       } as Record<string, string>
     )[entry.exchangeCode] ?? entry.exchangeCode
   );
+}
+
+export function useDirectoryFeed(query: string) {
+  const repository = useStockDirectory();
+  const [state, setState] = useState(() => emptyDirectoryFeed());
+  const feed = useRef<DirectoryFeed | null>(null);
+  useEffect(() => {
+    const current = new DirectoryFeed(repository, setState);
+    feed.current = current;
+    const timer = setTimeout(() => void current.reset(query), 180);
+    const interval = setInterval(() => void current.refresh(), 60000);
+    const focus = () => void current.refresh();
+    window.addEventListener("focus", focus);
+    return () => {
+      current.dispose();
+      clearTimeout(timer);
+      clearInterval(interval);
+      window.removeEventListener("focus", focus);
+      feed.current = null;
+    };
+  }, [repository, query]);
+  const loadMore = useCallback(() => void feed.current?.loadMore(), []);
+  const retry = useCallback(() => void feed.current?.retry(), []);
+  return {
+    ...(state.query === query.trim()
+      ? state
+      : emptyDirectoryFeed(query.trim())),
+    loadMore,
+    retry,
+  };
 }

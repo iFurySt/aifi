@@ -2797,25 +2797,6 @@ kbd {
   }
 }
 
-.stock-list-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 8px 4px;
-  color: var(--muted);
-}
-.stock-list-pagination button {
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  width: 28px;
-  height: 28px;
-}
-.stock-list-pagination button:hover:not(:disabled),
-.stock-list-pagination button:focus-visible {
-  background: var(--surface-muted);
-}
 .stock-company-header > div {
   min-width: 0;
 }
@@ -2839,7 +2820,7 @@ kbd {
 .stock-list-row {
   min-width: 0;
 }
-/* Keep directory pagination reachable when the mobile drawer lists a full page. */
+/* Keep the directory scroll area contained in the mobile drawer. */
 .dialog-content.detail-sheet:has(.stock-sidebar) {
   display: flex;
   flex-direction: column;
@@ -2891,4 +2872,8 @@ kbd {
 .stock-source-option [data-state="checked"] {
   display: grid;
   place-items: center;
+}
+
+.stock-list-sentinel {
+  height: 1px;
 }

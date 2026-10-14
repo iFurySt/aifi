@@ -1,0 +1,35 @@
+# Stock Scrolling And Logos
+
+## Goal
+
+Replace Previous/Next controls with incremental directory scrolling, clarify that
+Nasdaq Trader is the provider of US listings, and determine usable company logos.
+
+## Scope
+
+- Shared feed controller, bounded read port, debounced search and stale-response guards.
+- Snapshot changes rebase the list; failed next pages retain existing rows and retry.
+- Visible company logos when a compatible source is available, with letter fallback.
+- No pricing/fundamental data changes or fake common-stock/identity inference.
+
+## Risks And Decisions
+
+- Offset pages must share one snapshot; restart on changed snapshot IDs.
+- Logo sources can require keys, attribution or prohibit caching; verify the actual
+  current source rather than copying an old public endpoint into the renderer.
+- A logo is decorative, not proof of corporate identity or financial data freshness.
+
+## Milestones
+
+- [x] Feed and source name, regression tests.
+- [ ] Logo choice and implementation/research outcome.
+- [ ] Chrome/Electron validation, documentation, staged commits and main preview.
+
+## Validation
+
+Injected repository tests for concurrent paging, races, snapshot changes, error/retry,
+empty/end behavior; make ci and native smoke; Chrome desktop/mobile scrolling.
+
+- 2026-10-14: Feed slice typechecks; 24 TypeScript tests pass. Logos: Nasdaq
+  files have no images; FMP public AAPL/MSFT/KO PNG assets succeed without a key,
+  missing symbol is 404. Older Parqet/Elbstream API probes return 403 here.

@@ -137,8 +137,8 @@ their own content structure. Unsupported datasets have relevant empty
 tables/metrics. Filings lives inside Financials. Unknown tickers have no
 invented quotes.
 
-The Stocks heading opens a source dropdown with Nasdaq directory selected; it
-is currently the sole source. The sidebar reads its cached candidate directory in pages of 50. Ticker
+The Stocks heading opens a source dropdown with Nasdaq Trader selected; it
+is currently the sole source. The sidebar reads its cached candidate directory in batches of 50, loading more on scroll near the bottom. Ticker
 and security-name search runs against SQLite, not a fixed fixture list. The
 company header and workspace search share these source-backed reads. Raw exchange
 codes receive display labels without inventing exchange MIC or company identity.

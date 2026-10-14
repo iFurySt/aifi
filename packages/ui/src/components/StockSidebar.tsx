@@ -1,24 +1,35 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { useState } from "react";
-import {
-  Search,
-  ChevronLeft,
-  ChevronRight,
-  ChevronDown,
-  Check,
-} from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Search, ChevronDown, Check } from "lucide-react";
 import { validDirectorySymbol } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import {
-  useDirectorySearch,
+  useDirectoryFeed,
   directoryExchange,
 } from "../stock-directory-context";
 
 export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
   const { stockRoute, openStock, page } = useWorkspace();
   const [query, setQuery] = useState("");
-  const [offset, setOffset] = useState(0);
-  const { data, loading, error, retry } = useDirectorySearch(query, 50, offset);
+  const data = useDirectoryFeed(query);
+  const { loading, error, retry, loadMore } = data;
+  const list = useRef<HTMLElement>(null);
+  const sentinel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    list.current?.scrollTo({ top: 0 });
+  }, [query, data.snapshotId]);
+  useEffect(() => {
+    if (!list.current || !sentinel.current || loading || error || !data.hasMore)
+      return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) loadMore();
+      },
+      { root: list.current, rootMargin: "0px 0px 180px 0px" },
+    );
+    observer.observe(sentinel.current);
+    return () => observer.disconnect();
+  }, [data.items.length, data.hasMore, loading, error, loadMore]);
   return (
     <div className="sidebar-inner stock-sidebar">
       <div className="stock-sidebar-heading">
@@ -28,7 +39,7 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
               <button
                 className="stock-source-trigger"
                 aria-label="Stock directory source"
-                title="Nasdaq directory"
+                title="Nasdaq Trader · US listings"
               >
                 Stocks <ChevronDown size={14} aria-hidden="true" />
               </button>
@@ -46,7 +57,7 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
                     value="nasdaq"
                     className="dropdown-item stock-source-option"
                   >
-                    Nasdaq directory
+                    Nasdaq Trader
                     <DropdownMenu.ItemIndicator>
                       <Check size={15} aria-hidden="true" />
                     </DropdownMenu.ItemIndicator>
@@ -69,11 +80,15 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
           maxLength={80}
           onChange={(e) => {
             setQuery(e.target.value);
-            setOffset(0);
           }}
         />
       </label>
-      <nav className="stock-list" aria-label="Stock list" aria-busy={loading}>
+      <nav
+        ref={list}
+        className="stock-list"
+        aria-label="Stock list"
+        aria-busy={loading}
+      >
         {data.items.map((entry) => (
           <button
             key={entry.id}
@@ -99,9 +114,9 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
             </span>
           </button>
         ))}
-        {loading && !data.items.length && (
+        {loading && (
           <p className="sidebar-hint" role="status">
-            Loading stocks…
+            {data.items.length ? "Loading more…" : "Loading stocks…"}
           </p>
         )}
         {error && (
@@ -119,28 +134,12 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
               : "No directory yet. Sync in Settings."}
           </p>
         )}
+        <div
+          ref={sentinel}
+          className="stock-list-sentinel"
+          aria-hidden="true"
+        />
       </nav>
-      <div className="stock-list-pagination">
-        <button
-          aria-label="Previous stocks"
-          disabled={loading || offset === 0}
-          onClick={() => setOffset(Math.max(0, offset - 50))}
-        >
-          <ChevronLeft size={15} />
-        </button>
-        <small>
-          {data.items.length
-            ? `${offset + 1}–${offset + data.items.length}`
-            : "—"}
-        </small>
-        <button
-          aria-label="Next stocks"
-          disabled={loading || offset + data.items.length >= data.total}
-          onClick={() => setOffset(offset + 50)}
-        >
-          <ChevronRight size={15} />
-        </button>
-      </div>
     </div>
   );
 }
