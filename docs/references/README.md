@@ -38,3 +38,6 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 
 - [Company logo sources](stock-logos.md): directory limitations, keyless public
   asset probes, provider restrictions and the shipped presentation adapter.
+
+- [Company logo coverage audit](company-logo-coverage-audit.md): measured GitHub
+  filename coverage, current provider sample and reviewed catalog proposal.

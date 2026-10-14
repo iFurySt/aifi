@@ -38,9 +38,17 @@ future hosted product. Do not turn this into a bulk logo mirror.
 - [apistemic pricing](https://logos.apistemic.com/pricing): keyless domain/LinkedIn
   lookups with attribution, but the directory does not supply verified domains.
   Do not infer company domains from names just to obtain an avatar.
-- [NVSTly icons](https://github.com/nvstly/icons): broad community collection, but
-  repository availability is not a blanket redistribution license for brand assets.
+- [NVSTly icons](https://github.com/nvstly/icons): the ticker image pack has a
+  CC BY-NC-SA 4.0 license in ticker_icons/LICENSE. Current exact PNG filename
+  coverage is 3,458 of our 7,487 candidates; not a complete current issuer catalog.
 
 Logo availability and brand/ticker mappings can change. A decorative icon does
 not prove historical issuer identity or source freshness. Use letter fallback
 rather than inventing a company image or guessing aliases.
+
+## Coverage And Catalog Follow-Up
+
+The [2026-10-14 coverage audit](company-logo-coverage-audit.md) compares all current
+candidate symbols with three GitHub collections, tests a bounded FMP sample and
+records incorrect/missing mappings. The [catalog proposal](../design-docs/company-logo-catalog.md)
+explains reviewed aliases, URL lists, optional images and Gist/repository choices.
