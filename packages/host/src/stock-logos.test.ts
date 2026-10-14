@@ -10,6 +10,7 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { StockLogoCache, validLogoPNG } from "./stock-logos";
+const noCatalog = { sources: () => [], close: () => {} };
 const png = Buffer.from(
   "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=",
   "base64",
@@ -22,7 +23,7 @@ it("coalesces reads and persists only a bounded private PNG, including offline r
     const fetcher = vi
       .fn<typeof fetch>()
       .mockImplementation(async () => response());
-    const cache = new StockLogoCache(dir, false, fetcher);
+    const cache = new StockLogoCache(dir, false, fetcher, noCatalog);
     const [a, b] = await Promise.all([cache.get("AAPL"), cache.get("AAPL")]);
     expect(a?.dataUrl).toBe("data:image/png;base64," + png.toString("base64"));
     expect(a).toEqual(b);
@@ -34,12 +35,13 @@ it("coalesces reads and persists only a bounded private PNG, including offline r
     const file = join(
       dir,
       "stock-logos",
-      readdirSync(join(dir, "stock-logos"))[0]!,
+      "v2",
+      readdirSync(join(dir, "stock-logos", "v2"))[0]!,
     );
     expect(readFileSync(file)).toEqual(png);
     if (process.platform !== "win32")
       expect(statSync(file).mode & 0o777).toBe(0o600);
-    const offline = new StockLogoCache(dir, true, fetcher);
+    const offline = new StockLogoCache(dir, true, fetcher, noCatalog);
     expect((await offline.get("AAPL"))?.dataUrl).toBe(a?.dataUrl);
     expect(await offline.get("UNKNOWN")).toBeNull();
     expect(fetcher).toHaveBeenCalledTimes(1);
@@ -71,7 +73,7 @@ it("rejects invalid symbols, HTML/SVG, oversized bodies and absurd image dimensi
       .mockResolvedValueOnce(
         new Response("not a PNG", { headers: { "Content-Type": "image/png" } }),
       );
-    const cache = new StockLogoCache(dir, false, fetcher);
+    const cache = new StockLogoCache(dir, false, fetcher, noCatalog);
     await expect(cache.get("../../private")).rejects.toThrow();
     expect(fetcher).not.toHaveBeenCalled();
     expect(await cache.get("HTML")).toBeNull();
@@ -84,7 +86,7 @@ it("rejects invalid symbols, HTML/SVG, oversized bodies and absurd image dimensi
     expect(validLogoPNG(bomb)).toBe(false);
     expect(validLogoPNG(png)).toBe(true);
     expect(
-      readdirSync(join(dir, "stock-logos")).every((f) =>
+      readdirSync(join(dir, "stock-logos", "v2")).every((f) =>
         f.endsWith(".missing"),
       ),
     ).toBe(true);
@@ -105,7 +107,7 @@ it("bounds outbound requests to four and coalesces duplicate symbol requests", a
     return response();
   });
   try {
-    const cache = new StockLogoCache(dir, false, fetcher);
+    const cache = new StockLogoCache(dir, false, fetcher, noCatalog);
     const work = Promise.all(
       ["A", "B", "C", "D", "E", "F"].map((s) => cache.get(s)),
     );
@@ -137,13 +139,147 @@ it("shutdown aborts active logo work without leaving a negative cache", async ()
           );
         }),
     );
-    const cache = new StockLogoCache(dir, false, fetcher);
+    const cache = new StockLogoCache(dir, false, fetcher, noCatalog);
     const work = cache.get("AAPL");
     for (let i = 0; i < 10 && !fetcher.mock.calls.length; i++)
       await new Promise((r) => setTimeout(r, 1));
     cache.close();
     expect(await work).toBeNull();
     expect(readdirSync(dir)).toEqual([]);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+it("catalog aliases bypass an old raw-symbol failure and reuse verified issuer cache offline", async () => {
+  const { createHash } = await import("node:crypto");
+  const { mkdirSync, writeFileSync } = await import("node:fs");
+  const { fixturePNG, fixtureCatalog } = await import("./logo-fixtures");
+  const { parseLogoCatalog } = await import("./logo-catalog");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-logo-"));
+  try {
+    mkdirSync(join(dir, "stock-logos"));
+    writeFileSync(
+      join(
+        dir,
+        "stock-logos",
+        createHash("sha256").update("AACOW").digest("hex") + ".missing",
+      ),
+      "",
+    );
+    writeFileSync(
+      join(
+        dir,
+        "stock-logos",
+        createHash("sha256").update("AACO").digest("hex") + ".png",
+      ),
+      fixturePNG,
+    );
+    const parsed = parseLogoCatalog(fixtureCatalog());
+    const catalog = {
+      sources: (s: string) => parsed.mappings.get(s)?.logos ?? [],
+      close: () => {},
+    };
+    const fetcher = vi.fn<typeof fetch>();
+    const cache = new StockLogoCache(dir, true, fetcher, catalog);
+    expect((await cache.get("AACOW"))?.source).toContain(
+      "company-logo-catalog",
+    );
+    expect(fetcher).not.toHaveBeenCalled();
+    cache.close();
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+it("a raw positive cache cannot outrank a reviewed source and different aliases share one download", async () => {
+  const { createHash } = await import("node:crypto");
+  const { mkdirSync, writeFileSync } = await import("node:fs");
+  const { fixturePNG, fixtureCatalog } = await import("./logo-fixtures");
+  const { parseLogoCatalog } = await import("./logo-catalog");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-logo-"));
+  try {
+    mkdirSync(join(dir, "stock-logos"));
+    writeFileSync(
+      join(
+        dir,
+        "stock-logos",
+        createHash("sha256").update("AACOW").digest("hex") + ".png",
+      ),
+      png,
+    );
+    const parsed = parseLogoCatalog(fixtureCatalog());
+    const catalog = {
+      sources: (s: string) => parsed.mappings.get(s)?.logos ?? [],
+      close: () => {},
+    };
+    const fetcher = vi.fn<typeof fetch>().mockImplementation(async () => {
+      await new Promise((r) => setTimeout(r, 5));
+      return new Response(fixturePNG, {
+        headers: { "Content-Type": "image/png" },
+      });
+    });
+    const cache = new StockLogoCache(dir, false, fetcher, catalog);
+    const [a, b] = await Promise.all([cache.get("AACOW"), cache.get("AACOU")]);
+    expect(a?.dataUrl).toBe(
+      "data:image/png;base64," + fixturePNG.toString("base64"),
+    );
+    expect(a).toEqual(b);
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    expect(fetcher.mock.calls[0]?.[0]).toBe(
+      "https://financialmodelingprep.com/image-stock/AACO.png",
+    );
+    cache.close();
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+it("failed catalog source falls back to the original exact symbol, including cache and offline reuse", async () => {
+  const { fixtureCatalog } = await import("./logo-fixtures");
+  const { parseLogoCatalog } = await import("./logo-catalog");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-logo-"));
+  try {
+    const parsed = parseLogoCatalog(fixtureCatalog());
+    const catalog = {
+      sources: (s: string) => parsed.mappings.get(s)?.logos ?? [],
+      close: () => {},
+    };
+    const fetcher = vi
+      .fn<typeof fetch>()
+      .mockResolvedValueOnce(new Response("missing", { status: 404 }))
+      .mockResolvedValueOnce(response());
+    const cache = new StockLogoCache(dir, false, fetcher, catalog);
+    expect((await cache.get("AACOW"))?.source).toBe("fmp-public-image");
+    expect(fetcher.mock.calls.map((c) => c[0])).toEqual([
+      "https://financialmodelingprep.com/image-stock/AACO.png",
+      "https://financialmodelingprep.com/image-stock/AACOW.png",
+    ]);
+    expect((await cache.get("AACOW"))?.source).toBe("fmp-public-image");
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    const offline = new StockLogoCache(dir, true, fetcher, catalog);
+    expect((await offline.get("AACOW"))?.source).toBe("fmp-public-image");
+    cache.close();
+    offline.close();
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+it("changed catalog bytes are rejected before exact-symbol fallback", async () => {
+  const { fixtureCatalog } = await import("./logo-fixtures");
+  const { parseLogoCatalog } = await import("./logo-catalog");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-logo-"));
+  try {
+    const parsed = parseLogoCatalog(fixtureCatalog());
+    const catalog = {
+      sources: (s: string) => parsed.mappings.get(s)?.logos ?? [],
+      close: () => {},
+    };
+    const fetcher = vi
+      .fn<typeof fetch>()
+      .mockImplementation(async () => response());
+    const cache = new StockLogoCache(dir, false, fetcher, catalog);
+    expect((await cache.get("AACOW"))?.source).toBe("fmp-public-image");
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    cache.close();
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

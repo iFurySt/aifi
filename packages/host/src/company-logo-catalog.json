@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "0.1.0",
+  "updatedAt": "2026-10-14",
+  "companies": [
+    {
+      "id": "abony-acquisition-i",
+      "name": "Abony Acquisition Corp. I",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/2099906/000121390026018826/ea0277646-8k_abony1.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "AACO",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2099906/000121390026018826/ea0277646-8k_abony1.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AACOU",
+          "exchange": "NASDAQ",
+          "kind": "unit",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2099906/000121390026018826/ea0277646-8k_abony1.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AACOW",
+          "exchange": "NASDAQ",
+          "kind": "warrant",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2099906/000121390026018826/ea0277646-8k_abony1.htm"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/AACO.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://www.abonyacquisitioncorp.com/",
+          "redistribution": "not-granted",
+          "sha256": "894d3fff3328edb3cd9ef1498abbc7dbbdf538c4b56b0feaee419e2d21d054c3",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Reviewed ABONY wordmark identifies the company; reusable across this issuer's ordinary shares, units and warrants."
+        }
+      ],
+      "websiteUrl": "https://www.abonyacquisitioncorp.com/",
+      "cik": "0002099906"
+    },
+    {
+      "id": "advanced-micro-devices",
+      "name": "Advanced Micro Devices, Inc.",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://ir.amd.com/"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "AMD",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/AMD.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://ir.amd.com/",
+          "redistribution": "not-granted",
+          "sha256": "2c94246f0c6dd24e4136d603400d486def9be17696db53d7841533011b3a99c9",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Recognizable corporate mark reviewed visually; color/theme variant may differ from the latest brand guide."
+        }
+      ],
+      "websiteUrl": "https://ir.amd.com/"
+    },
+    {
+      "id": "alphabet",
+      "name": "Alphabet Inc.",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://abc.xyz/investor/"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "GOOGL",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "GOOG",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/GOOGL.png",
+          "source": "fmp-public-image",
+          "status": "candidate",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://abc.xyz/investor/",
+          "redistribution": "not-granted",
+          "sha256": "bd3b7de49841562702c9b4f18f221a2c318979e1380f1658064600081021e4fe",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Source serves the Google G mark, not the Alphabet wordmark. A deliberate issuer/operating-brand mapping review is required before promotion."
+        }
+      ],
+      "websiteUrl": "https://abc.xyz/investor/"
+    },
+    {
+      "id": "apogee-acquisition",
+      "name": "Apogee Acquisition Corp",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "AACP",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AACPU",
+          "exchange": "NASDAQ",
+          "kind": "unit",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AACPR",
+          "exchange": "NASDAQ",
+          "kind": "right",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AACPW",
+          "exchange": "NASDAQ",
+          "kind": "warrant",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/AACP.png",
+          "source": "fmp-public-image",
+          "status": "candidate",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm",
+          "redistribution": "not-granted",
+          "sha256": "6da1cb8052c7f1036779e1f6c00e80166cc8180453be0ebd3b229c34e0f0afec",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Blue A mark is available, but no issuer-specific brand reference was verified. Do not treat this monogram as an approved company logo."
+        }
+      ],
+      "cik": "0002102123"
+    },
+    {
+      "id": "apple",
+      "name": "Apple Inc.",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://investor.apple.com/"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "AAPL",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/AAPL.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://investor.apple.com/",
+          "redistribution": "not-granted",
+          "sha256": "41483c742e810831c12663ef2040d306f81440e15126f34b623dd08a09bbb63e",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Recognizable corporate mark reviewed visually; color/theme variant may differ from the latest brand guide."
+        }
+      ],
+      "websiteUrl": "https://investor.apple.com/"
+    },
+    {
+      "id": "arbor-realty-trust",
+      "name": "Arbor Realty Trust, Inc.",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1253986/000125398626000036/abr-20260331.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ABR",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1253986/000125398626000036/abr-20260331.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "ABR$D",
+          "exchange": "NYSE",
+          "kind": "preferred",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1253986/000125398626000036/abr-20260331.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ],
+          "aliases": [
+            "ABR-PD"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "ABR$E",
+          "exchange": "NYSE",
+          "kind": "preferred",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1253986/000125398626000036/abr-20260331.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ],
+          "aliases": [
+            "ABR-PE"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "ABR$F",
+          "exchange": "NYSE",
+          "kind": "preferred",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1253986/000125398626000036/abr-20260331.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ],
+          "aliases": [
+            "ABR-PF"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ABR.png",
+          "source": "fmp-public-image",
+          "status": "candidate",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://ir.arbor.com/",
+          "redistribution": "not-granted",
+          "sha256": "7936760e510db7dcd93d86b67660211a77a0fa18642f81a313edd2f7fe0fd835",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "White symbol requires comparison with current issuer artwork; use the verified security mapping independently of the image."
+        }
+      ],
+      "websiteUrl": "https://ir.arbor.com/",
+      "cik": "0001253986"
+    },
+    {
+      "id": "ares-acquisition-iii",
+      "name": "Ares Acquisition Corporation III",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/2128115/000110465926099241/tm2622817d1_8k.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "AAC",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2128115/000110465926099241/tm2622817d1_8k.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AAC.U",
+          "exchange": "NYSE",
+          "kind": "unit",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2128115/000110465926099241/tm2622817d1_8k.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "AAC.W",
+          "exchange": "NYSE",
+          "kind": "warrant",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2128115/000110465926099241/tm2622817d1_8k.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ],
+          "aliases": [
+            "AAC WS"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/AAC.png",
+          "source": "fmp-public-image",
+          "status": "candidate",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://www.ares.com/us/our-strategies/aac-iii",
+          "redistribution": "not-granted",
+          "sha256": "5649ab646617ce8d28cc910b098a38a9d89ada4a86ede8aa43c92ff32eedd450",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Ares sponsor-brand mark from a reused ticker. The current issuer uses Ares branding, but an issuer-specific visual check remains pending."
+        }
+      ],
+      "websiteUrl": "https://www.ares.com/us/our-strategies/aac-iii",
+      "cik": "0002128115"
+    },
+    {
+      "id": "averin-capital-acquisition",
+      "name": "Averin Capital Acquisition Corp.",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ACAA",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "ACAAU",
+          "exchange": "NASDAQ",
+          "kind": "unit",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "ACAAW",
+          "exchange": "NASDAQ",
+          "kind": "warrant",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ACAA.png",
+          "source": "fmp-public-image",
+          "status": "candidate",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm",
+          "redistribution": "not-granted",
+          "sha256": "ab077b16c04d9ed110d2aabc82e85ba209b21f7bc088fdc0439d41f29e1febb3",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Averin wordmark is available. Sponsor branding must be distinguished from issuer-specific approval before promotion."
+        }
+      ],
+      "cik": "0002096900"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft Corporation",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.microsoft.com/en-us/investor/default"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "MSFT",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/MSFT.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://www.microsoft.com/en-us/investor/default",
+          "redistribution": "not-granted",
+          "sha256": "5464732326598baca91f5aaa9b19ca9b8ced1655465a41a54f3424485be5e33a",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Recognizable corporate mark reviewed visually; color/theme variant may differ from the latest brand guide."
+        }
+      ],
+      "websiteUrl": "https://www.microsoft.com/en-us/investor/default"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA Corporation",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://investor.nvidia.com/"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "NVDA",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/NVDA.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://investor.nvidia.com/",
+          "redistribution": "not-granted",
+          "sha256": "65adfc123c82dd816d8bebeaded5d0bdd72a4a799d1c0e23d310eaf6e2c457e6",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Recognizable corporate mark reviewed visually; color/theme variant may differ from the latest brand guide."
+        }
+      ],
+      "websiteUrl": "https://investor.nvidia.com/"
+    },
+    {
+      "id": "pge-corporation",
+      "name": "PG&E Corporation",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/75488/000100498025000148/pcg-20250930.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "PCG",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/75488/000100498025000148/pcg-20250930.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "PCG$X",
+          "exchange": "NYSE",
+          "kind": "preferred",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/75488/000100498025000148/pcg-20250930.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/PCG.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://investor.pgecorp.com/",
+          "redistribution": "not-granted",
+          "sha256": "10d65deaf80028a8495e564489963fb5a203d9354f46cc219a7e62cdd3ee1232",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "PG&E blue/yellow mark, reviewed as issuer-identifying artwork shared by the corporate brand."
+        }
+      ],
+      "websiteUrl": "https://investor.pgecorp.com/",
+      "cik": "0001004980",
+      "notes": "PCG$X is PG&E Corporation mandatory convertible preferred stock. Other PCG preferred classes can be issued by its utility subsidiary and are intentionally not inferred."
+    },
+    {
+      "id": "quasaredge-acquisition",
+      "name": "QuasarEdge Acquisition Corporation",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/2085177/000182912626006503/quasaredgeacq_10q.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "QRED",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2085177/000182912626006503/quasaredgeacq_10q.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "QRED.U",
+          "exchange": "NYSE",
+          "kind": "unit",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2085177/000182912626006503/quasaredgeacq_10q.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ],
+          "aliases": [
+            "QRED U"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "QRED.R",
+          "exchange": "NYSE",
+          "kind": "right",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/2085177/000182912626006503/quasaredgeacq_10q.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ],
+          "aliases": [
+            "QRED RT"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/QRED.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://quasaredge.co/",
+          "redistribution": "not-granted",
+          "sha256": "2e729f43f08fc891f5f87ffda44b720b945b22c930dd448d1349aa8582578e1c",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "QUASAREDGE wordmark matches the current issuer name on its website. This is not the unrelated Qred lending brand."
+        }
+      ],
+      "websiteUrl": "https://quasaredge.co/",
+      "cik": "0002085177"
+    },
+    {
+      "id": "tactical-resources",
+      "name": "Tactical Resources Corp.",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://tacticalresources.com/tactical-resources-a-u-s-focused-rare-earth-elements-development-company-begins-trading-on-nasdaq-under-ticker-symbol-treo/"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "TREO",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://tacticalresources.com/tactical-resources-a-u-s-focused-rare-earth-elements-development-company-begins-trading-on-nasdaq-under-ticker-symbol-treo/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://tacticalresources.com/wp-content/uploads/2021/04/favicon-300x300.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://tacticalresources.com/",
+          "redistribution": "not-granted",
+          "sha256": "5b50c33e1058ab2da1b29c7ab2833dc061e790a9384b55b8ed2311e1938d8a9a",
+          "width": 300,
+          "height": 300,
+          "format": "png",
+          "notes": "Official site-linked square favicon; red target and white T mark. FMP TREO URL was 404 during the initial audit."
+        }
+      ],
+      "websiteUrl": "https://tacticalresources.com/"
+    },
+    {
+      "id": "wintrust-financial",
+      "name": "Wintrust Financial Corporation",
+      "reviewedAt": "2026-10-14",
+      "identityEvidenceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1015328/000110465925046769/tm2513736-3_424b5.htm"
+      ],
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "WTFC",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1015328/000110465925046769/tm2513736-3_424b5.htm"
+          ]
+        },
+        {
+          "market": "US",
+          "symbol": "WTFCN",
+          "exchange": "NASDAQ",
+          "kind": "depositary",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1015328/000110465925046769/tm2513736-3_424b5.htm"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/WTFC.png",
+          "source": "fmp-public-image",
+          "status": "candidate",
+          "checkedAt": "2026-10-14",
+          "referenceUrl": "https://ir.wintrust.com/",
+          "redistribution": "not-granted",
+          "sha256": "091d2afcc9d3033ed87684cb8165cc10c6700f80fe00a4d562a2f0fd4e5577db",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "White W mark is technically available; current issuer artwork comparison remains pending."
+        }
+      ],
+      "websiteUrl": "https://ir.wintrust.com/",
+      "cik": "0001015328"
+    }
+  ],
+  "symbols": {
+    "US:AAC": "ares-acquisition-iii",
+    "US:AAC WS": "ares-acquisition-iii",
+    "US:AAC.U": "ares-acquisition-iii",
+    "US:AAC.W": "ares-acquisition-iii",
+    "US:AACO": "abony-acquisition-i",
+    "US:AACOU": "abony-acquisition-i",
+    "US:AACOW": "abony-acquisition-i",
+    "US:AACP": "apogee-acquisition",
+    "US:AACPR": "apogee-acquisition",
+    "US:AACPU": "apogee-acquisition",
+    "US:AACPW": "apogee-acquisition",
+    "US:AAPL": "apple",
+    "US:ABR": "arbor-realty-trust",
+    "US:ABR$D": "arbor-realty-trust",
+    "US:ABR$E": "arbor-realty-trust",
+    "US:ABR$F": "arbor-realty-trust",
+    "US:ABR-PD": "arbor-realty-trust",
+    "US:ABR-PE": "arbor-realty-trust",
+    "US:ABR-PF": "arbor-realty-trust",
+    "US:ACAA": "averin-capital-acquisition",
+    "US:ACAAU": "averin-capital-acquisition",
+    "US:ACAAW": "averin-capital-acquisition",
+    "US:AMD": "advanced-micro-devices",
+    "US:GOOG": "alphabet",
+    "US:GOOGL": "alphabet",
+    "US:MSFT": "microsoft",
+    "US:NVDA": "nvidia",
+    "US:PCG": "pge-corporation",
+    "US:PCG$X": "pge-corporation",
+    "US:QRED": "quasaredge-acquisition",
+    "US:QRED RT": "quasaredge-acquisition",
+    "US:QRED U": "quasaredge-acquisition",
+    "US:QRED.R": "quasaredge-acquisition",
+    "US:QRED.U": "quasaredge-acquisition",
+    "US:TREO": "tactical-resources",
+    "US:WTFC": "wintrust-financial",
+    "US:WTFCN": "wintrust-financial"
+  }
+}

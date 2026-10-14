@@ -1,5 +1,3 @@
-import { Agent, get as httpsGet } from "node:https";
-import { Readable } from "node:stream";
 import { createHash, randomUUID } from "node:crypto";
 import {
   mkdirSync,
@@ -12,46 +10,9 @@ import {
 import { join } from "node:path";
 import { validDirectorySymbol } from "../../core/src/stock-directory.ts";
 import type { StockLogo } from "../../core/src/stock-logos.ts";
-// A scoped native HTTPS agent respects configured proxy env without changing
-// global fetch/HMR/session routing. Requests deliberately never follow redirects.
-const logoAgent = new Agent({
-  proxyEnv: process.env,
-  keepAlive: true,
-  maxSockets: 4,
-});
-const publicLogoFetch: typeof fetch = (input, options) =>
-  new Promise((resolve, reject) => {
-    const url = new URL(String(input));
-    if (
-      url.protocol !== "https:" ||
-      url.hostname !== "financialmodelingprep.com" ||
-      !url.pathname.startsWith("/image-stock/") ||
-      url.port ||
-      url.username ||
-      url.password
-    ) {
-      reject(Error("Invalid logo source."));
-      return;
-    }
-    const headers = Object.fromEntries(new Headers(options?.headers).entries());
-    const request = httpsGet(
-      url,
-      { agent: logoAgent, headers, signal: options?.signal ?? undefined },
-      (response) => {
-        const headers = new Headers();
-        for (const [key, value] of Object.entries(response.headers))
-          if (value !== undefined)
-            headers.set(key, Array.isArray(value) ? value.join(", ") : value);
-        resolve(
-          new Response(Readable.toWeb(response) as ReadableStream<Uint8Array>, {
-            status: response.statusCode || 502,
-            headers,
-          }),
-        );
-      },
-    );
-    request.on("error", reject);
-  });
+import { LogoCatalog, type LogoSource } from "./logo-catalog.ts";
+import { fetchPublicAsset, readPublicBytes } from "./public-assets.ts";
+
 const maxBytes = 256 * 1024;
 const week = 7 * 24 * 60 * 60 * 1000;
 const pngSignature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
@@ -67,31 +28,132 @@ export function validLogoPNG(bytes: Buffer) {
     height = bytes.readUInt32BE(20);
   return width > 0 && height > 0 && width <= 2048 && height <= 2048;
 }
-/** Public presentation assets only: fixed origin/path, private per-device PNG cache. */
+export interface LogoCatalogReader {
+  sources(symbol: string): LogoSource[];
+  close(): void;
+}
+interface CachedLogo {
+  logo: StockLogo;
+  fresh: boolean;
+}
+/** Catalog first, exact-symbol fallback; renderer receives private PNG data only. */
 export class StockLogoCache {
   private pending = new Map<string, Promise<StockLogo | null>>();
+  private assets = new Map<string, Promise<StockLogo | null>>();
   private active = 0;
   private shutdown = new AbortController();
-  close() {
-    this.shutdown.abort();
-  }
   private waiters: (() => void)[] = [];
   constructor(
     private dataDir: string,
     private offline = false,
-    private fetchAsset: typeof fetch = publicLogoFetch,
+    private fetchAsset: typeof fetch = fetchPublicAsset,
+    private catalog: LogoCatalogReader = new LogoCatalog(
+      dataDir,
+      offline,
+      fetchAsset,
+    ),
   ) {}
+  close() {
+    this.shutdown.abort();
+    this.catalog.close();
+  }
   get(symbol: string): Promise<StockLogo | null> {
     if (!validDirectorySymbol(symbol))
       return Promise.reject(Error("Invalid stock symbol."));
+    const sources: LogoSource[] = [
+      ...this.catalog.sources(symbol),
+      {
+        url: `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
+        source: "fmp-public-image",
+        legacySymbol: symbol,
+      },
+    ];
+    // The preferred source's cache is checked before backpressure. A raw-symbol
+    // positive/negative cache never overrides a new reviewed issuer mapping.
+    const preferred = this.cached(sources[0]!);
+    if (
+      preferred &&
+      (preferred.fresh || this.offline || this.shutdown.signal.aborted)
+    )
+      return Promise.resolve(preferred.logo);
     const pending = this.pending.get(symbol);
     if (pending) return pending;
     if (this.pending.size >= 16) return Promise.resolve(null);
-    const request = this.read(symbol).finally(() =>
+    const request = this.read(sources).finally(() =>
       this.pending.delete(symbol),
     );
     this.pending.set(symbol, request);
     return request;
+  }
+  private key(source: LogoSource) {
+    return createHash("sha256")
+      .update(source.url + "\n" + (source.expectedHash ?? "unreviewed"))
+      .digest("hex");
+  }
+  private paths(source: LogoSource) {
+    const base = join(this.dataDir, "stock-logos", "v2", this.key(source));
+    return { png: base + ".png", missing: base + ".missing" };
+  }
+  private valid(bytes: Buffer, source: LogoSource) {
+    return (
+      validLogoPNG(bytes) &&
+      (!source.expectedHash ||
+        (createHash("sha256").update(bytes).digest("hex") ===
+          source.expectedHash &&
+          bytes.readUInt32BE(16) === source.width &&
+          bytes.readUInt32BE(20) === source.height))
+    );
+  }
+  private cached(source: LogoSource): CachedLogo | null {
+    const paths = [this.paths(source).png];
+    if (source.legacySymbol)
+      paths.push(
+        join(
+          this.dataDir,
+          "stock-logos",
+          createHash("sha256").update(source.legacySymbol).digest("hex") +
+            ".png",
+        ),
+      );
+    for (const path of paths) {
+      try {
+        const stat = statSync(path);
+        if (stat.size > maxBytes) continue;
+        const bytes = readFileSync(path);
+        if (!this.valid(bytes, source)) continue;
+        return {
+          logo: {
+            dataUrl: "data:image/png;base64," + bytes.toString("base64"),
+            source: source.source,
+            fetchedAt: stat.mtime.toISOString(),
+          },
+          fresh: Date.now() - stat.mtimeMs < week,
+        };
+      } catch {
+        /* Missing/corrupt files are cache misses, never a UI error. */
+      }
+    }
+    return null;
+  }
+  private negative(source: LogoSource) {
+    const paths = [this.paths(source).missing];
+    // Old failures belong only to the old exact-symbol provider, not a catalog alias.
+    if (!source.expectedHash && source.legacySymbol)
+      paths.push(
+        join(
+          this.dataDir,
+          "stock-logos",
+          createHash("sha256").update(source.legacySymbol).digest("hex") +
+            ".missing",
+        ),
+      );
+    return paths.some((path) => {
+      try {
+        return Date.now() - statSync(path).mtimeMs < 10 * 60 * 1000;
+      } catch {
+        return false;
+      }
+    });
   }
   private async slot() {
     if (this.active >= 4)
@@ -103,104 +165,95 @@ export class StockLogoCache {
       else this.active--;
     };
   }
-  private async read(symbol: string): Promise<StockLogo | null> {
-    const dir = join(this.dataDir, "stock-logos");
-    const name = createHash("sha256").update(symbol).digest("hex");
-    const path = join(dir, name + ".png"),
-      missing = join(dir, name + ".missing");
-    let cached: StockLogo | null = null;
+  private async read(sources: LogoSource[]): Promise<StockLogo | null> {
+    let release: (() => void) | undefined, budget: AbortSignal | undefined;
     try {
-      const bytes = readFileSync(path),
-        stat = statSync(path);
-      if (validLogoPNG(bytes)) {
-        cached = {
-          dataUrl: "data:image/png;base64," + bytes.toString("base64"),
-          source: "fmp-public-image",
-          fetchedAt: stat.mtime.toISOString(),
-        };
-        if (Date.now() - stat.mtimeMs < week) return cached;
-      }
-    } catch {
-      /* A missing/corrupt cached file is a cache miss, never a UI error. */
-    }
-    if (this.offline || this.shutdown.signal.aborted) return cached;
-    try {
-      if (Date.now() - statSync(missing).mtimeMs < 10 * 60 * 1000)
-        return cached;
-    } catch {
-      /* No failed lookup cached. */
-    }
-    const release = await this.slot();
-    try {
-      const response = await this.fetchAsset(
-        `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
-        {
-          redirect: "error",
-          signal: AbortSignal.any([
+      for (const source of sources) {
+        const cached = this.cached(source);
+        if (cached?.fresh) return cached.logo;
+        if (
+          this.offline ||
+          this.shutdown.signal.aborted ||
+          this.negative(source) ||
+          budget?.aborted
+        ) {
+          if (cached) return cached.logo;
+          continue;
+        }
+        if (!release) {
+          release = await this.slot();
+          budget = AbortSignal.any([
             AbortSignal.timeout(15000),
             this.shutdown.signal,
-          ]),
-          headers: {
-            "User-Agent": "AIFi (+https://github.com/ifuryst/aifi)",
-            Accept: "image/png",
-          },
-        },
-      );
-      if (
-        !response.ok ||
-        response.headers.get("content-type")?.split(";")[0] !== "image/png" ||
-        Number(response.headers.get("content-length") || 0) > maxBytes ||
-        !response.body
-      ) {
-        await response.body?.cancel();
-        throw Error("Logo unavailable.");
-      }
-      const reader = response.body.getReader();
-      const chunks: Buffer[] = [];
-      let size = 0;
-      try {
-        while (true) {
-          const next = await reader.read();
-          if (next.done) break;
-          size += next.value.length;
-          if (size > maxBytes) throw Error("Logo too large.");
-          chunks.push(Buffer.from(next.value));
+          ]);
         }
-      } finally {
-        await reader.cancel().catch(() => {});
+        if (this.shutdown.signal.aborted) return cached?.logo ?? null;
+        const key = this.key(source);
+        let work = this.assets.get(key);
+        if (!work) {
+          work = this.retrieve(source, budget!, cached?.logo ?? null).finally(
+            () => this.assets.delete(key),
+          );
+          this.assets.set(key, work);
+        }
+        const logo = await work;
+        if (logo) return logo;
       }
-      const bytes = Buffer.concat(chunks);
-      if (!validLogoPNG(bytes)) throw Error("Invalid logo.");
+      return null;
+    } finally {
+      release?.();
+    }
+  }
+  private async retrieve(
+    source: LogoSource,
+    signal: AbortSignal,
+    cached: StockLogo | null,
+  ) {
+    const paths = this.paths(source);
+    try {
+      const response = await this.fetchAsset(source.url, {
+        redirect: "error",
+        signal,
+        headers: {
+          "User-Agent": "AIFi (+https://github.com/ifuryst/aifi)",
+          Accept: "image/png",
+        },
+      });
+      const bytes = await readPublicBytes(response, maxBytes, "image/png");
+      if (!this.valid(bytes, source))
+        throw Error("Invalid/changed company image.");
       const result: StockLogo = {
         dataUrl: "data:image/png;base64," + bytes.toString("base64"),
-        source: "fmp-public-image",
+        source: source.source,
         fetchedAt: new Date().toISOString(),
       };
       try {
+        const dir = join(this.dataDir, "stock-logos", "v2");
         mkdirSync(dir, { recursive: true, mode: 0o700 });
-        const temp = join(dir, name + "." + randomUUID() + ".tmp");
+        const temp = join(dir, `${this.key(source)}.${randomUUID()}.tmp`);
         writeFileSync(temp, bytes, { mode: 0o600 });
-        renameSync(temp, path);
+        renameSync(temp, paths.png);
         try {
-          unlinkSync(missing);
+          unlinkSync(paths.missing);
         } catch {
-          /* No negative cache entry. */
+          /* No failed lookup cached. */
         }
       } catch {
-        /* A disk failure must not prevent displaying the fetched image. */
+        /* Disk failure must not prevent a fetched image from rendering. */
       }
       return result;
     } catch {
       if (this.shutdown.signal.aborted) return cached;
       try {
-        mkdirSync(dir, { recursive: true, mode: 0o700 });
-        writeFileSync(missing, "", { mode: 0o600 });
+        mkdirSync(join(this.dataDir, "stock-logos", "v2"), {
+          recursive: true,
+          mode: 0o700,
+        });
+        writeFileSync(paths.missing, "", { mode: 0o600 });
       } catch {
         /* Cache writes are best effort. */
       }
       return cached;
-    } finally {
-      release();
     }
   }
 }

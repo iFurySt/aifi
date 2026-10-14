@@ -160,6 +160,8 @@ See [directory read contract](design-docs/stock-directory-reads.md).
 ## Decorative Company Assets
 
 An independently injected StockLogoRepository serves stock avatars. Node host
-verifies cached directory membership through Go and fetches bounded public PNGs
-into a private device cache, returning data URLs only. Directory/list/financial
+verifies cached directory membership through Go, resolves a bundled/locally cached
+reviewed company catalog first, then falls back to exact-symbol FMP images. Bounded
+public PNGs use a private device cache; a validated background manifest refresh
+runs at most daily. Only data URLs reach the renderer. Directory/list/financial
 contracts and CSP stay separate. See [logo boundary](design-docs/stock-logos.md).

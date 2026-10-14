@@ -1,6 +1,6 @@
 # Reviewed Company Logo Catalog
 
-Status: public catalog established, 2026-10-14. AIFi runtime integration remains pending.
+Status: public catalog established, 2026-10-14. AIFi catalog-first runtime integration implemented.
 
 Repository: [ifuryst/company-logo-catalog](https://github.com/ifuryst/company-logo-catalog).
 The initial catalog has 14 companies, 31 securities, 37 exact symbol/alias keys,
@@ -14,7 +14,9 @@ is suitable for a small JSON URL/alias list. Prefer a regular Git repository for
 an image collection: contribution PRs, per-entry history, source metadata,
 release versions and individual asset notices are easier to maintain together.
 The user authorized a public independent repository; the catalog is now kept
-there. Use versioned catalog releases as the future integration boundary.
+there. AIFi bundles the v0.1.0 seed and validates background updates from its main manifest.
+A published release pins the initial provenance; cached last-good metadata keeps
+the app independent of GitHub availability.
 
 ## Suggested Shape
 
@@ -64,10 +66,8 @@ brand and asset rights remain distinct from the code/metadata license.
 
 ## Runtime Direction
 
-Reviewed issuer overrides → local asset/cache → configured logo providers → letter
-fallback. Unknown mappings remain explicit; missing images never invent identity.
-The existing StockLogoRepository can stay unchanged while the host changes its
-resolver. The current fixed-host PNG validation must remain; remote manifests or
+Verified catalog source/cache → exact-symbol FMP source/cache → letter fallback. Unknown mappings remain explicit; missing images never invent identity.
+The StockLogoRepository stays unchanged; Node host owns the catalog resolver. The current fixed-host PNG validation must remain; remote manifests or
 URL overrides require explicit trusted origins, bounded reads and validation,
 not arbitrary renderer-controlled URL downloads.
 
@@ -78,7 +78,7 @@ image download is needed.
 
 ## Scope To Implement Later
 
-- AIFi adapter for the public catalog, local overrides and resolver order.
+- User-owned local overrides and configurable provider selection.
 - Expand reviewed issuer/security mappings and image checks; schema/versioning
   and the offline catalog resolver are implemented in the public repository.
 - Provider settings, retrieval diagnostics and retries for queue/network failures.

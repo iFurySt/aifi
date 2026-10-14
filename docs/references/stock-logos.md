@@ -11,7 +11,7 @@ Neither file includes company website URLs or logo images.
 
 ## Shipped Presentation Adapter
 
-The host currently reads fixed public PNG paths such as
+The original provider fallback reads fixed public PNG paths such as
 [FMP AAPL image](https://financialmodelingprep.com/image-stock/AAPL.png).
 Unauthenticated probes returned PNGs for AAPL (1,974 bytes), MSFT (938 bytes) and
 KO (19,990 bytes); a nonexistent symbol returned 404. This is a best-effort public
@@ -55,4 +55,13 @@ explains reviewed aliases, URL lists, optional images and Gist/repository choice
 
 Public follow-up: [company-logo-catalog](https://github.com/ifuryst/company-logo-catalog)
 now holds the first reviewed batch, exact issuer aliases and validation tooling.
-AIFi still uses its FMP adapter; no automatic remote catalog reads are implemented.
+AIFi now bundles `catalog.json` from v0.1.0, commit
+`5d8f3bc2e14304a37bdb1f69f7106d31bf972a0d` (catalog Git blob
+`f0fe0bae112b432c9e96d9f665d0922c276ee212`), with the upstream MIT notice.
+The seed contains URL metadata, not image files. The host prefers verified active
+catalog mappings; eight reviewed company images are eligible, while six candidate
+sources stay withheld. It checks the fixed GitHub main manifest in the background
+at most daily and retains validated metadata locally. AACOW can reuse AACO's
+reviewed image; TREO uses its official website PNG. Unsupported catalog entries
+and failed source reads fall back to the original exact-symbol FMP adapter.
+See [runtime limits and cache migration](../design-docs/stock-logos.md).

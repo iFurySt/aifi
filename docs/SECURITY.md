@@ -89,8 +89,11 @@ Before live provider access or infrastructure, extend this file with:
 
 The Node host also owns one decorative public PNG adapter. Allowlisted stock.logo
 accepts a symbol, verifies current directory membership, and fetches only the fixed
-FMP image origin/path. No key, cookie, user path or arbitrary endpoint reaches the
-provider. TLS remains verified, redirects are rejected, size/dimensions/MIME are
+FMP image path or reviewed Tactical Resources PNG upload path. Catalog metadata
+is read only from the fixed company-logo-catalog GitHub URL, with bounded reads,
+schema validation, exact aliases and approved image origins. Reviewed images must
+match recorded checksums/dimensions; unreviewed entries do not become catalog
+results. No key, cookie, user path or arbitrary endpoint reaches the provider. TLS remains verified, redirects are rejected, size/dimensions/MIME are
 bounded, and PNGs are private local cache files. The renderer receives data URLs;
 remote image/script permissions are not widened. See
 [logo capability](design-docs/stock-logos.md) for limits and cache/shutdown behavior.
