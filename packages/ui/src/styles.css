@@ -2877,3 +2877,18 @@ kbd {
 .stock-list-sentinel {
   height: 1px;
 }
+
+.stock-avatar {
+  position: relative;
+  overflow: hidden;
+}
+.stock-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.stock-avatar[data-light-logo="true"] {
+  background: #303030;
+}

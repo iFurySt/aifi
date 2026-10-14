@@ -7,3 +7,5 @@ export * from "./data-service";
 export * from "./stock-directory";
 
 export * from "./directory-feed";
+
+export * from "./stock-logos";

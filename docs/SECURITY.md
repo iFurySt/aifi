@@ -84,3 +84,13 @@ Before live provider access or infrastructure, extend this file with:
 - data retention policy for research archives and generated artifacts
 - dependency and vulnerability scanning for the chosen stack
 - deployment rollback and incident-response expectations
+
+## Company Logo Assets
+
+The Node host also owns one decorative public PNG adapter. Allowlisted stock.logo
+accepts a symbol, verifies current directory membership, and fetches only the fixed
+FMP image origin/path. No key, cookie, user path or arbitrary endpoint reaches the
+provider. TLS remains verified, redirects are rejected, size/dimensions/MIME are
+bounded, and PNGs are private local cache files. The renderer receives data URLs;
+remote image/script permissions are not widened. See
+[logo capability](design-docs/stock-logos.md) for limits and cache/shutdown behavior.

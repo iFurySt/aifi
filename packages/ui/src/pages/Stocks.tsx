@@ -10,6 +10,7 @@ import {
 import type { StockTab } from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
 import { Button } from "../components/primitives";
+import { StockAvatar } from "../components/StockAvatar";
 import { StockChart } from "../components/StockChart";
 import {
   useStockDirectory,
@@ -380,7 +381,11 @@ export function Stocks() {
   return (
     <div className="stocks-page">
       <header className="stock-company-header">
-        <span className="stock-company-mark">{symbol[0]}</span>
+        <StockAvatar
+          symbol={symbol}
+          className="stock-company-mark"
+          enabled={!!listing}
+        />
         <div>
           <h1 title={listing?.name}>{listing?.name ?? symbol}</h1>
           <small>
@@ -530,7 +535,7 @@ export function Stocks() {
                   .filter(([s]) => s !== symbol)
                   .map(([s, q]) => (
                     <button key={s} onClick={() => openStock(s)}>
-                      <span className="stock-monogram">{s[0]}</span>
+                      <StockAvatar symbol={s} />
                       <span>
                         <strong>{s}</strong>
                         <small>{q.name}</small>

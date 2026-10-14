@@ -61,3 +61,13 @@ it("rejects invalid directory reads before starting any child or RPC", async () 
     "Invalid directory symbol",
   );
 });
+
+it("rejects arbitrary logo URLs before any service or outbound request", async () => {
+  const host = new DataHost("unused-test-binary");
+  await expect(
+    host.request("stock.logo", {
+      symbol: "AAPL",
+      url: "https://other.invalid/image.png",
+    }),
+  ).rejects.toThrow("Invalid directory symbol");
+});

@@ -47,7 +47,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, nineteen domain/storage/route/host tests,
+make ci runs repository gates, TypeScript, 31 domain/storage/route/host tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -177,3 +177,9 @@ Directory routes preserve source punctuation such as `BRK.B` and `ABR$D`.
 Watchlist persistence retains its existing ticker grammar; unsupported formats
 can be viewed but cannot be added yet. Native smoke now checks offline directory
 reads and verifies that an empty store never shows the sample stock list.
+
+Company avatars use an injected logo repository. Near-visible rows and the company
+header request local host PNGs; unavailable images use letters. White transparent
+marks get contrast on light surfaces. Directory reads never wait for logo HTTP
+requests. Public asset source/cache limits are documented in
+[stock logos](design-docs/stock-logos.md).

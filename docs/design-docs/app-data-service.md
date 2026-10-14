@@ -95,3 +95,8 @@ watchlist persistence retains its stricter existing validation.
 The UI receives this repository at application composition. A future cloud
 adapter can implement the same domain contract with its own authenticated
 transport; no cloud URL or authentication support is added by this change.
+
+A separate stock.logo host method verifies directory membership and serves
+bounded PNG data URLs from an optional presentation cache. Go remains the database
+owner; Node asset HTTP retrieval does not occupy the Go RPC loop or directory
+worker. See [logo capability](stock-logos.md).

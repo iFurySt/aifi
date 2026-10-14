@@ -1,6 +1,7 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { useEffect, useRef, useState } from "react";
 import { Search, ChevronDown, Check } from "lucide-react";
+import { StockAvatar } from "./StockAvatar";
 import { validDirectorySymbol } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import {
@@ -104,7 +105,7 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
               onSelect?.();
             }}
           >
-            <span className="stock-monogram">{entry.symbol.slice(0, 1)}</span>
+            <StockAvatar symbol={entry.symbol} />
             <span className="stock-list-name">
               <strong>{entry.symbol}</strong>
               <small title={entry.name}>{entry.name}</small>

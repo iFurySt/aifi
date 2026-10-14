@@ -27,6 +27,7 @@ export class DirectoryFeed {
   private generation = 0;
   private busy = false;
   private offset = 0;
+  private retryAppend = false;
   constructor(
     private repository: StockDirectoryRepository,
     private publish: (state: DirectoryFeedState) => void,
@@ -53,7 +54,7 @@ export class DirectoryFeed {
       : this.read(true);
   }
   retry() {
-    return this.read(this.offset > 0);
+    return this.read(this.retryAppend);
   }
   refresh() {
     return this.read(false);
@@ -89,6 +90,7 @@ export class DirectoryFeed {
       // The head can advance between offset requests. Start at the new head,
       // preserving old rows until that first page succeeds rather than mixing versions.
       if (append && page.snapshotId !== this.state.snapshotId) {
+        append = false;
         page = await this.repository.search({
           query,
           limit: this.batchSize,
@@ -96,7 +98,6 @@ export class DirectoryFeed {
         });
         if (generation !== this.generation) return;
         this.check(page, 0);
-        append = false;
       }
       const sameSnapshot =
         !!page.snapshotId && page.snapshotId === this.state.snapshotId;
@@ -125,6 +126,7 @@ export class DirectoryFeed {
         hasMore: this.offset < page.total,
       });
     } catch {
+      if (generation === this.generation) this.retryAppend = append;
       if (generation === this.generation)
         this.update({
           ...this.state,

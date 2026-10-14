@@ -22,8 +22,8 @@ Nasdaq Trader is the provider of US listings, and determine usable company logos
 ## Milestones
 
 - [x] Feed and source name, regression tests.
-- [ ] Logo choice and implementation/research outcome.
-- [ ] Chrome/Electron validation, documentation, staged commits and main preview.
+- [x] Logo choice and implementation/research outcome.
+- [x] Chrome/Electron validation and documentation; staged integration and main preview follow.
 
 ## Validation
 
@@ -33,3 +33,11 @@ empty/end behavior; make ci and native smoke; Chrome desktop/mobile scrolling.
 - 2026-10-14: Feed slice typechecks; 24 TypeScript tests pass. Logos: Nasdaq
   files have no images; FMP public AAPL/MSFT/KO PNG assets succeed without a key,
   missing symbol is 404. Older Parqet/Elbstream API probes return 403 here.
+
+- 2026-10-14: Separate logo repository, bounded host PNG cache, private local data URLs and renderer contrast/fallback implemented. Native HTTPS agent verified against real public AAPL data. Directory feed is unaffected by asset latency.
+
+- 2026-10-14: make ci passes with 31 TypeScript tests, Go vet/race and all builds.
+  Actual macOS smoke passes. Native UI verifies 50→100 and AAPL reset; Chrome
+  verifies 50→100→150, prefix preservation, search reset/empty, cached data-only
+  logos and no viewport overflow. Mobile drawer verifies 50→100 and logos.
+  White transparent marks retain contrast across cached focus refreshes.

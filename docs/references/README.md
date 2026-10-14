@@ -35,3 +35,6 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 
 - [Stock directory sources](stock-directory-sources.md): selected keyless bulk
   directory, pinned-project comparison, actual requests, and classification limits.
+
+- [Company logo sources](stock-logos.md): directory limitations, keyless public
+  asset probes, provider restrictions and the shipped presentation adapter.

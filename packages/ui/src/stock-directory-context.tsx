@@ -9,12 +9,14 @@ import {
 import { DirectoryFeed, emptyDirectoryFeed } from "@aifi/core";
 import type {
   StockDirectoryRepository,
+  StockLogoRepository,
   DirectoryPage,
   DirectoryLookup,
 } from "@aifi/core";
 
 export const StockDirectoryContext =
   createContext<StockDirectoryRepository | null>(null);
+export const StockLogoContext = createContext<StockLogoRepository | null>(null);
 export function useStockDirectory() {
   const repository = useContext(StockDirectoryContext);
   if (!repository) throw Error("Stock directory repository is missing.");

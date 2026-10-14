@@ -70,16 +70,13 @@ it("ignores an old query response and disposal, even while a next page is pendin
 it("rebases instead of mixing snapshots and preserves loaded rows on an unchanged refresh", async () => {
   const { feed, search } = setup();
   search
-    .mockResolvedValueOnce(page(0, ["A", "B"]))
-    .mockResolvedValueOnce(page(2, ["C", "D"]))
-    .mockResolvedValueOnce(page(0, ["A", "B"]));
+    .mockResolvedValueOnce(page(0, ["A", "B"], "one", 6))
+    .mockResolvedValueOnce(page(2, ["C", "D"], "one", 6))
+    .mockResolvedValueOnce(page(0, ["A", "B"], "one", 6));
   await feed.reset("");
   await feed.loadMore();
   await feed.refresh();
   expect(feed.state.items).toHaveLength(4);
-  // Background import changes head, then the next batch sees the new snapshot.
-  search.mockResolvedValueOnce(page(0, ["A", "B"], "one", 6));
-  await feed.refresh();
   search
     .mockResolvedValueOnce(page(4, [], "two", 2))
     .mockResolvedValueOnce(page(0, ["X", "Y"], "two", 2));
@@ -117,4 +114,20 @@ it("distinguishes empty cache and empty search and rejects non-progressing pages
   await feed.reset("broken");
   expect(feed.state.error).toBeTruthy();
   expect(feed.state.hasMore).toBe(false);
+});
+
+it("retries a failed refresh from offset zero, preserving loaded rows", async () => {
+  const { feed, search } = setup();
+  search
+    .mockResolvedValueOnce(page(0, ["A", "B"]))
+    .mockResolvedValueOnce(page(2, ["C", "D"]))
+    .mockRejectedValueOnce(Error("offline"))
+    .mockResolvedValueOnce(page(0, ["A", "B"]));
+  await feed.reset("");
+  await feed.loadMore();
+  await feed.refresh();
+  await feed.retry();
+  expect(search).toHaveBeenLastCalledWith({ query: "", limit: 2, offset: 0 });
+  expect(feed.state.items).toHaveLength(4);
+  expect(feed.state.error).toBe("");
 });

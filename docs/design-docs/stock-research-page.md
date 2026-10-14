@@ -26,7 +26,7 @@ opens this app rather than keeping a second UI tree.
   Settings and appearance remain in the avatar popup.
 - The 248px inner sidebar contains a searchable stock list, not app destinations
   or conversations. It reads the cached Nasdaq candidate directory, 50 rows per
-  page, with ticker/security-name search and Previous/Next controls. Below 900px it becomes a drawer; below 600px the
+  batch, with ticker/security-name search and loading near the scroll bottom. Below 900px it becomes a drawer; below 600px the
   drawer also supplies app navigation because the outer rail is hidden.
 - Stocks is the default page. `#/stocks/AAPL?tab=chart` encodes ticker and tab;
   reload and native back/forward preserve them. A malformed ticker falls back to
@@ -119,3 +119,7 @@ recovery remain in the data plan. Windows/Linux native checks remain separate.
 Directory read behavior, failure handling and cloud replacement boundaries are
 specified in [directory reads](stock-directory-reads.md). The directory omits ETFs
 and test issues; remaining records are candidates, not verified common shares.
+
+Stock rows/header use optional decorative logos with letter fallback; this does
+not infer company profiles or make sample quotes live. See
+[logo capability](stock-logos.md).

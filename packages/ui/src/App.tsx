@@ -13,16 +13,21 @@ import type {
   WorkspacePage,
   StockTab,
   StockDirectoryRepository,
+  StockLogoRepository,
 } from "@aifi/core";
 import {
   createLocalStockDirectory,
+  createLocalStockLogos,
   getRuntimeInfo,
   readWorkspace,
   writeWorkspace,
 } from "@aifi/platform";
 import type { StoragePort } from "@aifi/platform";
 import { WorkspaceContext } from "./workspace-context";
-import { StockDirectoryContext } from "./stock-directory-context";
+import {
+  StockDirectoryContext,
+  StockLogoContext,
+} from "./stock-directory-context";
 import { Shell } from "./components/Shell";
 import { Agents } from "./pages/Agents";
 import { Research } from "./pages/Research";
@@ -46,9 +51,11 @@ function currentPage(): WorkspacePage {
     : "stocks";
 }
 const localDirectory = createLocalStockDirectory();
+const localLogos = createLocalStockLogos();
 export function App({
   directory = localDirectory,
-}: { directory?: StockDirectoryRepository } = {}) {
+  logos = localLogos,
+}: { directory?: StockDirectoryRepository; logos?: StockLogoRepository } = {}) {
   const [loaded] = useState(() =>
     readWorkspace(storage, createDemoWorkspace, decodeWorkspace),
   );
@@ -149,53 +156,55 @@ export function App({
     return () => clearTimeout(toastTimer.current);
   }, [notify]);
   return (
-    <StockDirectoryContext.Provider value={directory}>
-      <WorkspaceContext.Provider
-        value={{
-          workspace,
-          update,
-          page,
-          navigate,
-          stockRoute,
-          settingsSection,
-          openStock,
-          notify,
-          research,
-          conversationId,
-          openConversation,
-          storageError,
-          reset,
-        }}
-      >
-        <a
-          className="skip-link"
-          href="#main-content"
-          onClick={(event) => {
-            event.preventDefault();
-            document.getElementById("main-content")?.focus();
+    <StockLogoContext.Provider value={logos}>
+      <StockDirectoryContext.Provider value={directory}>
+        <WorkspaceContext.Provider
+          value={{
+            workspace,
+            update,
+            page,
+            navigate,
+            stockRoute,
+            settingsSection,
+            openStock,
+            notify,
+            research,
+            conversationId,
+            openConversation,
+            storageError,
+            reset,
           }}
         >
-          Skip to content
-        </a>
-        <Shell>
-          {page === "stocks" && <Stocks />}
-          {page === "agents" && <Agents />}
-          {page === "research" && (
-            <Research draft={draft} clearDraft={clearDraft} />
-          )}
-          {page === "watchlist" && <Watchlist />}
-          {page === "portfolio" && <Portfolio />}
-          {page === "library" && <Library />}
-          {page === "settings" && <Settings />}
-        </Shell>
-        <div
-          className={`toast ${toast ? "visible" : ""}`}
-          role="status"
-          aria-live="polite"
-        >
-          {toast}
-        </div>
-      </WorkspaceContext.Provider>
-    </StockDirectoryContext.Provider>
+          <a
+            className="skip-link"
+            href="#main-content"
+            onClick={(event) => {
+              event.preventDefault();
+              document.getElementById("main-content")?.focus();
+            }}
+          >
+            Skip to content
+          </a>
+          <Shell>
+            {page === "stocks" && <Stocks />}
+            {page === "agents" && <Agents />}
+            {page === "research" && (
+              <Research draft={draft} clearDraft={clearDraft} />
+            )}
+            {page === "watchlist" && <Watchlist />}
+            {page === "portfolio" && <Portfolio />}
+            {page === "library" && <Library />}
+            {page === "settings" && <Settings />}
+          </Shell>
+          <div
+            className={`toast ${toast ? "visible" : ""}`}
+            role="status"
+            aria-live="polite"
+          >
+            {toast}
+          </div>
+        </WorkspaceContext.Provider>
+      </StockDirectoryContext.Provider>
+    </StockLogoContext.Provider>
   );
 }

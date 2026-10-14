@@ -85,7 +85,10 @@ export function validateSettings(
   )
     throw Error("Invalid settings.");
 }
+import { StockLogoCache } from "./stock-logos.ts";
+
 export class DataHost {
+  private logoCache?: StockLogoCache;
   private child?: ChildProcessWithoutNullStreams;
   private ready?: Promise<void>;
   private nextID = 0;
@@ -194,7 +197,7 @@ export class DataHost {
   async request(method: DataMethod, params?: unknown): Promise<unknown> {
     if (!dataMethods.includes(method)) throw Error("Unsupported data action.");
     if (method === "directory.list") validateDirectoryQuery(params);
-    if (method === "directory.get") {
+    if (method === "directory.get" || method === "stock.logo") {
       const p = params as { symbol?: unknown };
       if (
         !p ||
@@ -203,6 +206,15 @@ export class DataHost {
         !validDirectorySymbol(p.symbol)
       )
         throw Error("Invalid directory symbol.");
+    }
+    if (method === "stock.logo") {
+      const { symbol } = params as { symbol: string };
+      const lookup = (await this.rpc("directory.get", { symbol })) as {
+        item: unknown;
+      };
+      if (!lookup.item) return null;
+      this.logoCache ??= new StockLogoCache(this.dataDir, this.offline);
+      return this.logoCache.get(symbol);
     }
     if (method === "settings.save") validateSettings(params);
     if (method === "credentials.set") {
@@ -241,6 +253,7 @@ export class DataHost {
     return this.rpc(method, params);
   }
   async stop() {
+    this.logoCache?.close();
     if (this.stopping) return;
     this.stopping = true;
     const child = this.child;

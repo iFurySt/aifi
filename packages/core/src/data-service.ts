@@ -55,6 +55,7 @@ export type DataMethod =
   | "directory.sync"
   | "directory.list"
   | "directory.get"
+  | "stock.logo"
   | "credentials.set"
   | "credentials.remove";
 export const dataMethods: readonly DataMethod[] = [
@@ -63,6 +64,7 @@ export const dataMethods: readonly DataMethod[] = [
   "directory.sync",
   "directory.list",
   "directory.get",
+  "stock.logo",
   "credentials.set",
   "credentials.remove",
 ];
