@@ -37,6 +37,8 @@ tracings. The UI only loads the compact export, not the high-resolution master.
   directory/settings/security flows and child lifecycle; all pass.
 - `codesign --verify --deep --strict` passes for the local named macOS runtime.
 - Real native window and menu identify as AIFi; light/dark Logo rendering reviewed.
+- Primary checkout rebuilt, named runtime signature verified, and AIFi restarted
+  with the original light theme. New mark and native name/menu confirmed.
 - Chrome Default via Open Browser Use: desktop dark rendering, 390px mobile
   layout without horizontal overflow, favicon/mask retrieval and all six asset
   preview images verified. Browser preview/title are AIFi.

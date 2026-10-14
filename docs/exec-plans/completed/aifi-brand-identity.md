@@ -18,7 +18,7 @@ identity. Keep the display name AIFi, matching the selected artwork.
 - [x] Generate, inspect and store brand assets/provenance.
 - [x] Apply shared UI/native identity and reproducible local launch.
 - [x] Checks, isolated native smoke and light/dark/browser review.
-- [ ] Deliver into the primary checkout and restart the app.
+- [x] Deliver into the primary checkout and restart the app.
 
 ## Risks And Validation
 
@@ -39,3 +39,11 @@ The first manifest cache stamp inside the bundle root and an external resource
 symlink prevented strict signature validation. The final launcher keeps its stamp
 outside the bundle and uses a sealed local entry instead; the package-manager
 runtime remains unchanged. The local bundle continues to depend on its checkout.
+
+## Delivery
+
+Implementation was committed locally and fast-forwarded into the primary
+checkout. The primary build and named runtime passed; the native app remains
+open on Stocks in the original light theme. Actual primary window and menu are
+AIFi, with the new mark visible. The existing browser preview was restored to the
+primary app, and ignored screenshots/smoke evidence were preserved before cleanup.
