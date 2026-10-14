@@ -157,6 +157,11 @@ cloud implementation can satisfy the same domain contract or preserve the bridge
 and delegate host reads to cloud transport. The UI does not choose SQL/URLs/auth.
 See [directory read contract](design-docs/stock-directory-reads.md).
 
+The proposed [stock collections design](design-docs/stock-collections.md) moves
+the Stocks selector toward browsing scopes: All US listings, index memberships,
+themes and personal lists. Market, exchange, provider and sorting stay distinct.
+Collection snapshots/read ports and additional markets are planned, not implemented.
+
 ## Decorative Company Assets
 
 An independently injected StockLogoRepository serves stock avatars. Node host
