@@ -2885,8 +2885,8 @@ kbd {
 .stock-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 4px;
+  display: block;
+  object-fit: cover;
 }
 
 .stock-avatar[data-light-logo="true"] {

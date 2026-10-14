@@ -36,6 +36,8 @@ third-party asset is bundled into source. Source selection is recorded in
   host shutdown cancels queued/active retrieval and does not persist a failure.
 - The renderer decodes images and handles failures. Tiny/empty assets use letters;
   predominantly white transparent marks get a dark background for contrast.
+  Images fill the rounded avatar edge to edge with cover sizing and no inset
+  padding; nonsquare images crop centrally instead of adding letterboxing.
 
 No backup/retention UI or asset cache migration is added. Directory snapshot
 counts and SQLite size do not include PNG cache bytes. The source may not have an
