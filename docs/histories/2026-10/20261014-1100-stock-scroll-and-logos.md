@@ -46,3 +46,8 @@ rows on scroll and reset to one AAPL result; Chrome desktop/mobile checks pass: 
 search reset/empty, data-only images, contrast retention and no overflow.
 make ci passes with 31 TypeScript tests, Go vet/race and all builds; actual macOS
 smoke passes. Directory and asset reads remain independently bounded.
+
+### Delivery
+
+Changes landed in two feature commits; main build and live Web directory checked.
+Final native preview restart is pending Mac unlock; isolated native checks passed.

@@ -23,7 +23,7 @@ Nasdaq Trader is the provider of US listings, and determine usable company logos
 
 - [x] Feed and source name, regression tests.
 - [x] Logo choice and implementation/research outcome.
-- [x] Chrome/Electron validation and documentation; staged integration and main preview follow.
+- [x] Chrome/Electron validation, documentation and staged integration into main.
 
 ## Validation
 
@@ -41,3 +41,7 @@ empty/end behavior; make ci and native smoke; Chrome desktop/mobile scrolling.
   verifies 50→100→150, prefix preservation, search reset/empty, cached data-only
   logos and no viewport overflow. Mobile drawer verifies 50→100 and logos.
   White transparent marks retain contrast across cached focus refreshes.
+
+- 2026-10-14: Both feature commits pushed and main updated/built. Main Web
+  preview opens the live 50-row directory with no pager. Final native preview
+  restart is pending because the Mac is locked; isolated native validation passed.
