@@ -158,9 +158,10 @@ and delegate host reads to cloud transport. The UI does not choose SQL/URLs/auth
 See [directory read contract](design-docs/stock-directory-reads.md).
 
 The proposed [stock collections design](design-docs/stock-collections.md) moves
-the Stocks selector toward browsing scopes: All US listings, index memberships,
-themes and personal lists. Market, exchange, provider and sorting stay distinct.
-Collection snapshots/read ports and additional markets are planned, not implemented.
+the Stocks selector toward All US listings, S&P 500, Nasdaq-100 and the existing
+watchlist. Built-in universe/index lists are system-maintained and not user-editable;
+watchlist contents remain user-owned. Named personal groups and additional markets
+are deferred. Scoped reads/index snapshots are planned, not implemented.
 
 ## Decorative Company Assets
 
