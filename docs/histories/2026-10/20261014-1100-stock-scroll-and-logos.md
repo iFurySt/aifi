@@ -50,4 +50,5 @@ smoke passes. Directory and asset reads remain independently bounded.
 ### Delivery
 
 Changes landed in two feature commits; main build and live Web directory checked.
-Final native preview restart is pending Mac unlock; isolated native checks passed.
+Main native process restarted with the new build. Final visual handoff awaits
+Mac unlock; isolated native checks passed.

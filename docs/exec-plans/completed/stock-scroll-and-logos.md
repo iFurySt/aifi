@@ -43,5 +43,6 @@ empty/end behavior; make ci and native smoke; Chrome desktop/mobile scrolling.
   White transparent marks retain contrast across cached focus refreshes.
 
 - 2026-10-14: Both feature commits pushed and main updated/built. Main Web
-  preview opens the live 50-row directory with no pager. Final native preview
-  restart is pending because the Mac is locked; isolated native validation passed.
+  preview opens the live 50-row directory with no pager. Main native process
+  restarted with the new build. Final visual handoff awaits Mac unlock; isolated
+  native validation passed.
