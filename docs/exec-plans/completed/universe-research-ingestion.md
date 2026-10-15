@@ -82,3 +82,8 @@ Do not claim successful live datasets without actual responses and credentials.
   backfill is claimed. Provider window/entitlement restrictions, segmented/IFRS
   statements, future earnings consensus/calendar, short interest and point-in-time
   historical queries are documented in the runtime specification.
+
+- Scale correction: shared market-wide corporate actions replace per-listing
+  daily calls; SEC accession XML reuses immutable evidence. This keeps the free
+  EOD/reference path practical for the whole directory. Optional FMP throughput
+  still depends on the user's plan and configured daily quota.

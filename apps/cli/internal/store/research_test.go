@@ -163,3 +163,28 @@ func TestOldUnconfiguredBackfillCannotBlockCurrentPrices(t *testing.T) {
 		t.Fatal("retired history fetched")
 	}
 }
+
+func TestSharedActionSnapshotIsQueriedBySymbolAndPublishesEmptyCoverage(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Now()
+	db.AddResearchJobs(ctx, []market.Job{{Provider: "massive", Dataset: "actions", Subject: "us"}, {Provider: "massive", Dataset: "actions", Subject: "OLD"}}, now)
+	db.UseSharedActions(ctx)
+	j, e := db.ClaimResearchJob(ctx, "massive", []string{"actions"}, false, now)
+	if e != nil || j == nil || j.Subject != "us" {
+		t.Fatal(e)
+	}
+	r := market.Result{Payload: market.Payload{Complete: true, Records: []market.Record{{"ticker": "AAPL", "kind": "splits", "execution_date": "2026-01-01", "split_from": 1, "split_to": 2}, {"ticker": "MSFT", "kind": "dividends", "cash_amount": 1}}}, Evidence: []market.Evidence{{URL: "https://api.massive.com/stocks/v1/splits", Body: []byte(`{"source":"all market"}`), FetchedAt: now}}}
+	if e = db.FinishResearchJob(ctx, *j, r, now, now.Add(time.Hour)); e != nil {
+		t.Fatal(e)
+	}
+	for symbol, count := range map[string]int{"AAPL": 1, "MSFT": 1, "OTHER": 0} {
+		data, e := db.ResearchRead(ctx, symbol)
+		if e != nil || len(data.Datasets["actions"].Data.Records) != count || !data.Datasets["actions"].Data.Complete {
+			t.Fatal("shared action lookup", symbol, e)
+		}
+	}
+	if next, _ := db.ClaimResearchJob(ctx, "massive", []string{"actions"}, false, now); next != nil {
+		t.Fatal("per-listing actions still scheduled")
+	}
+}

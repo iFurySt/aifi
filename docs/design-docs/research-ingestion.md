@@ -28,8 +28,8 @@ subscription is purchased by the application.
 | Company identity/profile | Massive ticker overview; SEC exchange/ticker-to-CIK map | Key/contact; weekly company profile, daily shared map |
 | Filings | SEC submissions recent window | Contact; daily; recent window only |
 | Financial facts | SEC Company Facts selected standard US-GAAP/DEI concepts | Contact; weekly; last seven years; raw source preserves other concepts |
-| Splits/dividends | Massive reference endpoints, all pages | Key; daily |
-| Insider transactions | SEC Form 4/4-A XML from stored submissions | Contact; daily; latest 40 filings, derivative status and transaction codes retained |
+| Splits/dividends | Massive market-wide reference snapshots, all pages | Key; daily |
+| Insider transactions | SEC Form 4/4-A XML from stored submissions; immutable documents reused | Contact; daily; latest 40 filings, derivative status and transaction codes retained |
 | Institutional ownership | FMP stable extract-analytics/holder, paginated | Optional key/endpoint entitlement; weekly; latest elapsed quarter |
 | Congressional trades | FMP stable senate-trades + house-trades | Optional key/entitlement; daily; reported amount ranges retained |
 | Analyst data | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |
@@ -60,7 +60,9 @@ next reconciliation. Old data is retained; automatic deletion is not inferred
 from directory absence. Candidate directory membership does not prove common
 stock type or SEC reporting coverage.
 
-Prices use one whole-market request per date. Newest sessions and the three
+Prices use one whole-market request per date. Splits/dividends also use shared
+market-wide snapshots with indexed per-symbol SQLite reads; daily refresh does
+not make two requests per listing. Newest sessions and the three
 initial development targets are prioritized before expensive enrichment. A
 previous-New-York-date watermark avoids unfinished sessions. Weekends are skipped;
 empty provider holiday responses are evidenced. No exchange-grade calendar or
@@ -115,3 +117,6 @@ Valuations/margins use explicitly matching periods/units where available.
 Company Facts is not a complete dimensional/custom financial statement parser;
 IFRS, business/geographic segments, future earnings estimates/calendar and short
 interest still require additional dataset-specific work. No missing value is zero.
+
+Shared action snapshots retain two years of events and publish their per-symbol
+rows atomically. Earlier per-listing action jobs retire without deleting evidence.

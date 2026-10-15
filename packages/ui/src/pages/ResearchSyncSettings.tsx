@@ -29,7 +29,7 @@ const sources: Record<ResearchDataset, string> = {
   profile: "Massive · Listings",
   filings: "SEC · Issuers",
   facts: "SEC · Issuers",
-  actions: "Massive · Listings",
+  actions: "Massive · Market batch",
   insiders: "SEC · Issuers",
   funds: "FMP · Listings",
   politicians: "FMP · Listings",

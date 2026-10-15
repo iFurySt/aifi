@@ -101,3 +101,10 @@ INSERT OR IGNORE INTO schema_migrations(version) VALUES(4);
 CREATE TABLE IF NOT EXISTS research_staging(
  cache_key TEXT PRIMARY KEY, source_url TEXT NOT NULL, fetched_at TEXT NOT NULL, body BLOB NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS research_actions(
+ snapshot_id TEXT NOT NULL REFERENCES research_snapshots(id), symbol TEXT NOT NULL,
+ record_key TEXT NOT NULL, payload_json TEXT NOT NULL, PRIMARY KEY(snapshot_id,symbol,record_key)
+);
+CREATE INDEX IF NOT EXISTS research_actions_symbol ON research_actions(symbol,snapshot_id);
+CREATE INDEX IF NOT EXISTS research_evidence_source_url ON research_evidence(source_url,fetched_at DESC);

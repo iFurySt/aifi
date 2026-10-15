@@ -164,7 +164,7 @@ func (s *Store) ClaimResearchJob(ctx context.Context, provider string, enabled [
 	args = append(args, now.AddDate(0, 0, -14).Format("2006-01-02"))
 	var j market.Job
 	// Mapping and recent market batches lead history and per-company enrichment.
-	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN dataset='prices' AND subject>=? THEN 1 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN dataset='prices' THEN 3 ELSE 4 END,CASE WHEN dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
+	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN dataset='prices' AND subject>=? THEN 1 WHEN dataset='actions' AND subject='us' THEN 2 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN dataset='prices' THEN 3 ELSE 4 END,CASE WHEN dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
 	if errors.Is(e, sql.ErrNoRows) {
 		return nil, nil
 	}
@@ -220,8 +220,28 @@ func (s *Store) FinishResearchJob(ctx context.Context, j market.Job, result mark
 	}
 	fingerprint := sha256.Sum256([]byte(j.Provider + ":" + j.Dataset + ":" + j.Subject + ":" + strings.Join(hashes, ":") + ":" + string(raw)))
 	snapshot := hex.EncodeToString(fingerprint[:])
-	if _, e = tx.ExecContext(ctx, "INSERT OR IGNORE INTO research_snapshots VALUES(?,?,?,?,?,?)", snapshot, j.Provider, j.Dataset, j.Subject, stamp(now), string(raw)); e != nil {
+	if _, e = tx.ExecContext(ctx, "INSERT OR IGNORE INTO research_snapshots VALUES(?,?,?,?,?,?)", snapshot, j.Provider, j.Dataset, j.Subject, stamp(now), func() string {
+		if j.Dataset == "actions" && j.Subject == "us" {
+			payload := result.Payload
+			payload.Records = nil
+			return market.Marshal(payload)
+		}
+		return string(raw)
+	}()); e != nil {
 		return e
+	}
+	if j.Dataset == "actions" && j.Subject == "us" {
+		for _, record := range result.Payload.Records {
+			symbol, ok := record["ticker"].(string)
+			if !ok || symbol == "" {
+				return errors.New("invalid action ticker")
+			}
+			body := market.Marshal(record)
+			hash := sha256.Sum256([]byte(body))
+			if _, e = tx.ExecContext(ctx, "INSERT OR IGNORE INTO research_actions VALUES(?,?,?,?)", snapshot, symbol, hex.EncodeToString(hash[:]), body); e != nil {
+				return e
+			}
+		}
 	}
 	for _, h := range hashes {
 		if _, e = tx.ExecContext(ctx, "INSERT OR IGNORE INTO research_snapshot_sources VALUES(?,?)", snapshot, h); e != nil {
@@ -364,7 +384,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		return out, e
 	}
 	defer tx.Rollback()
-	rows, e := tx.QueryContext(ctx, `SELECT h.dataset,s.id,s.provider,s.fetched_at,s.payload_json FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.subject=? OR (h.subject=? AND h.dataset IN ('facts','filings','insiders'))`, symbol, "cik:"+cik)
+	rows, e := tx.QueryContext(ctx, `SELECT h.dataset,s.id,s.provider,s.fetched_at,s.payload_json FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.subject=? OR (h.subject=? AND h.dataset IN ('facts','filings','insiders')) OR (h.dataset='actions' AND h.subject='us')`, symbol, "cik:"+cik)
 	if e != nil {
 		return out, e
 	}
@@ -387,6 +407,9 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		if len(v.Data.Filings) > 250 {
 			v.Data.Filings = v.Data.Filings[:250]
 		}
+		if old, ok := out.Datasets[d]; ok && old.FetchedAt > v.FetchedAt {
+			continue
+		}
 		out.Datasets[d] = v
 		ids[d] = id
 	}
@@ -394,6 +417,40 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 	rows.Close()
 	if e != nil {
 		return out, e
+	}
+	if actionID, ok := ids["actions"]; ok {
+		var actionSubject string
+		if e = tx.QueryRowContext(ctx, "SELECT subject FROM research_snapshots WHERE id=?", actionID).Scan(&actionSubject); e != nil {
+			return out, e
+		}
+		if actionSubject == "us" {
+			v := out.Datasets["actions"]
+			v.Data.Records = []market.Record{}
+			rs, e := tx.QueryContext(ctx, "SELECT payload_json FROM research_actions WHERE snapshot_id=? AND symbol=?", actionID, symbol)
+			if e != nil {
+				return out, e
+			}
+			for rs.Next() {
+				var body string
+				if e = rs.Scan(&body); e != nil {
+					rs.Close()
+					return out, e
+				}
+				var r market.Record
+				if e = json.Unmarshal([]byte(body), &r); e != nil {
+					rs.Close()
+					return out, e
+				}
+				v.Data.Records = append(v.Data.Records, r)
+			}
+			e = rs.Err()
+			rs.Close()
+			if e != nil {
+				return out, e
+			}
+			v.RecordCount = len(v.Data.Records)
+			out.Datasets["actions"] = v
+		}
 	}
 	var priceID string
 	var priceView DatasetView
@@ -559,7 +616,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs GROUP BY dataset`)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' GROUP BY dataset`)
 	if e != nil {
 		return out, e
 	}
@@ -777,4 +834,38 @@ func (s *Store) BoundPriceJobs(ctx context.Context, from string, now time.Time) 
 		return e
 	}
 	return tx.Commit()
+}
+
+// SEC accession document URLs are immutable. Reuse their original verified bytes;
+// mutable submissions/facts URLs never enter this cache path.
+func (s *Store) ResearchArchive(ctx context.Context, url string) (*market.Evidence, error) {
+	if !strings.HasPrefix(url, "https://www.sec.gov/Archives/edgar/data/") {
+		return nil, errors.New("invalid archive source")
+	}
+	var ev market.Evidence
+	var fetched string
+	var compressed []byte
+	e := s.db.QueryRowContext(ctx, "SELECT source_url,fetched_at,content_gzip FROM research_evidence WHERE source_url=? ORDER BY fetched_at DESC LIMIT 1", url).Scan(&ev.URL, &fetched, &compressed)
+	if errors.Is(e, sql.ErrNoRows) {
+		return nil, nil
+	}
+	if e != nil {
+		return nil, e
+	}
+	r, e := gzip.NewReader(bytes.NewReader(compressed))
+	if e != nil {
+		return nil, e
+	}
+	defer r.Close()
+	ev.Body, e = io.ReadAll(io.LimitReader(r, (32<<20)+1))
+	if e != nil || len(ev.Body) > 32<<20 {
+		return nil, errors.New("invalid archive evidence")
+	}
+	ev.FetchedAt, _ = time.Parse(time.RFC3339Nano, fetched)
+	return &ev, nil
+}
+
+func (s *Store) UseSharedActions(ctx context.Context) error {
+	_, e := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE dataset='actions' AND subject!='us' AND state!='running'")
+	return e
 }

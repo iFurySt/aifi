@@ -19,6 +19,7 @@ import (
 )
 
 type Client struct {
+	ReadArchive  func(context.Context, string) (*Evidence, error)
 	ReadStage    func(context.Context, string) (*Evidence, error)
 	SaveStage    func(context.Context, string, Evidence) error
 	HTTP         *http.Client
@@ -494,13 +495,19 @@ func (c *Client) massivePages(ctx context.Context, endpoint string, r *Result) (
 	return nil, &Failure{Code: "pagination_limit"}
 }
 func (c *Client) actions(ctx context.Context, j Job, r *Result) error {
-	q := "?ticker=" + url.QueryEscape(j.Subject) + "&limit=1000"
+	q := "?limit=5000"
+	if j.Subject != "us" {
+		q += "&ticker=" + url.QueryEscape(j.Subject)
+	}
 	for _, kind := range []string{"splits", "dividends"} {
-		items, e := c.massivePages(ctx, "https://api.massive.com/stocks/v1/"+kind+q, r)
+		items, e := c.massivePages(ctx, "https://api.massive.com/stocks/v1/"+kind+q+"&"+map[string]string{"splits": "execution_date", "dividends": "ex_dividend_date"}[kind]+".gte="+c.Now().AddDate(-2, 0, 0).Format("2006-01-02"), r)
 		if e != nil {
 			return e
 		}
 		for _, v := range items {
+			if j.Subject == "us" && text(v["ticker"]) == "" {
+				return &Failure{Code: "invalid_action_symbol"}
+			}
 			v["kind"] = kind
 			if kind == "splits" && (!validDate(text(v["execution_date"])) || number(v["split_from"]) <= 0 || number(v["split_to"]) <= 0) {
 				r.Payload.Complete = false

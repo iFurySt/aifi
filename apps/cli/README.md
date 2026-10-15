@@ -125,7 +125,10 @@ retrieval is exposed to the renderer.
 
 Market jobs fetch raw OHLCV for all US tickers by date, initially up to 730
 calendar days, with newest sessions and AAPL/MSFT/NVDA enrichment prioritized.
-Per-company jobs cover the whole directory; SEC issuer jobs share a CIK. Unknown
+Company-profile and optional enrichment jobs cover the whole directory;
+SEC issuer jobs share a CIK. Splits/dividends use a shared market-wide snapshot
+and indexed per-symbol SQLite rows, rather than daily requests per stock.
+Immutable SEC accession XML is reused after its first successful collection. Unknown
 SEC mappings and unavailable vendor instruments are not fabricated. Prices for
 non-company instruments may exist even when SEC financials do not.
 

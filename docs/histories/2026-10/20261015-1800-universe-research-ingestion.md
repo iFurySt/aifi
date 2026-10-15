@@ -55,3 +55,8 @@ provenance. All-directory coverage is a measured queue, not a fixture ticker lis
 - The local 7,481-candidate directory is queued; no market/FMP key or SEC contact
   is configured, so actual sourced price coverage remains zero. No full live
   coverage claim is made. Provider/source-window limits are in the runtime doc.
+
+- Final scale adjustment: corporate actions use one shared market snapshot,
+  normalized per-symbol action rows and no per-listing daily refresh requests.
+  Immutable SEC Form 4 XML is reused; expired price jobs are retired before keys
+  configured later can trigger out-of-window collection.

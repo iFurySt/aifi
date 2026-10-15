@@ -32,6 +32,7 @@ func New(db *store.Store, path string, offline bool) *Engine {
 	e.Client = c
 	c.ReadPayload = db.ResearchPayload
 	c.ReadEvidence = db.ResearchEvidence
+	c.ReadArchive = db.ResearchArchive
 	c.ReadStage = db.ResearchStage
 	c.SaveStage = db.SaveResearchStage
 	c.Key = func(ctx context.Context, p string) (map[string]string, error) {
@@ -133,7 +134,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	if err != nil {
 		return err
 	}
-	jobs := []market.Job{{Provider: "sec", Dataset: "identity", Subject: "us"}}
+	jobs := []market.Job{{Provider: "sec", Dataset: "identity", Subject: "us"}, {Provider: "massive", Dataset: "actions", Subject: "us"}}
 	// Date-only batches are intentionally raw; split adjustments are computed from
 	// persisted actions, so a new split cannot leave older stored bars inconsistent.
 	location, _ := time.LoadLocation("America/New_York")
@@ -148,7 +149,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
-		for _, d := range []string{"profile", "actions", "funds", "politicians", "analyst", "news"} {
+		for _, d := range []string{"profile", "funds", "politicians", "analyst", "news"} {
 			p := "massive"
 			if d == "funds" || d == "politicians" || d == "analyst" || d == "news" {
 				p = "fmp"
@@ -177,6 +178,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 		}
 	}
 	if err = e.DB.BoundPriceJobs(ctx, end.AddDate(0, 0, -cfg.HistoryDays+1).Format("2006-01-02"), now); err != nil {
+		return err
+	}
+	if err = e.DB.UseSharedActions(ctx); err != nil {
 		return err
 	}
 	e.fingerprint = fingerprint

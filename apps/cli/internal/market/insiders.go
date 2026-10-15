@@ -62,9 +62,22 @@ func (c *Client) insiders(ctx context.Context, j Job, r *Result) error {
 			clean = append(clean, v)
 		}
 		u.Path = strings.Join(clean, "/")
-		raw, e := c.getXML(ctx, u.String(), &r.Evidence)
-		if e != nil {
-			return e
+		var raw []byte
+		var cached *Evidence
+		if c.ReadArchive != nil {
+			cached, e = c.ReadArchive(ctx, u.String())
+			if e != nil {
+				return e
+			}
+		}
+		if cached != nil {
+			raw = cached.Body
+			r.Evidence = append(r.Evidence, *cached)
+		} else {
+			raw, e = c.getXML(ctx, u.String(), &r.Evidence)
+			if e != nil {
+				return e
+			}
 		}
 		var doc ownershipDocument
 		if xml.Unmarshal(raw, &doc) != nil || doc.Issuer.CIK == "" {

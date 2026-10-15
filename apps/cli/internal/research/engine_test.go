@@ -53,7 +53,7 @@ func TestUniverseJobsAndReconcileAfterMapping(t *testing.T) {
 		for _, p := range status.Progress {
 			if p.Dataset == d {
 				found = true
-				if p.Total != 3 {
+				if p.Total != map[string]int{"actions": 1, "profile": 3, "funds": 3, "politicians": 3, "analyst": 3, "news": 3}[d] {
 					t.Fatalf("%s not all-directory: %+v", d, p)
 				}
 			}
