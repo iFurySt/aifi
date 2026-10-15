@@ -24,7 +24,7 @@ retrying null responses too often, and apparent cache misses after restart.
 - [x] Inspect existing cache and avatar mount/refresh behavior.
 - [x] Implement immediate local/session hits with focused regression coverage.
 - [x] CI, isolated native smoke, real cache/network-count verification and docs.
-- [ ] Commit/push, rebuild primary checkout and restart the app.
+- [x] Commit/push, rebuild primary checkout and restart the app.
 
 ## Verification Results
 
@@ -38,3 +38,11 @@ retrying null responses too often, and apparent cache misses after restart.
   times without running effects or performing a second local read.
 - Native manual interaction tools returned Transport closed, so this task uses
   the repository's actual Electron smoke plus cache/render probes for validation.
+
+## Delivery
+
+Implementation pushed and primary checkout rebuilt. The previous owned app
+process was stopped and the updated app launched through `pnpm desktop`; the
+new process uses the primary bundle. Native interaction tooling remained
+unavailable, so no post-restart manual UI observation is claimed. Cache/render
+probes and isolated native smoke evidence were preserved in ignored artifacts.

@@ -45,6 +45,8 @@ still require a bounded provider request.
 - Isolated actual Electron offline smoke passes; its screenshot was reviewed.
   Native interaction tools were unavailable (Transport closed), so no manual
   navigation review is claimed.
+- Implementation was pushed, primary assets rebuilt and the owned app restarted
+  through the normal launcher. Public cache/render QA artifacts were preserved.
 
 ### Files Modified
 
