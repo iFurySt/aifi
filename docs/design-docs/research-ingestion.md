@@ -119,7 +119,7 @@ Valuations/margins use explicitly matching periods/units where available.
 Market cap uses the provider's company-level weighted share reference, not a
 single share class's outstanding count; its reference date remains available.
 Company Facts is not a complete dimensional/custom financial statement parser;
-IFRS, business/geographic segments, future earnings estimates/calendar and short
+IFRS, business/geographic segments, peer relationships, future earnings estimates/calendar and short
 interest still require additional dataset-specific work. No missing value is zero.
 
 Shared action snapshots retain two years of events and publish their per-symbol

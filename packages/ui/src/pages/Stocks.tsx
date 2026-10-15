@@ -312,6 +312,10 @@ export function Stocks() {
                   </div>
                 ))}
               </dl>
+              <section className="stock-peers">
+                <h2>Peers</h2>
+                <div className="stock-no-data">No peer data</div>
+              </section>
             </div>
             <div className="stock-visual-column">
               <StockChart
