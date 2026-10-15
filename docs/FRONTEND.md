@@ -53,7 +53,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, 61 domain/storage/route/host/UI tests,
+make ci runs repository gates, TypeScript, 62 domain/storage/route/host/UI tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -229,3 +229,12 @@ Native smoke also opens the four-choice collection menu, saves/restores selectio
 checks offline index provenance/coverage, rejects caller-defined built-in members,
 and verifies hidden scrollbar styles. It never substitutes index entries into an
 empty imported directory.
+
+## Local Read And Loading Semantics
+
+Directory search/paging/focus refreshes call the local Go/SQLite read capability,
+not Nasdaq/provider APIs. Source collection has its own scheduler/manual-sync
+path. Keep this distinction when adding datasets; follow the
+[local data contract](design-docs/local-data-contract.md). During a periodic head
+read, retain rows without showing Loading more. The `loadingMore` flag identifies
+actual append reads; status/empty/error hints use the stock rows' 8px leading inset.

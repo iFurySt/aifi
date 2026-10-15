@@ -1997,6 +1997,10 @@ kbd {
   align-content: start;
   gap: 4px;
 }
+.stock-list > .sidebar-hint {
+  margin: 0;
+  padding: 8px 8px 12px;
+}
 .stock-list-row {
   display: flex;
   align-items: center;

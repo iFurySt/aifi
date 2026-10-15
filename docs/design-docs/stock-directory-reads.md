@@ -63,7 +63,8 @@ Readers debounce search by 180ms, discard superseded responses, and refresh ever
 60 seconds/on window focus while mounted to discover background imports. Query
 changes reset the feed. One in-flight batch per feed prevents duplicate reads;
 changed snapshot IDs rebase rather than mixing versions. Unchanged background
-refreshes preserve all loaded rows. Refresh errors retain the same query's cached real rows and
+refreshes preserve all loaded rows and stay visually quiet; only an actual append
+sets loadingMore and displays the inset loading status. Refresh errors retain the same query's cached real rows and
 show Retry; new failed queries never substitute sample companies. Empty imports
 and unmatched searches have distinct short messages. Native offline smoke checks
 that the empty store cannot show the former five-symbol fixture list.
@@ -74,15 +75,15 @@ marked samples for five targets; other symbols show no market/fundamental data.
 The other research tabs remain placeholders. Watchlist/Portfolio demo quotes are
 outside this directory-read change.
 
-## Future Cloud Implementation
+## Future Cloud Synchronization
 
-Implement the same repository contract, preserving nullable lookup, bounded
-pagination, literal search, snapshot semantics and source fields. Select it at
-application composition instead of modifying components. For Electron, cloud
-auth/network ownership can remain in main behind the existing narrow bridge;
-main can delegate directory reads to a cloud adapter instead of the local Go
-service. Local settings/collection can remain independent.
+Keep the same repository contract: nullable lookup, bounded pagination, literal
+search, snapshot semantics and source fields. A future cloud source synchronizes
+through the host/collector into SQLite before consumers read it. Normal page reads
+must keep using stored snapshots rather than directly request a remote listing
+endpoint. Components stay unchanged because the domain read port stays injectable.
+See [local data contract](local-data-contract.md).
 
-No cloud backend, provider-selection UI, ambient remote URL, auth token storage,
-remote renderer permission or permissive CORS is added now. A future integration
-must explicitly compose authentication and host/CSP policy with its adapter.
+No cloud backend, ambient remote URL, auth token storage, remote renderer
+permission or permissive CORS is added now. A future integration must compose
+sync/authentication and host policy explicitly.

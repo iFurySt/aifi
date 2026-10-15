@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"github.com/ifuryst/aifi/apps/cli/internal/directory"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
 	"io"
@@ -19,6 +20,9 @@ type fakeFetcher struct {
 
 func (f *fakeFetcher) Fetch(ctx context.Context) ([]directory.File, error) {
 	f.calls.Add(1)
+	if f.fail {
+		return nil, errors.New("provider unavailable")
+	}
 	texts := []string{"Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares\nEXAMPLE|Example security|Q|N|N|100|N|N\nFile Creation Time: 1012202621:31|||||||\n", "ACT Symbol|Security Name|Exchange|CQS Symbol|ETF|Round Lot Size|Test Issue|NASDAQ Symbol\nOTHER|Other security|N|OTHER|N|100|N|OTHER\nFile Creation Time: 1012202621:31||||||\n"}
 	var files []directory.File
 	for i, text := range texts {
@@ -210,5 +214,47 @@ func TestDirectoryReadRPC(t *testing.T) {
 	}
 	if f.calls.Load() != 0 {
 		t.Fatal("cached reads spent network calls")
+	}
+}
+
+func TestReadStoredDirectoryAfterRestartWithoutProvider(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, e := store.Open(ctx, path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	source := &fakeFetcher{}
+	if _, e = db.Sync(ctx, source); e != nil {
+		t.Fatal(e)
+	}
+	db.Close()
+	db, e = store.Open(ctx, path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	defer db.Close()
+	// Provider unavailable after restart: every UI read must use the durable store.
+	unavailable := &fakeFetcher{fail: true}
+	service := New(db, unavailable, path, true)
+	for _, params := range []string{
+		`{"query":"","limit":1,"offset":0}`,
+		`{"query":"","limit":1,"offset":1}`,
+		`{"query":"Example","limit":50,"offset":0,"collection":"all-us"}`,
+		`{"query":"","limit":50,"offset":0,"collection":"watchlist","symbols":["OTHER"]}`,
+		`{"query":"","limit":50,"offset":0,"collection":"sp500"}`,
+		`{"query":"","limit":50,"offset":0,"collection":"nasdaq100"}`,
+	} {
+		result, err := service.Dispatch(ctx, Request{Method: "directory.list", Params: json.RawMessage(params)})
+		if err != nil || result.(store.Page).SnapshotID == "" {
+			t.Fatal("stored list read failed", params, result, err)
+		}
+	}
+	lookup, e := service.Dispatch(ctx, Request{Method: "directory.get", Params: json.RawMessage(`{"symbol":"EXAMPLE"}`)})
+	if e != nil || lookup.(store.Lookup).Item == nil {
+		t.Fatal("stored exact lookup failed", lookup, e)
+	}
+	if unavailable.calls.Load() != 0 {
+		t.Fatal("a read attempted provider collection")
 	}
 }

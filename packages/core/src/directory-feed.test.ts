@@ -131,3 +131,28 @@ it("retries a failed refresh from offset zero, preserving loaded rows", async ()
   expect(feed.state.items).toHaveLength(4);
   expect(feed.state.error).toBe("");
 });
+
+it("shows append progress only for local pagination, keeping periodic head reads quiet", async () => {
+  const { feed, search } = setup();
+  search.mockResolvedValueOnce(page(0, ["A", "B"]));
+  await feed.reset("");
+  const head = deferred<DirectoryPage>();
+  search.mockReturnValueOnce(head.promise);
+  const checking = feed.refresh();
+  expect(feed.state.loading).toBe(true);
+  expect(feed.state.loadingMore).toBe(false);
+  expect(feed.state.items.map((e) => e.id)).toEqual(["A", "B"]);
+  // Keep the shared busy gate: bottom intersections cannot race a head refresh.
+  await feed.loadMore();
+  expect(search).toHaveBeenCalledTimes(2);
+  head.resolve(page(0, ["A", "B"]));
+  await checking;
+  const next = deferred<DirectoryPage>();
+  search.mockReturnValueOnce(next.promise);
+  const loading = feed.loadMore();
+  expect(feed.state.loadingMore).toBe(true);
+  next.resolve(page(2, ["C", "D"]));
+  await loading;
+  expect(feed.state.loading).toBe(false);
+  expect(feed.state.loadingMore).toBe(false);
+});

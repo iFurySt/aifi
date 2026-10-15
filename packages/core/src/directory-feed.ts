@@ -11,6 +11,7 @@ export interface DirectoryFeedState {
   total: number;
   snapshotId: string;
   loading: boolean;
+  loadingMore: boolean;
   error: string;
   hasMore: boolean;
 }
@@ -20,6 +21,7 @@ export const emptyDirectoryFeed = (query = ""): DirectoryFeedState => ({
   total: 0,
   snapshotId: "",
   loading: true,
+  loadingMore: false,
   error: "",
   hasMore: false,
 });
@@ -80,7 +82,12 @@ export class DirectoryFeed {
     const generation = this.generation,
       query = this.state.query,
       offset = append ? this.offset : 0;
-    this.update({ ...this.state, loading: true, error: "" });
+    this.update({
+      ...this.state,
+      loading: true,
+      loadingMore: append,
+      error: "",
+    });
     try {
       let page = await this.repository.search({
         query,
@@ -125,6 +132,7 @@ export class DirectoryFeed {
         total: page.total,
         snapshotId: page.snapshotId,
         loading: false,
+        loadingMore: false,
         error: "",
         hasMore: this.offset < page.total,
       });
@@ -134,6 +142,7 @@ export class DirectoryFeed {
         this.update({
           ...this.state,
           loading: false,
+          loadingMore: false,
           error: "Directory unavailable",
         });
     } finally {

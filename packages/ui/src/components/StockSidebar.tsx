@@ -158,7 +158,7 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
             </span>
           </button>
         ))}
-        {loading && (
+        {loading && (!data.items.length || data.loadingMore) && (
           <p className="sidebar-hint" role="status">
             {data.items.length ? "Loading more…" : "Loading stocks…"}
           </p>

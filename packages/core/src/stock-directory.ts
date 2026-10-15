@@ -51,7 +51,7 @@ export interface DirectoryLookup {
   snapshotId: string;
   item: DirectoryEntry | null;
 }
-/** UI domain port. Local IPC/HTTP and future authenticated cloud adapters fit here. */
+/** UI port for stored local snapshots; provider/cloud collection stays behind persistence. */
 export interface StockDirectoryRepository {
   search(query: DirectoryQuery): Promise<DirectoryPage>;
   get(symbol: string): Promise<DirectoryLookup>;

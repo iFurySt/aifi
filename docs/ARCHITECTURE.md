@@ -91,6 +91,10 @@ financials remain fixtures; directory scheduling and paged directory reads are i
 
 ## Boundary Rules
 
+Source data follows [collect → persist → local read](design-docs/local-data-contract.md):
+asynchronous collectors commit structured datasets to SQLite; normal page reads,
+filters and pagination never trigger remote collection. Go owns the durable store.
+
 - Put business logic in reusable packages before spreading it across apps.
 - Keep infrastructure and runtime orchestration explicit and versioned.
 - Avoid hidden cross-package coupling; follow the dependency direction above.
@@ -154,8 +158,8 @@ Core `StockDirectoryRepository` defines search/get without host APIs. Platform
 provides the local adapter; App injects it into shared UI context. Electron reads
 through preload/main/private Go RPC, while Web uses the authenticated loopback
 bridge. Main owns the service capability; Go remains the SQLite owner. A future
-cloud implementation can satisfy the same domain contract or preserve the bridge
-and delegate host reads to cloud transport. The UI does not choose SQL/URLs/auth.
+cloud source can synchronize into SQLite behind the same domain contract and
+bridge. Ordinary page reads stay local. The UI does not choose SQL/URLs/auth.
 See [directory read contract](design-docs/stock-directory-reads.md).
 
 The [stock collections design](design-docs/stock-collections.md) defines All US

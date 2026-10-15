@@ -55,3 +55,9 @@ Startup seeds require complete validated lists and an atomic transaction;
 reopening older reviewed bundles cannot roll a newer index head back. Index
 coverage reports unresolved source symbols instead of silently truncating counts.
 Automatic index sync is deferred; source dates stay attached to scoped reads.
+
+The [local data contract](design-docs/local-data-contract.md) requires asynchronous
+structured-data collection followed by durable SQLite commits and local reads.
+Directory paging/search has a restart regression with an unavailable provider:
+all reads still succeed without invoking its fetcher. The UI distinguishes quiet
+local head rechecks from append progress instead of showing Loading more for both.

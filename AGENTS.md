@@ -22,6 +22,7 @@ If a code or workflow change makes a doc stale, update the doc in the same task.
 
 - `docs/PLANS_GUIDE.md`: when to create an execution plan and how to maintain it.
 - `docs/PRODUCT_SENSE.md`: user value, product constraints, and feature prioritization heuristics.
+- `docs/design-docs/local-data-contract.md`: required collect → persist → local-read boundary for any source-data work.
 - `docs/RELIABILITY.md`: runtime guardrails, observability expectations, and operational readiness.
 - `docs/SECURITY.md`: secure defaults for research data, source handling, secrets, and external integrations.
 - `docs/CICD.md`: current CI scope and when to add heavier automation.
