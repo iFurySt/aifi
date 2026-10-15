@@ -300,7 +300,15 @@ export function Stocks() {
                 {metrics.map(([label, value], i) => (
                   <div key={label} className={i >= 8 ? "wide" : ""}>
                     <dt>{label}</dt>
-                    <dd>{value}</dd>
+                    <dd
+                      title={
+                        label === "Market cap" && profile?.sharesDate
+                          ? `Company share reference: ${profile.sharesDate}`
+                          : undefined
+                      }
+                    >
+                      {value}
+                    </dd>
                   </div>
                 ))}
               </dl>

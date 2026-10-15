@@ -65,3 +65,7 @@ provenance. All-directory coverage is a measured queue, not a fixture ticker lis
   re-enqueuing an existing universe. Hoisted it out of per-job values and indexed
   pending manual work. A 12,000-job reconciliation/reopen regression covers
   simultaneous host startup without changing the user's workspace or source data.
+
+- Multi-class company market-cap calculations use the provider's company-level
+  weighted share count, with the reference date available in the UI. New York
+  zone rules are embedded in the Go binary for standalone host portability.

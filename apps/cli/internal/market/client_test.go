@@ -157,3 +157,13 @@ func TestFundPagesResumeWithoutPublishingPartialHoldings(t *testing.T) {
 		t.Fatal("resume did not reuse validated page", e, requests)
 	}
 }
+
+func TestMarketCapShareReferenceIsCompanyLevelNotSingleClass(t *testing.T) {
+	c := testClient(t, func(*http.Request) (int, string) {
+		return 200, `{"results":{"ticker":"CLASS.A","name":"Multi-class issuer","share_class_shares_outstanding":100,"weighted_shares_outstanding":1000}}`
+	})
+	r, e := c.Collect(context.Background(), Job{Dataset: "profile", Subject: "CLASS.A"})
+	if e != nil || r.Payload.Profile.Shares == nil || *r.Payload.Profile.Shares != 1000 {
+		t.Fatal("company market cap used one share class", e)
+	}
+}

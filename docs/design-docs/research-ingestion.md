@@ -114,6 +114,8 @@ Quarter cash flows can be derived only from compatible cumulative periods with
 the same start. Annual totals are never divided by four. Weighted EPS is not
 subtracted to invent a quarter. TTM requires four contiguous quarterly periods.
 Valuations/margins use explicitly matching periods/units where available.
+Market cap uses the provider's company-level weighted share reference, not a
+single share class's outstanding count; its reference date remains available.
 Company Facts is not a complete dimensional/custom financial statement parser;
 IFRS, business/geographic segments, future earnings estimates/calendar and short
 interest still require additional dataset-specific work. No missing value is zero.

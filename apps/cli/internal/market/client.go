@@ -329,7 +329,7 @@ func (c *Client) profile(ctx context.Context, j Job, r *Result) error {
 		return &Failure{Code: "invalid_profile"}
 	}
 	p := &Profile{Symbol: j.Subject, Name: text(v["name"]), CIK: text(v["cik"]), Description: text(v["description"]), Industry: text(v["sic_description"]), Website: text(v["homepage_url"]), Currency: strings.ToUpper(text(v["currency_name"])), Type: text(v["type"])}
-	if n := number(v["share_class_shares_outstanding"]); n > 0 {
+	if n := number(v["weighted_shares_outstanding"]); n > 0 {
 		p.Shares = &n
 		p.SharesDate = c.Now().UTC().Format("2006-01-02")
 	}

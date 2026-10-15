@@ -12,6 +12,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	_ "time/tzdata"
 
 	"github.com/ifuryst/aifi/apps/cli/internal/market"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
@@ -137,7 +138,10 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	jobs := []market.Job{{Provider: "sec", Dataset: "identity", Subject: "us"}, {Provider: "massive", Dataset: "actions", Subject: "us"}}
 	// Date-only batches are intentionally raw; split adjustments are computed from
 	// persisted actions, so a new split cannot leave older stored bars inconsistent.
-	location, _ := time.LoadLocation("America/New_York")
+	location, err := time.LoadLocation("America/New_York")
+	if err != nil {
+		return err
+	}
 	local := now.In(location)
 	end := time.Date(local.Year(), local.Month(), local.Day(), 0, 0, 0, 0, location).AddDate(0, 0, -1)
 	for i := 0; i < cfg.HistoryDays; i++ {
