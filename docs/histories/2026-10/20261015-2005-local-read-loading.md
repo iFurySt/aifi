@@ -44,3 +44,11 @@ append label as actual paging. Status text also lacked the row-content inset.
 - `packages/ui/src/components/StockSidebar.tsx`, `styles.css`
 - `apps/cli/internal/service/service_test.go`
 - `AGENTS.md`, core beliefs, local-data contract and related architecture/UI docs
+
+### Delivery
+
+Implementation `3694d38` pushed to main. Primary checkout rebuilt and normal
+AIFi restarted; its saved S&P selection and cached directory rows were verified
+in the native accessibility tree. The existing Chrome preview was restored to
+the primary build with its QA wrapper removed. Ignored screenshots/results and
+native smoke evidence were preserved before isolated-service/worktree cleanup.
