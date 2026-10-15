@@ -75,7 +75,9 @@ multiple hosts/processes using the same DB. Defaults: Massive 5/min, SEC 240/min
 FMP 4/min and 200/day; settings permit lower or account-specific higher limits.
 Daily counters currently use UTC days. Provider 429/Retry-After applies a shared
 cooldown; actual provider quota rules can be stricter than this local budget.
-Transient failures back off 1–64 minutes. Invalid credentials block the provider;
+Transient failures back off 1–64 minutes. Not-yet-available instruments/facts
+retry on at least a daily/dataset cadence; 404 does not permanently disable a
+new issuer that may publish data later. Invalid credentials block the provider;
 endpoint access errors block that dataset. Credential/contact updates unblock
 eligible work. Disabled datasets remain disabled for manual requests too.
 

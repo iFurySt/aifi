@@ -56,3 +56,5 @@ venv/
 *.sqlite
 *.sqlite-wal
 *.sqlite-shm
+# Local credential master key (including custom data directories)
+aifi-vault.key

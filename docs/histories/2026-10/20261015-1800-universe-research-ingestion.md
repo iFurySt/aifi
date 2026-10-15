@@ -73,3 +73,7 @@ provenance. All-directory coverage is a measured queue, not a fixture ticker lis
 - Manual issuer expansion now derives from explicitly requested listing jobs.
   Newly added listings and future price sessions cannot inherit an old manual
   request while automation is paused; no manual-scope scan runs per insert.
+
+- Missing vendor data retries conservatively rather than permanently blocking a
+  newly listed issuer. Credential master-key filenames are ignored even when a
+  user chooses a repository-local custom data directory.

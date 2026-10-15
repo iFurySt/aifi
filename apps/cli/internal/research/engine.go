@@ -268,10 +268,17 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 		if code == "access_denied" {
 			_ = e.DB.BlockResearchDataset(ctx, p, j.Dataset, code)
 		}
+		if code == "not_found" {
+			hours := cfg.Datasets[j.Dataset].IntervalHours
+			if hours < 24 {
+				hours = 24
+			}
+			retry = time.Duration(hours) * time.Hour
+		}
 		if failure.RetryAfter > retry {
 			retry = failure.RetryAfter
 		}
-		blocked = code == "access_denied" || code == "invalid_key" || code == "not_found" || code == "unsupported_dataset"
+		blocked = code == "access_denied" || code == "invalid_key" || code == "unsupported_dataset"
 		if code == "invalid_key" || (p == "sec" && code == "access_denied") {
 			_ = e.DB.CooldownProvider(ctx, p, code, now)
 		} else if code == "rate_limited" {

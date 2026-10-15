@@ -219,3 +219,32 @@ func TestCollectionToOfflineResearchReadForNonDemoSymbol(t *testing.T) {
 		t.Fatal("offline read called a provider")
 	}
 }
+
+func TestNewIssuerMissingDataRetriesWithoutPermanentBlock(t *testing.T) {
+	ctx := context.Background()
+	db, e := store.Open(ctx, t.TempDir())
+	if e != nil {
+		t.Fatal(e)
+	}
+	defer db.Close()
+	now := time.Now()
+	db.AddResearchJobs(ctx, []market.Job{{Provider: "massive", Dataset: "profile", Subject: "NEW"}}, now)
+	engine := New(db, "", false)
+	engine.Client.Gate = nil
+	engine.Client.Key = func(context.Context, string) (map[string]string, error) {
+		return map[string]string{"apiKey": "fixture-key"}, nil
+	}
+	engine.Client.HTTP = &http.Client{Transport: fixtureHTTP(func(*http.Request) (*http.Response, error) {
+		return &http.Response{StatusCode: 404, Header: http.Header{}, Body: io.NopCloser(strings.NewReader("not published yet"))}, nil
+	})}
+	worked, e := engine.Step(ctx, "massive")
+	if e != nil || !worked {
+		t.Fatal(e)
+	}
+	if j, _ := db.ClaimResearchJob(ctx, "massive", []string{"profile"}, false, now.Add(24*time.Hour)); j != nil {
+		t.Fatal("new issuer retried too aggressively")
+	}
+	if j, e := db.ClaimResearchJob(ctx, "massive", []string{"profile"}, false, now.Add(169*time.Hour)); e != nil || j == nil {
+		t.Fatal("temporarily missing data permanently blocked", e)
+	}
+}
