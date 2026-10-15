@@ -14,5 +14,8 @@
     "@radix-ui/react-dropdown-menu": "2.2.0",
     "lucide-react": "1.55.0",
     "react": "19.3.0"
+  },
+  "devDependencies": {
+    "react-dom": "19.3.0"
   }
 }

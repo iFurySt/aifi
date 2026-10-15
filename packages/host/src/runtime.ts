@@ -135,7 +135,7 @@ export class DataHost {
         /* Never mirror host diagnostics/credentials to renderer logs. */
       });
       createInterface({ input: child.stdout }).on("line", (line) => {
-        if (line.length > 1 << 20) {
+        if (line.length > 4 << 20) {
           child.kill();
           return;
         }

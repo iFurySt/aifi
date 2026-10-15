@@ -5,8 +5,12 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"encoding/base64"
+	"fmt"
+	"io"
+	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 
@@ -142,5 +146,76 @@ func TestDatasetPauseAndAuthBlockDoNotDrainUniverse(t *testing.T) {
 	worked, err := engine.Step(ctx, "massive")
 	if err != nil || worked {
 		t.Fatal("blocked account drained queued jobs", err)
+	}
+}
+
+type fixtureHTTP func(*http.Request) (*http.Response, error)
+
+func (f fixtureHTTP) RoundTrip(r *http.Request) (*http.Response, error) { return f(r) }
+func TestCollectionToOfflineResearchReadForNonDemoSymbol(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, err := store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	engine := New(db, path, false)
+	engine.Client.Gate = nil
+	engine.Client.Key = func(context.Context, string) (map[string]string, error) {
+		return map[string]string{"apiKey": "test-only-private-key"}, nil
+	}
+	engine.Client.SECContact = func(context.Context) (string, error) { return "AIFi fixture test@example.invalid", nil }
+	requests := 0
+	engine.Client.HTTP = &http.Client{Transport: fixtureHTTP(func(r *http.Request) (*http.Response, error) {
+		requests++
+		raw := ""
+		switch {
+		case strings.Contains(r.URL.Path, "/aggs/grouped/"):
+			date := r.URL.Path[strings.LastIndex(r.URL.Path, "/")+1:]
+			at, _ := time.Parse("2006-01-02", date)
+			raw = fmt.Sprintf(`{"status":"OK","adjusted":false,"results":[{"T":"OTHER.B","t":%d,"o":100,"h":110,"l":90,"c":105,"v":1234}]}`, at.UnixMilli())
+		case strings.Contains(r.URL.Path, "/reference/tickers/"):
+			raw = `{"results":{"ticker":"OTHER.B","name":"Other Company Class B","type":"CS","currency_name":"usd","description":"Real fixture source profile"}}`
+		case strings.Contains(r.URL.Path, "/stocks/v1/"):
+			raw = `{"status":"OK","results":[]}`
+		case strings.Contains(r.URL.Path, "/submissions/"):
+			raw = `{"name":"Other Company","filings":{"recent":{"accessionNumber":["0000000123-26-000001"],"form":["10-K"],"reportDate":["2026-09-30"],"filingDate":["2026-10-14"],"acceptanceDateTime":["2026-10-14T12:00:00Z"],"primaryDocument":["annual.htm"]}}}`
+		case strings.Contains(r.URL.Path, "/companyfacts/"):
+			raw = `{"entityName":"Other Company","facts":{"us-gaap":{"Revenues":{"units":{"USD":[{"val":123000000,"start":"2025-10-01","end":"2026-09-30","filed":"2026-10-14","accn":"0000000123-26-000001","fy":2026,"fp":"FY","form":"10-K"}]}}}}}`
+		default:
+			t.Fatalf("unexpected endpoint %s", r.URL.Path)
+		}
+		return &http.Response{StatusCode: 200, Body: io.NopCloser(strings.NewReader(raw)), Header: http.Header{}}, nil
+	})}
+	now := time.Now()
+	mapping := market.Job{Provider: "sec", Dataset: "identity", Subject: "us"}
+	db.AddResearchJobs(ctx, []market.Job{mapping}, now)
+	identity, _ := db.ClaimResearchJob(ctx, "sec", []string{"identity"}, false, now)
+	if err = db.FinishResearchJob(ctx, *identity, market.Result{Aliases: map[string]string{"OTHER.B": "0000000123"}, Payload: market.Payload{Complete: true}, Evidence: []market.Evidence{{URL: "https://www.sec.gov/files/company_tickers_exchange.json", Body: []byte(`{"source":"fixture"}`), FetchedAt: now}}}, now, now.Add(time.Hour)); err != nil {
+		t.Fatal(err)
+	}
+	jobs := []market.Job{{Provider: "massive", Dataset: "prices", Subject: "2026-10-14"}, {Provider: "massive", Dataset: "profile", Subject: "OTHER.B"}, {Provider: "massive", Dataset: "actions", Subject: "OTHER.B"}, {Provider: "sec", Dataset: "filings", Subject: "cik:0000000123"}, {Provider: "sec", Dataset: "facts", Subject: "cik:0000000123"}, {Provider: "sec", Dataset: "insiders", Subject: "cik:0000000123"}}
+	db.AddResearchJobs(ctx, jobs, now)
+	for _, provider := range []string{"massive", "sec"} {
+		for i := 0; i < 3; i++ {
+			worked, e := engine.Step(ctx, provider)
+			if e != nil || !worked {
+				t.Fatal(provider, i, e)
+			}
+		}
+	}
+	before := requests
+	db.Close()
+	db, err = store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	data, err := db.ResearchRead(ctx, "OTHER.B")
+	if err != nil || len(data.Bars) != 1 || data.Bars[0].Close != 105 || data.Datasets["profile"].Data.Profile.Name != "Other Company Class B" || len(data.Datasets["facts"].Data.Facts) != 1 || len(data.Datasets["filings"].Data.Filings) != 1 || data.Datasets["insiders"].Provider != "sec" || len(data.Datasets["prices"].Sources) != 1 {
+		t.Fatal("persisted source read failed", market.Marshal(data), err)
+	}
+	if requests != before {
+		t.Fatal("offline read called a provider")
 	}
 }

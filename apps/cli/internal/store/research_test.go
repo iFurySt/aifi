@@ -146,3 +146,20 @@ func TestResearchSharedIssuerAndReadBounds(t *testing.T) {
 		t.Fatal("private blobs escaped")
 	}
 }
+
+func TestOldUnconfiguredBackfillCannotBlockCurrentPrices(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Now()
+	db.AddResearchJobs(ctx, []market.Job{{Provider: "massive", Dataset: "prices", Subject: "2020-01-02"}, {Provider: "massive", Dataset: "prices", Subject: "2026-10-14"}}, now)
+	if e := db.BoundPriceJobs(ctx, "2024-10-15", now); e != nil {
+		t.Fatal(e)
+	}
+	j, e := db.ClaimResearchJob(ctx, "massive", []string{"prices"}, false, now)
+	if e != nil || j == nil || j.Subject != "2026-10-14" {
+		t.Fatal("expired unconfigured history was claimed", e)
+	}
+	if second, _ := db.ClaimResearchJob(ctx, "massive", []string{"prices"}, false, now); second != nil {
+		t.Fatal("retired history fetched")
+	}
+}

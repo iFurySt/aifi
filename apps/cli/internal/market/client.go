@@ -95,7 +95,7 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 		switch response.StatusCode {
 		case 401:
 			code = "invalid_key"
-		case 403:
+		case 402, 403:
 			code = "access_denied"
 		case 404:
 			code = "not_found"
@@ -122,6 +122,13 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 		return nil, &Failure{Code: "invalid_response"}
 	}
 	if strings.HasPrefix(strings.TrimSpace(string(raw)), "<") && strings.HasSuffix(u.Path, ".xml") {
+		total := len(raw)
+		for _, item := range *ev {
+			total += len(item.Body)
+		}
+		if total > 64<<20 {
+			return nil, &Failure{Code: "source_window_too_large"}
+		}
 		*ev = append(*ev, Evidence{URL: safe, Body: raw, FetchedAt: c.Now()})
 		return raw, nil
 	}
@@ -136,8 +143,22 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	}
 	if m, ok := probe.(map[string]any); ok {
 		if m["Error Message"] != nil || m["error"] != nil || m["status"] == "ERROR" || m["status"] == "NOT_AUTHORIZED" {
+			message := strings.ToLower(text(m["Error Message"]) + " " + text(m["error"]))
+			if strings.Contains(message, "limit") || strings.Contains(message, "rate") {
+				return nil, &Failure{Code: "rate_limited", RetryAfter: 24 * time.Hour}
+			}
+			if strings.Contains(message, "invalid") && strings.Contains(message, "key") {
+				return nil, &Failure{Code: "invalid_key"}
+			}
 			return nil, &Failure{Code: "access_denied"}
 		}
+	}
+	total := len(raw)
+	for _, item := range *ev {
+		total += len(item.Body)
+	}
+	if total > 64<<20 {
+		return nil, &Failure{Code: "source_window_too_large"}
 	}
 	*ev = append(*ev, Evidence{URL: safe, Body: raw, FetchedAt: c.Now()})
 	return raw, nil
@@ -475,15 +496,19 @@ func (c *Client) massivePages(ctx context.Context, endpoint string, r *Result) (
 func (c *Client) actions(ctx context.Context, j Job, r *Result) error {
 	q := "?ticker=" + url.QueryEscape(j.Subject) + "&limit=1000"
 	for _, kind := range []string{"splits", "dividends"} {
-		items, e := c.massivePages(ctx, "https://api.massive.com/v3/reference/"+kind+q, r)
+		items, e := c.massivePages(ctx, "https://api.massive.com/stocks/v1/"+kind+q, r)
 		if e != nil {
 			return e
 		}
 		for _, v := range items {
 			v["kind"] = kind
+			if kind == "splits" && (!validDate(text(v["execution_date"])) || number(v["split_from"]) <= 0 || number(v["split_to"]) <= 0) {
+				r.Payload.Complete = false
+			}
 			r.Payload.Records = append(r.Payload.Records, v)
 		}
 	}
+	r.Payload.Window = "Provider-entitled split/dividend history"
 	return nil
 }
 func (c *Client) fmpRows(ctx context.Context, path string, q url.Values, r *Result) ([]Record, error) {

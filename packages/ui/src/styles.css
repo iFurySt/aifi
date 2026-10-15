@@ -2936,3 +2936,43 @@ kbd {
     min-height: 40px;
   }
 }
+
+.stock-news-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.stock-news-item h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+.stock-news-item p,
+.stock-news-item small {
+  color: var(--muted);
+  font-size: 12px;
+}
+.quota-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .research-dataset-row .setting-control {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 600px) {
+  .setting-row:has(.credential-state),
+  .research-dataset-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .setting-row:has(.credential-state) .setting-control {
+    justify-content: space-between;
+  }
+  .research-dataset-row .setting-control {
+    justify-content: flex-start;
+  }
+}

@@ -164,3 +164,20 @@ describe("stored research calculations", () => {
       expect(isResearchSourceURL(url)).toBe(false);
   });
 });
+it("does not label distant sparse observations as daily or year-start returns", () => {
+  const bar = (date: string, close: number) => ({
+    date,
+    open: close,
+    high: close,
+    low: close,
+    close,
+    volume: 1,
+  });
+  const metrics = priceMetrics([
+    bar("2025-06-30", 100),
+    bar("2026-01-12", 200),
+  ]);
+  expect(metrics.change).toBeUndefined();
+  expect(metrics.ytd).toBeUndefined();
+  expect(metrics.high52).toBeUndefined();
+});

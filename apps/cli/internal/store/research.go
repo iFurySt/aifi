@@ -395,6 +395,20 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 	if e != nil {
 		return out, e
 	}
+	var priceID string
+	var priceView DatasetView
+	var pricePayload string
+	err := tx.QueryRowContext(ctx, `SELECT s.id,s.provider,s.fetched_at,s.payload_json FROM daily_bars b JOIN research_snapshots s ON s.id=b.snapshot_id WHERE b.symbol=? AND b.provider='massive' ORDER BY b.date DESC LIMIT 1`, symbol).Scan(&priceID, &priceView.Provider, &priceView.FetchedAt, &pricePayload)
+	if err != nil && !errors.Is(err, sql.ErrNoRows) {
+		return out, err
+	}
+	if err == nil {
+		if err = json.Unmarshal([]byte(pricePayload), &priceView.Data); err != nil {
+			return out, err
+		}
+		out.Datasets["prices"] = priceView
+		ids["prices"] = priceID
+	}
 	for d, id := range ids {
 		v := out.Datasets[d]
 		v.Sources = []string{}
@@ -685,7 +699,7 @@ func (s *Store) ResearchEvidence(ctx context.Context, dataset, subject string) (
 	return out, rows.Err()
 }
 func (s *Store) BlockResearchDataset(ctx context.Context, provider, dataset, code string) error {
-	_, e := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='blocked',error=? WHERE provider=? AND dataset=? AND state!='running'", code, provider, dataset)
+	_, e := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='blocked',error=? WHERE provider=? AND dataset=? AND state NOT IN ('running','retired')", code, provider, dataset)
 	return e
 }
 
@@ -723,4 +737,44 @@ func (s *Store) SaveResearchStage(ctx context.Context, key string, ev market.Evi
 	}
 	_, e = s.db.ExecContext(ctx, "DELETE FROM research_staging WHERE fetched_at<?", stamp(time.Now().Add(-48*time.Hour)))
 	return e
+}
+
+func (s *Store) ProviderWait(ctx context.Context, p string, limit ProviderLimit, now time.Time) (time.Duration, error) {
+	var day, cooldown string
+	var calls int
+	e := s.db.QueryRowContext(ctx, "SELECT day,calls,cooldown_until FROM provider_budgets WHERE provider=?", p).Scan(&day, &calls, &cooldown)
+	if errors.Is(e, sql.ErrNoRows) {
+		return 0, nil
+	}
+	if e != nil {
+		return 0, e
+	}
+	until, _ := time.Parse(time.RFC3339Nano, cooldown)
+	if day == now.UTC().Format("2006-01-02") && calls >= limit.PerDay {
+		tomorrow := time.Date(now.UTC().Year(), now.UTC().Month(), now.UTC().Day()+1, 0, 0, 0, 0, time.UTC)
+		if tomorrow.After(until) {
+			until = tomorrow
+		}
+	}
+	if until.After(now) {
+		return until.Sub(now), nil
+	}
+	return 0, nil
+}
+
+// Keys may be configured months after installation. Never spend quota repairing
+// dates outside the selected/provider-supported backfill window.
+func (s *Store) BoundPriceJobs(ctx context.Context, from string, now time.Time) error {
+	tx, e := s.db.BeginTx(ctx, nil)
+	if e != nil {
+		return e
+	}
+	defer tx.Rollback()
+	if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE dataset='prices' AND subject<? AND state!='running'", from); e != nil {
+		return e
+	}
+	if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET state='queued',next_run=? WHERE dataset='prices' AND subject>=? AND state='retired'", stamp(now), from); e != nil {
+		return e
+	}
+	return tx.Commit()
 }

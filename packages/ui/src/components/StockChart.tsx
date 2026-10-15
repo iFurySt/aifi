@@ -1,28 +1,37 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { sampleBars } from "../pages/stock-fixtures";
+import { useLayoutEffect, useRef, useState } from "react";
+import type { DailyBar } from "@aifi/core";
 import { money } from "../workspace-context";
 
-export function StockChart({ symbol }: { symbol: string }) {
+export function StockChart({
+  symbol,
+  bars: all,
+  adjusted,
+}: {
+  symbol: string;
+  bars: DailyBar[];
+  adjusted: boolean;
+}) {
   const [range, setRange] = useState("1Y"),
     [mode, setMode] = useState("Line"),
     [cursor, setCursor] = useState<number | null>(null);
   const host = useRef<HTMLDivElement>(null),
     [width, setWidth] = useState(560);
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (host.current)
+      setWidth(Math.max(250, host.current.getBoundingClientRect().width));
     const observer = new ResizeObserver((entries) =>
       setWidth(Math.max(250, entries[0]?.contentRect.width ?? 560)),
     );
     if (host.current) observer.observe(host.current);
     return () => observer.disconnect();
-  }, [symbol]);
-  const all = useMemo(() => sampleBars(symbol), [symbol]);
+  }, [symbol, all.length > 0]);
   const bars = all.slice(
     -({ "1M": 22, "3M": 65, "1Y": 252, "2Y": 504 }[range] ?? 252),
   );
-  useEffect(() => setCursor(null), [symbol, range]);
+  useLayoutEffect(() => setCursor(null), [symbol, range]);
   if (!bars.length)
     return (
-      <section className="stock-chart-panel">
+      <section className="stock-chart-panel" ref={host}>
         <h2>Price history</h2>
         <div className="stock-no-data">No price data</div>
       </section>
@@ -41,13 +50,13 @@ export function StockChart({ symbol }: { symbol: string }) {
     <section className="stock-chart-panel" ref={host}>
       <div className="stock-chart-heading">
         <strong>{money(bars.at(-1)!.close)}</strong>
-        <small>{range} · Sample prices</small>
+        <small>{range} · Daily close</small>
       </div>
       <svg
         className="stock-price-chart"
         viewBox={`0 0 ${width} ${height}`}
         role="img"
-        aria-label={`${symbol} sample ${range} ${mode.toLowerCase()} chart`}
+        aria-label={`${symbol} ${range} ${mode.toLowerCase()} chart`}
         tabIndex={0}
         onMouseMove={(e) => {
           const r = e.currentTarget.getBoundingClientRect();
@@ -108,12 +117,17 @@ export function StockChart({ symbol }: { symbol: string }) {
             <g key={b.date}>
               <rect
                 x={x(i)}
-                y={278 - b.volume / 3000000}
+                y={
+                  278 -
+                  (b.volume / Math.max(...bars.map((v) => v.volume), 1)) * 45
+                }
                 width={Math.max(
                   2,
                   ((right - 12) / (bars.length / stride)) * 0.65,
                 )}
-                height={b.volume / 3000000}
+                height={
+                  (b.volume / Math.max(...bars.map((v) => v.volume), 1)) * 45
+                }
                 fill="var(--muted)"
                 opacity={0.24}
               />
@@ -184,7 +198,7 @@ export function StockChart({ symbol }: { symbol: string }) {
       <div className="stock-chart-readout" aria-live="polite">
         {active
           ? `${active.date} · O ${money(active.open)} · H ${money(active.high)} · L ${money(active.low)} · C ${money(active.close)}`
-          : "Daily OHLCV · Split-adjusted sample"}
+          : `Daily OHLCV · ${adjusted ? "Split-adjusted" : "Unadjusted"}`}
       </div>
       <div className="stock-chart-controls">
         <div className="segmented-control" aria-label="Price range">

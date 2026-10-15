@@ -1,4 +1,4 @@
-import type { SampleBar } from "./stocks";
+import type { DailyBar } from "./stocks";
 export const researchDatasets = [
   "prices",
   "profile",
@@ -76,7 +76,7 @@ export interface ResearchDatasetView {
 }
 export interface StockResearch {
   symbol: string;
-  bars: SampleBar[];
+  bars: DailyBar[];
   basis: "raw";
   datasets: Partial<Record<ResearchDataset, ResearchDatasetView>>;
   coverage: Partial<Record<ResearchDataset, string>>;
@@ -115,7 +115,7 @@ export const emptyResearch = (symbol: string): StockResearch => ({
 });
 
 export function splitAdjustedBars(data: StockResearch): {
-  bars: SampleBar[];
+  bars: DailyBar[];
   adjusted: boolean;
 } {
   const actions = data.datasets.actions;
@@ -266,9 +266,15 @@ export function trailingMetric(
     ? { value: annual.value, end: annual.end, basis: "Annual" }
     : undefined;
 }
-export function priceMetrics(bars: SampleBar[]) {
-  const latest = bars.at(-1),
-    previous = bars.at(-2);
+export function priceMetrics(bars: DailyBar[]) {
+  const latest = bars.at(-1);
+  const candidatePrevious = bars.at(-2);
+  const previous =
+    latest &&
+    candidatePrevious &&
+    day(latest.date) - day(candidatePrevious.date) <= 7
+      ? candidatePrevious
+      : undefined;
   if (!latest) return {};
   const cutoff = new Date(`${latest.date}T00:00:00Z`);
   cutoff.setUTCFullYear(cutoff.getUTCFullYear() - 1);
@@ -305,10 +311,22 @@ export function priceMetrics(bars: SampleBar[]) {
     latest,
     previous,
     change: previous ? (latest.close / previous.close - 1) * 100 : undefined,
-    ytd: priorYear ? (latest.close / priorYear.close - 1) * 100 : undefined,
-    yearChange: yearAgo ? (latest.close / yearAgo.close - 1) * 100 : undefined,
-    high52: yearAgo ? Math.max(...history.map((b) => b.high)) : undefined,
-    low52: yearAgo ? Math.min(...history.map((b) => b.low)) : undefined,
+    ytd:
+      priorYear && day(`${year}-01-01`) - day(priorYear.date) <= 7
+        ? (latest.close / priorYear.close - 1) * 100
+        : undefined,
+    yearChange:
+      yearAgo && day(cutoff.toISOString().slice(0, 10)) - day(yearAgo.date) <= 7
+        ? (latest.close / yearAgo.close - 1) * 100
+        : undefined,
+    high52:
+      yearAgo && history.length >= 240
+        ? Math.max(...history.map((b) => b.high))
+        : undefined,
+    low52:
+      yearAgo && history.length >= 240
+        ? Math.min(...history.map((b) => b.low))
+        : undefined,
     rsi,
   };
 }

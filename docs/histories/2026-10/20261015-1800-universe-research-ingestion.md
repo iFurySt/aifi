@@ -24,7 +24,14 @@
   dynamic interval recomputation and local research CLI diagnostics.
 - Go race tests cover restart/fencing, source validation, pagination resume,
   financial restatements, source-secret redaction and all-directory job creation.
-- Renderer wiring and final runtime verification are in progress under the plan.
+- Frontend checkpoint: all stock tabs and Watchlist use replaceable local reads;
+  removed generated stock fixtures; added company actions, period-aware financial
+  tables, SEC document links and source timestamps/empty states.
+- Dedicated API key management plus dataset scheduling/history/quota/coverage UI.
+- Real directory inspection queues every one of 7,481 candidates; 522 market-date
+  jobs. Missing keys/contact correctly report zero sourced price coverage.
+- Native smoke and Chrome desktop/mobile checks passed. Final CI/interaction
+  checks and source setup gates are recorded in the implementation plan.
 
 ### Design Intent
 

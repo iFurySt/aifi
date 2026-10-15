@@ -270,7 +270,18 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 		if !directorySymbol.MatchString(value.Symbol) {
 			return nil, errors.New("invalid stock symbol")
 		}
-		return s.DB.ResearchRead(ctx, strings.ToUpper(value.Symbol))
+		view, e := s.DB.ResearchRead(ctx, strings.ToUpper(value.Symbol))
+		if e != nil {
+			return nil, e
+		}
+		encoded, e := json.Marshal(view)
+		if e != nil {
+			return nil, e
+		}
+		if len(encoded) > 3<<20 {
+			return nil, errors.New("research view exceeds local response limit")
+		}
+		return view, nil
 	case "status":
 		return s.State(ctx)
 	case "settings.save":

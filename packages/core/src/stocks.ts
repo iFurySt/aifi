@@ -35,7 +35,7 @@ export function stockHref(symbol: string, tab: StockTab = "chart") {
   return `#/stocks/${encodeURIComponent(normalized)}?tab=${tab}`;
 }
 
-export interface SampleBar {
+export interface DailyBar {
   date: string;
   open: number;
   high: number;

@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { ArrowUpRight, Plus, Search, X } from "lucide-react";
-import { addWatchSymbol, sampleQuotes } from "@aifi/core";
+import {
+  addWatchSymbol,
+  priceMetrics,
+  splitAdjustedBars,
+  type StockResearch,
+} from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
 import {
   Button,
@@ -10,6 +15,12 @@ import {
   PageHeading,
   Sparkline,
 } from "../components/primitives";
+import {
+  StockResearchContext,
+  prepareStockResearch,
+} from "../stock-research-context";
+import { useStockDirectory } from "../stock-directory-context";
+import { StockAvatar } from "../components/StockAvatar";
 export function Watchlist() {
   const { workspace, update, notify, research, openStock } = useWorkspace();
   const [query, setQuery] = useState("");
@@ -28,10 +39,66 @@ export function Watchlist() {
       setError((e as Error).message);
     }
   }
+  const reader = useContext(StockResearchContext),
+    directory = useStockDirectory();
+  const [quotes, setQuotes] = useState<
+    Record<
+      string,
+      {
+        name: string;
+        price?: number;
+        change?: number;
+        points: number[];
+        date?: string;
+      }
+    >
+  >({});
+  const symbolsKey = workspace.watchlist.join(",");
+  useEffect(() => {
+    let active = true,
+      pending = false;
+    const refresh = async () => {
+      if (pending) return;
+      pending = true;
+      let cursor = 0;
+      const symbols = symbolsKey.split(",").filter(Boolean),
+        next: typeof quotes = {};
+      await Promise.all(
+        Array.from({ length: Math.min(4, symbols.length) }, async () => {
+          while (cursor < symbols.length) {
+            const symbol = symbols[cursor++]!;
+            try {
+              const [data, identity] = await Promise.all([
+                prepareStockResearch(reader, symbol),
+                directory.get(symbol),
+              ]);
+              const bars = splitAdjustedBars(data as StockResearch).bars,
+                m = priceMetrics(bars);
+              next[symbol] = {
+                name: identity.item?.name ?? symbol,
+                price: m.latest?.close,
+                change: m.change,
+                points: bars.slice(-22).map((b) => b.close),
+                date: m.latest?.date,
+              };
+            } catch {
+              /* Keep last-good rows if one local read fails. */
+            }
+          }
+        }),
+      );
+      if (active) setQuotes((old) => ({ ...old, ...next }));
+      pending = false;
+    };
+    void refresh();
+    const timer = setInterval(() => void refresh(), 30000);
+    return () => {
+      active = false;
+      clearInterval(timer);
+    };
+  }, [reader, directory, symbolsKey]);
   const filtered = workspace.watchlist.filter((s) =>
-    `${s} ${sampleQuotes[s]?.name ?? ""}`
-      .toLowerCase()
-      .includes(query.toLowerCase()),
+    `${s} ${quotes[s]?.name ?? ""}`.toLowerCase().includes(query.toLowerCase()),
   );
   return (
     <div className="page-container">
@@ -61,7 +128,7 @@ export function Watchlist() {
           />
         </label>
         <span className="section-meta">
-          {workspace.watchlist.length} symbols · sample quotes
+          {workspace.watchlist.length} symbols · Latest stored close
         </span>
       </div>
       <div className="table-panel">
@@ -80,7 +147,7 @@ export function Watchlist() {
             </thead>
             <tbody>
               {filtered.map((s) => {
-                const quote = sampleQuotes[s];
+                const quote = quotes[s];
                 return (
                   <tr key={s}>
                     <td>
@@ -88,37 +155,35 @@ export function Watchlist() {
                         className="company-cell"
                         onClick={() => openStock(s)}
                       >
-                        <span
-                          className={`company-monogram tone-${s === "NVDA" ? "mint" : s === "AAPL" ? "peach" : "blue"}`}
-                        >
-                          {s.slice(0, 1)}
-                        </span>
+                        <StockAvatar symbol={s} />
                         <span>
                           <strong>{s}</strong>
-                          <small>{quote?.name ?? "Custom symbol"}</small>
+                          <small>{quote?.name ?? s}</small>
                         </span>
                       </button>
                     </td>
                     <td className="number">
-                      {quote ? (
+                      {quote?.price !== undefined ? (
                         money(quote.price)
                       ) : (
                         <span className="muted">—</span>
                       )}
                     </td>
                     <td
-                      className={`number ${quote ? (quote.change >= 0 ? "positive" : "negative") : "muted"}`}
+                      className={`number ${quote?.change !== undefined ? (quote.change >= 0 ? "positive" : "negative") : "muted"}`}
                     >
-                      {quote ? percent(quote.change) : "—"}
+                      {quote?.change !== undefined
+                        ? percent(quote.change)
+                        : "—"}
                     </td>
                     <td>
-                      {quote ? (
+                      {quote && quote.points.length > 1 ? (
                         <Sparkline
                           points={quote.points}
-                          positive={quote.change >= 0}
+                          positive={(quote.change ?? 0) >= 0}
                         />
                       ) : (
-                        <span className="muted">No sample data</span>
+                        <span className="muted">No price data</span>
                       )}
                     </td>
                     <td>
@@ -172,7 +237,7 @@ export function Watchlist() {
         open={adding}
         onOpenChange={setAdding}
         title="Add to your watchlist"
-        description="New symbols have no price data."
+        description="Prices come from your local data cache."
       >
         <form
           onSubmit={(e) => {

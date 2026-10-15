@@ -15,12 +15,14 @@ import type {
   StockCollection,
   StockDirectoryRepository,
   StockLogoRepository,
+ StockResearchRepository,
 } from "@aifi/core";
 import {
   readStockCollection,
   writeStockCollection,
   createLocalStockDirectory,
   createLocalStockLogos,
+ createLocalStockResearch,
   getRuntimeInfo,
   readWorkspace,
   writeWorkspace,
@@ -53,12 +55,15 @@ function currentPage(): WorkspacePage {
     ? (candidate as WorkspacePage)
     : "stocks";
 }
+import { StockResearchContext } from "./stock-research-context";
+const localResearch=createLocalStockResearch();
 const localDirectory = createLocalStockDirectory();
 const localLogos = createLocalStockLogos();
 export function App({
   directory = localDirectory,
   logos = localLogos,
-}: { directory?: StockDirectoryRepository; logos?: StockLogoRepository } = {}) {
+ stockResearch=localResearch,
+}: { directory?: StockDirectoryRepository; logos?: StockLogoRepository;stockResearch?:StockResearchRepository } = {}) {
   const [loaded] = useState(() =>
     readWorkspace(storage, createDemoWorkspace, decodeWorkspace),
   );
@@ -170,7 +175,7 @@ export function App({
     return () => clearTimeout(toastTimer.current);
   }, [notify]);
   return (
-    <StockLogoContext.Provider value={logos}>
+    <StockResearchContext.Provider value={stockResearch}><StockLogoContext.Provider value={logos}>
       <StockDirectoryContext.Provider value={directory}>
         <WorkspaceContext.Provider
           value={{
@@ -221,6 +226,6 @@ export function App({
           </div>
         </WorkspaceContext.Provider>
       </StockDirectoryContext.Provider>
-    </StockLogoContext.Provider>
+    </StockLogoContext.Provider></StockResearchContext.Provider>
   );
 }

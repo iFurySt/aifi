@@ -14,7 +14,7 @@ import {
   ArrowRight,
   PanelLeft,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { workspacePages, stockHref, validDirectorySymbol } from "@aifi/core";
 import { useWorkspace, pageLabels } from "../workspace-context";
 import { IconButton, Logo, Modal } from "./primitives";
@@ -79,7 +79,7 @@ export function Shell({ children }: { children: ReactNode }) {
     openConversation,
   } = useWorkspace();
   const desktop = !!window.aifiDesktop;
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (page !== "research")
       document
         .getElementById("main-content")
@@ -258,7 +258,7 @@ export function Shell({ children }: { children: ReactNode }) {
         open={demoOpen}
         onOpenChange={setDemoOpen}
         title="Demo data"
-        description="Stock names and exchanges use the Nasdaq directory. Quotes, financials, holdings and replies are samples."
+        description="Stocks uses locally collected data. Portfolio positions and AI replies are examples."
       >
         <div className="dialog-actions">
           <button

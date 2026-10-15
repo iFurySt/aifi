@@ -10,6 +10,7 @@ import {
 } from "@aifi/platform";
 import { useWorkspace } from "../workspace-context";
 import { Button, Modal } from "../components/primitives";
+import { ResearchSyncSettings } from "./ResearchSyncSettings";
 import { settingItems } from "../components/SettingsSidebar";
 function Row({
   title,
@@ -180,7 +181,7 @@ export function Settings() {
               </a>
             </Row>
             <Row title="API credentials">
-              <a className="setting-link" href="#/settings/sources">
+              <a className="setting-link" href="#/settings/keys">
                 Manage
               </a>
             </Row>
@@ -224,36 +225,17 @@ export function Settings() {
                 }
               />
             </Row>
-            {(["massive", "alpaca"] as const).map((p) => (
-              <Row
-                key={p}
-                title={p === "massive" ? "Massive" : "Alpaca"}
-                description="Prices · Not syncing"
-              >
-                <span className="credential-state">
-                  {data?.credentials.find((x) => x.provider === p)?.fields
-                    .length ? (
-                    <>
-                      <CircleCheck size={14} /> Saved
-                    </>
-                  ) : (
-                    "No credentials"
-                  )}
-                </span>
-                <Button
-                  disabled={!connected || busy}
-                  onClick={() => {
-                    setProvider(p);
-                    setValues({});
-                  }}
-                >
-                  Configure
-                </Button>
-              </Row>
-            ))}
+            <Row title="External API keys">
+              <a className="setting-link" href="#/settings/keys">
+                Manage
+              </a>
+            </Row>
           </Group>
           <Group title="Company data">
-            <Row title="SEC" description="Filings and financials · Not syncing">
+            <Row
+              title="SEC"
+              description="Filings, financials and insider disclosures · No API key"
+            >
               <span>
                 {data?.settings.secUserAgent ? "Saved" : "Not configured"}
               </span>
@@ -282,6 +264,51 @@ export function Settings() {
             </div>
           </Group>
         </>
+      )}
+      {section === "keys" && (
+        <Group title="External services">
+          {" "}
+          {(["massive", "fmp", "alpaca"] as const).map((p) => (
+            <Row
+              key={p}
+              title={
+                {
+                  massive: "Massive",
+                  fmp: "Financial Modeling Prep",
+                  alpaca: "Alpaca",
+                }[p]
+              }
+              description={
+                {
+                  massive:
+                    "Daily prices, company profiles and corporate actions",
+                  fmp: "Holdings, politician trades, ratings and news · Access depends on plan",
+                  alpaca: "Reserved for an alternate price source",
+                }[p]
+              }
+            >
+              <span className="credential-state">
+                {data?.credentials.find((x) => x.provider === p)?.fields
+                  .length ? (
+                  <>
+                    <CircleCheck size={14} /> Saved
+                  </>
+                ) : (
+                  "No credentials"
+                )}
+              </span>
+              <Button
+                disabled={!connected || busy}
+                onClick={() => {
+                  setProvider(p);
+                  setValues({});
+                }}
+              >
+                Configure
+              </Button>
+            </Row>
+          ))}
+        </Group>
       )}
       {section === "sync" && (
         <>
@@ -376,6 +403,7 @@ export function Settings() {
               </Button>
             </Row>
           </Group>
+          <ResearchSyncSettings />
           <Group title="Recent syncs">
             {data?.directory.recentRuns.length ? (
               data.directory.recentRuns.slice(0, 6).map((run) => (
@@ -452,8 +480,14 @@ export function Settings() {
             setValues({});
           }
         }}
-        title={provider === "alpaca" ? "Alpaca" : "Massive"}
-        description="Credentials stay on this device. Price sync is not active."
+        title={
+          provider === "fmp"
+            ? "Financial Modeling Prep"
+            : provider === "alpaca"
+              ? "Alpaca"
+              : "Massive"
+        }
+        description="Credentials are encrypted on this device."
       >
         <form
           className="credential-form"

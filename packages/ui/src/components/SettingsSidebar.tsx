@@ -4,6 +4,7 @@ import {
   Sun,
   Database,
   Plug,
+  KeyRound,
   RefreshCw,
   Search,
 } from "lucide-react";
@@ -18,6 +19,7 @@ export const settingItems: {
   { id: "general", label: "General", group: "Personal", icon: Settings2 },
   { id: "appearance", label: "Appearance", group: "Personal", icon: Sun },
   { id: "sources", label: "Data sources", group: "Data", icon: Plug },
+  { id: "keys", label: "API keys", group: "Data", icon: KeyRound },
   { id: "sync", label: "Sync", group: "Data", icon: RefreshCw },
   { id: "storage", label: "Storage", group: "Data", icon: Database },
 ];

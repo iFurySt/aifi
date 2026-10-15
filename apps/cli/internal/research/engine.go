@@ -176,6 +176,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 			return err
 		}
 	}
+	if err = e.DB.BoundPriceJobs(ctx, end.AddDate(0, 0, -cfg.HistoryDays+1).Format("2006-01-02"), now); err != nil {
+		return err
+	}
 	e.fingerprint = fingerprint
 	e.lastReconcile = now
 	return nil
@@ -213,6 +216,10 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	}
 	providerBlock, err := e.DB.ProviderBlocked(ctx, p)
 	if err != nil || providerBlock != "" {
+		return false, err
+	}
+	wait, err := e.DB.ProviderWait(ctx, p, cfg.Limits[p], e.Now())
+	if err != nil || wait > time.Minute {
 		return false, err
 	}
 	j, err := e.DB.ClaimResearchJob(ctx, p, enabled, !cfg.Automatic, e.Now())

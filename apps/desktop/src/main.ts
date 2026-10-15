@@ -10,6 +10,7 @@ import {
   session,
   Menu,
   nativeImage,
+  shell,
 } from "electron";
 import { join, sep, basename } from "node:path";
 import {
@@ -23,6 +24,7 @@ import { tmpdir } from "node:os";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { setTimeout as delay } from "node:timers/promises";
 
+import { isResearchSourceURL } from "../../../packages/core/src/stock-research";
 app.setName("AIFi");
 const devUrl = process.env.AIFI_DEV_URL;
 const smoke = process.argv.includes("--smoke");
@@ -72,7 +74,10 @@ async function createWindow() {
       sandbox: true,
     },
   });
-  window.webContents.setWindowOpenHandler(() => ({ action: "deny" }));
+  window.webContents.setWindowOpenHandler(({ url }) => {
+    if (isResearchSourceURL(url)) void shell.openExternal(url);
+    return { action: "deny" };
+  });
   const restrictNavigation = (event: Electron.Event, url: string) => {
     const current = window.webContents.getURL().split("#")[0];
     if (url.split("#")[0] !== current) event.preventDefault();
@@ -126,9 +131,11 @@ async function createWindow() {
       const stockSidebar = !!document.querySelector('.stock-sidebar') && document.querySelectorAll('.rail-destinations a').length === 6;
       document.querySelector('[role="tab"][id="stock-tab-funds"]').click();
       await waitFor(() => !!document.querySelector('#stock-panel-funds .stock-table-empty'));
-      const stockPlaceholders = document.body.innerText.includes('No holdings data');
+      const stockPlaceholders = !!document.querySelector('#stock-panel-funds .stock-table-empty') && !document.body.innerText.includes('Sample financials');
       document.querySelector('[role="tab"][id="stock-tab-chart"]').click();
-      await waitFor(() => !!document.querySelector('#stock-panel-chart .stock-price-chart'));
+      await waitFor(() => !!document.querySelector('#stock-panel-chart .stock-chart-panel'));
+ const cachedResearch=await window.aifiDesktop.requestData('research.read',{symbol:'AAPL'});
+ if(cachedResearch.bars.length!==0 || document.querySelector('.stock-price-chart') || !document.querySelector('.stock-quote').innerText.includes('—')) throw Error('Research fixtures leaked into an empty store');
       const directoryPage = await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0});
       const directoryLookup = await window.aifiDesktop.requestData('directory.get', {symbol:'AAPL'});
       await waitFor(() => document.querySelector('.stock-list')?.getAttribute('aria-busy') === 'false');
@@ -160,9 +167,13 @@ async function createWindow() {
       try { await fetch('file://' + configured.dataDir + '/aifi-vault.key'); } catch { privateFilesBlocked = true; }
       const credentials = privateFilesBlocked && configured.credentials.some(x => x.provider === 'massive') && !JSON.stringify(configured).includes('synthetic-native-test-key');
       await window.aifiDesktop.requestData('credentials.remove', {provider:'massive'});
-      location.hash = '/settings/sync';
+      const researchStatus=await window.aifiDesktop.requestData('research.status');
+ if(researchStatus.universe!==0 || researchStatus.priced!==0) throw Error('Research coverage is invented');
+ location.hash = '/settings/keys';
+ await waitFor(()=>!!document.querySelector('.settings-content') && document.querySelector('.settings-content').innerText.includes('Financial Modeling Prep'));
+ location.hash = '/settings/sync';
       await waitFor(() => !!document.querySelector('.settings-content') && document.querySelector('[aria-label="Directory interval hours"]')?.value === '6');
-      const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 5;
+      const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 6;
       const brand = document.querySelector('.brand-mark');
       const maskImage = brand && getComputedStyle(brand).maskImage;
       const maskURL = maskImage?.startsWith('url(') ? maskImage.slice(4, -1).replaceAll('"', '').replaceAll("'", '') : null;

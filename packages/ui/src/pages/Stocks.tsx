@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowUpRight, Search, Star, MessageCircle } from "lucide-react";
 import {
   addWatchSymbol,
-  sampleQuotes,
+  priceMetrics,
+  splitAdjustedBars,
+  trailingMetric,
   stockTabs,
   validSymbol,
   validDirectorySymbol,
@@ -18,7 +20,19 @@ import {
   useDirectorySearch,
   directoryExchange,
 } from "../stock-directory-context";
-import { sampleBars, stockProfiles } from "./stock-fixtures";
+import { useStockResearch } from "../stock-research-context";
+import {
+  SourceNote,
+  Financials,
+  Activity,
+  AnalystSummary,
+  AnalystPanel,
+  FilingsTable,
+  Earnings,
+  Digest,
+  MissingData,
+  overviewFinancials,
+} from "./stock-research-panels";
 const labels: Record<StockTab, string> = {
   chart: "Chart",
   financials: "Financials",
@@ -27,259 +41,23 @@ const labels: Record<StockTab, string> = {
   insiders: "Insiders",
   analyst: "Analyst",
 };
-function EmptyTable({
-  columns,
-  message,
-}: {
-  columns: string[];
-  message: string;
-}) {
-  return (
-    <div className="table-panel">
-      <div className="table-scroll">
-        <table className="data-table stock-data-table">
-          <thead>
-            <tr>
-              {columns.map((c) => (
-                <th key={c}>{c}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colSpan={columns.length} className="stock-table-empty">
-                {message}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-function Summary({ items }: { items: string[] }) {
-  return (
-    <div className="stock-summary">
-      {items.map((label) => (
-        <div key={label}>
-          <span>{label}</span>
-          <strong>—</strong>
-        </div>
-      ))}
-    </div>
-  );
-}
-function AnalystSummary() {
-  return (
-    <div className="stock-analyst-summary">
-      <div className="stock-analyst-number">—</div>
-      <p>Average price target</p>
-      <div className="rating-scale">
-        {["Strong sell", "Sell", "Hold", "Buy", "Strong buy"].map((s, i) => (
-          <div key={s}>
-            <span
-              style={{
-                background: [
-                  "#b34c47",
-                  "#ce8560",
-                  "#c2aa68",
-                  "#719f86",
-                  "#217a54",
-                ][i],
-              }}
-            />
-            <small>{s}</small>
-          </div>
-        ))}
-      </div>
-      <small>No ratings yet</small>
-    </div>
-  );
-}
-function Activity({ kind }: { kind: "funds" | "politicians" | "insiders" }) {
-  const [filter, setFilter] = useState("All");
-  const config = {
-    funds: {
-      title: "Fund ownership",
-      metrics: ["Reported funds", "Shares held", "Report period"],
-      filters: ["All", "Added", "Reduced", "Exited"],
-      columns: ["Fund", "Shares", "Value", "Change", "Report period"],
-      empty: "No holdings data",
-    },
-    politicians: {
-      title: "Politician trades",
-      metrics: ["Purchases", "Sales", "Filers"],
-      filters: ["All", "Buy", "Sell"],
-      columns: [
-        "Politician",
-        "Transaction",
-        "Reported range",
-        "Traded",
-        "Disclosed",
-      ],
-      empty: "No politician trades",
-    },
-    insiders: {
-      title: "Insider activity",
-      metrics: ["Purchases", "Sales", "Insiders"],
-      filters: ["All", "Buy", "Sell"],
-      columns: ["Insider", "Role", "Transaction", "Shares", "Value", "Date"],
-      empty: "No insider trades",
-    },
-  }[kind];
-  return (
-    <section className="stock-tab-body">
-      <h2>{config.title}</h2>
-      <Summary items={config.metrics} />
-      <div className="stock-table-toolbar">
-        <div
-          className="segmented-control"
-          aria-label={`Filter ${config.title}`}
-        >
-          {config.filters.map((f) => (
-            <button
-              key={f}
-              className={filter === f ? "selected" : ""}
-              aria-pressed={filter === f}
-              onClick={() => setFilter(f)}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-        <small>
-          {kind === "funds" ? "Reported holdings" : "Disclosed transactions"}
-        </small>
-      </div>
-      <EmptyTable columns={config.columns} message={config.empty} />
-    </section>
-  );
-}
-function Financials({ symbol }: { symbol: string }) {
-  const [view, setView] = useState("Metrics"),
-    [period, setPeriod] = useState("Yearly");
-  const profile = stockProfiles[symbol];
-  const rows = profile
-    ? ((
-        {
-          Metrics: [
-            ["Revenue", profile.revenue],
-            ["Gross profit", profile.revenue * 0.45],
-            ["Net income", profile.income],
-          ],
-          Income: [
-            ["Revenue", profile.revenue],
-            ["Gross profit", profile.revenue * 0.45],
-            ["Operating income", profile.income * 1.2],
-            ["Net income", profile.income],
-          ],
-          Balance: [
-            ["Cash", profile.revenue * 0.12],
-            ["Total assets", profile.revenue * 0.9],
-            ["Total liabilities", profile.revenue * 0.55],
-            ["Equity", profile.revenue * 0.35],
-          ],
-          "Cash flow": [
-            ["Operating cash flow", profile.income * 1.2],
-            ["Capital expenditures", profile.income * 0.16],
-            ["Free cash flow", profile.income * 1.04],
-          ],
-        } as Record<string, [string, number][]>
-      )[view] ?? [])
-    : [];
-  return (
-    <section className="stock-tab-body">
-      <div className="stock-table-toolbar">
-        <label>
-          <span className="sr-only">Financial view</span>
-          <select
-            aria-label="Financial view"
-            value={view}
-            onChange={(e) => setView(e.target.value)}
-          >
-            {["Metrics", "Income", "Balance", "Cash flow", "Filings"].map(
-              (v) => (
-                <option key={v}>{v}</option>
-              ),
-            )}
-          </select>
-        </label>
-        {view !== "Filings" && (
-          <div className="segmented-control" aria-label="Financial period">
-            {["Quarter", "Yearly"].map((p) => (
-              <button
-                key={p}
-                className={period === p ? "selected" : ""}
-                aria-pressed={period === p}
-                onClick={() => setPeriod(p)}
-              >
-                {p}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-      {view === "Filings" ? (
-        <EmptyTable
-          columns={["Form", "Report period", "Filed", "Document"]}
-          message="No filings data"
-        />
-      ) : rows.length ? (
-        <>
-          <div className="table-panel">
-            <div className="table-scroll">
-              <table className="data-table stock-financial-table">
-                <thead>
-                  <tr>
-                    <th>Metric</th>
-                    {(period === "Yearly"
-                      ? ["FY 2025", "FY 2024", "FY 2023"]
-                      : ["Q3 FY26", "Q2 FY26", "Q1 FY26"]
-                    ).map((h) => (
-                      <th className="number" key={h}>
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map(([label, value]) => (
-                    <tr key={label}>
-                      <td>{label}</td>
-                      {[1, 0.94, 0.88].map((f) => (
-                        <td key={f} className="number">
-                          {money(
-                            value *
-                              f *
-                              (period === "Quarter" && view !== "Balance"
-                                ? 0.25
-                                : 1),
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="stock-footnote">USD billions · Sample financials</p>
-        </>
-      ) : (
-        <EmptyTable
-          columns={["Metric", "Latest period", "Previous period"]}
-          message="No financial data"
-        />
-      )}
-    </section>
-  );
-}
 export function Stocks() {
   const { workspace, stockRoute, openStock, update, notify, research } =
     useWorkspace();
   const { symbol, tab } = stockRoute;
-  const quote = sampleQuotes[symbol],
-    profile = stockProfiles[symbol];
+  const { data, loading, error } = useStockResearch(symbol);
+  const profile =
+    data.datasets.profile?.data.profile ?? data.datasets.filings?.data.profile;
+  const adjusted = useMemo(() => splitAdjustedBars(data), [data]);
+  const bars = adjusted.bars;
+  const calculated = priceMetrics(bars);
+  const quote = calculated.latest
+    ? {
+        price: calculated.latest.close,
+        change: calculated.change,
+        name: profile?.name ?? symbol,
+      }
+    : undefined;
   const [query, setQuery] = useState("");
   const directory = useStockDirectory();
   const identity = useDirectoryEntry(symbol);
@@ -294,7 +72,6 @@ export function Stocks() {
   }, [symbol]);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const watched = workspace.watchlist.includes(symbol);
-  const bars = sampleBars(symbol);
   async function findStock(e: React.FormEvent) {
     e.preventDefault();
     const request = ++searchSequence.current;
@@ -330,53 +107,49 @@ export function Stocks() {
       notify((e as Error).message);
     }
   }
-  const latest = bars.at(-1),
-    firstYear = bars.at(-252),
-    firstYTD = bars.find((b) => b.date.startsWith("2026"));
+  const latest = calculated.latest;
+  const formattedPercent = (n: number | undefined) =>
+    n === undefined ? "—" : percent(n);
+  const facts = data.datasets.facts?.data.facts ?? [],
+    eps = trailingMetric(facts, "eps");
   const metrics: [string, string][] = [
     ["Open", latest ? money(latest.open) : "—"],
     [
       "Previous close",
-      quote ? money(quote.price / (1 + quote.change / 100)) : "—",
+      calculated.previous ? money(calculated.previous.close) : "—",
     ],
-    [
-      "YTD change",
-      latest && firstYTD
-        ? percent((latest.close / firstYTD.close - 1) * 100)
-        : "—",
-    ],
-    [
-      "12 month change",
-      latest && firstYear
-        ? percent((latest.close / firstYear.close - 1) * 100)
-        : "—",
-    ],
-    ["Sector", profile ? "Technology" : "—"],
-    ["P/E ratio", "—"],
-    ["Volume", latest ? `${(latest.volume / 1e6).toFixed(1)}M` : "—"],
-    ["Market cap", "—"],
+    ["YTD change", formattedPercent(calculated.ytd)],
+    ["12 month change", formattedPercent(calculated.yearChange)],
     ["Industry", profile?.industry ?? "—"],
-    ["Revenue", profile ? `$${profile.revenue.toFixed(1)}B · FY25` : "—"],
-    ["Gross margin", profile ? "45.0% · FY25" : "—"],
-    ["Net income", profile ? `$${profile.income.toFixed(1)}B · FY25` : "—"],
     [
-      "Free cash flow",
-      profile ? `$${(profile.income * 1.04).toFixed(1)}B · FY25` : "—",
+      "P/E ratio",
+      latest && eps && eps.value > 0
+        ? (latest.close / eps.value).toFixed(1) + " · " + eps.basis
+        : "—",
     ],
+    [
+      "Volume",
+      latest
+        ? new Intl.NumberFormat("en-US", { notation: "compact" }).format(
+            latest.volume,
+          )
+        : "—",
+    ],
+    [
+      "Market cap",
+      latest && profile?.shares
+        ? new Intl.NumberFormat("en-US", {
+            notation: "compact",
+            style: "currency",
+            currency: "USD",
+          }).format(latest.close * profile.shares)
+        : "—",
+    ],
+    ...overviewFinancials(data),
+    ["52-week high", calculated.high52 ? money(calculated.high52) : "—"],
+    ["52-week low", calculated.low52 ? money(calculated.low52) : "—"],
+    ["RSI (14)", calculated.rsi?.toFixed(1) ?? "—"],
     ["Short interest", "—"],
-    [
-      "52-week high",
-      bars.length
-        ? money(Math.max(...bars.slice(-252).map((b) => b.high)))
-        : "—",
-    ],
-    [
-      "52-week low",
-      bars.length
-        ? money(Math.min(...bars.slice(-252).map((b) => b.low)))
-        : "—",
-    ],
-    ["RSI (14)", "—"],
   ];
   return (
     <div className="stocks-page">
@@ -469,6 +242,11 @@ export function Stocks() {
           </button>
         ))}
       </div>
+      {error && (
+        <div className="stock-no-data" role="status">
+          {error}
+        </div>
+      )}
       <section
         className="stock-panel"
         id={`stock-panel-${tab}`}
@@ -479,23 +257,26 @@ export function Stocks() {
           <div className="stock-chart-layout">
             <div className="stock-identity-column">
               <section className="stock-quote">
-                <small>Latest close{quote ? " · Sample" : ""}</small>
+                <small>Latest close</small>
                 <strong>{quote ? money(quote.price) : "—"}</strong>
-                {quote && (
+                {quote && quote.change !== undefined && (
                   <p className={quote.change >= 0 ? "positive" : "negative"}>
-                    {money(
-                      quote.price - quote.price / (1 + quote.change / 100),
-                    )}{" "}
-                    ({percent(quote.change)})
+                    {money(quote.price - calculated.previous!.close)} (
+                    {percent(quote.change)})
                   </p>
                 )}
-                <small>{quote ? "Oct 12, 2026 · USD" : "No price data"}</small>
+                <small>
+                  {latest ? (
+                    `${latest.date} · USD`
+                  ) : loading ? (
+                    "Loading…"
+                  ) : (
+                    <MissingData data={data} dataset="prices" />
+                  )}
+                </small>
               </section>
               <section className="stock-about">
-                <h2>
-                  About {quote?.name ?? symbol}{" "}
-                  {profile && <small className="muted">Sample</small>}
-                </h2>
+                <h2>About {quote?.name ?? symbol} </h2>
                 <p>{profile?.description ?? "No company data"}</p>
                 <button
                   className="text-link"
@@ -507,15 +288,11 @@ export function Stocks() {
               </section>
               <section className="stock-about">
                 <h2>Analyst</h2>
-                <AnalystSummary />
+                <AnalystSummary data={data} />
               </section>
               <section className="stock-about">
                 <h2>Earnings</h2>
-                <div className="earnings-placeholder">
-                  <span>Actual EPS</span>
-                  <span>Estimated EPS</span>
-                  <div>No earnings data</div>
-                </div>
+                <Earnings data={data} />
               </section>
             </div>
             <div className="stock-metrics-column">
@@ -527,36 +304,17 @@ export function Stocks() {
                   </div>
                 ))}
               </dl>
-              <section className="stock-peers">
-                <h2>
-                  Peers <small className="muted">Sample</small>
-                </h2>
-                {Object.entries(sampleQuotes)
-                  .filter(([s]) => s !== symbol)
-                  .map(([s, q]) => (
-                    <button key={s} onClick={() => openStock(s)}>
-                      <StockAvatar symbol={s} />
-                      <span>
-                        <strong>{s}</strong>
-                        <small>{q.name}</small>
-                      </span>
-                      <span>
-                        {money(q.price)}
-                        <small
-                          className={q.change >= 0 ? "positive" : "negative"}
-                        >
-                          {percent(q.change)}
-                        </small>
-                      </span>
-                    </button>
-                  ))}
-              </section>
             </div>
             <div className="stock-visual-column">
-              <StockChart symbol={symbol} />
+              <StockChart
+                symbol={symbol}
+                bars={bars}
+                adjusted={adjusted.adjusted}
+              />
+              <SourceNote view={data.datasets.prices} />
               <section className="stock-digest">
                 <h2>Digest</h2>
-                <div className="stock-no-data">No news yet</div>
+                <Digest data={data} />
               </section>
               <section className="stock-digest">
                 <div className="section-heading">
@@ -568,31 +326,16 @@ export function Stocks() {
                     Financials <ArrowUpRight size={13} />
                   </button>
                 </div>
-                <EmptyTable
-                  columns={["Form", "Filed"]}
-                  message="No filings data"
-                />
+                <FilingsTable data={data} compact />
               </section>
             </div>
           </div>
         )}
-        {tab === "financials" && <Financials symbol={symbol} />}
+        {tab === "financials" && <Financials data={data} />}
         {(tab === "funds" || tab === "politicians" || tab === "insiders") && (
-          <Activity key={tab} kind={tab} />
+          <Activity key={tab} kind={tab} data={data} />
         )}
-        {tab === "analyst" && (
-          <section className="stock-tab-body">
-            <h2>Analyst ratings</h2>
-            <Summary
-              items={["Average target", "High / low target", "Consensus"]}
-            />
-            <AnalystSummary />
-            <EmptyTable
-              columns={["Date", "Firm", "Analyst", "Rating", "Price target"]}
-              message="No analyst ratings"
-            />
-          </section>
-        )}
+        {tab === "analyst" && <AnalystPanel data={data} />}
       </section>
     </div>
   );
