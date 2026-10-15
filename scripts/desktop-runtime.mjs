@@ -18,7 +18,7 @@ const require = createRequire(import.meta.url);
 export function desktopRuntime() {
   const executable = require("electron");
   if (process.platform !== "darwin") return executable;
-  const icon = join(root, "packages/ui/src/assets/brand/app-icon.png");
+  const icon = join(root, "packages/ui/src/assets/brand/app-icon-macos.png");
   const version = require("electron/package.json").version;
   const identity = JSON.stringify({
     version,

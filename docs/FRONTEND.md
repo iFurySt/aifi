@@ -196,7 +196,8 @@ requests. Public asset source/cache limits are documented in
 
 The selected three-part symbol and AIFi wordmark are shared by the rail and chat
 identity. One compact alpha mask inherits the theme color, with 32px rail and
-24px compact marks. Browser icons and native icons use the dedicated dark tile.
+24px compact marks. Browser icons and native icons use the approved dark tile. macOS has a separate
+centered export with native-sized canvas inset for both bundle and Dock icons.
 See [brand assets/provenance](../packages/ui/src/assets/brand/README.md) and
 [identity boundaries](design-docs/brand-identity.md). No remote assets or fonts
 are required. Name/icon changes preserve the existing app name and data paths.

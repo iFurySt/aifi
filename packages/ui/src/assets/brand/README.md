@@ -14,7 +14,8 @@ Display spelling is **AIFi**, including the lowercase final i.
 | symbol-on-green.svg | Green mark, pale green tile |
 | symbol-mask.png | Compact 256px mask used by UI and SVG variants |
 | app-icon.png | Original dark rounded tile master |
-| app-icon-512.png | Native Dock/window icon and touch icon |
+| app-icon-512.png | Web touch icon and non-macOS window icon |
+| app-icon-macos.png | macOS Dock/bundle/window icon with native canvas inset |
 | favicon-64.png | Browser favicon |
 
 The PNG master/app icon were made with the built-in imagegen tool from the
@@ -27,6 +28,13 @@ rejected; do not reintroduce them. Pure vector tracing is a future refinement.
 Re-export the committed size/color variants on macOS with
 `node scripts/export-brand-assets.mjs`. sips performs only size/format exports;
 normal cross-platform builds consume the committed output.
+The macOS export also uses `scripts/export-macos-icon.swift` (CoreGraphics via
+Xcode Command Line Tools). It scales the existing approved artwork onto a
+transparent 1024px canvas: the alpha>=128 tile occupies 824px (about 80.5%) and
+is centered by its actual opaque bounds. Finder/Chrome native icon exports measured
+about 80.5%, versus the original AIFi export's 88.3%. Only the dedicated macOS
+asset uses this inset; UI marks, browser favicon and original masters retain their
+size and geometry. Both the bundle ICNS and runtime Dock override use this asset.
 
 [Preview all variants](preview.html).
 

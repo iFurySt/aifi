@@ -21,6 +21,9 @@ await build({
 const brandDir = resolve(root, "apps/desktop/dist/brand");
 mkdirSync(brandDir, { recursive: true });
 copyFileSync(
-  resolve(root, "packages/ui/src/assets/brand/app-icon-512.png"),
+  resolve(
+    root,
+    `packages/ui/src/assets/brand/${process.platform === "darwin" ? "app-icon-macos.png" : "app-icon-512.png"}`,
+  ),
   resolve(brandDir, "app-icon.png"),
 );

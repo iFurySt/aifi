@@ -18,7 +18,12 @@ with noise were rejected. The master is preserved for later vector refinement.
 Shared Logo renders the mask in the theme foreground plus the exact AIFi
 wordmark. The rail shows only a 32px mark; compact chat identity uses 24px.
 Browser title/application metadata/favicon and native window/Dock/about panel
-use the same name and local icon. No external image/font calls are added.
+use the same name and approved artwork. macOS uses a dedicated centered icon
+export with an 80.5% opaque tile extent; the original web/touch icon had an 88.3%
+tile extent and appeared too large beside native Dock icons. Both the generated
+bundle ICNS and runtime Dock override use the inset macOS export. Shared UI mark
+sizes and other platform/browser exports stay unchanged. No external image/font
+calls are added.
 
 ## Native Local Identity
 

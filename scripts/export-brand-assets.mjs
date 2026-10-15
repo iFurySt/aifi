@@ -10,6 +10,13 @@ if (process.platform !== "darwin")
 const assets = fileURLToPath(
   new URL("../packages/ui/src/assets/brand/", import.meta.url),
 );
+// Native Dock tiles need more canvas inset than web/touch icons. Swift/CoreGraphics
+// is only an authoring dependency; ordinary builds consume the committed PNG.
+execFileSync("/usr/bin/swift", [
+  fileURLToPath(new URL("./export-macos-icon.swift", import.meta.url)),
+  join(assets, "app-icon.png"),
+  join(assets, "app-icon-macos.png"),
+]);
 for (const [source, size, output] of [
   ["symbol-master.png", 256, "symbol-mask.png"],
   ["app-icon.png", 512, "app-icon-512.png"],
