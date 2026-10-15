@@ -25,9 +25,12 @@ Suggested conventions:
 - [Local US stock data pipeline](us-stock-data-pipeline.md) — proposed Go/local
   collection design, source boundaries, durable jobs, and correctness rules.
 - [Stock research page](stock-research-page.md) — shared six-tab Web/Electron company UI
-  with sample/empty structures; provider integration is not implemented.
+  with persisted provider reads and empty/access states for unavailable datasets.
 - [Execution plan](../exec-plans/active/us-stock-data-foundation.md) — design first,
   then provider verification, local collection, scheduling, UI, and scale.
 
 - [App-owned data service](app-data-service.md) — directory scheduling, local
   settings/credential boundaries, and app-owned lifecycle.
+
+- [Local research ingestion](research-ingestion.md): implemented provider jobs,
+  SQLite evidence/read contracts, dataset settings and current coverage limits.

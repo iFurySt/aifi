@@ -29,7 +29,7 @@ launching terminal; the app exposes user-facing storage/startup failures.
 
 Directory collection has bounded requests, persisted outcomes/leases, atomic
 snapshot writes, stale-source/shrink guards, and last-good cache retention. SQLite
-v3 migrates prior versions in place and is explicitly versioned; an unknown future schema is rejected.
+v4 migrates prior versions in place and is explicitly versioned; an unknown future schema is rejected.
 
 Multi-window editing, UI schema migrations, backups, broader live-source retry policies,
 and research-runner observability remain future work. CI workflow and release
@@ -61,3 +61,8 @@ structured-data collection followed by durable SQLite commits and local reads.
 Directory paging/search has a restart regression with an unavailable provider:
 all reads still succeed without invoking its fetcher. The UI distinguishes quiet
 local head rechecks from append progress instead of showing Loading more for both.
+
+Research workers now have durable fenced leases, atomic evidence/snapshot/bar
+commits, provider budgets, shared 429/auth cooldowns, staged institutional pages
+and last-good reads. See [research ingestion](design-docs/research-ingestion.md)
+for execution limits, UTC budget days, source windows and live-validation gates.

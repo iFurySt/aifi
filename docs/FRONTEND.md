@@ -53,7 +53,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, 62 domain/storage/route/host/UI tests,
+make ci runs repository gates, TypeScript, domain/storage/route/host/UI tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -164,10 +164,10 @@ workspace and saved conversations are unchanged.
 
 The [stock page specification](design-docs/stock-research-page.md) describes
 this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
-opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Market-data reads and remaining provider collection stay staged in the [data plan](exec-plans/active/us-stock-data-foundation.md).
+opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Market-data reads and research collection now use SQLite; live setup gates remain in the [data plan](exec-plans/active/us-stock-data-foundation.md).
 ## Data Settings And Runtime
 
-General, Appearance, Data sources, Sync, Storage use the supplied screenshot's
+General, Appearance, Data sources, API keys, Sync, Storage use the supplied screenshot's
 category sidebar, centered title, bordered groups and short rows. Desktop/mobile
 share the same page; the drawer exposes settings categories on narrow screens.
 Settings has no Demo badge because its service controls are real.
@@ -175,7 +175,7 @@ Settings has no Demo badge because its service controls are real.
 Both local app hosts start a Go child. Fresh directories skip startup download;
 default sync interval is 24 hours, editable 1–720 hours. Enable/automation/interval
 changes persist and affect the worker. Manual sync, counts, outcomes, cache size,
-and source credential presence are real; market/SEC adapters say Not syncing.
+and source credential presence are real; research sources report key/contact/access requirements and dataset progress.
 
 Credentials are submitted transiently to the host, cleared after save/close, and
 never placed in browser workspace storage or returned as saved values. The Web
@@ -238,3 +238,18 @@ path. Keep this distinction when adding datasets; follow the
 [local data contract](design-docs/local-data-contract.md). During a periodic head
 read, retain rows without showing Loading more. The `loadingMore` flag identifies
 actual append reads; status/empty/error hints use the stock rows' 8px leading inset.
+
+## Sourced research pages
+
+Stocks no longer imports quote/profile/statement fixtures. Its injected
+StockResearchRepository reads normalized SQLite research snapshots. All six tabs
+use stored data or a dataset-specific empty/access state. Actual fiscal dates,
+source timestamps, split basis and partial source windows are visible. Watchlist
+reads local closing prices with bounded concurrency; Portfolio and AI remain
+examples. See [runtime semantics](design-docs/research-ingestion.md).
+
+Settings → API keys manages encrypted Massive/FMP and reserved Alpaca credentials.
+Data sources holds SEC identification. Sync manages all-directory dataset toggles,
+intervals, history range, provider budgets and measured coverage. No page read or
+filter triggers provider collection. SEC filing links open only allowlisted HTTPS
+research hosts in the system browser; desktop navigation remains sandboxed.

@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-15 | Stock research | Browse locally collected stock research across the directory and configure sources in dedicated API key settings. | Added durable background price, company, financial, filing and activity collection; six tabs and Watchlist read SQLite. Missing credentials/permissions stay explicit; live coverage grows after configuration. |
 | 2026-10-15 | Stock avatars | Scrolling prepares nearby logos before they enter the list viewport, without flashing temporary letters. | Fixed the inner-scroll observer root, separated pending/unavailable states, and decode/sample contrast before showing an image. |
 | 2026-10-15 | Company logos | Previously loaded logos appear immediately when revisiting stocks; app restarts reuse local images. | Added bounded session caching and immediate disk reads with background refresh instead of waiting for remote images. |
 | 2026-10-15 | App icon | AIFi now matches neighboring macOS Dock icons in apparent size. | Added a centered macOS-specific export with transparent inset; web and in-app marks keep their existing sizing. |

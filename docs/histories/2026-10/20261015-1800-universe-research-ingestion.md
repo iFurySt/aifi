@@ -46,3 +46,12 @@ provenance. All-directory coverage is a measured queue, not a fixture ticker lis
 - `apps/cli/internal/store/schema.sql`
 - `apps/cli/internal/service/service.go`
 - `docs/exec-plans/active/universe-research-ingestion.md`
+
+### Verification And Remaining Setup
+
+- Repository CI, TypeScript tests/build, Go vet/race and actual Electron smoke pass.
+- Chrome Default desktop/narrow-screen settings and six-tab layout checked.
+- HTTP-fixture-to-SQLite-to-offline-read integration passes for a non-demo symbol.
+- The local 7,481-candidate directory is queued; no market/FMP key or SEC contact
+  is configured, so actual sourced price coverage remains zero. No full live
+  coverage claim is made. Provider/source-window limits are in the runtime doc.

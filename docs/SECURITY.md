@@ -37,7 +37,8 @@ Local future market-provider credentials can now be configured.
 - Electron renderer: sandbox, context isolation, no Node integration, and a
   preload bridge exposing metadata and allowlisted data actions only.
 - New windows, navigation/redirects away from the app, and permission requests
-  are denied.
+  are denied. Explicit links to allowlisted primary HTTPS research hosts open in
+  the system browser without granting renderer navigation or network access.
 - Production Web CSP permits same-origin local requests/assets and denies frames;
   development also permits fixed localhost HMR. Electron intercepts resource
   requests: production files are restricted to built app assets, private key/DB

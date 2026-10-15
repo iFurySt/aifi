@@ -1,6 +1,6 @@
 # Whole-directory research ingestion
 
-Status: active, 2026-10-15.
+Status: implementation completed, 2026-10-15. Live source setup/coverage remains an explicit external gate.
 
 ## Goal and authorization
 
@@ -18,12 +18,12 @@ unrelated datasets. Actual live coverage depends on configured accounts/contact.
 - [x] App-lifetime scheduler, global provider budgets/cooldowns, all-directory
   reconciliation, persisted progress and per-dataset settings.
 - [x] Narrow local research read/settings/sync ports and protected credential use.
-- [ ] Replace Stocks fixtures across all tabs with sourced cached data and computed
+- [x] Replace Stocks fixtures across all tabs with sourced cached data and computed
   indicators/financial rows; preserve absence and incomplete coverage.
-- [ ] Dedicated API key settings and dataset coverage/schedule controls.
-- [ ] Offline/restart, malformed/partial providers, quota/auth failure, financial
+- [x] Dedicated API key settings and dataset coverage/schedule controls.
+- [x] Offline/restart, malformed/partial providers, quota/auth failure, financial
   periods, universe expansion, transport and native renderer verification.
-- [ ] Update architecture/security/runtime/history/release records; stage commits.
+- [x] Update architecture/security/runtime/history/release records; stage commits.
 
 ## Decisions and limits
 
@@ -64,3 +64,21 @@ Do not claim successful live datasets without actual responses and credentials.
 - Domain checkpoint: replaceable stock-research repository, local read adapter,
   source status/config/sync methods, FMP credential allowlist, fiscal period and
   split/indicator calculations with domain tests. UI integration follows.
+
+- UI checkpoint: all six stock tabs plus Watchlist consume persisted research;
+  Financials includes corporate actions, reported earnings and source filing links.
+  API key, source contact, history, dataset cadence, budget and progress controls
+  exist. Verified Chrome desktop/mobile and native smoke without fixture fallbacks.
+- Actual local directory inspection: 7,481 candidates; 522 market-day jobs; all
+  candidate enrichment jobs exist. Market/FMP keys and SEC contact are absent;
+  actual sourced price coverage is zero. This is a setup gate, not a success claim.
+
+- Final verification: 81 current TypeScript/domain/UI tests, Go race/vet, repository
+  CI/build and native smoke/interaction checks passed. End-to-end HTTP fixtures
+  collect a non-demo symbol, commit bars/profile/actions/SEC data and reopen the
+  SQLite store for offline reads without provider calls. Historical jobs outside
+  the selected lookback retire without deleting evidence or blocking new sessions.
+- Deliberate limits: no actual vendor key/contact was supplied; no live full-market
+  backfill is claimed. Provider window/entitlement restrictions, segmented/IFRS
+  statements, future earnings consensus/calendar, short interest and point-in-time
+  historical queries are documented in the runtime specification.

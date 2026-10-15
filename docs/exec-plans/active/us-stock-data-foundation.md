@@ -1,7 +1,7 @@
 # US Stock Data Foundation
 
 Status: directory collection, app-owned scheduling, settings/status transport and
-credential configuration and stock directory UI reads implemented; prices and SEC pending. Created 2026-10-13.
+credential configuration, research collectors and cached stock UI reads implemented; live provider validation remains pending. Created 2026-10-13.
 
 ## Goal
 
@@ -26,7 +26,8 @@ The approved first latency is daily/closing, not real-time.
 - [Provider review and actual probes](../../references/us-stock-data-providers.md).
 - [Page design](../../design-docs/stock-research-page.md).
 - [Visual prototype](../../prototypes/stock-research/preview.html).
-- Current renderer and desktop bridge remain demo-only; preserve saved user data.
+- Directory/research reads are local and sourced; preserve saved user data.
+- Whole-directory implementation is recorded in [the runtime specification](../../design-docs/research-ingestion.md); actual key/contact/source validation remains a separate gate.
 
 ## Risks And Gates
 
@@ -64,10 +65,10 @@ Commit: provider adapters and directory identity validation, with redacted fixtu
 
 - [x] Add Go/Cobra, directory schema v1, user-data directory, source blobs, and
   manual sync/list/status.
-- [ ] Extend storage/status to price and financial datasets.
+- [x] Extend storage/status to price and financial datasets.
 - [ ] Run bounded manual sync for the three targets; preserve raw responses,
   feed/basis/periods and filing links; do not commit provider datasets.
-- [ ] Verify duplicates, write rollback, validation failures, and correction history.
+- [x] Verify duplicates, write rollback, validation failures, and correction history with source fixtures.
 
 Commit: first reproducible live local collection through CLI.
 
@@ -75,7 +76,7 @@ Commit: first reproducible live local collection through CLI.
 
 - [ ] Add due jobs, leases, fake clock, market calendar, provider quotas, backoff,
   cancellation, publication lag, sleep/wake catch-up, and revision repair.
-- [ ] Verify that worker concurrency cannot exceed a provider rate, quota waiting
+- [x] Verify that worker concurrency cannot exceed a provider rate, quota waiting
   cannot spin, and crash/restart cannot falsely advance completeness.
 
 Commit: durable asynchronous EOD collection with status/diagnostics.
@@ -86,10 +87,10 @@ Commit: durable asynchronous EOD collection with status/diagnostics.
   Live directory readers refresh periodically; push events remain deferred.
 - [x] Implement shared stock routes, six-tab layouts, and sample/empty panels.
 - [x] Connect cached candidate directory membership, names, exchange labels and search.
-- [ ] Connect cached bars/facts/filings.
-- [ ] Keep conversation Research separate; use sources/date/basis labels and
+- [x] Connect cached bars/facts/filings.
+- [x] Keep conversation Research separate; use sources/date/basis labels and
   correct empty/partial/error states. Preserve existing user state.
-- [ ] Validate Web/Electron, mobile, source links, and offline cached viewing.
+- [x] Validate Web/Electron, mobile, source links, and offline cached viewing.
 
 Commits: sample UI landed independently; transport/bridge and cached reads follow.
 
@@ -140,3 +141,12 @@ verify source/sample labels, table/tab overflow, theme, and keyboard behavior.
 - 2026-10-13: Stocks/sidebar/workspace search now read cached directory data using
   a replaceable StockDirectoryRepository. Market/facts/filings still require their
   provider collection paths. See [read contract](../../design-docs/stock-directory-reads.md).
+
+- 2026-10-15: whole-directory jobs and market-date batches, fenced leases, raw
+  evidence/normalized SQLite snapshots, shared provider budgets, partial-source
+  windows, SEC facts/submissions/Form4 and optional FMP adapters implemented.
+  Shared stock tabs/Watchlist read stored data; dedicated key/sync settings exist.
+  Current actual setup has 7,481 candidates, 522 market-date jobs and zero sourced
+  price coverage because no market key/SEC contact is configured. Production
+  credentials, real endpoint entitlements and measured live backfill remain gates;
+  fixture tests and UI verification are not substitutes for those observations.

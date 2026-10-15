@@ -1,13 +1,11 @@
 # Local US Stock Data Pipeline
 
-Status: directory collection implemented; broader pipeline remains proposed,
-2026-10-13. The user confirmed daily/closing data first. This document specifies the first live data capability; the
-current React/Electron application remains a demo until the implementation
-milestones pass. The first Go/Cobra directory collector and SQLite snapshots now
-exist; directory scheduling and settings/status transport now exist. Prices, SEC facts
-remain unimplemented. Stock list/search/header now read the cached directory through
-a replaceable domain repository; market/financial stock-page reads remain pending.
-[Directory runtime](../../apps/cli/README.md) specifies the narrower shipped scope.
+Status: directory and whole-directory research collection implemented, 2026-10-15.
+This original design is now accompanied by the narrower runtime specification in
+[research ingestion](research-ingestion.md). Prices/facts/filings use persisted
+reads; actual coverage depends on keys/contact and source access. Broader calendar,
+point-in-time queries, dimensional statements and full archived filing history
+remain follow-ups.
 
 ## Decisions
 
@@ -15,7 +13,7 @@ a replaceable domain repository; market/financial stock-page reads remain pendin
 - Default to Massive Basic EOD prices, Nasdaq Trader directory, and SEC filings /
   entity-wide financial facts. Alpaca historical SIP is the first alternative.
 - Use a local Go/Cobra service, SQLite for normalized data and durable jobs, and
-  compressed raw responses on disk. No cloud, Redis, Kafka, or required Python.
+  gzip-compressed raw responses inside SQLite. No cloud, Redis, Kafka, or required Python.
 - React reads a local data contract. Pages do not fetch providers or start
   scheduling loops. Research agents consume the stored data later.
 - The shared UI exposes Chart, Financials, Funds, Politicians, Insiders, Analyst.

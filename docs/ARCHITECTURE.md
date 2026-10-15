@@ -16,13 +16,14 @@ The first executable surface is a local Web/Electron workspace:
 - packages/platform adapts browser storage and allowlisted local data capabilities. Node-only packages/host owns child lifecycle,
   local transport and credential encryption; it never enters the renderer bundle.
 - apps/cli owns the Go/Cobra collector: Nasdaq directory requests, SQLite
-  snapshots, and cached CLI reads. Its internal directory/store packages are
-  shared by commands; future scheduling/transport can compose the same packages.
+  snapshots, research jobs/providers, and cached CLI reads. Internal market, research,
+  directory and store packages separate collection, scheduling and persistence.
 
 Dependency direction: applications compose ui; ui consumes core and platform.
 Core never imports React or Electron. Renderer code has no Node or unrestricted
 filesystem access. Workspace state stays local. Directory collection/settings run through the Go
-host; model, price/fundamental and broker adapters remain future work.
+host. Research adapters and local stock reads now exist; model execution and
+broker adapters remain future work.
 
 The shared Shell separates outer application chrome from the inset sidebar and
 scrolling document panel. The outer rail owns application navigation; the inner
@@ -65,11 +66,10 @@ The renderer loads a versioned workspace through packages/platform, validates it
 through packages/core, and supplies it to page components through one context.
 User actions update immutable state; changes persist locally. Core rules
 validate agent prompts, ticker symbols, paused checks, and stored shapes. Seven
-pages share this state. Stocks uses symbol/tab hash routes, deterministic local
-OHLCV/statement fixtures, and empty structures for unsupported datasets. Quotes
-and positions are examples, and chat responses are illustrative. These contracts
-are separate from live directory settings/scheduling below. Market charts and
-financials remain fixtures; directory scheduling and paged directory reads are implemented.
+pages share this state. Stocks uses symbol/tab hash routes and source-backed local research reads, with
+empty states for unavailable datasets. Watchlist uses stored closing prices.
+Portfolio positions and chat replies remain illustrative. Directory/research
+scheduling and settings are independent of page navigation.
 
 ## Intended Research Domain Objects
 
@@ -130,13 +130,13 @@ The first live collector is implemented in apps/cli: two official Nasdaq Trader
 files, validated source blobs, atomic SQLite directory snapshots, sync outcomes,
 and cached reads. App hosts now start a private-stdio Go service with a configurable
 directory schedule, durable requests, bounded retry and existing sync leases.
-SQLite v3 preserves prior directory/settings/credential data and adds reviewed
+SQLite v4 preserves prior directory/settings/credential data and includes reviewed
 index snapshots, memberships and immutable source provenance.
 Electron uses a narrow IPC bridge; local Web uses an authenticated same-origin
 loopback bridge. Node encrypts credentials before Go storage; status never returns
-saved plaintext. The shared renderer manages sources/sync settings, while market
-bars and SEC adapters remain unimplemented. Stocks reads real cached directory names,
-exchange codes and membership; quotes/profiles/financials remain samples.
+saved plaintext. The shared renderer manages sources/sync settings, and research dataset controls. Stocks reads cached directory names,
+exchange codes, membership and sourced research snapshots; unavailable datasets
+remain empty and require configured source access.
 The [design](design-docs/us-stock-data-pipeline.md) and
 [implementation plan](exec-plans/active/us-stock-data-foundation.md) define the
 remaining boundaries; see [directory commands](../apps/cli/README.md) and
@@ -182,7 +182,7 @@ A bounded disk-only batch port warms renderer images before each directory page
 is presented; slow provider retrieval stays separate. Only data URLs reach the renderer. Directory/list/financial
 contracts and CSP stay separate. See [logo boundary](design-docs/stock-logos.md).
 
-## Research collection implementation (in progress)
+## Research collection implementation
 
 SQLite v4 adds immutable compressed evidence, research snapshots, raw daily bars,
 CIK aliases, dataset settings, durable fenced jobs and shared provider budgets.
@@ -191,6 +191,9 @@ of reads. Every directory candidate gets enrichment jobs; market-date jobs cover
 the full market. Missing credentials/contact leave work pending. Optional FMP
 datasets are disabled by default and may require paid endpoint permissions.
 Go can decrypt existing AES-GCM blobs using the private host vault file solely
-for collectors; no plaintext retrieval RPC is exposed. Cached research read and
-status/config/sync methods exist; renderer wiring follows in the next checkpoint.
-See [implementation plan](exec-plans/active/universe-research-ingestion.md).
+for collectors; no plaintext retrieval RPC is exposed. Cached research read/status/config/sync methods connect all six stock tabs and
+watchlist prices; API keys have their own Settings category.
+See [implementation plan](exec-plans/completed/universe-research-ingestion.md).
+
+See [research ingestion](design-docs/research-ingestion.md) for implemented
+providers, source windows, job budgets, financial semantics and remaining limits.
