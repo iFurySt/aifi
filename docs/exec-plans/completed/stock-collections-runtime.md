@@ -33,7 +33,7 @@ additional markets. Watchlist stays in existing renderer workspace storage.
 - [x] SQLite snapshots/scoped reads and bounded transport contract.
 - [x] Four-choice selector, persisted view state, watchlist integration, hidden bars.
 - [x] Tests, real Chrome/Electron validation and docs/history.
-- [ ] Commit/push, rebuild/restart normal app, preserve evidence and clean up.
+- [x] Commit/push, rebuild/restart normal app, preserve evidence and clean up.
 
 ## Verification results
 
@@ -43,3 +43,12 @@ protection checks. Chrome checks matched the full 101-symbol NDX list, 503 S&P
 members and 7,481 All entries; search/pagination, watchlist add/remove/empty state,
 reload persistence and global outside-scope lookup passed. Light/dark and mobile
 menus were visually inspected; scrollbar-width none retained scrolling.
+
+## Delivery
+
+Data foundation 34e8928 and shared UI a54f22f pushed in separate slices. Primary
+checkout rebuilt and normal AIFi bundle restarted. Runtime process and actual
+SQLite v3 index heads (503/101) verified. The restored primary Chrome preview
+exposes all four options. Final root native window inspection was unavailable
+because macOS was locked; isolated actual Electron smoke had already passed.
+Ignored screenshots/results/native smoke evidence were retained before cleanup.

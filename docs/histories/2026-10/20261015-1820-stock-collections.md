@@ -57,3 +57,13 @@ No generic group manager or additional market is introduced.
 - `packages/ui/src/components/StockSidebar.tsx`, `stock-directory-context.tsx`
 - `packages/ui/src/App.tsx`, `workspace-context.tsx`, `styles.css`
 - `apps/desktop/src/main.ts` smoke, source updater and related documentation
+
+### Delivery
+
+- Data foundation `34e8928` and shared UI `a54f22f` pushed separately.
+- Primary checkout rebuilt; normal AIFi bundle restarted with its existing data.
+  Actual SQLite migration/index heads verified at 503/101; primary Chrome preview
+  confirmed all four options and was restored to its original stock route.
+- macOS was locked during final root native inspection. Actual isolated Electron
+  smoke had passed; do not claim a final root-window visual review.
+- QA evidence retained in ignored artifacts; isolated services/worktree cleaned up.
