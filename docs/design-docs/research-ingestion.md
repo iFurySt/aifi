@@ -123,6 +123,7 @@ interest still require additional dataset-specific work. No missing value is zer
 Shared action snapshots retain two years of events and publish their per-symbol
 rows atomically. Earlier per-listing action jobs retire without deleting evidence.
 
-Universe inserts use bounded 500-job transactions and a single indexed manual-run
-lookup per batch. Dual-host startup must not wait behind a per-row full-queue scan;
+Universe inserts use bounded 500-job transactions and an indexed manual issuer-scope
+lookup per reconciliation. New listings/dates do not inherit an older manual request while automation is
+paused. Dual-host startup must not wait behind a per-row full-queue scan;
 the 12,000-job reconciliation/open regression exercises this boundary.

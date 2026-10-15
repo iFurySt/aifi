@@ -125,17 +125,13 @@ func (s *Store) AddResearchJobs(ctx context.Context, jobs []market.Job, now time
 		return e
 	}
 	defer tx.Rollback()
-	var manual bool
-	if e = tx.QueryRowContext(ctx, "SELECT EXISTS(SELECT 1 FROM research_jobs WHERE manual=1)").Scan(&manual); e != nil {
-		return e
-	}
 	stmt, e := tx.PrepareContext(ctx, "INSERT OR IGNORE INTO research_jobs(provider,dataset,subject,window,next_run,manual) VALUES(?,?,?,?,?,?)")
 	if e != nil {
 		return e
 	}
 	defer stmt.Close()
 	for _, j := range jobs {
-		if _, e = stmt.ExecContext(ctx, j.Provider, j.Dataset, j.Subject, j.Window, stamp(now), manual); e != nil {
+		if _, e = stmt.ExecContext(ctx, j.Provider, j.Dataset, j.Subject, j.Window, stamp(now), j.Manual); e != nil {
 			return e
 		}
 	}
@@ -877,4 +873,23 @@ func (s *Store) ResearchArchive(ctx context.Context, url string) (*market.Eviden
 func (s *Store) UseSharedActions(ctx context.Context) error {
 	_, e := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE dataset='actions' AND subject!='us' AND state!='running'")
 	return e
+}
+
+// Manual scope is captured from explicitly requested listing jobs. A later new
+// listing/date must not inherit an unrelated unfinished manual run while paused.
+func (s *Store) ManualIssuers(ctx context.Context) (map[string]bool, error) {
+	out := map[string]bool{}
+	rows, e := s.db.QueryContext(ctx, `SELECT DISTINCT a.cik FROM research_aliases a WHERE a.symbol IN (SELECT subject FROM research_jobs WHERE manual=1)`)
+	if e != nil {
+		return nil, e
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var cik string
+		if e = rows.Scan(&cik); e != nil {
+			return nil, e
+		}
+		out[cik] = true
+	}
+	return out, rows.Err()
 }

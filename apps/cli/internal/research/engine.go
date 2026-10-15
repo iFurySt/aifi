@@ -131,6 +131,10 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	if !force && fingerprint == e.fingerprint && now.Sub(e.lastReconcile) < time.Hour {
 		return nil
 	}
+	manualIssuers, err := e.DB.ManualIssuers(ctx)
+	if err != nil {
+		return err
+	}
 	symbols, err := e.DB.ResearchSymbols(ctx)
 	if err != nil {
 		return err
@@ -170,7 +174,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 		}
 		if cik != "" {
 			for _, d := range []string{"filings", "facts", "insiders"} {
-				jobs = append(jobs, market.Job{Provider: "sec", Dataset: d, Subject: "cik:" + cik})
+				jobs = append(jobs, market.Job{Provider: "sec", Dataset: d, Subject: "cik:" + cik, Manual: manualIssuers[cik]})
 			}
 		}
 	}

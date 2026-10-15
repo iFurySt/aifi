@@ -251,3 +251,24 @@ func TestLargeQueueReconciliationAllowsAnotherHostToOpen(t *testing.T) {
 		t.Fatal("manual pending lookup scans the entire universe", plan)
 	}
 }
+
+func TestPausedFutureListingsDoNotInheritAnOldManualRequest(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Now()
+	db.AddResearchJobs(ctx, []market.Job{{Provider: "massive", Dataset: "profile", Subject: "OLD"}}, now)
+	db.RequestResearchSync(ctx)
+	db.db.Exec("INSERT INTO research_aliases VALUES('OLD','0000000001'),('NEW','0000000002')")
+	issuers, e := db.ManualIssuers(ctx)
+	if e != nil || !issuers["0000000001"] || issuers["0000000002"] {
+		t.Fatal("manual scope included a later new company", issuers, e)
+	}
+	db.AddResearchJobs(ctx, []market.Job{{Provider: "massive", Dataset: "profile", Subject: "NEW"}, {Provider: "sec", Dataset: "facts", Subject: "cik:0000000001", Manual: issuers["0000000001"]}, {Provider: "sec", Dataset: "facts", Subject: "cik:0000000002", Manual: issuers["0000000002"]}}, now)
+	j, e := db.ClaimResearchJob(ctx, "sec", []string{"facts"}, true, now)
+	if e != nil || j == nil || j.Subject != "cik:0000000001" {
+		t.Fatal("original manual issuer did not expand", e)
+	}
+	if later, _ := db.ClaimResearchJob(ctx, "sec", []string{"facts"}, true, now); later != nil {
+		t.Fatal("automation pause ignored for a new listing")
+	}
+}
