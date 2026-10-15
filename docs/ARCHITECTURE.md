@@ -181,3 +181,16 @@ renderer session cache reuses data URLs and supports immediate avatar remounts.
 A bounded disk-only batch port warms renderer images before each directory page
 is presented; slow provider retrieval stays separate. Only data URLs reach the renderer. Directory/list/financial
 contracts and CSP stay separate. See [logo boundary](design-docs/stock-logos.md).
+
+## Research collection implementation (in progress)
+
+SQLite v4 adds immutable compressed evidence, research snapshots, raw daily bars,
+CIK aliases, dataset settings, durable fenced jobs and shared provider budgets.
+The app-owned Go service now runs bounded Massive/SEC/FMP workers independently
+of reads. Every directory candidate gets enrichment jobs; market-date jobs cover
+the full market. Missing credentials/contact leave work pending. Optional FMP
+datasets are disabled by default and may require paid endpoint permissions.
+Go can decrypt existing AES-GCM blobs using the private host vault file solely
+for collectors; no plaintext retrieval RPC is exposed. Cached research read and
+status/config/sync methods exist; renderer wiring follows in the next checkpoint.
+See [implementation plan](exec-plans/active/universe-research-ingestion.md).

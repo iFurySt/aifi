@@ -57,3 +57,43 @@ CREATE TABLE IF NOT EXISTS index_heads(
  snapshot_id TEXT NOT NULL REFERENCES index_snapshots(id)
 );
 INSERT OR IGNORE INTO schema_migrations(version) VALUES(3);
+
+CREATE TABLE IF NOT EXISTS research_config(
+ singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL, config_json TEXT NOT NULL
+);
+INSERT OR IGNORE INTO research_config VALUES(1,0,'{"automatic":true,"historyDays":730,"datasets":{"prices":{"enabled":true,"intervalHours":24},"profile":{"enabled":true,"intervalHours":168},"filings":{"enabled":true,"intervalHours":24},"facts":{"enabled":true,"intervalHours":168},"actions":{"enabled":true,"intervalHours":24},"insiders":{"enabled":true,"intervalHours":24},"funds":{"enabled":false,"intervalHours":168},"politicians":{"enabled":false,"intervalHours":24},"analyst":{"enabled":false,"intervalHours":24},"news":{"enabled":false,"intervalHours":24}}}');
+CREATE TABLE IF NOT EXISTS research_jobs(
+ id INTEGER PRIMARY KEY, provider TEXT NOT NULL, dataset TEXT NOT NULL, subject TEXT NOT NULL, window TEXT NOT NULL DEFAULT '',
+ manual INTEGER NOT NULL DEFAULT 0, state TEXT NOT NULL DEFAULT 'queued', attempts INTEGER NOT NULL DEFAULT 0,
+ next_run TEXT NOT NULL, lease TEXT, lease_until TEXT, last_success TEXT, error TEXT NOT NULL DEFAULT '',
+ UNIQUE(provider,dataset,subject,window)
+);
+CREATE INDEX IF NOT EXISTS research_jobs_due ON research_jobs(state,next_run);
+CREATE TABLE IF NOT EXISTS research_aliases(symbol TEXT PRIMARY KEY, cik TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS research_evidence(
+ hash TEXT PRIMARY KEY, provider TEXT NOT NULL, source_url TEXT NOT NULL, fetched_at TEXT NOT NULL,
+ content_gzip BLOB NOT NULL
+);
+CREATE TABLE IF NOT EXISTS research_snapshots(
+ id TEXT PRIMARY KEY, provider TEXT NOT NULL, dataset TEXT NOT NULL, subject TEXT NOT NULL,
+ fetched_at TEXT NOT NULL, payload_json TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS research_snapshot_sources(
+ snapshot_id TEXT NOT NULL REFERENCES research_snapshots(id), evidence_hash TEXT NOT NULL REFERENCES research_evidence(hash),
+ PRIMARY KEY(snapshot_id,evidence_hash)
+);
+CREATE TABLE IF NOT EXISTS research_heads(
+ dataset TEXT NOT NULL, subject TEXT NOT NULL, snapshot_id TEXT NOT NULL REFERENCES research_snapshots(id),
+ PRIMARY KEY(dataset,subject)
+);
+CREATE TABLE IF NOT EXISTS daily_bars(
+ provider TEXT NOT NULL, symbol TEXT NOT NULL, date TEXT NOT NULL, basis TEXT NOT NULL,
+ open REAL NOT NULL, high REAL NOT NULL, low REAL NOT NULL, close REAL NOT NULL, volume REAL NOT NULL,
+ snapshot_id TEXT NOT NULL REFERENCES research_snapshots(id), PRIMARY KEY(provider,symbol,date,basis)
+);
+CREATE INDEX IF NOT EXISTS daily_bars_symbol ON daily_bars(symbol,date);
+CREATE TABLE IF NOT EXISTS provider_budgets(
+ provider TEXT PRIMARY KEY, next_request TEXT NOT NULL, day TEXT NOT NULL, calls INTEGER NOT NULL,
+ cooldown_until TEXT NOT NULL DEFAULT '', blocked TEXT NOT NULL DEFAULT ''
+);
+INSERT OR IGNORE INTO schema_migrations(version) VALUES(4);

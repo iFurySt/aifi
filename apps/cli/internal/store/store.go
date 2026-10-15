@@ -76,7 +76,7 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 	if err = tx.QueryRowContext(ctx, "SELECT COALESCE(MAX(version),0) FROM schema_migrations").Scan(&version); err != nil {
 		return fail(err)
 	}
-	if version > 3 {
+	if version > 4 {
 		return fail(fmt.Errorf("unsupported SQLite schema version %d", version))
 	}
 	if _, err = tx.ExecContext(ctx, schema); err != nil {

@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/ifuryst/aifi/apps/cli/internal/directory"
+	"github.com/ifuryst/aifi/apps/cli/internal/research"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
 	"io"
 	"regexp"
@@ -211,6 +212,7 @@ func (s *Service) Save(ctx context.Context, value store.Settings) (store.Setting
 	if !updated.DirectoryEnabled {
 		_ = s.DB.ClearRequest(ctx)
 	}
+	_ = s.DB.ResetResearchProvider(ctx, "sec")
 	s.Wake()
 	return updated, nil
 }
@@ -239,6 +241,33 @@ func decode(raw json.RawMessage, target any) error {
 }
 func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 	switch req.Method {
+	case "research.status":
+		return s.DB.ResearchStatus(ctx)
+	case "research.settings":
+		var value store.ResearchConfig
+		if e := decode(req.Params, &value); e != nil {
+			return nil, e
+		}
+		return s.DB.SaveResearchConfig(ctx, value)
+	case "research.sync":
+		if s.Offline {
+			return nil, errors.New("network is paused")
+		}
+		if e := s.DB.RequestResearchSync(ctx); e != nil {
+			return nil, e
+		}
+		return s.DB.ResearchStatus(ctx)
+	case "research.read":
+		var value struct {
+			Symbol string `json:"symbol"`
+		}
+		if e := decode(req.Params, &value); e != nil {
+			return nil, e
+		}
+		if !directorySymbol.MatchString(value.Symbol) {
+			return nil, errors.New("invalid stock symbol")
+		}
+		return s.DB.ResearchRead(ctx, strings.ToUpper(value.Symbol))
 	case "status":
 		return s.State(ctx)
 	case "settings.save":
@@ -306,6 +335,7 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 		if e := s.DB.PutCredentials(ctx, value.Provider, value.Values); e != nil {
 			return nil, e
 		}
+		_ = s.DB.ResetResearchProvider(ctx, value.Provider)
 		return s.DB.Credentials(ctx)
 	case "vault.remove":
 		var value struct {
@@ -317,6 +347,7 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 		if e := s.DB.RemoveCredentials(ctx, value.Provider); e != nil {
 			return nil, e
 		}
+		_ = s.DB.ResetResearchProvider(ctx, value.Provider)
 		return s.DB.Credentials(ctx)
 	default:
 		return nil, errors.New("unsupported data method")
@@ -325,6 +356,9 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 func (s *Service) Serve(ctx context.Context, input io.Reader, output io.Writer) error {
 	ctx, stop := context.WithCancel(ctx)
 	defer stop()
+	researchDone := make(chan struct{})
+	go func() { research.New(s.DB, s.DataDir, s.Offline).Run(ctx); close(researchDone) }()
+	defer func() { stop(); <-researchDone }()
 	done := make(chan struct{})
 	go func() { s.Run(ctx); close(done) }()
 	if closer, ok := input.(io.ReadCloser); ok {

@@ -71,7 +71,7 @@ type Credential struct {
 }
 
 func ValidCredential(provider, field string) bool {
-	return provider == "massive" && field == "apiKey" || provider == "alpaca" && (field == "keyId" || field == "secret")
+	return (provider == "massive" || provider == "fmp") && field == "apiKey" || provider == "alpaca" && (field == "keyId" || field == "secret")
 }
 func (s *Store) PutCredentials(ctx context.Context, provider string, values map[string]string) error {
 	if len(values) == 0 {
@@ -96,7 +96,7 @@ func (s *Store) PutCredentials(ctx context.Context, provider string, values map[
 	return tx.Commit()
 }
 func (s *Store) RemoveCredentials(ctx context.Context, provider string) error {
-	if provider != "massive" && provider != "alpaca" {
+	if provider != "massive" && provider != "alpaca" && provider != "fmp" {
 		return errors.New("unknown credential provider")
 	}
 	_, e := s.db.ExecContext(ctx, "DELETE FROM credential_blobs WHERE provider=?", provider)

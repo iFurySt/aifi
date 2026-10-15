@@ -109,3 +109,14 @@ by Go; the renderer has no source URL, database-write or built-in mutation route
 Personal watchlist symbols travel only over the existing local IPC/loopback bridge,
 never to the public constituent sources. Public index refresh is a maintainer
 reviewed script/commit, not an arbitrary runtime endpoint.
+
+## Research providers
+
+The local Go collector reads the private vault key to decrypt saved Massive/FMP
+credentials only in memory. Requests use fixed HTTPS provider hosts, reject
+redirects, bound response bodies and sanitize provider/transport errors. Massive
+auth uses a header; required FMP query credentials are removed from stored source
+URLs. SEC requests require a user-supplied identifying contact. No raw provider
+error body, credential or vault-read operation is exposed to the renderer.
+Research evidence is gzip-compressed in SQLite; normal page reads contain bounded
+normalized data and provenance, never raw evidence or secret blobs.

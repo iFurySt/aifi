@@ -1,0 +1,148 @@
+package store
+
+import (
+	"context"
+	"encoding/json"
+	"strings"
+	"testing"
+	"time"
+
+	"github.com/ifuryst/aifi/apps/cli/internal/market"
+)
+
+func TestResearchAtomicPersistenceRestartAndLease(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, e := Open(ctx, path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	now := time.Now().UTC()
+	job := market.Job{Provider: "massive", Dataset: "prices", Subject: "2026-10-14"}
+	if e = db.AddResearchJobs(ctx, []market.Job{job, job}, now); e != nil {
+		t.Fatal(e)
+	}
+	claimed, e := db.ClaimResearchJob(ctx, "massive", []string{"prices"}, false, now)
+	if e != nil || claimed == nil {
+		t.Fatal(e)
+	}
+	if second, _ := db.ClaimResearchJob(ctx, "massive", []string{"prices"}, false, now); second != nil {
+		t.Fatal("double claim")
+	}
+	result := market.Result{Payload: market.Payload{Complete: true}, Evidence: []market.Evidence{{URL: "https://api.massive.com/test", Body: []byte(`{"test":"source"}`), FetchedAt: now}}, Bars: []market.Bar{{Symbol: "AAPL", Date: "2026-10-14", Open: 100, High: 110, Low: 95, Close: 105, Volume: 1000}}}
+	invalid := result
+	invalid.Bars = append(append([]market.Bar{}, result.Bars...), market.Bar{Symbol: "BAD", Date: "invalid"})
+	if e = db.FinishResearchJob(ctx, *claimed, invalid, now, now.Add(time.Hour)); e == nil {
+		t.Fatal("invalid batch committed")
+	}
+	view, _ := db.ResearchRead(ctx, "AAPL")
+	if len(view.Bars) != 0 {
+		t.Fatal("partial atomic batch")
+	}
+	if e = db.FinishResearchJob(ctx, *claimed, result, now, now.Add(time.Hour)); e != nil {
+		t.Fatal(e)
+	}
+	if e = db.FinishResearchJob(ctx, *claimed, result, now, now.Add(time.Hour)); e == nil {
+		t.Fatal("stale lease committed")
+	}
+	db.Close()
+	db, e = Open(ctx, path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	defer db.Close()
+	view, e = db.ResearchRead(ctx, "AAPL")
+	if e != nil || len(view.Bars) != 1 || view.Bars[0].Close != 105 || view.Coverage["prices"] != "stored" {
+		t.Fatalf("offline reopen: %+v %v", view, e)
+	}
+	ev, e := db.ResearchEvidence(ctx, "prices", job.Subject)
+	if e != nil || len(ev) != 1 || !strings.Contains(string(ev[0].Body), "source") {
+		t.Fatal("raw evidence lost", e)
+	}
+	if e = db.RequestResearchSync(ctx); e != nil {
+		t.Fatal(e)
+	}
+	reclaimed, e := db.ClaimResearchJob(ctx, "massive", []string{"prices"}, true, time.Now().Add(time.Second))
+	if e != nil || reclaimed == nil {
+		t.Fatal("manual request did not persist", e)
+	}
+	expired, e := db.ClaimResearchJob(ctx, "massive", []string{"prices"}, true, time.Now().Add(16*time.Minute))
+	if e != nil || expired == nil || expired.Lease == reclaimed.Lease {
+		t.Fatal("expired lease not recovered", e)
+	}
+	if e = db.FinishResearchJob(ctx, *reclaimed, result, time.Now().Add(17*time.Minute), now.Add(time.Hour)); e == nil {
+		t.Fatal("old worker overwrote new lease")
+	}
+}
+func TestResearchGlobalBudgetAndSettings(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Date(2026, 10, 15, 12, 0, 0, 0, time.UTC)
+	limit := ProviderLimit{5, 2}
+	for i := 0; i < 2; i++ {
+		wait, blocked, e := db.ReserveProvider(ctx, "massive", limit, now.Add(time.Duration(i)*12*time.Second))
+		if e != nil || blocked != "" || wait != 0 {
+			t.Fatal(wait, blocked, e)
+		}
+	}
+	wait, _, e := db.ReserveProvider(ctx, "massive", limit, now.Add(time.Minute))
+	if e != nil || wait < 11*time.Hour {
+		t.Fatal("daily cap ignored", wait, e)
+	}
+	if e = db.CooldownProvider(ctx, "sec", "access_denied", now); e != nil {
+		t.Fatal(e)
+	}
+	_, blocked, _ := db.ReserveProvider(ctx, "sec", ProviderLimit{240, 10000}, now)
+	if blocked != "access_denied" {
+		t.Fatal("blocked provider made a request")
+	}
+	db.ResetResearchProvider(ctx, "sec")
+	_, blocked, _ = db.ReserveProvider(ctx, "sec", ProviderLimit{240, 10000}, now)
+	if blocked != "" {
+		t.Fatal("credentials/config cannot unblock")
+	}
+	cfg, e := db.ResearchConfig(ctx)
+	if e != nil || cfg.Limits["massive"].PerMinute != 5 || cfg.HistoryDays != 730 {
+		t.Fatal(cfg, e)
+	}
+	old := cfg
+	cfg.HistoryDays = 365
+	next, e := db.SaveResearchConfig(ctx, cfg)
+	if e != nil || next.Revision != 1 {
+		t.Fatal(e)
+	}
+	if _, e = db.SaveResearchConfig(ctx, old); e == nil {
+		t.Fatal("stale settings overwrote newer")
+	}
+	cfg = next
+	cfg.Datasets["shell"] = DatasetConfig{true, 1}
+	if _, e = db.SaveResearchConfig(ctx, cfg); e == nil {
+		t.Fatal("unknown dataset accepted")
+	}
+}
+func TestResearchSharedIssuerAndReadBounds(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Now()
+	jobs := []market.Job{{Provider: "sec", Dataset: "identity", Subject: "us"}, {Provider: "sec", Dataset: "facts", Subject: "cik:0000320193"}}
+	db.AddResearchJobs(ctx, jobs, now)
+	j, _ := db.ClaimResearchJob(ctx, "sec", []string{"identity"}, false, now)
+	result := market.Result{Aliases: map[string]string{"AAPL": "0000320193", "AAPL.B": "0000320193"}, Payload: market.Payload{Complete: true}, Evidence: []market.Evidence{{URL: "https://www.sec.gov/test", Body: []byte("test"), FetchedAt: now}}}
+	if e := db.FinishResearchJob(ctx, *j, result, now, now.Add(time.Hour)); e != nil {
+		t.Fatal(e)
+	}
+	j, _ = db.ClaimResearchJob(ctx, "sec", []string{"facts"}, false, now)
+	result.Aliases = nil
+	result.Payload.Facts = []market.Fact{{Metric: "revenue", Value: "12345678901234567890", Unit: "USD", End: "2026-09-30"}}
+	if e := db.FinishResearchJob(ctx, *j, result, now, now.Add(time.Hour)); e != nil {
+		t.Fatal(e)
+	}
+	view, e := db.ResearchRead(ctx, "AAPL.B")
+	if e != nil || view.Datasets["facts"].Data.Facts[0].Value != "12345678901234567890" {
+		t.Fatal("issuer mapping/decimal lost", e)
+	}
+	b, _ := json.Marshal(view)
+	if strings.Contains(string(b), "content_gzip") || strings.Contains(string(b), "ciphertext") {
+		t.Fatal("private blobs escaped")
+	}
+}
