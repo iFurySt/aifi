@@ -41,6 +41,8 @@ still require network time; a neutral tile accurately represents that state.
   reports false while the inner-scroll root reports true for the same target.
 - Browser fixture reads are controlled 80ms/1s values, not a remote-speed benchmark.
   Ignored screenshots/results preserve this distinction.
+- Primary assets were rebuilt and the actual native app restarted/visually checked
+  with real stock images. The existing Chrome preview was restored after QA.
 
 ### Files Modified
 

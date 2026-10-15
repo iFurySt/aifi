@@ -31,7 +31,7 @@ actual offline native smoke; rebuild/restart the primary app after delivery.
 - [x] Identify inner-scroll clipping and fallback-state causes.
 - [x] Implement observer/preparation/presentation changes and unit checks.
 - [x] Real Chrome scroll checks, CI/native smoke, documentation and history.
-- [ ] Commit/push, primary rebuild/restart and cleanup.
+- [x] Commit/push, primary rebuild/restart and cleanup.
 
 ## Verification Results
 
@@ -46,3 +46,11 @@ actual offline native smoke; rebuild/restart the primary app after delivery.
   inner-scroll-root=true for the same offscreen avatar.
 - The fixture imports the production component; fake 80ms/1s reads isolate UI
   scheduling rather than claiming first-time remote downloads are instant.
+
+## Delivery
+
+Implementation pushed; primary checkout rebuilt and the native app restarted.
+The native stock list was visually inspected with real cached company images.
+The existing Chrome deliverable tab was restored to the primary preview after QA,
+with its temporary device metrics cleared. Cache/scroll metrics, fixture screenshot
+and offline native smoke evidence were preserved before test-server cleanup.
