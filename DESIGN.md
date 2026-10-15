@@ -170,6 +170,13 @@ dialogs. 999px: pill buttons and ticker chips.
 
 ### Workspace Menu
 
+The stock heading selects All US listings, S&P 500, Nasdaq-100 or My watchlist;
+the selected collection replaces the heading label with its actual filtered count.
+Keep provider names in Settings, snapshot dates compact and incomplete coverage
+explicit. Built-in definitions have no user edit/rename/delete controls. Hide
+vertical scrollbar chrome while preserving normal scrolling; horizontal table
+wrappers retain their own scroll affordance.
+
 Keep the sidebar focused on stock selection; chats remain selectable inside
 Chat. The bottom outer-rail avatar opens a 264px popup with workspace identity,
 Settings, and theme switching. Use a 40px trigger, 16px popup radius, and 40px

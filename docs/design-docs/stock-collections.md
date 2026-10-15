@@ -1,9 +1,9 @@
 # Stock Collections And Market Scope
 
-Status: scoped reads and SQLite snapshots implemented 2026-10-15; shared selector
-is the next delivery slice. Scope remains indexes and the existing watchlist.
-Current index data uses reviewed bundled snapshots with visible source dates;
-automatic index ingestion/scheduling remains deferred.
+Status: implemented in the shared Web/Electron app, 2026-10-15. Scope remains
+indexes and the existing watchlist. Reviewed bundled snapshots provide working
+offline index membership. Automatic source ingestion/scheduling remains deferred;
+source dates and incomplete local coverage are shown rather than implying freshness.
 
 ## First Version
 
@@ -109,3 +109,22 @@ for every member.
    behavior and the absence of built-in mutation paths.
 3. Later add user-managed named groups alongside protected built-ins; defer
    themes, screens, exchange filters and HK/JP markets until their data is ready.
+
+## Implemented Local Slice
+
+- Four working collections, persisted last selection and scoped literal search.
+  Selecting a collection resets search/scroll/pagination and preserves detail tabs.
+- SQLite v3 stores immutable reviewed index snapshots, members and source hashes;
+  startup seeds atomically, preserves previous data, and cannot roll a newer head
+  back with an older bundle. Go filters before counting/searching/paging.
+- Index source symbols are preserved and report unresolved local members. Scoped
+  page tokens include both directory and collection identity. Global stock lookup
+  remains independent. Watchlist is passed only over local transport, not to a
+  public constituent source. Built-ins accept no caller symbols or mutation RPC.
+- Current seeds: 503 S&P securities observed 2026-10-15, 101 Nasdaq securities
+  dated 2026-10-14. See [source provenance](../references/stock-index-sources.md)
+  for actual payload checks, licensing, source hashes and the review/update script.
+- `scripts/update-stock-index-seeds.py` prepares reviewed source updates; runtime
+  directory sync does not automatically refresh index snapshots yet. The daily
+  index scheduler/settings described above remain the next data slice, not shipped
+  behavior. No named-group manager or additional market is introduced.

@@ -163,7 +163,8 @@ listings, S&P 500, Nasdaq-100 and the existing watchlist. Scoped read contracts
 and SQLite snapshots are implemented. Bundled, reviewed dated index membership
 works offline; source refresh currently requires a reviewed repository update.
 Built-ins have no membership-write operation; watchlist symbols remain in existing
-workspace storage. The collection selector is the next UI delivery slice.
+workspace storage. The shared selector remembers personal viewing state separately from the unchanged
+workspace schema. Search and incremental reads stay inside the selected collection.
 
 ## Decorative Company Assets
 

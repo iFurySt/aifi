@@ -31,6 +31,15 @@ additional markets. Watchlist stays in existing renderer workspace storage.
 
 - [x] Confirm old menu was planning-only; verify full sources/local reconciliation.
 - [x] SQLite snapshots/scoped reads and bounded transport contract.
-- [ ] Four-choice selector, persisted view state, watchlist integration, hidden bars.
-- [ ] Tests, real Chrome/Electron validation and docs/history.
+- [x] Four-choice selector, persisted view state, watchlist integration, hidden bars.
+- [x] Tests, real Chrome/Electron validation and docs/history.
 - [ ] Commit/push, rebuild/restart normal app, preserve evidence and clean up.
+
+## Verification results
+
+`make ci` passed with 61 TypeScript tests plus Go vet/race/builds. Actual Electron
+smoke passed its four-choice menu, saved selection, offline coverage and built-in
+protection checks. Chrome checks matched the full 101-symbol NDX list, 503 S&P
+members and 7,481 All entries; search/pagination, watchlist add/remove/empty state,
+reload persistence and global outside-scope lookup passed. Light/dark and mobile
+menus were visually inspected; scrollbar-width none retained scrolling.

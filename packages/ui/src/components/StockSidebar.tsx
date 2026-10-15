@@ -2,7 +2,11 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { useEffect, useRef, useState } from "react";
 import { Search, ChevronDown, Check } from "lucide-react";
 import { StockAvatar } from "./StockAvatar";
-import { validDirectorySymbol } from "@aifi/core";
+import {
+  stockCollections,
+  validStockCollection,
+  validDirectorySymbol,
+} from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import {
   useDirectoryFeed,
@@ -10,15 +14,26 @@ import {
 } from "../stock-directory-context";
 
 export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
-  const { stockRoute, openStock, page } = useWorkspace();
+  const {
+    stockRoute,
+    openStock,
+    page,
+    workspace,
+    stockCollection,
+    selectStockCollection,
+    navigate,
+  } = useWorkspace();
+  const selected = stockCollections.find(
+    (collection) => collection.id === stockCollection,
+  )!;
   const [query, setQuery] = useState("");
-  const data = useDirectoryFeed(query);
+  const data = useDirectoryFeed(query, stockCollection, workspace.watchlist);
   const { loading, error, retry, loadMore } = data;
   const list = useRef<HTMLElement>(null);
   const sentinel = useRef<HTMLDivElement>(null);
   useEffect(() => {
     list.current?.scrollTo({ top: 0 });
-  }, [query, data.snapshotId]);
+  }, [query, stockCollection, data.snapshotId]);
   useEffect(() => {
     if (!list.current || !sentinel.current || loading || error || !data.hasMore)
       return;
@@ -39,10 +54,10 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
             <DropdownMenu.Trigger asChild>
               <button
                 className="stock-source-trigger"
-                aria-label="Stock directory source"
-                title="Nasdaq Trader · US listings"
+                aria-label="Stock collection"
+                title={selected.label}
               >
-                Stocks <ChevronDown size={14} aria-hidden="true" />
+                {selected.heading} <ChevronDown size={14} aria-hidden="true" />
               </button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
@@ -51,18 +66,29 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
                 align="start"
                 sideOffset={8}
                 collisionPadding={12}
-                aria-label="Stock directories"
+                aria-label="Stock collections"
               >
-                <DropdownMenu.RadioGroup value="nasdaq">
-                  <DropdownMenu.RadioItem
-                    value="nasdaq"
-                    className="dropdown-item stock-source-option"
-                  >
-                    Nasdaq Trader
-                    <DropdownMenu.ItemIndicator>
-                      <Check size={15} aria-hidden="true" />
-                    </DropdownMenu.ItemIndicator>
-                  </DropdownMenu.RadioItem>
+                <DropdownMenu.RadioGroup
+                  value={stockCollection}
+                  onValueChange={(value) => {
+                    if (validStockCollection(value)) {
+                      selectStockCollection(value);
+                      setQuery("");
+                    }
+                  }}
+                >
+                  {stockCollections.map((collection) => (
+                    <DropdownMenu.RadioItem
+                      key={collection.id}
+                      value={collection.id}
+                      className="dropdown-item stock-source-option"
+                    >
+                      {collection.label}
+                      <DropdownMenu.ItemIndicator>
+                        <Check size={15} aria-hidden="true" />
+                      </DropdownMenu.ItemIndicator>
+                    </DropdownMenu.RadioItem>
+                  ))}
                 </DropdownMenu.RadioGroup>
               </DropdownMenu.Content>
             </DropdownMenu.Portal>
@@ -72,6 +98,23 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
           <span className="count-badge">{data.total.toLocaleString()}</span>
         )}
       </div>
+      {data.collection?.snapshotDate && (
+        <p
+          className="stock-collection-date"
+          title={`${data.collection.sourceName} · Retrieved ${data.collection.fetchedAt?.slice(0, 10)}`}
+        >
+          Snapshot {data.collection.snapshotDate}
+        </p>
+      )}
+      {!!data.collection?.unresolvedSymbols.length && (
+        <p
+          className="stock-collection-date"
+          title={data.collection.unresolvedSymbols.join(", ")}
+        >
+          {data.collection.availableCount} / {data.collection.memberCount}{" "}
+          available
+        </p>
+      )}
       <label className="search-field stock-list-search">
         <Search size={15} />
         <input
@@ -130,9 +173,25 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
         )}
         {!loading && !error && !data.items.length && (
           <p className="sidebar-hint">
-            {data.snapshotId
-              ? "No matches."
-              : "No directory yet. Sync in Settings."}
+            {stockCollection === "watchlist" &&
+            workspace.watchlist.length === 0 ? (
+              <>
+                Your watchlist is empty.{" "}
+                <button
+                  className="text-link"
+                  onClick={() => {
+                    navigate("watchlist");
+                    onSelect?.();
+                  }}
+                >
+                  Add stocks
+                </button>
+              </>
+            ) : data.snapshotId ? (
+              "No matches."
+            ) : (
+              "No directory yet. Sync in Settings."
+            )}
           </p>
         )}
         <div

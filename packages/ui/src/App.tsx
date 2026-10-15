@@ -12,10 +12,13 @@ import type {
   Workspace,
   WorkspacePage,
   StockTab,
+  StockCollection,
   StockDirectoryRepository,
   StockLogoRepository,
 } from "@aifi/core";
 import {
+  readStockCollection,
+  writeStockCollection,
   createLocalStockDirectory,
   createLocalStockLogos,
   getRuntimeInfo,
@@ -64,6 +67,9 @@ export function App({
   const blocked = useRef(!!loaded.error);
   const dirty = useRef(false);
   const [page, setPage] = useState(currentPage);
+  const [stockCollection, setStockCollection] = useState(() =>
+    readStockCollection(storage),
+  );
   const [stockRoute, setStockRoute] = useState(() =>
     parseStockRoute(location.hash),
   );
@@ -94,6 +100,14 @@ export function App({
     setToast(message);
     toastTimer.current = setTimeout(() => setToast(""), 6500);
   }, []);
+  const selectStockCollection = useCallback(
+    (collection: StockCollection) => {
+      setStockCollection(collection);
+      if (!writeStockCollection(storage, collection))
+        notify("Selection couldn't be saved.");
+    },
+    [notify],
+  );
   const update = useCallback((change: (current: Workspace) => Workspace) => {
     dirty.current = true;
     setWorkspace(change);
@@ -165,6 +179,8 @@ export function App({
             page,
             navigate,
             stockRoute,
+            stockCollection,
+            selectStockCollection,
             settingsSection,
             openStock,
             notify,

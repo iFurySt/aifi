@@ -1,57 +1,59 @@
-# Reliability
+## 2026-10-15 18:20 | Task: Stock collections and hidden vertical scrollbars
 
-## Current Local Runtime
+### Execution Context
 
-Web starts on the fixed loopback origin 127.0.0.1:5173. Desktop development owns
-its Vite process; a conflicting port causes startup to fail rather than silently
-choosing another origin. Production desktop loads bundled assets without a server.
-The first desktop launch downloads Electron if the binary is not cached. On
-macOS, a cached local AIFi-named runtime is prepared from that pinned distribution,
-with an icon and ad-hoc signature; source dependencies are left pristine.
+- Agent ID: `/root`
+- Base Model: GPT-6
+- Runtime: Codex desktop
 
-App-owned Go now schedules directory checks/downloads while the host runs.
-Electron starts a private child; local Web dev/preview starts an equivalent child.
-The renderer uses local settings/status transport and has no direct provider calls
-or cloud dependency. Cached reads do not fetch. See [CLI guardrails](../apps/cli/README.md).
-Local state is bounded and validated. Invalid or unsupported state opens a
-recoverable temporary demo and preserves the stored value until explicit reset.
-Storage denial/quota failure leaves the session usable and displays a notice.
+### User Query
 
-## Verification And Diagnostics
+> Hide vertical scrollbars and implement the previously discussed Stocks choices.
 
-make ci includes repository checks, TypeScript, domain/storage contracts, and
-production builds. pnpm smoke:desktop separately checks a real native launch,
-local persistence, renderer isolation, and the shared renderer with a timeout.
-It uses a throwaway profile and saves diagnostics in .artifacts. Frontend
-browser/Electron verification lives in
-[the frontend guide](FRONTEND.md). Vite and Electron diagnostics appear in the
-launching terminal; the app exposes user-facing storage/startup failures.
+### Changes Overview
 
-Directory collection has bounded requests, persisted outcomes/leases, atomic
-snapshot writes, stale-source/shrink guards, and last-good cache retention. SQLite
-v3 migrates prior versions in place and is explicitly versioned; an unknown future schema is rejected.
+- Slice 1 (`34e8928`): SQLite v3 stores reviewed index snapshots/source hashes;
+  scoped directory reads apply membership before search/count/paging in Go.
+  Existing directory, settings and credential data survive migration. Built-ins
+  accept no caller membership or write operation.
+- Sources: 503 S&P securities from the datasets PDDL CSV observed 2026-10-15;
+  101 Nasdaq-100 securities from Nasdaq's complete response dated 2026-10-14.
+  All members reconciled with the real candidate directory in validation.
+- Slice 2: four working choices, persisted view state, watchlist add/remove
+  integration, generation-safe collection changes and hidden vertical scrollbars.
+  Directory bottom-scroll loading and cached logo preparation remain in use.
+- Index dates and partial directory coverage are visible. Public source updates
+  remain reviewed script/commit changes; automatic index scheduling is deferred.
 
-Multi-window editing, UI schema migrations, backups, broader live-source retry policies,
-and research-runner observability remain future work. CI workflow and release
-automation guidance live in [CICD.md](CICD.md).
+### Design Intent
 
-Directory settings use revision checks; source disabling cancels owned work,
-automation/interval changes recompute due time, and manual requests persist.
-Failures back off 15/30/60 minutes; wake checks catch up using stored outcomes.
-EOF/quit cancels downloads and waits for cleanup, with a host kill deadline.
-Unexpected process exit is visible as unavailable and needs host reconnect/restart.
-Directory history retention remains a follow-up; Storage exposes DB size.
+The earlier grouping task saved a proposal without runtime choices. Deliver
+actual scoped reads rather than inactive menu entries. Keep system list ownership
+separate from personal watchlists and future custom groups. Preserve global stock
+lookup, detail tabs, local logo batching and local/cloud repository replacement.
+No generic group manager or additional market is introduced.
 
-Company logos persist as private host PNGs across restarts. Fresh disk hits make
-no image-provider request; stale/fallback hits display immediately and refresh in
-the background. The renderer shares pending reads and holds a bounded session
-cache to avoid repeated local round trips/letter flashes during navigation.
-Directory paging prepares disk-cached images in batches before displaying rows,
-independent of slow remote downloads. Cache misses get immediate letters; no
-blank pending avatars. Catalog metadata retains its separate at-most-daily refresh schedule.
+### Validation
 
-SQLite v3 adds index snapshots with provenance and immutable source symbols.
-Startup seeds require complete validated lists and an atomic transaction;
-reopening older reviewed bundles cannot roll a newer index head back. Index
-coverage reports unresolved source symbols instead of silently truncating counts.
-Automatic index sync is deferred; source dates stay attached to scoped reads.
+- `make ci`: 61 TypeScript tests, Go vet/race checks and production builds pass.
+- Go regressions cover scoped search/paging, unresolved members, empty watchlists,
+  protected built-ins, migration, idempotence and newer-head preservation.
+- Real Chrome Default at 1280×960: All=7,481, S&P=503, Nasdaq-100=101; all NDX
+  rows loaded by scroll and matched the recorded source symbols. Hidden bars
+  retain scrolling. Index search excludes outsiders; BRK.B punctuation is kept.
+- Watchlist UI add/remove updates the selected sidebar immediately. Empty
+  watchlist has zero directory rows and an Add stocks action. Reload retains
+  selection; global IBM search opens outside NDX without changing its membership.
+- Light/dark menus and 390px mobile drawer reviewed without page/menu overflow.
+- Actual isolated Electron smoke checks the four choices, saved selection,
+  offline index coverage, caller-override rejection and hidden scrollbar styles.
+
+### Files Modified
+
+- `apps/cli/internal/store/collections.go`, schema, seed and regression tests
+- `apps/cli/internal/service/service.go`
+- `packages/core/src/stock-directory.ts`, `directory-feed.ts`
+- `packages/platform/src/stock-collection.ts`, scoped transport tests
+- `packages/ui/src/components/StockSidebar.tsx`, `stock-directory-context.tsx`
+- `packages/ui/src/App.tsx`, `workspace-context.tsx`, `styles.css`
+- `apps/desktop/src/main.ts` smoke, source updater and related documentation

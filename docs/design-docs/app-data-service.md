@@ -100,3 +100,9 @@ A separate stock.logo host method verifies directory membership and serves
 bounded PNG data URLs from an optional presentation cache. Go remains the database
 owner; Node asset HTTP retrieval does not occupy the Go RPC loop or directory
 worker. See [logo capability](stock-logos.md).
+
+SQLite v3 additionally stores reviewed index snapshots/members/source hashes.
+Directory list reads can select All US, S&P 500, Nasdaq-100 or a bounded local
+watchlist. This does not add index network jobs to the directory scheduler;
+reviewed seed updates currently ship through the repository. See
+[collections](stock-collections.md) for scope/coverage and ownership.

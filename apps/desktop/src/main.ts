@@ -133,6 +133,24 @@ async function createWindow() {
       const directoryLookup = await window.aifiDesktop.requestData('directory.get', {symbol:'AAPL'});
       await waitFor(() => document.querySelector('.stock-list')?.getAttribute('aria-busy') === 'false');
       const directoryReads = directoryPage.total === 0 && directoryPage.items.length === 0 && directoryLookup.item === null && document.querySelector('.stock-list').innerText.includes('No directory yet') && document.querySelector('.stock-company-header h1').textContent === 'AAPL';
+      const sp = await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0,collection:'sp500'});
+      const ndx = await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0,collection:'nasdaq100'});
+      let protectedMembership = false;
+      try { await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0,collection:'sp500',symbols:['AAPL']}); } catch { protectedMembership = true; }
+      const openCollections = () => document.querySelector('[aria-label="Stock collection"]').dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,button:0,ctrlKey:false,pointerType:'mouse',isPrimary:true}));
+      openCollections();
+      await waitFor(() => document.querySelectorAll('[role="menuitemradio"]').length === 4);
+      const collectionOptions = [...document.querySelectorAll('[role="menuitemradio"]')];
+      const labels = collectionOptions.map(el => el.textContent).join(',');
+      collectionOptions.find(el => el.textContent === 'S&P 500').click();
+      await waitFor(() => document.querySelector('[aria-label="Stock collection"]').textContent.trim() === 'S&P 500' && document.querySelector('.stock-list').getAttribute('aria-busy') === 'false' && !document.querySelector('[role="menuitemradio"]'));
+      const selectionSaved = localStorage.getItem('aifi.stock-collection.v1') === 'sp500';
+      openCollections();
+      await waitFor(() => document.querySelectorAll('[role="menuitemradio"]').length === 4);
+      [...document.querySelectorAll('[role="menuitemradio"]')].find(el => el.textContent === 'All US listings').click();
+      await waitFor(() => document.querySelector('[aria-label="Stock collection"]').textContent.trim() === 'Stocks' && document.querySelector('.stock-list').getAttribute('aria-busy') === 'false');
+      const stockCollections = labels === 'All US listings,S&P 500,Nasdaq-100,My watchlist' && selectionSaved && protectedMembership && sp.total === 0 && sp.collection.memberCount >= 500 && sp.collection.unresolvedSymbols.length === sp.collection.memberCount && ndx.collection.memberCount >= 100 && ndx.collection.unresolvedSymbols.length === ndx.collection.memberCount;
+      const hiddenScrollbars = getComputedStyle(document.querySelector('.stock-list')).scrollbarWidth === 'none' && getComputedStyle(document.querySelector('.main-content')).scrollbarWidth === 'none';
       const initialData = await window.aifiDesktop.requestData('status');
       const saved = await window.aifiDesktop.requestData('settings.save', {...initialData.settings, intervalHours:6, automatic:false});
       await window.aifiDesktop.requestData('credentials.set', {provider:'massive',values:{apiKey:'synthetic-native-test-key'}});
@@ -150,7 +168,7 @@ async function createWindow() {
       const maskURL = maskImage?.startsWith('url(') ? maskImage.slice(4, -1).replaceAll('"', '').replaceAll("'", '') : null;
       const brandLoaded = maskURL ? await new Promise(resolve => { const image = new Image(); image.onload = () => resolve(image.naturalWidth > 0); image.onerror = () => resolve(false); image.src = maskURL; }) : false;
       const branding = document.title === 'AIFi' && !!brand && brandLoaded && brand.getBoundingClientRect().width > 0;
-      return { runtime, branding, directoryReads, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
+      return { runtime, branding, directoryReads, stockCollections, hiddenScrollbars, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
         rendered: !!document.querySelector('.settings-content'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
@@ -168,6 +186,8 @@ async function createWindow() {
       !result.settingsUI ||
       !result.stockTabs ||
       !result.stockSidebar ||
+      !result.stockCollections ||
+      !result.hiddenScrollbars ||
       !result.stockPlaceholders ||
       !result.initialHistory ||
       !result.historyControls ||

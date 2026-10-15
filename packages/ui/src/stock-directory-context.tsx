@@ -11,6 +11,8 @@ import { withPreparedStockLogos } from "./stock-logo-page";
 import { DirectoryFeed, emptyDirectoryFeed } from "@aifi/core";
 import type {
   StockDirectoryRepository,
+  StockCollection,
+  DirectoryFeedState,
   StockLogoRepository,
   DirectoryPage,
   DirectoryLookup,
@@ -130,17 +132,46 @@ export function directoryExchange(entry: { exchangeCode: string }) {
   );
 }
 
-export function useDirectoryFeed(query: string) {
+export function useDirectoryFeed(
+  query: string,
+  collection: StockCollection = "all-us",
+  watchlist: string[] = [],
+) {
   const directory = useStockDirectory();
   const logos = useContext(StockLogoContext);
-  const repository = useMemo(
-    () => withPreparedStockLogos(directory, logos),
-    [directory, logos],
+  const symbolsKey = JSON.stringify(
+    collection === "watchlist" ? watchlist : [],
   );
-  const [state, setState] = useState(() => emptyDirectoryFeed());
+  const key = JSON.stringify([collection, symbolsKey, query.trim()]);
+  const repository = useMemo(
+    () =>
+      withPreparedStockLogos(
+        {
+          get: (symbol) => directory.get(symbol),
+          search: (input) =>
+            directory.search({
+              ...input,
+              collection,
+              ...(collection === "watchlist"
+                ? { symbols: JSON.parse(symbolsKey) as string[] }
+                : {}),
+            }),
+        },
+        logos,
+      ),
+    [directory, logos, collection, symbolsKey],
+  );
+  const [snapshot, setSnapshot] = useState<{
+    key: string;
+    state: DirectoryFeedState;
+  }>(() => ({ key: "", state: emptyDirectoryFeed() }));
+  const state =
+    snapshot.key === key ? snapshot.state : emptyDirectoryFeed(query.trim());
   const feed = useRef<DirectoryFeed | null>(null);
   useEffect(() => {
-    const current = new DirectoryFeed(repository, setState);
+    const current = new DirectoryFeed(repository, (state) =>
+      setSnapshot({ key, state }),
+    );
     feed.current = current;
     const timer = setTimeout(() => void current.reset(query), 180);
     const interval = setInterval(() => void current.refresh(), 60000);
@@ -153,7 +184,7 @@ export function useDirectoryFeed(query: string) {
       window.removeEventListener("focus", focus);
       feed.current = null;
     };
-  }, [repository, query]);
+  }, [repository, query, key]);
   const loadMore = useCallback(() => void feed.current?.loadMore(), []);
   const retry = useCallback(() => void feed.current?.retry(), []);
   return {

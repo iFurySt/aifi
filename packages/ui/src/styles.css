@@ -2908,3 +2908,27 @@ kbd {
 .stock-avatar[data-light-logo="true"] {
   background: #303030;
 }
+
+/* Keep wheel, trackpad, touch and keyboard scrolling without vertical chrome. */
+.stock-list,
+.main-content,
+.sidebar-recents {
+  scrollbar-width: none;
+}
+.stock-list::-webkit-scrollbar,
+.main-content::-webkit-scrollbar,
+.sidebar-recents::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+.stock-collection-date {
+  margin: -5px 0 10px;
+  padding: 0 2px;
+  font-size: 11px;
+  color: var(--muted);
+}
+@media (max-width: 900px) {
+  .stock-source-menu .stock-source-option {
+    min-height: 40px;
+  }
+}

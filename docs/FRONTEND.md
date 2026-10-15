@@ -53,7 +53,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, 58 domain/storage/route/host/UI tests,
+make ci runs repository gates, TypeScript, 61 domain/storage/route/host/UI tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -144,8 +144,14 @@ their own content structure. Unsupported datasets have relevant empty
 tables/metrics. Filings lives inside Financials. Unknown tickers have no
 invented quotes.
 
-The Stocks heading opens a source dropdown with Nasdaq Trader selected; it
-is currently the sole source. The sidebar reads its cached candidate directory in batches of 50, loading more on scroll near the bottom. Ticker
+The sidebar heading opens All US listings, S&P 500, Nasdaq-100 and My watchlist.
+Selected labels/counts reflect the active collection; index dates and incomplete
+local coverage stay visible. Built-ins have no rename/delete/membership edits.
+The last selection is saved under `aifi.stock-collection.v1`; the existing workspace
+schema and personal watchlist storage stay unchanged. Index snapshots are reviewed
+bundled data, not an automatic live index subscription. Provider names stay in
+Settings. The sidebar reads its selected cached directory in batches of 50,
+loading more on scroll near the bottom. Ticker
 and security-name search runs against SQLite, not a fixed fixture list. The
 company header and workspace search share these source-backed reads. Raw exchange
 codes receive display labels without inventing exchange MIC or company identity.
@@ -206,3 +212,20 @@ centered export with native-sized canvas inset for both bundle and Dock icons.
 See [brand assets/provenance](../packages/ui/src/assets/brand/README.md) and
 [identity boundaries](design-docs/brand-identity.md). No remote assets or fonts
 are required. Name/icon changes preserve the existing app name and data paths.
+
+## Collection Interaction Checks
+
+Collection changes reset search/pagination/scroll without changing detail tabs.
+Watchlist add/remove updates the scoped sidebar. New query/selection keys hide
+stale rows immediately; DirectoryFeed continues checking snapshot generations.
+Global stock search/lookup remains able to open symbols outside a collection.
+Vertical scrollbar chrome is hidden for stock lists, main content and sidebar
+recents; wheel/trackpad/touch/keyboard scrolling stays enabled. Financial table
+horizontal scrolling retains its own styles. Verify all four radio choices,
+index counts/scoped search, empty watchlist, persistence, mobile drawer and dark
+menu styling. Sources/refresh limits are in [index provenance](references/stock-index-sources.md).
+
+Native smoke also opens the four-choice collection menu, saves/restores selection,
+checks offline index provenance/coverage, rejects caller-defined built-in members,
+and verifies hidden scrollbar styles. It never substitutes index entries into an
+empty imported directory.
