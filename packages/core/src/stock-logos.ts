@@ -6,4 +6,6 @@ export interface StockLogo {
 }
 export interface StockLogoRepository {
   get(symbol: string): Promise<StockLogo | null>;
+  /** Optional synchronous session hit; durable persistence remains host-owned. */
+  peek?(symbol: string): StockLogo | null;
 }

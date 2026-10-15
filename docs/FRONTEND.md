@@ -53,7 +53,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, 43 domain/storage/route/host tests,
+make ci runs repository gates, TypeScript, 49 domain/storage/route/host tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -189,7 +189,9 @@ Company avatars use an injected logo repository. The host prefers verified compa
 catalog mappings, then the original exact-symbol provider; components stay unchanged. Near-visible rows and the company
 header request local host PNGs; unavailable images use letters. White transparent
 marks get contrast on light surfaces. Directory reads never wait for logo HTTP
-requests. Public asset source/cache limits are documented in
+requests. A bounded session cache reuses fetched data URLs and supplies immediate
+initial images when avatars remount. Disk hits survive app restarts; stale source
+refresh runs behind the displayed cached image. Public asset source/cache limits are documented in
 [stock logos](design-docs/stock-logos.md).
 
 ## Brand Identity

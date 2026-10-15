@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-15 | Company logos | Previously loaded logos appear immediately when revisiting stocks; app restarts reuse local images. | Added bounded session caching and immediate disk reads with background refresh instead of waiting for remote images. |
 | 2026-10-15 | App icon | AIFi now matches neighboring macOS Dock icons in apparent size. | Added a centered macOS-specific export with transparent inset; web and in-app marks keep their existing sizing. |
 | 2026-10-14 | Branding | New three-part Logo across the workspace and AIFi desktop identity. | Added reusable color/background assets, theme-aware marks, browser icons and a named local macOS runtime. |
 | 2026-10-14 | Company logos | Prefer reviewed company images, including shared logos for warrants/units, while retaining the existing provider fallback. | Added bundled catalog metadata, daily background checks, checksum validation and source-aware device caching. |

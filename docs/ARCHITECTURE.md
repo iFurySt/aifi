@@ -169,5 +169,7 @@ An independently injected StockLogoRepository serves stock avatars. Node host
 verifies cached directory membership through Go, resolves a bundled/locally cached
 reviewed company catalog first, then falls back to exact-symbol FMP images. Bounded
 public PNGs use a private device cache; a validated background manifest refresh
-runs at most daily. Only data URLs reach the renderer. Directory/list/financial
+runs at most daily. Valid disk images return before background refresh; a bounded
+renderer session cache reuses data URLs and supports immediate avatar remounts.
+Only data URLs reach the renderer. Directory/list/financial
 contracts and CSP stay separate. See [logo boundary](design-docs/stock-logos.md).

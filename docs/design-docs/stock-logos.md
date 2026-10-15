@@ -37,7 +37,15 @@ third-party artwork is bundled into source. See [source provenance](../reference
 ## Requests And Persistence
 
 - Visible/near-visible avatars request logos; hidden/deep rows do not preload the
-  whole universe. The first letter stays visible until an image succeeds.
+  whole universe. Renderer session hits render immediately through an optional
+  synchronous repository peek, including remounts and cached symbol changes.
+  Cold images retain the letter until the first successful local/remote read.
+- The local platform adapter shares in-flight reads and keeps a per-repository
+  session LRU, bounded to 128 entries and 8 MiB of data-URL characters. Successful
+  images avoid repeated IPC/HTTP for five minutes; null results retry after
+  30 seconds. Expired positives remain available for immediate rendering and
+  survive temporary bridge errors. This is memory only: durable PNGs stay in the
+  private host cache, not workspace localStorage or IndexedDB.
 - Host requests use a scoped native HTTPS agent honoring configured proxy env
   without changing global local-session/HMR routing. Only the fixed GitHub
   manifest, FMP image path and Tactical Resources PNG upload path are allowed.
@@ -53,10 +61,16 @@ third-party artwork is bundled into source. See [source provenance](../reference
   credentials are sent to providers.
 - Image keys hash the source URL and expected review checksum in `stock-logos/v2`.
   Shared issuer aliases reuse one image. Writes use private permissions and atomic
-  rename. Positive cache lasts seven days; failures retry after ten minutes.
-- Reviewed sources take precedence over old raw-symbol positives/negatives. Old
-  exact-source PNG caches remain useful when their bytes match the required hash
-  and dimensions; old failed symbol lookups cannot block a new catalog mapping.
+  rename. Positive images are fresh for seven days; failures retry after ten
+  minutes. A fresh disk hit, including after an online app restart, does not
+  download the image again.
+- A valid cached image returns immediately even when stale or the download queue
+  is full. Reviewed cached sources win. If only a cached fallback exists, it can
+  display while the reviewed source is acquired in the background; the next read
+  discovers that preferred image. Background refresh shares the same bounds,
+  deduplication, negative backoff and shutdown cancellation as cold reads.
+- Old exact-source PNGs remain useful when their bytes match required review
+  hashes/dimensions. Failed symbol lookups cannot block a new catalog mapping.
 - Old good images survive refresh failures. Offline reads use cached data; host
   shutdown cancels retrieval/timers without recording a new negative result.
 - Renderer image decoding handles failures. Tiny/empty assets use letters;
@@ -71,5 +85,8 @@ small; unsupported/missing sources retain the original provider and letter fallb
 
 Host tests cover exact aliases/status/validity, malformed manifests, cache/refresh
 bounds, last-good/offline reuse, priority over old failures, checksum changes,
-raw fallback, shared assets, image validation, concurrency and shutdown. Native
+raw fallback, shared assets, image validation, concurrency and shutdown. Additional
+regressions cover online restart hits without network, stale/queue-full disk hits,
+background promotion, bounded renderer memory, synchronous peek, TTL retries and
+bridge errors. Native
 validation exercises real AACOW and TREO sources; isolated smoke stays offline.

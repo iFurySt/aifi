@@ -11,13 +11,17 @@ export function StockAvatar({
 }) {
   const repository = useContext(StockLogoContext);
   const container = useRef<HTMLSpanElement>(null);
+  const cached = repository?.peek?.(symbol);
+  const cachedUrl = cached?.dataUrl.startsWith("data:image/png;base64,")
+    ? cached.dataUrl
+    : null;
   const [image, setImage] = useState<{
     symbol: string;
     url: string | null;
     light: boolean;
   }>({
     symbol,
-    url: null,
+    url: cachedUrl,
     light: false,
   });
   useEffect(() => {
@@ -46,7 +50,7 @@ export function StockAvatar({
           }));
         }
       } catch {
-        if (alive) setImage({ symbol, url: null, light: false });
+        // A temporary local bridge failure must not blank an existing image.
       } finally {
         loading = false;
       }
@@ -69,13 +73,17 @@ export function StockAvatar({
       window.removeEventListener("focus", focus);
     };
   }, [symbol, enabled, repository]);
-  const url = enabled && image.symbol === symbol ? image.url : null;
+  const url = enabled
+    ? image.symbol === symbol
+      ? image.url
+      : cachedUrl
+    : null;
   return (
     <span
       className={`${className} stock-avatar`}
       ref={container}
       aria-hidden="true"
-      data-light-logo={!!url && image.light}
+      data-light-logo={!!url && image.symbol === symbol && image.light}
     >
       {url ? (
         <img

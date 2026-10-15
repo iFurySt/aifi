@@ -68,14 +68,23 @@ export class StockLogoCache {
         legacySymbol: symbol,
       },
     ];
-    // The preferred source's cache is checked before backpressure. A raw-symbol
-    // positive/negative cache never overrides a new reviewed issuer mapping.
-    const preferred = this.cached(sources[0]!);
-    if (
-      preferred &&
-      (preferred.fresh || this.offline || this.shutdown.signal.aborted)
-    )
-      return Promise.resolve(preferred.logo);
+    // Never put a usable disk image behind a network refresh or its queue.
+    // Reviewed cached images win; a cached fallback may display while the
+    // preferred source is acquired/revalidated in the background.
+    for (let i = 0; i < sources.length; i++) {
+      const cached = this.cached(sources[i]!);
+      if (!cached) continue;
+      if (
+        (!cached.fresh || i > 0) &&
+        !this.offline &&
+        !this.shutdown.signal.aborted
+      )
+        void this.load(symbol, sources).catch(() => {});
+      return Promise.resolve(cached.logo);
+    }
+    return this.load(symbol, sources);
+  }
+  private load(symbol: string, sources: LogoSource[]) {
     const pending = this.pending.get(symbol);
     if (pending) return pending;
     if (this.pending.size >= 16) return Promise.resolve(null);

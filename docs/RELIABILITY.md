@@ -41,3 +41,9 @@ Failures back off 15/30/60 minutes; wake checks catch up using stored outcomes.
 EOF/quit cancels downloads and waits for cleanup, with a host kill deadline.
 Unexpected process exit is visible as unavailable and needs host reconnect/restart.
 Directory history retention remains a follow-up; Storage exposes DB size.
+
+Company logos persist as private host PNGs across restarts. Fresh disk hits make
+no image-provider request; stale/fallback hits display immediately and refresh in
+the background. The renderer shares pending reads and holds a bounded session
+cache to avoid repeated local round trips/letter flashes during navigation.
+Catalog metadata retains its separate at-most-daily refresh schedule.
