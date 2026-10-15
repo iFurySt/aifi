@@ -199,7 +199,11 @@ export class DataHost {
   async request(method: DataMethod, params?: unknown): Promise<unknown> {
     if (!dataMethods.includes(method)) throw Error("Unsupported data action.");
     if (method === "directory.list") validateDirectoryQuery(params);
-    if (method === "directory.get" || method === "stock.logo") {
+    if (
+      method === "directory.get" ||
+      method === "stock.logo" ||
+      method === "research.read"
+    ) {
       const p = params as { symbol?: unknown };
       if (
         !p ||
@@ -266,7 +270,7 @@ export class DataHost {
       };
       if (
         !input ||
-        !["massive", "alpaca"].includes(input.provider || "") ||
+        !["massive", "alpaca", "fmp"].includes(input.provider || "") ||
         !input.values ||
         typeof input.values !== "object"
       )
@@ -275,7 +279,7 @@ export class DataHost {
       for (const [field, value] of Object.entries(input.values)) {
         if (
           !(
-            input.provider === "massive" ? ["apiKey"] : ["keyId", "secret"]
+            input.provider === "alpaca" ? ["keyId", "secret"] : ["apiKey"]
           ).includes(field) ||
           typeof value !== "string"
         )
@@ -288,7 +292,10 @@ export class DataHost {
     }
     if (method === "credentials.remove") {
       const input = params as { provider?: string };
-      if (!input || !["massive", "alpaca"].includes(input.provider || ""))
+      if (
+        !input ||
+        !["massive", "alpaca", "fmp"].includes(input.provider || "")
+      )
         throw Error("Invalid credential provider.");
       return this.rpc("vault.remove", { provider: input.provider });
     }

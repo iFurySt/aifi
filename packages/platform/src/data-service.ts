@@ -46,3 +46,15 @@ export const saveCredentials = (
 ) => requestLocalData("credentials.set", { provider, values });
 export const removeCredentials = (provider: CredentialProvider) =>
   requestLocalData("credentials.remove", { provider });
+
+export const readResearchStatus = () =>
+  requestLocalData("research.status") as Promise<
+    import("@aifi/core").ResearchStatus
+  >;
+export const saveResearchConfig = (
+  config: import("@aifi/core").ResearchConfig,
+) =>
+  requestLocalData("research.settings", config) as Promise<
+    import("@aifi/core").ResearchConfig
+  >;
+export const syncResearch = () => requestLocalData("research.sync");

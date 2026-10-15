@@ -9,3 +9,5 @@ export * from "./stock-directory";
 export * from "./directory-feed";
 
 export * from "./stock-logos";
+
+export * from "./stock-research";

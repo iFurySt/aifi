@@ -2,6 +2,7 @@ export const settingsSections = [
   "general",
   "appearance",
   "sources",
+  "keys",
   "sync",
   "storage",
 ] as const;
@@ -20,7 +21,7 @@ export interface DataSettings {
   intervalHours: number;
   secUserAgent: string;
 }
-export type CredentialProvider = "massive" | "alpaca";
+export type CredentialProvider = "massive" | "alpaca" | "fmp";
 export interface CredentialStatus {
   provider: CredentialProvider;
   fields: string[];
@@ -50,6 +51,10 @@ export interface DataStatus {
   databaseBytes: number;
 }
 export type DataMethod =
+  | "research.read"
+  | "research.status"
+  | "research.settings"
+  | "research.sync"
   | "status"
   | "settings.save"
   | "directory.sync"
@@ -60,6 +65,10 @@ export type DataMethod =
   | "credentials.set"
   | "credentials.remove";
 export const dataMethods: readonly DataMethod[] = [
+  "research.read",
+  "research.status",
+  "research.settings",
+  "research.sync",
   "status",
   "settings.save",
   "directory.sync",

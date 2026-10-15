@@ -17,7 +17,7 @@ unrelated datasets. Actual live coverage depends on configured accounts/contact.
   submissions/facts; optional FMP ownership, congressional trades, ratings and news.
 - [x] App-lifetime scheduler, global provider budgets/cooldowns, all-directory
   reconciliation, persisted progress and per-dataset settings.
-- [ ] Narrow local research read/settings/sync ports and protected credential use.
+- [x] Narrow local research read/settings/sync ports and protected credential use.
 - [ ] Replace Stocks fixtures across all tabs with sourced cached data and computed
   indicators/financial rows; preserve absence and incomplete coverage.
 - [ ] Dedicated API key settings and dataset coverage/schedule controls.
@@ -60,3 +60,7 @@ Do not claim successful live datasets without actual responses and credentials.
   market-day history, SEC facts/submissions/Form4 XML and optional FMP adapters.
   Fixture tests cover rollback/restart, leases, budgets, restatements, credentials,
   pagination denial and directory-wide reconciliation. Live keys remain absent.
+
+- Domain checkpoint: replaceable stock-research repository, local read adapter,
+  source status/config/sync methods, FMP credential allowlist, fiscal period and
+  split/indicator calculations with domain tests. UI integration follows.
