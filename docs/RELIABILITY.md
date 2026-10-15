@@ -46,4 +46,6 @@ Company logos persist as private host PNGs across restarts. Fresh disk hits make
 no image-provider request; stale/fallback hits display immediately and refresh in
 the background. The renderer shares pending reads and holds a bounded session
 cache to avoid repeated local round trips/letter flashes during navigation.
-Catalog metadata retains its separate at-most-daily refresh schedule.
+Directory paging prepares disk-cached images in batches before displaying rows,
+independent of slow remote downloads. Cache misses get immediate letters; no
+blank pending avatars. Catalog metadata retains its separate at-most-daily refresh schedule.

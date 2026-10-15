@@ -53,7 +53,7 @@ trees. Fonts and icons are local; no remote font or telemetry service is require
 
 ## Verification
 
-make ci runs repository gates, TypeScript, 52 domain/storage/route/host/UI tests,
+make ci runs repository gates, TypeScript, 58 domain/storage/route/host/UI tests,
 Go vet/race checks, and renderer/desktop/Go builds. Use the local app for desktop and mobile visual
 checks. Validate the actual Electron renderer, not only the browser build,
 before claiming desktop support.
@@ -191,8 +191,9 @@ header request local host PNGs; unavailable images use letters. White transparen
 marks get contrast on light surfaces. Directory reads never wait for logo HTTP
 requests. A bounded session cache reuses fetched data URLs and supplies immediate
 initial images when avatars remount. Avatars preload against the actual sidebar
-scroll root, decode/sample contrast before presentation, and show neutral pending
-placeholders; letters denote resolved missing/rejected images. Disk hits survive app restarts; stale source
+scroll root. Each directory batch reads disk cache and decodes/samples contrast
+before rows are published. Next-page loading begins 900px before the bottom;
+uncached images use letters immediately while provider requests run. Disk hits survive app restarts; stale source
 refresh runs behind the displayed cached image. Public asset source/cache limits are documented in
 [stock logos](design-docs/stock-logos.md).
 

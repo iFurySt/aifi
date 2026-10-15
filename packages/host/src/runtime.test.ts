@@ -71,3 +71,69 @@ it("rejects arbitrary logo URLs before any service or outbound request", async (
     }),
   ).rejects.toThrow("Invalid directory symbol");
 });
+it("validates logo batches and checks directory membership in one batch before disk-only reads", async () => {
+  const { vi } = await import("vitest");
+  const host = new DataHost("unused-test-binary");
+  for (const params of [
+    { symbols: ["AAPL"], url: "https://bad.invalid" },
+    { symbols: Array(51).fill("AAPL") },
+    { symbols: ["../private"] },
+  ])
+    await expect(host.request("stock.logos.cached", params)).rejects.toThrow(
+      "Invalid logo batch",
+    );
+  let active = 0,
+    peak = 0;
+  const rpc = vi.fn(async () => {
+    active++;
+    peak = Math.max(peak, active);
+    await Promise.resolve();
+    active--;
+    return [];
+  });
+  const peek = vi.fn();
+  Object.assign(host, { rpc, logoCache: { peek } });
+  expect(
+    await host.request("stock.logos.cached", {
+      symbols: ["aapl", "AAPL", "MSFT"],
+    }),
+  ).toEqual([]);
+  expect(rpc.mock.calls.length).toBe(1);
+  expect(peak).toBe(1);
+  expect(peek).not.toHaveBeenCalled();
+});
+it("bounds cached batch concurrency and total image payload", async () => {
+  const { vi } = await import("vitest");
+  const host = new DataHost("unused-test-binary");
+  const symbols = Array.from({ length: 50 }, (_, i) => `A${i}`);
+  let release!: (symbols: string[]) => void;
+  const blocked = new Promise<string[]>((resolve) => {
+    release = resolve;
+  });
+  const rpc = vi.fn().mockReturnValue(blocked);
+  const logo = {
+    dataUrl: "x".repeat(350000),
+    source: "fixture",
+    fetchedAt: "",
+  };
+  Object.assign(host, { rpc, logoCache: { peek: () => logo } });
+  const first = host.request("stock.logos.cached", { symbols });
+  const second = host.request("stock.logos.cached", { symbols });
+  await expect(host.request("stock.logos.cached", { symbols })).rejects.toThrow(
+    "Logo cache busy",
+  );
+  release(symbols);
+  const batches = (await Promise.all([first, second])) as {
+    symbol: string;
+    logo: typeof logo;
+  }[][];
+  for (const batch of batches) {
+    expect(batch.length).toBeGreaterThan(0);
+    expect(batch.length).toBeLessThan(50);
+    expect(
+      batch.reduce((bytes, entry) => bytes + entry.logo.dataUrl.length, 0),
+    ).toBeLessThanOrEqual(8 * 1024 * 1024);
+  }
+  expect(rpc).toHaveBeenCalledTimes(2);
+  expect(await host.request("stock.logos.cached", { symbols: [] })).toEqual([]);
+});

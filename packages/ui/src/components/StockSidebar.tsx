@@ -26,7 +26,7 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) loadMore();
       },
-      { root: list.current, rootMargin: "0px 0px 180px 0px" },
+      { root: list.current, rootMargin: "0px 0px 900px 0px" },
     );
     observer.observe(sentinel.current);
     return () => observer.disconnect();

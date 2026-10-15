@@ -88,7 +88,9 @@ Before live provider access or infrastructure, extend this file with:
 ## Company Logo Assets
 
 The Node host also owns one decorative public PNG adapter. Allowlisted stock.logo
-accepts a symbol, verifies current directory membership, and fetches only the fixed
+accepts a symbol; the disk-only stock.logos.cached capability accepts at most
+50 symbols with two concurrent batches and an 8 MiB data-URL response budget.
+Both verify current directory membership through Go. Image downloads fetch only the fixed
 FMP image path or reviewed Tactical Resources PNG upload path. Catalog metadata
 is read only from the fixed company-logo-catalog GitHub URL, with bounded reads,
 schema validation, exact aliases and approved image origins. Reviewed images must

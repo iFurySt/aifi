@@ -1,6 +1,6 @@
 # Stock Logo Read Capability
 
-Status: implemented, 2026-10-14.
+Status: implemented, updated 2026-10-15.
 
 ## Boundary
 
@@ -36,13 +36,24 @@ third-party artwork is bundled into source. See [source provenance](../reference
 
 ## Requests And Persistence
 
-- Visible/near-visible avatars request logos; hidden/deep rows do not preload the
-  whole universe. Renderer session hits render immediately through an optional
-  synchronous repository peek, including remounts and cached symbol changes.
-  Sidebar avatars observe the actual stock-list scroller with a 240px lookahead;
-  expanding the window viewport alone does not expand an inner scroll clip.
-  Unresolved reads show a neutral tile. Letters appear only after an unavailable
-  or rejected image result, rather than as an intermediate loading state.
+- Directory pages warm local images as a batch before rows are published. The
+  optional `getCached(symbols)` repository port uses `stock.logos.cached`, accepts
+  at most 50 symbols, and returns only current-directory disk hits. At most two
+  batches run concurrently; one Go membership query avoids repeated per-symbol directory scans. Responses are capped at 8 MiB of data-URL characters. This path never
+  joins the provider queue or schedules image refresh; catalog metadata retains
+  its independent background refresh. Cache misses are omitted, not recorded as
+  missing provider images.
+- UI decodes/samples all returned page images before DirectoryFeed sees the page,
+  so existing cached artwork is present on the rows' first render after restart
+  as well as during scrolling. Preparation failures preserve usable directory
+  reads. Existing generation/snapshot checks still discard superseded batches.
+  The next page starts within 900px of the list bottom. Per-avatar requests keep
+  a 240px lookahead against the real sidebar scroll root for uncached images.
+- Uncached/rejected images show a letter immediately, including while a remote
+  request is pending; no blank waiting tiles are inserted. First-time provider
+  retrieval can still replace a letter later. Instant artwork is guaranteed only
+  for usable cached assets, not for logos never downloaded or unavailable at a
+  provider. The app does not download the entire universe on launch.
 - The local platform adapter shares in-flight reads and keeps a per-repository
   session LRU, bounded to 128 entries and 8 MiB of data-URL characters. Successful
   images avoid repeated IPC/HTTP for five minutes; null results retry after
@@ -77,8 +88,7 @@ third-party artwork is bundled into source. See [source provenance](../reference
 - Old good images survive refresh failures. Offline reads use cached data; host
   shutdown cancels retrieval/timers without recording a new negative result.
 - Renderer images decode and get optional contrast sampling before becoming
-  visible, preventing a letter-to-image transition and a white-on-white first
-  frame. Weak preparation caches share work/contrast by the existing bounded
+  visible, avoiding white-on-white first frames and delayed cached-image insertion. Weak preparation caches share work/contrast by the existing bounded
   repository objects without retaining an unbounded second image store.
   Tiny/empty/corrupt assets use letters; predominantly white transparent marks
   get a dark background for contrast.
@@ -95,5 +105,7 @@ bounds, last-good/offline reuse, priority over old failures, checksum changes,
 raw fallback, shared assets, image validation, concurrency and shutdown. Additional
 regressions cover online restart hits without network, stale/queue-full disk hits,
 background promotion, bounded renderer memory, synchronous peek, TTL retries and
-bridge errors. Native
+bridge errors. Batch regressions cover cache-only reads under a saturated provider
+queue, membership validation, page preparation ordering, stale responses and cache
+failures. Native
 validation exercises real AACOW and TREO sources; isolated smoke stays offline.

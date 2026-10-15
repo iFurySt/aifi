@@ -86,3 +86,26 @@ it("bounds session entries and image bytes without affecting another repository"
   expect(limited.peek?.("B8")).toEqual(large);
   expect(repository.peek?.("A128")).toEqual(logo);
 });
+it("warms disk hits as one bounded batch without treating cache misses as provider misses", async () => {
+  const transport = vi
+    .fn()
+    .mockResolvedValueOnce([{ symbol: "AAPL", logo }])
+    .mockResolvedValue(null);
+  const repository = createLocalStockLogos(transport);
+  expect(await repository.getCached!(["aapl", "AAPL", "MISSING"])).toEqual([
+    { symbol: "AAPL", logo },
+  ]);
+  expect(transport).toHaveBeenCalledWith("stock.logos.cached", {
+    symbols: ["AAPL", "MISSING"],
+  });
+  expect(repository.peek?.("AAPL")).toBe(logo);
+  await repository.getCached!(["AAPL"]);
+  await repository.get("AAPL");
+  expect(transport).toHaveBeenCalledTimes(1);
+  await repository.get("MISSING");
+  expect(transport).toHaveBeenLastCalledWith("stock.logo", {
+    symbol: "MISSING",
+  });
+  await expect(repository.getCached!(["../private"])).rejects.toThrow();
+  await expect(repository.getCached!(Array(51).fill("AAPL"))).rejects.toThrow();
+});

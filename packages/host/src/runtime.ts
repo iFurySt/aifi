@@ -86,9 +86,11 @@ export function validateSettings(
     throw Error("Invalid settings.");
 }
 import { StockLogoCache } from "./stock-logos.ts";
+import type { StockLogo } from "../../core/src/stock-logos.ts";
 
 export class DataHost {
   private logoCache?: StockLogoCache;
+  private cachedLogoReads = 0;
   private child?: ChildProcessWithoutNullStreams;
   private ready?: Promise<void>;
   private nextID = 0;
@@ -207,12 +209,52 @@ export class DataHost {
       )
         throw Error("Invalid directory symbol.");
     }
+    if (method === "stock.logos.cached") {
+      const p = params as { symbols?: unknown };
+      if (
+        !p ||
+        Object.keys(p).length !== 1 ||
+        !Array.isArray(p.symbols) ||
+        p.symbols.length > 50 ||
+        p.symbols.some((s) => typeof s !== "string" || !validDirectorySymbol(s))
+      )
+        throw Error("Invalid logo batch.");
+      if (this.cachedLogoReads >= 2) throw Error("Logo cache busy. Try again.");
+      this.cachedLogoReads++;
+      try {
+        this.logoCache ??= new StockLogoCache(this.dataDir, this.offline);
+        const result: {
+          symbol: string;
+          logo: StockLogo;
+        }[] = [];
+        let bytes = 0;
+        const symbols = [
+          ...new Set((p.symbols as string[]).map((s) => s.toUpperCase())),
+        ];
+        // One bounded Go query verifies a consistent current snapshot. Per-symbol
+        // lookups would scan/count the directory 50 times and stall page insertion.
+        const members = new Set(
+          (await this.rpc("directory.contains", { symbols })) as string[],
+        );
+        for (const symbol of symbols) {
+          if (!members.has(symbol)) continue;
+          const logo = this.logoCache.peek(symbol);
+          if (!logo) continue;
+          bytes += logo.dataUrl.length;
+          if (bytes > 8 * 1024 * 1024) break;
+          result.push({ symbol, logo });
+        }
+        return result;
+      } finally {
+        this.cachedLogoReads--;
+      }
+    }
     if (method === "stock.logo") {
-      const { symbol } = params as { symbol: string };
-      const lookup = (await this.rpc("directory.get", { symbol })) as {
-        item: unknown;
-      };
-      if (!lookup.item) return null;
+      const symbol = (params as { symbol: string }).symbol.toUpperCase();
+      const members = (await this.rpc("directory.contains", {
+        symbols: [symbol],
+      })) as string[];
+      if (!members.includes(symbol)) return null;
       this.logoCache ??= new StockLogoCache(this.dataDir, this.offline);
       return this.logoCache.get(symbol);
     }

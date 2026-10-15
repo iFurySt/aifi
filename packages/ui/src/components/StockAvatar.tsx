@@ -97,9 +97,9 @@ export function StockAvatar({
             setImage({ symbol, url: null, light: false, settled: true })
           }
         />
-      ) : state === "unavailable" ? (
+      ) : (
         symbol.slice(0, 1)
-      ) : null}
+      )}
     </span>
   );
 }

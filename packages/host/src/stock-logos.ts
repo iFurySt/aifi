@@ -60,17 +60,8 @@ export class StockLogoCache {
   get(symbol: string): Promise<StockLogo | null> {
     if (!validDirectorySymbol(symbol))
       return Promise.reject(Error("Invalid stock symbol."));
-    const sources: LogoSource[] = [
-      ...this.catalog.sources(symbol),
-      {
-        url: `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
-        source: "fmp-public-image",
-        legacySymbol: symbol,
-      },
-    ];
+    const sources = this.sources(symbol);
     // Never put a usable disk image behind a network refresh or its queue.
-    // Reviewed cached images win; a cached fallback may display while the
-    // preferred source is acquired/revalidated in the background.
     for (let i = 0; i < sources.length; i++) {
       const cached = this.cached(sources[i]!);
       if (!cached) continue;
@@ -83,6 +74,25 @@ export class StockLogoCache {
       return Promise.resolve(cached.logo);
     }
     return this.load(symbol, sources);
+  }
+  /** Disk-only fast lane, independent of provider queue and cache freshness. */
+  peek(symbol: string): StockLogo | null {
+    if (!validDirectorySymbol(symbol)) throw Error("Invalid stock symbol.");
+    for (const source of this.sources(symbol)) {
+      const hit = this.cached(source);
+      if (hit) return hit.logo;
+    }
+    return null;
+  }
+  private sources(symbol: string): LogoSource[] {
+    return [
+      ...this.catalog.sources(symbol),
+      {
+        url: `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
+        source: "fmp-public-image",
+        legacySymbol: symbol,
+      },
+    ];
   }
   private load(symbol: string, sources: LogoSource[]) {
     const pending = this.pending.get(symbol);

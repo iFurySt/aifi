@@ -385,3 +385,48 @@ it("disk hits remain immediate when the cold-download queue is full", async () =
     rmSync(dir, { recursive: true, force: true });
   }
 });
+it("disk-only reads reuse stale images without scheduling provider work, including a saturated queue", async () => {
+  const { mkdirSync, writeFileSync } = await import("node:fs");
+  const { createHash } = await import("node:crypto");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-logo-batch-"));
+  const fetcher = vi.fn<typeof fetch>().mockImplementation(
+    async (_url, options) =>
+      new Promise((_resolve, reject) => {
+        options?.signal?.addEventListener(
+          "abort",
+          () => reject(Error("closed")),
+          { once: true },
+        );
+      }),
+  );
+  const cache = new StockLogoCache(dir, false, fetcher, noCatalog);
+  let work: Promise<unknown> = Promise.resolve();
+  try {
+    mkdirSync(join(dir, "stock-logos"));
+    const file = join(
+      dir,
+      "stock-logos",
+      createHash("sha256").update("AAPL").digest("hex") + ".png",
+    );
+    writeFileSync(file, png);
+    const old = new Date(Date.now() - 8 * 86400000);
+    utimesSync(file, old, old);
+    expect(cache.peek("AAPL")?.dataUrl).toBe(
+      "data:image/png;base64," + png.toString("base64"),
+    );
+    expect(cache.peek("MISSING")).toBeNull();
+    expect(fetcher).not.toHaveBeenCalled();
+    work = Promise.all(
+      Array.from({ length: 16 }, (_, i) => cache.get(`B${i}`)),
+    );
+    await vi.waitFor(() => expect(fetcher).toHaveBeenCalledTimes(4));
+    expect(cache.peek("AAPL")).not.toBeNull();
+    expect(cache.peek("MISSING")).toBeNull();
+    expect(fetcher).toHaveBeenCalledTimes(4);
+    expect(() => cache.peek("../private")).toThrow();
+  } finally {
+    cache.close();
+    await work;
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

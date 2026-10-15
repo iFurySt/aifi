@@ -28,6 +28,26 @@ export function createLocalStockLogos(
     peek(symbol) {
       return memory.get(symbol.toUpperCase())?.logo ?? null;
     },
+    async getCached(symbols) {
+      if (symbols.length > 50 || symbols.some((s) => !validDirectorySymbol(s)))
+        throw Error("Invalid logo batch.");
+      const unique = [...new Set(symbols.map((s) => s.toUpperCase()))];
+      const missing = unique.filter((s) => !memory.get(s)?.logo);
+      if (missing.length) {
+        const hits = (await transport("stock.logos.cached", {
+          symbols: missing,
+        })) as { symbol: string; logo: StockLogo }[];
+        for (const { symbol, logo } of hits) {
+          // Preserve object identity: decoded image metadata is shared by consumers.
+          if (missing.includes(symbol) && !memory.get(symbol)?.logo)
+            remember(symbol, logo);
+        }
+      }
+      return unique.flatMap((symbol) => {
+        const logo = memory.get(symbol)?.logo;
+        return logo ? [{ symbol, logo }] : [];
+      });
+    },
     async get(symbol) {
       if (!validDirectorySymbol(symbol)) throw Error("Invalid stock symbol.");
       symbol = symbol.toUpperCase();

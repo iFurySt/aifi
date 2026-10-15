@@ -289,3 +289,27 @@ func TestDirectoryPaginationAndExactLookup(t *testing.T) {
 		t.Fatal("end of pagination", beyond, err)
 	}
 }
+
+func TestDirectoryBatchMembership(t *testing.T) {
+	s := openTest(t)
+	ctx := context.Background()
+	empty, e := s.Contains(ctx, []string{"MSFT"})
+	if e != nil || len(empty) != 0 {
+		t.Fatal(empty, e)
+	}
+	commitTest(t, s, fixtures(t, "1012202621:31", true))
+	symbols, e := s.Contains(ctx, []string{"msft", "MSFT", "CLASS.B", "EXETF", "ZTEST", "UNKNOWN", "MS", "' OR 1=1 --"})
+	if e != nil || len(symbols) != 2 {
+		t.Fatal(symbols, e)
+	}
+	members := map[string]bool{}
+	for _, symbol := range symbols {
+		members[symbol] = true
+	}
+	if !members["MSFT"] || !members["CLASS.B"] {
+		t.Fatal(symbols)
+	}
+	if _, e = s.Contains(ctx, make([]string, 51)); e == nil {
+		t.Fatal("accepted oversized batch")
+	}
+}

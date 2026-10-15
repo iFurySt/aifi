@@ -5,7 +5,9 @@ import {
   useEffect,
   useState,
   useRef,
+  useMemo,
 } from "react";
+import { withPreparedStockLogos } from "./stock-logo-page";
 import { DirectoryFeed, emptyDirectoryFeed } from "@aifi/core";
 import type {
   StockDirectoryRepository,
@@ -129,7 +131,12 @@ export function directoryExchange(entry: { exchangeCode: string }) {
 }
 
 export function useDirectoryFeed(query: string) {
-  const repository = useStockDirectory();
+  const directory = useStockDirectory();
+  const logos = useContext(StockLogoContext);
+  const repository = useMemo(
+    () => withPreparedStockLogos(directory, logos),
+    [directory, logos],
+  );
   const [state, setState] = useState(() => emptyDirectoryFeed());
   const feed = useRef<DirectoryFeed | null>(null);
   useEffect(() => {

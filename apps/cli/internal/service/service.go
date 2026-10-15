@@ -10,10 +10,13 @@ import (
 	"github.com/ifuryst/aifi/apps/cli/internal/directory"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
 	"io"
+	"regexp"
 	"strings"
 	"sync"
 	"time"
 )
+
+var directorySymbol = regexp.MustCompile(`(?i)^[A-Z][A-Z0-9.$^/+=-]{0,13}$`)
 
 type State struct {
 	Settings      store.Settings     `json:"settings"`
@@ -259,6 +262,22 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 			return nil, e
 		}
 		return s.DB.List(ctx, value.Query, value.Limit, value.Offset, false)
+	case "directory.contains":
+		var value struct {
+			Symbols []string `json:"symbols"`
+		}
+		if e := decode(req.Params, &value); e != nil {
+			return nil, e
+		}
+		if len(value.Symbols) > 50 {
+			return nil, errors.New("invalid directory batch")
+		}
+		for _, symbol := range value.Symbols {
+			if !directorySymbol.MatchString(symbol) {
+				return nil, errors.New("invalid directory symbol")
+			}
+		}
+		return s.DB.Contains(ctx, value.Symbols)
 	case "directory.get":
 		var value struct {
 			Symbol string `json:"symbol"`

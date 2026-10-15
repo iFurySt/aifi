@@ -282,6 +282,41 @@ func (s *Store) Get(ctx context.Context, symbol string) (Lookup, error) {
 	}
 	return value, err
 }
+
+// Contains returns exact current candidate symbols with one snapshot-bound query.
+// It is an internal authorization read, without profile fields or page counts.
+func (s *Store) Contains(ctx context.Context, symbols []string) ([]string, error) {
+	result := []string{}
+	if len(symbols) > 50 {
+		return nil, errors.New("invalid directory batch")
+	}
+	if len(symbols) == 0 {
+		return result, nil
+	}
+	placeholders := make([]string, len(symbols))
+	args := make([]any, len(symbols))
+	for i, symbol := range symbols {
+		placeholders[i] = "?"
+		args[i] = strings.ToUpper(symbol)
+	}
+	rows, err := s.db.QueryContext(ctx, `SELECT DISTINCT UPPER(l.source_symbol)
+      FROM directory_head h JOIN directory_memberships m ON m.snapshot_id=h.snapshot_id
+      JOIN listings l ON l.id=m.listing_id
+      WHERE h.singleton=1 AND m.test=0 AND m.etf=0 AND UPPER(l.source_symbol) IN (`+strings.Join(placeholders, ",")+`)`, args...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var symbol string
+		if err = rows.Scan(&symbol); err != nil {
+			return nil, err
+		}
+		result = append(result, symbol)
+	}
+	return result, rows.Err()
+}
+
 func (s *Store) list(ctx context.Context, query string, limit, offset int, all, exact bool) (Page, error) {
 	p := Page{Items: []ListingView{}, Scope: "candidates", Offset: offset}
 	if all {
