@@ -32,3 +32,5 @@ export * from "./data-service";
 export * from "./stock-directory";
 
 export * from "./stock-logos";
+
+export * from "./stock-collection";

@@ -126,7 +126,8 @@ The first live collector is implemented in apps/cli: two official Nasdaq Trader
 files, validated source blobs, atomic SQLite directory snapshots, sync outcomes,
 and cached reads. App hosts now start a private-stdio Go service with a configurable
 directory schedule, durable requests, bounded retry and existing sync leases.
-SQLite v2 preserves v1 data and adds revisioned settings/encrypted credential blobs.
+SQLite v3 preserves prior directory/settings/credential data and adds reviewed
+index snapshots, memberships and immutable source provenance.
 Electron uses a narrow IPC bridge; local Web uses an authenticated same-origin
 loopback bridge. Node encrypts credentials before Go storage; status never returns
 saved plaintext. The shared renderer manages sources/sync settings, while market
@@ -157,11 +158,12 @@ cloud implementation can satisfy the same domain contract or preserve the bridge
 and delegate host reads to cloud transport. The UI does not choose SQL/URLs/auth.
 See [directory read contract](design-docs/stock-directory-reads.md).
 
-The proposed [stock collections design](design-docs/stock-collections.md) moves
-the Stocks selector toward All US listings, S&P 500, Nasdaq-100 and the existing
-watchlist. Built-in universe/index lists are system-maintained and not user-editable;
-watchlist contents remain user-owned. Named personal groups and additional markets
-are deferred. Scoped reads/index snapshots are planned, not implemented.
+The [stock collections design](design-docs/stock-collections.md) defines All US
+listings, S&P 500, Nasdaq-100 and the existing watchlist. Scoped read contracts
+and SQLite snapshots are implemented. Bundled, reviewed dated index membership
+works offline; source refresh currently requires a reviewed repository update.
+Built-ins have no membership-write operation; watchlist symbols remain in existing
+workspace storage. The collection selector is the next UI delivery slice.
 
 ## Decorative Company Assets
 

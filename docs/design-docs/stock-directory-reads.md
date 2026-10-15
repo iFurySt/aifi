@@ -1,6 +1,6 @@
 # Stock Directory Reads
 
-Status: implemented in shared Web/Electron UI, 2026-10-13.
+Status: implemented in shared Web/Electron UI, updated 2026-10-15.
 
 ## Contract And Composition
 
@@ -32,8 +32,17 @@ schedule downloads. Configuration/sync remains a separate existing capability.
   Exact symbol matches lead results; remaining rows use deterministic source
   symbol/source/exchange ordering. Company form submit resolves exact symbols
   first, then the first name-search result. The datalist permits explicit choice.
-- Stocks heading opens a source selector; Nasdaq Trader is the only current
-  option and is checked. No footer attribution label or unavailable source choice.
+- Search optionally accepts collection `all-us`, `sp500`, `nasdaq100` or
+  `watchlist`. Only watchlist accepts up to 50 explicit uppercase symbols;
+  built-in definitions cannot be overridden. Go applies scope before count,
+  search, ordering and paging. Exact lookup remains global.
+- Scoped pages return source/date metadata, full membership count, locally
+  available count and unresolved source symbols. The opaque page snapshot token
+  combines directory and collection identity, rebasing pagination when either
+  changes. It is not a database identifier for a scoped page.
+- Index snapshots are reviewed, dated bundled data imported into SQLite v3;
+  they work offline and are updated through a reviewed repository change. See
+  [collection design](stock-collections.md).
 - Sidebar loads 50 rows initially and appends batches when its bottom sentinel
   enters the scroll viewport; company suggestions use 20, workspace search 12.
   Counts reflect the filtered candidate scope, not whole-market common-stock coverage.

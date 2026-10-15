@@ -76,10 +76,13 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 	if err = tx.QueryRowContext(ctx, "SELECT COALESCE(MAX(version),0) FROM schema_migrations").Scan(&version); err != nil {
 		return fail(err)
 	}
-	if version > 2 {
+	if version > 3 {
 		return fail(fmt.Errorf("unsupported SQLite schema version %d", version))
 	}
 	if _, err = tx.ExecContext(ctx, schema); err != nil {
+		return fail(err)
+	}
+	if err = seedIndexes(ctx, tx, indexSeed); err != nil {
 		return fail(err)
 	}
 	if err = tx.Commit(); err != nil {
@@ -258,11 +261,12 @@ type ListingView struct {
 	Fields   map[string]string `json:"sourceFields"`
 }
 type Page struct {
-	Total      int           `json:"total"`
-	SnapshotID string        `json:"snapshotId"`
-	Scope      string        `json:"scope"`
-	Offset     int           `json:"offset"`
-	Items      []ListingView `json:"items"`
+	Collection *CollectionInfo `json:"collection,omitempty"`
+	Total      int             `json:"total"`
+	SnapshotID string          `json:"snapshotId"`
+	Scope      string          `json:"scope"`
+	Offset     int             `json:"offset"`
+	Items      []ListingView   `json:"items"`
 }
 
 func (s *Store) List(ctx context.Context, query string, limit, offset int, all bool) (Page, error) {
@@ -317,7 +321,7 @@ func (s *Store) Contains(ctx context.Context, symbols []string) ([]string, error
 	return result, rows.Err()
 }
 
-func (s *Store) list(ctx context.Context, query string, limit, offset int, all, exact bool) (Page, error) {
+func (s *Store) list(ctx context.Context, query string, limit, offset int, all, exact bool, selections ...CollectionSelection) (Page, error) {
 	p := Page{Items: []ListingView{}, Scope: "candidates", Offset: offset}
 	if all {
 		p.Scope = "all"
@@ -325,12 +329,59 @@ func (s *Store) list(ctx context.Context, query string, limit, offset int, all, 
 	if limit < 1 || limit > 200 || offset < 0 || offset > 100000 || len(query) > 255 {
 		return p, errors.New("list bounds: limit 1–200, offset 0–100000, query up to 255 bytes")
 	}
-	err := s.db.QueryRowContext(ctx, "SELECT snapshot_id FROM directory_head WHERE singleton=1").Scan(&p.SnapshotID)
+	selection := CollectionSelection{}
+	if len(selections) > 0 {
+		selection = selections[0]
+	}
+	info, symbols, err := s.collection(ctx, selection)
+	if err != nil {
+		return p, err
+	}
+	p.Collection = info
+	err = s.db.QueryRowContext(ctx, "SELECT snapshot_id FROM directory_head WHERE singleton=1").Scan(&p.SnapshotID)
 	if errors.Is(err, sql.ErrNoRows) {
+		if info != nil {
+			info.UnresolvedSymbols = symbols
+		}
 		return p, nil
 	}
 	if err != nil {
 		return p, err
+	}
+	snapshotID := p.SnapshotID
+	if info != nil {
+		filter, args := symbolFilter(symbols)
+		args = append([]any{snapshotID}, args...)
+		rows, e := s.db.QueryContext(ctx, `SELECT DISTINCT UPPER(l.source_symbol) FROM directory_memberships m JOIN listings l ON l.id=m.listing_id WHERE m.snapshot_id=? AND m.test=0 AND m.etf=0`+filter, args...)
+		if e != nil {
+			return p, e
+		}
+		available := map[string]bool{}
+		for rows.Next() {
+			var symbol string
+			if e = rows.Scan(&symbol); e != nil {
+				rows.Close()
+				return p, e
+			}
+			available[symbol] = true
+		}
+		e = rows.Err()
+		rows.Close()
+		if e != nil {
+			return p, e
+		}
+		info.AvailableCount = len(available)
+		for _, symbol := range symbols {
+			if !available[symbol] {
+				info.UnresolvedSymbols = append(info.UnresolvedSymbols, symbol)
+			}
+		}
+		fingerprint, _ := json.Marshal(struct {
+			ID      string
+			Symbols []string
+		}{info.SnapshotID, symbols})
+		hash := sha256.Sum256(fingerprint)
+		p.SnapshotID += ":" + hex.EncodeToString(hash[:8])
 	}
 	// Escape LIKE metacharacters: a user's query always means literal text.
 	escaped := strings.NewReplacer("\\", "\\\\", "%", "\\%", "_", "\\_").Replace(query)
@@ -339,7 +390,12 @@ func (s *Store) list(ctx context.Context, query string, limit, offset int, all, 
 		filter = " AND m.test=0 AND m.etf=0"
 	}
 	where := ` FROM directory_memberships m JOIN listings l ON l.id=m.listing_id WHERE m.snapshot_id=?` + filter
-	args := []any{p.SnapshotID}
+	args := []any{snapshotID}
+	if info != nil {
+		selected, values := symbolFilter(symbols)
+		where += selected
+		args = append(args, values...)
+	}
 	if exact {
 		where += ` AND l.source_symbol = ? COLLATE NOCASE`
 		args = append(args, query)

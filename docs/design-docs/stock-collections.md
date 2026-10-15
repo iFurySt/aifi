@@ -1,7 +1,9 @@
 # Stock Collections And Market Scope
 
-Status: proposed, 2026-10-14. Scope narrowed to indexes and the existing watchlist;
-no runtime/UI changes are implemented by this planning task.
+Status: scoped reads and SQLite snapshots implemented 2026-10-15; shared selector
+is the next delivery slice. Scope remains indexes and the existing watchlist.
+Current index data uses reviewed bundled snapshots with visible source dates;
+automatic index ingestion/scheduling remains deferred.
 
 ## First Version
 

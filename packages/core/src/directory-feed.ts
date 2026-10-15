@@ -1,9 +1,11 @@
 import type {
   DirectoryEntry,
+  CollectionInfo,
   DirectoryPage,
   StockDirectoryRepository,
 } from "./stock-directory";
 export interface DirectoryFeedState {
+  collection?: CollectionInfo;
   query: string;
   items: DirectoryEntry[];
   total: number;
@@ -118,6 +120,7 @@ export class DirectoryFeed {
           : page.items.length;
       this.update({
         query,
+        collection: page.collection,
         items,
         total: page.total,
         snapshotId: page.snapshotId,

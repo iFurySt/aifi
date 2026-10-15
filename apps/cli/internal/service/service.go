@@ -257,11 +257,12 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 			Query  string `json:"query"`
 			Limit  int    `json:"limit"`
 			Offset int    `json:"offset"`
+			store.CollectionSelection
 		}
 		if e := decode(req.Params, &value); e != nil {
 			return nil, e
 		}
-		return s.DB.List(ctx, value.Query, value.Limit, value.Offset, false)
+		return s.DB.ListCollection(ctx, value.Query, value.Limit, value.Offset, value.CollectionSelection)
 	case "directory.contains":
 		var value struct {
 			Symbols []string `json:"symbols"`

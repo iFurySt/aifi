@@ -42,3 +42,18 @@ CREATE TABLE IF NOT EXISTS directory_requests(singleton INTEGER PRIMARY KEY CHEC
 INSERT OR IGNORE INTO directory_requests VALUES(1,0);
 CREATE TABLE IF NOT EXISTS credential_blobs(provider TEXT NOT NULL, field TEXT NOT NULL, ciphertext TEXT NOT NULL, PRIMARY KEY(provider,field));
 INSERT OR IGNORE INTO schema_migrations(version) VALUES(2);
+
+CREATE TABLE IF NOT EXISTS index_snapshots(
+ id TEXT PRIMARY KEY, collection_id TEXT NOT NULL CHECK(collection_id IN ('sp500','nasdaq100')),
+ snapshot_date TEXT NOT NULL, fetched_at TEXT NOT NULL, source_url TEXT NOT NULL,
+ source_name TEXT NOT NULL, source_hash TEXT NOT NULL, member_count INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS index_memberships(
+ snapshot_id TEXT NOT NULL REFERENCES index_snapshots(id), symbol TEXT NOT NULL,
+ PRIMARY KEY(snapshot_id,symbol)
+);
+CREATE TABLE IF NOT EXISTS index_heads(
+ collection_id TEXT PRIMARY KEY CHECK(collection_id IN ('sp500','nasdaq100')),
+ snapshot_id TEXT NOT NULL REFERENCES index_snapshots(id)
+);
+INSERT OR IGNORE INTO schema_migrations(version) VALUES(3);

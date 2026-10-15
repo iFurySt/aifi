@@ -191,7 +191,13 @@ func TestDirectoryReadRPC(t *testing.T) {
 	if e != nil || len(value.([]string)) != 1 || value.([]string)[0] != "EXAMPLE" {
 		t.Fatal("membership RPC", value, e)
 	}
+	value, e = s.Dispatch(ctx, Request{Method: "directory.list", Params: json.RawMessage(`{"query":"","limit":50,"offset":0,"collection":"watchlist","symbols":["OTHER"]}`)})
+	if e != nil || value.(store.Page).Total != 1 || value.(store.Page).Items[0].Symbol != "OTHER" {
+		t.Fatal("scoped RPC", value, e)
+	}
 	for _, req := range []Request{
+		{Method: "directory.list", Params: json.RawMessage(`{"query":"","limit":50,"offset":0,"collection":"sp500","symbols":["EXAMPLE"]}`)},
+		{Method: "directory.list", Params: json.RawMessage(`{"query":"","limit":50,"offset":0,"collection":"other"}`)},
 		{Method: "directory.contains", Params: json.RawMessage(`{"symbols":["../private"]}`)},
 		{Method: "directory.contains", Params: json.RawMessage(`{"symbols":["EXAMPLE"],"path":"/private"}`)},
 		{Method: "directory.list", Params: json.RawMessage(`{"query":"","limit":10000,"offset":0}`)},

@@ -99,3 +99,13 @@ results. No key, cookie, user path or arbitrary endpoint reaches the provider. T
 bounded, and PNGs are private local cache files. The renderer receives data URLs;
 remote image/script permissions are not widened. See
 [logo capability](design-docs/stock-logos.md) for limits and cache/shutdown behavior.
+
+## Stock Collections
+
+Directory read scopes are an allowlist. Only the personal watchlist scope accepts
+up to 50 symbols; callers cannot replace built-in index members. Scoped SQL uses
+bound parameters. Current reviewed index seeds are bundled and imported atomically
+by Go; the renderer has no source URL, database-write or built-in mutation route.
+Personal watchlist symbols travel only over the existing local IPC/loopback bridge,
+never to the public constituent sources. Public index refresh is a maintainer
+reviewed script/commit, not an arbitrary runtime endpoint.

@@ -43,3 +43,26 @@ it("bounds directory queries at the host boundary", () => {
   ])
     expect(() => validateDirectoryQuery(v)).toThrow();
 });
+it("keeps collections bounded and protects built-in membership from caller overrides", () => {
+  const query = { query: "", limit: 50, offset: 0 };
+  for (const collection of ["all-us", "sp500", "nasdaq100", "watchlist"])
+    expect(() =>
+      validateDirectoryQuery({ ...query, collection }),
+    ).not.toThrow();
+  expect(() =>
+    validateDirectoryQuery({
+      ...query,
+      collection: "watchlist",
+      symbols: ["AAPL", "BRK.B"],
+    }),
+  ).not.toThrow();
+  for (const extra of [
+    { collection: "other" },
+    { collection: "sp500", symbols: ["AAPL"] },
+    { symbols: [] },
+    { collection: "watchlist", symbols: Array(51).fill("AAPL") },
+    { collection: "watchlist", symbols: ["aapl"] },
+    { collection: "watchlist", symbols: ["../private"] },
+  ])
+    expect(() => validateDirectoryQuery({ ...query, ...extra })).toThrow();
+});

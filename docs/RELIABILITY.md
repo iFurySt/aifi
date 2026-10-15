@@ -29,7 +29,7 @@ launching terminal; the app exposes user-facing storage/startup failures.
 
 Directory collection has bounded requests, persisted outcomes/leases, atomic
 snapshot writes, stale-source/shrink guards, and last-good cache retention. SQLite
-v2 migrates v1 in place and is explicitly versioned; an unknown future schema is rejected.
+v3 migrates prior versions in place and is explicitly versioned; an unknown future schema is rejected.
 
 Multi-window editing, UI schema migrations, backups, broader live-source retry policies,
 and research-runner observability remain future work. CI workflow and release
@@ -49,3 +49,9 @@ cache to avoid repeated local round trips/letter flashes during navigation.
 Directory paging prepares disk-cached images in batches before displaying rows,
 independent of slow remote downloads. Cache misses get immediate letters; no
 blank pending avatars. Catalog metadata retains its separate at-most-daily refresh schedule.
+
+SQLite v3 adds index snapshots with provenance and immutable source symbols.
+Startup seeds require complete validated lists and an atomic transaction;
+reopening older reviewed bundles cannot roll a newer index head back. Index
+coverage reports unresolved source symbols instead of silently truncating counts.
+Automatic index sync is deferred; source dates stay attached to scoped reads.

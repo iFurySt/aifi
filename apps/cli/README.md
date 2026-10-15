@@ -55,7 +55,7 @@ recent sync runs record successful checks even if source content did not change.
 
 `aifi service` runs the private stdio scheduler used by local app hosts. Startup
 checks due work; default automatic frequency is 24 hours, adjustable 1–720 hours.
-Settings, revision conflicts, requests and sync outcomes persist in SQLite v2;
+Settings, revision conflicts, requests and sync outcomes persist in SQLite v3;
 v1 directory data is migrated in place. A disabled source also prevents CLI sync.
 `--offline` keeps settings/cache available without network collection.
 
@@ -90,3 +90,20 @@ is not implemented. Existing UI Reset does not delete this DB.
 Design/source selection: [directory sources](../../docs/references/stock-directory-sources.md),
 [pipeline](../../docs/design-docs/us-stock-data-pipeline.md), and
 [broader data plan](../../docs/exec-plans/active/us-stock-data-foundation.md).
+
+## Index Collection Reads
+
+`directory.list` private RPC accepts optional `collection`: `all-us`, `sp500`,
+`nasdaq100`, or `watchlist`. Only watchlist accepts `symbols` (at most 50).
+Search/count/paging apply inside that scope; `directory.get` remains global.
+SQLite v3 retains reviewed index snapshots/source hashes and unresolved symbols.
+There is no membership-write RPC for built-ins. Existing directory/settings and
+credential records are preserved by migration.
+
+The bundled seed currently contains 503 S&P securities (datasets PDDL dataset,
+observed 2026-10-15) and 101 Nasdaq-100 securities (Nasdaq response dated
+2026-10-14). These are security counts, not hardcoded group sizes. Refresh the
+reviewed seed with `python3 scripts/update-stock-index-seeds.py`, inspect the diff
+and source dates, run CI, and commit. Automatic index downloading/scheduling is
+not part of this slice; offline/restart reads never depend on GitHub or Nasdaq.
+See [sources and provenance](../../docs/references/stock-index-sources.md).

@@ -33,3 +33,43 @@ it("uses injected transport for paged search and exact identity without fixture 
   ).rejects.toThrow();
   await expect(repository.get("invalid symbol")).rejects.toThrow();
 });
+it("passes scoped index/watchlist reads through the same replaceable directory port", async () => {
+  const transport = vi.fn().mockResolvedValue({ items: [] });
+  const repository = createLocalStockDirectory(transport);
+  await repository.search({
+    query: "Apple",
+    limit: 50,
+    offset: 50,
+    collection: "sp500",
+  });
+  expect(transport).toHaveBeenLastCalledWith("directory.list", {
+    query: "Apple",
+    limit: 50,
+    offset: 50,
+    collection: "sp500",
+  });
+  await repository.search({
+    query: "",
+    limit: 50,
+    offset: 0,
+    collection: "watchlist",
+    symbols: ["AAPL"],
+  });
+  expect(transport).toHaveBeenLastCalledWith("directory.list", {
+    query: "",
+    limit: 50,
+    offset: 0,
+    collection: "watchlist",
+    symbols: ["AAPL"],
+  });
+  await expect(
+    repository.search({
+      query: "",
+      limit: 50,
+      offset: 0,
+      collection: "sp500",
+      symbols: ["AAPL"],
+    }),
+  ).rejects.toThrow();
+  expect(transport).toHaveBeenCalledTimes(2);
+});
