@@ -3,6 +3,8 @@ package market
 import (
 	"bytes"
 	"context"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -17,6 +19,8 @@ import (
 )
 
 type Client struct {
+	ReadStage    func(context.Context, string) (*Evidence, error)
+	SaveStage    func(context.Context, string, Evidence) error
 	HTTP         *http.Client
 	Key          func(context.Context, string) (map[string]string, error)
 	Gate         func(context.Context, string) error
@@ -121,6 +125,11 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 		*ev = append(*ev, Evidence{URL: safe, Body: raw, FetchedAt: c.Now()})
 		return raw, nil
 	}
+	for _, secret := range keys {
+		if len(secret) >= 8 && bytes.Contains(raw, []byte(secret)) {
+			return nil, &Failure{Code: "unsafe_provider_response"}
+		}
+	}
 	var probe any
 	if e = decodeJSON(raw, &probe); e != nil {
 		return nil, e
@@ -171,6 +180,7 @@ var cikPattern = regexp.MustCompile(`^\d{10}$`)
 var accessionPattern = regexp.MustCompile(`^\d{10}-\d{2}-\d{6}$`)
 
 func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
+	ctx = WithJob(ctx, j)
 	result := Result{Payload: Payload{Complete: true}}
 	var e error
 	switch j.Dataset {
@@ -501,17 +511,51 @@ func (c *Client) optional(ctx context.Context, j Job, r *Result) error {
 		q.Set("year", strconv.Itoa(at.Year()))
 		q.Set("quarter", strconv.Itoa((int(at.Month())-1)/3+1))
 		q.Set("limit", "1000")
+		generation := ""
+		seen := map[string]bool{}
 		for page := 0; page < 100; page++ {
 			q.Set("page", strconv.Itoa(page))
-			items, e := c.fmpRows(ctx, "institutional-ownership/extract-analytics/holder", q, r)
-			if e != nil {
-				return e
+			endpoint := "https://financialmodelingprep.com/stable/institutional-ownership/extract-analytics/holder?" + q.Encode()
+			cacheKey := generation + ":" + endpoint
+			var items []Record
+			var ev *Evidence
+			if page > 0 && c.ReadStage != nil {
+				ev, e = c.ReadStage(ctx, cacheKey)
+				if e != nil {
+					return e
+				}
 			}
-			r.Payload.Records = append(r.Payload.Records, items...)
-			if len(items) < 1000 {
+			if ev != nil {
+				if e = decodeJSON(ev.Body, &items); e != nil {
+					return e
+				}
+				r.Evidence = append(r.Evidence, *ev)
+			} else {
+				items, e = c.fmpRows(ctx, "institutional-ownership/extract-analytics/holder", q, r)
+				if e != nil {
+					return e
+				}
+				saved := r.Evidence[len(r.Evidence)-1]
+				if page == 0 {
+					hash := sha256.Sum256(saved.Body)
+					generation = hex.EncodeToString(hash[:])
+				} else if c.SaveStage != nil {
+					if e = c.SaveStage(ctx, cacheKey, saved); e != nil {
+						return e
+					}
+				}
+			}
+			if len(items) == 0 {
 				r.Payload.Window = j.Window
 				return nil
 			}
+			hash := sha256.Sum256([]byte(Marshal(items)))
+			fingerprint := hex.EncodeToString(hash[:])
+			if seen[fingerprint] {
+				return &Failure{Code: "pagination_loop"}
+			}
+			seen[fingerprint] = true
+			r.Payload.Records = append(r.Payload.Records, items...)
 		}
 		return &Failure{Code: "pagination_limit"}
 	case "politicians":

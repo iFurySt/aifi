@@ -5,11 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/ifuryst/aifi/apps/cli/internal/directory"
+	"github.com/ifuryst/aifi/apps/cli/internal/research"
 	"github.com/ifuryst/aifi/apps/cli/internal/service"
 	"github.com/ifuryst/aifi/apps/cli/internal/store"
 	"github.com/spf13/cobra"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 func New() *cobra.Command {
@@ -94,6 +96,25 @@ func New() *cobra.Command {
 	}}
 	daemon.Flags().BoolVar(&offline, "offline", false, "Pause network work while keeping settings/cache available")
 	root.AddCommand(daemon)
+	researchCommand := &cobra.Command{Use: "research", Short: "Persisted whole-directory research datasets"}
+	researchCommand.AddCommand(&cobra.Command{Use: "status", Args: cobra.NoArgs, RunE: func(cmd *cobra.Command, _ []string) error {
+		return withStore(cmd, func(ctx context.Context, db *store.Store) (any, error) { return db.ResearchStatus(ctx) })
+	}}, &cobra.Command{Use: "read SYMBOL", Args: cobra.ExactArgs(1), RunE: func(cmd *cobra.Command, args []string) error {
+		return withStore(cmd, func(ctx context.Context, db *store.Store) (any, error) {
+			return db.ResearchRead(ctx, strings.ToUpper(args[0]))
+		})
+	}}, &cobra.Command{Use: "sync", Short: "Queue whole-directory work; app service executes it", Args: cobra.NoArgs, RunE: func(cmd *cobra.Command, _ []string) error {
+		return withStore(cmd, func(ctx context.Context, db *store.Store) (any, error) {
+			if e := research.New(db, dataDir, false).Reconcile(ctx, true); e != nil {
+				return nil, e
+			}
+			if e := db.RequestResearchSync(ctx); e != nil {
+				return nil, e
+			}
+			return db.ResearchStatus(ctx)
+		})
+	}})
+	data.AddCommand(researchCommand)
 	dir.AddCommand(sync, list, status)
 	return root
 }

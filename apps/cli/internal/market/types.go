@@ -2,6 +2,7 @@
 package market
 
 import (
+	"context"
 	"encoding/json"
 	"time"
 )
@@ -69,6 +70,7 @@ type Result struct {
 	Evidence []Evidence
 }
 type Job struct {
+	Manual   bool   `json:"-"`
 	ID       int64  `json:"id"`
 	Provider string `json:"provider"`
 	Dataset  string `json:"dataset"`
@@ -84,3 +86,13 @@ type Failure struct {
 
 func (e *Failure) Error() string { return e.Code }
 func Marshal(v any) string       { b, _ := json.Marshal(v); return string(b) }
+
+type jobContextKey struct{}
+
+func WithJob(ctx context.Context, j Job) context.Context {
+	return context.WithValue(ctx, jobContextKey{}, j)
+}
+func ContextJob(ctx context.Context) (Job, bool) {
+	j, ok := ctx.Value(jobContextKey{}).(Job)
+	return j, ok
+}

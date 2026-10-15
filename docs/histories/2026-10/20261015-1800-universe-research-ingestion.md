@@ -19,6 +19,11 @@
   optional FMP institution/congress/analyst/news adapters.
 - Every imported candidate receives jobs. Missing keys/contact and endpoint
   permissions remain distinct from successfully collected data.
+- Second backend checkpoint: resumable institutional pages, source readiness,
+  per-request pause checks, auth blocking, manual work with automation paused,
+  dynamic interval recomputation and local research CLI diagnostics.
+- Go race tests cover restart/fencing, source validation, pagination resume,
+  financial restatements, source-secret redaction and all-directory job creation.
 - Renderer wiring and final runtime verification are in progress under the plan.
 
 ### Design Intent

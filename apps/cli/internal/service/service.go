@@ -253,6 +253,9 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 		if s.Offline {
 			return nil, errors.New("network is paused")
 		}
+		if e := research.New(s.DB, s.DataDir, s.Offline).Reconcile(ctx, true); e != nil {
+			return nil, e
+		}
 		if e := s.DB.RequestResearchSync(ctx); e != nil {
 			return nil, e
 		}

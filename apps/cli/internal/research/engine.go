@@ -32,6 +32,8 @@ func New(db *store.Store, path string, offline bool) *Engine {
 	e.Client = c
 	c.ReadPayload = db.ResearchPayload
 	c.ReadEvidence = db.ResearchEvidence
+	c.ReadStage = db.ResearchStage
+	c.SaveStage = db.SaveResearchStage
 	c.Key = func(ctx context.Context, p string) (map[string]string, error) {
 		blobs, err := db.EncryptedCredentials(ctx, p)
 		if err != nil {
@@ -78,6 +80,14 @@ func New(db *store.Store, path string, offline bool) *Engine {
 				return err
 			}
 
+			if j, ok := market.ContextJob(ctx); ok {
+				if !cfg.Automatic && !j.Manual {
+					return &market.Failure{Code: "paused"}
+				}
+				if j.Dataset != "identity" && !cfg.Datasets[j.Dataset].Enabled {
+					return &market.Failure{Code: "paused"}
+				}
+			}
 			wait, blocked, err := db.ReserveProvider(ctx, p, cfg.Limits[p], e.Now())
 			if err != nil {
 				return err
@@ -200,6 +210,10 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 		if err != nil || !strings.Contains(contact, "@") {
 			return false, nil
 		}
+	}
+	providerBlock, err := e.DB.ProviderBlocked(ctx, p)
+	if err != nil || providerBlock != "" {
+		return false, err
 	}
 	j, err := e.DB.ClaimResearchJob(ctx, p, enabled, !cfg.Automatic, e.Now())
 	if err != nil || j == nil {

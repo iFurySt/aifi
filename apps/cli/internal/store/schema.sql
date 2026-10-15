@@ -97,3 +97,7 @@ CREATE TABLE IF NOT EXISTS provider_budgets(
  cooldown_until TEXT NOT NULL DEFAULT '', blocked TEXT NOT NULL DEFAULT ''
 );
 INSERT OR IGNORE INTO schema_migrations(version) VALUES(4);
+
+CREATE TABLE IF NOT EXISTS research_staging(
+ cache_key TEXT PRIMARY KEY, source_url TEXT NOT NULL, fetched_at TEXT NOT NULL, body BLOB NOT NULL
+);

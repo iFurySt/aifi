@@ -68,14 +68,31 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 			return c, errors.New("invalid provider budget")
 		}
 	}
-	r, e := s.db.ExecContext(ctx, "UPDATE research_config SET config_json=?,revision=revision+1 WHERE singleton=1 AND revision=?", market.Marshal(c), c.Revision)
+	tx, e := s.db.BeginTx(ctx, nil)
 	if e != nil {
 		return c, e
 	}
-	n, _ := r.RowsAffected()
+	defer tx.Rollback()
+	r, e := tx.ExecContext(ctx, "UPDATE research_config SET config_json=?,revision=revision+1 WHERE singleton=1 AND revision=?", market.Marshal(c), c.Revision)
+	if e != nil {
+		return c, e
+	}
+	n, e := r.RowsAffected()
+	if e != nil {
+		return c, e
+	}
 	if n != 1 {
 		return c, errors.New("research settings changed; reload and retry")
 	}
+	for d, v := range c.Datasets {
+		if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET next_run=strftime('%Y-%m-%dT%H:%M:%f000000Z',last_success,? || ' hours') WHERE dataset=? AND state='idle' AND manual=0 AND last_success IS NOT NULL", v.IntervalHours, d); e != nil {
+			return c, e
+		}
+	}
+	if e = tx.Commit(); e != nil {
+		return c, e
+	}
+
 	return s.ResearchConfig(ctx)
 }
 func (s *Store) ResearchSymbols(ctx context.Context) ([]string, error) {
@@ -108,7 +125,7 @@ func (s *Store) AddResearchJobs(ctx context.Context, jobs []market.Job, now time
 		return e
 	}
 	defer tx.Rollback()
-	stmt, e := tx.PrepareContext(ctx, "INSERT OR IGNORE INTO research_jobs(provider,dataset,subject,window,next_run) VALUES(?,?,?,?,?)")
+	stmt, e := tx.PrepareContext(ctx, "INSERT OR IGNORE INTO research_jobs(provider,dataset,subject,window,next_run,manual) VALUES(?,?,?,?,?,EXISTS(SELECT 1 FROM research_jobs WHERE manual=1))")
 	if e != nil {
 		return e
 	}
@@ -144,9 +161,10 @@ func (s *Store) ClaimResearchJob(ctx context.Context, provider string, enabled [
 	if manualOnly {
 		manualFilter = " AND manual=1"
 	}
+	args = append(args, now.AddDate(0, 0, -14).Format("2006-01-02"))
 	var j market.Job
 	// Mapping and recent market batches lead history and per-company enrichment.
-	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN dataset='prices' THEN 1 ELSE 2 END,CASE WHEN dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts)
+	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN dataset='prices' AND subject>=? THEN 1 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN dataset='prices' THEN 3 ELSE 4 END,CASE WHEN dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
 	if errors.Is(e, sql.ErrNoRows) {
 		return nil, nil
 	}
@@ -346,7 +364,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		return out, e
 	}
 	defer tx.Rollback()
-	rows, e := tx.QueryContext(ctx, `SELECT h.dataset,s.id,s.provider,s.fetched_at,s.payload_json FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.subject=? OR (h.subject=? AND h.dataset IN ('facts','filings'))`, symbol, "cik:"+cik)
+	rows, e := tx.QueryContext(ctx, `SELECT h.dataset,s.id,s.provider,s.fetched_at,s.payload_json FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.subject=? OR (h.subject=? AND h.dataset IN ('facts','filings','insiders'))`, symbol, "cik:"+cik)
 	if e != nil {
 		return out, e
 	}
@@ -423,7 +441,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 			continue
 		}
 		subject := symbol
-		if d == "facts" || d == "filings" {
+		if d == "facts" || d == "filings" || d == "insiders" {
 			subject = "cik:" + cik
 		}
 		var state, code string
@@ -437,6 +455,48 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 			out.Coverage[d] = state
 		} else {
 			out.Coverage[d] = "pending"
+		}
+	}
+	for _, d := range ResearchDatasets {
+		if out.Coverage[d] == "stored" {
+			continue
+		}
+		p := "massive"
+		if d == "facts" || d == "filings" || d == "insiders" {
+			p = "sec"
+		}
+		if d == "funds" || d == "politicians" || d == "analyst" || d == "news" {
+			p = "fmp"
+		}
+		var blocked string
+		err := tx.QueryRowContext(ctx, "SELECT blocked FROM provider_budgets WHERE provider=?", p).Scan(&blocked)
+		if err != nil && !errors.Is(err, sql.ErrNoRows) {
+			return out, err
+		}
+		if blocked != "" {
+			out.Coverage[d] = blocked
+			continue
+		}
+		if p != "sec" {
+			var n int
+			if err = tx.QueryRowContext(ctx, "SELECT COUNT(*) FROM credential_blobs WHERE provider=? AND field='apiKey'", p).Scan(&n); err != nil {
+				return out, err
+			}
+			if n == 0 {
+				out.Coverage[d] = "needs_key"
+			}
+		} else {
+			var settings string
+			if err = tx.QueryRowContext(ctx, "SELECT settings_json FROM service_settings WHERE singleton=1").Scan(&settings); err != nil {
+				return out, err
+			}
+			var cfg Settings
+			json.Unmarshal([]byte(settings), &cfg)
+			if !strings.Contains(cfg.SECUserAgent, "@") {
+				out.Coverage[d] = "needs_contact"
+			} else if cik == "" {
+				out.Coverage[d] = "unmapped"
+			}
 		}
 	}
 	if len(out.Bars) > 0 {
@@ -506,7 +566,6 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	defer rows.Close()
 	for rows.Next() {
 		var b BudgetStatus
 		if e = rows.Scan(&b.Provider, &b.Calls, &b.Day, &b.Cooldown, &b.Blocked); e != nil {
@@ -514,7 +573,48 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 		}
 		out.Providers = append(out.Providers, b)
 	}
-	return out, rows.Err()
+	err := rows.Err()
+	rows.Close()
+	if err != nil {
+		return out, err
+	}
+	credentials, err := s.Credentials(ctx)
+	if err != nil {
+		return out, err
+	}
+	configured := map[string]bool{}
+	for _, v := range credentials {
+		for _, field := range v.Fields {
+			if field == "apiKey" {
+				configured[v.Provider] = true
+			}
+		}
+	}
+	settings, err := s.Settings(ctx)
+	if err != nil {
+		return out, err
+	}
+	for _, p := range []string{"massive", "sec", "fmp"} {
+		index := -1
+		for i, v := range out.Providers {
+			if v.Provider == p {
+				index = i
+				break
+			}
+		}
+		if index < 0 {
+			out.Providers = append(out.Providers, BudgetStatus{Provider: p})
+			index = len(out.Providers) - 1
+		}
+		if p == "sec" {
+			if !strings.Contains(settings.SECUserAgent, "@") {
+				out.Providers[index].Blocked = "needs_contact"
+			}
+		} else if !configured[p] {
+			out.Providers[index].Blocked = "needs_key"
+		}
+	}
+	return out, nil
 }
 func (s *Store) EncryptedCredentials(ctx context.Context, provider string) (map[string]string, error) {
 	out := map[string]string{}
@@ -586,5 +686,41 @@ func (s *Store) ResearchEvidence(ctx context.Context, dataset, subject string) (
 }
 func (s *Store) BlockResearchDataset(ctx context.Context, provider, dataset, code string) error {
 	_, e := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='blocked',error=? WHERE provider=? AND dataset=? AND state!='running'", code, provider, dataset)
+	return e
+}
+
+func (s *Store) ProviderBlocked(ctx context.Context, p string) (string, error) {
+	var code string
+	e := s.db.QueryRowContext(ctx, "SELECT blocked FROM provider_budgets WHERE provider=?", p).Scan(&code)
+	if errors.Is(e, sql.ErrNoRows) {
+		return "", nil
+	}
+	return code, e
+}
+
+// Private resumable provider pages are not visible through research.read until a
+// complete validated snapshot is committed. Entries expire before a new refresh.
+func (s *Store) ResearchStage(ctx context.Context, key string) (*market.Evidence, error) {
+	var ev market.Evidence
+	var fetched string
+	e := s.db.QueryRowContext(ctx, "SELECT source_url,fetched_at,body FROM research_staging WHERE cache_key=? AND fetched_at>?", key, stamp(time.Now().Add(-24*time.Hour))).Scan(&ev.URL, &fetched, &ev.Body)
+	if errors.Is(e, sql.ErrNoRows) {
+		return nil, nil
+	}
+	if e != nil {
+		return nil, e
+	}
+	ev.FetchedAt, _ = time.Parse(time.RFC3339Nano, fetched)
+	return &ev, nil
+}
+func (s *Store) SaveResearchStage(ctx context.Context, key string, ev market.Evidence) error {
+	if len(ev.Body) > 32<<20 {
+		return errors.New("staging page too large")
+	}
+	_, e := s.db.ExecContext(ctx, "INSERT INTO research_staging VALUES(?,?,?,?) ON CONFLICT(cache_key) DO UPDATE SET source_url=excluded.source_url,fetched_at=excluded.fetched_at,body=excluded.body", key, ev.URL, stamp(ev.FetchedAt), ev.Body)
+	if e != nil {
+		return e
+	}
+	_, e = s.db.ExecContext(ctx, "DELETE FROM research_staging WHERE fetched_at<?", stamp(time.Now().Add(-48*time.Hour)))
 	return e
 }

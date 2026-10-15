@@ -114,3 +114,46 @@ func TestSECInsiderXMLUsesStoredSubmissionEvidence(t *testing.T) {
 		t.Fatal(r, e)
 	}
 }
+
+func TestFundPagesResumeWithoutPublishingPartialHoldings(t *testing.T) {
+	stage := map[string]Evidence{}
+	fail := true
+	requests := map[string]int{}
+	c := testClient(t, func(r *http.Request) (int, string) {
+		page := r.URL.Query().Get("page")
+		requests[page]++
+		switch page {
+		case "0":
+			return 200, `[{"investorName":"Fund A","sharesNumber":10}]`
+		case "1":
+			return 200, `[{"investorName":"Fund B","sharesNumber":20}]`
+		case "2":
+			if fail {
+				return 429, `rate limit`
+			}
+			return 200, `[]`
+		}
+		t.Fatal("unexpected page", page)
+		return 500, ""
+	})
+	c.ReadStage = func(_ context.Context, k string) (*Evidence, error) {
+		v, ok := stage[k]
+		if !ok {
+			return nil, nil
+		}
+		return &v, nil
+	}
+	c.SaveStage = func(_ context.Context, k string, v Evidence) error { stage[k] = v; return nil }
+	job := Job{Provider: "fmp", Dataset: "funds", Subject: "AAPL", Window: "2026-06-30"}
+	if _, e := c.Collect(context.Background(), job); e == nil {
+		t.Fatal("partial page window accepted")
+	}
+	if len(stage) != 1 {
+		t.Fatal("completed page not checkpointed")
+	}
+	fail = false
+	r, e := c.Collect(context.Background(), job)
+	if e != nil || len(r.Payload.Records) != 2 || !r.Payload.Complete || requests["1"] != 1 || requests["0"] != 2 {
+		t.Fatal("resume did not reuse validated page", e, requests)
+	}
+}
