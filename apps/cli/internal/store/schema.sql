@@ -108,3 +108,4 @@ CREATE TABLE IF NOT EXISTS research_actions(
 );
 CREATE INDEX IF NOT EXISTS research_actions_symbol ON research_actions(symbol,snapshot_id);
 CREATE INDEX IF NOT EXISTS research_evidence_source_url ON research_evidence(source_url,fetched_at DESC);
+CREATE INDEX IF NOT EXISTS research_manual_pending ON research_jobs(id) WHERE manual=1;

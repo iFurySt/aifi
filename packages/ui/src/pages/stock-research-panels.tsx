@@ -105,7 +105,11 @@ export function MissingData({
   };
   return (
     <span>
-      {message[status ?? ""] ?? "Not collected yet"} ·{" "}
+      {message[status ?? ""] ??
+        (data.datasets[dataset]
+          ? "No data for this view"
+          : "Not collected yet")}{" "}
+      ·{" "}
       <a
         href={
           status === "needs_key" || status === "invalid_key"

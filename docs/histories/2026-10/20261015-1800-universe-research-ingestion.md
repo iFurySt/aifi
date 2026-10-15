@@ -60,3 +60,8 @@ provenance. All-directory coverage is a measured queue, not a fixture ticker lis
   normalized per-symbol action rows and no per-listing daily refresh requests.
   Immutable SEC Form 4 XML is reused; expired price jobs are retired before keys
   configured later can trigger out-of-window collection.
+
+- Real dual-host startup exposed a quadratic pending-manual lookup while
+  re-enqueuing an existing universe. Hoisted it out of per-job values and indexed
+  pending manual work. A 12,000-job reconciliation/reopen regression covers
+  simultaneous host startup without changing the user's workspace or source data.

@@ -125,13 +125,17 @@ func (s *Store) AddResearchJobs(ctx context.Context, jobs []market.Job, now time
 		return e
 	}
 	defer tx.Rollback()
-	stmt, e := tx.PrepareContext(ctx, "INSERT OR IGNORE INTO research_jobs(provider,dataset,subject,window,next_run,manual) VALUES(?,?,?,?,?,EXISTS(SELECT 1 FROM research_jobs WHERE manual=1))")
+	var manual bool
+	if e = tx.QueryRowContext(ctx, "SELECT EXISTS(SELECT 1 FROM research_jobs WHERE manual=1)").Scan(&manual); e != nil {
+		return e
+	}
+	stmt, e := tx.PrepareContext(ctx, "INSERT OR IGNORE INTO research_jobs(provider,dataset,subject,window,next_run,manual) VALUES(?,?,?,?,?,?)")
 	if e != nil {
 		return e
 	}
 	defer stmt.Close()
 	for _, j := range jobs {
-		if _, e = stmt.ExecContext(ctx, j.Provider, j.Dataset, j.Subject, j.Window, stamp(now)); e != nil {
+		if _, e = stmt.ExecContext(ctx, j.Provider, j.Dataset, j.Subject, j.Window, stamp(now), manual); e != nil {
 			return e
 		}
 	}
@@ -279,6 +283,11 @@ func (s *Store) FinishResearchJob(ctx context.Context, j market.Job, result mark
 	return tx.Commit()
 }
 func validBar(b market.Bar) bool {
+	for _, v := range []float64{b.Open, b.High, b.Low, b.Close, b.Volume} {
+		if math.IsNaN(v) || math.IsInf(v, 0) {
+			return false
+		}
+	}
 	_, e := time.Parse("2006-01-02", b.Date)
 	return e == nil && b.Open > 0 && b.Close > 0 && b.High >= math.Max(b.Open, b.Close) && b.Low <= math.Min(b.Open, b.Close) && b.Low > 0 && b.Volume >= 0 && !math.IsNaN(b.Volume) && !math.IsInf(b.Volume, 0)
 }

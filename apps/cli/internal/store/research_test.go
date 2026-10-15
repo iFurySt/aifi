@@ -3,6 +3,8 @@ package store
 import (
 	"context"
 	"encoding/json"
+	"fmt"
+	"math"
 	"strings"
 	"testing"
 	"time"
@@ -34,6 +36,12 @@ func TestResearchAtomicPersistenceRestartAndLease(t *testing.T) {
 	invalid.Bars = append(append([]market.Bar{}, result.Bars...), market.Bar{Symbol: "BAD", Date: "invalid"})
 	if e = db.FinishResearchJob(ctx, *claimed, invalid, now, now.Add(time.Hour)); e == nil {
 		t.Fatal("invalid batch committed")
+	}
+	nonfinite := result
+	nonfinite.Bars = append([]market.Bar{}, result.Bars...)
+	nonfinite.Bars[0].High = math.Inf(1)
+	if e = db.FinishResearchJob(ctx, *claimed, nonfinite, now, now.Add(time.Hour)); e == nil {
+		t.Fatal("nonfinite market price committed")
 	}
 	view, _ := db.ResearchRead(ctx, "AAPL")
 	if len(view.Bars) != 0 {
@@ -186,5 +194,60 @@ func TestSharedActionSnapshotIsQueriedBySymbolAndPublishesEmptyCoverage(t *testi
 	}
 	if next, _ := db.ClaimResearchJob(ctx, "massive", []string{"actions"}, false, now); next != nil {
 		t.Fatal("per-listing actions still scheduled")
+	}
+}
+
+func TestLargeQueueReconciliationAllowsAnotherHostToOpen(t *testing.T) {
+	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	defer cancel()
+	path := t.TempDir()
+	db, e := Open(ctx, path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	defer db.Close()
+	jobs := make([]market.Job, 12000)
+	for i := range jobs {
+		jobs[i] = market.Job{Provider: "massive", Dataset: "profile", Subject: fmt.Sprintf("S%05d", i)}
+	}
+	for start := 0; start < len(jobs); start += 500 {
+		if e = db.AddResearchJobs(ctx, jobs[start:min(start+500, len(jobs))], time.Now()); e != nil {
+			t.Fatal(e)
+		}
+	}
+	done := make(chan error, 1)
+	go func() {
+		for start := 0; start < len(jobs); start += 500 {
+			if e := db.AddResearchJobs(ctx, jobs[start:min(start+500, len(jobs))], time.Now()); e != nil {
+				done <- e
+				return
+			}
+		}
+		done <- nil
+	}()
+	other, e := Open(ctx, path)
+	if e != nil {
+		t.Fatal("second app host could not open during a directory-size queue reconciliation", e)
+	}
+	other.Close()
+	if e = <-done; e != nil {
+		t.Fatal(e)
+	}
+	var plan string
+	rows, e := db.db.QueryContext(ctx, "EXPLAIN QUERY PLAN SELECT EXISTS(SELECT 1 FROM research_jobs WHERE manual=1)")
+	if e != nil {
+		t.Fatal(e)
+	}
+	for rows.Next() {
+		var a, b, c int
+		var detail string
+		if e = rows.Scan(&a, &b, &c, &detail); e != nil {
+			t.Fatal(e)
+		}
+		plan += detail
+	}
+	rows.Close()
+	if !strings.Contains(plan, "research_manual_pending") {
+		t.Fatal("manual pending lookup scans the entire universe", plan)
 	}
 }
