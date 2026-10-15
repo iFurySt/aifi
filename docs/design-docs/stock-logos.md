@@ -39,7 +39,10 @@ third-party artwork is bundled into source. See [source provenance](../reference
 - Visible/near-visible avatars request logos; hidden/deep rows do not preload the
   whole universe. Renderer session hits render immediately through an optional
   synchronous repository peek, including remounts and cached symbol changes.
-  Cold images retain the letter until the first successful local/remote read.
+  Sidebar avatars observe the actual stock-list scroller with a 240px lookahead;
+  expanding the window viewport alone does not expand an inner scroll clip.
+  Unresolved reads show a neutral tile. Letters appear only after an unavailable
+  or rejected image result, rather than as an intermediate loading state.
 - The local platform adapter shares in-flight reads and keeps a per-repository
   session LRU, bounded to 128 entries and 8 MiB of data-URL characters. Successful
   images avoid repeated IPC/HTTP for five minutes; null results retry after
@@ -73,8 +76,12 @@ third-party artwork is bundled into source. See [source provenance](../reference
   hashes/dimensions. Failed symbol lookups cannot block a new catalog mapping.
 - Old good images survive refresh failures. Offline reads use cached data; host
   shutdown cancels retrieval/timers without recording a new negative result.
-- Renderer image decoding handles failures. Tiny/empty assets use letters;
-  predominantly white transparent marks get a dark background for contrast.
+- Renderer images decode and get optional contrast sampling before becoming
+  visible, preventing a letter-to-image transition and a white-on-white first
+  frame. Weak preparation caches share work/contrast by the existing bounded
+  repository objects without retaining an unbounded second image store.
+  Tiny/empty/corrupt assets use letters; predominantly white transparent marks
+  get a dark background for contrast.
   Images fill rounded avatars edge to edge with cover sizing and no inset.
 
 No backup/retention or provider-management UI is added. Directory snapshot counts

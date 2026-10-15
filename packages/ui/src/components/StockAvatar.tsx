@@ -1,5 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { StockLogoContext } from "../stock-directory-context";
+import { peekPreparedStockLogo, prepareStockLogo } from "../stock-logo-image";
+
 export function StockAvatar({
   symbol,
   className = "stock-monogram",
@@ -12,18 +14,14 @@ export function StockAvatar({
   const repository = useContext(StockLogoContext);
   const container = useRef<HTMLSpanElement>(null);
   const cached = repository?.peek?.(symbol);
-  const cachedUrl = cached?.dataUrl.startsWith("data:image/png;base64,")
-    ? cached.dataUrl
-    : null;
-  const [image, setImage] = useState<{
-    symbol: string;
-    url: string | null;
-    light: boolean;
-  }>({
+  const ready = cached ? peekPreparedStockLogo(cached) : undefined;
+  const initial = {
     symbol,
-    url: cachedUrl,
-    light: false,
-  });
+    url: ready?.url ?? null,
+    light: ready?.light ?? false,
+    settled: ready !== undefined || !enabled || !repository,
+  };
+  const [image, setImage] = useState(initial);
   useEffect(() => {
     let alive = true,
       loading = false,
@@ -36,31 +34,30 @@ export function StockAvatar({
       lastAttempt = Date.now();
       try {
         const logo = await repository.get(symbol);
-        if (alive) {
-          const url = logo?.dataUrl.startsWith("data:image/png;base64,")
-            ? logo.dataUrl
-            : null;
-          setImage((current) => ({
+        const ready = logo ? await prepareStockLogo(logo) : null;
+        if (alive)
+          setImage({
             symbol,
-            url,
-            light:
-              current.symbol === symbol && current.url === url
-                ? current.light
-                : false,
-          }));
-        }
+            url: ready?.url ?? null,
+            light: ready?.light ?? false,
+            settled: true,
+          });
       } catch {
-        // A temporary local bridge failure must not blank an existing image.
+        // A transient bridge error neither blanks a good image nor confirms absence.
       } finally {
         loading = false;
       }
     };
     const observer = new IntersectionObserver(
       (entries) => {
-        visible = entries.some((e) => e.isIntersecting);
+        visible = entries.some((entry) => entry.isIntersecting);
         if (visible) void load();
       },
-      { rootMargin: "100px" },
+      {
+        // Expanding the window viewport does not expand an inner scroller's clip.
+        root: container.current.closest(".stock-list"),
+        rootMargin: "240px 0px",
+      },
     );
     observer.observe(container.current);
     const focus = () => {
@@ -73,67 +70,36 @@ export function StockAvatar({
       window.removeEventListener("focus", focus);
     };
   }, [symbol, enabled, repository]);
-  const url = enabled
-    ? image.symbol === symbol
-      ? image.url
-      : cachedUrl
-    : null;
+  const current = image.symbol === symbol ? image : initial;
+  const url = enabled ? current.url : null;
+  const state =
+    !enabled || !repository
+      ? "unavailable"
+      : url
+        ? "ready"
+        : current.settled
+          ? "unavailable"
+          : "loading";
   return (
     <span
       className={`${className} stock-avatar`}
       ref={container}
       aria-hidden="true"
-      data-light-logo={!!url && image.symbol === symbol && image.light}
+      data-logo-state={state}
+      data-light-logo={!!url && current.light}
     >
       {url ? (
         <img
           src={url}
           alt=""
-          decoding="async"
-          onLoad={(event) => {
-            // Some providers serve a white mark on transparent pixels. Give it
-            // contrast rather than showing a seemingly empty company avatar.
-            try {
-              if (
-                event.currentTarget.naturalWidth < 4 ||
-                event.currentTarget.naturalHeight < 4
-              ) {
-                setImage({ symbol, url: null, light: false });
-                return;
-              }
-              const canvas = document.createElement("canvas");
-              canvas.width = canvas.height = 24;
-              const context = canvas.getContext("2d");
-              if (!context) return;
-              context.drawImage(event.currentTarget, 0, 0, 24, 24);
-              const pixels = context.getImageData(0, 0, 24, 24).data;
-              let visible = 0,
-                white = 0;
-              for (let i = 0; i < pixels.length; i += 4)
-                if (pixels[i + 3]! > 32) {
-                  visible++;
-                  if (
-                    Math.min(pixels[i]!, pixels[i + 1]!, pixels[i + 2]!) > 224
-                  )
-                    white++;
-                }
-              if (!visible || (visible > 550 && white === visible))
-                setImage({ symbol, url: null, light: false });
-              else if (white / visible > 0.95)
-                setImage((current) =>
-                  current.symbol === symbol && current.url === url
-                    ? { ...current, light: true }
-                    : current,
-                );
-            } catch {
-              /* A decoded logo remains usable if contrast sampling fails. */
-            }
-          }}
-          onError={() => setImage({ symbol, url: null, light: false })}
+          decoding="sync"
+          onError={() =>
+            setImage({ symbol, url: null, light: false, settled: true })
+          }
         />
-      ) : (
+      ) : state === "unavailable" ? (
         symbol.slice(0, 1)
-      )}
+      ) : null}
     </span>
   );
 }
