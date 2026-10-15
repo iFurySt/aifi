@@ -53,3 +53,10 @@ An initial batch implementation issued 50 directory lookups and measured about
 - `packages/ui/src/stock-logo-page.ts`, `packages/ui/src/stock-directory-context.tsx`
 - `packages/ui/src/components/StockAvatar.tsx`, `StockSidebar.tsx`
 - Related regression tests and architecture/frontend/security/reliability docs.
+
+### Delivery
+
+Implementation `9e3ba5f` pushed to main. Primary builds were refreshed and the
+normal AIFi app restarted with its existing user data. Native visual review
+confirmed real cached images in the sidebar. Existing Chrome preview restored;
+ignored validation metrics/screenshots preserved before worktree cleanup.
