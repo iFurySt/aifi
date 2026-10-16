@@ -9,6 +9,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/ifuryst/aifi/apps/cli/internal/directory"
 	"github.com/ifuryst/aifi/apps/cli/internal/market"
 )
 
@@ -270,5 +271,93 @@ func TestPausedFutureListingsDoNotInheritAnOldManualRequest(t *testing.T) {
 	}
 	if later, _ := db.ClaimResearchJob(ctx, "sec", []string{"facts"}, true, now); later != nil {
 		t.Fatal("automation pause ignored for a new listing")
+	}
+}
+
+func TestCoverageAggregatesSymbolsBeforeJoiningDirectory(t *testing.T) {
+	db := openTest(t)
+	files := fixtures(t, "1014202621:31", true)
+	// 1,000 candidates plus many price sessions reproduces the former O(bars ×
+	// listings) status join, which blocked local reads as ingestion progressed.
+	text := "Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares\n"
+	for i := 0; i < 1000; i++ {
+		text += fmt.Sprintf("Q%04d|Scale common stock|Q|N|N|100|N|N\n", i)
+	}
+	text += "File Creation Time: 1014202621:31|||||||\n"
+	large, err := directory.Parse("nasdaqlisted", []byte(text))
+	if err != nil {
+		t.Fatal(err)
+	}
+	large.URL = files[0].URL
+	large.FetchedAt = files[0].FetchedAt
+	files[0] = large
+	commitTest(t, db, files)
+	ctx := context.Background()
+	_, err = db.db.ExecContext(ctx, `INSERT INTO research_snapshots VALUES('scale','yahoo','prices','Q0000','2026-10-15','{"complete":true}')`)
+	if err != nil {
+		t.Fatal(err)
+	}
+	_, err = db.db.ExecContext(ctx, `WITH RECURSIVE n(x) AS (VALUES(0) UNION ALL SELECT x+1 FROM n WHERE x<19999) INSERT INTO daily_bars SELECT 'yahoo',printf('Q%04d',x % 100),date('2025-01-01','+' || (x / 100) || ' days'),'split-adjusted',100,110,90,105,1000,'scale' FROM n`)
+	if err != nil {
+		t.Fatal(err)
+	}
+	timed, stop := context.WithTimeout(ctx, 3*time.Second)
+	defer stop()
+	status, err := db.ResearchStatus(timed)
+	if err != nil || status.Priced != 100 {
+		t.Fatal("coverage must count securities once without scanning each session against each listing", status.Priced, err)
+	}
+}
+
+func TestPriceSourceSelectionDoesNotMixBasisAndRetainsLastGood(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Now()
+	for _, provider := range []string{"yahoo", "massive"} {
+		subject := "OTHER.B"
+		basis := "split-adjusted"
+		price := 100.0
+		if provider == "massive" {
+			subject = "2026-10-14"
+			basis = "raw"
+			price = 200
+		}
+		db.AddResearchJobs(ctx, []market.Job{{Provider: provider, Dataset: "prices", Subject: subject}}, now)
+		j, err := db.ClaimResearchJob(ctx, provider, []string{"prices"}, false, now)
+		if err != nil || j == nil {
+			t.Fatal(err)
+		}
+		result := market.Result{Evidence: []market.Evidence{{URL: "https://example.invalid/" + provider, Body: []byte(`{"source":"fixture"}`), FetchedAt: now}}, Basis: basis, Payload: market.Payload{Complete: true}, Bars: []market.Bar{{Symbol: "OTHER.B", Date: "2026-10-14", Open: price, High: price + 1, Low: price - 1, Close: price, Volume: 1000}}}
+		if err = db.FinishResearchJob(ctx, *j, result, now, now.Add(time.Hour)); err != nil {
+			t.Fatal(err)
+		}
+	}
+	v, err := db.ResearchRead(ctx, "OTHER.B")
+	if err != nil || len(v.Bars) != 1 || v.Bars[0].Close != 100 || v.Basis != "split-adjusted" {
+		t.Fatal(v, err)
+	}
+	cfg, _ := db.ResearchConfig(ctx)
+	cfg.PriceSource = "massive"
+	if _, err = db.SaveResearchConfig(ctx, cfg); err != nil {
+		t.Fatal(err)
+	}
+	v, err = db.ResearchRead(ctx, "OTHER.B")
+	if err != nil || len(v.Bars) != 1 || v.Bars[0].Close != 200 || v.Basis != "raw" {
+		t.Fatal("source series mixed", v, err)
+	}
+	// Invalid Yahoo restatement must roll back its deletion and head update.
+	j, err := db.ClaimResearchJob(ctx, "yahoo", []string{"prices"}, false, now.Add(25*time.Hour))
+	if err != nil || j == nil {
+		t.Fatal(err)
+	}
+	if err = db.FinishResearchJob(ctx, *j, market.Result{Evidence: []market.Evidence{{URL: "https://example.invalid/yahoo", Body: []byte(`{"source":"invalid replacement"}`), FetchedAt: now}}, Basis: "split-adjusted", Payload: market.Payload{Complete: true}, Bars: []market.Bar{{Symbol: "OTHER.B", Date: "invalid"}}}, now.Add(25*time.Hour), now.Add(26*time.Hour)); err == nil {
+		t.Fatal("invalid replacement accepted")
+	}
+	cfg, _ = db.ResearchConfig(ctx)
+	cfg.PriceSource = "yahoo"
+	db.SaveResearchConfig(ctx, cfg)
+	v, err = db.ResearchRead(ctx, "OTHER.B")
+	if err != nil || len(v.Bars) != 1 || v.Bars[0].Close != 100 {
+		t.Fatal("last-good Yahoo snapshot lost", v, err)
 	}
 }

@@ -14,6 +14,7 @@ export const researchDatasets = [
 export type ResearchDataset = (typeof researchDatasets)[number];
 export interface ResearchConfig {
   revision: number;
+  priceSource?: "yahoo" | "massive";
   automatic: boolean;
   historyDays: number;
   datasets: Record<
@@ -21,7 +22,7 @@ export interface ResearchConfig {
     { enabled: boolean; intervalHours: number }
   >;
   limits: Record<
-    "massive" | "sec" | "fmp",
+    "massive" | "sec" | "fmp" | "yahoo",
     { perMinute: number; perDay: number }
   >;
 }
@@ -77,7 +78,7 @@ export interface ResearchDatasetView {
 export interface StockResearch {
   symbol: string;
   bars: DailyBar[];
-  basis: "raw";
+  basis: "raw" | "split-adjusted";
   datasets: Partial<Record<ResearchDataset, ResearchDatasetView>>;
   coverage: Partial<Record<ResearchDataset, string>>;
 }
@@ -118,6 +119,8 @@ export function splitAdjustedBars(data: StockResearch): {
   bars: DailyBar[];
   adjusted: boolean;
 } {
+  if (data.basis === "split-adjusted")
+    return { bars: data.bars, adjusted: true };
   const actions = data.datasets.actions;
   if (!actions?.data.complete) return { bars: data.bars, adjusted: false };
   const splits = (actions.data.records ?? []).filter(
@@ -346,6 +349,7 @@ export function isResearchSourceURL(value: string): boolean {
         "data.sec.gov",
         "investor.apple.com",
         "www.apple.com",
+        "query1.finance.yahoo.com",
         "api.massive.com",
         "massive.com",
         "financialmodelingprep.com",

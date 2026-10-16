@@ -64,6 +64,7 @@ type Evidence struct {
 	FetchedAt time.Time
 }
 type Result struct {
+	Basis    string
 	Payload  Payload
 	Bars     []Bar
 	Aliases  map[string]string

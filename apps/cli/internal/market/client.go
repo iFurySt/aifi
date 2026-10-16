@@ -43,12 +43,17 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	if e != nil {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
-	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true}[u.Host] {
+	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true}[u.Host] {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
 	q := u.Query()
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
+	case "yahoo":
+		if u.Host != "query1.finance.yahoo.com" {
+			return nil, &Failure{Code: "invalid_endpoint"}
+		}
+		headers.Set("User-Agent", "AIFi/0.1 local investment research")
 	case "massive":
 		if keys["apiKey"] == "" {
 			return nil, &Failure{Code: "needs_key"}
@@ -209,7 +214,11 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 	case "identity":
 		e = c.identity(ctx, &result)
 	case "prices":
-		e = c.prices(ctx, j, &result)
+		if j.Provider == "yahoo" {
+			e = c.yahooPrices(ctx, j, &result)
+		} else {
+			e = c.prices(ctx, j, &result)
+		}
 	case "profile":
 		e = c.profile(ctx, j, &result)
 	case "filings":

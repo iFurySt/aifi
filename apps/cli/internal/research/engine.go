@@ -86,6 +86,9 @@ func New(db *store.Store, path string, offline bool) *Engine {
 				if !cfg.Automatic && !j.Manual {
 					return &market.Failure{Code: "paused"}
 				}
+				if j.Dataset == "prices" && j.Provider != cfg.PriceSource {
+					return &market.Failure{Code: "paused"}
+				}
 				if j.Dataset != "identity" && !cfg.Datasets[j.Dataset].Enabled {
 					return &market.Failure{Code: "paused"}
 				}
@@ -157,6 +160,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
+		jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: "prices", Subject: symbol})
 		for _, d := range []string{"profile", "funds", "politicians", "analyst", "news"} {
 			p := "massive"
 			if d == "funds" || d == "politicians" || d == "analyst" || d == "news" {
@@ -205,7 +209,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	}
 	enabled := []string{}
 	for d, v := range cfg.Datasets {
-		if v.Enabled {
+		if v.Enabled && (d != "prices" || p == cfg.PriceSource) {
 			enabled = append(enabled, d)
 		}
 	}
@@ -217,7 +221,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if err != nil {
 		return false, nil
 	}
-	if p != "sec" && keys["apiKey"] == "" {
+	if p != "sec" && p != "yahoo" && keys["apiKey"] == "" {
 		return false, nil
 	}
 	if p == "sec" {
@@ -248,13 +252,27 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 			hours = v.IntervalHours
 		}
 		next := now.Add(time.Duration(hours) * time.Hour)
-		if j.Dataset == "prices" {
+		if j.Dataset == "prices" && p != "yahoo" {
 			date, _ := time.Parse("2006-01-02", j.Subject)
 			if now.Sub(date) > 7*24*time.Hour {
 				next = now.Add(30 * 24 * time.Hour)
 			}
 		}
-		err = e.DB.FinishResearchJob(ctx, *j, result, now, next)
+		if p == "yahoo" {
+			cutoff := now.AddDate(0, 0, -cfg.HistoryDays).Format("2006-01-02")
+			bars := result.Bars[:0]
+			for _, b := range result.Bars {
+				if b.Date >= cutoff {
+					bars = append(bars, b)
+				}
+			}
+			result.Bars = bars
+		}
+		if p == "yahoo" && len(result.Bars) == 0 {
+			err = &market.Failure{Code: "not_found"}
+		} else {
+			err = e.DB.FinishResearchJob(ctx, *j, result, now, next)
+		}
 		if err == nil {
 			return true, nil
 		}
@@ -265,10 +283,14 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	var failure *market.Failure
 	if errors.As(err, &failure) {
 		code = failure.Code
+		if (code == "access_denied" || code == "invalid_key") && p == "yahoo" {
+			code = "rate_limited"
+			failure = &market.Failure{Code: code, RetryAfter: 15 * time.Minute}
+		}
 		if code == "access_denied" {
 			_ = e.DB.BlockResearchDataset(ctx, p, j.Dataset, code)
 		}
-		if code == "not_found" {
+		if code == "not_found" || code == "unsupported_symbol" {
 			hours := cfg.Datasets[j.Dataset].IntervalHours
 			if hours < 24 {
 				hours = 24
@@ -299,7 +321,7 @@ func (e *Engine) Run(ctx context.Context) {
 	}
 	var workers sync.WaitGroup
 	// One worker per provider; all requests also pass the durable shared budget.
-	for _, p := range []string{"massive", "sec", "fmp"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo"} {
 		workers.Add(1)
 		go func(provider string) {
 			defer workers.Done()

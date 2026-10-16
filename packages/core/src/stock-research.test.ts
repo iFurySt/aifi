@@ -181,3 +181,36 @@ it("does not label distant sparse observations as daily or year-start returns", 
   expect(metrics.ytd).toBeUndefined();
   expect(metrics.high52).toBeUndefined();
 });
+
+it("does not adjust Yahoo split-adjusted bars a second time", () => {
+  const data = emptyResearch("OTHER.B");
+  data.basis = "split-adjusted";
+  data.bars = [
+    {
+      date: "2026-01-02",
+      open: 100,
+      high: 110,
+      low: 90,
+      close: 105,
+      volume: 1000,
+    },
+  ];
+  data.datasets.actions = {
+    provider: "massive",
+    fetchedAt: "2026-10-15",
+    sources: [],
+    recordCount: 1,
+    data: {
+      complete: true,
+      records: [
+        {
+          kind: "splits",
+          execution_date: "2026-05-01",
+          split_from: 1,
+          split_to: 10,
+        },
+      ],
+    },
+  };
+  expect(splitAdjustedBars(data)).toEqual({ bars: data.bars, adjusted: true });
+});

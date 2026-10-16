@@ -159,6 +159,11 @@ func TestCollectionToOfflineResearchReadForNonDemoSymbol(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	cfg, _ := db.ResearchConfig(ctx)
+	cfg.PriceSource = "massive"
+	if _, err = db.SaveResearchConfig(ctx, cfg); err != nil {
+		t.Fatal(err)
+	}
 	engine := New(db, path, false)
 	engine.Client.Gate = nil
 	engine.Client.Key = func(context.Context, string) (map[string]string, error) {
@@ -246,5 +251,76 @@ func TestNewIssuerMissingDataRetriesWithoutPermanentBlock(t *testing.T) {
 	}
 	if j, e := db.ClaimResearchJob(ctx, "massive", []string{"profile"}, false, now.Add(169*time.Hour)); e != nil || j == nil {
 		t.Fatal("temporarily missing data permanently blocked", e)
+	}
+}
+
+func TestKeylessPricesPersistRestateAndReadOffline(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, err := store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	engine := New(db, path, false)
+	cfg, _ := db.ResearchConfig(ctx)
+	if cfg.PriceSource != "yahoo" || cfg.Limits["yahoo"].PerMinute != 20 {
+		t.Fatal("keyless default missing", cfg)
+	}
+	now := time.Date(2026, 10, 15, 21, 0, 0, 0, time.UTC)
+	engine.Now = func() time.Time { return now }
+	engine.Client.Now = engine.Now
+	calls := 0
+	closePrice := 105.0
+	engine.Client.HTTP = &http.Client{Transport: fixtureHTTP(func(r *http.Request) (*http.Response, error) {
+		calls++
+		if r.URL.Host != "query1.finance.yahoo.com" || r.Header.Get("Authorization") != "" {
+			t.Fatal("not keyless", r.URL)
+		}
+		raw := fmt.Sprintf(`{"chart":{"error":null,"result":[{"meta":{"symbol":"OTHER-B","currency":"USD","exchangeTimezoneName":"America/New_York"},"timestamp":[1791984600],"indicators":{"quote":[{"open":[100],"high":[110],"low":[90],"close":[%v],"volume":[1234]}]}}]}}`, closePrice)
+		return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader(raw))}, nil
+	})}
+	if err = db.AddResearchJobs(ctx, []market.Job{{Provider: "yahoo", Dataset: "prices", Subject: "OTHER.B"}}, now); err != nil {
+		t.Fatal(err)
+	}
+	if worked, err := engine.Step(ctx, "yahoo"); err != nil || !worked {
+		t.Fatal(worked, err)
+	}
+	first, err := db.ResearchRead(ctx, "OTHER.B")
+	if err != nil || len(first.Bars) != 1 || first.Bars[0].Close != 105 || first.Basis != "split-adjusted" || first.Datasets["prices"].Provider != "yahoo" || len(first.Datasets["prices"].Sources) != 1 {
+		t.Fatal(market.Marshal(first), err)
+	}
+	// A subsequent restated window replaces old split-adjusted values atomically.
+	now = now.Add(25 * time.Hour)
+	closePrice = 100
+	if worked, err := engine.Step(ctx, "yahoo"); err != nil || !worked {
+		t.Fatal(worked, err)
+	}
+	db.Close()
+	db, err = store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	for i := 0; i < 3; i++ {
+		v, err := db.ResearchRead(ctx, "OTHER.B")
+		if err != nil || len(v.Bars) != 1 || v.Bars[0].Close != 100 || v.Coverage["prices"] != "stored" {
+			t.Fatal(market.Marshal(v), err)
+		}
+	}
+	if calls != 2 {
+		t.Fatal("local/offline reads fetched provider", calls)
+	}
+	engine.DB = db
+	cfg, _ = db.ResearchConfig(ctx)
+	cfg.Automatic = false
+	if _, err = db.SaveResearchConfig(ctx, cfg); err != nil {
+		t.Fatal(err)
+	}
+	now = now.Add(25 * time.Hour)
+	if worked, err := engine.Step(ctx, "yahoo"); err != nil || worked {
+		t.Fatal("paused sync executed", worked, err)
+	}
+	if calls != 2 {
+		t.Fatal("paused source requested")
 	}
 }

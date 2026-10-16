@@ -31,6 +31,7 @@ type ProviderLimit struct {
 }
 type ResearchConfig struct {
 	Revision    int                      `json:"revision"`
+	PriceSource string                   `json:"priceSource"`
 	Automatic   bool                     `json:"automatic"`
 	HistoryDays int                      `json:"historyDays"`
 	Datasets    map[string]DatasetConfig `json:"datasets"`
@@ -50,10 +51,16 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	if c.Limits == nil {
 		c.Limits = map[string]ProviderLimit{"massive": {5, 10000}, "sec": {240, 100000}, "fmp": {4, 200}}
 	}
+	if c.Limits["yahoo"].PerMinute == 0 {
+		c.Limits["yahoo"] = ProviderLimit{20, 10000}
+	}
+	if c.PriceSource == "" {
+		c.PriceSource = "yahoo"
+	}
 	return c, e
 }
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
-	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 3 {
+	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 4 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
 	}
 	for _, d := range ResearchDatasets {
@@ -62,7 +69,7 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 			return c, errors.New("invalid dataset interval")
 		}
 	}
-	for _, p := range []string{"massive", "sec", "fmp"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo"} {
 		v, ok := c.Limits[p]
 		if !ok || v.PerMinute < 1 || v.PerMinute > 300 || v.PerDay < 1 || v.PerDay > 1000000 {
 			return c, errors.New("invalid provider budget")
@@ -164,7 +171,7 @@ func (s *Store) ClaimResearchJob(ctx context.Context, provider string, enabled [
 	args = append(args, now.AddDate(0, 0, -14).Format("2006-01-02"))
 	var j market.Job
 	// Mapping and recent market batches lead history and per-company enrichment.
-	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN dataset='prices' AND subject>=? THEN 1 WHEN dataset='actions' AND subject='us' THEN 2 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN dataset='prices' THEN 3 ELSE 4 END,CASE WHEN dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
+	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN provider='massive' AND dataset='prices' AND subject>=? THEN 1 WHEN dataset='actions' AND subject='us' THEN 2 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN dataset='prices' THEN 3 ELSE 4 END,CASE WHEN provider='massive' AND dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
 	if errors.Is(e, sql.ErrNoRows) {
 		return nil, nil
 	}
@@ -264,11 +271,24 @@ func (s *Store) FinishResearchJob(ctx context.Context, j market.Job, result mark
 			}
 		}
 	}
+	basis := result.Basis
+	if basis == "" {
+		basis = "raw"
+	}
+	if basis != "raw" && basis != "split-adjusted" {
+		return errors.New("invalid price basis")
+	}
+	if j.Provider == "yahoo" && len(result.Bars) > 0 {
+		// Replace the whole symbol window atomically: new splits restate historical OHLC.
+		if _, e = tx.ExecContext(ctx, "DELETE FROM daily_bars WHERE provider=? AND symbol=?", j.Provider, j.Subject); e != nil {
+			return e
+		}
+	}
 	for _, b := range result.Bars {
 		if b.Symbol == "" || !validBar(b) {
 			return errors.New("invalid OHLCV")
 		}
-		if _, e = tx.ExecContext(ctx, `INSERT INTO daily_bars VALUES(?,?,?,'raw',?,?,?,?,?,?) ON CONFLICT(provider,symbol,date,basis) DO UPDATE SET open=excluded.open,high=excluded.high,low=excluded.low,close=excluded.close,volume=excluded.volume,snapshot_id=excluded.snapshot_id`, j.Provider, b.Symbol, b.Date, b.Open, b.High, b.Low, b.Close, b.Volume, snapshot); e != nil {
+		if _, e = tx.ExecContext(ctx, `INSERT INTO daily_bars VALUES(?,?,?,?,?,?,?,?,?,?) ON CONFLICT(provider,symbol,date,basis) DO UPDATE SET open=excluded.open,high=excluded.high,low=excluded.low,close=excluded.close,volume=excluded.volume,snapshot_id=excluded.snapshot_id`, j.Provider, b.Symbol, b.Date, basis, b.Open, b.High, b.Low, b.Close, b.Volume, snapshot); e != nil {
 			return e
 		}
 	}
@@ -383,6 +403,10 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 	if e != nil {
 		return out, e
 	}
+	cfg, e := s.ResearchConfig(ctx)
+	if e != nil {
+		return out, e
+	}
 	// One read transaction gives all panels a consistent committed view.
 	tx, e := s.db.BeginTx(ctx, &sql.TxOptions{ReadOnly: true})
 	if e != nil {
@@ -460,7 +484,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 	var priceID string
 	var priceView DatasetView
 	var pricePayload string
-	err := tx.QueryRowContext(ctx, `SELECT s.id,s.provider,s.fetched_at,s.payload_json FROM daily_bars b JOIN research_snapshots s ON s.id=b.snapshot_id WHERE b.symbol=? AND b.provider='massive' ORDER BY b.date DESC LIMIT 1`, symbol).Scan(&priceID, &priceView.Provider, &priceView.FetchedAt, &pricePayload)
+	err := tx.QueryRowContext(ctx, `SELECT s.id,s.provider,s.fetched_at,s.payload_json,b.basis FROM daily_bars b JOIN research_snapshots s ON s.id=b.snapshot_id WHERE b.symbol=? ORDER BY (b.provider=?) DESC,b.date DESC LIMIT 1`, symbol, cfg.PriceSource).Scan(&priceID, &priceView.Provider, &priceView.FetchedAt, &pricePayload, &out.Basis)
 	if err != nil && !errors.Is(err, sql.ErrNoRows) {
 		return out, err
 	}
@@ -493,7 +517,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		}
 		out.Datasets[d] = v
 	}
-	rows, e = tx.QueryContext(ctx, "SELECT date,open,high,low,close,volume FROM daily_bars WHERE symbol=? AND provider='massive' AND basis='raw' ORDER BY date DESC LIMIT 550", symbol)
+	rows, e = tx.QueryContext(ctx, "SELECT date,open,high,low,close,volume FROM daily_bars WHERE symbol=? AND provider=? AND basis=? ORDER BY date DESC LIMIT 550", symbol, priceView.Provider, out.Basis)
 	if e != nil {
 		return out, e
 	}
@@ -511,6 +535,10 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		return out, e
 	}
 	sort.Slice(out.Bars, func(i, j int) bool { return out.Bars[i].Date < out.Bars[j].Date })
+	if view, ok := out.Datasets["prices"]; ok {
+		view.RecordCount = len(out.Bars)
+		out.Datasets["prices"] = view
+	}
 	for _, d := range ResearchDatasets {
 		if _, ok := out.Datasets[d]; ok {
 			out.Coverage[d] = "stored"
@@ -538,6 +566,9 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 			continue
 		}
 		p := "massive"
+		if d == "prices" {
+			p = cfg.PriceSource
+		}
 		if d == "facts" || d == "filings" || d == "insiders" {
 			p = "sec"
 		}
@@ -551,6 +582,9 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		}
 		if blocked != "" {
 			out.Coverage[d] = blocked
+			continue
+		}
+		if p == "yahoo" {
 			continue
 		}
 		if p != "sec" {
@@ -617,11 +651,11 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 		return out, e
 	}
 	out.Universe = len(symbols)
-	e = s.db.QueryRowContext(ctx, `SELECT COUNT(DISTINCT b.symbol) FROM daily_bars b JOIN listings l ON UPPER(l.source_symbol)=b.symbol JOIN directory_memberships m ON m.listing_id=l.id JOIN directory_head h ON h.snapshot_id=m.snapshot_id WHERE m.test=0 AND m.etf=0`).Scan(&out.Priced)
+	e = s.db.QueryRowContext(ctx, `SELECT COUNT(*) FROM (SELECT DISTINCT symbol FROM daily_bars) b JOIN (SELECT DISTINCT UPPER(l.source_symbol) AS symbol FROM directory_head h JOIN directory_memberships m ON m.snapshot_id=h.snapshot_id JOIN listings l ON l.id=m.listing_id WHERE m.test=0 AND m.etf=0) u ON u.symbol=b.symbol`).Scan(&out.Priced)
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' GROUP BY dataset`)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) GROUP BY dataset`, out.Config.PriceSource)
 	if e != nil {
 		return out, e
 	}
@@ -670,7 +704,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if err != nil {
 		return out, err
 	}
-	for _, p := range []string{"massive", "sec", "fmp"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo"} {
 		index := -1
 		for i, v := range out.Providers {
 			if v.Provider == p {
@@ -686,7 +720,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 			if !strings.Contains(settings.SECUserAgent, "@") {
 				out.Providers[index].Blocked = "needs_contact"
 			}
-		} else if !configured[p] {
+		} else if p != "yahoo" && !configured[p] {
 			out.Providers[index].Blocked = "needs_key"
 		}
 	}
@@ -832,10 +866,10 @@ func (s *Store) BoundPriceJobs(ctx context.Context, from string, now time.Time) 
 		return e
 	}
 	defer tx.Rollback()
-	if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE dataset='prices' AND subject<? AND state!='running'", from); e != nil {
+	if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE provider='massive' AND dataset='prices' AND subject<? AND state!='running'", from); e != nil {
 		return e
 	}
-	if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET state='queued',next_run=? WHERE dataset='prices' AND subject>=? AND state='retired'", stamp(now), from); e != nil {
+	if _, e = tx.ExecContext(ctx, "UPDATE research_jobs SET state='queued',next_run=? WHERE provider='massive' AND dataset='prices' AND subject>=? AND state='retired'", stamp(now), from); e != nil {
 		return e
 	}
 	return tx.Commit()
