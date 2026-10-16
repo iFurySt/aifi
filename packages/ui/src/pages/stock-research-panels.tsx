@@ -218,7 +218,11 @@ export function Financials({ data }: { data: StockResearch }) {
         ? [
             ...financialSeries(facts, "revenue", "Yearly"),
             ...facts
-              .filter((f) => !f.start && /^(10-K|20-F)(\/A)?$/.test(f.form))
+              .filter(
+                (f) =>
+                  f.period === "annual" ||
+                  (!f.start && /^(10-K|20-F)(\/A)?$/.test(f.form)),
+              )
               .map((f) => ({ end: f.end })),
           ]
         : rows.flatMap(([metric]) => series(metric))
@@ -302,7 +306,7 @@ export function Financials({ data }: { data: StockResearch }) {
                       const p = series(metric).find((v) => v.end === end);
                       return p ? (
                         <span
-                          title={`${p.derived ? "Derived · " : ""}Filed ${p.filed} · ${p.accession}`}
+                          title={`${p.derived ? "Derived · " : ""}${p.filed ? `Filed ${p.filed} · ${p.accession}` : "Vendor period end · Filing date unavailable"}`}
                         >
                           {metric === "eps"
                             ? money(p.value)
@@ -320,7 +324,11 @@ export function Financials({ data }: { data: StockResearch }) {
           <SourceNote view={data.datasets.facts} />
           {facts.length > 0 && (
             <p className="stock-footnote">
-              USD · Actual period ends · * Derived from reported values
+              USD ·{" "}
+              {data.datasets.facts?.provider === "yahoo"
+                ? "Vendor period ends"
+                : "Actual period ends"}{" "}
+              · * Derived from reported values
             </p>
           )}
         </>

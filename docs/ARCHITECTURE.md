@@ -190,6 +190,10 @@ The app-owned Go service now runs bounded Yahoo/Massive/SEC/FMP workers independ
 of reads. Every directory candidate gets enrichment jobs; market-date jobs cover
 the full market. Yahoo is the default keyless daily-price source, with explicit
 split-adjusted series and full-directory per-listing jobs; Massive is selectable.
+Company details, standardized annual/quarterly financials and recent filing
+indices also default to Yahoo public sources. Each has its own source selector;
+company-page JSON is shared privately for up to 24 hours. Jobs rotate across
+these datasets rather than waiting behind the initial price backlog.
 Other datasets with missing credentials/contact leave work pending. Optional FMP
 datasets are disabled by default and may require paid endpoint permissions.
 Go can decrypt existing AES-GCM blobs using the private host vault file solely

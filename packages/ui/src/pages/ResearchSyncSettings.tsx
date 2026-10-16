@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   researchDatasets,
+  researchProvider,
   type ResearchConfig,
   type ResearchDataset,
   type ResearchStatus,
@@ -59,7 +60,7 @@ function DatasetRow({
       <div>
         <strong>{names[dataset]}</strong>
         <p>
-          {dataset === "prices" && (config.priceSource ?? "yahoo") === "yahoo"
+          {researchProvider(config, dataset) === "yahoo"
             ? "Yahoo Finance · No API key"
             : sources[dataset]}
           {status
@@ -354,6 +355,36 @@ export function ResearchSyncSettings() {
                   </select>
                 </div>
               </div>
+              {(
+                [
+                  ["profileSource", "Company details source", "massive"],
+                  ["factsSource", "Financial statements source", "sec"],
+                  ["filingsSource", "Filings source", "sec"],
+                ] as const
+              ).map(([field, label, official]) => (
+                <div className="setting-row" key={field}>
+                  <div>
+                    <strong>{label}</strong>
+                  </div>
+                  <div className="setting-control">
+                    <select
+                      aria-label={label}
+                      value={state.config[field] ?? "yahoo"}
+                      disabled={busy}
+                      onChange={(e) =>
+                        void save({ ...state.config, [field]: e.target.value })
+                      }
+                    >
+                      <option value="yahoo">Yahoo Finance · No key</option>
+                      <option value={official}>
+                        {official === "sec"
+                          ? "SEC · Contact required"
+                          : "Massive · API key"}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              ))}
               <div className="setting-row">
                 <div>
                   <strong>Price history</strong>
@@ -383,15 +414,7 @@ export function ResearchSyncSettings() {
                   dataset={d}
                   sourceState={
                     state.providers.find(
-                      (p) =>
-                        p.provider ===
-                        (d === "prices"
-                          ? (state.config.priceSource ?? "yahoo")
-                          : d === "facts" || d === "filings" || d === "insiders"
-                            ? "sec"
-                            : d === "profile" || d === "actions"
-                              ? "massive"
-                              : "fmp"),
+                      (p) => p.provider === researchProvider(state.config, d),
                     )?.blocked
                   }
                   config={state.config}

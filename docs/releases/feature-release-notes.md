@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-17 | Keyless company research | Company profiles, annual/quarterly financials and recent SEC filing indices collect without API keys. | Added bounded Yahoo public-source collectors, SQLite persistence, independent source selection, fair dataset scheduling and short expandable company descriptions. Official SEC adapters remain optional. |
 | 2026-10-16 | Keyless stock prices | Daily charts collect real data without entering an API key. | Added default Yahoo daily collection for all directory candidates, SQLite persistence, source/basis labels and selectable Massive access. Other datasets retain their own setup requirements. |
 | 2026-10-15 | Stock research | Browse locally collected stock research across the directory and configure sources in dedicated API key settings. | Added durable background price, company, financial, filing and activity collection; six tabs and Watchlist read SQLite. Missing credentials/permissions stay explicit; live coverage grows after configuration. |
 | 2026-10-15 | Stock avatars | Scrolling prepares nearby logos before they enter the list viewport, without flashing temporary letters. | Fixed the inner-scroll observer root, separated pending/unavailable states, and decode/sample contrast before showing an image. |

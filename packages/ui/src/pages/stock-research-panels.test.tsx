@@ -88,3 +88,35 @@ it("renders source filing links and explicit key requirements with no invented r
   expect(html).toContain("2026-09-26");
   expect(html).not.toContain("No filings");
 });
+
+it("shows vendor annual periods without fabricating a filing date", () => {
+  const data = emptyResearch("OTHER.B");
+  data.datasets.facts = {
+    ...view({
+      complete: false,
+      facts: [
+        {
+          period: "annual",
+          metric: "revenue",
+          tag: "yahoo:annualTotalRevenue",
+          unit: "USD",
+          value: "123000000000",
+          end: "2025-09-30",
+          filed: "",
+          accession: "",
+          form: "",
+          fiscalYear: 0,
+          fiscalPeriod: "",
+        },
+      ],
+    }),
+    provider: "yahoo",
+  };
+  const html = renderToStaticMarkup(<Financials data={data} />);
+  expect(html).toContain("2025-09-30");
+  expect(html).toContain("$123B");
+  expect(html).toContain("Vendor period end");
+  expect(html).not.toContain("Actual period ends");
+  expect(html).not.toContain("Filed  ·");
+  expect(html).toContain("YAHOO");
+});

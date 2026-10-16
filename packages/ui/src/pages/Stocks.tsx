@@ -45,6 +45,7 @@ export function Stocks() {
   const { workspace, stockRoute, openStock, update, notify, research } =
     useWorkspace();
   const { symbol, tab } = stockRoute;
+  const [expandedCompany, setExpandedCompany] = useState<string | null>(null);
   const { data, loading, error } = useStockResearch(symbol);
   const profile =
     data.datasets.profile?.data.profile ?? data.datasets.filings?.data.profile;
@@ -277,7 +278,42 @@ export function Stocks() {
               </section>
               <section className="stock-about">
                 <h2>About {quote?.name ?? symbol} </h2>
-                <p>{profile?.description ?? "No company data"}</p>
+                <p>
+                  {profile?.description
+                    ? profile.description.length > 420 &&
+                      expandedCompany !== symbol
+                      ? `${profile.description.slice(0, 417)}…`
+                      : profile.description
+                    : "No company data"}
+                </p>
+                {profile?.description && profile.description.length > 420 && (
+                  <button
+                    className="text-link"
+                    onClick={() =>
+                      setExpandedCompany(
+                        expandedCompany === symbol ? null : symbol,
+                      )
+                    }
+                  >
+                    {expandedCompany === symbol ? "Show less" : "Read more"}
+                  </button>
+                )}
+                {profile && (
+                  <p className="stock-footnote">
+                    {[
+                      profile.sector,
+                      profile.country,
+                      profile.employees
+                        ? `${profile.employees.toLocaleString()} employees`
+                        : undefined,
+                    ]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                )}
+                <SourceNote
+                  view={data.datasets.profile ?? data.datasets.filings}
+                />
                 <button
                   className="text-link"
                   onClick={() => research(`Research ${symbol}.`)}

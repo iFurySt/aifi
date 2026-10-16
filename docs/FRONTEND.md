@@ -243,7 +243,7 @@ actual append reads; status/empty/error hints use the stock rows' 8px leading in
 
 Stocks no longer imports quote/profile/statement fixtures. Its injected
 StockResearchRepository reads normalized SQLite research snapshots. All six tabs
-use stored data or a dataset-specific empty/access state. Actual fiscal dates,
+use stored data or a dataset-specific empty/access state. Source period dates,
 source timestamps, split basis and partial source windows are visible. Watchlist
 reads local closing prices with bounded concurrency; Portfolio and AI remain
 examples. See [runtime semantics](design-docs/research-ingestion.md).

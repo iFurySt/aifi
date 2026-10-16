@@ -77,3 +77,11 @@ part of the research regression suite.
 Coverage counts aggregate unique symbols before directory membership joins; the
 20,000-bar status regression prevents collection progress from blocking local
 settings/read operations through a session-by-listing join.
+
+The Yahoo worker rotates company profiles, filing indices, financial facts and
+prices to prevent directory-sized backlogs from starving enrichment. Profile
+and filing jobs share a bounded 24-hour validated public-page response in SQLite
+staging; published snapshots retain source fetch dates and last-good behavior.
+A changed public page format fails closed. Synthetic tests cover cached-page
+reuse, hostile identities/links, vendor annual/quarterly semantics and offline
+reopening after collection.

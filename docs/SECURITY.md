@@ -127,3 +127,11 @@ User-Agent. They require no key, cookie, browser account or credential retrieval
 Redirects and response limits remain enforced. Symbol mapping is bounded and
 validated against the returned identity/currency/timezone. Yahoo's unofficial
 endpoint and personal data-use terms are explicit in the ingestion design.
+
+Keyless company collection additionally reads the fixed Yahoo public profile
+page and fundamentals-timeseries path. It uses no cookies, crumb, login or
+browser session. Public embedded JSON is parsed as data, never evaluated; page
+HTML/scripts are neither persisted nor rendered. Identity, currency and period
+values are checked; arbitrary embedded URLs are never fetched. Filings link to
+SEC only after validating symbol/issuer/accession paths. Website fields are
+normalized HTTPS strings, not additional renderer network permissions.
