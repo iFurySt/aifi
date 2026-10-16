@@ -40,6 +40,11 @@ func TestUniverseJobsAndReconcileAfterMapping(t *testing.T) {
 	if _, e = db.Commit(ctx, run, []directory.File{first, second}, time.Now()); e != nil {
 		t.Fatal(e)
 	}
+	cfg, _ := db.ResearchConfig(ctx)
+	cfg.FactsSource = "sec"
+	if _, e = db.SaveResearchConfig(ctx, cfg); e != nil {
+		t.Fatal(e)
+	}
 	engine := New(db, path, false)
 	if e = engine.Reconcile(ctx, true); e != nil {
 		t.Fatal(e)
@@ -161,6 +166,9 @@ func TestCollectionToOfflineResearchReadForNonDemoSymbol(t *testing.T) {
 	}
 	cfg, _ := db.ResearchConfig(ctx)
 	cfg.PriceSource = "massive"
+	cfg.ProfileSource = "massive"
+	cfg.FactsSource = "sec"
+	cfg.FilingsSource = "sec"
 	if _, err = db.SaveResearchConfig(ctx, cfg); err != nil {
 		t.Fatal(err)
 	}
@@ -232,6 +240,11 @@ func TestNewIssuerMissingDataRetriesWithoutPermanentBlock(t *testing.T) {
 		t.Fatal(e)
 	}
 	defer db.Close()
+	cfg, _ := db.ResearchConfig(ctx)
+	cfg.ProfileSource = "massive"
+	if _, e = db.SaveResearchConfig(ctx, cfg); e != nil {
+		t.Fatal(e)
+	}
 	now := time.Now()
 	db.AddResearchJobs(ctx, []market.Job{{Provider: "massive", Dataset: "profile", Subject: "NEW"}}, now)
 	engine := New(db, "", false)
@@ -322,5 +335,83 @@ func TestKeylessPricesPersistRestateAndReadOffline(t *testing.T) {
 	}
 	if calls != 2 {
 		t.Fatal("paused source requested")
+	}
+}
+
+func TestKeylessCompanyCollectionBeatsPriceBacklogAndSurvivesOfflineRestart(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, err := store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	engine := New(db, path, false)
+	calls := 0
+	engine.Client.HTTP = &http.Client{Transport: fixtureHTTP(func(r *http.Request) (*http.Response, error) {
+		calls++
+		if r.Header.Get("Cookie") != "" || r.Header.Get("Authorization") != "" {
+			t.Fatal("keyless source used credentials")
+		}
+		body := ""
+		if r.URL.Host == "finance.yahoo.com" {
+			embedded := `{"quoteSummary":{"error":null,"result":[{"price":{"symbol":"OTHER-B","currency":"USD","quoteType":"EQUITY","longName":"Other Company"},"assetProfile":{"industry":"Hardware","longBusinessSummary":"Other Company makes hardware."},"secFilings":{"filings":[{"date":"2026-10-14","type":"8-K","edgarUrl":"https://finance.yahoo.com/sec-filing/OTHER-B/0000000123-26-000001_123"}]}}]}}`
+			body = `<html><script type="application/json" data-sveltekit-fetched data-url="https://query1.finance.yahoo.com/v10/finance/quoteSummary/OTHER-B">` + market.Marshal(map[string]any{"status": 200, "body": embedded}) + `</script></html>`
+		} else if strings.Contains(r.URL.Path, "fundamentals-timeseries") {
+			body = `{"timeseries":{"error":null,"result":[{"meta":{"symbol":["OTHER-B"],"type":["annualTotalRevenue"]},"annualTotalRevenue":[{"asOfDate":"2025-09-30","periodType":"12M","currencyCode":"USD","reportedValue":{"raw":123456}}]}]}}`
+		} else {
+			t.Fatalf("price backlog starved enrichment: %s", r.URL)
+		}
+		return &http.Response{StatusCode: 200, Body: io.NopCloser(strings.NewReader(body)), Header: http.Header{}}, nil
+	})}
+	jobs := []market.Job{}
+	for i := 0; i < 1000; i++ {
+		jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: "prices", Subject: fmt.Sprintf("Q%04d", i)})
+	}
+	for _, d := range []string{"profile", "filings", "facts"} {
+		jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: "OTHER.B"})
+	}
+	if err = db.AddResearchJobs(ctx, jobs, time.Now()); err != nil {
+		t.Fatal(err)
+	}
+	for i := 0; i < 3; i++ {
+		if worked, err := engine.Step(ctx, "yahoo"); err != nil || !worked {
+			t.Fatal(i, worked, err)
+		}
+	}
+	if calls != 2 {
+		t.Fatal("profile/filings did not reuse public page", calls)
+	}
+	db.Close()
+	db, err = store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	for i := 0; i < 3; i++ {
+		data, err := db.ResearchRead(ctx, "OTHER.B")
+		if err != nil || data.Datasets["profile"].Data.Profile == nil || data.Datasets["profile"].Data.Profile.Industry != "Hardware" || len(data.Datasets["facts"].Data.Facts) != 1 || len(data.Datasets["filings"].Data.Filings) != 1 {
+			t.Fatal(market.Marshal(data), err)
+		}
+		for _, d := range []string{"profile", "facts", "filings"} {
+			if data.Coverage[d] != "stored" || data.Datasets[d].Provider != "yahoo" || len(data.Datasets[d].Sources) != 1 {
+				t.Fatal(d, market.Marshal(data))
+			}
+		}
+	}
+	if calls != 2 {
+		t.Fatal("local reads fetched sources", calls)
+	}
+	failed := New(db, path, false)
+	failed.Now = func() time.Time { return time.Now().Add(8 * 24 * time.Hour) }
+	failed.Client.Now = failed.Now
+	failed.Client.HTTP = &http.Client{Transport: fixtureHTTP(func(*http.Request) (*http.Response, error) {
+		return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader("<html>Page format changed</html>"))}, nil
+	})}
+	if worked, err := failed.Step(ctx, "yahoo"); err != nil || !worked {
+		t.Fatal(worked, err)
+	}
+	last, err := db.ResearchRead(ctx, "OTHER.B")
+	if err != nil || last.Datasets["profile"].Data.Profile == nil || last.Datasets["profile"].Data.Profile.Industry != "Hardware" {
+		t.Fatal("failed public-page refresh erased last-good profile", market.Marshal(last), err)
 	}
 }

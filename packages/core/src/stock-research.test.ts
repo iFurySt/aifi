@@ -214,3 +214,41 @@ it("does not adjust Yahoo split-adjusted bars a second time", () => {
   };
   expect(splitAdjustedBars(data)).toEqual({ bars: data.bars, adjusted: true });
 });
+
+it("keeps vendor annual and quarterly periods separate without invented start dates", () => {
+  const vendor = (
+    period: "annual" | "quarterly",
+    end: string,
+    value: number,
+  ): FinancialFact => ({
+    period,
+    metric: "revenue",
+    tag: `yahoo:${period}TotalRevenue`,
+    unit: "USD",
+    value: String(value),
+    end,
+    filed: "",
+    accession: "",
+    form: "",
+    fiscalYear: 0,
+    fiscalPeriod: "",
+  });
+  const facts = [
+    vendor("annual", "2025-09-30", 1000),
+    vendor("quarterly", "2025-09-30", 300),
+    vendor("quarterly", "2025-12-31", 350),
+    vendor("quarterly", "2026-03-31", 400),
+    vendor("quarterly", "2026-06-30", 450),
+  ];
+  expect(
+    financialSeries(facts, "revenue", "Yearly").map((p) => p.value),
+  ).toEqual([1000]);
+  expect(
+    financialSeries(facts, "revenue", "Quarter").map((p) => p.value),
+  ).toEqual([450, 400, 350, 300]);
+  expect(trailingMetric(facts, "revenue")).toEqual({
+    value: 1500,
+    end: "2026-06-30",
+    basis: "TTM",
+  });
+});

@@ -43,14 +43,14 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	if e != nil {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
-	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true}[u.Host] {
+	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true}[u.Host] {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
 	q := u.Query()
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
 	case "yahoo":
-		if u.Host != "query1.finance.yahoo.com" {
+		if u.Host != "query1.finance.yahoo.com" && !(u.Host == "finance.yahoo.com" && strings.HasPrefix(u.Path, "/quote/") && strings.HasSuffix(u.Path, "/profile/")) {
 			return nil, &Failure{Code: "invalid_endpoint"}
 		}
 		headers.Set("User-Agent", "AIFi/0.1 local investment research")
@@ -126,6 +126,13 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	}
 	if len(raw) > 32<<20 || len(raw) == 0 {
 		return nil, &Failure{Code: "invalid_response"}
+	}
+	if provider == "yahoo" && u.Host == "finance.yahoo.com" {
+		if len(raw) > 4<<20 {
+			return nil, &Failure{Code: "source_window_too_large"}
+		}
+		*ev = append(*ev, Evidence{URL: safe, Body: raw, FetchedAt: c.Now()})
+		return raw, nil
 	}
 	if strings.HasPrefix(strings.TrimSpace(string(raw)), "<") && strings.HasSuffix(u.Path, ".xml") {
 		total := len(raw)
@@ -220,11 +227,23 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 			e = c.prices(ctx, j, &result)
 		}
 	case "profile":
-		e = c.profile(ctx, j, &result)
+		if j.Provider == "yahoo" {
+			e = c.yahooCompany(ctx, j, &result)
+		} else {
+			e = c.profile(ctx, j, &result)
+		}
 	case "filings":
-		e = c.filings(ctx, j, &result)
+		if j.Provider == "yahoo" {
+			e = c.yahooCompany(ctx, j, &result)
+		} else {
+			e = c.filings(ctx, j, &result)
+		}
 	case "facts":
-		e = c.facts(ctx, j, &result)
+		if j.Provider == "yahoo" {
+			e = c.yahooFacts(ctx, j, &result)
+		} else {
+			e = c.facts(ctx, j, &result)
+		}
 	case "actions":
 		e = c.actions(ctx, j, &result)
 	case "insiders":

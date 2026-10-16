@@ -41,3 +41,6 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 
 - [Company logo coverage audit](company-logo-coverage-audit.md): measured GitHub
   filename coverage, current provider sample and reviewed catalog proposal.
+
+- [Keyless company research](keyless-company-research.md): live company profile,
+  financial-series and filing-index probes, access limits and vendor semantics.

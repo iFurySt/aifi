@@ -30,12 +30,15 @@ type ProviderLimit struct {
 	PerDay    int `json:"perDay"`
 }
 type ResearchConfig struct {
-	Revision    int                      `json:"revision"`
-	PriceSource string                   `json:"priceSource"`
-	Automatic   bool                     `json:"automatic"`
-	HistoryDays int                      `json:"historyDays"`
-	Datasets    map[string]DatasetConfig `json:"datasets"`
-	Limits      map[string]ProviderLimit `json:"limits"`
+	Revision      int                      `json:"revision"`
+	PriceSource   string                   `json:"priceSource"`
+	ProfileSource string                   `json:"profileSource"`
+	FactsSource   string                   `json:"factsSource"`
+	FilingsSource string                   `json:"filingsSource"`
+	Automatic     bool                     `json:"automatic"`
+	HistoryDays   int                      `json:"historyDays"`
+	Datasets      map[string]DatasetConfig `json:"datasets"`
+	Limits        map[string]ProviderLimit `json:"limits"`
 }
 
 func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
@@ -57,11 +60,41 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	if c.PriceSource == "" {
 		c.PriceSource = "yahoo"
 	}
+	if c.ProfileSource == "" {
+		c.ProfileSource = "yahoo"
+	}
+	if c.FactsSource == "" {
+		c.FactsSource = "yahoo"
+	}
+	if c.FilingsSource == "" {
+		c.FilingsSource = "yahoo"
+	}
 	return c, e
+}
+func (c ResearchConfig) ProviderFor(dataset string) string {
+	switch dataset {
+	case "prices":
+		return c.PriceSource
+	case "profile":
+		return c.ProfileSource
+	case "facts":
+		return c.FactsSource
+	case "filings":
+		return c.FilingsSource
+	case "identity", "insiders":
+		return "sec"
+	case "actions":
+		return "massive"
+	default:
+		return "fmp"
+	}
 }
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
 	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 4 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
+	}
+	if (c.ProfileSource != "yahoo" && c.ProfileSource != "massive") || (c.FactsSource != "yahoo" && c.FactsSource != "sec") || (c.FilingsSource != "yahoo" && c.FilingsSource != "sec") {
+		return c, errors.New("invalid research source")
 	}
 	for _, d := range ResearchDatasets {
 		v, ok := c.Datasets[d]
@@ -436,8 +469,11 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		if len(v.Data.Filings) > 250 {
 			v.Data.Filings = v.Data.Filings[:250]
 		}
-		if old, ok := out.Datasets[d]; ok && old.FetchedAt > v.FetchedAt {
-			continue
+		if old, ok := out.Datasets[d]; ok {
+			selected := cfg.ProviderFor(d)
+			if (old.Provider == selected && v.Provider != selected) || (old.Provider == v.Provider && old.FetchedAt > v.FetchedAt) || (old.Provider != selected && v.Provider != selected && old.FetchedAt > v.FetchedAt) {
+				continue
+			}
 		}
 		out.Datasets[d] = v
 		ids[d] = id
@@ -545,11 +581,11 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 			continue
 		}
 		subject := symbol
-		if d == "facts" || d == "filings" || d == "insiders" {
+		if cfg.ProviderFor(d) == "sec" && (d == "facts" || d == "filings" || d == "insiders") {
 			subject = "cik:" + cik
 		}
 		var state, code string
-		e := tx.QueryRowContext(ctx, "SELECT state,error FROM research_jobs WHERE dataset=? AND subject=? ORDER BY id DESC LIMIT 1", d, subject).Scan(&state, &code)
+		e := tx.QueryRowContext(ctx, "SELECT state,error FROM research_jobs WHERE dataset=? AND subject=? AND provider=? ORDER BY id DESC LIMIT 1", d, subject, cfg.ProviderFor(d)).Scan(&state, &code)
 		if e != nil && !errors.Is(e, sql.ErrNoRows) {
 			return out, e
 		}
@@ -565,16 +601,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		if out.Coverage[d] == "stored" {
 			continue
 		}
-		p := "massive"
-		if d == "prices" {
-			p = cfg.PriceSource
-		}
-		if d == "facts" || d == "filings" || d == "insiders" {
-			p = "sec"
-		}
-		if d == "funds" || d == "politicians" || d == "analyst" || d == "news" {
-			p = "fmp"
-		}
+		p := cfg.ProviderFor(d)
 		var blocked string
 		err := tx.QueryRowContext(ctx, "SELECT blocked FROM provider_budgets WHERE provider=?", p).Scan(&blocked)
 		if err != nil && !errors.Is(err, sql.ErrNoRows) {
@@ -655,7 +682,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) GROUP BY dataset`, out.Config.PriceSource)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource)
 	if e != nil {
 		return out, e
 	}

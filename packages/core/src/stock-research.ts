@@ -15,6 +15,9 @@ export type ResearchDataset = (typeof researchDatasets)[number];
 export interface ResearchConfig {
   revision: number;
   priceSource?: "yahoo" | "massive";
+  profileSource?: "yahoo" | "massive";
+  factsSource?: "yahoo" | "sec";
+  filingsSource?: "yahoo" | "sec";
   automatic: boolean;
   historyDays: number;
   datasets: Record<
@@ -26,12 +29,27 @@ export interface ResearchConfig {
     { perMinute: number; perDay: number }
   >;
 }
+export function researchProvider(
+  config: ResearchConfig,
+  dataset: ResearchDataset,
+): "yahoo" | "massive" | "sec" | "fmp" {
+  if (dataset === "prices") return config.priceSource ?? "yahoo";
+  if (dataset === "profile") return config.profileSource ?? "yahoo";
+  if (dataset === "facts") return config.factsSource ?? "yahoo";
+  if (dataset === "filings") return config.filingsSource ?? "yahoo";
+  if (dataset === "insiders") return "sec";
+  if (dataset === "actions") return "massive";
+  return "fmp";
+}
 export interface CompanyProfile {
   symbol?: string;
   name: string;
   cik?: string;
   description?: string;
   industry?: string;
+  sector?: string;
+  country?: string;
+  employees?: number;
   website?: string;
   currency?: string;
   type?: string;
@@ -39,6 +57,7 @@ export interface CompanyProfile {
   sharesDate?: string;
 }
 export interface FinancialFact {
+  period?: "annual" | "quarterly";
   metric: string;
   tag: string;
   unit: string;
@@ -178,7 +197,7 @@ function metricFacts(facts: FinancialFact[], metric: string) {
       !Number.isFinite(Number(f.value))
     )
       continue;
-    const key = `${f.start ?? ""}/${f.end}`,
+    const key = `${f.period ?? ""}/${f.start ?? ""}/${f.end}`,
       old = rows.get(key);
     if (
       !old ||
@@ -215,6 +234,14 @@ export function financialSeries(
       });
   };
   for (const f of rows) {
+    if (f.period) {
+      if (
+        (period === "Yearly" && f.period === "annual") ||
+        (period === "Quarter" && f.period === "quarterly")
+      )
+        put(f, Number(f.value));
+      continue;
+    }
     const duration = f.start ? day(f.end) - day(f.start) + 1 : 0;
     if (!f.start) {
       put(f, Number(f.value));
@@ -334,7 +361,7 @@ export function priceMetrics(bars: DailyBar[]) {
   };
 }
 
-/** Only primary public research hosts may open outside the desktop sandbox. */
+/** Only allowlisted public research hosts may open outside the desktop sandbox. */
 export function isResearchSourceURL(value: string): boolean {
   try {
     const u = new URL(value);
@@ -350,6 +377,7 @@ export function isResearchSourceURL(value: string): boolean {
         "investor.apple.com",
         "www.apple.com",
         "query1.finance.yahoo.com",
+        "finance.yahoo.com",
         "api.massive.com",
         "massive.com",
         "financialmodelingprep.com",

@@ -22,6 +22,9 @@ type Profile struct {
 	CIK         string   `json:"cik,omitempty"`
 	Description string   `json:"description,omitempty"`
 	Industry    string   `json:"industry,omitempty"`
+	Sector      string   `json:"sector,omitempty"`
+	Country     string   `json:"country,omitempty"`
+	Employees   int      `json:"employees,omitempty"`
 	Website     string   `json:"website,omitempty"`
 	Currency    string   `json:"currency,omitempty"`
 	Type        string   `json:"type,omitempty"`
@@ -29,6 +32,7 @@ type Profile struct {
 	SharesDate  string   `json:"sharesDate,omitempty"`
 }
 type Filing struct {
+	Title      string `json:"title,omitempty"`
 	Accession  string `json:"accession"`
 	Form       string `json:"form"`
 	ReportDate string `json:"reportDate"`
@@ -37,6 +41,7 @@ type Filing struct {
 	URL        string `json:"url"`
 }
 type Fact struct {
+	Period       string `json:"period,omitempty"`
 	Metric       string `json:"metric"`
 	Tag          string `json:"tag"`
 	Unit         string `json:"unit"`

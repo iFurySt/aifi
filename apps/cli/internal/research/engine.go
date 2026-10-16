@@ -25,6 +25,7 @@ type Engine struct {
 	Now           func() time.Time
 	fingerprint   string
 	lastReconcile time.Time
+	yahooCursor   int
 }
 
 func New(db *store.Store, path string, offline bool) *Engine {
@@ -86,7 +87,7 @@ func New(db *store.Store, path string, offline bool) *Engine {
 				if !cfg.Automatic && !j.Manual {
 					return &market.Failure{Code: "paused"}
 				}
-				if j.Dataset == "prices" && j.Provider != cfg.PriceSource {
+				if j.Dataset != "identity" && j.Provider != cfg.ProviderFor(j.Dataset) && !(j.Provider == "sec" && j.Dataset == "filings" && cfg.Datasets["insiders"].Enabled) {
 					return &market.Failure{Code: "paused"}
 				}
 				if j.Dataset != "identity" && !cfg.Datasets[j.Dataset].Enabled {
@@ -160,7 +161,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
-		jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: "prices", Subject: symbol})
+		for _, d := range []string{"prices", "profile", "facts", "filings"} {
+			jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: symbol})
+		}
 		for _, d := range []string{"profile", "funds", "politicians", "analyst", "news"} {
 			p := "massive"
 			if d == "funds" || d == "politicians" || d == "analyst" || d == "news" {
@@ -209,12 +212,15 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	}
 	enabled := []string{}
 	for d, v := range cfg.Datasets {
-		if v.Enabled && (d != "prices" || p == cfg.PriceSource) {
+		if v.Enabled && p == cfg.ProviderFor(d) {
 			enabled = append(enabled, d)
 		}
 	}
 	if cfg.Datasets["filings"].Enabled || cfg.Datasets["facts"].Enabled || cfg.Datasets["insiders"].Enabled {
 		enabled = append(enabled, "identity")
+	}
+	if p == "sec" && cfg.Datasets["insiders"].Enabled && cfg.ProviderFor("filings") != "sec" && cfg.Datasets["filings"].Enabled {
+		enabled = append(enabled, "filings")
 	}
 	// Do not claim thousands of jobs just to rediscover an unavailable account.
 	keys, err := e.Client.Key(ctx, p)
@@ -238,7 +244,25 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if err != nil || wait > time.Minute {
 		return false, err
 	}
-	j, err := e.DB.ClaimResearchJob(ctx, p, enabled, !cfg.Automatic, e.Now())
+	var j *market.Job
+	if p == "yahoo" {
+		// Rotate datasets before claiming: an existing universe-size price backlog
+		// must not starve company details and financials. All requests share a budget.
+		order := []string{"profile", "filings", "facts", "prices"}
+		for i := 0; i < len(order); i++ {
+			d := order[e.yahooCursor%len(order)]
+			e.yahooCursor++
+			if !cfg.Datasets[d].Enabled || cfg.ProviderFor(d) != p {
+				continue
+			}
+			j, err = e.DB.ClaimResearchJob(ctx, p, []string{d}, !cfg.Automatic, e.Now())
+			if err != nil || j != nil {
+				break
+			}
+		}
+	} else {
+		j, err = e.DB.ClaimResearchJob(ctx, p, enabled, !cfg.Automatic, e.Now())
+	}
 	if err != nil || j == nil {
 		return false, err
 	}
@@ -258,7 +282,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 				next = now.Add(30 * 24 * time.Hour)
 			}
 		}
-		if p == "yahoo" {
+		if p == "yahoo" && j.Dataset == "prices" {
 			cutoff := now.AddDate(0, 0, -cfg.HistoryDays).Format("2006-01-02")
 			bars := result.Bars[:0]
 			for _, b := range result.Bars {
@@ -268,7 +292,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 			}
 			result.Bars = bars
 		}
-		if p == "yahoo" && len(result.Bars) == 0 {
+		if p == "yahoo" && j.Dataset == "prices" && len(result.Bars) == 0 {
 			err = &market.Failure{Code: "not_found"}
 		} else {
 			err = e.DB.FinishResearchJob(ctx, *j, result, now, next)

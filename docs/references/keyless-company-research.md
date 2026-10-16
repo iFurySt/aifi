@@ -1,0 +1,52 @@
+# Keyless company research sources
+
+Reviewed 2026-10-17. These are actual local network probes, not guarantees of
+ongoing availability or complete listing coverage.
+
+| Source | Probe | Decision |
+| --- | --- | --- |
+| Yahoo public company profile page | HTTP 200; public embedded JSON has company identity, description, industry, sector, website, employee count and recent SEC filings | Implement bounded extraction without executing scripts or calling authenticated APIs |
+| Yahoo fundamentals timeseries | HTTP 200 without key/cookies; annual/quarterly standardized metrics | Implement with vendor period metadata; retain missing filing/start dates |
+| Yahoo direct quoteSummary | HTTP 401 | Do not implement a direct API or browser-cookie/crumb flow |
+| SEC submissions/companyfacts/ticker map | HTTP 403 with identifying project URL; real contact requested | Keep existing official adapter/contact gate; no bypass or fabricated email |
+| Nasdaq company profile/filings API | Requests timed out | Do not present as a working default |
+| Apple Newsroom RSS | HTTP 200 | Company-specific press-release feed; not a universe-wide filings adapter |
+
+## Upstream references
+
+- [Yahoo public AAPL profile](https://finance.yahoo.com/quote/AAPL/profile/):
+  published `application/json` Svelte fetch records include company data and a
+  recent filing index. We read the published document, follow no embedded API
+  URLs, and retain the selected embedded response with the public page URL.
+- [yfinance fundamentals implementation](https://github.com/ranaroussi/yfinance/blob/main/yfinance/scrapers/fundamentals.py)
+  documents the annual/quarterly timeseries approach. The Go collector is an
+  independent small implementation; it adds no Python/browser dependency.
+- [yfinance upstream/data-use notice](https://github.com/ranaroussi/yfinance):
+  unofficial public APIs, research/personal-use context, Yahoo data terms.
+- [SEC accessing EDGAR](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data)
+  documents free public submissions/XBRL APIs, declared User-Agent/contact and
+  fair-access requirements. These are different from authenticated filing
+  submission APIs used to send filings to EDGAR.
+
+The ignored reference checkouts reinforce provider separation: OpenBB's SEC
+company-filings adapter handles issuer-specific filings; Dexter's financial
+statement tools use a FinancialDatasets key, not a generally keyless source;
+the ai-hedge-fund checkout also has a provider protocol. None is vendored or
+executed as a runtime dependency.
+
+## Financial meaning
+
+Yahoo's `asOfDate` is its vendor-standardized period end. It can differ from the
+issuer's exact 52/53-week fiscal date; do not label it as an SEC report date.
+Annual `12M` and quarterly `3M` rows remain separate even at the same end date.
+No fiscal start, filing date, accession, form, fiscal year or fiscal quarter is
+invented. Source decimal strings/units are preserved; capital expenditure cash
+outflows change sign to the existing positive-expense convention, without abs().
+The endpoint commonly supplies four annual and five quarterly observations;
+missing fields/currencies remain gaps rather than zeros. Latest standardized
+values are not point-in-time backtest evidence.
+
+The filing index is secondary coverage. Validate symbol, filing ID and issuer
+paths, then link to SEC's primary document/index. Do not download filing bodies
+or imply report dates, acceptance timestamps, amendments or every historical
+filing are complete. Newsroom press releases and SEC filings are distinct.

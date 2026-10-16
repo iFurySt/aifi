@@ -1,7 +1,8 @@
 # Local stock research ingestion
 
-Status: implementation, 2026-10-16. Daily prices default to a keyless source;
-other datasets require their own source setup and successful responses. No live completeness claim follows
+Status: implementation, 2026-10-17. Daily prices, company details, standardized
+financials and recent filing indices default to keyless Yahoo sources; other
+datasets retain separate setup gates. No live completeness claim follows
 from a passing fixture test or the existence of the directory.
 
 ## Product behavior
@@ -13,6 +14,8 @@ examples. Missing data, contact/key requirements and source access failures are
 explicit. Six research tabs remain available even when their datasets are empty.
 
 Settings has dedicated API keys, Data sources, Sync and Storage categories.
+Sync independently selects price, company, financial and filing sources; old
+settings gain keyless defaults without a SQLite schema migration.
 Massive and optional FMP keys are encrypted locally; Alpaca credentials remain a
 reserved alternate-provider slot, not an implemented price adapter. SEC needs an
 identifying app/contact string, not an API key. Optional FMP datasets are disabled
@@ -26,9 +29,12 @@ subscription is purchased by the application.
 | Listing directory | Existing Nasdaq Trader files | No key; existing daily schedule |
 | Daily OHLCV (default) | Yahoo Finance public chart endpoint | No key; unofficial personal-research source; split-adjusted, up to two years, closed sessions only |
 | Raw daily OHLCV (optional) | Massive daily grouped market summaries | Key; EOD, configured interval; up to 730 calendar-day backfill |
-| Company identity/profile | Massive ticker overview; SEC exchange/ticker-to-CIK map | Key/contact; weekly company profile, daily shared map |
-| Filings | SEC submissions recent window | Contact; daily; recent window only |
-| Financial facts | SEC Company Facts selected standard US-GAAP/DEI concepts | Contact; weekly; last seven years; raw source preserves other concepts |
+| Company identity/profile (default) | Yahoo public company page embedded JSON | No key/cookie; weekly profile; bounded description, sector/industry, country, website, employees |
+| Company identity/profile (optional) | Massive ticker overview; SEC exchange/ticker-to-CIK map | Key/contact; weekly company profile, daily shared map |
+| Filing index (default) | Yahoo public company page recent SEC filings | No key/cookie; daily, secondary limited index with validated primary SEC links |
+| Filings (optional) | SEC submissions recent window | Contact; daily; recent window only |
+| Financial facts (default) | Yahoo fundamentals timeseries | No key/cookie; weekly; standardized annual/quarterly periods, usually 4 years / 5 quarters |
+| Financial facts (optional) | SEC Company Facts selected standard US-GAAP/DEI concepts | Contact; weekly; last seven years; raw source preserves other concepts |
 | Splits/dividends | Massive market-wide reference snapshots, all pages | Key; daily |
 | Insider transactions | SEC Form 4/4-A XML from stored submissions; immutable documents reused | Contact; daily; latest 40 filings, derivative status and transaction codes retained |
 | Institutional ownership | FMP stable extract-analytics/holder, paginated | Optional key/endpoint entitlement; weekly; latest elapsed quarter |
@@ -66,6 +72,13 @@ history window, with 24-hour default refresh. Massive remains selectable in Sync
 settings and uses one whole-market request per date. Only the selected price
 provider runs price jobs; reads prefer that provider and can retain an existing
 other-provider series when it has no stored data. Series are never mixed.
+Yahoo workers rotate profile → filings → facts → prices before claiming work,
+so an initial price backlog cannot starve company research. Each dataset retains
+its own enabled flag and cadence. Company page responses are shared privately
+for at most 24 hours between profile/filing jobs, preserving original fetch time;
+only validated committed dataset snapshots appear in normal reads. Source
+selection is rechecked before requests. SEC filings can still feed the insider
+dependency when Yahoo is selected for the visible filing index.
 
 Massive splits/dividends also use shared
 market-wide snapshots with indexed per-symbol SQLite reads; daily refresh does
@@ -161,11 +174,36 @@ added as a working source. HTTP 401/403 on Yahoo apply a shared 15-minute minimu
 cooldown rather than incorrectly asking for a key or blocking every listing.
 Normal 429/Retry-After handling also applies; last-good data stays readable.
 
-SEC remains keyless but needs an honest identifying contact; company financials,
-filings and insider records have not been live-validated on this device. Profiles,
-corporate actions, ratings, funds, politician trades and news retain their
-separate setup gates. The keyless chart collector does not fill those panels.
+SEC remains keyless but needs an honest identifying contact; its direct
+financials, filings and insider adapter remain unvalidated on this device.
+Corporate actions, ratings, funds, politician trades and news retain separate
+setup gates. The additional keyless company collectors are described below.
 
 Coverage status collapses daily bars to distinct symbols before joining the
 current candidate directory. This avoids a per-session × listing join as prices
 accumulate. A 20,000-bar/1,000-candidate regression exercises the status boundary.
+
+## Keyless company research
+
+[Source probes and financial semantics](../references/keyless-company-research.md)
+record Yahoo public page/timeseries access and unsuccessful alternative probes.
+Public page extraction executes no scripts and follows no embedded URL. It keeps
+only the matching public embedded JSON response as compressed evidence with the
+page URL, not the page's ads/scripts. A malformed, throttled, challenged or
+identity-mismatched page cannot replace the last good snapshot.
+
+Facts retain explicit `annual`/`quarterly` vendor periods; they have no invented
+fiscal starts or SEC filing metadata. The domain layer filters these periods
+directly, while keeping the existing SEC duration/YTD derivation path separate.
+Capital expenditure is normalized to the existing expense sign convention.
+Financial footnotes/tooltips distinguish unavailable filing dates. Annual
+balance columns can use explicit vendor annual observations.
+
+On initial live validation, AAPL/MSFT each persisted 108 financial rows and
+80/83 recent filing index entries respectively, plus descriptions/industries.
+NVDA also persisted 108 financial rows, its profile and 81 filing index entries. These are initial
+measured samples, not a claim that all listings have coverage. Every candidate
+gets jobs for all four Yahoo datasets. At 20/min and 10,000/day, a universe-wide
+first pass spans multiple running days and can take longer after failures.
+Snapshots survive restart; normal tab reads still never fetch providers.
+Long company descriptions default to a short preview with an explicit expand.

@@ -361,3 +361,39 @@ func TestPriceSourceSelectionDoesNotMixBasisAndRetainsLastGood(t *testing.T) {
 		t.Fatal("last-good Yahoo snapshot lost", v, err)
 	}
 }
+
+func TestCompanyFactsChooseConfiguredSourceWithoutMergingPeriods(t *testing.T) {
+	db := openTest(t)
+	ctx := context.Background()
+	now := time.Now()
+	commit := func(j market.Job, r market.Result) {
+		t.Helper()
+		if err := db.AddResearchJobs(ctx, []market.Job{j}, now); err != nil {
+			t.Fatal(err)
+		}
+		claimed, err := db.ClaimResearchJob(ctx, j.Provider, []string{j.Dataset}, false, now)
+		if err != nil || claimed == nil {
+			t.Fatal(err)
+		}
+		r.Evidence = []market.Evidence{{URL: "https://example.invalid/" + j.Provider + "/" + j.Dataset, Body: []byte(market.Marshal(r.Payload)), FetchedAt: now}}
+		if err = db.FinishResearchJob(ctx, *claimed, r, now, now.Add(time.Hour)); err != nil {
+			t.Fatal(err)
+		}
+	}
+	commit(market.Job{Provider: "sec", Dataset: "identity", Subject: "us"}, market.Result{Aliases: map[string]string{"OTHER.B": "0000000123"}, Payload: market.Payload{Complete: true}})
+	commit(market.Job{Provider: "sec", Dataset: "facts", Subject: "cik:0000000123"}, market.Result{Payload: market.Payload{Facts: []market.Fact{{Metric: "revenue", Value: "100", Unit: "USD", End: "2025-09-27", Start: "2024-09-29", Filed: "2025-10-30", Form: "10-K"}}, Complete: false}})
+	commit(market.Job{Provider: "yahoo", Dataset: "facts", Subject: "OTHER.B"}, market.Result{Payload: market.Payload{Facts: []market.Fact{{Period: "annual", Metric: "revenue", Value: "101", Unit: "USD", End: "2025-09-30"}}, Complete: false}})
+	cfg, _ := db.ResearchConfig(ctx)
+	for _, source := range []string{"sec", "yahoo"} {
+		cfg.FactsSource = source
+		var err error
+		cfg, err = db.SaveResearchConfig(ctx, cfg)
+		if err != nil {
+			t.Fatal(err)
+		}
+		data, err := db.ResearchRead(ctx, "OTHER.B")
+		if err != nil || data.Datasets["facts"].Provider != source || len(data.Datasets["facts"].Data.Facts) != 1 {
+			t.Fatal("source periods mixed", market.Marshal(data), err)
+		}
+	}
+}
