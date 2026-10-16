@@ -1,7 +1,7 @@
 # Local stock research ingestion
 
-Status: implementation, 2026-10-15. Actual provider coverage requires configured
-keys/contact and successful source responses. No live completeness claim follows
+Status: implementation, 2026-10-16. Daily prices default to a keyless source;
+other datasets require their own source setup and successful responses. No live completeness claim follows
 from a passing fixture test or the existence of the directory.
 
 ## Product behavior
@@ -24,7 +24,8 @@ subscription is purchased by the application.
 | Dataset | Implementation | Access / initial cadence |
 | --- | --- | --- |
 | Listing directory | Existing Nasdaq Trader files | No key; existing daily schedule |
-| Raw daily OHLCV | Massive daily grouped market summaries | Key; EOD, configured interval; up to 730 calendar-day backfill |
+| Daily OHLCV (default) | Yahoo Finance public chart endpoint | No key; unofficial personal-research source; split-adjusted, up to two years, closed sessions only |
+| Raw daily OHLCV (optional) | Massive daily grouped market summaries | Key; EOD, configured interval; up to 730 calendar-day backfill |
 | Company identity/profile | Massive ticker overview; SEC exchange/ticker-to-CIK map | Key/contact; weekly company profile, daily shared map |
 | Filings | SEC submissions recent window | Contact; daily; recent window only |
 | Financial facts | SEC Company Facts selected standard US-GAAP/DEI concepts | Contact; weekly; last seven years; raw source preserves other concepts |
@@ -60,7 +61,13 @@ next reconciliation. Old data is retained; automatic deletion is not inferred
 from directory absence. Candidate directory membership does not prove common
 stock type or SEC reporting coverage.
 
-Prices use one whole-market request per date. Splits/dividends also use shared
+Yahoo prices use one two-year chart request per candidate, filtered to the configured
+history window, with 24-hour default refresh. Massive remains selectable in Sync
+settings and uses one whole-market request per date. Only the selected price
+provider runs price jobs; reads prefer that provider and can retain an existing
+other-provider series when it has no stored data. Series are never mixed.
+
+Massive splits/dividends also use shared
 market-wide snapshots with indexed per-symbol SQLite reads; daily refresh does
 not make two requests per listing. Newest sessions and the three
 initial development targets are prioritized before expensive enrichment. A
@@ -71,7 +78,7 @@ recent sessions use the configurable daily cadence.
 
 One worker per provider runs with a 10-minute context and 15-minute fenced lease.
 All HTTP calls reserve a SQLite-backed provider minute/day slot, even across
-multiple hosts/processes using the same DB. Defaults: Massive 5/min, SEC 240/min,
+multiple hosts/processes using the same DB. Defaults: Yahoo 20/min and 10,000/day, Massive 5/min, SEC 240/min,
 FMP 4/min and 200/day; settings permit lower or account-specific higher limits.
 Daily counters currently use UTC days. Provider 429/Retry-After applies a shared
 cooldown; actual provider quota rules can be stricter than this local budget.
@@ -102,7 +109,10 @@ The renderer receives bounded normalized records/source URLs, never evidence
 blobs or plaintext secrets. Detail reads cap activity rows at 200 and filings at
 250 and expose total activity counts. Full source data remains in SQLite.
 
-Raw OHLCV is preserved. Once a complete action snapshot exists, the domain layer
+Each bar series preserves its source basis: Massive raw, Yahoo split-adjusted
+OHLCV (not dividend-adjusted `adjclose`). Yahoo windows replace the prior symbol
+window atomically because new splits can restate old history. The renderer never
+adjusts an already split-adjusted series again. Raw Massive OHLCV is preserved. Once a complete action snapshot exists, the domain layer
 computes split-adjusted history (not dividend-adjusted total returns) using only
 splits effective by the last stored session. Without actions the chart labels
 unadjusted prices. The closing date is always visible. YTD uses the last available
@@ -129,3 +139,33 @@ Universe inserts use bounded 500-job transactions and an indexed manual issuer-s
 lookup per reconciliation. New listings/dates do not inherit an older manual request while automation is
 paused. Dual-host startup must not wait behind a per-row full-queue scan;
 the 12,000-job reconciliation/open regression exercises this boundary.
+
+## Keyless source validation
+
+On 2026-10-16, host HTTP probes and the real Go service successfully collected
+AAPL, MSFT and NVDA: 501 closed daily bars each, latest session 2026-10-15.
+Chrome rendered AAPL from SQLite. This is actual initial coverage, not a claim
+that all directory entries have data. All 7,482 current candidates have Yahoo
+jobs; coverage grows asynchronously, bounded by the shared budget. At 20/minute,
+a complete first pass takes hours and may take longer after failures/cooldowns.
+Class-share dots map to Yahoo hyphens; unsupported warrants/preferred/units and
+other unmatched symbols remain explicit gaps, without guessing a parent price.
+
+Yahoo is an unofficial public endpoint with no API availability contract.
+The [yfinance upstream](https://github.com/ranaroussi/yfinance) documents its
+public-API approach and personal-use context; no Python dependency is required
+by our bounded Go adapter. Data use remains governed by Yahoo's terms. No user
+browser cookies, login, client secrets or browser impersonation are used.
+Stooq's CSV URL returned browser verification in this host probe and was not
+added as a working source. HTTP 401/403 on Yahoo apply a shared 15-minute minimum
+cooldown rather than incorrectly asking for a key or blocking every listing.
+Normal 429/Retry-After handling also applies; last-good data stays readable.
+
+SEC remains keyless but needs an honest identifying contact; company financials,
+filings and insider records have not been live-validated on this device. Profiles,
+corporate actions, ratings, funds, politician trades and news retain their
+separate setup gates. The keyless chart collector does not fill those panels.
+
+Coverage status collapses daily bars to distinct symbols before joining the
+current candidate directory. This avoids a per-session × listing join as prices
+accumulate. A 20,000-bar/1,000-candidate regression exercises the status boundary.

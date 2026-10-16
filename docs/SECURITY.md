@@ -121,3 +121,9 @@ URLs. SEC requests require a user-supplied identifying contact. No raw provider
 error body, credential or vault-read operation is exposed to the renderer.
 Research evidence is gzip-compressed in SQLite; normal page reads contain bounded
 normalized data and provenance, never raw evidence or secret blobs.
+
+Yahoo daily prices use only the fixed public HTTPS chart host/path and an app
+User-Agent. They require no key, cookie, browser account or credential retrieval.
+Redirects and response limits remain enforced. Symbol mapping is bounded and
+validated against the returned identity/currency/timezone. Yahoo's unofficial
+endpoint and personal data-use terms are explicit in the ingestion design.

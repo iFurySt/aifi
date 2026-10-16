@@ -59,7 +59,9 @@ function DatasetRow({
       <div>
         <strong>{names[dataset]}</strong>
         <p>
-          {sources[dataset]}
+          {dataset === "prices" && (config.priceSource ?? "yahoo") === "yahoo"
+            ? "Yahoo Finance · No API key"
+            : sources[dataset]}
           {status
             ? ` · ${status.stored.toLocaleString()} / ${status.total.toLocaleString()} synced`
             : ""}
@@ -146,7 +148,7 @@ function BudgetRow({
   busy,
   save,
 }: {
-  provider: "massive" | "sec" | "fmp";
+  provider: "massive" | "sec" | "fmp" | "yahoo";
   config: ResearchConfig;
   busy: boolean;
   save: (c: ResearchConfig) => Promise<void>;
@@ -169,7 +171,11 @@ function BudgetRow({
     <div className="setting-row">
       <div>
         <strong>{provider.toUpperCase()}</strong>
-        <p>Match your account limits.</p>
+        <p>
+          {provider === "yahoo"
+            ? "Public endpoint · Personal research"
+            : "Match your account limits."}
+        </p>
       </div>
       <div className="setting-control">
         <label className="quota-input">
@@ -328,6 +334,28 @@ export function ResearchSyncSettings() {
               </div>
               <div className="setting-row">
                 <div>
+                  <strong>Daily price source</strong>
+                  <p>Yahoo is unofficial and may be rate limited.</p>
+                </div>
+                <div className="setting-control">
+                  <select
+                    aria-label="Daily price source"
+                    value={state.config.priceSource ?? "yahoo"}
+                    disabled={busy}
+                    onChange={(e) =>
+                      void save({
+                        ...state.config,
+                        priceSource: e.target.value as "yahoo" | "massive",
+                      })
+                    }
+                  >
+                    <option value="yahoo">Yahoo Finance · No key</option>
+                    <option value="massive">Massive · API key</option>
+                  </select>
+                </div>
+              </div>
+              <div className="setting-row">
+                <div>
                   <strong>Price history</strong>
                   <p>Background backfill across the directory.</p>
                 </div>
@@ -357,11 +385,13 @@ export function ResearchSyncSettings() {
                     state.providers.find(
                       (p) =>
                         p.provider ===
-                        (d === "facts" || d === "filings" || d === "insiders"
-                          ? "sec"
-                          : d === "prices" || d === "profile" || d === "actions"
-                            ? "massive"
-                            : "fmp"),
+                        (d === "prices"
+                          ? (state.config.priceSource ?? "yahoo")
+                          : d === "facts" || d === "filings" || d === "insiders"
+                            ? "sec"
+                            : d === "profile" || d === "actions"
+                              ? "massive"
+                              : "fmp"),
                     )?.blocked
                   }
                   config={state.config}
@@ -378,7 +408,7 @@ export function ResearchSyncSettings() {
         <h2>Request limits</h2>
         <div className="setting-card">
           {state &&
-            (["massive", "sec", "fmp"] as const).map((p) => (
+            (["yahoo", "massive", "sec", "fmp"] as const).map((p) => (
               <BudgetRow
                 key={p}
                 provider={p}

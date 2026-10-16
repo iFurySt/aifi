@@ -106,7 +106,7 @@ export function Shell({ children }: { children: ReactNode }) {
     pageLabels[p].toLowerCase().includes(search.toLowerCase()),
   );
   const demoBadge =
-    page === "settings" ? null : (
+    page === "settings" || page === "stocks" || page === "watchlist" ? null : (
       <button
         className="demo-badge"
         aria-label="About demo data"

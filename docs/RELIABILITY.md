@@ -66,3 +66,14 @@ Research workers now have durable fenced leases, atomic evidence/snapshot/bar
 commits, provider budgets, shared 429/auth cooldowns, staged institutional pages
 and last-good reads. See [research ingestion](design-docs/research-ingestion.md)
 for execution limits, UTC budget days, source windows and live-validation gates.
+
+Daily prices default to the keyless Yahoo chart adapter. A provider switch never
+mixes source series or price bases. Shared budgets and public-endpoint cooldowns
+apply across hosts; 401/403 do not turn into a nonexistent Yahoo API-key prompt.
+Split-adjusted historical windows replace atomically, preserving last-good data
+on failure. Keyless collection/offline reopening and double-adjustment tests are
+part of the research regression suite.
+
+Coverage counts aggregate unique symbols before directory membership joins; the
+20,000-bar status regression prevents collection progress from blocking local
+settings/read operations through a session-by-listing join.

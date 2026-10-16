@@ -184,11 +184,13 @@ contracts and CSP stay separate. See [logo boundary](design-docs/stock-logos.md)
 
 ## Research collection implementation
 
-SQLite v4 adds immutable compressed evidence, research snapshots, raw daily bars,
+SQLite v4 adds immutable compressed evidence, research snapshots, source-basis daily bars,
 CIK aliases, dataset settings, durable fenced jobs and shared provider budgets.
-The app-owned Go service now runs bounded Massive/SEC/FMP workers independently
+The app-owned Go service now runs bounded Yahoo/Massive/SEC/FMP workers independently
 of reads. Every directory candidate gets enrichment jobs; market-date jobs cover
-the full market. Missing credentials/contact leave work pending. Optional FMP
+the full market. Yahoo is the default keyless daily-price source, with explicit
+split-adjusted series and full-directory per-listing jobs; Massive is selectable.
+Other datasets with missing credentials/contact leave work pending. Optional FMP
 datasets are disabled by default and may require paid endpoint permissions.
 Go can decrypt existing AES-GCM blobs using the private host vault file solely
 for collectors; no plaintext retrieval RPC is exposed. Cached research read/status/config/sync methods connect all six stock tabs and
