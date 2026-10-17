@@ -13,10 +13,11 @@
 
 ### Changes Overview
 
-- Replaced the provider text row with a 20px badge beside the name; email occupies
+- Replaced the provider text row with a transparent 12px mark in a 14px slot beside the name; email occupies
   the second line and truncates within the compact menu.
 - Added AccountProviderBadge with a presentation-only provider registry. Only the
   existing connected ChatGPT source is shown; anonymous accounts have no badge.
+- Follow-up: removed the badge tile/background and reduced its visual weight.
 - Bundled the monochrome mark and its source/license locally. Kept existing
   account actions, authentication and subscription state unchanged.
 - Extended the existing account smoke to check two-line identity, badge placement
