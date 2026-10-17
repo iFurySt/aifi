@@ -124,6 +124,7 @@ func New() *cobra.Command {
 			command.Flags().StringSliceVar(&syncSymbols, "symbols", nil, "Queue selected directory symbols (at most 50), preserving provider limits")
 		}
 	}
+	researchCommand.AddCommand(newBackfillCommand(&dataDir))
 	data.AddCommand(researchCommand)
 	dir.AddCommand(sync, list, status)
 	return root

@@ -170,3 +170,40 @@ work; protected index membership prioritizes company/issuer initial collection
 before the alphabetical universe. Whole-directory work continues under existing
 provider budgets; a queue is not a claim of complete collection. See the
 [audit](../../docs/references/stock-data-coverage-audit.md) for the observed gaps.
+
+## Whole-directory backfill
+
+```sh
+./bin/aifi data research backfill                      # local record-level audit
+./bin/aifi data research backfill --queue              # persist missing-only work
+./bin/aifi data research backfill --run --sec-bulk     # independent collector
+```
+
+The standalone collector runs until interrupted and emits a JSON progress line
+each minute. It can run while the app is closed; this is an explicit foreground
+CLI operation, not an installed login service. Restart the same command to resume.
+App and CLI workers cooperate through SQLite leases and shared provider budgets.
+Daily limits and cooldowns wait for reset; they are never bypassed by this command.
+Source switches, disabled datasets and stored credentials remain authoritative.
+
+Backfill requests preserve successful snapshots, active leases, entitlement
+blocks and per-company HTTP backoffs. Unattempted companies lead retries and
+ordinary refreshes; current index membership prioritizes work within that pass.
+This prevents periodic seed/index refreshes from indefinitely starving the rest
+of the directory. The audit counts `withRecords`, `empty` and missing job states
+separately. A nonempty observation still does not imply complete fields/history.
+SEC counts expand shared CIK records to their mapped directory symbols; unmapped
+securities remain visible rather than acquiring a guessed issuer.
+
+`--sec-bulk` uses the [official nightly ZIPs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces)
+for financial facts and recent submissions, using the configured SEC contact.
+The two downloads are about 3 GB combined at the observed publication, each
+bounded to 3 GiB; normalized evidence needs additional local storage. Private
+`bulk-cache/` files use 0600 permissions and a per-archive process lock. Downloads
+resume with validated HTTP byte ranges and server version validators; a changed
+archive restarts safely. Slow downloads have a cancellable 12-hour request limit,
+transient failures back off, and a complete ZIP is reused for 24 hours. Members
+are never extracted to filesystem paths. Only exact CIK JSON members (max 32 MiB)
+with matching body identity enter existing parsers and atomic fenced commits.
+Missing/invalid members fall back to ordinary API collection, preserving good
+data. The archive URL/member and source time remain in SQLite evidence.

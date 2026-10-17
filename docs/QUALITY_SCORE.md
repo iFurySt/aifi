@@ -42,3 +42,10 @@ queued work from stored snapshots and records initial-collection gaps. A bounded
 symbol repair path preserves source budgets/leases; protected index members lead
 the alphabetical backlog. These mechanisms improve repairability, but do not imply
 complete source fields or whole-universe freshness; area scores stay unchanged.
+
+Whole-directory backfill adds missing-only requests, first-pass fairness, a
+standalone budget-sharing collector, record-versus-empty progress, and bounded
+resumable official SEC ZIP ingestion. Provider/store/engine/CLI race tests cover
+the ingestion boundaries. The [rollout remains active](exec-plans/active/full-stock-backfill.md):
+pending work, unsupported source fields and unmapped securities remain coverage
+gaps rather than an improved completeness score.

@@ -75,6 +75,16 @@ commits, provider budgets, shared 429/auth cooldowns, staged institutional pages
 and last-good reads. See [research ingestion](design-docs/research-ingestion.md)
 for execution limits, UTC budget days, source windows and live-validation gates.
 
+An explicitly launched `data research backfill --run` continues independently
+of the desktop and shares those leases/budgets. First visits lead recurring
+refreshes and retries. The optional SEC bulk path resumes private downloads with
+server version/range checks, imports only missing selected-source company heads,
+and falls back to normal APIs for absent members. Progress separates populated
+observations, empty responses, pending work and source/identity gaps; no worker
+startup or snapshot counter alone is a completeness claim. A machine restart
+requires rerunning the standalone command; normal app scheduling still resumes
+its persisted jobs. See the [active rollout](exec-plans/active/full-stock-backfill.md).
+
 Daily prices default to the keyless Yahoo chart adapter. A provider switch never
 mixes source series or price bases. Shared budgets and public-endpoint cooldowns
 apply across hosts; 401/403 do not turn into a nonexistent Yahoo API-key prompt.

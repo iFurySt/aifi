@@ -134,6 +134,16 @@ error body, credential or vault-read operation is exposed to the renderer.
 Research evidence is gzip-compressed in SQLite; normal page reads contain bounded
 normalized data and provenance, never raw evidence or secret blobs.
 
+Explicit CLI SEC bulk collection has two fixed official ZIP URLs, a 3 GiB bound
+per archive and a cancellable 12-hour request limit. It uses the same identifying
+contact and shared provider gate, refuses redirects, and never exposes archive
+bytes to the renderer. Private process-locked partial files resume only with
+matching byte ranges/server validators; archive changes cannot splice versions.
+No archive path is extracted. Only exact CIK JSON members with matching body
+identity and a 32 MiB uncompressed bound reach the existing parsers and fenced
+SQLite transaction. Missing members do not erase prior data or prove live-API
+absence.
+
 Yahoo daily prices use only the fixed public HTTPS chart host/path and an app
 User-Agent. They require no key, cookie, browser account or credential retrieval.
 Redirects and response limits remain enforced. Symbol mapping is bounded and

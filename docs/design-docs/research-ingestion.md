@@ -100,6 +100,15 @@ real-time market status is claimed. Default old-session repairs run monthly;
 recent sessions use the configurable daily cadence.
 
 One worker per provider runs with a 10-minute context and 15-minute fenced lease.
+Explicit whole-directory `research backfill --run` can also run independently of
+the app, sharing the same leases and budgets. First visits lead failed retries
+and periodic refreshes so a large universe eventually receives its initial pass.
+`--sec-bulk` imports SEC's fixed nightly companyfacts/submissions archives through
+the same normalizers and fenced transactions. Download requests are separately
+bounded to 3 GiB and a cancellable 12 hours, support validated byte-range resume,
+and never unpack archive paths. Existing per-company API collection continues.
+See the [CLI backfill contract](../../apps/cli/README.md#whole-directory-backfill)
+for progress semantics, cache bounds and operational controls.
 All HTTP calls reserve a SQLite-backed provider minute/day slot, even across
 multiple hosts/processes using the same DB. Defaults: Yahoo 20/min and 10,000/day, Massive 5/min, SEC 240/min,
 FMP 4/min and 200/day; settings permit lower or account-specific higher limits.

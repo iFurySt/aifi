@@ -410,8 +410,12 @@ func (c *Client) filings(ctx context.Context, j Job, r *Result) error {
 	if e != nil {
 		return e
 	}
+	return c.parseSECFilings(raw, cik, r)
+}
+
+func (c *Client) parseSECFilings(raw []byte, cik string, r *Result) error {
 	var m map[string]any
-	if e = decodeJSON(raw, &m); e != nil {
+	if e := decodeJSON(raw, &m); e != nil {
 		return e
 	}
 	recent := object(object(m["filings"])["recent"])
@@ -451,8 +455,12 @@ func (c *Client) facts(ctx context.Context, j Job, r *Result) error {
 	if e != nil {
 		return e
 	}
+	return c.parseSECFacts(raw, cik, r)
+}
+
+func (c *Client) parseSECFacts(raw []byte, cik string, r *Result) error {
 	var m map[string]any
-	if e = decodeJSON(raw, &m); e != nil {
+	if e := decodeJSON(raw, &m); e != nil {
 		return e
 	}
 	facts := object(m["facts"])
