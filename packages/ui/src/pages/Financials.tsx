@@ -1,3 +1,4 @@
+import { Select } from "../components/Select";
 import { Fragment, useMemo, useState } from "react";
 import { Check, ChevronDown, ChevronRight, Plus } from "lucide-react";
 import {
@@ -158,20 +159,18 @@ export function Financials({ data }: { data: StockResearch }) {
         <FinancialTrend ends={ends} metrics={selected} series={series} />
       )}
       <div className="stock-table-toolbar">
-        <select
-          aria-label="Financial view"
+        <Select
+          label="Financial view"
           value={view}
-          onChange={(e) => setView(e.target.value)}
-        >
-          <option value="metrics">Metrics</option>
-          {financialGroups.map((g) => (
-            <option key={g.id} value={g.id}>
-              {g.label}
-            </option>
-          ))}
-          <option value="actions">Corporate actions</option>
-          <option value="filings">Filings</option>
-        </select>
+          onValueChange={setView}
+          align="start"
+          options={[
+            { value: "metrics", label: "Metrics" },
+            ...financialGroups.map((g) => ({ value: g.id, label: g.label })),
+            { value: "actions", label: "Corporate actions" },
+            { value: "filings", label: "Filings" },
+          ]}
+        />
         {statements && (
           <div className="segmented-control" aria-label="Financial period">
             {(["Quarter", "Yearly"] as const).map((p) => (

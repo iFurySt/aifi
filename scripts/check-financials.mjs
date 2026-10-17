@@ -49,10 +49,13 @@ async function checks() {
     [...document.querySelectorAll("button")].find(
       (b) => b.textContent.trim() === text,
     );
-  const selectView = (value) => {
-    const select = document.querySelector('[aria-label="Financial view"]');
-    select.value = value;
-    select.dispatchEvent(new Event("change", { bubbles: true }));
+  const selectView = async (label) => {
+    document.querySelector('[aria-label="Financial view"]').click();
+    await until(() => !!document.querySelector('[role="listbox"]'));
+    [...document.querySelectorAll('[role="option"]')]
+      .find((option) => option.textContent === label)
+      .click();
+    await until(() => !document.querySelector('[role="listbox"]'));
   };
   await until(() => table() && graph());
   assert(
@@ -123,13 +126,13 @@ async function checks() {
       .textContent.includes("Diluted EPS"),
     "Tooltip has no selected metric",
   );
-  selectView("derived");
+  await selectView("Derived metrics");
   await until(() => !!table().querySelector('[data-metric="peRatio"]'));
   assert(
     table().querySelector('[data-metric="peRatio"] td').textContent === "—",
     "Historical valuation was invented",
   );
-  selectView("kpi");
+  await selectView("Key performance indicators");
   await until(
     () =>
       !!table().querySelector(

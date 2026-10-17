@@ -1,3 +1,4 @@
+import { Select } from "../components/Select";
 import { useEffect, useState } from "react";
 import {
   ArrowUpRight,
@@ -127,15 +128,14 @@ export function Agents() {
           <div className="composer-footer">
             <label className="cadence-control">
               <CalendarDays size={15} />
-              <select
-                aria-label="Agent cadence"
+              <Select
+                label="Agent cadence"
                 value={cadence}
-                onChange={(e) => setCadence(e.target.value as Cadence)}
-              >
-                {cadences.map((c) => (
-                  <option key={c}>{c}</option>
-                ))}
-              </select>
+                onValueChange={setCadence}
+                variant="subtle"
+                align="start"
+                options={cadences.map((c) => ({ value: c, label: c }))}
+              />
             </label>
             <Button variant="primary" type="submit">
               <Plus size={16} />

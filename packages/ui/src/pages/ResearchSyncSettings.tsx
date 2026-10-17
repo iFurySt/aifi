@@ -1,3 +1,4 @@
+import { Select } from "../components/Select";
 import { useEffect, useState } from "react";
 import {
   researchDatasets,
@@ -343,20 +344,18 @@ export function ResearchSyncSettings() {
                   <p>Yahoo is unofficial and may be rate limited.</p>
                 </div>
                 <div className="setting-control">
-                  <select
-                    aria-label="Daily price source"
+                  <Select
+                    label="Daily price source"
                     value={state.config.priceSource ?? "yahoo"}
                     disabled={busy}
-                    onChange={(e) =>
-                      void save({
-                        ...state.config,
-                        priceSource: e.target.value as "yahoo" | "massive",
-                      })
+                    onValueChange={(value) =>
+                      void save({ ...state.config, priceSource: value })
                     }
-                  >
-                    <option value="yahoo">Yahoo Finance · No key</option>
-                    <option value="massive">Massive · API key</option>
-                  </select>
+                    options={[
+                      { value: "yahoo", label: "Yahoo Finance · No key" },
+                      { value: "massive", label: "Massive · API key" },
+                    ]}
+                  />
                 </div>
               </div>
               {(
@@ -372,23 +371,26 @@ export function ResearchSyncSettings() {
                     <strong>{label}</strong>
                   </div>
                   <div className="setting-control">
-                    <select
-                      aria-label={label}
+                    <Select
+                      label={label}
                       value={state.config[field] ?? "yahoo"}
                       disabled={busy}
-                      onChange={(e) =>
-                        void save({ ...state.config, [field]: e.target.value })
+                      onValueChange={(value) =>
+                        void save({ ...state.config, [field]: value })
                       }
-                    >
-                      <option value="yahoo">Yahoo Finance · No key</option>
-                      <option value={official}>
-                        {official === "sec"
-                          ? "SEC · Contact required"
-                          : official === "fmp"
-                            ? "FMP · API key"
-                            : "Massive · API key"}
-                      </option>
-                    </select>
+                      options={[
+                        { value: "yahoo", label: "Yahoo Finance · No key" },
+                        {
+                          value: official,
+                          label:
+                            official === "sec"
+                              ? "SEC · Contact required"
+                              : official === "fmp"
+                                ? "FMP · API key"
+                                : "Massive · API key",
+                        },
+                      ]}
+                    />
                   </div>
                 </div>
               ))}
@@ -398,21 +400,19 @@ export function ResearchSyncSettings() {
                   <p>Background backfill across the directory.</p>
                 </div>
                 <div className="setting-control">
-                  <select
-                    aria-label="Price history"
-                    value={state.config.historyDays}
+                  <Select
+                    label="Price history"
+                    value={String(state.config.historyDays)}
                     disabled={busy}
-                    onChange={(e) =>
-                      void save({
-                        ...state.config,
-                        historyDays: Number(e.target.value),
-                      })
+                    onValueChange={(value) =>
+                      void save({ ...state.config, historyDays: Number(value) })
                     }
-                  >
-                    <option value={30}>1 month</option>
-                    <option value={365}>1 year</option>
-                    <option value={730}>2 years</option>
-                  </select>
+                    options={[
+                      { value: "30", label: "1 month" },
+                      { value: "365", label: "1 year" },
+                      { value: "730", label: "2 years" },
+                    ]}
+                  />
                 </div>
               </div>
               {researchDatasets.map((d) => (

@@ -169,17 +169,17 @@ async function createWindow() {
       const ndx = await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0,collection:'nasdaq100'});
       let protectedMembership = false;
       try { await window.aifiDesktop.requestData('directory.list', {query:'',limit:50,offset:0,collection:'sp500',symbols:['AAPL']}); } catch { protectedMembership = true; }
-      const openCollections = () => document.querySelector('[aria-label="Stock collection"]').dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,button:0,ctrlKey:false,pointerType:'mouse',isPrimary:true}));
+      const openCollections = () => document.querySelector('[aria-label="Stock collection"]').click();
       openCollections();
-      await waitFor(() => document.querySelectorAll('[role="menuitemradio"]').length === 4);
-      const collectionOptions = [...document.querySelectorAll('[role="menuitemradio"]')];
+      await waitFor(() => document.querySelectorAll('[role="option"]').length === 4);
+      const collectionOptions = [...document.querySelectorAll('[role="option"]')];
       const labels = collectionOptions.map(el => el.textContent).join(',');
       collectionOptions.find(el => el.textContent === 'S&P 500').click();
-      await waitFor(() => document.querySelector('[aria-label="Stock collection"]').textContent.trim() === 'S&P 500' && document.querySelector('.stock-list').getAttribute('aria-busy') === 'false' && !document.querySelector('[role="menuitemradio"]'));
+      await waitFor(() => document.querySelector('[aria-label="Stock collection"]').textContent.trim() === 'S&P 500' && document.querySelector('.stock-list').getAttribute('aria-busy') === 'false' && !document.querySelector('[role="option"]'));
       const selectionSaved = localStorage.getItem('aifi.stock-collection.v1') === 'sp500';
       openCollections();
-      await waitFor(() => document.querySelectorAll('[role="menuitemradio"]').length === 4);
-      [...document.querySelectorAll('[role="menuitemradio"]')].find(el => el.textContent === 'All US listings').click();
+      await waitFor(() => document.querySelectorAll('[role="option"]').length === 4);
+      [...document.querySelectorAll('[role="option"]')].find(el => el.textContent === 'All US listings').click();
       await waitFor(() => document.querySelector('[aria-label="Stock collection"]').textContent.trim() === 'Stocks' && document.querySelector('.stock-list').getAttribute('aria-busy') === 'false');
       const stockCollections = labels === 'All US listings,S&P 500,Nasdaq-100,My watchlist' && selectionSaved && protectedMembership && sp.total === 0 && sp.collection.memberCount >= 500 && sp.collection.unresolvedSymbols.length === sp.collection.memberCount && ndx.collection.memberCount >= 100 && ndx.collection.unresolvedSymbols.length === ndx.collection.memberCount;
       const hiddenScrollbars = getComputedStyle(document.querySelector('.stock-list')).scrollbarWidth === 'none' && getComputedStyle(document.querySelector('.main-content')).scrollbarWidth === 'none';

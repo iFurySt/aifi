@@ -1,3 +1,4 @@
+import { Select } from "../components/Select";
 import { useState, useLayoutEffect, useEffect, useRef } from "react";
 import {
   ArrowUp,
@@ -283,21 +284,19 @@ export function Research({
           {profile?.sharing ? (
             <>
               <span>Using ChatGPT plan · {profile.email || profile.label}</span>
-              <select
-                aria-label="Chat model"
+              <Select
+                label="Chat model"
                 value={chatgpt.model}
                 disabled={sending || !chatgpt.models.length}
-                onChange={(e) => chatgpt.setModel(e.target.value)}
-              >
-                {!chatgpt.models.length && (
-                  <option value="">No models available</option>
-                )}
-                {chatgpt.models.map((m) => (
-                  <option key={m.slug} value={m.slug}>
-                    {m.displayName}
-                  </option>
-                ))}
-              </select>
+                onValueChange={chatgpt.setModel}
+                searchable
+                variant="subtle"
+                placeholder="No models available"
+                options={chatgpt.models.map((m) => ({
+                  value: m.slug,
+                  label: m.displayName,
+                }))}
+              />
               <Button
                 variant="ghost"
                 onClick={() => void chatgpt.action("openUsage")}

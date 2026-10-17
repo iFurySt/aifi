@@ -1,6 +1,6 @@
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { Select } from "./Select";
 import { useEffect, useRef } from "react";
-import { Search, ChevronDown, Check } from "lucide-react";
+import { Search } from "lucide-react";
 import { StockAvatar } from "./StockAvatar";
 import {
   stockCollections,
@@ -58,49 +58,23 @@ export function StockSidebar({
     <div className="sidebar-inner stock-sidebar">
       <div className="stock-sidebar-heading">
         <h2>
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger asChild>
-              <button
-                className="stock-source-trigger"
-                aria-label="Stock collection"
-                title={selected.label}
-              >
-                {selected.heading} <ChevronDown size={14} aria-hidden="true" />
-              </button>
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Portal>
-              <DropdownMenu.Content
-                className="dropdown-menu stock-source-menu"
-                align="start"
-                sideOffset={8}
-                collisionPadding={12}
-                aria-label="Stock collections"
-              >
-                <DropdownMenu.RadioGroup
-                  value={stockCollection}
-                  onValueChange={(value) => {
-                    if (validStockCollection(value)) {
-                      selectStockCollection(value);
-                      setQuery("");
-                    }
-                  }}
-                >
-                  {stockCollections.map((collection) => (
-                    <DropdownMenu.RadioItem
-                      key={collection.id}
-                      value={collection.id}
-                      className="dropdown-item stock-source-option"
-                    >
-                      {collection.label}
-                      <DropdownMenu.ItemIndicator>
-                        <Check size={15} aria-hidden="true" />
-                      </DropdownMenu.ItemIndicator>
-                    </DropdownMenu.RadioItem>
-                  ))}
-                </DropdownMenu.RadioGroup>
-              </DropdownMenu.Content>
-            </DropdownMenu.Portal>
-          </DropdownMenu.Root>
+          <Select
+            label="Stock collection"
+            value={stockCollection}
+            triggerLabel={selected.heading}
+            variant="heading"
+            align="start"
+            options={stockCollections.map((collection) => ({
+              value: collection.id,
+              label: collection.label,
+            }))}
+            onValueChange={(value) => {
+              if (validStockCollection(value)) {
+                selectStockCollection(value);
+                setQuery("");
+              }
+            }}
+          />
         </h2>
         {data.snapshotId && (
           <span className="count-badge">{data.total.toLocaleString()}</span>

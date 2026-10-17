@@ -1,3 +1,4 @@
+import { Select } from "../components/Select";
 import { useChatGPT } from "../chatgpt-context";
 import { Button } from "../components/primitives";
 
@@ -72,24 +73,20 @@ export function ChatGPTSettings() {
                 {active?.email && <p>{active.email}</p>}
               </div>
               <div className="setting-control">
-                <select
-                  aria-label="ChatGPT account"
+                <Select
+                  label="ChatGPT account"
                   value={status.activeProfileId ?? ""}
                   disabled={busy}
-                  onChange={(e) =>
-                    void action("selectProfile", { profileId: e.target.value })
+                  onValueChange={(value) =>
+                    void action("selectProfile", { profileId: value })
                   }
-                >
-                  <option value="" disabled>
-                    Choose account
-                  </option>
-                  {status.profiles.map((p) => (
-                    <option key={p.id} value={p.id}>
-                      {p.label}
-                      {p.connected ? "" : " · Sign in needed"}
-                    </option>
-                  ))}
-                </select>
+                  searchable
+                  placeholder="Choose account"
+                  options={status.profiles.map((p) => ({
+                    value: p.id,
+                    label: `${p.label}${p.connected ? "" : " · Sign in needed"}`,
+                  }))}
+                />
               </div>
             </div>
           )}
@@ -99,21 +96,18 @@ export function ChatGPTSettings() {
                 <strong>Model</strong>
               </div>
               <div className="setting-control">
-                <select
-                  aria-label="ChatGPT model"
+                <Select
+                  label="ChatGPT model"
                   value={model}
                   disabled={busy || !models.length}
-                  onChange={(e) => setModel(e.target.value)}
-                >
-                  {!models.length && (
-                    <option value="">No models available</option>
-                  )}
-                  {models.map((m) => (
-                    <option key={m.slug} value={m.slug}>
-                      {m.displayName}
-                    </option>
-                  ))}
-                </select>
+                  onValueChange={setModel}
+                  searchable
+                  placeholder="No models available"
+                  options={models.map((m) => ({
+                    value: m.slug,
+                    label: m.displayName,
+                  }))}
+                />
                 <Button
                   disabled={busy}
                   onClick={() =>

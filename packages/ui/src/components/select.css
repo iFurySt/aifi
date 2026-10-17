@@ -61,8 +61,12 @@
 .select-popover {
   z-index: 110;
   box-sizing: border-box;
-  width: max(220px, var(--radix-popover-trigger-width));
-  max-width: var(--radix-popover-content-available-width);
+  width: max-content;
+  min-width: min(
+    max(180px, var(--radix-popover-trigger-width)),
+    var(--radix-popover-content-available-width)
+  );
+  max-width: min(320px, var(--radix-popover-content-available-width));
   max-height: min(360px, var(--radix-popover-content-available-height));
   display: flex;
   flex-direction: column;
@@ -77,6 +81,12 @@
   font-size: 13px;
   line-height: 1.4;
   -webkit-app-region: no-drag;
+}
+.select-popover:has(.select-search) {
+  min-width: min(
+    max(220px, var(--radix-popover-trigger-width)),
+    var(--radix-popover-content-available-width)
+  );
 }
 .select-search {
   display: flex;

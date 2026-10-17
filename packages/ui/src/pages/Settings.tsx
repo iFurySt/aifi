@@ -1,3 +1,4 @@
+import { Select } from "../components/Select";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { Check, RefreshCw, Trash2, CircleCheck } from "lucide-react";
 import type { DataStatus, DataSettings, CredentialProvider } from "@aifi/core";
@@ -194,19 +195,15 @@ export function Settings() {
       {section === "appearance" && (
         <Group title="Theme">
           <Row title="Color theme">
-            <select
-              aria-label="Color theme"
+            <Select
+              label="Color theme"
               value={workspace.theme}
-              onChange={(e) =>
-                update((w) => ({
-                  ...w,
-                  theme: e.target.value as "light" | "dark",
-                }))
-              }
-            >
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
+              onValueChange={(value) => update((w) => ({ ...w, theme: value }))}
+              options={[
+                { value: "light", label: "Light" },
+                { value: "dark", label: "Dark" },
+              ]}
+            />
           </Row>
         </Group>
       )}
