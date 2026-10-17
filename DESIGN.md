@@ -329,7 +329,7 @@ after-hours observation times remain in source details; the clock never implies
 that prices stream. Keep the native breadcrumb next to the sidebar toggle with
 a vertical divider, independent of the sidebar's width/collapse state.
 
-### Workspace Search And Shortcuts
+## 13. Workspace Search And Shortcuts
 
 Keep the search dialog at most 560px high or viewport height minus 48px. The
 header, 40px input and compact footer stay visible; only results scroll. Desktop
@@ -343,18 +343,3 @@ Desktop-only N opens New chat and focuses its composer; Web preserves browser
 New Window. Ignore composition/additional modifiers and retain input formatting
 for B. Held commands do not repeatedly toggle/navigate. Utility shortcuts are
 listed in one small help dialog rather than additional navigation items.
-
-## 13. Workspace Search And Shortcuts
-
-Cap search at 560px or the viewport height minus 48px, whichever is smaller.
-Keep the header, 40px input and short footer fixed; scroll the results internally.
-Use 40px result rows (44px mobile), single-line ellipsis and hover titles for full
-names. Arrow Up/Down reveals/focuses results, Enter opens, Escape closes. Keep
-neutral focus styling and Radix dismissal/focus restoration.
-
-The footer's Shortcuts action and Command/Ctrl+/ open a concise guide from the
-shared binding registry. Support session-bounded back/forward with Command/Ctrl+[
-and ], search with K, sidebar with B, and Settings with comma. Command/Ctrl+N
-starts a new chat in desktop only, preserving the browser's New Window shortcut.
-Use platform-correct Command/Control hints. Preserve editing and open-form input;
-never intercept plain text, IME composition or extra-modifier system shortcuts.

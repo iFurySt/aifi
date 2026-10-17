@@ -29,6 +29,9 @@
   search geometry/scroll/long names, keyboard selection, help and new chat focus.
 - Account, desktop and interaction smokes passed. Chrome desktop and 390×600
   review confirmed 560px/552px dialogs, 40px inputs and no horizontal overflow.
+- Real macOS Command+[ / ], B, N, K and / worked, including composer focus,
+  search arrow selection and switching from search to shortcut help. The existing
+  connection persisted after restart; no real OAuth or inference was performed.
 
 ### Files Modified
 
