@@ -52,3 +52,13 @@ requested, with no fake identity or access-control bypass.
 - `packages/core/src/stock-research.ts` and tests
 - Stock/financial/settings UI and tests
 - Architecture, frontend, reliability, security and research-source documents
+
+### Follow-up: official SEC access
+
+The user supplied a real contact for SEC identification. Saved only through the
+local settings service; no contact value entered repository files. All three
+public SEC API probes returned 200. The local workspace now selects official
+SEC financial facts and submissions. Persisted AAPL/MSFT/NVDA reads returned
+426/455/396 financial rows and SEC filing records, with Yahoo data retained.
+Prices/profiles continue using Yahoo. This was runtime configuration and live
+validation, with no source-code change or bundled-default change.

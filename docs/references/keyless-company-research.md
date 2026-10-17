@@ -8,7 +8,7 @@ ongoing availability or complete listing coverage.
 | Yahoo public company profile page | HTTP 200; public embedded JSON has company identity, description, industry, sector, website, employee count and recent SEC filings | Implement bounded extraction without executing scripts or calling authenticated APIs |
 | Yahoo fundamentals timeseries | HTTP 200 without key/cookies; annual/quarterly standardized metrics | Implement with vendor period metadata; retain missing filing/start dates |
 | Yahoo direct quoteSummary | HTTP 401 | Do not implement a direct API or browser-cookie/crumb flow |
-| SEC submissions/companyfacts/ticker map | HTTP 403 with identifying project URL; real contact requested | Keep existing official adapter/contact gate; no bypass or fabricated email |
+| SEC submissions/companyfacts/ticker map | Initial HTTP 403 with project URL; HTTP 200 after a user-supplied identifying contact was configured locally | Official adapter live-validated; contact value stays outside the repository |
 | Nasdaq company profile/filings API | Requests timed out | Do not present as a working default |
 | Apple Newsroom RSS | HTTP 200 | Company-specific press-release feed; not a universe-wide filings adapter |
 
@@ -50,3 +50,15 @@ The filing index is secondary coverage. Validate symbol, filing ID and issuer
 paths, then link to SEC's primary document/index. Do not download filing bodies
 or imply report dates, acceptance timestamps, amendments or every historical
 filing are complete. Newsroom press releases and SEC filings are distinct.
+
+## SEC follow-up validation
+
+On 2026-10-17 the user supplied an identifying contact, saved through local app
+settings only. The contact is intentionally absent from versioned documents.
+Ticker mapping, AAPL submissions and AAPL Company Facts returned HTTP 200.
+The local user configuration now selects SEC for facts/filings; fresh installs
+still default to keyless Yahoo until source setup is chosen. The running Go
+collector persisted official AAPL/MSFT/NVDA facts (426/455/396 normalized rows)
+and recent filings; local reads selected SEC while keeping existing Yahoo data.
+The renderer caps returned recent filing rows at 250; this is not total archive
+coverage. Prices/company profiles retain their existing Yahoo selection.

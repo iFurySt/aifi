@@ -8,8 +8,8 @@ without API keys, persist evidence/snapshots in SQLite, keep all UI reads local.
 - [x] Probe primary/public endpoints and inspect existing reference adapters.
 - [x] Add verified Yahoo financial series and company identity adapters with
       explicit vendor periods and no invented filing dates/start dates.
-- [x] Retain optional SEC filings/facts and expose contact/network gates. Live
-      direct SEC validation remains deferred until honest contact is supplied.
+- [x] Retain optional SEC filings/facts and expose contact/network gates.
+      Follow-up contact setup on 2026-10-17 enabled successful official ingestion.
 - [x] Queue all directory candidates; separate enrichment from price budgets so
       a directory-size initial backlog cannot starve higher-value datasets.
 - [x] Verify persistence/offline/last-good semantics, source selection, UI and
@@ -31,5 +31,11 @@ queue fairness, explicit periods and offline restart reads.
 
 Decision: public-page embedded JSON extraction avoids authenticated quoteSummary
 and browser sessions. Yahoo is an unofficial personal-research source; page
-changes/throttling remain possible. SEC contact question is still pending; no
-fabricated identity, proxy or challenge bypass was added.
+changes/throttling remain possible. The subsequent user-provided contact was
+saved locally and official SEC facts/filings were validated; no fabricated
+identity, proxy or challenge bypass was added.
+
+Follow-up: all three official API probes returned 200. Local source selection
+now prefers SEC facts/filings; AAPL/MSFT/NVDA persisted 426/455/396 fact rows and
+recent filing records. Fresh-install defaults remain Yahoo. The private contact
+value is not recorded in this plan or any other tracked file.

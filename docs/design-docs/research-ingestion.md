@@ -50,8 +50,9 @@ Primary specs checked during implementation:
 [FMP stable endpoints](https://site.financialmodelingprep.com/developer/docs).
 The documented Massive Basic plan is 5 calls/minute, two years of EOD history.
 Real account entitlements must be validated; FMP ownership/ratings/congress are
-not assumed to be included with a free key. SEC access previously returned 403
-from this host; a real configured contact/network response is the validation gate.
+not assumed to be included with a free key. SEC initially returned 403
+from this host. On 2026-10-17, user-supplied local contact configuration was
+followed by HTTP 200 and successful official facts/filings ingestion.
 
 ## Persistence and scheduling
 
@@ -174,8 +175,9 @@ added as a working source. HTTP 401/403 on Yahoo apply a shared 15-minute minimu
 cooldown rather than incorrectly asking for a key or blocking every listing.
 Normal 429/Retry-After handling also applies; last-good data stays readable.
 
-SEC remains keyless but needs an honest identifying contact; its direct
-financials, filings and insider adapter remain unvalidated on this device.
+SEC remains keyless but needs an honest identifying contact. Official facts
+and recent submissions were live-validated after local contact setup on
+2026-10-17; individual insider archive coverage is still collected separately.
 Corporate actions, ratings, funds, politician trades and news retain separate
 setup gates. The additional keyless company collectors are described below.
 
@@ -207,3 +209,8 @@ gets jobs for all four Yahoo datasets. At 20/min and 10,000/day, a universe-wide
 first pass spans multiple running days and can take longer after failures.
 Snapshots survive restart; normal tab reads still never fetch providers.
 Long company descriptions default to a short preview with an explicit expand.
+
+The local configured workspace now prefers official SEC facts/filings, verified
+by persisted AAPL/MSFT/NVDA reads (426/455/396 financial rows). These local
+preferences/contact are not bundled defaults or repository configuration. Yahoo
+prices/profiles remain selected; existing Yahoo facts/filings remain stored.
