@@ -16,7 +16,7 @@ import { fetchPublicAsset, readPublicBytes } from "./public-assets.ts";
 const maxBytes = 256 * 1024;
 const week = 7 * 24 * 60 * 60 * 1000;
 const pngSignature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
-export function validLogoPNG(bytes: Buffer) {
+export function validLogoPNG(bytes: Buffer, maxDimension = 2048) {
   if (
     bytes.length < 24 ||
     bytes.length > maxBytes ||
@@ -26,7 +26,13 @@ export function validLogoPNG(bytes: Buffer) {
     return false;
   const width = bytes.readUInt32BE(16),
     height = bytes.readUInt32BE(20);
-  return width > 0 && height > 0 && width <= 2048 && height <= 2048;
+  return (
+    width > 0 &&
+    height > 0 &&
+    width <= maxDimension &&
+    height <= maxDimension &&
+    width * height <= 2048 * 2048
+  );
 }
 export interface LogoCatalogReader {
   sources(symbol: string): LogoSource[];
@@ -53,6 +59,7 @@ export class StockLogoCache {
       offline,
       fetchAsset,
     ),
+    private policy: { fallback?: boolean; maxDimension?: number } = {},
   ) {}
   close() {
     this.shutdown.abort();
@@ -90,11 +97,15 @@ export class StockLogoCache {
     const rejectedHashes = this.catalog.rejectedImageHashes?.(symbol) ?? [];
     return [
       ...reviewed,
-      {
-        url: `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
-        source: "fmp-public-image",
-        legacySymbol: symbol,
-      },
+      ...(this.policy.fallback === false
+        ? []
+        : [
+            {
+              url: `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
+              source: "fmp-public-image",
+              legacySymbol: symbol,
+            },
+          ]),
     ].map((source) => ({ ...source, rejectedHashes }));
   }
   private load(symbol: string, sources: LogoSource[]) {
@@ -118,7 +129,7 @@ export class StockLogoCache {
   }
   private valid(bytes: Buffer, source: LogoSource) {
     return (
-      validLogoPNG(bytes) &&
+      validLogoPNG(bytes, this.policy.maxDimension) &&
       !source.rejectedHashes?.includes(
         createHash("sha256").update(bytes).digest("hex"),
       ) &&

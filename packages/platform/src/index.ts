@@ -43,3 +43,5 @@ export * from "./stock-logos";
 export * from "./stock-collection";
 export * from "./stock-research";
 export * from "./chatgpt";
+
+export * from "./fund-logos";

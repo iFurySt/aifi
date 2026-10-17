@@ -1,9 +1,15 @@
+import fundSeed from "./company-fund-logo-catalog.json" with { type: "json" };
 import { Agent, get as httpsGet } from "node:https";
 import { Readable } from "node:stream";
 import { validDirectorySymbol } from "../../core/src/stock-directory.ts";
 
 export const catalogURL =
   "https://raw.githubusercontent.com/ifuryst/company-logo-catalog/main/catalog.json";
+export const fundCatalogURL =
+  "https://raw.githubusercontent.com/ifuryst/company-logo-catalog/main/funds-catalog.json";
+const reviewedFundURLs = new Set(
+  fundSeed.funds.flatMap((f) => f.logos.map((l) => l.url)),
+);
 const agent = new Agent({
   proxyEnv: process.env,
   keepAlive: true,
@@ -23,6 +29,7 @@ const issuerLogoURLs = new Set([
 /** Only explicitly reviewed origins/paths may supply company images. */
 export function trustedLogoURL(value: string): boolean {
   try {
+    if (reviewedFundURLs.has(value)) return true;
     const url = new URL(value);
     if (
       url.protocol !== "https:" ||
@@ -54,7 +61,11 @@ export function trustedLogoURL(value: string): boolean {
 export const fetchPublicAsset: typeof fetch = (input, options) =>
   new Promise((resolve, reject) => {
     const value = String(input);
-    if (value !== catalogURL && !trustedLogoURL(value)) {
+    if (
+      value !== catalogURL &&
+      value !== fundCatalogURL &&
+      !trustedLogoURL(value)
+    ) {
       reject(Error("Untrusted public asset source."));
       return;
     }

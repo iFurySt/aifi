@@ -154,3 +154,12 @@ file/root, rechecks containment and ancestors, and delegates fixed native APIs
 through trusted top-frame IPC. Web has no native callback. No file-read, SQL,
 credential-content, delete or arbitrary command capability is added. See
 [storage boundaries](design-docs/storage-usage.md).
+
+
+Historical Funds collection permits only fixed 13f.info manager, autocomplete and
+manager/CUSIP routes. HTML is parsed for report metadata, never executed. Public
+responses remain untrusted, bounded evidence. Fund-logo requests accept only a
+10-digit CIK, never a renderer URL. The separate catalog parser and fixed reviewed
+URL allowlist cannot broaden network origins; PNG hash/dimensions are verified.
+Fund logos allow a 4,096px axis within the existing 4MP/byte cap; stock limits
+remain unchanged. Failed sources retain the last good local observations.

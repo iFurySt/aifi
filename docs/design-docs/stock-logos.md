@@ -122,3 +122,13 @@ bridge errors. Batch regressions cover cache-only reads under a saturated provid
 queue, membership validation, page preparation ordering, stale responses and cache
 failures. Native
 validation exercises real AACOW and TREO sources; isolated smoke stays offline.
+
+
+## Fund manager logos
+
+`funds-catalog.json` in the same public repository is a separate CIK profile,
+with a bundled 16-manager seed and independent private metadata cache. A narrow
+`fund.logo {cik}` request reuses the bounded PNG cache without ticker fallback.
+Renderer repositories reuse session images and prepared decode/contrast data.
+Unknown CIKs keep initials; arbitrary remote URLs are never accepted. All 16
+reviewed assets were downloaded, validated and cached during native verification.

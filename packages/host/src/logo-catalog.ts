@@ -177,15 +177,20 @@ export class LogoCatalog {
     private offline = false,
     private fetcher: typeof fetch = fetchPublicAsset,
     seed: unknown = bundled,
+    private options: {
+      parse?: (value: unknown) => ParsedCatalog;
+      url?: string;
+      fileName?: string;
+    } = {},
   ) {
     this.manifest = seed;
-    this.parsed = parseLogoCatalog(seed);
+    this.parsed = (this.options.parse ?? parseLogoCatalog)(seed);
     try {
       const path = this.path();
       if (statSync(path).size > maxBytes)
         throw Error("Cached catalog too large.");
       const saved = object(JSON.parse(readFileSync(path, "utf8")));
-      const parsed = parseLogoCatalog(saved.manifest);
+      const parsed = (this.options.parse ?? parseLogoCatalog)(saved.manifest);
       if (
         typeof saved.checkedAt !== "number" ||
         !Number.isFinite(saved.checkedAt) ||
@@ -206,7 +211,11 @@ export class LogoCatalog {
     }
   }
   private path() {
-    return join(this.dataDir, "stock-logos", "catalog.json");
+    return join(
+      this.dataDir,
+      "stock-logos",
+      this.options.fileName ?? "catalog.json",
+    );
   }
   sources(
     symbol: string,
@@ -237,7 +246,7 @@ export class LogoCatalog {
   }
   private async update() {
     try {
-      const response = await this.fetcher(catalogURL, {
+      const response = await this.fetcher(this.options.url ?? catalogURL, {
         redirect: "error",
         signal: AbortSignal.any([
           AbortSignal.timeout(10000),
@@ -252,7 +261,7 @@ export class LogoCatalog {
       const manifest: unknown = JSON.parse(
         new TextDecoder("utf-8", { fatal: true }).decode(bytes),
       );
-      const parsed = parseLogoCatalog(manifest);
+      const parsed = (this.options.parse ?? parseLogoCatalog)(manifest);
       if (this.shutdown.signal.aborted) return;
       if (compareVersion(parsed.version, this.parsed.version) < 0)
         throw Error("Catalog downgrade rejected.");

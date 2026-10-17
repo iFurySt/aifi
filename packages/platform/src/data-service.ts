@@ -23,7 +23,9 @@ export async function requestLocalData(
     method: "POST",
     headers: { "Content-Type": "application/json", "X-AIFi-Session": session! },
     body: JSON.stringify({ method, params }),
-    signal: AbortSignal.timeout(method === "stock.logo" ? 70000 : 20000),
+    signal: AbortSignal.timeout(
+      method === "stock.logo" || method === "fund.logo" ? 70000 : 20000,
+    ),
   });
   if (response.status === 403 && retry) {
     session = undefined;

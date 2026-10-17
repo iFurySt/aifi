@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "profile": "fund-manager-logos",
+  "catalogVersion": "0.1.0",
+  "updatedAt": "2026-10-17",
+  "funds": [
+    {
+      "id": "a16z-perennial",
+      "name": "a16z Perennial Management, L.P.",
+      "displayName": "a16z Perennial",
+      "cik": "0002009275",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://a16z.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0002009275.json",
+        "https://13f.info/manager/0002009275-a16z-perennial-management-l-p",
+        "https://a16z.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fa16z.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://a16z.com/",
+          "redistribution": "not-granted",
+          "sha256": "c749a33b3b5d6bc961d7f71cb81bf90c8ff40fa612f813efe50576214c66a49c",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "berkshire-asset",
+      "name": "BERKSHIRE ASSET MANAGEMENT LLC/PA",
+      "displayName": "Berkshire Asset",
+      "cik": "0000949012",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://berkshireasset.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0000949012.json",
+        "https://13f.info/manager/0000949012-berkshire-asset-management-llc-pa",
+        "https://berkshireasset.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fberkshireasset.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://berkshireasset.com/",
+          "redistribution": "not-granted",
+          "sha256": "4f3abe826d210e9899169e2e721dc441b0daca4735f00e655cabd5000e6a7711",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "berkshire-hathaway",
+      "name": "BERKSHIRE HATHAWAY INC",
+      "displayName": "Berkshire Hathaway",
+      "cik": "0001067983",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://berkshirehathaway.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001067983.json",
+        "https://13f.info/manager/0001067983-berkshire-hathaway-inc",
+        "https://berkshirehathaway.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/BRK-B.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://berkshirehathaway.com/",
+          "redistribution": "not-granted",
+          "sha256": "74e4092f93a90a16f6882bb2b5f13aaf1122e8fee0e731e1ca1580db3d20cea4",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "bridgewater-associates",
+      "name": "Bridgewater Associates, LP",
+      "displayName": "Bridgewater Associates",
+      "cik": "0001350694",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://bridgewater.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001350694.json",
+        "https://13f.info/manager/0001350694-bridgewater-associates-lp",
+        "https://bridgewater.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fbridgewater.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://bridgewater.com/",
+          "redistribution": "not-granted",
+          "sha256": "38060c1db5cf050a6f83494bcd46c5d49f199f859b68d9a963463d68b5ee5e2e",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "centerbook-partners",
+      "name": "CenterBook Partners LP",
+      "displayName": "CenterBook Partners",
+      "cik": "0001872738",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://centerbook.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001872738.json",
+        "https://13f.info/manager/0001872738-centerbook-partners-lp",
+        "https://centerbook.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fcenterbook.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://centerbook.com/",
+          "redistribution": "not-granted",
+          "sha256": "4d5c0e595251724a6998df8a0d6a2be55b61baa855519278f54956f4e7b9d70c",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "chilton-investment",
+      "name": "CHILTON INVESTMENT CO INC.",
+      "displayName": "Chilton Investment",
+      "cik": "0001332632",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://chiltonfunds.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001332632.json",
+        "https://13f.info/manager/0001332632-chilton-investment-co-inc",
+        "https://chiltonfunds.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fchiltonfunds.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://chiltonfunds.com/",
+          "redistribution": "not-granted",
+          "sha256": "380c6726c5c6d08d99894da948b501e17564f4d032f4ff055ec74c1ebfbb1e97",
+          "width": 16,
+          "height": 16,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "exoduspoint-capital",
+      "name": "ExodusPoint Capital Management, LP",
+      "displayName": "ExodusPoint Capital",
+      "cik": "0001736225",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://exoduspoint.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001736225.json",
+        "https://13f.info/manager/0001736225-exoduspoint-capital-management-lp",
+        "https://exoduspoint.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fexoduspoint.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://exoduspoint.com/",
+          "redistribution": "not-granted",
+          "sha256": "4d42f4cfe9c290f48582ee94d68e07d77a906389ba3a75c272f16ba3c5ecdd5c",
+          "width": 64,
+          "height": 64,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "gqg-partners",
+      "name": "GQG Partners LLC",
+      "displayName": "GQG Partners",
+      "cik": "0001697233",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://gqg.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001697233.json",
+        "https://13f.info/manager/0001697233-gqg-partners-llc",
+        "https://gqg.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fgqg.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://gqg.com/",
+          "redistribution": "not-granted",
+          "sha256": "8bcfa049838d38ea32ce072340afb19aa658e1b5358bf104e95d7db1de1054c6",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "harris-associates",
+      "name": "HARRIS ASSOCIATES L P",
+      "displayName": "Harris Associates",
+      "cik": "0000813917",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://harrisassoc.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0000813917.json",
+        "https://13f.info/manager/0000813917-harris-associates-l-p",
+        "https://harrisassoc.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://harrisassoc.com/wp-content/uploads/sites/2/2024/07/cropped-Harris_Oakmark_Stacked_W-Bl-70x70-1-192x192.png",
+          "source": "issuer-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://harrisassoc.com/",
+          "redistribution": "not-granted",
+          "sha256": "f1a90807996e278c1a646f085dc055f1dc13c6748a9ef1d9733c30ebfb5467b8",
+          "width": 192,
+          "height": 192,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "panagora-asset",
+      "name": "PANAGORA ASSET MANAGEMENT INC",
+      "displayName": "PanAgora Asset",
+      "cik": "0000883677",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://panagora.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0000883677.json",
+        "https://13f.info/manager/0000883677-panagora-asset-management-inc",
+        "https://panagora.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fpanagora.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://panagora.com/",
+          "redistribution": "not-granted",
+          "sha256": "9e6be74751f7e5c384cb50df15fa8de074e65536c1c7d8b79192a7ea54913562",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "polen-capital",
+      "name": "POLEN CAPITAL MANAGEMENT LLC",
+      "displayName": "Polen Capital",
+      "cik": "0001034524",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://polencapital.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001034524.json",
+        "https://13f.info/manager/0001034524-polen-capital-management-llc",
+        "https://polencapital.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fpolencapital.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://polencapital.com/",
+          "redistribution": "not-granted",
+          "sha256": "d88e7362279a275ba3c9f028db07df5ae7a8eb109516af9441b7be8779c47c31",
+          "width": 64,
+          "height": 64,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "rokos-capital",
+      "name": "Rokos Capital Management LLP",
+      "displayName": "Rokos Capital",
+      "cik": "0001666335",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://rokoscapital.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001666335.json",
+        "https://13f.info/manager/0001666335-rokos-capital-management-llp",
+        "https://rokoscapital.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Frokoscapital.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://rokoscapital.com/",
+          "redistribution": "not-granted",
+          "sha256": "f0a926f7c64187a1c391b69623f8464b71bcca6258326a81b2ac7147768f0365",
+          "width": 20,
+          "height": 20,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "soros-fund",
+      "name": "SOROS FUND MANAGEMENT LLC",
+      "displayName": "Soros Fund",
+      "cik": "0001029160",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://sorosfundmgmt.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001029160.json",
+        "https://13f.info/manager/0001029160-soros-fund-management-llc",
+        "https://sorosfundmgmt.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://sorosfundmgmt.com/wp-content/uploads/2025/04/Favicon_512x512px-1-150x150.png",
+          "source": "issuer-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://sorosfundmgmt.com/",
+          "redistribution": "not-granted",
+          "sha256": "3f7806e2c7684681862cebc462560584631598a3945c2ca3d26302d226bfd656",
+          "width": 150,
+          "height": 150,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "temasek-holdings",
+      "name": "Temasek Holdings (Private) Ltd",
+      "displayName": "Temasek Holdings",
+      "cik": "0001021944",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://temasek.com.sg/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001021944.json",
+        "https://13f.info/manager/0001021944-temasek-holdings-private-ltd",
+        "https://temasek.com.sg/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Ftemasek.com.sg&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://temasek.com.sg/",
+          "redistribution": "not-granted",
+          "sha256": "551ebc5cd18bbd03e648c852b3f9c9d7d46a61f3cb33ee863462e0e576d1aedb",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "viking-global",
+      "name": "VIKING GLOBAL INVESTORS LP",
+      "displayName": "Viking Global",
+      "cik": "0001103804",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://vikingglobal.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001103804.json",
+        "https://13f.info/manager/0001103804-viking-global-investors-lp",
+        "https://vikingglobal.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fvikingglobal.com&size=128",
+          "source": "public-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://vikingglobal.com/",
+          "redistribution": "not-granted",
+          "sha256": "24f931752dc725eb8c2c20d19d51a0d36e2d2438586d419256fbc580ce0df5cd",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    },
+    {
+      "id": "whale-rock",
+      "name": "Whale Rock Capital Management LLC",
+      "displayName": "Whale Rock",
+      "cik": "0001387322",
+      "reviewedAt": "2026-10-17",
+      "websiteUrl": "https://whalerockcapital.com/",
+      "identityEvidenceUrls": [
+        "https://data.sec.gov/submissions/CIK0001387322.json",
+        "https://13f.info/manager/0001387322-whale-rock-capital-management-llc",
+        "https://whalerockcapital.com/"
+      ],
+      "logos": [
+        {
+          "url": "https://www.whalerockcapital.com/Templates/Whalerock/media/logo.png",
+          "source": "issuer-brand-favicon",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://whalerockcapital.com/",
+          "redistribution": "not-granted",
+          "sha256": "c11aba77a1e56fb7e662b1372110576d76ff72d215e614ad863b41a96ca46ba7",
+          "width": 2150,
+          "height": 764,
+          "format": "png",
+          "notes": "Corporate manager mark compared with its official public website; this is not a fund manager portrait. Metadata only; source owner retains artwork rights."
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { FundLogoCache } from "./fund-logos.ts";
 import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
 import { createInterface } from "node:readline";
 import { createCipheriv, randomBytes } from "node:crypto";
@@ -92,6 +93,7 @@ import type { StockLogo } from "../../core/src/stock-logos.ts";
 
 export class DataHost {
   private logoCache?: StockLogoCache;
+  private fundLogoCache?: FundLogoCache;
   private storage: LocalStorageUsage;
   private cachedLogoReads = 0;
   private child?: ChildProcessWithoutNullStreams;
@@ -269,6 +271,18 @@ export class DataHost {
         this.cachedLogoReads--;
       }
     }
+    if (method === "fund.logo") {
+      const p = params as { cik?: unknown };
+      if (
+        !p ||
+        Object.keys(p).length !== 1 ||
+        typeof p.cik !== "string" ||
+        !/^\d{10}$/.test(p.cik)
+      )
+        throw Error("Invalid manager logo request.");
+      this.fundLogoCache ??= new FundLogoCache(this.dataDir, this.offline);
+      return this.fundLogoCache.get(p.cik);
+    }
     if (method === "stock.logo") {
       const symbol = (params as { symbol: string }).symbol.toUpperCase();
       const members = (await this.rpc("directory.contains", {
@@ -319,6 +333,7 @@ export class DataHost {
   }
   async stop() {
     this.logoCache?.close();
+    this.fundLogoCache?.close();
     if (this.stopping) return;
     this.stopping = true;
     const child = this.child;
