@@ -3,6 +3,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Gauge, LogIn, Settings, UserRound } from "lucide-react";
 import { useWorkspace } from "../workspace-context";
 import { useChatGPT } from "../chatgpt-context";
+import { workspaceShortcut, shortcutModifier } from "./workspace-shortcuts";
 
 export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
   const { navigate } = useWorkspace();
@@ -47,11 +48,7 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
           collisionPadding={10}
           aria-label="Account"
           onKeyDown={(event) => {
-            if (
-              (event.metaKey || event.ctrlKey) &&
-              !event.altKey &&
-              event.key === ","
-            )
+            if (workspaceShortcut(event.nativeEvent, !!window.aifiDesktop))
               setOpen(false);
           }}
         >
@@ -87,7 +84,8 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
             onSelect={() => navigate("settings")}
           >
             <Settings size={17} strokeWidth={1.7} />
-            Settings<kbd className="account-shortcut">⌘ ,</kbd>
+            Settings
+            <kbd className="account-shortcut">{shortcutModifier()} ,</kbd>
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>

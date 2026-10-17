@@ -15,16 +15,26 @@ import {
   PanelLeft,
   Settings,
 } from "lucide-react";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { workspacePages, stockHref, validDirectorySymbol } from "@aifi/core";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  workspacePages,
+  stockHref,
+  stockDisplayName,
+  validDirectorySymbol,
+} from "@aifi/core";
 import { useWorkspace, pageLabels } from "../workspace-context";
 import { IconButton, Logo, Modal } from "./primitives";
-import type { ReactNode } from "react";
+import type { ReactNode, KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useWorkspaceHistory } from "./useWorkspaceHistory";
 import { ProfileMenu } from "./ProfileMenu";
 import { SettingsSidebar } from "./SettingsSidebar";
 import { useDirectorySearch } from "../stock-directory-context";
 import { StockSidebar } from "./StockSidebar";
+import {
+  workspaceShortcut,
+  workspaceShortcuts,
+  shortcutModifier,
+} from "./workspace-shortcuts";
 const destinations = [
   { page: "stocks", icon: ChartNoAxesCombined },
   { page: "research", icon: MessageCircle },
@@ -95,28 +105,106 @@ export function Shell({ children }: { children: ReactNode }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const [shortcutsOpen, setShortcutsOpen] = useState(false);
+  const searchResults = useRef<HTMLDivElement>(null);
+  const modifier = shortcutModifier();
   const directoryResults = useDirectorySearch(search, 12, 0, searchOpen);
   useEffect(() => {
     function keydown(event: KeyboardEvent) {
+      if (event.defaultPrevented) return;
+      const action = workspaceShortcut(event, desktop);
+      if (!action) return;
+      const editing =
+        event.target instanceof HTMLElement &&
+        !!event.target.closest(
+          "input,textarea,select,[contenteditable]:not([contenteditable=false]),[role=textbox]",
+        );
+      // Preserve editor formatting and avoid changing a form behind a dialog.
       if (
-        (event.metaKey || event.ctrlKey) &&
-        !event.altKey &&
-        event.key === ","
-      ) {
-        event.preventDefault();
-        setSearchOpen(false);
-        setMobileOpen(false);
-        navigate("settings");
+        (action === "sidebar" && editing) ||
+        ((action === "newChat" || (action === "sidebar" && !mobileOpen)) &&
+          document.querySelector('[role="dialog"],[role="alertdialog"]'))
+      )
         return;
-      }
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
-        setSearchOpen((value) => !value);
+      event.preventDefault();
+      if (event.repeat) return;
+      setSearchOpen(action === "search" ? !searchOpen : false);
+      setShortcutsOpen(action === "help" ? !shortcutsOpen : false);
+      setDemoOpen(false);
+      setMobileOpen(false);
+      switch (action) {
+        case "search":
+          if (!searchOpen) setSearch("");
+          break;
+        case "settings":
+          navigate("settings");
+          break;
+        case "back":
+          routeHistory.back();
+          break;
+        case "forward":
+          routeHistory.forward();
+          break;
+        case "sidebar":
+          if (matchMedia("(max-width: 899px)").matches)
+            setMobileOpen(!mobileOpen);
+          else setSidebarCollapsed((value) => !value);
+          break;
+        case "newChat":
+          openConversation(null);
+          requestAnimationFrame(() =>
+            document
+              .querySelector<HTMLTextAreaElement>(".research-composer textarea")
+              ?.focus(),
+          );
+          break;
       }
     }
     window.addEventListener("keydown", keydown);
     return () => window.removeEventListener("keydown", keydown);
-  }, [navigate]);
+  }, [
+    desktop,
+    navigate,
+    openConversation,
+    routeHistory,
+    searchOpen,
+    shortcutsOpen,
+    mobileOpen,
+  ]);
+  function searchKeys(event: ReactKeyboardEvent) {
+    if (
+      event.altKey ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.nativeEvent.isComposing
+    )
+      return;
+    const buttons = [
+      ...(searchResults.current?.querySelectorAll<HTMLButtonElement>(
+        "button:not(:disabled)",
+      ) ?? []),
+    ];
+    if (!buttons.length) return;
+    const current = buttons.indexOf(
+      document.activeElement as HTMLButtonElement,
+    );
+    if (event.key === "Enter" && current < 0) {
+      event.preventDefault();
+      buttons[0].click();
+    } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const next =
+        current < 0
+          ? event.key === "ArrowDown"
+            ? 0
+            : buttons.length - 1
+          : (current + (event.key === "ArrowDown" ? 1 : -1) + buttons.length) %
+            buttons.length;
+      buttons[next].focus();
+      buttons[next].scrollIntoView({ block: "nearest" });
+    }
+  }
   const matches = workspacePages.filter((p) =>
     pageLabels[p].toLowerCase().includes(search.toLowerCase()),
   );
@@ -142,10 +230,11 @@ export function Shell({ children }: { children: ReactNode }) {
           setSearchOpen(true);
         }}
         aria-label="Search workspace"
+        aria-keyshortcuts="Meta+k Control+k"
       >
         <Search size={17} />
         <span>Search</span>
-        <kbd>⌘ K</kbd>
+        <kbd>{modifier} K</kbd>
       </button>
       <IconButton
         label={
@@ -170,6 +259,8 @@ export function Shell({ children }: { children: ReactNode }) {
       <span className="sidebar-toggle">
         <IconButton
           label={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+          title={`${sidebarCollapsed ? "Expand" : "Collapse"} sidebar (${modifier}B)`}
+          aria-keyshortcuts="Meta+b Control+b"
           aria-expanded={!sidebarCollapsed}
           aria-controls="workspace-sidebar"
           onClick={() => setSidebarCollapsed((value) => !value)}
@@ -194,6 +285,8 @@ export function Shell({ children }: { children: ReactNode }) {
             <span className="native-window-space" aria-hidden="true" />
             <IconButton
               label="Go back"
+              title={`Go back (${modifier}[)`}
+              aria-keyshortcuts="Meta+[ Control+["
               disabled={!routeHistory.canGoBack}
               onClick={routeHistory.back}
             >
@@ -201,6 +294,8 @@ export function Shell({ children }: { children: ReactNode }) {
             </IconButton>
             <IconButton
               label="Go forward"
+              title={`Go forward (${modifier}])`}
+              aria-keyshortcuts="Meta+] Control+]"
               disabled={!routeHistory.canGoForward}
               onClick={routeHistory.forward}
             >
@@ -307,8 +402,9 @@ export function Shell({ children }: { children: ReactNode }) {
         open={searchOpen}
         onOpenChange={setSearchOpen}
         title="Search workspace"
+        className="workspace-search-dialog"
       >
-        <label className="search-field">
+        <label className="search-field" onKeyDown={searchKeys}>
           <Search size={18} />
           <input
             autoFocus
@@ -318,7 +414,11 @@ export function Shell({ children }: { children: ReactNode }) {
             aria-label="Search workspace content"
           />
         </label>
-        <div className="search-results">
+        <div
+          className="search-results"
+          ref={searchResults}
+          onKeyDown={searchKeys}
+        >
           {directoryResults.loading && (
             <p className="muted" role="status">
               Loading stocks…
@@ -342,8 +442,9 @@ export function Shell({ children }: { children: ReactNode }) {
               }}
             >
               <ChartNoAxesCombined size={17} />
-              <span>
-                {entry.symbol} · {entry.name}
+              <span title={`${entry.symbol} · ${entry.name}`}>
+                {entry.symbol} ·{" "}
+                {stockDisplayName(undefined, entry.name, entry.symbol)}
               </span>
               <small>Stock</small>
             </button>
@@ -360,7 +461,7 @@ export function Shell({ children }: { children: ReactNode }) {
                 }}
               >
                 <MessageCircle size={17} />
-                <span>{c.title}</span>
+                <span title={c.title}>{c.title}</span>
                 <small>Chat</small>
               </button>
             ))}
@@ -389,7 +490,7 @@ export function Shell({ children }: { children: ReactNode }) {
                 }}
               >
                 <Bot size={17} />
-                <span>{agent.name}</span>
+                <span title={agent.name}>{agent.name}</span>
                 <small>Agent</small>
               </button>
             ))}
@@ -404,6 +505,43 @@ export function Shell({ children }: { children: ReactNode }) {
               a.name.toLowerCase().includes(search.toLowerCase()),
             ) && <p className="muted">No matches.</p>}
         </div>
+        <footer className="search-footer">
+          <span>↑↓ Navigate · ↵ Open</span>
+          <button
+            onClick={() => {
+              setSearchOpen(false);
+              setShortcutsOpen(true);
+            }}
+          >
+            Shortcuts <kbd>{modifier} /</kbd>
+          </button>
+        </footer>
+      </Modal>
+      <Modal
+        open={shortcutsOpen}
+        onOpenChange={setShortcutsOpen}
+        title="Keyboard shortcuts"
+      >
+        <dl className="shortcut-list">
+          {workspaceShortcuts
+            .filter((s) => !("desktopOnly" in s) || desktop)
+            .map((s) => (
+              <div key={s.action}>
+                <dt>{s.label}</dt>
+                <dd>
+                  <kbd>
+                    {modifier} {s.display}
+                  </kbd>
+                </dd>
+              </div>
+            ))}
+          <div>
+            <dt>Close dialog or menu</dt>
+            <dd>
+              <kbd>Esc</kbd>
+            </dd>
+          </div>
+        </dl>
       </Modal>
     </div>
   );

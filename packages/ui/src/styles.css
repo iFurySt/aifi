@@ -1601,13 +1601,40 @@ kbd {
   opacity: 0.5;
   cursor: not-allowed;
 }
+.workspace-search-dialog {
+  display: flex;
+  flex-direction: column;
+  max-height: min(560px, calc(100dvh - 48px));
+  overflow: hidden;
+}
+.workspace-search-dialog > .dialog-header,
+.workspace-search-dialog > .search-field,
+.workspace-search-dialog > .search-footer {
+  flex-shrink: 0;
+}
+.workspace-search-dialog > .search-field {
+  height: 40px;
+  margin-top: 16px;
+  padding: 8px 10px;
+}
 .search-results {
   display: grid;
+  align-content: start;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
   gap: 3px;
-  margin-top: 14px;
+  margin-top: 12px;
+}
+.search-results::-webkit-scrollbar {
+  display: none;
 }
 .search-results button {
   display: flex;
+  min-width: 0;
+  height: 40px;
+  flex-shrink: 0;
   align-items: center;
   gap: 10px;
   padding: 10px;
@@ -1620,11 +1647,53 @@ kbd {
 }
 .search-results button span {
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 13px;
 }
 .search-results button small {
+  flex-shrink: 0;
   color: var(--muted);
   font-size: 10px;
+}
+.search-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+}
+.search-footer button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary);
+}
+.search-footer kbd {
+  font-size: 10px;
+}
+.shortcut-list {
+  margin-top: 16px;
+}
+.shortcut-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 38px;
+  font-size: 13px;
+}
+.shortcut-list > div + div {
+  border-top: 1px solid var(--border);
+}
+.shortcut-list kbd {
+  white-space: nowrap;
 }
 .workflow-steps {
   margin: 22px 0;
@@ -3433,5 +3502,14 @@ kbd {
   .setting-control select,
   .setting-control input {
     min-height: 36px;
+  }
+}
+
+@media (max-width: 599px) {
+  .search-results button {
+    height: 44px;
+  }
+  .search-footer button {
+    min-height: 32px;
   }
 }

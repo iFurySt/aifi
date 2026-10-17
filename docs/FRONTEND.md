@@ -148,6 +148,22 @@ browser focus outlines; no blue focus token/ring remains. Tab navigation and
 Escape focus return stay enabled. Do not blur controls or intercept Tab to hide
 focus styling.
 
+## Workspace Search And Shortcuts
+
+Search uses a dedicated modal class: at most 560px or viewport height minus 48px,
+a fixed 40px input, one-line result names, and an internally scrolling result list.
+Header/footer stay visible. Arrow keys focus/reveal results, Enter opens a result,
+and Escape uses the existing Radix dismissal/focus restoration.
+
+`workspace-shortcuts.ts` is the shared binding/help source. Command/Control+[ and
+] call the same session-bounded history controls as the toolbar, including branch
+invalidation. B toggles the sidebar/drawer, K search, comma Settings, and / help.
+Desktop N opens a new chat and focuses the composer; Web leaves New Window to
+the browser. Respect IME, extra modifiers, input formatting, open form dialogs
+and held-key suppression. Account menus close before recognized commands.
+`pnpm smoke:navigation` exercises these interactions with isolated local fixtures;
+it does not authorize accounts, infer models or collect provider data.
+
 ## Stock Workspace
 
 The shared renderer starts at Stocks. Routes such as

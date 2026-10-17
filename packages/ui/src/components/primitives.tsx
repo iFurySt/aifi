@@ -71,6 +71,7 @@ export function Modal({
   description,
   children,
   sheet = false,
+  className = "",
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -78,6 +79,7 @@ export function Modal({
   description?: string;
   children: ReactNode;
   sheet?: boolean;
+  className?: string;
 }) {
   const previousFocus = useRef<HTMLElement | null>(null);
   const wasOpen = useRef(false);
@@ -91,7 +93,7 @@ export function Modal({
       <Dialog.Portal>
         <Dialog.Overlay className="dialog-overlay" />
         <Dialog.Content
-          className={sheet ? "dialog-content detail-sheet" : "dialog-content"}
+          className={`dialog-content${sheet ? " detail-sheet" : ""}${className ? ` ${className}` : ""}`}
           onCloseAutoFocus={(event) => {
             event.preventDefault();
             if (previousFocus.current?.isConnected)

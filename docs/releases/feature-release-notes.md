@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-17 | Workspace search and shortcuts | Search stays compact with scrollable single-line results; navigate with keyboard shortcuts. | Added bounded back/forward, sidebar toggle, desktop New chat, shortcut help and arrow/Enter search selection. |
 | 2026-10-17 | Account and Settings | A tighter rail, larger account entry and compact Settings; Command/Ctrl+, opens Settings. | Reused ChatGPT sign-in and verified display identity; connected menus expose official Usage management without an invented quota. |
 | 2026-10-17 | ChatGPT connection | Connect a ChatGPT plan in the desktop app and chat without an API key. | Added official dynamic OAuth, protected account sessions, model selection, streamed replies, cancellation and usage controls; verified real sign-in, replies and connection persistence after restart. |
 | 2026-10-17 | Chart inspection and valuation | Hover or use arrow keys to inspect dated OHLC/volume in a dark crosshair tooltip; reported market cap is available where supplied. | Restored every daily volume/candle bar, switched to calendar ranges and mode-specific scales, centered return arrows and persisted source-reported company cap. |
