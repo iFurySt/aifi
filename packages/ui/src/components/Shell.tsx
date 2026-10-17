@@ -322,7 +322,11 @@ export function Shell({ children }: { children: ReactNode }) {
           </div>
           <span className="window-toolbar-divider" aria-hidden="true" />
           <div className="window-title">
-            <PageIcon size={18} strokeWidth={1.7} />
+            <PageIcon
+              size={18}
+              strokeWidth={1.7}
+              className={page === "research" ? "page-icon-chat" : undefined}
+            />
             <span>AIFi</span>
             <span className="breadcrumb-divider">/</span>
             <span>{pageLabels[page]}</span>
@@ -366,7 +370,13 @@ export function Shell({ children }: { children: ReactNode }) {
                 <div className="topbar-left">
                   {navigationToggle}
                   <span className="window-toolbar-divider" aria-hidden="true" />
-                  <PageIcon size={18} strokeWidth={1.7} />
+                  <PageIcon
+                    size={18}
+                    strokeWidth={1.7}
+                    className={
+                      page === "research" ? "page-icon-chat" : undefined
+                    }
+                  />
                   <span className="page-label">{pageLabels[page]}</span>
                   {demoBadge}
                 </div>
@@ -427,7 +437,7 @@ export function Shell({ children }: { children: ReactNode }) {
       <Modal
         open={searchOpen}
         onOpenChange={setSearchOpen}
-        title="Search workspace"
+        title="Search"
         className="workspace-search-dialog"
       >
         <label className="search-field" onKeyDown={searchKeys}>
@@ -532,7 +542,6 @@ export function Shell({ children }: { children: ReactNode }) {
             ) && <p className="muted">No matches.</p>}
         </div>
         <footer className="search-footer">
-          <span>↑↓ Navigate · ↵ Open</span>
           <button
             onClick={() => {
               setSearchOpen(false);

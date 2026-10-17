@@ -1,5 +1,4 @@
 import type { StockLogo } from "@aifi/core";
-import { stockLogoBounds } from "./stock-logo-bounds";
 
 export interface PreparedStockLogo {
   url: string;
@@ -55,40 +54,9 @@ async function decode(logo: StockLogo): Promise<PreparedStockLogo | null> {
     }
     if (!visible || (visible > (pixels.length / 4) * 0.95 && white === visible))
       return null;
-    const { bounds, whiteBackground } = stockLogoBounds(pixels, size);
-    result.light = !whiteBackground && white / visible > 0.95;
-    if (bounds.width < size || bounds.height < size) {
-      const x = (bounds.x / size) * image.naturalWidth;
-      const y = (bounds.y / size) * image.naturalHeight;
-      const width = (bounds.width / size) * image.naturalWidth;
-      const height = (bounds.height / size) * image.naturalHeight;
-      // Crop once during cached preparation, never on render or scroll. Originals
-      // remain intact in the host cache; derived PNGs stay bounded and local.
-      if (width < 4 || height < 4) return result;
-      const scale = Math.min(1, 128 / Math.max(width, height));
-      const cropped = document.createElement("canvas");
-      cropped.width = Math.max(1, Math.round(width * scale));
-      cropped.height = Math.max(1, Math.round(height * scale));
-      const croppedContext = cropped.getContext("2d");
-      if (croppedContext) {
-        croppedContext.drawImage(
-          image,
-          x,
-          y,
-          width,
-          height,
-          0,
-          0,
-          cropped.width,
-          cropped.height,
-        );
-        const url = cropped.toDataURL("image/png");
-        const decoded = new Image();
-        decoded.src = url;
-        await decoded.decode();
-        result.url = url;
-      }
-    }
+    // Keep the source square intact. Only transparent white marks need contrast.
+    result.light =
+      visible < (pixels.length / 4) * 0.95 && white / visible > 0.95;
   } catch {
     // A decoded PNG remains usable if optional contrast sampling fails.
   }

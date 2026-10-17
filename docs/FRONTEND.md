@@ -230,7 +230,7 @@ scroll root. Each directory batch reads disk cache and decodes/samples contrast
 before rows are published. Next-page loading begins 900px before the bottom;
 uncached images use letters immediately while provider requests run. Disk hits survive app restarts; stale source
 refresh runs behind the displayed cached image. Public asset source/cache limits are documented in
-[stock logos](design-docs/stock-logos.md). Avatars use contain sizing with an 8% safe inset. Preparation trims transparent/flat-white outside space once, preserves colored tiles and aspect ratios, and reuses decoded results; source PNGs stay intact.
+[stock logos](design-docs/stock-logos.md). Avatars display original square PNGs across the full content box with contain sizing and no extra inset or automatic cropping. Rounded bounds clip the image; source whitespace is curated in the catalog. Decode/contrast results remain shared and cached.
 
 ## Brand Identity
 
@@ -465,3 +465,14 @@ Run `pnpm smoke:selection` to visit implemented main pages, six stock tabs and
 settings categories in a disposable visible Electron window. It checks chrome,
 focused field ranges, document Select All and reading/control areas in portals.
 It uses offline fixtures and never opens a real account or source collector.
+
+## Shared interaction color
+
+`--interaction-hover` is the single neutral hover/open/highlight background,
+using the rail's 6% text tint in either theme. Navigation, secondary/icon buttons,
+search fields, menu/listbox rows and settings controls consume this token;
+`--surface-muted` remains a resting surface/chip color. Primary actions and
+semantic chart colors retain their own states. Search uses a short title with
+keyboard help available through its Shortcuts action; collection headings omit
+redundant stock counts. Toolbar Chat glyphs have a 1px optical inset within the
+same 18px icon slot.

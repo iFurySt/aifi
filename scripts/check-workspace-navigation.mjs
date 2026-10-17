@@ -115,6 +115,12 @@ async function checks() {
         (button) => button.querySelector("small")?.textContent === "Stock",
       ).length >= 12,
   );
+  assert(
+    dialog().querySelector("h2").textContent === "Search" &&
+      !dialog().textContent.includes("Navigate ·") &&
+      !dialog().textContent.includes("↵ Open"),
+    "Search chrome contains redundant copy",
+  );
   const box = dialog().getBoundingClientRect();
   const results = document.querySelector(".search-results");
   const searchField = document
@@ -152,6 +158,17 @@ async function checks() {
   await until(() => !!input());
   key("Enter", input(), {});
   await until(() => location.hash.startsWith("#/stocks/TEST0") && !dialog());
+  assert(
+    !document.querySelector(".stock-sidebar-heading .count-badge"),
+    "Stock collection count is still visible",
+  );
+  const collectionName = document.querySelector(
+    ".stock-sidebar-heading .select-value",
+  );
+  assert(
+    collectionName.scrollWidth <= collectionName.clientWidth,
+    "Collection title is unnecessarily truncated",
+  );
   key("k");
   await until(() => !!input());
   key("/", input());
@@ -168,6 +185,13 @@ async function checks() {
       location.hash === "#/research" &&
       document.querySelector('[aria-label="Research question"]') ===
         document.activeElement,
+  );
+  const chatIcon = document.querySelector(".window-title .page-icon-chat");
+  assert(
+    chatIcon &&
+      getComputedStyle(chatIcon).padding === "1px" &&
+      chatIcon.getBoundingClientRect().width === 18,
+    "Chat breadcrumb icon is not optically normalized",
   );
   assert(
     !key("n", window, { metaKey: true, repeat: true }),
@@ -188,8 +212,64 @@ async function checks() {
     newChatFocus: true,
   };
 }
+// Force real CSS hover states in the offline Electron renderer, in both themes.
+async function hoverChecks(win) {
+  const debug = win.webContents.debugger;
+  debug.attach("1.3");
+  await debug.sendCommand("DOM.enable");
+  await debug.sendCommand("CSS.enable");
+  const { root } = await debug.sendCommand("DOM.getDocument");
+  const original = await win.webContents.executeJavaScript(
+    "document.documentElement.dataset.theme",
+  );
+  const selectors = [
+    ".rail-button",
+    ".search-trigger",
+    ".settings-search",
+    ".settings-nav-link",
+    ".icon-button:not(:disabled)",
+  ];
+  try {
+    for (const theme of ["light", "dark"]) {
+      await win.webContents.executeJavaScript(
+        `document.documentElement.dataset.theme=${JSON.stringify(theme)}`,
+      );
+      let reference;
+      for (const selector of selectors) {
+        const { nodeId } = await debug.sendCommand("DOM.querySelector", {
+          nodeId: root.nodeId,
+          selector,
+        });
+        if (!nodeId) throw Error("Missing hover control: " + selector);
+        await debug.sendCommand("CSS.forcePseudoState", {
+          nodeId,
+          forcedPseudoClasses: ["hover"],
+        });
+        await new Promise((resolve) => setTimeout(resolve, 180));
+        const color = await win.webContents.executeJavaScript(
+          `getComputedStyle(document.querySelector(${JSON.stringify(selector)})).backgroundColor`,
+        );
+        if (reference && color !== reference)
+          throw Error(
+            `${theme} hover differs for ${selector}: ${color} vs ${reference}`,
+          );
+        reference = color;
+        await debug.sendCommand("CSS.forcePseudoState", {
+          nodeId,
+          forcedPseudoClasses: [],
+        });
+      }
+    }
+  } finally {
+    await win.webContents.executeJavaScript(
+      `document.documentElement.dataset.theme=${JSON.stringify(original)}`,
+    );
+    debug.detach();
+  }
+  return true;
+}
 const main = `const {app,BrowserWindow}=require('electron');const fs=require('node:fs');const path=require('node:path');
-app.setPath('userData',path.join(__dirname,'profile'));app.whenReady().then(async()=>{const win=new BrowserWindow({show:false,width:1360,height:1000,webPreferences:{sandbox:true,contextIsolation:true,backgroundThrottling:false}});win.webContents.on('console-message',(event)=>{if(event.level==='error')console.error(event.message)});try{await win.loadFile(path.join(__dirname,'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));await win.webContents.executeJavaScript("window.dispatchEvent(new KeyboardEvent('keydown',{key:'k',metaKey:true,bubbles:true}))");await new Promise(r=>setTimeout(r,200));fs.writeFileSync(path.join(__dirname,'search.png'),(await win.webContents.capturePage()).toPNG());console.log(JSON.stringify(report));app.exit(0)}catch(error){console.error(error);app.exit(1)}});setTimeout(()=>{console.error('Workspace navigation check timed out');app.exit(1)},25000);`;
+app.setPath('userData',path.join(__dirname,'profile'));app.whenReady().then(async()=>{const win=new BrowserWindow({show:false,width:1360,height:1000,webPreferences:{sandbox:true,contextIsolation:true,backgroundThrottling:false}});win.webContents.on('console-message',(event)=>{if(event.level==='error')console.error(event.message)});try{await win.loadFile(path.join(__dirname,'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');report.sharedHover=await (${hoverChecks.toString()})(win);fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));await win.webContents.executeJavaScript("window.dispatchEvent(new KeyboardEvent('keydown',{key:'k',metaKey:true,bubbles:true}))");await new Promise(r=>setTimeout(r,200));fs.writeFileSync(path.join(__dirname,'search.png'),(await win.webContents.capturePage()).toPNG());console.log(JSON.stringify(report));app.exit(0)}catch(error){console.error(error);app.exit(1)}});setTimeout(()=>{console.error('Workspace navigation check timed out');app.exit(1)},25000);`;
 await writeFile(join(output, "main.cjs"), main);
 const env = { ...process.env };
 delete env.ELECTRON_RUN_AS_NODE;

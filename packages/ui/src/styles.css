@@ -16,6 +16,7 @@
   --surface: #fff;
   --surface-muted: #f5f5f5;
   --text: #202020;
+  --interaction-hover: color-mix(in srgb, var(--text) 6%, transparent);
   --secondary: #636363;
   --muted: #777;
   --border: #e8e8e8;
@@ -222,7 +223,7 @@ svg {
 .rail-button:hover,
 .rail-button:focus-visible,
 .rail-button.selected {
-  background: color-mix(in srgb, var(--text) 6%, transparent);
+  background: var(--interaction-hover);
   color: var(--text);
 }
 .rail-button.selected svg {
@@ -244,7 +245,7 @@ svg {
 .profile-trigger:hover,
 .profile-trigger:focus-visible,
 .profile-trigger[data-state="open"] {
-  background: color-mix(in srgb, var(--text) 6%, transparent);
+  background: var(--interaction-hover);
 }
 .profile-avatar {
   display: grid;
@@ -442,10 +443,10 @@ nav {
 .nav-link:focus-visible,
 .recent-link:hover,
 .recent-link:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .nav-link.selected {
-  background: color-mix(in srgb, var(--text) 6%, transparent);
+  background: var(--interaction-hover);
 }
 .nav-link.selected svg {
   color: var(--text);
@@ -519,7 +520,7 @@ nav {
 }
 .demo-badge:hover,
 .demo-badge:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
   color: var(--text);
 }
 .search-trigger {
@@ -533,7 +534,7 @@ nav {
 }
 .search-trigger:hover,
 .search-trigger:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 kbd {
   font-size: 10px;
@@ -557,7 +558,7 @@ kbd {
 .icon-button:hover,
 .icon-button:focus-visible {
   color: var(--text);
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .mobile-menu {
   display: none;
@@ -590,6 +591,14 @@ kbd {
   color: var(--on-primary);
   background: var(--primary);
 }
+.segmented-control button:not(.selected):hover,
+.theme-option:hover,
+.stock-tabs button:hover,
+.financial-series-toggle:hover:not(:disabled),
+.search-footer button:hover,
+.search-footer button:focus-visible {
+  background: var(--interaction-hover);
+}
 .button-primary:hover,
 .button-primary:focus-visible {
   opacity: 0.86;
@@ -602,7 +611,7 @@ kbd {
 .button-secondary:focus-visible,
 .button-ghost:hover,
 .button-ghost:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .button-ghost {
   color: var(--secondary);
@@ -698,7 +707,7 @@ kbd {
 }
 .template-chips button:hover,
 .template-chips button:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
   color: var(--text);
 }
 .section-heading {
@@ -893,7 +902,7 @@ kbd {
 }
 .update-row:hover,
 .update-row:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .update-icon {
   width: 34px;
@@ -969,6 +978,10 @@ kbd {
   padding: 10px 12px;
   color: var(--muted);
   margin-top: 20px;
+}
+.search-field:hover,
+.search-field:focus-within {
+  background: var(--interaction-hover);
 }
 .search-field input {
   width: 100%;
@@ -1389,7 +1402,7 @@ kbd {
 }
 .research-starters button:hover,
 .research-starters button:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .research-starters svg {
   color: var(--secondary);
@@ -1595,7 +1608,7 @@ kbd {
   cursor: pointer;
 }
 .dropdown-item[data-highlighted] {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .dropdown-item[data-disabled] {
   color: var(--muted);
@@ -1644,7 +1657,7 @@ kbd {
 }
 .search-results button:hover,
 .search-results button:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .search-results button span {
   flex: 1;
@@ -1662,7 +1675,7 @@ kbd {
 .search-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
   padding-top: 12px;
   margin-top: 10px;
@@ -2074,7 +2087,7 @@ kbd {
 }
 .company-cell:focus-visible,
 .cadence-control select:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .segmented-control button:focus-visible {
   color: var(--text);
@@ -2130,6 +2143,8 @@ kbd {
   margin-bottom: 15px;
 }
 .stock-sidebar-heading h2 {
+  flex: 1;
+  min-width: 0;
   font-size: 16px;
 }
 .stock-list-search {
@@ -2159,7 +2174,7 @@ kbd {
 .stock-list-row:hover,
 .stock-list-row:focus-visible,
 .stock-list-row.selected {
-  background: color-mix(in srgb, var(--text) 6%, transparent);
+  background: var(--interaction-hover);
 }
 .stock-monogram {
   width: 30px;
@@ -2549,7 +2564,7 @@ kbd {
   padding: 9px 12px;
 }
 .stock-table-toolbar select:focus-visible {
-  background: color-mix(in srgb, var(--text) 6%, var(--surface-muted));
+  background: var(--interaction-hover);
 }
 .stock-data-table {
   min-width: 600px;
@@ -2826,7 +2841,7 @@ kbd {
 .settings-nav-link:hover,
 .settings-nav-link:focus-visible,
 .settings-nav-link.selected {
-  background: color-mix(in srgb, var(--text) 6%, transparent);
+  background: var(--interaction-hover);
 }
 .settings-content {
   max-width: 920px;
@@ -2917,7 +2932,7 @@ kbd {
 }
 .setting-link:hover,
 .setting-link:focus-visible {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .setting-switch {
   width: 38px;
@@ -3142,7 +3157,7 @@ kbd {
 .stock-source-trigger:hover,
 .stock-source-trigger:focus-visible,
 .stock-source-trigger[data-state="open"] {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .stock-source-option {
   display: flex;
@@ -3166,8 +3181,8 @@ kbd {
   place-items: center;
 }
 .stock-avatar img {
-  width: 84%;
-  height: 84%;
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: contain;
 }
@@ -3421,6 +3436,7 @@ kbd {
 }
 .research-source-chip:hover,
 .research-source-chip[data-state="open"] {
+  background: var(--interaction-hover);
   color: var(--text);
   border-color: var(--muted);
 }
@@ -3483,7 +3499,7 @@ kbd {
   text-decoration: none;
 }
 .research-source-link[data-highlighted] {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .stock-quote .research-source-chip {
   margin-left: 8px;
@@ -3508,7 +3524,7 @@ kbd {
   cursor: pointer;
 }
 .stock-peer-row:hover {
-  background: var(--surface-muted);
+  background: var(--interaction-hover);
 }
 .stock-peer-row .stock-avatar {
   flex: 0 0 30px;
@@ -3564,6 +3580,10 @@ kbd {
 .window-title > svg,
 .topbar-left > svg {
   flex-shrink: 0;
+}
+/* Round speech bubbles read larger than rectangular toolbar glyphs. */
+.page-icon-chat {
+  padding: 1px;
 }
 .stock-company-identity {
   display: flex;

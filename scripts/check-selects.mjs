@@ -132,15 +132,13 @@ async function checks(phase) {
       .click();
     await wait(30);
     assert(!!list(), "Disabled choice closed picker");
-    document
-      .querySelector("#after-period")
-      .dispatchEvent(
-        new PointerEvent("pointerdown", {
-          bubbles: true,
-          pointerType: "mouse",
-          button: 0,
-        }),
-      );
+    document.querySelector("#after-period").dispatchEvent(
+      new PointerEvent("pointerdown", {
+        bubbles: true,
+        pointerType: "mouse",
+        button: 0,
+      }),
+    );
     document.querySelector("#after-period").click();
     await until(() => !list());
     await open("Model");
@@ -236,6 +234,18 @@ async function checks(phase) {
   document.documentElement.dataset.theme = phase === "dark" ? "dark" : "light";
   await open("Model");
   await search("model");
+  const reference = document.createElement("span");
+  reference.style.background = "var(--interaction-hover)";
+  document.body.append(reference);
+  const hoverColor = getComputedStyle(reference).backgroundColor;
+  // Open trigger and highlighted options use the same shared neutral tint.
+  await wait(160);
+  assert(
+    getComputedStyle(trigger("Model")).backgroundColor === hoverColor &&
+      getComputedStyle(active()).backgroundColor === hoverColor,
+    "Select states do not share the global hover color",
+  );
+  reference.remove();
   bounded();
   assert(
     document.documentElement.scrollWidth <= innerWidth,

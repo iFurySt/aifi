@@ -40,7 +40,8 @@ third product's branding. Values below are AIFi choices unless marked observed.
 | canvas | #FFFFFF | #191919 | Main page |
 | sidebar | #F8F8F8 | #212121 | Navigation |
 | surface | #FFFFFF | #242424 | Cards and dialogs |
-| surface-muted | #F5F5F5 | #2C2C2C | Hover, chips, inset areas |
+| surface-muted | #F5F5F5 | #2C2C2C | Resting chips and inset areas |
+| interaction-hover | text at 6% | text at 6% | Shared neutral hover, open and highlighted controls |
 | text | #202020 | #ECECEC | Main text and headings |
 | secondary | #636363 | #B5B5B5 | Descriptions |
 | muted | #777777 | #A0A0A0 | Metadata |
@@ -82,8 +83,8 @@ Chart colors are semantic; they do not indicate recommendations.
 
 Primary: dark pill, 36–40px high, 16px horizontal padding. Secondary:
 transparent or surface fill, 1px border, same height. Icon buttons: 32–36px
-square, 8px radius, muted text, named accessible label. Hover uses surface-
-muted; keyboard focus uses neutral hover-like feedback with no outline. Disabled
+square, 8px radius, muted text, named accessible label. Hover uses the shared `--interaction-hover` token (6% text tint over the current
+surface); keyboard focus uses the same neutral feedback with no outline. Disabled
 buttons keep a clear disabled appearance.
 
 ### Cards & Containers

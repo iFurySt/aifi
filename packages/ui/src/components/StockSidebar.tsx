@@ -76,9 +76,7 @@ export function StockSidebar({
             }}
           />
         </h2>
-        {data.snapshotId && (
-          <span className="count-badge">{data.total.toLocaleString()}</span>
-        )}
+
       </div>
       {!!data.collection?.unresolvedSymbols.length && (
         <p
