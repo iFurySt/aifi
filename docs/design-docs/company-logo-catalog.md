@@ -1,15 +1,21 @@
 # Reviewed Company Logo Catalog
 
-Status: public catalog and AIFi integration updated, 2026-10-17.
+Status: full-directory availability audit and consumer updated, 2026-10-18.
 
 Repository: [ifuryst/company-logo-catalog](https://github.com/ifuryst/company-logo-catalog).
-The v0.3.0 reviewed catalog contains 42 companies, 59 securities, 65 exact
-symbol/alias keys and 40 companies with verified images. The latest batch adds
-24 issuer reviews, including ECL/ED/EFX/EG/EIX/EL, official small-icon sources for
-ADI/ELV, and an explicit rejection of ELV's generic A image. Its separate frozen
-7,481-security inventory still has 342 source gaps and many unreviewed images;
-AIFi does not silently promote that inventory to verified mappings.
-It publishes URL metadata, evidence and checksums; no third-party image pack is bundled.
+The v0.4.0 reviewed catalog contains 47 companies, 65 securities, 71 exact keys
+and 45 companies with visually reviewed images. A separate 588-entry availability
+supplement retains provisional name-group/repository image observations; AIFi
+explicitly accepts these as best-effort decorative artwork, not verified legal
+issuer aliases. Both metadata profiles are bundled and refreshed independently.
+
+Every current directory security has an availability result: 7,108 of 7,484
+pass real PNG decoding and offline host cache reads. S&P 500 (503/503) and
+Nasdaq-100 (101/101) have full PNG availability. The 376 remaining App gaps are
+338 without a selected source plus 38 with SVG-only candidates. HTTP/decoder
+success does not imply independently reviewed issuer identity.
+No third-party artwork pack is bundled or published. See the
+[full audit](https://github.com/ifuryst/company-logo-catalog/blob/57502b2b180afb2844f5ede422716aace751f485/docs/availability-2026-10-18.md).
 
 ## Decision Direction
 
@@ -18,7 +24,7 @@ is suitable for a small JSON URL/alias list. Prefer a regular Git repository for
 an image collection: contribution PRs, per-entry history, source metadata,
 release versions and individual asset notices are easier to maintain together.
 The user authorized a public independent repository; the catalog is now kept
-there. AIFi bundles the v0.3.0 reviewed seed and validates background updates from its main manifest.
+there. AIFi bundles the v0.4.0 reviewed seed and availability supplement and validates background updates from its main manifest.
 The bundled snapshot pins provenance; cached last-good metadata keeps
 the app independent of GitHub availability.
 
@@ -70,7 +76,7 @@ brand and asset rights remain distinct from the code/metadata license.
 
 ## Runtime Direction
 
-Verified catalog source/cache → exact-symbol FMP source/cache → letter fallback.
+Verified catalog source/cache → explicit availability supplement/cache → exact-symbol FMP source/cache → letter fallback.
 Known rejected artwork checksums are blocked at every cache/provider step.
 Newer shipped metadata supersedes an older disk manifest; background refresh
 cannot downgrade the catalog. Exact official asset paths require code review. Unknown mappings remain explicit; missing images never invent identity.

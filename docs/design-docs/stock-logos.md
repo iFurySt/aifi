@@ -1,6 +1,6 @@
 # Stock Logo Read Capability
 
-Status: implemented, updated 2026-10-17.
+Status: implemented, updated 2026-10-18.
 
 ## Boundary
 
@@ -17,7 +17,7 @@ third-party artwork is bundled into source. See [source provenance](../reference
 
 ## Catalog Resolution
 
-- Node-only host ships the public catalog v0.3.0 metadata seed, with its MIT
+- Node-only host ships the public catalog v0.4.0 metadata seed, with its MIT
   notice. Startup works without GitHub. Cached metadata is validated before use;
   a corrupt or older-version cache falls back to the seed. Background metadata
   cannot downgrade the active version.
@@ -36,6 +36,33 @@ third-party artwork is bundled into source. See [source provenance](../reference
   existing disk bytes; a generic cached A cannot bypass ELV/Apogee corrections.
 - Catalog metadata is private `stock-logos/catalog.json`; its updater never
   downloads the entire image universe. Offline mode makes no public requests.
+
+## Best-effort PNG Availability
+
+`StockLogoSources` combines reviewed identity with a separate 588-row v0.4.0
+`app-fallbacks.json` seed. The latter has exact symbols, PNG checksums/dimensions,
+source observation times and explicit `directory-name-candidate` or
+`repository-unverified` basis. It does not promote those mappings into reviewed
+issuer identity or infer aliases in the host. The default upstream CLI resolver
+still returns reviewed images only.
+
+The separate fixed manifest refresh reuses bounded catalog persistence, per-file
+last-good state, daily backoff and downgrade rejection. Pinned PNG paths in three
+known public repositories and three exact new company asset URLs supplement the
+existing source policy. No arbitrary GitHub paths, dynamic favicon domains,
+credentials, redirects or SVG execution are accepted. Reviewed sources remain
+first; the original exact-symbol FMP fallback remains last.
+
+The full current-directory audit covers 7,484 securities: 7,108 pass decoding
+and actual offline cache reads, including all 503 S&P and 101 Nasdaq-100 members.
+The remaining 376 have no accepted PNG: 338 source gaps and 38 SVG-only candidates.
+These are availability counts, not manually verified identity counts.
+
+`node scripts/audit-stock-logos.mjs` explicitly audits a stable exported directory
+against private downloaded evidence. An optional `--import-cache` validates bytes
+and imports them atomically with private permissions before proving offline host
+reads. This one-time maintenance operation never runs on startup or page reads;
+source HTTP observation times remain distinct from import/decode times.
 
 ## Requests And Persistence
 
@@ -65,9 +92,9 @@ third-party artwork is bundled into source. See [source provenance](../reference
   private host cache, not workspace localStorage or IndexedDB.
 - Host requests use a scoped native HTTPS agent honoring configured proxy env
   without changing global local-session/HMR routing. Only the fixed GitHub
-  manifest, FMP image path, Tactical Resources PNG upload path and seven exact
-  issuer PNG URLs reviewed in the seed are allowed. These official assets cover
-  ACCV, ADBT, ADIG, ADRX, AACP, ADI and ELV; no general CDN/domain access is granted.
+  reviewed and availability manifests, FMP image path, Tactical Resources PNG
+  upload path, exact issuer asset URLs and pinned known-repository PNG paths are
+  allowed. No general CDN/domain access is granted.
 - The renderer queues page requests through four transport slots (up to 128
   waiting). Host queue pressure is a retryable error, never a null missing image.
   Visible avatars retry transient errors with 1–30 second backoff and recheck

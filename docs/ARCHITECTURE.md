@@ -176,7 +176,9 @@ workspace schema. Search and incremental reads stay inside the selected collecti
 
 An independently injected StockLogoRepository serves stock avatars. Node host
 verifies cached directory membership through Go, resolves a bundled/locally cached
-reviewed company catalog first, then falls back to exact-symbol FMP images. Bounded
+reviewed company catalog first, then an explicit best-effort PNG availability
+supplement, then exact-symbol FMP images. Provisional image observations remain
+separate from reviewed issuer identity. Bounded
 public PNGs use a private device cache; a validated background manifest refresh
 runs at most daily. Valid disk images return before background refresh; a bounded
 renderer session cache reuses data URLs and supports immediate avatar remounts.

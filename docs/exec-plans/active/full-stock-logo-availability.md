@@ -28,6 +28,22 @@ Run catalog schema/build/tests and relevant host/platform/UI checks.
 
 - [x] Confirm screenshot F stocks have valid provider-source observations but no
   local image files; first investigation points at dropped queue requests.
-- [ ] Fix delivery/retry behavior and verify all stock scopes locally.
-- [ ] Audit every directory symbol and expand usable fallback sources.
-- [ ] Publish reproducible results, verify actual App, commit and push.
+- [x] Fix delivery/retry behavior and verify all stock scopes locally.
+- [x] Audit every directory symbol and expand usable fallback sources.
+- [x] Publish reproducible results, verify actual App, commit and push.
+
+## Result and remaining coverage work
+
+Delivery fix is committed in 81c1f37. Public catalog v0.4.0 / 57502b2 contains the
+full 7,484-row result, 588 PNG availability fallbacks and five more issuer reviews.
+7,108 entries pass actual decoding and offline cache reads; 503/503 S&P and
+101/101 Nasdaq-100 entries pass. The live App now displays all reported F rows.
+
+The audit and delivery implementation are complete. **Full logo coverage remains
+open:** 338 securities have no selected source and 38 have only SVG candidates.
+Their exact symbols, source outcomes and next-review scope remain in the public
+unresolved CSV. Do not label those 376 rows as complete or use generated artwork
+as if it were the issuer's logo.
+
+- [ ] Find evidence-backed sources for the remaining 338 securities.
+- [ ] Add accepted PNG sources or a separately reviewed SVG conversion path for 38.

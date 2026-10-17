@@ -5,6 +5,8 @@ import { validDirectorySymbol } from "../../core/src/stock-directory.ts";
 
 export const catalogURL =
   "https://raw.githubusercontent.com/ifuryst/company-logo-catalog/main/catalog.json";
+export const fallbackCatalogURL =
+  "https://raw.githubusercontent.com/ifuryst/company-logo-catalog/main/app-fallbacks.json";
 export const fundCatalogURL =
   "https://raw.githubusercontent.com/ifuryst/company-logo-catalog/main/funds-catalog.json";
 const reviewedFundURLs = new Set(
@@ -18,6 +20,9 @@ const agent = new Agent({
 // Exact official assets reviewed in the bundled catalog. A remote manifest cannot
 // broaden these origins or paths. New assets require a code review here.
 const issuerLogoURLs = new Set([
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Skydance_Corporation_Dark_Logo_2026.svg/330px-Skydance_Corporation_Dark_Logo_2026.svg.png",
+  "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fwww.vylor.com&size=128",
+  "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE%2CSIZE%2CURL&url=https%3A%2F%2Fwww.vivmarkresidential.com&size=128",
   "https://www.adarx.com/apple-touch-icon.png",
   "https://s25.q4cdn.com/125328972/files/design/site_logo/ADI_Logo_White.png",
   "https://adbt.io/favicon-192.png",
@@ -29,7 +34,7 @@ const issuerLogoURLs = new Set([
 /** Only explicitly reviewed origins/paths may supply company images. */
 export function trustedLogoURL(value: string): boolean {
   try {
-    if (reviewedFundURLs.has(value)) return true;
+    if (reviewedFundURLs.has(value) || issuerLogoURLs.has(value)) return true;
     const url = new URL(value);
     if (
       url.protocol !== "https:" ||
@@ -40,7 +45,15 @@ export function trustedLogoURL(value: string): boolean {
       url.hash
     )
       return false;
-    if (issuerLogoURLs.has(value)) return true;
+    if (url.hostname === "raw.githubusercontent.com") {
+      const match =
+        /^\/(?:nvstly\/icons\/[0-9a-f]{40}\/ticker_icons|ShaadyEmad\/ticker-logos\/[0-9a-f]{40}\/US%20Market\/PNG|ngnmarket\/us-companies-logos\/[0-9a-f]{40}\/dist\/png)\/([^/]+)\.png$/.exec(
+          url.pathname,
+        );
+      if (!match) return false;
+      const symbol = decodeURIComponent(match[1]!);
+      return validDirectorySymbol(symbol) && !symbol.split("/").includes("..");
+    }
     if (url.hostname === "financialmodelingprep.com") {
       const match = /^\/image-stock\/([^/]+)\.png$/.exec(url.pathname);
       if (!match) return false;
@@ -63,6 +76,7 @@ export const fetchPublicAsset: typeof fetch = (input, options) =>
     const value = String(input);
     if (
       value !== catalogURL &&
+      value !== fallbackCatalogURL &&
       value !== fundCatalogURL &&
       !trustedLogoURL(value)
     ) {

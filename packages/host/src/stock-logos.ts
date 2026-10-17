@@ -10,7 +10,8 @@ import {
 import { join } from "node:path";
 import { validDirectorySymbol } from "../../core/src/stock-directory.ts";
 import type { StockLogo } from "../../core/src/stock-logos.ts";
-import { LogoCatalog, type LogoSource } from "./logo-catalog.ts";
+import type { LogoSource } from "./logo-catalog.ts";
+import { StockLogoSources } from "./logo-fallbacks.ts";
 import { fetchPublicAsset, readPublicBytes } from "./public-assets.ts";
 
 const maxBytes = 256 * 1024;
@@ -54,7 +55,7 @@ export class StockLogoCache {
     private dataDir: string,
     private offline = false,
     private fetchAsset: typeof fetch = fetchPublicAsset,
-    private catalog: LogoCatalogReader = new LogoCatalog(
+    private catalog: LogoCatalogReader = new StockLogoSources(
       dataDir,
       offline,
       fetchAsset,

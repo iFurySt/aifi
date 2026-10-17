@@ -55,20 +55,25 @@ explains reviewed aliases, URL lists, optional images and Gist/repository choice
 
 Public follow-up: [company-logo-catalog](https://github.com/ifuryst/company-logo-catalog)
 holds reviewed issuer aliases, source evidence and validation tooling.
-AIFi bundles `catalog.json` v0.3.0, commit
-`34c978e8984f09cda182b4ded999bd8c7cf01f7f` (catalog Git blob
-`0b62a75f1becbe09733f86feea733a108fbd6d32`), with the upstream MIT notice.
-The seed contains URL metadata, not image files: 42 issuers, 59 securities,
-65 exact symbol keys and 40 issuers with reviewed images. Twenty-four new issuer
-reviews include the reported E-list gaps. ADI and ELV use official small-icon
-assets, while ELV's generic A checksum is rejected. See the upstream
-[batch review](https://github.com/ifuryst/company-logo-catalog/blob/34c978e8984f09cda182b4ded999bd8c7cf01f7f/docs/review-2026-10-17.md).
+AIFi bundles `catalog.json` and `app-fallbacks.json` v0.4.0 from commit
+`57502b2b180afb2844f5ede422716aace751f485`, with the upstream MIT notice.
+Their Git blobs are `7ceace0d3e8bd76096866127691d41201d6fa237` and
+`86f3fba03873d42a7ac8abf99d1979332f2d3087`. These are URL metadata, not artwork.
+Reviewed identity covers 47 issuers / 65 securities / 71 exact keys, with 45
+issuer images. The 588-row supplement explicitly preserves provisional
+name-group and repository availability levels instead of claiming identity review.
 
-The host prefers verified active mappings and checks the fixed GitHub manifest
-at most daily. A newer bundled seed supersedes older downloaded metadata;
-updates cannot downgrade the catalog. Seven exact issuer PNG paths supplement
-the FMP/Tactical policy, including sources added after the original seed.
-Known rejected image bytes stay blocked in old caches and provider fallback;
-matching existing provider bytes can satisfy new reviewed mappings offline.
-The separate exhaustive source inventory remains unreviewed and is not bundled
-as approved company identity. See [runtime limits and cache migration](../design-docs/stock-logos.md).
+The [full 2026-10-18 audit](https://github.com/ifuryst/company-logo-catalog/blob/57502b2b180afb2844f5ede422716aace751f485/docs/availability-2026-10-18.md)
+checks actual bytes and offline host reads for every current security: 7,108 of
+7,484 have App-eligible PNGs; all S&P 500 and Nasdaq-100 members are covered.
+[Remaining 376](https://github.com/ifuryst/company-logo-catalog/blob/57502b2b180afb2844f5ede422716aace751f485/data/audits/2026-10-18/unresolved.csv)
+include 338 source gaps and 38 SVG-only candidates. Those are not reported as
+usable PNGs. Source/decoder availability remains distinct from issuer verification.
+
+The host checks two fixed GitHub manifests independently at most daily. Newer
+bundled metadata supersedes old downloaded versions. PNG paths are restricted to
+existing sources, exact reviewed company assets and pinned image paths in three
+known repositories. Known rejected bytes remain blocked in provider/cache paths;
+matching existing provider bytes satisfy new mappings offline. The full 7 MB
+inventory is not ingested as verified identity. See [runtime limits and cache
+migration](../design-docs/stock-logos.md).
