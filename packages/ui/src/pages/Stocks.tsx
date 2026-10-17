@@ -1,3 +1,4 @@
+import { Funds } from "./Funds";
 import { Financials } from "./Financials";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
@@ -475,7 +476,8 @@ export function Stocks() {
           </div>
         )}
         {tab === "financials" && <Financials data={data} />}
-        {(tab === "funds" || tab === "politicians" || tab === "insiders") && (
+        {tab === "funds" && <Funds data={data} />}
+        {(tab === "politicians" || tab === "insiders") && (
           <Activity key={tab} kind={tab} data={data} />
         )}
         {tab === "analyst" && <AnalystPanel data={data} />}

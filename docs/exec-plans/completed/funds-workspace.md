@@ -1,6 +1,6 @@
 # Funds ownership workspace
 
-Status: active, 2026-10-17.
+Status: completed, 2026-10-17.
 
 ## Outcome and sequence
 
@@ -10,9 +10,9 @@ ownership with a fund selector, position changes and real period history.
 1. [x] Inspect the real reference and source adapters/reference repositories.
 2. [x] Add keyless Yahoo public holders collection, configurable source/schedule,
    bounded same-source stored history, validation and offline persistence tests.
-3. [ ] Build compact ownership summary, selectable fund history and searchable,
+3. [x] Build compact ownership summary, selectable fund history and searchable,
    filterable holdings table with exact reporting dates and source details.
-4. [ ] Verify actual AAPL and additional companies, isolated UI tests, native/Web
+4. [x] Verify actual AAPL and additional companies, isolated UI tests, native/Web
    presentation, docs/history; commit and push only Funds changes in phases.
 
 ## Source decisions and boundaries
@@ -46,3 +46,17 @@ call collectors. UI checks cover selector, table/chart synchronization, search,
 position filtering, real history gaps, exact monthly dates, mobile overflow,
 hover/keyboard inspection, missing and partial coverage. Review actual AAPL plus
 MSFT/NVDA when source access allows. No login/inference/API purchase required.
+
+## Completion evidence
+
+- Data layer committed/pushed independently as `27c7a08`. Shared workspace edits
+  were preserved; no stash or blanket add/commit was used.
+- TypeScript, 148 unit tests, full Go format/vet/race/build, production builds,
+  desktop/continuity smoke and isolated Funds interaction checks passed.
+- Actual SQLite stores AAPL/MSFT/NVDA with 20 normalized rows each. The existing
+  local Funds dataset alone was enabled with Yahoo; other settings were retained.
+- Native AAPL and Chrome desktop/mobile show aggregate and sampled ownership.
+  Monthly fund dates remain exact; 390px layout has no body overflow and the table
+  owns its horizontal scroll. App is left on AAPL Funds.
+- Full historical 13F, all-manager census and managed fund logos remain source
+  gaps; no uncollected quarter, inferred exit or fabricated logo is displayed.

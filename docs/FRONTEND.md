@@ -265,6 +265,26 @@ history for groups, 20-period range, math provenance, zero baselines, units,
 selection, tooltip and scroll behavior. Actual AAPL/NVDA Web and native Electron
 views were also checked; 390px layouts keep table overflow inside the table.
 
+## Funds Workspace
+
+`Funds.tsx` reads the stored funds dataset through core `fundHistories` and
+`fundPeriods`. A selected-holder share-history plot is linked to a sticky-name
+report-date table, with separate institution/mutual-fund scopes, local search,
+position filters and bounded source details. Ownership aggregates describe the
+vendor universe, not the sampled rows. Missing samples/periods stay unknown;
+monthly dates are not relabeled as quarter ends. Past sample members remain
+inspectable without being marked exited. Yahoo percentage changes are rounded
+source values and are not used to infer exact prior shares. Optional FMP exact
+share deltas remain supported.
+
+`FundHistoryChart.tsx` has a zero-safe axis, bounded dark hover/keyboard details
+and one bar per collected observation. Scope changes clear old tooltip state.
+The local Funds stylesheet follows the research container; narrow layouts stack
+selection/chart and keep the wide table's scroll inside its wrapper. Run
+`pnpm smoke:funds` for selector/table/graph synchronization, gaps, type/position
+filters, search, date semantics, tooltip bounds, zero values and missing states.
+The isolated Electron fixture has no providers or account data.
+
 ## Collection Interaction Checks
 
 Collection changes reset search/pagination/scroll without changing detail tabs.

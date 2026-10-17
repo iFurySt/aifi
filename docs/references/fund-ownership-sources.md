@@ -14,7 +14,7 @@ Our old panel showed one FMP quarter in a generic table behind an API key.
 | Yahoo public `/quote/{symbol}/holders/` | No key/cookie | Top institutional and mutual-fund samples, aggregate ownership, true per-holder report dates, rounded change fractions. No full historical endpoint. | Default keyless collector, configurable weekly schedule; retain locally observed history. |
 | FMP stable `institutional-ownership/extract-analytics/holder` | Key and endpoint entitlement | Paginated reported institutional holdings for a requested quarter. Existing optional adapter. | Keep selectable; do not assume free-tier permission or fabricate history. |
 | Nasdaq public institutional-holdings | No key | Broader holder table and changes; exact period/date and value unit (thousands) matter. OpenBB ships an adapter. | Local probes failed (HTTP2 error, HTTP1 timeout); not enabled as an unverified fallback. |
-| SEC Form 13F bulk | No API key, identifying contact/fair access | Official filings, ~$96 MB latest compressed archive; CUSIPs, options/share classes, amendments and manager overlaps require normalized ingestion. | Dedicated future global backfill, not a per-company page request. |
+| SEC Form 13F bulk | No API key, identifying contact/fair access | Official filings, ~96 MB latest compressed archive; CUSIPs, options/share classes, amendments and manager overlaps require normalized ingestion. | Dedicated future global backfill, not a per-company page request. |
 
 ## Measured public sample
 
@@ -24,6 +24,11 @@ JSON has 10 institutions and 10 mutual funds. The institutional sample is dated
 2026-09-30. The provider's institutional ownership summary is 66.35% and its
 institution count is 7,695. These aggregates are not computed from our 20 rows.
 The institutions and funds overlap and are never added together.
+
+Actual background collection subsequently persisted all three sample issuers
+(AAPL/MSFT/NVDA), 20 normalized records each. Their institutional ownership
+aggregates were 66.35%, 75.80% and 71.41% respectively. These are stored vendor
+observations, not a claim that collection across the whole directory is complete.
 
 Yahoo `pctHeld` and `pctChange` are fractions: normalize 0.0797 to 7.97%, not
 0.0797%. `position` is shares; `value` is USD, with vendor valuation timing (not

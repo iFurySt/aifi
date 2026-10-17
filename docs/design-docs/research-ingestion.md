@@ -37,7 +37,7 @@ subscription is purchased by the application.
 | Financial facts (optional) | SEC Company Facts selected standard US-GAAP/DEI concepts | Contact; weekly; last seven years; raw source preserves other concepts |
 | Splits/dividends | Massive market-wide reference snapshots, all pages | Key; daily |
 | Insider transactions | SEC Form 4/4-A XML from stored submissions; immutable documents reused | Contact; daily; latest 40 filings, derivative status and transaction codes retained |
-| Institutional ownership | FMP stable extract-analytics/holder, paginated | Optional key/endpoint entitlement; weekly; latest elapsed quarter |
+| Institutional ownership | Yahoo public holders; optional FMP stable extract-analytics/holder, paginated | Keyless top institutional/fund samples and observed report-date history; FMP key/endpoint entitlement; weekly |
 | Congressional trades | FMP stable senate-trades + house-trades | Optional key/entitlement; daily; reported amount ranges retained |
 | Analyst data (default) | Yahoo public analysis page embedded JSON | No key/cookie; daily; consensus, current rating distribution and recent grades |
 | Analyst data (optional) | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |

@@ -28,3 +28,8 @@ Financials now compares collected periods across six statement/KPI/derived group
 with provider/store, same-period math and isolated interaction checks. Custom
 issuer KPIs, coherent historical valuation and non-USD/IFRS normalization remain
 explicit coverage gaps; existing product quality scores are unchanged.
+
+Funds has parser/domain/offline-store and isolated chart/table interaction checks,
+plus a native/web review of real stored ownership samples. Complete historical
+13F coverage and amendment/CUSIP normalization remain deferred; top-holder samples
+are explicit and never interpreted as a complete ownership census.

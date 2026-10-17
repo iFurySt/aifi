@@ -326,6 +326,23 @@ asterisk and inspectable source/filing/calculation details; missing operands are
 never replaced with zero. Keep custom KPIs and historical valuation unavailable
 until a real, coherent source exists.
 
+### Fund Ownership
+
+Funds pairs a selected-holder summary with a compact share-history bar plot and
+an independently scrolling report-date table. Show institutional aggregate
+ownership separately from the top-holder sample; institutions and mutual funds
+have separate scopes and are never summed. Retain local holder search, position
+filters, linked row/chart selection and a source details chip. Unknown sample
+membership is neutral, added/new is green and reduced/exited is red.
+
+Use real reporting dates. Quarter-end dates may show Qn YYYY; monthly fund dates
+must remain exact. Missing observations are em dashes with no bar, never zero or
+an inferred exit. A one-period sample has one bar. Retained earlier sample names
+stay visibly distinct from current sampled holders. The dark tooltip exposes
+shares, ownership and vendor value without implying a 13F quarter-end valuation.
+Wrap the selected-holder panel above the chart in narrow research containers;
+keep horizontal table overflow inside its own wrapper.
+
 ## 12. Settings
 
 Use the supplied 2026-10-13 settings screenshot as the layout reference. Preserve
