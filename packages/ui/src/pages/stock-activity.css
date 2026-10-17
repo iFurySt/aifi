@@ -1,0 +1,273 @@
+.activity-page {
+  min-width: 0;
+  container-type: inline-size;
+}
+.activity-heading,
+.activity-data-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.activity-heading h2 {
+  font-size: 18px;
+}
+.activity-heading .research-source-chip {
+  margin: 0;
+}
+.activity-data-heading {
+  justify-content: space-between;
+  margin: 24px 0 16px;
+}
+.activity-data-heading h3 {
+  font-size: 16px;
+}
+.activity-data-heading > span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.activity-toolbar,
+.activity-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+.activity-toolbar {
+  margin: 18px 0;
+}
+.activity-filters {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.activity-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  min-width: 0;
+  max-width: 240px;
+}
+.activity-search input {
+  font-size: 12px;
+  background: transparent;
+  width: 100%;
+  min-width: 0;
+}
+.activity-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  font-size: 10px;
+  font-weight: 500;
+}
+.activity-person {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 170px;
+}
+.activity-person strong {
+  font-weight: 500;
+}
+.activity-person small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-top: 4px;
+}
+.activity-warning {
+  color: #b28125;
+}
+.activity-side {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 11px;
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+.activity-buy {
+  color: var(--positive);
+}
+.activity-sell {
+  color: var(--negative);
+}
+.activity-side.activity-buy {
+  background: color-mix(in srgb, var(--positive) 9%, var(--canvas));
+}
+.activity-side.activity-sell {
+  background: color-mix(in srgb, var(--negative) 9%, var(--canvas));
+}
+.activity-table table {
+  font-variant-numeric: tabular-nums;
+}
+.activity-table td,
+.activity-table th {
+  white-space: nowrap;
+  font-size: 12px;
+}
+.activity-table td:first-child {
+  min-width: 190px;
+}
+.politician-leaders {
+  margin: 22px 0 28px;
+}
+.politician-leaders > p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.politician-leaders > p > span {
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 5px;
+}
+.politician-leaders > div {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+.politician-leaders button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  width: 110px;
+  min-width: 85px;
+  padding: 8px 6px;
+  border-radius: 12px;
+}
+.politician-leaders button:hover,
+.politician-leaders button.selected {
+  background: var(--surface-muted);
+}
+.politician-leaders .activity-avatar {
+  width: 46px;
+  height: 46px;
+  font-size: 14px;
+}
+.politician-leaders strong {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+}
+.politician-leaders small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.activity-chart {
+  position: relative;
+  min-width: 0;
+  margin: 20px 0 30px;
+}
+.activity-chart svg {
+  display: block;
+  width: 100%;
+  cursor: crosshair;
+  min-height: 190px;
+}
+.activity-chart text {
+  font-size: 10px;
+  fill: var(--muted);
+}
+.activity-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.activity-chart-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.activity-chart-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: currentColor;
+}
+.activity-chart-legend .activity-net {
+  width: 14px;
+  height: 2px;
+  background: var(--text);
+}
+.activity-buy-bar {
+  fill: var(--positive);
+}
+.activity-sell-bar {
+  fill: var(--negative);
+}
+.activity-chart-tooltip {
+  position: absolute;
+  top: 28px;
+  transform: translateX(-50%);
+  background: #181818;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-size: 11px;
+  pointer-events: none;
+  box-shadow: 0 5px 20px #0002;
+  min-width: 170px;
+}
+.activity-chart-tooltip strong {
+  display: block;
+  margin-bottom: 7px;
+}
+.activity-chart-tooltip span {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  line-height: 1.8;
+}
+.activity-chart-tooltip b {
+  font-weight: 500;
+}
+.activity-chart-empty {
+  height: 210px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 12px;
+  border-bottom: 1px solid var(--border);
+}
+@container (max-width:650px) {
+  .activity-toolbar {
+    flex-wrap: wrap;
+  }
+  .activity-filters {
+    justify-content: flex-start;
+  }
+  .activity-chart svg {
+    min-height: 150px;
+  }
+  .activity-chart-legend {
+    gap: 10px;
+  }
+  .activity-chart-tooltip {
+    font-size: 10px;
+    min-width: 130px;
+    padding: 8px;
+  }
+  .politician-leaders > div {
+    justify-content: flex-start;
+  }
+  .politician-leaders button {
+    min-width: 92px;
+  }
+  .activity-table .table-scroll {
+    max-width: 100%;
+  }
+}

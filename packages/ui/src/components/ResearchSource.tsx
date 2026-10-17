@@ -12,7 +12,11 @@ export function ResearchSource({
 }) {
   if (!view) return null;
   const providerLabel =
-    view.provider === "thirteenf" ? "13F.INFO" : view.provider.toUpperCase();
+    view.provider === "thirteenf"
+      ? "13F.INFO"
+      : view.provider === "congress"
+        ? "CONGRESSINVESTS"
+        : view.provider.toUpperCase();
   const fetched = new Date(view.fetchedAt);
   const sources = [...new Set(view.sources)]
     .filter(isResearchSourceURL)

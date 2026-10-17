@@ -22,3 +22,5 @@ export * from "./storage-usage";
 export * from "./storage-session";
 
 export * from "./funds";
+
+export * from "./stock-activity";

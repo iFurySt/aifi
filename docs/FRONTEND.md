@@ -481,3 +481,14 @@ semantic chart colors retain their own states. Search uses a short title with
 keyboard help available through its Shortcuts action; collection headings omit
 redundant stock counts. Toolbar Chat glyphs have a 1px optical inset within the
 same 18px icon slot.
+
+
+## Stock activity pages
+
+Politicians reads stored disclosure records through core normalization. Top buyers
+and its signed/cumulative chart count disclosed purchases/sales, excluding source
+ambiguities. Local actor/chamber/type/date/search filters share the same rows.
+Amounts remain ranges; source links open official reports. Price moves require
+stored split-adjusted closes and are never labeled portfolio gains. The shared
+ActivityChart supports dark hover/keyboard details and contained mobile overflow.
+Run `node scripts/check-stock-activity.mjs` for its isolated interaction fixture.

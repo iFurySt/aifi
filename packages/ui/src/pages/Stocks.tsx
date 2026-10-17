@@ -1,3 +1,4 @@
+import { Politicians } from "./Politicians";
 import { Funds } from "./Funds";
 import { Financials } from "./Financials";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
@@ -477,9 +478,8 @@ export function Stocks() {
         )}
         {tab === "financials" && <Financials data={data} />}
         {tab === "funds" && <Funds data={data} />}
-        {(tab === "politicians" || tab === "insiders") && (
-          <Activity key={tab} kind={tab} data={data} />
-        )}
+        {tab === "politicians" && <Politicians data={data} />}
+        {tab === "insiders" && <Activity kind="insiders" data={data} />}
         {tab === "analyst" && <AnalystPanel data={data} />}
       </section>
     </div>
