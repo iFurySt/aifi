@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowUpRight,
-  Search,
   Star,
   MessageCircle,
   Moon,
@@ -17,7 +16,6 @@ import {
   stockTabs,
   stockDisplayName,
   validSymbol,
-  validDirectorySymbol,
 } from "@aifi/core";
 import type { StockTab } from "@aifi/core";
 import { useWorkspace, money, percent } from "../workspace-context";
@@ -25,10 +23,9 @@ import { Button } from "../components/primitives";
 import { StockAvatar } from "../components/StockAvatar";
 import { StockChart } from "../components/StockChart";
 import { StockPeers } from "../components/StockPeers";
+import { ExchangeClock } from "../components/ExchangeClock";
 import {
-  useStockDirectory,
   useDirectoryEntry,
-  useDirectorySearch,
   directoryExchange,
 } from "../stock-directory-context";
 import { useStockResearch } from "../stock-research-context";
@@ -76,45 +73,10 @@ export function Stocks() {
         name: profile?.name ?? symbol,
       }
     : undefined;
-  const [query, setQuery] = useState("");
-  const directory = useStockDirectory();
   const identity = useDirectoryEntry(symbol);
   const listing = identity.data.item;
-  const suggestions = useDirectorySearch(query, 20);
-  const searchSequence = useRef(0);
-  useEffect(() => {
-    searchSequence.current++;
-    return () => {
-      searchSequence.current++;
-    };
-  }, [symbol]);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const watched = workspace.watchlist.includes(symbol);
-  async function findStock(e: React.FormEvent) {
-    e.preventDefault();
-    const request = ++searchSequence.current;
-    const input = query.trim();
-    if (!input) return;
-    try {
-      const exact = validDirectorySymbol(input)
-        ? await directory.get(input.toUpperCase())
-        : null;
-      const matches = exact?.item
-        ? null
-        : await directory.search({ query: input, limit: 20, offset: 0 });
-      if (request !== searchSequence.current) return;
-      const target =
-        exact?.item?.symbol ?? matches?.items[0]?.symbol ?? input.toUpperCase();
-      if (validDirectorySymbol(target)) {
-        openStock(target, tab);
-        setQuery("");
-      } else notify("Choose a stock or enter a ticker.");
-    } catch {
-      if (request === searchSequence.current)
-        notify("Directory unavailable. Try again.");
-    }
-  }
-
   function toggleWatch() {
     try {
       const watchlist = watched
@@ -201,7 +163,7 @@ export function Stocks() {
           className="stock-company-mark"
           enabled={!!listing}
         />
-        <div>
+        <div className="stock-company-identity">
           <h1>{stockDisplayName(profile?.name, listing?.name, symbol)}</h1>
           <small>
             {symbol}
@@ -218,27 +180,6 @@ export function Stocks() {
             </small>
           )}
         </div>
-        <form className="stock-company-search" onSubmit={findStock}>
-          <Search size={16} />
-          <input
-            aria-label="Search a stock"
-            placeholder="Search a stock"
-            list="stock-suggestions"
-            maxLength={80}
-            value={query}
-            onChange={(e) => {
-              searchSequence.current++;
-              setQuery(e.target.value);
-            }}
-          />
-          <datalist id="stock-suggestions">
-            {suggestions.data.items.map((entry) => (
-              <option value={entry.symbol} key={entry.id}>
-                {entry.name}
-              </option>
-            ))}
-          </datalist>
-        </form>
         <Button
           aria-pressed={watched}
           disabled={!validSymbol(symbol)}
@@ -345,29 +286,24 @@ export function Stocks() {
                       <span>regular session</span>
                     </p>
                   )}
-                <small>
-                  {shown.asOf
-                    ? new Date(shown.asOf).toLocaleString("en-US", {
-                        timeZone: "America/New_York",
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                        hour: "numeric",
-                        minute: "2-digit",
-                        timeZoneName: "short",
-                      })
-                    : (shown.date ??
-                      (loading ? (
-                        "Loading…"
-                      ) : (
-                        <MissingData data={data} dataset="prices" />
-                      )))}
-                </small>
+                <ExchangeClock />
+                {!shown.asOf && !shown.date && (
+                  <small>
+                    {loading ? (
+                      "Loading…"
+                    ) : (
+                      <MissingData data={data} dataset="prices" />
+                    )}
+                  </small>
+                )}
                 <SourceNote
                   view={shown.sourceView}
                   detail={
                     <>
                       <p>Collected snapshot · Not streaming.</p>
+                      {shown.date && !shown.asOf && (
+                        <p>Price session: {shown.date}</p>
+                      )}
                       {shown.asOf && (
                         <p>
                           Regular session:{" "}

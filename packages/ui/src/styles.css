@@ -301,7 +301,7 @@ svg {
   display: flex;
   flex: 0 0 48px;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   padding: 0 12px;
   -webkit-app-region: drag;
 }
@@ -313,7 +313,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 4px;
-  flex: 0 0 max(240px, calc(var(--rail-width) + var(--sidebar-width) - 4px));
+  flex: 0 0 auto;
 }
 .native-window-space {
   display: none;
@@ -2098,7 +2098,8 @@ kbd {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 22px 26px 16px;
+  padding: 14px 22px;
+  min-height: 64px;
 }
 .stock-company-mark {
   width: 36px;
@@ -2112,7 +2113,7 @@ kbd {
   flex-shrink: 0;
 }
 .stock-company-header h1 {
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.3;
   font-weight: 600;
   letter-spacing: -0.4px;
@@ -2121,42 +2122,21 @@ kbd {
   font-size: 10px;
   color: var(--muted);
 }
-.stock-company-search {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  border-radius: 999px;
-  background: var(--surface-muted);
-  padding: 8px 14px;
-  margin-left: auto;
-  max-width: 330px;
-  width: 35%;
-  color: var(--muted);
-}
-.stock-company-search input {
-  width: 100%;
-  min-width: 0;
-  background: transparent;
-  border: 0;
-  font-size: 12px;
-}
-.stock-company-search:focus-within {
-  background: color-mix(in srgb, var(--text) 6%, var(--surface-muted));
-}
 .stock-company-header .button {
   padding: 7px 12px;
   font-size: 11px;
 }
 .stock-tabs {
   display: flex;
-  gap: 24px;
+  gap: 22px;
+  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 0 26px;
+  padding: 0 22px;
   overflow-x: auto;
   scrollbar-width: thin;
 }
 .stock-tabs button {
-  padding: 12px 0 10px;
+  padding: 10px 0 9px;
   font-size: 14px;
   font-weight: 500;
   color: var(--muted);
@@ -2474,13 +2454,7 @@ kbd {
   }
   .stock-company-header {
     flex-wrap: wrap;
-    padding: 20px;
-  }
-  .stock-company-search {
-    order: 3;
-    width: 100%;
-    max-width: none;
-    margin-left: 0;
+    padding: 12px 20px;
   }
   .stock-company-header > .button {
     margin-left: auto;
@@ -2951,24 +2925,24 @@ kbd {
   gap: 9px;
   color: var(--secondary);
   font-size: 13px;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
 }
 .stock-quote-price {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 9px;
 }
 .stock-quote-price strong {
-  font-size: 34px;
-  line-height: 1.15;
+  font-size: 32px;
+  line-height: 1.1;
   letter-spacing: -1px;
   font-weight: 650;
 }
 .stock-quote-currency {
   color: var(--muted);
   font-weight: 450;
-  margin-right: 7px;
+  margin-right: 3px;
 }
 .stock-symbol-pill {
   color: var(--on-primary);
@@ -2987,8 +2961,8 @@ kbd {
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
-  margin: 16px 0;
-  font-size: 13px;
+  margin: 10px 0 12px;
+  font-size: 12px;
   font-weight: 550;
 }
 .stock-daily-change span {
@@ -3258,4 +3232,66 @@ kbd {
 }
 .stock-peer-price small.negative {
   color: var(--negative);
+}
+
+/* Compact stock identity and adjacent native navigation/breadcrumb controls. */
+.window-toolbar-divider {
+  height: 18px;
+  width: 1px;
+  flex: 0 0 1px;
+  background: var(--frame-border);
+}
+.window-title > svg,
+.topbar-left > svg {
+  flex-shrink: 0;
+}
+.stock-company-identity {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+.stock-company-identity h1 {
+  margin: 0;
+  min-width: 0;
+}
+.stock-company-identity > small {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.stock-company-identity .directory-status {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stock-company-header > .button {
+  flex-shrink: 0;
+  min-height: 30px;
+}
+.stock-exchange-clock {
+  color: var(--secondary);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+@container (max-width:660px) {
+  .stock-company-header {
+    gap: 8px;
+  }
+  .stock-company-mark {
+    width: 28px;
+    height: 28px;
+  }
+  .stock-company-identity {
+    gap: 4px 8px;
+    flex-wrap: wrap;
+  }
+  .stock-company-identity > h1 {
+    flex-basis: 100%;
+    font-size: 16px;
+  }
+  .stock-company-header > .button {
+    min-width: 34px;
+    padding: 6px 8px;
+  }
 }

@@ -13,6 +13,7 @@ import {
   ArrowLeft,
   ArrowRight,
   PanelLeft,
+  Settings,
 } from "lucide-react";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { workspacePages, stockHref, validDirectorySymbol } from "@aifi/core";
@@ -79,6 +80,9 @@ export function Shell({ children }: { children: ReactNode }) {
     openConversation,
   } = useWorkspace();
   const desktop = !!window.aifiDesktop;
+  const PageIcon =
+    destinations.find((destination) => destination.page === page)?.icon ??
+    Settings;
   useLayoutEffect(() => {
     if (page !== "research")
       document
@@ -190,8 +194,9 @@ export function Shell({ children }: { children: ReactNode }) {
             </IconButton>
             {navigationToggle}
           </div>
+          <span className="window-toolbar-divider" aria-hidden="true" />
           <div className="window-title">
-            <FolderOpen size={16} />
+            <PageIcon size={18} strokeWidth={1.7} />
             <span>AIFi</span>
             <span className="breadcrumb-divider">/</span>
             <span>{pageLabels[page]}</span>
@@ -230,6 +235,8 @@ export function Shell({ children }: { children: ReactNode }) {
               <header className="topbar">
                 <div className="topbar-left">
                   {navigationToggle}
+                  <span className="window-toolbar-divider" aria-hidden="true" />
+                  <PageIcon size={18} strokeWidth={1.7} />
                   <span className="page-label">{pageLabels[page]}</span>
                   {demoBadge}
                 </div>

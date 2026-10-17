@@ -279,3 +279,18 @@ and profitable/loss-making values without inventing period-over-period growth.
 Peers show exact US-directory matches from stored related-symbol recommendations;
 identity and regular quotes use independent local reads and unavailable quotes
 stay empty. Source details explain the related-stock classification.
+
+## Compact stock header and exchange clock
+
+The stock page uses one desktop identity row for company, ticker/exchange and
+watchlist action, with a border above research tabs. Only the global
+Command/Ctrl+K dialog performs workspace-wide search; sidebar stock filtering
+remains available. The visible quote clock ticks independently using New York
+exchange time and catches up on focus/visibility changes. Quote observations
+keep their own timestamps inside the source chip. No clock tick or search
+navigation fetches a provider dataset.
+
+The native sidebar toggle, vertical divider and page-specific 18px breadcrumb
+icon are adjacent; their spacing is independent of sidebar width. Native window
+controls and drag/no-drag boundaries remain unchanged. Narrow identity rows may
+wrap metadata while tabs continue scrolling within the document.

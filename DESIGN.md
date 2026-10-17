@@ -134,7 +134,8 @@ Use Radix primitives for those behaviors, not a large visual component library.
   containing sidebar and main canvas. Panel radius 16px, outline 1px, outer gap
   8px. The frame and sidebar stay still while main content scrolls internally.
 - Electron: 48px draggable outer toolbar with native Mac traffic lights,
-  back/forward, sidebar toggle, page title, search, and theme. Reserve 96px before navigation at the
+  back/forward, sidebar toggle, adjacent divider and page-specific breadcrumb,
+  search, and theme. Controls use consistent 18px icons. Reserve 96px before navigation at the
   left on macOS; interactive controls are no-drag. Do not draw traffic lights.
 - Web: 8px top gap, no desktop window toolbar; a 52px page toolbar lives inside
   the main panel with sidebar toggle, page title, search, and theme.
@@ -268,7 +269,10 @@ selector plus Quarter/Yearly controls. Missing-data layouts and responsive
 rearrangement below are AIFi choices.
 
 - Reuse the shared frame, rail, stock sidebar, avatar, and native toolbar.
-- Company header: monogram/name/ticker/exchange, search, Watchlist toggle.
+- Company header: compact company mark, name and ticker/exchange on one row,
+  with the Watchlist toggle aligned right. Use the global Command/Ctrl+K search
+  instead of a second company-page search. Separate this header from the tabs
+  with a thin border; wrap identity metadata only on narrow screens.
 - Six main tabs: Chart, Financials, Funds, Politicians, Insiders, Analyst. Tabs
   are 15px/500, selected 600 with a 2px underline and 40px minimum height.
   Filings is a Financials view; no separate Overview tab.
@@ -308,3 +312,10 @@ Saved credentials show only presence; blank password inputs replace values on
 explicit Save, and Remove clears saved fields. Data adapters that are not active
 say Not syncing; do not imply remote authentication success. Keep neutral focus,
 Escape/dismissal, and actual enabled/disabled states.
+
+Stock quote refinement (2026-10-17): keep market state, currency, price and
+change compact. The visible clock is current exchange-local time (US listings:
+America/New_York, DST aware) and advances automatically. Stored regular and
+after-hours observation times remain in source details; the clock never implies
+that prices stream. Keep the native breadcrumb next to the sidebar toggle with
+a vertical divider, independent of the sidebar's width/collapse state.
