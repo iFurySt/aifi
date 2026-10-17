@@ -34,6 +34,7 @@ type ResearchConfig struct {
 	PriceSource   string                   `json:"priceSource"`
 	ProfileSource string                   `json:"profileSource"`
 	FactsSource   string                   `json:"factsSource"`
+	FundsSource   string                   `json:"fundsSource"`
 	AnalystSource string                   `json:"analystSource"`
 	FilingsSource string                   `json:"filingsSource"`
 	Automatic     bool                     `json:"automatic"`
@@ -64,6 +65,12 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	if _, ok := c.Datasets["earnings"]; !ok {
 		c.Datasets["earnings"] = DatasetConfig{true, 24}
 	}
+	if c.FundsSource == "" {
+		c.FundsSource = "yahoo"
+		if c.Datasets["funds"].Enabled {
+			c.FundsSource = "fmp"
+		}
+	}
 	if c.AnalystSource == "" {
 		c.AnalystSource = "yahoo"
 		if c.Datasets["analyst"].Enabled {
@@ -88,6 +95,8 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	switch dataset {
 	case "prices":
 		return c.PriceSource
+	case "funds":
+		return c.FundsSource
 	case "analyst":
 		return c.AnalystSource
 	case "earnings", "peers":
@@ -109,6 +118,12 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
 	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 4 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
+	}
+	if c.FundsSource == "" {
+		c.FundsSource = "yahoo"
+	}
+	if c.FundsSource != "yahoo" && c.FundsSource != "fmp" {
+		return c, errors.New("invalid funds source")
 	}
 	if c.AnalystSource != "yahoo" && c.AnalystSource != "fmp" {
 		return c, errors.New("invalid analyst source")
@@ -483,8 +498,12 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 			return out, e
 		}
 		v.RecordCount = len(v.Data.Records)
-		if len(v.Data.Records) > 200 {
-			v.Data.Records = v.Data.Records[:200]
+		limit := 200
+		if d == "funds" {
+			limit = 2000
+		}
+		if len(v.Data.Records) > limit {
+			v.Data.Records = v.Data.Records[:limit]
 		}
 		if len(v.Data.Filings) > 250 {
 			v.Data.Filings = v.Data.Filings[:250]
@@ -702,7 +721,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) AND (dataset!='funds' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource, out.Config.FundsSource)
 	if e != nil {
 		return out, e
 	}

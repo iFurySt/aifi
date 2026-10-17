@@ -20,16 +20,17 @@ import (
 )
 
 type Client struct {
-	ReadArchive  func(context.Context, string) (*Evidence, error)
-	ReadStage    func(context.Context, string) (*Evidence, error)
-	SaveStage    func(context.Context, string, Evidence) error
-	HTTP         *http.Client
-	Key          func(context.Context, string) (map[string]string, error)
-	Gate         func(context.Context, string) error
-	SECContact   func(context.Context) (string, error)
-	Now          func() time.Time
-	ReadEvidence func(context.Context, string, string) ([]Evidence, error)
-	ReadPayload  func(context.Context, string, string) (Payload, error)
+	ReadFundsHistory func(context.Context, string, string) ([]Record, error)
+	ReadArchive      func(context.Context, string) (*Evidence, error)
+	ReadStage        func(context.Context, string) (*Evidence, error)
+	SaveStage        func(context.Context, string, Evidence) error
+	HTTP             *http.Client
+	Key              func(context.Context, string) (map[string]string, error)
+	Gate             func(context.Context, string) error
+	SECContact       func(context.Context) (string, error)
+	Now              func() time.Time
+	ReadEvidence     func(context.Context, string, string) ([]Evidence, error)
+	ReadPayload      func(context.Context, string, string) (Payload, error)
 }
 
 func NewClient() *Client {
@@ -51,7 +52,7 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
 	case "yahoo":
-		if u.Host != "query1.finance.yahoo.com" && !(u.Host == "finance.yahoo.com" && strings.HasPrefix(u.Path, "/quote/") && (strings.HasSuffix(u.Path, "/profile/") || strings.HasSuffix(u.Path, "/analysis/"))) {
+		if u.Host != "query1.finance.yahoo.com" && !(u.Host == "finance.yahoo.com" && strings.HasPrefix(u.Path, "/quote/") && (strings.HasSuffix(u.Path, "/profile/") || strings.HasSuffix(u.Path, "/analysis/") || strings.HasSuffix(u.Path, "/holders/"))) {
 			return nil, &Failure{Code: "invalid_endpoint"}
 		}
 		headers.Set("User-Agent", "AIFi/0.1 local investment research")
@@ -226,6 +227,12 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 			e = c.yahooPrices(ctx, j, &result)
 		} else {
 			e = c.prices(ctx, j, &result)
+		}
+	case "funds":
+		if j.Provider == "yahoo" {
+			e = c.yahooFunds(ctx, j, &result)
+		} else {
+			e = c.optional(ctx, j, &result)
 		}
 	case "peers":
 		e = c.yahooPeers(ctx, j, &result)

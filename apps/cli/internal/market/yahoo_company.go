@@ -47,13 +47,13 @@ func (c *Client) yahooPage(ctx context.Context, symbol string, r *Result, pages 
 	if len(pages) > 0 {
 		page = pages[0]
 	}
-	if page != "profile" && page != "analysis" {
+	if page != "profile" && page != "analysis" && page != "holders" {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
 	endpoint := "https://finance.yahoo.com/quote/" + url.PathEscape(symbol) + "/" + page + "/"
 	key := "yahoo-company-v1:" + symbol
-	if page == "analysis" {
-		key = "yahoo-analysis-v1:" + symbol
+	if page != "profile" {
+		key = "yahoo-" + page + "-v1:" + symbol
 	}
 	if c.ReadStage != nil {
 		cached, err := c.ReadStage(ctx, key)

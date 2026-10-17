@@ -17,6 +17,7 @@ export const researchDatasets = [
 export type ResearchDataset = (typeof researchDatasets)[number];
 export interface ResearchConfig {
   revision: number;
+  fundsSource?: "yahoo" | "fmp";
   analystSource?: "yahoo" | "fmp";
   priceSource?: "yahoo" | "massive";
   profileSource?: "yahoo" | "massive";
@@ -37,6 +38,7 @@ export function researchProvider(
   config: ResearchConfig,
   dataset: ResearchDataset,
 ): "yahoo" | "massive" | "sec" | "fmp" {
+  if (dataset === "funds") return config.fundsSource ?? "yahoo";
   if (dataset === "analyst") return config.analystSource ?? "yahoo";
   if (dataset === "earnings" || dataset === "peers") return "yahoo";
   if (dataset === "prices") return config.priceSource ?? "yahoo";
@@ -97,7 +99,14 @@ export interface MarketQuote {
   postAsOf?: string;
   state?: string;
 }
+export interface OwnershipSummary {
+  institutionsPercent?: number;
+  floatPercent?: number;
+  insidersPercent?: number;
+  institutionsCount?: number;
+}
 export interface ResearchPayload {
+  ownership?: OwnershipSummary;
   version?: number;
   quote?: MarketQuote;
   profile?: CompanyProfile;

@@ -362,6 +362,7 @@ export function ResearchSyncSettings() {
                 [
                   ["profileSource", "Company details source", "massive"],
                   ["analystSource", "Analyst source", "fmp"],
+                  ["fundsSource", "Institutional holdings source", "fmp"],
                   ["factsSource", "Financial statements source", "sec"],
                   ["filingsSource", "Filings source", "sec"],
                 ] as const

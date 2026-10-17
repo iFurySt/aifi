@@ -20,3 +20,5 @@ export * from "./financial-analysis";
 export * from "./storage-usage";
 
 export * from "./storage-session";
+
+export * from "./funds";

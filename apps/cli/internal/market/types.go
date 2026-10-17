@@ -67,15 +67,22 @@ type MarketQuote struct {
 	PostPrice     *float64 `json:"postPrice,omitempty"`
 	PostAsOf      string   `json:"postAsOf,omitempty"`
 }
+type OwnershipSummary struct {
+	InstitutionsPercent *float64 `json:"institutionsPercent,omitempty"`
+	FloatPercent        *float64 `json:"floatPercent,omitempty"`
+	InsidersPercent     *float64 `json:"insidersPercent,omitempty"`
+	InstitutionsCount   *float64 `json:"institutionsCount,omitempty"`
+}
 type Payload struct {
-	Version  int          `json:"version,omitempty"`
-	Quote    *MarketQuote `json:"quote,omitempty"`
-	Profile  *Profile     `json:"profile,omitempty"`
-	Facts    []Fact       `json:"facts,omitempty"`
-	Filings  []Filing     `json:"filings,omitempty"`
-	Records  []Record     `json:"records,omitempty"`
-	Window   string       `json:"window,omitempty"`
-	Complete bool         `json:"complete"`
+	Ownership *OwnershipSummary `json:"ownership,omitempty"`
+	Version   int               `json:"version,omitempty"`
+	Quote     *MarketQuote      `json:"quote,omitempty"`
+	Profile   *Profile          `json:"profile,omitempty"`
+	Facts     []Fact            `json:"facts,omitempty"`
+	Filings   []Filing          `json:"filings,omitempty"`
+	Records   []Record          `json:"records,omitempty"`
+	Window    string            `json:"window,omitempty"`
+	Complete  bool              `json:"complete"`
 }
 type Evidence struct {
 	URL       string

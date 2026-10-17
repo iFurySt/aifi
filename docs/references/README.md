@@ -53,3 +53,6 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
   financial-series and filing-index probes, access limits and vendor semantics.
 
 - [Financial statement coverage and sources](financial-statement-sources.md): Rallies comparison, extended SEC/Yahoo mappings, actual probes and calculation limits.
+
+- [Fund ownership coverage and sources](fund-ownership-sources.md): Rallies comparison,
+  keyless top-holder samples, local observed history and future SEC 13F backfill.

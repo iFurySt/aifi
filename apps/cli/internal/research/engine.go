@@ -33,6 +33,7 @@ func New(db *store.Store, path string, offline bool) *Engine {
 	c := market.NewClient()
 	e.Client = c
 	c.ReadPayload = db.ResearchPayload
+	c.ReadFundsHistory = db.FundsHistory
 	c.ReadEvidence = db.ResearchEvidence
 	c.ReadArchive = db.ResearchArchive
 	c.ReadStage = db.ResearchStage
@@ -161,7 +162,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
-		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers"} {
+		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds"} {
 			jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: symbol})
 		}
 		for _, d := range []string{"profile", "funds", "politicians", "analyst", "news"} {
@@ -259,7 +260,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if p == "yahoo" {
 		// Rotate datasets before claiming: an existing universe-size price backlog
 		// must not starve company details and financials. All requests share a budget.
-		order := []string{"profile", "filings", "facts", "prices", "analyst", "earnings", "peers"}
+		order := []string{"profile", "filings", "facts", "prices", "analyst", "earnings", "peers", "funds"}
 		for i := 0; i < len(order); i++ {
 			d := order[e.yahooCursor%len(order)]
 			e.yahooCursor++

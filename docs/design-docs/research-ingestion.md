@@ -309,3 +309,15 @@ values and weighted averages. Only matching YTD flows may become derived quarter
 ratios join matching period starts/ends, and YoY requires a positive year-ago base.
 Source tags, fiscal dates and filing identities remain inspectable. See
 [coverage and source decisions](../references/financial-statement-sources.md).
+
+## Funds ownership samples
+
+Funds supports Yahoo public holders (no key, top institutional/mutual-fund samples)
+and the existing optional FMP quarterly endpoint. Yahoo normalization preserves
+exact report dates, source fraction percentages, aggregates, sample membership
+and at most 20 observed dates/2,000 rows of same-provider history in committed
+SQLite snapshots. New installations enable weekly collection; existing pauses
+and enabled FMP selections are retained. Source selection and interval live in
+Sync settings. Reads/filters never collect; missing sampled holders never imply
+exits or zero positions. See [source comparison](../references/fund-ownership-sources.md)
+for coverage and the deferred full SEC 13F archive/mapping importer.
