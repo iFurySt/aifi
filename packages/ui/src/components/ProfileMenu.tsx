@@ -1,7 +1,8 @@
 import { AccountProviderBadge } from "./AccountProviderBadge";
 import { useState } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Gauge, LogIn, Settings, UserRound } from "lucide-react";
+import { ArrowUpRight, Gauge, GitFork, LogIn, Settings, UserRound } from "lucide-react";
+import { AIFI_REPOSITORY_URL } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import { useChatGPT } from "../chatgpt-context";
 import { workspaceShortcut, shortcutModifier } from "./workspace-shortcuts";
@@ -90,6 +91,21 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
             <Settings size={17} strokeWidth={1.7} />
             Settings
             <kbd className="account-shortcut">{shortcutModifier()} ,</kbd>
+          </DropdownMenu.Item>
+          <DropdownMenu.Item className="dropdown-item" asChild>
+            <a
+              href={AIFI_REPOSITORY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitFork size={17} strokeWidth={1.7} />
+              GitHub
+              <ArrowUpRight
+                size={14}
+                className="account-shortcut"
+                aria-hidden="true"
+              />
+            </a>
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>

@@ -85,18 +85,34 @@ async function checks() {
     "Rail avatar is too small",
   );
   const row = document.querySelector(".setting-row").getBoundingClientRect();
-  assert(row.height <= 65 && row.height >= 58, "Settings rows are not compact");
+  assert(row.height <= 90 && row.height >= 58, "Settings rows are not compact");
   await open();
   assert(
     menu().getBoundingClientRect().width === 228,
     "Account menu is too wide",
   );
   assert(
-    items().length === 2 &&
+    items().length === 3 &&
       items()[0].textContent === "Continue with ChatGPT" &&
       items()[1].textContent.includes("Settings"),
     "Anonymous menu actions differ",
   );
+  const repository = items()[2];
+  assert(
+    repository.tagName === "A" &&
+      repository.href === "https://github.com/iFurySt/aifi" &&
+      repository.target === "_blank" &&
+      repository.rel.includes("noopener") &&
+      repository.rel.includes("noreferrer"),
+    "Repository action must be a safe external link",
+  );
+  repository.click();
+  await until(
+    () =>
+      window.accountFixture.repositoryURL ===
+        "https://github.com/iFurySt/aifi" && !menu(),
+  );
+  await open();
   items()[0].click();
   await until(
     () =>
@@ -138,7 +154,7 @@ async function checks() {
     "Provider badge is not centered next to the name",
   );
   assert(
-    items().length === 2 && items()[0].textContent === "Usage",
+    items().length === 3 && items()[0].textContent === "Usage",
     "Connected menu actions differ",
   );
   assert(!menu().textContent.includes("%"), "Usage quota was invented");
@@ -155,7 +171,7 @@ async function checks() {
   assert(
     location.hash === "#/settings" &&
       document.querySelector(".settings-content > h1").textContent ===
-        "General",
+        "Appearance",
     "Command+, did not open Settings",
   );
   location.hash = "/agents";
@@ -165,6 +181,7 @@ async function checks() {
   );
   await until(() => !!document.querySelector(".settings-content"));
   return {
+    repositoryLink: true,
     anonymousPersonIcon: true,
     reusesSignIn: true,
     connectedIdentity: true,
@@ -175,7 +192,7 @@ async function checks() {
   };
 }
 const main = `const {app,BrowserWindow}=require('electron');const fs=require('node:fs');const path=require('node:path');
-app.setPath('userData',path.join(__dirname,'profile'));app.whenReady().then(async()=>{const win=new BrowserWindow({show:false,width:1360,height:1000,webPreferences:{sandbox:true,contextIsolation:true,backgroundThrottling:false}});win.webContents.on('console-message',(event)=>{if(event.level==='error')console.error(event.message)});try{await win.loadFile(path.join(__dirname,'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));fs.writeFileSync(path.join(__dirname,'settings.png'),(await win.webContents.capturePage()).toPNG());console.log(JSON.stringify(report));app.exit(0)}catch(error){console.error(error);app.exit(1)}});setTimeout(()=>{console.error('Account UI check timed out');app.exit(1)},25000);`;
+app.setPath('userData',path.join(__dirname,'profile'));app.whenReady().then(async()=>{const win=new BrowserWindow({show:false,width:1360,height:1000,webPreferences:{sandbox:true,contextIsolation:true,backgroundThrottling:false}});win.webContents.on('console-message',(event)=>{if(event.level==='error')console.error(event.message)});win.webContents.setWindowOpenHandler(({url})=>{void win.webContents.executeJavaScript('window.accountFixture.repositoryURL='+JSON.stringify(url));return {action:'deny'}});try{await win.loadFile(path.join(__dirname,'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));fs.writeFileSync(path.join(__dirname,'settings.png'),(await win.webContents.capturePage()).toPNG());console.log(JSON.stringify(report));app.exit(0)}catch(error){console.error(error);app.exit(1)}});setTimeout(()=>{console.error('Account UI check timed out');app.exit(1)},25000);`;
 await writeFile(join(output, "main.cjs"), main);
 const env = { ...process.env };
 delete env.ELECTRON_RUN_AS_NODE;

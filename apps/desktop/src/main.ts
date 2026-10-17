@@ -31,7 +31,7 @@ import { tmpdir } from "node:os";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { setTimeout as delay } from "node:timers/promises";
 
-import { isResearchSourceURL } from "../../../packages/core/src/stock-research";
+import { isAppExternalURL } from "../../../packages/core/src/app-links";
 app.setName("AIFi");
 const devUrl = process.env.AIFI_DEV_URL;
 const smoke = process.argv.includes("--smoke");
@@ -100,7 +100,7 @@ async function createWindow() {
   });
   window.webContents.on("destroyed", () => chatGPTHost?.cancelPending());
   window.webContents.setWindowOpenHandler(({ url }) => {
-    if (isResearchSourceURL(url)) void shell.openExternal(url);
+    if (isAppExternalURL(url)) void shell.openExternal(url);
     return { action: "deny" };
   });
   const restrictNavigation = (event: Electron.Event, url: string) => {

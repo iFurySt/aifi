@@ -132,7 +132,8 @@ sign-in or the active verified name initial after connection. Connected identiti
 account menu is 228px wide with 34px desktop rows: Continue with ChatGPT/Settings
 when anonymous, Usage/Settings when connected. It reuses the existing ChatGPT
 host actions; Usage opens official management rather than inventing a remaining
-percentage. Theme stays in the toolbar/Appearance. Command/Ctrl+, opens Settings
+percentage. The GitHub row opens the fixed project repository in the system
+browser on desktop or a separate tab on Web, in either account state. Theme stays in the toolbar/Appearance. Command/Ctrl+, opens Settings
 and dismisses the account menu. Below 600px the rail is hidden and the same menu
 appears in the page toolbar. Check keyboard selection, Escape/focus return,
 outside dismissal, popup viewport bounds, and settings access with the sidebar

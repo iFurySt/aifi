@@ -163,3 +163,18 @@ responses remain untrusted, bounded evidence. Fund-logo requests accept only a
 URL allowlist cannot broaden network origins; PNG hash/dimensions are verified.
 Fund logos allow a 4,096px axis within the existing 4MP/byte cap; stock limits
 remain unchanged. Failed sources retain the last good local observations.
+
+## Project Repository Link
+
+The account menu opens the exact fixed HTTPS project repository through the
+existing external-window handler. Other GitHub URLs, query suffixes, credentials
+and non-HTTPS alternatives are not allowed by this exception. Existing research
+source rules remain separate. Web uses a new tab with noopener/noreferrer;
+Electron denies an in-app window and delegates the accepted URL to the OS.
+
+
+Congress collection permits only the fixed CongressInvests ticker endpoint with
+bounded limit/offset parameters. It sends no cookies, credentials or personal
+contact information. Returned ticker/date/ranges and official House/Senate URLs
+are validated; source failure preserves last-good data. Government disclosure
+records remain personal-research inputs, not a bundled redistributable dataset.
