@@ -9,6 +9,7 @@ import type {
 } from "../../core/src/storage-usage.ts";
 
 const pageSize = 50;
+const individualFileBytes = 50 * 1024 * 1024;
 function fileCategory(path: string) {
   if (/^aifi\.sqlite(?:-(?:wal|shm|journal))?$/.test(path)) return "database";
   if (path.startsWith("stock-logos/")) return "logos";
@@ -46,10 +47,31 @@ export class LocalStorageUsage {
     const root = await realpath(this.dataDir);
     const files: StorageFile[] = [];
     const groups = categories();
+    const folders = new Map<
+      string,
+      { entry: StorageFile; totalFiles: number }
+    >();
+    const folderFor = (relativePath: string) => {
+      let folder = folders.get(relativePath);
+      if (!folder) {
+        folder = {
+          entry: {
+            relativePath,
+            kind: "directory",
+            fileCount: 0,
+            bytes: 0,
+            category: fileCategory(relativePath + "/"),
+          },
+          totalFiles: 0,
+        };
+        folders.set(relativePath, folder);
+      }
+      return folder;
+    };
     const deadline = Date.now() + 10000;
     let entries = 0;
     let fileCount = 0;
-    const walk = async (parts: string[], aggregate?: StorageFile) => {
+    const walk = async (parts: string[], container = "") => {
       const dir = await opendir(join(root, ...parts));
       for await (const entry of dir) {
         if (++entries > 100000 || Date.now() > deadline)
@@ -70,26 +92,17 @@ export class LocalStorageUsage {
         }
         if (info.isSymbolicLink()) continue;
         if (info.isDirectory()) {
-          if (relativePath === "stock-logos") {
-            const folder: StorageFile = {
-              relativePath,
-              kind: "directory",
-              fileCount: 0,
-              bytes: 0,
-              category: "logos",
-            };
-            await walk(child, folder);
-            files.push(folder);
-          } else await walk(child, aggregate);
+          const parent = parts.length === 0 ? relativePath : container;
+          folderFor(parent);
+          await walk(child, parent);
           continue;
         }
         if (!info.isFile()) continue;
         const category = fileCategory(relativePath);
+        const folder = folderFor(container);
+        folder.totalFiles++;
         fileCount++;
-        if (aggregate) {
-          aggregate.bytes += info.size;
-          aggregate.fileCount++;
-        } else
+        if (info.size > individualFileBytes) {
           files.push({
             relativePath,
             kind: "file",
@@ -97,6 +110,10 @@ export class LocalStorageUsage {
             bytes: info.size,
             category,
           });
+        } else {
+          folder.entry.bytes += info.size;
+          folder.entry.fileCount++;
+        }
         groups.find((g) => g.id === category)!.bytes += info.size;
       }
     };
@@ -108,6 +125,11 @@ export class LocalStorageUsage {
       throw Error(
         "Storage scan failed. Check access to the data directory and refresh.",
       );
+    }
+    // Each file contributes to one row: a large-file outlier or its top-level
+    // directory's remainder. Root-level small files share the data-folder row.
+    for (const { entry, totalFiles } of folders.values()) {
+      if (entry.fileCount || totalFiles === 0) files.push(entry);
     }
     files.sort(
       (a, b) =>

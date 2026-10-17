@@ -89,3 +89,23 @@ frames during a delayed route re-entry, verifying cached rows remain throughout,
 expanded pages survive revalidation and the updating indicator appears. Rebuilt
 and restarted the real development app and visually confirmed a single complete
 Logo-cache directory row, no individual images, and concise page copy.
+
+### Follow-up: directory summaries and large-file exceptions
+
+- User requested removing the standalone data-directory path and keeping native
+  folder access in Files & folders. Only files larger than 50 MB should appear
+  individually; all remaining files should be summarized by directory.
+- All top-level folders now recursively sum small-file remainders; root-level
+  small files use one Data folder row. Individual files strictly above
+  50 × 1,024 × 1,024 bytes are extracted and excluded from directory sizes/counts.
+- Removed the standalone absolute path/Open folder row. Existing list actions,
+  cached re-entry and background refresh remain available.
+- Added strict-threshold, nested/root grouping, disjoint totals and native action
+  checks; the Electron fixture uses sparse files to test the boundary cheaply.
+
+Threshold-follow-up validation: TypeScript and all 131 tests passed. Production
+Web/desktop builds and the isolated real-Go Electron gate passed, including
+exactly-50-MB grouping, larger-file reveal, root directory actions, absence of the
+standalone path row, pagination and cached re-entry. Rebuilt/restarted the actual
+app and confirmed two large database-file rows and directory summaries with no
+absolute path caption. Filesystem content was not removed or compacted.

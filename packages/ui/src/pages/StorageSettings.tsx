@@ -148,16 +148,6 @@ export function StorageSettings() {
               total={data.totalBytes}
               label="Local file storage"
             />
-            <div className="storage-folder">
-              <span title={data.dataDir}>{data.dataDir}</span>
-              <Button
-                variant="ghost"
-                onClick={() => void (desktop ? locate() : copyPath())}
-              >
-                {desktop ? <FolderOpen size={15} /> : <Copy size={15} />}
-                {desktop ? "Open folder" : "Copy path"}
-              </Button>
-            </div>
           </>
         )}
       </section>
@@ -206,7 +196,7 @@ export function StorageSettings() {
                   <div className="storage-file-name">
                     <strong title={file.relativePath}>
                       {file.kind === "directory"
-                        ? file.relativePath
+                        ? file.relativePath || "Data folder"
                         : file.relativePath.split("/").at(-1)}
                     </strong>
                     {(file.kind === "directory" ||
@@ -229,7 +219,7 @@ export function StorageSettings() {
                   <Button
                     variant="ghost"
                     className="storage-reveal"
-                    aria-label={`${desktop ? (file.kind === "directory" ? "Open folder" : revealLabel) : "Copy path"}: ${file.relativePath}`}
+                    aria-label={`${desktop ? (file.kind === "directory" ? "Open folder" : revealLabel) : "Copy path"}: ${file.relativePath || "Data folder"}`}
                     title={
                       desktop
                         ? file.kind === "directory"

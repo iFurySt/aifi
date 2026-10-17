@@ -401,9 +401,11 @@ local fixtures do not use real credentials, inference or provider collection.
 ## Storage Settings
 
 Storage displays data-directory file usage, a separate SQLite content breakdown,
-and a largest-first file/folder inventory in pages of 50. The image-heavy
-`stock-logos` cache (including legacy root images and `v2`) appears once with its
-total size and file count; its action opens the directory. Re-entry immediately
+and a largest-first file/folder inventory in pages of 50. Files strictly above
+50 MB appear individually; smaller files roll into top-level directories, with
+root-level small files grouped as Data folder. Large files are excluded from the
+directory remainder so row sizes sum to the total. Folder/reveal actions live on
+the list rows; the standalone absolute data-path row is removed. Re-entry immediately
 reuses the renderer-session scan and expanded pages, then refreshes in the
 background with a spinning Refresh icon. Background scans and failures retain the
 visible result. Only the first uncached visit shows loading. Desktop offers Open

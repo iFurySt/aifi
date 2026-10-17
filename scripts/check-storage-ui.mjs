@@ -80,7 +80,21 @@ async function checks() {
   await wait(60);
   document.querySelector(".storage-reveal").click();
   await wait(60);
-  document.querySelector(".storage-folder button").click();
+  const rootFolder = rows().find(
+    (row) => row.querySelector("strong")?.textContent === "Data folder",
+  );
+  assert(
+    rootFolder &&
+      !rows().some(
+        (row) => row.querySelector("strong")?.textContent === "exact.bin",
+      ),
+    "Files at or below 50 MB were not grouped",
+  );
+  assert(
+    !document.querySelector(".storage-folder"),
+    "Standalone data path remains",
+  );
+  rootFolder.querySelector(".storage-reveal").click();
   await wait(60);
   const total = document.querySelector(".storage-total").textContent;
   const reads = window.storageFixture.reads;
@@ -151,7 +165,7 @@ async function checks() {
     !document
       .querySelector(".storage-settings")
       .textContent.match(
-        /Largest first|Last scanned|SQLite pages|Collected data and cached files|Data folder/,
+        /Largest first|Last scanned|SQLite pages|Collected data and cached files/,
       ),
     "Redundant storage copy remains",
   );
@@ -170,20 +184,23 @@ async function checks() {
     immediateCachedReentry: true,
     retainedVisiblePages: true,
     backgroundRefreshIndicator: true,
+    individualFilesAbove50MBOnly: true,
+    directoryActionsWithoutPathLine: true,
   };
 }
 const main = `import {app,BrowserWindow,ipcMain} from 'electron';
 import {DataHost} from '${join(root, "packages/host/src/runtime.ts")}';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,truncateSync} from 'node:fs';
 import {join} from 'node:path';
 app.setPath('userData',join(${JSON.stringify(output)},'profile'));
 let host;const revealed=[];
 app.whenReady().then(async()=>{
 const dataDir=join(${JSON.stringify(output)},'data');mkdirSync(dataDir,{recursive:true});
-writeFileSync(join(dataDir,'largest.bin'),Buffer.alloc(2*1024*1024));
+writeFileSync(join(dataDir,'largest.bin'),'');truncateSync(join(dataDir,'largest.bin'),64*1024*1024+1);
+writeFileSync(join(dataDir,'exact.bin'),'');truncateSync(join(dataDir,'exact.bin'),50*1024*1024);
 writeFileSync(join(dataDir,'aifi-vault.key'),'synthetic-private-value');
 mkdirSync(join(dataDir,'stock-logos'),{recursive:true});
-for(let i=0;i<55;i++)writeFileSync(join(dataDir,'sample-'+i+'.json'),Buffer.alloc(300+i));
+for(let i=0;i<55;i++){const folder=join(dataDir,'sample-'+i);mkdirSync(folder);writeFileSync(join(folder,'data.json'),Buffer.alloc(300+i));}
 mkdirSync(join(dataDir,'stock-logos','v2','nested'),{recursive:true});for(let i=0;i<80;i++)writeFileSync(join(dataDir,'stock-logos','v2','nested','logo-'+i+'.png'),Buffer.alloc(2048));
 host=new DataHost(${JSON.stringify(join(root, "apps/desktop/dist/aifi"))},dataDir,true,(path,directory)=>{revealed.push({path,directory})});
 ipcMain.handle('runtime',()=>({kind:'desktop',version:'test',platform:'darwin'}));ipcMain.handle('data',(_e,m,p)=>host.request(m,p));

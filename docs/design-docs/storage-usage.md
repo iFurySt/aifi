@@ -13,14 +13,22 @@ allocated-block measurements or the computer's available capacity.
 
 File categories are SQLite (`aifi.sqlite`, WAL/SHM/rollback journals), company
 logos (`stock-logos/`), account/settings (`chatgpt/`, vault key), and all other
-files. The UI offers manual Refresh and a descending file list; the scan time is
-in the Refresh tooltip. Equal sizes use path ordering. `stock-logos` is one directory
-entry with recursively summed bytes and its underlying regular-file count;
-legacy root images, `v2` images and cache metadata all contribute once. Individual
-cache images are omitted. Other files remain individual entries.
-`fileCount` counts actual regular files; `entryCount` counts displayed file/folder
-rows and governs pagination. Empty logo-cache directories still appear. A moving collector can change file lengths while
-a scan is in progress; refresh provides a new observation.
+files. The UI offers manual Refresh and a descending file/folder list; the scan
+time is in the Refresh tooltip. Equal sizes use path ordering.
+
+Only individual files strictly larger than 50 × 1,024 × 1,024 bytes appear as
+file rows. All smaller files (including exactly 50 MB) roll into their top-level
+data-directory folder, recursively. Root-level small files share one **Data
+folder** row. Each standalone large file is excluded from that directory's size
+and file count, so summing all rows equals the total without double counting.
+Folders containing only standalone large files are omitted; genuinely empty
+folders can remain as zero-size rows. `fileCount` counts underlying regular files;
+`entryCount` counts displayed rows and governs pagination.
+
+There is no standalone absolute data-path row or Open folder button above the
+list. Each directory row opens its folder; each large file can be revealed in
+Finder. Web retains per-row path copying. A moving collector can change lengths
+while a scan is in progress; refresh provides a new observation.
 
 The separate Database contents breakdown uses Go-owned `dbstat` pages joined to
 `sqlite_schema`, assigning both table and index pages to price history, research
@@ -42,7 +50,7 @@ No checkpoint, vacuum, migration, cleanup or data deletion is performed.
   files with a snapshot ID. `storage.files` reads successive 50-file pages from
   that inventory without rescanning. Refresh replaces the snapshot; stale page
   requests require a refresh. File contents and credential values never appear.
-- `storage.reveal` accepts only a relative inventory file, the collapsed logo-cache directory, or the empty root path.
+- `storage.reveal` accepts only a relative inventory file or directory, or the empty data-root path.
   Before file reveal, Node checks the current root, every ancestor and the file;
   traversal, absolute paths, symlinks, missing files and non-files are rejected.
   Electron main supplies `shell.showItemInFolder` for files and `shell.openPath`

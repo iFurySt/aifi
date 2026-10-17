@@ -48,3 +48,7 @@ Second follow-up: retain the renderer-session inventory across navigation, rebas
 visible pages atomically after background refresh, expose progress through the
 Refresh icon, and remove redundant page copy. Verify delayed re-entry frame by
 frame and restart the actual local desktop so its main process loads grouping.
+
+Third follow-up: remove the standalone path row and group all small files into
+top-level directory remainders; extract individual files only above 50 MB. Test
+the exact boundary, recursive extraction, root remainder and disjoint totals.

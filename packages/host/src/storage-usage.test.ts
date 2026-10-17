@@ -1,5 +1,12 @@
 import { afterEach, expect, it, vi } from "vitest";
-import { mkdtemp, mkdir, writeFile, rm, symlink } from "node:fs/promises";
+import {
+  mkdtemp,
+  mkdir,
+  writeFile,
+  rm,
+  symlink,
+  truncate,
+} from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { LocalStorageUsage } from "./storage-usage";
@@ -26,11 +33,11 @@ it("inventories actual files, WAL and unknown files once, sorts descending, and 
   await writeFile(join(root, "aifi.sqlite-wal"), Buffer.alloc(12000));
   await writeFile(join(root, "stock-logos/logo.png"), Buffer.alloc(1000));
   await writeFile(join(root, "aifi-vault.key"), "synthetic-private-value");
-  for (let i = 0; i < 55; i++)
-    await writeFile(
-      join(root, `extra-${String(i).padStart(2, "0")}.json`),
-      "{}",
-    );
+  for (let i = 0; i < 55; i++) {
+    const folder = join(root, `extra-${String(i).padStart(2, "0")}`);
+    await mkdir(folder);
+    await writeFile(join(folder, "data.json"), "{}");
+  }
   const storage = new LocalStorageUsage(root, database);
   const result = await storage.read();
   expect(result.fileCount).toBe(59);
@@ -41,15 +48,17 @@ it("inventories actual files, WAL and unknown files once, sorts descending, and 
     result.totalBytes,
   );
   expect(result.categories.find((c) => c.id === "database")?.bytes).toBe(22000);
-  expect(result.files[0]?.relativePath).toBe("aifi.sqlite-wal");
+  expect(result.files[0]?.relativePath).toBe("");
+  expect(result.files[0]?.kind).toBe("directory");
+  expect(result.entryCount).toBe(57);
   expect(JSON.stringify(result)).not.toContain("synthetic-private-value");
   expect(result.files).toHaveLength(50);
   await writeFile(join(root, "new-file"), "new");
   const next = storage.files({ snapshotId: result.snapshotId, offset: 50 });
-  expect(next.files).toHaveLength(9);
+  expect(next.files).toHaveLength(7);
   expect(
     new Set([...result.files, ...next.files].map((f) => f.relativePath)).size,
-  ).toBe(59);
+  ).toBe(57);
   const refreshed = await storage.read();
   expect(refreshed.fileCount).toBe(60);
   expect(() =>
@@ -73,12 +82,9 @@ it("never follows file/directory symlinks and rechecks native reveal ancestors",
   const reveal = vi.fn();
   const storage = new LocalStorageUsage(root, database, reveal);
   const result = await storage.read();
-  expect(result.files.map((f) => f.relativePath)).toEqual(["nested/file"]);
-  await storage.reveal({ relativePath: "nested/file" });
-  expect(reveal).toHaveBeenLastCalledWith(
-    join(result.dataDir, "nested/file"),
-    false,
-  );
+  expect(result.files.map((f) => f.relativePath)).toEqual(["nested"]);
+  await storage.reveal({ relativePath: "nested" });
+  expect(reveal).toHaveBeenLastCalledWith(join(result.dataDir, "nested"), true);
   await storage.reveal({ relativePath: "" });
   expect(reveal).toHaveBeenLastCalledWith(result.dataDir, true);
   for (const path of [
@@ -94,7 +100,7 @@ it("never follows file/directory symlinks and rechecks native reveal ancestors",
     await expect(storage.reveal({ relativePath: path })).rejects.toThrow();
   await rm(join(root, "nested"), { recursive: true });
   await symlink(outside, join(root, "nested"));
-  await expect(storage.reveal({ relativePath: "nested/file" })).rejects.toThrow(
+  await expect(storage.reveal({ relativePath: "nested" })).rejects.toThrow(
     "unavailable",
   );
   expect(reveal).toHaveBeenCalledTimes(2);
@@ -183,4 +189,69 @@ it("includes empty logo cache folders as one entry with zero underlying files", 
     bytes: 0,
     fileCount: 0,
   });
+});
+it("groups all small files by top-level directory and extracts only files strictly above 50 MB", async () => {
+  const root = await directory();
+  const limit = 50 * 1024 * 1024;
+  await mkdir(join(root, "research/deep"), { recursive: true });
+  await mkdir(join(root, "only-large"));
+  for (const [path, bytes] of [
+    ["exact.bin", limit],
+    ["large.bin", limit + 1],
+    ["small.json", 100],
+    ["research/small.json", 200],
+    ["research/deep/equal.bin", limit],
+    ["research/deep/big.bin", limit + 2],
+    ["only-large/big.bin", limit + 3],
+  ] as const) {
+    await writeFile(join(root, path), "");
+    await truncate(join(root, path), bytes);
+  }
+  const reveal = vi.fn();
+  const storage = new LocalStorageUsage(root, database, reveal);
+  const usage = await storage.read();
+  expect(usage.fileCount).toBe(7);
+  expect(usage.entryCount).toBe(5);
+  const singles = usage.files.filter((entry) => entry.kind === "file");
+  expect(singles.map((f) => f.relativePath).sort()).toEqual([
+    "large.bin",
+    "only-large/big.bin",
+    "research/deep/big.bin",
+  ]);
+  const folders = usage.files.filter((entry) => entry.kind === "directory");
+  expect(folders).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        relativePath: "",
+        bytes: limit + 100,
+        fileCount: 2,
+      }),
+      expect.objectContaining({
+        relativePath: "research",
+        bytes: limit + 200,
+        fileCount: 2,
+      }),
+    ]),
+  );
+  expect(usage.files.reduce((sum, f) => sum + f.bytes, 0)).toBe(
+    usage.totalBytes,
+  );
+  expect(usage.files.reduce((sum, f) => sum + f.fileCount, 0)).toBe(
+    usage.fileCount,
+  );
+  expect(usage.files.map((f) => f.bytes)).toEqual(
+    usage.files.map((f) => f.bytes).sort((a, b) => b - a),
+  );
+  await storage.reveal({ relativePath: "research/deep/big.bin" });
+  expect(reveal).toHaveBeenLastCalledWith(
+    join(usage.dataDir, "research/deep/big.bin"),
+    false,
+  );
+  await storage.reveal({ relativePath: "research" });
+  expect(reveal).toHaveBeenLastCalledWith(
+    join(usage.dataDir, "research"),
+    true,
+  );
+  await storage.reveal({ relativePath: "" });
+  expect(reveal).toHaveBeenLastCalledWith(usage.dataDir, true);
 });
