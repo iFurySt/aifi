@@ -1794,6 +1794,23 @@ kbd {
     font-size: 24px;
   }
 }
+@media (min-width: 900px) and (max-width: 1279px) {
+  .stock-workspace {
+    --sidebar-width: 0px;
+  }
+  .stock-workspace .sidebar,
+  .stock-workspace .sidebar-toggle {
+    display: none;
+  }
+  .stock-workspace .mobile-menu {
+    display: block;
+  }
+}
+@media (min-width: 600px) {
+  .detail-sheet > .mobile-app-navigation {
+    display: none;
+  }
+}
 @media (max-width: 899px) {
   .app-shell {
     --sidebar-width: 0px;
@@ -2256,12 +2273,17 @@ kbd {
 }
 .stock-tabs {
   display: flex;
+  scroll-padding-inline: 20px;
+  overscroll-behavior-x: contain;
   gap: 22px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 0 22px;
   overflow-x: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+.stock-tabs::-webkit-scrollbar {
+  display: none;
 }
 .stock-tabs button {
   padding: 10px 0 9px;
@@ -2383,11 +2405,12 @@ kbd {
 }
 .stock-metrics-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   margin: 0;
   gap: 0 16px;
 }
 .stock-metrics-grid > div {
+  min-width: 0;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
 }
@@ -2546,49 +2569,129 @@ kbd {
 .stock-tab-body > .stock-analyst-summary {
   padding: 2px 0 24px;
 }
+/* Reflow the existing sections rather than removing deep company content. */
 @container (max-width:1000px) {
   .stock-chart-layout {
-    grid-template-columns: minmax(200px, 0.8fr) minmax(300px, 1.2fr);
+    grid-template-columns: minmax(240px, 0.85fr) minmax(320px, 1.15fr);
+    grid-template-areas: "quote price" "about price" "metrics metrics" "analyst earnings" "news filings";
   }
-  .stock-identity-column {
-    grid-area: 1/1;
+  .stock-identity-column,
+  .stock-visual-column {
+    display: contents;
+  }
+  .stock-chart-layout .stock-quote {
+    grid-area: quote;
+  }
+  .stock-company-about {
+    grid-area: about;
+  }
+  .stock-analyst-overview {
+    grid-area: analyst;
+  }
+  .stock-earnings-overview {
+    grid-area: earnings;
   }
   .stock-metrics-column {
-    grid-area: 2/1;
-    border-top: 1px solid var(--border);
+    grid-area: metrics;
   }
-  .stock-visual-column {
-    grid-area: 1/2/3/3;
+  .stock-price-section {
+    grid-area: price;
+  }
+  .stock-news-overview {
+    grid-area: news;
+  }
+  .stock-filings-overview {
+    grid-area: filings;
+  }
+  .stock-chart-layout .stock-about,
+  .stock-chart-layout .stock-digest,
+  .stock-chart-layout .stock-quote,
+  .stock-metrics-column,
+  .stock-price-section {
+    min-width: 0;
+    padding: 20px;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .stock-chart-layout .stock-quote,
+  .stock-company-about,
+  .stock-analyst-overview,
+  .stock-news-overview {
+    border-right: 1px solid var(--border);
+  }
+  .stock-metrics-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .stock-metrics-grid > div:nth-child(-n + 4) {
+    padding-top: 0;
+  }
+  .stock-metrics-grid .wide {
+    grid-column: span 2;
+  }
+  .stock-peer-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
   }
 }
-@container (max-width:660px) {
+@container (max-width:700px) {
   .stock-chart-layout {
     display: flex;
     flex-direction: column;
   }
-  .stock-identity-column {
+  .stock-chart-layout .stock-quote {
     order: 0;
-    border-right: 0;
   }
-  .stock-visual-column {
+  .stock-price-section {
     order: 1;
   }
   .stock-metrics-column {
     order: 2;
+  }
+  .stock-company-about {
+    order: 3;
+  }
+  .stock-analyst-overview {
+    order: 4;
+  }
+  .stock-earnings-overview {
+    order: 5;
+  }
+  .stock-news-overview {
+    order: 6;
+  }
+  .stock-filings-overview {
+    order: 7;
+  }
+  .stock-chart-layout .stock-about,
+  .stock-chart-layout .stock-digest,
+  .stock-chart-layout .stock-quote,
+  .stock-metrics-column,
+  .stock-price-section {
+    padding: 18px 20px;
     border-right: 0;
   }
-  .stock-identity-column .stock-about {
-    display: none;
+  .stock-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stock-metrics-grid > div:nth-child(-n + 4) {
+    padding-top: 10px;
+  }
+  .stock-metrics-grid > div:nth-child(-n + 2) {
+    padding-top: 0;
+  }
+  .stock-metrics-grid .wide {
+    grid-column: 1 / -1;
+  }
+  .stock-peer-list {
+    grid-template-columns: minmax(0, 1fr);
   }
   .stock-company-header {
-    flex-wrap: wrap;
     padding: 12px 20px;
   }
-  .stock-company-header > .button {
-    margin-left: auto;
-  }
   .stock-tabs {
-    gap: 22px;
+    gap: 20px;
     padding: 0 20px;
   }
   .stock-tabs button {
@@ -2596,15 +2699,91 @@ kbd {
   }
   .stock-summary > div {
     padding: 0 12px;
+    min-width: 0;
   }
   .stock-summary span {
     font-size: 10px;
   }
+  .stock-summary strong {
+    font-size: 20px;
+    overflow-wrap: anywhere;
+  }
   .stock-tab-body {
-    padding: 22px 20px;
+    padding: 20px;
+  }
+  .stock-table-toolbar select {
+    max-width: 100%;
   }
   .stock-table-toolbar .segmented-control button {
     min-height: 40px;
+  }
+  .stock-recommendations {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+@container (max-width:440px) {
+  .stock-company-header {
+    padding: 12px 16px;
+  }
+  .stock-watch-label {
+    display: none;
+  }
+  .stock-company-header > .button:has(.stock-watch-label) {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+  .stock-tabs {
+    gap: 18px;
+    padding-inline: 16px;
+  }
+  .stock-tabs button {
+    font-size: 13px;
+  }
+  .stock-chart-layout .stock-about,
+  .stock-chart-layout .stock-digest,
+  .stock-chart-layout .stock-quote,
+  .stock-metrics-column,
+  .stock-price-section,
+  .stock-tab-body {
+    padding: 16px;
+  }
+  .stock-summary {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+    margin: 16px 0;
+  }
+  .stock-summary > div {
+    padding: 12px 14px;
+    border-right: 0;
+  }
+  .stock-summary > div + div {
+    border-top: 1px solid var(--border);
+  }
+  .stock-summary strong {
+    margin-top: 4px;
+  }
+}
+
+/* A temporary stock list opens beside its toolbar control. */
+.dialog-content.stock-navigation-drawer {
+  left: 76px;
+  right: auto;
+  top: 8px;
+  height: calc(100dvh - 16px);
+  width: min(340px, calc(100vw - 92px));
+  border-radius: 16px;
+}
+:root[data-runtime="desktop"] .stock-navigation-drawer {
+  top: 56px;
+  height: calc(100dvh - 64px);
+}
+@media (max-width: 599px) {
+  .dialog-content.stock-navigation-drawer {
+    left: 8px;
+    width: calc(100vw - 16px);
   }
 }
 

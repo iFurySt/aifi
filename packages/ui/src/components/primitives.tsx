@@ -96,7 +96,10 @@ export function Modal({
           className={`dialog-content${sheet ? " detail-sheet" : ""}${className ? ` ${className}` : ""}`}
           onCloseAutoFocus={(event) => {
             event.preventDefault();
-            if (previousFocus.current?.isConnected)
+            if (
+              previousFocus.current?.isConnected &&
+              previousFocus.current.getClientRects().length
+            )
               previousFocus.current.focus();
             else document.getElementById("main-content")?.focus();
           }}

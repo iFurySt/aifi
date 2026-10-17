@@ -111,7 +111,9 @@ async function checks() {
   await until(
     () =>
       dialog() &&
-      document.querySelectorAll(".search-results button").length >= 12,
+      [...document.querySelectorAll(".search-results button")].filter(
+        (button) => button.querySelector("small")?.textContent === "Stock",
+      ).length >= 12,
   );
   const box = dialog().getBoundingClientRect();
   const results = document.querySelector(".search-results");
@@ -127,7 +129,9 @@ async function checks() {
     results.scrollHeight > results.clientHeight,
     "Results do not scroll internally",
   );
-  const firstLabel = results.querySelector("button span");
+  const firstLabel = [...results.querySelectorAll("button")]
+    .find((button) => button.querySelector("small")?.textContent === "Stock")
+    .querySelector("span");
   assert(
     getComputedStyle(firstLabel).whiteSpace === "nowrap" &&
       firstLabel.scrollWidth > firstLabel.clientWidth,

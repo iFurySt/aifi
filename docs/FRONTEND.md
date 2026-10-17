@@ -347,3 +347,30 @@ failed-reply retry, cancellation and composer continuity. Synthetic transport ne
 uses real credentials or inference. `pnpm smoke:desktop` separately validates the
 real sandboxed desktop capability. See
 [official sources and setup](design-docs/chatgpt-desktop-connection.md).
+
+## Stocks In Narrow Windows
+
+Stocks switches its 248px list to a left drawer below a 1280px viewport. The
+existing toggle and Command/Control+B reopen it. At 1280px and above, restore the
+user's wide sidebar preference; automatic changes never overwrite that choice.
+Other pages keep their 900px drawer threshold. Category/app navigation stays in
+the outer rail where visible; only phones repeat app destinations in the drawer.
+The mounted wide list and the drawer share a filter, and resizing keeps the
+selected stock, loaded list position, chart range and Line/Candle state.
+
+Use document container widths, rather than screen width, for content: above
+1000px retain three independent columns; 701–1000px place quote/About beside the
+chart, then full-width metrics/peers and paired company/news panels. At 700px
+and below, order quote, price chart, metrics/peers, About, Analyst, Earnings,
+Digest and filings vertically. No company section is hidden to fit the window.
+At 440px and below, compact the watch control to an accessible 40px star button
+and stack summary cards. Financial/activity tables scroll within their wrappers.
+Tabs scroll horizontally without a scrollbar; a ResizeObserver reveals the
+selected tab using only horizontal scroll, retaining document position.
+
+`pnpm smoke:stocks-layout` checks real shared React/CSS in disposable Electron
+windows at 1440/1279/1100/900/760px and Web at 600/390px. It verifies no page
+horizontal overflow, all company sections, chart DOM/range/style retention,
+list position/filter retention, drawer keyboard/selection/dismissal, wide
+preference restoration and every tab's visibility/table containment. Its injected
+local fixtures do not use real credentials, inference or provider collection.

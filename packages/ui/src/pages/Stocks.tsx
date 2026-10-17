@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowUpRight,
   Star,
@@ -156,6 +156,25 @@ export function Stocks() {
     }
     return "";
   };
+  useLayoutEffect(() => {
+    const strip = buttons.current[0]?.parentElement;
+    if (!strip) return;
+    const reveal = () => {
+      const selected = buttons.current[stockTabs.indexOf(tab)];
+      if (!selected) return;
+      const parent = strip.getBoundingClientRect(),
+        item = selected.getBoundingClientRect();
+      const style = getComputedStyle(strip);
+      const left = parent.left + parseFloat(style.paddingLeft),
+        right = parent.right - parseFloat(style.paddingRight);
+      if (item.left < left) strip.scrollLeft -= left - item.left;
+      else if (item.right > right) strip.scrollLeft += item.right - right;
+    };
+    reveal();
+    const observer = new ResizeObserver(reveal);
+    observer.observe(strip);
+    return () => observer.disconnect();
+  }, [tab]);
   return (
     <div className="stocks-page">
       <header className="stock-company-header">
@@ -183,6 +202,7 @@ export function Stocks() {
         </div>
         <Button
           aria-pressed={watched}
+          aria-label={watched ? "Watching" : "Watchlist"}
           disabled={!validSymbol(symbol)}
           title={
             !validSymbol(symbol)
@@ -192,7 +212,9 @@ export function Stocks() {
           onClick={toggleWatch}
         >
           <Star size={15} fill={watched ? "currentColor" : "none"} />
-          {watched ? "Watching" : "Watchlist"}
+          <span className="stock-watch-label">
+            {watched ? "Watching" : "Watchlist"}
+          </span>
         </Button>
       </header>
       <div className="stock-tabs" role="tablist" aria-label="Stock research">
@@ -327,7 +349,7 @@ export function Stocks() {
                   }
                 />
               </section>
-              <section className="stock-about">
+              <section className="stock-about stock-company-about">
                 <h2>About {quote?.name ?? symbol} </h2>
                 <p>
                   {profile?.description
@@ -373,12 +395,12 @@ export function Stocks() {
                   Ask about {symbol}
                 </button>
               </section>
-              <section className="stock-about">
+              <section className="stock-about stock-analyst-overview">
                 <h2>Analyst</h2>
                 <AnalystSummary data={data} />
                 <SourceNote view={data.datasets.analyst} />
               </section>
-              <section className="stock-about">
+              <section className="stock-about stock-earnings-overview">
                 <h2>Earnings</h2>
                 <Earnings data={data} />
               </section>
@@ -425,17 +447,19 @@ export function Stocks() {
               <StockPeers data={data} />
             </div>
             <div className="stock-visual-column">
-              <StockChart
-                symbol={symbol}
-                bars={bars}
-                adjusted={adjusted.adjusted}
-              />
-              <SourceNote view={data.datasets.prices} />
-              <section className="stock-digest">
+              <div className="stock-price-section">
+                <StockChart
+                  symbol={symbol}
+                  bars={bars}
+                  adjusted={adjusted.adjusted}
+                />
+                <SourceNote view={data.datasets.prices} />
+              </div>
+              <section className="stock-digest stock-news-overview">
                 <h2>Digest</h2>
                 <Digest data={data} />
               </section>
-              <section className="stock-digest">
+              <section className="stock-digest stock-filings-overview">
                 <div className="section-heading">
                   <h2>Recent filings</h2>
                   <button

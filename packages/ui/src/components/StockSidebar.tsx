@@ -1,5 +1,5 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Search, ChevronDown, Check } from "lucide-react";
 import { StockAvatar } from "./StockAvatar";
 import {
@@ -14,7 +14,15 @@ import {
   directoryExchange,
 } from "../stock-directory-context";
 
-export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
+export function StockSidebar({
+  onSelect,
+  query,
+  onQueryChange: setQuery,
+}: {
+  onSelect?: () => void;
+  query: string;
+  onQueryChange: (value: string) => void;
+}) {
   const {
     stockRoute,
     openStock,
@@ -27,7 +35,6 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
   const selected = stockCollections.find(
     (collection) => collection.id === stockCollection,
   )!;
-  const [query, setQuery] = useState("");
   const data = useDirectoryFeed(query, stockCollection, workspace.watchlist);
   const { loading, error, retry, loadMore } = data;
   const list = useRef<HTMLElement>(null);

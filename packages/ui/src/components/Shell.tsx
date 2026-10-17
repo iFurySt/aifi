@@ -90,6 +90,8 @@ export function Shell({ children }: { children: ReactNode }) {
     openConversation,
   } = useWorkspace();
   const desktop = !!window.aifiDesktop;
+  const drawerQuery =
+    page === "stocks" ? "(max-width: 1279px)" : "(max-width: 899px)";
   const PageIcon =
     destinations.find((destination) => destination.page === page)?.icon ??
     Settings;
@@ -100,8 +102,18 @@ export function Shell({ children }: { children: ReactNode }) {
         ?.scrollTo({ top: 0, behavior: "instant" });
   }, [page, stockRoute.symbol, stockRoute.tab, settingsSection]);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [stockQuery, setStockQuery] = useState("");
   const routeHistory = useWorkspaceHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
+  useEffect(() => {
+    const query = matchMedia(drawerQuery);
+    const closeWideDrawer = () => {
+      if (!query.matches) setMobileOpen(false);
+    };
+    closeWideDrawer();
+    query.addEventListener("change", closeWideDrawer);
+    return () => query.removeEventListener("change", closeWideDrawer);
+  }, [drawerQuery]);
   const [searchOpen, setSearchOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -146,8 +158,7 @@ export function Shell({ children }: { children: ReactNode }) {
           routeHistory.forward();
           break;
         case "sidebar":
-          if (matchMedia("(max-width: 899px)").matches)
-            setMobileOpen(!mobileOpen);
+          if (matchMedia(drawerQuery).matches) setMobileOpen(!mobileOpen);
           else setSidebarCollapsed((value) => !value);
           break;
         case "newChat":
@@ -164,6 +175,7 @@ export function Shell({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("keydown", keydown);
   }, [
     desktop,
+    drawerQuery,
     navigate,
     openConversation,
     routeHistory,
@@ -269,15 +281,20 @@ export function Shell({ children }: { children: ReactNode }) {
         </IconButton>
       </span>
       <span className="mobile-menu">
-        <IconButton label="Open navigation" onClick={() => setMobileOpen(true)}>
-          <Menu size={19} />
+        <IconButton
+          label={page === "stocks" ? "Open stock list" : "Open navigation"}
+          title={`${page === "stocks" ? "Open stock list" : "Open navigation"} (${modifier}B)`}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen(true)}
+        >
+          {page === "stocks" ? <PanelLeft size={18} /> : <Menu size={19} />}
         </IconButton>
       </span>
     </>
   );
   return (
     <div
-      className={`app-shell ${sidebarCollapsed ? "sidebar-collapsed" : ""} ${desktop ? "desktop-shell" : "web-shell"}`}
+      className={`app-shell ${page === "stocks" ? "stock-workspace" : ""} ${sidebarCollapsed ? "sidebar-collapsed" : ""} ${desktop ? "desktop-shell" : "web-shell"}`}
     >
       {desktop && (
         <header className="window-toolbar">
@@ -337,7 +354,11 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
         <div className="workspace-panel">
           <aside className="sidebar" id="workspace-sidebar">
-            {page === "settings" ? <SettingsSidebar /> : <StockSidebar />}
+            {page === "settings" ? (
+              <SettingsSidebar />
+            ) : (
+              <StockSidebar query={stockQuery} onQueryChange={setStockQuery} />
+            )}
           </aside>
           <div className="main-shell">
             {!desktop && (
@@ -388,14 +409,19 @@ export function Shell({ children }: { children: ReactNode }) {
       <Modal
         open={mobileOpen}
         onOpenChange={setMobileOpen}
-        title="Navigation"
+        title={page === "stocks" ? "Stocks" : "Navigation"}
+        className={page === "stocks" ? "stock-navigation-drawer" : undefined}
         sheet
       >
         <AppNavigation mobile onNavigate={() => setMobileOpen(false)} />
         {page === "settings" ? (
           <SettingsSidebar onSelect={() => setMobileOpen(false)} />
         ) : (
-          <StockSidebar onSelect={() => setMobileOpen(false)} />
+          <StockSidebar
+            query={stockQuery}
+            onQueryChange={setStockQuery}
+            onSelect={() => setMobileOpen(false)}
+          />
         )}
       </Modal>
       <Modal

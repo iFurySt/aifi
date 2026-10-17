@@ -343,3 +343,22 @@ Desktop-only N opens New chat and focuses its composer; Web preserves browser
 New Window. Ignore composition/additional modifiers and retain input formatting
 for B. Held commands do not repeatedly toggle/navigate. Utility shortcuts are
 listed in one small help dialog rather than additional navigation items.
+
+## 14. Responsive Stocks
+
+Below a 1280px viewport, move the stock list into a left drawer opened by the
+sidebar button or Command/Control+B. Keep the wide sidebar preference independent
+of this automatic mode. Restore the mounted list when returning to a wide window;
+share its filter with the drawer. The rail remains visible above phone widths.
+
+Use the actual document container to reflow content. Above 1000px keep the three
+columns. Between 701 and 1000px, pair quote/About with the chart, followed by
+metrics/peers and paired secondary panels. Below 701px, show quote and chart
+first, then metrics, About, Analyst, Earnings, Digest and filings. Keep every
+section and a single mounted chart; resizing must preserve its range and mode.
+
+Keep company identity compact, ellipsize long names and retain the watch action.
+Below a 440px document, use a 40px icon-only watch button with an accessible name,
+16px content padding and stacked summary rows. Tabs use horizontal scrolling and
+automatically reveal the selected label. Dense tables retain internal scrolling;
+they must not widen the document or the window.

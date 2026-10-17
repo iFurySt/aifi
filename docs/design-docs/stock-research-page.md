@@ -1,9 +1,8 @@
 # Stock Research Page
 
-Status: shared Web/Electron UI and cached Nasdaq directory reads implemented,
-2026-10-13. Live market/fundamental data
-is still pending in [the data pipeline](us-stock-data-pipeline.md) and
-[data plan](../exec-plans/active/us-stock-data-foundation.md).
+Status: shared Web/Electron UI, persisted research reads and responsive layout
+implemented; reviewed 2026-10-17. Dataset coverage depends on local collection
+and source availability. See [research ingestion](research-ingestion.md).
 
 ## Reference And Adaptation
 
@@ -22,12 +21,15 @@ opens this app rather than keeping a second UI tree.
 
 ## Navigation And Routes
 
-- The 80px outer rail contains Stocks, Chat, Agents, Watchlist, Portfolio, Library.
-  Settings and appearance remain in the avatar popup.
+- The 76px outer rail contains Stocks, Chat, Agents, Watchlist, Portfolio, Library.
+  Settings remains in the account popup; appearance is available in Settings/toolbar.
 - The 248px inner sidebar contains a searchable stock list, not app destinations
   or conversations. It reads the cached Nasdaq candidate directory, 50 rows per
-  batch, with ticker/security-name search and loading near the scroll bottom. Below 900px it becomes a drawer; below 600px the
-  drawer also supplies app navigation because the outer rail is hidden.
+  batch, with ticker/security-name search and loading near the scroll bottom.
+  Below a 1280px viewport, the list moves into a left drawer opened by its toolbar
+  button or Command/Control+B. Above that breakpoint, restore the user's wide
+  sidebar preference. The filter is shared between mounted list and drawer.
+  Below 600px the drawer also supplies app navigation because the rail is hidden.
 - Stocks is the default page. `#/stocks/AAPL?tab=chart` encodes ticker and tab;
   reload and native back/forward preserve them. A malformed ticker falls back to
   AAPL; unknown tabs fall back to Chart.
@@ -42,14 +44,16 @@ opens this app rather than keeping a second UI tree.
 
 ## Header And Tabs
 
-Company monogram/name, ticker/exchange where known, stock search, Watchlist toggle.
-Sample close dates never imply a live feed. Unknown symbols have no invented
+Company logo/name, ticker/exchange where known, and Watchlist toggle. Use the
+shared Command/Control+K search rather than a second company search. A long name
+ellipsizes; at phone widths the watch action is an accessible icon button.
+The advancing exchange-local clock never implies streaming price freshness. Unknown symbols have no invented
 name, exchange, quote, chart, or statements.
 
 | Tab | Current content | Future source requirement |
 | --- | --- | --- |
-| Chart | Sample quote, About, analyst/earnings placeholders, metrics/peers, interactive daily chart, empty Digest/recent filings. | Profile, daily OHLCV, facts, sourced news/filings. |
-| Financials | Metrics/Income/Balance/Cash flow/Filings selector; Quarter/Yearly tables with sample units and periods; empty filings. | Validated XBRL mappings and submissions. |
+| Chart | Stored quote, About, analyst/earnings summaries, metrics/peers, interactive daily chart, empty Digest/recent filings. | Profile, daily OHLCV, facts, sourced news/filings. |
+| Financials | Metrics/Income/Balance/Cash flow/Filings selector; Quarter/Yearly tables with stored units and periods; empty filings. | Validated XBRL mappings and submissions. |
 | Funds | Reported funds/shares/period, All/Added/Reduced/Exited, ownership table. | Reported fund holdings with reporting lag and provenance. |
 | Politicians | Purchases/sales/filers, All/Buy/Sell, transaction/range/traded/disclosed columns. | Public disclosures with transaction and publication dates. |
 | Insiders | Purchases/sales/insiders, All/Buy/Sell, insider/role/transaction/shares/value/date table. | Form 4 activity and transaction-code interpretation. |
@@ -73,20 +77,27 @@ Outer menu | Stock list | Company / ticker          Search    Watchlist
                         Earnings                        Digest / recent filings
 ```
 
-Three flexible columns use thin vertical separators. At document widths below
-1,000px metrics move below identity beside the chart; below 660px stack quote,
-chart, and metrics, hiding the deep identity subsections. Preserve internal
-main scrolling and horizontal tab/table scrolling without widening the viewport.
+Three flexible columns use thin vertical separators above a 1000px document.
+Between 701 and 1000px, quote/About sit beside the price chart, then metrics/peers
+span the document and secondary sections form pairs. At 700px and below, stack
+quote, chart, metrics/peers, About, Analyst, Earnings, Digest and recent filings.
+Do not hide deep company sections. At 440px and below use compact headers,
+40px watch targets and stacked summary rows. CSS reflows one section/chart tree
+so chart mode/range and the mounted list's position survive resizing.
+
+Tabs scroll horizontally and reveal the selected label on resize or tab change;
+only horizontal tab scroll is adjusted. Dense tables scroll inside their wrappers.
+No page-level horizontal overflow is allowed.
 
 Close is 32px with tabular figures. Chart controls cover 1M/3M/1Y/2Y and Line/Candle.
-Both modes use the same deterministic local OHLCV series; range changes slice
-that series. Hover and keyboard arrows reveal bar details. SVG dimensions follow
-rendered width so labels stay legible on mobile. Fixtures use weekday samples,
-not a validated exchange calendar; no intraday selector or total-return claim.
+Both modes use the same persisted OHLCV series; range changes slice
+that local series. Hover and keyboard arrows reveal bar details. SVG dimensions follow
+rendered width so labels stay legible on mobile. Stored source timestamps and raw/split-adjusted basis stay explicit; there is no
+intraday selector or total-return claim.
 
-All five known symbols use sample quotes/profiles/bars. Fiscal numbers are marked
-as sample financials in USD billions. Unsupported P/E, market cap, short interest,
-and RSI remain blank. Derived example ranges/changes are not provider evidence.
+The directory universe reads stored source-backed quotes/profiles/bars and
+financial records. Unsupported values stay blank; resizing and navigating never
+collect a provider dataset. Source chips expose provenance and observation times.
 
 ## Interactions And States
 
@@ -96,8 +107,8 @@ and RSI remain blank. Derived example ranges/changes are not provider evidence.
   are preserved. Chart ranges and table views are local presentation controls.
 - The shared avatar, search, drawer, theme, sidebar collapse, and native history
   remain available. Neutral focus feedback preserves Tab/Escape without blue rings.
-- Missing data uses short, dataset-specific empty copy. No queue/retry button is
-  advertised until a real collection path exists.
+- Missing data uses short, dataset-specific empty copy. Configure sources through the existing Settings surface; ordinary view changes
+  do not enqueue collection.
 
 Future live states: show actual source/session/basis and filing period, retain
 cached values while updating or after errors, distinguish partial/stale coverage,
@@ -112,9 +123,11 @@ Electron smoke. Checked stock search/selection, missing symbols, local watchlist
 persistence, chart type/ranges, statements/periods, Chat history, drawer navigation,
 light/dark, internally scrolling tables, route tests, and neutral focus.
 
-Validated market calendars, source-backed OHLCV/facts,
-original filing links, provenance popups, offline cached reads, and provider error
-recovery remain in the data plan. Windows/Linux native checks remain separate.
+The responsive gate `pnpm smoke:stocks-layout` covers large/medium/narrow desktop
+and phone layouts, all six tabs, drawer behavior, selected-tab reveal and retained
+chart/list presentation. Chrome review complements its disposable fixture run.
+Windows/Linux native window checks remain separate; source/runtime limits belong
+in the ingestion design.
 
 Directory read behavior, failure handling and cloud replacement boundaries are
 specified in [directory reads](stock-directory-reads.md). The directory omits ETFs
