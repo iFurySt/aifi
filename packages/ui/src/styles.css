@@ -2976,3 +2976,164 @@ kbd {
     justify-content: flex-start;
   }
 }
+
+/* Stock quote: source time and regular/extended sessions stay distinct. */
+.stock-market-state {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--secondary);
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+.stock-quote-price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.stock-quote-price strong {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-weight: 650;
+}
+.stock-quote-currency {
+  color: var(--muted);
+  font-weight: 450;
+  margin-right: 7px;
+}
+.stock-symbol-pill {
+  color: white;
+  background: var(--positive);
+  padding: 7px 11px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.stock-symbol-pill.down {
+  background: var(--negative);
+}
+.stock-quote .stock-daily-change {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 16px 0;
+  font-size: 13px;
+  font-weight: 550;
+}
+.stock-daily-change span {
+  color: var(--secondary);
+  font-weight: 400;
+}
+.stock-quote > small {
+  font-size: 12px;
+  color: var(--secondary);
+}
+.stock-post-quote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  color: var(--secondary);
+  margin-top: 12px;
+  font-size: 11px;
+}
+.stock-post-quote strong {
+  font-size: 11px;
+  letter-spacing: 0;
+  color: var(--text);
+}
+.stock-rating-label {
+  text-transform: capitalize;
+  color: var(--text);
+}
+.stock-rating-meter {
+  position: relative;
+  height: 6px;
+  margin-top: 22px;
+  background: linear-gradient(
+    to right,
+    #ef4444 0 20%,
+    #f28a34 20% 40%,
+    #d5d5d5 40% 60%,
+    #97c91b 60% 80%,
+    #159d75 80% 100%
+  );
+}
+.stock-rating-meter i {
+  position: absolute;
+  top: -12px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--text);
+  transform: translateX(-50%);
+}
+.stock-rating-meter i::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 1px;
+  height: 10px;
+  background: var(--text);
+}
+.stock-rating-scale {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin: 8px 0 12px;
+  color: var(--secondary);
+  font-size: 9px;
+}
+.stock-rating-scale span {
+  flex: 1;
+  text-align: center;
+}
+.stock-earnings svg {
+  display: block;
+  width: 100%;
+  margin: 12px 0 4px;
+}
+.stock-earnings svg text {
+  fill: var(--secondary);
+  font-family: inherit;
+  font-size: 10px;
+}
+.stock-earnings svg text.positive {
+  fill: var(--positive);
+}
+.stock-earnings svg text.negative {
+  fill: var(--negative);
+}
+.stock-earnings-legend {
+  display: flex;
+  gap: 12px;
+  color: var(--secondary);
+  font-size: 10px;
+  margin-top: 16px;
+}
+.stock-earnings-legend span:first-child {
+  color: var(--positive);
+}
+
+.stock-recommendations {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+.stock-recommendations > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stock-recommendations span,
+.stock-recommendations small {
+  color: var(--secondary);
+  font-size: 12px;
+}
+.stock-recommendations small {
+  grid-column: 1 / -1;
+}

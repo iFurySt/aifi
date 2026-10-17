@@ -43,3 +43,20 @@ export interface DailyBar {
   close: number;
   volume: number;
 }
+
+/** Company identity for presentation; the directory's full security name stays intact. */
+export function stockDisplayName(
+  profileName?: string,
+  listingName?: string,
+  symbol = "",
+) {
+  if (profileName?.trim()) return profileName.trim();
+  return (
+    listingName
+      ?.replace(
+        /\s*(?:-\s*)?(?:Class\s+[A-Z0-9.-]+\s+)?(?:Common Stock|Ordinary Shares)(?:\s+\([^)]*\))?$/i,
+        "",
+      )
+      .trim() || symbol
+  );
+}

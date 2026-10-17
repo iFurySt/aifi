@@ -23,6 +23,7 @@ const names: Record<ResearchDataset, string> = {
   funds: "Institutional holdings",
   politicians: "Politician trades",
   analyst: "Analyst ratings",
+  earnings: "Earnings & estimates",
   news: "Company news",
 };
 const sources: Record<ResearchDataset, string> = {
@@ -35,6 +36,7 @@ const sources: Record<ResearchDataset, string> = {
   funds: "FMP · Listings",
   politicians: "FMP · Listings",
   analyst: "FMP · Listings",
+  earnings: "Yahoo Finance · No key",
   news: "FMP · Listings",
 };
 function DatasetRow({
@@ -358,6 +360,7 @@ export function ResearchSyncSettings() {
               {(
                 [
                   ["profileSource", "Company details source", "massive"],
+                  ["analystSource", "Analyst source", "fmp"],
                   ["factsSource", "Financial statements source", "sec"],
                   ["filingsSource", "Filings source", "sec"],
                 ] as const
@@ -379,7 +382,9 @@ export function ResearchSyncSettings() {
                       <option value={official}>
                         {official === "sec"
                           ? "SEC · Contact required"
-                          : "Massive · API key"}
+                          : official === "fmp"
+                            ? "FMP · API key"
+                            : "Massive · API key"}
                       </option>
                     </select>
                   </div>

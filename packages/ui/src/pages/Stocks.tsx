@@ -1,11 +1,21 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowUpRight, Search, Star, MessageCircle } from "lucide-react";
+import {
+  ArrowUpRight,
+  Search,
+  Star,
+  MessageCircle,
+  Moon,
+  Sun,
+  Triangle,
+} from "lucide-react";
 import {
   addWatchSymbol,
   priceMetrics,
+  stockQuotePresentation,
   splitAdjustedBars,
   trailingMetric,
   stockTabs,
+  stockDisplayName,
   validSymbol,
   validDirectorySymbol,
 } from "@aifi/core";
@@ -52,6 +62,12 @@ export function Stocks() {
   const adjusted = useMemo(() => splitAdjustedBars(data), [data]);
   const bars = adjusted.bars;
   const calculated = priceMetrics(bars);
+  const [clock, setClock] = useState(Date.now);
+  useEffect(() => {
+    const id = setInterval(() => setClock(Date.now()), 60000);
+    return () => clearInterval(id);
+  }, []);
+  const shown = stockQuotePresentation(data, clock);
   const quote = calculated.latest
     ? {
         price: calculated.latest.close,
@@ -161,7 +177,7 @@ export function Stocks() {
           enabled={!!listing}
         />
         <div>
-          <h1 title={listing?.name}>{listing?.name ?? symbol}</h1>
+          <h1>{stockDisplayName(profile?.name, listing?.name, symbol)}</h1>
           <small>
             {symbol}
             {listing ? ` · ${directoryExchange(listing)}` : ""}
@@ -258,23 +274,96 @@ export function Stocks() {
           <div className="stock-chart-layout">
             <div className="stock-identity-column">
               <section className="stock-quote">
-                <small>Latest close</small>
-                <strong>{quote ? money(quote.price) : "—"}</strong>
-                {quote && quote.change !== undefined && (
-                  <p className={quote.change >= 0 ? "positive" : "negative"}>
-                    {money(quote.price - calculated.previous!.close)} (
-                    {percent(quote.change)})
-                  </p>
-                )}
-                <small>
-                  {latest ? (
-                    `${latest.date} · USD`
-                  ) : loading ? (
-                    "Loading…"
+                <div className="stock-market-state">
+                  {shown.status === "Market Open" ? (
+                    <Sun size={16} />
                   ) : (
-                    <MissingData data={data} dataset="prices" />
+                    <Moon size={16} />
                   )}
+                  <span>{shown.status}</span>
+                </div>
+                <div className="stock-quote-price">
+                  <strong>
+                    {shown.price !== undefined ? (
+                      <>
+                        <span className="stock-quote-currency">$</span>
+                        {shown.price.toLocaleString("en-US", {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        })}
+                      </>
+                    ) : (
+                      "—"
+                    )}
+                  </strong>
+                  <span
+                    className={`stock-symbol-pill ${shown.change !== undefined && shown.change < 0 ? "down" : ""}`}
+                  >
+                    {symbol}
+                  </span>
+                </div>
+                {shown.change !== undefined &&
+                  shown.changePercent !== undefined && (
+                    <p
+                      className={`stock-daily-change ${shown.change >= 0 ? "positive" : "negative"}`}
+                    >
+                      <Triangle
+                        size={10}
+                        fill="currentColor"
+                        style={{
+                          transform:
+                            shown.change < 0 ? "rotate(180deg)" : undefined,
+                        }}
+                      />{" "}
+                      {shown.change >= 0 ? "+" : ""}
+                      {money(shown.change)} ({percent(shown.changePercent)}){" "}
+                      <span>regular session</span>
+                    </p>
+                  )}
+                <small>
+                  {shown.asOf
+                    ? new Date(shown.asOf).toLocaleString("en-US", {
+                        timeZone: "America/New_York",
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                        hour: "numeric",
+                        minute: "2-digit",
+                        timeZoneName: "short",
+                      })
+                    : (shown.date ??
+                      (loading ? (
+                        "Loading…"
+                      ) : (
+                        <MissingData data={data} dataset="prices" />
+                      )))}
                 </small>
+                {shown.postPrice !== undefined && (
+                  <div
+                    className="stock-post-quote"
+                    title={
+                      shown.postAsOf
+                        ? new Date(shown.postAsOf).toLocaleString("en-US", {
+                            timeZone: "America/New_York",
+                            timeZoneName: "short",
+                          })
+                        : undefined
+                    }
+                  >
+                    <span>After hours</span>
+                    <strong>{money(shown.postPrice)}</strong>
+                    {shown.postChange !== undefined && (
+                      <span
+                        className={
+                          shown.postChange >= 0 ? "positive" : "negative"
+                        }
+                      >
+                        {shown.postChange >= 0 ? "+" : ""}
+                        {money(shown.postChange)}
+                      </span>
+                    )}
+                  </div>
+                )}
               </section>
               <section className="stock-about">
                 <h2>About {quote?.name ?? symbol} </h2>

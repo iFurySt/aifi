@@ -308,7 +308,10 @@ it("does not replace a newer local close with an older company-page quote", asyn
     fetchedAt: "2026-10-17T04:00:00Z",
     sources: [],
     recordCount: 0,
-    data: { quote: { price: 330, asOf: "2026-10-09T20:00:00Z" } },
+    data: {
+      complete: false,
+      quote: { price: 330, asOf: "2026-10-09T20:00:00Z" },
+    },
   };
   const quote = stockQuotePresentation(
     data,

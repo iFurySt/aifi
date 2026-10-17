@@ -337,17 +337,53 @@ export function Financials({ data }: { data: StockResearch }) {
   );
 }
 export function AnalystSummary({ data }: { data: StockResearch }) {
-  const records = data.datasets.analyst?.data.records ?? [],
-    consensus = records.find((r) => r.recordKind === "price-target-consensus");
+  const records = data.datasets.analyst?.data.records ?? [];
+  const consensus = records.find(
+    (r) => r.recordKind === "price-target-consensus",
+  );
+  const mean =
+    typeof consensus?.recommendationMean === "number"
+      ? consensus.recommendationMean
+      : undefined;
+  const rating =
+    typeof consensus?.recommendation === "string"
+      ? consensus.recommendation.replaceAll("_", " ")
+      : undefined;
   return (
     <div className="stock-analyst-summary">
+      <p>
+        {consensus?.analystCount
+          ? `Average target · ${consensus.analystCount} analysts`
+          : "Average price target"}
+      </p>
       <div className="stock-analyst-number">
         {consensus ? amount(consensus.targetConsensus, true) : "—"}
       </div>
-      <p>Consensus price target</p>
+      {rating && (
+        <p>
+          Average score:{" "}
+          <strong className="stock-rating-label">{rating}</strong>
+        </p>
+      )}
+      {mean !== undefined && mean >= 1 && mean <= 5 && (
+        <>
+          <div
+            className="stock-rating-meter"
+            role="img"
+            aria-label={`Average rating ${mean.toFixed(2)} of 5, lower is more positive`}
+          >
+            <i style={{ left: `${((5 - mean) / 4) * 100}%` }} />
+          </div>
+          <div className="stock-rating-scale">
+            {["Strong sell", "Sell", "Hold", "Buy", "Strong buy"].map((x) => (
+              <span key={x}>{x}</span>
+            ))}
+          </div>
+        </>
+      )}
       {consensus && (
         <small>
-          {amount(consensus.targetLow, true)} –{" "}
+          Target range {amount(consensus.targetLow, true)} –{" "}
           {amount(consensus.targetHigh, true)}
         </small>
       )}
@@ -497,10 +533,42 @@ export function AnalystPanel({ data }: { data: StockResearch }) {
     records = (view?.data.records ?? []).filter(
       (r) => r.recordKind === "grades",
     );
+  const distribution = view?.data.records?.find(
+    (r) => r.recordKind === "recommendations",
+  );
   return (
     <section className="stock-tab-body">
       <h2>Analyst ratings</h2>
       <AnalystSummary data={data} />
+      {distribution && (
+        <div
+          className="stock-recommendations"
+          aria-label="Current recommendation distribution"
+        >
+          {(
+            [
+              ["strongSell", "Strong sell"],
+              ["sell", "Sell"],
+              ["hold", "Hold"],
+              ["buy", "Buy"],
+              ["strongBuy", "Strong buy"],
+            ] as const
+          ).map(([key, label]) => (
+            <div key={key}>
+              <strong>
+                {typeof distribution[key] === "number"
+                  ? String(distribution[key])
+                  : "—"}
+              </strong>
+              <span>{label}</span>
+            </div>
+          ))}
+          <small>
+            {String(distribution.count)} ratings · Coverage may differ from
+            target-price opinions
+          </small>
+        </div>
+      )}
       <DataTable
         columns={["Date", "Firm", "Previous", "Rating", "Action"]}
         rows={records.map((r) => [
@@ -521,14 +589,133 @@ export function AnalystPanel({ data }: { data: StockResearch }) {
   );
 }
 export function Earnings({ data }: { data: StockResearch }) {
-  const facts = data.datasets.facts?.data.facts ?? [],
-    eps = financialSeries(facts, "eps", "Quarter").slice(0, 4);
+  const view = data.datasets.earnings,
+    records = view?.data.records ?? [];
+  const history = records
+    .filter((r) => r.recordKind === "earnings" && typeof r.actual === "number")
+    .slice(-4);
+  const upcoming = records.find((r) => r.recordKind === "earnings-calendar");
+  const fallback = financialSeries(
+    data.datasets.facts?.data.facts ?? [],
+    "eps",
+    "Quarter",
+  ).slice(0, 4);
+  const estimates = history.flatMap((r) =>
+    typeof r.estimate === "number" ? [r.estimate] : [],
+  );
+  const values = [...history.map((r) => Number(r.actual)), ...estimates, 0],
+    min = Math.min(...values),
+    max = Math.max(...values);
+  const span = max - min || 1,
+    y = (v: number) => 18 + ((max - v) / span) * 88,
+    zero = y(0);
+  const label = (r: Record<string, unknown>) =>
+    String(r.fiscalQuarter ?? r.periodEnd ?? "").replace(
+      /^(\d)Q(\d{2})(\d{2})$/,
+      "Q$1 '$3",
+    );
+  const compared = history.filter((r) => typeof r.estimate === "number");
+  const beats = compared.filter(
+    (r) => Number(r.actual) - Number(r.estimate) > 0.005,
+  ).length;
   return (
-    <DataTable
-      columns={["Period end", "Actual EPS"]}
-      rows={eps.map((p) => [p.end, money(p.value)])}
-      empty="No reported earnings yet"
-    />
+    <div className="stock-earnings">
+      {history.length > 0 ? (
+        <>
+          <div className="stock-earnings-legend">
+            <span>● Actual EPS</span>
+            <span>● Estimated EPS</span>
+          </div>
+          <svg
+            viewBox="0 0 300 156"
+            role="img"
+            aria-label="GAAP actual and estimated EPS by fiscal quarter"
+          >
+            <line x1="3" x2="297" y1={zero} y2={zero} stroke="var(--border)" />
+            {history.map((r, i) => {
+              const x = 14 + i * (280 / history.length),
+                w = 280 / history.length;
+              const actual = Number(r.actual),
+                estimate =
+                  typeof r.estimate === "number" ? r.estimate : undefined;
+              const result =
+                estimate === undefined
+                  ? ""
+                  : Math.abs(actual - estimate) <= 0.005
+                    ? "Met"
+                    : actual > estimate
+                      ? "Beat"
+                      : "Miss";
+              return (
+                <g key={String(r.periodEnd)}>
+                  <rect
+                    x={x + w * 0.15}
+                    y={Math.min(y(actual), zero)}
+                    width={w * 0.24}
+                    height={Math.max(0.5, Math.abs(y(actual) - zero))}
+                    rx="2"
+                    fill={
+                      result === "Miss" ? "var(--negative)" : "var(--positive)"
+                    }
+                  >
+                    <title>
+                      {label(r)} actual {money(actual)}
+                    </title>
+                  </rect>
+                  {estimate !== undefined && (
+                    <rect
+                      x={x + w * 0.44}
+                      y={Math.min(y(estimate), zero)}
+                      width={w * 0.24}
+                      height={Math.max(0.5, Math.abs(y(estimate) - zero))}
+                      rx="2"
+                      fill="var(--secondary)"
+                      opacity="0.35"
+                    >
+                      <title>
+                        {label(r)} estimate {money(estimate)}
+                      </title>
+                    </rect>
+                  )}
+                  <text x={x + w * 0.4} y="128" textAnchor="middle">
+                    {label(r)}
+                  </text>
+                  <text
+                    x={x + w * 0.4}
+                    y="146"
+                    textAnchor="middle"
+                    className={result === "Miss" ? "negative" : "positive"}
+                  >
+                    {result}
+                  </text>
+                </g>
+              );
+            })}
+          </svg>
+          {compared.length > 0 && (
+            <p>
+              Beat in {beats}/{compared.length} quarters shown
+            </p>
+          )}
+        </>
+      ) : (
+        <DataTable
+          columns={["Period end", "Actual EPS"]}
+          rows={fallback.map((p) => [p.end, money(p.value)])}
+          empty="No reported earnings yet"
+        />
+      )}
+      {upcoming && Array.isArray(upcoming.dates) && (
+        <p>
+          {upcoming.estimated ? "Expected report" : "Next report"}:{" "}
+          {upcoming.dates.map(String).join(" – ")}
+          {typeof upcoming.estimate === "number"
+            ? ` · EPS est. ${money(upcoming.estimate)}`
+            : ""}
+        </p>
+      )}
+      <SourceNote view={view ?? data.datasets.facts} />
+    </div>
   );
 }
 export function Digest({ data }: { data: StockResearch }) {

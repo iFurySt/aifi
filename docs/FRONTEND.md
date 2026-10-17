@@ -253,3 +253,13 @@ Data sources holds SEC identification. Sync manages all-directory dataset toggle
 intervals, history range, provider budgets and measured coverage. No page read or
 filter triggers provider collection. SEC filing links open only allowlisted HTTPS
 research hosts in the system browser; desktop navigation remains sandboxed.
+
+## Company quote and outlook presentation
+
+Company headings prefer the stored profile name and otherwise shorten explicit
+common-stock/ordinary-share suffixes without changing directory identities.
+The quote block shows source-dated regular price/change, market state and a
+separate after-hours observation. Analyst consensus, rating distribution and
+recent GAAP actual/estimated EPS read persisted research snapshots; missing data
+is never replaced with reference-site values. Snapshot dates stay out of the
+stock-list heading area.

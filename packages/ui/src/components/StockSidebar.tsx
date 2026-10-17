@@ -4,6 +4,7 @@ import { Search, ChevronDown, Check } from "lucide-react";
 import { StockAvatar } from "./StockAvatar";
 import {
   stockCollections,
+  stockDisplayName,
   validStockCollection,
   validDirectorySymbol,
 } from "@aifi/core";
@@ -98,14 +99,6 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
           <span className="count-badge">{data.total.toLocaleString()}</span>
         )}
       </div>
-      {data.collection?.snapshotDate && (
-        <p
-          className="stock-collection-date"
-          title={`${data.collection.sourceName} · Retrieved ${data.collection.fetchedAt?.slice(0, 10)}`}
-        >
-          Snapshot {data.collection.snapshotDate}
-        </p>
-      )}
       {!!data.collection?.unresolvedSymbols.length && (
         <p
           className="stock-collection-date"
@@ -151,7 +144,9 @@ export function StockSidebar({ onSelect }: { onSelect?: () => void }) {
             <StockAvatar symbol={entry.symbol} />
             <span className="stock-list-name">
               <strong>{entry.symbol}</strong>
-              <small title={entry.name}>{entry.name}</small>
+              <small title={entry.name}>
+                {stockDisplayName(undefined, entry.name, entry.symbol)}
+              </small>
             </span>
             <span className="stock-list-quote">
               <small>{directoryExchange(entry)}</small>
