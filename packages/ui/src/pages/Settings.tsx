@@ -1,4 +1,4 @@
-import { Select } from "../components/Select";
+import { AppearanceMode } from "../components/AppearanceMode";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { Check, RefreshCw, Trash2, CircleCheck } from "lucide-react";
 import type { DataStatus, DataSettings, CredentialProvider } from "@aifi/core";
@@ -102,11 +102,14 @@ export function Settings() {
       setError("Data service unavailable.");
     }
   }, []);
+  const needsData =
+    section === "sources" || section === "keys" || section === "sync";
   useEffect(() => {
+    if (!needsData) return;
     void refresh();
     const timer = setInterval(() => void refresh(), 3000);
     return () => clearInterval(timer);
-  }, [refresh]);
+  }, [refresh, needsData]);
   useEffect(() => {
     if (data) setHours(String(data.settings.intervalHours));
   }, [data?.settings.intervalHours]);
@@ -143,7 +146,7 @@ export function Settings() {
   return (
     <div className="settings-content">
       <h1>{settingItems.find((x) => x.id === section)?.label}</h1>
-      {error && section !== "chatgpt" && section !== "storage" && (
+      {error && needsData && (
         <div className="settings-service-error" role="status">
           {error}
           <Button variant="ghost" onClick={() => void refresh()}>
@@ -152,57 +155,12 @@ export function Settings() {
         </div>
       )}
       {section === "chatgpt" && <ChatGPTSettings />}
-      {section === "general" && (
-        <>
-          <Group title="Workspace">
-            <Row title="Local workspace" description="Saved on this device.">
-              <span>Personal</span>
-            </Row>
-            <Row title="Data service" description="Starts with the app.">
-              <span className="service-status">
-                <i className={connected ? "ready" : ""} />
-                {connected ? "Running" : error ? "Unavailable" : "Starting…"}
-              </span>
-            </Row>
-          </Group>
-          <Group title="Data">
-            <Row
-              title="Directory sync"
-              description="Check for updates in the background."
-            >
-              <Toggle
-                label="Automatic directory sync"
-                checked={data?.settings.automatic ?? false}
-                disabled={!connected || busy}
-                onChange={() =>
-                  void configure({ automatic: !data?.settings.automatic })
-                }
-              />
-            </Row>
-            <Row title="Sync settings">
-              <a className="setting-link" href="#/settings/sync">
-                Manage
-              </a>
-            </Row>
-            <Row title="API credentials">
-              <a className="setting-link" href="#/settings/keys">
-                Manage
-              </a>
-            </Row>
-          </Group>
-        </>
-      )}
       {section === "appearance" && (
-        <Group title="Theme">
-          <Row title="Color theme">
-            <Select
-              label="Color theme"
+        <Group title="Visual style">
+          <Row title="Mode">
+            <AppearanceMode
               value={workspace.theme}
-              onValueChange={(value) => update((w) => ({ ...w, theme: value }))}
-              options={[
-                { value: "light", label: "Light" },
-                { value: "dark", label: "Dark" },
-              ]}
+              onChange={(theme) => update((w) => ({ ...w, theme }))}
             />
           </Row>
         </Group>

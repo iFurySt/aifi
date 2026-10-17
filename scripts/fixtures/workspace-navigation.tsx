@@ -23,7 +23,7 @@ const entries: DirectoryEntry[] = Array.from({ length: 12 }, (_, i) => ({
   source: "fixture",
   securityType: "stock",
 }));
-location.hash = "/settings/general";
+location.hash = "/settings/appearance";
 createRoot(document.getElementById("root")!).render(
   <App
     directory={{

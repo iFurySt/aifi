@@ -10,6 +10,7 @@ import type {
 } from "@aifi/core";
 export interface WorkspaceContextValue {
   workspace: Workspace;
+  resolvedTheme: "light" | "dark";
   update: (change: (current: Workspace) => Workspace) => void;
   page: WorkspacePage;
   navigate: (page: WorkspacePage) => void;

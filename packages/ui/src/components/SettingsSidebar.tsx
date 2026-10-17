@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Settings2,
   Sun,
   Database,
   Plug,
@@ -17,7 +16,6 @@ export const settingItems: {
   group: string;
   icon: typeof Sun;
 }[] = [
-  { id: "general", label: "General", group: "Personal", icon: Settings2 },
   { id: "appearance", label: "Appearance", group: "Personal", icon: Sun },
   { id: "chatgpt", label: "ChatGPT", group: "Personal", icon: Sparkles },
   { id: "sources", label: "Data sources", group: "Data", icon: Plug },

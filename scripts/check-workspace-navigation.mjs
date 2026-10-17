@@ -63,7 +63,7 @@ async function checks() {
   key("[");
   await wait(50);
   assert(
-    location.hash === "#/settings/general",
+    location.hash === "#/settings/appearance",
     "Back escaped the initial session entry",
   );
   location.hash = "/agents";
@@ -71,11 +71,11 @@ async function checks() {
     () => document.querySelector('[aria-label="Go back"]').disabled === false,
   );
   key("[");
-  await until(() => location.hash === "#/settings/general");
+  await until(() => location.hash === "#/settings/appearance");
   key("]");
   await until(() => location.hash === "#/agents");
   key("[");
-  await until(() => location.hash === "#/settings/general");
+  await until(() => location.hash === "#/settings/appearance");
   location.hash = "/library";
   await until(
     () =>
@@ -268,8 +268,88 @@ async function hoverChecks(win) {
   }
   return true;
 }
+async function appearanceChecks(win) {
+  const evaluate = (code) => win.webContents.executeJavaScript(code);
+  const until = async (code) => {
+    for (let i = 0; i < 150; i++) {
+      if (await evaluate(code)) return;
+      await new Promise((resolve) => setTimeout(resolve, 20));
+    }
+    throw Error("Appearance check timed out: " + code);
+  };
+  await evaluate("location.hash='/settings'");
+  await until("document.querySelectorAll('.appearance-mode').length === 3");
+  if (
+    !(await evaluate(
+      `document.querySelector('.settings-content h1').textContent === 'Appearance' && !document.querySelector('a[href="#/settings/general"]') && !document.querySelector('.settings-service-error') && document.querySelectorAll('.settings-content .setting-group').length === 1`,
+    ))
+  )
+    throw Error("Settings contains removed or redundant controls");
+  const debug = win.webContents.debugger;
+  debug.attach("1.3");
+  const scheme = (value) =>
+    debug.sendCommand("Emulation.setEmulatedMedia", {
+      features: [{ name: "prefers-color-scheme", value }],
+    });
+  const choose = async (mode) => {
+    await evaluate(`document.querySelector('[data-mode="${mode}"]').click()`);
+    await until(
+      `JSON.parse(localStorage.getItem('aifi.workspace.v1')).theme === '${mode}'`,
+    );
+  };
+  try {
+    await scheme("light");
+    await choose("dark");
+    await until("document.documentElement.dataset.theme === 'dark'");
+    await choose("light");
+    await scheme("dark");
+    await until("document.documentElement.dataset.theme === 'light'");
+    await choose("system");
+    await until("document.documentElement.dataset.theme === 'dark'");
+    await scheme("light");
+    await until("document.documentElement.dataset.theme === 'light'");
+    await scheme("dark");
+    await until("document.documentElement.dataset.theme === 'dark'");
+    await win.reload();
+    await until(
+      `document.querySelector('[data-mode="system"][aria-checked="true"]') && document.documentElement.dataset.theme === 'dark'`,
+    );
+    await evaluate(
+      `document.querySelector('[data-mode="system"]').focus(); document.activeElement.dispatchEvent(new KeyboardEvent('keydown', {key:'ArrowLeft',bubbles:true,cancelable:true}))`,
+    );
+    await until(
+      `document.activeElement.dataset.mode === 'dark' && document.querySelector('[data-mode="dark"]').getAttribute('aria-checked') === 'true'`,
+    );
+    await evaluate(
+      `document.activeElement.dispatchEvent(new KeyboardEvent('keydown', {key:'Home',bubbles:true,cancelable:true}))`,
+    );
+    await until(
+      `document.activeElement.dataset.mode === 'system' && document.querySelector('[data-mode="system"]').getAttribute('aria-checked') === 'true'`,
+    );
+    for (const width of [1360, 390]) {
+      win.setContentSize(width, 820);
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      if (
+        !(await evaluate(
+          `document.documentElement.scrollWidth <= innerWidth && [...document.querySelectorAll('.appearance-mode')].every(e => { const r=e.getBoundingClientRect(); return r.left>=0 && r.right<=innerWidth && r.height>=44; })`,
+        ))
+      )
+        throw Error("Appearance preview overflows or lacks a usable target");
+    }
+    win.setContentSize(1360, 1000);
+  } finally {
+    debug.detach();
+  }
+  return {
+    systemFollowsOS: true,
+    explicitMode: true,
+    persistedPreference: true,
+    keyboard: true,
+    compactLayout: true,
+  };
+}
 const main = `const {app,BrowserWindow}=require('electron');const fs=require('node:fs');const path=require('node:path');
-app.setPath('userData',path.join(__dirname,'profile'));app.whenReady().then(async()=>{const win=new BrowserWindow({show:false,width:1360,height:1000,webPreferences:{sandbox:true,contextIsolation:true,backgroundThrottling:false}});win.webContents.on('console-message',(event)=>{if(event.level==='error')console.error(event.message)});try{await win.loadFile(path.join(__dirname,'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');report.sharedHover=await (${hoverChecks.toString()})(win);fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));await win.webContents.executeJavaScript("window.dispatchEvent(new KeyboardEvent('keydown',{key:'k',metaKey:true,bubbles:true}))");await new Promise(r=>setTimeout(r,200));fs.writeFileSync(path.join(__dirname,'search.png'),(await win.webContents.capturePage()).toPNG());console.log(JSON.stringify(report));app.exit(0)}catch(error){console.error(error);app.exit(1)}});setTimeout(()=>{console.error('Workspace navigation check timed out');app.exit(1)},25000);`;
+app.setPath('userData',path.join(__dirname,'profile'));app.whenReady().then(async()=>{const win=new BrowserWindow({show:false,width:1360,height:1000,webPreferences:{sandbox:true,contextIsolation:true,backgroundThrottling:false}});win.webContents.on('console-message',(event)=>{if(event.level==='error')console.error(event.message)});try{await win.loadFile(path.join(__dirname,'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');report.sharedHover=await (${hoverChecks.toString()})(win);report.appearance=await (${appearanceChecks.toString()})(win);fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));await win.webContents.executeJavaScript("window.dispatchEvent(new KeyboardEvent('keydown',{key:'k',metaKey:true,bubbles:true}))");await new Promise(r=>setTimeout(r,200));fs.writeFileSync(path.join(__dirname,'search.png'),(await win.webContents.capturePage()).toPNG());console.log(JSON.stringify(report));app.exit(0)}catch(error){console.error(error);app.exit(1)}});setTimeout(()=>{console.error('Workspace navigation check timed out');app.exit(1)},25000);`;
 await writeFile(join(output, "main.cjs"), main);
 const env = { ...process.env };
 delete env.ELECTRON_RUN_AS_NODE;

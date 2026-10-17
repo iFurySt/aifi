@@ -196,10 +196,17 @@ this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
 opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Market-data reads and research collection now use SQLite; live setup gates remain in the [data plan](exec-plans/active/us-stock-data-foundation.md).
 ## Data Settings And Runtime
 
-General, Appearance, ChatGPT, Data sources, API keys, Sync, Storage use the supplied screenshot's
+Appearance, ChatGPT, Data sources, API keys, Sync, Storage use the supplied screenshot's
 category sidebar, centered title, bordered groups and short rows. Desktop/mobile
 share the same page; the drawer exposes settings categories on narrow screens.
 Settings has no Demo badge because its service controls are real.
+Appearance is the default category; old General links resolve there. It contains
+only Visual style → Mode: System, Light and Dark compact preview radios. Existing
+light/dark preferences are preserved. System persists the preference while the
+rendered palette follows `prefers-color-scheme` changes. The toolbar toggles the
+currently resolved palette into an explicit mode. Appearance does not poll the
+data service or show service status. Directory automation and credentials remain
+in Sync/Data sources/API keys.
 
 Both local app hosts start a Go child. Fresh directories skip startup download;
 default sync interval is 24 hours, editable 1–720 hours. Enable/automation/interval

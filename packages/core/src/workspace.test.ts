@@ -71,3 +71,11 @@ describe("local workspace contracts", () => {
     ).toThrow("missing agent");
   });
 });
+
+it("round-trips all appearance modes and rejects unknown modes", () => {
+  for (const theme of ["system", "light", "dark"] as const) {
+    const state = { ...createDemoWorkspace(), theme };
+    expect(decodeWorkspace(JSON.stringify(state)).theme).toBe(theme);
+  }
+  expect(() => decodeWorkspace(JSON.stringify({ ...createDemoWorkspace(), theme: "auto" }))).toThrow();
+});

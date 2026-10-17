@@ -16,7 +16,7 @@ export const workspacePages: WorkspacePage[] = [
   "settings",
 ];
 export type Cadence = "Daily" | "Weekly" | "On demand";
-export type Theme = "light" | "dark";
+export type Theme = "system" | "light" | "dark";
 export interface Agent {
   id: string;
   name: string;
@@ -157,7 +157,7 @@ export function decodeWorkspace(raw: string): Workspace {
     !list(value.events, 100, eventCheck) ||
     !list(value.watchlist, 50, (x) => str(x, 10) && validSymbol(x)) ||
     !list(value.conversations, 30, conversationCheck) ||
-    !["light", "dark"].includes(value.theme as string)
+    !["system", "light", "dark"].includes(value.theme as string)
   ) {
     throw new Error(
       "Saved workspace is invalid or from an unsupported version.",

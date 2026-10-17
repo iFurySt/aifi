@@ -1,5 +1,4 @@
 export const settingsSections = [
-  "general",
   "appearance",
   "chatgpt",
   "sources",
@@ -13,7 +12,7 @@ export function parseSettingsSection(hash: string): SettingsSection {
     .replace(/^#\/?/, "")
     .split("?")[0]
     ?.split("/")[1] as SettingsSection;
-  return settingsSections.includes(section) ? section : "general";
+  return settingsSections.includes(section) ? section : "appearance";
 }
 export interface DataSettings {
   revision: number;

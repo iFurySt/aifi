@@ -145,7 +145,6 @@ async function checks() {
     check(route);
   }
   for (const section of [
-    "general",
     "appearance",
     "chatgpt",
     "sources",
@@ -189,8 +188,18 @@ async function checks() {
   document.querySelector('[aria-label="Close dialog"]').click();
   await until(() => !document.querySelector('[role="dialog"]'));
   location.hash = "/settings/appearance";
-  await until(() => document.querySelector('button[aria-label="Color theme"]'));
-  document.querySelector('button[aria-label="Color theme"]').click();
+  await until(() =>
+    document.querySelector('[role="radiogroup"][aria-label="Mode"]'),
+  );
+  assert(
+    [...document.querySelectorAll(".appearance-mode")].every(
+      (o) => selection(o) === "none",
+    ),
+    "Appearance mode text is selectable",
+  );
+  location.hash = "/stocks/AAPL?tab=chart";
+  await until(() => document.querySelector(".stock-quote"));
+  document.querySelector('[aria-label="Stock collection"]').click();
   await until(() => document.querySelector('[role="listbox"]'));
   assert(
     selection(document.querySelector('[role="listbox"]')) === "none" &&
@@ -203,8 +212,6 @@ async function checks() {
     new KeyboardEvent("keydown", { key: "Escape", bubbles: true }),
   );
   await until(() => !document.querySelector('[role="listbox"]'));
-  location.hash = "/stocks/AAPL?tab=chart";
-  await until(() => document.querySelector(".stock-quote"));
   const paragraph = document.querySelector(".stock-company-about p");
   assert(
     selection(paragraph) === "text",

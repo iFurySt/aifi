@@ -147,7 +147,7 @@ Use Radix primitives for those behaviors, not a large visual component library.
 - Watchlist: compact ticker list, sparklines, and local add/remove controls.
 - Portfolio: illustrative allocation chart and position table.
 - Library: reusable skill categories and mock report previews.
-- Settings: category sidebar and centered grouped rows for General, Appearance,
+- Settings: category sidebar and centered grouped rows for Appearance,
   Data sources, Sync, Storage; short labels and neutral switches.
 
 ### Spacing System
@@ -356,7 +356,12 @@ Each section uses a 14px title and a 14px rounded bordered group. Rows have 12px
 vertical padding, a 58px minimum height, 14px labels and optional 12px functional descriptions. Controls
 align right: neutral switches, selects, compact buttons, and inline inputs. Tables
 or cards must not overflow on mobile; use the existing drawer for categories.
-Settings represents real local controls and has no Demo badge.
+Settings represents real local controls and has no Demo badge. Appearance is the
+default category; omit General and duplicate service/status rows. Appearance
+contains one Visual style group and a Mode row with three compact app previews:
+System (split light/dark), Light, Dark. Use a neutral selected outline, shared
+hover tint, named radio semantics and arrow-key selection. Keep extra themes,
+accents, fonts and explanatory copy out of this surface.
 
 Saved credentials show only presence; blank password inputs replace values on
 explicit Save, and Remove clears saved fields. Data adapters that are not active

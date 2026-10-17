@@ -35,6 +35,7 @@ import {
   StockLogoContext,
 } from "./stock-directory-context";
 import { Shell } from "./components/Shell";
+import { useResolvedTheme } from "./use-resolved-theme";
 import { Agents } from "./pages/Agents";
 import { Research } from "./pages/Research";
 import { Watchlist } from "./pages/Watchlist";
@@ -69,6 +70,7 @@ export function App({
     readWorkspace(storage, createDemoWorkspace, decodeWorkspace),
   );
   const [workspace, setWorkspace] = useState(loaded.value);
+  const resolvedTheme = useResolvedTheme(workspace.theme);
   const [storageError, setStorageError] = useState(loaded.error);
   const blocked = useRef(!!loaded.error);
   const dirty = useRef(false);
@@ -162,7 +164,9 @@ export function App({
     return () => window.removeEventListener("hashchange", change);
   }, []);
   useEffect(() => {
-    document.documentElement.dataset.theme = workspace.theme;
+    document.documentElement.dataset.theme = resolvedTheme;
+  }, [resolvedTheme]);
+  useEffect(() => {
     if (dirty.current && !blocked.current)
       setStorageError(writeWorkspace(storage, workspace));
   }, [workspace]);
@@ -182,6 +186,7 @@ export function App({
         <WorkspaceContext.Provider
           value={{
             workspace,
+            resolvedTheme,
             update,
             page,
             navigate,

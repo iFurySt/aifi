@@ -1,0 +1,114 @@
+.appearance-modes {
+  display: flex;
+  gap: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.appearance-mode {
+  width: 84px;
+  height: 60px;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+}
+.appearance-mode:hover,
+.appearance-mode:focus-visible {
+  background: var(--interaction-hover);
+}
+.appearance-mode[aria-checked="true"] {
+  border-color: var(--text);
+}
+.mode-preview {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #eaeaea;
+  padding: 5px;
+}
+.mode-mini-window {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  --mini-muted: #ddd;
+  --mini-line: #b6b6b6;
+}
+.mode-mini-rail {
+  width: 18%;
+  padding: 5px 2px;
+  background: #f3f3f3;
+  border-right: 1px solid var(--mini-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mode-mini-rail i {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--mini-line);
+}
+.mode-mini-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  padding: 6px 5px 4px;
+}
+.mode-mini-page i {
+  height: 2px;
+  width: 90%;
+  background: var(--mini-muted);
+  border-radius: 1px;
+}
+.mode-mini-page i:nth-child(2) {
+  width: 65%;
+  background: var(--mini-line);
+}
+.mode-mini-page b {
+  margin-top: auto;
+  height: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--mini-muted);
+}
+.mode-mini-dark {
+  background: #202020;
+  border-color: #444;
+  --mini-muted: #424242;
+  --mini-line: #888;
+}
+.mode-mini-dark .mode-mini-rail {
+  background: #292929;
+}
+.mode-preview-dark {
+  background: #333;
+}
+.mode-preview-system {
+  padding: 0;
+}
+.mode-preview-system > span {
+  position: absolute;
+  inset: 0;
+  padding: 5px;
+}
+.mode-preview-system > span:last-child {
+  clip-path: inset(0 0 0 50%);
+  background: #333;
+}
+@media (max-width: 599px) {
+  .appearance-modes {
+    gap: 6px;
+  }
+  .appearance-mode {
+    width: 72px;
+    height: 54px;
+  }
+}

@@ -80,6 +80,7 @@ function AppNavigation({
 export function Shell({ children }: { children: ReactNode }) {
   const {
     workspace,
+    resolvedTheme,
     update,
     page,
     navigate,
@@ -250,18 +251,18 @@ export function Shell({ children }: { children: ReactNode }) {
       </button>
       <IconButton
         label={
-          workspace.theme === "light"
+          resolvedTheme === "light"
             ? "Switch to dark theme"
             : "Switch to light theme"
         }
         onClick={() =>
           update((w) => ({
             ...w,
-            theme: w.theme === "light" ? "dark" : "light",
+            theme: resolvedTheme === "light" ? "dark" : "light",
           }))
         }
       >
-        {workspace.theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+        {resolvedTheme === "light" ? <Moon size={18} /> : <Sun size={18} />}
       </IconButton>
       <ProfileMenu mobile />
     </div>
