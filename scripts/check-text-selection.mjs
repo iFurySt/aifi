@@ -69,8 +69,8 @@ async function checks() {
       if (!input.disabled) {
         input.focus();
         assert(
-          selection(input) === "text",
-          "Input selection disabled: " +
+          selection(input) === (input.matches(":focus") ? "text" : "none"),
+          "Input focus/selection state mismatch: " +
             route +
             " " +
             input.outerHTML.slice(0, 200) +

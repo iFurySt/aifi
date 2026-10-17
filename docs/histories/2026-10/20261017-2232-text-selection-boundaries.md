@@ -32,6 +32,8 @@ or pointer events. New routes inherit the policy; reading portals have an opt-in
 
 - Selection regression passes across all current page states, editable ranges,
   reading dialogs and listbox controls.
+- The regression respects inactive-window focus state rather than assuming every
+  active DOM field has foreground CSS focus.
 - Renderer build passes. Actual macOS App Command+A review retains readable body
   highlights and excludes window chrome, navigation, tabs and buttons.
 
