@@ -416,3 +416,12 @@ See [storage boundaries](design-docs/storage-usage.md).
 a disposable offline Go/Node host, including page sorting, pagination without a
 rescan, refresh/error recovery, native dispatch and narrow/light/dark presentation.
 Run from an isolated checkout; results live in `.artifacts/storage-ui/`.
+
+## Shared Value Selectors
+
+Use the controlled `Select` component for Usage, settings, stock collections,
+Financials, Chat model/effort and agent cadence. It provides optional local search,
+neutral selected rows, a nearby chevron, viewport-bounded portals and keyboard
+selection. Keep action and citation menus separate. See
+[selection controls](design-docs/selection-controls.md) for the API and
+`pnpm smoke:selects` regression gate.

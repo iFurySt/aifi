@@ -23,7 +23,8 @@
     "smoke:storage": "node scripts/check-storage-ui.mjs",
     "smoke:account": "node scripts/check-account-ui.mjs",
     "smoke:chatgpt": "node scripts/check-chatgpt.mjs",
-    "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json,css}\" \"scripts/*.mjs\" package.json tsconfig.json"
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json,css}\" \"scripts/*.mjs\" package.json tsconfig.json",
+    "smoke:selects": "node scripts/check-selects.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.3",

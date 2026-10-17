@@ -385,3 +385,11 @@ Below a 440px document, use a 40px icon-only watch button with an accessible nam
 16px content padding and stacked summary rows. Tabs use horizontal scrolling and
 automatically reveal the selected label. Dense tables retain internal scrolling;
 they must not widen the document or the window.
+
+## Shared value selectors
+
+Use the shared `Select` for value choices: content-sized 34px triggers, 8px
+label/chevron gap, 10px trigger radius, 16px popup radius and compact 34px rows
+(38px on narrow touch screens). Menus use a neutral selected row and check,
+optional search, internal scrolling and a 360px height cap. Preserve keyboard
+selection and focus return; avoid native system-blue popups.
