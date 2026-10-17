@@ -50,7 +50,7 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
 	case "yahoo":
-		if u.Host != "query1.finance.yahoo.com" && !(u.Host == "finance.yahoo.com" && strings.HasPrefix(u.Path, "/quote/") && strings.HasSuffix(u.Path, "/profile/")) {
+		if u.Host != "query1.finance.yahoo.com" && !(u.Host == "finance.yahoo.com" && strings.HasPrefix(u.Path, "/quote/") && (strings.HasSuffix(u.Path, "/profile/") || strings.HasSuffix(u.Path, "/analysis/"))) {
 			return nil, &Failure{Code: "invalid_endpoint"}
 		}
 		headers.Set("User-Agent", "AIFi/0.1 local investment research")
@@ -225,6 +225,12 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 			e = c.yahooPrices(ctx, j, &result)
 		} else {
 			e = c.prices(ctx, j, &result)
+		}
+	case "analyst", "earnings":
+		if j.Provider == "yahoo" {
+			e = c.yahooOutlook(ctx, j, &result)
+		} else {
+			e = c.optional(ctx, j, &result)
 		}
 	case "profile":
 		if j.Provider == "yahoo" {

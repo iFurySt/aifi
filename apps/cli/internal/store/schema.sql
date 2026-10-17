@@ -61,7 +61,7 @@ INSERT OR IGNORE INTO schema_migrations(version) VALUES(3);
 CREATE TABLE IF NOT EXISTS research_config(
  singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL, config_json TEXT NOT NULL
 );
-INSERT OR IGNORE INTO research_config VALUES(1,0,'{"automatic":true,"historyDays":730,"datasets":{"prices":{"enabled":true,"intervalHours":24},"profile":{"enabled":true,"intervalHours":168},"filings":{"enabled":true,"intervalHours":24},"facts":{"enabled":true,"intervalHours":168},"actions":{"enabled":true,"intervalHours":24},"insiders":{"enabled":true,"intervalHours":24},"funds":{"enabled":false,"intervalHours":168},"politicians":{"enabled":false,"intervalHours":24},"analyst":{"enabled":false,"intervalHours":24},"news":{"enabled":false,"intervalHours":24}}}');
+INSERT OR IGNORE INTO research_config VALUES(1,0,'{"analystSource":"yahoo","automatic":true,"historyDays":730,"datasets":{"prices":{"enabled":true,"intervalHours":24},"profile":{"enabled":true,"intervalHours":168},"filings":{"enabled":true,"intervalHours":24},"facts":{"enabled":true,"intervalHours":168},"actions":{"enabled":true,"intervalHours":24},"insiders":{"enabled":true,"intervalHours":24},"funds":{"enabled":false,"intervalHours":168},"politicians":{"enabled":false,"intervalHours":24},"analyst":{"enabled":true,"intervalHours":24},"earnings":{"enabled":true,"intervalHours":24},"news":{"enabled":false,"intervalHours":24}}}');
 CREATE TABLE IF NOT EXISTS research_jobs(
  id INTEGER PRIMARY KEY, provider TEXT NOT NULL, dataset TEXT NOT NULL, subject TEXT NOT NULL, window TEXT NOT NULL DEFAULT '',
  manual INTEGER NOT NULL DEFAULT 0, state TEXT NOT NULL DEFAULT 'queued', attempts INTEGER NOT NULL DEFAULT 0,

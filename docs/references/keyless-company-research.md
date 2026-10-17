@@ -6,6 +6,7 @@ ongoing availability or complete listing coverage.
 | Source | Probe | Decision |
 | --- | --- | --- |
 | Yahoo public company profile page | HTTP 200; public embedded JSON has company identity, description, industry, sector, website, employee count and recent SEC filings | Implement bounded extraction without executing scripts or calling authenticated APIs |
+| Yahoo public analysis page | HTTP 200; embedded JSON includes target consensus, current recommendations, recent grades, GAAP EPS history/estimates and calendar | Implement independent daily analyst/earnings jobs sharing one staged response |
 | Yahoo fundamentals timeseries | HTTP 200 without key/cookies; annual/quarterly standardized metrics | Implement with vendor period metadata; retain missing filing/start dates |
 | Yahoo direct quoteSummary | HTTP 401 | Do not implement a direct API or browser-cookie/crumb flow |
 | SEC submissions/companyfacts/ticker map | Initial HTTP 403 with project URL; HTTP 200 after a user-supplied identifying contact was configured locally | Official adapter live-validated; contact value stays outside the repository |
@@ -62,3 +63,23 @@ collector persisted official AAPL/MSFT/NVDA facts (426/455/396 normalized rows)
 and recent filings; local reads selected SEC while keeping existing Yahoo data.
 The renderer caps returned recent filing rows at 250; this is not total archive
 coverage. Prices/company profiles retain their existing Yahoo selection.
+
+## Analyst, earnings and quote checks
+
+[Yahoo AAPL analysis](https://finance.yahoo.com/quote/AAPL/analysis/) was
+HTTP 200 on 2026-10-17 without key, cookies or direct quoteSummary access.
+Read the published embedded response as data; never execute page scripts or
+follow authenticated embedded endpoint URLs. As with profile collection,
+upstream format changes and availability remain risks; preserve last good data.
+
+AAPL returned 39 target-price analyst opinions and 44 current recommendation
+ratings; these represent different coverage. GAAP EPS actual/estimate pairs
+cover four recent quarters; non-GAAP records are separate and not ingested.
+Vendor calendar dates can change, including dates whose estimated flag is false.
+Do not treat consensus or schedules as issuer-confirmed announcements.
+
+Public quote data distinguishes regular and post-market prices. The existing
+chart adapter incorrectly excluded today's completed bar before this change;
+it now uses observed session end plus ten minutes, with a post-close refresh.
+A price on another site can refer to an extended session or another observation
+time; matching a screenshot's number is not a data-quality test.

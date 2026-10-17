@@ -56,12 +56,16 @@ func (c *Client) yahooPrices(ctx context.Context, j Job, r *Result) error {
 		return err
 	}
 	today := c.Now().In(loc).Format("2006-01-02")
+	regular := object(object(meta["currentTradingPeriod"])["regular"])
+	sessionStart, sessionEnd := int64(number(regular["start"])), int64(number(regular["end"]))
+	sessionDate := time.Unix(sessionEnd, 0).In(loc).Format("2006-01-02")
+	completedToday := sessionStart > 0 && sessionEnd > sessionStart && sessionDate == today && !c.Now().Before(time.Unix(sessionEnd, 0).Add(10*time.Minute))
 	seen := map[string]bool{}
 	for i, ts := range timestamps {
 		date := time.Unix(int64(number(ts)), 0).In(loc).Format("2006-01-02")
-		if date >= today {
+		if date > today || (date == today && !completedToday) {
 			continue
-		} // EOD-only: never persist the open session as a close.
+		} // Include today only after the provider regular session + settlement buffer.
 		if date < "1970-01-02" || seen[date] {
 			return &Failure{Code: "invalid_response"}
 		}
@@ -79,6 +83,23 @@ func (c *Client) yahooPrices(ctx context.Context, j Job, r *Result) error {
 	}
 	if len(r.Bars) == 0 {
 		return &Failure{Code: "not_found"}
+	}
+	r.Payload.Window = "Yahoo completed sessions v2"
+	if price := number(meta["regularMarketPrice"]); price > 0 {
+		asOf := int64(number(meta["regularMarketTime"]))
+		if asOf > 0 && !time.Unix(asOf, 0).After(c.Now().Add(time.Minute)) {
+			q := &MarketQuote{Price: price, AsOf: time.Unix(asOf, 0).UTC().Format(time.RFC3339), SessionStart: sessionStart, SessionEnd: sessionEnd}
+			quoteDate := time.Unix(asOf, 0).In(loc).Format("2006-01-02")
+			previousDate := ""
+			for _, bar := range r.Bars {
+				if bar.Date < quoteDate && bar.Date > previousDate {
+					value := bar.Close
+					q.PreviousClose = &value
+					previousDate = bar.Date
+				}
+			}
+			r.Payload.Quote = q
+		}
 	}
 	r.Basis = "split-adjusted"
 	return nil

@@ -19,7 +19,7 @@ import (
 	"github.com/ifuryst/aifi/apps/cli/internal/market"
 )
 
-var ResearchDatasets = []string{"prices", "profile", "filings", "facts", "actions", "insiders", "funds", "politicians", "analyst", "news"}
+var ResearchDatasets = []string{"prices", "profile", "filings", "facts", "actions", "insiders", "funds", "politicians", "analyst", "earnings", "news"}
 
 type DatasetConfig struct {
 	Enabled       bool `json:"enabled"`
@@ -34,6 +34,7 @@ type ResearchConfig struct {
 	PriceSource   string                   `json:"priceSource"`
 	ProfileSource string                   `json:"profileSource"`
 	FactsSource   string                   `json:"factsSource"`
+	AnalystSource string                   `json:"analystSource"`
 	FilingsSource string                   `json:"filingsSource"`
 	Automatic     bool                     `json:"automatic"`
 	HistoryDays   int                      `json:"historyDays"`
@@ -57,6 +58,15 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	if c.Limits["yahoo"].PerMinute == 0 {
 		c.Limits["yahoo"] = ProviderLimit{20, 10000}
 	}
+	if _, ok := c.Datasets["earnings"]; !ok {
+		c.Datasets["earnings"] = DatasetConfig{true, 24}
+	}
+	if c.AnalystSource == "" {
+		c.AnalystSource = "yahoo"
+		if c.Datasets["analyst"].Enabled {
+			c.AnalystSource = "fmp"
+		}
+	}
 	if c.PriceSource == "" {
 		c.PriceSource = "yahoo"
 	}
@@ -75,6 +85,10 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	switch dataset {
 	case "prices":
 		return c.PriceSource
+	case "analyst":
+		return c.AnalystSource
+	case "earnings":
+		return "yahoo"
 	case "profile":
 		return c.ProfileSource
 	case "facts":
@@ -92,6 +106,9 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
 	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 4 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
+	}
+	if c.AnalystSource != "yahoo" && c.AnalystSource != "fmp" {
+		return c, errors.New("invalid analyst source")
 	}
 	if (c.ProfileSource != "yahoo" && c.ProfileSource != "massive") || (c.FactsSource != "yahoo" && c.FactsSource != "sec") || (c.FilingsSource != "yahoo" && c.FilingsSource != "sec") {
 		return c, errors.New("invalid research source")
@@ -682,7 +699,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource)
 	if e != nil {
 		return out, e
 	}
@@ -953,4 +970,11 @@ func (s *Store) ManualIssuers(ctx context.Context) (map[string]bool, error) {
 		out[cik] = true
 	}
 	return out, rows.Err()
+}
+
+// Upgrade old price snapshots once and wake intraday-collected snapshots after
+// their observed regular session finishes. Failed jobs retain their backoff.
+func (s *Store) WakeCompletedYahooPrices(ctx context.Context, now time.Time) error {
+	_, err := s.db.ExecContext(ctx, `UPDATE research_jobs SET next_run=? WHERE provider='yahoo' AND dataset='prices' AND state='idle' AND next_run>? AND EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots snap ON snap.id=h.snapshot_id WHERE h.dataset='prices' AND h.subject=research_jobs.subject AND snap.provider='yahoo' AND (COALESCE(json_extract(snap.payload_json,'$.window'),'')!='Yahoo completed sessions v2' OR (json_extract(snap.payload_json,'$.quote.sessionEnd')>0 AND unixepoch(research_jobs.last_success)<json_extract(snap.payload_json,'$.quote.sessionEnd')+600 AND ?>=json_extract(snap.payload_json,'$.quote.sessionEnd')+600)))`, stamp(now), stamp(now), now.Unix())
+	return err
 }

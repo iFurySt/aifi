@@ -42,9 +42,19 @@ func companyJSON(raw []byte, symbol string) (map[string]any, error) {
 	}
 	return data, nil
 }
-func (c *Client) yahooPage(ctx context.Context, symbol string, r *Result) (map[string]any, error) {
-	endpoint := "https://finance.yahoo.com/quote/" + url.PathEscape(symbol) + "/profile/"
+func (c *Client) yahooPage(ctx context.Context, symbol string, r *Result, pages ...string) (map[string]any, error) {
+	page := "profile"
+	if len(pages) > 0 {
+		page = pages[0]
+	}
+	if page != "profile" && page != "analysis" {
+		return nil, &Failure{Code: "invalid_endpoint"}
+	}
+	endpoint := "https://finance.yahoo.com/quote/" + url.PathEscape(symbol) + "/" + page + "/"
 	key := "yahoo-company-v1:" + symbol
+	if page == "analysis" {
+		key = "yahoo-analysis-v1:" + symbol
+	}
 	if c.ReadStage != nil {
 		cached, err := c.ReadStage(ctx, key)
 		if err != nil {
@@ -133,6 +143,7 @@ func (c *Client) yahooCompany(ctx context.Context, j Job, r *Result) error {
 		return &Failure{Code: "invalid_profile"}
 	}
 	r.Payload.Profile = p
+	r.Payload.Quote = publicPageQuote(data, c.Now())
 	r.Payload.Complete = false
 	if j.Dataset == "profile" {
 		if p.Description == "" && p.Industry == "" {

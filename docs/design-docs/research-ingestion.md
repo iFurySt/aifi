@@ -1,7 +1,7 @@
 # Local stock research ingestion
 
 Status: implementation, 2026-10-17. Daily prices, company details, standardized
-financials and recent filing indices default to keyless Yahoo sources; other
+financials, recent filing indices, analyst data and earnings default to keyless Yahoo sources; other
 datasets retain separate setup gates. No live completeness claim follows
 from a passing fixture test or the existence of the directory.
 
@@ -14,7 +14,7 @@ examples. Missing data, contact/key requirements and source access failures are
 explicit. Six research tabs remain available even when their datasets are empty.
 
 Settings has dedicated API keys, Data sources, Sync and Storage categories.
-Sync independently selects price, company, financial and filing sources; old
+Sync independently selects price, company, financial, filing and analyst sources; old
 settings gain keyless defaults without a SQLite schema migration.
 Massive and optional FMP keys are encrypted locally; Alpaca credentials remain a
 reserved alternate-provider slot, not an implemented price adapter. SEC needs an
@@ -39,7 +39,9 @@ subscription is purchased by the application.
 | Insider transactions | SEC Form 4/4-A XML from stored submissions; immutable documents reused | Contact; daily; latest 40 filings, derivative status and transaction codes retained |
 | Institutional ownership | FMP stable extract-analytics/holder, paginated | Optional key/endpoint entitlement; weekly; latest elapsed quarter |
 | Congressional trades | FMP stable senate-trades + house-trades | Optional key/entitlement; daily; reported amount ranges retained |
-| Analyst data | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |
+| Analyst data (default) | Yahoo public analysis page embedded JSON | No key/cookie; daily; consensus, current rating distribution and recent grades |
+| Analyst data (optional) | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |
+| Earnings | Yahoo public analysis page embedded JSON | No key/cookie; daily; recent GAAP actual/consensus EPS and earnings calendar |
 | News headlines | FMP stable news/stock | Optional key/entitlement; daily; recent provider response window |
 
 Primary specs checked during implementation:
@@ -73,7 +75,7 @@ history window, with 24-hour default refresh. Massive remains selectable in Sync
 settings and uses one whole-market request per date. Only the selected price
 provider runs price jobs; reads prefer that provider and can retain an existing
 other-provider series when it has no stored data. Series are never mixed.
-Yahoo workers rotate profile → filings → facts → prices before claiming work,
+Yahoo workers rotate profile → filings → facts → prices → analyst → earnings before claiming work,
 so an initial price backlog cannot starve company research. Each dataset retains
 its own enabled flag and cadence. Company page responses are shared privately
 for at most 24 hours between profile/filing jobs, preserving original fetch time;
@@ -85,7 +87,13 @@ Massive splits/dividends also use shared
 market-wide snapshots with indexed per-symbol SQLite reads; daily refresh does
 not make two requests per listing. Newest sessions and the three
 initial development targets are prioritized before expensive enrichment. A
-previous-New-York-date watermark avoids unfinished sessions. Weekends are skipped;
+previous-New-York-date watermark avoids unfinished Massive sessions. Yahoo can
+include the current New York date only after its observed regular session end
+plus a ten-minute settlement buffer; absent metadata keeps that date excluded.
+For configured intervals up to 24 hours, idle Yahoo price work wakes after that
+observed boundary; failed-job backoff is preserved. A weekday 16:10 New York
+poll is also scheduled (DST aware), not an exchange holiday calendar. Longer
+user-selected cadences remain unchanged. Old pre-fix snapshots get one repair. Weekends are skipped;
 empty provider holiday responses are evidenced. No exchange-grade calendar or
 real-time market status is claimed. Default old-session repairs run monthly;
 recent sessions use the configurable daily cadence.
@@ -143,7 +151,7 @@ Valuations/margins use explicitly matching periods/units where available.
 Market cap uses the provider's company-level weighted share reference, not a
 single share class's outstanding count; its reference date remains available.
 Company Facts is not a complete dimensional/custom financial statement parser;
-IFRS, business/geographic segments, peer relationships, future earnings estimates/calendar and short
+IFRS, business/geographic segments, peer relationships and short
 interest still require additional dataset-specific work. No missing value is zero.
 
 Shared action snapshots retain two years of events and publish their per-symbol
@@ -178,7 +186,7 @@ Normal 429/Retry-After handling also applies; last-good data stays readable.
 SEC remains keyless but needs an honest identifying contact. Official facts
 and recent submissions were live-validated after local contact setup on
 2026-10-17; individual insider archive coverage is still collected separately.
-Corporate actions, ratings, funds, politician trades and news retain separate
+Corporate actions, funds, politician trades and news retain separate
 setup gates. The additional keyless company collectors are described below.
 
 Coverage status collapses daily bars to distinct symbols before joining the
@@ -205,7 +213,7 @@ On initial live validation, AAPL/MSFT each persisted 108 financial rows and
 80/83 recent filing index entries respectively, plus descriptions/industries.
 NVDA also persisted 108 financial rows, its profile and 81 filing index entries. These are initial
 measured samples, not a claim that all listings have coverage. Every candidate
-gets jobs for all four Yahoo datasets. At 20/min and 10,000/day, a universe-wide
+gets jobs for the selected Yahoo datasets. At 20/min and 10,000/day, a universe-wide
 first pass spans multiple running days and can take longer after failures.
 Snapshots survive restart; normal tab reads still never fetch providers.
 Long company descriptions default to a short preview with an explicit expand.
@@ -214,3 +222,33 @@ The local configured workspace now prefers official SEC facts/filings, verified
 by persisted AAPL/MSFT/NVDA reads (426/455/396 financial rows). These local
 preferences/contact are not bundled defaults or repository configuration. Yahoo
 prices/profiles remain selected; existing Yahoo facts/filings remain stored.
+
+## Quote presentation and outlook validation
+
+The quote block prefers the newest valid stored regular-session quote, falling
+back to daily bars. Regular close and post-market price are separate; the latter
+never overwrites the close, daily change or chart. Prior close comes from an
+actual preceding session, not chartPreviousClose (which is range-dependent).
+Timestamps describe the source observation in New York time, never the UI clock.
+Weekend/out-of-hours status is closed; during regular hours stale metadata does
+not claim the market is open. This is delayed collected data, not streaming or
+an exchange-grade holiday/status service. Listing suffixes are shortened only
+for presentation; raw directory identity remains stored.
+
+Analyst and earnings jobs share a separately staged public analysis response
+for up to 24 hours. Schema v4 settings gain an earnings job and analyst source
+without new columns. Existing enabled FMP analyst configurations stay on FMP;
+existing disabled flags remain disabled. New installs default to Yahoo. All
+read paths remain SQLite-only, including after restart.
+
+Target-price opinion count and recommendation-distribution count are different
+coverage sets and are not conflated. Earnings use only explicitly USD GAAP
+actual/estimate pairs, retaining vendor fiscal quarter and standardized period
+end, zero/negative values and estimated calendar flags. Non-GAAP is not merged
+with GAAP; missing actuals/estimates remain missing. The limited recent window
+is not an entire earnings archive.
+
+Live validation on 2026-10-17: AAPL's Oct 16 regular quote was 343.46, previous
+close 342.00 and post-market quote 342.62. Four GAAP actual/estimate quarters,
+a future report date, target consensus and recent grades were persisted and
+rendered from local reads. These are dated source observations, not constants.

@@ -397,3 +397,48 @@ func TestCompanyFactsChooseConfiguredSourceWithoutMergingPeriods(t *testing.T) {
 		}
 	}
 }
+
+func TestCompletedYahooSessionWakesIdleJobsWithoutOverridingBackoff(t *testing.T) {
+	ctx := context.Background()
+	db := openTest(t)
+	end := time.Date(2026, 10, 16, 20, 0, 0, 0, time.UTC)
+	for _, symbol := range []string{"OLD", "INTRA", "SETTLED", "FAILED"} {
+		at := end.Add(-time.Hour)
+		window := "Yahoo completed sessions v2"
+		if symbol == "OLD" {
+			window = "Yahoo completed sessions"
+		}
+		if symbol == "SETTLED" {
+			at = end.Add(11 * time.Minute)
+		}
+		job := market.Job{Provider: "yahoo", Dataset: "prices", Subject: symbol}
+		if err := db.AddResearchJobs(ctx, []market.Job{job}, at); err != nil {
+			t.Fatal(err)
+		}
+		claimed, err := db.ClaimResearchJob(ctx, "yahoo", []string{"prices"}, false, at)
+		if err != nil || claimed == nil {
+			t.Fatal(err)
+		}
+		result := market.Result{Evidence: []market.Evidence{{URL: "https://query1.finance.yahoo.com/v8/finance/chart/" + symbol, Body: []byte(`{"fixture":true}`), FetchedAt: at}}, Payload: market.Payload{Window: window, Quote: &market.MarketQuote{Price: 100, AsOf: at.Format(time.RFC3339), SessionEnd: end.Unix()}}}
+		if err = db.FinishResearchJob(ctx, *claimed, result, at, end.Add(24*time.Hour)); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if _, err := db.db.ExecContext(ctx, `UPDATE research_jobs SET state='failed' WHERE subject='FAILED'`); err != nil {
+		t.Fatal(err)
+	}
+	now := end.Add(15 * time.Minute)
+	if err := db.WakeCompletedYahooPrices(ctx, now); err != nil {
+		t.Fatal(err)
+	}
+	for _, symbol := range []string{"OLD", "INTRA", "SETTLED", "FAILED"} {
+		var next string
+		if err := db.db.QueryRowContext(ctx, `SELECT next_run FROM research_jobs WHERE subject=?`, symbol).Scan(&next); err != nil {
+			t.Fatal(err)
+		}
+		shouldWake := symbol == "OLD" || symbol == "INTRA"
+		if (next == stamp(now)) != shouldWake {
+			t.Fatalf("%s next=%s wake=%v", symbol, next, shouldWake)
+		}
+	}
+}

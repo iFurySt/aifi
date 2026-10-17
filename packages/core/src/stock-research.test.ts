@@ -252,3 +252,69 @@ it("keeps vendor annual and quarterly periods separate without invented start da
     basis: "TTM",
   });
 });
+
+it("keeps regular close and post-market prices distinct and never calls a stale weekday quote live", async () => {
+  const { stockQuotePresentation } = await import("./stock-research");
+  const data = emptyResearch("AAPL");
+  data.datasets.prices = {
+    provider: "yahoo",
+    fetchedAt: "2026-10-17T04:00:00Z",
+    sources: [],
+    recordCount: 0,
+    data: {
+      complete: true,
+      quote: {
+        price: 343.46,
+        previousClose: 342,
+        asOf: "2026-10-16T20:00:01Z",
+        sessionStart: 1792157400,
+        sessionEnd: 1792180800,
+        postPrice: 342.62,
+        postAsOf: "2026-10-16T23:59:00Z",
+      },
+    },
+  };
+  const weekend = stockQuotePresentation(
+    data,
+    Date.parse("2026-10-17T04:12:00Z"),
+  );
+  expect(weekend.status).toBe("Market Closed");
+  expect(weekend.price).toBe(343.46);
+  expect(weekend.change).toBeCloseTo(1.46);
+  expect(weekend.postPrice).toBe(342.62);
+  expect(weekend.date).toBe("2026-10-16");
+  const monday = stockQuotePresentation(
+    data,
+    Date.parse("2026-10-19T14:00:00Z"),
+  );
+  expect(monday.status).toBe("Market status unavailable");
+});
+
+it("does not replace a newer local close with an older company-page quote", async () => {
+  const { stockQuotePresentation } = await import("./stock-research");
+  const data = emptyResearch("AAPL");
+  data.bars = [
+    {
+      date: "2026-10-16",
+      open: 340,
+      high: 345,
+      low: 339,
+      close: 343.46,
+      volume: 100,
+    },
+  ];
+  data.datasets.profile = {
+    provider: "yahoo",
+    fetchedAt: "2026-10-17T04:00:00Z",
+    sources: [],
+    recordCount: 0,
+    data: { quote: { price: 330, asOf: "2026-10-09T20:00:00Z" } },
+  };
+  const quote = stockQuotePresentation(
+    data,
+    Date.parse("2026-10-17T04:10:00Z"),
+  );
+  expect(quote.price).toBe(343.46);
+  expect(quote.date).toBe("2026-10-16");
+  expect(quote.asOf).toBeUndefined();
+});

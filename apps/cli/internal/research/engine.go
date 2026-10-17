@@ -161,7 +161,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
-		for _, d := range []string{"prices", "profile", "facts", "filings"} {
+		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings"} {
 			jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: symbol})
 		}
 		for _, d := range []string{"profile", "funds", "politicians", "analyst", "news"} {
@@ -197,6 +197,11 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	if err = e.DB.UseSharedActions(ctx); err != nil {
 		return err
+	}
+	if cfg.PriceSource == "yahoo" && cfg.Datasets["prices"].IntervalHours <= 24 {
+		if err = e.DB.WakeCompletedYahooPrices(ctx, now); err != nil {
+			return err
+		}
 	}
 	e.fingerprint = fingerprint
 	e.lastReconcile = now
@@ -248,7 +253,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if p == "yahoo" {
 		// Rotate datasets before claiming: an existing universe-size price backlog
 		// must not starve company details and financials. All requests share a budget.
-		order := []string{"profile", "filings", "facts", "prices"}
+		order := []string{"profile", "filings", "facts", "prices", "analyst", "earnings"}
 		for i := 0; i < len(order); i++ {
 			d := order[e.yahooCursor%len(order)]
 			e.yahooCursor++
@@ -276,6 +281,9 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 			hours = v.IntervalHours
 		}
 		next := now.Add(time.Duration(hours) * time.Hour)
+		if p == "yahoo" && j.Dataset == "prices" {
+			next = market.NextPriceRefresh(now, hours, result.Payload.Quote)
+		}
 		if j.Dataset == "prices" && p != "yahoo" {
 			date, _ := time.Parse("2006-01-02", j.Subject)
 			if now.Sub(date) > 7*24*time.Hour {

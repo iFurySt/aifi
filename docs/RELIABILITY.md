@@ -78,10 +78,17 @@ Coverage counts aggregate unique symbols before directory membership joins; the
 20,000-bar status regression prevents collection progress from blocking local
 settings/read operations through a session-by-listing join.
 
-The Yahoo worker rotates company profiles, filing indices, financial facts and
-prices to prevent directory-sized backlogs from starving enrichment. Profile
+The Yahoo worker rotates company profiles, filing indices, financial facts,
+prices, analyst data and earnings to prevent directory-sized backlogs from starving enrichment. Profile
 and filing jobs share a bounded 24-hour validated public-page response in SQLite
 staging; published snapshots retain source fetch dates and last-good behavior.
 A changed public page format fails closed. Synthetic tests cover cached-page
 reuse, hostile identities/links, vendor annual/quarterly semantics and offline
 reopening after collection.
+
+Yahoo current-date bars require a validated observed session end plus ten
+minutes. Idle intraday snapshots wake after settlement without resetting failed
+backoffs, and the scheduler polls after weekday close in New York time. This
+weekday schedule is not a holiday calendar. Quote timestamps, regular close and
+extended-session observations stay distinct. Parser, DST/early-close boundary,
+post-close wake and offline outlook-read regressions cover these paths.

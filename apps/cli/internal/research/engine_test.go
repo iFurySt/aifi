@@ -354,12 +354,12 @@ func TestKeylessCompanyCollectionBeatsPriceBacklogAndSurvivesOfflineRestart(t *t
 		}
 		body := ""
 		if r.URL.Host == "finance.yahoo.com" {
-			embedded := `{"quoteSummary":{"error":null,"result":[{"price":{"symbol":"OTHER-B","currency":"USD","quoteType":"EQUITY","longName":"Other Company"},"assetProfile":{"industry":"Hardware","longBusinessSummary":"Other Company makes hardware."},"secFilings":{"filings":[{"date":"2026-10-14","type":"8-K","edgarUrl":"https://finance.yahoo.com/sec-filing/OTHER-B/0000000123-26-000001_123"}]}}]}}`
+			embedded := `{"quoteSummary":{"error":null,"result":[{"price":{"symbol":"OTHER-B","currency":"USD","quoteType":"EQUITY","longName":"Other Company"},"assetProfile":{"industry":"Hardware","longBusinessSummary":"Other Company makes hardware."},"financialData":{"targetMeanPrice":{"raw":120},"numberOfAnalystOpinions":{"raw":39}},"earningsGaap":{"financialCurrency":"USD","earningsChart":{"quarterly":[{"fiscalQuarter":"3Q2026","periodEndDate":{"fmt":"2026-06-30"},"actual":{"raw":1.2},"estimate":{"raw":1.1}}]}},"secFilings":{"filings":[{"date":"2026-10-14","type":"8-K","edgarUrl":"https://finance.yahoo.com/sec-filing/OTHER-B/0000000123-26-000001_123"}]}}]}}`
 			body = `<html><script type="application/json" data-sveltekit-fetched data-url="https://query1.finance.yahoo.com/v10/finance/quoteSummary/OTHER-B">` + market.Marshal(map[string]any{"status": 200, "body": embedded}) + `</script></html>`
 		} else if strings.Contains(r.URL.Path, "fundamentals-timeseries") {
 			body = `{"timeseries":{"error":null,"result":[{"meta":{"symbol":["OTHER-B"],"type":["annualTotalRevenue"]},"annualTotalRevenue":[{"asOfDate":"2025-09-30","periodType":"12M","currencyCode":"USD","reportedValue":{"raw":123456}}]}]}}`
 		} else {
-			t.Fatalf("price backlog starved enrichment: %s", r.URL)
+			body = `{"chart":{"error":null,"result":[{"meta":{"symbol":"Q0000","currency":"USD","instrumentType":"EQUITY"},"timestamp":[1791979200],"indicators":{"quote":[{"open":[10],"high":[11],"low":[9],"close":[10],"volume":[100]}]}}]}}`
 		}
 		return &http.Response{StatusCode: 200, Body: io.NopCloser(strings.NewReader(body)), Header: http.Header{}}, nil
 	})}
@@ -367,18 +367,18 @@ func TestKeylessCompanyCollectionBeatsPriceBacklogAndSurvivesOfflineRestart(t *t
 	for i := 0; i < 1000; i++ {
 		jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: "prices", Subject: fmt.Sprintf("Q%04d", i)})
 	}
-	for _, d := range []string{"profile", "filings", "facts"} {
+	for _, d := range []string{"profile", "filings", "facts", "analyst", "earnings"} {
 		jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: "OTHER.B"})
 	}
 	if err = db.AddResearchJobs(ctx, jobs, time.Now()); err != nil {
 		t.Fatal(err)
 	}
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 6; i++ {
 		if worked, err := engine.Step(ctx, "yahoo"); err != nil || !worked {
 			t.Fatal(i, worked, err)
 		}
 	}
-	if calls != 2 {
+	if calls != 4 {
 		t.Fatal("profile/filings did not reuse public page", calls)
 	}
 	db.Close()
@@ -392,13 +392,16 @@ func TestKeylessCompanyCollectionBeatsPriceBacklogAndSurvivesOfflineRestart(t *t
 		if err != nil || data.Datasets["profile"].Data.Profile == nil || data.Datasets["profile"].Data.Profile.Industry != "Hardware" || len(data.Datasets["facts"].Data.Facts) != 1 || len(data.Datasets["filings"].Data.Filings) != 1 {
 			t.Fatal(market.Marshal(data), err)
 		}
-		for _, d := range []string{"profile", "facts", "filings"} {
+		if len(data.Datasets["analyst"].Data.Records) != 1 || len(data.Datasets["earnings"].Data.Records) != 1 {
+			t.Fatal("outlook records lost on offline restart", market.Marshal(data))
+		}
+		for _, d := range []string{"profile", "facts", "filings", "analyst", "earnings"} {
 			if data.Coverage[d] != "stored" || data.Datasets[d].Provider != "yahoo" || len(data.Datasets[d].Sources) != 1 {
 				t.Fatal(d, market.Marshal(data))
 			}
 		}
 	}
-	if calls != 2 {
+	if calls != 4 {
 		t.Fatal("local reads fetched sources", calls)
 	}
 	failed := New(db, path, false)

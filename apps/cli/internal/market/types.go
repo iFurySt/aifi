@@ -55,13 +55,25 @@ type Fact struct {
 	FiscalPeriod string `json:"fiscalPeriod"`
 }
 type Record map[string]any
+type MarketQuote struct {
+	State         string   `json:"state,omitempty"`
+	Price         float64  `json:"price"`
+	PreviousClose *float64 `json:"previousClose,omitempty"`
+	AsOf          string   `json:"asOf"`
+	SessionStart  int64    `json:"sessionStart,omitempty"`
+	SessionEnd    int64    `json:"sessionEnd,omitempty"`
+	DelayMinutes  *float64 `json:"delayMinutes,omitempty"`
+	PostPrice     *float64 `json:"postPrice,omitempty"`
+	PostAsOf      string   `json:"postAsOf,omitempty"`
+}
 type Payload struct {
-	Profile  *Profile `json:"profile,omitempty"`
-	Facts    []Fact   `json:"facts,omitempty"`
-	Filings  []Filing `json:"filings,omitempty"`
-	Records  []Record `json:"records,omitempty"`
-	Window   string   `json:"window,omitempty"`
-	Complete bool     `json:"complete"`
+	Quote    *MarketQuote `json:"quote,omitempty"`
+	Profile  *Profile     `json:"profile,omitempty"`
+	Facts    []Fact       `json:"facts,omitempty"`
+	Filings  []Filing     `json:"filings,omitempty"`
+	Records  []Record     `json:"records,omitempty"`
+	Window   string       `json:"window,omitempty"`
+	Complete bool         `json:"complete"`
 }
 type Evidence struct {
 	URL       string
