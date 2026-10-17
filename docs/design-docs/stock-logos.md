@@ -92,7 +92,13 @@ third-party artwork is bundled into source. See [source provenance](../reference
   repository objects without retaining an unbounded second image store.
   Tiny/empty/corrupt assets use letters; predominantly white transparent marks
   get a dark background for contrast.
-  Images fill rounded avatars edge to edge with cover sizing and no inset.
+  Images use centered contain sizing within 84% of the avatar, leaving an 8%
+  safe inset on every side. A shared 64px analysis trims transparent or flat-white
+  outer space, with one sample of edge protection; colored tiles retain their
+  full backgrounds. Cropped previews preserve source aspect ratio and cap the
+  long edge at 128px. Derived PNGs decode before publication and reuse the same
+  weak preparation cache; raw host PNGs, provider requests and disk caches remain
+  unchanged. Optional analysis/crop failures keep the original decoded image.
 
 No backup/retention or provider-management UI is added. Directory snapshot counts
 and SQLite size exclude PNG/metadata cache bytes. Reviewed coverage is currently

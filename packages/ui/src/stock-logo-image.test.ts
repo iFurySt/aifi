@@ -11,6 +11,7 @@ function environment(
     size?: number;
     pixels?: Uint8ClampedArray;
     canvasError?: boolean;
+    cropUrl?: string;
   } = {},
 ) {
   const decode = vi.fn(options.decode ?? (() => Promise.resolve()));
@@ -31,6 +32,7 @@ function environment(
     createElement: () => {
       if (options.canvasError) throw Error("no canvas");
       return {
+        toDataURL: () => options.cropUrl ?? "data:image/png;base64,cropped",
         getContext: () => ({
           drawImage: () => {},
           getImageData: () => ({
@@ -72,6 +74,25 @@ it("waits for decoding, shares preparation and remembers white-mark contrast bef
   });
   await prepareStockLogo(item);
   expect(env.create).toHaveBeenCalledTimes(1);
+});
+it("crops padded artwork once before publishing the shared prepared image", async () => {
+  const pixels = new Uint8ClampedArray(64 * 64 * 4).fill(255);
+  for (let y = 12; y < 52; y++)
+    for (let x = 12; x < 52; x++) pixels.set([0, 0, 0, 255], (y * 64 + x) * 4);
+  const env = environment({
+    size: 128,
+    pixels,
+    cropUrl: "data:image/png;base64,normalized",
+  });
+  const item = logo();
+  expect(await prepareStockLogo(item)).toEqual({
+    url: "data:image/png;base64,normalized",
+    light: false,
+  });
+  expect(env.decode).toHaveBeenCalledTimes(2);
+  expect(item.dataUrl).toBe("data:image/png;base64,fixture");
+  await prepareStockLogo(item);
+  expect(env.decode).toHaveBeenCalledTimes(2);
 });
 it("settles corrupt, tiny, transparent and blank white images as unavailable", async () => {
   environment({ decode: () => Promise.reject(Error("bad PNG")) });

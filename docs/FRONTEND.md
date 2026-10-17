@@ -230,7 +230,7 @@ scroll root. Each directory batch reads disk cache and decodes/samples contrast
 before rows are published. Next-page loading begins 900px before the bottom;
 uncached images use letters immediately while provider requests run. Disk hits survive app restarts; stale source
 refresh runs behind the displayed cached image. Public asset source/cache limits are documented in
-[stock logos](design-docs/stock-logos.md).
+[stock logos](design-docs/stock-logos.md). Avatars use contain sizing with an 8% safe inset. Preparation trims transparent/flat-white outside space once, preserves colored tiles and aspect ratios, and reuses decoded results; source PNGs stay intact.
 
 ## Brand Identity
 
