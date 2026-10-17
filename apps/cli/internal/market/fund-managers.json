@@ -1,0 +1,130 @@
+[
+  {
+    "id": "berkshire-hathaway",
+    "name": "Berkshire Hathaway Inc (Warren Buffett)",
+    "cik": "0001067983",
+    "profileUrl": "https://13f.info/manager/0001067983-berkshire-hathaway-inc",
+    "websiteUrl": "https://berkshirehathaway.com/",
+    "displayName": "Berkshire Hathaway"
+  },
+  {
+    "id": "panagora-asset",
+    "name": "PANAGORA ASSET MANAGEMENT INC",
+    "cik": "0000883677",
+    "profileUrl": "https://13f.info/manager/0000883677-panagora-asset-management-inc",
+    "websiteUrl": "https://panagora.com/",
+    "displayName": "PanAgora Asset"
+  },
+  {
+    "id": "gqg-partners",
+    "name": "GQG Partners LLC",
+    "cik": "0001697233",
+    "profileUrl": "https://13f.info/manager/0001697233-gqg-partners-llc",
+    "websiteUrl": "https://gqg.com/",
+    "displayName": "GQG Partners"
+  },
+  {
+    "id": "soros-fund",
+    "name": "SOROS FUND MANAGEMENT LLC (George Soros)",
+    "cik": "0001029160",
+    "profileUrl": "https://13f.info/manager/0001029160-soros-fund-management-llc",
+    "websiteUrl": "https://sorosfundmgmt.com/",
+    "displayName": "Soros Fund"
+  },
+  {
+    "id": "temasek-holdings",
+    "name": "Temasek Holdings (Private) Ltd",
+    "cik": "0001021944",
+    "profileUrl": "https://13f.info/manager/0001021944-temasek-holdings-private-ltd",
+    "websiteUrl": "https://temasek.com.sg/",
+    "displayName": "Temasek Holdings"
+  },
+  {
+    "id": "rokos-capital",
+    "name": "Rokos Capital Management LLP (Chris Rokos)",
+    "cik": "0001666335",
+    "profileUrl": "https://13f.info/manager/0001666335-rokos-capital-management-llp",
+    "websiteUrl": "https://rokoscapital.com/",
+    "displayName": "Rokos Capital"
+  },
+  {
+    "id": "chilton-investment",
+    "name": "CHILTON INVESTMENT CO INC.",
+    "cik": "0001332632",
+    "profileUrl": "https://13f.info/manager/0001332632-chilton-investment-co-inc",
+    "websiteUrl": "https://chiltonfunds.com/",
+    "displayName": "Chilton Investment"
+  },
+  {
+    "id": "bridgewater-associates",
+    "name": "Bridgewater Associates, LP (Ray Dalio)",
+    "cik": "0001350694",
+    "profileUrl": "https://13f.info/manager/0001350694-bridgewater-associates-lp",
+    "websiteUrl": "https://bridgewater.com/",
+    "displayName": "Bridgewater Associates"
+  },
+  {
+    "id": "berkshire-asset",
+    "name": "BERKSHIRE ASSET MANAGEMENT LLC/PA",
+    "cik": "0000949012",
+    "profileUrl": "https://13f.info/manager/0000949012-berkshire-asset-management-llc-pa",
+    "websiteUrl": "https://berkshireasset.com/",
+    "displayName": "Berkshire Asset"
+  },
+  {
+    "id": "harris-associates",
+    "name": "HARRIS ASSOCIATES L P",
+    "cik": "0000813917",
+    "profileUrl": "https://13f.info/manager/0000813917-harris-associates-l-p",
+    "websiteUrl": "https://harrisassoc.com/",
+    "displayName": "Harris Associates"
+  },
+  {
+    "id": "whale-rock",
+    "name": "Whale Rock Capital Management LLC (Alex Sacerdote)",
+    "cik": "0001387322",
+    "profileUrl": "https://13f.info/manager/0001387322-whale-rock-capital-management-llc",
+    "websiteUrl": "https://whalerockcapital.com/",
+    "displayName": "Whale Rock"
+  },
+  {
+    "id": "centerbook-partners",
+    "name": "CenterBook Partners LP",
+    "cik": "0001872738",
+    "profileUrl": "https://13f.info/manager/0001872738-centerbook-partners-lp",
+    "websiteUrl": "https://centerbook.com/",
+    "displayName": "CenterBook Partners"
+  },
+  {
+    "id": "a16z-perennial",
+    "name": "a16z Perennial Management, L.P.",
+    "cik": "0002009275",
+    "profileUrl": "https://13f.info/manager/0002009275-a16z-perennial-management-l-p",
+    "websiteUrl": "https://a16z.com/",
+    "displayName": "a16z Perennial"
+  },
+  {
+    "id": "polen-capital",
+    "name": "POLEN CAPITAL MANAGEMENT LLC",
+    "cik": "0001034524",
+    "profileUrl": "https://13f.info/manager/0001034524-polen-capital-management-llc",
+    "websiteUrl": "https://polencapital.com/",
+    "displayName": "Polen Capital"
+  },
+  {
+    "id": "exoduspoint-capital",
+    "name": "ExodusPoint Capital Management, LP",
+    "cik": "0001736225",
+    "profileUrl": "https://13f.info/manager/0001736225-exoduspoint-capital-management-lp",
+    "websiteUrl": "https://exoduspoint.com/",
+    "displayName": "ExodusPoint Capital"
+  },
+  {
+    "id": "viking-global",
+    "name": "VIKING GLOBAL INVESTORS LP (Andreas Halvorsen)",
+    "cik": "0001103804",
+    "profileUrl": "https://13f.info/manager/0001103804-viking-global-investors-lp",
+    "websiteUrl": "https://vikingglobal.com/",
+    "displayName": "Viking Global"
+  }
+]

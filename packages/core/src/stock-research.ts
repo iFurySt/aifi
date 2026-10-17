@@ -17,7 +17,8 @@ export const researchDatasets = [
 export type ResearchDataset = (typeof researchDatasets)[number];
 export interface ResearchConfig {
   revision: number;
-  fundsSource?: "yahoo" | "fmp";
+  fundsSource?: "yahoo" | "fmp" | "thirteenf";
+  fundsHistoryQuarters?: number;
   analystSource?: "yahoo" | "fmp";
   priceSource?: "yahoo" | "massive";
   profileSource?: "yahoo" | "massive";
@@ -32,12 +33,12 @@ export interface ResearchConfig {
   limits: Record<
     "massive" | "sec" | "fmp" | "yahoo",
     { perMinute: number; perDay: number }
-  >;
+  > & { thirteenf?: { perMinute: number; perDay: number } };
 }
 export function researchProvider(
   config: ResearchConfig,
   dataset: ResearchDataset,
-): "yahoo" | "massive" | "sec" | "fmp" {
+): "yahoo" | "massive" | "sec" | "fmp" | "thirteenf" {
   if (dataset === "funds") return config.fundsSource ?? "yahoo";
   if (dataset === "analyst") return config.analystSource ?? "yahoo";
   if (dataset === "earnings" || dataset === "peers") return "yahoo";
@@ -106,6 +107,7 @@ export interface OwnershipSummary {
   institutionsCount?: number;
 }
 export interface ResearchPayload {
+  reportPeriods?: string[];
   ownership?: OwnershipSummary;
   version?: number;
   quote?: MarketQuote;
@@ -424,6 +426,7 @@ export function isResearchSourceURL(value: string): boolean {
         "www.apple.com",
         "query1.finance.yahoo.com",
         "finance.yahoo.com",
+        "13f.info",
         "api.massive.com",
         "massive.com",
         "financialmodelingprep.com",

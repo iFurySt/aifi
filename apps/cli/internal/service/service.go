@@ -252,6 +252,24 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 		}
 		return s.DB.SaveResearchConfig(ctx, value)
 	case "research.sync":
+		if req.Params != nil && string(req.Params) != "null" {
+			var params struct {
+				Dataset string `json:"dataset"`
+			}
+			if e := decode(req.Params, &params); e != nil || params.Dataset != "funds" {
+				return nil, errors.New("invalid sync dataset")
+			}
+			if s.Offline {
+				return nil, errors.New("network is paused")
+			}
+			if e := research.New(s.DB, s.DataDir, s.Offline).Reconcile(ctx, false); e != nil {
+				return nil, e
+			}
+			if e := s.DB.RequestFundsSync(ctx); e != nil {
+				return nil, e
+			}
+			return s.DB.ResearchStatus(ctx)
+		}
 		if s.Offline {
 			return nil, errors.New("network is paused")
 		}

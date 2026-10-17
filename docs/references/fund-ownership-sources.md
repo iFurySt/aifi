@@ -11,6 +11,7 @@ Our old panel showed one FMP quarter in a generic table behind an API key.
 
 | Source | Access | Coverage and tradeoffs | AIFi choice |
 | --- | --- | --- | --- |
+| 13f.info public manager/CUSIP history | No key; public MIT upstream and live probes | Historical common-share observations for a reviewed CIK roster; exact symbol/CUSIP matching; manager report list confirms zeros. Not an institutional census or split-adjusted trade feed. | Selectable historical collector, default 14 quarters, 16 tracked managers. |
 | Yahoo public `/quote/{symbol}/holders/` | No key/cookie | Top institutional and mutual-fund samples, aggregate ownership, true per-holder report dates, rounded change fractions. No full historical endpoint. | Default keyless collector, configurable weekly schedule; retain locally observed history. |
 | FMP stable `institutional-ownership/extract-analytics/holder` | Key and endpoint entitlement | Paginated reported institutional holdings for a requested quarter. Existing optional adapter. | Keep selectable; do not assume free-tier permission or fabricate history. |
 | Nasdaq public institutional-holdings | No key | Broader holder table and changes; exact period/date and value unit (thousands) matter. OpenBB ships an adapter. | Local probes failed (HTTP2 error, HTTP1 timeout); not enabled as an unverified fallback. |
@@ -55,7 +56,39 @@ commits precede presentation; store read failures or source failures retain the
 last good snapshot. Returning after restart works offline. History is not
 backfilled by copying adjacent periods or treating an absent manager as zero.
 
-## Next complete 13F backfill
+## Historical backfill implemented
+
+Selecting `thirteenf` queues a bounded historical job for each eligible directory
+symbol. Default window is 14 quarter ends; settings supports 4–20 quarters and
+independent request budgets (12/minute, 2,000/day). Common reporting quarter is
+at least 45 days old. Existing source choices and pauses are preserved. The
+Funds Backfill action queues only the selected Funds provider, not other datasets.
+
+Exact ticker autocomplete resolves one CUSIP. Each reviewed CIK has a fixed
+manager URL; HTML filing metadata verifies identity and complete report/accession.
+The fixed JSON manager/CUSIP route supplies reported shares and USD-thousands
+values, normalized to USD. Put/call rows are excluded. Ambiguous amendments,
+missing reports or unknown mappings remain gaps. A complete portfolio report
+without that common-share position can establish zero. Only adjacent reported
+quarters determine Added/Trimmed/New/Exited; these are holding changes, not trades.
+The oldest visible quarter can have an unknown change without a preceding report.
+
+Profile/history responses are staged in SQLite (24-hour store lifetime), shared
+across jobs and retries. Each completed issuer payload is committed atomically
+before renderer reads. Full-directory jobs proceed under the budget; this does
+not mean every issuer has been backfilled. Unsupported symbols remain explicit.
+A large directory takes multiple days; no source requests run on page navigation.
+
+The reference screenshots guide layout only. Some reference historical numbers
+differ from source filings; AIFi retains independently collected reported values.
+
+Fund logo metadata is maintained by CIK in the separate public
+[fund catalog](https://github.com/ifuryst/company-logo-catalog/blob/main/funds-catalog.json).
+Its reviewed fixed URLs, PNG dimensions and SHA-256 hashes are bundled and safely
+refreshed. Original artwork is not republished. Sixteen tracked managers have
+reviewed logos; tiny official favicons retain their native limits.
+
+## Future complete SEC backfill
 
 Run a global quarterly SEC import, not ~7,000 redundant archive downloads. Add a
 reviewed CUSIP/security-class to directory mapping, manager CIKs, report vs filing
@@ -74,3 +107,6 @@ accessions and never infer real-time buys/sells from disclosed quarter ends.
 - Local OpenBB Nasdaq `institutional_ownership.py`: keyless ranking/filter model and thousands-value conversion; SEC `form_13FHR.py`/`parse_13f.py`: CUSIP, options and amendment boundaries.
 - Dexter research skills mention institutional holders as an evidence input;
   ai-hedge-fund's paper-fund bookkeeping is a separate domain, not a holder source.
+
+- [13f.info public source](https://github.com/toddwschneider/sec-13f-filings): manager/CUSIP routes and data-table share/value format.
+- [Berkshire Hathaway manager history](https://13f.info/manager/0001067983-berkshire-hathaway-inc): report dates, filing identity and historical common-share disclosures.

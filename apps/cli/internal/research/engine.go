@@ -7,6 +7,7 @@ import (
 	"crypto/cipher"
 	"encoding/base64"
 	"errors"
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -162,6 +163,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
+		jobs = append(jobs, market.Job{Provider: "thirteenf", Dataset: "funds", Subject: symbol, Window: market.FundHistoryWindow(now, cfg.FundsHistoryQuarters)})
 		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds"} {
 			jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: symbol})
 		}
@@ -195,6 +197,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	if err = e.DB.BoundPriceJobs(ctx, end.AddDate(0, 0, -cfg.HistoryDays+1).Format("2006-01-02"), now); err != nil {
 		return err
+	}
+	if err = e.DB.BoundFundsJobs(ctx, market.FundHistoryWindow(now, cfg.FundsHistoryQuarters), now); err != nil {
+		return fmt.Errorf("fund generation: %w", err)
 	}
 	if err = e.DB.UseSharedActions(ctx); err != nil {
 		return err
@@ -239,7 +244,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if err != nil {
 		return false, nil
 	}
-	if p != "sec" && p != "yahoo" && keys["apiKey"] == "" {
+	if p != "sec" && p != "yahoo" && p != "thirteenf" && keys["apiKey"] == "" {
 		return false, nil
 	}
 	if p == "sec" {
@@ -360,7 +365,7 @@ func (e *Engine) Run(ctx context.Context) {
 	}
 	var workers sync.WaitGroup
 	// One worker per provider; all requests also pass the durable shared budget.
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf"} {
 		workers.Add(1)
 		go func(provider string) {
 			defer workers.Done()

@@ -45,3 +45,25 @@
 - `packages/ui/src/pages/Funds.tsx`, `funds.css`, `FundHistoryChart.tsx`
 - `scripts/check-funds.mjs` and isolated synthetic ownership fixture
 - Design/frontend/quality/release documentation
+
+
+## Follow-up: historical reports, ring and manager logos
+
+The user requested the reference-style ring, true quarterly backfill and shared
+public Fund Logo catalog. Added keyless 13f.info collection for 16 verified CIKs,
+exact symbol/CUSIP resolution, bounded 4–20-quarter jobs (default 14), shared
+staging, source budgets, filing-based absence proof and options exclusion. Data
+continues through collect → SQLite → local reads. Scoped Funds sync preserves
+other collection jobs. Existing Yahoo/FMP choices remain available.
+
+The Funds view now uses an interactive ownership ring, reporting-period control,
+colored positions and a multi-quarter share table. Positions compare adjacent
+reports; unknown reports stay unknown and deltas are not trading flows. Fund
+logos are maintained in the public company-logo-catalog repository and loaded
+through a narrow CIK host port with reviewed PNG hash/dimension checks and local
+cache reuse. Reference artwork/data was not copied.
+
+Validation includes parser/source identity and absence tests, scoped-sync/store
+checks, adjacent-quarter domain tests, logo identity/cache/offline tests and an
+isolated desktop/mobile ring/table interaction gate. See the completed execution
+plan and source coverage notes for observed backfill and remaining limits.

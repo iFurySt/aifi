@@ -45,12 +45,20 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	if e != nil {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
-	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true}[u.Host] {
+	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true, "13f.info": true}[u.Host] {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
 	q := u.Query()
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
+	case "thirteenf":
+		if !valid13FEndpoint(u) {
+			return nil, &Failure{Code: "invalid_endpoint"}
+		}
+		headers.Set("User-Agent", "AIFi/0.1 (+https://github.com/ifuryst/aifi)")
+		if strings.HasPrefix(u.Path, "/manager/") {
+			headers.Set("Accept", "text/html")
+		}
 	case "yahoo":
 		if u.Host != "query1.finance.yahoo.com" && !(u.Host == "finance.yahoo.com" && strings.HasPrefix(u.Path, "/quote/") && (strings.HasSuffix(u.Path, "/profile/") || strings.HasSuffix(u.Path, "/analysis/") || strings.HasSuffix(u.Path, "/holders/"))) {
 			return nil, &Failure{Code: "invalid_endpoint"}
@@ -129,7 +137,7 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	if len(raw) > 32<<20 || len(raw) == 0 {
 		return nil, &Failure{Code: "invalid_response"}
 	}
-	if provider == "yahoo" && u.Host == "finance.yahoo.com" {
+	if (provider == "yahoo" && u.Host == "finance.yahoo.com") || (provider == "thirteenf" && strings.HasPrefix(u.Path, "/manager/")) {
 		if len(raw) > 4<<20 {
 			return nil, &Failure{Code: "source_window_too_large"}
 		}
@@ -229,7 +237,9 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 			e = c.prices(ctx, j, &result)
 		}
 	case "funds":
-		if j.Provider == "yahoo" {
+		if j.Provider == "thirteenf" {
+			e = c.thirteenFFunds(ctx, j, &result)
+		} else if j.Provider == "yahoo" {
 			e = c.yahooFunds(ctx, j, &result)
 		} else {
 			e = c.optional(ctx, j, &result)

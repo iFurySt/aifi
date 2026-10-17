@@ -30,17 +30,18 @@ type ProviderLimit struct {
 	PerDay    int `json:"perDay"`
 }
 type ResearchConfig struct {
-	Revision      int                      `json:"revision"`
-	PriceSource   string                   `json:"priceSource"`
-	ProfileSource string                   `json:"profileSource"`
-	FactsSource   string                   `json:"factsSource"`
-	FundsSource   string                   `json:"fundsSource"`
-	AnalystSource string                   `json:"analystSource"`
-	FilingsSource string                   `json:"filingsSource"`
-	Automatic     bool                     `json:"automatic"`
-	HistoryDays   int                      `json:"historyDays"`
-	Datasets      map[string]DatasetConfig `json:"datasets"`
-	Limits        map[string]ProviderLimit `json:"limits"`
+	Revision             int                      `json:"revision"`
+	PriceSource          string                   `json:"priceSource"`
+	ProfileSource        string                   `json:"profileSource"`
+	FactsSource          string                   `json:"factsSource"`
+	FundsHistoryQuarters int                      `json:"fundsHistoryQuarters"`
+	FundsSource          string                   `json:"fundsSource"`
+	AnalystSource        string                   `json:"analystSource"`
+	FilingsSource        string                   `json:"filingsSource"`
+	Automatic            bool                     `json:"automatic"`
+	HistoryDays          int                      `json:"historyDays"`
+	Datasets             map[string]DatasetConfig `json:"datasets"`
+	Limits               map[string]ProviderLimit `json:"limits"`
 }
 
 func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
@@ -55,6 +56,12 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	c.Revision = revision
 	if c.Limits == nil {
 		c.Limits = map[string]ProviderLimit{"massive": {5, 10000}, "sec": {240, 100000}, "fmp": {4, 200}}
+	}
+	if c.FundsHistoryQuarters == 0 {
+		c.FundsHistoryQuarters = 14
+	}
+	if c.Limits["thirteenf"].PerMinute == 0 {
+		c.Limits["thirteenf"] = ProviderLimit{12, 2000}
 	}
 	if c.Limits["yahoo"].PerMinute == 0 {
 		c.Limits["yahoo"] = ProviderLimit{20, 10000}
@@ -116,13 +123,22 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	}
 }
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
-	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 4 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
+	if c.FundsHistoryQuarters == 0 {
+		c.FundsHistoryQuarters = 14
+	}
+	if c.Limits != nil && c.Limits["thirteenf"].PerMinute == 0 {
+		c.Limits["thirteenf"] = ProviderLimit{12, 2000}
+	}
+	if c.FundsHistoryQuarters < 4 || c.FundsHistoryQuarters > 20 {
+		return c, errors.New("invalid funds history")
+	}
+	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 5 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
 	}
 	if c.FundsSource == "" {
 		c.FundsSource = "yahoo"
 	}
-	if c.FundsSource != "yahoo" && c.FundsSource != "fmp" {
+	if c.FundsSource != "yahoo" && c.FundsSource != "fmp" && c.FundsSource != "thirteenf" {
 		return c, errors.New("invalid funds source")
 	}
 	if c.AnalystSource != "yahoo" && c.AnalystSource != "fmp" {
@@ -137,7 +153,7 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 			return c, errors.New("invalid dataset interval")
 		}
 	}
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf"} {
 		v, ok := c.Limits[p]
 		if !ok || v.PerMinute < 1 || v.PerMinute > 300 || v.PerDay < 1 || v.PerDay > 1000000 {
 			return c, errors.New("invalid provider budget")
@@ -770,7 +786,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if err != nil {
 		return out, err
 	}
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf"} {
 		index := -1
 		for i, v := range out.Providers {
 			if v.Provider == p {
@@ -786,7 +802,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 			if !strings.Contains(settings.SECUserAgent, "@") {
 				out.Providers[index].Blocked = "needs_contact"
 			}
-		} else if p != "yahoo" && !configured[p] {
+		} else if p != "yahoo" && p != "thirteenf" && !configured[p] {
 			out.Providers[index].Blocked = "needs_key"
 		}
 	}

@@ -74,15 +74,16 @@ type OwnershipSummary struct {
 	InstitutionsCount   *float64 `json:"institutionsCount,omitempty"`
 }
 type Payload struct {
-	Ownership *OwnershipSummary `json:"ownership,omitempty"`
-	Version   int               `json:"version,omitempty"`
-	Quote     *MarketQuote      `json:"quote,omitempty"`
-	Profile   *Profile          `json:"profile,omitempty"`
-	Facts     []Fact            `json:"facts,omitempty"`
-	Filings   []Filing          `json:"filings,omitempty"`
-	Records   []Record          `json:"records,omitempty"`
-	Window    string            `json:"window,omitempty"`
-	Complete  bool              `json:"complete"`
+	ReportPeriods []string          `json:"reportPeriods,omitempty"`
+	Ownership     *OwnershipSummary `json:"ownership,omitempty"`
+	Version       int               `json:"version,omitempty"`
+	Quote         *MarketQuote      `json:"quote,omitempty"`
+	Profile       *Profile          `json:"profile,omitempty"`
+	Facts         []Fact            `json:"facts,omitempty"`
+	Filings       []Filing          `json:"filings,omitempty"`
+	Records       []Record          `json:"records,omitempty"`
+	Window        string            `json:"window,omitempty"`
+	Complete      bool              `json:"complete"`
 }
 type Evidence struct {
 	URL       string

@@ -65,9 +65,11 @@ function DatasetRow({
       <div>
         <strong>{names[dataset]}</strong>
         <p>
-          {researchProvider(config, dataset) === "yahoo"
-            ? "Yahoo Finance · No API key"
-            : sources[dataset]}
+          {researchProvider(config, dataset) === "thirteenf"
+            ? "13f.info · Reported history · No API key"
+            : researchProvider(config, dataset) === "yahoo"
+              ? "Yahoo Finance · No API key"
+              : sources[dataset]}
           {status
             ? ` · ${status.stored.toLocaleString()} / ${status.total.toLocaleString()} synced`
             : ""}
@@ -154,12 +156,12 @@ function BudgetRow({
   busy,
   save,
 }: {
-  provider: "massive" | "sec" | "fmp" | "yahoo";
+  provider: "massive" | "sec" | "fmp" | "yahoo" | "thirteenf";
   config: ResearchConfig;
   busy: boolean;
   save: (c: ResearchConfig) => Promise<void>;
 }) {
-  const limit = config.limits[provider],
+  const limit = config.limits[provider] ?? { perMinute: 12, perDay: 2000 },
     [rpm, setRPM] = useState(String(limit.perMinute)),
     [daily, setDaily] = useState(String(limit.perDay));
   useEffect(() => {
@@ -178,7 +180,7 @@ function BudgetRow({
       <div>
         <strong>{provider.toUpperCase()}</strong>
         <p>
-          {provider === "yahoo"
+          {provider === "yahoo" || provider === "thirteenf"
             ? "Public endpoint · Personal research"
             : "Match your account limits."}
         </p>
@@ -380,6 +382,14 @@ export function ResearchSyncSettings() {
                         void save({ ...state.config, [field]: value })
                       }
                       options={[
+                        ...(field === "fundsSource"
+                          ? [
+                              {
+                                value: "thirteenf",
+                                label: "13f.info · Fund history · No key",
+                              },
+                            ]
+                          : []),
                         { value: "yahoo", label: "Yahoo Finance · No key" },
                         {
                           value: official,
@@ -416,6 +426,28 @@ export function ResearchSyncSettings() {
                   />
                 </div>
               </div>
+              <div className="setting-row">
+                <div>
+                  <strong>Fund history</strong>
+                </div>
+                <div className="setting-control">
+                  <Select
+                    label="Fund history quarters"
+                    value={String(state.config.fundsHistoryQuarters ?? 14)}
+                    disabled={busy}
+                    options={[4, 8, 14, 20].map((n) => ({
+                      value: String(n),
+                      label: `${n} quarters`,
+                    }))}
+                    onValueChange={(value) =>
+                      void save({
+                        ...state.config,
+                        fundsHistoryQuarters: Number(value),
+                      })
+                    }
+                  />
+                </div>
+              </div>
               {researchDatasets.map((d) => (
                 <DatasetRow
                   key={d}
@@ -439,15 +471,17 @@ export function ResearchSyncSettings() {
         <h2>Request limits</h2>
         <div className="setting-card">
           {state &&
-            (["yahoo", "massive", "sec", "fmp"] as const).map((p) => (
-              <BudgetRow
-                key={p}
-                provider={p}
-                config={state.config}
-                busy={busy}
-                save={save}
-              />
-            ))}
+            (["thirteenf", "yahoo", "massive", "sec", "fmp"] as const).map(
+              (p) => (
+                <BudgetRow
+                  key={p}
+                  provider={p}
+                  config={state.config}
+                  busy={busy}
+                  save={save}
+                />
+              ),
+            )}
         </div>
       </section>
     </>

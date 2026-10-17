@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
+	"time"
 
 	"github.com/ifuryst/aifi/apps/cli/internal/market"
 )
@@ -25,4 +26,23 @@ func (s *Store) FundsHistory(ctx context.Context, provider, symbol string) ([]ma
 		return nil, err
 	}
 	return payload.Records, nil
+}
+
+func (s *Store) BoundFundsJobs(ctx context.Context, window string, now time.Time) error {
+	_, err := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE provider='thirteenf' AND dataset='funds' AND window!=? AND state!='running'", window)
+	if err != nil {
+		return err
+	}
+	_, err = s.db.ExecContext(ctx, "UPDATE research_jobs SET state='queued',next_run=? WHERE provider='thirteenf' AND dataset='funds' AND window=? AND state='retired'", stamp(now), window)
+	return err
+}
+
+// Explicit dataset sync preserves independent datasets and provider budgets.
+func (s *Store) RequestFundsSync(ctx context.Context) error {
+	cfg, err := s.ResearchConfig(ctx)
+	if err != nil {
+		return err
+	}
+	_, err = s.db.ExecContext(ctx, "UPDATE research_jobs SET state='queued',manual=1,next_run=?,error='' WHERE dataset='funds' AND provider=? AND state NOT IN ('running','retired')", stamp(time.Now()), cfg.FundsSource)
+	return err
 }

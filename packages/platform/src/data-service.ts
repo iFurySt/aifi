@@ -57,7 +57,8 @@ export const saveResearchConfig = (
   requestLocalData("research.settings", config) as Promise<
     import("@aifi/core").ResearchConfig
   >;
-export const syncResearch = () => requestLocalData("research.sync");
+export const syncResearch = (dataset?: "funds") =>
+  requestLocalData("research.sync", dataset ? { dataset } : undefined);
 
 export const readStorageUsage = () =>
   requestLocalData("storage.read") as Promise<

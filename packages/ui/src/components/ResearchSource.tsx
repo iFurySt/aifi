@@ -11,6 +11,8 @@ export function ResearchSource({
   detail?: ReactNode;
 }) {
   if (!view) return null;
+  const providerLabel =
+    view.provider === "thirteenf" ? "13F.INFO" : view.provider.toUpperCase();
   const fetched = new Date(view.fetchedAt);
   const sources = [...new Set(view.sources)]
     .filter(isResearchSourceURL)
@@ -19,9 +21,9 @@ export function ResearchSource({
     <DropdownMenu.Root>
       <DropdownMenu.Trigger
         className="research-source-chip"
-        aria-label={`${view.provider.toUpperCase()} source details`}
+        aria-label={`${providerLabel} source details`}
       >
-        {view.provider.toUpperCase()}
+        {providerLabel}
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content
@@ -31,7 +33,7 @@ export function ResearchSource({
           collisionPadding={12}
         >
           <DropdownMenu.Label className="research-source-heading">
-            {view.provider.toUpperCase()}
+            {providerLabel}
             <span>Source details</span>
           </DropdownMenu.Label>
           <DropdownMenu.Label className="research-source-details">

@@ -79,3 +79,47 @@ func TestFundsSettingsDefaultsAndExistingPause(t *testing.T) {
 		t.Fatal("unknown funds source accepted")
 	}
 }
+
+func TestHistoricalFundsConfigAndScopedSync(t *testing.T) {
+	ctx := context.Background()
+	db, e := Open(ctx, t.TempDir())
+	if e != nil {
+		t.Fatal(e)
+	}
+	defer db.Close()
+	cfg, e := db.ResearchConfig(ctx)
+	if e != nil {
+		t.Fatal(e)
+	}
+	cfg.FundsSource = "thirteenf"
+	cfg.FundsHistoryQuarters = 14
+	cfg, e = db.SaveResearchConfig(ctx, cfg)
+	if e != nil || cfg.Limits["thirteenf"].PerMinute != 12 {
+		t.Fatal(cfg, e)
+	}
+	now := time.Now().UTC()
+	jobs := []market.Job{{Provider: "thirteenf", Dataset: "funds", Subject: "AAPL", Window: "2026-06-30:14"}, {Provider: "thirteenf", Dataset: "funds", Subject: "AAPL", Window: "2026-06-30:8"}, {Provider: "yahoo", Dataset: "funds", Subject: "AAPL"}, {Provider: "yahoo", Dataset: "prices", Subject: "AAPL"}}
+	if e = db.AddResearchJobs(ctx, jobs, now); e != nil {
+		t.Fatal(e)
+	}
+	if _, e = db.db.ExecContext(ctx, "UPDATE research_jobs SET state='idle'"); e != nil {
+		t.Fatal(e)
+	}
+	if e = db.BoundFundsJobs(ctx, "2026-06-30:14", now); e != nil {
+		t.Fatal(e)
+	}
+	if e = db.RequestFundsSync(ctx); e != nil {
+		t.Fatal(e)
+	}
+	var n int
+	if e = db.db.QueryRowContext(ctx, "SELECT COUNT(*) FROM research_jobs WHERE state='queued' AND manual=1").Scan(&n); e != nil || n != 1 {
+		t.Fatal(n, e)
+	}
+	if e = db.db.QueryRowContext(ctx, "SELECT COUNT(*) FROM research_jobs WHERE provider='yahoo' AND state='idle' AND manual=0").Scan(&n); e != nil || n != 2 {
+		t.Fatal(n, e)
+	}
+	cfg.FundsHistoryQuarters = 100
+	if _, e = db.SaveResearchConfig(ctx, cfg); e == nil {
+		t.Fatal("unbounded history accepted")
+	}
+}
