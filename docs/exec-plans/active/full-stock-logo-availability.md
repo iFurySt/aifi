@@ -47,3 +47,9 @@ as if it were the issuer's logo.
 
 - [ ] Find evidence-backed sources for the remaining 338 securities.
 - [ ] Add accepted PNG sources or a separately reviewed SVG conversion path for 38.
+
+A further source pass is recorded in the public audit's additional-source-probes
+file: LoadLogo's BXBL image was a ticker-letter monogram even with fallback=404
+(and metadata was 404); AMRO exceeded the host height cap despite size=128. These
+were not accepted as new coverage. An extra NYSE repository inventory hit GitHub
+API 403 rate limits and stopped. Counts remain 7,108 usable / 376 unresolved.
