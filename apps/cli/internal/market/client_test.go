@@ -101,10 +101,10 @@ func TestSECInsiderXMLUsesStoredSubmissionEvidence(t *testing.T) {
 		if strings.Contains(r.URL.Path, "xslF345") {
 			t.Fatal("HTML transform fetched")
 		}
-		return 200, `<ownershipDocument><issuer><issuerCik>320193</issuerCik></issuer><reportingOwner><reportingOwnerId><rptOwnerName>Example</rptOwnerName></reportingOwnerId><reportingOwnerRelationship><officerTitle>Officer</officerTitle></reportingOwnerRelationship></reportingOwner><nonDerivativeTable><nonDerivativeTransaction><transactionDate><value>2026-10-12</value></transactionDate><transactionCoding><transactionCode>F</transactionCode></transactionCoding><transactionAmounts><transactionShares><value>10</value></transactionShares><transactionPricePerShare><value>100</value></transactionPricePerShare></transactionAmounts></nonDerivativeTransaction></nonDerivativeTable></ownershipDocument>`
+		return 200, `<ownershipDocument><documentType>4</documentType><issuer><issuerCik>320193</issuerCik></issuer><reportingOwner><reportingOwnerId><rptOwnerName>Example</rptOwnerName></reportingOwnerId><reportingOwnerRelationship><officerTitle>Officer</officerTitle></reportingOwnerRelationship></reportingOwner><nonDerivativeTable><nonDerivativeTransaction><transactionDate><value>2026-10-12</value></transactionDate><transactionCoding><transactionCode>F</transactionCode></transactionCoding><transactionAmounts><transactionShares><value>10</value></transactionShares><transactionPricePerShare><value>100</value></transactionPricePerShare></transactionAmounts></nonDerivativeTransaction></nonDerivativeTable></ownershipDocument>`
 	})
 	c.ReadPayload = func(context.Context, string, string) (Payload, error) {
-		return Payload{Filings: []Filing{{Form: "4", URL: "https://www.sec.gov/Archives/edgar/data/320193/abc/xslF345X05/form4.xml"}}}, nil
+		return Payload{Filings: []Filing{{Form: "4", Filed: "2026-10-13", Accession: "0000000000-26-000001", URL: "https://www.sec.gov/Archives/edgar/data/320193/000000000026000001/xslF345X05/form4.xml"}}}, nil
 	}
 	c.ReadEvidence = func(context.Context, string, string) ([]Evidence, error) {
 		return []Evidence{{URL: "https://data.sec.gov/submissions/CIK0000320193.json", Body: []byte(`{"original":true}`)}}, nil

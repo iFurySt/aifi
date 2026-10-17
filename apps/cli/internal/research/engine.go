@@ -185,7 +185,11 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 		}
 		if cik != "" {
 			for _, d := range []string{"filings", "facts", "insiders"} {
-				jobs = append(jobs, market.Job{Provider: "sec", Dataset: d, Subject: "cik:" + cik, Manual: manualIssuers[cik]})
+				j := market.Job{Provider: "sec", Dataset: d, Subject: "cik:" + cik, Manual: manualIssuers[cik]}
+				if d == "insiders" {
+					j.Window = fmt.Sprintf("forms:%d", cfg.InsiderHistoryFilings)
+				}
+				jobs = append(jobs, j)
 			}
 		}
 	}
@@ -201,6 +205,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	if err = e.DB.BoundFundsJobs(ctx, market.FundHistoryWindow(now, cfg.FundsHistoryQuarters), now); err != nil {
 		return fmt.Errorf("fund generation: %w", err)
+	}
+	if err = e.DB.BoundInsiderJobs(ctx, fmt.Sprintf("forms:%d", cfg.InsiderHistoryFilings), now); err != nil {
+		return err
 	}
 	if err = e.DB.UseSharedActions(ctx); err != nil {
 		return err

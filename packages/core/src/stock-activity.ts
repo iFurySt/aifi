@@ -143,3 +143,121 @@ export function activityCutoff(range: string, asOf: string): string {
   d.setUTCMonth(d.getUTCMonth() - (range === "6M" ? 6 : 12));
   return d.toISOString().slice(0, 10);
 }
+
+export interface InsiderTrade {
+  id: string;
+  name: string;
+  role?: string;
+  date: string;
+  filed?: string;
+  side: TradeSide;
+  code: string;
+  shares?: number;
+  price?: number;
+  value?: number;
+  sharesAfter?: number;
+  derivative: boolean;
+  amendment: boolean;
+  superseded: boolean;
+  eligible: boolean;
+  security?: string;
+  ownership?: string;
+  url?: string;
+  plan: boolean;
+}
+const nonnegative = (raw: unknown) => {
+  const n = activityNumber(raw);
+  return n !== undefined && n >= 0 ? n : undefined;
+};
+export function insiderTrades(view?: ResearchDatasetView): InsiderTrade[] {
+  const rows: InsiderTrade[] = [];
+  for (const [i, r] of (view?.data.records ?? []).entries()) {
+    const name = text(r, "name", "reportingName"),
+      date = text(r, "date", "transactionDate");
+    if (!name || !activityDate(date)) continue;
+    const code = text(r, "code"),
+      side: TradeSide = code === "P" ? "buy" : code === "S" ? "sell" : "other";
+    const shares = nonnegative(r.shares),
+      price = nonnegative(r.price),
+      sharesAfter = nonnegative(r.sharesAfter);
+    const derivative = r.securityKind === "derivative",
+      amendment = r.amendment === true,
+      superseded = r.superseded === true;
+    const direction = text(r, "direction");
+    const eligible =
+      !derivative &&
+      !amendment &&
+      !superseded &&
+      side !== "other" &&
+      ((side === "buy" && direction === "A") ||
+        (side === "sell" && direction === "D"));
+    const rawValue =
+      shares !== undefined && price !== undefined ? shares * price : undefined;
+    const value =
+      rawValue !== undefined && Number.isFinite(rawValue)
+        ? rawValue
+        : undefined;
+    let url: string | undefined;
+    try {
+      const u = new URL(text(r, "url"));
+      if (
+        u.protocol === "https:" &&
+        u.hostname === "www.sec.gov" &&
+        !u.username &&
+        !u.password &&
+        !u.port &&
+        !u.search &&
+        !u.hash &&
+        /^\/Archives\/edgar\/data\/\d+\/\d{18}\/(?:xslF345X\d+\/)?[a-zA-Z0-9_.-]+\.xml$/.test(
+          u.pathname,
+        )
+      )
+        url = u.href;
+    } catch {}
+    const filed = text(r, "filed");
+    rows.push({
+      id: text(r, "id") || `${r.accession}:${r.securityKind}:${r.row ?? i}`,
+      name,
+      role: text(r, "role") || undefined,
+      date,
+      filed: activityDate(filed) ? filed : undefined,
+      side,
+      code,
+      shares,
+      price,
+      value,
+      sharesAfter,
+      derivative,
+      amendment,
+      superseded,
+      eligible,
+      security: text(r, "security") || undefined,
+      ownership: text(r, "ownership") || undefined,
+      url,
+      plan: r.plan10b5 === true,
+    });
+  }
+  return rows.sort(
+    (a, b) =>
+      b.date.localeCompare(a.date) ||
+      (b.filed ?? "").localeCompare(a.filed ?? "") ||
+      a.id.localeCompare(b.id),
+  );
+}
+export const insiderCodeLabel = (code: string) =>
+  ({
+    P: "Purchase",
+    S: "Sale",
+    A: "Award",
+    M: "Exercise",
+    F: "Tax withholding",
+    G: "Gift",
+    C: "Conversion",
+    D: "Disposition",
+    J: "Other",
+    K: "Equity swap",
+    U: "Tender",
+    W: "Inheritance",
+    X: "Exercise",
+  })[code] ??
+  (code || "Other");

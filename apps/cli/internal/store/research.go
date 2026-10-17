@@ -30,19 +30,20 @@ type ProviderLimit struct {
 	PerDay    int `json:"perDay"`
 }
 type ResearchConfig struct {
-	Revision             int                      `json:"revision"`
-	PriceSource          string                   `json:"priceSource"`
-	ProfileSource        string                   `json:"profileSource"`
-	FactsSource          string                   `json:"factsSource"`
-	PoliticiansSource    string                   `json:"politiciansSource"`
-	FundsHistoryQuarters int                      `json:"fundsHistoryQuarters"`
-	FundsSource          string                   `json:"fundsSource"`
-	AnalystSource        string                   `json:"analystSource"`
-	FilingsSource        string                   `json:"filingsSource"`
-	Automatic            bool                     `json:"automatic"`
-	HistoryDays          int                      `json:"historyDays"`
-	Datasets             map[string]DatasetConfig `json:"datasets"`
-	Limits               map[string]ProviderLimit `json:"limits"`
+	Revision              int                      `json:"revision"`
+	PriceSource           string                   `json:"priceSource"`
+	ProfileSource         string                   `json:"profileSource"`
+	FactsSource           string                   `json:"factsSource"`
+	PoliticiansSource     string                   `json:"politiciansSource"`
+	InsiderHistoryFilings int                      `json:"insiderHistoryFilings"`
+	FundsHistoryQuarters  int                      `json:"fundsHistoryQuarters"`
+	FundsSource           string                   `json:"fundsSource"`
+	AnalystSource         string                   `json:"analystSource"`
+	FilingsSource         string                   `json:"filingsSource"`
+	Automatic             bool                     `json:"automatic"`
+	HistoryDays           int                      `json:"historyDays"`
+	Datasets              map[string]DatasetConfig `json:"datasets"`
+	Limits                map[string]ProviderLimit `json:"limits"`
 }
 
 func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
@@ -66,6 +67,9 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	}
 	if c.Limits["congress"].PerMinute == 0 {
 		c.Limits["congress"] = ProviderLimit{6, 450}
+	}
+	if c.InsiderHistoryFilings == 0 {
+		c.InsiderHistoryFilings = 120
 	}
 	if c.FundsHistoryQuarters == 0 {
 		c.FundsHistoryQuarters = 14
@@ -144,11 +148,17 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 	if c.Limits != nil && c.Limits["congress"].PerMinute == 0 {
 		c.Limits["congress"] = ProviderLimit{6, 450}
 	}
+	if c.InsiderHistoryFilings == 0 {
+		c.InsiderHistoryFilings = 120
+	}
 	if c.FundsHistoryQuarters == 0 {
 		c.FundsHistoryQuarters = 14
 	}
 	if c.Limits != nil && c.Limits["thirteenf"].PerMinute == 0 {
 		c.Limits["thirteenf"] = ProviderLimit{12, 2000}
+	}
+	if c.InsiderHistoryFilings != 40 && c.InsiderHistoryFilings != 120 && c.InsiderHistoryFilings != 240 {
+		return c, errors.New("invalid insider history")
 	}
 	if c.FundsHistoryQuarters < 4 || c.FundsHistoryQuarters > 20 {
 		return c, errors.New("invalid funds history")

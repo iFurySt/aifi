@@ -71,3 +71,44 @@ it("groups real dates and signed purchases/sales with zero-safe cumulative total
     { date: "2026-10-03", buy: 3, sell: 0, net: -7, count: 1 },
   ]);
 });
+it("keeps insider codes, shares-after, zero and non-trade exclusions honest", async () => {
+  const { insiderTrades } = await import("./stock-activity");
+  const base = {
+    name: "Example Officer",
+    date: "2026-10-01",
+    filed: "2026-10-02",
+    code: "S",
+    direction: "D",
+    shares: "10",
+    price: "12.50",
+    sharesAfter: "90",
+    securityKind: "nonDerivative",
+  };
+  const view = {
+    provider: "sec",
+    recordCount: 5,
+    fetchedAt: "2026-10-18T00:00:00Z",
+    sources: [],
+    data: {
+      complete: false,
+      records: [
+        base,
+        { ...base, code: "F" },
+        { ...base, securityKind: "derivative" },
+        { ...base, amendment: true },
+        { ...base, superseded: true },
+        { ...base, price: "", sharesAfter: "0" },
+      ],
+    },
+  } as ResearchDatasetView;
+  const rows = insiderTrades(view);
+  expect(rows.filter((r) => r.eligible)).toHaveLength(2);
+  expect(rows[0]).toMatchObject({ value: 125, sharesAfter: 90 });
+  expect(rows.at(-1)).toMatchObject({ value: undefined, sharesAfter: 0 });
+  expect(
+    activityPoints(
+      rows.map((r) => ({ ...r, excluded: !r.eligible })),
+      "value",
+    ),
+  ).toEqual([{ date: "2026-10-01", buy: 0, sell: 125, net: -125, count: 1 }]);
+});

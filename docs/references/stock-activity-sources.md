@@ -36,10 +36,25 @@ Explicit dataset sync queues only the requested selected source.
 
 ## Insiders
 
-Existing SEC Form 4/4-A collection is keyless with an already configured contact.
-This phase will retain raw transaction codes and distinguish non-derivative
-market purchases/sales from awards, exercises, tax withholding and derivatives.
-The reference chart and table guide presentation, not code classification.
+SEC Form 4/4-A collection is keyless with an already configured contact. A
+configurable 40/120/240 filing cap (default 120) bounds recent-submissions backfill;
+older SEC submission archives are not imported. Issuer CIK, document type,
+accession path and dates are verified before persistence. Each XML is staged for
+retry and immutable committed evidence is reused. New setting generations retire
+obsolete queued jobs rather than growing an unbounded backlog.
+
+Records retain raw SEC code, owner CIKs, role, security kind, shares/price,
+post-transaction shares, direct/indirect ownership and amendment/10b5-1 metadata.
+Chart totals use non-derivative P/A or S/D purchases/sales with known numeric
+price × shares. Awards, exercises, withholding and derivatives stay inspectable
+in separate scopes. Amendments and matching potentially superseded originals are
+excluded from totals rather than double-counted or silently replaced. Prices
+missing from a filing stay unknown; zero is preserved. Disclosures are issuer-wide
+and may concern different share classes, not necessarily only the selected ticker.
+
+The reference-style signed value bars/cumulative line and table use the same
+local filters. Post-transaction holdings are displayed as reported, without
+retroactive split adjustment; chart dollar values are not profit or net worth.
 
 ## Analyst
 

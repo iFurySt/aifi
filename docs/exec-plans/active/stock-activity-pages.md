@@ -14,7 +14,7 @@ local/offline reads. Preserve unrelated working changes and source settings.
 2. [x] Politicians: keyless public disclosure collection with exact ticker,
    disclosed amount ranges, transaction vs filing dates, historical activity
    chart, actor/trade filters and source-linked table; commit/push this phase.
-3. [ ] Insiders: expand SEC Form 4 semantics/coverage with issuer checks,
+3. [x] Insiders: expand SEC Form 4 semantics/coverage with issuer checks,
    derivative separation, post-transaction shares, amendment-safe totals and
    reference-style chart/table; commit/push this phase.
 4. [ ] Analyst: preserve real Yahoo consensus/distribution, enrich grade/target

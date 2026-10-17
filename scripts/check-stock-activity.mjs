@@ -100,7 +100,41 @@ async function checks() {
   );
   window.activityFixture.restore();
   await until(() => !!document.querySelector(".activity-chart svg"));
+  window.activityFixture.insiders();
+  await until(() => table().textContent.includes("Shares after"));
+  assert(
+    table().querySelectorAll("tbody tr").length === 2,
+    "Insider trades include non-trades",
+  );
+  assert(
+    table().textContent.includes("90") && table().textContent.includes("$125"),
+    "Reported shares-after or derived value lost",
+  );
+  assert(
+    document.querySelectorAll(".activity-sell-bar").length === 1,
+    "Awards/derivatives/amendments inflated totals",
+  );
+  await choose("Insider events", "All events");
+  assert(
+    table().querySelectorAll("tbody tr").length === 6,
+    "Insider event history missing",
+  );
+  await choose("Insider events", "Derivatives");
+  assert(
+    table().querySelectorAll("tbody tr").length === 1 &&
+      !document.querySelector(".activity-chart svg"),
+    "Derivative events counted as market trades",
+  );
+  await choose("Insider events", "Amendments");
+  assert(
+    table().querySelectorAll("tbody tr").length === 2,
+    "Amended/superseded records lost",
+  );
+  await choose("Insider events", "Purchases & sales");
   return {
+    insiderScopes: true,
+    nonTradeExclusion: true,
+    reportedPostHoldings: true,
     reportedRanges: true,
     ambiguousExclusion: true,
     chart: true,

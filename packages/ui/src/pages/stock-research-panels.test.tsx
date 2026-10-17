@@ -1,10 +1,10 @@
+import { Insiders } from "./Insiders";
 import { it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { emptyResearch, type ResearchDatasetView } from "@aifi/core";
 import {
   Earnings,
   Financials,
-  Activity,
   FilingsTable,
   MissingData,
 } from "./stock-research-panels";
@@ -61,10 +61,10 @@ it("renders issuer insider transactions from real records without classifying wi
       },
     ],
   });
-  const html = renderToStaticMarkup(<Activity data={data} kind="insiders" />);
-  expect(html).toContain("Example officer");
-  expect(html).toContain("tax withholding");
-  expect(html).toContain(">F<");
+  const html = renderToStaticMarkup(<Insiders data={data} />);
+  expect(html).toContain("No matching insider events");
+  expect(html).not.toContain("Example officer");
+  expect(html).not.toContain(">F<");
 });
 it("renders source filing links and explicit key requirements with no invented records", () => {
   const data = emptyResearch("AAPL");

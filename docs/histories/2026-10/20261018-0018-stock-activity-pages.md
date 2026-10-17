@@ -28,3 +28,17 @@ The API probe's 88 AAPL rows normalize to 87 after an exact duplicate coalesces.
 Go parser/store/service/research race tests, TypeScript, 157 unit tests and the
 isolated Political desktop/mobile interaction checks passed. Data landed as
 `ec9f890`; the page remains a separate reviewable commit.
+
+
+## Insiders phase
+
+Expanded bounded SEC backfill to configurable 40/120/240 recent ownership filings,
+with issuer/type/accession-path checks and durable staged XML retry. Kept reported
+post-transaction holdings, direct/indirect ownership, owner identity, 10b5-1 and
+amendment details. Matching original/amended events are excluded from totals when
+replacement semantics are uncertain. Ordinary local reads remain network-free.
+
+Added a reference-style signed value/cumulative chart, price/share/value/holdings
+table, trade/other/derivative/amendment scopes and local date/name/type filters.
+Only non-derivative P/S records with matching acquisition/disposition direction
+contribute to purchase/sale chart totals; absent prices are not zero.

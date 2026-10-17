@@ -1,3 +1,4 @@
+import { Insiders } from "./Insiders";
 import { Politicians } from "./Politicians";
 import { Funds } from "./Funds";
 import { Financials } from "./Financials";
@@ -34,7 +35,6 @@ import {
 import { useStockResearch } from "../stock-research-context";
 import {
   SourceNote,
-  Activity,
   AnalystSummary,
   AnalystPanel,
   FilingsTable,
@@ -479,7 +479,7 @@ export function Stocks() {
         {tab === "financials" && <Financials data={data} />}
         {tab === "funds" && <Funds data={data} />}
         {tab === "politicians" && <Politicians data={data} />}
-        {tab === "insiders" && <Activity kind="insiders" data={data} />}
+        {tab === "insiders" && <Insiders data={data} />}
         {tab === "analyst" && <AnalystPanel data={data} />}
       </section>
     </div>

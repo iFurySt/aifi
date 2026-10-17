@@ -493,3 +493,11 @@ Amounts remain ranges; source links open official reports. Price moves require
 stored split-adjusted closes and are never labeled portfolio gains. The shared
 ActivityChart supports dark hover/keyboard details and contained mobile overflow.
 Run `node scripts/check-stock-activity.mjs` for its isolated interaction fixture.
+
+
+Insiders uses the same signed chart/table pattern with monetary values. Its default
+view contains non-derivative P/S purchases/sales; awards, withholding, exercises,
+derivatives and amended/superseded records are accessible through event scopes
+without inflating totals. Tables retain reported shares-after, ownership, role,
+filing date and official source links. Source details explain issuer-wide scope
+and the bounded recent-filings window.

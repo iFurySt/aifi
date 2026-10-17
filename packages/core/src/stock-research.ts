@@ -20,6 +20,7 @@ export interface ResearchConfig {
   politiciansSource?: "congress" | "fmp";
   fundsSource?: "yahoo" | "fmp" | "thirteenf";
   fundsHistoryQuarters?: number;
+  insiderHistoryFilings?: number;
   analystSource?: "yahoo" | "fmp";
   priceSource?: "yahoo" | "massive";
   profileSource?: "yahoo" | "massive";

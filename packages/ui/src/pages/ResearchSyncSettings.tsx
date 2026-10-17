@@ -484,6 +484,28 @@ export function ResearchSyncSettings() {
                   />
                 </div>
               </div>
+              <div className="setting-row">
+                <div>
+                  <strong>Insider history</strong>
+                </div>
+                <div className="setting-control">
+                  <Select
+                    label="Insider filing history"
+                    disabled={busy}
+                    value={String(state.config.insiderHistoryFilings ?? 120)}
+                    options={[40, 120, 240].map((n) => ({
+                      value: String(n),
+                      label: `${n} filings`,
+                    }))}
+                    onValueChange={(v) =>
+                      void save({
+                        ...state.config,
+                        insiderHistoryFilings: Number(v),
+                      })
+                    }
+                  />
+                </div>
+              </div>
               {researchDatasets.map((d) => (
                 <DatasetRow
                   key={d}
