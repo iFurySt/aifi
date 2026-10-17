@@ -58,3 +58,14 @@ export const saveResearchConfig = (
     import("@aifi/core").ResearchConfig
   >;
 export const syncResearch = () => requestLocalData("research.sync");
+
+export const readStorageUsage = () =>
+  requestLocalData("storage.read") as Promise<
+    import("@aifi/core").StorageUsage
+  >;
+export const readStorageFiles = (snapshotId: string, offset: number) =>
+  requestLocalData("storage.files", { snapshotId, offset }) as Promise<
+    import("@aifi/core").StorageFilePage
+  >;
+export const revealStorageFile = (relativePath = "") =>
+  requestLocalData("storage.reveal", { relativePath });

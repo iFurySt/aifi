@@ -147,3 +147,10 @@ HTML/scripts are neither persisted nor rendered. Identity, currency and period
 values are checked; arbitrary embedded URLs are never fetched. Filings link to
 SEC only after validating symbol/issuer/accession paths. Website fields are
 normalized HTTPS strings, not additional renderer network permissions.
+
+Storage settings exposes only local file metadata and SQLite category totals.
+The bounded inventory skips symlinks. Desktop reveal accepts an inventory-relative
+file/root, rechecks containment and ancestors, and delegates fixed native APIs
+through trusted top-frame IPC. Web has no native callback. No file-read, SQL,
+credential-content, delete or arbitrary command capability is added. See
+[storage boundaries](design-docs/storage-usage.md).

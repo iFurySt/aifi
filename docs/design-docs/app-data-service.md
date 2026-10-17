@@ -106,3 +106,10 @@ Directory list reads can select All US, S&P 500, Nasdaq-100 or a bounded local
 watchlist. This does not add index network jobs to the directory scheduler;
 reviewed seed updates currently ship through the repository. See
 [collections](stock-collections.md) for scope/coverage and ownership.
+
+## Storage Inspection
+
+Settings → Storage now reads data-directory file totals and a separate logical
+SQLite page breakdown without collecting data. File pages retain a scan snapshot;
+Electron reveals validated inventory paths through a native callback, while Web
+copies paths. See [storage accounting and capabilities](storage-usage.md).

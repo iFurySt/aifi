@@ -13,6 +13,7 @@ import { Button, Modal } from "../components/primitives";
 import { ResearchSyncSettings } from "./ResearchSyncSettings";
 import { settingItems } from "../components/SettingsSidebar";
 import { ChatGPTSettings } from "./ChatGPTSettings";
+import { StorageSettings } from "./StorageSettings";
 function Row({
   title,
   description,
@@ -141,7 +142,7 @@ export function Settings() {
   return (
     <div className="settings-content">
       <h1>{settingItems.find((x) => x.id === section)?.label}</h1>
-      {error && section !== "chatgpt" && (
+      {error && section !== "chatgpt" && section !== "storage" && (
         <div className="settings-service-error" role="status">
           {error}
           <Button variant="ghost" onClick={() => void refresh()}>
@@ -446,21 +447,7 @@ export function Settings() {
       )}
       {section === "storage" && (
         <>
-          <Group title="Directory cache">
-            <Row title="Database">
-              <span>
-                {data ? `${(data.databaseBytes / 1048576).toFixed(1)} MB` : "—"}
-              </span>
-            </Row>
-            <Row title="Securities">
-              <span>{data?.directory.rows.toLocaleString() ?? "—"}</span>
-            </Row>
-            <Row title="Location">
-              <span className="storage-location" title={data?.dataDir}>
-                {data?.dataDir ?? "—"}
-              </span>
-            </Row>
-          </Group>
+          <StorageSettings />
           <Group title="Workspace">
             <Row
               title="Reset workspace"

@@ -1,0 +1,304 @@
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Copy, File, FolderOpen, RefreshCw } from "lucide-react";
+import type { StorageCategory, StorageUsage } from "@aifi/core";
+import {
+  getRuntimeInfo,
+  readStorageFiles,
+  readStorageUsage,
+  revealStorageFile,
+  type RuntimeInfo,
+} from "@aifi/platform";
+import { Button } from "../components/primitives";
+import { useWorkspace } from "../workspace-context";
+
+export function formatStorageBytes(bytes: number) {
+  if (bytes === 0) return "0 bytes";
+  if (bytes < 1024) return `${bytes} bytes`;
+  const units = ["KB", "MB", "GB", "TB"];
+  const power = Math.min(Math.floor(Math.log(bytes) / Math.log(1024)), 4);
+  const value = bytes / 1024 ** power;
+  return `${value.toLocaleString(undefined, { maximumFractionDigits: value < 10 ? 2 : 1 })} ${units[power - 1]}`;
+}
+function Breakdown({
+  categories,
+  total,
+  label,
+}: {
+  categories: StorageCategory[];
+  total: number;
+  label: string;
+}) {
+  return (
+    <div className="storage-breakdown">
+      <div
+        className="storage-meter"
+        role="img"
+        aria-label={`${label}: ${categories.map((c) => `${c.label} ${formatStorageBytes(c.bytes)}`).join(", ")}`}
+      >
+        {categories.map((category, i) => (
+          <span
+            key={category.id}
+            className={`storage-color-${i}`}
+            style={{ width: `${total ? (category.bytes / total) * 100 : 0}%` }}
+          />
+        ))}
+      </div>
+      <dl className="storage-legend">
+        {categories.map((category, i) => (
+          <div key={category.id}>
+            <dt>
+              <i className={`storage-color-${i}`} />
+              {category.label}
+            </dt>
+            <dd>{formatStorageBytes(category.bytes)}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+export function StorageSettings() {
+  const { notify } = useWorkspace();
+  const [data, setData] = useState<StorageUsage>();
+  const [runtime, setRuntime] = useState<RuntimeInfo>();
+  const [refreshing, setRefreshing] = useState(true);
+  const [loadingFiles, setLoadingFiles] = useState(false);
+  const [error, setError] = useState("");
+  const generation = useRef(0);
+  const refresh = useCallback(async () => {
+    const current = ++generation.current;
+    setRefreshing(true);
+    try {
+      const next = await readStorageUsage();
+      if (current !== generation.current) return;
+      setData(next);
+      setError("");
+    } catch {
+      if (current === generation.current)
+        setError(
+          "Couldn't refresh storage. Check the data directory and try again.",
+        );
+    } finally {
+      if (current === generation.current) setRefreshing(false);
+    }
+  }, []);
+  useEffect(() => {
+    let alive = true;
+    void getRuntimeInfo().then((info) => {
+      if (alive) setRuntime(info);
+    });
+    void refresh();
+    return () => {
+      alive = false;
+      generation.current++;
+    };
+  }, [refresh]);
+  async function more() {
+    if (!data) return;
+    const current = generation.current;
+    setLoadingFiles(true);
+    try {
+      const page = await readStorageFiles(data.snapshotId, data.files.length);
+      if (current !== generation.current) return;
+      setData((old) =>
+        old?.snapshotId === page.snapshotId
+          ? { ...old, files: [...old.files, ...page.files] }
+          : old,
+      );
+      setError("");
+    } catch {
+      if (current === generation.current)
+        setError("Couldn't load more files. Refresh storage and try again.");
+    } finally {
+      if (current === generation.current) setLoadingFiles(false);
+    }
+  }
+  const desktop = runtime?.kind === "desktop";
+  const revealLabel =
+    runtime?.platform === "darwin" ? "Show in Finder" : "Show in folder";
+  async function locate(relativePath = "") {
+    try {
+      await revealStorageFile(relativePath);
+    } catch (e) {
+      notify(e instanceof Error ? e.message : "Couldn't open the folder.");
+    }
+  }
+  async function copyPath(relativePath = "") {
+    if (!data) return;
+    const path = relativePath
+      ? `${data.dataDir.replace(/[\\/]$/, "")}/${relativePath}`
+      : data.dataDir;
+    try {
+      await navigator.clipboard.writeText(path);
+      notify("Path copied.");
+    } catch {
+      notify("Couldn't copy the path. Select and copy it from the list.");
+    }
+  }
+  return (
+    <div className="storage-settings" aria-busy={refreshing}>
+      <section className="storage-overview">
+        <div className="storage-section-heading">
+          <div>
+            <h2>This device</h2>
+            <p>Collected data and cached files in the data folder.</p>
+          </div>
+          <Button
+            disabled={refreshing || loadingFiles}
+            onClick={() => void refresh()}
+          >
+            <RefreshCw size={14} />
+            {refreshing ? "Refreshing…" : "Refresh"}
+          </Button>
+        </div>
+        {error && (
+          <div className="settings-service-error" role="status">
+            {error}
+            {data && " Showing the last scan."}
+          </div>
+        )}
+        {!data && (
+          <p className="storage-loading" role="status">
+            {refreshing
+              ? "Calculating storage…"
+              : "Storage unavailable. Refresh to try again."}
+          </p>
+        )}
+        {data && (
+          <>
+            <div className="storage-total">
+              <strong>{formatStorageBytes(data.totalBytes)}</strong>
+              <span>used by local data</span>
+            </div>
+            <Breakdown
+              categories={data.categories}
+              total={data.totalBytes}
+              label="Local file storage"
+            />
+            <div className="storage-folder">
+              <span title={data.dataDir}>{data.dataDir}</span>
+              <Button
+                variant="ghost"
+                onClick={() => void (desktop ? locate() : copyPath())}
+              >
+                {desktop ? <FolderOpen size={15} /> : <Copy size={15} />}
+                {desktop ? "Open folder" : "Copy path"}
+              </Button>
+            </div>
+            <p className="storage-scan-time">
+              Last scanned{" "}
+              {new Date(data.scannedAt).toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </p>
+          </>
+        )}
+      </section>
+      {data && (
+        <>
+          <section className="setting-group storage-database">
+            <div className="storage-section-heading">
+              <div>
+                <h2>Database contents</h2>
+                <p>
+                  SQLite pages, including indexes and unused space. Journal
+                  files are counted above.
+                </p>
+              </div>
+              <span className="storage-number">
+                {formatStorageBytes(data.database.bytes)}
+              </span>
+            </div>
+            <Breakdown
+              categories={data.database.categories}
+              total={data.database.bytes}
+              label="SQLite contents"
+            />
+          </section>
+          <section className="setting-group storage-files">
+            <div className="storage-section-heading">
+              <h2>
+                Files & folders{" "}
+                <span className="storage-file-count">
+                  {data.entryCount.toLocaleString()}
+                </span>
+              </h2>
+              <span className="storage-sort">Largest first</span>
+            </div>
+            <div className="storage-file-list">
+              {data.files.map((file) => (
+                <div className="storage-file-row" key={file.relativePath}>
+                  {file.kind === "directory" ? (
+                    <FolderOpen
+                      size={18}
+                      className="storage-file-icon"
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <File
+                      size={18}
+                      className="storage-file-icon"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <div className="storage-file-name">
+                    <strong title={file.relativePath}>
+                      {file.kind === "directory"
+                        ? file.relativePath
+                        : file.relativePath.split("/").at(-1)}
+                    </strong>
+                    <span title={file.relativePath}>
+                      {file.kind === "directory"
+                        ? `${file.fileCount.toLocaleString()} files`
+                        : file.relativePath.includes("/")
+                          ? file.relativePath.slice(
+                              0,
+                              file.relativePath.lastIndexOf("/"),
+                            )
+                          : "Data folder"}
+                    </span>
+                  </div>
+                  <span className="storage-number">
+                    {formatStorageBytes(file.bytes)}
+                  </span>
+                  <Button
+                    variant="ghost"
+                    className="storage-reveal"
+                    aria-label={`${desktop ? (file.kind === "directory" ? "Open folder" : revealLabel) : "Copy path"}: ${file.relativePath}`}
+                    title={
+                      desktop
+                        ? file.kind === "directory"
+                          ? "Open folder"
+                          : revealLabel
+                        : "Copy path"
+                    }
+                    onClick={() =>
+                      void (desktop
+                        ? locate(file.relativePath)
+                        : copyPath(file.relativePath))
+                    }
+                  >
+                    {desktop ? <FolderOpen size={16} /> : <Copy size={16} />}
+                  </Button>
+                </div>
+              ))}
+              {!data.entryCount && (
+                <div className="settings-empty">No files in this folder</div>
+              )}
+            </div>
+            {data.files.length < data.entryCount && (
+              <Button
+                className="storage-load-more"
+                disabled={loadingFiles || refreshing}
+                onClick={() => void more()}
+              >
+                {loadingFiles ? "Loading…" : "Show more"}
+              </Button>
+            )}
+          </section>
+        </>
+      )}
+    </div>
+  );
+}

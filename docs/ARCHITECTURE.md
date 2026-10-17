@@ -208,3 +208,11 @@ See [implementation plan](exec-plans/completed/universe-research-ingestion.md).
 
 See [research ingestion](design-docs/research-ingestion.md) for implemented
 providers, source windows, job budgets, financial semantics and remaining limits.
+
+## Local Storage Inspection
+
+Go provides read-only SQLite page/category accounting. Node inventories metadata
+inside the app data directory and serves descending, snapshot-paged file lists.
+The shared Storage settings shows both file totals and logical database contents;
+Electron main owns a validated native reveal callback. Web offers path copying.
+See [storage usage](design-docs/storage-usage.md) for counting rules and limits.

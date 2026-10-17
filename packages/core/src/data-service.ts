@@ -52,6 +52,9 @@ export interface DataStatus {
   databaseBytes: number;
 }
 export type DataMethod =
+  | "storage.read"
+  | "storage.files"
+  | "storage.reveal"
   | "research.read"
   | "research.status"
   | "research.settings"
@@ -66,6 +69,9 @@ export type DataMethod =
   | "credentials.set"
   | "credentials.remove";
 export const dataMethods: readonly DataMethod[] = [
+  "storage.read",
+  "storage.files",
+  "storage.reveal",
   "research.read",
   "research.status",
   "research.settings",

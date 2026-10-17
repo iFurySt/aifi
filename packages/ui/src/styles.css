@@ -3692,3 +3692,239 @@ kbd {
     min-height: 32px;
   }
 }
+
+/* Storage sizes are local file lengths; SQLite logical pages are separate. */
+.storage-overview {
+  margin-bottom: 32px;
+}
+.storage-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.storage-section-heading h2 {
+  font-size: 15px;
+  font-weight: 550;
+  margin: 0;
+}
+.storage-section-heading p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+.storage-section-heading > .button {
+  flex-shrink: 0;
+}
+.storage-total {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 18px;
+}
+.storage-total strong {
+  font-size: 28px;
+  font-weight: 550;
+  letter-spacing: -0.7px;
+  font-variant-numeric: tabular-nums;
+}
+.storage-total > span,
+.storage-loading {
+  color: var(--muted);
+  font-size: 13px;
+}
+.storage-meter {
+  display: flex;
+  height: 20px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+.storage-meter > span {
+  height: 100%;
+}
+.storage-color-0 {
+  background: #578b79;
+}
+.storage-color-1 {
+  background: #8295b6;
+}
+.storage-color-2 {
+  background: #c59a64;
+}
+.storage-color-3 {
+  background: #9b86a9;
+}
+.storage-color-4 {
+  background: #8e9b9a;
+}
+.storage-color-5 {
+  background: #b1b1b1;
+}
+.storage-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin: 16px 0 0;
+}
+.storage-legend dt {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--secondary);
+}
+.storage-legend dt > i {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.storage-legend dd {
+  margin: 4px 0 0 14px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.storage-folder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+.storage-folder > span {
+  font-size: 12px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  min-width: 0;
+  user-select: text;
+}
+.storage-folder > button {
+  flex-shrink: 0;
+}
+.storage-scan-time {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+.storage-database {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+}
+.storage-database .storage-meter {
+  height: 10px;
+}
+.storage-number {
+  font-size: 12px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--secondary);
+}
+.storage-file-count {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+.storage-sort {
+  font-size: 12px;
+  color: var(--muted);
+}
+.storage-file-list {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0 14px;
+}
+.storage-file-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 65px;
+  padding: 10px 0;
+}
+.storage-file-row + .storage-file-row {
+  border-top: 1px solid var(--border);
+}
+.storage-file-icon {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.storage-file-name {
+  min-width: 0;
+  flex: 1;
+  user-select: text;
+}
+.storage-file-name strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.storage-file-name > span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+.storage-file-row .storage-reveal {
+  padding: 8px;
+  flex-shrink: 0;
+  min-width: 32px;
+}
+.storage-load-more {
+  display: flex;
+  margin: 16px auto 0;
+}
+@media (max-width: 600px) {
+  .storage-section-heading {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .storage-section-heading > .storage-number {
+    padding-top: 3px;
+  }
+  .storage-legend {
+    gap: 14px 12px;
+  }
+  .storage-legend dt {
+    font-size: 11px;
+  }
+  .storage-folder {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .storage-database {
+    padding: 14px;
+  }
+  .storage-file-list {
+    padding: 0 10px;
+  }
+  .storage-file-row {
+    gap: 8px;
+  }
+  .storage-file-icon {
+    display: none;
+  }
+  .storage-file-row .storage-reveal {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .storage-overview .storage-legend {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .storage-database .storage-legend {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

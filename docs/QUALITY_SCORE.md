@@ -18,3 +18,8 @@ Track quality by product area and architectural layer so agents can prioritize t
 | Testing | B | TypeScript, domain/storage/route/host/UI tests, Go parser/store/service/scheduler race tests, and all builds, Chrome desktop/mobile review, and a real macOS Electron smoke pass. | Add Windows/Linux launch checks and runner tests when their scope arrives. |
 | Observability | C | App-owned directory scheduling and sync outcomes/settings are durable; frontend errors are visible. Research datasets now expose durable job progress and provider readiness; ChatGPT connection/usage errors are visible; there is no sourced AI research runner yet. | Add structured run diagnostics when execution is implemented. |
 | Security | B | Renderer sandbox, narrow preload, CSP, validated demo state, and pinned dependencies are implemented. | Add dependency scanning and OS-vault/retention enhancements before wider integrations. |
+
+Storage inspection now has Go page-accounting and no-collection tests, host
+inventory/path/symlink/pagination tests, and an isolated Electron gate using a
+real offline Go store. Native Windows/Linux Finder-equivalent behavior still
+requires platform verification; file totals exclude profile/browser data.

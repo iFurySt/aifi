@@ -37,3 +37,6 @@ Suggested conventions:
 
 - [Local research ingestion](research-ingestion.md): implemented provider jobs,
   SQLite evidence/read contracts, dataset settings and current coverage limits.
+
+- [Local storage usage](storage-usage.md) — implemented file inventory, SQLite
+  page categories and bounded desktop reveal from Settings.

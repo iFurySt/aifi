@@ -19,6 +19,7 @@
     "smoke:desktop": "pnpm --filter @aifi/desktop smoke",
     "smoke:stocks-layout": "node scripts/check-stocks-responsive.mjs",
     "smoke:navigation": "node scripts/check-workspace-navigation.mjs",
+    "smoke:storage": "node scripts/check-storage-ui.mjs",
     "smoke:account": "node scripts/check-account-ui.mjs",
     "smoke:chatgpt": "node scripts/check-chatgpt.mjs",
     "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json,css}\" \"scripts/*.mjs\" package.json tsconfig.json"

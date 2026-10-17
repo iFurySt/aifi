@@ -374,3 +374,19 @@ horizontal overflow, all company sections, chart DOM/range/style retention,
 list position/filter retention, drawer keyboard/selection/dismissal, wide
 preference restoration and every tab's visibility/table containment. Its injected
 local fixtures do not use real credentials, inference or provider collection.
+
+## Storage Settings
+
+Storage displays data-directory file usage, a separate SQLite content breakdown,
+and a largest-first file/folder inventory in pages of 50. The image-heavy
+`stock-logos/v2` cache appears once with its total size and file count; its action
+opens the directory. Refresh retains the previous
+scan while loading or on failure. Desktop offers Open folder and Show in Finder
+(Show in folder elsewhere); Web offers Copy path. Reset workspace retains its
+existing demo-only scope. Counts exclude the app bundle and browser/profile data.
+See [storage boundaries](design-docs/storage-usage.md).
+
+`pnpm build && pnpm smoke:storage` validates the actual Electron renderer against
+a disposable offline Go/Node host, including page sorting, pagination without a
+rescan, refresh/error recovery, native dispatch and narrow/light/dark presentation.
+Run from an isolated checkout; results live in `.artifacts/storage-ui/`.

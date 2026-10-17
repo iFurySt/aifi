@@ -355,6 +355,12 @@ if (primaryInstance)
         join(__dirname, process.platform === "win32" ? "aifi.exe" : "aifi"),
         smokeProfile ? join(smokeProfile, "data") : undefined,
         smoke,
+        async (path, directory) => {
+          if (directory) {
+            const error = await shell.openPath(path);
+            if (error) throw Error("Could not open the data directory.");
+          } else shell.showItemInFolder(path);
+        },
       );
       chatGPTHost = new ChatGPTHost(
         new ChatGPTStore(

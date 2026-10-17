@@ -85,11 +85,14 @@ export function validateSettings(
   )
     throw Error("Invalid settings.");
 }
+import { LocalStorageUsage } from "./storage-usage.ts";
+import type { DatabaseStorage } from "../../core/src/storage-usage.ts";
 import { StockLogoCache } from "./stock-logos.ts";
 import type { StockLogo } from "../../core/src/stock-logos.ts";
 
 export class DataHost {
   private logoCache?: StockLogoCache;
+  private storage: LocalStorageUsage;
   private cachedLogoReads = 0;
   private child?: ChildProcessWithoutNullStreams;
   private ready?: Promise<void>;
@@ -108,7 +111,14 @@ export class DataHost {
     readonly binary: string,
     readonly dataDir = defaultDataDir(),
     readonly offline = false,
-  ) {}
+    nativeReveal?: (path: string, directory: boolean) => Promise<void> | void,
+  ) {
+    this.storage = new LocalStorageUsage(
+      dataDir,
+      () => this.rpc("storage.database") as Promise<DatabaseStorage>,
+      nativeReveal,
+    );
+  }
   get pid() {
     return this.child?.pid;
   }
@@ -198,6 +208,12 @@ export class DataHost {
   }
   async request(method: DataMethod, params?: unknown): Promise<unknown> {
     if (!dataMethods.includes(method)) throw Error("Unsupported data action.");
+    if (method === "storage.read") {
+      if (params !== undefined) throw Error("Invalid storage request.");
+      return this.storage.read();
+    }
+    if (method === "storage.files") return this.storage.files(params);
+    if (method === "storage.reveal") return this.storage.reveal(params);
     if (method === "directory.list") validateDirectoryQuery(params);
     if (
       method === "directory.get" ||

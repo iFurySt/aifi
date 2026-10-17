@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-17 | Storage | See local data usage by category and find the largest files quickly. | Added file totals, SQLite content allocation, descending file pages, refresh, desktop folder reveal and Web path copying. |
 | 2026-10-17 | Responsive Stocks | Narrow windows give research more room; all company sections remain available. | Added automatic stock-list drawers, container-based chart/content reflow, compact headers/summaries and selected-tab reveal with retained chart/list state. |
 | 2026-10-17 | Workspace search and shortcuts | Search stays compact with scrollable single-line results; navigate with keyboard shortcuts. | Added bounded back/forward, sidebar toggle, desktop New chat, shortcut help and arrow/Enter search selection. |
 | 2026-10-17 | Account and Settings | A tighter rail, larger account entry and compact Settings; Command/Ctrl+, opens Settings. | Reused ChatGPT sign-in and verified display identity; connected menus expose official Usage management without an invented quota. |
