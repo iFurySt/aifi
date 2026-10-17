@@ -358,7 +358,9 @@ Settings represents real local controls and has no Demo badge. Appearance is the
 default category; omit General and duplicate service/status rows. Appearance
 contains one Visual style group and a Mode row with three compact app previews:
 System (split light/dark), Light, Dark. Use a neutral selected outline, shared
-hover tint, named radio semantics and arrow-key selection. Keep extra themes,
+hover tint, named radio semantics and arrow-key selection. Preview names appear
+in a compact dark tooltip above the card on hover or focus; Escape dismisses it.
+Keep extra themes,
 accents, fonts and explanatory copy out of this surface.
 
 Saved credentials show only presence; blank password inputs replace values on

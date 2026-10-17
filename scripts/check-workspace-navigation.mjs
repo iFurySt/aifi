@@ -285,6 +285,36 @@ async function appearanceChecks(win) {
     ))
   )
     throw Error("Settings contains removed or redundant controls");
+  for (const [mode, label] of [
+    ["system", "System"],
+    ["light", "Light"],
+    ["dark", "Dark"],
+  ]) {
+    const point = await evaluate(
+      `(() => { const r=document.querySelector('[data-mode="${mode}"]').getBoundingClientRect(); return {x:Math.round(r.x+r.width/2),y:Math.round(r.y+r.height/2)}; })()`,
+    );
+    win.webContents.sendInputEvent({ type: "mouseMove", ...point });
+    await until(
+      `document.querySelector('[role="tooltip"]')?.textContent === '${label}'`,
+    );
+    if (
+      !(await evaluate(
+        `(() => { const button=document.querySelector('[data-mode="${mode}"]'); const tip=document.querySelector('[role="tooltip"]'); const r=tip.getBoundingClientRect(); return button.getAttribute('aria-describedby')===tip.id && !button.title && r.bottom<=button.getBoundingClientRect().top && r.left>=0 && r.right<=innerWidth; })()`,
+      ))
+    )
+      throw Error("Mode tooltip label or placement is incorrect");
+    win.webContents.sendInputEvent({ type: "mouseMove", x: 15, y: 85 });
+    await until("!document.querySelector('[role=tooltip]')");
+  }
+  win.webContents.focus();
+  await evaluate(`document.querySelector('[data-mode="system"]').focus()`);
+  await until(
+    "document.querySelector('[role=tooltip]')?.textContent === 'System'",
+  );
+  await evaluate(
+    `document.activeElement.dispatchEvent(new KeyboardEvent('keydown', {key:'Escape',bubbles:true}))`,
+  );
+  await until("!document.querySelector('[role=tooltip]')");
   const debug = win.webContents.debugger;
   debug.attach("1.3");
   const scheme = (value) =>
@@ -341,6 +371,7 @@ async function appearanceChecks(win) {
     debug.detach();
   }
   return {
+    modeTooltips: true,
     systemFollowsOS: true,
     explicitMode: true,
     persistedPreference: true,

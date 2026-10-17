@@ -41,3 +41,13 @@ and dark review completed; updated Appearance remains open in light mode.
 - `packages/ui/src/use-resolved-theme.ts`, `App.tsx`, context, Shell and Settings
 - Navigation/selection smoke fixtures and scripts
 - `DESIGN.md`, `docs/FRONTEND.md` and the completed execution plan
+
+### Follow-up: 2026-10-18 Mode Names
+
+Add compact dark System/Light/Dark tooltips above the preview on pointer hover
+and keyboard focus. Pointer leave, blur and Escape dismiss them. Remove native
+`title` bubbles to avoid duplicate labels; link the visible tooltip accessibly.
+
+TypeScript, production renderer build and the navigation smoke pass. The smoke
+uses real Electron pointer moves across all three previews and checks placement,
+labels, dismissal and keyboard focus. Native App confirms the System popup.

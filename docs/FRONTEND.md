@@ -201,7 +201,9 @@ category sidebar, centered title, bordered groups and short rows. Desktop/mobile
 share the same page; the drawer exposes settings categories on narrow screens.
 Settings has no Demo badge because its service controls are real.
 Appearance is the default category; old General links resolve there. It contains
-only Visual style → Mode: System, Light and Dark compact preview radios. Existing
+only Visual style → Mode: System, Light and Dark compact preview radios. Each
+preview shows a compact dark tooltip on hover or keyboard focus; Escape, leaving
+or blur dismisses it. Native title bubbles are omitted. Existing
 light/dark preferences are preserved. System persists the preference while the
 rendered palette follows `prefers-color-scheme` changes. The toolbar toggles the
 currently resolved palette into an explicit mode. Appearance does not poll the
