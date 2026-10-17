@@ -10,6 +10,7 @@ export const researchDatasets = [
   "politicians",
   "analyst",
   "earnings",
+  "peers",
   "news",
 ] as const;
 export type ResearchDataset = (typeof researchDatasets)[number];
@@ -36,7 +37,7 @@ export function researchProvider(
   dataset: ResearchDataset,
 ): "yahoo" | "massive" | "sec" | "fmp" {
   if (dataset === "analyst") return config.analystSource ?? "yahoo";
-  if (dataset === "earnings") return "yahoo";
+  if (dataset === "earnings" || dataset === "peers") return "yahoo";
   if (dataset === "prices") return config.priceSource ?? "yahoo";
   if (dataset === "profile") return config.profileSource ?? "yahoo";
   if (dataset === "facts") return config.factsSource ?? "yahoo";
@@ -433,7 +434,7 @@ export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
     v.data.quote.price > 0 &&
     Number.isFinite(Date.parse(v.data.quote.asOf)) &&
     Date.parse(v.data.quote.asOf) <= now + 60000
-      ? [{ ...v.data.quote, fetchedAt: v.fetchedAt }]
+      ? [{ ...v.data.quote, fetchedAt: v.fetchedAt, view: v }]
       : [],
   );
   candidates.sort(
@@ -495,6 +496,7 @@ export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
     .sort((a, b) => Date.parse(b.postAsOf!) - Date.parse(a.postAsOf!))[0];
   return {
     price,
+    sourceView: source?.view ?? data.datasets.prices,
     previous,
     change:
       price !== undefined && previous && previous > 0

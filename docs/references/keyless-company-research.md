@@ -7,6 +7,7 @@ ongoing availability or complete listing coverage.
 | --- | --- | --- |
 | Yahoo public company profile page | HTTP 200; public embedded JSON has company identity, description, industry, sector, website, employee count and recent SEC filings | Implement bounded extraction without executing scripts or calling authenticated APIs |
 | Yahoo public analysis page | HTTP 200; embedded JSON includes target consensus, current recommendations, recent grades, GAAP EPS history/estimates and calendar | Implement independent daily analyst/earnings jobs sharing one staged response |
+| Yahoo recommendations-by-symbol | HTTP 200 for AAPL; five scored related symbols without key/cookies | Add weekly persisted related-stock collection; do not claim strict industry peers |
 | Yahoo fundamentals timeseries | HTTP 200 without key/cookies; annual/quarterly standardized metrics | Implement with vendor period metadata; retain missing filing/start dates |
 | Yahoo direct quoteSummary | HTTP 401 | Do not implement a direct API or browser-cookie/crumb flow |
 | SEC submissions/companyfacts/ticker map | Initial HTTP 403 with project URL; HTTP 200 after a user-supplied identifying contact was configured locally | Official adapter live-validated; contact value stays outside the repository |
@@ -83,3 +84,15 @@ chart adapter incorrectly excluded today's completed bar before this change;
 it now uses observed session end plus ten minutes, with a post-close refresh.
 A price on another site can refer to an extended session or another observation
 time; matching a screenshot's number is not a data-quality test.
+
+## Related-symbol probe
+
+The fixed public endpoint
+[Yahoo AAPL recommendations](https://query1.finance.yahoo.com/v6/finance/recommendationsbysymbol/AAPL)
+returned AMZN, TSLA, GOOG, META and MSFT on 2026-10-17 without credentials.
+The [upstream module](https://github.com/gadicc/yahoo-finance2/blob/dev/src/modules/recommendationsBySymbol.ts)
+also describes it as recommendations, rather than an industry classification.
+The Go adapter is independent and shares existing Yahoo budgets/backoff.
+These source values can change and are not bundled mappings.
+Finnhub also documents a peers endpoint but requires a token; it is not added
+as another runtime dependency while the working keyless source is available.

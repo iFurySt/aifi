@@ -226,6 +226,8 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 		} else {
 			e = c.prices(ctx, j, &result)
 		}
+	case "peers":
+		e = c.yahooPeers(ctx, j, &result)
 	case "analyst", "earnings":
 		if j.Provider == "yahoo" {
 			e = c.yahooOutlook(ctx, j, &result)

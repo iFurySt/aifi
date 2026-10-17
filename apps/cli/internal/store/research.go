@@ -19,7 +19,7 @@ import (
 	"github.com/ifuryst/aifi/apps/cli/internal/market"
 )
 
-var ResearchDatasets = []string{"prices", "profile", "filings", "facts", "actions", "insiders", "funds", "politicians", "analyst", "earnings", "news"}
+var ResearchDatasets = []string{"prices", "profile", "filings", "facts", "actions", "insiders", "funds", "politicians", "analyst", "earnings", "peers", "news"}
 
 type DatasetConfig struct {
 	Enabled       bool `json:"enabled"`
@@ -58,6 +58,9 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	if c.Limits["yahoo"].PerMinute == 0 {
 		c.Limits["yahoo"] = ProviderLimit{20, 10000}
 	}
+	if _, ok := c.Datasets["peers"]; !ok {
+		c.Datasets["peers"] = DatasetConfig{true, 168}
+	}
 	if _, ok := c.Datasets["earnings"]; !ok {
 		c.Datasets["earnings"] = DatasetConfig{true, 24}
 	}
@@ -87,7 +90,7 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 		return c.PriceSource
 	case "analyst":
 		return c.AnalystSource
-	case "earnings":
+	case "earnings", "peers":
 		return "yahoo"
 	case "profile":
 		return c.ProfileSource

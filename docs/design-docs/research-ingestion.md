@@ -42,6 +42,7 @@ subscription is purchased by the application.
 | Analyst data (default) | Yahoo public analysis page embedded JSON | No key/cookie; daily; consensus, current rating distribution and recent grades |
 | Analyst data (optional) | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |
 | Earnings | Yahoo public analysis page embedded JSON | No key/cookie; daily; recent GAAP actual/consensus EPS and earnings calendar |
+| Related stocks | Yahoo recommendations-by-symbol | No key; weekly; related securities, not an industry-peer classification |
 | News headlines | FMP stable news/stock | Optional key/entitlement; daily; recent provider response window |
 
 Primary specs checked during implementation:
@@ -75,7 +76,7 @@ history window, with 24-hour default refresh. Massive remains selectable in Sync
 settings and uses one whole-market request per date. Only the selected price
 provider runs price jobs; reads prefer that provider and can retain an existing
 other-provider series when it has no stored data. Series are never mixed.
-Yahoo workers rotate profile → filings → facts → prices → analyst → earnings before claiming work,
+Yahoo workers rotate profile → filings → facts → prices → analyst → earnings → peers before claiming work,
 so an initial price backlog cannot starve company research. Each dataset retains
 its own enabled flag and cadence. Company page responses are shared privately
 for at most 24 hours between profile/filing jobs, preserving original fetch time;
@@ -252,3 +253,24 @@ Live validation on 2026-10-17: AAPL's Oct 16 regular quote was 343.46, previous
 close 342.00 and post-market quote 342.62. Four GAAP actual/estimate quarters,
 a future report date, target consensus and recent grades were persisted and
 rendered from local reads. These are dated source observations, not constants.
+
+## Related securities and quote disclosure
+
+Yahoo recommendations-by-symbol was live-probed without a key on 2026-10-17.
+Each current directory candidate receives a weekly `peers` job, governed by the
+existing shared Yahoo budget, pause controls, leased queue and atomic evidence
+commit. Additive settings defaults need no SQLite schema version change.
+Responses must match the requested ticker, contain a bounded explicit symbol
+array and finite relevance scores; empty arrays are valid coverage.
+
+These recommendations are vendor associations, not verified same-industry
+competitors. Retain exact source symbols; the UI shows only exact local US
+directory matches. Unsupported aliases/foreign listings are not guessed. Peer
+rows read company identity and regular prices through the existing local read
+ports and retain their independent quote dates. Missing prices stay missing.
+
+The daily/EOD page no longer displays a static after-hours quote as if it were
+streaming. Its separate source-dated observation is available in the quote
+source chip, alongside the collection time and daily/non-streaming disclosure.
+A later live quote service needs explicit cadence, subscription scope and
+budget design; repeated navigation must not become that collection mechanism.
