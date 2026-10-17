@@ -3306,6 +3306,7 @@ kbd {
   position: relative;
 }
 .stock-chart-tooltip {
+  max-width: calc(100% - 8px);
   position: absolute;
   z-index: 2;
   pointer-events: none;

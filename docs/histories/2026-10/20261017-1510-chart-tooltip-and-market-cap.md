@@ -40,6 +40,8 @@ reads remain SQLite-only and do not fetch a provider.
 - Chrome verified 252 volume bars in AAPL 1Y, OHLC/volume overlay content and
   centered arrow layout. The reference chart does not expose a comparable data
   count through its visible DOM; no exact feed-equivalence claim is made.
+- A narrow viewport follow-up found a stale-width edge case during resize; CSS
+  clamps tooltip position/width to its actual containing block as a second bound.
 
 ### Files Modified
 

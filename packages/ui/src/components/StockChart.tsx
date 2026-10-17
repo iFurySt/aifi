@@ -250,7 +250,11 @@ export function StockChart({
           <div
             className="stock-chart-tooltip"
             role="tooltip"
-            style={{ left: tipLeft, top: tipTop, width: tipWidth }}
+            style={{
+              left: `clamp(4px, ${tipLeft}px, calc(100% - ${tipWidth + 4}px))`,
+              top: tipTop,
+              width: tipWidth,
+            }}
           >
             <time dateTime={active.date}>
               {active.date}
