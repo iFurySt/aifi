@@ -2,6 +2,7 @@
   "name": "@aifi/desktop",
   "version": "0.1.0",
   "private": true,
+  "license": "AGPL-3.0-only",
   "main": "dist/main.cjs",
   "scripts": {
     "build": "node ../../scripts/build-desktop.mjs",

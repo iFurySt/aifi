@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-18 | Repository and license | Open the project repository from the account menu; AIFi is licensed under AGPLv3. | Added a safe external GitHub link and aligned LICENSE, READMEs, first-party manifests and contribution terms on AGPL-3.0-only. |
 | 2026-10-17 | Fund history | Explore historical reported holdings with fund logos and quarterly comparisons. | Added keyless 13f.info backfill for 16 tracked managers, a selectable ownership ring, colored positions, reporting-period controls and locally cached catalog logos. |
 | 2026-10-17 | Storage | See local data usage by category and find the largest files quickly. | Added file totals, SQLite allocation, directory summaries with individual files above 50 MB, instant cached re-entry with background refresh, desktop folder reveal and Web path copying. |
 | 2026-10-17 | Responsive Stocks | Narrow windows give research more room; all company sections remain available. | Added automatic stock-list drawers, container-based chart/content reflow, compact headers/summaries and selected-tab reveal with retained chart/list state. |

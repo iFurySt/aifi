@@ -1,5 +1,6 @@
 # AIFi
 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](./LICENSE)
 [![English](https://img.shields.io/badge/English-Click-yellow)](./README.md)
 [![简体中文](https://img.shields.io/badge/简体中文-点击查看-orange)](./README.zh-CN.md)
 [![LINUX.DO](https://img.shields.io/badge/LINUX.DO-Visit-blue)](https://linux.do/)
@@ -82,3 +83,8 @@ codex "Compare Intel with AMD, Nvidia, and TSMC, then summarize the bull, base, 
 ### Research artifact example
 
 ![AIFi research result preview](./docs/assets/readme/aifi-preview-en.png)
+
+## License
+
+AIFi is licensed under the [GNU Affero General Public License v3.0 only](./LICENSE)
+(`AGPL-3.0-only`). Third-party components and assets retain their own licenses.

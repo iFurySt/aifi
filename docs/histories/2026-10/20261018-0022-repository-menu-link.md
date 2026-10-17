@@ -34,3 +34,13 @@ Native App restarted; the compact GitHub menu row is visible.
 - `apps/desktop/src/main.ts`
 - `scripts/check-account-ui.mjs`
 - Frontend/security docs and the active license-decision plan
+
+### Follow-up: AGPLv3 Adoption
+
+The user selected a direct AGPLv3 switch. Replace the root LICENSE with the full
+canonical AGPLv3 text, use `AGPL-3.0-only` across six project manifests, add short
+license sections/badges to both READMEs, and align contribution terms. NOTICE
+retains the existing project copyright holder and separate third-party terms.
+
+License-text identity, JSON metadata, README links and notice preservation are
+verified. No runtime dependencies or third-party license files change.

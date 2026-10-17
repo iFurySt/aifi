@@ -1,5 +1,6 @@
 # AIFi
 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](./LICENSE)
 [![English](https://img.shields.io/badge/English-Click-yellow)](./README.md)
 [![简体中文](https://img.shields.io/badge/简体中文-点击查看-orange)](./README.zh-CN.md)
 
@@ -76,3 +77,8 @@ codex "对比 Intel、AMD、Nvidia 和 TSMC，并总结 bull/base/bear case"
 ### 研究产物示例
 
 ![AIFi 研究结果预览](./docs/assets/readme/aifi-preview-zh-CN.png)
+
+## 许可证
+
+AIFi 采用 [GNU Affero General Public License v3.0 only](./LICENSE)
+（`AGPL-3.0-only`）。第三方组件和素材遵循各自的许可。

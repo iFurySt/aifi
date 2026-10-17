@@ -30,3 +30,10 @@ humans to reuse.
 - Call out research-quality risks, data-retention concerns, migrations, and
   deferred follow-ups explicitly.
 - Link to the relevant plan, spec, or history file when context is important.
+
+## Contribution License
+
+Submit original contributions under the repository's GNU Affero General Public
+License v3.0 only (`AGPL-3.0-only`). You must have the rights to contribute the
+material under those terms. Retain the origin and license notices of third-party
+material; the repository license does not replace their separate terms.
