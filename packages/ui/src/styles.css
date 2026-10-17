@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./selection.css";
 @source "../../../apps/web/src";
 @source "./";
 @theme {

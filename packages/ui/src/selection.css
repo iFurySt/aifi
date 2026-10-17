@@ -1,0 +1,73 @@
+/* Application chrome is not a document. Reading surfaces opt back in below. */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+:is(
+  .main-content,
+  [data-selectable-content],
+  .sheet-body,
+  .workflow-steps,
+  .dialog-content > p,
+  .dialog-content > article,
+  .dialog-content > section
+) {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Controls inside reading surfaces still behave as controls. */
+:is(
+  button,
+  input,
+  textarea,
+  [contenteditable],
+  select,
+  label,
+  nav,
+  aside,
+  header,
+  [role="button"],
+  [role="tablist"],
+  [role="tab"],
+  [role="toolbar"],
+  [role="menu"],
+  [role="menuitem"],
+  [role="menuitemradio"],
+  [role="menuitemcheckbox"],
+  [role="listbox"],
+  [role="option"],
+  .button,
+  .setting-link,
+  a[href^="#/"],
+  .page-heading,
+  .conversation-header,
+  .data-toolbar,
+  .stock-table-toolbar,
+  .composer-footer,
+  .search-footer,
+  .profile-avatar,
+  .stock-avatar,
+  .usage-avatar,
+  .brand,
+  svg,
+  img
+) {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Only focused fields participate in editing selection, not document Select All. */
+input:focus,
+textarea:focus,
+[contenteditable="true"]:focus-within,
+[contenteditable="plaintext-only"]:focus-within {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img,
+svg {
+  -webkit-user-drag: none;
+}

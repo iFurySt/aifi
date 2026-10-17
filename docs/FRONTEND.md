@@ -427,3 +427,21 @@ neutral selected rows, a nearby chevron, viewport-bounded portals and keyboard
 selection. Keep action and citation menus separate. See
 [selection controls](design-docs/selection-controls.md) for the API and
 `pnpm smoke:selects` regression gate.
+
+## Text Selection Boundaries
+
+`selection.css` makes application chrome nonselectable by default: window/web
+headers, navigation/sidebars, buttons, tabs, menus, filters, avatars and chart
+graphics. The main document remains selectable for company descriptions,
+financial values/tables, chat messages and other reading content. Agent sheets
+and workflow details also opt in; future reading surfaces can use
+`data-selectable-content`. Internal app-navigation links remain controls.
+
+Inputs, textareas and editable content allow selection when focused, preserving
+editing/Select All without including unfocused placeholders in document-wide
+selection. This is CSS only; no blanket key/copy/pointer cancellation is added.
+
+Run `pnpm smoke:selection` to visit implemented main pages, six stock tabs and
+settings categories in a disposable visible Electron window. It checks chrome,
+focused field ranges, document Select All and reading/control areas in portals.
+It uses offline fixtures and never opens a real account or source collector.
