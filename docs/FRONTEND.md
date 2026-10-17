@@ -106,7 +106,7 @@ installer packaging, signing, and updates remain follow-ups.
 
 ## Shared Window And Document Shell
 
-The outer neutral frame owns an 80px tool rail. A single rounded inset panel
+The outer neutral frame owns a 76px tool rail. A single rounded inset panel
 holds the 248px sidebar and document. Only main content scrolls; the frame,
 toolbar, and sidebar stay in place. Collapsing the sidebar expands the document.
 At tablet widths navigation becomes a drawer; mobile hides the rail and keeps an
@@ -126,11 +126,21 @@ controls. Native close/minimize/full-screen controls remain owned by the OS.
 
 The outer rail contains application navigation; the inner sidebar selects stocks,
 or settings categories while Settings is open. Chat history remains selectable inside Chat and searchable from the
-toolbar. The outer-rail avatar opens the shared Radix workspace menu for
-Settings and theme switching. Below 600px the rail is hidden and the same menu
+toolbar. Rail buttons are centered with equal 6px side margins and no extra
+panel gutter. The 44px bottom account trigger contains a 36px person icon before
+sign-in or the active verified name initial after connection. The shared Radix
+account menu is 228px wide with 34px desktop rows: Continue with ChatGPT/Settings
+when anonymous, Usage/Settings when connected. It reuses the existing ChatGPT
+host actions; Usage opens official management rather than inventing a remaining
+percentage. Theme stays in the toolbar/Appearance. Command/Ctrl+, opens Settings
+and dismisses the account menu. Below 600px the rail is hidden and the same menu
 appears in the page toolbar. Check keyboard selection, Escape/focus return,
 outside dismissal, popup viewport bounds, and settings access with the sidebar
-collapsed as well as on mobile.
+collapsed as well as on mobile. Settings uses 40px desktop content padding,
+25px headings with 28px below, 14px group radii, and rows with 12px vertical
+padding/58px minimum height. Mobile retains 40px menu rows and usable controls.
+`pnpm smoke:account` checks anonymous/connected state, sign-in and usage dispatch,
+keyboard shortcuts, and rail/menu/row geometry with a synthetic isolated account.
 
 Keyboard focus across the renderer and stock prototype uses neutral backgrounds,
 text/underlines, and form borders instead of outlines. The shared CSS suppresses

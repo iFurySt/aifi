@@ -174,7 +174,7 @@ svg {
 }
 .app-shell {
   --sidebar-width: 248px;
-  --rail-width: 56px;
+  --rail-width: 76px;
   display: flex;
   flex-direction: column;
   height: 100dvh;
@@ -189,7 +189,7 @@ svg {
   display: flex;
   flex: 1;
   min-height: 0;
-  gap: 8px;
+  gap: 0;
 }
 .workspace-panel {
   display: flex;
@@ -208,7 +208,7 @@ svg {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 4px 8px 0;
+  padding: 4px 6px 0;
 }
 .rail-button {
   width: 40px;
@@ -234,8 +234,8 @@ svg {
   margin: 6px 0;
 }
 .profile-trigger {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   border-radius: 10px;
@@ -248,12 +248,12 @@ svg {
 .profile-avatar {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 1px solid var(--frame-border);
   background: var(--canvas);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 .rail-profile {
@@ -264,33 +264,58 @@ svg {
   display: none;
 }
 .dropdown-menu.workspace-menu {
-  width: 264px;
+  width: 228px;
   max-width: calc(100vw - 24px);
-  padding: 8px;
-  border-radius: 16px;
+  padding: 6px;
+  border-radius: 14px;
 }
 .workspace-menu-identity {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 8px;
+  gap: 9px;
+  padding: 7px 8px;
   font-size: 13px;
   font-weight: 500;
 }
 .workspace-menu-identity .profile-avatar {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
+}
+.workspace-menu-identity > span:last-child {
+  min-width: 0;
+}
+.workspace-menu-identity strong {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 550;
+}
+.workspace-menu-identity small {
+  display: block;
+  margin-top: 1px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.workspace-menu .account-shortcut {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 11px;
 }
 .workspace-menu-separator {
   height: 1px;
   background: var(--border);
-  margin: 6px 4px;
+  margin: 4px 4px;
 }
 .workspace-menu .dropdown-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-height: 40px;
+  gap: 9px;
+  min-height: 34px;
   font-size: 13px;
   border-radius: 8px;
 }
@@ -1972,7 +1997,7 @@ kbd {
 
 /* Global navigation lives in the outer rail; the document sidebar selects stocks. */
 .app-shell {
-  --rail-width: 80px;
+  --rail-width: 76px;
 }
 .rail-brand {
   height: 44px;
@@ -1989,6 +2014,7 @@ kbd {
 }
 .rail-destinations {
   display: grid;
+  justify-items: center;
   gap: 8px;
   width: 100%;
 }
@@ -2513,37 +2539,38 @@ kbd {
   }
 }
 
-/* Settings uses the document sidebar for categories and spacious grouped rows. */
+/* Compact settings categories and grouped controls. */
 .settings-main {
   padding: 0;
 }
 .settings-sidebar {
-  padding: 24px 14px;
+  padding: 18px 12px;
 }
 .settings-sidebar h2 {
-  font-size: 18px;
+  font-size: 17px;
   padding: 0 8px;
 }
 .settings-search {
-  margin: 20px 0 10px;
+  padding: 8px 10px;
+  margin: 14px 0 8px;
   border: 0;
   border-radius: 999px;
   background: var(--surface-muted);
 }
 .settings-nav-group {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 .settings-nav-group > small {
   color: var(--muted);
   display: block;
-  margin: 0 10px 10px;
-  font-size: 12px;
+  margin: 0 10px 7px;
+  font-size: 11px;
 }
 .settings-nav-link {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 7px 10px;
   border-radius: 8px;
   font-size: 13px;
 }
@@ -2555,33 +2582,33 @@ kbd {
 .settings-content {
   max-width: 920px;
   margin: 0 auto;
-  padding: 64px 48px 80px;
+  padding: 40px 40px 56px;
 }
 .settings-content > h1 {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 550;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
 }
 .setting-group {
-  margin-bottom: 44px;
+  margin-bottom: 28px;
 }
 .setting-group > h2 {
   font-size: 14px;
   font-weight: 550;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 .setting-card {
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 0 20px;
+  border-radius: 14px;
+  padding: 0 16px;
 }
 .setting-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  min-height: 76px;
-  padding: 18px 0;
+  gap: 20px;
+  min-height: 58px;
+  padding: 12px 0;
 }
 .setting-row + .setting-row,
 .setting-inline-form {
@@ -2591,14 +2618,16 @@ kbd {
   min-width: 0;
 }
 .setting-row strong {
+  display: block;
+  line-height: 1.4;
   font-weight: 500;
   font-size: 14px;
 }
 .setting-row p {
   font-size: 12px;
   color: var(--muted);
-  margin: 4px 0 0;
-  line-height: 1.5;
+  margin: 3px 0 0;
+  line-height: 1.45;
   overflow-wrap: anywhere;
 }
 .setting-control {
@@ -2618,6 +2647,15 @@ kbd {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 10px;
+}
+.setting-control .button {
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.setting-control select,
+.setting-control input {
+  padding: 6px 9px;
 }
 .setting-control .interval-input {
   width: 72px;
@@ -2745,7 +2783,7 @@ kbd {
 }
 @media (max-width: 1100px) {
   .settings-content {
-    padding: 40px 28px 60px;
+    padding: 32px 28px 48px;
   }
   .storage-location {
     max-width: 220px;
@@ -2753,11 +2791,11 @@ kbd {
 }
 @media (max-width: 599px) {
   .settings-content {
-    padding: 32px 20px 50px;
+    padding: 26px 20px 40px;
   }
   .settings-content > h1 {
-    font-size: 24px;
-    margin-bottom: 32px;
+    font-size: 23px;
+    margin-bottom: 24px;
   }
   .setting-group {
     margin-bottom: 28px;
@@ -3377,4 +3415,23 @@ kbd {
 .stock-chart-tooltip dd {
   margin: 0;
   font-weight: 500;
+}
+
+@media (max-width: 599px) {
+  .workspace-menu .dropdown-item {
+    min-height: 40px;
+  }
+  .mobile-profile {
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-profile .profile-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .setting-control .button,
+  .setting-control select,
+  .setting-control input {
+    min-height: 36px;
+  }
 }

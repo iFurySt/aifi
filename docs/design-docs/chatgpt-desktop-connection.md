@@ -36,6 +36,14 @@ then return to AIFi. Dismiss the first-use confirmation, choose a model and send
 a short message in Chat. **Manage usage** opens ChatGPT usage settings. Add
 account, selection, reconnect, cancel and sign out are supported.
 
+The bottom account menu also reuses sign-in and Manage usage. It shows a person
+icon when anonymous, and the active verified display name/initial when connected.
+The host's optional display-only `name` field avoids the account selector's ordinal
+suffix in that identity. It exposes no additional credential material.
+The [official accounts/session guidance](https://developers.openai.com/siwc/token-sharing-open-source/profiles-and-sessions)
+documents opening ChatGPT Settings → Usage. A remaining-percentage read API has
+not been verified for this integration; AIFi shows an action without guessed quota.
+
 No environment variable, OpenAI console app, API key or client secret is required.
 Dynamic registration returns the issued client ID; AIFi saves it before exchange
 and reuses it on reconnect, including after failed exchange. An eligible account,

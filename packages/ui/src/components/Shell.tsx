@@ -98,6 +98,17 @@ export function Shell({ children }: { children: ReactNode }) {
   const directoryResults = useDirectorySearch(search, 12, 0, searchOpen);
   useEffect(() => {
     function keydown(event: KeyboardEvent) {
+      if (
+        (event.metaKey || event.ctrlKey) &&
+        !event.altKey &&
+        event.key === ","
+      ) {
+        event.preventDefault();
+        setSearchOpen(false);
+        setMobileOpen(false);
+        navigate("settings");
+        return;
+      }
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         setSearchOpen((value) => !value);
@@ -105,7 +116,7 @@ export function Shell({ children }: { children: ReactNode }) {
     }
     window.addEventListener("keydown", keydown);
     return () => window.removeEventListener("keydown", keydown);
-  }, []);
+  }, [navigate]);
   const matches = workspacePages.filter((p) =>
     pageLabels[p].toLowerCase().includes(search.toLowerCase()),
   );

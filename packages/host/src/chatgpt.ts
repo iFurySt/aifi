@@ -115,6 +115,7 @@ export class ChatGPTHost {
       profiles: s.profiles.map((p, i) => ({
         id: p.id,
         label: `${p.name || p.email || "Connection"} · ${i + 1}`,
+        name: p.name,
         email: p.email,
         connected: !!p.subject && !!(p.accessToken || p.idToken),
         sharing:

@@ -3,6 +3,7 @@ import type { Message } from "./workspace";
 export interface ChatGPTProfile {
   id: string;
   label: string;
+  name?: string;
   email?: string;
   connected: boolean;
   sharing: boolean;

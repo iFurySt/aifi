@@ -102,7 +102,7 @@ Selected ticker chips are small outlined pills. Forms show validation inline.
 
 ### Navigation
 
-80px outer tool rail and a 248px stock sidebar inside the workspace panel. Rail
+76px outer tool rail and a 248px stock sidebar inside the workspace panel. Rail
 buttons are 64×56px with an icon and short label. Stocks, Chat, Agents,
 Watchlist, Portfolio, and Library live only in that single column; Settings
 lives in the avatar popup. Stocks is the starting route. The inner sidebar
@@ -130,7 +130,7 @@ Use Radix primitives for those behaviors, not a large visual component library.
 
 ### Page Composition
 
-- App shell: neutral outer chrome, 80px tool rail, and a single inset panel
+- App shell: neutral outer chrome, 76px tool rail, and a single inset panel
   containing sidebar and main canvas. Panel radius 16px, outline 1px, outer gap
   8px. The frame and sidebar stay still while main content scrolls internally.
 - Electron: 48px draggable outer toolbar with native Mac traffic lights,
@@ -179,9 +179,14 @@ vertical scrollbar chrome while preserving normal scrolling; horizontal table
 wrappers retain their own scroll affordance.
 
 Keep the sidebar focused on stock selection; chats remain selectable inside
-Chat. The bottom outer-rail avatar opens a 264px popup with workspace identity,
-Settings, and theme switching. Use a 40px trigger, 16px popup radius, and 40px
-menu rows. At mobile widths move the same avatar menu into the page toolbar;
+Chat. Center 64px icon+text buttons in the 76px rail with equal 6px side margins;
+keep no extra gutter before the inset panel. The bottom account control uses a
+44px trigger and 36px avatar: a person icon before sign-in, verified name initial
+after connection. Its 228px popup uses 6px padding, a 14px radius and 34px desktop
+rows. Show identity plus Continue with ChatGPT/Settings before sign-in; show
+Usage/Settings after connection. Usage opens the official management page; show
+no unverified remaining percentage. Theme lives in the toolbar/Appearance.
+Command/Ctrl+, opens Settings and dismisses an open account menu. At mobile widths move the same avatar menu into the page toolbar;
 avoid duplicating sidebar footers. Menus support keyboard navigation, Escape,
 outside dismissal, and focus return. All controls suppress browser/default focus
 outlines. Keyboard focus uses the existing neutral hover background, text,
@@ -302,11 +307,12 @@ Detailed scope: [stock page design](docs/design-docs/stock-research-page.md).
 
 Use the supplied 2026-10-13 settings screenshot as the layout reference. Preserve
 the outer frame/rail; replace the inner stock sidebar with category search and
-Personal/Data groups. Document width 920px with 48px desktop padding, 28px tablet,
-20px mobile; title 28px/550 with 48px space before content.
+Personal/Data groups. Document width 920px with 40px desktop padding, 28px tablet,
+20px mobile; title 25px/550 with 28px space before content. Sidebar category rows
+use 7px vertical padding and 16px between groups.
 
-Each section uses a 14px title and a 16px rounded bordered group. Rows have 18px
-vertical padding, 14px labels and optional 12px functional descriptions. Controls
+Each section uses a 14px title and a 14px rounded bordered group. Rows have 12px
+vertical padding, a 58px minimum height, 14px labels and optional 12px functional descriptions. Controls
 align right: neutral switches, selects, compact buttons, and inline inputs. Tables
 or cards must not overflow on mobile; use the existing drawer for categories.
 Settings represents real local controls and has no Demo badge.

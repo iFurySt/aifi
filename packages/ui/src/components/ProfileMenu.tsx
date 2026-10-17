@@ -1,21 +1,41 @@
+import { useState } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Moon, Settings, Sun } from "lucide-react";
+import { Gauge, LogIn, Settings, UserRound } from "lucide-react";
 import { useWorkspace } from "../workspace-context";
+import { useChatGPT } from "../chatgpt-context";
 
 export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
-  const { workspace, update, navigate } = useWorkspace();
-  const dark = workspace.theme === "dark";
+  const { navigate } = useWorkspace();
+  const [open, setOpen] = useState(false);
+  const { available, status, busy, signingIn, action } = useChatGPT();
+  const active = status?.profiles.find((p) => p.id === status.activeProfileId);
+  const connected = !!active?.connected;
+  const name = connected ? active.name || active.label : "Not signed in";
+  const initials = connected
+    ? (active.name || active.email || active.label)
+        .trim()
+        .slice(0, 1)
+        .toLocaleUpperCase()
+    : "";
+  const avatar = (
+    <span className="profile-avatar" aria-hidden="true">
+      {initials || <UserRound size={22} strokeWidth={1.6} />}
+    </span>
+  );
+  function signIn() {
+    location.hash = "/settings/chatgpt";
+    if (available)
+      void action("signIn", active ? { profileId: active.id } : undefined);
+  }
   return (
-    <DropdownMenu.Root>
+    <DropdownMenu.Root open={open} onOpenChange={setOpen}>
       <DropdownMenu.Trigger asChild>
         <button
           className={`profile-trigger ${mobile ? "mobile-profile" : "rail-profile"}`}
-          aria-label="Workspace menu"
-          title="Workspace menu"
+          aria-label="Account menu"
+          title={name}
         >
-          <span className="profile-avatar" aria-hidden="true">
-            A
-          </span>
+          {avatar}
         </button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
@@ -23,36 +43,51 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
           className="dropdown-menu workspace-menu"
           side={mobile ? "bottom" : "right"}
           align="end"
-          sideOffset={8}
-          collisionPadding={12}
-          aria-label="Workspace"
+          sideOffset={6}
+          collisionPadding={10}
+          aria-label="Account"
+          onKeyDown={(event) => {
+            if (
+              (event.metaKey || event.ctrlKey) &&
+              !event.altKey &&
+              event.key === ","
+            )
+              setOpen(false);
+          }}
         >
           <DropdownMenu.Label className="workspace-menu-identity">
-            <span className="profile-avatar" aria-hidden="true">
-              A
+            {avatar}
+            <span>
+              <strong>{name}</strong>
+              {connected && <small>ChatGPT</small>}
             </span>
-            <span>Personal workspace</span>
           </DropdownMenu.Label>
           <DropdownMenu.Separator className="workspace-menu-separator" />
+          {connected ? (
+            <DropdownMenu.Item
+              className="dropdown-item"
+              disabled={busy}
+              onSelect={() => void action("openUsage")}
+            >
+              <Gauge size={17} strokeWidth={1.7} />
+              Usage
+            </DropdownMenu.Item>
+          ) : (
+            <DropdownMenu.Item
+              className="dropdown-item"
+              disabled={busy || signingIn}
+              onSelect={signIn}
+            >
+              <LogIn size={17} strokeWidth={1.7} />
+              {signingIn ? "Signing in…" : "Continue with ChatGPT"}
+            </DropdownMenu.Item>
+          )}
           <DropdownMenu.Item
             className="dropdown-item"
             onSelect={() => navigate("settings")}
           >
-            <Settings size={18} strokeWidth={1.7} />
-            Settings
-          </DropdownMenu.Item>
-          <DropdownMenu.Item
-            className="dropdown-item"
-            onSelect={() =>
-              update((w) => ({ ...w, theme: dark ? "light" : "dark" }))
-            }
-          >
-            {dark ? (
-              <Sun size={18} strokeWidth={1.7} />
-            ) : (
-              <Moon size={18} strokeWidth={1.7} />
-            )}
-            {dark ? "Light theme" : "Dark theme"}
+            <Settings size={17} strokeWidth={1.7} />
+            Settings<kbd className="account-shortcut">⌘ ,</kbd>
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
