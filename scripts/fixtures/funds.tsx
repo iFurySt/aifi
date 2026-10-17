@@ -56,8 +56,38 @@ data.datasets.funds = {
     window: "Synthetic top-holder sample",
   },
 };
+const historyData = emptyResearch("HISTORY");
+const reportPeriods = Array.from({ length: 14 }, (_, i) =>
+  new Date(Date.UTC(2026, 6 - i * 3, 0)).toISOString().slice(0, 10),
+);
+const historicalRecords = [
+  ...reportPeriods.map((d, i) =>
+    point("Alpha manager", d, 100 - i * 3, {
+      managerCik: "0001067983",
+      current: i === 0,
+    }),
+  ),
+  point("New manager", reportPeriods[0], 20),
+  point("New manager", reportPeriods[1], 0, { current: false }),
+  point("Exited manager", reportPeriods[0], 0),
+  point("Exited manager", reportPeriods[1], 30, { current: false }),
+  point("Gap manager", reportPeriods[0], 50),
+  point("Gap manager", reportPeriods[2], 40, { current: false }),
+];
+historyData.datasets.funds = {
+  provider: "thirteenf",
+  fetchedAt: "2026-10-17T00:00:00Z",
+  recordCount: historicalRecords.length,
+  sources: ["https://13f.info/manager/0001067983-berkshire-hathaway-inc"],
+  data: {
+    version: 1,
+    complete: false,
+    records: historicalRecords,
+    reportPeriods,
+  },
+};
 const root = createRoot(document.getElementById("root")!);
-function render(empty = false, zero = false) {
+function render(empty = false, zero = false, history = false) {
   root.render(
     <main
       style={{
@@ -70,20 +100,22 @@ function render(empty = false, zero = false) {
         data={
           empty
             ? emptyResearch("EMPTY")
-            : zero
-              ? {
-                  ...data,
-                  datasets: {
-                    funds: {
-                      ...data.datasets.funds!,
-                      data: {
-                        ...data.datasets.funds!.data,
-                        records: records.map((r) => ({ ...r, shares: 0 })),
+            : history
+              ? historyData
+              : zero
+                ? {
+                    ...data,
+                    datasets: {
+                      funds: {
+                        ...data.datasets.funds!,
+                        data: {
+                          ...data.datasets.funds!.data,
+                          records: records.map((r) => ({ ...r, shares: 0 })),
+                        },
                       },
                     },
-                  },
-                }
-              : data
+                  }
+                : data
         }
       />
     </main>,
@@ -91,6 +123,7 @@ function render(empty = false, zero = false) {
 }
 Object.assign(window, {
   fundsFixture: {
+    history: () => render(false, false, true),
     empty: () => render(true),
     zero: () => render(false, true),
     restore: () => render(),

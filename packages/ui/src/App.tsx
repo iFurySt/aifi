@@ -1,3 +1,5 @@
+import { FundLogoContext } from "./fund-logo-context";
+import { createLocalFundLogos } from "@aifi/platform";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   createDemoWorkspace,
@@ -61,11 +63,18 @@ import { StockResearchContext } from "./stock-research-context";
 const localResearch=createLocalStockResearch();
 const localDirectory = createLocalStockDirectory();
 const localLogos = createLocalStockLogos();
+const localFundLogos = createLocalFundLogos();
 export function App({
   directory = localDirectory,
   logos = localLogos,
- stockResearch=localResearch,
-}: { directory?: StockDirectoryRepository; logos?: StockLogoRepository;stockResearch?:StockResearchRepository } = {}) {
+  fundLogos = localFundLogos,
+  stockResearch = localResearch,
+}: {
+  directory?: StockDirectoryRepository;
+  logos?: StockLogoRepository;
+  fundLogos?: Pick<StockLogoRepository, "get" | "peek">;
+  stockResearch?: StockResearchRepository;
+} = {}) {
   const [loaded] = useState(() =>
     readWorkspace(storage, createDemoWorkspace, decodeWorkspace),
   );
@@ -181,7 +190,7 @@ export function App({
   }, [notify]);
   return (
     <ChatGPTProvider>
-    <StockResearchContext.Provider value={stockResearch}><StockLogoContext.Provider value={logos}>
+    <StockResearchContext.Provider value={stockResearch}><FundLogoContext.Provider value={fundLogos}><StockLogoContext.Provider value={logos}>
       <StockDirectoryContext.Provider value={directory}>
         <WorkspaceContext.Provider
           value={{
@@ -233,7 +242,7 @@ export function App({
           </div>
         </WorkspaceContext.Provider>
       </StockDirectoryContext.Provider>
-    </StockLogoContext.Provider></StockResearchContext.Provider>
+    </StockLogoContext.Provider></FundLogoContext.Provider></StockResearchContext.Provider>
     </ChatGPTProvider>
   );
 }

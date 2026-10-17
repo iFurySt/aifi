@@ -86,3 +86,42 @@ describe("fund ownership meaning", () => {
     ).toBeUndefined();
   });
 });
+
+it("compares adjacent complete 13F periods, retaining reported zeros and missing-report gaps", () => {
+  const data = view([
+    point("New", "2026-06-30", 20, { managerCik: "0001067983" }),
+    point("New", "2026-03-31", 0),
+    point("Exited", "2026-06-30", 0),
+    point("Exited", "2026-03-31", 30),
+    point("Gap", "2026-06-30", 50),
+    point("Gap", "2025-12-31", 40),
+    point("Trim", "2026-06-30", 80),
+    point("Trim", "2026-03-31", 100, { current: false }),
+  ]);
+  data.provider = "thirteenf";
+  const rows = fundHistories(data);
+  expect(rows.find((r) => r.name === "New")?.latest).toMatchObject({
+    position: "New",
+    changeShares: 20,
+    cik: "0001067983",
+  });
+  expect(rows.find((r) => r.name === "Exited")?.latest).toMatchObject({
+    position: "Exited",
+    changeShares: -30,
+  });
+  expect(rows.find((r) => r.name === "Trim")?.latest).toMatchObject({
+    position: "Reduced",
+    changeShares: -20,
+    changePercent: -20,
+  });
+  expect(rows.find((r) => r.name === "Gap")?.latest.position).toBe("Unknown");
+  expect(
+    fundPeriods(rows, [
+      "2026-06-30",
+      "2026-03-31",
+      "2026-06-30",
+      "bad",
+      "2026-02-30",
+    ]),
+  ).toEqual(["2026-06-30", "2026-03-31"]);
+});

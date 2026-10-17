@@ -110,3 +110,13 @@ accessions and never infer real-time buys/sells from disclosed quarter ends.
 
 - [13f.info public source](https://github.com/toddwschneider/sec-13f-filings): manager/CUSIP routes and data-table share/value format.
 - [Berkshire Hathaway manager history](https://13f.info/manager/0001067983-berkshire-hathaway-inc): report dates, filing identity and historical common-share disclosures.
+
+
+## Verified historical collection
+
+The historical adapter persisted AAPL 216 observations across 16 managers,
+MSFT 200 across 15 and NVDA 203 across 15. Each payload has 14 reporting columns,
+2023 Q1 through 2026 Q2. Missing cells reflect unavailable/ambiguous report
+metadata and remain gaps; complete reported absences are stored as zero. All
+16 reviewed manager logos were validated and cached locally. Actual Chrome
+shows 16 ready AAPL fund images and 16 table columns (name/position + 14 dates).

@@ -60,3 +60,9 @@ MSFT/NVDA when source access allows. No login/inference/API purchase required.
   owns its horizontal scroll. App is left on AAPL Funds.
 - Full historical 13F, all-manager census and managed fund logos remain source
   gaps; no uncollected quarter, inferred exit or fabricated logo is displayed.
+
+
+Historical backfill and fund-logo gaps above describe the initial sample-only
+iteration. They are superseded by the subsequent
+[fund history and logos plan](fund-history-and-logos.md), which adds the tracked
+manager history source, ring layout and shared logo catalog.

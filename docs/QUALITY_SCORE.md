@@ -30,6 +30,9 @@ issuer KPIs, coherent historical valuation and non-USD/IFRS normalization remain
 explicit coverage gaps; existing product quality scores are unchanged.
 
 Funds has parser/domain/offline-store and isolated chart/table interaction checks,
-plus a native/web review of real stored ownership samples. Complete historical
-13F coverage and amendment/CUSIP normalization remain deferred; top-holder samples
-are explicit and never interpreted as a complete ownership census.
+plus a native/web review of real stored ownership samples. A keyless 16-manager
+13F backfill now supplies 4–20 quarters with exact CUSIP mapping, options exclusion
+and complete-report absence checks. Full institutional census, ambiguous amendments,
+corporate-action-adjusted history and broad CUSIP normalization remain gaps. Fund
+logos have strict identity/cache/offline checks; ring/table checks cover true zeros,
+report gaps, selection and 14-quarter desktop/mobile layout.

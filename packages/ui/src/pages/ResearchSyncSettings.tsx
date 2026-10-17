@@ -178,7 +178,9 @@ function BudgetRow({
   return (
     <div className="setting-row">
       <div>
-        <strong>{provider.toUpperCase()}</strong>
+        <strong>
+          {provider === "thirteenf" ? "13f.info" : provider.toUpperCase()}
+        </strong>
         <p>
           {provider === "yahoo" || provider === "thirteenf"
             ? "Public endpoint · Personal research"

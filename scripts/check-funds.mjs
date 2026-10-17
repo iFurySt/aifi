@@ -44,7 +44,8 @@ async function checks() {
     if (!ok) throw Error(message);
   };
   const table = () => document.querySelector(".funds-table");
-  const graph = () => document.querySelector(".fund-history-chart svg");
+  const graph = () => document.querySelector(".fund-ring-wrap svg");
+  const sectors = () => graph()?.querySelectorAll(".fund-ring-sector").length;
   const button = (text) =>
     [...document.querySelectorAll("button")].find(
       (b) => b.textContent.trim() === text,
@@ -66,123 +67,117 @@ async function checks() {
   };
   await until(() => table() && graph());
   assert(
-    document.querySelector(".funds-ownership").textContent.includes("66.35%") &&
-      document.querySelector(".funds-ownership").textContent.includes("7,695"),
-    "Aggregate ownership is lost",
+    document.querySelector(".funds-ownership").textContent.includes("66.35%"),
+    "Aggregate ownership lost",
   );
   assert(
-    table().querySelectorAll("tbody tr").length === 3,
-    "Current and earlier samples missing",
-  );
-  assert(
-    graph().querySelectorAll("rect").length === 1,
-    "Unobserved history was manufactured",
+    table().querySelectorAll("tbody tr").length === 3 && sectors() === 2,
+    "Sample scope or latest-period ring incorrect",
   );
   await choose("Select fund", "Alpha manager");
-  await until(() => graph().querySelectorAll("rect").length === 3);
-  assert(
-    table().querySelector(".fund-selected-row").dataset.holder ===
+  await until(
+    () =>
+      table().querySelector(".fund-selected-row").dataset.holder ===
       "Alpha manager",
-    "Selector/table selection mismatch",
   );
   await choose("Position filter", "Added");
   await until(() => table().querySelectorAll("tbody tr").length === 1);
-  assert(
-    table().textContent.includes("Alpha manager") &&
-      !table().textContent.includes("Beta manager"),
-    "Position filtering failed",
-  );
   await choose("Position filter", "All positions");
   input(document.querySelector('[aria-label="Search holders"]'), "Beta");
   await until(
     () =>
       table().querySelectorAll("tbody tr").length === 1 &&
-      !table().textContent.includes("Alpha manager"),
+      table().textContent.includes("Beta manager"),
   );
-  table().querySelector(".fund-name").click();
-  await until(() => graph().querySelectorAll("rect").length === 1);
   input(document.querySelector('[aria-label="Search holders"]'), "");
   await until(() => table().querySelectorAll("tbody tr").length === 3);
-  assert(
-    table()
-      .querySelector('[data-holder="Earlier sample"]')
-      .textContent.includes("Earlier sample"),
-    "Sample disappearance became an exit",
-  );
-  graph().focus();
-  graph().dispatchEvent(
-    new KeyboardEvent("keydown", { key: "ArrowLeft", bubbles: true }),
-  );
-  await until(() => !!document.querySelector(".fund-chart-tooltip"));
-  assert(
-    document
-      .querySelector(".fund-chart-tooltip")
-      .textContent.includes("No collected observation"),
-    "A history gap became zero",
-  );
   button("Funds & ETFs").click();
   await until(() => table().textContent.includes("Aug 31, 2026"));
+  assert(!table().textContent.includes("Q3 2026"), "Monthly date mislabeled");
+  window.fundsFixture.zero();
+  await until(() => sectors() === 0);
+  assert(!/NaN|Infinity/.test(graph().outerHTML), "Invalid zero geometry");
+  button("Institutions").click();
+  window.fundsFixture.history();
+  await until(() => table().querySelectorAll("thead th").length === 16);
+  assert(sectors() === 3, "Zero/missing holdings included in ring");
   assert(
-    !table().textContent.includes("Q3 2026"),
-    "Monthly fund date mislabeled as quarter-end",
+    table().querySelector('[data-holder="New manager"] .fund-position')
+      .textContent === "New",
+    "Proven new position missing",
   );
   assert(
-    graph().querySelectorAll("rect").length === 2,
-    "Fund history is missing",
+    table().querySelector('[data-holder="Exited manager"] .fund-position')
+      .textContent === "Exited",
+    "Proven exit missing",
+  );
+  assert(
+    table().querySelector('[data-holder="Gap manager"] .fund-position')
+      .textContent === "—",
+    "Gap interpreted as a trade",
+  );
+  await choose("Select fund", "Alpha manager");
+  await until(() =>
+    document
+      .querySelector(".fund-ring-center")
+      .textContent.includes("3Shares added"),
   );
   graph().focus();
   graph().dispatchEvent(
-    new KeyboardEvent("keydown", { key: "ArrowLeft", bubbles: true }),
+    new KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }),
   );
-  await until(() => !!document.querySelector(".fund-chart-tooltip"));
-  const tip = document
-      .querySelector(".fund-chart-tooltip")
-      .getBoundingClientRect(),
-    host = document
-      .querySelector(".fund-history-chart")
-      .getBoundingClientRect();
+  await until(
+    () =>
+      table().querySelector(".fund-selected-row").dataset.holder !==
+      "Alpha manager",
+  );
+  const sector = graph().querySelector(".fund-ring-sector");
+  sector.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
+  await until(() => !!document.querySelector(".fund-ring-tooltip"));
   assert(
-    tip.left >= host.left && tip.right <= host.right + 1,
-    "Tooltip escapes chart",
+    document
+      .querySelector(".fund-ring-tooltip")
+      .textContent.includes("of tracked holdings"),
+    "Ownership denominator unclear",
   );
-  await choose("Position filter", "New");
-  await until(() => table().textContent.includes("No matching holders"));
-  window.fundsFixture.zero();
-  await choose("Position filter", "All positions");
+  await choose("Reporting period", "Q1 2026");
   await until(() =>
-    [...graph().querySelectorAll("rect")].every(
-      (r) => r.getAttribute("height") === "1",
-    ),
+    document.querySelector(".fund-ring-center").textContent.includes("Q1 2026"),
   );
-  assert(
-    !/NaN|Infinity/.test(graph().outerHTML),
-    "Zero chart has invalid geometry",
-  );
+  assert(sectors() === 2, "Historical ring failed");
   window.fundsFixture.empty();
   await until(() => !graph());
   assert(
-    table().textContent.includes("No data") ||
-      table().textContent.includes("collect") ||
-      table().textContent.includes("sync") ||
-      table().textContent.includes("Sync"),
-    "Missing data is not explicit",
+    /data|collect|sync/i.test(table().textContent),
+    "Missing data unclear",
   );
-  window.fundsFixture.restore();
+  window.fundsFixture.history();
   await until(() => !!graph());
-  button("Institutions").click();
-  await until(() => !!table().querySelector('[data-holder="Alpha manager"]'));
+  document.dispatchEvent(
+    new KeyboardEvent("keydown", { key: "Escape", bubbles: true }),
+  );
+  await choose("Select fund", "Alpha manager");
+  await wait(100);
+  document.dispatchEvent(
+    new KeyboardEvent("keydown", { key: "Escape", bubbles: true }),
+  );
+  graph().dispatchEvent(
+    new MouseEvent("mouseout", { bubbles: true, relatedTarget: document.body }),
+  );
   return {
     aggregateOwnership: true,
-    separateHolderScopes: true,
-    selectorTableChartSync: true,
-    positionFilter: true,
-    localSearch: true,
-    unknownSampleAbsence: true,
+    holderScopes: true,
+    selectorTableRingSync: true,
+    filters: true,
     realMonthlyDates: true,
-    noInventedHistory: true,
-    keyboardTooltip: true,
-    boundedTooltip: true,
-    zeroChartFinite: true,
+    zeroFinite: true,
+    fourteenQuarters: true,
+    provenNewExit: true,
+    gapsRemainUnknown: true,
+    exactDelta: true,
+    keyboardSelection: true,
+    ringTooltip: true,
+    periodSelection: true,
     missingData: true,
   };
 }

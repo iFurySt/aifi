@@ -1,16 +1,17 @@
 import { useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import {
   fundHistories,
   fundPeriods,
   holdingPeriodLabel,
-  type FundHolding,
   type FundPosition,
   type HolderKind,
   type StockResearch,
 } from "@aifi/core";
 import { Select } from "../components/Select";
-import { FundHistoryChart } from "../components/FundHistoryChart";
+import { FundOwnershipRing } from "../components/FundOwnershipRing";
+import { FundAvatar } from "../components/FundAvatar";
+import { syncResearch } from "@aifi/platform";
 import { SourceNote, MissingData } from "./stock-research-shared";
 import "./funds.css";
 const compact = (n: number) =>
@@ -26,23 +27,6 @@ const positions: FundPosition[] = [
   "Exited",
   "Unknown",
 ];
-function Position({ point }: { point: FundHolding }) {
-  const cls =
-    point.position === "Added" || point.position === "New"
-      ? "positive"
-      : point.position === "Reduced" || point.position === "Exited"
-        ? "negative"
-        : "";
-  return (
-    <span className={`fund-position ${cls}`}>
-      {!point.current
-        ? "Earlier sample"
-        : point.position === "Unknown"
-          ? "—"
-          : point.position}
-    </span>
-  );
-}
 export function Funds({ data }: { data: StockResearch }) {
   const view = data.datasets.funds;
   const histories = useMemo(() => fundHistories(view), [view]);
@@ -55,31 +39,35 @@ export function Funds({ data }: { data: StockResearch }) {
     [histories, kind],
   );
   const fund = scope.find((f) => f.id === selected) ?? scope[0];
-  const periods = useMemo(() => fundPeriods(scope), [scope]);
+  const periods = useMemo(
+    () => fundPeriods(scope, view?.data.reportPeriods),
+    [scope, view],
+  );
+  const [chosenPeriod, setChosenPeriod] = useState("");
+  const period = periods.includes(chosenPeriod)
+    ? chosenPeriod
+    : (periods[0] ?? "");
+  const [syncing, setSyncing] = useState(false),
+    [syncMessage, setSyncMessage] = useState("");
+  const isHistory = view?.provider === "thirteenf";
   const rows = scope.filter(
     (f) =>
-      (position === "All" || f.latest.position === position) &&
+      (position === "All" ||
+        f.points.find((p) => p.date === period)?.position === position) &&
       f.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()),
   );
   const ownership = view?.data.ownership;
-  const latest = fund?.latest;
-  const change = latest?.current ? latest.changePercent : undefined;
-  const changeClass =
-    change !== undefined && change > 0
-      ? "positive"
-      : change !== undefined && change < 0
-        ? "negative"
-        : "";
   return (
     <section className="stock-tab-body funds-page">
       <header className="funds-heading">
-        <h2>Funds</h2>
+        <h2>Fund</h2>
         <SourceNote
           view={view}
           detail={
             <p>
-              Institution and fund/ETF samples overlap. Missing sample entries
-              do not prove an exit. Report dates differ from collection dates.
+              {isHistory
+                ? "Tracked managers only. Shares are as reported, without split adjustment. A zero requires a complete filing; missing reports remain blank."
+                : "Institution and fund/ETF samples overlap. Missing sample entries do not prove an exit. Report dates differ from collection dates."}
             </p>
           }
         />
@@ -112,73 +100,97 @@ export function Funds({ data }: { data: StockResearch }) {
         </div>
       )}
       <div className="funds-toolbar">
-        <div className="segmented-control" aria-label="Holder type">
-          {(
-            [
-              ["institution", "Institutions"],
-              ["fund", "Funds & ETFs"],
-            ] as const
-          ).map(([value, label]) => (
-            <button
-              key={value}
-              className={kind === value ? "selected" : ""}
-              aria-pressed={kind === value}
-              onClick={() => {
-                setKind(value);
-                setQuery("");
-                setPosition("All");
-              }}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <span className="funds-sample-count">
-          {scope.filter((f) => f.latest.current).length}{" "}
-          {view?.provider === "yahoo" ? "top holders" : "holders"}
-        </span>
-      </div>
-      {fund && latest && (
-        <div className="funds-overview">
-          <div className="funds-selected">
-            <Select
-              label="Select fund"
-              value={fund.id}
-              options={scope.map((f) => ({ value: f.id, label: f.name }))}
-              onValueChange={setSelected}
-              searchable
-              searchPlaceholder="Find a holder…"
-              align="start"
-            />
-            <div className="funds-selected-position">
-              <Position point={latest} />
-              <span>{holdingPeriodLabel(latest.date)}</span>
-            </div>
-            <strong className="funds-shares">
-              {compact(latest.shares)}
-              <small>shares</small>
-            </strong>
-            {change !== undefined && (
-              <span className={`funds-change ${changeClass}`}>
-                {change > 0 ? (
-                  <ArrowUp size={13} />
-                ) : change < 0 ? (
-                  <ArrowDown size={13} />
-                ) : null}
-                {change > 0 ? "+" : ""}
-                {change.toFixed(2)}%<small>reported change</small>
-              </span>
-            )}
-            <span className="funds-history-count">
-              {fund.points.length}{" "}
-              {fund.points.length === 1
-                ? "collected period"
-                : "collected periods"}
-            </span>
+        {!isHistory && (
+          <div className="segmented-control" aria-label="Holder type">
+            {(
+              [
+                ["institution", "Institutions"],
+                ["fund", "Funds & ETFs"],
+              ] as const
+            ).map(([value, label]) => (
+              <button
+                key={value}
+                className={kind === value ? "selected" : ""}
+                aria-pressed={kind === value}
+                onClick={() => {
+                  setKind(value);
+                  setQuery("");
+                  setPosition("All");
+                }}
+              >
+                {label}
+              </button>
+            ))}
           </div>
-          <FundHistoryChart fund={fund} periods={periods} />
+        )}
+        <span className="funds-data-period">
+          {period
+            ? `Data from ${holdingPeriodLabel(period)}`
+            : "Reported holdings"}
+        </span>
+        <div className="funds-period-controls">
+          <Select
+            label="Reporting period"
+            value={period}
+            options={periods.map((d) => ({
+              value: d,
+              label: holdingPeriodLabel(d),
+            }))}
+            onValueChange={setChosenPeriod}
+            disabled={!periods.length}
+          />
+          <button
+            className="text-link funds-backfill"
+            disabled={syncing}
+            onClick={() => {
+              setSyncing(true);
+              setSyncMessage("");
+              void syncResearch("funds")
+                .then(() => setSyncMessage("Backfill queued"))
+                .catch(() => setSyncMessage("Could not queue backfill"))
+                .finally(() => setSyncing(false));
+            }}
+          >
+            {syncing ? "Queuing…" : "Backfill"}
+          </button>
         </div>
+      </div>
+      {syncMessage && (
+        <p className="stock-footnote" role="status">
+          {syncMessage}
+        </p>
       )}
+      {fund && (
+        <FundOwnershipRing
+          funds={scope}
+          period={period}
+          selected={fund}
+          onSelect={setSelected}
+          positionLabel={(p) =>
+            !isHistory && !p.current
+              ? "Earlier sample"
+              : p.position === "Reduced"
+                ? "Trimmed"
+                : p.position === "Unknown"
+                  ? "—"
+                  : p.position
+          }
+        />
+      )}
+      <div className="funds-data-heading">
+        <h3>Data</h3>
+        {fund && (
+          <Select
+            label="Select fund"
+            value={fund.id}
+            options={scope.map((f) => ({ value: f.id, label: f.name }))}
+            onValueChange={setSelected}
+            searchable
+            searchPlaceholder="Find a holder…"
+            align="start"
+          />
+        )}
+      </div>
       <div className="funds-table-toolbar">
         <label className="funds-search">
           <Search size={15} />
@@ -197,7 +209,12 @@ export function Funds({ data }: { data: StockResearch }) {
             { value: "All", label: "All positions" },
             ...positions.map((p) => ({
               value: p,
-              label: p === "Unknown" ? "Unknown / earlier" : p,
+              label:
+                p === "Unknown"
+                  ? "Unknown / earlier"
+                  : p === "Reduced"
+                    ? "Trimmed"
+                    : p,
             })),
           ]}
         />
@@ -210,7 +227,9 @@ export function Funds({ data }: { data: StockResearch }) {
           >
             <thead>
               <tr>
-                <th>{kind === "institution" ? "Institution" : "Fund name"}</th>
+                <th>
+                  {isHistory || kind === "fund" ? "Fund name" : "Institution"}
+                </th>
                 <th>Position</th>
                 {periods.map((d) => (
                   <th key={d}>
@@ -235,14 +254,29 @@ export function Funds({ data }: { data: StockResearch }) {
                         aria-pressed={row.id === fund?.id}
                         onClick={() => setSelected(row.id)}
                       >
-                        <span className="fund-avatar" aria-hidden="true">
-                          {row.name[0]?.toUpperCase()}
-                        </span>
+                        <FundAvatar cik={row.latest.cik} name={row.name} />
                         <span title={row.name}>{row.name}</span>
                       </button>
                     </th>
                     <td>
-                      <Position point={row.latest} />
+                      {(() => {
+                        const point = row.points.find((p) => p.date === period);
+                        return point ? (
+                          <span
+                            className={`fund-position fund-position-${point.position.toLowerCase()}`}
+                          >
+                            {!isHistory && !point.current
+                              ? "Earlier sample"
+                              : point.position === "Reduced"
+                                ? "Trimmed"
+                                : point.position === "Unknown"
+                                  ? "—"
+                                  : point.position}
+                          </span>
+                        ) : (
+                          "—"
+                        );
+                      })()}
                     </td>
                     {periods.map((d) => {
                       const p = row.points.find((p) => p.date === d);
@@ -251,7 +285,7 @@ export function Funds({ data }: { data: StockResearch }) {
                           key={d}
                           title={
                             p
-                              ? `${p.name} · ${p.date}\nShares: ${p.shares.toLocaleString("en-US")}\n${p.observedAt ? `Collected: ${p.observedAt}` : ""}${p.value !== undefined ? `\nVendor value (USD): ${p.value.toLocaleString("en-US")}` : ""}${p.ownershipPercent !== undefined ? `\nOwnership: ${p.ownershipPercent.toFixed(2)}%` : ""}`
+                              ? `${p.name} · ${p.date}\nShares: ${p.shares.toLocaleString("en-US")}\n${p.filed ? `Filed: ${p.filed}\n` : ""}${p.filingId ? `Filing: ${p.filingId}\n` : ""}${p.observedAt ? `Collected: ${p.observedAt}` : ""}${p.value !== undefined ? `\nVendor value (USD): ${p.value.toLocaleString("en-US")}` : ""}${p.ownershipPercent !== undefined ? `\nOwnership: ${p.ownershipPercent.toFixed(2)}%` : ""}`
                               : "No collected observation"
                           }
                         >
@@ -284,7 +318,7 @@ export function Funds({ data }: { data: StockResearch }) {
       <p className="stock-footnote">
         {view?.provider === "yahoo"
           ? "Top-holder sample · Missing entries do not mean zero."
-          : "Reported holdings · Position changes are not trade records."}
+          : "Tracked managers · Reported shares, not trading flows."}
       </p>
     </section>
   );

@@ -4,6 +4,7 @@ export type FundPosition =
   "New" | "Added" | "Reduced" | "Same" | "Exited" | "Unknown";
 export interface FundHolding {
   id: string;
+  cik?: string;
   name: string;
   kind: HolderKind;
   date: string;
@@ -15,6 +16,8 @@ export interface FundHolding {
   position: FundPosition;
   current: boolean;
   observedAt?: string;
+  filed?: string;
+  filingId?: string;
 }
 export interface FundHistory {
   id: string;
@@ -81,6 +84,13 @@ export function fundHistories(view?: ResearchDatasetView): FundHistory[] {
     const ownership = number(r.ownershipPercent);
     const point: FundHolding = {
       id,
+      ...(typeof r.managerCik === "string" && /^\d{10}$/.test(r.managerCik)
+        ? { cik: r.managerCik }
+        : {}),
+      ...(date(text(r, "filed")) ? { filed: text(r, "filed") } : {}),
+      ...(/^\d{18}-[a-z0-9-]+$/.test(text(r, "filingId"))
+        ? { filingId: text(r, "filingId") }
+        : {}),
       name,
       kind,
       date: reportDate,
@@ -108,6 +118,34 @@ export function fundHistories(view?: ResearchDatasetView): FundHistory[] {
       const points = [...map.values()]
         .sort((a, b) => b.date.localeCompare(a.date))
         .slice(0, 20);
+      if (view?.provider === "thirteenf")
+        for (const point of points) {
+          const at = new Date(point.date + "T00:00:00Z");
+          const previousDate = new Date(
+            Date.UTC(at.getUTCFullYear(), at.getUTCMonth() - 2, 0),
+          )
+            .toISOString()
+            .slice(0, 10);
+          const prior = points.find((p) => p.date === previousDate);
+          if (!prior) {
+            point.position = "Unknown";
+            continue;
+          }
+          const delta = point.shares - prior.shares;
+          point.changeShares = delta;
+          if (prior.shares > 0)
+            point.changePercent = (delta / prior.shares) * 100;
+          point.position =
+            point.shares === 0 && prior.shares > 0
+              ? "Exited"
+              : point.shares > 0 && prior.shares === 0
+                ? "New"
+                : delta > 0
+                  ? "Added"
+                  : delta < 0
+                    ? "Reduced"
+                    : "Same";
+        }
       const latest = points[0];
       return { id, name: latest.name, kind: latest.kind, points, latest };
     })
@@ -118,7 +156,12 @@ export function fundHistories(view?: ResearchDatasetView): FundHistory[] {
         a.name.localeCompare(b.name),
     );
 }
-export function fundPeriods(rows: FundHistory[]): string[] {
+export function fundPeriods(
+  rows: FundHistory[],
+  reported?: string[],
+): string[] {
+  if (reported?.length)
+    return [...new Set(reported.filter(date))].sort().reverse().slice(0, 20);
   return [...new Set(rows.flatMap((r) => r.points.map((p) => p.date)))]
     .sort()
     .reverse()

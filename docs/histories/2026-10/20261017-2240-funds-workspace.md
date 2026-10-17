@@ -42,7 +42,7 @@
 - Research scheduler, shared domain definitions and Sync settings
 - Funds source references, execution plan and this history
 - `packages/core/src/funds.ts`, domain normalization and tests
-- `packages/ui/src/pages/Funds.tsx`, `funds.css`, `FundHistoryChart.tsx`
+- `packages/ui/src/pages/Funds.tsx`, `funds.css`, `FundOwnershipRing.tsx`
 - `scripts/check-funds.mjs` and isolated synthetic ownership fixture
 - Design/frontend/quality/release documentation
 
@@ -67,3 +67,11 @@ Validation includes parser/source identity and absence tests, scoped-sync/store
 checks, adjacent-quarter domain tests, logo identity/cache/offline tests and an
 isolated desktop/mobile ring/table interaction gate. See the completed execution
 plan and source coverage notes for observed backfill and remaining limits.
+
+
+Verified backfill: AAPL 216 rows / 16 managers, MSFT 200 / 15, NVDA 203 / 15,
+each with 14 quarter columns. All 16 catalog logos were cached and rendered in
+actual AAPL Chrome; the native App was refreshed to the same stored history.
+TypeScript, 153 unit tests, Go format/vet/race/build, production builds and the
+updated isolated Funds desktop/mobile checks pass. Data and logo cache landed
+independently as `3cba12f` and `0348679`; public catalog commit is `cf8a13d`.

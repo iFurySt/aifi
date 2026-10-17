@@ -46,117 +46,140 @@
   color: var(--muted);
   white-space: nowrap;
 }
-.funds-overview {
-  display: grid;
-  grid-template-columns: 235px minmax(0, 1fr);
-  gap: 28px;
-  border-bottom: 1px solid var(--border);
-  padding: 4px 0 20px;
-}
-.funds-selected {
-  min-width: 0;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 12px;
-}
-.funds-selected .select-root,
-.funds-selected .select-trigger {
-  max-width: 100%;
-}
-.funds-selected .select-trigger {
-  width: 100%;
-}
-.funds-selected-position {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11px;
-  color: var(--muted);
-}
 .fund-position {
   display: inline-flex;
   align-items: center;
+  border-radius: 999px;
+  padding: 4px 9px;
   white-space: nowrap;
-  color: var(--muted);
   font-size: 11px;
   font-weight: 500;
-}
-.fund-position.positive,
-.funds-change.positive {
-  color: var(--positive);
-}
-.fund-position.negative,
-.funds-change.negative {
-  color: var(--negative);
-}
-.funds-shares {
-  font-size: 29px;
-  font-weight: 550;
-  line-height: 1;
-  letter-spacing: -0.7px;
-  font-variant-numeric: tabular-nums;
-}
-.funds-shares small {
-  margin-left: 8px;
-  font-size: 12px;
-  letter-spacing: 0;
+  background: var(--surface-muted);
   color: var(--muted);
-  font-weight: 400;
 }
-.funds-change {
+.fund-position-added {
+  color: var(--positive);
+  background: color-mix(in srgb, var(--positive) 9%, var(--canvas));
+}
+.fund-position-new {
+  background: var(--text);
+  color: var(--canvas);
+}
+.fund-position-reduced {
+  color: #a24df0;
+  background: color-mix(in srgb, #a24df0 10%, var(--canvas));
+}
+.fund-position-exited {
+  color: var(--negative);
+  background: color-mix(in srgb, var(--negative) 9%, var(--canvas));
+}
+.funds-data-period {
+  font-size: 12px;
+  color: var(--muted);
+}
+.funds-period-controls,
+.funds-data-heading {
   display: flex;
   align-items: center;
-  gap: 3px;
-  font-size: 12px;
-  font-weight: 500;
+  gap: 14px;
 }
-.funds-change small {
-  font-size: 11px;
-  color: var(--muted);
-  margin-left: 5px;
-  font-weight: 400;
-}
-.funds-history-count {
-  font-size: 11px;
-  color: var(--muted);
-}
-.fund-history-chart {
-  position: relative;
-  min-width: 0;
-}
-.fund-history-chart svg {
-  display: block;
-  cursor: crosshair;
-}
-.fund-chart-tooltip {
-  position: absolute;
-  top: 28px;
-  z-index: 3;
-  background: #181818;
-  color: #f7f7f7;
-  border-radius: 9px;
-  padding: 10px 12px;
-  box-shadow: 0 6px 24px #0002;
-  pointer-events: none;
-  font-size: 11px;
-}
-.fund-chart-tooltip strong {
-  display: block;
-  font-weight: 500;
-  border-bottom: 1px solid #ffffff25;
-  margin-bottom: 7px;
-  padding-bottom: 7px;
-}
-.fund-chart-tooltip div {
-  display: flex;
+.funds-data-heading {
   justify-content: space-between;
-  gap: 10px;
-  margin: 5px 0;
+  margin-top: 24px;
 }
-.fund-chart-tooltip b {
+.funds-data-heading h3 {
+  font-size: 16px;
+}
+.funds-backfill {
+  font-size: 12px;
+  margin-top: 0;
+}
+.fund-ownership-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 370px;
+}
+.fund-ring-holder {
+  width: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  text-align: right;
+}
+.fund-ring-holder strong {
+  max-width: 130px;
+  font-size: 13px;
   font-weight: 500;
-  font-variant-numeric: tabular-nums;
+}
+.fund-ring-holder .fund-position {
+  margin-left: 70px;
+}
+.fund-ring-wrap {
+  position: relative;
+  width: min(390px, 55%);
+  flex-shrink: 0;
+}
+.fund-ring-wrap svg {
+  display: block;
+  width: 100%;
+}
+.fund-ring-sector {
+  stroke: #d6d8dc;
+  cursor: pointer;
+}
+.fund-ring-sector.active,
+.fund-ring-sector:hover {
+  stroke: #979eab;
+}
+.fund-ring-center {
+  position: absolute;
+  inset: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  pointer-events: none;
+  text-align: center;
+}
+.fund-ring-center span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.fund-ring-center strong {
+  font-size: 27px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+.fund-ring-center .positive {
+  color: var(--positive);
+}
+.fund-ring-center .fund-trimmed {
+  color: #a24df0;
+}
+.fund-ring-tooltip {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 9px 12px;
+  border-radius: 9px;
+  background: #181818;
+  color: white;
+  pointer-events: none;
+  width: max-content;
+  max-width: 100%;
+  font-size: 11px;
+  box-shadow: 0 4px 18px #0002;
+}
+.fund-ring-tooltip strong,
+.fund-ring-tooltip span {
+  display: block;
+  margin: 3px 0;
 }
 .funds-table-toolbar {
   display: flex;
@@ -240,32 +263,27 @@
   font-weight: 500;
   background: var(--canvas);
 }
-@container (max-width: 800px) {
-  .funds-overview {
-    grid-template-columns: 195px minmax(0, 1fr);
-    gap: 16px;
-  }
-}
-
 @container (max-width: 650px) {
-  .funds-overview {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
+  .fund-ownership-visual {
+    min-height: 300px;
+    gap: 8px;
   }
-  .funds-selected {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 12px;
-    align-items: center;
+  .fund-ring-holder {
+    width: 115px;
+    justify-content: center;
+    text-align: center;
   }
-  .funds-selected .select-trigger {
-    grid-column: 1/-1;
+  .fund-ring-holder .fund-position {
+    margin-left: 0;
   }
-  .funds-selected-position {
-    grid-column: 1/-1;
+  .fund-ring-wrap {
+    width: min(300px, 65%);
   }
-  .funds-history-count {
-    text-align: right;
+  .fund-ring-center strong {
+    font-size: 22px;
+  }
+  .funds-toolbar {
+    flex-wrap: wrap;
   }
   .funds-table th:first-child {
     min-width: 190px;
@@ -281,7 +299,9 @@
   .funds-ownership {
     gap: 18px 24px;
   }
-  .funds-sample-count {
-    display: none;
-  }
+}
+
+.fund-avatar-large {
+  width: 32px;
+  height: 32px;
 }
