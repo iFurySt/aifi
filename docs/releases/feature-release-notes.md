@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-17 | Stock research details | Cleaner source citations, compact ticker tags, financial colors, earnings dot comparisons and related stocks. | Moved static after-hours quotes into dated source details; added expandable provider chips and persisted keyless related-stock collection with local quote reads. |
 | 2026-10-17 | Quotes and outlook | Company names are shorter, completed-session prices refresh after close, and Analyst/Earnings show collected data without a key. | Separated regular/after-hours quotes and source times; added analyst consensus/ratings/grades and GAAP EPS estimates/calendar through SQLite-backed collection. |
 | 2026-10-17 | Keyless company research | Company profiles, annual/quarterly financials and recent SEC filing indices collect without API keys. | Added bounded Yahoo public-source collectors, SQLite persistence, independent source selection, fair dataset scheduling and short expandable company descriptions. Official SEC adapters remain optional. |
 | 2026-10-16 | Keyless stock prices | Daily charts collect real data without entering an API key. | Added default Yahoo daily collection for all directory candidates, SQLite persistence, source/basis labels and selectable Massive access. Other datasets retain their own setup requirements. |

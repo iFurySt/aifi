@@ -17,6 +17,9 @@
   by default, with bounded parsing, persisted evidence and offline local reads.
 - Related symbols are vendor associations rather than verified competitors;
   source identities remain exact and unsupported aliases are not guessed.
+- Replaced verbose source footnotes with shared accessible provider menus.
+- Compacted ticker tags, colored meaningful indicators and separated sector from
+  industry. EPS uses hollow estimate dots, colored actuals and BEAT/MISS labels.
 - Retained the daily/EOD model: after-hours snapshots belong in dated source
   details rather than an apparently live headline.
 
@@ -31,6 +34,11 @@ source-specific network requests from navigation or stock-related row rendering.
   credentials. App-owned collection persisted AAPL/MSFT/NVDA peer snapshots.
 - Parser regressions cover identity mismatch, explicit empty coverage, duplicates,
   self references and invalid scores; collection/restart reads include peers.
+- `make ci` passed typecheck, 88 TypeScript tests, production builds and Go
+  race/vet checks. Signed EPS regression includes negative actuals/zero estimates.
+- Electron smoke/interaction gate passed; Chrome verified persisted peer rows,
+  compact prices, metric colors, earnings dots and expandable source timestamps.
+  Mobile dark popup stayed within the viewport; source controls dismiss on Escape.
 
 ### Files Modified
 
@@ -38,4 +46,6 @@ source-specific network requests from navigation or stock-related row rendering.
 - `apps/cli/internal/research/engine.go`
 - `apps/cli/internal/store/research.go`
 - `packages/core/src/stock-research.ts`
+- `packages/ui/src/components/ResearchSource.tsx` and `StockPeers.tsx`
+- `packages/ui/src/pages/Stocks.tsx` and `stock-research-panels.tsx`
 - `docs/design-docs/research-ingestion.md`

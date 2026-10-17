@@ -8,6 +8,7 @@ import {
   type ResearchRecord,
 } from "@aifi/core";
 import { money } from "../workspace-context";
+import { ResearchSource } from "../components/ResearchSource";
 const value = (r: ResearchRecord, ...keys: string[]) => {
   for (const key of keys)
     if (r[key] !== undefined && r[key] !== null && r[key] !== "")
@@ -70,15 +71,14 @@ export function DataTable({
     </div>
   );
 }
-export function SourceNote({ view }: { view?: ResearchDatasetView }) {
-  if (!view) return null;
-  return (
-    <p className="stock-footnote" title={view.data.window}>
-      {view.provider.toUpperCase()} · Updated{" "}
-      {new Date(view.fetchedAt).toLocaleDateString()}
-      {view.data.complete ? "" : " · Partial coverage"}
-    </p>
-  );
+export function SourceNote({
+  view,
+  detail,
+}: {
+  view?: ResearchDatasetView;
+  detail?: ReactNode;
+}) {
+  return <ResearchSource view={view} detail={detail} />;
 }
 export function MissingData({
   data,
@@ -603,12 +603,14 @@ export function Earnings({ data }: { data: StockResearch }) {
   const estimates = history.flatMap((r) =>
     typeof r.estimate === "number" ? [r.estimate] : [],
   );
-  const values = [...history.map((r) => Number(r.actual)), ...estimates, 0],
-    min = Math.min(...values),
-    max = Math.max(...values);
+  const values = [...history.map((r) => Number(r.actual)), ...estimates],
+    low = values.length ? Math.min(...values) : 0,
+    high = values.length ? Math.max(...values) : 1,
+    padding = Math.max((high - low) * 0.25, Math.abs(high) * 0.08, 0.05),
+    min = low - padding,
+    max = high + padding;
   const span = max - min || 1,
-    y = (v: number) => 18 + ((max - v) / span) * 88,
-    zero = y(0);
+    y = (v: number) => 18 + ((max - v) / span) * 88;
   const label = (r: Record<string, unknown>) =>
     String(r.fiscalQuarter ?? r.periodEnd ?? "").replace(
       /^(\d)Q(\d{2})(\d{2})$/,
@@ -623,15 +625,31 @@ export function Earnings({ data }: { data: StockResearch }) {
       {history.length > 0 ? (
         <>
           <div className="stock-earnings-legend">
-            <span>● Actual EPS</span>
-            <span>● Estimated EPS</span>
+            <span>
+              <i className="eps-actual-mark" />
+              Actual EPS
+            </span>
+            <span>
+              <i className="eps-estimate-mark" />
+              Estimated EPS
+            </span>
           </div>
           <svg
             viewBox="0 0 300 156"
             role="img"
             aria-label="GAAP actual and estimated EPS by fiscal quarter"
           >
-            <line x1="3" x2="297" y1={zero} y2={zero} stroke="var(--border)" />
+            {[0, 0.5, 1].map((fraction) => (
+              <line
+                key={fraction}
+                x1="10"
+                x2="290"
+                y1={18 + fraction * 88}
+                y2={18 + fraction * 88}
+                stroke="var(--border)"
+                strokeDasharray="3 4"
+              />
+            ))}
             {history.map((r, i) => {
               const x = 14 + i * (280 / history.length),
                 w = 280 / history.length;
@@ -648,45 +666,50 @@ export function Earnings({ data }: { data: StockResearch }) {
                       : "Miss";
               return (
                 <g key={String(r.periodEnd)}>
-                  <rect
-                    x={x + w * 0.15}
-                    y={Math.min(y(actual), zero)}
-                    width={w * 0.24}
-                    height={Math.max(0.5, Math.abs(y(actual) - zero))}
-                    rx="2"
+                  {estimate !== undefined && (
+                    <circle
+                      cx={x + w * 0.4}
+                      cy={y(estimate)}
+                      r="6"
+                      fill="var(--surface)"
+                      stroke="var(--secondary)"
+                      strokeWidth="1.2"
+                    >
+                      <title>{`${label(r)} estimate ${money(estimate)}`}</title>
+                    </circle>
+                  )}
+                  <circle
+                    cx={x + w * 0.4}
+                    cy={y(actual)}
+                    r="6"
                     fill={
-                      result === "Miss" ? "var(--negative)" : "var(--positive)"
+                      result === "Miss"
+                        ? "var(--negative)"
+                        : result === ""
+                          ? "var(--text)"
+                          : "var(--positive)"
                     }
                   >
                     <title>
-                      {label(r)} actual {money(actual)}
+                      {`${label(r)} actual ${money(actual)}${estimate === undefined ? "" : ` · ${result} · estimate ${money(estimate)}`}`}
                     </title>
-                  </rect>
-                  {estimate !== undefined && (
-                    <rect
-                      x={x + w * 0.44}
-                      y={Math.min(y(estimate), zero)}
-                      width={w * 0.24}
-                      height={Math.max(0.5, Math.abs(y(estimate) - zero))}
-                      rx="2"
-                      fill="var(--secondary)"
-                      opacity="0.35"
-                    >
-                      <title>
-                        {label(r)} estimate {money(estimate)}
-                      </title>
-                    </rect>
-                  )}
-                  <text x={x + w * 0.4} y="128" textAnchor="middle">
-                    {label(r)}
-                  </text>
+                  </circle>
                   <text
                     x={x + w * 0.4}
-                    y="146"
+                    y="128"
                     textAnchor="middle"
-                    className={result === "Miss" ? "negative" : "positive"}
+                    className={
+                      result === "Miss"
+                        ? "negative"
+                        : result === "Beat"
+                          ? "positive"
+                          : ""
+                    }
                   >
-                    {result}
+                    {result.toUpperCase()}
+                  </text>
+                  <text x={x + w * 0.4} y="146" textAnchor="middle">
+                    {label(r)}
                   </text>
                 </g>
               );

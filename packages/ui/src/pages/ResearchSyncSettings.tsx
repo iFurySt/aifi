@@ -24,6 +24,7 @@ const names: Record<ResearchDataset, string> = {
   politicians: "Politician trades",
   analyst: "Analyst ratings",
   earnings: "Earnings & estimates",
+  peers: "Related stocks",
   news: "Company news",
 };
 const sources: Record<ResearchDataset, string> = {
@@ -37,6 +38,7 @@ const sources: Record<ResearchDataset, string> = {
   politicians: "FMP · Listings",
   analyst: "FMP · Listings",
   earnings: "Yahoo Finance · No key",
+  peers: "Yahoo Finance · No key",
   news: "FMP · Listings",
 };
 function DatasetRow({

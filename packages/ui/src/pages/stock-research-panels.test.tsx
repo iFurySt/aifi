@@ -2,6 +2,7 @@ import { it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { emptyResearch, type ResearchDatasetView } from "@aifi/core";
 import {
+  Earnings,
   Financials,
   Activity,
   FilingsTable,
@@ -38,7 +39,8 @@ it("shows actual stored financial periods/values and source provenance without f
   expect(html).toContain("2026-09-26");
   expect(html).toContain("$123B");
   expect(html).toContain("SEC");
-  expect(html).toContain("Partial coverage");
+  expect(html).toContain("SEC source details");
+  expect(html).not.toContain("Partial coverage");
   expect(html).not.toContain("FY 2025");
   expect(html).not.toContain("Sample");
 });
@@ -119,4 +121,43 @@ it("shows vendor annual periods without fabricating a filing date", () => {
   expect(html).not.toContain("Actual period ends");
   expect(html).not.toContain("Filed  ·");
   expect(html).toContain("YAHOO");
+});
+
+it("compares GAAP EPS with zero estimates and negative actuals using signed surprise dots", () => {
+  const data = emptyResearch("TEST");
+  data.datasets.earnings = {
+    ...view({
+      complete: false,
+      records: [
+        {
+          recordKind: "earnings",
+          basis: "GAAP",
+          currency: "USD",
+          periodEnd: "2026-03-31",
+          fiscalQuarter: "1Q2026",
+          actual: -0.5,
+          estimate: 0,
+        },
+        {
+          recordKind: "earnings",
+          basis: "GAAP",
+          currency: "USD",
+          periodEnd: "2026-06-30",
+          fiscalQuarter: "2Q2026",
+          actual: 0.1,
+          estimate: 0,
+        },
+      ],
+    }),
+    provider: "yahoo",
+  };
+  const html = renderToStaticMarkup(<Earnings data={data} />);
+  expect(html).toContain("MISS");
+  expect(html).toContain("BEAT");
+  expect(html).toContain("actual -$0.50");
+  expect(html).toContain("estimate $0.00");
+  expect(html).toContain("<circle");
+  expect(html).not.toContain("<rect");
+  expect(html).toContain("Beat in 1/2 quarters shown");
+  expect(html).toContain("YAHOO source details");
 });

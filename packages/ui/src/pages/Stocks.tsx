@@ -24,6 +24,7 @@ import { useWorkspace, money, percent } from "../workspace-context";
 import { Button } from "../components/primitives";
 import { StockAvatar } from "../components/StockAvatar";
 import { StockChart } from "../components/StockChart";
+import { StockPeers } from "../components/StockPeers";
 import {
   useStockDirectory,
   useDirectoryEntry,
@@ -137,7 +138,7 @@ export function Stocks() {
     ],
     ["YTD change", formattedPercent(calculated.ytd)],
     ["12 month change", formattedPercent(calculated.yearChange)],
-    ["Industry", profile?.industry ?? "—"],
+    ["Sector", profile?.sector ?? "—"],
     [
       "P/E ratio",
       latest && eps && eps.value > 0
@@ -162,12 +163,36 @@ export function Stocks() {
           }).format(latest.close * profile.shares)
         : "—",
     ],
+    ["Industry", profile?.industry ?? "—"],
     ...overviewFinancials(data),
     ["52-week high", calculated.high52 ? money(calculated.high52) : "—"],
     ["52-week low", calculated.low52 ? money(calculated.low52) : "—"],
     ["RSI (14)", calculated.rsi?.toFixed(1) ?? "—"],
     ["Short interest", "—"],
   ];
+  const sign = (n: number | undefined) =>
+    n === undefined || n === 0 ? "" : n > 0 ? "positive" : "negative";
+  const metricTone = (label: string) => {
+    if (label === "Open")
+      return sign(latest ? latest.close - latest.open : undefined);
+    if (label === "Previous close") return sign(calculated.change);
+    if (label === "YTD change") return sign(calculated.ytd);
+    if (label === "12 month change") return sign(calculated.yearChange);
+    if (label === "Gross margin")
+      return sign(trailingMetric(facts, "grossProfit")?.value);
+    if (label === "Net income")
+      return sign(trailingMetric(facts, "netIncome")?.value);
+    if (label === "Free cash flow") {
+      const cash = trailingMetric(facts, "operatingCashFlow"),
+        capex = trailingMetric(facts, "capex");
+      return sign(
+        cash && capex && cash.end === capex.end && cash.basis === capex.basis
+          ? cash.value - capex.value
+          : undefined,
+      );
+    }
+    return "";
+  };
   return (
     <div className="stocks-page">
       <header className="stock-company-header">
@@ -338,32 +363,32 @@ export function Stocks() {
                         <MissingData data={data} dataset="prices" />
                       )))}
                 </small>
-                {shown.postPrice !== undefined && (
-                  <div
-                    className="stock-post-quote"
-                    title={
-                      shown.postAsOf
-                        ? new Date(shown.postAsOf).toLocaleString("en-US", {
+                <SourceNote
+                  view={shown.sourceView}
+                  detail={
+                    <>
+                      <p>Collected snapshot · Not streaming.</p>
+                      {shown.asOf && (
+                        <p>
+                          Regular session:{" "}
+                          {new Date(shown.asOf).toLocaleString("en-US", {
                             timeZone: "America/New_York",
                             timeZoneName: "short",
-                          })
-                        : undefined
-                    }
-                  >
-                    <span>After hours</span>
-                    <strong>{money(shown.postPrice)}</strong>
-                    {shown.postChange !== undefined && (
-                      <span
-                        className={
-                          shown.postChange >= 0 ? "positive" : "negative"
-                        }
-                      >
-                        {shown.postChange >= 0 ? "+" : ""}
-                        {money(shown.postChange)}
-                      </span>
-                    )}
-                  </div>
-                )}
+                          })}
+                        </p>
+                      )}
+                      {shown.postPrice !== undefined && shown.postAsOf && (
+                        <p>
+                          After-hours snapshot: {money(shown.postPrice)} ·{" "}
+                          {new Date(shown.postAsOf).toLocaleString("en-US", {
+                            timeZone: "America/New_York",
+                            timeZoneName: "short",
+                          })}
+                        </p>
+                      )}
+                    </>
+                  }
+                />
               </section>
               <section className="stock-about">
                 <h2>About {quote?.name ?? symbol} </h2>
@@ -414,6 +439,7 @@ export function Stocks() {
               <section className="stock-about">
                 <h2>Analyst</h2>
                 <AnalystSummary data={data} />
+                <SourceNote view={data.datasets.analyst} />
               </section>
               <section className="stock-about">
                 <h2>Earnings</h2>
@@ -426,21 +452,37 @@ export function Stocks() {
                   <div key={label} className={i >= 8 ? "wide" : ""}>
                     <dt>{label}</dt>
                     <dd
+                      className={value === "—" ? "" : metricTone(label)}
                       title={
-                        label === "Market cap" && profile?.sharesDate
-                          ? `Company share reference: ${profile.sharesDate}`
-                          : undefined
+                        label === "Open"
+                          ? "Color compares the latest close with the open"
+                          : label === "Previous close"
+                            ? "Color compares the latest close with the previous close"
+                            : label === "Market cap" && profile?.sharesDate
+                              ? `Company share reference: ${profile.sharesDate}`
+                              : undefined
                       }
                     >
+                      {(label === "YTD change" ||
+                        label === "12 month change") &&
+                        value !== "—" && (
+                          <Triangle
+                            size={8}
+                            fill="currentColor"
+                            style={{
+                              transform:
+                                metricTone(label) === "negative"
+                                  ? "rotate(180deg)"
+                                  : undefined,
+                            }}
+                          />
+                        )}
                       {value}
                     </dd>
                   </div>
                 ))}
               </dl>
-              <section className="stock-peers">
-                <h2>Peers</h2>
-                <div className="stock-no-data">No peer data</div>
-              </section>
+              <StockPeers data={data} />
             </div>
             <div className="stock-visual-column">
               <StockChart

@@ -2311,39 +2311,6 @@ kbd {
 .stock-peers {
   margin-top: 22px;
 }
-.stock-peers > button {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 9px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  font-size: 10px;
-}
-.stock-peers > button:hover,
-.stock-peers > button:focus-visible {
-  background: var(--surface-muted);
-}
-.stock-peers > button > span:nth-child(2) {
-  flex: 1;
-  min-width: 0;
-}
-.stock-peers strong {
-  font-size: 11px;
-  font-weight: 550;
-  display: block;
-}
-.stock-peers small {
-  display: block;
-  font-size: 9px;
-  color: var(--muted);
-}
-.stock-peers > button > span:last-child {
-  text-align: right;
-  flex-shrink: 0;
-  font-variant-numeric: tabular-nums;
-}
 .stock-visual-column {
   min-width: 0;
   padding: 22px;
@@ -3004,11 +2971,12 @@ kbd {
   margin-right: 7px;
 }
 .stock-symbol-pill {
-  color: white;
+  color: var(--on-primary);
   background: var(--positive);
-  padding: 7px 11px;
-  border-radius: 9px;
-  font-size: 13px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.2;
   font-weight: 650;
 }
 .stock-symbol-pill.down {
@@ -3030,19 +2998,6 @@ kbd {
 .stock-quote > small {
   font-size: 12px;
   color: var(--secondary);
-}
-.stock-post-quote {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  color: var(--secondary);
-  margin-top: 12px;
-  font-size: 11px;
-}
-.stock-post-quote strong {
-  font-size: 11px;
-  letter-spacing: 0;
-  color: var(--text);
 }
 .stock-rating-label {
   text-transform: capitalize;
@@ -3114,8 +3069,22 @@ kbd {
   font-size: 10px;
   margin-top: 16px;
 }
-.stock-earnings-legend span:first-child {
-  color: var(--positive);
+.stock-earnings-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.stock-earnings-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.eps-actual-mark {
+  background: var(--text);
+}
+.eps-estimate-mark {
+  border: 1px solid var(--secondary);
 }
 
 .stock-recommendations {
@@ -3136,4 +3105,157 @@ kbd {
 }
 .stock-recommendations small {
   grid-column: 1 / -1;
+}
+
+/* Compact citations keep collection detail available without repeating footnotes. */
+.research-source-chip {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 9px;
+  font-weight: 550;
+  letter-spacing: 0.02em;
+  color: var(--secondary);
+  background: var(--surface-muted);
+  cursor: pointer;
+}
+.research-source-chip:hover,
+.research-source-chip[data-state="open"] {
+  color: var(--text);
+  border-color: var(--muted);
+}
+.research-source-popup {
+  width: min(330px, calc(100vw - 24px));
+  max-height: min(480px, var(--radix-dropdown-menu-content-available-height));
+  overflow-y: auto;
+  z-index: 100;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 12%);
+}
+.research-source-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.research-source-heading span {
+  color: var(--secondary);
+  font-size: 11px;
+  font-weight: 400;
+}
+.research-source-details {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--secondary);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.research-source-details dl {
+  margin: 12px 0;
+}
+.research-source-details dl > div {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 8px;
+  margin: 5px 0;
+}
+.research-source-details dd {
+  margin: 0;
+  color: var(--text);
+}
+.research-source-details p {
+  margin: 8px 0;
+}
+.research-source-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--text);
+  text-decoration: none;
+}
+.research-source-link[data-highlighted] {
+  background: var(--surface-muted);
+}
+.stock-quote .research-source-chip {
+  margin-left: 8px;
+  vertical-align: baseline;
+}
+.stock-metrics-grid dd > svg {
+  display: inline;
+  margin-right: 4px;
+  vertical-align: 2px;
+}
+.stock-peer-list {
+  margin-top: 14px;
+}
+.stock-peer-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.stock-peer-row:hover {
+  background: var(--surface-muted);
+}
+.stock-peer-row .stock-avatar {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+}
+.stock-peer-name {
+  min-width: 0;
+  flex: 1;
+}
+.stock-peer-name strong,
+.stock-peer-price strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 550;
+}
+.stock-peer-name small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--secondary);
+  font-size: 11px;
+  margin-top: 3px;
+}
+.stock-peer-price {
+  flex-shrink: 0;
+  text-align: right;
+}
+.stock-peer-price small {
+  display: block;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.stock-about > .research-source-chip {
+  display: flex;
+}
+.stock-peer-price small.positive {
+  color: var(--positive);
+}
+.stock-peer-price small.negative {
+  color: var(--negative);
 }

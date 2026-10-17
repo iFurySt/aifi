@@ -263,3 +263,19 @@ separate after-hours observation. Analyst consensus, rating distribution and
 recent GAAP actual/estimated EPS read persisted research snapshots; missing data
 is never replaced with reference-site values. Snapshot dates stay out of the
 stock-list heading area.
+
+## Research citations and comparison details
+
+Shared source chips show only the provider until clicked. Radix menus expose
+collection time, source window/coverage, validated source links and optional
+observation details; Escape/outside dismissal and keyboard focus return remain
+standard. After-hours snapshots live in quote details with their own source
+time and a non-streaming label; the page remains a collected daily/EOD view.
+
+Earnings compare hollow estimate dots and actual dots colored by beat/miss,
+with a padded value scale, quarter labels and source-value tooltips. Zero
+estimates and negative actuals remain valid. Metric colors distinguish returns
+and profitable/loss-making values without inventing period-over-period growth.
+Peers show exact US-directory matches from stored related-symbol recommendations;
+identity and regular quotes use independent local reads and unavailable quotes
+stay empty. Source details explain the related-stock classification.
