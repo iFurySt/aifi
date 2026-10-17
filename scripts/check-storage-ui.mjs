@@ -64,7 +64,7 @@ async function checks() {
     "Missing real total",
   );
   const folder = rows().find(
-    (row) => row.querySelector("strong")?.textContent === "stock-logos/v2",
+    (row) => row.querySelector("strong")?.textContent === "stock-logos",
   );
   assert(
     folder &&
@@ -89,13 +89,45 @@ async function checks() {
     () => rows().length > 50 && !document.querySelector(".storage-load-more"),
   );
   assert(window.storageFixture.reads === reads, "Pagination rescanned files");
+  const expanded = rows().length;
+  window.storageFixture.delay = 600;
+  location.hash = "/settings/general";
+  await until(() => !document.querySelector(".storage-settings"));
+  const frames = [];
+  let watching = true;
+  const observe = () => {
+    if (!watching) return;
+    if (document.querySelector(".storage-settings"))
+      frames.push({
+        count: rows().length,
+        loading: !!document.querySelector(".storage-loading"),
+        updating: !!document.querySelector(".storage-refreshing"),
+      });
+    requestAnimationFrame(observe);
+  };
+  requestAnimationFrame(observe);
+  location.hash = "/settings/storage";
+  await until(() => !!document.querySelector(".storage-refreshing"));
+  assert(
+    rows().length === expanded && !document.querySelector(".storage-loading"),
+    "Re-entry did not reuse the previous scan synchronously",
+  );
+  await until(() => !document.querySelector(".storage-refreshing"));
+  watching = false;
+  assert(
+    frames.length &&
+      frames.every((f) => f.count === expanded && !f.loading) &&
+      frames.some((f) => f.updating),
+    "Re-entry displayed empty/loading frames or collapsed the file list",
+  );
+  window.storageFixture.delay = 80;
   window.storageFixture.fail = true;
   refresh().click();
   assert(rows().length > 50, "Refresh cleared existing files");
   await until(() =>
     document
       .querySelector(".settings-service-error")
-      ?.textContent.includes("Couldn't refresh"),
+      ?.textContent.includes("Couldn't update"),
   );
   assert(
     document.querySelector(".storage-total").textContent === total,
@@ -106,13 +138,22 @@ async function checks() {
   await until(
     () =>
       !document.querySelector(".settings-service-error") &&
-      rows().length === 50,
+      !document.querySelector(".storage-refreshing") &&
+      rows().length === expanded,
   );
   assert(
     !document
       .querySelector(".storage-settings")
       .textContent.includes("synthetic-private-value"),
     "Secret content leaked",
+  );
+  assert(
+    !document
+      .querySelector(".storage-settings")
+      .textContent.match(
+        /Largest first|Last scanned|SQLite pages|Collected data and cached files|Data folder/,
+      ),
+    "Redundant storage copy remains",
   );
   assert(
     document.documentElement.scrollWidth === innerWidth,
@@ -126,6 +167,9 @@ async function checks() {
     refreshErrorRecovery: true,
     nativeRevealDispatch: true,
     collapsedLogoDirectory: true,
+    immediateCachedReentry: true,
+    retainedVisiblePages: true,
+    backgroundRefreshIndicator: true,
   };
 }
 const main = `import {app,BrowserWindow,ipcMain} from 'electron';
@@ -145,7 +189,7 @@ host=new DataHost(${JSON.stringify(join(root, "apps/desktop/dist/aifi"))},dataDi
 ipcMain.handle('runtime',()=>({kind:'desktop',version:'test',platform:'darwin'}));ipcMain.handle('data',(_e,m,p)=>host.request(m,p));
 const win=new BrowserWindow({show:false,width:1360,height:1100,webPreferences:{preload:join(${JSON.stringify(output)},'preload.cjs'),sandbox:true,contextIsolation:true,backgroundThrottling:false}});
 try{await win.loadFile(join(${JSON.stringify(output)},'index.html'));const report=await win.webContents.executeJavaScript('('+${JSON.stringify(checks.toString())}+')()');
-if(revealed.length!==3||!revealed[0].path.endsWith('stock-logos/v2')||!revealed[0].directory||!revealed[1].path.endsWith('largest.bin')||revealed[1].directory||!revealed[2].directory)throw Error('Native reveal paths incorrect');
+if(revealed.length!==3||!revealed[0].path.endsWith('stock-logos')||!revealed[0].directory||!revealed[1].path.endsWith('largest.bin')||revealed[1].directory||!revealed[2].directory)throw Error('Native reveal paths incorrect');
 writeFileSync(join(${JSON.stringify(output)},'storage-desktop.png'),(await win.webContents.capturePage()).toPNG());
 await win.webContents.executeJavaScript("document.querySelector('.storage-files').scrollIntoView();");writeFileSync(join(${JSON.stringify(output)},'storage-files.png'),(await win.webContents.capturePage()).toPNG());await win.webContents.executeJavaScript("document.getElementById('main-content').scrollTop=0;document.documentElement.dataset.theme='dark'");writeFileSync(join(${JSON.stringify(output)},'storage-dark.png'),(await win.webContents.capturePage()).toPNG());
 win.setSize(390,844);await new Promise(r=>setTimeout(r,150));

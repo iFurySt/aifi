@@ -43,3 +43,8 @@ Native Windows/Linux shell integration remains unverified.
 Follow-up: collapse `stock-logos/v2` into a directory row, preserve recursive
 byte/file totals and sort order, and open that directory through the same native
 capability. Added host and actual Electron checks for the roll-up.
+
+Second follow-up: retain the renderer-session inventory across navigation, rebase
+visible pages atomically after background refresh, expose progress through the
+Refresh icon, and remove redundant page copy. Verify delayed re-entry frame by
+frame and restart the actual local desktop so its main process loads grouping.

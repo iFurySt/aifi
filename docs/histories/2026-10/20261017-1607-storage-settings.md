@@ -64,3 +64,28 @@ logo-directory totals, omission of individual images and native folder dispatch.
 - `packages/ui/src/pages/StorageSettings.tsx`, `Settings.tsx`, `styles.css`
 - `scripts/check-storage-ui.mjs`, `scripts/fixtures/storage-ui.tsx`, `package.json`
 - Storage design, architecture, frontend, security, quality and release docs.
+
+### Follow-up: entry continuity and concise copy
+
+- The user reported ungrouped PNGs, redundant “Largest first” copy and slow blank
+  reloads on every visit. Process/build timestamps confirmed the running desktop
+  main predated the grouping build; refreshing the renderer cannot update it.
+- Added a renderer-session inventory owner: cached data renders immediately on
+  return, background updates coalesce, expanded pages rebase atomically, and
+  leaving mid-request still populates the next visit. Errors keep the last view.
+- Refresh keeps its label and exposes progress through its icon/accessibility
+  label. Removed sort/subtitle/accounting paragraphs, visible scan-time caption
+  and repeated “Data folder” labels; scan time remains in the Refresh tooltip.
+- Added core session tests and delayed actual-Electron navigation/frame checks
+  for immediate cached content, retained page range and background progress.
+
+- Actual native inspection also found legacy PNGs in the logo-cache root. The
+  entire `stock-logos` directory now rolls up, including legacy images, `v2` and
+  catalog metadata, rather than leaving the old image files individually visible.
+
+Follow-up validation: TypeScript and all 130 tests passed; production Web/desktop
+builds and the updated actual-Electron Storage gate passed. The gate samples
+frames during a delayed route re-entry, verifying cached rows remain throughout,
+expanded pages survive revalidation and the updating indicator appears. Rebuilt
+and restarted the real development app and visually confirmed a single complete
+Logo-cache directory row, no individual images, and concise page copy.

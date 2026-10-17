@@ -3709,12 +3709,6 @@ kbd {
   font-weight: 550;
   margin: 0;
 }
-.storage-section-heading p {
-  color: var(--muted);
-  font-size: 12px;
-  margin: 4px 0 0;
-  line-height: 1.5;
-}
 .storage-section-heading > .button {
   flex-shrink: 0;
 }
@@ -3805,11 +3799,6 @@ kbd {
 .storage-folder > button {
   flex-shrink: 0;
 }
-.storage-scan-time {
-  font-size: 11px;
-  color: var(--muted);
-  margin: 4px 0 0;
-}
 .storage-database {
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -3829,10 +3818,6 @@ kbd {
   font-size: 12px;
   font-weight: 400;
   margin-left: 6px;
-}
-.storage-sort {
-  font-size: 12px;
-  color: var(--muted);
 }
 .storage-file-list {
   border: 1px solid var(--border);
@@ -4146,4 +4131,10 @@ kbd {
   .financial-group-row button {
     left: 10px;
   }
+}
+
+.storage-refreshing { animation: storage-refresh 900ms linear infinite; }
+@keyframes storage-refresh { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .storage-refreshing { animation: none; opacity: 0.5; }
 }

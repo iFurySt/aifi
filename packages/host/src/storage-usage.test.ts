@@ -132,7 +132,7 @@ it("routes through the host allowlist and does not send native paths to the Go s
   expect(rpc).toHaveBeenCalledTimes(1);
 });
 
-it("rolls the v2 logo cache into one sorted directory entry without double counting", async () => {
+it("rolls legacy and v2 logo caches into one sorted directory entry without double counting", async () => {
   const root = await directory();
   await mkdir(join(root, "stock-logos/v2/nested"), { recursive: true });
   await writeFile(join(root, "stock-logos/v2/a.png"), Buffer.alloc(400));
@@ -148,29 +148,29 @@ it("rolls the v2 logo cache into one sorted directory entry without double count
   const usage = await storage.read();
   expect(usage.totalBytes).toBe(2000);
   expect(usage.fileCount).toBe(4);
-  expect(usage.entryCount).toBe(3);
+  expect(usage.entryCount).toBe(2);
   expect(usage.categories.find((c) => c.id === "logos")?.bytes).toBe(1200);
   expect(usage.files[0]).toEqual({
-    relativePath: "stock-logos/v2",
+    relativePath: "stock-logos",
     kind: "directory",
-    fileCount: 2,
-    bytes: 1000,
+    fileCount: 3,
+    bytes: 1200,
     category: "logos",
   });
   expect(usage.files.some((f) => f.relativePath.endsWith(".png"))).toBe(false);
-  await storage.reveal({ relativePath: "stock-logos/v2" });
+  await storage.reveal({ relativePath: "stock-logos" });
   expect(reveal).toHaveBeenLastCalledWith(
-    join(usage.dataDir, "stock-logos/v2"),
+    join(usage.dataDir, "stock-logos"),
     true,
   );
   await expect(
     storage.reveal({ relativePath: "stock-logos/v2/a.png" }),
   ).rejects.toThrow("unavailable");
-  await rm(join(root, "stock-logos/v2"), { recursive: true });
-  await writeFile(join(root, "stock-logos/v2"), "replaced");
-  await expect(
-    storage.reveal({ relativePath: "stock-logos/v2" }),
-  ).rejects.toThrow("unavailable");
+  await rm(join(root, "stock-logos"), { recursive: true });
+  await writeFile(join(root, "stock-logos"), "replaced");
+  await expect(storage.reveal({ relativePath: "stock-logos" })).rejects.toThrow(
+    "unavailable",
+  );
 });
 it("includes empty logo cache folders as one entry with zero underlying files", async () => {
   const root = await directory();

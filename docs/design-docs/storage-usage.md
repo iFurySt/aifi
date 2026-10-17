@@ -13,10 +13,11 @@ allocated-block measurements or the computer's available capacity.
 
 File categories are SQLite (`aifi.sqlite`, WAL/SHM/rollback journals), company
 logos (`stock-logos/`), account/settings (`chatgpt/`, vault key), and all other
-files. The UI reports a scan time, manual Refresh and a descending file list;
-equal sizes use path ordering. `stock-logos/v2` is represented by one directory
+files. The UI offers manual Refresh and a descending file list; the scan time is
+in the Refresh tooltip. Equal sizes use path ordering. `stock-logos` is one directory
 entry with recursively summed bytes and its underlying regular-file count;
-individual cache images are omitted. Other files remain individual entries.
+legacy root images, `v2` images and cache metadata all contribute once. Individual
+cache images are omitted. Other files remain individual entries.
 `fileCount` counts actual regular files; `entryCount` counts displayed file/folder
 rows and governs pagination. Empty logo-cache directories still appear. A moving collector can change file lengths while
 a scan is in progress; refresh provides a new observation.
@@ -52,8 +53,16 @@ No checkpoint, vacuum, migration, cleanup or data deletion is performed.
   reveal callback, and offers Copy path. Native macOS actions are Open folder
   and Show in Finder; other desktop hosts use Show in folder.
 
-The UI retains successful totals/files throughout refresh and on errors. Scan
-requests are independent of the Settings status poll. Existing Reset workspace
+A renderer-session `StorageSession` retains totals and expanded file pages across
+Settings visits. Re-entry renders that snapshot synchronously and starts a
+coalesced background scan, indicated by the Refresh icon (with reduced-motion
+support and an accessible updating label). Leaving the page does not cancel the
+cache update. Refresh atomically rebases the previously visible page range;
+failures preserve the last complete result. Only an uncached first visit shows
+Calculating storage. The cache is in memory and does not survive app restart.
+Scan requests are independent of the Settings status poll. Explanatory paragraphs,
+"Largest first", repeated root-folder labels and the visible scan-time caption
+are omitted from the page; technical accounting rules stay in this document. Existing Reset workspace
 continues to reset demo workspace state, not collected research or local files.
 
 ## Verification
@@ -67,3 +76,8 @@ offline Go data directory, checking actual accounting, descending files, paging,
 native callback dispatch, failure recovery, narrow layout and light/dark themes.
 Screenshots/reports are ignored under `.artifacts/storage-ui/`. Native shell
 callbacks are recorded during this gate; it does not open the user's Finder.
+
+When checking this feature in the development desktop app, rebuilding main/preload
+files does not update an already-running Electron main process. A process started
+before a build still uses its loaded host scanner. Restart the app and verify the
+visible directory row; refreshing/reloading only the renderer is insufficient.

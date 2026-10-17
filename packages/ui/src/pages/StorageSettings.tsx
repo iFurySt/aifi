@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { Copy, File, FolderOpen, RefreshCw } from "lucide-react";
-import type { StorageCategory, StorageUsage } from "@aifi/core";
+import { StorageSession, type StorageCategory } from "@aifi/core";
 import {
   getRuntimeInfo,
   readStorageFiles,
@@ -10,6 +10,9 @@ import {
 } from "@aifi/platform";
 import { Button } from "../components/primitives";
 import { useWorkspace } from "../workspace-context";
+
+const storageSession = new StorageSession(readStorageUsage, readStorageFiles);
+let lastRuntime: RuntimeInfo | undefined;
 
 export function formatStorageBytes(bytes: number) {
   if (bytes === 0) return "0 bytes";
@@ -59,60 +62,22 @@ function Breakdown({
 }
 export function StorageSettings() {
   const { notify } = useWorkspace();
-  const [data, setData] = useState<StorageUsage>();
-  const [runtime, setRuntime] = useState<RuntimeInfo>();
-  const [refreshing, setRefreshing] = useState(true);
-  const [loadingFiles, setLoadingFiles] = useState(false);
-  const [error, setError] = useState("");
-  const generation = useRef(0);
-  const refresh = useCallback(async () => {
-    const current = ++generation.current;
-    setRefreshing(true);
-    try {
-      const next = await readStorageUsage();
-      if (current !== generation.current) return;
-      setData(next);
-      setError("");
-    } catch {
-      if (current === generation.current)
-        setError(
-          "Couldn't refresh storage. Check the data directory and try again.",
-        );
-    } finally {
-      if (current === generation.current) setRefreshing(false);
-    }
-  }, []);
+  const { data, refreshing, loadingFiles, error } = useSyncExternalStore(
+    storageSession.subscribe,
+    storageSession.snapshot,
+  );
+  const [runtime, setRuntime] = useState<RuntimeInfo | undefined>(lastRuntime);
   useEffect(() => {
     let alive = true;
     void getRuntimeInfo().then((info) => {
+      lastRuntime = info;
       if (alive) setRuntime(info);
     });
-    void refresh();
+    void storageSession.refresh();
     return () => {
       alive = false;
-      generation.current++;
     };
-  }, [refresh]);
-  async function more() {
-    if (!data) return;
-    const current = generation.current;
-    setLoadingFiles(true);
-    try {
-      const page = await readStorageFiles(data.snapshotId, data.files.length);
-      if (current !== generation.current) return;
-      setData((old) =>
-        old?.snapshotId === page.snapshotId
-          ? { ...old, files: [...old.files, ...page.files] }
-          : old,
-      );
-      setError("");
-    } catch {
-      if (current === generation.current)
-        setError("Couldn't load more files. Refresh storage and try again.");
-    } finally {
-      if (current === generation.current) setLoadingFiles(false);
-    }
-  }
+  }, []);
   const desktop = runtime?.kind === "desktop";
   const revealLabel =
     runtime?.platform === "darwin" ? "Show in Finder" : "Show in folder";
@@ -141,25 +106,33 @@ export function StorageSettings() {
         <div className="storage-section-heading">
           <div>
             <h2>This device</h2>
-            <p>Collected data and cached files in the data folder.</p>
           </div>
           <Button
+            aria-label={refreshing ? "Updating storage" : "Refresh storage"}
+            title={
+              data
+                ? `Last updated ${new Date(data.scannedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`
+                : undefined
+            }
             disabled={refreshing || loadingFiles}
-            onClick={() => void refresh()}
+            onClick={() => void storageSession.refresh()}
           >
-            <RefreshCw size={14} />
-            {refreshing ? "Refreshing…" : "Refresh"}
+            <RefreshCw
+              size={14}
+              className={refreshing ? "storage-refreshing" : ""}
+              aria-hidden="true"
+            />
+            Refresh
           </Button>
         </div>
         {error && (
           <div className="settings-service-error" role="status">
             {error}
-            {data && " Showing the last scan."}
           </div>
         )}
         {!data && (
           <p className="storage-loading" role="status">
-            {refreshing
+            {!error
               ? "Calculating storage…"
               : "Storage unavailable. Refresh to try again."}
           </p>
@@ -168,7 +141,7 @@ export function StorageSettings() {
           <>
             <div className="storage-total">
               <strong>{formatStorageBytes(data.totalBytes)}</strong>
-              <span>used by local data</span>
+              <span>used</span>
             </div>
             <Breakdown
               categories={data.categories}
@@ -185,13 +158,6 @@ export function StorageSettings() {
                 {desktop ? "Open folder" : "Copy path"}
               </Button>
             </div>
-            <p className="storage-scan-time">
-              Last scanned{" "}
-              {new Date(data.scannedAt).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </p>
           </>
         )}
       </section>
@@ -201,10 +167,6 @@ export function StorageSettings() {
             <div className="storage-section-heading">
               <div>
                 <h2>Database contents</h2>
-                <p>
-                  SQLite pages, including indexes and unused space. Journal
-                  files are counted above.
-                </p>
               </div>
               <span className="storage-number">
                 {formatStorageBytes(data.database.bytes)}
@@ -224,7 +186,6 @@ export function StorageSettings() {
                   {data.entryCount.toLocaleString()}
                 </span>
               </h2>
-              <span className="storage-sort">Largest first</span>
             </div>
             <div className="storage-file-list">
               {data.files.map((file) => (
@@ -248,16 +209,19 @@ export function StorageSettings() {
                         ? file.relativePath
                         : file.relativePath.split("/").at(-1)}
                     </strong>
-                    <span title={file.relativePath}>
-                      {file.kind === "directory"
-                        ? `${file.fileCount.toLocaleString()} files`
-                        : file.relativePath.includes("/")
-                          ? file.relativePath.slice(
-                              0,
-                              file.relativePath.lastIndexOf("/"),
-                            )
-                          : "Data folder"}
-                    </span>
+                    {(file.kind === "directory" ||
+                      file.relativePath.includes("/")) && (
+                      <span title={file.relativePath}>
+                        {file.kind === "directory"
+                          ? `${file.fileCount.toLocaleString()} files`
+                          : file.relativePath.includes("/")
+                            ? file.relativePath.slice(
+                                0,
+                                file.relativePath.lastIndexOf("/"),
+                              )
+                            : ""}
+                      </span>
+                    )}
                   </div>
                   <span className="storage-number">
                     {formatStorageBytes(file.bytes)}
@@ -291,7 +255,7 @@ export function StorageSettings() {
               <Button
                 className="storage-load-more"
                 disabled={loadingFiles || refreshing}
-                onClick={() => void more()}
+                onClick={() => void storageSession.loadMore()}
               >
                 {loadingFiles ? "Loading…" : "Show more"}
               </Button>

@@ -7,7 +7,7 @@ import "../../packages/ui/src/styles.css";
 const bridge = (
   window as unknown as { storageBridge: NonNullable<Window["aifiDesktop"]> }
 ).storageBridge;
-const fixture = { fail: false, reads: 0, web: false };
+const fixture = { fail: false, reads: 0, web: false, delay: 80 };
 Object.assign(window, { storageFixture: fixture });
 window.aifiDesktop = {
   ...bridge,
@@ -19,7 +19,7 @@ window.aifiDesktop = {
   requestData: async (method, params) => {
     if (method === "storage.read") {
       fixture.reads++;
-      await new Promise((resolve) => setTimeout(resolve, 80));
+      await new Promise((resolve) => setTimeout(resolve, fixture.delay));
       if (fixture.fail) throw Error("Synthetic read failure");
     }
     return bridge.requestData(method, params);

@@ -402,9 +402,12 @@ local fixtures do not use real credentials, inference or provider collection.
 
 Storage displays data-directory file usage, a separate SQLite content breakdown,
 and a largest-first file/folder inventory in pages of 50. The image-heavy
-`stock-logos/v2` cache appears once with its total size and file count; its action
-opens the directory. Refresh retains the previous
-scan while loading or on failure. Desktop offers Open folder and Show in Finder
+`stock-logos` cache (including legacy root images and `v2`) appears once with its
+total size and file count; its action opens the directory. Re-entry immediately
+reuses the renderer-session scan and expanded pages, then refreshes in the
+background with a spinning Refresh icon. Background scans and failures retain the
+visible result. Only the first uncached visit shows loading. Desktop offers Open
+folder and Show in Finder
 (Show in folder elsewhere); Web offers Copy path. Reset workspace retains its
 existing demo-only scope. Counts exclude the app bundle and browser/profile data.
 See [storage boundaries](design-docs/storage-usage.md).

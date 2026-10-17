@@ -70,7 +70,7 @@ export class LocalStorageUsage {
         }
         if (info.isSymbolicLink()) continue;
         if (info.isDirectory()) {
-          if (relativePath === "stock-logos/v2") {
+          if (relativePath === "stock-logos") {
             const folder: StorageFile = {
               relativePath,
               kind: "directory",

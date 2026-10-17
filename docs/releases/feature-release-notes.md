@@ -4,7 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
-| 2026-10-17 | Storage | See local data usage by category and find the largest files quickly. | Added file totals, SQLite content allocation, descending file pages, refresh, desktop folder reveal and Web path copying. |
+| 2026-10-17 | Storage | See local data usage by category and find the largest files quickly. | Added file totals, SQLite allocation, grouped Logo-cache directories, instant cached re-entry with background refresh, desktop folder reveal and Web path copying. |
 | 2026-10-17 | Responsive Stocks | Narrow windows give research more room; all company sections remain available. | Added automatic stock-list drawers, container-based chart/content reflow, compact headers/summaries and selected-tab reveal with retained chart/list state. |
 | 2026-10-17 | Enriched Financials | Compare up to 20 collected quarters, expand financial statement groups and chart selected metrics. | Expanded keyless SEC/Yahoo collection to 64 standard concepts; added safe margins/YoY/FCF, persisted snapshot upgrades and explicit custom-KPI/valuation gaps. |
 | 2026-10-17 | Workspace search and shortcuts | Search stays compact with scrollable single-line results; navigate with keyboard shortcuts. | Added bounded back/forward, sidebar toggle, desktop New chat, shortcut help and arrow/Enter search selection. |
