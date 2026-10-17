@@ -58,3 +58,8 @@ venv/
 *.sqlite-shm
 # Local credential master key (including custom data directories)
 aifi-vault.key
+**/chatgpt/vault.key
+**/chatgpt/profiles.enc
+**/chatgpt/profiles-*.tmp
+**/chatgpt/session.lock
+**/chatgpt/session.lock.recovery/

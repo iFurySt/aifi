@@ -22,8 +22,8 @@ The first executable surface is a local Web/Electron workspace:
 Dependency direction: applications compose ui; ui consumes core and platform.
 Core never imports React or Electron. Renderer code has no Node or unrestricted
 filesystem access. Workspace state stays local. Directory collection/settings run through the Go
-host. Research adapters and local stock reads now exist; model execution and
-broker adapters remain future work.
+host. Desktop ChatGPT authorization and text inference run in the Node host;
+research tool execution and broker adapters remain future work.
 
 The shared Shell separates outer application chrome from the inset sidebar and
 scrolling document panel. The outer rail owns application navigation; the inner
@@ -68,7 +68,8 @@ User actions update immutable state; changes persist locally. Core rules
 validate agent prompts, ticker symbols, paused checks, and stored shapes. Seven
 pages share this state. Stocks uses symbol/tab hash routes and source-backed local research reads, with
 empty states for unavailable datasets. Watchlist uses stored closing prices.
-Portfolio positions and chat replies remain illustrative. Directory/research
+Portfolio positions remain illustrative. Chat uses the connected ChatGPT plan;
+legacy sample replies stay labeled. Directory/research
 scheduling and settings are independent of page navigation.
 
 ## Intended Research Domain Objects
@@ -113,16 +114,17 @@ have separate capability boundaries. This is a recorded direction, not a
 runtime implementation or first-wave commitment. See the
 [Schwab and Plaid connectivity direction](design-docs/broker-connectivity-direction.md).
 
-## Future Model Access and Identity
+## Desktop Model Access and Identity
 
-The local research runtime may offer ChatGPT plan usage through the official
-open-source OAuth flow as an optional model access path alongside user-supplied
-API keys and other providers. Keep application identity, inference permissions,
-and brokerage authorization separate. The plan route needs its own capability
-adapter; it does not support every ordinary API feature. Website identity-only
-login and a company-operated hosted service require separate eligibility
-decisions. No authentication runtime is implemented. See
-[ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
+The desktop Node host implements official open-source ChatGPT OAuth, protected
+account registrations, model discovery and bounded streaming text inference.
+Electron exposes a separate allowlisted capability without tokens or remote
+renderer access. Application identity, inference permission and brokerage access
+remain separate. API-key providers and research tool execution are future work.
+Web currently directs model connection to desktop. See
+[desktop connection](design-docs/chatgpt-desktop-connection.md) for implementation
+and live-validation status, and
+[plan research](design-docs/chatgpt-auth-and-plan-usage.md) for feature restrictions.
 
 ## Stock Data Foundation
 

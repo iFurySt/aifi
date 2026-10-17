@@ -12,6 +12,13 @@ declare global {
         method: import("@aifi/core").DataMethod,
         params?: unknown,
       ): Promise<unknown>;
+      requestChatGPT?(
+        method: import("@aifi/core").ChatGPTMethod,
+        params?: unknown,
+      ): Promise<import("@aifi/core").ChatGPTResult<unknown>>;
+      onChatGPTDelta(
+        callback: (event: import("@aifi/core").ChatGPTDelta) => void,
+      ): () => void;
     };
   }
 }
@@ -35,3 +42,4 @@ export * from "./stock-logos";
 
 export * from "./stock-collection";
 export * from "./stock-research";
+export * from "./chatgpt";

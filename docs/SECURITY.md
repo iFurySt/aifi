@@ -2,7 +2,8 @@
 
 AIFi includes a local Web/Electron demo, a Go directory collector, and pinned
 JavaScript/Go dependencies.
-There is no hosted backend, model credential handling, or broker connection.
+There is no hosted backend or broker connection. Desktop ChatGPT credentials
+and requests are handled by a separate Node-host capability.
 Local future market-provider credentials can now be configured.
 
 ## Current Defaults
@@ -39,10 +40,12 @@ Local future market-provider credentials can now be configured.
 - New windows, navigation/redirects away from the app, and permission requests
   are denied. Explicit links to allowlisted primary HTTPS research hosts open in
   the system browser without granting renderer navigation or network access.
+  ChatGPT authorization and usage actions also open fixed official destinations
+  from the main process, without accepting renderer-supplied URLs.
 - Production Web CSP permits same-origin local requests/assets and denies frames;
   development also permits fixed localhost HMR. Electron intercepts resource
   requests: production files are restricted to built app assets, private key/DB
-  files are denied, and remote provider requests stay in the Go host.
+  files are denied, and market-provider requests stay in the Go host.
 - Local storage contains demo research state, not credentials. Do not add tokens
   to this storage adapter; future secrets need a separate protected capability.
 - Saved data is validated before use and rendered as text, without raw HTML.
@@ -69,14 +72,23 @@ filesystem access; back up the private key with the DB when needed. Vite denies
 key, SQLite and artifact files, and Electron file access is asset-scoped.
 See [service design](design-docs/app-data-service.md) for boundaries and follow-ups.
 
-## Future Runtime Work
+## Desktop ChatGPT Connection
 
-If ChatGPT plan access is implemented, use AIFi's official OAuth registration
-and protect its account-specific tokens in local or user-controlled runtime
-storage. Keep model permission separate from application sessions and Schwab or
-Plaid authorization. The researched requirements and current availability are
-recorded in [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md);
-no credential handling is implemented yet.
+The desktop host uses official dynamic registration, PKCE/state/nonce and signed
+OIDC identity verification. Granted plan scope gates inference separately.
+The dedicated IPC returns sanitized display state and text only. Credentials
+stay in bounded AES-GCM encrypted files with a private device key, 0600 files
+and atomic replacement, outside workspace storage. File transactions serialize
+refreshes across runtimes. Sign out clears local tokens even when revocation
+cannot be confirmed, with an explicit recovery message. Credentials and callback
+URLs are never logged; remote error bodies are not exposed. Node host requests
+use fixed HTTPS endpoints, verified TLS, rejected redirects and size/time bounds.
+Renderer request permissions remain unchanged; Vite denies the credential subtree.
+This file-key vault does not resist same-user filesystem access. See
+[desktop connection](design-docs/chatgpt-desktop-connection.md) for scope, limits
+and live-account verification status.
+
+## Future Runtime Work
 
 Before live provider access or infrastructure, extend this file with:
 

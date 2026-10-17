@@ -1,14 +1,20 @@
 # ChatGPT Sign In and Plan Usage for AIFi
 
-Status: researched integration option; documentation only, no implementation.
-Reviewed: 2026-10-12.
+Status: researched integration; a first desktop connection is implemented.
+Reviewed: 2026-10-17.
+
+See [desktop connection](chatgpt-desktop-connection.md) for implemented scope,
+setup, credential boundaries and validation status. The broader research below
+also covers future tools and non-desktop hosts.
 
 AIFi can pursue an official Sign in with ChatGPT integration for its open-source,
 locally running research tool. Eligible Plus and Pro users can authorize model
 requests against their ChatGPT plan without supplying an API key. This flow also
 returns verified identity. A general identity-only website login has different
 availability: it currently requires access through the selected commercial
-partner trial. AIFi has not registered or tested an integration.
+partner trial. AIFi's desktop integration has synthetic regression coverage and
+live user-assisted sign-in, model discovery, completed inference and restart
+verification. Live expiry/renewal and revocation remain unverified separately.
 
 The official [Quickstart](https://developers.openai.com/siwc/quickstart) distinguishes
 these paths. The [OpenAI Cookbook tutorial](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt),
@@ -50,7 +56,7 @@ investment account based on matching email addresses.
 
 ## Open Source Authorization Flow
 
-The future local runtime would follow this sequence:
+The local authorization contract follows this sequence:
 
 1. Persist a stable host identifier and prepare a loopback listener, fresh
    transaction state, nonce, and PKCE challenge.
@@ -64,7 +70,9 @@ The future local runtime would follow this sequence:
    for that account registration in protected runtime storage.
 6. Discover available models and send eligible requests with the access token.
 
-This public-client flow needs no client secret or partner API key. Its callback
+For this open-source local flow, developers do not pre-create an OAuth app in
+the OpenAI console: first sign-in dynamically registers the client. This public-client
+flow needs no client secret or partner API key. Its callback
 must use `127.0.0.1`; the registration placeholder is not the issued client ID
 used for token exchange. See the
 [registration guide](https://developers.openai.com/siwc/token-sharing-open-source/sign-in).
@@ -132,22 +140,21 @@ bounded retry; unsupported capabilities require a corrected request. AIFi must
 not silently switch to paid API-key billing. See
 [errors and recovery](https://developers.openai.com/siwc/token-sharing-open-source/errors-and-recovery).
 
-The future interface should use **Continue with ChatGPT**, show which account
-and funding path are active, and provide **Manage usage**. Respect the user's
+AIFi's desktop interface uses **Continue with ChatGPT**, shows which account
+and funding path are active, and provides **Manage usage**. Respect the user's
 plan and credit permissions, and make alternative billing an explicit choice.
 [UI/UX guidelines](https://developers.openai.com/siwc/ui-ux-guidelines)
 describe these product requirements.
 
 ## AIFi Direction and Follow Up
 
-Treat ChatGPT plan usage as a useful optional provider for a future local AIFi
-runtime. Preserve user-supplied API keys and other model providers as separate
-choices. A plan-specific adapter should handle authorization, account-specific
-models, supported requests, streaming completion, and session renewal. Research
-skills should depend on a capability contract rather than on one billing path.
+Desktop ChatGPT plan usage now has its own adapter for authorization,
+account-specific models, supported requests, streaming completion and session
+renewal. Future API-key and other providers should remain separate choices.
+Research skills should depend on a capability contract rather than one billing path.
 
-This task implements no authentication or model calls and does not add a new
-first-wave requirement. Before implementation:
+The [desktop implementation](chatgpt-desktop-connection.md) covers authentication
+and text chat. Before extending it to research tools or other deployments:
 
 1. Recheck eligibility and limitations for the selected local or self-hosted
    deployment, user account, workspace, and serving region.
@@ -155,7 +162,8 @@ first-wave requirement. Before implementation:
    declined consent, renewal, revocation, and account switching.
 3. Exercise a representative research tool call and terminal stream failures;
    check tool formats instead of assuming the complete Responses feature set.
-4. Define credential storage and explicit provider selection before adding UI.
+4. Preserve protected credential storage and explicit provider selection when
+   extending the existing UI or introducing another host.
 5. Revisit OpenAI approval independently if a company-operated hosted product
    is proposed. Keep this separate from the
    [Schwab and Plaid direction](broker-connectivity-direction.md).

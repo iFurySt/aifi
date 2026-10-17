@@ -19,6 +19,14 @@ Storage denial/quota failure leaves the session usable and displays a notice.
 
 ## Verification And Diagnostics
 
+Desktop ChatGPT requests have bounded OAuth/API calls, a five-minute browser
+authorization deadline, a three-minute generation deadline and request-scoped
+cancellation. Partial streams never become completed history. Refresh writes are
+serialized and atomic; corrupt credentials fail closed. Account discovery and
+inference failures stay separate from local stock reads. No inference request
+is automatically retried or moved to paid API billing. See
+[desktop connection](design-docs/chatgpt-desktop-connection.md).
+
 make ci includes repository checks, TypeScript, domain/storage contracts, and
 production builds. pnpm smoke:desktop separately checks a real native launch,
 local persistence, renderer isolation, and the shared renderer with a timeout.

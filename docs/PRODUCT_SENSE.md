@@ -71,8 +71,10 @@ AIFi should be able to choose their own provider. Personal use is the initial
 context; a possible company-operated commercial offering remains a separate
 future decision. See the [deferred connectivity direction](design-docs/broker-connectivity-direction.md).
 
-An optional ChatGPT plan connection could reduce API-key setup for eligible
-users of a future local research runtime. Preserve other model access choices,
-make the active funding path visible, and keep plan usage independent of broker
-access. This researched option adds no first-wave implementation requirement;
-see [ChatGPT sign-in and plan usage](design-docs/chatgpt-auth-and-plan-usage.md).
+The open-source desktop app connects eligible users' ChatGPT plans without
+API-key setup. Keep active account/funding visible and plan usage independent
+of broker access. The first implementation provides draft text chat; source-backed
+research tools and other providers remain future work. See
+[desktop connection](design-docs/chatgpt-desktop-connection.md) and
+[plan research](design-docs/chatgpt-auth-and-plan-usage.md). A commercial edition
+is outside the current product scope.

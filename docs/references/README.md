@@ -22,10 +22,17 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 
 ## Model Access and Identity
 
+- [Official open-source ChatGPT sign-in tutorial](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt)
+  explains how eligible users bring their ChatGPT plan to a local open-source app.
+  The first sign-in dynamically registers the client; no console app, client secret
+  or user API key is needed. Published 2026-09-28; reviewed 2026-10-17.
+- [Implemented AIFi desktop connection](../design-docs/chatgpt-desktop-connection.md)
+  records setup, authoritative URLs, identity/plan permission separation,
+  protected credentials, request restrictions and live verification results.
 - [ChatGPT sign-in and plan usage for AIFi](../design-docs/chatgpt-auth-and-plan-usage.md)
   records the official open-source flow, website identity availability, account
   limits, and request restrictions, with linked OpenAI documentation reviewed on
-  2026-10-12.
+  2026-10-17.
 
 ## Stock Data
 

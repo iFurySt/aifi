@@ -1,6 +1,7 @@
 export const settingsSections = [
   "general",
   "appearance",
+  "chatgpt",
   "sources",
   "keys",
   "sync",

@@ -36,6 +36,7 @@ export interface PreviewEvent {
 export interface Message {
   role: "user" | "assistant";
   content: string;
+  source?: "sample" | "chatgpt";
 }
 export interface Conversation {
   id: string;
@@ -141,7 +142,10 @@ const conversationCheck = (v: unknown) =>
     (m) =>
       isRecord(m) &&
       ["user", "assistant"].includes(m.role as string) &&
-      str(m.content, 5000),
+      str(m.content, m.role === "assistant" ? 32000 : 5000) &&
+      (m.source === undefined ||
+        m.source === "sample" ||
+        m.source === "chatgpt"),
   );
 /** Validate persisted input before it enters the UI. Unknown schemas are never silently migrated. */
 export function decodeWorkspace(raw: string): Workspace {

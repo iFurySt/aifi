@@ -29,6 +29,7 @@ import {
 } from "@aifi/platform";
 import type { StoragePort } from "@aifi/platform";
 import { WorkspaceContext } from "./workspace-context";
+import { ChatGPTProvider } from "./chatgpt-context";
 import {
   StockDirectoryContext,
   StockLogoContext,
@@ -175,6 +176,7 @@ export function App({
     return () => clearTimeout(toastTimer.current);
   }, [notify]);
   return (
+    <ChatGPTProvider>
     <StockResearchContext.Provider value={stockResearch}><StockLogoContext.Provider value={logos}>
       <StockDirectoryContext.Provider value={directory}>
         <WorkspaceContext.Provider
@@ -227,5 +229,6 @@ export function App({
         </WorkspaceContext.Provider>
       </StockDirectoryContext.Provider>
     </StockLogoContext.Provider></StockResearchContext.Provider>
+    </ChatGPTProvider>
   );
 }

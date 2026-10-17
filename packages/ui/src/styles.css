@@ -1297,6 +1297,39 @@ kbd {
 .research-composer-area {
   margin-top: 20px;
 }
+.chat-connection,
+.chat-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+.chat-connection {
+  margin-bottom: 12px;
+  color: var(--secondary);
+  font-size: 12px;
+}
+.chat-connection > span {
+  overflow-wrap: anywhere;
+}
+.chat-connection select {
+  background: var(--surface-muted);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  max-width: 100%;
+}
+.chat-error {
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+.chat-actions {
+  margin-top: 10px;
+}
 .composer-mode {
   display: flex;
   align-items: center;

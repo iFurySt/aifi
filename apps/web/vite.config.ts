@@ -16,6 +16,7 @@ export default defineConfig(({ command }) => ({
         "*.{crt,pem}",
         "**/.git/**",
         "**/aifi-vault.*",
+        "**/chatgpt/**",
         "**/*.sqlite*",
         "**/.artifacts/**",
       ],

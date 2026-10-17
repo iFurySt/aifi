@@ -17,6 +17,7 @@
     "desktop": "pnpm --filter @aifi/desktop start",
     "test": "vitest run packages/core/src packages/platform/src packages/host/src packages/ui/src",
     "smoke:desktop": "pnpm --filter @aifi/desktop smoke",
+    "smoke:chatgpt": "node scripts/check-chatgpt.mjs",
     "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json,css}\" \"scripts/*.mjs\" package.json tsconfig.json"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "@vitejs/plugin-react": "6.1.2",
     "electron": "44.7.0",
     "esbuild": "0.28.2",
+    "jose": "6.2.12",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
     "vite": "8.3.4",

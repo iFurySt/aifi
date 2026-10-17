@@ -110,7 +110,10 @@ export function Shell({ children }: { children: ReactNode }) {
     pageLabels[p].toLowerCase().includes(search.toLowerCase()),
   );
   const demoBadge =
-    page === "settings" || page === "stocks" || page === "watchlist" ? null : (
+    page === "settings" ||
+    page === "stocks" ||
+    page === "watchlist" ||
+    page === "research" ? null : (
       <button
         className="demo-badge"
         aria-label="About demo data"
@@ -265,7 +268,7 @@ export function Shell({ children }: { children: ReactNode }) {
         open={demoOpen}
         onOpenChange={setDemoOpen}
         title="Demo data"
-        description="Stocks uses locally collected data. Portfolio positions and AI replies are examples."
+        description="Stocks uses locally collected data. Chat can use your connected ChatGPT plan. Portfolio positions and agent previews are examples."
       >
         <div className="dialog-actions">
           <button

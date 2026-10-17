@@ -18,7 +18,10 @@ Suggested conventions:
   Plaid access, and keep implementation outside the first wave.
 - [ChatGPT sign-in and plan usage](chatgpt-auth-and-plan-usage.md) - researched
   local runtime option, website login availability, OAuth flow, and current
-  inference restrictions; implementation remains deferred.
+  inference restrictions.
+- [ChatGPT desktop connection](chatgpt-desktop-connection.md) - implemented local
+  OAuth, protected accounts, model discovery and streaming text chat; live sign-in,
+  inference and connection recovery after restart verified.
 
 ## Stock Data Foundation
 

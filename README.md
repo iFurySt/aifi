@@ -14,8 +14,9 @@ advice.
 ## Local app preview
 
 The local Web and Electron apps share one React interface. The first version
-uses a real cached stock directory and sample research data; model calls, broker
-connections, and background agents come later.
+uses a real cached stock directory and collected research data. Desktop Chat
+supports ChatGPT-plan text inference; broker connections and background agents
+come later.
 
 Stocks opens with a searchable Nasdaq Trader directory and six research tabs.
 The list loads more on scroll; available company logos are cached on the device. Chart/financial examples
@@ -35,6 +36,12 @@ pnpm build
 pnpm desktop         # Run the built desktop app
 make ci
 ```
+
+In the desktop app, open **Settings → ChatGPT → Continue with ChatGPT** to connect
+an eligible ChatGPT plan, then choose a model and send a message in Chat. No API
+key, client secret or OpenAI console app is needed. Browser-only Web does not yet
+support this connection. Chat has no attached market-data tools; responses are
+drafts. See [connection setup and limits](docs/design-docs/chatgpt-desktop-connection.md).
 
 The first desktop launch downloads the Electron runtime. See
 [frontend development](docs/FRONTEND.md), [architecture](docs/ARCHITECTURE.md),

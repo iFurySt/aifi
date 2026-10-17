@@ -7,6 +7,7 @@ import {
   KeyRound,
   RefreshCw,
   Search,
+  Sparkles,
 } from "lucide-react";
 import type { SettingsSection } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
@@ -18,6 +19,7 @@ export const settingItems: {
 }[] = [
   { id: "general", label: "General", group: "Personal", icon: Settings2 },
   { id: "appearance", label: "Appearance", group: "Personal", icon: Sun },
+  { id: "chatgpt", label: "ChatGPT", group: "Personal", icon: Sparkles },
   { id: "sources", label: "Data sources", group: "Data", icon: Plug },
   { id: "keys", label: "API keys", group: "Data", icon: KeyRound },
   { id: "sync", label: "Sync", group: "Data", icon: RefreshCw },

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useLayoutEffect, useEffect, useRef } from "react";
 import {
   ArrowUp,
   BookOpen,
@@ -6,8 +6,12 @@ import {
   FileText,
   Plus,
   Sparkles,
+  Square,
 } from "lucide-react";
-import { demoAnswer } from "@aifi/core";
+import type { Conversation, Message } from "@aifi/core";
+import { validateChatGPTRequest } from "@aifi/core";
+import { requestChatGPT, respondWithChatGPT } from "@aifi/platform";
+import { useChatGPT } from "../chatgpt-context";
 import { useWorkspace, uid } from "../workspace-context";
 import { Button, Logo, Tag } from "../components/primitives";
 const starters = [
@@ -36,38 +40,97 @@ export function Research({
 }) {
   const { workspace, update, conversationId, openConversation, notify } =
     useWorkspace();
-  const [prompt, setPrompt] = useState("");
+  const [prompt, setPrompt] = useState(draft);
+  const chatgpt = useChatGPT();
+  const profile = chatgpt.status?.profiles.find(
+    (p) => p.id === chatgpt.status?.activeProfileId,
+  );
+  const [reply, setReply] = useState<{
+    conversationId: string;
+    text: string;
+    error?: string;
+  }>();
+  const [sending, setSending] = useState(false);
+  const running = useRef<
+    { requestId: string; conversationId: string } | undefined
+  >(undefined);
+  function stop() {
+    const request = running.current;
+    running.current = undefined;
+    setSending(false);
+    if (request) {
+      void requestChatGPT("cancelResponse", {
+        requestId: request.requestId,
+      }).catch(() => {});
+      setReply((old) =>
+        old ? { ...old, error: "Reply stopped. You can retry." } : old,
+      );
+    }
+  }
+  useEffect(
+    () => () => {
+      const request = running.current;
+      running.current = undefined;
+      if (request)
+        void requestChatGPT("cancelResponse", {
+          requestId: request.requestId,
+        }).catch(() => {});
+    },
+    [],
+  );
+  useEffect(() => {
+    if (running.current && running.current.conversationId !== conversationId)
+      stop();
+  }, [conversationId]);
   const end = useRef<HTMLDivElement>(null);
   const conversation = workspace.conversations.find(
     (c) => c.id === conversationId,
   );
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (draft) {
       setPrompt(draft);
       clearDraft();
     }
   }, [draft, clearDraft]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     end.current?.scrollIntoView({ behavior: "instant", block: "end" });
-  }, [conversation?.messages.length]);
-  function send() {
+  }, [conversation?.id, conversation?.messages.length, reply?.text]);
+  async function send(retry = false) {
+    if (running.current || !profile?.sharing || !chatgpt.model) return;
     const text = prompt.trim();
-    if (!text) return;
+    if (!retry && !text) return;
     if (text.length > 2000) {
       notify("Limit: 2,000 characters.");
       return;
     }
-    if ((conversation?.messages.length ?? 0) > 98) {
+    if ((conversation?.messages.length ?? 0) > (retry ? 99 : 98)) {
       notify("Start a new conversation to continue.");
       return;
     }
-    const messages = [
-      { role: "user" as const, content: text },
-      { role: "assistant" as const, content: demoAnswer(text) },
-    ];
+    const messages: Message[] = [{ role: "user", content: text }];
     const next = conversation
-      ? { ...conversation, messages: [...conversation.messages, ...messages] }
+      ? {
+          ...conversation,
+          messages: retry
+            ? conversation.messages
+            : [...conversation.messages, ...messages],
+        }
       : { id: uid(), title: text.slice(0, 80), messages };
+    const request = {
+      requestId: uid(),
+      profileId: profile.id,
+      model: chatgpt.model,
+      messages: next.messages,
+    };
+    try {
+      validateChatGPTRequest(request);
+    } catch (e) {
+      notify((e as Error).message);
+      return;
+    }
+    running.current = { requestId: request.requestId, conversationId: next.id };
+    setSending(true);
+    setReply({ conversationId: next.id, text: "" });
     update((w) => ({
       ...w,
       conversations: [
@@ -77,7 +140,52 @@ export function Research({
     }));
     openConversation(next);
     setPrompt("");
+    try {
+      const result = await respondWithChatGPT(request, (delta) => {
+        if (running.current?.requestId === request.requestId)
+          setReply((old) => ({
+            conversationId: next.id,
+            text: (old?.text ?? "") + delta,
+          }));
+      });
+      if (running.current?.requestId !== request.requestId) return;
+      // A late response must not resurrect a chat removed by a workspace reset.
+      update((w) => ({
+        ...w,
+        conversations: w.conversations.map((c) =>
+          c.id === next.id
+            ? {
+                ...c,
+                messages: [
+                  ...c.messages,
+                  {
+                    role: "assistant",
+                    content: result.text,
+                    source: "chatgpt",
+                  },
+                ],
+              }
+            : c,
+        ),
+      }));
+      setReply(undefined);
+    } catch (e) {
+      if (running.current?.requestId === request.requestId)
+        setReply((old) => ({
+          conversationId: next.id,
+          text: old?.text ?? "",
+          error: (e as Error).message,
+        }));
+    } finally {
+      if (running.current?.requestId === request.requestId) {
+        running.current = undefined;
+        setSending(false);
+        void chatgpt.refresh();
+      }
+    }
   }
+  const visibleReply =
+    reply?.conversationId === conversationId ? reply : undefined;
   return (
     <div className={`research-page ${conversation ? "has-conversation" : ""}`}>
       {workspace.conversations.length > 0 && (
@@ -113,20 +221,52 @@ export function Research({
           </div>
           <div className="conversation" aria-label="Research conversation">
             {conversation.messages.map((message, i) => (
-              <article key={i} className={`message message-${message.role}`}>
-                {message.role === "assistant" && (
-                  <div className="assistant-label">
-                    <Logo small />
-                    <Tag>Sample response</Tag>
-                  </div>
-                )}
+              <ChatMessage key={i} message={message} />
+            ))}
+            {visibleReply && (
+              <article
+                className="message message-assistant"
+                aria-busy={sending}
+              >
+                <div className="assistant-label">
+                  <Logo small />
+                  <Tag>{sending ? "Responding…" : "Incomplete reply"}</Tag>
+                </div>
                 <div className="message-content">
-                  {message.content.split("\n\n").map((paragraph, j) => (
-                    <p key={j}>{paragraph}</p>
+                  {visibleReply.text.split("\n\n").map((text, i) => (
+                    <p key={i}>{text}</p>
                   ))}
                 </div>
+                {visibleReply.error && (
+                  <div className="chat-error" role="alert">
+                    {visibleReply.error}
+                    <div className="chat-actions">
+                      <Button onClick={() => void chatgpt.action("openUsage")}>
+                        Manage usage
+                      </Button>
+                      <Button
+                        disabled={
+                          sending || !profile?.sharing || !chatgpt.model
+                        }
+                        onClick={() => void send(true)}
+                      >
+                        Retry reply
+                      </Button>
+                    </div>
+                  </div>
+                )}
               </article>
-            ))}
+            )}
+            {!visibleReply &&
+              !sending &&
+              conversation.messages.at(-1)?.role === "user" && (
+                <Button
+                  disabled={!profile?.sharing || !chatgpt.model}
+                  onClick={() => void send(true)}
+                >
+                  Retry reply
+                </Button>
+              )}
             <div ref={end} />
           </div>
         </>
@@ -139,11 +279,60 @@ export function Research({
         </div>
       )}
       <div className="research-composer-area">
+        <div className="chat-connection">
+          {profile?.sharing ? (
+            <>
+              <span>Using ChatGPT plan · {profile.email || profile.label}</span>
+              <select
+                aria-label="Chat model"
+                value={chatgpt.model}
+                disabled={sending || !chatgpt.models.length}
+                onChange={(e) => chatgpt.setModel(e.target.value)}
+              >
+                {!chatgpt.models.length && (
+                  <option value="">No models available</option>
+                )}
+                {chatgpt.models.map((m) => (
+                  <option key={m.slug} value={m.slug}>
+                    {m.displayName}
+                  </option>
+                ))}
+              </select>
+              <Button
+                variant="ghost"
+                onClick={() => void chatgpt.action("openUsage")}
+              >
+                Manage usage
+              </Button>
+            </>
+          ) : (
+            <>
+              <span>
+                {chatgpt.available
+                  ? "Connect ChatGPT to start chatting."
+                  : "Open the desktop app to connect ChatGPT."}
+              </span>
+              {chatgpt.available && (
+                <a className="setting-link" href="#/settings/chatgpt">
+                  Connect ChatGPT
+                </a>
+              )}
+            </>
+          )}
+        </div>
+        {chatgpt.error && (
+          <div className="chat-error" role="alert">
+            {chatgpt.error}{" "}
+            <a className="setting-link" href="#/settings/chatgpt">
+              Connection settings
+            </a>
+          </div>
+        )}
         <form
           className="composer research-composer"
           onSubmit={(e) => {
             e.preventDefault();
-            send();
+            void send();
           }}
         >
           <textarea
@@ -159,7 +348,7 @@ export function Research({
                 !e.nativeEvent.isComposing
               ) {
                 e.preventDefault();
-                send();
+                void send();
               }
             }}
           />
@@ -168,14 +357,25 @@ export function Research({
               <Sparkles size={15} />
               Research
             </span>
-            <button
-              className="send-button"
-              aria-label="Send research question"
-              disabled={!prompt.trim()}
-              type="submit"
-            >
-              <ArrowUp size={19} />
-            </button>
+            {sending ? (
+              <button
+                className="send-button"
+                type="button"
+                aria-label="Stop response"
+                onClick={stop}
+              >
+                <Square size={16} />
+              </button>
+            ) : (
+              <button
+                className="send-button"
+                aria-label="Send research question"
+                disabled={!prompt.trim() || !profile?.sharing || !chatgpt.model}
+                type="submit"
+              >
+                <ArrowUp size={19} />
+              </button>
+            )}
           </div>
         </form>
       </div>
@@ -200,5 +400,31 @@ export function Research({
         </div>
       )}
     </div>
+  );
+}
+
+function ChatMessage({
+  message,
+}: {
+  message: Conversation["messages"][number];
+}) {
+  return (
+    <article className={`message message-${message.role}`}>
+      {message.role === "assistant" && (
+        <div className="assistant-label">
+          <Logo small />
+          <Tag>
+            {message.source === "chatgpt"
+              ? "ChatGPT · Draft"
+              : "Sample response"}
+          </Tag>
+        </div>
+      )}
+      <div className="message-content">
+        {message.content.split("\n\n").map((text, i) => (
+          <p key={i}>{text}</p>
+        ))}
+      </div>
+    </article>
   );
 }

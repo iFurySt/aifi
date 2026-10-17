@@ -1,4 +1,11 @@
 import { DataHost } from "../../../packages/host/src/runtime";
+import { defaultDataDir } from "../../../packages/host/src/runtime";
+import { ChatGPTHost } from "../../../packages/host/src/chatgpt";
+import { ChatGPTStore } from "../../../packages/host/src/chatgpt-store";
+import {
+  chatGPTMethods,
+  type ChatGPTMethod,
+} from "../../../packages/core/src/chatgpt";
 import {
   dataMethods,
   type DataMethod,
@@ -46,13 +53,30 @@ if (smokeProfile) {
   });
 }
 
+// A normal installation owns one renderer profile and ChatGPT connection.
+// Smoke uses its disposable userData and must not activate the user's window.
+const primaryInstance = smoke || app.requestSingleInstanceLock();
+if (!primaryInstance) app.quit();
+else
+  app.on("second-instance", () => {
+    const window = BrowserWindow.getAllWindows()[0];
+    if (window) {
+      if (window.isMinimized()) window.restore();
+      window.show();
+      window.focus();
+    } else if (app.isReady()) void createWindow().catch(failStartup);
+  });
+
 let dataHost: DataHost;
+let chatGPTHost: ChatGPTHost;
 let quitting = false;
 app.on("before-quit", (event) => {
   if (quitting || !dataHost) return;
   event.preventDefault();
   quitting = true;
-  void dataHost.stop().finally(() => app.quit());
+  void Promise.allSettled([dataHost.stop(), chatGPTHost?.dispose()]).finally(
+    () => app.quit(),
+  );
 });
 async function createWindow() {
   const window = new BrowserWindow({
@@ -74,6 +98,7 @@ async function createWindow() {
       sandbox: true,
     },
   });
+  window.webContents.on("destroyed", () => chatGPTHost?.cancelPending());
   window.webContents.setWindowOpenHandler(({ url }) => {
     if (isResearchSourceURL(url)) void shell.openExternal(url);
     return { action: "deny" };
@@ -173,13 +198,20 @@ async function createWindow() {
  await waitFor(()=>!!document.querySelector('.settings-content') && document.querySelector('.settings-content').innerText.includes('Financial Modeling Prep'));
  location.hash = '/settings/sync';
       await waitFor(() => !!document.querySelector('.settings-content') && document.querySelector('[aria-label="Directory interval hours"]')?.value === '6');
-      const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 6;
+      const settingsUI = document.querySelectorAll('[aria-label="Settings categories"] a').length === 7;
+      location.hash = '/settings/chatgpt';
+      await waitFor(() => document.querySelector('.settings-content')?.innerText.includes('Continue with ChatGPT'));
+      const chatStatus = await window.aifiDesktop.requestChatGPT('status');
+      const deniedChat = await window.aifiDesktop.requestChatGPT('read-token');
+      const invalidChat = await window.aifiDesktop.requestChatGPT('respond', {url:'https://other.invalid'});
+      const chatGPT = chatStatus.ok && chatStatus.value.profiles.length === 0 && !deniedChat.ok && !invalidChat.ok &&
+        !JSON.stringify(chatStatus.value).includes('Token') && document.querySelector('.settings-content').innerText.includes('Manage usage');
       const brand = document.querySelector('.brand-mark');
       const maskImage = brand && getComputedStyle(brand).maskImage;
       const maskURL = maskImage?.startsWith('url(') ? maskImage.slice(4, -1).replaceAll('"', '').replaceAll("'", '') : null;
       const brandLoaded = maskURL ? await new Promise(resolve => { const image = new Image(); image.onload = () => resolve(image.naturalWidth > 0); image.onerror = () => resolve(false); image.src = maskURL; }) : false;
       const branding = document.title === 'AIFi' && !!brand && brandLoaded && brand.getBoundingClientRect().width > 0;
-      return { runtime, branding, directoryReads, stockCollections, hiddenScrollbars, dataService, credentials, settingsUI, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
+      return { runtime, branding, directoryReads, stockCollections, hiddenScrollbars, dataService, credentials, settingsUI, chatGPT, stockTabs, stockSidebar, stockPlaceholders, navigation, initialHistory, historyControls, branchingHistory, framedShell, localSave, isolated: typeof require === 'undefined',
         rendered: !!document.querySelector('.settings-content'),
         theme: document.documentElement.dataset.theme,
         desktop: document.documentElement.dataset.runtime,
@@ -195,6 +227,7 @@ async function createWindow() {
       !result.directoryReads ||
       !result.credentials ||
       !result.settingsUI ||
+      !result.chatGPT ||
       !result.stockTabs ||
       !result.stockSidebar ||
       !result.stockCollections ||
@@ -242,117 +275,161 @@ const smokeTimeout = smoke
       app.exit(1);
     }, 15000)
   : undefined;
-void app
-  .whenReady()
-  .then(async () => {
-    const iconPath = join(__dirname, "brand/app-icon.png");
-    const brandIcon = nativeImage.createFromPath(iconPath);
-    if (brandIcon.isEmpty()) throw Error("AIFi app icon is unavailable.");
-    app.dock?.setIcon(brandIcon);
-    app.setAboutPanelOptions({
-      applicationName: "AIFi",
-      applicationVersion: app.getVersion(),
-      iconPath,
-    });
-    Menu.setApplicationMenu(
-      Menu.buildFromTemplate([
-        ...(process.platform === "darwin"
-          ? [
-              {
-                label: "AIFi",
-                submenu: [
-                  { role: "about" as const },
-                  { type: "separator" as const },
-                  { role: "services" as const },
-                  { type: "separator" as const },
-                  { role: "hide" as const },
-                  { role: "hideOthers" as const },
-                  { role: "unhide" as const },
-                  { type: "separator" as const },
-                  { role: "quit" as const },
-                ],
-              },
-            ]
-          : []),
-        { role: "fileMenu" },
-        { role: "editMenu" },
-        { role: "viewMenu" },
-        { role: "windowMenu" },
-      ]),
-    );
-    session.defaultSession.setPermissionRequestHandler(
-      (_contents, _permission, callback) => callback(false),
-    );
-    session.defaultSession.setPermissionCheckHandler(() => false);
-    const assetRoot = realpathSync(join(__dirname, "../../web/dist"));
-    session.defaultSession.webRequest.onBeforeRequest(
-      { urls: ["<all_urls>"] },
-      (details, callback) => {
-        let allowed = false;
-        try {
-          const target = new URL(details.url);
-          if (
-            devUrl &&
-            ["http://127.0.0.1:5173", "ws://127.0.0.1:5173"].includes(
-              target.origin,
+if (primaryInstance)
+  void app
+    .whenReady()
+    .then(async () => {
+      const iconPath = join(__dirname, "brand/app-icon.png");
+      const brandIcon = nativeImage.createFromPath(iconPath);
+      if (brandIcon.isEmpty()) throw Error("AIFi app icon is unavailable.");
+      app.dock?.setIcon(brandIcon);
+      app.setAboutPanelOptions({
+        applicationName: "AIFi",
+        applicationVersion: app.getVersion(),
+        iconPath,
+      });
+      Menu.setApplicationMenu(
+        Menu.buildFromTemplate([
+          ...(process.platform === "darwin"
+            ? [
+                {
+                  label: "AIFi",
+                  submenu: [
+                    { role: "about" as const },
+                    { type: "separator" as const },
+                    { role: "services" as const },
+                    { type: "separator" as const },
+                    { role: "hide" as const },
+                    { role: "hideOthers" as const },
+                    { role: "unhide" as const },
+                    { type: "separator" as const },
+                    { role: "quit" as const },
+                  ],
+                },
+              ]
+            : []),
+          { role: "fileMenu" },
+          { role: "editMenu" },
+          { role: "viewMenu" },
+          { role: "windowMenu" },
+        ]),
+      );
+      session.defaultSession.setPermissionRequestHandler(
+        (_contents, _permission, callback) => callback(false),
+      );
+      session.defaultSession.setPermissionCheckHandler(() => false);
+      const assetRoot = realpathSync(join(__dirname, "../../web/dist"));
+      session.defaultSession.webRequest.onBeforeRequest(
+        { urls: ["<all_urls>"] },
+        (details, callback) => {
+          let allowed = false;
+          try {
+            const target = new URL(details.url);
+            if (
+              devUrl &&
+              ["http://127.0.0.1:5173", "ws://127.0.0.1:5173"].includes(
+                target.origin,
+              )
             )
+              allowed = true;
+            else if (!devUrl && target.protocol === "file:") {
+              const path = realpathSync(fileURLToPath(target));
+              allowed =
+                path.startsWith(assetRoot + sep) &&
+                !path.split(sep).includes("chatgpt") &&
+                !basename(path).startsWith("aifi-vault.") &&
+                !/\.sqlite(?:-wal|-shm)?$/.test(path);
+            } else if (target.protocol === "data:") allowed = true;
+          } catch {
+            /* Invalid or out-of-scope resources remain denied. */
+          }
+          callback({ cancel: !allowed });
+        },
+      );
+      ipcMain.handle("aifi:runtime-info", () => ({
+        kind: "desktop",
+        version: app.getVersion(),
+        platform: process.platform,
+      }));
+      dataHost = new DataHost(
+        join(__dirname, process.platform === "win32" ? "aifi.exe" : "aifi"),
+        smokeProfile ? join(smokeProfile, "data") : undefined,
+        smoke,
+      );
+      chatGPTHost = new ChatGPTHost(
+        new ChatGPTStore(
+          smokeProfile ? join(smokeProfile, "data") : defaultDataDir(),
+        ),
+        (url) => shell.openExternal(url),
+      );
+      ipcMain.handle(
+        "aifi:chatgpt",
+        async (event, method: ChatGPTMethod, params?: unknown) => {
+          const frame = event.senderFrame;
+          const url = frame?.url.split("#")[0];
+          const expected =
+            devUrl ||
+            pathToFileURL(join(__dirname, "../../web/dist/index.html")).href;
+          if (
+            frame !== event.sender.mainFrame ||
+            (devUrl
+              ? url !== expected && url !== expected + "/"
+              : url !== expected) ||
+            !chatGPTMethods.includes(method)
           )
-            allowed = true;
-          else if (!devUrl && target.protocol === "file:") {
-            const path = realpathSync(fileURLToPath(target));
-            allowed =
-              path.startsWith(assetRoot + sep) &&
-              !basename(path).startsWith("aifi-vault.") &&
-              !/\.sqlite(?:-wal|-shm)?$/.test(path);
-          } else if (target.protocol === "data:") allowed = true;
-        } catch {
-          /* Invalid or out-of-scope resources remain denied. */
-        }
-        callback({ cancel: !allowed });
-      },
-    );
-    ipcMain.handle("aifi:runtime-info", () => ({
-      kind: "desktop",
-      version: app.getVersion(),
-      platform: process.platform,
-    }));
-    dataHost = new DataHost(
-      join(__dirname, process.platform === "win32" ? "aifi.exe" : "aifi"),
-      smokeProfile ? join(smokeProfile, "data") : undefined,
-      smoke,
-    );
-    try {
-      await dataHost.start();
-    } catch {
-      console.error("AIFi data service could not start.");
-    }
-    ipcMain.handle(
-      "aifi:data",
-      (event, method: DataMethod, params?: unknown) => {
-        const frame = event.senderFrame;
-        const url = frame?.url.split("#")[0];
-        const expected =
-          devUrl ||
-          pathToFileURL(join(__dirname, "../../web/dist/index.html")).href;
-        if (
-          frame !== event.sender.mainFrame ||
-          (devUrl
-            ? url !== expected + "/" && url !== expected
-            : url !== expected) ||
-          !dataMethods.includes(method)
-        )
-          throw Error("Data access denied.");
-        return dataHost.request(method, params);
-      },
-    );
-    await createWindow();
-    if (smokeTimeout) clearTimeout(smokeTimeout);
-    app.on("activate", () => {
-      if (BrowserWindow.getAllWindows().length === 0)
-        void createWindow().catch(failStartup);
-    });
-  })
-  .catch(failStartup);
+            return { ok: false, error: "ChatGPT access denied." };
+          try {
+            const value = await chatGPTHost.request(method, params, (delta) => {
+              if (
+                !event.sender.isDestroyed() &&
+                event.senderFrame === event.sender.mainFrame
+              )
+                event.sender.send("aifi:chatgpt-delta", delta);
+            });
+            return { ok: true, value };
+          } catch (error) {
+            return {
+              ok: false,
+              error:
+                error instanceof Error
+                  ? error.message
+                  : "ChatGPT request failed.",
+            };
+          }
+        },
+      );
+      try {
+        await dataHost.start();
+      } catch {
+        console.error("AIFi data service could not start.");
+      }
+      ipcMain.handle(
+        "aifi:data",
+        (event, method: DataMethod, params?: unknown) => {
+          const frame = event.senderFrame;
+          const url = frame?.url.split("#")[0];
+          const expected =
+            devUrl ||
+            pathToFileURL(join(__dirname, "../../web/dist/index.html")).href;
+          if (
+            frame !== event.sender.mainFrame ||
+            (devUrl
+              ? url !== expected + "/" && url !== expected
+              : url !== expected) ||
+            !dataMethods.includes(method)
+          )
+            throw Error("Data access denied.");
+          return dataHost.request(method, params);
+        },
+      );
+      await createWindow();
+      if (smokeTimeout) clearTimeout(smokeTimeout);
+      app.on("activate", () => {
+        if (BrowserWindow.getAllWindows().length === 0)
+          void createWindow().catch(failStartup);
+      });
+    })
+    .catch(failStartup);
 function failStartup(error: unknown) {
   console.error("AIFi could not start:", error);
   app.exit(1);

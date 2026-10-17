@@ -64,7 +64,10 @@ belong in the ignored .artifacts directory unless curated into documentation.
 ## Local Demo Behavior
 
 Agents can be created, filtered, paused/resumed, deleted, and given an explicit
-preview. Research conversations contain deterministic illustrative responses.
+preview. Desktop Chat uses a connected ChatGPT plan for real streamed text replies;
+existing illustrative replies retain sample labels. Model tools and source-backed
+research execution are not attached yet. Settings → ChatGPT starts official browser
+authorization without an API key or OpenAI console app. Web directs users to desktop.
 Watchlists support adding/removing symbols; unknown symbols have no invented
 quote. Portfolio numbers and charts are fixed examples. Library cards preview
 existing repository skills without executing them. Settings uses categories and grouped rows for appearance, sources, scheduling
@@ -167,7 +170,7 @@ this UI. The [legacy prototype entry](prototypes/stock-research/preview.html)
 opens the shared app, avoiding a second UI tree. Settings/status transport and directory collection are implemented. Market-data reads and research collection now use SQLite; live setup gates remain in the [data plan](exec-plans/active/us-stock-data-foundation.md).
 ## Data Settings And Runtime
 
-General, Appearance, Data sources, API keys, Sync, Storage use the supplied screenshot's
+General, Appearance, ChatGPT, Data sources, API keys, Sync, Storage use the supplied screenshot's
 category sidebar, centered title, bordered groups and short rows. Desktop/mobile
 share the same page; the drawer exposes settings categories on narrow screens.
 Settings has no Demo badge because its service controls are real.
@@ -310,3 +313,11 @@ it. The bottom source/basis/session-count line stays static; a hidden live
 readout retains accessible keyboard detail. Hover never requests a provider.
 Return arrows use flex center alignment with their values, without a baseline
 offset. Reported market cap retains its source quote date on the metric tooltip.
+
+## ChatGPT Connection Verification
+
+Run `pnpm smoke:chatgpt` for isolated React/Electron checks of completed replies,
+failed-reply retry, cancellation and composer continuity. Synthetic transport never
+uses real credentials or inference. `pnpm smoke:desktop` separately validates the
+real sandboxed desktop capability. See
+[official sources and setup](design-docs/chatgpt-desktop-connection.md).

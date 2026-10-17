@@ -12,6 +12,7 @@ import { useWorkspace } from "../workspace-context";
 import { Button, Modal } from "../components/primitives";
 import { ResearchSyncSettings } from "./ResearchSyncSettings";
 import { settingItems } from "../components/SettingsSidebar";
+import { ChatGPTSettings } from "./ChatGPTSettings";
 function Row({
   title,
   description,
@@ -140,7 +141,7 @@ export function Settings() {
   return (
     <div className="settings-content">
       <h1>{settingItems.find((x) => x.id === section)?.label}</h1>
-      {error && (
+      {error && section !== "chatgpt" && (
         <div className="settings-service-error" role="status">
           {error}
           <Button variant="ghost" onClick={() => void refresh()}>
@@ -148,6 +149,7 @@ export function Settings() {
           </Button>
         </div>
       )}
+      {section === "chatgpt" && <ChatGPTSettings />}
       {section === "general" && (
         <>
           <Group title="Workspace">
