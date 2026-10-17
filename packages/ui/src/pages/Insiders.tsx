@@ -28,6 +28,7 @@ const compact = (v: number | undefined) =>
         maximumFractionDigits: 2,
       }).format(v);
 export function Insiders({ data }: { data: StockResearch }) {
+  const [limit, setLimit] = useState(200);
   const view = data.datasets.insiders,
     all = useMemo(() => insiderTrades(view), [view]);
   const [range, setRange] = useState("1Y"),
@@ -51,7 +52,7 @@ export function Insiders({ data }: { data: StockResearch }) {
   );
   const market = rows.filter((r) => r.eligible);
   const points = activityPoints(market, "value");
-  const shown = rows.slice(0, 200);
+  const shown = rows.slice(0, limit);
   const incomplete = market.filter((r) => r.value === undefined).length;
   return (
     <section className="stock-tab-body activity-page">
@@ -197,9 +198,17 @@ export function Insiders({ data }: { data: StockResearch }) {
           }
         />
       </div>
+      {rows.length > limit && (
+        <button
+          className="secondary-button activity-more"
+          onClick={() => setLimit((n) => n + 200)}
+        >
+          Show more
+        </button>
+      )}
       <p className="stock-footnote">
         SEC Form 4 · Purchases / sales only in chart
-        {rows.length > 200 ? ` · Showing 200 of ${rows.length}` : ""}
+        {rows.length > limit ? ` · Showing ${limit} of ${rows.length}` : ""}
       </p>
     </section>
   );

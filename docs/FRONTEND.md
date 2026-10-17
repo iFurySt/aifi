@@ -503,3 +503,11 @@ derivatives and amended/superseded records are accessible through event scopes
 without inflating totals. Tables retain reported shares-after, ownership, role,
 filing date and official source links. Source details explain issuer-wide scope
 and the bounded recent-filings window.
+
+Analysts uses a five-axis recommendation radar, current consensus/target summary
+and a historical firm-event table. Source populations are separate: target
+opinions are not the recommendation count or historical event count. Individual
+identities/targets remain blank when absent. Target deltas and upside reference
+stored prices and are not labeled returns. Firm/action/date/search controls and
+local Show more share one stored event array. Activity charts resize their SVG
+coordinate space to keep mobile axes readable and tooltip bounds contained.

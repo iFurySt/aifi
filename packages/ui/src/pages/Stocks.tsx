@@ -1,3 +1,4 @@
+import { Analysts } from "./Analysts";
 import { Insiders } from "./Insiders";
 import { Politicians } from "./Politicians";
 import { Funds } from "./Funds";
@@ -36,7 +37,6 @@ import { useStockResearch } from "../stock-research-context";
 import {
   SourceNote,
   AnalystSummary,
-  AnalystPanel,
   FilingsTable,
   Earnings,
   Digest,
@@ -480,7 +480,7 @@ export function Stocks() {
         {tab === "funds" && <Funds data={data} />}
         {tab === "politicians" && <Politicians data={data} />}
         {tab === "insiders" && <Insiders data={data} />}
-        {tab === "analyst" && <AnalystPanel data={data} />}
+        {tab === "analyst" && <Analysts data={data} />}
       </section>
     </div>
   );

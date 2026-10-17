@@ -88,66 +88,6 @@ export function AnalystSummary({ data }: { data: StockResearch }) {
     </div>
   );
 }
-export function AnalystPanel({ data }: { data: StockResearch }) {
-  const view = data.datasets.analyst,
-    records = (view?.data.records ?? []).filter(
-      (r) => r.recordKind === "grades",
-    );
-  const distribution = view?.data.records?.find(
-    (r) => r.recordKind === "recommendations",
-  );
-  return (
-    <section className="stock-tab-body">
-      <h2>Analyst ratings</h2>
-      <AnalystSummary data={data} />
-      {distribution && (
-        <div
-          className="stock-recommendations"
-          aria-label="Current recommendation distribution"
-        >
-          {(
-            [
-              ["strongSell", "Strong sell"],
-              ["sell", "Sell"],
-              ["hold", "Hold"],
-              ["buy", "Buy"],
-              ["strongBuy", "Strong buy"],
-            ] as const
-          ).map(([key, label]) => (
-            <div key={key}>
-              <strong>
-                {typeof distribution[key] === "number"
-                  ? String(distribution[key])
-                  : "—"}
-              </strong>
-              <span>{label}</span>
-            </div>
-          ))}
-          <small>
-            {String(distribution.count)} ratings · Coverage may differ from
-            target-price opinions
-          </small>
-        </div>
-      )}
-      <DataTable
-        columns={["Date", "Firm", "Previous", "Rating", "Action"]}
-        rows={records.map((r) => [
-          value(r, "date"),
-          value(r, "gradingCompany"),
-          value(r, "previousGrade"),
-          value(r, "newGrade"),
-          value(r, "action"),
-        ])}
-      />
-      <SourceNote view={view} />
-      {!view && (
-        <div className="stock-no-data">
-          <MissingData data={data} dataset="analyst" />
-        </div>
-      )}
-    </section>
-  );
-}
 export function Earnings({ data }: { data: StockResearch }) {
   const view = data.datasets.earnings,
     records = view?.data.records ?? [];

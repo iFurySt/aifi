@@ -114,6 +114,10 @@ async function checks() {
     document.querySelectorAll(".activity-sell-bar").length === 1,
     "Awards/derivatives/amendments inflated totals",
   );
+  assert(
+    document.querySelector(".activity-chart svg text").textContent === "$0",
+    "All-sale chart has a fictitious positive baseline",
+  );
   await choose("Insider events", "All events");
   assert(
     table().querySelectorAll("tbody tr").length === 6,
@@ -131,7 +135,48 @@ async function checks() {
     "Amended/superseded records lost",
   );
   await choose("Insider events", "Purchases & sales");
+  window.activityFixture.analyst();
+  await until(() => !!document.querySelector(".analyst-radar"));
+  assert(
+    document
+      .querySelector(".analyst-radar")
+      .getAttribute("aria-label")
+      .includes("Strong buy 6"),
+    "Recommendation radar lost real counts",
+  );
+  assert(
+    document
+      .querySelector(".analyst-summary-stats")
+      .textContent.includes("44 recommendations") &&
+      document
+        .querySelector(".analyst-summary-stats")
+        .textContent.includes("39 target opinions"),
+    "Analyst sample counts were mixed",
+  );
+  assert(
+    table().textContent.includes("Example Analyst") &&
+      table().textContent.includes("20.0%") &&
+      !table().textContent.includes("$0.00"),
+    "Target/name/upside semantics wrong",
+  );
+  await choose("Analyst firm", "Another Firm");
+  assert(
+    table().querySelectorAll("tbody tr").length === 1,
+    "Firm filter failed",
+  );
+  await choose("Analyst firm", "All firms");
+  await choose("Rating action", "Maintained");
+  assert(
+    table().querySelectorAll("tbody tr").length === 1 &&
+      table().textContent.includes("$10.00"),
+    "Target delta/action filter wrong",
+  );
+  await choose("Rating action", "All actions");
   return {
+    recommendationRadar: true,
+    targetCoverageCounts: true,
+    targetAndUpside: true,
+    firmActionFilters: true,
     insiderScopes: true,
     nonTradeExclusion: true,
     reportedPostHoldings: true,

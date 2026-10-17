@@ -343,6 +343,24 @@ selection and a bounded dark holder tooltip. Monthly Yahoo fund dates stay exact
 never invent quarter ends or previous shares from rounded percentages. Narrow
 containers keep the ring compact and the wide table inside a horizontal scroller.
 
+### Reported Activity and Analyst Ratings
+
+Politicians and Insiders pair a signed daily bar chart with a cumulative line and
+a compact source-linked event table. Purchases use green, sales red, and event
+type pills remain small. Keep readable axes on narrow screens and bounded dark
+hover/keyboard details. Person/firm search, scopes and period filters stay local.
+Politician amounts remain disclosed ranges; its chart/ranking counts disclosures
+and excludes ambiguous duplicate lines. Never display estimated dollar gains.
+Use initials when a public identity/portrait has not been verified.
+
+Insider default scope shows non-derivative P/S purchases/sales. Other SEC events,
+derivatives and amendments remain separately inspectable; keep reported shares
+after the transaction, ownership and filing source. Analyst uses a five-axis
+recommendation radar with source counts, consensus and average target beneath it.
+The historical table includes firm, optional analyst, action, rating, target and
+signed upside. Missing targets/names are em dashes. Upside references a stored
+price/date, not an assumed investment return.
+
 ## 12. Settings
 
 Use the supplied 2026-10-13 settings screenshot as the layout reference. Preserve

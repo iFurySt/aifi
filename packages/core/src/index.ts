@@ -26,3 +26,4 @@ export * from "./funds";
 export * from "./stock-activity";
 
 export * from "./app-links";
+export * from "./stock-analyst";

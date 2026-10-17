@@ -69,3 +69,34 @@ func TestActivityScopedSyncAndOfflineRead(t *testing.T) {
 		t.Fatal("unscoped sync accepted")
 	}
 }
+func TestAnalystGenerationRetiresLegacyQueueAndCommitsTargetSnapshot(t *testing.T) {
+	ctx := context.Background()
+	db, e := Open(ctx, t.TempDir())
+	if e != nil {
+		t.Fatal(e)
+	}
+	defer db.Close()
+	now := time.Now().UTC()
+	jobs := []market.Job{{Provider: "yahoo", Dataset: "analyst", Subject: "TEST"}, {Provider: "yahoo", Dataset: "analyst", Subject: "TEST", Window: "outlook:3"}}
+	if e = db.AddResearchJobs(ctx, jobs, now); e != nil {
+		t.Fatal(e)
+	}
+	if e = db.BoundAnalystJobs(ctx, now); e != nil {
+		t.Fatal(e)
+	}
+	j, e := db.ClaimResearchJob(ctx, "yahoo", []string{"analyst"}, false, now.Add(time.Second))
+	if e != nil || j == nil || j.Window != "outlook:3" {
+		t.Fatal(j, e)
+	}
+	var n int
+	if e = db.db.QueryRowContext(ctx, "SELECT COUNT(*) FROM research_jobs WHERE dataset='analyst' AND state='retired'").Scan(&n); e != nil || n != 1 {
+		t.Fatal(n, e)
+	}
+	if e = db.FinishResearchJob(ctx, *j, market.Result{Payload: market.Payload{Version: 3, Records: []market.Record{{"recordKind": "grades", "currentPriceTarget": 120}}}, Evidence: []market.Evidence{{URL: "https://finance.yahoo.com/quote/TEST/analysis/", Body: []byte(`{"fixture":true}`), FetchedAt: now}}}, now, now.Add(time.Hour)); e != nil {
+		t.Fatal(e)
+	}
+	v, e := db.ResearchRead(ctx, "TEST")
+	if e != nil || v.Datasets["analyst"].Data.Version != 3 {
+		t.Fatal(v, e)
+	}
+}

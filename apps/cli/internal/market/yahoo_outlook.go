@@ -57,6 +57,7 @@ func (c *Client) yahooOutlook(ctx context.Context, j Job, r *Result) error {
 	r.Payload.Quote = publicPageQuote(data, c.Now())
 	r.Payload.Complete = false
 	if j.Dataset == "analyst" {
+		r.Payload.Version = 3
 		f := object(data["financialData"])
 		consensus := Record{"recordKind": "price-target-consensus"}
 		for source, target := range map[string]string{"targetMeanPrice": "targetConsensus", "targetMedianPrice": "targetMedian", "targetHighPrice": "targetHigh", "targetLowPrice": "targetLow", "numberOfAnalystOpinions": "analystCount", "recommendationMean": "recommendationMean"} {
@@ -72,10 +73,10 @@ func (c *Client) yahooOutlook(ctx context.Context, j Job, r *Result) error {
 		}
 		for _, item := range array(object(data["recommendationTrend"])["trend"]) {
 			t := object(item)
-			if text(t["period"]) != "0m" {
+			if period := text(t["period"]); period != "0m" && period != "-1m" && period != "-2m" && period != "-3m" {
 				continue
 			}
-			row := Record{"recordKind": "recommendations", "period": "0m"}
+			row := Record{"recordKind": "recommendations", "period": text(t["period"])}
 			total := 0.0
 			for _, key := range []string{"strongBuy", "buy", "hold", "sell", "strongSell"} {
 				if v, ok := sourceNumber(t[key]); ok && v >= 0 && math.Trunc(v) == v {
@@ -89,18 +90,29 @@ func (c *Client) yahooOutlook(ctx context.Context, j Job, r *Result) error {
 			}
 		}
 		grades := array(object(data["upgradeDowngradeHistory"])["history"])
+		gradeCount := 0
 		for _, item := range grades {
 			g := object(item)
 			at, ok := sourceNumber(g["epochGradeDate"])
 			if !ok || at <= 0 || time.Unix(int64(at), 0).After(c.Now()) || text(g["firm"]) == "" {
 				continue
 			}
-			r.Payload.Records = append(r.Payload.Records, Record{"recordKind": "grades", "date": time.Unix(int64(at), 0).UTC().Format("2006-01-02"), "gradingCompany": text(g["firm"]), "previousGrade": text(g["fromGrade"]), "newGrade": text(g["toGrade"]), "action": text(g["action"])})
-			if len(r.Payload.Records) >= 180 {
+			row := Record{"recordKind": "grades", "date": time.Unix(int64(at), 0).UTC().Format("2006-01-02"), "publishedAt": time.Unix(int64(at), 0).UTC().Format(time.RFC3339), "gradingCompany": text(g["firm"]), "previousGrade": text(g["fromGrade"]), "newGrade": text(g["toGrade"]), "action": text(g["action"]), "priceTargetAction": text(g["priceTargetAction"])}
+			for _, key := range []string{"currentPriceTarget", "priorPriceTarget"} {
+				if v, ok := sourceNumber(g[key]); ok && v > 0 {
+					row[key] = v
+				}
+			}
+			if name := text(g["analystName"]); name != "" {
+				row["analystName"] = name
+			}
+			r.Payload.Records = append(r.Payload.Records, row)
+			gradeCount++
+			if gradeCount >= 500 {
 				break
 			}
 		}
-		r.Payload.Window = "Yahoo analyst consensus/current recommendation distribution/recent grades; counts can represent different vendor coverage"
+		r.Payload.Window = "Yahoo analyst consensus, four monthly recommendation snapshots and up to 500 recent grade/target events. Zero target sentinels are omitted. Analyst identities only when supplied. Consensus and recommendation counts can represent different vendor coverage."
 	} else {
 		gaap := object(data["earningsGaap"])
 		chart := map[string]any{}

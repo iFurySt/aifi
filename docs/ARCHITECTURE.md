@@ -216,3 +216,13 @@ inside the app data directory and serves descending, snapshot-paged file lists.
 The shared Storage settings shows both file totals and logical database contents;
 Electron main owns a validated native reveal callback. Web offers path copying.
 See [storage usage](design-docs/storage-usage.md) for counting rules and limits.
+
+## Reported Stock Activity
+
+Politicians adds a selectable keyless CongressInvests worker under the shared
+job/budget/staging contract, retaining optional FMP. Insider jobs use configurable
+40/120/240 SEC recent filings with issuer/document checks, typed event semantics
+and reported post-transaction holdings. Analyst `outlook:3` jobs refresh Yahoo
+consensus/recommendations and per-event targets. These versioned generations
+retire obsolete queued work while preserving last-good snapshots. Activity pages
+filter and chart only SQLite reads, including after offline restart.

@@ -26,3 +26,12 @@ func (s *Store) BoundInsiderJobs(ctx context.Context, window string, now time.Ti
 	_, e = s.db.ExecContext(ctx, "UPDATE research_jobs SET state='queued',next_run=? WHERE provider='sec' AND dataset='insiders' AND window=? AND state='retired'", stamp(now), window)
 	return e
 }
+
+func (s *Store) BoundAnalystJobs(ctx context.Context, now time.Time) error {
+	_, e := s.db.ExecContext(ctx, "UPDATE research_jobs SET state='retired',manual=0 WHERE provider='yahoo' AND dataset='analyst' AND window!='outlook:3' AND state!='running'")
+	if e != nil {
+		return e
+	}
+	_, e = s.db.ExecContext(ctx, "UPDATE research_jobs SET state='queued',next_run=? WHERE provider='yahoo' AND dataset='analyst' AND window='outlook:3' AND state='retired'", stamp(now))
+	return e
+}

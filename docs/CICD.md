@@ -43,3 +43,11 @@ when updating actions.
 
 There is no release workflow by default. Add one only when the output is a real
 versioned artifact, not a packaged copy of repository metadata.
+
+## Stock Activity Regression
+
+`AIFI_UI_ACTIVITY=1 make ci` additionally runs `pnpm smoke:stock-activity` in a
+disposable Electron profile. The combined fixture covers Politicians ranges and
+ambiguous records, Insider event exclusions/post-holdings, and Analyst radar/
+source-population/target/upside/filter semantics. It checks narrow table overflow
+and performs no provider or account requests.

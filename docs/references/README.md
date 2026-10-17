@@ -56,3 +56,6 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 
 - [Fund ownership coverage and sources](fund-ownership-sources.md): Rallies comparison,
   keyless top-holder samples, local observed history and future SEC 13F backfill.
+
+- [Stock activity coverage and sources](stock-activity-sources.md): keyless Congress,
+  SEC ownership filings and Yahoo analyst targets, with semantics and limits.

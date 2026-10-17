@@ -18,6 +18,7 @@ const initials = (name: string) =>
     .slice(0, 2)
     .join("");
 export function Politicians({ data }: { data: StockResearch }) {
+  const [limit, setLimit] = useState(200);
   const view = data.datasets.politicians;
   const adjusted = useMemo(() => splitAdjustedBars(data), [data]);
   const all = useMemo(() => politicalTrades(view), [view]);
@@ -44,12 +45,12 @@ export function Politicians({ data }: { data: StockResearch }) {
   );
   const buyers = new Map<string, number>();
   for (const r of all)
-    if (r.side === "buy" && !r.ambiguous)
+    if (r.side === "buy" && !r.ambiguous && r.date >= cutoff)
       buyers.set(r.name, (buyers.get(r.name) ?? 0) + 1);
   const leaders = [...buyers]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, 6);
-  const shown = rows.slice(0, 200);
+  const shown = rows.slice(0, limit);
   return (
     <section className="stock-tab-body activity-page">
       <header className="activity-heading">
@@ -235,9 +236,17 @@ export function Politicians({ data }: { data: StockResearch }) {
           }
         />
       </div>
+      {rows.length > limit && (
+        <button
+          className="secondary-button activity-more"
+          onClick={() => setLimit((n) => n + 200)}
+        >
+          Show more
+        </button>
+      )}
       <p className="stock-footnote">
         Reported amounts are ranges · House / Senate
-        {rows.length > 200 ? ` · Showing 200 of ${rows.length}` : ""}
+        {rows.length > limit ? ` · Showing ${limit} of ${rows.length}` : ""}
       </p>
     </section>
   );

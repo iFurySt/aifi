@@ -166,7 +166,11 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 		jobs = append(jobs, market.Job{Provider: "congress", Dataset: "politicians", Subject: symbol})
 		jobs = append(jobs, market.Job{Provider: "thirteenf", Dataset: "funds", Subject: symbol, Window: market.FundHistoryWindow(now, cfg.FundsHistoryQuarters)})
 		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds"} {
-			jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: symbol})
+			j := market.Job{Provider: "yahoo", Dataset: d, Subject: symbol}
+			if d == "analyst" {
+				j.Window = "outlook:3"
+			}
+			jobs = append(jobs, j)
 		}
 		for _, d := range []string{"profile", "funds", "politicians", "analyst", "news"} {
 			p := "massive"
@@ -207,6 +211,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 		return fmt.Errorf("fund generation: %w", err)
 	}
 	if err = e.DB.BoundInsiderJobs(ctx, fmt.Sprintf("forms:%d", cfg.InsiderHistoryFilings), now); err != nil {
+		return err
+	}
+	if err = e.DB.BoundAnalystJobs(ctx, now); err != nil {
 		return err
 	}
 	if err = e.DB.UseSharedActions(ctx); err != nil {

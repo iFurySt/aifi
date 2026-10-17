@@ -49,3 +49,9 @@ resumable official SEC ZIP ingestion. Provider/store/engine/CLI race tests cover
 the ingestion boundaries. The [rollout remains active](exec-plans/active/full-stock-backfill.md):
 pending work, unsupported source fields and unmapped securities remain coverage
 gaps rather than an improved completeness score.
+
+Politicians/Insiders/Analyst have source parser, identity/range, event classification,
+source-population, local-store and isolated desktop/mobile chart/table checks.
+Congress coverage remains intermediary House/Senate data with flagged ambiguities;
+SEC backfill is bounded to recent submissions and excludes uncertain amendments
+from totals. Individual analyst names are generally absent from the keyless feed.

@@ -58,10 +58,24 @@ retroactive split adjustment; chart dollar values are not profit or net worth.
 
 ## Analyst
 
-Existing keyless Yahoo analysis collection provides consensus targets, current
-recommendation distribution and recent firm grade history. Target opinion and
-recommendation counts can differ. Missing individual analyst names/targets must
-stay unavailable unless an inspected source actually supplies them.
+Keyless Yahoo analysis JSON provides consensus targets, four monthly recommendation
+snapshots and up to 500 recent firm grade/target events. Individual events retain
+current/prior target, target action and exact publication time when supplied.
+Zero target sentinels remain unavailable; analysts' identities are never guessed.
+The current source generally supplies firms rather than individual names, so that
+column remains blank unless the source includes an analyst name.
+
+The five-axis radar uses only a complete numeric current recommendation sample.
+Target opinions (e.g. AAPL 39) and recommendation counts (44) remain separate.
+Consensus mean is the vendor's consensus, not a mean of duplicated historical
+firm events. Target changes and upside are calculated from supplied targets and
+the latest stored reference quote/close. These are scenarios, not realized returns.
+Table firm/action/search/date controls operate only on stored data.
+
+The `outlook:3` job generation schedules a normal atomic refresh of older analyst
+snapshots so newly supported target fields are acquired across the universe;
+retired legacy queued jobs do not compete with the new source contract. Last-good
+older snapshots remain readable until a new one commits.
 
 ## Primary references
 
@@ -72,5 +86,10 @@ stay unavailable unless an inspected source actually supplies them.
 - [Capitol Gains data documentation](https://capitolgains.info/data): aggregate index coverage and source-use constraints.
 - [Bargo Congress API documentation](https://www.bargo.ai/free-apis/congress): keyless rolling-window limits and terms.
 - [SEC ownership forms](https://www.sec.gov/submit-filings/forms-index): Form 4/4-A source semantics.
+- [Yahoo Apple analysis](https://finance.yahoo.com/quote/AAPL/analysis/): public consensus, recommendation and firm-event source.
 - Local OpenBB FMP government-trade adapters informed optional source vocabulary;
   Dexter/AI Hedge Fund do not provide an equivalent complete keyless Congress API.
+
+Primary semantics: [SEC Form 4 instructions](https://www.sec.gov/files/form4.pdf)
+define P/S as open-market or private purchases/sales. They do not imply that every
+reported transaction occurred on an exchange.

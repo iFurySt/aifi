@@ -31,4 +31,8 @@ if [[ -f "${repo_root}/apps/cli/go.mod" ]]; then
   "${repo_root}/scripts/check-go.sh"
 fi
 
+if [[ "${AIFI_UI_ACTIVITY:-0}" == "1" ]]; then
+  (cd "${repo_root}" && pnpm smoke:stock-activity)
+fi
+
 echo "aifi CI checks passed"

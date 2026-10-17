@@ -1,6 +1,6 @@
 # Politicians, Insiders and Analyst research pages
 
-Status: active, 2026-10-18.
+Status: completed, 2026-10-18.
 
 ## Goal
 
@@ -17,10 +17,10 @@ local/offline reads. Preserve unrelated working changes and source settings.
 3. [x] Insiders: expand SEC Form 4 semantics/coverage with issuer checks,
    derivative separation, post-transaction shares, amendment-safe totals and
    reference-style chart/table; commit/push this phase.
-4. [ ] Analyst: preserve real Yahoo consensus/distribution, enrich grade/target
-   fields when supplied, present rating gauge and target/upside history without
+4. [x] Analyst: preserve real Yahoo consensus/distribution, enrich grade/target
+   fields when supplied, present recommendation radar and target/upside history without
    inventing analyst identities or missing targets; commit/push this phase.
-5. [ ] Validate actual AAPL/MSFT/NVDA collection, offline restart reads, isolated
+5. [x] Validate actual AAPL/MSFT/NVDA collection, offline restart reads, isolated
    desktop/mobile interactions and native/Chrome rendering; update history,
    source coverage, design/release notes and complete this plan.
 
