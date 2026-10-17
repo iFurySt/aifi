@@ -143,6 +143,7 @@ func (c *Client) yahooCompany(ctx context.Context, j Job, r *Result) error {
 		return &Failure{Code: "invalid_profile"}
 	}
 	r.Payload.Profile = p
+	r.Payload.Version = 1
 	r.Payload.Quote = publicPageQuote(data, c.Now())
 	r.Payload.Complete = false
 	if j.Dataset == "profile" {

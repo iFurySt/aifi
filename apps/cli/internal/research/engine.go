@@ -203,6 +203,9 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 			return err
 		}
 	}
+	if err = e.DB.WakeYahooQuoteMetadata(ctx, now); err != nil {
+		return err
+	}
 	e.fingerprint = fingerprint
 	e.lastReconcile = now
 	return nil

@@ -442,3 +442,48 @@ func TestCompletedYahooSessionWakesIdleJobsWithoutOverridingBackoff(t *testing.T
 		}
 	}
 }
+
+func TestYahooValuationUpgradePreservesFailedBackoffAndStopsAfterVersionedCommit(t *testing.T) {
+	ctx := context.Background()
+	db := openTest(t)
+	now := time.Now().UTC()
+	future := now.Add(7 * 24 * time.Hour)
+	for _, symbol := range []string{"OLD", "CURRENT", "BACKOFF"} {
+		job := market.Job{Provider: "yahoo", Dataset: "profile", Subject: symbol}
+		if err := db.AddResearchJobs(ctx, []market.Job{job}, now); err != nil {
+			t.Fatal(err)
+		}
+		j, err := db.ClaimResearchJob(ctx, "yahoo", []string{"profile"}, false, now)
+		if err != nil || j == nil {
+			t.Fatal(err)
+		}
+		version := 0
+		if symbol == "CURRENT" {
+			version = 1
+		}
+		cap := 5000000000000.0
+		result := market.Result{Payload: market.Payload{Version: version, Quote: &market.MarketQuote{Price: 100, AsOf: now.Format(time.RFC3339), MarketCap: &cap}}, Evidence: []market.Evidence{{URL: "https://finance.yahoo.com/quote/" + symbol + "/profile/", Body: []byte(`{"fixture":true}`), FetchedAt: now}}}
+		if err = db.FinishResearchJob(ctx, *j, result, now, future); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if _, err := db.db.ExecContext(ctx, `UPDATE research_jobs SET state='failed' WHERE subject='BACKOFF'`); err != nil {
+		t.Fatal(err)
+	}
+	if err := db.WakeYahooQuoteMetadata(ctx, now.Add(time.Minute)); err != nil {
+		t.Fatal(err)
+	}
+	for _, symbol := range []string{"OLD", "CURRENT", "BACKOFF"} {
+		var next string
+		if err := db.db.QueryRowContext(ctx, `SELECT next_run FROM research_jobs WHERE subject=?`, symbol).Scan(&next); err != nil {
+			t.Fatal(err)
+		}
+		if (next == stamp(future)) != (symbol != "OLD") {
+			t.Fatal(symbol, next)
+		}
+	}
+	view, err := db.ResearchRead(ctx, "CURRENT")
+	if err != nil || view.Datasets["profile"].Data.Quote == nil || view.Datasets["profile"].Data.Quote.MarketCap == nil || *view.Datasets["profile"].Data.Quote.MarketCap != 5000000000000 {
+		t.Fatal("valuation lost in local snapshot", err)
+	}
+}

@@ -149,8 +149,9 @@ Quarter cash flows can be derived only from compatible cumulative periods with
 the same start. Annual totals are never divided by four. Weighted EPS is not
 subtracted to invent a quarter. TTM requires four contiguous quarterly periods.
 Valuations/margins use explicitly matching periods/units where available.
-Market cap uses the provider's company-level weighted share reference, not a
-single share class's outstanding count; its reference date remains available.
+Market cap prefers the reported company-wide value in a stored public quote,
+with its independent observation timestamp. The optional fallback uses the
+provider's company-level weighted share reference, never a single share class's outstanding count; its reference date remains available.
 Company Facts is not a complete dimensional/custom financial statement parser;
 IFRS, business/geographic segments, peer relationships and short
 interest still require additional dataset-specific work. No missing value is zero.
@@ -274,3 +275,21 @@ streaming. Its separate source-dated observation is available in the quote
 source chip, alongside the collection time and daily/non-streaming disclosure.
 A later live quote service needs explicit cadence, subscription scope and
 budget design; repeated navigation must not become that collection mechanism.
+
+## Reported valuations
+
+Validated Yahoo profile/analysis price metadata includes USD company market cap.
+The quote payload preserves that source number and regular observation time
+without recomputing it from share-class outstanding shares. A newer quote without
+valuation does not erase the newest available reported cap; its date remains
+visible on the metric tooltip.
+
+Public-page payload format version 1 adds valuation normalization. Reconciliation
+wakes older idle profile/analyst/earnings jobs once; workers reuse eligible staged
+responses and commit normalized snapshots through the normal collector boundary.
+Disabled sources, failure backoff and provider budgets remain respected. No SQL
+column/schema migration or read-triggered provider call is needed.
+
+On 2026-10-17 AAPL's stored Oct 16 Yahoo regular quote reported company market cap
+5,012,516,765,696 USD. This is a dated vendor value, not a bundled constant or a
+guarantee that other sites use the same quote/share reference.

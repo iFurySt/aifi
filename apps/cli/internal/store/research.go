@@ -981,3 +981,10 @@ func (s *Store) WakeCompletedYahooPrices(ctx context.Context, now time.Time) err
 	_, err := s.db.ExecContext(ctx, `UPDATE research_jobs SET next_run=? WHERE provider='yahoo' AND dataset='prices' AND state='idle' AND next_run>? AND EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots snap ON snap.id=h.snapshot_id WHERE h.dataset='prices' AND h.subject=research_jobs.subject AND snap.provider='yahoo' AND (COALESCE(json_extract(snap.payload_json,'$.window'),'')!='Yahoo completed sessions v2' OR (json_extract(snap.payload_json,'$.quote.sessionEnd')>0 AND unixepoch(research_jobs.last_success)<json_extract(snap.payload_json,'$.quote.sessionEnd')+600 AND ?>=json_extract(snap.payload_json,'$.quote.sessionEnd')+600)))`, stamp(now), stamp(now), now.Unix())
 	return err
 }
+
+// Re-normalize old public-page snapshots once for reported valuation metadata.
+// Collection still obeys source selection, pause flags, budgets and failed backoff.
+func (s *Store) WakeYahooQuoteMetadata(ctx context.Context, now time.Time) error {
+	_, err := s.db.ExecContext(ctx, `UPDATE research_jobs SET next_run=? WHERE provider='yahoo' AND dataset IN ('profile','analyst','earnings') AND state='idle' AND next_run>? AND EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots snap ON snap.id=h.snapshot_id WHERE h.subject=research_jobs.subject AND h.dataset=research_jobs.dataset AND snap.provider='yahoo' AND COALESCE(json_extract(snap.payload_json,'$.version'),0)<1)`, stamp(now), stamp(now))
+	return err
+}

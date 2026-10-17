@@ -321,3 +321,39 @@ it("does not replace a newer local close with an older company-page quote", asyn
   expect(quote.date).toBe("2026-10-16");
   expect(quote.asOf).toBeUndefined();
 });
+
+it("keeps reported company cap from a dated quote when a fresher price has no valuation", async () => {
+  const { stockQuotePresentation } = await import("./stock-research");
+  const data = emptyResearch("AAPL");
+  data.datasets.prices = {
+    provider: "yahoo",
+    fetchedAt: "2026-10-17T05:00:00Z",
+    sources: [],
+    recordCount: 0,
+    data: {
+      complete: false,
+      quote: { price: 343.46, asOf: "2026-10-16T20:00:01Z" },
+    },
+  };
+  data.datasets.analyst = {
+    provider: "yahoo",
+    fetchedAt: "2026-10-17T04:00:00Z",
+    sources: [],
+    recordCount: 0,
+    data: {
+      complete: false,
+      quote: {
+        price: 343.46,
+        asOf: "2026-10-16T20:00:01Z",
+        marketCap: 5012516765696,
+      },
+    },
+  };
+  const quote = stockQuotePresentation(
+    data,
+    Date.parse("2026-10-17T06:00:00Z"),
+  );
+  expect(quote.price).toBe(343.46);
+  expect(quote.marketCap).toBe(5012516765696);
+  expect(quote.marketCapAsOf).toBe("2026-10-16T20:00:01Z");
+});

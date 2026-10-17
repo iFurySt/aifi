@@ -85,6 +85,7 @@ export interface CompanyFiling {
 }
 export type ResearchRecord = Record<string, unknown>;
 export interface MarketQuote {
+  marketCap?: number;
   price: number;
   previousClose?: number;
   asOf: string;
@@ -96,6 +97,7 @@ export interface MarketQuote {
   state?: string;
 }
 export interface ResearchPayload {
+  version?: number;
   quote?: MarketQuote;
   profile?: CompanyProfile;
   facts?: FinancialFact[];
@@ -494,8 +496,16 @@ export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
         nyDate(q.postAsOf) === sourceDate,
     )
     .sort((a, b) => Date.parse(b.postAsOf!) - Date.parse(a.postAsOf!))[0];
+  const valuation = candidates.find(
+    (q) =>
+      typeof q.marketCap === "number" &&
+      Number.isFinite(q.marketCap) &&
+      q.marketCap > 0,
+  );
   return {
     price,
+    marketCap: valuation?.marketCap,
+    marketCapAsOf: valuation?.asOf,
     sourceView: source?.view ?? data.datasets.prices,
     previous,
     change:

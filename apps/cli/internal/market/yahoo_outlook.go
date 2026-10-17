@@ -27,6 +27,9 @@ func publicPageQuote(data map[string]any, now time.Time) *MarketQuote {
 		return nil
 	}
 	q := &MarketQuote{State: text(p["marketState"]), Price: price, AsOf: time.Unix(int64(stamp), 0).UTC().Format(time.RFC3339)}
+	if v, ok := sourceNumber(p["marketCap"]); ok && v > 0 {
+		q.MarketCap = &v
+	}
 	if v, ok := sourceNumber(p["regularMarketPreviousClose"]); ok && v > 0 {
 		q.PreviousClose = &v
 	}
@@ -50,6 +53,7 @@ func (c *Client) yahooOutlook(ctx context.Context, j Job, r *Result) error {
 	if err != nil {
 		return err
 	}
+	r.Payload.Version = 1
 	r.Payload.Quote = publicPageQuote(data, c.Now())
 	r.Payload.Complete = false
 	if j.Dataset == "analyst" {

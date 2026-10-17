@@ -56,6 +56,7 @@ type Fact struct {
 }
 type Record map[string]any
 type MarketQuote struct {
+	MarketCap     *float64 `json:"marketCap,omitempty"`
 	State         string   `json:"state,omitempty"`
 	Price         float64  `json:"price"`
 	PreviousClose *float64 `json:"previousClose,omitempty"`
@@ -67,6 +68,7 @@ type MarketQuote struct {
 	PostAsOf      string   `json:"postAsOf,omitempty"`
 }
 type Payload struct {
+	Version  int          `json:"version,omitempty"`
 	Quote    *MarketQuote `json:"quote,omitempty"`
 	Profile  *Profile     `json:"profile,omitempty"`
 	Facts    []Fact       `json:"facts,omitempty"`
