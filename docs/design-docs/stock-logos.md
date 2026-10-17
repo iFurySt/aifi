@@ -68,6 +68,10 @@ third-party artwork is bundled into source. See [source provenance](../reference
   manifest, FMP image path, Tactical Resources PNG upload path and seven exact
   issuer PNG URLs reviewed in the seed are allowed. These official assets cover
   ACCV, ADBT, ADIG, ADRX, AACP, ADI and ELV; no general CDN/domain access is granted.
+- The renderer queues page requests through four transport slots (up to 128
+  waiting). Host queue pressure is a retryable error, never a null missing image.
+  Visible avatars retry transient errors with 1–30 second backoff and recheck
+  null results after the adapter TTL; timers stop offscreen or on unmount.
 - Four image lookup slots per host, at most 16 pending distinct symbols; duplicate
   symbols and shared issuer assets coalesce. Each slot has a 15-second total
   network budget shared by source attempts. Immediate errors advance to fallback;

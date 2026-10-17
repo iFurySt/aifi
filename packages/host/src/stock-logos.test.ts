@@ -512,3 +512,33 @@ it("promotes matching exact-URL cache bytes into a newly reviewed source without
     rmSync(dir, { recursive: true, force: true });
   }
 });
+it("reports queue pressure as retryable and never as a cached missing image", async () => {
+  const dir = mkdtempSync(join(tmpdir(), "aifi-logo-pressure-"));
+  const releases: (() => void)[] = [];
+  const fetcher = vi.fn<typeof fetch>().mockImplementation(async () => {
+    await new Promise<void>((resolve) => releases.push(resolve));
+    return response();
+  });
+  const cache = new StockLogoCache(dir, false, fetcher, noCatalog);
+  try {
+    const first = Array.from({ length: 16 }, (_, i) => cache.get(`F${i}`));
+    await expect(cache.get("FICO")).rejects.toThrow("busy");
+    while (releases.length || fetcher.mock.calls.length < 16) {
+      releases.shift()?.();
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    }
+    await Promise.all(first);
+    const retry = cache.get("FICO");
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    releases.shift()?.();
+    expect(await retry).not.toBeNull();
+    expect(
+      readdirSync(join(dir, "stock-logos", "v2")).some((f) =>
+        f.endsWith(".missing"),
+      ),
+    ).toBe(false);
+  } finally {
+    cache.close();
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

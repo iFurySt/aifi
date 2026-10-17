@@ -26,24 +26,45 @@ export function StockAvatar({
     let alive = true,
       loading = false,
       visible = false,
-      lastAttempt = 0;
+      retryAt = 0,
+      failures = 0;
+    let retryTimer: ReturnType<typeof setTimeout> | undefined;
+    const cancelRetry = () => {
+      clearTimeout(retryTimer);
+      retryTimer = undefined;
+    };
+    const retry = (delay: number) => {
+      cancelRetry();
+      retryAt = Date.now() + delay;
+      if (alive && visible) retryTimer = setTimeout(() => void load(), delay);
+    };
     if (!enabled || !repository || !container.current) return;
     const load = async () => {
-      if (loading || Date.now() - lastAttempt < 60000) return;
+      if (loading || !alive || !visible) return;
+      if (Date.now() < retryAt) {
+        retry(retryAt - Date.now());
+        return;
+      }
+      cancelRetry();
       loading = true;
-      lastAttempt = Date.now();
       try {
         const logo = await repository.get(symbol);
         const ready = logo ? await prepareStockLogo(logo) : null;
-        if (alive)
+        failures = 0;
+        if (alive) {
           setImage({
             symbol,
             url: ready?.url ?? null,
             light: ready?.light ?? false,
             settled: true,
           });
+          if (!ready)
+            retry(31000); // The adapter's missing-result TTL is 30s.
+          else retryAt = Date.now() + 60000;
+        }
       } catch {
-        // A transient bridge error neither blanks a good image nor confirms absence.
+        // Pressure/bridge errors must not strand a visible row on its letter.
+        if (alive) retry(Math.min(30000, 1000 * 2 ** Math.min(failures++, 5)));
       } finally {
         loading = false;
       }
@@ -52,6 +73,7 @@ export function StockAvatar({
       (entries) => {
         visible = entries.some((entry) => entry.isIntersecting);
         if (visible) void load();
+        else cancelRetry();
       },
       {
         // Expanding the window viewport does not expand an inner scroller's clip.
@@ -66,6 +88,7 @@ export function StockAvatar({
     window.addEventListener("focus", focus);
     return () => {
       alive = false;
+      cancelRetry();
       observer.disconnect();
       window.removeEventListener("focus", focus);
     };

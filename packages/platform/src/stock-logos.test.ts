@@ -109,3 +109,27 @@ it("warms disk hits as one bounded batch without treating cache misses as provid
   await expect(repository.getCached!(["../private"])).rejects.toThrow();
   await expect(repository.getCached!(Array(51).fill("AAPL"))).rejects.toThrow();
 });
+it("drains a whole page without flooding the host or caching queue pressure as absence", async () => {
+  let active = 0,
+    peak = 0;
+  const releases: (() => void)[] = [];
+  const transport = vi.fn(async () => {
+    active++;
+    peak = Math.max(peak, active);
+    await new Promise<void>((resolve) => releases.push(resolve));
+    active--;
+    return logo;
+  });
+  const repository = createLocalStockLogos(transport);
+  const results = Promise.all(
+    Array.from({ length: 50 }, (_, i) => repository.get(`F${i}`)),
+  );
+  expect(transport).toHaveBeenCalledTimes(4);
+  while (releases.length || transport.mock.calls.length < 50) {
+    releases.shift()?.();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  }
+  expect((await results).every(Boolean)).toBe(true);
+  expect(peak).toBe(4);
+  expect(repository.peek?.("F49")).toBe(logo);
+});

@@ -8,6 +8,24 @@ export function createLocalStockLogos(
   const memory = new Map<string, { logo: StockLogo | null; expires: number }>();
   const pending = new Map<string, Promise<StockLogo | null>>();
   let bytes = 0;
+  let active = 0;
+  const waiting: (() => void)[] = [];
+  // Do not flood the shared host queue when a whole page mounts. Cache-only
+  // batch reads bypass this lane; pressure is retryable, never a missing logo.
+  const schedule = <T>(read: () => Promise<T>): Promise<T> => {
+    if (active >= 4) {
+      if (waiting.length >= 128)
+        return Promise.reject(Error("Logo requests busy. Try again."));
+      return new Promise<T>((resolve, reject) =>
+        waiting.push(() => schedule(read).then(resolve, reject)),
+      );
+    }
+    active++;
+    return read().finally(() => {
+      active--;
+      waiting.shift()?.();
+    });
+  };
   const remember = (symbol: string, logo: StockLogo | null) => {
     bytes -= memory.get(symbol)?.logo?.dataUrl.length ?? 0;
     memory.delete(symbol);
@@ -59,7 +77,7 @@ export function createLocalStockLogos(
       }
       const inflight = pending.get(symbol);
       if (inflight) return inflight;
-      const request = transport("stock.logo", { symbol })
+      const request = schedule(() => transport("stock.logo", { symbol }))
         .then((value) => {
           const logo = value as StockLogo | null;
           remember(symbol, logo);

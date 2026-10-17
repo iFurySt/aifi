@@ -111,7 +111,8 @@ export class StockLogoCache {
   private load(symbol: string, sources: LogoSource[]) {
     const pending = this.pending.get(symbol);
     if (pending) return pending;
-    if (this.pending.size >= 16) return Promise.resolve(null);
+    if (this.pending.size >= 16)
+      return Promise.reject(Error("Logo queue busy. Try again."));
     const request = this.read(sources).finally(() =>
       this.pending.delete(symbol),
     );
