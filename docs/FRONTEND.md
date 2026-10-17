@@ -128,7 +128,7 @@ The outer rail contains application navigation; the inner sidebar selects stocks
 or settings categories while Settings is open. Chat history remains selectable inside Chat and searchable from the
 toolbar. Rail buttons are centered with equal 6px side margins and no extra
 panel gutter. The 44px bottom account trigger contains a 36px person icon before
-sign-in or the active verified name initial after connection. The shared Radix
+sign-in or the active verified name initial after connection. Connected identities use two lines: name with a small provider-icon badge, then email. The badge is local, theme-aware and describes the actual sign-in source; no third provider text line is shown. The shared Radix
 account menu is 228px wide with 34px desktop rows: Continue with ChatGPT/Settings
 when anonymous, Usage/Settings when connected. It reuses the existing ChatGPT
 host actions; Usage opens official management rather than inventing a remaining

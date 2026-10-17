@@ -1,3 +1,4 @@
+import { AccountProviderBadge } from "./AccountProviderBadge";
 import { useState } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Gauge, LogIn, Settings, UserRound } from "lucide-react";
@@ -55,8 +56,11 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
           <DropdownMenu.Label className="workspace-menu-identity">
             {avatar}
             <span>
-              <strong>{name}</strong>
-              {connected && <small>ChatGPT</small>}
+              <span className="workspace-menu-name">
+                <strong>{name}</strong>
+                {connected && <AccountProviderBadge provider="chatgpt" />}
+              </span>
+              {connected && active.email && <small>{active.email}</small>}
             </span>
           </DropdownMenu.Label>
           <DropdownMenu.Separator className="workspace-menu-separator" />

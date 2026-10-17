@@ -63,6 +63,10 @@ async function checks() {
     trigger().querySelector("svg") && !trigger().textContent.trim(),
     "Anonymous avatar must be a person icon",
   );
+  assert(
+    !document.querySelector(".account-provider-badge"),
+    "Anonymous account has a provider badge",
+  );
   const rail = document.querySelector(".tool-rail").getBoundingClientRect();
   const nav = document
     .querySelector(".rail-destinations .rail-button")
@@ -108,6 +112,30 @@ async function checks() {
   assert(
     menu().querySelector("strong").textContent === "Test User",
     "Verified name is missing",
+  );
+  const identity = menu().querySelector(".workspace-menu-identity");
+  const nameRow = identity.querySelector(".workspace-menu-name");
+  const badge = nameRow.querySelector(
+    '[role="img"][aria-label="Signed in with ChatGPT"]',
+  );
+  assert(
+    badge &&
+      identity.querySelectorAll("small").length === 1 &&
+      identity.querySelector("small").textContent === "test@example.invalid",
+    "Account identity must be name/provider badge then email, without a third text line",
+  );
+  const nameBox = nameRow.querySelector("strong").getBoundingClientRect();
+  const badgeBox = badge.getBoundingClientRect();
+  assert(
+    getComputedStyle(badge.firstElementChild).maskImage !== "none",
+    "Provider mark mask failed to load",
+  );
+  assert(
+    badgeBox.left >= nameBox.right &&
+      Math.abs(
+        badgeBox.top + badgeBox.height / 2 - nameBox.top - nameBox.height / 2,
+      ) < 2,
+    "Provider badge is not centered next to the name",
   );
   assert(
     items().length === 2 && items()[0].textContent === "Usage",
