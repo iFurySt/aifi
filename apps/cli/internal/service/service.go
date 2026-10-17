@@ -252,11 +252,12 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 		}
 		return s.DB.SaveResearchConfig(ctx, value)
 	case "research.sync":
+
 		if req.Params != nil && string(req.Params) != "null" {
 			var params struct {
 				Dataset string `json:"dataset"`
 			}
-			if e := decode(req.Params, &params); e != nil || params.Dataset != "funds" {
+			if e := decode(req.Params, &params); e != nil || (params.Dataset != "funds" && params.Dataset != "politicians" && params.Dataset != "insiders" && params.Dataset != "analyst") {
 				return nil, errors.New("invalid sync dataset")
 			}
 			if s.Offline {
@@ -265,7 +266,13 @@ func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 			if e := research.New(s.DB, s.DataDir, s.Offline).Reconcile(ctx, false); e != nil {
 				return nil, e
 			}
-			if e := s.DB.RequestFundsSync(ctx); e != nil {
+			var e error
+			if params.Dataset == "funds" {
+				e = s.DB.RequestFundsSync(ctx)
+			} else {
+				e = s.DB.RequestActivitySync(ctx, params.Dataset)
+			}
+			if e != nil {
 				return nil, e
 			}
 			return s.DB.ResearchStatus(ctx)

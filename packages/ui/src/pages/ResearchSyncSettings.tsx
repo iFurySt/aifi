@@ -65,11 +65,13 @@ function DatasetRow({
       <div>
         <strong>{names[dataset]}</strong>
         <p>
-          {researchProvider(config, dataset) === "thirteenf"
-            ? "13f.info · Reported history · No API key"
-            : researchProvider(config, dataset) === "yahoo"
-              ? "Yahoo Finance · No API key"
-              : sources[dataset]}
+          {researchProvider(config, dataset) === "congress"
+            ? "CongressInvests · No API key"
+            : researchProvider(config, dataset) === "thirteenf"
+              ? "13f.info · Reported history · No API key"
+              : researchProvider(config, dataset) === "yahoo"
+                ? "Yahoo Finance · No API key"
+                : sources[dataset]}
           {status
             ? ` · ${status.stored.toLocaleString()} / ${status.total.toLocaleString()} synced`
             : ""}
@@ -156,12 +158,16 @@ function BudgetRow({
   busy,
   save,
 }: {
-  provider: "massive" | "sec" | "fmp" | "yahoo" | "thirteenf";
+  provider: "massive" | "sec" | "fmp" | "yahoo" | "thirteenf" | "congress";
   config: ResearchConfig;
   busy: boolean;
   save: (c: ResearchConfig) => Promise<void>;
 }) {
-  const limit = config.limits[provider] ?? { perMinute: 12, perDay: 2000 },
+  const limit =
+      config.limits[provider] ??
+      (provider === "congress"
+        ? { perMinute: 6, perDay: 450 }
+        : { perMinute: 12, perDay: 2000 }),
     [rpm, setRPM] = useState(String(limit.perMinute)),
     [daily, setDaily] = useState(String(limit.perDay));
   useEffect(() => {
@@ -179,10 +185,16 @@ function BudgetRow({
     <div className="setting-row">
       <div>
         <strong>
-          {provider === "thirteenf" ? "13f.info" : provider.toUpperCase()}
+          {provider === "thirteenf"
+            ? "13f.info"
+            : provider === "congress"
+              ? "CongressInvests"
+              : provider.toUpperCase()}
         </strong>
         <p>
-          {provider === "yahoo" || provider === "thirteenf"
+          {provider === "yahoo" ||
+          provider === "thirteenf" ||
+          provider === "congress"
             ? "Public endpoint · Personal research"
             : "Match your account limits."}
         </p>
@@ -409,6 +421,28 @@ export function ResearchSyncSettings() {
               ))}
               <div className="setting-row">
                 <div>
+                  <strong>Politician trades source</strong>
+                </div>
+                <div className="setting-control">
+                  <Select
+                    label="Politician trades source"
+                    value={state.config.politiciansSource ?? "congress"}
+                    disabled={busy}
+                    options={[
+                      { value: "congress", label: "CongressInvests · No key" },
+                      { value: "fmp", label: "FMP · API key" },
+                    ]}
+                    onValueChange={(value) =>
+                      void save({
+                        ...state.config,
+                        politiciansSource: value as "congress" | "fmp",
+                      })
+                    }
+                  />
+                </div>
+              </div>
+              <div className="setting-row">
+                <div>
                   <strong>Price history</strong>
                   <p>Background backfill across the directory.</p>
                 </div>
@@ -473,17 +507,24 @@ export function ResearchSyncSettings() {
         <h2>Request limits</h2>
         <div className="setting-card">
           {state &&
-            (["thirteenf", "yahoo", "massive", "sec", "fmp"] as const).map(
-              (p) => (
-                <BudgetRow
-                  key={p}
-                  provider={p}
-                  config={state.config}
-                  busy={busy}
-                  save={save}
-                />
-              ),
-            )}
+            (
+              [
+                "congress",
+                "thirteenf",
+                "yahoo",
+                "massive",
+                "sec",
+                "fmp",
+              ] as const
+            ).map((p) => (
+              <BudgetRow
+                key={p}
+                provider={p}
+                config={state.config}
+                busy={busy}
+                save={save}
+              />
+            ))}
         </div>
       </section>
     </>

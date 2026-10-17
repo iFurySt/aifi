@@ -34,6 +34,7 @@ type ResearchConfig struct {
 	PriceSource          string                   `json:"priceSource"`
 	ProfileSource        string                   `json:"profileSource"`
 	FactsSource          string                   `json:"factsSource"`
+	PoliticiansSource    string                   `json:"politiciansSource"`
 	FundsHistoryQuarters int                      `json:"fundsHistoryQuarters"`
 	FundsSource          string                   `json:"fundsSource"`
 	AnalystSource        string                   `json:"analystSource"`
@@ -56,6 +57,15 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	c.Revision = revision
 	if c.Limits == nil {
 		c.Limits = map[string]ProviderLimit{"massive": {5, 10000}, "sec": {240, 100000}, "fmp": {4, 200}}
+	}
+	if c.PoliticiansSource == "" {
+		c.PoliticiansSource = "congress"
+		if c.Datasets["politicians"].Enabled {
+			c.PoliticiansSource = "fmp"
+		}
+	}
+	if c.Limits["congress"].PerMinute == 0 {
+		c.Limits["congress"] = ProviderLimit{6, 450}
 	}
 	if c.FundsHistoryQuarters == 0 {
 		c.FundsHistoryQuarters = 14
@@ -102,6 +112,8 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	switch dataset {
 	case "prices":
 		return c.PriceSource
+	case "politicians":
+		return c.PoliticiansSource
 	case "funds":
 		return c.FundsSource
 	case "analyst":
@@ -123,6 +135,15 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	}
 }
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
+	if c.PoliticiansSource == "" {
+		c.PoliticiansSource = "congress"
+	}
+	if c.PoliticiansSource != "congress" && c.PoliticiansSource != "fmp" {
+		return c, errors.New("invalid politicians source")
+	}
+	if c.Limits != nil && c.Limits["congress"].PerMinute == 0 {
+		c.Limits["congress"] = ProviderLimit{6, 450}
+	}
 	if c.FundsHistoryQuarters == 0 {
 		c.FundsHistoryQuarters = 14
 	}
@@ -132,7 +153,7 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 	if c.FundsHistoryQuarters < 4 || c.FundsHistoryQuarters > 20 {
 		return c, errors.New("invalid funds history")
 	}
-	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 5 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
+	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 6 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
 	}
 	if c.FundsSource == "" {
@@ -153,7 +174,7 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 			return c, errors.New("invalid dataset interval")
 		}
 	}
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress"} {
 		v, ok := c.Limits[p]
 		if !ok || v.PerMinute < 1 || v.PerMinute > 300 || v.PerDay < 1 || v.PerDay > 1000000 {
 			return c, errors.New("invalid provider budget")
@@ -516,7 +537,7 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 		}
 		v.RecordCount = len(v.Data.Records)
 		limit := 200
-		if d == "funds" {
+		if d == "funds" || d == "politicians" || d == "insiders" || d == "analyst" {
 			limit = 2000
 		}
 		if len(v.Data.Records) > limit {
@@ -738,7 +759,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) AND (dataset!='funds' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource, out.Config.FundsSource)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) AND (dataset!='funds' OR provider=?) AND (dataset!='politicians' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource, out.Config.FundsSource, out.Config.PoliticiansSource)
 	if e != nil {
 		return out, e
 	}
@@ -787,7 +808,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if err != nil {
 		return out, err
 	}
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress"} {
 		index := -1
 		for i, v := range out.Providers {
 			if v.Provider == p {
@@ -803,7 +824,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 			if !strings.Contains(settings.SECUserAgent, "@") {
 				out.Providers[index].Blocked = "needs_contact"
 			}
-		} else if p != "yahoo" && p != "thirteenf" && !configured[p] {
+		} else if p != "yahoo" && p != "thirteenf" && p != "congress" && !configured[p] {
 			out.Providers[index].Blocked = "needs_key"
 		}
 	}

@@ -17,6 +17,7 @@ export const researchDatasets = [
 export type ResearchDataset = (typeof researchDatasets)[number];
 export interface ResearchConfig {
   revision: number;
+  politiciansSource?: "congress" | "fmp";
   fundsSource?: "yahoo" | "fmp" | "thirteenf";
   fundsHistoryQuarters?: number;
   analystSource?: "yahoo" | "fmp";
@@ -33,12 +34,16 @@ export interface ResearchConfig {
   limits: Record<
     "massive" | "sec" | "fmp" | "yahoo",
     { perMinute: number; perDay: number }
-  > & { thirteenf?: { perMinute: number; perDay: number } };
+  > & {
+    thirteenf?: { perMinute: number; perDay: number };
+    congress?: { perMinute: number; perDay: number };
+  };
 }
 export function researchProvider(
   config: ResearchConfig,
   dataset: ResearchDataset,
-): "yahoo" | "massive" | "sec" | "fmp" | "thirteenf" {
+): "yahoo" | "massive" | "sec" | "fmp" | "thirteenf" | "congress" {
+  if (dataset === "politicians") return config.politiciansSource ?? "congress";
   if (dataset === "funds") return config.fundsSource ?? "yahoo";
   if (dataset === "analyst") return config.analystSource ?? "yahoo";
   if (dataset === "earnings" || dataset === "peers") return "yahoo";
@@ -427,6 +432,9 @@ export function isResearchSourceURL(value: string): boolean {
         "query1.finance.yahoo.com",
         "finance.yahoo.com",
         "13f.info",
+        "congressinfor-production.up.railway.app",
+        "disclosures-clerk.house.gov",
+        "efdsearch.senate.gov",
         "api.massive.com",
         "massive.com",
         "financialmodelingprep.com",

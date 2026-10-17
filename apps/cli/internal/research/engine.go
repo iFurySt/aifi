@@ -163,6 +163,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
+		jobs = append(jobs, market.Job{Provider: "congress", Dataset: "politicians", Subject: symbol})
 		jobs = append(jobs, market.Job{Provider: "thirteenf", Dataset: "funds", Subject: symbol, Window: market.FundHistoryWindow(now, cfg.FundsHistoryQuarters)})
 		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds"} {
 			jobs = append(jobs, market.Job{Provider: "yahoo", Dataset: d, Subject: symbol})
@@ -244,7 +245,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if err != nil {
 		return false, nil
 	}
-	if p != "sec" && p != "yahoo" && p != "thirteenf" && keys["apiKey"] == "" {
+	if p != "sec" && p != "yahoo" && p != "thirteenf" && p != "congress" && keys["apiKey"] == "" {
 		return false, nil
 	}
 	if p == "sec" {
@@ -365,7 +366,7 @@ func (e *Engine) Run(ctx context.Context) {
 	}
 	var workers sync.WaitGroup
 	// One worker per provider; all requests also pass the durable shared budget.
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress"} {
 		workers.Add(1)
 		go func(provider string) {
 			defer workers.Done()

@@ -45,12 +45,17 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	if e != nil {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
-	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true, "13f.info": true}[u.Host] {
+	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true, "13f.info": true, congressHost: true}[u.Host] {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
 	q := u.Query()
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
+	case "congress":
+		if !validCongressEndpoint(u) {
+			return nil, &Failure{Code: "invalid_endpoint"}
+		}
+		headers.Set("User-Agent", "AIFi/0.1 (+https://github.com/ifuryst/aifi)")
 	case "thirteenf":
 		if !valid13FEndpoint(u) {
 			return nil, &Failure{Code: "invalid_endpoint"}
@@ -235,6 +240,12 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 			e = c.yahooPrices(ctx, j, &result)
 		} else {
 			e = c.prices(ctx, j, &result)
+		}
+	case "politicians":
+		if j.Provider == "congress" {
+			e = c.congressTrades(ctx, j, &result)
+		} else {
+			e = c.optional(ctx, j, &result)
 		}
 	case "funds":
 		if j.Provider == "thirteenf" {
