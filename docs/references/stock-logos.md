@@ -54,14 +54,21 @@ records incorrect/missing mappings. The [catalog proposal](../design-docs/compan
 explains reviewed aliases, URL lists, optional images and Gist/repository choices.
 
 Public follow-up: [company-logo-catalog](https://github.com/ifuryst/company-logo-catalog)
-now holds the first reviewed batch, exact issuer aliases and validation tooling.
-AIFi now bundles `catalog.json` from v0.1.0, commit
-`5d8f3bc2e14304a37bdb1f69f7106d31bf972a0d` (catalog Git blob
-`f0fe0bae112b432c9e96d9f665d0922c276ee212`), with the upstream MIT notice.
-The seed contains URL metadata, not image files. The host prefers verified active
-catalog mappings; eight reviewed company images are eligible, while six candidate
-sources stay withheld. It checks the fixed GitHub main manifest in the background
-at most daily and retains validated metadata locally. AACOW can reuse AACO's
-reviewed image; TREO uses its official website PNG. Unsupported catalog entries
-and failed source reads fall back to the original exact-symbol FMP adapter.
-See [runtime limits and cache migration](../design-docs/stock-logos.md).
+holds reviewed issuer aliases, source evidence and validation tooling.
+AIFi bundles `catalog.json` v0.3.0, commit
+`34c978e8984f09cda182b4ded999bd8c7cf01f7f` (catalog Git blob
+`0b62a75f1becbe09733f86feea733a108fbd6d32`), with the upstream MIT notice.
+The seed contains URL metadata, not image files: 42 issuers, 59 securities,
+65 exact symbol keys and 40 issuers with reviewed images. Twenty-four new issuer
+reviews include the reported E-list gaps. ADI and ELV use official small-icon
+assets, while ELV's generic A checksum is rejected. See the upstream
+[batch review](https://github.com/ifuryst/company-logo-catalog/blob/34c978e8984f09cda182b4ded999bd8c7cf01f7f/docs/review-2026-10-17.md).
+
+The host prefers verified active mappings and checks the fixed GitHub manifest
+at most daily. A newer bundled seed supersedes older downloaded metadata;
+updates cannot downgrade the catalog. Seven exact issuer PNG paths supplement
+the FMP/Tactical policy, including sources added after the original seed.
+Known rejected image bytes stay blocked in old caches and provider fallback;
+matching existing provider bytes can satisfy new reviewed mappings offline.
+The separate exhaustive source inventory remains unreviewed and is not bundled
+as approved company identity. See [runtime limits and cache migration](../design-docs/stock-logos.md).

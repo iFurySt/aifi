@@ -26,11 +26,14 @@ export interface LogoSource {
   height?: number;
   /** Existing exact-symbol cache may migrate only if its bytes fit this source. */
   legacySymbol?: string;
+  /** Never display artwork explicitly rejected by the issuer review. */
+  rejectedHashes?: readonly string[];
 }
 interface Mapping {
   from: string;
   to: string;
   logos: LogoSource[];
+  rejectedHashes?: string[];
 }
 export interface ParsedCatalog {
   version: string;
@@ -78,8 +81,18 @@ export function parseLogoCatalog(value: unknown): ParsedCatalog {
     ids.add(company.id);
     date(company.reviewedAt);
     const logos: LogoSource[] = [];
+    const rejectedHashes: string[] = [];
     for (const rawLogo of array(company.logos, 16)) {
       const logo = object(rawLogo);
+      if (
+        logo.status === "rejected" &&
+        logo.format === "png" &&
+        typeof logo.url === "string" &&
+        trustedLogoURL(logo.url) &&
+        typeof logo.sha256 === "string" &&
+        /^[0-9a-f]{64}$/.test(logo.sha256)
+      )
+        rejectedHashes.push(logo.sha256);
       // Unreviewed/unsupported images are not catalog-approved results.
       if (
         logo.status !== "verified" ||
@@ -133,11 +146,24 @@ export function parseLogoCatalog(value: unknown): ParsedCatalog {
         const key = symbol.toUpperCase();
         if (mappings.has(key) || mappings.size >= 20000)
           throw Error("Duplicate/excess catalog aliases.");
-        mappings.set(key, { from, to, logos: logos.slice(0, 2) });
+        mappings.set(key, {
+          from,
+          to,
+          logos: logos.slice(0, 2),
+          rejectedHashes,
+        });
       }
     }
   }
   return { version: root.catalogVersion, mappings };
+}
+function compareVersion(a: string, b: string): number {
+  const left = a.split(".").map(Number),
+    right = b.split(".").map(Number);
+  for (let i = 0; i < 3; i++) {
+    if (left[i] !== right[i]) return left[i]! > right[i]! ? 1 : -1;
+  }
+  return 0;
 }
 export class LogoCatalog {
   private manifest: unknown;
@@ -166,6 +192,8 @@ export class LogoCatalog {
         saved.checkedAt > Date.now()
       )
         throw Error("Invalid catalog cache time.");
+      if (compareVersion(parsed.version, this.parsed.version) < 0)
+        throw Error("Cached catalog predates the bundled seed.");
       this.manifest = saved.manifest;
       this.parsed = parsed;
       this.checkedAt = saved.checkedAt;
@@ -187,6 +215,15 @@ export class LogoCatalog {
     void this.refresh();
     const entry = this.parsed.mappings.get(symbol.toUpperCase());
     return entry && entry.from <= today && today <= entry.to ? entry.logos : [];
+  }
+  rejectedImageHashes(
+    symbol: string,
+    today = new Date().toISOString().slice(0, 10),
+  ): readonly string[] {
+    const entry = this.parsed.mappings.get(symbol.toUpperCase());
+    return entry && entry.from <= today && today <= entry.to
+      ? (entry.rejectedHashes ?? [])
+      : [];
   }
   refresh(): Promise<void> {
     if (this.offline || this.shutdown.signal.aborted) return Promise.resolve();
@@ -217,6 +254,8 @@ export class LogoCatalog {
       );
       const parsed = parseLogoCatalog(manifest);
       if (this.shutdown.signal.aborted) return;
+      if (compareVersion(parsed.version, this.parsed.version) < 0)
+        throw Error("Catalog downgrade rejected.");
       this.manifest = manifest;
       this.parsed = parsed;
     } catch {

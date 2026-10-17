@@ -1,6 +1,6 @@
 # Stock Logo Read Capability
 
-Status: implemented, updated 2026-10-15.
+Status: implemented, updated 2026-10-17.
 
 ## Boundary
 
@@ -17,9 +17,10 @@ third-party artwork is bundled into source. See [source provenance](../reference
 
 ## Catalog Resolution
 
-- Node-only host ships the public catalog v0.1.0 metadata seed, with its MIT
+- Node-only host ships the public catalog v0.3.0 metadata seed, with its MIT
   notice. Startup works without GitHub. Cached metadata is validated before use;
-  a corrupt cache falls back to the seed.
+  a corrupt or older-version cache falls back to the seed. Background metadata
+  cannot downgrade the active version.
 - Exact US security symbols/aliases are rebuilt from company records, ignoring
   the supplied index. Validity dates are respected. Only verified PNG entries
   on explicitly trusted paths are eligible; candidate images remain unapproved.
@@ -30,7 +31,9 @@ third-party artwork is bundled into source. See [source provenance](../reference
   manifest and persist the check time to avoid repeated requests on restart.
 - At most two reviewed sources precede the exact-symbol FMP fallback. Catalog
   images must match recorded SHA-256 and dimensions. No suffix stripping or
-  company-domain guessing occurs. Adding an image origin needs a code change.
+  company-domain guessing occurs. Adding an image origin/path needs a code change.
+  Rejected image hashes apply to reviewed sources, exact-provider fallback and
+  existing disk bytes; a generic cached A cannot bypass ELV/Apogee corrections.
 - Catalog metadata is private `stock-logos/catalog.json`; its updater never
   downloads the entire image universe. Offline mode makes no public requests.
 
@@ -62,7 +65,9 @@ third-party artwork is bundled into source. See [source provenance](../reference
   private host cache, not workspace localStorage or IndexedDB.
 - Host requests use a scoped native HTTPS agent honoring configured proxy env
   without changing global local-session/HMR routing. Only the fixed GitHub
-  manifest, FMP image path and Tactical Resources PNG upload path are allowed.
+  manifest, FMP image path, Tactical Resources PNG upload path and seven exact
+  issuer PNG URLs reviewed in the seed are allowed. These official assets cover
+  ACCV, ADBT, ADIG, ADRX, AACP, ADI and ELV; no general CDN/domain access is granted.
 - Four image lookup slots per host, at most 16 pending distinct symbols; duplicate
   symbols and shared issuer assets coalesce. Each slot has a 15-second total
   network budget shared by source attempts. Immediate errors advance to fallback;
@@ -84,7 +89,9 @@ third-party artwork is bundled into source. See [source provenance](../reference
   discovers that preferred image. Background refresh shares the same bounds,
   deduplication, negative backoff and shutdown cancellation as cold reads.
 - Old exact-source PNGs remain useful when their bytes match required review
-  hashes/dimensions. Failed symbol lookups cannot block a new catalog mapping.
+  hashes/dimensions, including existing v2 exact-URL provider caches. Promoting
+  matching bytes to a reviewed mapping does not require another download.
+  Failed symbol lookups cannot block a new catalog mapping.
 - Old good images survive refresh failures. Offline reads use cached data; host
   shutdown cancels retrieval/timers without recording a new negative result.
 - Renderer images decode and get optional contrast sampling before becoming
@@ -105,7 +112,9 @@ small; unsupported/missing sources retain the original provider and letter fallb
 ## Verification
 
 Host tests cover exact aliases/status/validity, malformed manifests, cache/refresh
-bounds, last-good/offline reuse, priority over old failures, checksum changes,
+bounds, last-good/offline reuse, priority over old failures, newer-seed upgrades/downgrade rejection, rejected
+artwork in old cache/provider responses, exact official path allowlisting,
+review promotion without redownloading, checksum changes,
 raw fallback, shared assets, image validation, concurrency and shutdown. Additional
 regressions cover online restart hits without network, stale/queue-full disk hits,
 background promotion, bounded renderer memory, synchronous peek, TTL retries and

@@ -30,6 +30,7 @@ export function validLogoPNG(bytes: Buffer) {
 }
 export interface LogoCatalogReader {
   sources(symbol: string): LogoSource[];
+  rejectedImageHashes?(symbol: string): readonly string[];
   close(): void;
 }
 interface CachedLogo {
@@ -85,14 +86,16 @@ export class StockLogoCache {
     return null;
   }
   private sources(symbol: string): LogoSource[] {
+    const reviewed = this.catalog.sources(symbol);
+    const rejectedHashes = this.catalog.rejectedImageHashes?.(symbol) ?? [];
     return [
-      ...this.catalog.sources(symbol),
+      ...reviewed,
       {
         url: `https://financialmodelingprep.com/image-stock/${encodeURIComponent(symbol)}.png`,
         source: "fmp-public-image",
         legacySymbol: symbol,
       },
-    ];
+    ].map((source) => ({ ...source, rejectedHashes }));
   }
   private load(symbol: string, sources: LogoSource[]) {
     const pending = this.pending.get(symbol);
@@ -116,6 +119,9 @@ export class StockLogoCache {
   private valid(bytes: Buffer, source: LogoSource) {
     return (
       validLogoPNG(bytes) &&
+      !source.rejectedHashes?.includes(
+        createHash("sha256").update(bytes).digest("hex"),
+      ) &&
       (!source.expectedHash ||
         (createHash("sha256").update(bytes).digest("hex") ===
           source.expectedHash &&
@@ -125,6 +131,10 @@ export class StockLogoCache {
   }
   private cached(source: LogoSource): CachedLogo | null {
     const paths = [this.paths(source).png];
+    // A newly reviewed source may reuse the existing exact-URL v2 cache only
+    // after its bytes pass the new checksum, dimensions and rejection policy.
+    if (source.expectedHash)
+      paths.push(this.paths({ ...source, expectedHash: undefined }).png);
     if (source.legacySymbol)
       paths.push(
         join(

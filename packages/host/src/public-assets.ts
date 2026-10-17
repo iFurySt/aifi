@@ -9,6 +9,17 @@ const agent = new Agent({
   keepAlive: true,
   maxSockets: 5,
 });
+// Exact official assets reviewed in the bundled catalog. A remote manifest cannot
+// broaden these origins or paths. New assets require a code review here.
+const issuerLogoURLs = new Set([
+  "https://www.adarx.com/apple-touch-icon.png",
+  "https://s25.q4cdn.com/125328972/files/design/site_logo/ADI_Logo_White.png",
+  "https://adbt.io/favicon-192.png",
+  "https://apogeeacquisitioncorp.com/wp-content/uploads/2026/02/cropped-AAC-LOGO-192x192.png",
+  "https://cdn.prod.website-files.com/6a32c781f257940eba92bcf0/6a5e7e4a39e67f4aa00a20d0_accelevation-icon-512-brand.png",
+  "https://www.analog.com/media/favicon/adi-icon-iphone-retina-180x180.png",
+  "https://www.elevancehealth.com/content/dam/elevance-health-non-index/logos/Elevance_Health_Avatar_1200x1200.png",
+]);
 /** Only explicitly reviewed origins/paths may supply company images. */
 export function trustedLogoURL(value: string): boolean {
   try {
@@ -22,6 +33,7 @@ export function trustedLogoURL(value: string): boolean {
       url.hash
     )
       return false;
+    if (issuerLogoURLs.has(value)) return true;
     if (url.hostname === "financialmodelingprep.com") {
       const match = /^\/image-stock\/([^/]+)\.png$/.exec(url.pathname);
       if (!match) return false;

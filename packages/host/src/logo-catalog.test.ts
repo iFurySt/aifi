@@ -163,3 +163,52 @@ it("a valid stale local catalog remains available when refresh fails", async () 
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+it("accepts every shipped verified PNG only through explicit source policy", async () => {
+  const { default: seed } = await import("./company-logo-catalog.json");
+  for (const issuer of seed.companies)
+    for (const logo of issuer.logos)
+      if (logo.status === "verified" && logo.format === "png")
+        expect(trustedLogoURL(logo.url), logo.url).toBe(true);
+  for (const url of [
+    "https://www.analog.com/media/favicon/other.png",
+    "https://www.elevancehealth.com/private.png",
+    "https://adbt.io/favicon-192.png?token=bad",
+    "https://s25.q4cdn.com/another-tenant/logo.png",
+    "https://cdn.prod.website-files.com/another-site/logo.png",
+  ])
+    expect(trustedLogoURL(url), url).toBe(false);
+});
+it("upgrades an older disk catalog from the shipped seed and rejects remote downgrades", async () => {
+  const dir = mkdtempSync(join(tmpdir(), "aifi-catalog-upgrade-"));
+  mkdirSync(join(dir, "stock-logos"));
+  const previous = fixtureCatalog();
+  const seed = fixtureCatalog("rejected");
+  seed.catalogVersion = "0.3.0";
+  writeFileSync(
+    join(dir, "stock-logos", "catalog.json"),
+    JSON.stringify({
+      checkedAt: Date.now(),
+      manifest: previous,
+    }),
+  );
+  const fetcher = vi
+    .fn<typeof fetch>()
+    .mockResolvedValue(new Response(JSON.stringify(previous)));
+  const store = new LogoCatalog(dir, false, fetcher, seed);
+  try {
+    expect(store.sources("AACO")).toEqual([]);
+    expect(store.rejectedImageHashes("AACOW")).toHaveLength(1);
+    await store.refresh();
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    expect(store.sources("AACO")).toEqual([]);
+    const offline = new LogoCatalog(dir, true, fetcher, previous);
+    expect(offline.rejectedImageHashes("AACO")).toEqual(
+      store.rejectedImageHashes("AACO"),
+    );
+    offline.close();
+  } finally {
+    store.close();
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

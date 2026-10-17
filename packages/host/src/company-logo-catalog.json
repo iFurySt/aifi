@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "0.1.0",
-  "updatedAt": "2026-10-14",
+  "catalogVersion": "0.3.0",
+  "updatedAt": "2026-10-17",
   "companies": [
     {
       "id": "abony-acquisition-i",
@@ -58,6 +58,120 @@
       "cik": "0002099906"
     },
     {
+      "id": "accelevation-holdings",
+      "name": "Accelevation Holdings Corp.",
+      "reviewedAt": "2026-10-15",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.accelevation.com/"
+      ],
+      "websiteUrl": "https://www.accelevation.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ACCV",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+            "https://www.accelevation.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://cdn.prod.website-files.com/6a32c781f257940eba92bcf0/6a5e7e4a39e67f4aa00a20d0_accelevation-icon-512-brand.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://www.accelevation.com/",
+          "redistribution": "not-granted",
+          "sha256": "3ed3f7793575576aa7bfecf92f222c89eaba0cb95438a44baea7d2ab10cfc537",
+          "width": 32,
+          "height": 32,
+          "format": "png",
+          "notes": "Issuer site header/favicon asset inspected and decoded. The current directory supplies the exact listing identity. Original remote image dimensions retained; no artwork bundled."
+        }
+      ],
+      "notes": "Operating-brand favicon from Accelevation website; the Nasdaq directory identifies Accelevation Holdings Corp. The source filename says 512 but the returned asset is 32x32; recorded dimensions are actual bytes."
+    },
+    {
+      "id": "adarx-pharmaceuticals",
+      "name": "ADARx Pharmaceuticals, Inc.",
+      "reviewedAt": "2026-10-15",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.adarx.com/"
+      ],
+      "websiteUrl": "https://www.adarx.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ADRX",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+            "https://www.adarx.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://www.adarx.com/apple-touch-icon.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://www.adarx.com/",
+          "redistribution": "not-granted",
+          "sha256": "5aaf420c69824937312c91e1dec6fd89222068763911ba305d954483ca0f9f1d",
+          "width": 180,
+          "height": 180,
+          "format": "png",
+          "notes": "Issuer site header/favicon asset inspected and decoded. The current directory supplies the exact listing identity. Original remote image dimensions retained; no artwork bundled."
+        }
+      ]
+    },
+    {
+      "id": "adi-global-distribution",
+      "name": "ADI Global Distribution Inc.",
+      "reviewedAt": "2026-10-15",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://investor.adiglobal.com/",
+        "https://investor.adiglobal.com/news/news-details/2026/ADI-Global-Distribution-Completes-Spin-Off-from-Resideo-Technologies-and-Begins-Trading-on-the-New-York-Stock-Exchange/default.aspx"
+      ],
+      "websiteUrl": "https://investor.adiglobal.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ADIG",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://investor.adiglobal.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://s25.q4cdn.com/125328972/files/design/site_logo/ADI_Logo_White.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://investor.adiglobal.com/",
+          "redistribution": "not-granted",
+          "sha256": "79ce8aa519a1d2a87f17bf0f0cbc0bdfa344d81d5030d061b4db5c45b4bab467",
+          "width": 190,
+          "height": 80,
+          "format": "png",
+          "notes": "Issuer site header/favicon asset inspected and decoded. The current directory supplies the exact listing identity. Original remote image dimensions retained; no artwork bundled."
+        }
+      ],
+      "cik": "0002105139"
+    },
+    {
       "id": "advanced-micro-devices",
       "name": "Advanced Micro Devices, Inc.",
       "reviewedAt": "2026-10-14",
@@ -92,6 +206,45 @@
         }
       ],
       "websiteUrl": "https://ir.amd.com/"
+    },
+    {
+      "id": "advasa-holdings",
+      "name": "Advasa Holdings, Inc.",
+      "reviewedAt": "2026-10-15",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://adbt.io/",
+        "https://www.sec.gov/Archives/edgar/data/2084227/000149315226040094/ex99-1.htm"
+      ],
+      "websiteUrl": "https://adbt.io/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ADBT",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+            "https://adbt.io/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://adbt.io/favicon-192.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://adbt.io/",
+          "redistribution": "not-granted",
+          "sha256": "1e78264346ecb96b5475638e49878a7bfbee953a3b8340655aacc1dad6d8d051",
+          "width": 192,
+          "height": 192,
+          "format": "png",
+          "notes": "Issuer site header/favicon asset inspected and decoded. The current directory supplies the exact listing identity. Original remote image dimensions retained; no artwork bundled."
+        }
+      ],
+      "cik": "0002084227"
     },
     {
       "id": "alphabet",
@@ -139,11 +292,62 @@
       "websiteUrl": "https://abc.xyz/investor/"
     },
     {
+      "id": "analog-devices",
+      "name": "Analog Devices, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.analog.com/en/index.html"
+      ],
+      "websiteUrl": "https://www.analog.com/en/index.html",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ADI",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+            "https://www.analog.com/en/index.html"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://www.analog.com/media/favicon/adi-icon-iphone-retina-180x180.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.analog.com/en/index.html",
+          "redistribution": "not-granted",
+          "sha256": "208248093233d6652e59d77d09609669ee3d0ddc575da2d340ad23eac58e9985",
+          "width": 180,
+          "height": 180,
+          "format": "png",
+          "notes": "Official blue square / white triangle touch icon preferred to the older gray triangle provider asset."
+        },
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ADI.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.analog.com/en/index.html",
+          "redistribution": "not-granted",
+          "sha256": "45fbe60477ea2a4d84cedf33221b44f4ed4822b781bce664228d84bc4830303f",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Official blue square / white triangle touch icon preferred to the older gray triangle provider asset."
+        }
+      ]
+    },
+    {
       "id": "apogee-acquisition",
       "name": "Apogee Acquisition Corp",
-      "reviewedAt": "2026-10-14",
+      "reviewedAt": "2026-10-15",
       "identityEvidenceUrls": [
-        "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm"
+        "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm",
+        "https://apogeeacquisitioncorp.com/about-us/"
       ],
       "securities": [
         {
@@ -185,20 +389,34 @@
       ],
       "logos": [
         {
+          "url": "https://apogeeacquisitioncorp.com/wp-content/uploads/2026/02/cropped-AAC-LOGO-192x192.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://apogeeacquisitioncorp.com/about-us/",
+          "redistribution": "not-granted",
+          "sha256": "eab29b76bb12538322399965c34d272d4e8639064b631fca0ee7ee881dddd017",
+          "width": 192,
+          "height": 192,
+          "format": "png",
+          "notes": "Shield/globe/upward-arrow issuer favicon linked by the official About Us page. Image bytes inspected and decoded; metadata only, no artwork bundled."
+        },
+        {
           "url": "https://financialmodelingprep.com/image-stock/AACP.png",
           "source": "fmp-public-image",
-          "status": "candidate",
-          "checkedAt": "2026-10-14",
-          "referenceUrl": "https://www.sec.gov/Archives/edgar/data/2102123/000121390026060608/ea0291860-8k_apogee.htm",
+          "status": "rejected",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://apogeeacquisitioncorp.com/about-us/",
           "redistribution": "not-granted",
           "sha256": "6da1cb8052c7f1036779e1f6c00e80166cc8180453be0ebd3b229c34e0f0afec",
           "width": 100,
           "height": 100,
           "format": "png",
-          "notes": "Blue A mark is available, but no issuer-specific brand reference was verified. Do not treat this monogram as an approved company logo."
+          "notes": "Rejected: the generic blue A supplied by FMP does not match the shield/globe/upward-arrow branding on the issuer website. Never reuse this image as an approved Apogee logo."
         }
       ],
-      "cik": "0002102123"
+      "cik": "0002102123",
+      "websiteUrl": "https://apogeeacquisitioncorp.com/"
     },
     {
       "id": "apple",
@@ -314,7 +532,7 @@
     {
       "id": "ares-acquisition-iii",
       "name": "Ares Acquisition Corporation III",
-      "reviewedAt": "2026-10-14",
+      "reviewedAt": "2026-10-15",
       "identityEvidenceUrls": [
         "https://www.sec.gov/Archives/edgar/data/2128115/000110465926099241/tm2622817d1_8k.htm"
       ],
@@ -356,15 +574,15 @@
         {
           "url": "https://financialmodelingprep.com/image-stock/AAC.png",
           "source": "fmp-public-image",
-          "status": "candidate",
-          "checkedAt": "2026-10-14",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
           "referenceUrl": "https://www.ares.com/us/our-strategies/aac-iii",
           "redistribution": "not-granted",
           "sha256": "5649ab646617ce8d28cc910b098a38a9d89ada4a86ede8aa43c92ff32eedd450",
           "width": 128,
           "height": 128,
           "format": "png",
-          "notes": "Ares sponsor-brand mark from a reused ticker. The current issuer uses Ares branding, but an issuer-specific visual check remains pending."
+          "notes": "Ares orbital brand mark visually matches the official AAC III strategy page header. Represents the Ares sponsor brand used on that issuer page; no unrelated historical AAC issuer is inferred."
         }
       ],
       "websiteUrl": "https://www.ares.com/us/our-strategies/aac-iii",
@@ -373,7 +591,7 @@
     {
       "id": "averin-capital-acquisition",
       "name": "Averin Capital Acquisition Corp.",
-      "reviewedAt": "2026-10-14",
+      "reviewedAt": "2026-10-15",
       "identityEvidenceUrls": [
         "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm"
       ],
@@ -410,18 +628,845 @@
         {
           "url": "https://financialmodelingprep.com/image-stock/ACAA.png",
           "source": "fmp-public-image",
-          "status": "candidate",
-          "checkedAt": "2026-10-14",
-          "referenceUrl": "https://www.sec.gov/Archives/edgar/data/2096900/000121390026085680/ea0300633-10q_averin.htm",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://www.averincapital.com/press",
           "redistribution": "not-granted",
           "sha256": "ab077b16c04d9ed110d2aabc82e85ba209b21f7bc088fdc0439d41f29e1febb3",
           "width": 100,
           "height": 100,
           "format": "png",
-          "notes": "Averin wordmark is available. Sponsor branding must be distinguished from issuer-specific approval before promotion."
+          "notes": "Averin wordmark matches the official sponsor site header and its press page explicitly identifies Averin Capital Acquisition Corp. Sponsor-brand representation is disclosed, not a separate invented issuer mark."
         }
       ],
       "cik": "0002096900"
+    },
+    {
+      "id": "consolidated-edison",
+      "name": "Consolidated Edison, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.conedison.com/en/"
+      ],
+      "websiteUrl": "https://www.conedison.com/en/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ED",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.conedison.com/en/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ED.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.conedison.com/en/",
+          "redistribution": "not-granted",
+          "sha256": "032007f9520d373e043620a87ccdb80d8994ede67d7707725b8adc3f2613cdc9",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Con Edison interlocking C/E symbol and wordmark compared with official header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "darden-restaurants",
+      "name": "Darden Restaurants, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.darden.com/"
+      ],
+      "websiteUrl": "https://www.darden.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "DRI",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.darden.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/DRI.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.darden.com/",
+          "redistribution": "not-granted",
+          "sha256": "2ec6ebc3c9ef94474687aa0c1f803febd299ab16d016e6bc83d114b18652d9c2",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Black/red curved D device compared with the official corporate header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "digital-realty-trust",
+      "name": "Digital Realty Trust, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.digitalrealty.com/"
+      ],
+      "websiteUrl": "https://www.digitalrealty.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "DLR",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.digitalrealty.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/DLR.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.digitalrealty.com/",
+          "redistribution": "not-granted",
+          "sha256": "a373b05eb41cc0656864bbbeedd4c577ddf8e9da6bb87073c5e4e9564d4bf30e",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Four-corner D device compared with official Digital Realty header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "dominos-pizza",
+      "name": "Domino's Pizza Inc",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://biz.dominos.com/"
+      ],
+      "websiteUrl": "https://biz.dominos.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "DPZ",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+            "https://biz.dominos.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/DPZ.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://biz.dominos.com/",
+          "redistribution": "not-granted",
+          "sha256": "0d433fe8bc0338dabb0d9c5721c853526d4909c12074d57fe273970747a4d40d",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Red/blue domino tile compared with the official corporate-site header."
+        }
+      ]
+    },
+    {
+      "id": "dow",
+      "name": "Dow Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://corporate.dow.com/en-us.html"
+      ],
+      "websiteUrl": "https://corporate.dow.com/en-us.html",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "DOW",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://corporate.dow.com/en-us.html"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/DOW.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://corporate.dow.com/en-us.html",
+          "redistribution": "not-granted",
+          "sha256": "f7f64f1558a2422ed9dfbab92986b6c48f055c05cacbc7cb3b0cebf65030de1f",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Red Dow diamond compared with the official corporate header and touch icon."
+        }
+      ]
+    },
+    {
+      "id": "dte-energy",
+      "name": "DTE Energy Company",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://ir.dteenergy.com/"
+      ],
+      "websiteUrl": "https://ir.dteenergy.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "DTE",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://ir.dteenergy.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/DTE.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://ir.dteenergy.com/",
+          "redistribution": "not-granted",
+          "sha256": "5a52bba9d5028c8f0e58568fbb01c4f74bf6d91ab3502c073cfa8e826062e809",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "DTE lettermark compared with the official investor-site header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "ecolab",
+      "name": "Ecolab Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.ecolab.com/en-us"
+      ],
+      "websiteUrl": "https://www.ecolab.com/en-us",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ECL",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.ecolab.com/en-us"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ECL.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.ecolab.com/en-us",
+          "redistribution": "not-granted",
+          "sha256": "f3eb4d17bd0c624eaca1ecea8b67a1f0d50b675f438089e1e80e10c908b3f23a",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Blue circular star mark compared with the star device in the official Ecolab wordmark."
+        }
+      ]
+    },
+    {
+      "id": "edison-international",
+      "name": "Edison International",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.edison.com/"
+      ],
+      "websiteUrl": "https://www.edison.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EIX",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.edison.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EIX.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.edison.com/",
+          "redistribution": "not-granted",
+          "sha256": "aaf8e76a80c073719c2ea5f8f82b4dfe6ab46fcaf80939e353c5aa1234cc1586",
+          "width": 128,
+          "height": 129,
+          "format": "png",
+          "notes": "Yellow sunburst / green square compared with the official issuer favicon and header."
+        }
+      ]
+    },
+    {
+      "id": "edwards-lifesciences",
+      "name": "Edwards Lifesciences Corporation",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.edwards.com/"
+      ],
+      "websiteUrl": "https://www.edwards.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EW",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.edwards.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EW.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.edwards.com/",
+          "redistribution": "not-granted",
+          "sha256": "daac35c57cc4b99d84c9916be6d6f7a6ac6798d6d91b7707770031ab94861202",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Gray E device and Edwards wordmark compared with the official header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "elevance-health",
+      "name": "Elevance Health, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.elevancehealth.com/"
+      ],
+      "websiteUrl": "https://www.elevancehealth.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ELV",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.elevancehealth.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://www.elevancehealth.com/content/dam/elevance-health-non-index/logos/Elevance_Health_Avatar_1200x1200.png",
+          "source": "issuer-website",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.elevancehealth.com/",
+          "redistribution": "not-granted",
+          "sha256": "feed3facd56500d8ba6f902ab1bde97b3d9704a0158b5ba8eaa68ad10afccc5f",
+          "width": 1200,
+          "height": 1200,
+          "format": "png",
+          "notes": "Official navy E with cyan roof touch/favicon asset, compared with the issuer header. Replaces the unrelated generic A."
+        },
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ELV.png",
+          "source": "fmp-public-image",
+          "status": "rejected",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.elevancehealth.com/",
+          "redistribution": "not-granted",
+          "sha256": "46a2735c425c6f175bf8a178da8151984303523c4e369634c3d50f6c920f2c7a",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Rejected generic white A on blue: it does not match the official Elevance Health E/roof branding. Known artwork checksum retained to block cached copies."
+        }
+      ]
+    },
+    {
+      "id": "emcor-group",
+      "name": "EMCOR Group, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.emcorgroup.com/"
+      ],
+      "websiteUrl": "https://www.emcorgroup.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EME",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.emcorgroup.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EME.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.emcorgroup.com/",
+          "redistribution": "not-granted",
+          "sha256": "32a39055bd0ddca410b13248d7a912c8f202090aaf9acab10a6c5ba7e7968e21",
+          "width": 128,
+          "height": 76,
+          "format": "png",
+          "notes": "Striped teal diamond compared with the official issuer favicon; provider includes the EMCOR wordmark."
+        }
+      ]
+    },
+    {
+      "id": "emerson-electric",
+      "name": "Emerson Electric Company",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.emerson.com/en-us"
+      ],
+      "websiteUrl": "https://www.emerson.com/en-us",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EMR",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.emerson.com/en-us"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EMR.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.emerson.com/en-us",
+          "redistribution": "not-granted",
+          "sha256": "456fda66b1c58063d2b8f7af46882aadace2797dc1adc83fe0d2066cde60d525",
+          "width": 240,
+          "height": 150,
+          "format": "png",
+          "notes": "Blue striped device and EMERSON wordmark compared with official header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "entergy",
+      "name": "Entergy Corporation",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.entergy.com/"
+      ],
+      "websiteUrl": "https://www.entergy.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ETR",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.entergy.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ETR.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.entergy.com/",
+          "redistribution": "not-granted",
+          "sha256": "ad0225470a81edcc293fbdccab7b10c7483f2a79a2e044a049e14388fb22a9c0",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Pink/purple e device compared with official Entergy header and favicon."
+        }
+      ]
+    },
+    {
+      "id": "eqt-corporation",
+      "name": "EQT Corporation",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.eqt.com/"
+      ],
+      "websiteUrl": "https://www.eqt.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EQT",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.eqt.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EQT.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.eqt.com/",
+          "redistribution": "not-granted",
+          "sha256": "72aada70e5e0ab63d74af0520cb781fece0e92b6979a2d4eadfc994b74ba5bc4",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Pink/gray Q device compared with the official EQT Corporation header and favicon. Not the unrelated investment firm."
+        }
+      ]
+    },
+    {
+      "id": "equifax",
+      "name": "Equifax, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://investor.equifax.com/"
+      ],
+      "websiteUrl": "https://www.equifax.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EFX",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://investor.equifax.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EFX.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://investor.equifax.com/",
+          "redistribution": "not-granted",
+          "sha256": "dde107ecb9864cefbaa36fee168ae639cdf74d46c90cc21df9e1807b53615a65",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Equifax italic wordmark compared with the official investor-site header. Provider uses a red circular background."
+        }
+      ]
+    },
+    {
+      "id": "estee-lauder-companies",
+      "name": "Estee Lauder Companies, Inc. (The)",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.elcompanies.com/en/"
+      ],
+      "websiteUrl": "https://www.elcompanies.com/en/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EL",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.elcompanies.com/en/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EL.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.elcompanies.com/en/",
+          "redistribution": "not-granted",
+          "sha256": "e3a87a1d587931bbd8a04637e946f533bb6312fc076337f3d68a5b91307f312b",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Issuer-identifying Estee Lauder Companies wordmark; stacked provider presentation differs from the horizontal website header."
+        }
+      ]
+    },
+    {
+      "id": "everest-group",
+      "name": "Everest Group, Ltd.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://s203.q4cdn.com/937887252/files/doc_financials/2025/q4/Everest-4Q-25-Investor-Presentation.pdf"
+      ],
+      "websiteUrl": "https://www.everestglobal.com/us-en",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EG",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://s203.q4cdn.com/937887252/files/doc_financials/2025/q4/Everest-4Q-25-Investor-Presentation.pdf"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EG.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://s203.q4cdn.com/937887252/files/doc_financials/2025/q4/Everest-4Q-25-Investor-Presentation.pdf",
+          "redistribution": "not-granted",
+          "sha256": "37503f6b5979aff30fc29eac7c35116e87946004f23a7735e6cf6a935185414b",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Blue three-slope mountain device compared with the cover of the official Q4 2025 investor presentation."
+        }
+      ]
+    },
+    {
+      "id": "eversource-energy",
+      "name": "Eversource Energy (D/B/A)",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.eversource.com/"
+      ],
+      "websiteUrl": "https://www.eversource.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "ES",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.eversource.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/ES.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.eversource.com/",
+          "redistribution": "not-granted",
+          "sha256": "a1023bb892504d817cd73fd49808d7b9238a9be7175f292eb80a922cf2c3736e",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Blue/green striped circular device compared with the O device in the official EVERSOURCE header."
+        }
+      ]
+    },
+    {
+      "id": "expedia-group",
+      "name": "Expedia Group, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.expediagroup.com/"
+      ],
+      "websiteUrl": "https://www.expediagroup.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EXPE",
+          "exchange": "NASDAQ",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+            "https://www.expediagroup.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EXPE.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.expediagroup.com/",
+          "redistribution": "not-granted",
+          "sha256": "e9c19aba301740fd3be19eb111766ebce2d35cde6c77bc01e106f15cc98ed9e7",
+          "width": 100,
+          "height": 100,
+          "format": "png",
+          "notes": "Blue/purple e device compared with the official Expedia Group header; distinct from the Expedia travel-service wordmark."
+        }
+      ]
+    },
+    {
+      "id": "expeditors-international",
+      "name": "Expeditors International of Washington, Inc.",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.expeditors.com/"
+      ],
+      "websiteUrl": "https://www.expeditors.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EXPD",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.expeditors.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EXPD.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.expeditors.com/",
+          "redistribution": "not-granted",
+          "sha256": "1d2beb21c25c577313063ca51a27306b025b26d01a119e76697bf3b4915a2e4e",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Orange/red angled device compared with the official issuer favicon."
+        }
+      ]
+    },
+    {
+      "id": "extra-space-storage",
+      "name": "Extra Space Storage Inc",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.extraspace.com/"
+      ],
+      "websiteUrl": "https://www.extraspace.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "EXR",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://www.extraspace.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/EXR.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://www.extraspace.com/",
+          "redistribution": "not-granted",
+          "sha256": "f4fa95cda7df43411c38f49880c228b50aab81e2b699d43ec3c341836af54842",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Provider uses the issuer-identifying full Extra Space Storage wordmark on green; current website favicon abbreviates it to ESS."
+        }
+      ]
+    },
+    {
+      "id": "ford-motor",
+      "name": "Ford Motor Company",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://corporate.ford.com/"
+      ],
+      "websiteUrl": "https://corporate.ford.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "F",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://corporate.ford.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/F.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://corporate.ford.com/",
+          "redistribution": "not-granted",
+          "sha256": "e2980349794323b1b5b96ca9356e303cf40b7e491aafbe584330170dac409667",
+          "width": 250,
+          "height": 250,
+          "format": "png",
+          "notes": "Blue oval Ford script compared with official corporate-site favicon script."
+        }
+      ]
     },
     {
       "id": "microsoft",
@@ -498,7 +1543,7 @@
     {
       "id": "pge-corporation",
       "name": "PG&E Corporation",
-      "reviewedAt": "2026-10-14",
+      "reviewedAt": "2026-10-15",
       "identityEvidenceUrls": [
         "https://www.sec.gov/Archives/edgar/data/75488/000100498025000148/pcg-20250930.htm"
       ],
@@ -540,7 +1585,17 @@
       ],
       "websiteUrl": "https://investor.pgecorp.com/",
       "cik": "0001004980",
-      "notes": "PCG$X is PG&E Corporation mandatory convertible preferred stock. Other PCG preferred classes can be issued by its utility subsidiary and are intentionally not inferred."
+      "notes": "Nasdaq Trader uses the operating-company display name for PCG. This explicit PCG-only directory naming exception follows the verified holding-company ticker evidence; it does not map other subsidiary securities to PG&E Corporation.",
+      "directoryNameAliases": [
+        {
+          "name": "Pacific Gas & Electric Co.",
+          "symbol": "PCG",
+          "evidenceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/75488/000100498025000148/pcg-20250930.htm",
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+          ]
+        }
+      ]
     },
     {
       "id": "quasaredge-acquisition",
@@ -640,9 +1695,46 @@
       "websiteUrl": "https://tacticalresources.com/"
     },
     {
+      "id": "walt-disney",
+      "name": "Walt Disney Company (The)",
+      "reviewedAt": "2026-10-17",
+      "identityEvidenceUrls": [
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://thewaltdisneycompany.com/"
+      ],
+      "websiteUrl": "https://thewaltdisneycompany.com/",
+      "securities": [
+        {
+          "market": "US",
+          "symbol": "DIS",
+          "exchange": "NYSE",
+          "kind": "common",
+          "evidenceUrls": [
+            "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+            "https://thewaltdisneycompany.com/"
+          ]
+        }
+      ],
+      "logos": [
+        {
+          "url": "https://financialmodelingprep.com/image-stock/DIS.png",
+          "source": "fmp-public-image",
+          "status": "verified",
+          "checkedAt": "2026-10-17",
+          "referenceUrl": "https://thewaltdisneycompany.com/",
+          "redistribution": "not-granted",
+          "sha256": "a03f60cf9c7961578f75b24583227ffd175454ad17e5fecf9d0d31041761a559",
+          "width": 128,
+          "height": 128,
+          "format": "png",
+          "notes": "White Disney D device compared with the black D device in the official corporate-site favicon. Not a subsidiary logo."
+        }
+      ]
+    },
+    {
       "id": "wintrust-financial",
       "name": "Wintrust Financial Corporation",
-      "reviewedAt": "2026-10-14",
+      "reviewedAt": "2026-10-15",
       "identityEvidenceUrls": [
         "https://www.sec.gov/Archives/edgar/data/1015328/000110465925046769/tm2513736-3_424b5.htm"
       ],
@@ -670,15 +1762,15 @@
         {
           "url": "https://financialmodelingprep.com/image-stock/WTFC.png",
           "source": "fmp-public-image",
-          "status": "candidate",
-          "checkedAt": "2026-10-14",
-          "referenceUrl": "https://ir.wintrust.com/",
+          "status": "verified",
+          "checkedAt": "2026-10-15",
+          "referenceUrl": "https://s205.q4cdn.com/387403231/files/doc_financials/2026/q1/Wintrust-Financial-Corporation-Earnings-Release-Presentation-Q1-2026.pdf",
           "redistribution": "not-granted",
           "sha256": "091d2afcc9d3033ed87684cb8165cc10c6700f80fe00a4d562a2f0fd4e5577db",
           "width": 250,
           "height": 250,
           "format": "png",
-          "notes": "White W mark is technically available; current issuer artwork comparison remains pending."
+          "notes": "Wintrust serif W and underline compared with the official Q1 2026 presentation cover. Provider supplies a white outline variant of the same brand monogram."
         }
       ],
       "websiteUrl": "https://ir.wintrust.com/",
@@ -708,7 +1800,35 @@
     "US:ACAA": "averin-capital-acquisition",
     "US:ACAAU": "averin-capital-acquisition",
     "US:ACAAW": "averin-capital-acquisition",
+    "US:ACCV": "accelevation-holdings",
+    "US:ADBT": "advasa-holdings",
+    "US:ADI": "analog-devices",
+    "US:ADIG": "adi-global-distribution",
+    "US:ADRX": "adarx-pharmaceuticals",
     "US:AMD": "advanced-micro-devices",
+    "US:DIS": "walt-disney",
+    "US:DLR": "digital-realty-trust",
+    "US:DOW": "dow",
+    "US:DPZ": "dominos-pizza",
+    "US:DRI": "darden-restaurants",
+    "US:DTE": "dte-energy",
+    "US:ECL": "ecolab",
+    "US:ED": "consolidated-edison",
+    "US:EFX": "equifax",
+    "US:EG": "everest-group",
+    "US:EIX": "edison-international",
+    "US:EL": "estee-lauder-companies",
+    "US:ELV": "elevance-health",
+    "US:EME": "emcor-group",
+    "US:EMR": "emerson-electric",
+    "US:EQT": "eqt-corporation",
+    "US:ES": "eversource-energy",
+    "US:ETR": "entergy",
+    "US:EW": "edwards-lifesciences",
+    "US:EXPD": "expeditors-international",
+    "US:EXPE": "expedia-group",
+    "US:EXR": "extra-space-storage",
+    "US:F": "ford-motor",
     "US:GOOG": "alphabet",
     "US:GOOGL": "alphabet",
     "US:MSFT": "microsoft",

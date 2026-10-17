@@ -1,10 +1,14 @@
 # Reviewed Company Logo Catalog
 
-Status: public catalog established, 2026-10-14. AIFi catalog-first runtime integration implemented.
+Status: public catalog and AIFi integration updated, 2026-10-17.
 
 Repository: [ifuryst/company-logo-catalog](https://github.com/ifuryst/company-logo-catalog).
-The initial catalog has 14 companies, 31 securities, 37 exact symbol/alias keys,
-eight verified logo sources and six candidate sources withheld by its resolver.
+The v0.3.0 reviewed catalog contains 42 companies, 59 securities, 65 exact
+symbol/alias keys and 40 companies with verified images. The latest batch adds
+24 issuer reviews, including ECL/ED/EFX/EG/EIX/EL, official small-icon sources for
+ADI/ELV, and an explicit rejection of ELV's generic A image. Its separate frozen
+7,481-security inventory still has 342 source gaps and many unreviewed images;
+AIFi does not silently promote that inventory to verified mappings.
 It publishes URL metadata, evidence and checksums; no third-party image pack is bundled.
 
 ## Decision Direction
@@ -14,8 +18,8 @@ is suitable for a small JSON URL/alias list. Prefer a regular Git repository for
 an image collection: contribution PRs, per-entry history, source metadata,
 release versions and individual asset notices are easier to maintain together.
 The user authorized a public independent repository; the catalog is now kept
-there. AIFi bundles the v0.1.0 seed and validates background updates from its main manifest.
-A published release pins the initial provenance; cached last-good metadata keeps
+there. AIFi bundles the v0.3.0 reviewed seed and validates background updates from its main manifest.
+The bundled snapshot pins provenance; cached last-good metadata keeps
 the app independent of GitHub availability.
 
 ## Suggested Shape
@@ -66,7 +70,10 @@ brand and asset rights remain distinct from the code/metadata license.
 
 ## Runtime Direction
 
-Verified catalog source/cache → exact-symbol FMP source/cache → letter fallback. Unknown mappings remain explicit; missing images never invent identity.
+Verified catalog source/cache → exact-symbol FMP source/cache → letter fallback.
+Known rejected artwork checksums are blocked at every cache/provider step.
+Newer shipped metadata supersedes an older disk manifest; background refresh
+cannot downgrade the catalog. Exact official asset paths require code review. Unknown mappings remain explicit; missing images never invent identity.
 The StockLogoRepository stays unchanged; Node host owns the catalog resolver. The current fixed-host PNG validation must remain; remote manifests or
 URL overrides require explicit trusted origins, bounded reads and validation,
 not arbitrary renderer-controlled URL downloads.

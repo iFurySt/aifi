@@ -430,3 +430,85 @@ it("disk-only reads reuse stale images without scheduling provider work, includi
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+it("a reviewed rejection blocks previously cached artwork and a repeated bad provider response", async () => {
+  const { fixturePNG, fixtureCatalog } = await import("./logo-fixtures");
+  const { LogoCatalog } = await import("./logo-catalog");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-rejected-logo-"));
+  const fetcher = vi
+    .fn<typeof fetch>()
+    .mockImplementation(
+      async () =>
+        new Response(fixturePNG, { headers: { "Content-Type": "image/png" } }),
+    );
+  const old = new StockLogoCache(dir, false, fetcher, noCatalog);
+  try {
+    expect(await old.get("AACO")).not.toBeNull();
+    old.close();
+    const seed = fixtureCatalog("rejected");
+    const offline = new StockLogoCache(
+      dir,
+      true,
+      fetcher,
+      new LogoCatalog(dir, true, fetcher, seed),
+    );
+    expect(offline.peek("AACO")).toBeNull();
+    expect(await offline.get("AACO")).toBeNull();
+    offline.close();
+    const online = new StockLogoCache(
+      dir,
+      false,
+      fetcher,
+      new LogoCatalog(dir, true, fetcher, seed),
+    );
+    expect(await online.get("AACO")).toBeNull();
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    expect(await online.get("AACO")).toBeNull();
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    online.close();
+  } finally {
+    old.close();
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+it("promotes matching exact-URL cache bytes into a newly reviewed source without downloading again", async () => {
+  const { fixturePNG, fixtureCatalog } = await import("./logo-fixtures");
+  const { LogoCatalog } = await import("./logo-catalog");
+  const dir = mkdtempSync(join(tmpdir(), "aifi-reviewed-logo-upgrade-"));
+  const fetcher = vi
+    .fn<typeof fetch>()
+    .mockImplementation(
+      async () =>
+        new Response(fixturePNG, { headers: { "Content-Type": "image/png" } }),
+    );
+  const previous = new StockLogoCache(dir, false, fetcher, noCatalog);
+  try {
+    await previous.get("AACO");
+    previous.close();
+    const cache = new StockLogoCache(
+      dir,
+      true,
+      fetcher,
+      new LogoCatalog(dir, true, fetcher, fixtureCatalog()),
+    );
+    expect(cache.peek("AACO")?.source).toContain("company-logo-catalog");
+    expect((await cache.get("AACOW"))?.source).toContain(
+      "company-logo-catalog",
+    );
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    cache.close();
+    const changed = fixtureCatalog();
+    changed.companies[0]!.logos[0]!.sha256 = "a".repeat(64);
+    const strict = new StockLogoCache(
+      dir,
+      true,
+      fetcher,
+      new LogoCatalog(dir, true, fetcher, changed),
+    );
+    expect(await strict.get("AACOW")).toBeNull();
+    strict.close();
+  } finally {
+    previous.close();
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
