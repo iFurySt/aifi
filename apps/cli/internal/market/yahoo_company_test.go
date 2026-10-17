@@ -86,3 +86,25 @@ func TestYahooFactsPreserveVendorPeriodsAndCapexSign(t *testing.T) {
 		}
 	}
 }
+
+func TestExpandedYahooFinancialUnitsAndCapitalReturns(t *testing.T) {
+	c := testClient(t, func(r *http.Request) (int, string) {
+		fields := r.URL.Query().Get("type")
+		if !strings.Contains(fields, "quarterlyResearchAndDevelopment") || !strings.Contains(fields, "annualBasicAverageShares") {
+			t.Fatal("missing expanded fields", fields)
+		}
+		return 200, `{"timeseries":{"result":[{"meta":{"symbol":["AAPL"],"type":["quarterlyBasicAverageShares"]},"quarterlyBasicAverageShares":[{"asOfDate":"2026-06-30","periodType":"3M","currencyCode":"USD","reportedValue":{"raw":1500}}]},{"meta":{"symbol":["AAPL"],"type":["quarterlyCashDividendsPaid"]},"quarterlyCashDividendsPaid":[{"asOfDate":"2026-06-30","periodType":"3M","currencyCode":"USD","reportedValue":{"raw":-30}}]},{"meta":{"symbol":["AAPL"],"type":["quarterlyResearchAndDevelopment"]},"quarterlyResearchAndDevelopment":[{"asOfDate":"2026-06-30","periodType":"3M","currencyCode":"USD","reportedValue":{"raw":12.5}}]}]}}`
+	})
+	r, err := c.Collect(context.Background(), Job{Provider: "yahoo", Dataset: "facts", Subject: "AAPL"})
+	if err != nil || len(r.Payload.Facts) != 3 || r.Payload.Version != FinancialFactsVersion {
+		t.Fatal(r, err)
+	}
+	for _, f := range r.Payload.Facts {
+		if f.Metric == "weightedSharesBasic" && f.Unit != "shares" {
+			t.Fatal(f)
+		}
+		if f.Metric == "dividendsPaid" && f.Value != "30" {
+			t.Fatal(f)
+		}
+	}
+}

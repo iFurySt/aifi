@@ -487,3 +487,67 @@ func TestYahooValuationUpgradePreservesFailedBackoffAndStopsAfterVersionedCommit
 		t.Fatal("valuation lost in local snapshot", err)
 	}
 }
+
+func TestFinancialFactsUpgradeKeepsLastGoodBackoffAndStopsAfterCommit(t *testing.T) {
+	ctx := context.Background()
+	db := openTest(t)
+	now := time.Now().UTC()
+	future := now.Add(24 * time.Hour)
+	for _, provider := range []string{"sec", "yahoo"} {
+		for _, state := range []string{"OLD", "CURRENT", "BACKOFF"} {
+			subject := provider + state
+			if err := db.AddResearchJobs(ctx, []market.Job{{Provider: provider, Dataset: "facts", Subject: subject}}, now); err != nil {
+				t.Fatal(err)
+			}
+			job, err := db.ClaimResearchJob(ctx, provider, []string{"facts"}, false, now)
+			if err != nil || job == nil {
+				t.Fatal(err)
+			}
+			version := 0
+			if state == "CURRENT" {
+				version = market.FinancialFactsVersion
+			}
+			payload := market.Payload{Version: version, Facts: []market.Fact{{Metric: "researchAndDevelopment", Unit: "USD", Value: "12.25", End: "2026-06-30"}}}
+			if err = db.FinishResearchJob(ctx, *job, market.Result{Payload: payload, Evidence: []market.Evidence{{URL: "https://source.example.invalid/facts.json", Body: []byte(`{"fixture":true}`), FetchedAt: now}}}, now, future); err != nil {
+				t.Fatal(err)
+			}
+		}
+	}
+	if _, err := db.db.ExecContext(ctx, `UPDATE research_jobs SET state='failed' WHERE subject LIKE '%BACKOFF'`); err != nil {
+		t.Fatal(err)
+	}
+	wake := now.Add(time.Minute)
+	if err := db.WakeFinancialFacts(ctx, wake); err != nil {
+		t.Fatal(err)
+	}
+	for _, provider := range []string{"sec", "yahoo"} {
+		for _, state := range []string{"OLD", "CURRENT", "BACKOFF"} {
+			subject := provider + state
+			var next string
+			if err := db.db.QueryRowContext(ctx, `SELECT next_run FROM research_jobs WHERE subject=?`, subject).Scan(&next); err != nil {
+				t.Fatal(err)
+			}
+			if (next == stamp(wake)) != (state == "OLD") {
+				t.Fatal(subject, next)
+			}
+			payload, err := db.ResearchPayload(ctx, "facts", subject)
+			if err != nil || len(payload.Facts) != 1 || payload.Facts[0].Value != "12.25" {
+				t.Fatal("upgrade erased stored data", subject, err)
+			}
+		}
+		job, err := db.ClaimResearchJob(ctx, provider, []string{"facts"}, false, wake)
+		if err != nil || job == nil {
+			t.Fatal(err)
+		}
+		if err = db.FinishResearchJob(ctx, *job, market.Result{Payload: market.Payload{Version: market.FinancialFactsVersion, Facts: []market.Fact{{Metric: "researchAndDevelopment", Value: "13.5", Unit: "USD", End: "2026-06-30"}}}, Evidence: []market.Evidence{{URL: "https://source.example.invalid/facts.json", Body: []byte(`{"fixture":true}`), FetchedAt: wake}}}, wake, future); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if err := db.WakeFinancialFacts(ctx, wake.Add(time.Minute)); err != nil {
+		t.Fatal(err)
+	}
+	var next string
+	if err := db.db.QueryRowContext(ctx, `SELECT next_run FROM research_jobs WHERE subject='secOLD'`).Scan(&next); err != nil || next != stamp(future) {
+		t.Fatal("current snapshot woke again", next, err)
+	}
+}

@@ -988,3 +988,10 @@ func (s *Store) WakeYahooQuoteMetadata(ctx context.Context, now time.Time) error
 	_, err := s.db.ExecContext(ctx, `UPDATE research_jobs SET next_run=? WHERE provider='yahoo' AND dataset IN ('profile','analyst','earnings') AND state='idle' AND next_run>? AND EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots snap ON snap.id=h.snapshot_id WHERE h.subject=research_jobs.subject AND h.dataset=research_jobs.dataset AND snap.provider='yahoo' AND COALESCE(json_extract(snap.payload_json,'$.version'),0)<1)`, stamp(now), stamp(now))
 	return err
 }
+
+// Enrich pre-expansion fact snapshots via ordinary background jobs. Retain their
+// good heads while collecting, and preserve failures, leases and rate backoff.
+func (s *Store) WakeFinancialFacts(ctx context.Context, now time.Time) error {
+	_, err := s.db.ExecContext(ctx, `UPDATE research_jobs SET next_run=? WHERE provider IN ('sec','yahoo') AND dataset='facts' AND state='idle' AND next_run>? AND EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots snap ON snap.id=h.snapshot_id WHERE h.subject=research_jobs.subject AND h.dataset='facts' AND snap.provider=research_jobs.provider AND COALESCE(json_extract(snap.payload_json,'$.version'),0)<?)`, stamp(now), stamp(now), market.FinancialFactsVersion)
+	return err
+}

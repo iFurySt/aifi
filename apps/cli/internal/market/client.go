@@ -413,14 +413,6 @@ func (c *Client) filings(ctx context.Context, j Job, r *Result) error {
 	return nil
 }
 
-var FactTags = map[string][]string{
-	"revenue":     {"RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "SalesRevenueNet"},
-	"grossProfit": {"GrossProfit"}, "operatingIncome": {"OperatingIncomeLoss"}, "netIncome": {"NetIncomeLoss", "ProfitLoss"},
-	"eps": {"EarningsPerShareDiluted"}, "cash": {"CashAndCashEquivalentsAtCarryingValue"}, "assets": {"Assets"}, "liabilities": {"Liabilities"}, "equity": {"StockholdersEquity"},
-	"operatingCashFlow": {"NetCashProvidedByUsedInOperatingActivities"}, "capex": {"PaymentsToAcquirePropertyPlantAndEquipment"},
-	"shares": {"CommonStockSharesOutstanding", "EntityCommonStockSharesOutstanding"},
-}
-
 func (c *Client) facts(ctx context.Context, j Job, r *Result) error {
 	cik := strings.TrimPrefix(j.Subject, "cik:")
 	if !cikPattern.MatchString(cik) {
@@ -479,10 +471,11 @@ func (c *Client) facts(ctx context.Context, j Job, r *Result) error {
 		a, b := r.Payload.Facts[i], r.Payload.Facts[j]
 		return a.Metric+a.End+a.Start+a.Tag+a.Unit < b.Metric+b.End+b.Start+b.Tag+b.Unit
 	})
-	if len(r.Payload.Facts) > 3000 {
+	if len(r.Payload.Facts) > 12000 || len(Marshal(r.Payload.Facts)) > 2<<20 {
 		return &Failure{Code: "too_many_facts"}
 	}
-	r.Payload.Window = "Selected standard entity-wide concepts, last 7 years"
+	r.Payload.Version = FinancialFactsVersion
+	r.Payload.Window = "Standard entity-wide financial statements, comprehensive income and capital-return concepts; last 7 years; no custom or segment facts"
 	r.Payload.Complete = false
 	return nil
 }

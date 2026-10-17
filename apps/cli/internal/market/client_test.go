@@ -167,3 +167,23 @@ func TestMarketCapShareReferenceIsCompanyLevelNotSingleClass(t *testing.T) {
 		t.Fatal("company market cap used one share class", e)
 	}
 }
+
+func TestExpandedSECStatementsPreserveUnitsPeriodsAndProvenance(t *testing.T) {
+	c := testClient(t, func(*http.Request) (int, string) {
+		return 200, `{"entityName":"Fixture","facts":{"us-gaap":{"ResearchAndDevelopmentExpense":{"units":{"USD":[{"val":12.25,"start":"2026-01-01","end":"2026-03-31","filed":"2026-04-30","accn":"fixture","form":"10-Q","fy":2026,"fp":"Q1"}]}},"WeightedAverageNumberOfDilutedSharesOutstanding":{"units":{"shares":[{"val":1500,"start":"2026-01-01","end":"2026-03-31","filed":"2026-04-30","accn":"fixture","form":"10-Q"}]}},"MarketableSecuritiesNoncurrent":{"units":{"USD":[{"val":50,"end":"2026-03-31","filed":"2026-04-30","accn":"fixture","form":"10-Q"}]}},"CommonStockDividendsPerShareDeclared":{"units":{"USD/shares":[{"val":0.26,"start":"2026-01-01","end":"2026-03-31","filed":"2026-04-30","accn":"fixture","form":"10-Q"}]}}}}}`
+	})
+	r, err := c.Collect(context.Background(), Job{Provider: "sec", Dataset: "facts", Subject: "cik:0000000123"})
+	if err != nil || len(r.Payload.Facts) != 4 || r.Payload.Version != FinancialFactsVersion {
+		t.Fatal(r, err)
+	}
+	units := map[string]string{}
+	for _, f := range r.Payload.Facts {
+		units[f.Metric] = f.Unit
+		if f.Filed != "2026-04-30" || f.Accession != "fixture" {
+			t.Fatal("lost provenance", f)
+		}
+	}
+	if units["weightedSharesDiluted"] != "shares" || units["dividendsPerShare"] != "USD/shares" || units["longTermInvestments"] != "USD" {
+		t.Fatal(units)
+	}
+}

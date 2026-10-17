@@ -1,3 +1,4 @@
+import { financialMetric, financialUnit } from "./financial-definitions";
 import type { DailyBar } from "./stocks";
 export const researchDatasets = [
   "prices",
@@ -194,6 +195,9 @@ export function splitAdjustedBars(data: StockResearch): {
 }
 const day = (s: string) => Date.parse(`${s}T00:00:00Z`) / 86400000;
 export interface FinancialPoint {
+  start?: string;
+  tag?: string;
+  calculation?: string;
   end: string;
   value: number;
   filed: string;
@@ -201,8 +205,7 @@ export interface FinancialPoint {
   derived: boolean;
 }
 function metricFacts(facts: FinancialFact[], metric: string) {
-  const unit =
-    metric === "shares" ? "shares" : metric === "eps" ? "USD/shares" : "USD";
+  const unit = financialUnit(metric);
   const precedence: Record<string, number> = {
     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": 3,
     "us-gaap:Revenues": 2,
@@ -237,7 +240,12 @@ export function financialSeries(
 ): FinancialPoint[] {
   const rows = metricFacts(facts, metric),
     points = new Map<string, FinancialPoint>();
-  const put = (f: FinancialFact, value: number, derived = false) => {
+  const put = (
+    f: FinancialFact,
+    value: number,
+    derived = false,
+    start = f.start,
+  ) => {
     const old = points.get(f.end);
     if (
       !old ||
@@ -245,6 +253,8 @@ export function financialSeries(
       (old.derived === derived && f.filed > old.filed)
     )
       points.set(f.end, {
+        ...(start ? { start } : {}),
+        tag: f.tag,
         end: f.end,
         value,
         filed: f.filed,
@@ -275,7 +285,9 @@ export function financialSeries(
       period === "Quarter" &&
       duration > 115 &&
       duration <= 380 &&
-      metric !== "eps"
+      !["perShare", "weightedShares"].includes(
+        financialMetric(metric)?.kind ?? "",
+      )
     ) {
       const prior = rows
         .filter(
@@ -286,7 +298,13 @@ export function financialSeries(
             day(f.end) - day(p.end) <= 115,
         )
         .sort((a, b) => b.end.localeCompare(a.end))[0];
-      if (prior) put(f, Number(f.value) - Number(prior.value), true);
+      if (prior)
+        put(
+          f,
+          Number(f.value) - Number(prior.value),
+          true,
+          new Date((day(prior.end) + 1) * 86400000).toISOString().slice(0, 10),
+        );
     }
   }
   return [...points.values()].sort((a, b) => b.end.localeCompare(a.end));

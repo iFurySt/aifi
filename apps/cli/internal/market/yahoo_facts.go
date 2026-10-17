@@ -10,12 +10,6 @@ import (
 	"strings"
 )
 
-var yahooFactFields = map[string]string{
-	"revenue": "TotalRevenue", "grossProfit": "GrossProfit", "operatingIncome": "OperatingIncome", "netIncome": "NetIncome", "eps": "DilutedEPS",
-	"cash": "CashAndCashEquivalents", "assets": "TotalAssets", "liabilities": "TotalLiabilitiesNetMinorityInterest", "equity": "StockholdersEquity",
-	"operatingCashFlow": "OperatingCashFlow", "capex": "CapitalExpenditure", "shares": "OrdinarySharesNumber",
-}
-
 func (c *Client) yahooFacts(ctx context.Context, j Job, r *Result) error {
 	symbol, err := yahooTicker(j.Subject)
 	if err != nil {
@@ -83,16 +77,10 @@ func (c *Client) yahooFacts(ctx context.Context, j Job, r *Result) error {
 				return &Failure{Code: "invalid_fact_value"}
 			}
 			rawValue := string(n)
-			if metric == "capex" {
+			if metric == "capex" || metric == "dividendsPaid" || metric == "shareRepurchases" {
 				rawValue = strconv.FormatFloat(-number, 'f', -1, 64)
 			} // negative source cash outflow → positive expense, preserving refunds
-			unit := "USD"
-			if metric == "eps" {
-				unit = "USD/shares"
-			}
-			if metric == "shares" {
-				unit = "shares"
-			}
+			unit := financialUnit(metric)
 			dedup := key + date
 			if seen[dedup] {
 				return &Failure{Code: "invalid_facts"}
@@ -103,7 +91,7 @@ func (c *Client) yahooFacts(ctx context.Context, j Job, r *Result) error {
 			r.Payload.Facts = append(r.Payload.Facts, Fact{Period: period, Metric: metric, Tag: "yahoo:" + key, Unit: unit, Value: rawValue, End: date})
 		}
 	}
-	if len(r.Payload.Facts) > 1000 {
+	if len(r.Payload.Facts) > 2000 {
 		return &Failure{Code: "too_many_facts"}
 	}
 	if len(r.Payload.Facts) == 0 {
@@ -113,6 +101,7 @@ func (c *Client) yahooFacts(ctx context.Context, j Job, r *Result) error {
 		a, b := r.Payload.Facts[i], r.Payload.Facts[j]
 		return a.Metric+a.Period+a.End < b.Metric+b.Period+b.End
 	})
+	r.Payload.Version = FinancialFactsVersion
 	r.Payload.Complete = false
 	r.Payload.Window = "Yahoo vendor-standardized annual/quarterly periods; up to 4 annual and 5 quarterly observations; no SEC filing dates, accessions or fiscal start dates"
 	return nil

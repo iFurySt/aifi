@@ -293,3 +293,19 @@ column/schema migration or read-triggered provider call is needed.
 On 2026-10-17 AAPL's stored Oct 16 Yahoo regular quote reported company market cap
 5,012,516,765,696 USD. This is a dated vendor value, not a bundled constant or a
 guarantee that other sites use the same quote/share reference.
+
+## Extended financial normalization
+
+Facts normalization v1 expands to 64 standard metric concepts (46 Yahoo fields)
+covering statements, comprehensive income and capital returns. SEC retains up to
+seven years, bounded at 12,000 normalized rows and 2 MiB of fact JSON; Yahoo remains
+bounded at 2,000 rows and its shorter vendor window. These are allowlists rather
+than promises that every issuer reports every concept. No schema migration or
+new API key is required. Existing successful pre-v1 jobs become due asynchronously;
+failed backoff/leases and last-good heads remain intact.
+
+Core metric definitions distinguish instant balances, additive flows, per-share
+values and weighted averages. Only matching YTD flows may become derived quarters;
+ratios join matching period starts/ends, and YoY requires a positive year-ago base.
+Source tags, fiscal dates and filing identities remain inspectable. See
+[coverage and source decisions](../references/financial-statement-sources.md).

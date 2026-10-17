@@ -51,3 +51,5 @@ Avoid dumping large vendor manuals here. Keep references curated and scoped.
 
 - [Keyless company research](keyless-company-research.md): live company profile,
   financial-series and filing-index probes, access limits and vendor semantics.
+
+- [Financial statement coverage and sources](financial-statement-sources.md): Rallies comparison, extended SEC/Yahoo mappings, actual probes and calculation limits.
