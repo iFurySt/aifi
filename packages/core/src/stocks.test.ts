@@ -39,3 +39,29 @@ it("uses company identity and removes only known directory security suffixes", a
     "Example - Warrants",
   );
 });
+
+it("uses calendar windows across weekends, sparse data and month ends", async () => {
+  const { stockChartBars } = await import("./stocks");
+  const bar = (date: string) => ({
+    date,
+    open: 1,
+    high: 1,
+    low: 1,
+    close: 1,
+    volume: 1,
+  });
+  const bars = ["2026-02-27", "2026-02-28", "2026-03-02", "2026-03-31"].map(
+    bar,
+  );
+  expect(stockChartBars(bars, 1).map((b) => b.date)).toEqual([
+    "2026-02-28",
+    "2026-03-02",
+    "2026-03-31",
+  ]);
+  const sparse = ["2025-10-15", "2025-10-16", "2026-10-16"].map(bar);
+  expect(stockChartBars(sparse, 12).map((b) => b.date)).toEqual([
+    "2025-10-16",
+    "2026-10-16",
+  ]);
+  expect(stockChartBars([], 12)).toEqual([]);
+});

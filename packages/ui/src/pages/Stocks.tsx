@@ -117,12 +117,13 @@ export function Stocks() {
     ],
     [
       "Market cap",
-      latest && profile?.shares
+      shown.marketCap !== undefined || (latest && profile?.shares)
         ? new Intl.NumberFormat("en-US", {
             notation: "compact",
+            maximumFractionDigits: 2,
             style: "currency",
             currency: "USD",
-          }).format(latest.close * profile.shares)
+          }).format(shown.marketCap ?? latest!.close * profile!.shares!)
         : "—",
     ],
     ["Industry", profile?.industry ?? "—"],
@@ -394,8 +395,11 @@ export function Stocks() {
                           ? "Color compares the latest close with the open"
                           : label === "Previous close"
                             ? "Color compares the latest close with the previous close"
-                            : label === "Market cap" && profile?.sharesDate
-                              ? `Company share reference: ${profile.sharesDate}`
+                            : label === "Market cap" &&
+                                (shown.marketCapAsOf || profile?.sharesDate)
+                              ? shown.marketCapAsOf
+                                ? `Reported company market cap · ${new Date(shown.marketCapAsOf).toLocaleString("en-US", { timeZone: "America/New_York", timeZoneName: "short" })}`
+                                : `Company share reference: ${profile?.sharesDate}`
                               : undefined
                       }
                     >

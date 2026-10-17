@@ -60,3 +60,18 @@ export function stockDisplayName(
       .trim() || symbol
   );
 }
+
+/** Calendar window anchored to the last stored session, not a guessed row count. */
+export function stockChartBars(bars: DailyBar[], months: number) {
+  const last = bars.at(-1);
+  if (!last || !Number.isInteger(months) || months <= 0) return [];
+  const [year, month, day] = last.date.split("-").map(Number);
+  const cutoff = new Date(Date.UTC(year!, month! - 1 - months, 1));
+  const monthEnd = new Date(
+    Date.UTC(cutoff.getUTCFullYear(), cutoff.getUTCMonth() + 1, 0),
+  ).getUTCDate();
+  cutoff.setUTCDate(Math.min(day!, monthEnd));
+  if (!Number.isFinite(cutoff.getTime())) return [];
+  const start = cutoff.toISOString().slice(0, 10);
+  return bars.filter((bar) => bar.date >= start && bar.date <= last.date);
+}

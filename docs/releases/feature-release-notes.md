@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-17 | Chart inspection and valuation | Hover or use arrow keys to inspect dated OHLC/volume in a dark crosshair tooltip; reported market cap is available where supplied. | Restored every daily volume/candle bar, switched to calendar ranges and mode-specific scales, centered return arrows and persisted source-reported company cap. |
 | 2026-10-17 | Compact stock workspace | A tighter company/quote header, unified global search and automatically advancing exchange-local time. | Added tab and toolbar dividers, adjacent page-specific breadcrumb icons and an independent clock; stored quote timestamps remain in source details. |
 | 2026-10-17 | Stock research details | Cleaner source citations, compact ticker tags, financial colors, earnings dot comparisons and related stocks. | Moved static after-hours quotes into dated source details; added expandable provider chips and persisted keyless related-stock collection with local quote reads. |
 | 2026-10-17 | Quotes and outlook | Company names are shorter, completed-session prices refresh after close, and Analyst/Earnings show collected data without a key. | Separated regular/after-hours quotes and source times; added analyst consensus/ratings/grades and GAAP EPS estimates/calendar through SQLite-backed collection. |

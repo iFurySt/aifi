@@ -294,3 +294,19 @@ The native sidebar toggle, vertical divider and page-specific 18px breadcrumb
 icon are adjacent; their spacing is independent of sidebar width. Native window
 controls and drag/no-drag boundaries remain unchanged. Narrow identity rows may
 wrap metadata while tabs continue scrolling within the document.
+
+## Chart point inspection and density
+
+Chart ranges use calendar months/years anchored to the latest stored session.
+All stored sessions in that window render price and volume/candles; no stride
+filter drops intermediate volumes or extrema. Volume uses a linear scale against
+the entire selected range. Line mode scales its closing values with small padding;
+candle mode scales highs/lows. These are daily observations, not intraday ticks.
+
+Pointer/touch selection and keyboard arrows/Home/End share the same selected
+session. A bounded dark overlay follows the crosshair and shows session date,
+OHLC and full volume, with no invented time-of-day. Escape/blur/leave dismiss
+it. The bottom source/basis/session-count line stays static; a hidden live
+readout retains accessible keyboard detail. Hover never requests a provider.
+Return arrows use flex center alignment with their values, without a baseline
+offset. Reported market cap retains its source quote date on the metric tooltip.

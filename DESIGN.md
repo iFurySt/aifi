@@ -282,7 +282,10 @@ rearrangement below are AIFi choices.
 - At content widths below 1,000px move metrics below identity beside the chart;
   below 660px prioritize quote, chart, metrics. Tabs and tables scroll internally.
 - Chart controls: 1M/3M/1Y/2Y and Line/Candle; hover/keyboard details use the same
-  daily OHLCV fixtures. SVG dimensions follow rendered width to keep labels legible.
+  persisted daily OHLCV observations. SVG dimensions follow rendered width to keep
+  labels legible. Use a compact dark crosshair tooltip for session date, OHLC and
+  volume; the footer stays static. Render every session in calendar ranges, without
+  dropping volume/candle bars. Line and candle modes use appropriate value bounds.
 - Financials: Metrics/Income/Balance/Cash flow/Filings selector, Quarter/Yearly,
   period/unit labels, sparse tables. Fixtures say Sample financials.
 - Funds, Politicians, Insiders: relevant summary metrics, filters, disclosure

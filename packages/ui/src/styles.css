@@ -3168,9 +3168,7 @@ kbd {
   vertical-align: baseline;
 }
 .stock-metrics-grid dd > svg {
-  display: inline;
-  margin-right: 4px;
-  vertical-align: 2px;
+  flex-shrink: 0;
 }
 .stock-peer-list {
   margin-top: 14px;
@@ -3294,4 +3292,55 @@ kbd {
     min-width: 34px;
     padding: 6px 8px;
   }
+}
+
+.stock-metrics-grid dd {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.stock-metrics-grid .wide dd {
+  justify-content: flex-end;
+}
+.stock-chart-canvas {
+  position: relative;
+}
+.stock-chart-tooltip {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  background: #202020;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 14%);
+  font-size: 11px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+.stock-chart-tooltip time {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+  font-weight: 550;
+}
+.stock-chart-tooltip time span,
+.stock-chart-tooltip dt {
+  color: #bcbcbc;
+  font-weight: 400;
+}
+.stock-chart-tooltip dl {
+  margin: 0;
+}
+.stock-chart-tooltip dl > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.stock-chart-tooltip dd {
+  margin: 0;
+  font-weight: 500;
 }

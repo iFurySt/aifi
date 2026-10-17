@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import type { DailyBar } from "@aifi/core";
+import { stockChartBars, type DailyBar } from "@aifi/core";
 import { money } from "../workspace-context";
 
 export function StockChart({
@@ -13,7 +13,8 @@ export function StockChart({
 }) {
   const [range, setRange] = useState("1Y"),
     [mode, setMode] = useState("Line"),
-    [cursor, setCursor] = useState<number | null>(null);
+    [cursor, setCursor] = useState<number | null>(null),
+    [pointerY, setPointerY] = useState<number | null>(null);
   const host = useRef<HTMLDivElement>(null),
     [width, setWidth] = useState(560);
   useLayoutEffect(() => {
@@ -25,8 +26,9 @@ export function StockChart({
     if (host.current) observer.observe(host.current);
     return () => observer.disconnect();
   }, [symbol, all.length > 0]);
-  const bars = all.slice(
-    -({ "1M": 22, "3M": 65, "1Y": 252, "2Y": 504 }[range] ?? 252),
+  const bars = stockChartBars(
+    all,
+    { "1M": 1, "3M": 3, "1Y": 12, "2Y": 24 }[range] ?? 12,
   );
   useLayoutEffect(() => setCursor(null), [symbol, range]);
   if (!bars.length)
@@ -39,97 +41,137 @@ export function StockChart({
   const height = 300,
     right = width - 52,
     bottom = 210,
-    min = Math.min(...bars.map((b) => b.low)),
-    max = Math.max(...bars.map((b) => b.high)),
+    values =
+      mode === "Line"
+        ? bars.map((b) => b.close)
+        : bars.flatMap((b) => [b.low, b.high]),
+    low = Math.min(...values),
+    high = Math.max(...values),
+    padding = (high - low) * 0.04 || Math.max(1, Math.abs(high) * 0.02),
+    min = low - padding,
+    max = high + padding,
     x = (i: number) => 12 + (i / Math.max(1, bars.length - 1)) * (right - 12),
     y = (v: number) => bottom - ((v - min) / (max - min || 1)) * 190;
   const active =
     cursor === null ? null : bars[Math.min(cursor, bars.length - 1)];
-  const stride = Math.max(1, Math.ceil(bars.length / 64));
+  const maxVolume = Math.max(...bars.map((b) => b.volume), 1);
+  const barWidth = Math.max(
+    0.35,
+    Math.min(8, ((right - 12) / bars.length) * 0.72),
+  );
+  const tipWidth = 178;
+  const tipLeft =
+    cursor === null
+      ? 0
+      : Math.max(
+          4,
+          Math.min(
+            width - tipWidth - 4,
+            x(cursor) > width / 2 ? x(cursor) - tipWidth - 12 : x(cursor) + 12,
+          ),
+        );
+  const tipTop = Math.max(
+    8,
+    Math.min(140, (pointerY ?? (active ? y(active.close) : 20)) - 24),
+  );
+  const selectPoint = (event: React.PointerEvent<SVGSVGElement>) => {
+    const r = event.currentTarget.getBoundingClientRect();
+    setCursor(
+      Math.max(
+        0,
+        Math.min(
+          bars.length - 1,
+          Math.round(
+            ((((event.clientX - r.left) / r.width) * width - 12) /
+              (right - 12)) *
+              (bars.length - 1),
+          ),
+        ),
+      ),
+    );
+    setPointerY(event.clientY - r.top);
+  };
   return (
     <section className="stock-chart-panel" ref={host}>
       <div className="stock-chart-heading">
         <strong>{money(bars.at(-1)!.close)}</strong>
         <small>{range} · Daily close</small>
       </div>
-      <svg
-        className="stock-price-chart"
-        viewBox={`0 0 ${width} ${height}`}
-        role="img"
-        aria-label={`${symbol} ${range} ${mode.toLowerCase()} chart`}
-        tabIndex={0}
-        onMouseMove={(e) => {
-          const r = e.currentTarget.getBoundingClientRect();
-          setCursor(
-            Math.max(
-              0,
-              Math.min(
-                bars.length - 1,
-                Math.round(
-                  ((((e.clientX - r.left) / r.width) * width - 12) /
-                    (right - 12)) *
-                    (bars.length - 1),
+      <div className="stock-chart-canvas">
+        <svg
+          className="stock-price-chart"
+          viewBox={`0 0 ${width} ${height}`}
+          role="img"
+          aria-label={`${symbol} ${range} ${mode.toLowerCase()} chart`}
+          tabIndex={0}
+          onPointerMove={selectPoint}
+          onPointerDown={selectPoint}
+          onPointerLeave={() => {
+            setCursor(null);
+            setPointerY(null);
+          }}
+          onFocus={() => {
+            setCursor(bars.length - 1);
+            setPointerY(null);
+          }}
+          onBlur={() => setCursor(null)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") {
+              setCursor(null);
+              setPointerY(null);
+              return;
+            }
+            if (e.key === "Home" || e.key === "End") {
+              e.preventDefault();
+              setCursor(e.key === "Home" ? 0 : bars.length - 1);
+              setPointerY(null);
+              return;
+            }
+            if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+              e.preventDefault();
+              setPointerY(null);
+              setCursor((i) =>
+                Math.max(
+                  0,
+                  Math.min(
+                    bars.length - 1,
+                    (i ?? bars.length - 1) + (e.key === "ArrowLeft" ? -1 : 1),
+                  ),
                 ),
-              ),
-            ),
-          );
-        }}
-        onMouseLeave={() => setCursor(null)}
-        onFocus={() => setCursor(bars.length - 1)}
-        onBlur={() => setCursor(null)}
-        onKeyDown={(e) => {
-          if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-            e.preventDefault();
-            setCursor((i) =>
-              Math.max(
-                0,
-                Math.min(
-                  bars.length - 1,
-                  (i ?? bars.length - 1) + (e.key === "ArrowLeft" ? -1 : 1),
-                ),
-              ),
-            );
-          }
-        }}
-      >
-        {[0, 1, 2, 3, 4].map((i) => (
-          <g key={i}>
-            <line
-              x1={12}
-              x2={right}
-              y1={20 + i * 47.5}
-              y2={20 + i * 47.5}
-              stroke="var(--border)"
-              strokeDasharray="2 5"
-            />
-            <text
-              x={right + 10}
-              y={24 + i * 47.5}
-              fill="var(--muted)"
-              fontSize={10}
-            >
-              {(max - ((max - min) * i) / 4).toFixed(0)}
-            </text>
-          </g>
-        ))}
-        {bars.map((b, i) =>
-          i % stride === 0 ? (
+              );
+            }
+          }}
+        >
+          {[0, 1, 2, 3, 4].map((i) => (
+            <g key={i}>
+              <line
+                x1={12}
+                x2={right}
+                y1={20 + i * 47.5}
+                y2={20 + i * 47.5}
+                stroke="var(--border)"
+                strokeDasharray="2 5"
+              />
+              <text
+                x={right + 10}
+                y={24 + i * 47.5}
+                fill="var(--muted)"
+                fontSize={10}
+              >
+                {(max - ((max - min) * i) / 4).toFixed(0)}
+              </text>
+            </g>
+          ))}
+          {bars.map((b, i) => (
             <g key={b.date}>
               <rect
-                x={x(i)}
-                y={
-                  278 -
-                  (b.volume / Math.max(...bars.map((v) => v.volume), 1)) * 45
-                }
-                width={Math.max(
-                  2,
-                  ((right - 12) / (bars.length / stride)) * 0.65,
-                )}
-                height={
-                  (b.volume / Math.max(...bars.map((v) => v.volume), 1)) * 45
-                }
-                fill="var(--muted)"
-                opacity={0.24}
+                className="stock-volume-bar"
+                x={x(i) - barWidth / 2}
+                y={278 - (b.volume / maxVolume) * 52}
+                width={barWidth}
+                height={(b.volume / maxVolume) * 52}
+                fill={b.close >= b.open ? "var(--positive)" : "var(--negative)"}
+                opacity={0.45}
               />
               {mode === "Candle" && (
                 <>
@@ -141,12 +183,14 @@ export function StockChart({
                     stroke={
                       b.close >= b.open ? "var(--positive)" : "var(--negative)"
                     }
+                    strokeWidth={Math.min(1, barWidth)}
                   />
                   <rect
-                    x={x(i) - 2}
-                    y={y(Math.max(b.close, b.open))}
-                    width={4}
-                    height={Math.max(2, Math.abs(y(b.close) - y(b.open)))}
+                    className="stock-candle-bar"
+                    x={x(i) - barWidth / 2}
+                    y={y(Math.max(b.open, b.close))}
+                    width={barWidth}
+                    height={Math.max(1, Math.abs(y(b.open) - y(b.close)))}
                     fill={
                       b.close >= b.open ? "var(--positive)" : "var(--negative)"
                     }
@@ -154,52 +198,95 @@ export function StockChart({
                 </>
               )}
             </g>
-          ) : null,
-        )}
-        {mode === "Line" && (
-          <polyline
-            points={bars.map((b, i) => `${x(i)},${y(b.close)}`).join(" ")}
-            fill="none"
-            stroke="var(--positive)"
-            strokeWidth={1.8}
-          />
-        )}
+          ))}
+          {mode === "Line" && (
+            <polyline
+              points={bars.map((b, i) => `${x(i)},${y(b.close)}`).join(" ")}
+              fill="none"
+              stroke="var(--positive)"
+              strokeWidth={1.8}
+            />
+          )}
+          {active && (
+            <>
+              <line
+                x1={x(cursor!)}
+                x2={x(cursor!)}
+                y1={16}
+                y2={280}
+                stroke="var(--secondary)"
+                strokeDasharray="3 4"
+              />
+              <line
+                x1={12}
+                x2={right}
+                y1={y(active.close)}
+                y2={y(active.close)}
+                stroke="var(--secondary)"
+                strokeDasharray="3 4"
+              />
+              <circle
+                cx={x(cursor!)}
+                cy={y(active.close)}
+                r={3.5}
+                fill="var(--positive)"
+              />
+            </>
+          )}
+          <text x={12} y={298} fill="var(--muted)" fontSize={10}>
+            {bars[0]!.date}
+          </text>
+          <text
+            x={right}
+            y={298}
+            textAnchor="end"
+            fill="var(--muted)"
+            fontSize={10}
+          >
+            {bars.at(-1)!.date}
+          </text>
+        </svg>
         {active && (
-          <>
-            <line
-              x1={x(cursor!)}
-              x2={x(cursor!)}
-              y1={16}
-              y2={280}
-              stroke="var(--secondary)"
-              strokeDasharray="3 4"
-            />
-            <circle
-              cx={x(cursor!)}
-              cy={y(active.close)}
-              r={3.5}
-              fill="var(--positive)"
-            />
-          </>
+          <div
+            className="stock-chart-tooltip"
+            role="tooltip"
+            style={{ left: tipLeft, top: tipTop, width: tipWidth }}
+          >
+            <time dateTime={active.date}>
+              {active.date}
+              <span>Daily</span>
+            </time>
+            <dl>
+              {(
+                [
+                  ["Open", money(active.open)],
+                  ["High", money(active.high)],
+                  ["Low", money(active.low)],
+                  ["Close", money(active.close)],
+                  [
+                    "Volume",
+                    new Intl.NumberFormat("en-US").format(active.volume),
+                  ],
+                ] as const
+              ).map(([label, value]) => (
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         )}
-        <text x={12} y={298} fill="var(--muted)" fontSize={10}>
-          {bars[0]!.date}
-        </text>
-        <text
-          x={right}
-          y={298}
-          textAnchor="end"
-          fill="var(--muted)"
-          fontSize={10}
-        >
-          {bars.at(-1)!.date}
-        </text>
-      </svg>
-      <div className="stock-chart-readout" aria-live="polite">
-        {active
-          ? `${active.date} · O ${money(active.open)} · H ${money(active.high)} · L ${money(active.low)} · C ${money(active.close)}`
-          : `Daily OHLCV · ${adjusted ? "Split-adjusted" : "Unadjusted"}`}
       </div>
+      <div className="stock-chart-readout">
+        Daily OHLCV · {adjusted ? "Split-adjusted" : "Unadjusted"} ·{" "}
+        {bars.length} sessions
+      </div>
+      <span className="sr-only" aria-live="polite">
+        {active
+          ? `${active.date} · Open ${money(active.open)} · High ${money(active.high)} · Low ${money(active.low)} · Close ${money(active.close)} · Volume ${active.volume}`
+          : ""}
+      </span>
       <div className="stock-chart-controls">
         <div className="segmented-control" aria-label="Price range">
           {["1M", "3M", "1Y", "2Y"].map((r) => (
