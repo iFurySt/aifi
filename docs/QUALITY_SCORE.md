@@ -36,3 +36,9 @@ and complete-report absence checks. Full institutional census, ambiguous amendme
 corporate-action-adjusted history and broad CUSIP normalization remain gaps. Fund
 logos have strict identity/cache/offline checks; ring/table checks cover true zeros,
 report gaps, selection and 14-quarter desktop/mobile layout.
+
+The [stock coverage audit](references/stock-data-coverage-audit.md) distinguishes
+queued work from stored snapshots and records initial-collection gaps. A bounded
+symbol repair path preserves source budgets/leases; protected index members lead
+the alphabetical backlog. These mechanisms improve repairability, but do not imply
+complete source fields or whole-universe freshness; area scores stay unchanged.

@@ -54,6 +54,10 @@ export function StockChart({
     y = (v: number) => bottom - ((v - min) / (max - min || 1)) * 190;
   const active =
     cursor === null ? null : bars[Math.min(cursor, bars.length - 1)];
+  const trendColor =
+    bars.at(-1)!.close >= bars[0]!.close
+      ? "var(--positive)"
+      : "var(--negative)";
   const maxVolume = Math.max(...bars.map((b) => b.volume), 1);
   const barWidth = Math.max(
     0.35,
@@ -203,7 +207,7 @@ export function StockChart({
             <polyline
               points={bars.map((b, i) => `${x(i)},${y(b.close)}`).join(" ")}
               fill="none"
-              stroke="var(--positive)"
+              stroke={trendColor}
               strokeWidth={1.8}
             />
           )}
@@ -229,7 +233,7 @@ export function StockChart({
                 cx={x(cursor!)}
                 cy={y(active.close)}
                 r={3.5}
-                fill="var(--positive)"
+                fill={trendColor}
               />
             </>
           )}

@@ -254,8 +254,9 @@ func (s *Store) ClaimResearchJob(ctx context.Context, provider string, enabled [
 	}
 	args = append(args, now.AddDate(0, 0, -14).Format("2006-01-02"))
 	var j market.Job
-	// Mapping and recent market batches lead history and per-company enrichment.
-	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY CASE WHEN dataset='identity' THEN 0 WHEN provider='massive' AND dataset='prices' AND subject>=? THEN 1 WHEN dataset='actions' AND subject='us' THEN 2 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN dataset='prices' THEN 3 ELSE 4 END,CASE WHEN provider='massive' AND dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
+	// Explicit repairs lead automatic work. Current index members (including shared
+	// SEC issuers) lead the alphabetical universe without duplicating constituent lists.
+	e = tx.QueryRowContext(ctx, `SELECT id,provider,dataset,subject,window,attempts,manual FROM research_jobs WHERE provider=? AND next_run<=? AND state IN ('queued','idle','failed') AND dataset IN (`+strings.Join(marks, ",")+`)`+manualFilter+` ORDER BY manual DESC,CASE WHEN dataset='identity' THEN 0 WHEN provider='massive' AND dataset='prices' AND subject>=? THEN 1 WHEN dataset='actions' AND subject='us' THEN 2 WHEN subject IN ('AAPL','MSFT','NVDA','cik:0000320193','cik:0000789019','cik:0001045810') THEN 2 WHEN subject IN (SELECT m.symbol FROM index_heads h JOIN index_memberships m ON m.snapshot_id=h.snapshot_id UNION SELECT 'cik:'||a.cik FROM index_heads h JOIN index_memberships m ON m.snapshot_id=h.snapshot_id JOIN research_aliases a ON a.symbol=m.symbol) THEN 3 WHEN dataset='prices' THEN 4 ELSE 5 END,CASE WHEN provider='massive' AND dataset='prices' THEN subject END DESC,next_run,id LIMIT 1`, args...).Scan(&j.ID, &j.Provider, &j.Dataset, &j.Subject, &j.Window, &j.Attempts, &j.Manual)
 	if errors.Is(e, sql.ErrNoRows) {
 		return nil, nil
 	}

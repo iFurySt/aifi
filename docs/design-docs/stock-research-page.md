@@ -136,3 +136,11 @@ and test issues; remaining records are candidates, not verified common shares.
 Stock rows/header use optional decorative logos with letter fallback; this does
 not infer company profiles or make sample quotes live. See
 [logo capability](stock-logos.md).
+
+## Range trend color
+
+Line charts and their hover points use the selected range's first-to-last close
+for red/green direction; daily candle/volume colors still compare each session's
+close with open. Chart colors do not follow a hardcoded positive tint or the
+unrelated current-day quote. Data completeness/source disagreements are recorded
+in the [coverage audit](../references/stock-data-coverage-audit.md).

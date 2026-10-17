@@ -114,6 +114,7 @@ See [sources and provenance](../../docs/references/stock-index-sources.md).
 ./bin/aifi data research status
 ./bin/aifi data research read AAPL
 ./bin/aifi data research sync
+./bin/aifi data research sync --symbols ADBE,BABA  # bounded repair, at most 50
 ```
 
 `read`/`status` are SQLite-only. `sync` reconciles every current non-test/non-ETF
@@ -154,3 +155,18 @@ than seven days have a default 30-day repair interval until settings are changed
 A conservative previous-New-York-date watermark avoids collecting an unfinished
 session; weekends are skipped and empty holiday responses remain evidenced.
 This is EOD collection, not an exchange-grade real-time market calendar.
+
+## Coverage Audit And Repair
+
+Use `python3 scripts/audit-stock-coverage.py --db /path/to/aifi.sqlite` from the
+repository root for a read-only coverage/error summary. It uses Python 3's
+standard library, never reads credentials and never calls a provider. Stored
+snapshot counts do not guarantee complete fields or current quotes.
+
+Targeted `research sync --symbols` validates all symbols before queuing enabled,
+configured-source jobs, including mapped SEC issuers. It preserves blocked
+entitlements, active leases and retired history. Manual repairs lead background
+work; protected index membership prioritizes company/issuer initial collection
+before the alphabetical universe. Whole-directory work continues under existing
+provider budgets; a queue is not a claim of complete collection. See the
+[audit](../../docs/references/stock-data-coverage-audit.md) for the observed gaps.

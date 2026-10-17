@@ -97,6 +97,7 @@ func New() *cobra.Command {
 	daemon.Flags().BoolVar(&offline, "offline", false, "Pause network work while keeping settings/cache available")
 	root.AddCommand(daemon)
 	researchCommand := &cobra.Command{Use: "research", Short: "Persisted whole-directory research datasets"}
+	var syncSymbols []string
 	researchCommand.AddCommand(&cobra.Command{Use: "status", Args: cobra.NoArgs, RunE: func(cmd *cobra.Command, _ []string) error {
 		return withStore(cmd, func(ctx context.Context, db *store.Store) (any, error) { return db.ResearchStatus(ctx) })
 	}}, &cobra.Command{Use: "read SYMBOL", Args: cobra.ExactArgs(1), RunE: func(cmd *cobra.Command, args []string) error {
@@ -108,12 +109,21 @@ func New() *cobra.Command {
 			if e := research.New(db, dataDir, false).Reconcile(ctx, true); e != nil {
 				return nil, e
 			}
-			if e := db.RequestResearchSync(ctx); e != nil {
+			if len(syncSymbols) > 0 {
+				if e := db.RequestSymbolResearchSync(ctx, syncSymbols); e != nil {
+					return nil, e
+				}
+			} else if e := db.RequestResearchSync(ctx); e != nil {
 				return nil, e
 			}
 			return db.ResearchStatus(ctx)
 		})
 	}})
+	for _, command := range researchCommand.Commands() {
+		if command.Name() == "sync" {
+			command.Flags().StringSliceVar(&syncSymbols, "symbols", nil, "Queue selected directory symbols (at most 50), preserving provider limits")
+		}
+	}
 	data.AddCommand(researchCommand)
 	dir.AddCommand(sync, list, status)
 	return root
