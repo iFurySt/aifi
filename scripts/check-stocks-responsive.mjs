@@ -155,11 +155,13 @@ async function checks(phase, width) {
     if (main().clientWidth <= 700) {
       const positions = [
         ".stock-quote",
-        ".stock-price-section",
-        ".stock-metrics-column",
         ".stock-company-about",
         ".stock-analyst-overview",
         ".stock-earnings-overview",
+        ".stock-metrics-column",
+        ".stock-price-section",
+        ".stock-news-overview",
+        ".stock-filings-overview",
       ].map((s) => document.querySelector(s).getBoundingClientRect().top);
       assert(
         positions.every((y, i) => i === 0 || y > positions[i - 1]),
@@ -292,16 +294,128 @@ async function checks(phase, width) {
         "Selected tab is not revealed: " + tab,
       );
       const table = document.querySelector(".table-scroll");
-      if (table)
+      if (table) {
         assert(
           table.clientWidth <= main().clientWidth,
           "Table is not contained",
         );
+        if (table.scrollWidth > table.clientWidth) {
+          table.scrollLeft = 60;
+          assert(table.scrollLeft > 0, tab + " table cannot scroll locally");
+          table.scrollLeft = 0;
+        }
+      }
+      const body = document.querySelector(`#stock-panel-${tab}`);
+      for (const control of body.querySelectorAll(
+        ".select-trigger, .activity-search, .funds-search, .segmented-control",
+      )) {
+        const bounds = control.getBoundingClientRect(),
+          page = main().getBoundingClientRect();
+        assert(
+          bounds.left >= page.left - 1 && bounds.right <= page.right + 1,
+          tab + " control escapes the document",
+        );
+      }
+      const empty = new URLSearchParams(location.search).has("empty");
+      const sequences = {
+        financials: [
+          ".financial-heading",
+          ".financial-trend",
+          ".stock-table-toolbar",
+          empty ? ".stock-no-data" : ".financial-table-panel",
+        ],
+        funds: [
+          ".funds-heading",
+          ".funds-toolbar",
+          ...(!empty ? [".fund-ownership-visual"] : []),
+          ".funds-data-heading",
+          ".funds-table-toolbar",
+          ".table-panel",
+        ],
+        politicians: [
+          ".activity-heading",
+          ...(!empty ? [".politician-leaders"] : []),
+          ".activity-toolbar",
+          ".activity-chart",
+          ".activity-data-heading",
+          ".activity-table",
+        ],
+        insiders: [
+          ".activity-heading",
+          ".activity-toolbar",
+          ".activity-chart",
+          ".activity-data-heading",
+          ".activity-table",
+        ],
+        analyst: body.querySelector(".analysts-page")
+          ? [
+              ".activity-heading",
+              ".analyst-overview",
+              ".activity-data-heading",
+              ".activity-toolbar",
+              ".analyst-events",
+            ]
+          : [
+              "h2",
+              ".stock-analyst-summary",
+              ...(!empty ? [".stock-recommendations"] : []),
+              ".table-panel",
+            ],
+      };
+      const ordered = sequences[tab]?.map((selector) => {
+        const el = body.querySelector(selector);
+        assert(!!el, tab + " section missing: " + selector);
+        return el.getBoundingClientRect();
+      });
+      if (ordered)
+        assert(
+          ordered.every(
+            (rect, i) => i === 0 || rect.top >= ordered[i - 1].bottom - 1,
+          ),
+          tab + " section order/spacing differs",
+        );
+      if (
+        tab === "analyst" &&
+        !empty &&
+        body.querySelector(".stock-recommendations")
+      ) {
+        const ratings = [
+          ...body.querySelectorAll(".stock-recommendations > div"),
+        ];
+        assert(
+          ratings.length === 5 &&
+            ratings.every(
+              (el) =>
+                Math.abs(
+                  el.getBoundingClientRect().top -
+                    ratings[0].getBoundingClientRect().top,
+                ) < 1,
+            ),
+          "Analyst spectrum wraps into unrelated rows",
+        );
+      }
+      if (
+        tab === "funds" &&
+        !empty &&
+        body.querySelector(".funds-page").clientWidth <= 440
+      ) {
+        const holder = body
+            .querySelector(".fund-ring-holder")
+            .getBoundingClientRect(),
+          ring = body.querySelector(".fund-ring-wrap").getBoundingClientRect();
+        assert(
+          ring.top >= holder.bottom,
+          "Narrow selected holder overlaps the ring",
+        );
+      }
     }
     return {
       allTabsFit: true,
       selectedTabVisible: true,
       tableScrollContained: true,
+      sectionOrder: true,
+      controlsContained: true,
+      populated: !new URLSearchParams(location.search).has("empty"),
     };
   }
 }
@@ -321,7 +435,9 @@ app.whenReady().then(async()=>{
   await resize(760);await resize(1440);report.push(await run('restorePreference',1440));
   await resize(900);report.push(await run('select',900));
   await win.loadFile(path.join(__dirname,'index.html'),{query:{host:'web'}});
-  for(const width of [600,390]){await win.webContents.executeJavaScript("location.hash='/stocks/AAPL?tab=chart'");await resize(width);report.push(await run('layout',width));report.push(await run('tabs',width));fs.writeFileSync(path.join(__dirname,'web-'+width+'.png'),(await win.webContents.capturePage()).toPNG());}
+  for(const width of [600,390]){await win.webContents.executeJavaScript("location.hash='/stocks/AAPL?tab=chart'");await resize(width);report.push(await run('layout',width));report.push(await run('tabs',width));for(const tab of ['chart','financials','funds','politicians','insiders','analyst']){await win.webContents.executeJavaScript("document.querySelector('#stock-tab-"+tab+"').click();document.querySelector('.stock-main').scrollTop=0");await new Promise(r=>setTimeout(r,60));fs.writeFileSync(path.join(__dirname,'tab-'+width+'-'+tab+'.png'),(await win.webContents.capturePage()).toPNG());}fs.writeFileSync(path.join(__dirname,'web-'+width+'.png'),(await win.webContents.capturePage()).toPNG());}
+  await win.loadFile(path.join(__dirname,'index.html'),{query:{host:'web',empty:'1'}});
+  await resize(390);report.push(await run('tabs',390));
   fs.writeFileSync(path.join(__dirname,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));app.exit(0);
  }catch(error){console.error(error);console.error(await win.webContents.executeJavaScript('document.body.innerText.slice(0,1800)'));fs.writeFileSync(path.join(__dirname,'failure.png'),(await win.webContents.capturePage()).toPNG());app.exit(1)}
 });setTimeout(()=>{console.error('Stocks responsive check timed out');app.exit(1)},30000);`;
@@ -352,6 +468,19 @@ if (exit === 0) {
     "web-390",
   ])
     await copyFile(join(output, name + ".png"), join(reports, name + ".png"));
+  for (const width of [600, 390])
+    for (const tab of [
+      "chart",
+      "financials",
+      "funds",
+      "politicians",
+      "insiders",
+      "analyst",
+    ])
+      await copyFile(
+        join(output, `tab-${width}-${tab}.png`),
+        join(reports, `tab-${width}-${tab}.png`),
+      );
   await rm(output, { recursive: true, force: true });
 }
 process.exitCode = exit;

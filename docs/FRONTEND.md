@@ -410,7 +410,7 @@ selected stock, loaded list position, chart range and Line/Candle state.
 Use document container widths, rather than screen width, for content: above
 1000px retain three independent columns; 701–1000px place quote/About beside the
 chart, then full-width metrics/peers and paired company/news panels. At 700px
-and below, order quote, price chart, metrics/peers, About, Analyst, Earnings,
+and below, order quote, About, Analyst, Earnings, metrics/Peers, price chart,
 Digest and filings vertically. No company section is hidden to fit the window.
 At 440px and below, compact the watch control to an accessible 40px star button
 and stack summary cards. Financial/activity tables scroll within their wrappers.
@@ -421,7 +421,9 @@ selected tab using only horizontal scroll, retaining document position.
 windows at 1440/1279/1100/900/760px and Web at 600/390px. It verifies no page
 horizontal overflow, all company sections, chart DOM/range/style retention,
 list position/filter retention, drawer keyboard/selection/dismissal, wide
-preference restoration and every tab's visibility/table containment. Its injected
+preference restoration and every tab's visibility/table containment. Populated
+and empty fixtures also assert per-tab reading order, bounded controls, local
+table scrolling and compact fund identity/ring stacking. Its injected
 local fixtures do not use real credentials, inference or provider collection.
 
 ## Storage Settings

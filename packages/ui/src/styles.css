@@ -2660,19 +2660,19 @@ kbd {
     order: 0;
   }
   .stock-price-section {
-    order: 1;
+    order: 5;
   }
   .stock-metrics-column {
-    order: 2;
-  }
-  .stock-company-about {
-    order: 3;
-  }
-  .stock-analyst-overview {
     order: 4;
   }
+  .stock-company-about {
+    order: 1;
+  }
+  .stock-analyst-overview {
+    order: 2;
+  }
   .stock-earnings-overview {
-    order: 5;
+    order: 3;
   }
   .stock-news-overview {
     order: 6;
@@ -2734,8 +2734,11 @@ kbd {
     min-height: 40px;
   }
   .stock-recommendations {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .stock-recommendations span {
+    font-size: 11px;
   }
 }
 @container (max-width:440px) {
@@ -4118,13 +4121,13 @@ kbd {
   font-size: 10px;
   font-weight: 400;
 }
-@media (max-width: 599px) {
+@container (max-width:700px) {
   .financial-data-table th:first-child {
-    width: 210px;
-    min-width: 210px;
+    width: 170px;
+    min-width: 170px;
   }
   .financial-row-label > span {
-    max-width: 160px;
+    max-width: 120px;
   }
   .financial-data-table th,
   .financial-data-table td {
@@ -4132,6 +4135,14 @@ kbd {
   }
   .financial-group-row button {
     left: 10px;
+  }
+  .financial-workspace .stock-table-toolbar {
+    align-items: stretch;
+    gap: 10px;
+  }
+  .financial-workspace .stock-table-toolbar > .select-trigger {
+    flex: 1 1 150px;
+    justify-content: space-between;
   }
 }
 

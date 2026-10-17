@@ -286,7 +286,8 @@ rearrangement below are AIFi choices.
   daily price/volume chart followed by Digest and recent filings. Thin vertical
   dividers separate columns. Quote is 32px; metrics use tabular figures.
 - At content widths below 1,000px move metrics below identity beside the chart;
-  below 660px prioritize quote, chart, metrics. Tabs and tables scroll internally.
+  at 700px and below keep quote, About, Analyst and Earnings together before
+  metrics/Peers and the price chart. Tabs and tables scroll internally.
 - Chart controls: 1M/3M/1Y/2Y and Line/Candle; hover/keyboard details use the same
   persisted daily OHLCV observations. SVG dimensions follow rendered width to keep
   labels legible. Use a compact dark crosshair tooltip for session date, OHLC and
@@ -399,8 +400,8 @@ share its filter with the drawer. The rail remains visible above phone widths.
 
 Use the actual document container to reflow content. Above 1000px keep the three
 columns. Between 701 and 1000px, pair quote/About with the chart, followed by
-metrics/peers and paired secondary panels. Below 701px, show quote and chart
-first, then metrics, About, Analyst, Earnings, Digest and filings. Keep every
+metrics/peers and paired secondary panels. Below 701px, show quote, About,
+Analyst, Earnings, metrics/Peers, price chart, Digest and filings. Keep every
 section and a single mounted chart; resizing must preserve its range and mode.
 
 Keep company identity compact, ellipsize long names and retain the watch action.
@@ -408,6 +409,13 @@ Below a 440px document, use a 40px icon-only watch button with an accessible nam
 16px content padding and stacked summary rows. Tabs use horizontal scrolling and
 automatically reveal the selected label. Dense tables retain internal scrolling;
 they must not widen the document or the window.
+
+Below a 440px detail body, put the selected fund identity above its ownership
+ring. Let holder search and activity search use their own row, with filters
+following in source order. Keep period controls and long selected values bounded.
+Financial tables compact their pinned metric column based on document width so
+at least part of the period data stays visible. Research tabs keep overview or
+visualization before their data headings, filters and internally scrolling tables.
 
 ## Shared value selectors
 

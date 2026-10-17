@@ -54,6 +54,111 @@ const view = (data: ResearchDatasetView["data"]): ResearchDatasetView => ({
   recordCount: 1,
   data,
 });
+const empty = new URLSearchParams(location.search).has("empty");
+const extraDatasets = empty
+  ? {}
+  : {
+      facts: view({
+        facts: Array.from({ length: 8 }, (_, i) => {
+          const year = 2025 + Math.floor(i / 4),
+            quarter = i % 4;
+          return {
+            metric: "revenue",
+            tag: "us-gaap:Revenues",
+            unit: "USD",
+            value: String(1000 + i * 50),
+            start: new Date(Date.UTC(year, quarter * 3, 1))
+              .toISOString()
+              .slice(0, 10),
+            end: new Date(Date.UTC(year, quarter * 3 + 3, 0))
+              .toISOString()
+              .slice(0, 10),
+            fiscalYear: year,
+            fiscalPeriod: `Q${quarter + 1}`,
+            form: "10-Q",
+          };
+        }),
+      }),
+      funds: view({
+        records: [
+          {
+            recordKind: "holding",
+            holderKind: "institution",
+            holderId: "alpha",
+            name: "An exceptionally long synthetic investment manager name",
+            reportDate: "2026-06-30",
+            shares: 100,
+            current: true,
+          },
+          {
+            recordKind: "holding",
+            holderKind: "institution",
+            holderId: "alpha",
+            name: "An exceptionally long synthetic investment manager name",
+            reportDate: "2026-03-31",
+            shares: 80,
+            current: false,
+          },
+        ],
+      }),
+      politicians: view({
+        records: [
+          {
+            id: "fixture",
+            name: "A deliberately long synthetic politician name",
+            chamber: "house",
+            type: "buy",
+            transactionDate: "2026-10-01",
+            amount: "$1,001 - $15,000",
+          },
+        ],
+      }),
+      insiders: view({
+        records: [
+          {
+            id: "fixture",
+            name: "A deliberately long synthetic officer name",
+            date: "2026-10-01",
+            code: "S",
+            direction: "D",
+            shares: "10",
+            price: "12.5",
+            securityKind: "nonDerivative",
+          },
+        ],
+      }),
+      analyst: view({
+        records: [
+          {
+            recordKind: "price-target-consensus",
+            targetConsensus: 140,
+            targetLow: 100,
+            targetHigh: 170,
+            analystCount: 20,
+            recommendationMean: 2.1,
+            recommendation: "buy",
+          },
+          {
+            recordKind: "recommendations",
+            count: 20,
+            strongSell: 1,
+            sell: 2,
+            hold: 3,
+            buy: 10,
+            strongBuy: 4,
+          },
+          {
+            recordKind: "grades",
+            date: "2026-10-01",
+            gradingCompany:
+              "An exceptionally long synthetic research firm name",
+            previousGrade: "Hold",
+            newGrade: "Buy",
+            action: "upgrade",
+          },
+        ],
+      }),
+    };
 location.hash = "/stocks/AAPL?tab=chart";
 createRoot(document.getElementById("root")!).render(
   <App
@@ -90,6 +195,7 @@ createRoot(document.getElementById("root")!).render(
           volume: 1000000 + i * 1000,
         })),
         datasets: {
+          ...extraDatasets,
           profile: view({
             complete: true,
             profile: {

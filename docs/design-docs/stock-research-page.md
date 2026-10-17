@@ -80,7 +80,7 @@ Outer menu | Stock list | Company / ticker          Search    Watchlist
 Three flexible columns use thin vertical separators above a 1000px document.
 Between 701 and 1000px, quote/About sit beside the price chart, then metrics/peers
 span the document and secondary sections form pairs. At 700px and below, stack
-quote, chart, metrics/peers, About, Analyst, Earnings, Digest and recent filings.
+quote, About, Analyst, Earnings, metrics/Peers, price chart, Digest and recent filings.
 Do not hide deep company sections. At 440px and below use compact headers,
 40px watch targets and stacked summary rows. CSS reflows one section/chart tree
 so chart mode/range and the mounted list's position survive resizing.
@@ -144,3 +144,19 @@ for red/green direction; daily candle/volume colors still compare each session's
 close with open. Chart colors do not follow a hardcoded positive tint or the
 unrelated current-day quote. Data completeness/source disagreements are recorded
 in the [coverage audit](../references/stock-data-coverage-audit.md).
+
+## Narrow-tab reference review (2026-10-18)
+
+Live Rallies at 390/613/760px confirms that Chart completes the company column
+before metrics/Peers, then the price chart/Digest. Funds shows its overview/ring
+before Data; Politicians shows leaders/timeline before Data; Insiders shows its
+timeline before Activity; Analyst shows its consensus visualization before
+updates. Financials remained blank in this review, so AIFi retains its financial
+chart, statement/period controls and table order without claiming exact parity.
+
+At a detail-body width of 440px or less, fund identity sits above the ring;
+search precedes wrapped filters, and long selector labels truncate. Financials
+uses a narrower pinned metric column at document widths up to 700px, including
+narrow desktop windows. Data tables scroll locally. The responsive fixture checks
+populated and empty versions of all six tabs as well as each visible control's
+bounds and the ordered, non-overlapping section rectangles.

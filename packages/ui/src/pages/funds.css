@@ -305,3 +305,48 @@
   width: 32px;
   height: 32px;
 }
+
+/* The document width, rather than the window width, drives detail controls. */
+@container (max-width: 440px) {
+  .funds-period-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .fund-ownership-visual {
+    flex-direction: column;
+    min-height: 0;
+    padding-block: 12px;
+  }
+  .fund-ring-holder {
+    width: 100%;
+    gap: 8px;
+  }
+  .fund-ring-holder strong {
+    max-width: min(220px, 65%);
+  }
+  .fund-ring-wrap {
+    width: min(300px, 100%);
+  }
+  .funds-data-heading {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .funds-data-heading > .select-trigger {
+    max-width: calc(100% - 48px);
+  }
+  .funds-table-toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .funds-search {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .funds-table th:first-child {
+    min-width: 150px;
+    max-width: 150px;
+  }
+  .fund-name > span:last-child {
+    max-width: 95px;
+  }
+}
