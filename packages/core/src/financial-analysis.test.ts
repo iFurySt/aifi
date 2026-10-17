@@ -80,7 +80,7 @@ describe("financial statement presentation", () => {
     ).toEqual([]);
     expect(
       financialMetricSeries(
-        [f("revenue", 100, end, start), f("netIncome", 25, end, "2026-01-01")],
+        [f("revenue", 100, end, start), f("netIncome", 25, end, "2026-03-20")],
         "netMargin",
         "Quarter",
       ),

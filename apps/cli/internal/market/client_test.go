@@ -187,3 +187,12 @@ func TestExpandedSECStatementsPreserveUnitsPeriodsAndProvenance(t *testing.T) {
 		t.Fatal(units)
 	}
 }
+
+func TestSECRejectsNonFiniteStatementValues(t *testing.T) {
+	c := testClient(t, func(*http.Request) (int, string) {
+		return 200, `{"entityName":"Fixture","facts":{"us-gaap":{"ResearchAndDevelopmentExpense":{"units":{"USD":[{"val":"NaN","start":"2026-01-01","end":"2026-03-31","filed":"2026-04-30"}]}}}}}`
+	})
+	if _, err := c.Collect(context.Background(), Job{Provider: "sec", Dataset: "facts", Subject: "cik:0000000123"}); err == nil || err.Error() != "invalid_fact_value" {
+		t.Fatal("nonfinite fact accepted", err)
+	}
+}

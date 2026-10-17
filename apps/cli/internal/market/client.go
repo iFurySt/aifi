@@ -9,6 +9,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"math"
 	"net/http"
 	"net/url"
 	"regexp"
@@ -446,7 +447,7 @@ func (c *Client) facts(ctx context.Context, j Job, r *Result) error {
 						if !validDate(end) || !validDate(filed) || end < cutoff || val == "" {
 							continue
 						}
-						if _, e := strconv.ParseFloat(val, 64); e != nil {
+						if n, e := strconv.ParseFloat(val, 64); e != nil || math.IsNaN(n) || math.IsInf(n, 0) {
 							return &Failure{Code: "invalid_fact_value"}
 						}
 						r.Payload.Facts = append(r.Payload.Facts, Fact{Metric: metric, Tag: ns + ":" + tag, Unit: unit, Value: val, Start: text(f["start"]), End: end, Filed: filed, Accession: text(f["accn"]), Form: text(f["form"]), FiscalYear: int(number(f["fy"])), FiscalPeriod: text(f["fp"])})

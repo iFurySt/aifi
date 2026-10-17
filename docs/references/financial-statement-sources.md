@@ -70,3 +70,12 @@ Snapshots carry a financial normalization version. Old successful snapshots are
 woken through durable background jobs, with existing source selection, budgets,
 pause flags and failed backoff. Reads retain last-good SQLite data while updating;
 opening Financials never fetches provider data or starts a hidden sync.
+
+## Persisted application validation
+
+The upgraded scheduler committed version-1 snapshots into the actual local
+SQLite store: AAPL 1,981 records/63 metrics, MSFT 1,718/51 and NVDA 1,747/55.
+Ordinary local reads returned `stored`; AAPL's page showed 20 quarters, while its
+annual view showed six actual year ends. Opening NVDA displayed its own financial
+values and dates. These are observed examples, not guaranteed universe coverage.
+All supported directory candidates continue through the existing background queue.

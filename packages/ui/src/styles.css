@@ -3928,3 +3928,222 @@ kbd {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Financial history uses stored periods; charts and dense tables share metrics. */
+.financial-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.financial-heading h2 {
+  font-size: 18px;
+  font-weight: 550;
+}
+.financial-heading .research-source-chip {
+  margin: 0;
+}
+.financial-trend {
+  position: relative;
+  min-width: 0;
+  margin: 20px 0 22px;
+}
+.financial-trend svg {
+  display: block;
+  cursor: crosshair;
+}
+.financial-trend-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--secondary);
+}
+.financial-trend-legend span,
+.financial-trend-tooltip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.financial-trend-legend i,
+.financial-trend-tooltip i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.financial-grid-line {
+  stroke: var(--border);
+  stroke-dasharray: 3 5;
+}
+.financial-crosshair {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  pointer-events: none;
+}
+.financial-axis-label {
+  fill: var(--muted);
+  font-size: 10px;
+}
+.financial-trend-tooltip {
+  position: absolute;
+  top: 42px;
+  z-index: 3;
+  padding: 11px 12px;
+  border-radius: 9px;
+  background: #181818;
+  color: #f7f7f7;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 16%);
+  pointer-events: none;
+  font-size: 11px;
+}
+.financial-trend-tooltip strong {
+  display: block;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  border-bottom: 1px solid #ffffff25;
+  font-weight: 500;
+}
+.financial-trend-tooltip > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+.financial-trend-tooltip span {
+  min-width: 0;
+}
+.financial-trend-tooltip .financial-tooltip-label {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.financial-trend-tooltip b {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.financial-trend-tooltip i {
+  outline: 1px solid #ffffff40;
+}
+.financial-trend-empty {
+  display: grid;
+  place-items: center;
+  height: 200px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.financial-data-table {
+  min-width: max-content;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+.financial-data-table th,
+.financial-data-table td {
+  padding: 10px 14px;
+}
+.financial-data-table thead th {
+  text-align: right;
+  font-size: 11px;
+}
+.financial-data-table th:first-child {
+  width: 260px;
+  min-width: 260px;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+}
+.financial-data-table tbody th {
+  background: var(--canvas);
+  font-weight: 450;
+  font-size: 12px;
+}
+.financial-data-table td {
+  min-width: 105px;
+  text-align: right;
+  font-size: 12px;
+}
+.financial-data-table sup {
+  margin-left: 2px;
+  color: var(--muted);
+  font-size: 9px;
+}
+.financial-row-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.financial-row-label > span {
+  width: 205px;
+  max-width: 205px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.financial-series-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+}
+.financial-series-toggle[aria-pressed="true"] {
+  background: var(--text);
+  color: var(--canvas);
+  border-color: var(--text);
+}
+.financial-series-toggle:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.financial-series-toggle:hover:not(:disabled),
+.financial-series-toggle:focus-visible {
+  border-color: var(--secondary);
+}
+.financial-data-table .financial-group-row th {
+  background: var(--surface-muted);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.financial-group-row button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: sticky;
+  left: 14px;
+  font-size: 11px;
+  font-weight: 550;
+  color: var(--secondary);
+}
+.financial-group-row button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+.financial-group-row small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+@media (max-width: 599px) {
+  .financial-data-table th:first-child {
+    width: 210px;
+    min-width: 210px;
+  }
+  .financial-row-label > span {
+    max-width: 160px;
+  }
+  .financial-data-table th,
+  .financial-data-table td {
+    padding: 10px;
+  }
+  .financial-group-row button {
+    left: 10px;
+  }
+}

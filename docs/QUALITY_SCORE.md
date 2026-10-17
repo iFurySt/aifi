@@ -23,3 +23,8 @@ Storage inspection now has Go page-accounting and no-collection tests, host
 inventory/path/symlink/pagination tests, and an isolated Electron gate using a
 real offline Go store. Native Windows/Linux Finder-equivalent behavior still
 requires platform verification; file totals exclude profile/browser data.
+
+Financials now compares collected periods across six statement/KPI/derived groups
+with provider/store, same-period math and isolated interaction checks. Custom
+issuer KPIs, coherent historical valuation and non-USD/IFRS normalization remain
+explicit coverage gaps; existing product quality scores are unchanged.

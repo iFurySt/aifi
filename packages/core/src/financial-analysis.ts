@@ -98,10 +98,12 @@ export function financialMetricSeries(
             Math.abs(day(current.end) - day(b.end) - 365),
         )[0];
       if (!prior || prior.value <= 0) return [];
+      const value = (current.value / prior.value - 1) * 100;
+      if (!Number.isFinite(value)) return [];
       return [
         {
           ...current,
-          value: (current.value / prior.value - 1) * 100,
+          value,
           derived: true,
           calculation: `Year-over-year change · comparison ${prior.end}`,
         },

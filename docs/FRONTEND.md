@@ -242,6 +242,29 @@ See [brand assets/provenance](../packages/ui/src/assets/brand/README.md) and
 [identity boundaries](design-docs/brand-identity.md). No remote assets or fonts
 are required. Name/icon changes preserve the existing app name and data paths.
 
+## Financials Workspace
+
+`Financials.tsx` composes source chips, a comparison trend, a compact view/period
+selector and a sticky-metric-column table. The overview has 13 metrics and six
+expandable statement/KPI/derived groups. Shared read-only table/filing helpers
+live in `stock-research-shared.tsx`; existing panel exports remain compatible.
+
+Core owns metric unit/aggregation definitions, same-period derived calculations
+and date selection. Up to 20 quarters/ten annual ends come from real reports;
+annual balance columns never include every quarterly instant. Start quarterly
+when available, fall back to annual-only coverage, and retain explicit user
+period/series choices across company changes. No provider request is issued by
+this page. Missing concepts/unsafe historical valuations remain gaps.
+
+The plot compares at most three metrics on one unit scale, retains all periods,
+and supports a dark bounded hover/keyboard tooltip. Horizontal table scroll is
+retained when expanding groups. Raw and calculated values have inspectable tags,
+periods and filing IDs; weighted shares never use currency formatting. Run
+`pnpm smoke:financials` after changing this surface. It uses isolated synthetic
+history for groups, 20-period range, math provenance, zero baselines, units,
+selection, tooltip and scroll behavior. Actual AAPL/NVDA Web and native Electron
+views were also checked; 390px layouts keep table overflow inside the table.
+
 ## Collection Interaction Checks
 
 Collection changes reset search/pagination/scroll without changing detail tabs.

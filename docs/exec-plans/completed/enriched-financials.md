@@ -1,6 +1,6 @@
 # Enrich the Financials workspace
 
-Status: implementing, 2026-10-17.
+Status: completed, 2026-10-17.
 
 ## Outcome
 
@@ -15,9 +15,9 @@ source/currency/fiscal-period meaning and missing coverage explicit.
    upgrade older snapshots asynchronously through existing durable jobs.
 3. [x] Add deterministic period/metric metadata, safe ratios and YoY calculations;
    retain provenance and never subtract weighted averages or EPS to invent Q4.
-4. [ ] Build compact trend chart, richer metric table and expandable statement,
+4. [x] Build compact trend chart, richer metric table and expandable statement,
    comprehensive-income, KPI and derived groups, with annual/quarter controls.
-5. [ ] Verify parser/derived math, persistence/offline reads and UI interactions;
+5. [x] Verify parser/derived math, persistence/offline reads and UI interactions;
    inspect live AAPL plus additional issuers, update docs/history, commit and push.
 
 ## Boundaries
@@ -36,3 +36,14 @@ No fake values, cross-source period stitching or gap-as-zero calculations.
 - Real persisted data read, no-provider offline read, last-good snapshot behavior.
 - Synthetic financial UI coverage for groups/periods/graph/missing data; actual
   Web/Electron desktop/mobile review; preserve existing account and unrelated work.
+
+## Completion evidence
+
+- Data layer committed independently before UI. Actual SQLite reads now return
+  1,981 AAPL facts/63 metrics, 1,718 MSFT/51 and 1,747 NVDA/55.
+- Core/provider/store/scheduler regressions, Go vet/race checks, isolated financial
+  interactions and desktop/continuity smokes passed. Reopening the test store
+  without a collector preserved expanded facts, units and provenance.
+- Chrome desktop and 390×844 review: 20 quarters, internal table scroll, bounded
+  tooltip, six annual fiscal dates and correct issuer switching. Native Electron
+  displayed the real AAPL financials after refresh; account connection retained.

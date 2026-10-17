@@ -1,3 +1,4 @@
+import { Financials } from "./Financials";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowUpRight,
@@ -31,7 +32,6 @@ import {
 import { useStockResearch } from "../stock-research-context";
 import {
   SourceNote,
-  Financials,
   Activity,
   AnalystSummary,
   AnalystPanel,

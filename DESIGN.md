@@ -303,6 +303,29 @@ rearrangement below are AIFi choices.
 
 Detailed scope: [stock page design](docs/design-docs/stock-research-page.md).
 
+### Financial Statements
+
+Financials uses a compact heading/source chip, a 230px comparison plot, a view
+selector and Quarter/Yearly toggle. Start with quarterly history when available;
+annual-only issuers display available annual data. Use up to 20 collected
+quarters/ten annual period ends, showing exact source dates rather than inferred
+fiscal labels. SEC and vendor-standardized dates must remain distinguishable.
+
+A 13-row summary precedes expandable Income statement, Balance sheet, Cash flows,
+Comprehensive income, Key performance indicators and Derived metrics groups.
+Keep missing source concepts as em dashes with optional explanations. Preserve
+Corporate actions and Filings views. Metric columns stay fixed while dates scroll
+horizontally; expanded groups preserve the scroll position.
+
+Row controls select up to three comparable series; a different unit replaces the
+selection. Shares, dollars, per-share values and percentages must not share one
+scale. Keep all available period bars, signed zero baselines, endpoint labels,
+neutral/green series and red losses. A bounded dark tooltip follows the crosshair
+with dates/values, including keyboard inspection. Calculated cells carry an
+asterisk and inspectable source/filing/calculation details; missing operands are
+never replaced with zero. Keep custom KPIs and historical valuation unavailable
+until a real, coherent source exists.
+
 ## 12. Settings
 
 Use the supplied 2026-10-13 settings screenshot as the layout reference. Preserve

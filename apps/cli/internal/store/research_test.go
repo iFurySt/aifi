@@ -551,3 +551,40 @@ func TestFinancialFactsUpgradeKeepsLastGoodBackoffAndStopsAfterCommit(t *testing
 		t.Fatal("current snapshot woke again", next, err)
 	}
 }
+
+func TestExpandedFinancialSnapshotIsReadableAfterOfflineReopen(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, err := Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	now := time.Now().UTC()
+	if err = db.AddResearchJobs(ctx, []market.Job{{Provider: "yahoo", Dataset: "facts", Subject: "AAPL"}}, now); err != nil {
+		t.Fatal(err)
+	}
+	job, err := db.ClaimResearchJob(ctx, "yahoo", []string{"facts"}, false, now)
+	if err != nil || job == nil {
+		t.Fatal(err)
+	}
+	payload := market.Payload{Version: market.FinancialFactsVersion, Facts: []market.Fact{{Period: "quarterly", Metric: "researchAndDevelopment", Unit: "USD", Value: "123456789.25", End: "2026-06-30", Tag: "yahoo:quarterlyResearchAndDevelopment"}, {Period: "quarterly", Metric: "weightedSharesDiluted", Unit: "shares", Value: "100.5", End: "2026-06-30", Tag: "yahoo:quarterlyDilutedAverageShares"}}}
+	result := market.Result{Payload: payload, Evidence: []market.Evidence{{URL: "https://query1.finance.yahoo.com/fixture", Body: []byte(`{"synthetic":true}`), FetchedAt: now}}}
+	if err = db.FinishResearchJob(ctx, *job, result, now, now.Add(time.Hour)); err != nil {
+		t.Fatal(err)
+	}
+	db.Close()
+	db, err = Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	// No market client or collector exists in this reopened read-only workflow.
+	view, err := db.ResearchRead(ctx, "AAPL")
+	if err != nil || len(view.Datasets["facts"].Data.Facts) != 2 || view.Coverage["facts"] != "stored" {
+		t.Fatal("offline facts unavailable", err, view)
+	}
+	got := view.Datasets["facts"].Data
+	if got.Version != market.FinancialFactsVersion || got.Facts[0].Value != "123456789.25" || got.Facts[1].Unit != "shares" {
+		t.Fatal("expanded financial meaning lost", got)
+	}
+}

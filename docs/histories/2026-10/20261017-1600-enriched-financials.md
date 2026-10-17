@@ -20,15 +20,23 @@
   actual-period column selection. Never subtract weighted averages or EPS.
 - Compare reference coverage and record measured public AAPL parser results and
   remaining custom KPI/valuation/non-USD gaps.
-- UI implementation continues in the linked active execution plan.
+- Phase 2: Add the 13-row overview, six expandable statement/KPI/derived groups,
+  20-quarter/annual table and selectable same-unit comparison trend. Preserve
+  Corporate actions/Filings and existing exports while extracting shared helpers.
+- Add bounded keyboard/hover graph details, persistent horizontal scroll, source
+  inspection, and placeholders for unsupported custom KPIs/historical valuations.
 
 ### Verification
 
-- TypeScript and 115 unit tests passed after financial math changes.
+- TypeScript and 122 unit tests passed in the final workspace; financial math has dedicated regressions.
 - Provider/store/research tests cover expanded concepts, unit/sign/provenance,
   version upgrades, retained good values and failure backoff.
 - Actual AAPL source bytes normalize to 1,981 SEC facts across 63 metrics and
   405 Yahoo observations across 45 metrics; public data remains ignored locally.
+- Actual SQLite snapshots now read AAPL 1,981/63, MSFT 1,718/51, NVDA 1,747/55
+  records/metrics. Offline reopened-store tests preserve expanded facts and units.
+- Financial interaction and desktop/continuity smokes passed. Chrome desktop,
+  390px layout, issuer switching, annual dates and native AAPL were reviewed.
 
 ### Files Modified
 
@@ -37,3 +45,6 @@
 - `packages/core/src/financial-definitions.ts`, `financial-analysis.ts` and tests
 - `packages/core/src/stock-research.ts`
 - Financial source references, ingestion design and execution plan
+- `packages/ui/src/pages/Financials.tsx`, shared panel helpers and trend/format components
+- `scripts/check-financials.mjs` and isolated financial UI fixture
+- `DESIGN.md`, frontend guidance, release notes and package scripts
