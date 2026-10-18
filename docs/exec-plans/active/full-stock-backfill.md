@@ -80,3 +80,22 @@ Operational progress is emitted each minute by `data research backfill --run`.
 The explicitly launched process survives closing the desktop; on machine reboot,
 rerun `data research backfill --run --sec-bulk` to resume. No OS login service was
 installed. This plan remains active: full coverage has not been achieved yet.
+
+## 2026-10-18 morning audit and repair
+
+At 09:18 local, the standalone collector was still running after about 8.5 hours.
+Populated observations: prices 3,093; profiles 916; facts 6,398; filings 5,889;
+analyst 864; earnings 751; peers 2,093; insiders 1,698; tracked funds 128;
+politicians 135. There were 803 stored price series behind the newest observed
+session (2026-10-16), 312 empty financial observations, and 515 SEC identity gaps.
+These are not fully populated/current companies. Most enrichment remained queued.
+
+The facts archive completed and imported 3,998 missing issuer snapshots, with
+254 members requiring normal API fallback. The submissions download also
+completed, but its 994,773 entries exceeded the original 500,000-entry bound.
+Corrected that limit to 1,250,000, with a 128 MiB ZIP/ZIP64 central-directory
+preflight before allocating headers. A sparse metadata regression captures the
+actual archive layout. An opt-in offline test against the actual downloaded
+archive verified 989,373 exact CIK members and 1,000 Apple filings. Provider/CLI
+race tests passed. Restarted the owned worker to import the existing ZIP without
+redownloading it. Whole-directory completion remains unchecked.

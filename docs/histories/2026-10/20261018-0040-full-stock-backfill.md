@@ -23,3 +23,14 @@ Validation: Go store/provider/engine/command race suite; download restart/range,
 identity/traversal/size bounds, missing-only requests, lease isolation, first-pass
 fairness and empty-result audit regressions. Windows/Linux market-package cross-compilation also passed. Live progress
 checkpoints and unresolved coverage are recorded in the active plan.
+
+Follow-up, 2026-10-18: checking the overnight run found the official submissions
+archive had 994,773 entries and was rejected by the initial 500,000-entry guard.
+Raised the bounded allowance to 1,250,000 and added ZIP/ZIP64 count/central-size
+preflight before `archive/zip` header allocation (128 MiB directory bound).
+Sparse metadata fixtures exercise the real archive layout and reject oversized
+declarations without generating a million test members. Offline verification
+against the already-downloaded official ZIP validated 989,373 exact CIK members
+and parsed Apple's 1,000 recent filings. Restarted the owned backfill worker to
+reuse the completed download and resume missing-only imports. Full data coverage
+remains unresolved; empty results and identity gaps stay separate.

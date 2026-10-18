@@ -203,7 +203,10 @@ bounded to 3 GiB; normalized evidence needs additional local storage. Private
 resume with validated HTTP byte ranges and server version validators; a changed
 archive restarts safely. Slow downloads have a cancellable 12-hour request limit,
 transient failures back off, and a complete ZIP is reused for 24 hours. Members
-are never extracted to filesystem paths. Only exact CIK JSON members (max 32 MiB)
+are never extracted to filesystem paths. ZIP/ZIP64 directory metadata is checked
+before allocating file headers: at most 1,250,000 entries and a 128 MiB central
+directory, accommodating the official submissions archive's roughly 995,000
+entries. Only exact CIK JSON members (max 32 MiB)
 with matching body identity enter existing parsers and atomic fenced commits.
 Missing/invalid members fall back to ordinary API collection, preserving good
 data. The archive URL/member and source time remain in SQLite evidence.

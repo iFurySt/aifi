@@ -96,11 +96,14 @@ func (c *Client) DownloadSECBulk(ctx context.Context, dataset, dir string) (*SEC
 }
 
 func (b *SECBulk) open(path string) error {
+	if err := validateSECBulkDirectory(path); err != nil {
+		return err
+	}
 	z, err := zip.OpenReader(path)
 	if err != nil {
 		return &Failure{Code: "invalid_bulk_archive"}
 	}
-	if len(z.File) > 500000 {
+	if len(z.File) > maxSECBulkMembers {
 		z.Close()
 		return &Failure{Code: "invalid_bulk_archive"}
 	}
