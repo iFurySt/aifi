@@ -231,3 +231,8 @@ and reported post-transaction holdings. Analyst `outlook:3` jobs refresh Yahoo
 consensus/recommendations and per-event targets. These versioned generations
 retire obsolete queued work while preserving last-good snapshots. Activity pages
 filter and chart only SQLite reads, including after offline restart.
+
+Interactive stock reads now have a separate query-only SQLite pool and bounded
+directory/research RPC lanes. App boot warms the selected cached list; optional
+logo preparation has an 80ms artwork budget. See
+[directory read latency](design-docs/directory-read-latency.md) for boundaries and checks.

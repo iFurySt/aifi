@@ -63,8 +63,9 @@ async function checks() {
   );
   stats.releaseDirectory();
   await until(() => stats.logos === 1);
-  stats.releaseLogos();
-  await wait(50);
+  // The cached-artwork lane remains stalled. Committed directory rows must
+  // become usable anyway, including when the first request finished offscreen.
+  await wait(120);
   const samples = [];
   let sampling = true;
   const sample = () => {
@@ -79,6 +80,8 @@ async function checks() {
   requestAnimationFrame(sample);
   location.hash = "/stocks/AAPL?tab=chart";
   await until(() => rows() >= 50);
+  assert(!stats.logoDone, "Logo gate was not stalled for the cold read check");
+  stats.releaseLogos();
   await wait(60);
   assert(
     stats.reads === 1 && stats.logos === 1,

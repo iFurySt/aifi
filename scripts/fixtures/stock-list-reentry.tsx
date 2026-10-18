@@ -14,6 +14,7 @@ const logoGate = new Promise<void>((r) => {
 const stats = {
   reads: 0,
   logos: 0,
+  logoDone: false,
   failed: false,
   time: 0,
   releaseDirectory: () => releaseDirectory(),
@@ -41,7 +42,7 @@ const entries: DirectoryEntry[] = Array.from({ length: 110 }, (_, i) => ({
   exchangeCode: "Q",
   securityType: "stock",
 }));
-location.hash = "/stocks/AAPL?tab=chart";
+location.hash = "/settings/appearance";
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App
@@ -70,6 +71,7 @@ createRoot(document.getElementById("root")!).render(
         getCached: async () => {
           stats.logos++;
           await logoGate;
+          stats.logoDone = true;
           return [];
         },
       }}

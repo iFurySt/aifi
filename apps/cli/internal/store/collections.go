@@ -130,7 +130,7 @@ func (selection CollectionSelection) Validate() error {
 	return nil
 }
 
-func (s *Store) collection(ctx context.Context, selection CollectionSelection) (*CollectionInfo, []string, error) {
+func collection(ctx context.Context, db *sql.Tx, selection CollectionSelection) (*CollectionInfo, []string, error) {
 	if err := selection.Validate(); err != nil {
 		return nil, nil, err
 	}
@@ -148,10 +148,10 @@ func (s *Store) collection(ctx context.Context, selection CollectionSelection) (
 			}
 		}
 	} else {
-		if err := s.db.QueryRowContext(ctx, `SELECT p.id,p.snapshot_date,p.fetched_at,p.source_url,p.source_name FROM index_heads h JOIN index_snapshots p ON p.id=h.snapshot_id WHERE h.collection_id=?`, selection.Collection).Scan(&info.SnapshotID, &info.SnapshotDate, &info.FetchedAt, &info.Source, &info.SourceName); err != nil {
+		if err := db.QueryRowContext(ctx, `SELECT p.id,p.snapshot_date,p.fetched_at,p.source_url,p.source_name FROM index_heads h JOIN index_snapshots p ON p.id=h.snapshot_id WHERE h.collection_id=?`, selection.Collection).Scan(&info.SnapshotID, &info.SnapshotDate, &info.FetchedAt, &info.Source, &info.SourceName); err != nil {
 			return nil, nil, errors.New("index membership unavailable")
 		}
-		rows, err := s.db.QueryContext(ctx, `SELECT symbol FROM index_memberships WHERE snapshot_id=? ORDER BY symbol`, info.SnapshotID)
+		rows, err := db.QueryContext(ctx, `SELECT symbol FROM index_memberships WHERE snapshot_id=? ORDER BY symbol`, info.SnapshotID)
 		if err != nil {
 			return nil, nil, err
 		}

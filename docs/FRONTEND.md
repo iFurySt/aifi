@@ -535,3 +535,8 @@ is involved. Failed background reads retain usable rows. See
 Settings navigation links and shared Select options have 2px between highlights.
 Select hover/keyboard-active fill matches the selected row without an inset border;
 keep the selected checkmark and the trigger's keyboard focus indication.
+
+Interactive stock reads now have a separate query-only SQLite pool and bounded
+directory/research RPC lanes. App boot warms the selected cached list; optional
+logo preparation has an 80ms artwork budget. See
+[directory read latency](design-docs/directory-read-latency.md) for boundaries and checks.

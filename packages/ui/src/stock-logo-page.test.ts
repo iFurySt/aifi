@@ -17,7 +17,10 @@ const page: DirectoryPage = {
     securityType: "stock",
   })),
 };
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.useRealTimers();
+});
 it("publishes a whole page only after disk hits decode, without issuing cold provider reads", async () => {
   let decode!: () => void;
   vi.stubGlobal(
@@ -90,4 +93,23 @@ it("ignores stale batches and keeps directory usable when its decorative cache f
   await old;
   expect(feed.state.items[0]?.symbol).toBe("NEW");
   expect(feed.state.error).toBe("");
+});
+
+it("shows directory rows within the budget when the decorative cache never settles", async () => {
+  vi.useFakeTimers();
+  const get = vi.fn();
+  const repository = withPreparedStockLogos(
+    { search: async () => page, get: vi.fn() },
+    {
+      get,
+      getCached: () => new Promise(() => {}),
+    },
+  );
+  const feed = new DirectoryFeed(repository, () => {});
+  const pending = feed.reset("");
+  await vi.advanceTimersByTimeAsync(81);
+  await pending;
+  expect(feed.state.items).toEqual(page.items);
+  expect(feed.state.loading).toBe(false);
+  expect(get).not.toHaveBeenCalled();
 });

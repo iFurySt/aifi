@@ -2,7 +2,6 @@
 package service
 
 import (
-	"bufio"
 	"bytes"
 	"context"
 	"encoding/json"
@@ -402,43 +401,8 @@ func (s *Service) Serve(ctx context.Context, input io.Reader, output io.Writer) 
 	defer func() { stop(); <-researchDone }()
 	done := make(chan struct{})
 	go func() { s.Run(ctx); close(done) }()
-	if closer, ok := input.(io.ReadCloser); ok {
-		go func() { <-ctx.Done(); _ = closer.Close() }()
-	}
-	encoder := json.NewEncoder(output)
-	if e := encoder.Encode(map[string]any{"event": "ready"}); e != nil {
-		stop()
-		<-done
-		return e
-	}
-	scanner := bufio.NewScanner(input)
-	scanner.Buffer(make([]byte, 4096), 64<<10)
-	for scanner.Scan() {
-		var req Request
-		if e := decode(scanner.Bytes(), &req); e != nil {
-			if e = encoder.Encode(Response{Error: "invalid request"}); e != nil {
-				break
-			}
-			continue
-		}
-		request, finish := context.WithTimeout(ctx, 15*time.Second)
-		result, e := s.Dispatch(request, req)
-		finish()
-		response := Response{ID: req.ID, Result: result}
-		if e != nil {
-			response.Result = nil
-			response.Error = e.Error()
-		}
-		if e = encoder.Encode(response); e != nil {
-			stop()
-			<-done
-			return e
-		}
-	}
+	err := serveRequests(ctx, input, output, s.Dispatch)
 	stop()
 	<-done
-	if ctx.Err() != nil {
-		return nil
-	}
-	return scanner.Err()
+	return err
 }

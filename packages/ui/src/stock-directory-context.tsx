@@ -152,6 +152,27 @@ function directoryFeeds(
   }
   return cache;
 }
+/** Warm the selected local list at app boot, even if Chat/Settings opens first. */
+export function useDirectoryWarmup(
+  repository: StockDirectoryRepository,
+  logos: StockLogoRepository | null,
+  collection: StockCollection,
+  watchlist: string[],
+) {
+  const personal =
+    collection === "watchlist"
+      ? JSON.stringify([...new Set(watchlist)].sort())
+      : "[]";
+  useEffect(() => {
+    const view = directoryFeeds(repository, logos).view(
+      "",
+      collection,
+      JSON.parse(personal),
+    );
+    void view.ensure();
+  }, [repository, logos, collection, personal]);
+}
+
 export function useDirectoryFeed(
   query: string,
   collection: StockCollection = "all-us",

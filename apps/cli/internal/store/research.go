@@ -47,9 +47,12 @@ type ResearchConfig struct {
 }
 
 func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
+	return readResearchConfig(ctx, s.db)
+}
+func readResearchConfig(ctx context.Context, db snapshotReader) (ResearchConfig, error) {
 	var c ResearchConfig
 	var raw string
-	e := s.db.QueryRowContext(ctx, "SELECT revision,config_json FROM research_config WHERE singleton=1").Scan(&c.Revision, &raw)
+	e := db.QueryRowContext(ctx, "SELECT revision,config_json FROM research_config WHERE singleton=1").Scan(&c.Revision, &raw)
 	if e != nil {
 		return c, e
 	}
@@ -240,8 +243,11 @@ func (s *Store) ResearchSymbols(ctx context.Context) ([]string, error) {
 	return out, rows.Err()
 }
 func (s *Store) CIK(ctx context.Context, symbol string) (string, error) {
+	return readCIK(ctx, s.db, symbol)
+}
+func readCIK(ctx context.Context, db snapshotReader, symbol string) (string, error) {
 	var cik string
-	e := s.db.QueryRowContext(ctx, "SELECT cik FROM research_aliases WHERE symbol=?", symbol).Scan(&cik)
+	e := db.QueryRowContext(ctx, "SELECT cik FROM research_aliases WHERE symbol=?", symbol).Scan(&cik)
 	if errors.Is(e, sql.ErrNoRows) {
 		return "", nil
 	}
@@ -547,20 +553,21 @@ type StockResearch struct {
 
 func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch, error) {
 	out := StockResearch{Symbol: symbol, Bars: []market.Bar{}, Basis: "raw", Datasets: map[string]DatasetView{}, Coverage: map[string]string{}}
-	cik, e := s.CIK(ctx, symbol)
-	if e != nil {
-		return out, e
-	}
-	cfg, e := s.ResearchConfig(ctx)
-	if e != nil {
-		return out, e
-	}
-	// One read transaction gives all panels a consistent committed view.
-	tx, e := s.db.BeginTx(ctx, &sql.TxOptions{ReadOnly: true})
+	// Identity aliases, selected providers and panels share one deferred read
+	// snapshot without acquiring the collector connection or a write lock.
+	tx, e := s.reads.BeginTx(ctx, &sql.TxOptions{ReadOnly: true})
 	if e != nil {
 		return out, e
 	}
 	defer tx.Rollback()
+	cik, e := readCIK(ctx, tx, symbol)
+	if e != nil {
+		return out, e
+	}
+	cfg, e := readResearchConfig(ctx, tx)
+	if e != nil {
+		return out, e
+	}
 	rows, e := tx.QueryContext(ctx, `SELECT h.dataset,s.id,s.provider,s.fetched_at,s.payload_json FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.subject=? OR (h.subject=? AND h.dataset IN ('facts','filings','insiders')) OR (h.dataset='actions' AND h.subject='us')`, symbol, "cik:"+cik)
 	if e != nil {
 		return out, e

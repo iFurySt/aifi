@@ -35,6 +35,7 @@ import { ChatGPTProvider } from "./chatgpt-context";
 import {
   StockDirectoryContext,
   StockLogoContext,
+  useDirectoryWarmup,
 } from "./stock-directory-context";
 import { Shell } from "./components/Shell";
 import { useResolvedTheme } from "./use-resolved-theme";
@@ -93,6 +94,7 @@ export function App({
   const [settingsSection, setSettingsSection] = useState(() =>
     parseSettingsSection(location.hash),
   );
+  useDirectoryWarmup(directory, logos, stockCollection, workspace.watchlist);
   const openStock = useCallback((symbol: string, tab?: StockTab) => {
     location.hash = stockHref(symbol, tab).slice(1);
   }, []);

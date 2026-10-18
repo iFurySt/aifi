@@ -28,6 +28,7 @@ var ErrLease = errors.New("directory sync lease expired or superseded")
 
 type Store struct {
 	db      *sql.DB
+	reads   *sql.DB
 	storage *storageAccounting
 }
 
@@ -56,9 +57,13 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 	}
 	db.SetMaxOpenConns(1)
 	var tx *sql.Tx
+	var reader *sql.DB
 	fail := func(e error) (*Store, error) {
 		if tx != nil {
 			_ = tx.Rollback()
+		}
+		if reader != nil {
+			reader.Close()
 		}
 		db.Close()
 		return nil, e
@@ -91,13 +96,18 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 	if err = tx.Commit(); err != nil {
 		return fail(err)
 	}
+	reader, err = openInteractiveReader(ctx, absolute)
+	if err != nil {
+		return fail(err)
+	}
 	accounting, err := newStorageAccounting(absolute)
 	if err != nil {
 		return fail(err)
 	}
-	return &Store{db: db, storage: accounting}, nil
+	return &Store{db: db, reads: reader, storage: accounting}, nil
 }
 func (s *Store) Close() error {
+	_ = s.reads.Close()
 	_ = s.storage.close()
 	return s.db.Close()
 }
@@ -313,7 +323,7 @@ func (s *Store) Contains(ctx context.Context, symbols []string) ([]string, error
 		placeholders[i] = "?"
 		args[i] = strings.ToUpper(symbol)
 	}
-	rows, err := s.db.QueryContext(ctx, `SELECT DISTINCT UPPER(l.source_symbol)
+	rows, err := s.reads.QueryContext(ctx, `SELECT DISTINCT UPPER(l.source_symbol)
       FROM directory_head h JOIN directory_memberships m ON m.snapshot_id=h.snapshot_id
       JOIN listings l ON l.id=m.listing_id
       WHERE h.singleton=1 AND m.test=0 AND m.etf=0 AND UPPER(l.source_symbol) IN (`+strings.Join(placeholders, ",")+`)`, args...)
@@ -343,12 +353,18 @@ func (s *Store) list(ctx context.Context, query string, limit, offset int, all, 
 	if len(selections) > 0 {
 		selection = selections[0]
 	}
-	info, symbols, err := s.collection(ctx, selection)
+	// A deferred snapshot covers both heads, coverage, count and page.
+	reader, err := s.reads.BeginTx(ctx, &sql.TxOptions{ReadOnly: true})
+	if err != nil {
+		return p, err
+	}
+	defer reader.Rollback()
+	info, symbols, err := collection(ctx, reader, selection)
 	if err != nil {
 		return p, err
 	}
 	p.Collection = info
-	err = s.db.QueryRowContext(ctx, "SELECT snapshot_id FROM directory_head WHERE singleton=1").Scan(&p.SnapshotID)
+	err = reader.QueryRowContext(ctx, "SELECT snapshot_id FROM directory_head WHERE singleton=1").Scan(&p.SnapshotID)
 	if errors.Is(err, sql.ErrNoRows) {
 		if info != nil {
 			info.UnresolvedSymbols = symbols
@@ -362,7 +378,7 @@ func (s *Store) list(ctx context.Context, query string, limit, offset int, all, 
 	if info != nil {
 		filter, args := symbolFilter(symbols)
 		args = append([]any{snapshotID}, args...)
-		rows, e := s.db.QueryContext(ctx, `SELECT DISTINCT UPPER(l.source_symbol) FROM directory_memberships m JOIN listings l ON l.id=m.listing_id WHERE m.snapshot_id=? AND m.test=0 AND m.etf=0`+filter, args...)
+		rows, e := reader.QueryContext(ctx, `SELECT DISTINCT UPPER(l.source_symbol) FROM directory_memberships m JOIN listings l ON l.id=m.listing_id WHERE m.snapshot_id=? AND m.test=0 AND m.etf=0`+filter, args...)
 		if e != nil {
 			return p, e
 		}
@@ -413,13 +429,13 @@ func (s *Store) list(ctx context.Context, query string, limit, offset int, all, 
 		where += ` AND (l.source_symbol LIKE ? ESCAPE '\' OR m.name LIKE ? ESCAPE '\')`
 		args = append(args, "%"+escaped+"%", "%"+escaped+"%")
 	}
-	if err = s.db.QueryRowContext(ctx, `SELECT count(*)`+where, args...).Scan(&p.Total); err != nil {
+	if err = reader.QueryRowContext(ctx, `SELECT count(*)`+where, args...).Scan(&p.Total); err != nil {
 		return p, err
 	}
 	// Exact tickers lead search results even when many security names match.
 	order := ` ORDER BY CASE WHEN l.source_symbol = ? COLLATE NOCASE THEN 0 ELSE 1 END,l.source_symbol,l.source,l.exchange_code LIMIT ? OFFSET ?`
 	args = append(args, query, limit, offset)
-	rows, err := s.db.QueryContext(ctx, `SELECT l.id,l.source_symbol,m.name,l.source,l.exchange_code,m.etf,m.test,m.security_type,m.fields_json`+where+order, args...)
+	rows, err := reader.QueryContext(ctx, `SELECT l.id,l.source_symbol,m.name,l.source,l.exchange_code,m.etf,m.test,m.security_type,m.fields_json`+where+order, args...)
 	if err != nil {
 		return p, err
 	}
