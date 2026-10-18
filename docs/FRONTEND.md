@@ -511,3 +511,16 @@ identities/targets remain blank when absent. Target deltas and upside reference
 stored prices and are not labeled returns. Firm/action/date/search controls and
 local Show more share one stored event array. Activity charts resize their SVG
 coordinate space to keep mobile axes readable and tooltip bounds contained.
+
+## Stock list session lifecycle
+
+`DirectoryFeedCache` keeps a sidebar's pages, pending read, preparation and scroll
+outside React mounts. Re-entry uses its snapshot synchronously; ordinary
+mount/focus checks share a 60-second local freshness window. No provider collection
+is involved. Failed background reads retain usable rows. See
+[the directory contract](design-docs/stock-directory-reads.md) and run
+`pnpm smoke:stocks-cache` for delayed-read/remount/offline regressions.
+
+Settings navigation links and shared Select options have 2px between highlights.
+Select hover/keyboard-active fill matches the selected row without an inset border;
+keep the selected checkmark and the trigger's keyboard focus indication.

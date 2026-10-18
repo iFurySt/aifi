@@ -2841,6 +2841,9 @@ kbd {
   border-radius: 8px;
   font-size: 13px;
 }
+.settings-nav-link + .settings-nav-link {
+  margin-top: 2px;
+}
 .settings-nav-link:hover,
 .settings-nav-link:focus-visible,
 .settings-nav-link.selected {

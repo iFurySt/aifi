@@ -156,3 +156,44 @@ it("shows append progress only for local pagination, keeping periodic head reads
   expect(feed.state.loading).toBe(false);
   expect(feed.state.loadingMore).toBe(false);
 });
+
+it("rehydrates a populated feed without empty/loading flashes and preserves row identity", async () => {
+  const search = vi.fn().mockResolvedValue(page(0, ["A", "B"]));
+  const first = new DirectoryFeed({ search, get: vi.fn() }, () => {}, 2);
+  await first.reset("");
+  const oldRow = first.state.items[0];
+  const states: number[] = [];
+  const restored = new DirectoryFeed(
+    { search, get: vi.fn() },
+    (state) => states.push(state.items.length),
+    2,
+    first.state,
+  );
+  expect(restored.state.items).toBe(first.state.items);
+  await restored.refresh();
+  expect(states.every((count) => count === 2)).toBe(true);
+  expect(restored.state.items[0]).toBe(oldRow);
+});
+
+it("atomically refreshes all loaded pages when the snapshot advances, without collapsing visible rows", async () => {
+  const { feed, search } = setup();
+  search
+    .mockResolvedValueOnce(page(0, ["A", "B"], "one", 6))
+    .mockResolvedValueOnce(page(2, ["C", "D"], "one", 6));
+  await feed.reset("");
+  await feed.loadMore();
+  const oldA = feed.state.items[0];
+  const tail = deferred<DirectoryPage>();
+  search
+    .mockResolvedValueOnce(page(0, ["A", "B"], "two", 6))
+    .mockReturnValueOnce(tail.promise);
+  const refreshing = feed.refresh();
+  await Promise.resolve();
+  await Promise.resolve();
+  expect(feed.state.items.map((e) => e.id)).toEqual(["A", "B", "C", "D"]);
+  tail.resolve(page(2, ["C", "E"], "two", 6));
+  await refreshing;
+  expect(feed.state.items.map((e) => e.id)).toEqual(["A", "B", "C", "E"]);
+  expect(feed.state.items[0]).toBe(oldA);
+  expect(feed.state.snapshotId).toBe("two");
+});

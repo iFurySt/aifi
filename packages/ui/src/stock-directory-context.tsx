@@ -4,15 +4,13 @@ import {
   useCallback,
   useEffect,
   useState,
-  useRef,
-  useMemo,
+  useSyncExternalStore,
 } from "react";
 import { withPreparedStockLogos } from "./stock-logo-page";
-import { DirectoryFeed, emptyDirectoryFeed } from "@aifi/core";
+import { DirectoryFeedCache } from "./directory-feed-cache";
 import type {
   StockDirectoryRepository,
   StockCollection,
-  DirectoryFeedState,
   StockLogoRepository,
   DirectoryPage,
   DirectoryLookup,
@@ -132,6 +130,28 @@ export function directoryExchange(entry: { exchangeCode: string }) {
   );
 }
 
+const feedCaches = new WeakMap<
+  StockDirectoryRepository,
+  Map<StockLogoRepository | null, DirectoryFeedCache>
+>();
+function directoryFeeds(
+  repository: StockDirectoryRepository,
+  logos: StockLogoRepository | null,
+) {
+  let caches = feedCaches.get(repository);
+  if (!caches) {
+    caches = new Map();
+    feedCaches.set(repository, caches);
+  }
+  let cache = caches.get(logos);
+  if (!cache) {
+    cache = new DirectoryFeedCache(repository, (source) =>
+      withPreparedStockLogos(source, logos),
+    );
+    caches.set(logos, cache);
+  }
+  return cache;
+}
 export function useDirectoryFeed(
   query: string,
   collection: StockCollection = "all-us",
@@ -139,59 +159,49 @@ export function useDirectoryFeed(
 ) {
   const directory = useStockDirectory();
   const logos = useContext(StockLogoContext);
-  const symbolsKey = JSON.stringify(
-    collection === "watchlist" ? watchlist : [],
+  const trimmed = query.trim();
+  const view = directoryFeeds(directory, logos).view(
+    trimmed,
+    collection,
+    watchlist,
   );
-  const key = JSON.stringify([collection, symbolsKey, query.trim()]);
-  const repository = useMemo(
-    () =>
-      withPreparedStockLogos(
-        {
-          get: (symbol) => directory.get(symbol),
-          search: (input) =>
-            directory.search({
-              ...input,
-              collection,
-              ...(collection === "watchlist"
-                ? { symbols: JSON.parse(symbolsKey) as string[] }
-                : {}),
-            }),
-        },
-        logos,
-      ),
-    [directory, logos, collection, symbolsKey],
+  const { state, preview } = useSyncExternalStore(
+    view.subscribe,
+    view.snapshot,
   );
-  const [snapshot, setSnapshot] = useState<{
-    key: string;
-    state: DirectoryFeedState;
-  }>(() => ({ key: "", state: emptyDirectoryFeed() }));
-  const state =
-    snapshot.key === key ? snapshot.state : emptyDirectoryFeed(query.trim());
-  const feed = useRef<DirectoryFeed | null>(null);
   useEffect(() => {
-    const current = new DirectoryFeed(repository, (state) =>
-      setSnapshot({ key, state }),
-    );
-    feed.current = current;
-    const timer = setTimeout(() => void current.reset(query), 180);
-    const interval = setInterval(() => void current.refresh(), 60000);
-    const focus = () => void current.refresh();
+    const timer = setTimeout(() => void view.ensure(), trimmed ? 180 : 0);
+    const interval = setInterval(() => void view.ensure(), 60000);
+    const focus = () => void view.ensure();
     window.addEventListener("focus", focus);
     return () => {
-      current.dispose();
       clearTimeout(timer);
       clearInterval(interval);
       window.removeEventListener("focus", focus);
-      feed.current = null;
+      // Keep in-flight local work alive: its result remains useful after navigation.
     };
-  }, [repository, query, key]);
-  const loadMore = useCallback(() => void feed.current?.loadMore(), []);
-  const retry = useCallback(() => void feed.current?.retry(), []);
+  }, [view, trimmed]);
+  const rememberScroll = useCallback(
+    (top: number) => {
+      view.scrollTop = top;
+    },
+    [view],
+  );
   return {
-    ...(state.query === query.trim()
-      ? state
-      : emptyDirectoryFeed(query.trim())),
-    loadMore,
-    retry,
+    ...state,
+    preview,
+    ...(collection === "watchlist" && !watchlist.length
+      ? {
+          items: [],
+          total: 0,
+          hasMore: false,
+          loading: false,
+          loadingMore: false,
+        }
+      : {}),
+    loadMore: view.loadMore,
+    retry: view.retry,
+    scrollTop: view.scrollTop,
+    rememberScroll,
   };
 }

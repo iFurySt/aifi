@@ -442,3 +442,8 @@ label/chevron gap, 10px trigger radius, 16px popup radius and compact 34px rows
 (38px on narrow touch screens). Menus use a neutral selected row and check,
 optional search, internal scrolling and a 360px height cap. Preserve keyboard
 selection and focus return; avoid native system-blue popups.
+
+Settings category links and shared Select option rows leave 2px between rounded
+highlights. Active/hover and selected options share the neutral interaction fill;
+do not add an inset outline to the hovered option. Preserve the selected check
+and normal keyboard focus cues on the trigger.

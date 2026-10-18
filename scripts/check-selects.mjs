@@ -106,6 +106,25 @@ async function checks(phase) {
       active().textContent === "Last 7 days",
       "Keyboard selected disabled choice",
     );
+    const selectedRow = options().find(
+      (option) => option.getAttribute("aria-selected") === "true",
+    );
+    assert(
+      getComputedStyle(active()).boxShadow === "none",
+      "Active option has a hover outline",
+    );
+    assert(
+      getComputedStyle(active()).backgroundColor ===
+        getComputedStyle(selectedRow).backgroundColor,
+      "Hover and selected option fills differ",
+    );
+    const firstTwo = options()
+      .slice(0, 2)
+      .map((option) => option.getBoundingClientRect());
+    assert(
+      firstTwo[1].top - firstTwo[0].bottom >= 2,
+      "Select option highlights touch",
+    );
     await key("Enter");
     await until(() => !list());
     assert(

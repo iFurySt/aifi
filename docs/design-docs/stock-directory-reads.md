@@ -59,21 +59,37 @@ schedule downloads. Configuration/sync remains a separate existing capability.
 
 ## UI States
 
-Readers debounce search by 180ms, discard superseded responses, and refresh every
-60 seconds/on window focus while mounted to discover background imports. Query
-changes reset the feed. One in-flight batch per feed prevents duplicate reads;
-changed snapshot IDs rebase rather than mixing versions. Unchanged background
-refreshes preserve all loaded rows and stay visually quiet; only an actual append
-sets loadingMore and displays the inset loading status. Refresh errors retain the same query's cached real rows and
-show Retry; new failed queries never substitute sample companies. Empty imports
-and unmatched searches have distinct short messages. Native offline smoke checks
-that the empty store cannot show the former five-symbol fixture list.
+Directory feeds are session-owned rather than component-owned. Each repository,
+logo repository, collection, trimmed query and (for watchlists) sorted membership
+has an isolated view with loaded pages, scroll and a shared pending local read.
+Leaving Stocks unsubscribes its UI without discarding an unfinished SQLite/logo
+batch. Returning renders the completed snapshot synchronously; no reset to an
+empty feed and no duplicate request are required. Reuse valid empty results too.
+The session keeps up to 32 idle views; subscribed and pending views are protected.
 
-Header names and exchange labels come from exact cached directory reads. Quotes,
-About profiles, charts, peers and financial statements still use explicitly
-marked samples for five targets; other symbols show no market/fundamental data.
-The other research tabs remain placeholders. Watchlist/Portfolio demo quotes are
-outside this directory-read change.
+New text searches debounce by 180ms; matching loaded rows from the same scope can
+remain as a provisional preview until the complete local result arrives. Warm
+queries/scopes restore their own completed pages. Watchlist edits retain matching
+real rows and reconcile against the changed local membership. Built-in index
+membership stays immutable.
+
+The local directory head is checked at most once per 60 seconds per view during
+normal mount/focus/timer activity. Stale snapshots remain visible during the
+check; manual Retry is explicit and bypasses freshness. Only an uncached first
+read or actual append displays loading. Last-good rows and scroll survive a
+failed check. Background snapshot changes rebase the loaded range atomically.
+Cached logo preparation stays grouped with the first page; revisiting a prepared
+view does not repeat its cache authorization/decode work.
+
+SQLite remains authoritative across app restarts; these bounded presentation
+snapshots never collect a remote provider or replace durable local storage.
+Header identities and research datasets also read local committed source data;
+unavailable fields remain absent, with no fabricated quotes or statements.
+
+`pnpm smoke:stocks-cache` uses the actual App under Strict Mode with delayed local
+repositories. It verifies a first read completed while off-page, zero additional
+reads and no empty/loading animation frames across repeated warm returns, saved
+scroll, collection switching, fresh-focus deduplication and offline Retry.
 
 ## Future Cloud Synchronization
 

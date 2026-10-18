@@ -111,6 +111,9 @@
   color: var(--muted);
 }
 .select-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -139,9 +142,6 @@
 .select-option[aria-selected="true"],
 .select-option[data-active="true"] {
   background: var(--interaction-hover);
-}
-.select-option[data-active="true"][aria-selected="false"] {
-  box-shadow: inset 0 0 0 1px var(--border);
 }
 .select-option[aria-disabled="true"] {
   opacity: 0.4;

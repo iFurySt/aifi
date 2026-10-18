@@ -1,5 +1,5 @@
 import { Select } from "./Select";
-import { useEffect, useRef } from "react";
+import { memo, useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { Search } from "lucide-react";
 import { StockAvatar } from "./StockAvatar";
 import {
@@ -8,12 +8,42 @@ import {
   validStockCollection,
   validDirectorySymbol,
 } from "@aifi/core";
+import type { DirectoryEntry } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import {
   useDirectoryFeed,
   directoryExchange,
 } from "../stock-directory-context";
 
+const StockRow = memo(function StockRow({
+  entry,
+  selected,
+  open,
+}: {
+  entry: DirectoryEntry;
+  selected: boolean;
+  open: (symbol: string) => void;
+}) {
+  return (
+    <button
+      disabled={!validDirectorySymbol(entry.symbol)}
+      className={`stock-list-row ${selected ? "selected" : ""}`}
+      aria-current={selected ? "page" : undefined}
+      onClick={() => open(entry.symbol)}
+    >
+      <StockAvatar symbol={entry.symbol} />
+      <span className="stock-list-name">
+        <strong>{entry.symbol}</strong>
+        <small title={entry.name}>
+          {stockDisplayName(undefined, entry.name, entry.symbol)}
+        </small>
+      </span>
+      <span className="stock-list-quote">
+        <small>{directoryExchange(entry)}</small>
+      </span>
+    </button>
+  );
+});
 export function StockSidebar({
   onSelect,
   query,
@@ -37,11 +67,23 @@ export function StockSidebar({
   )!;
   const data = useDirectoryFeed(query, stockCollection, workspace.watchlist);
   const { loading, error, retry, loadMore } = data;
+  const openRow = useCallback(
+    (symbol: string) => {
+      openStock(symbol, stockRoute.tab);
+      onSelect?.();
+    },
+    [openStock, stockRoute.tab, onSelect],
+  );
   const list = useRef<HTMLElement>(null);
   const sentinel = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    list.current?.scrollTo({ top: 0 });
-  }, [query, stockCollection, data.snapshotId]);
+  useLayoutEffect(() => {
+    const element = list.current;
+    element?.scrollTo({ top: data.scrollTop });
+    return () => {
+      // Capture before detachment, including a last scroll event not yet delivered.
+      if (element) data.rememberScroll(element.scrollTop);
+    };
+  }, [query, stockCollection, data.rememberScroll]);
   useEffect(() => {
     if (!list.current || !sentinel.current || loading || error || !data.hasMore)
       return;
@@ -76,7 +118,6 @@ export function StockSidebar({
             }}
           />
         </h2>
-
       </div>
       {!!data.collection?.unresolvedSymbols.length && (
         <p
@@ -102,35 +143,17 @@ export function StockSidebar({
       <nav
         ref={list}
         className="stock-list"
+        onScroll={(event) => data.rememberScroll(event.currentTarget.scrollTop)}
         aria-label="Stock list"
         aria-busy={loading}
       >
         {data.items.map((entry) => (
-          <button
+          <StockRow
             key={entry.id}
-            disabled={!validDirectorySymbol(entry.symbol)}
-            className={`stock-list-row ${page === "stocks" && stockRoute.symbol === entry.symbol ? "selected" : ""}`}
-            aria-current={
-              page === "stocks" && stockRoute.symbol === entry.symbol
-                ? "page"
-                : undefined
-            }
-            onClick={() => {
-              openStock(entry.symbol, stockRoute.tab);
-              onSelect?.();
-            }}
-          >
-            <StockAvatar symbol={entry.symbol} />
-            <span className="stock-list-name">
-              <strong>{entry.symbol}</strong>
-              <small title={entry.name}>
-                {stockDisplayName(undefined, entry.name, entry.symbol)}
-              </small>
-            </span>
-            <span className="stock-list-quote">
-              <small>{directoryExchange(entry)}</small>
-            </span>
-          </button>
+            entry={entry}
+            selected={page === "stocks" && stockRoute.symbol === entry.symbol}
+            open={openRow}
+          />
         ))}
         {loading && (!data.items.length || data.loadingMore) && (
           <p className="sidebar-hint" role="status">

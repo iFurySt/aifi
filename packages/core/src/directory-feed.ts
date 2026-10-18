@@ -36,7 +36,17 @@ export class DirectoryFeed {
     private repository: StockDirectoryRepository,
     private publish: (state: DirectoryFeedState) => void,
     private batchSize = 50,
-  ) {}
+    initial?: DirectoryFeedState,
+  ) {
+    if (initial) {
+      this.state = {
+        ...initial,
+        loading: !initial.snapshotId,
+        loadingMore: false,
+      };
+      this.offset = initial.items.length;
+    }
+  }
   private update(state: DirectoryFeedState) {
     this.state = state;
     this.publish(state);
@@ -110,21 +120,56 @@ export class DirectoryFeed {
       }
       const sameSnapshot =
         !!page.snapshotId && page.snapshotId === this.state.snapshotId;
+      let incoming = page.items;
+      // Rebase the entire visible range atomically when the source head advances.
+      // Publishing only the new first page would remove already-visible rows and
+      // clamp scroll, even though the old good snapshot was still usable.
+      if (
+        !append &&
+        !sameSnapshot &&
+        this.state.items.length > incoming.length
+      ) {
+        const target = Math.min(this.state.items.length, page.total);
+        while (incoming.length < target) {
+          const more = await this.repository.search({
+            query,
+            limit: this.batchSize,
+            offset: incoming.length,
+          });
+          if (generation !== this.generation) return;
+          this.check(more, incoming.length);
+          if (more.snapshotId !== page.snapshotId)
+            throw Error("Directory changed during refresh.");
+          incoming = [...incoming, ...more.items];
+        }
+      }
+      const oldById = new Map(
+        this.state.items.map((entry) => [entry.id, entry]),
+      );
+      incoming = incoming.map((entry) => {
+        const old = oldById.get(entry.id);
+        return old &&
+          old.symbol === entry.symbol &&
+          old.name === entry.name &&
+          old.exchangeCode === entry.exchangeCode &&
+          old.source === entry.source &&
+          old.securityType === entry.securityType
+          ? old
+          : entry;
+      });
       const items = append
         ? [
             ...this.state.items,
-            ...page.items.filter(
-              (e) => !this.state.items.some((old) => old.id === e.id),
-            ),
+            ...incoming.filter((entry) => !oldById.has(entry.id)),
           ]
-        : sameSnapshot && this.state.items.length > page.items.length
-          ? [...page.items, ...this.state.items.slice(page.items.length)]
-          : page.items;
+        : sameSnapshot && this.state.items.length > incoming.length
+          ? [...incoming, ...this.state.items.slice(incoming.length)]
+          : incoming;
       this.offset = append
         ? offset + page.items.length
         : sameSnapshot
-          ? Math.max(this.offset, page.items.length)
-          : page.items.length;
+          ? Math.max(this.offset, incoming.length)
+          : incoming.length;
       this.update({
         query,
         collection: page.collection,
