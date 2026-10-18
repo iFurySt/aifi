@@ -242,7 +242,7 @@ func decode(raw json.RawMessage, target any) error {
 func (s *Service) Dispatch(ctx context.Context, req Request) (any, error) {
 	switch req.Method {
 	case "storage.database":
-		return s.DB.DatabaseStorage(ctx)
+		return s.DB.CachedDatabaseStorage(ctx)
 	case "research.status":
 		return s.DB.ResearchStatus(ctx)
 	case "research.settings":

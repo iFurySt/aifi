@@ -214,6 +214,10 @@ export class DataHost {
       if (params !== undefined) throw Error("Invalid storage request.");
       return this.storage.read();
     }
+    if (method === "storage.details") {
+      if (params !== undefined) throw Error("Invalid storage request.");
+      return this.storage.details();
+    }
     if (method === "storage.files") return this.storage.files(params);
     if (method === "storage.reveal") return this.storage.reveal(params);
     if (method === "directory.list") validateDirectoryQuery(params);

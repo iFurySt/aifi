@@ -30,24 +30,45 @@ list. Each directory row opens its folder; each large file can be revealed in
 Finder. Web retains per-row path copying. A moving collector can change lengths
 while a scan is in progress; refresh provides a new observation.
 
-The separate Database contents breakdown uses Go-owned `dbstat` pages joined to
-`sqlite_schema`, assigning both table and index pages to price history, research
-snapshots, source evidence, directory/index data, or sync/settings. Unknown tables
-fall into sync/settings. SQLite schema, free pages and remaining allocation are
-reported as unused pages/overhead. This is logical SQLite allocation in a single
-read snapshot; committed WAL pages may not yet be in the main file, and WAL may
-hold several revisions of a page. Do not add logical database bytes to file bytes.
-No checkpoint, vacuum, migration, cleanup or data deletion is performed.
+Database contents is an independent, exact-but-cached diagnostic. Its category
+sizes are from the timestamp in the heading tooltip; they are not added to file
+bytes. A first scan fills in asynchronously while total usage and files are
+already usable. Optional SQL failures affect only this section, retaining any
+last-good category values instead of hiding the inventory.
+
+Go streams `dbstat` pages and maps the small SQLite schema to categories once,
+without the former per-page schema join/materialized GROUP BY. Table and index
+pages go to price history, research snapshots, source evidence, directory/index
+data, or sync/settings. Free pages and remaining allocation are overhead. One
+read transaction supplies consistent logical page counts; committed WAL pages
+may not yet be in the main file, and WAL may contain several revisions of a page.
+See [SQLite DBSTAT](https://www.sqlite.org/dbstat.html). Exact accounting still
+visits database pages, so it never runs synchronously in the service request loop.
+
+The accountant has a dedicated **read-only, query-only** pool: one worker plus a
+cheap metadata reader. It does not occupy the collector connection. Work coalesces,
+is cancellable between streamed pages, and has a 60-second background budget.
+Metadata/status reads have a one-second deadline. Successful totals are atomically
+saved as private `storage-accounting.json` metadata (version/schema/timestamp/sizes,
+no rows or secrets), validated on reopen, and reused for ten minutes. Schema
+changes or a smaller logical database invalidate the cache. An expired snapshot
+remains visible during revalidation; failures back off for one minute. Shutdown
+cancels the worker before closing its reader. No checkpoint, vacuum, migration or
+data deletion is performed by inspection.
 
 ## Capability boundaries
 
 - `storage.database` is a private Go RPC returning only category sizes. The
-  renderer cannot invoke it directly. Its read has an eight-second deadline.
-- Node `LocalStorageUsage` inventories metadata asynchronously after the Go read,
+  renderer cannot invoke it directly. It returns cheap metadata/cached sizes and
+  starts independent background work if needed.
+- Node `LocalStorageUsage` inventories file metadata without waiting for SQL,
   bounded to 100,000 entries, ten seconds of iteration and 2,048-character paths.
-  Concurrent refreshes coalesce. Failures do not replace the previous snapshot.
+  Concurrent refreshes coalesce. Filesystem failures do not replace the previous
+  snapshot; disappearing subdirectories are skipped. SQL failures never reject
+  the file inventory.
 - Public `storage.read` returns totals, categories, timestamp and the first 50
-  files with a snapshot ID. `storage.files` reads successive 50-file pages from
+  files with a snapshot ID. `storage.details` reads only the small database
+  diagnostic snapshot, without rescanning files. `storage.files` reads successive 50-file pages from
   that inventory without rescanning. Refresh replaces the snapshot; stale page
   requests require a refresh. File contents and credential values never appear.
 - `storage.reveal` accepts only a relative inventory file or directory, or the empty data-root path.
@@ -64,7 +85,10 @@ No checkpoint, vacuum, migration, cleanup or data deletion is performed.
 A renderer-session `StorageSession` retains totals and expanded file pages across
 Settings visits. Re-entry renders that snapshot synchronously and starts a
 coalesced background scan, indicated by the Refresh icon (with reduced-motion
-support and an accessible updating label). Leaving the page does not cancel the
+support and an accessible updating label). While optional database accounting is
+pending, active views quietly recheck only its metadata every 1.5 seconds. Leaving
+the page stops those checks; a late result cannot replace a newer file snapshot.
+Leaving the page does not cancel the
 cache update. Refresh atomically rebases the previously visible page range;
 failures preserve the last complete result. Only an uncached first visit shows
 Calculating storage. The cache is in memory and does not survive app restart.
@@ -89,3 +113,21 @@ When checking this feature in the development desktop app, rebuilding main/prelo
 files does not update an already-running Electron main process. A process started
 before a build still uses its loaded host scanner. Restart the app and verify the
 visible directory row; refreshing/reloading only the renderer is insufficient.
+
+## Performance evidence
+
+Read-only profiling of an approximately 4 GB working store reproduced the old
+query failing its 8-second deadline. Aggregate-mode DBSTAT alone was also slow,
+so moving the same scan into foreground code was rejected. File metadata for
+about 7,000 regular files took roughly 300 ms. The replacement cold database
+metadata request took 2 ms and a cached request less than 1 ms; the exact first
+background scan took about 26 seconds and was not on the UI critical path. These
+are observed local timings, not cross-machine guarantees.
+
+`AIFI_STORAGE_PROFILE_DIR=<data-directory> go test ./internal/store -run
+TestStoragePerformanceRealStore -count=1 -v` runs an opt-in read-only profile from
+`apps/cli`. It does not migrate/start collection and writes its cache to a temporary
+test folder. Normal tests cover cache reopen/schema invalidation, writer isolation,
+last-good fallback, exact totals, and read-only enforcement. The native UI gate
+injects delayed/failed database details and proves files appear first and remain
+usable through diagnostic failures and recovery.

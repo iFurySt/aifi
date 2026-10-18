@@ -55,3 +55,8 @@ source-population, local-store and isolated desktop/mobile chart/table checks.
 Congress coverage remains intermediary House/Senate data with flagged ambiguities;
 SEC backfill is bounded to recent submissions and excludes uncertain amendments
 from totals. Individual analyst names are generally absent from the keyless feed.
+
+Storage performance now has real-store read-only profiling, durable category-cache
+and writer-isolation/read-only tests, and delayed/failed optional-diagnostic UI
+checks. Exact cold category scans still scale with database pages; they are
+bounded background work rather than an interactive response dependency.

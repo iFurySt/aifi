@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-18 | Storage performance | Storage opens without waiting for database analysis, and files remain available when diagnostics fail. | Added independent metadata inventory, background query-only category accounting, durable cache reuse and lightweight detail updates. |
 | 2026-10-18 | Politicians | Browse cached congressional disclosures by member, chamber and trade type. | Added keyless collection, disclosed ranges, count timeline, source links and ambiguity handling. |
 | 2026-10-18 | Insiders | Review richer SEC history and reported holdings after each event. | Added configurable 40/120/240 filing backfill, signed chart, event scopes and amendment-safe totals. |
 | 2026-10-18 | Analyst | Compare recommendations and historical firm targets. | Added recommendation radar, current/prior targets, signed upside and firm/action/date filters. |

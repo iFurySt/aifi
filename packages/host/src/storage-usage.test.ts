@@ -114,10 +114,14 @@ it("coalesces refreshes and never replaces a successful snapshot on failure", as
   const result = await first;
   expect(result.fileCount).toBe(0);
   expect(db).toHaveBeenCalledTimes(1);
-  db.mockRejectedValueOnce(Error("unavailable"));
-  await expect(storage.read()).rejects.toThrow("unavailable");
+  db.mockRejectedValue(Error("unavailable"));
+  const degraded = await storage.read();
+  expect(degraded.database.error).toBe("Database details unavailable.");
+  expect(degraded.fileCount).toBe(0);
+  await rm(root, { recursive: true });
+  await expect(storage.read()).rejects.toThrow();
   expect(
-    storage.files({ snapshotId: result.snapshotId, offset: 0 }).files,
+    storage.files({ snapshotId: degraded.snapshotId, offset: 0 }).files,
   ).toEqual([]);
   await expect(storage.reveal({ relativePath: "" })).rejects.toThrow("desktop");
 });
@@ -254,4 +258,54 @@ it("groups all small files by top-level directory and extracts only files strict
   );
   await storage.reveal({ relativePath: "" });
   expect(reveal).toHaveBeenLastCalledWith(usage.dataDir, true);
+});
+it("returns the file inventory while SQL diagnostics are unresolved and preserves it on SQL failure", async () => {
+  const root = await directory();
+  await writeFile(join(root, "file.json"), "local");
+  let reject!: (reason: Error) => void;
+  const waiting = new Promise<Awaited<ReturnType<typeof database>>>(
+    (_yes, no) => {
+      reject = no;
+    },
+  );
+  const db = vi.fn().mockReturnValue(waiting);
+  const storage = new LocalStorageUsage(root, db);
+  const read = await storage.read();
+  expect(read.totalBytes).toBe(5);
+  expect(read.files[0]).toMatchObject({ kind: "directory", fileCount: 1 });
+  expect(read.database.pending).toBe(true);
+  const first = storage.details();
+  expect(storage.details()).toBe(first);
+  expect(db).toHaveBeenCalledTimes(1);
+  reject(Error("SQL timed out"));
+  expect(await first).toMatchObject({
+    pending: false,
+    error: "Database details unavailable.",
+  });
+  expect(
+    storage.files({ snapshotId: read.snapshotId, offset: 0 }).files,
+  ).toEqual(read.files);
+  const retry = await storage.read();
+  expect(retry.totalBytes).toBe(read.totalBytes);
+  expect(retry.database.error).toBeTruthy();
+});
+it("marks retained database details pending while a queued metadata request finishes", async () => {
+  const root = await directory();
+  let release!: (value: Awaited<ReturnType<typeof database>>) => void;
+  const queued = new Promise<Awaited<ReturnType<typeof database>>>(
+    (resolve) => {
+      release = resolve;
+    },
+  );
+  const db = vi
+    .fn()
+    .mockResolvedValueOnce(await database())
+    .mockReturnValueOnce(queued);
+  const storage = new LocalStorageUsage(root, db);
+  const initial = await storage.read();
+  const next = await storage.read();
+  expect(next.database.categories).toEqual(initial.database.categories);
+  expect(next.database.pending).toBe(true);
+  release(await database());
+  expect((await storage.details()).pending).toBeFalsy();
 });

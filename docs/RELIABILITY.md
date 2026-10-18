@@ -110,3 +110,14 @@ backoffs, and the scheduler polls after weekday close in New York time. This
 weekday schedule is not a holiday calendar. Quote timestamps, regular close and
 extended-session observations stay distinct. Parser, DST/early-close boundary,
 post-close wake and offline outlook-read regressions cover these paths.
+
+## Storage inspection
+
+Storage file totals/listing must remain available independently of SQLite category
+accounting. Go runs one cancellable category worker on a separate query-only
+reader, with a cheap metadata response outside the expensive scan. Exact results
+are version/schema-validated, persisted atomically and reused for ten minutes;
+failures retain good values and back off. The primary collector connection and
+service dispatch loop never perform the page scan. File inventory skips vanished
+subdirectories and preserves its prior snapshot on real filesystem failures.
+See [storage performance and profiling](design-docs/storage-usage.md).

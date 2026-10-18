@@ -27,6 +27,8 @@ const categories = (): StorageCategory[] => [
 export class LocalStorageUsage {
   private snapshot?: { usage: StorageUsage; files: StorageFile[] };
   private reading?: Promise<StorageUsage>;
+  private databaseRequest?: Promise<DatabaseStorage>;
+  private latestDatabase?: DatabaseStorage;
   constructor(
     private dataDir: string,
     private database: () => Promise<DatabaseStorage>,
@@ -42,8 +44,33 @@ export class LocalStorageUsage {
     });
     return this.reading;
   }
+  details(): Promise<DatabaseStorage> {
+    if (this.databaseRequest) return this.databaseRequest;
+    this.databaseRequest = Promise.resolve()
+      .then(this.database)
+      .then(
+        (value) => {
+          this.latestDatabase = value;
+          return value;
+        },
+        () => {
+          const fallback: DatabaseStorage = {
+            ...(this.latestDatabase ?? { bytes: 0, categories: [] }),
+            pending: false,
+            error: "Database details unavailable.",
+          };
+          this.latestDatabase = fallback;
+          return fallback;
+        },
+      )
+      .finally(() => {
+        this.databaseRequest = undefined;
+      });
+    return this.databaseRequest;
+  }
   private async scan(): Promise<StorageUsage> {
-    const database = await this.database();
+    // File metadata must never wait for optional SQL diagnostics or its RPC queue.
+    void this.details();
     const root = await realpath(this.dataDir);
     const files: StorageFile[] = [];
     const groups = categories();
@@ -72,7 +99,18 @@ export class LocalStorageUsage {
     let entries = 0;
     let fileCount = 0;
     const walk = async (parts: string[], container = "") => {
-      const dir = await opendir(join(root, ...parts));
+      let dir;
+      try {
+        dir = await opendir(join(root, ...parts));
+      } catch (error) {
+        if (
+          ["ENOENT", "ENOTDIR"].includes(
+            (error as NodeJS.ErrnoException).code ?? "",
+          )
+        )
+          return;
+        throw error;
+      }
       for await (const entry of dir) {
         if (++entries > 100000 || Date.now() > deadline)
           throw Error(
@@ -144,7 +182,10 @@ export class LocalStorageUsage {
       fileCount,
       entryCount: files.length,
       categories: groups,
-      database,
+      database: {
+        ...(this.latestDatabase ?? { bytes: 0, categories: [] }),
+        pending: !!this.databaseRequest || !!this.latestDatabase?.pending,
+      },
       files: files.slice(0, pageSize),
     };
     this.snapshot = { usage, files };

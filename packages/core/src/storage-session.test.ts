@@ -120,3 +120,71 @@ it("keeps the old complete view if a refresh page is incomplete, and handles a s
   expect(session.snapshot().data?.entryCount).toBe(3);
   expect(session.snapshot().error).toBe("");
 });
+it("updates optional database details without rescanning files and pauses polling off-page", async () => {
+  const { vi } = await import("vitest");
+  vi.useFakeTimers();
+  try {
+    const first = {
+      ...usage(),
+      database: { bytes: 4096, categories: [], pending: true },
+    };
+    const read = vi.fn().mockResolvedValue(first);
+    const details = vi
+      .fn()
+      .mockResolvedValueOnce(first.database)
+      .mockResolvedValueOnce({
+        bytes: 4096,
+        categories: [{ id: "system", label: "Settings", bytes: 4096 }],
+        pending: false,
+      });
+    const session = new StorageSession(read, page, details);
+    let unmount = session.subscribe(() => {});
+    await session.refresh();
+    const rows = session.snapshot().data!.files;
+    expect(session.snapshot().refreshing).toBe(false);
+    await vi.advanceTimersByTimeAsync(1500);
+    expect(details).toHaveBeenCalledTimes(1);
+    expect(session.snapshot().data!.files).toBe(rows);
+    unmount();
+    await vi.advanceTimersByTimeAsync(5000);
+    expect(details).toHaveBeenCalledTimes(1);
+    unmount = session.subscribe(() => {});
+    await vi.advanceTimersByTimeAsync(1500);
+    expect(details).toHaveBeenCalledTimes(2);
+    expect(session.snapshot().data?.database.pending).toBe(false);
+    expect(read).toHaveBeenCalledTimes(1);
+    expect(session.snapshot().data!.files).toBe(rows);
+    unmount();
+  } finally {
+    vi.useRealTimers();
+  }
+});
+it("keeps file rows usable when only database detail refresh fails", async () => {
+  const { vi } = await import("vitest");
+  vi.useFakeTimers();
+  try {
+    const first = {
+      ...usage(),
+      database: { bytes: 0, categories: [], pending: true },
+    };
+    const session = new StorageSession(
+      async () => first,
+      page,
+      async () => {
+        throw Error("SQL unavailable");
+      },
+    );
+    const unmount = session.subscribe(() => {});
+    await session.refresh();
+    await vi.advanceTimersByTimeAsync(1500);
+    expect(session.snapshot().error).toBe("");
+    expect(session.snapshot().data!.files).toBe(first.files);
+    expect(session.snapshot().data?.database.error).toBe(
+      "Database details unavailable.",
+    );
+    expect(session.snapshot().data?.database.pending).toBe(false);
+    unmount();
+  } finally {
+    vi.useRealTimers();
+  }
+});

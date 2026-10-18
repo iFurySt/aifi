@@ -5,13 +5,18 @@ import {
   getRuntimeInfo,
   readStorageFiles,
   readStorageUsage,
+  readStorageDetails,
   revealStorageFile,
   type RuntimeInfo,
 } from "@aifi/platform";
 import { Button } from "../components/primitives";
 import { useWorkspace } from "../workspace-context";
 
-const storageSession = new StorageSession(readStorageUsage, readStorageFiles);
+const storageSession = new StorageSession(
+  readStorageUsage,
+  readStorageFiles,
+  readStorageDetails,
+);
 let lastRuntime: RuntimeInfo | undefined;
 
 export function formatStorageBytes(bytes: number) {
@@ -156,17 +161,41 @@ export function StorageSettings() {
           <section className="setting-group storage-database">
             <div className="storage-section-heading">
               <div>
-                <h2>Database contents</h2>
+                <h2
+                  title={
+                    data.database.updatedAt
+                      ? `Last updated ${new Date(data.database.updatedAt).toLocaleTimeString()}`
+                      : undefined
+                  }
+                >
+                  Database contents
+                  {data.database.pending && (
+                    <RefreshCw
+                      size={13}
+                      className="storage-refreshing"
+                      aria-label="Updating database details"
+                    />
+                  )}
+                </h2>
               </div>
-              <span className="storage-number">
-                {formatStorageBytes(data.database.bytes)}
-              </span>
+              {data.database.bytes > 0 && (
+                <span className="storage-number">
+                  {formatStorageBytes(data.database.bytes)}
+                </span>
+              )}
             </div>
-            <Breakdown
-              categories={data.database.categories}
-              total={data.database.bytes}
-              label="SQLite contents"
-            />
+            {data.database.categories.length > 0 && (
+              <Breakdown
+                categories={data.database.categories}
+                total={data.database.bytes}
+                label="SQLite contents"
+              />
+            )}
+            {data.database.error && !data.database.pending && (
+              <p className="storage-loading" role="status">
+                Database details unavailable
+              </p>
+            )}
           </section>
           <section className="setting-group storage-files">
             <div className="storage-section-heading">

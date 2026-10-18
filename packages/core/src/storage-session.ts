@@ -1,4 +1,8 @@
-import type { StorageFilePage, StorageUsage } from "./storage-usage";
+import type {
+  DatabaseStorage,
+  StorageFilePage,
+  StorageUsage,
+} from "./storage-usage";
 
 export interface StorageSessionState {
   data?: StorageUsage;
@@ -17,23 +21,67 @@ export class StorageSession {
   private listeners = new Set<() => void>();
   private reading?: Promise<void>;
   private paging?: Promise<void>;
+  private detailTimer?: ReturnType<typeof setTimeout>;
+  private detailReading?: Promise<void>;
   constructor(
     private read: () => Promise<StorageUsage>,
     private files: (
       snapshotId: string,
       offset: number,
     ) => Promise<StorageFilePage>,
+    private details?: () => Promise<DatabaseStorage>,
   ) {}
   snapshot = () => this.state;
   subscribe = (listener: () => void) => {
     this.listeners.add(listener);
+    this.scheduleDetails();
     return () => {
       this.listeners.delete(listener);
+      if (!this.listeners.size && this.detailTimer) {
+        clearTimeout(this.detailTimer);
+        this.detailTimer = undefined;
+      }
     };
   };
   private publish(patch: Partial<StorageSessionState>) {
     this.state = { ...this.state, ...patch };
     for (const listener of this.listeners) listener();
+    this.scheduleDetails();
+  }
+  private scheduleDetails() {
+    if (
+      !this.details ||
+      !this.listeners.size ||
+      !this.state.data?.database.pending ||
+      this.detailTimer ||
+      this.detailReading
+    )
+      return;
+    this.detailTimer = setTimeout(() => {
+      this.detailTimer = undefined;
+      void this.updateDetails();
+    }, 1500);
+  }
+  private updateDetails() {
+    const data = this.state.data;
+    if (!data || !this.details) return Promise.resolve();
+    this.detailReading = Promise.resolve()
+      .then(this.details)
+      .catch(() => ({
+        ...data.database,
+        pending: false,
+        error: "Database details unavailable.",
+      }))
+      .then((database) => {
+        const current = this.state.data;
+        if (current?.snapshotId === data.snapshotId)
+          this.publish({ data: { ...current, database } });
+      })
+      .finally(() => {
+        this.detailReading = undefined;
+        this.scheduleDetails();
+      });
+    return this.detailReading;
   }
   refresh = (): Promise<void> => {
     if (this.reading) return this.reading;

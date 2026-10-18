@@ -50,14 +50,23 @@ async function checks() {
   const rows = () => [...document.querySelectorAll(".storage-file-row")];
   const refresh = () =>
     document.querySelector(".storage-section-heading button");
+  const started = performance.now();
   await until(() => rows().length === 50);
+  assert(
+    performance.now() - started < 1500,
+    "File inventory waited for database accounting",
+  );
+  assert(
+    !!document.querySelector(".storage-database .storage-refreshing"),
+    "Missing independent database progress",
+  );
   assert(
     rows()[0].textContent.includes("largest.bin"),
     "Files are not sorted by size",
   );
   assert(
-    document.querySelectorAll(".storage-legend").length === 2,
-    "Missing disk/SQLite breakdown",
+    document.querySelectorAll(".storage-legend").length === 1,
+    "File overview should render before slow database details",
   );
   assert(
     document.querySelector(".storage-total").textContent.includes("MB"),
@@ -96,7 +105,8 @@ async function checks() {
   );
   rootFolder.querySelector(".storage-reveal").click();
   await wait(60);
-  const total = document.querySelector(".storage-total").textContent;
+  await until(() => document.querySelectorAll(".storage-legend").length === 2);
+  window.storageFixture.databaseMode = "normal";
   const reads = window.storageFixture.reads;
   document.querySelector(".storage-load-more").click();
   await until(
@@ -135,6 +145,7 @@ async function checks() {
     "Re-entry displayed empty/loading frames or collapsed the file list",
   );
   window.storageFixture.delay = 80;
+  const total = document.querySelector(".storage-total").textContent;
   window.storageFixture.fail = true;
   refresh().click();
   assert(rows().length > 50, "Refresh cleared existing files");
@@ -154,6 +165,28 @@ async function checks() {
       !document.querySelector(".settings-service-error") &&
       !document.querySelector(".storage-refreshing") &&
       rows().length === expanded,
+  );
+  window.storageFixture.databaseMode = "failure";
+  refresh().click();
+  await until(() =>
+    document
+      .querySelector(".storage-database")
+      ?.textContent.includes("Database details unavailable"),
+  );
+  assert(
+    rows().length === expanded &&
+      !!document.querySelector(".storage-total") &&
+      !document.querySelector(".settings-service-error"),
+    "SQL failure hid the file inventory",
+  );
+  window.storageFixture.databaseMode = "normal";
+  refresh().click();
+  await until(
+    () =>
+      !document
+        .querySelector(".storage-database")
+        ?.textContent.includes("Database details unavailable") &&
+      document.querySelectorAll(".storage-legend").length === 2,
   );
   assert(
     !document
@@ -186,6 +219,8 @@ async function checks() {
     backgroundRefreshIndicator: true,
     individualFilesAbove50MBOnly: true,
     directoryActionsWithoutPathLine: true,
+    filesBeforeDatabaseDetails: true,
+    optionalDatabaseFailureRecovery: true,
   };
 }
 const main = `import {app,BrowserWindow,ipcMain} from 'electron';

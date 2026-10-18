@@ -73,3 +73,8 @@ export const readStorageFiles = (snapshotId: string, offset: number) =>
   >;
 export const revealStorageFile = (relativePath = "") =>
   requestLocalData("storage.reveal", { relativePath });
+
+export const readStorageDetails = () =>
+  requestLocalData("storage.details") as Promise<
+    import("@aifi/core").DatabaseStorage
+  >;

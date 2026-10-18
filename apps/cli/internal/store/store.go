@@ -26,7 +26,10 @@ var schema string
 var ErrBusy = errors.New("directory sync already running; wait for its bounded lease")
 var ErrLease = errors.New("directory sync lease expired or superseded")
 
-type Store struct{ db *sql.DB }
+type Store struct {
+	db      *sql.DB
+	storage *storageAccounting
+}
 
 func Open(ctx context.Context, dataDir string) (*Store, error) {
 	absolute, err := filepath.Abs(dataDir)
@@ -88,9 +91,16 @@ func Open(ctx context.Context, dataDir string) (*Store, error) {
 	if err = tx.Commit(); err != nil {
 		return fail(err)
 	}
-	return &Store{db: db}, nil
+	accounting, err := newStorageAccounting(absolute)
+	if err != nil {
+		return fail(err)
+	}
+	return &Store{db: db, storage: accounting}, nil
 }
-func (s *Store) Close() error  { return s.db.Close() }
+func (s *Store) Close() error {
+	_ = s.storage.close()
+	return s.db.Close()
+}
 func stamp(t time.Time) string { return t.UTC().Format("2006-01-02T15:04:05.000000000Z") }
 func id() string {
 	var b [16]byte

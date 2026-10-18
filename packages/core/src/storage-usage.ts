@@ -5,6 +5,9 @@ export interface StorageCategory {
 }
 /** Logical SQLite pages, including indexes/free pages, independent of WAL size. */
 export interface DatabaseStorage {
+  pending?: boolean;
+  updatedAt?: string;
+  error?: string;
   bytes: number;
   categories: StorageCategory[];
 }

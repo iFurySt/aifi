@@ -436,7 +436,11 @@ directory remainder so row sizes sum to the total. Folder/reveal actions live on
 the list rows; the standalone absolute data-path row is removed. Re-entry immediately
 reuses the renderer-session scan and expanded pages, then refreshes in the
 background with a spinning Refresh icon. Background scans and failures retain the
-visible result. Only the first uncached visit shows loading. Desktop offers Open
+visible result. Only the first uncached visit shows loading. File totals/listing do not wait
+for Database contents: its exact category snapshot updates independently in the
+background, reuses a durable ten-minute cache, and retains last-good values on
+SQL errors. Active views poll only pending diagnostic metadata; no file rescan
+is involved. Desktop offers Open
 folder and Show in Finder
 (Show in folder elsewhere); Web offers Copy path. Reset workspace retains its
 existing demo-only scope. Counts exclude the app bundle and browser/profile data.

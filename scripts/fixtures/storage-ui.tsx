@@ -7,7 +7,13 @@ import "../../packages/ui/src/styles.css";
 const bridge = (
   window as unknown as { storageBridge: NonNullable<Window["aifiDesktop"]> }
 ).storageBridge;
-const fixture = { fail: false, reads: 0, web: false, delay: 80 };
+const fixture = {
+  fail: false,
+  reads: 0,
+  web: false,
+  delay: 80,
+  databaseMode: "delayed",
+};
 Object.assign(window, { storageFixture: fixture });
 window.aifiDesktop = {
   ...bridge,
@@ -22,7 +28,19 @@ window.aifiDesktop = {
       await new Promise((resolve) => setTimeout(resolve, fixture.delay));
       if (fixture.fail) throw Error("Synthetic read failure");
     }
-    return bridge.requestData(method, params);
+    if (method === "storage.details") {
+      if (fixture.databaseMode === "failure")
+        throw Error("Synthetic SQL failure");
+      if (fixture.databaseMode === "delayed")
+        await new Promise((resolve) => setTimeout(resolve, 400));
+    }
+    const value = await bridge.requestData(method, params);
+    if (method === "storage.read" && fixture.databaseMode !== "normal")
+      return {
+        ...(value as object),
+        database: { bytes: 0, categories: [], pending: true },
+      };
+    return value;
   },
   onChatGPTDelta: () => () => {},
   requestChatGPT: async () => ({ ok: false, error: "Offline fixture" }),

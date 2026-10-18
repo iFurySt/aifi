@@ -213,8 +213,11 @@ providers, source windows, job budgets, financial semantics and remaining limits
 
 ## Local Storage Inspection
 
-Go provides read-only SQLite page/category accounting. Node inventories metadata
-inside the app data directory and serves descending, snapshot-paged file lists.
+Go provides cached SQLite page/category accounting through a dedicated read-only
+pool and cancellable background worker, outside the service request loop. Small
+aggregate snapshots persist across restarts. Node independently inventories file
+metadata inside the app data directory and serves descending, snapshot-paged lists;
+optional SQL diagnostics never block or fail the file overview.
 The shared Storage settings shows both file totals and logical database contents;
 Electron main owns a validated native reveal callback. Web offers path copying.
 See [storage usage](design-docs/storage-usage.md) for counting rules and limits.
