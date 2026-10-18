@@ -196,13 +196,28 @@ export function Stocks() {
           />
         )}
         <div className="stock-company-identity">
-          <h1>
-            {identity.loading && !listing ? (
-              <Skeleton width={180} height={24} />
-            ) : (
-              stockDisplayName(profile?.name, listing?.name, symbol)
-            )}
-          </h1>
+          <div className="stock-company-title">
+            <h1>
+              {identity.loading && !listing ? (
+                <Skeleton width={180} height={24} />
+              ) : (
+                stockDisplayName(profile?.name, listing?.name, symbol)
+              )}
+            </h1>
+            <Button
+              className="stock-watch-button"
+              variant="ghost"
+              aria-pressed={watched}
+              aria-label={
+                watched ? "Remove from watchlist" : "Add to watchlist"
+              }
+              title={watched ? "Remove from watchlist" : "Add to watchlist"}
+              disabled={!validSymbol(symbol)}
+              onClick={toggleWatch}
+            >
+              <Star size={16} fill={watched ? "currentColor" : "none"} />
+            </Button>
+          </div>
           <small>
             {symbol}
             {listing ? ` · ${directoryExchange(listing)}` : ""}
@@ -225,22 +240,6 @@ export function Stocks() {
             </small>
           )}
         </div>
-        <Button
-          aria-pressed={watched}
-          aria-label={watched ? "Watching" : "Watchlist"}
-          disabled={!validSymbol(symbol)}
-          title={
-            !validSymbol(symbol)
-              ? "This symbol format is not supported in watchlists yet"
-              : undefined
-          }
-          onClick={toggleWatch}
-        >
-          <Star size={15} fill={watched ? "currentColor" : "none"} />
-          <span className="stock-watch-label">
-            {watched ? "Watching" : "Watchlist"}
-          </span>
-        </Button>
       </header>
       <div className="stock-tabs" role="tablist" aria-label="Stock research">
         {stockTabs.map((t, i) => (
@@ -490,8 +489,8 @@ export function Stocks() {
                       symbol={symbol}
                       bars={bars}
                       adjusted={adjusted.adjusted}
+                      source={data.datasets.prices}
                     />
-                    <SourceNote view={data.datasets.prices} />
                   </div>
                   <section className="stock-digest stock-news-overview">
                     <h2>Digest</h2>

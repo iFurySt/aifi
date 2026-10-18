@@ -72,8 +72,10 @@ async function checks(phase, width) {
     await until(
       () => document.querySelectorAll(".sidebar .stock-list-row").length >= 50,
     );
-    document
-      .querySelector('[aria-label="Price range"] button:nth-child(2)')
+    document.querySelector('[aria-label="Price range"]').click();
+    await until(() => document.querySelector('[role="option"]'));
+    [...document.querySelectorAll('[role="option"]')]
+      .find((o) => o.textContent === "3M")
       .click();
     document
       .querySelector('[aria-label="Chart style"] button:nth-child(2)')
@@ -119,9 +121,8 @@ async function checks(phase, width) {
         "Resize remounted chart",
       );
       assert(
-        document.querySelector(
-          '[aria-label="Price range"] [aria-pressed="true"]',
-        ).textContent === "3M",
+        document.querySelector('[aria-label="Price range"] .select-value')
+          .textContent === "3M",
         "Range reset on resize",
       );
       assert(

@@ -547,3 +547,10 @@ All initial data reads use the [shared loading states](design-docs/loading-state
 neutral shimmer shapes, accessible named regions and static reduced-motion support.
 Keep cached content visible during refresh; append row skeletons during pagination.
 Empty/error results and long-running user operations remain explicit states.
+
+## Stock Chart Toolbar
+
+[Chart tools](design-docs/stock-chart-tools.md) share the range Select, inline
+source details, session-based SMA studies and cached local comparison reads.
+`pnpm smoke:chart-tools` covers their calculations, menus and responsive controls;
+`pnpm smoke:stocks-layout` retains all-tab and chart-state reflow checks.

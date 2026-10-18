@@ -468,3 +468,11 @@ Use the shared Skeleton primitives for initial data reads. Match the content's
 layout with neutral, softly shimmering blocks; honor reduced motion with static
 shapes. Retain cached content on refresh and existing rows during pagination.
 See [loading states](docs/design-docs/loading-states.md).
+
+### Stock chart controls
+
+Keep watch actions beside company identity as labeled icon controls. Divide tab
+spacing between outer gaps and hover padding. Chart controls form one wrapping,
+left-aligned row: range, style, source, studies and comparison. Technical coverage
+belongs in source details; chart hover owns point-in-time values. See
+[stock chart tools](docs/design-docs/stock-chart-tools.md).

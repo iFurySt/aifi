@@ -1,17 +1,55 @@
-import { useLayoutEffect, useRef, useState } from "react";
-import { stockChartBars, type DailyBar } from "@aifi/core";
+import {
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { Check, SlidersHorizontal, X } from "lucide-react";
+import {
+  chartRanges,
+  chartRangeBars,
+  simpleMovingAverage,
+  relativeChartSeries,
+  splitAdjustedBars,
+  type ChartRange,
+  type DailyBar,
+  type ResearchDatasetView,
+  type StockResearch,
+} from "@aifi/core";
+import {
+  StockResearchContext,
+  prepareStockResearch,
+} from "../stock-research-context";
+import { Select } from "./Select";
+import { ResearchSource } from "./ResearchSource";
+import { Skeleton } from "./Skeleton";
+import { StockComparePicker } from "./StockComparePicker";
+import "./stock-chart-tools.css";
 import { money } from "../workspace-context";
+const periods = [20, 50, 200] as const;
+const studyColors: Record<number, string> = {
+  20: "#d29a28",
+  50: "#4c8dff",
+  200: "#c774d9",
+};
+const comparisonColors = ["#4c8dff", "#cf7b35", "#aa78dd"];
+const percentage = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
 
 export function StockChart({
   symbol,
   bars: all,
   adjusted,
+  source,
 }: {
   symbol: string;
   bars: DailyBar[];
   adjusted: boolean;
+  source?: ResearchDatasetView;
 }) {
-  const [range, setRange] = useState("1Y"),
+  const [range, setRange] = useState<ChartRange>("1Y"),
     [mode, setMode] = useState("Line"),
     [cursor, setCursor] = useState<number | null>(null),
     [pointerY, setPointerY] = useState<number | null>(null);
@@ -26,11 +64,85 @@ export function StockChart({
     if (host.current) observer.observe(host.current);
     return () => observer.disconnect();
   }, [symbol, all.length > 0]);
-  const bars = stockChartBars(
-    all,
-    { "1M": 1, "3M": 3, "1Y": 12, "2Y": 24 }[range] ?? 12,
+  const reader = useContext(StockResearchContext);
+  const [indicators, setIndicators] = useState<number[]>([]),
+    [selected, setSelected] = useState<string[]>([]);
+  const [peers, setPeers] = useState<
+    Record<string, { data?: StockResearch; error?: string }>
+  >({});
+  const selectedKey = selected.join(",");
+  useEffect(() => {
+    let current = true;
+    for (const ticker of selected)
+      void prepareStockResearch(reader, ticker)
+        .then((data) => {
+          if (current) setPeers((old) => ({ ...old, [ticker]: { data } }));
+        })
+        .catch(() => {
+          if (current)
+            setPeers((old) => ({
+              ...old,
+              [ticker]: old[ticker]?.data
+                ? old[ticker]!
+                : { error: "Couldn't read prices" },
+            }));
+        });
+    return () => {
+      current = false;
+    };
+  }, [reader, selectedKey]);
+  useLayoutEffect(() => {
+    setSelected([]);
+    setCursor(null);
+  }, [symbol]);
+  const windowBars = useMemo(() => chartRangeBars(all, range), [all, range]);
+  const studies = useMemo(
+    () =>
+      indicators.map((period) => ({
+        period,
+        points: simpleMovingAverage(all, period),
+      })),
+    [all, indicators],
   );
-  useLayoutEffect(() => setCursor(null), [symbol, range]);
+  const comparable = useMemo(
+    () =>
+      selected.flatMap((ticker) => {
+        const data = peers[ticker]?.data;
+        if (!data) return [];
+        const adjusted = splitAdjustedBars(data);
+        return adjusted.adjusted && adjusted.bars.length > 1
+          ? [{ symbol: ticker, bars: adjusted.bars }]
+          : [];
+      }),
+    [selected, peers],
+  );
+  const comparison = useMemo(
+    () =>
+      adjusted
+        ? relativeChartSeries([{ symbol, bars: windowBars }, ...comparable])
+        : undefined,
+    [adjusted, symbol, windowBars, comparable],
+  );
+  const bars = comparison?.bars ?? windowBars;
+  const baseline = bars[0]?.close ?? 1;
+  const displayValue = (value: number) =>
+    comparison ? (value / baseline - 1) * 100 : value;
+  const barPositions = useMemo(
+    () => new Map(bars.map((b, i) => [b.date, i])),
+    [bars],
+  );
+  const visibleStudies = useMemo(
+    () =>
+      studies.map((study) => ({
+        ...study,
+        points: study.points.filter((p) => barPositions.has(p.date)),
+      })),
+    [studies, barPositions],
+  );
+  useLayoutEffect(() => {
+    setCursor(null);
+    setPointerY(null);
+  }, [symbol, range, comparison?.start, comparison?.end]);
   if (!bars.length)
     return (
       <section className="stock-chart-panel" ref={host}>
@@ -41,17 +153,24 @@ export function StockChart({
   const height = 300,
     right = width - 52,
     bottom = 210,
-    values =
-      mode === "Line"
-        ? bars.map((b) => b.close)
-        : bars.flatMap((b) => [b.low, b.high]),
+    values = [
+      ...(mode === "Line"
+        ? bars.map((b) => displayValue(b.close))
+        : bars.flatMap((b) => [displayValue(b.low), displayValue(b.high)])),
+      ...visibleStudies.flatMap((s) =>
+        s.points.map((p) => displayValue(p.value)),
+      ),
+      ...(comparison?.series.flatMap((s) => s.points.map((p) => p.value)) ??
+        []),
+    ],
     low = Math.min(...values),
     high = Math.max(...values),
     padding = (high - low) * 0.04 || Math.max(1, Math.abs(high) * 0.02),
     min = low - padding,
     max = high + padding,
     x = (i: number) => 12 + (i / Math.max(1, bars.length - 1)) * (right - 12),
-    y = (v: number) => bottom - ((v - min) / (max - min || 1)) * 190;
+    plotY = (v: number) => bottom - ((v - min) / (max - min || 1)) * 190,
+    y = (v: number) => plotY(displayValue(v));
   const active =
     cursor === null ? null : bars[Math.min(cursor, bars.length - 1)];
   const trendColor =
@@ -76,7 +195,15 @@ export function StockChart({
         );
   const tipTop = Math.max(
     8,
-    Math.min(140, (pointerY ?? (active ? y(active.close) : 20)) - 24),
+    Math.min(
+      Math.max(
+        8,
+        height -
+          (58 +
+            (5 + indicators.length + (comparison?.series.length ?? 0)) * 18),
+      ),
+      (pointerY ?? (active ? y(active.close) : 20)) - 24,
+    ),
   );
   const selectPoint = (event: React.PointerEvent<SVGSVGElement>) => {
     const r = event.currentTarget.getBoundingClientRect();
@@ -99,7 +226,7 @@ export function StockChart({
     <section className="stock-chart-panel" ref={host}>
       <div className="stock-chart-heading">
         <strong>{money(bars.at(-1)!.close)}</strong>
-        <small>{range} · Daily close</small>
+        {comparison && <small>Price return</small>}
       </div>
       <div className="stock-chart-canvas">
         <svg
@@ -162,7 +289,8 @@ export function StockChart({
                 fill="var(--muted)"
                 fontSize={10}
               >
-                {(max - ((max - min) * i) / 4).toFixed(0)}
+                {(max - ((max - min) * i) / 4).toFixed(comparison ? 1 : 0)}
+                {comparison ? "%" : ""}
               </text>
             </g>
           ))}
@@ -211,6 +339,45 @@ export function StockChart({
               strokeWidth={1.8}
             />
           )}
+          {visibleStudies.map((study) => (
+            <polyline
+              key={study.period}
+              data-study={`SMA${study.period}`}
+              points={study.points
+                .map((p) => `${x(barPositions.get(p.date)!)},${y(p.value)}`)
+                .join(" ")}
+              fill="none"
+              stroke={studyColors[study.period]}
+              strokeDasharray="5 3"
+              strokeWidth={1.4}
+            />
+          ))}
+          {comparison?.series.slice(1).map((series) => {
+            const points = new Map(series.points.map((p) => [p.date, p.value]));
+            let continued = false;
+            const d = bars
+              .map((b, i) => {
+                const value = points.get(b.date);
+                if (value === undefined) {
+                  continued = false;
+                  return "";
+                }
+                const command = continued ? "L" : "M";
+                continued = true;
+                return `${command}${x(i)},${plotY(value)}`;
+              })
+              .join(" ");
+            return (
+              <path
+                key={series.symbol}
+                data-comparison={series.symbol}
+                d={d}
+                fill="none"
+                stroke={comparisonColors[selected.indexOf(series.symbol)]}
+                strokeWidth={1.8}
+              />
+            );
+          })}
           {active && (
             <>
               <line
@@ -282,32 +449,42 @@ export function StockChart({
                   <dd>{value}</dd>
                 </div>
               ))}
+              {visibleStudies.map((study) => {
+                const p = study.points.find((p) => p.date === active.date);
+                return p ? (
+                  <div key={study.period}>
+                    <dt>SMA{study.period}</dt>
+                    <dd>{money(p.value)}</dd>
+                  </div>
+                ) : null;
+              })}
+              {comparison?.series.map((series) => {
+                const p = series.points.find((p) => p.date === active.date);
+                return (
+                  <div key={series.symbol}>
+                    <dt>{series.symbol}</dt>
+                    <dd>{p ? percentage(p.value) : "—"}</dd>
+                  </div>
+                );
+              })}
             </dl>
           </div>
         )}
       </div>
-      <div className="stock-chart-readout">
-        Daily OHLCV · {adjusted ? "Split-adjusted" : "Unadjusted"} ·{" "}
-        {bars.length} sessions
-      </div>
-      <span className="sr-only" aria-live="polite">
+      <span className="stock-chart-live-readout" aria-live="polite">
         {active
           ? `${active.date} · Open ${money(active.open)} · High ${money(active.high)} · Low ${money(active.low)} · Close ${money(active.close)} · Volume ${active.volume}`
           : ""}
       </span>
       <div className="stock-chart-controls">
-        <div className="segmented-control" aria-label="Price range">
-          {["1M", "3M", "1Y", "2Y"].map((r) => (
-            <button
-              key={r}
-              aria-pressed={range === r}
-              className={range === r ? "selected" : ""}
-              onClick={() => setRange(r)}
-            >
-              {r}
-            </button>
-          ))}
-        </div>
+        <Select
+          label="Price range"
+          value={range}
+          onValueChange={setRange}
+          options={chartRanges.map((value) => ({ value, label: value }))}
+          align="start"
+          className="stock-range-select"
+        />
         <div className="segmented-control" aria-label="Chart style">
           {["Line", "Candle"].map((t) => (
             <button
@@ -320,7 +497,152 @@ export function StockChart({
             </button>
           ))}
         </div>
+        <ResearchSource
+          view={source}
+          detail={
+            <>
+              <p>
+                Daily OHLCV · {adjusted ? "Split-adjusted" : "Unadjusted"} ·{" "}
+                {windowBars.length} sessions
+              </p>
+              {comparison && (
+                <p>
+                  Price return · Dividends excluded
+                  <br />
+                  {comparison.start} → {comparison.end}
+                </p>
+              )}
+              {selected.map((ticker) => {
+                const view = peers[ticker]?.data?.datasets.prices;
+                return view ? (
+                  <p key={ticker}>
+                    {ticker} · {view.provider.toUpperCase()} ·{" "}
+                    <time dateTime={view.fetchedAt}>
+                      {new Date(view.fetchedAt).toLocaleDateString()}
+                    </time>
+                  </p>
+                ) : null;
+              })}
+            </>
+          }
+        />
+        <DropdownMenu.Root>
+          <DropdownMenu.Trigger
+            className="stock-chart-tool"
+            aria-label="Indicators"
+          >
+            <SlidersHorizontal size={14} />
+            <span>Indicators</span>
+            {indicators.length > 0 && <small>{indicators.length}</small>}
+          </DropdownMenu.Trigger>
+          <DropdownMenu.Portal>
+            <DropdownMenu.Content
+              className="dropdown-content stock-indicator-menu"
+              align="start"
+              sideOffset={6}
+              collisionPadding={12}
+            >
+              {periods.map((period) => (
+                <DropdownMenu.CheckboxItem
+                  key={period}
+                  className="dropdown-item"
+                  checked={indicators.includes(period)}
+                  disabled={all.length < period && !indicators.includes(period)}
+                  title={
+                    all.length < period
+                      ? `Needs ${period} stored sessions`
+                      : `${period}-session simple moving average`
+                  }
+                  onSelect={(e) => e.preventDefault()}
+                  onCheckedChange={(checked) =>
+                    setIndicators((old) =>
+                      checked
+                        ? [...old, period]
+                        : old.filter((p) => p !== period),
+                    )
+                  }
+                >
+                  <span
+                    className="chart-series-dot"
+                    style={{ background: studyColors[period] }}
+                  />
+                  <span>SMA{period}</span>
+                  <DropdownMenu.ItemIndicator className="stock-indicator-check">
+                    <Check size={14} />
+                  </DropdownMenu.ItemIndicator>
+                </DropdownMenu.CheckboxItem>
+              ))}
+            </DropdownMenu.Content>
+          </DropdownMenu.Portal>
+        </DropdownMenu.Root>
+        <StockComparePicker
+          symbol={symbol}
+          selected={selected}
+          onChange={setSelected}
+        />
       </div>
+      {(indicators.length > 0 || selected.length > 0) && (
+        <div className="stock-chart-legend">
+          {comparison && (
+            <span className="stock-series-label">
+              <i style={{ background: trendColor }} />
+              {symbol}
+            </span>
+          )}
+          {indicators.map((period) => (
+            <button
+              key={period}
+              onClick={() =>
+                setIndicators((old) => old.filter((p) => p !== period))
+              }
+              aria-label={`Remove SMA${period}`}
+            >
+              <i style={{ background: studyColors[period] }} />
+              SMA{period}
+              <X size={11} />
+            </button>
+          ))}
+          {selected.map((ticker, i) => (
+            <button
+              key={ticker}
+              onClick={() =>
+                setSelected((old) => old.filter((s) => s !== ticker))
+              }
+              aria-label={`Remove comparison ${ticker}`}
+              aria-busy={!peers[ticker]}
+            >
+              <i style={{ background: comparisonColors[i] }} />
+              {ticker}
+              {!peers[ticker] && <Skeleton width={24} height={8} />}
+              <X size={11} />
+            </button>
+          ))}
+          {comparison && (
+            <small title="Price return over the same observed dates; dividends excluded">
+              {comparison.start} → {comparison.end}
+            </small>
+          )}
+        </div>
+      )}
+      {selected.map((ticker) => {
+        const entry = peers[ticker];
+        const data = entry?.data;
+        const prices = data ? splitAdjustedBars(data) : undefined;
+        const message =
+          entry?.error ||
+          (prices && prices.bars.length < 2
+            ? "No stored prices"
+            : prices && (!adjusted || !prices.adjusted)
+              ? "Split-adjusted prices needed"
+              : prices && !comparison
+                ? "No shared price dates"
+                : "");
+        return message ? (
+          <p className="stock-compare-status" key={ticker} role="status">
+            {ticker} · {message}
+          </p>
+        ) : null;
+      })}
     </section>
   );
 }
