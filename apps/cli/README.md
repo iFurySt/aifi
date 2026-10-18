@@ -202,8 +202,10 @@ bounded to 3 GiB; normalized evidence needs additional local storage. Private
 `bulk-cache/` files use 0600 permissions and a per-archive process lock. Downloads
 resume with validated HTTP byte ranges and server version validators; a changed
 archive restarts safely. Slow downloads have a cancellable 12-hour request limit,
-transient failures back off, and a complete ZIP is reused for 24 hours. Members
-are never extracted to filesystem paths. ZIP/ZIP64 directory metadata is checked
+transient failures back off, and a complete ZIP is reused for 24 hours.
+SQLite BUSY/LOCKED conflicts also back off and resume the missing-only import;
+completed company writes are retained when app and standalone writers overlap.
+Members are never extracted to filesystem paths. ZIP/ZIP64 directory metadata is checked
 before allocating file headers: at most 1,250,000 entries and a 128 MiB central
 directory, accommodating the official submissions archive's roughly 995,000
 entries. Only exact CIK JSON members (max 32 MiB)

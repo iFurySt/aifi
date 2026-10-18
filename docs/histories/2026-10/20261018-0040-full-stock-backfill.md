@@ -34,3 +34,11 @@ against the already-downloaded official ZIP validated 989,373 exact CIK members
 and parsed Apple's 1,000 recent filings. Restarted the owned backfill worker to
 reuse the completed download and resume missing-only imports. Full data coverage
 remains unresolved; empty results and identity gaps stay separate.
+
+The resumed submissions pass imported hundreds of additional issuers before a
+generic store error stopped the bulk pass. Added sanitized recognition and retry
+for SQLite BUSY/LOCKED (including extended codes), so temporary concurrent-writer
+conflicts resume the missing-only pass instead of abandoning it. A real two-writer
+SQLite regression verifies contention classification without exposing raw errors.
+Provider/command race tests passed and the owned worker was restarted with the
+retry handling; successful imported snapshots remain intact.

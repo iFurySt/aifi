@@ -99,3 +99,15 @@ actual archive layout. An opt-in offline test against the actual downloaded
 archive verified 989,373 exact CIK members and 1,000 Apple filings. Provider/CLI
 race tests passed. Restarted the owned worker to import the existing ZIP without
 redownloading it. Whole-directory completion remains unchecked.
+
+The resumed submissions pass wrote hundreds of additional issuers. Added
+sanitized SQLite BUSY/LOCKED retry handling after the pass encountered a store
+error amid concurrent app/CLI writes; a real SQLite writer-contention regression
+and provider/CLI race suite pass. The owned collector continues with that repair.
+
+The resumed submissions bulk pass subsequently completed (644 further issuer
+imports, one API fallback in its final pass). At the 2026-10-18T01:25:52.248841Z UTC
+checkpoint, 6968 directory symbols had populated filing observations;
+6398 had populated financial observations. Overall coverage is still
+incomplete. Other datasets remain queued/failed, and 803 price series
+lag the newest locally observed session.

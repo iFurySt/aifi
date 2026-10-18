@@ -76,12 +76,10 @@ func newBackfillCommand(dataDir *string) *cobra.Command {
 						}
 						// Never print contact headers or arbitrary provider bodies.
 						var failure *market.Failure
-						code := "bulk_import_failed"
-						if errors.As(err, &failure) {
-							code = failure.Code
-						}
+						_ = errors.As(err, &failure)
+						code := backfillFailureCode(err)
 						fmt.Fprintf(cmd.ErrOrStderr(), "SEC %s: %s; normal per-company collector continues\n", dataset, code)
-						if code != "network_error" && code != "incomplete_response" && code != "rate_limited" {
+						if code != "network_error" && code != "incomplete_response" && code != "rate_limited" && code != "store_busy" && code != "store_timeout" {
 							return
 						}
 						delay := time.Duration(1<<min(attempt, 5)) * time.Minute
@@ -165,11 +163,7 @@ func importSECBulk(ctx context.Context, db *store.Store, client *market.Client, 
 			}
 		}
 		if collectErr != nil {
-			code := "bulk_import_failed"
-			var failure *market.Failure
-			if errors.As(collectErr, &failure) {
-				code = failure.Code
-			}
+			code := backfillFailureCode(collectErr)
 			// A missing/invalid bulk member is not proof that the live API has
 			// no data. Preserve the normal HTTP fallback and its source checks.
 			cleanup, stop := context.WithTimeout(context.WithoutCancel(ctx), 5*time.Second)
@@ -188,4 +182,24 @@ func importSECBulk(ctx context.Context, db *store.Store, client *market.Client, 
 	}
 	fmt.Fprintf(cmd.ErrOrStderr(), "SEC %s: imported %d, fallback %d; existing snapshots retained\n", dataset, stored, failed)
 	return nil
+}
+
+// SQLite extended BUSY/LOCKED codes are transient across cooperating app/CLI
+// writers. Keep their classification, not the raw database error text, in logs.
+func backfillFailureCode(err error) string {
+	var failure *market.Failure
+	if errors.As(err, &failure) {
+		return failure.Code
+	}
+	if errors.Is(err, context.DeadlineExceeded) {
+		return "store_timeout"
+	}
+	var coded interface{ Code() int }
+	if errors.As(err, &coded) {
+		switch coded.Code() & 0xff {
+		case 5, 6:
+			return "store_busy"
+		}
+	}
+	return "bulk_import_failed"
 }
