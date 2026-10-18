@@ -36,26 +36,34 @@ function Breakdown({
   total: number;
   label: string;
 }) {
+  // Keep category colors stable when a refresh changes their size ranking.
+  const ordered = categories
+    .map((category, color) => ({ ...category, color }))
+    .sort((a, b) => b.bytes - a.bytes || a.id.localeCompare(b.id));
   return (
     <div className="storage-breakdown">
       <div
         className="storage-meter"
         role="img"
-        aria-label={`${label}: ${categories.map((c) => `${c.label} ${formatStorageBytes(c.bytes)}`).join(", ")}`}
+        aria-label={`${label}: ${ordered.map((c) => `${c.label} ${formatStorageBytes(c.bytes)}`).join(", ")}`}
       >
-        {categories.map((category, i) => (
+        {ordered.map((category) => (
           <span
             key={category.id}
-            className={`storage-color-${i}`}
+            className={`storage-color-${category.color}`}
+            title={`${category.label}: ${formatStorageBytes(category.bytes)}`}
             style={{ width: `${total ? (category.bytes / total) * 100 : 0}%` }}
           />
         ))}
       </div>
       <dl className="storage-legend">
-        {categories.map((category, i) => (
+        {ordered.map((category) => (
           <div key={category.id}>
             <dt>
-              <i className={`storage-color-${i}`} />
+              <i
+                className={`storage-color-${category.color}`}
+                aria-hidden="true"
+              />
               {category.label}
             </dt>
             <dd>{formatStorageBytes(category.bytes)}</dd>
@@ -108,16 +116,23 @@ export function StorageSettings() {
   return (
     <div className="storage-settings" aria-busy={refreshing}>
       <section className="storage-overview">
-        <div className="storage-section-heading">
-          <div>
-            <h2>This device</h2>
-          </div>
+        <div className="storage-section-heading storage-overview-heading">
+          {data ? (
+            <div className="storage-total">
+              <strong>{formatStorageBytes(data.totalBytes)}</strong>
+              <span>used</span>
+            </div>
+          ) : (
+            <span />
+          )}
           <Button
+            variant="ghost"
+            className="storage-refresh"
             aria-label={refreshing ? "Updating storage" : "Refresh storage"}
             title={
               data
-                ? `Last updated ${new Date(data.scannedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`
-                : undefined
+                ? `Refresh storage · Last updated ${new Date(data.scannedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`
+                : "Refresh storage"
             }
             disabled={refreshing || loadingFiles}
             onClick={() => void storageSession.refresh()}
@@ -127,7 +142,6 @@ export function StorageSettings() {
               className={refreshing ? "storage-refreshing" : ""}
               aria-hidden="true"
             />
-            Refresh
           </Button>
         </div>
         {error && (
@@ -143,17 +157,11 @@ export function StorageSettings() {
           </p>
         )}
         {data && (
-          <>
-            <div className="storage-total">
-              <strong>{formatStorageBytes(data.totalBytes)}</strong>
-              <span>used</span>
-            </div>
-            <Breakdown
-              categories={data.categories}
-              total={data.totalBytes}
-              label="Local file storage"
-            />
-          </>
+          <Breakdown
+            categories={data.categories}
+            total={data.totalBytes}
+            label="Local file storage"
+          />
         )}
       </section>
       {data && (

@@ -3741,12 +3741,23 @@ kbd {
 .storage-section-heading > .button {
   flex-shrink: 0;
 }
+.storage-overview-heading {
+  align-items: center;
+  margin-bottom: 18px;
+}
+.storage-overview-heading > .storage-refresh {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  padding: 0;
+  border-radius: 50%;
+}
 .storage-total {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 24px 0 18px;
+  margin: 0;
 }
 .storage-total strong {
   font-size: 28px;
@@ -3802,12 +3813,12 @@ kbd {
 }
 .storage-legend dt > i {
   flex-shrink: 0;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
 }
 .storage-legend dd {
-  margin: 4px 0 0 14px;
+  margin: 4px 0 0 16px;
   font-size: 13px;
   font-variant-numeric: tabular-nums;
 }

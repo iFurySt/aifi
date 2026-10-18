@@ -106,6 +106,40 @@ async function checks() {
   rootFolder.querySelector(".storage-reveal").click();
   await wait(60);
   await until(() => document.querySelectorAll(".storage-legend").length === 2);
+  for (const breakdown of document.querySelectorAll(".storage-breakdown")) {
+    const segments = [...breakdown.querySelectorAll(".storage-meter > span")];
+    const legend = [...breakdown.querySelectorAll(".storage-legend > div")];
+    assert(
+      segments.length === legend.length,
+      "Bar and legend differ in length",
+    );
+    const widths = segments.map((segment) => parseFloat(segment.style.width));
+    assert(
+      widths.every((width, i) => !i || widths[i - 1] >= width),
+      "Storage bar is not largest first",
+    );
+    segments.forEach((segment, i) => {
+      const name = legend[i].querySelector("dt").textContent.trim();
+      const size = legend[i].querySelector("dd").textContent;
+      assert(
+        segment.title === `${name}: ${size}`,
+        "Bar and legend order differs",
+      );
+      assert(
+        getComputedStyle(segment).backgroundColor ===
+          getComputedStyle(legend[i].querySelector("i")).backgroundColor,
+        "Bar and legend category colors differ",
+      );
+    });
+  }
+  const refreshBounds = refresh().getBoundingClientRect();
+  assert(
+    refreshBounds.width <= 32 &&
+      refreshBounds.height <= 32 &&
+      !refresh().textContent.trim() &&
+      refresh().getAttribute("aria-label"),
+    "Storage refresh is not a compact labeled icon",
+  );
   window.storageFixture.databaseMode = "normal";
   const reads = window.storageFixture.reads;
   document.querySelector(".storage-load-more").click();
@@ -198,7 +232,7 @@ async function checks() {
     !document
       .querySelector(".storage-settings")
       .textContent.match(
-        /Largest first|Last scanned|SQLite pages|Collected data and cached files/,
+        /Largest first|Last scanned|SQLite pages|Collected data and cached files|This device|Reset workspace/,
       ),
     "Redundant storage copy remains",
   );
@@ -221,6 +255,8 @@ async function checks() {
     directoryActionsWithoutPathLine: true,
     filesBeforeDatabaseDetails: true,
     optionalDatabaseFailureRecovery: true,
+    descendingBreakdownsWithMatchingLegends: true,
+    compactAccessibleRefresh: true,
   };
 }
 const main = `import {app,BrowserWindow,ipcMain} from 'electron';

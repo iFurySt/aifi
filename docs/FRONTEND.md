@@ -448,6 +448,9 @@ is involved. Desktop offers Open
 folder and Show in Finder
 (Show in folder elsewhere); Web offers Copy path. The legacy demo workspace reset
 control is removed. Counts exclude the app bundle and browser/profile data.
+Both breakdowns order bars and legend entries by descending size with stable
+category colors and matching segment tooltips. The small icon-only refresh
+action sits beside the total; the This device heading is removed.
 See [storage boundaries](design-docs/storage-usage.md).
 
 `pnpm build && pnpm smoke:storage` validates the actual Electron renderer against

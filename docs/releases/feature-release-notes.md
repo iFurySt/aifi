@@ -4,6 +4,7 @@
 
 | Date | Area | User Impact | Change Summary |
 | --- | --- | --- | --- |
+| 2026-10-18 | Storage charts | Match usage categories to each bar at a glance. | Sorted both breakdowns and legends largest first, retained category colors, added segment tooltips and placed a compact refresh icon beside the total. |
 | 2026-10-18 | Storage settings | No demo reset action appears in Storage. | Removed the legacy workspace reset control, confirmation and unused reset action. |
 | 2026-10-18 | Storage performance | Storage opens without waiting for database analysis, and files remain available when diagnostics fail. | Added independent metadata inventory, background query-only category accounting, durable cache reuse and lightweight detail updates. |
 | 2026-10-18 | Politicians | Browse cached congressional disclosures by member, chamber and trade type. | Added keyless collection, disclosed ranges, count timeline, source links and ambiguity handling. |

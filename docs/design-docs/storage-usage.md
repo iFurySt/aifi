@@ -95,7 +95,12 @@ Calculating storage. The cache is in memory and does not survive app restart.
 Scan requests are independent of the Settings status poll. Explanatory paragraphs,
 "Largest first", repeated root-folder labels and the visible scan-time caption
 are omitted from the page; technical accounting rules stay in this document. The
-legacy demo workspace reset control and its confirmation dialog are removed.
+legacy demo workspace reset control and its confirmation dialog are removed. Both file and
+database category bars and their legends use descending byte order, with the
+largest category at the left. Category colors remain stable when sizes reorder,
+and segment tooltips identify the matching label and size. The compact icon-only
+refresh action sits beside the total; it retains an accessible label, update
+spinner and timestamp tooltip. There is no separate This device heading.
 
 ## Verification
 
