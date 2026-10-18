@@ -73,10 +73,10 @@ source HTTP observation times remain distinct from import/decode times.
   joins the provider queue or schedules image refresh; catalog metadata retains
   its independent background refresh. Cache misses are omitted, not recorded as
   missing provider images.
-- UI decodes/samples all returned page images before DirectoryFeed sees the page,
-  so existing cached artwork is present on the rows' first render after restart
-  as well as during scrolling. Preparation failures preserve usable directory
-  reads. Existing generation/snapshot checks still discard superseded batches.
+- UI decodes/samples returned page images before DirectoryFeed sees the page,
+  within an 80ms optional-artwork budget. Fast cache hits appear together; delayed
+  or failed artwork cannot hold stored directory rows behind a spinner. Late hits
+  continue warming the shared image cache. Existing generation/snapshot checks still discard superseded batches.
   The next page starts within 900px of the list bottom. Per-avatar requests keep
   a 240px lookahead against the real sidebar scroll root for uncached images.
 - Uncached/rejected images show a letter immediately, including while a remote
@@ -132,8 +132,11 @@ source HTTP observation times remain distinct from import/decode times.
   get a dark background for contrast.
   Original square PNGs fill the avatar's content box with centered contain sizing,
   preserving aspect ratio without added inset or automatic whitespace cropping.
-  Rounded avatar bounds clip the image; any remaining whitespace belongs to the
-  source artwork and should be fixed in the catalog. Optional contrast sampling
+  Rounded avatar bounds clip the image. Ready images have no wrapper border or
+  added background; letter placeholders retain their tile, and transparent white
+  marks retain the contrast background. Intrinsic transparent margins must not
+  expose an unrelated frame as thin divider lines. Remaining whitespace belongs
+  to source artwork and should be fixed in the catalog. Optional contrast sampling
   never changes image bytes or source dimensions.
 
 No backup/retention or provider-management UI is added. Directory snapshot counts

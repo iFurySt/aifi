@@ -3190,6 +3190,10 @@ kbd {
   display: grid;
   place-items: center;
 }
+.stock-avatar[data-logo-state="ready"] {
+  border: 0;
+  background: transparent;
+}
 .stock-avatar img {
   width: 100%;
   height: 100%;
