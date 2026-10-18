@@ -146,21 +146,6 @@ export function App({
     [navigate],
   );
   const clearDraft = useCallback(() => setDraft(""), []);
-  function reset() {
-    const next = createDemoWorkspace();
-    const error = writeWorkspace(storage, next);
-    blocked.current = !!error;
-    dirty.current = false;
-    setWorkspace(next);
-    setStorageError(error);
-    setConversationId(null);
-    setDraft("");
-    notify(
-      error
-        ? "Reset for this session. Saving is unavailable."
-        : "Workspace reset.",
-    );
-  }
   useEffect(() => {
     const change = () => {
       const nextPage = currentPage();
@@ -209,7 +194,6 @@ export function App({
             conversationId,
             openConversation,
             storageError,
-            reset,
           }}
         >
           <a

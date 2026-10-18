@@ -1,6 +1,6 @@
 import { AppearanceMode } from "../components/AppearanceMode";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
-import { Check, RefreshCw, Trash2, CircleCheck } from "lucide-react";
+import { Check, RefreshCw, CircleCheck } from "lucide-react";
 import type { DataStatus, DataSettings, CredentialProvider } from "@aifi/core";
 import {
   readDataStatus,
@@ -79,14 +79,12 @@ export function Settings() {
   const {
     workspace,
     update,
-    reset,
     settingsSection: section,
     notify,
   } = useWorkspace();
   const [data, setData] = useState<DataStatus>();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
-  const [confirm, setConfirm] = useState(false);
   const [provider, setProvider] = useState<CredentialProvider>();
   const [values, setValues] = useState<Record<string, string>>({});
   const [hours, setHours] = useState("24");
@@ -400,22 +398,7 @@ export function Settings() {
           </Group>
         </>
       )}
-      {section === "storage" && (
-        <>
-          <StorageSettings />
-          <Group title="Workspace">
-            <Row
-              title="Reset workspace"
-              description="Restore demo chats, agents and watchlist."
-            >
-              <Button onClick={() => setConfirm(true)}>
-                <Trash2 size={15} />
-                Reset
-              </Button>
-            </Row>
-          </Group>
-        </>
-      )}
+      {section === "storage" && <StorageSettings />}
       <Modal
         open={!!provider}
         onOpenChange={(open) => {
@@ -496,25 +479,6 @@ export function Settings() {
             </Button>
           </div>
         </form>
-      </Modal>
-      <Modal
-        open={confirm}
-        onOpenChange={setConfirm}
-        title="Reset workspace?"
-        description="Replaces your agents, watchlist, chats and theme with demo defaults."
-      >
-        <div className="dialog-actions">
-          <Button onClick={() => setConfirm(false)}>Cancel</Button>
-          <Button
-            variant="primary"
-            onClick={() => {
-              reset();
-              setConfirm(false);
-            }}
-          >
-            Reset workspace
-          </Button>
-        </div>
       </Modal>
     </div>
   );

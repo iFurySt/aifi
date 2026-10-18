@@ -24,7 +24,6 @@ export interface WorkspaceContextValue {
   conversationId: string | null;
   openConversation: (conversation: Conversation | null) => void;
   storageError?: string;
-  reset: () => void;
 }
 export const WorkspaceContext = createContext<WorkspaceContextValue | null>(
   null,

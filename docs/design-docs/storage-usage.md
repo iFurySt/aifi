@@ -94,8 +94,8 @@ failures preserve the last complete result. Only an uncached first visit shows
 Calculating storage. The cache is in memory and does not survive app restart.
 Scan requests are independent of the Settings status poll. Explanatory paragraphs,
 "Largest first", repeated root-folder labels and the visible scan-time caption
-are omitted from the page; technical accounting rules stay in this document. Existing Reset workspace
-continues to reset demo workspace state, not collected research or local files.
+are omitted from the page; technical accounting rules stay in this document. The
+legacy demo workspace reset control and its confirmation dialog are removed.
 
 ## Verification
 

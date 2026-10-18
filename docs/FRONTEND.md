@@ -442,8 +442,8 @@ background, reuses a durable ten-minute cache, and retains last-good values on
 SQL errors. Active views poll only pending diagnostic metadata; no file rescan
 is involved. Desktop offers Open
 folder and Show in Finder
-(Show in folder elsewhere); Web offers Copy path. Reset workspace retains its
-existing demo-only scope. Counts exclude the app bundle and browser/profile data.
+(Show in folder elsewhere); Web offers Copy path. The legacy demo workspace reset
+control is removed. Counts exclude the app bundle and browser/profile data.
 See [storage boundaries](design-docs/storage-usage.md).
 
 `pnpm build && pnpm smoke:storage` validates the actual Electron renderer against
