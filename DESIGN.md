@@ -458,3 +458,6 @@ in the row's more menu. Put Add account in the section heading, cancellation in
 its place while sign-in is pending, and official ChatGPT usage below as a subtle
 external link. Keep model selection in Chat. Avoid Connected/Connections/status
 explanations and duplicated login or usage rows; errors remain actionable.
+
+Account action menus align icons and labels horizontally in one compact row.
+Secondary usage links keep 10px horizontal padding inside their hover surface.

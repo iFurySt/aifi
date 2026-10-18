@@ -47,3 +47,11 @@ in the completed execution plan.
 - `scripts/check-account-ui.mjs`
 - `scripts/fixtures/account-ui.tsx`
 - Account flow design, frontend guidance and execution plan.
+
+### Follow-up: compact action geometry
+
+- User reported Sign out icon/text stacking and the usage hover surface touching
+  its contents. Shared dropdown items now align icons and labels on one row;
+  the secondary usage link keeps 10px horizontal padding.
+- Reused the synthetic account gate and reviewed the real menu without signing
+  out or otherwise changing the live account.

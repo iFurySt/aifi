@@ -1601,6 +1601,10 @@ kbd {
   box-shadow: 0 8px 30px rgb(0 0 0 / 8%);
 }
 .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
   padding: 7px 10px;
   font-size: 12px;
   outline: none;
