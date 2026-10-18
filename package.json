@@ -28,6 +28,7 @@
     "smoke:account": "node scripts/check-account-ui.mjs",
     "smoke:chatgpt": "node scripts/check-chatgpt.mjs",
     "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json,css}\" \"scripts/*.mjs\" package.json tsconfig.json",
+    "smoke:loading": "node scripts/check-loading-skeletons.mjs",
     "smoke:selects": "node scripts/check-selects.mjs",
     "smoke:selection": "node scripts/check-text-selection.mjs"
   },

@@ -540,3 +540,10 @@ Interactive stock reads now have a separate query-only SQLite pool and bounded
 directory/research RPC lanes. App boot warms the selected cached list; optional
 logo preparation has an 80ms artwork budget. See
 [directory read latency](design-docs/directory-read-latency.md) for boundaries and checks.
+
+## Shared Data Skeletons
+
+All initial data reads use the [shared loading states](design-docs/loading-states.md):
+neutral shimmer shapes, accessible named regions and static reduced-motion support.
+Keep cached content visible during refresh; append row skeletons during pagination.
+Empty/error results and long-running user operations remain explicit states.

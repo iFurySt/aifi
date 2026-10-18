@@ -1,3 +1,4 @@
+import { SkeletonRows } from "../components/Skeleton";
 import { AppearanceMode } from "../components/AppearanceMode";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { Check, RefreshCw, CircleCheck } from "lucide-react";
@@ -141,6 +142,24 @@ export function Settings() {
           { id: "secret", label: "Secret key" },
         ]
       : [{ id: "apiKey", label: "API key" }];
+  if (needsData && !data)
+    return (
+      <div className="settings-content">
+        <h1>{settingItems.find((x) => x.id === section)?.label}</h1>
+        {error ? (
+          <div className="settings-service-error" role="alert">
+            {error}
+            <Button onClick={() => void refresh()}>Retry</Button>
+          </div>
+        ) : (
+          <SkeletonRows
+            label="Loading settings"
+            rows={5}
+            className="setting-card skeleton-settings"
+          />
+        )}
+      </div>
+    );
   return (
     <div className="settings-content">
       <h1>{settingItems.find((x) => x.id === section)?.label}</h1>

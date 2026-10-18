@@ -1,3 +1,4 @@
+import { SkeletonRows } from "./Skeleton";
 import { Select } from "./Select";
 import { memo, useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { Search } from "lucide-react";
@@ -156,9 +157,11 @@ export function StockSidebar({
           />
         ))}
         {loading && (!data.items.length || data.loadingMore) && (
-          <p className="sidebar-hint" role="status">
-            {data.items.length ? "Loading more…" : "Loading stocks…"}
-          </p>
+          <SkeletonRows
+            label={data.items.length ? "Loading more stocks" : "Loading stocks"}
+            rows={data.items.length ? 2 : 6}
+            avatar
+          />
         )}
         {error && (
           <p className="sidebar-hint" role="status">

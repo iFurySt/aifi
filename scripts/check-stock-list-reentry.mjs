@@ -73,7 +73,7 @@ async function checks() {
     if (document.querySelector(".stock-main"))
       samples.push({
         rows: rows(),
-        loading: !!list()?.innerText.includes("Loading stocks"),
+        loading: !!list()?.querySelector(":scope > .skeleton-group"),
       });
     requestAnimationFrame(sample);
   };

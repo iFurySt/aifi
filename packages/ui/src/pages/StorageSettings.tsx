@@ -1,3 +1,4 @@
+import { Skeleton, SkeletonGroup, SkeletonRows } from "../components/Skeleton";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { Copy, File, FolderOpen, RefreshCw } from "lucide-react";
 import { StorageSession, type StorageCategory } from "@aifi/core";
@@ -149,12 +150,13 @@ export function StorageSettings() {
             {error}
           </div>
         )}
-        {!data && (
-          <p className="storage-loading" role="status">
-            {!error
-              ? "Calculating storage…"
-              : "Storage unavailable. Refresh to try again."}
-          </p>
+        {!data && !error && (
+          <SkeletonGroup label="Loading storage" className="skeleton-stack">
+            <Skeleton width={150} height={34} />
+            <Skeleton height={16} />
+            <SkeletonRows label="Loading storage categories" rows={4} />
+            <SkeletonRows label="Loading files" rows={5} />
+          </SkeletonGroup>
         )}
         {data && (
           <Breakdown
@@ -192,6 +194,15 @@ export function StorageSettings() {
                 </span>
               )}
             </div>
+            {!data.database.categories.length && data.database.pending && (
+              <SkeletonGroup
+                label="Loading database breakdown"
+                className="skeleton-stack"
+              >
+                <Skeleton height={16} />
+                <SkeletonRows label="Loading database categories" rows={4} />
+              </SkeletonGroup>
+            )}
             {data.database.categories.length > 0 && (
               <Breakdown
                 categories={data.database.categories}
@@ -274,6 +285,9 @@ export function StorageSettings() {
                   </Button>
                 </div>
               ))}
+              {loadingFiles && (
+                <SkeletonRows label="Loading more files" rows={2} />
+              )}
               {!data.entryCount && (
                 <div className="settings-empty">No files in this folder</div>
               )}
@@ -284,7 +298,7 @@ export function StorageSettings() {
                 disabled={loadingFiles || refreshing}
                 onClick={() => void storageSession.loadMore()}
               >
-                {loadingFiles ? "Loading…" : "Show more"}
+                Show more
               </Button>
             )}
           </section>

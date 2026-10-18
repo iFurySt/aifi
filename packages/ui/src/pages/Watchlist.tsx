@@ -1,3 +1,4 @@
+import { Skeleton } from "../components/Skeleton";
 import { useState, useEffect, useContext } from "react";
 import { ArrowUpRight, Plus, Search, X } from "lucide-react";
 import {
@@ -53,6 +54,7 @@ export function Watchlist() {
       }
     >
   >({});
+  const [settled, setSettled] = useState<Set<string>>(() => new Set());
   const symbolsKey = workspace.watchlist.join(",");
   useEffect(() => {
     let active = true,
@@ -87,7 +89,10 @@ export function Watchlist() {
           }
         }),
       );
-      if (active) setQuotes((old) => ({ ...old, ...next }));
+      if (active) {
+        setQuotes((old) => ({ ...old, ...next }));
+        setSettled((old) => new Set([...old, ...symbols]));
+      }
       pending = false;
     };
     void refresh();
@@ -148,8 +153,9 @@ export function Watchlist() {
             <tbody>
               {filtered.map((s) => {
                 const quote = quotes[s];
+                const loading = !quote && !settled.has(s);
                 return (
-                  <tr key={s}>
+                  <tr key={s} aria-busy={loading}>
                     <td>
                       <button
                         className="company-cell"
@@ -158,12 +164,26 @@ export function Watchlist() {
                         <StockAvatar symbol={s} />
                         <span>
                           <strong>{s}</strong>
-                          <small>{quote?.name ?? s}</small>
+                          <small>
+                            {loading ? (
+                              <Skeleton width={110} height={10} />
+                            ) : (
+                              (quote?.name ?? s)
+                            )}
+                          </small>
                         </span>
                       </button>
                     </td>
                     <td className="number">
-                      {quote?.price !== undefined ? (
+                      {loading ? (
+                        <span
+                          role="status"
+                          aria-label={`Loading ${s} quote`}
+                          aria-busy="true"
+                        >
+                          <Skeleton width={64} />
+                        </span>
+                      ) : quote?.price !== undefined ? (
                         money(quote.price)
                       ) : (
                         <span className="muted">—</span>
@@ -172,12 +192,18 @@ export function Watchlist() {
                     <td
                       className={`number ${quote?.change !== undefined ? (quote.change >= 0 ? "positive" : "negative") : "muted"}`}
                     >
-                      {quote?.change !== undefined
-                        ? percent(quote.change)
-                        : "—"}
+                      {loading ? (
+                        <Skeleton width={54} />
+                      ) : quote?.change !== undefined ? (
+                        percent(quote.change)
+                      ) : (
+                        "—"
+                      )}
                     </td>
                     <td>
-                      {quote && quote.points.length > 1 ? (
+                      {loading ? (
+                        <Skeleton width={90} height={24} />
+                      ) : quote && quote.points.length > 1 ? (
                         <Sparkline
                           points={quote.points}
                           positive={(quote.change ?? 0) >= 0}

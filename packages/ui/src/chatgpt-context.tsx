@@ -20,6 +20,7 @@ interface Connection {
   available: boolean;
   status?: ChatGPTStatus;
   models: ChatGPTModel[];
+  modelsLoading: boolean;
   model: string;
   setModel: (model: string) => void;
   busy: boolean;
@@ -39,6 +40,7 @@ export function ChatGPTProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<ChatGPTStatus>();
   const [models, setModels] = useState<ChatGPTModel[]>([]);
   const [model, setModel] = useState("");
+  const [modelsLoading, setModelsLoading] = useState(false);
   const [busy, setBusy] = useState(false);
   const [signingIn, setSigningIn] = useState(false);
   const [error, setError] = useState("");
@@ -63,16 +65,22 @@ export function ChatGPTProvider({ children }: { children: ReactNode }) {
       setModel("");
       return;
     }
-    const next = await listChatGPTModels(active.id);
-    setModels(next);
-    setModel((old) =>
-      next.some((m) => m.slug === old) ? old : (next[0]?.slug ?? ""),
-    );
-  }, [active?.id, active?.sharing]);
+    setModelsLoading(!models.length);
+    try {
+      const next = await listChatGPTModels(active.id);
+      setModels(next);
+      setModel((old) =>
+        next.some((m) => m.slug === old) ? old : (next[0]?.slug ?? ""),
+      );
+    } finally {
+      setModelsLoading(false);
+    }
+  }, [active?.id, active?.sharing, models.length]);
   useEffect(() => {
     let current = true;
     setModels([]);
     setModel("");
+    setModelsLoading(!!active?.sharing);
     if (active?.sharing)
       void listChatGPTModels(active.id)
         .then((next) => {
@@ -83,6 +91,9 @@ export function ChatGPTProvider({ children }: { children: ReactNode }) {
         })
         .catch((e) => {
           if (current) setError(e.message);
+        })
+        .finally(() => {
+          if (current) setModelsLoading(false);
         });
     return () => {
       current = false;
@@ -118,6 +129,7 @@ export function ChatGPTProvider({ children }: { children: ReactNode }) {
         available,
         status,
         models,
+        modelsLoading,
         model,
         setModel,
         busy,

@@ -286,6 +286,7 @@ export function Research({
               <span>Using ChatGPT plan · {profile.email || profile.label}</span>
               <Select
                 label="Chat model"
+                loading={chatgpt.available && ((!chatgpt.status && !chatgpt.error) || chatgpt.modelsLoading)}
                 value={chatgpt.model}
                 disabled={sending || !chatgpt.models.length}
                 onValueChange={chatgpt.setModel}

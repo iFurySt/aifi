@@ -1,3 +1,4 @@
+import { Skeleton } from "./Skeleton";
 import { useContext, useEffect, useRef, useState } from "react";
 import { StockLogoContext } from "../stock-directory-context";
 import { peekPreparedStockLogo, prepareStockLogo } from "../stock-logo-image";
@@ -64,7 +65,14 @@ export function StockAvatar({
         }
       } catch {
         // Pressure/bridge errors must not strand a visible row on its letter.
-        if (alive) retry(Math.min(30000, 1000 * 2 ** Math.min(failures++, 5)));
+        if (alive) {
+          setImage((old) =>
+            old.symbol === symbol && old.url
+              ? old
+              : { symbol, url: null, light: false, settled: true },
+          );
+          retry(Math.min(30000, 1000 * 2 ** Math.min(failures++, 5)));
+        }
       } finally {
         loading = false;
       }
@@ -120,6 +128,8 @@ export function StockAvatar({
             setImage({ symbol, url: null, light: false, settled: true })
           }
         />
+      ) : state === "loading" ? (
+        <Skeleton className="skeleton-avatar-fill" />
       ) : (
         symbol.slice(0, 1)
       )}

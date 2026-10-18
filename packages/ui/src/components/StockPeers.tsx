@@ -1,3 +1,4 @@
+import { Skeleton, SkeletonRows } from "./Skeleton";
 import {
   stockDisplayName,
   stockQuotePresentation,
@@ -11,15 +12,19 @@ import { ResearchSource } from "./ResearchSource";
 
 function PeerRow({ symbol }: { symbol: string }) {
   const identity = useDirectoryEntry(symbol);
-  const { data } = useStockResearch(symbol);
+  const { data, loading } = useStockResearch(symbol);
   const { openStock } = useWorkspace();
   const quote = stockQuotePresentation(data);
   const entry = identity.data.item;
   // Only resolve exact US-directory symbols; do not guess foreign/share mappings.
-  if (!entry) return null;
+  if (!entry)
+    return identity.loading ? (
+      <SkeletonRows label="Loading related company" rows={1} avatar />
+    ) : null;
   return (
     <button
       className="stock-peer-row"
+      aria-busy={loading}
       onClick={() => openStock(symbol, "chart")}
     >
       <StockAvatar symbol={symbol} />
@@ -34,7 +39,15 @@ function PeerRow({ symbol }: { symbol: string }) {
         </small>
       </span>
       <span className="stock-peer-price" title={quote.asOf ?? quote.date}>
-        <strong>{quote.price === undefined ? "—" : money(quote.price)}</strong>
+        <strong>
+          {loading ? (
+            <Skeleton width={52} />
+          ) : quote.price === undefined ? (
+            "—"
+          ) : (
+            money(quote.price)
+          )}
+        </strong>
         <small
           className={
             quote.changePercent === undefined

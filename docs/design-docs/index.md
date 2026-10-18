@@ -40,3 +40,5 @@ Suggested conventions:
 
 - [Local storage usage](storage-usage.md) — implemented file inventory, SQLite
   page categories and bounded desktop reveal from Settings.
+- [Data loading states](loading-states.md) - shared skeletons, cached refresh,
+  accessible status and reduced-motion behavior across renderer data reads.

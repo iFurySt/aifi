@@ -461,3 +461,10 @@ explanations and duplicated login or usage rows; errors remain actionable.
 
 Account action menus align icons and labels horizontally in one compact row.
 Secondary usage links keep 10px horizontal padding inside their hover surface.
+
+### Loading
+
+Use the shared Skeleton primitives for initial data reads. Match the content's
+layout with neutral, softly shimmering blocks; honor reduced motion with static
+shapes. Retain cached content on refresh and existing rows during pagination.
+See [loading states](docs/design-docs/loading-states.md).

@@ -1,3 +1,4 @@
+import { SkeletonRows } from "../components/Skeleton";
 import { Select } from "../components/Select";
 import { useEffect, useState } from "react";
 import {
@@ -302,6 +303,24 @@ export function ResearchSyncSettings() {
       setBusy(false);
     }
   }
+  if (!state)
+    return (
+      <section className="setting-group">
+        <h2>Stock research</h2>
+        {error ? (
+          <div className="settings-service-error" role="alert">
+            {error}
+            <Button onClick={() => void refresh()}>Retry</Button>
+          </div>
+        ) : (
+          <SkeletonRows
+            label="Loading sync settings"
+            rows={5}
+            className="setting-card skeleton-settings"
+          />
+        )}
+      </section>
+    );
   return (
     <>
       <section className="setting-group">

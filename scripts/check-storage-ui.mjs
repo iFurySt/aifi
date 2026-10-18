@@ -158,7 +158,7 @@ async function checks() {
     if (document.querySelector(".storage-settings"))
       frames.push({
         count: rows().length,
-        loading: !!document.querySelector(".storage-loading"),
+        loading: !!document.querySelector('[aria-label="Loading storage"]'),
         updating: !!document.querySelector(".storage-refreshing"),
       });
     requestAnimationFrame(observe);
@@ -167,7 +167,8 @@ async function checks() {
   location.hash = "/settings/storage";
   await until(() => !!document.querySelector(".storage-refreshing"));
   assert(
-    rows().length === expanded && !document.querySelector(".storage-loading"),
+    rows().length === expanded &&
+      !document.querySelector('[aria-label="Loading storage"]'),
     "Re-entry did not reuse the previous scan synchronously",
   );
   await until(() => !document.querySelector(".storage-refreshing"));

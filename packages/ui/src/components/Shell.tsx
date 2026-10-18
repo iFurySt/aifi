@@ -1,3 +1,4 @@
+import { SkeletonRows } from "./Skeleton";
 import {
   Bot,
   MessageCircle,
@@ -456,10 +457,8 @@ export function Shell({ children }: { children: ReactNode }) {
           ref={searchResults}
           onKeyDown={searchKeys}
         >
-          {directoryResults.loading && (
-            <p className="muted" role="status">
-              Loading stocks…
-            </p>
+          {directoryResults.loading && !directoryResults.data.items.length && (
+            <SkeletonRows label="Loading search results" rows={4} className="skeleton-search" />
           )}
           {directoryResults.error && (
             <p className="muted" role="status">

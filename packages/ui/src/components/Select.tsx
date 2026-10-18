@@ -1,3 +1,4 @@
+import { Skeleton } from "./Skeleton";
 import * as Popover from "@radix-ui/react-popover";
 import { Check, ChevronDown, Search } from "lucide-react";
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
@@ -16,6 +17,7 @@ interface SelectProps<T extends string> {
   options: readonly SelectOption<T>[];
   onValueChange: (value: T) => void;
   disabled?: boolean;
+  loading?: boolean;
   searchable?: boolean;
   searchPlaceholder?: string;
   placeholder?: string;
@@ -33,6 +35,7 @@ export function Select<T extends string>({
   options,
   onValueChange,
   disabled = false,
+  loading = false,
   searchable = false,
   searchPlaceholder = "Search…",
   placeholder = "Choose…",
@@ -63,7 +66,7 @@ export function Select<T extends string>({
     `${id}-option-${options.findIndex((o) => o.value === v)}`;
 
   function changeOpen(next: boolean) {
-    if (next && disabled) return;
+    if (next && (disabled || loading)) return;
     setOpen(next);
     if (next) {
       setQuery("");
@@ -73,13 +76,13 @@ export function Select<T extends string>({
     }
   }
   function choose(option: SelectOption<T> | undefined) {
-    if (!option || option.disabled || disabled) return;
+    if (!option || option.disabled || disabled || loading) return;
     if (option.value !== value) onValueChange(option.value);
     setOpen(false);
   }
   useEffect(() => {
-    if (disabled) setOpen(false);
-  }, [disabled]);
+    if (disabled || loading) setOpen(false);
+  }, [disabled, loading]);
   useEffect(() => {
     if (open && current) {
       document
@@ -152,7 +155,8 @@ export function Select<T extends string>({
           aria-describedby={`${id}-value`}
           aria-haspopup="listbox"
           aria-controls={open ? `${id}-list` : undefined}
-          disabled={disabled}
+          disabled={disabled || loading}
+          aria-busy={loading || undefined}
           title={triggerLabel ?? selected?.label ?? placeholder}
           onKeyDown={(event) => {
             if (event.key === "ArrowDown" || event.key === "ArrowUp") {
@@ -169,7 +173,11 @@ export function Select<T extends string>({
           }}
         >
           <span id={`${id}-value`} className="select-value">
-            {triggerLabel ?? selected?.label ?? placeholder}
+            {loading ? (
+              <Skeleton width={80} />
+            ) : (
+              (triggerLabel ?? selected?.label ?? placeholder)
+            )}
           </span>
           <ChevronDown
             size={14}

@@ -1,3 +1,5 @@
+import { Skeleton, SkeletonGroup } from "../components/Skeleton";
+import { StockLoading } from "../components/StockLoading";
 import { Analysts } from "./Analysts";
 import { Insiders } from "./Insiders";
 import { Politicians } from "./Politicians";
@@ -57,6 +59,8 @@ export function Stocks() {
   const { symbol, tab } = stockRoute;
   const [expandedCompany, setExpandedCompany] = useState<string | null>(null);
   const { data, loading, error } = useStockResearch(symbol);
+  const initialLoading =
+    loading && !data.bars.length && !Object.keys(data.datasets).length;
   const profile =
     data.datasets.profile?.data.profile ?? data.datasets.filings?.data.profile;
   const adjusted = useMemo(() => splitAdjustedBars(data), [data]);
@@ -180,25 +184,44 @@ export function Stocks() {
   return (
     <div className="stocks-page">
       <header className="stock-company-header">
-        <StockAvatar
-          symbol={symbol}
-          className="stock-company-mark"
-          enabled={!!listing}
-        />
+        {identity.loading && !listing ? (
+          <span className="stock-company-mark stock-avatar" aria-hidden="true">
+            <Skeleton className="skeleton-avatar-fill" />
+          </span>
+        ) : (
+          <StockAvatar
+            symbol={symbol}
+            className="stock-company-mark"
+            enabled={!!listing}
+          />
+        )}
         <div className="stock-company-identity">
-          <h1>{stockDisplayName(profile?.name, listing?.name, symbol)}</h1>
+          <h1>
+            {identity.loading && !listing ? (
+              <Skeleton width={180} height={24} />
+            ) : (
+              stockDisplayName(profile?.name, listing?.name, symbol)
+            )}
+          </h1>
           <small>
             {symbol}
             {listing ? ` · ${directoryExchange(listing)}` : ""}
           </small>
           {!listing && (
-            <small className="directory-status" role="status">
-              {identity.loading
-                ? "Loading…"
-                : identity.error ||
-                  (!identity.data.snapshotId
-                    ? "No directory yet"
-                    : "Not in directory")}
+            <small
+              className="directory-status"
+              role="status"
+              aria-label={identity.loading ? "Loading company" : undefined}
+              aria-busy={identity.loading}
+            >
+              {identity.loading ? (
+                <Skeleton width={90} height={10} />
+              ) : (
+                identity.error ||
+                (!identity.data.snapshotId
+                  ? "No directory yet"
+                  : "Not in directory")
+              )}
             </small>
           )}
         </div>
@@ -260,227 +283,242 @@ export function Stocks() {
         id={`stock-panel-${tab}`}
         role="tabpanel"
         aria-labelledby={`stock-tab-${tab}`}
+        aria-busy={initialLoading}
       >
-        {tab === "chart" && (
-          <div className="stock-chart-layout">
-            <div className="stock-identity-column">
-              <section className="stock-quote">
-                <div className="stock-market-state">
-                  {shown.status === "Market Open" ? (
-                    <Sun size={16} />
-                  ) : (
-                    <Moon size={16} />
-                  )}
-                  <span>{shown.status}</span>
-                </div>
-                <div className="stock-quote-price">
-                  <strong>
-                    {shown.price !== undefined ? (
-                      <>
-                        <span className="stock-quote-currency">$</span>
-                        {shown.price.toLocaleString("en-US", {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
-                        })}
-                      </>
-                    ) : (
-                      "—"
-                    )}
-                  </strong>
-                  <span
-                    className={`stock-symbol-pill ${shown.change !== undefined && shown.change < 0 ? "down" : ""}`}
-                  >
-                    {symbol}
-                  </span>
-                </div>
-                {shown.change !== undefined &&
-                  shown.changePercent !== undefined && (
-                    <p
-                      className={`stock-daily-change ${shown.change >= 0 ? "positive" : "negative"}`}
-                    >
-                      <Triangle
-                        size={10}
-                        fill="currentColor"
-                        style={{
-                          transform:
-                            shown.change < 0 ? "rotate(180deg)" : undefined,
-                        }}
-                      />{" "}
-                      {shown.change >= 0 ? "+" : ""}
-                      {money(shown.change)} ({percent(shown.changePercent)}){" "}
-                      <span>regular session</span>
-                    </p>
-                  )}
-                <ExchangeClock />
-                {!shown.asOf && !shown.date && (
-                  <small>
-                    {loading ? (
-                      "Loading…"
-                    ) : (
-                      <MissingData data={data} dataset="prices" />
-                    )}
-                  </small>
-                )}
-                <SourceNote
-                  view={shown.sourceView}
-                  detail={
-                    <>
-                      <p>Collected snapshot · Not streaming.</p>
-                      {shown.date && !shown.asOf && (
-                        <p>Price session: {shown.date}</p>
+        {initialLoading ? (
+          <StockLoading tab={tab} />
+        ) : (
+          <>
+            {tab === "chart" && (
+              <div className="stock-chart-layout">
+                <div className="stock-identity-column">
+                  <section className="stock-quote">
+                    <div className="stock-market-state">
+                      {shown.status === "Market Open" ? (
+                        <Sun size={16} />
+                      ) : (
+                        <Moon size={16} />
                       )}
-                      {shown.asOf && (
-                        <p>
-                          Regular session:{" "}
-                          {new Date(shown.asOf).toLocaleString("en-US", {
-                            timeZone: "America/New_York",
-                            timeZoneName: "short",
-                          })}
-                        </p>
-                      )}
-                      {shown.postPrice !== undefined && shown.postAsOf && (
-                        <p>
-                          After-hours snapshot: {money(shown.postPrice)} ·{" "}
-                          {new Date(shown.postAsOf).toLocaleString("en-US", {
-                            timeZone: "America/New_York",
-                            timeZoneName: "short",
-                          })}
-                        </p>
-                      )}
-                    </>
-                  }
-                />
-              </section>
-              <section className="stock-about stock-company-about">
-                <h2>About {quote?.name ?? symbol} </h2>
-                <p>
-                  {profile?.description
-                    ? profile.description.length > 420 &&
-                      expandedCompany !== symbol
-                      ? `${profile.description.slice(0, 417)}…`
-                      : profile.description
-                    : "No company data"}
-                </p>
-                {profile?.description && profile.description.length > 420 && (
-                  <button
-                    className="text-link"
-                    onClick={() =>
-                      setExpandedCompany(
-                        expandedCompany === symbol ? null : symbol,
-                      )
-                    }
-                  >
-                    {expandedCompany === symbol ? "Show less" : "Read more"}
-                  </button>
-                )}
-                {profile && (
-                  <p className="stock-footnote">
-                    {[
-                      profile.sector,
-                      profile.country,
-                      profile.employees
-                        ? `${profile.employees.toLocaleString()} employees`
-                        : undefined,
-                    ]
-                      .filter(Boolean)
-                      .join(" · ")}
-                  </p>
-                )}
-                <SourceNote
-                  view={data.datasets.profile ?? data.datasets.filings}
-                />
-                <button
-                  className="text-link"
-                  onClick={() => research(`Research ${symbol}.`)}
-                >
-                  <MessageCircle size={14} />
-                  Ask about {symbol}
-                </button>
-              </section>
-              <section className="stock-about stock-analyst-overview">
-                <h2>Analyst</h2>
-                <AnalystSummary data={data} />
-                <SourceNote view={data.datasets.analyst} />
-              </section>
-              <section className="stock-about stock-earnings-overview">
-                <h2>Earnings</h2>
-                <Earnings data={data} />
-              </section>
-            </div>
-            <div className="stock-metrics-column">
-              <dl className="stock-metrics-grid">
-                {metrics.map(([label, value], i) => (
-                  <div key={label} className={i >= 8 ? "wide" : ""}>
-                    <dt>{label}</dt>
-                    <dd
-                      className={value === "—" ? "" : metricTone(label)}
-                      title={
-                        label === "Open"
-                          ? "Color compares the latest close with the open"
-                          : label === "Previous close"
-                            ? "Color compares the latest close with the previous close"
-                            : label === "Market cap" &&
-                                (shown.marketCapAsOf || profile?.sharesDate)
-                              ? shown.marketCapAsOf
-                                ? `Reported company market cap · ${new Date(shown.marketCapAsOf).toLocaleString("en-US", { timeZone: "America/New_York", timeZoneName: "short" })}`
-                                : `Company share reference: ${profile?.sharesDate}`
-                              : undefined
-                      }
-                    >
-                      {(label === "YTD change" ||
-                        label === "12 month change") &&
-                        value !== "—" && (
+                      <span>{shown.status}</span>
+                    </div>
+                    <div className="stock-quote-price">
+                      <strong>
+                        {shown.price !== undefined ? (
+                          <>
+                            <span className="stock-quote-currency">$</span>
+                            {shown.price.toLocaleString("en-US", {
+                              minimumFractionDigits: 2,
+                              maximumFractionDigits: 2,
+                            })}
+                          </>
+                        ) : (
+                          "—"
+                        )}
+                      </strong>
+                      <span
+                        className={`stock-symbol-pill ${shown.change !== undefined && shown.change < 0 ? "down" : ""}`}
+                      >
+                        {symbol}
+                      </span>
+                    </div>
+                    {shown.change !== undefined &&
+                      shown.changePercent !== undefined && (
+                        <p
+                          className={`stock-daily-change ${shown.change >= 0 ? "positive" : "negative"}`}
+                        >
                           <Triangle
-                            size={8}
+                            size={10}
                             fill="currentColor"
                             style={{
                               transform:
-                                metricTone(label) === "negative"
-                                  ? "rotate(180deg)"
-                                  : undefined,
+                                shown.change < 0 ? "rotate(180deg)" : undefined,
                             }}
-                          />
+                          />{" "}
+                          {shown.change >= 0 ? "+" : ""}
+                          {money(shown.change)} ({percent(shown.changePercent)}){" "}
+                          <span>regular session</span>
+                        </p>
+                      )}
+                    <ExchangeClock />
+                    {!shown.asOf && !shown.date && (
+                      <small>
+                        {loading ? (
+                          <SkeletonGroup inline label="Loading price">
+                            <Skeleton width={100} />
+                          </SkeletonGroup>
+                        ) : (
+                          <MissingData data={data} dataset="prices" />
                         )}
-                      {value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-              <StockPeers data={data} />
-            </div>
-            <div className="stock-visual-column">
-              <div className="stock-price-section">
-                <StockChart
-                  symbol={symbol}
-                  bars={bars}
-                  adjusted={adjusted.adjusted}
-                />
-                <SourceNote view={data.datasets.prices} />
-              </div>
-              <section className="stock-digest stock-news-overview">
-                <h2>Digest</h2>
-                <Digest data={data} />
-              </section>
-              <section className="stock-digest stock-filings-overview">
-                <div className="section-heading">
-                  <h2>Recent filings</h2>
-                  <button
-                    className="text-link"
-                    onClick={() => openStock(symbol, "financials")}
-                  >
-                    Financials <ArrowUpRight size={13} />
-                  </button>
+                      </small>
+                    )}
+                    <SourceNote
+                      view={shown.sourceView}
+                      detail={
+                        <>
+                          <p>Collected snapshot · Not streaming.</p>
+                          {shown.date && !shown.asOf && (
+                            <p>Price session: {shown.date}</p>
+                          )}
+                          {shown.asOf && (
+                            <p>
+                              Regular session:{" "}
+                              {new Date(shown.asOf).toLocaleString("en-US", {
+                                timeZone: "America/New_York",
+                                timeZoneName: "short",
+                              })}
+                            </p>
+                          )}
+                          {shown.postPrice !== undefined && shown.postAsOf && (
+                            <p>
+                              After-hours snapshot: {money(shown.postPrice)} ·{" "}
+                              {new Date(shown.postAsOf).toLocaleString(
+                                "en-US",
+                                {
+                                  timeZone: "America/New_York",
+                                  timeZoneName: "short",
+                                },
+                              )}
+                            </p>
+                          )}
+                        </>
+                      }
+                    />
+                  </section>
+                  <section className="stock-about stock-company-about">
+                    <h2>About {quote?.name ?? symbol} </h2>
+                    <p>
+                      {profile?.description
+                        ? profile.description.length > 420 &&
+                          expandedCompany !== symbol
+                          ? `${profile.description.slice(0, 417)}…`
+                          : profile.description
+                        : "No company data"}
+                    </p>
+                    {profile?.description &&
+                      profile.description.length > 420 && (
+                        <button
+                          className="text-link"
+                          onClick={() =>
+                            setExpandedCompany(
+                              expandedCompany === symbol ? null : symbol,
+                            )
+                          }
+                        >
+                          {expandedCompany === symbol
+                            ? "Show less"
+                            : "Read more"}
+                        </button>
+                      )}
+                    {profile && (
+                      <p className="stock-footnote">
+                        {[
+                          profile.sector,
+                          profile.country,
+                          profile.employees
+                            ? `${profile.employees.toLocaleString()} employees`
+                            : undefined,
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </p>
+                    )}
+                    <SourceNote
+                      view={data.datasets.profile ?? data.datasets.filings}
+                    />
+                    <button
+                      className="text-link"
+                      onClick={() => research(`Research ${symbol}.`)}
+                    >
+                      <MessageCircle size={14} />
+                      Ask about {symbol}
+                    </button>
+                  </section>
+                  <section className="stock-about stock-analyst-overview">
+                    <h2>Analyst</h2>
+                    <AnalystSummary data={data} />
+                    <SourceNote view={data.datasets.analyst} />
+                  </section>
+                  <section className="stock-about stock-earnings-overview">
+                    <h2>Earnings</h2>
+                    <Earnings data={data} />
+                  </section>
                 </div>
-                <FilingsTable data={data} compact />
-              </section>
-            </div>
-          </div>
+                <div className="stock-metrics-column">
+                  <dl className="stock-metrics-grid">
+                    {metrics.map(([label, value], i) => (
+                      <div key={label} className={i >= 8 ? "wide" : ""}>
+                        <dt>{label}</dt>
+                        <dd
+                          className={value === "—" ? "" : metricTone(label)}
+                          title={
+                            label === "Open"
+                              ? "Color compares the latest close with the open"
+                              : label === "Previous close"
+                                ? "Color compares the latest close with the previous close"
+                                : label === "Market cap" &&
+                                    (shown.marketCapAsOf || profile?.sharesDate)
+                                  ? shown.marketCapAsOf
+                                    ? `Reported company market cap · ${new Date(shown.marketCapAsOf).toLocaleString("en-US", { timeZone: "America/New_York", timeZoneName: "short" })}`
+                                    : `Company share reference: ${profile?.sharesDate}`
+                                  : undefined
+                          }
+                        >
+                          {(label === "YTD change" ||
+                            label === "12 month change") &&
+                            value !== "—" && (
+                              <Triangle
+                                size={8}
+                                fill="currentColor"
+                                style={{
+                                  transform:
+                                    metricTone(label) === "negative"
+                                      ? "rotate(180deg)"
+                                      : undefined,
+                                }}
+                              />
+                            )}
+                          {value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <StockPeers data={data} />
+                </div>
+                <div className="stock-visual-column">
+                  <div className="stock-price-section">
+                    <StockChart
+                      symbol={symbol}
+                      bars={bars}
+                      adjusted={adjusted.adjusted}
+                    />
+                    <SourceNote view={data.datasets.prices} />
+                  </div>
+                  <section className="stock-digest stock-news-overview">
+                    <h2>Digest</h2>
+                    <Digest data={data} />
+                  </section>
+                  <section className="stock-digest stock-filings-overview">
+                    <div className="section-heading">
+                      <h2>Recent filings</h2>
+                      <button
+                        className="text-link"
+                        onClick={() => openStock(symbol, "financials")}
+                      >
+                        Financials <ArrowUpRight size={13} />
+                      </button>
+                    </div>
+                    <FilingsTable data={data} compact />
+                  </section>
+                </div>
+              </div>
+            )}
+            {tab === "financials" && <Financials data={data} />}
+            {tab === "funds" && <Funds data={data} />}
+            {tab === "politicians" && <Politicians data={data} />}
+            {tab === "insiders" && <Insiders data={data} />}
+            {tab === "analyst" && <Analysts data={data} />}
+          </>
         )}
-        {tab === "financials" && <Financials data={data} />}
-        {tab === "funds" && <Funds data={data} />}
-        {tab === "politicians" && <Politicians data={data} />}
-        {tab === "insiders" && <Insiders data={data} />}
-        {tab === "analyst" && <Analysts data={data} />}
       </section>
     </div>
   );

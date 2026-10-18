@@ -1,3 +1,4 @@
+import { SkeletonRows } from "../components/Skeleton";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
   ArrowUpRight,
@@ -47,11 +48,18 @@ export function ChatGPTSettings() {
             <p>Sign in from the desktop app.</p>
           </div>
         ) : !status ? (
-          <div className="setting-row">
-            <p role="status">
-              {error ? "Couldn’t load accounts." : "Loading accounts…"}
-            </p>
-          </div>
+          error ? (
+            <div className="setting-row">
+              <p>Couldn’t load accounts.</p>
+            </div>
+          ) : (
+            <SkeletonRows
+              label="Loading accounts"
+              rows={1}
+              avatar
+              className="skeleton-settings"
+            />
+          )
         ) : !profiles.length ? (
           <div className="setting-row chatgpt-account-row">
             <div className="chatgpt-account-person">
