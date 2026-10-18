@@ -60,3 +60,10 @@ Storage performance now has real-store read-only profiling, durable category-cac
 and writer-isolation/read-only tests, and delayed/failed optional-diagnostic UI
 checks. Exact cold category scans still scale with database pages; they are
 bounded background work rather than an interactive response dependency.
+
+Enrichment throughput now has failed-primary Nasdaq fallback, separately budgeted
+public requests, whole-report 13f reuse and immutable evidence references, restart
+cache/TTL and source-identity regressions. Source absence and empty tracked samples
+remain explicit. The [enrichment rollout](exec-plans/active/enrichment-throughput.md)
+is active; initial shared-cache collection and whole-directory completeness remain
+operational gaps, so scores are unchanged.

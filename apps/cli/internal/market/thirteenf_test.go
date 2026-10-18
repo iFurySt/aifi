@@ -67,15 +67,15 @@ func Test13FCollectorUsesStagingWithoutKeysAndRetainsSourceProof(t *testing.T) {
 			t.Fatal("auth leaked")
 		}
 		switch r.URL.Path {
-		case "/data/autocomplete":
-			return 200, `{"cusips":[{"name":"AAPL - Fixture","extra":"037833100 - COM","url":"/cusip/037833100"}]}`
 		case "/manager/0000000001-fixture":
 			if r.Header.Get("Accept") != "text/html" {
 				t.Fatal("manager HTML negotiated as JSON")
 			}
 			return 200, managerPage("0000000001")
+		case "/data/13f/000000000126000002":
+			return 200, `{"data":[["AAPL","Apple","COM","037833100",20,1,100,null,null],["MSFT","Microsoft","COM","594918104",30,1,200,null,null]]}`
 		default:
-			return 200, `{"data":[[["2026-03-31","000000000126000002-fixture-q1-2026"],20,null,100,null,"2026-05-10",[2026,1]]]}`
+			return 200, `{"data":[["AAPL","Apple","COM","037833100",999,1,99999,null,"Put"]]}`
 		}
 	})
 	c.Key = func(context.Context, string) (map[string]string, error) { return nil, nil }
@@ -87,8 +87,10 @@ func Test13FCollectorUsesStagingWithoutKeysAndRetainsSourceProof(t *testing.T) {
 		return nil, nil
 	}
 	c.SaveStage = func(_ context.Context, k string, e Evidence) error { saved[k] = e; return nil }
-	for i := 0; i < 2; i++ {
-		result, err := c.Collect(context.Background(), Job{Provider: "thirteenf", Dataset: "funds", Subject: "AAPL", Window: "2026-06-30:14"})
+	for _, symbol := range []string{"AAPL", "MSFT", "AAPL"} {
+		// Recreate the client to prove disk staging is sufficient after restart.
+		c.fundBatch = fundBatchCache{}
+		result, err := c.Collect(context.Background(), Job{Provider: "thirteenf", Dataset: "funds", Subject: symbol, Window: "2026-06-30:14"})
 		if err != nil || len(result.Payload.Records) != 2 || result.Payload.Complete || len(result.Evidence) != 3 {
 			t.Fatal(result, err)
 		}

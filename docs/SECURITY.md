@@ -166,8 +166,8 @@ credential-content, delete or arbitrary command capability is added. See
 [storage boundaries](design-docs/storage-usage.md).
 
 
-Historical Funds collection permits only fixed 13f.info manager, autocomplete and
-manager/CUSIP routes. HTML is parsed for report metadata, never executed. Public
+Historical Funds collection permits only fixed 13f.info manager, autocomplete,
+manager/CUSIP and exact 18-digit report-accession JSON routes. HTML is parsed for report metadata, never executed. Public
 responses remain untrusted, bounded evidence. Fund-logo requests accept only a
 10-digit CIK, never a renderer URL. The separate catalog parser and fixed reviewed
 URL allowlist cannot broaden network origins; PNG hash/dimensions are verified.
@@ -188,3 +188,12 @@ bounded limit/offset parameters. It sends no cookies, credentials or personal
 contact information. Returned ticker/date/ranges and official House/Senate URLs
 are validated; source failure preserves last-good data. Government disclosure
 records remain personal-research inputs, not a bundled redistributable dataset.
+
+Nasdaq enrichment uses only fixed public `api.nasdaq.com` company-profile and
+analyst-target endpoints. It sends no cookies, API credentials or personal contact
+information, rejects redirects and mismatched symbols, and retains source evidence.
+Its host permission belongs to the Go collector; the renderer only receives
+normalized local data and vetted source links. Whole 13f reports remain private
+local evidence. Shared hash references are accepted only for previously archived
+13f URL/provider/timestamp matches, inside a valid company-job lease; arbitrary
+renderer references or evidence URLs are not a collection capability.

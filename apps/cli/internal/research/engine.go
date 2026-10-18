@@ -39,6 +39,7 @@ func New(db *store.Store, path string, offline bool) *Engine {
 	c.ReadArchive = db.ResearchArchive
 	c.ReadStage = db.ResearchStage
 	c.SaveStage = db.SaveResearchStage
+	c.ArchiveFundEvidence = db.ArchiveFundEvidence
 	c.Key = func(ctx context.Context, p string) (map[string]string, error) {
 		blobs, err := db.EncryptedCredentials(ctx, p)
 		if err != nil {
@@ -89,7 +90,7 @@ func New(db *store.Store, path string, offline bool) *Engine {
 				if !cfg.Automatic && !j.Manual {
 					return &market.Failure{Code: "paused"}
 				}
-				if j.Dataset != "identity" && j.Provider != cfg.ProviderFor(j.Dataset) && !(j.Provider == "sec" && j.Dataset == "filings" && cfg.Datasets["insiders"].Enabled) {
+				if j.Dataset != "identity" && !cfg.AllowsProvider(j.Provider, j.Dataset) && !(j.Provider == "sec" && j.Dataset == "filings" && cfg.Datasets["insiders"].Enabled) {
 					return &market.Failure{Code: "paused"}
 				}
 				if j.Dataset != "identity" && !cfg.Datasets[j.Dataset].Enabled {
@@ -163,6 +164,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 	}
 	quarter := time.Date(local.Year(), time.Month(((int(local.Month())-1)/3)*3+1), 1, 0, 0, 0, 0, time.UTC).AddDate(0, 0, -1).Format("2006-01-02")
 	for _, symbol := range symbols {
+		jobs = append(jobs, market.Job{Provider: "nasdaq", Dataset: "profile", Subject: symbol}, market.Job{Provider: "nasdaq", Dataset: "analyst", Subject: symbol})
 		jobs = append(jobs, market.Job{Provider: "congress", Dataset: "politicians", Subject: symbol})
 		jobs = append(jobs, market.Job{Provider: "thirteenf", Dataset: "funds", Subject: symbol, Window: market.FundHistoryWindow(now, cfg.FundsHistoryQuarters)})
 		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds"} {
@@ -244,7 +246,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	}
 	enabled := []string{}
 	for d, v := range cfg.Datasets {
-		if v.Enabled && p == cfg.ProviderFor(d) {
+		if v.Enabled && cfg.AllowsProvider(p, d) {
 			enabled = append(enabled, d)
 		}
 	}
@@ -259,7 +261,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if err != nil {
 		return false, nil
 	}
-	if p != "sec" && p != "yahoo" && p != "thirteenf" && p != "congress" && keys["apiKey"] == "" {
+	if p != "sec" && p != "yahoo" && p != "thirteenf" && p != "congress" && p != "nasdaq" && keys["apiKey"] == "" {
 		return false, nil
 	}
 	if p == "sec" {
@@ -342,14 +344,17 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	var failure *market.Failure
 	if errors.As(err, &failure) {
 		code = failure.Code
-		if (code == "access_denied" || code == "invalid_key") && p == "yahoo" {
+		if (code == "access_denied" || code == "invalid_key") && (p == "yahoo" || p == "nasdaq") {
 			code = "rate_limited"
 			failure = &market.Failure{Code: code, RetryAfter: 15 * time.Minute}
 		}
 		if code == "access_denied" {
 			_ = e.DB.BlockResearchDataset(ctx, p, j.Dataset, code)
 		}
-		if code == "not_found" || code == "unsupported_symbol" {
+		if code == "not_found" || code == "unsupported_symbol" || (p == "yahoo" && code == "invalid_company_page") {
+			// An absent/unsupported embedded public page is not a transient
+			// transport failure. Revisit on the dataset cadence rather than
+			// repeatedly spending today's budget on the same missing content.
 			hours := cfg.Datasets[j.Dataset].IntervalHours
 			if hours < 24 {
 				hours = 24
@@ -380,13 +385,19 @@ func (e *Engine) Run(ctx context.Context) {
 	}
 	var workers sync.WaitGroup
 	// One worker per provider; all requests also pass the durable shared budget.
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress", "nasdaq"} {
 		workers.Add(1)
 		go func(provider string) {
 			defer workers.Done()
 			for ctx.Err() == nil {
 				worked, _ := e.Step(ctx, provider)
 				delay := time.Second
+				if worked && provider == "thirteenf" {
+					// A warm shared report needs no HTTP request. Let local
+					// materialization proceed while yielding to other DB users;
+					// any real download still passes the shared provider gate.
+					delay = 50 * time.Millisecond
+				}
 				if !worked {
 					delay = 5 * time.Second
 				}

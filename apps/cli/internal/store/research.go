@@ -77,6 +77,9 @@ func (s *Store) ResearchConfig(ctx context.Context) (ResearchConfig, error) {
 	if c.Limits["thirteenf"].PerMinute == 0 {
 		c.Limits["thirteenf"] = ProviderLimit{12, 2000}
 	}
+	if c.Limits["nasdaq"].PerMinute == 0 {
+		c.Limits["nasdaq"] = ProviderLimit{20, 10000}
+	}
 	if c.Limits["yahoo"].PerMinute == 0 {
 		c.Limits["yahoo"] = ProviderLimit{20, 10000}
 	}
@@ -139,6 +142,9 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	}
 }
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
+	if c.Limits != nil && c.Limits["nasdaq"].PerMinute == 0 {
+		c.Limits["nasdaq"] = ProviderLimit{20, 10000}
+	}
 	if c.PoliticiansSource == "" {
 		c.PoliticiansSource = "congress"
 	}
@@ -163,7 +169,7 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 	if c.FundsHistoryQuarters < 4 || c.FundsHistoryQuarters > 20 {
 		return c, errors.New("invalid funds history")
 	}
-	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 6 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
+	if c.Revision < 0 || c.HistoryDays < 30 || c.HistoryDays > 730 || len(c.Datasets) != len(ResearchDatasets) || len(c.Limits) != 7 || (c.PriceSource != "yahoo" && c.PriceSource != "massive") {
 		return c, errors.New("invalid research settings")
 	}
 	if c.FundsSource == "" {
@@ -184,7 +190,7 @@ func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (Resea
 			return c, errors.New("invalid dataset interval")
 		}
 	}
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress", "nasdaq"} {
 		v, ok := c.Limits[p]
 		if !ok || v.PerMinute < 1 || v.PerMinute > 300 || v.PerDay < 1 || v.PerDay > 1000000 {
 			return c, errors.New("invalid provider budget")
@@ -283,6 +289,13 @@ func (s *Store) ClaimResearchJob(ctx context.Context, provider string, enabled [
 	if manualOnly {
 		manualFilter = " AND manual=1"
 	}
+	if provider == "nasdaq" {
+		// A backup never displaces existing primary-source data and only follows
+		// an eligible Yahoo failure or a first attempt queued for ten minutes.
+		// The latter prevents a universe-sized primary backlog starving enrichment.
+		manualFilter += ` AND NOT EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.dataset=research_jobs.dataset AND h.subject=research_jobs.subject AND s.provider!='nasdaq') AND EXISTS(SELECT 1 FROM research_jobs p WHERE p.provider='yahoo' AND p.dataset=research_jobs.dataset AND p.subject=research_jobs.subject AND ((p.state='failed' AND p.error IN ('invalid_company_page','not_found','invalid_profile','network_error','provider_error','incomplete_response','collection_failed','interrupted')) OR (p.state='queued' AND p.attempts=0 AND p.last_success IS NULL AND p.next_run<=?)))`
+		args = append(args, stamp(now.Add(-10*time.Minute)))
+	}
 	args = append(args, now.AddDate(0, 0, -14).Format("2006-01-02"))
 	var j market.Job
 	// Explicit repairs lead automatic work. Current index members (including shared
@@ -319,6 +332,21 @@ func (s *Store) FinishResearchJob(ctx context.Context, j market.Job, result mark
 	}
 	hashes := []string{}
 	for _, ev := range result.Evidence {
+		if ev.Hash != "" {
+			if j.Provider != "thirteenf" || len(ev.Body) != 0 || len(ev.Hash) != 64 {
+				return errors.New("invalid shared evidence reference")
+			}
+			var exists int
+			if e = tx.QueryRowContext(ctx, "SELECT COUNT(*) FROM research_evidence WHERE hash=? AND provider=? AND source_url=? AND fetched_at=?", ev.Hash, j.Provider, ev.URL, stamp(ev.FetchedAt)).Scan(&exists); e != nil {
+				return e
+			}
+			if exists != 1 {
+				return errors.New("shared evidence is not archived")
+			}
+			hashes = append(hashes, ev.Hash)
+			continue
+		}
+
 		if len(ev.Body) == 0 || len(ev.Body) > 32<<20 || strings.Contains(ev.URL, "apiKey=") || strings.Contains(ev.URL, "apikey=") {
 			return errors.New("invalid source evidence")
 		}
@@ -371,7 +399,11 @@ func (s *Store) FinishResearchJob(ctx context.Context, j market.Job, result mark
 			return e
 		}
 	}
-	if _, e = tx.ExecContext(ctx, "INSERT INTO research_heads VALUES(?,?,?) ON CONFLICT(dataset,subject) DO UPDATE SET snapshot_id=excluded.snapshot_id", j.Dataset, j.Subject, snapshot); e != nil {
+	headQuery := "INSERT INTO research_heads VALUES(?,?,?) ON CONFLICT(dataset,subject) DO UPDATE SET snapshot_id=excluded.snapshot_id"
+	if j.Provider == "nasdaq" {
+		headQuery += ` WHERE NOT EXISTS(SELECT 1 FROM research_snapshots s WHERE s.id=research_heads.snapshot_id AND s.provider!='nasdaq')`
+	}
+	if _, e = tx.ExecContext(ctx, headQuery, j.Dataset, j.Subject, snapshot); e != nil {
 		return e
 	}
 	if len(result.Aliases) > 0 {
@@ -769,7 +801,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if e != nil {
 		return out, e
 	}
-	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) AND (dataset!='funds' OR provider=?) AND (dataset!='politicians' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource, out.Config.FundsSource, out.Config.PoliticiansSource)
+	rows, e := s.db.QueryContext(ctx, `SELECT dataset,COUNT(*),SUM(last_success IS NOT NULL OR (provider='yahoo' AND dataset IN ('profile','analyst') AND EXISTS(SELECT 1 FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.dataset=research_jobs.dataset AND h.subject=research_jobs.subject AND s.provider='nasdaq'))),SUM(state='failed'),SUM(state='blocked'),SUM(state='running'),COALESCE(MAX(NULLIF(error,'')),'') FROM research_jobs WHERE state!='retired' AND (dataset!='prices' OR provider=?) AND (dataset!='profile' OR provider=?) AND (dataset!='facts' OR provider=?) AND (dataset!='filings' OR provider=?) AND (dataset!='analyst' OR provider=?) AND (dataset!='funds' OR provider=?) AND (dataset!='politicians' OR provider=?) GROUP BY dataset`, out.Config.PriceSource, out.Config.ProfileSource, out.Config.FactsSource, out.Config.FilingsSource, out.Config.AnalystSource, out.Config.FundsSource, out.Config.PoliticiansSource)
 	if e != nil {
 		return out, e
 	}
@@ -818,7 +850,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 	if err != nil {
 		return out, err
 	}
-	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress"} {
+	for _, p := range []string{"massive", "sec", "fmp", "yahoo", "thirteenf", "congress", "nasdaq"} {
 		index := -1
 		for i, v := range out.Providers {
 			if v.Provider == p {
@@ -834,7 +866,7 @@ func (s *Store) ResearchStatus(ctx context.Context) (ResearchStatus, error) {
 			if !strings.Contains(settings.SECUserAgent, "@") {
 				out.Providers[index].Blocked = "needs_contact"
 			}
-		} else if p != "yahoo" && p != "thirteenf" && p != "congress" && !configured[p] {
+		} else if p != "yahoo" && p != "thirteenf" && p != "congress" && p != "nasdaq" && !configured[p] {
 			out.Providers[index].Blocked = "needs_key"
 		}
 	}
@@ -927,7 +959,11 @@ func (s *Store) ProviderBlocked(ctx context.Context, p string) (string, error) {
 func (s *Store) ResearchStage(ctx context.Context, key string) (*market.Evidence, error) {
 	var ev market.Evidence
 	var fetched string
-	e := s.db.QueryRowContext(ctx, "SELECT source_url,fetched_at,body FROM research_staging WHERE cache_key=? AND fetched_at>?", key, stamp(time.Now().Add(-24*time.Hour))).Scan(&ev.URL, &fetched, &ev.Body)
+	ttl := 24 * time.Hour
+	if strings.HasPrefix(key, "thirteenf-v1:") {
+		ttl = 30 * 24 * time.Hour
+	}
+	e := s.db.QueryRowContext(ctx, "SELECT source_url,fetched_at,body FROM research_staging WHERE cache_key=? AND fetched_at>?", key, stamp(time.Now().Add(-ttl))).Scan(&ev.URL, &fetched, &ev.Body)
 	if errors.Is(e, sql.ErrNoRows) {
 		return nil, nil
 	}
@@ -945,7 +981,7 @@ func (s *Store) SaveResearchStage(ctx context.Context, key string, ev market.Evi
 	if e != nil {
 		return e
 	}
-	_, e = s.db.ExecContext(ctx, "DELETE FROM research_staging WHERE fetched_at<?", stamp(time.Now().Add(-48*time.Hour)))
+	_, e = s.db.ExecContext(ctx, "DELETE FROM research_staging WHERE (cache_key LIKE 'thirteenf-v1:%' AND fetched_at<?) OR (cache_key NOT LIKE 'thirteenf-v1:%' AND fetched_at<?)", stamp(time.Now().Add(-30*24*time.Hour)), stamp(time.Now().Add(-48*time.Hour)))
 	return e
 }
 

@@ -27,15 +27,21 @@ func (s *Store) RequestResearchBackfill(ctx context.Context) (int64, error) {
 		if !v.Enabled {
 			continue
 		}
-		r, err := tx.ExecContext(ctx, `UPDATE research_jobs SET manual=1 WHERE dataset=? AND provider=? AND state IN ('queued','idle','failed') AND NOT EXISTS (SELECT 1 FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.dataset=research_jobs.dataset AND h.subject=research_jobs.subject AND s.provider=research_jobs.provider) AND (subject IN (SELECT l.source_symbol FROM directory_head h JOIN directory_memberships m ON m.snapshot_id=h.snapshot_id JOIN listings l ON l.id=m.listing_id WHERE m.etf=0 AND m.test=0) OR subject IN (SELECT 'cik:'||a.cik FROM research_aliases a JOIN listings l ON l.source_symbol=a.symbol JOIN directory_memberships m ON m.listing_id=l.id JOIN directory_head h ON h.snapshot_id=m.snapshot_id WHERE m.etf=0 AND m.test=0) OR (provider='massive' AND dataset='prices' AND subject GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]') OR (dataset='actions' AND subject='us'))`, dataset, cfg.ProviderFor(dataset))
-		if err != nil {
-			return 0, err
+		providers := []string{cfg.ProviderFor(dataset)}
+		if cfg.AllowsProvider("nasdaq", dataset) {
+			providers = append(providers, "nasdaq")
 		}
-		n, err := r.RowsAffected()
-		if err != nil {
-			return 0, err
+		for _, provider := range providers {
+			r, err := tx.ExecContext(ctx, `UPDATE research_jobs SET manual=1 WHERE dataset=? AND provider=? AND state IN ('queued','idle','failed') AND NOT EXISTS (SELECT 1 FROM research_heads h JOIN research_snapshots s ON s.id=h.snapshot_id WHERE h.dataset=research_jobs.dataset AND h.subject=research_jobs.subject AND s.provider=research_jobs.provider) AND (subject IN (SELECT l.source_symbol FROM directory_head h JOIN directory_memberships m ON m.snapshot_id=h.snapshot_id JOIN listings l ON l.id=m.listing_id WHERE m.etf=0 AND m.test=0) OR subject IN (SELECT 'cik:'||a.cik FROM research_aliases a JOIN listings l ON l.source_symbol=a.symbol JOIN directory_memberships m ON m.listing_id=l.id JOIN directory_head h ON h.snapshot_id=m.snapshot_id WHERE m.etf=0 AND m.test=0) OR (provider='massive' AND dataset='prices' AND subject GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]') OR (dataset='actions' AND subject='us'))`, dataset, provider)
+			if err != nil {
+				return 0, err
+			}
+			n, err := r.RowsAffected()
+			if err != nil {
+				return 0, err
+			}
+			count += n
 		}
-		count += n
 	}
 	return count, tx.Commit()
 }
@@ -88,12 +94,13 @@ func (s *Store) ClaimSECBulkJob(ctx context.Context, dataset, subject string, no
 }
 
 type BackfillDataset struct {
-	Dataset     string         `json:"dataset"`
-	Provider    string         `json:"provider"`
-	Total       int            `json:"total"`
-	WithRecords int            `json:"withRecords"`
-	Empty       int            `json:"empty"`
-	Missing     map[string]int `json:"missing"`
+	Dataset             string         `json:"dataset"`
+	Provider            string         `json:"provider"`
+	Total               int            `json:"total"`
+	WithRecords         int            `json:"withRecords"`
+	FallbackWithRecords int            `json:"fallbackWithRecords,omitempty"`
+	Empty               int            `json:"empty"`
+	Missing             map[string]int `json:"missing"`
 }
 type BackfillProgress struct {
 	NewestStoredPriceDate           string            `json:"newestStoredPriceDate,omitempty"`
@@ -226,9 +233,12 @@ func (s *Store) ResearchBackfillProgress(ctx context.Context) (BackfillProgress,
 				}
 				subject = "cik:" + target.cik
 			}
-			if h, ok := heads[dataset+":"+subject]; ok && h.provider == p {
+			if h, ok := heads[dataset+":"+subject]; ok && (h.provider == p || h.provider == "nasdaq" && cfg.AllowsProvider("nasdaq", dataset)) {
 				if h.nonempty {
 					d.WithRecords++
+					if h.provider == "nasdaq" {
+						d.FallbackWithRecords++
+					}
 				} else {
 					d.Empty++
 				}

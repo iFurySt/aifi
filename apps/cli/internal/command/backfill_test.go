@@ -65,3 +65,33 @@ func TestBackfillRecognizesActualSQLiteWriteContention(t *testing.T) {
 		t.Fatal("bounded write timeout confused with caller cancellation")
 	}
 }
+
+func TestBackfillStoreRetryIsBoundedAndCancellable(t *testing.T) {
+	attempts := 0
+	ctx, cancel := context.WithCancel(context.Background())
+	err := retryBackfillStore(ctx, func() error { attempts++; cancel(); return codedBusy{} })
+	if !errors.Is(err, context.Canceled) || attempts != 1 {
+		t.Fatal(err, attempts)
+	}
+	attempts = 0
+	err = retryBackfillStore(context.Background(), func() error {
+		attempts++
+		if attempts == 1 {
+			return codedBusy{}
+		}
+		return nil
+	})
+	if err != nil || attempts != 2 {
+		t.Fatal(err, attempts)
+	}
+	attempts = 0
+	err = retryBackfillStore(context.Background(), func() error { attempts++; return errors.New("not retryable") })
+	if err == nil || attempts != 1 {
+		t.Fatal(err, attempts)
+	}
+}
+
+type codedBusy struct{}
+
+func (codedBusy) Error() string { return "busy" }
+func (codedBusy) Code() int     { return 517 }

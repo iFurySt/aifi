@@ -86,6 +86,7 @@ type Payload struct {
 	Complete      bool              `json:"complete"`
 }
 type Evidence struct {
+	Hash      string // Optional reference to already archived immutable shared evidence.
 	URL       string
 	Body      []byte
 	FetchedAt time.Time

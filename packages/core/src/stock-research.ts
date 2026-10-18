@@ -36,6 +36,7 @@ export interface ResearchConfig {
     "massive" | "sec" | "fmp" | "yahoo",
     { perMinute: number; perDay: number }
   > & {
+    nasdaq?: { perMinute: number; perDay: number };
     thirteenf?: { perMinute: number; perDay: number };
     congress?: { perMinute: number; perDay: number };
   };
@@ -432,6 +433,7 @@ export function isResearchSourceURL(value: string): boolean {
         "www.apple.com",
         "query1.finance.yahoo.com",
         "finance.yahoo.com",
+        "api.nasdaq.com",
         "13f.info",
         "congressinfor-production.up.railway.app",
         "disclosures-clerk.house.gov",

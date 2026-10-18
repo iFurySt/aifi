@@ -121,3 +121,11 @@ failures retain good values and back off. The primary collector connection and
 service dispatch loop never perform the page scan. File inventory skips vanished
 subdirectories and preserves its prior snapshot on real filesystem failures.
 See [storage performance and profiling](design-docs/storage-usage.md).
+
+Company/analyst enrichment can fall back from a failed Yahoo public response to
+attributed, separately budgeted Nasdaq data without replacing good primary data.
+Institutional jobs share whole-report staging and immutable evidence, bounded
+parsed indexes and seven-day refreshes, so company count no longer multiplies
+remote manager-history requests. Missing source data and empty tracked samples
+remain separate from populated coverage. Startup SQLite write contention has
+bounded retries; reporting contention does not stop active standalone workers.

@@ -64,20 +64,27 @@ independent request budgets (12/minute, 2,000/day). Common reporting quarter is
 at least 45 days old. Existing source choices and pauses are preserved. The
 Funds Backfill action queues only the selected Funds provider, not other datasets.
 
-Exact ticker autocomplete resolves one CUSIP. Each reviewed CIK has a fixed
-manager URL; HTML filing metadata verifies identity and complete report/accession.
-The fixed JSON manager/CUSIP route supplies reported shares and USD-thousands
-values, normalized to USD. Put/call rows are excluded. Ambiguous amendments,
-missing reports or unknown mappings remain gaps. A complete portfolio report
-without that common-share position can establish zero. Only adjacent reported
-quarters determine Added/Trimmed/New/Exited; these are holding changes, not trades.
-The oldest visible quarter can have an unknown change without a preceding report.
+Each reviewed CIK has a fixed manager URL; HTML filing metadata verifies
+identity and complete report/accession. The fixed `/data/13f/{accession}` JSON
+route supplies the whole common-share portfolio. One report download serves all
+company jobs, rather than sixteen manager/CUSIP histories per symbol. USD-thousands
+values normalize to USD. Put/call, principal, note/bond/warrant/preferred rows are
+excluded. The newest unambiguous source ticker/CUSIP match anchors all tracked managers
+to the same security. Older managers cannot introduce a previous instrument at
+a reused ticker. Unknown tickers
+can still match an already verified CUSIP. Duplicate matches, changed CUSIPs,
+ambiguous amendments and missing reports remain gaps. Only a complete report
+without the identified position can establish zero, after a positive holding
+establishes that identity within the selected window. Holding changes are not trades.
 
-Profile/history responses are staged in SQLite (24-hour store lifetime), shared
-across jobs and retries. Each completed issuer payload is committed atomically
-before renderer reads. Full-directory jobs proceed under the budget; this does
-not mean every issuer has been backfilled. Unsupported symbols remain explicit.
-A large directory takes multiple days; no source requests run on page navigation.
+Manager/report pages are staged in SQLite for up to 30 days; the adapter enforces
+its own seven-day refresh before reuse. Bounded parsed indexes accelerate repeated
+company lookups. Raw immutable reports are compressed/archived once and referenced
+by each fenced company snapshot. Restart reuses staging without source requests.
+The first cache build still obeys 12/minute, 2,000/day and job deadlines; subsequent
+symbols need local lookups. Missing-only whole-directory collection continues
+independently of page navigation. A stored empty tracked sample does not mean
+there are no institutional owners outside this 16-manager roster.
 
 The reference screenshots guide layout only. Some reference historical numbers
 differ from source filings; AIFi retains independently collected reported values.

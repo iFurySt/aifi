@@ -20,17 +20,19 @@ import (
 )
 
 type Client struct {
-	ReadFundsHistory func(context.Context, string, string) ([]Record, error)
-	ReadArchive      func(context.Context, string) (*Evidence, error)
-	ReadStage        func(context.Context, string) (*Evidence, error)
-	SaveStage        func(context.Context, string, Evidence) error
-	HTTP             *http.Client
-	Key              func(context.Context, string) (map[string]string, error)
-	Gate             func(context.Context, string) error
-	SECContact       func(context.Context) (string, error)
-	Now              func() time.Time
-	ReadEvidence     func(context.Context, string, string) ([]Evidence, error)
-	ReadPayload      func(context.Context, string, string) (Payload, error)
+	ArchiveFundEvidence func(context.Context, Evidence) (Evidence, error)
+	fundBatch           fundBatchCache
+	ReadFundsHistory    func(context.Context, string, string) ([]Record, error)
+	ReadArchive         func(context.Context, string) (*Evidence, error)
+	ReadStage           func(context.Context, string) (*Evidence, error)
+	SaveStage           func(context.Context, string, Evidence) error
+	HTTP                *http.Client
+	Key                 func(context.Context, string) (map[string]string, error)
+	Gate                func(context.Context, string) error
+	SECContact          func(context.Context) (string, error)
+	Now                 func() time.Time
+	ReadEvidence        func(context.Context, string, string) ([]Evidence, error)
+	ReadPayload         func(context.Context, string, string) (Payload, error)
 }
 
 func NewClient() *Client {
@@ -45,12 +47,17 @@ func (c *Client) get(ctx context.Context, provider, endpoint string, ev *[]Evide
 	if e != nil {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
-	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true, "13f.info": true, congressHost: true}[u.Host] {
+	if u.Scheme != "https" || u.User != nil || !map[string]bool{"api.massive.com": true, "www.sec.gov": true, "data.sec.gov": true, "financialmodelingprep.com": true, "query1.finance.yahoo.com": true, "finance.yahoo.com": true, "13f.info": true, "api.nasdaq.com": true, congressHost: true}[u.Host] {
 		return nil, &Failure{Code: "invalid_endpoint"}
 	}
 	q := u.Query()
 	headers := http.Header{"Accept": []string{"application/json"}}
 	switch provider {
+	case "nasdaq":
+		if !validNasdaqEndpoint(u) {
+			return nil, &Failure{Code: "invalid_endpoint"}
+		}
+		headers.Set("User-Agent", "AIFi/0.1 local investment research")
 	case "congress":
 		if !validCongressEndpoint(u) {
 			return nil, &Failure{Code: "invalid_endpoint"}
@@ -249,7 +256,7 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 		}
 	case "funds":
 		if j.Provider == "thirteenf" {
-			e = c.thirteenFFunds(ctx, j, &result)
+			e = c.thirteenFBatchFunds(ctx, j, &result)
 		} else if j.Provider == "yahoo" {
 			e = c.yahooFunds(ctx, j, &result)
 		} else {
@@ -258,13 +265,17 @@ func (c *Client) Collect(ctx context.Context, j Job) (Result, error) {
 	case "peers":
 		e = c.yahooPeers(ctx, j, &result)
 	case "analyst", "earnings":
-		if j.Provider == "yahoo" {
+		if j.Provider == "nasdaq" {
+			e = c.nasdaqEnrichment(ctx, j, &result)
+		} else if j.Provider == "yahoo" {
 			e = c.yahooOutlook(ctx, j, &result)
 		} else {
 			e = c.optional(ctx, j, &result)
 		}
 	case "profile":
-		if j.Provider == "yahoo" {
+		if j.Provider == "nasdaq" {
+			e = c.nasdaqEnrichment(ctx, j, &result)
+		} else if j.Provider == "yahoo" {
 			e = c.yahooCompany(ctx, j, &result)
 		} else {
 			e = c.profile(ctx, j, &result)

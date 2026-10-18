@@ -150,6 +150,11 @@ describe("stored research calculations", () => {
   it("only opens primary HTTPS research hosts outside the desktop sandbox", () => {
     expect(
       isResearchSourceURL(
+        "https://api.nasdaq.com/api/company/A/company-profile",
+      ),
+    ).toBe(true);
+    expect(
+      isResearchSourceURL(
         "https://www.sec.gov/Archives/edgar/data/320193/report.htm",
       ),
     ).toBe(true);

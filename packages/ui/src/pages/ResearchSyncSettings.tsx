@@ -158,16 +158,19 @@ function BudgetRow({
   busy,
   save,
 }: {
-  provider: "massive" | "sec" | "fmp" | "yahoo" | "thirteenf" | "congress";
+  provider:
+    "massive" | "sec" | "fmp" | "yahoo" | "thirteenf" | "congress" | "nasdaq";
   config: ResearchConfig;
   busy: boolean;
   save: (c: ResearchConfig) => Promise<void>;
 }) {
   const limit =
       config.limits[provider] ??
-      (provider === "congress"
-        ? { perMinute: 6, perDay: 450 }
-        : { perMinute: 12, perDay: 2000 }),
+      (provider === "nasdaq"
+        ? { perMinute: 20, perDay: 10000 }
+        : provider === "congress"
+          ? { perMinute: 6, perDay: 450 }
+          : { perMinute: 12, perDay: 2000 }),
     [rpm, setRPM] = useState(String(limit.perMinute)),
     [daily, setDaily] = useState(String(limit.perDay));
   useEffect(() => {
@@ -192,7 +195,8 @@ function BudgetRow({
               : provider.toUpperCase()}
         </strong>
         <p>
-          {provider === "yahoo" ||
+          {provider === "nasdaq" ||
+          provider === "yahoo" ||
           provider === "thirteenf" ||
           provider === "congress"
             ? "Public endpoint · Personal research"
@@ -404,7 +408,14 @@ export function ResearchSyncSettings() {
                               },
                             ]
                           : []),
-                        { value: "yahoo", label: "Yahoo Finance · No key" },
+                        {
+                          value: "yahoo",
+                          label:
+                            field === "profileSource" ||
+                            field === "analystSource"
+                              ? "Yahoo Finance + Nasdaq backup · No key"
+                              : "Yahoo Finance · No key",
+                        },
                         {
                           value: official,
                           label:
@@ -533,6 +544,7 @@ export function ResearchSyncSettings() {
               [
                 "congress",
                 "thirteenf",
+                "nasdaq",
                 "yahoo",
                 "massive",
                 "sec",

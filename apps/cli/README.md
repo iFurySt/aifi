@@ -212,3 +212,18 @@ entries. Only exact CIK JSON members (max 32 MiB)
 with matching body identity enter existing parsers and atomic fenced commits.
 Missing/invalid members fall back to ordinary API collection, preserving good
 data. The archive URL/member and source time remain in SQLite evidence.
+
+### Enrichment throughput
+
+Yahoo-selected profile/analyst failures can use a no-key Nasdaq backup under its
+own configurable local budget (20/minute, 10,000/day). Good primary snapshots and
+alternate source choices are preserved; source chips/audits show actual provenance.
+Nasdaq targets do not imply individual analyst-grade coverage.
+
+The 16-manager `thirteenf` source downloads complete reports once per accession,
+then reuses validated symbol/CUSIP indexes and archived evidence across companies.
+Seven-day source freshness survives restarts through durable staging. Missing
+reports, options and ambiguous identities never become invented holdings/zeros.
+The first shared-cache build remains budgeted and resumable. Standalone startup
+retries transient SQLite contention from app writers; progress contention does
+not terminate the collector. None of these counts guarantees complete source fields.

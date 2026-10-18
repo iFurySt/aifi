@@ -29,7 +29,7 @@ subscription is purchased by the application.
 | Listing directory | Existing Nasdaq Trader files | No key; existing daily schedule |
 | Daily OHLCV (default) | Yahoo Finance public chart endpoint | No key; unofficial personal-research source; split-adjusted, up to two years, closed sessions only |
 | Raw daily OHLCV (optional) | Massive daily grouped market summaries | Key; EOD, configured interval; up to 730 calendar-day backfill |
-| Company identity/profile (default) | Yahoo public company page embedded JSON | No key/cookie; weekly profile; bounded description, sector/industry, country, website, employees |
+| Company identity/profile (default) | Yahoo public company page embedded JSON; Nasdaq public company endpoint on eligible failure | No key/cookie; weekly profile; bounded description, sector/industry, country, website, employees |
 | Company identity/profile (optional) | Massive ticker overview; SEC exchange/ticker-to-CIK map | Key/contact; weekly company profile, daily shared map |
 | Filing index (default) | Yahoo public company page recent SEC filings | No key/cookie; daily, secondary limited index with validated primary SEC links |
 | Filings (optional) | SEC submissions recent window | Contact; daily; recent window only |
@@ -39,7 +39,7 @@ subscription is purchased by the application.
 | Insider transactions | SEC Form 4/4-A XML from stored submissions; immutable documents reused | Contact; daily; latest 40 filings, derivative status and transaction codes retained |
 | Institutional ownership | Yahoo public holders; optional FMP stable extract-analytics/holder, paginated | Keyless top institutional/fund samples and observed report-date history; FMP key/endpoint entitlement; weekly |
 | Congressional trades | FMP stable senate-trades + house-trades | Optional key/entitlement; daily; reported amount ranges retained |
-| Analyst data (default) | Yahoo public analysis page embedded JSON | No key/cookie; daily; consensus, current rating distribution and recent grades |
+| Analyst data (default) | Yahoo public analysis page embedded JSON; Nasdaq target consensus on eligible failure | No key/cookie; daily; consensus, current rating distribution and recent grades |
 | Analyst data (optional) | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |
 | Earnings | Yahoo public analysis page embedded JSON | No key/cookie; daily; recent GAAP actual/consensus EPS and earnings calendar |
 | Related stocks | Yahoo recommendations-by-symbol | No key; weekly; related securities, not an industry-peer classification |
@@ -330,3 +330,35 @@ and enabled FMP selections are retained. Source selection and interval live in
 Sync settings. Reads/filters never collect; missing sampled holders never imply
 exits or zero positions. See [source comparison](../references/fund-ownership-sources.md)
 for coverage and the deferred full SEC 13F archive/mapping importer.
+
+## Enrichment fallback and shared report throughput
+
+Yahoo-selected profile/analyst jobs have an attributed `nasdaq` backup. Absent Yahoo embedded public pages retry on the
+dataset cadence (at least 24 hours), rather than repeatedly consuming the daily
+budget with minute-scale retries. An
+eligible Yahoo failure, or an unattempted first job queued for at least ten
+minutes, can enable it when there is no existing non-Nasdaq head;
+paused/disabled datasets and alternate source choices remain respected. Backup
+publication cannot race away a good primary head. The public fixed HTTPS company
+profile and analyst target-price endpoints use no key/cookie or account. Returned
+symbol/fields/target ranges are validated and missing fields remain absent. The
+analyst backup supplies target consensus/count only, not invented individual
+grades or five-level ratings. UI provenance and local audits retain Nasdaq as the
+actual source. Default local budget is 20/minute, 10,000/day, configurable in Sync;
+it is not a published provider quota or availability guarantee.
+
+The `thirteenf` adapter now stages complete validated reports per accession and
+shares their parsed symbol/CUSIP indexes across company jobs. At 16 managers and
+14 quarters, the initial window uses at most 224 available report requests plus
+16 manager pages; repeats are local until refresh. This replaces roughly 17
+requests for each of 7,484 candidates. Archived evidence is compressed once;
+company publication verifies immutable references in the same fenced transaction.
+Warm institutional jobs yield for 50 ms rather than sleeping one second per
+company; network requests still pass the shared provider gate.
+Read paths remain network-free. See [institutional source boundaries](../references/fund-ownership-sources.md).
+
+The store now retains 13f staging for up to 30 days instead of dropping it after
+24/48 hours; the consumer still rejects reports/managers older than seven days.
+Other staging keeps its previous 24-hour read/48-hour cleanup bounds. Standalone
+backfill startup retries bounded SQLite BUSY/LOCKED errors from cooperating app
+writers; a busy progress read no longer terminates active workers.

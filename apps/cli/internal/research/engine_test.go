@@ -420,3 +420,56 @@ func TestKeylessCompanyCollectionBeatsPriceBacklogAndSurvivesOfflineRestart(t *t
 		t.Fatal("failed public-page refresh erased last-good profile", market.Marshal(last), err)
 	}
 }
+
+func TestNasdaqBackupRunsAfterPublicPageFailureAndRespectsPause(t *testing.T) {
+	ctx := context.Background()
+	path := t.TempDir()
+	db, err := store.Open(ctx, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	now := time.Now().UTC()
+	engine := New(db, path, false)
+	engine.Now = func() time.Time { return now }
+	engine.Client.Now = engine.Now
+	if err = db.AddResearchJobs(ctx, []market.Job{{Provider: "yahoo", Dataset: "profile", Subject: "A"}, {Provider: "nasdaq", Dataset: "profile", Subject: "A"}}, now); err != nil {
+		t.Fatal(err)
+	}
+	engine.Client.HTTP = &http.Client{Transport: fixtureHTTP(func(r *http.Request) (*http.Response, error) {
+		body := `<html><title>Agilent profile</title>Profile Information Not Available</html>`
+		if r.URL.Host == "api.nasdaq.com" {
+			body = `{"data":{"Symbol":{"value":"A"},"CompanyName":{"value":"Agilent"},"CompanyDescription":{"value":"Laboratory instruments"}}}`
+		}
+		return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader(body))}, nil
+	})}
+	// Test request policy independently of wall-clock budget waits.
+	engine.Client.Gate = func(context.Context, string) error { return nil }
+	if worked, e := engine.Step(ctx, "yahoo"); e != nil || !worked {
+		t.Fatal(worked, e)
+	}
+	// Missing page now waits for its normal cadence; the backup is independent.
+	if j, e := db.ClaimResearchJob(ctx, "yahoo", []string{"profile"}, false, now.Add(2*time.Hour)); e != nil || j != nil {
+		t.Fatal("missing page retried before cadence", j, e)
+	}
+	cfg, _ := db.ResearchConfig(ctx)
+	cfg.Datasets["profile"] = store.DatasetConfig{Enabled: false, IntervalHours: 168}
+	cfg, err = db.SaveResearchConfig(ctx, cfg)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if worked, e := engine.Step(ctx, "nasdaq"); e != nil || worked {
+		t.Fatal("disabled backup ran", worked, e)
+	}
+	cfg.Datasets["profile"] = store.DatasetConfig{Enabled: true, IntervalHours: 168}
+	if _, err = db.SaveResearchConfig(ctx, cfg); err != nil {
+		t.Fatal(err)
+	}
+	if worked, e := engine.Step(ctx, "nasdaq"); e != nil || !worked {
+		t.Fatal("backup did not run", worked, e)
+	}
+	view, e := db.ResearchRead(ctx, "A")
+	if e != nil || view.Datasets["profile"].Provider != "nasdaq" || view.Datasets["profile"].Data.Profile.Description == "" {
+		t.Fatal(view, e)
+	}
+}

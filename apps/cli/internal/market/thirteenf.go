@@ -43,7 +43,7 @@ func valid13FEndpoint(u *url.URL) bool {
 	if u.Host != "13f.info" || u.Fragment != "" {
 		return false
 	}
-	if managerPath.MatchString(u.Path) || historyPath.MatchString(u.Path) {
+	if managerPath.MatchString(u.Path) || historyPath.MatchString(u.Path) || fundDataPath.MatchString(u.Path) {
 		return u.RawQuery == ""
 	}
 	return u.Path == "/data/autocomplete" && len(u.Query()) == 1 && len(u.Query()["q"]) == 1 && yahooSymbol.MatchString(u.Query().Get("q"))

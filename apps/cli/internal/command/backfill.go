@@ -36,17 +36,22 @@ func newBackfillCommand(dataDir *string) *cobra.Command {
 		}
 		ctx, cancel := context.WithCancel(cmd.Context())
 		defer cancel()
-		db, err := store.Open(ctx, path)
+		var db *store.Store
+		err = retryBackfillStore(ctx, func() error {
+			var openErr error
+			db, openErr = store.Open(ctx, path)
+			return openErr
+		})
 		if err != nil {
 			return err
 		}
 		defer db.Close()
 		engine := research.New(db, path, false)
 		if queue || run {
-			if err = engine.Reconcile(ctx, true); err != nil {
+			if err = retryBackfillStore(ctx, func() error { return engine.Reconcile(ctx, true) }); err != nil {
 				return err
 			}
-			if _, err = db.RequestResearchBackfill(ctx); err != nil {
+			if err = retryBackfillStore(ctx, func() error { _, requestErr := db.RequestResearchBackfill(ctx); return requestErr }); err != nil {
 				return err
 			}
 		}
@@ -58,7 +63,7 @@ func newBackfillCommand(dataDir *string) *cobra.Command {
 			}
 			return encoder.Encode(progress)
 		}
-		if err = report(); err != nil || !run {
+		if err = retryBackfillStore(ctx, report); err != nil || !run {
 			return err
 		}
 		var workers sync.WaitGroup
@@ -109,6 +114,10 @@ func newBackfillCommand(dataDir *string) *cobra.Command {
 				return nil
 			case <-ticker.C:
 				if err = report(); err != nil {
+					if backfillFailureCode(err) == "store_busy" {
+						fmt.Fprintln(cmd.ErrOrStderr(), "Progress: store_busy; collector continues")
+						continue
+					}
 					return err
 				}
 			}
@@ -202,4 +211,22 @@ func backfillFailureCode(err error) string {
 		}
 	}
 	return "bulk_import_failed"
+}
+
+// Startup writes are idempotent and share SQLite with the app. Retry transient
+// contention instead of exiting before workers have even been launched.
+func retryBackfillStore(ctx context.Context, work func() error) error {
+	for attempt := 0; ; attempt++ {
+		err := work()
+		if err == nil || backfillFailureCode(err) != "store_busy" || attempt >= 7 {
+			return err
+		}
+		timer := time.NewTimer(time.Duration(1<<min(attempt, 4)) * 100 * time.Millisecond)
+		select {
+		case <-ctx.Done():
+			timer.Stop()
+			return ctx.Err()
+		case <-timer.C:
+		}
+	}
 }

@@ -29,8 +29,8 @@ def cell(symbol, dataset):
     p = provider(dataset)
     subject = 'cik:' + aliases.get(symbol,'') if p=='sec' else symbol
     head = heads.get((dataset,subject))
-    if head and head['provider']==p:
-        return {'state':'stored','fetchedAt':head['fetched_at']}
+    if head and (head['provider']==p or head['provider']=='nasdaq' and p=='yahoo' and dataset in ('profile','analyst')):
+        return {'state':'stored','provider':head['provider'],'fetchedAt':head['fetched_at']}
     job=jobs.get((p,dataset,subject),{})
     return {'state':job.get('state','unmapped' if p=='sec' and not aliases.get(symbol) else 'pending'), 'error':job.get('error','')}
 coverage=[]

@@ -50,10 +50,17 @@ func (s *Store) RequestSymbolResearchSync(ctx context.Context, symbols []string)
 			if !v.Enabled {
 				continue
 			}
-			// Keep active leases, blocked entitlements and retired history intact.
-			if _, err = tx.ExecContext(ctx, `UPDATE research_jobs SET manual=1,next_run=? WHERE subject=? AND dataset=? AND provider=? AND state IN ('queued','idle','failed')`, stamp(time.Now()), subject, dataset, cfg.ProviderFor(dataset)); err != nil {
-				return err
+			providers := []string{cfg.ProviderFor(dataset)}
+			if cfg.AllowsProvider("nasdaq", dataset) {
+				providers = append(providers, "nasdaq")
 			}
+			for _, provider := range providers {
+				// Keep active leases, blocked entitlements and retired history intact.
+				if _, err = tx.ExecContext(ctx, `UPDATE research_jobs SET manual=1,next_run=? WHERE subject=? AND dataset=? AND provider=? AND state IN ('queued','idle','failed')`, stamp(time.Now()), subject, dataset, provider); err != nil {
+					return err
+				}
+			}
+
 		}
 	}
 	return tx.Commit()
