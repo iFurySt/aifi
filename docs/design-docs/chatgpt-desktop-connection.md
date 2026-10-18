@@ -30,14 +30,24 @@ dependent; do not generalize this local open-source path to a hosted or paid ser
 
 ## Setup And Scope
 
-Run `pnpm install`, `pnpm build`, and `pnpm desktop`. Open Settings → ChatGPT,
-choose **Continue with ChatGPT**, complete browser sign-in and plan consent,
-then return to AIFi. Dismiss the first-use confirmation, choose a model and send
-a short message in Chat. **Manage usage** opens ChatGPT usage settings. Add
-account, selection, reconnect, cancel and sign out are supported.
+Run `pnpm install`, `pnpm build`, and `pnpm desktop`. Before sign-in, the bottom
+account menu's identity area is **Sign in with ChatGPT**; Settings → ChatGPT
+provides the same action. Complete browser sign-in and plan consent, then return
+to AIFi. Dismiss the first-use confirmation, choose a model in Chat and send a
+short message. Settings manages accounts, not model selection.
 
-The bottom account menu also reuses sign-in and Manage usage. It shows a person
-icon when anonymous, and the active verified display name/initial when connected.
+The account list shows name/email and marks the active account. **Add account**
+creates a separate profile; **Use account** switches Chat to an authorized saved
+profile. **Sign in** reconnects a signed-out profile; **Reconnect** restores plan
+permission. Each connected row's more menu signs out that specific account.
+Signing out preserves the registered profile and does not silently switch to a
+different account. Pending sign-in exposes cancellation and blocks duplicate
+actions; sign-in/revocation errors remain visible. The low-emphasis **ChatGPT
+usage** link opens official usage management.
+
+The bottom account menu shows a person icon before sign-in and the active verified
+name/initial plus email after connection. Selecting that connected identity opens
+Settings → ChatGPT; Usage remains a separate menu action.
 The host's optional display-only `name` field avoids the account selector's ordinal
 suffix in that identity. It exposes no additional credential material.
 The [official accounts/session guidance](https://developers.openai.com/siwc/token-sharing-open-source/profiles-and-sessions)

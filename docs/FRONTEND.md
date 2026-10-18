@@ -129,10 +129,10 @@ or settings categories while Settings is open. Chat history remains selectable i
 toolbar. Rail buttons are centered with equal 6px side margins and no extra
 panel gutter. The 44px bottom account trigger contains a 36px person icon before
 sign-in or the active verified name initial after connection. Connected identities use two lines: name with a transparent 12px provider mark in a 14px slot, then email. The badge is local, theme-aware and describes the actual sign-in source; no third provider text line is shown. The shared Radix
-account menu is 228px wide with 34px desktop rows: Continue with ChatGPT/Settings
-when anonymous, Usage/Settings when connected. It reuses the existing ChatGPT
-host actions; Usage opens official management rather than inventing a remaining
-percentage. The GitHub row opens the fixed project repository in the system
+account menu is 228px wide with 34px desktop action rows. Its identity area is
+Sign in with ChatGPT before connection, then name/email opening Settings → ChatGPT.
+Usage/Settings remain separate actions when connected. It reuses existing ChatGPT
+host actions; Usage opens official management without inventing remaining quota. The GitHub row opens the fixed project repository in the system
 browser on desktop or a separate tab on Web, in either account state. Theme stays in the toolbar/Appearance. Command/Ctrl+, opens Settings
 and dismisses the account menu. Below 600px the rail is hidden and the same menu
 appears in the page toolbar. Check keyboard selection, Escape/focus return,
@@ -140,8 +140,12 @@ outside dismissal, popup viewport bounds, and settings access with the sidebar
 collapsed as well as on mobile. Settings uses 40px desktop content padding,
 25px headings with 28px below, 14px group radii, and rows with 12px vertical
 padding/58px minimum height. Mobile retains 40px menu rows and usable controls.
-`pnpm smoke:account` checks anonymous/connected state, sign-in and usage dispatch,
-keyboard shortcuts, and rail/menu/row geometry with a synthetic isolated account.
+Settings → ChatGPT is a compact saved-account list: name/email, active marker,
+explicit switch/reconnect and per-account sign-out. Add account is in the section
+heading; official ChatGPT usage is a secondary link. Model choice stays in Chat.
+`pnpm smoke:account` checks anonymous/connected identity routes, multi-account
+switch/reconnect/sign-out, cancellation/errors, usage dispatch, keyboard shortcuts
+and compact light/dark/narrow layout using synthetic isolated accounts.
 
 Keyboard focus across the renderer and stock prototype uses neutral backgrounds,
 text/underlines, and form borders instead of outlines. The shared CSS suppresses

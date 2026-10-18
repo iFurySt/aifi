@@ -1,11 +1,17 @@
-import { AccountProviderBadge } from "./AccountProviderBadge";
 import { useState } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { ArrowUpRight, Gauge, GitFork, LogIn, Settings, UserRound } from "lucide-react";
+import {
+  ArrowUpRight,
+  Gauge,
+  GitFork,
+  Settings,
+  UserRound,
+} from "lucide-react";
 import { AIFI_REPOSITORY_URL } from "@aifi/core";
 import { useWorkspace } from "../workspace-context";
 import { useChatGPT } from "../chatgpt-context";
 import { workspaceShortcut, shortcutModifier } from "./workspace-shortcuts";
+import { AccountProviderBadge } from "./AccountProviderBadge";
 
 export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
   const { navigate } = useWorkspace();
@@ -13,7 +19,11 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
   const { available, status, busy, signingIn, action } = useChatGPT();
   const active = status?.profiles.find((p) => p.id === status.activeProfileId);
   const connected = !!active?.connected;
-  const name = connected ? active.name || active.label : "Not signed in";
+  const name = connected
+    ? active.name || active.label
+    : signingIn
+      ? "Signing in…"
+      : "Sign in with ChatGPT";
   const initials = connected
     ? (active.name || active.email || active.label)
         .trim()
@@ -27,7 +37,7 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
   );
   function signIn() {
     location.hash = "/settings/chatgpt";
-    if (available)
+    if (available && !busy && !signingIn)
       void action("signIn", active ? { profileId: active.id } : undefined);
   }
   return (
@@ -54,7 +64,14 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
               setOpen(false);
           }}
         >
-          <DropdownMenu.Label className="workspace-menu-identity">
+          <DropdownMenu.Item
+            className="workspace-menu-identity dropdown-item"
+            disabled={!connected && (busy || (available && !status))}
+            onSelect={() => {
+              if (connected || signingIn) location.hash = "/settings/chatgpt";
+              else signIn();
+            }}
+          >
             {avatar}
             <span>
               <span className="workspace-menu-name">
@@ -63,9 +80,9 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
               </span>
               {connected && active.email && <small>{active.email}</small>}
             </span>
-          </DropdownMenu.Label>
+          </DropdownMenu.Item>
           <DropdownMenu.Separator className="workspace-menu-separator" />
-          {connected ? (
+          {connected && (
             <DropdownMenu.Item
               className="dropdown-item"
               disabled={busy}
@@ -73,15 +90,6 @@ export function ProfileMenu({ mobile = false }: { mobile?: boolean }) {
             >
               <Gauge size={17} strokeWidth={1.7} />
               Usage
-            </DropdownMenu.Item>
-          ) : (
-            <DropdownMenu.Item
-              className="dropdown-item"
-              disabled={busy || signingIn}
-              onSelect={signIn}
-            >
-              <LogIn size={17} strokeWidth={1.7} />
-              {signingIn ? "Signing in…" : "Continue with ChatGPT"}
             </DropdownMenu.Item>
           )}
           <DropdownMenu.Item

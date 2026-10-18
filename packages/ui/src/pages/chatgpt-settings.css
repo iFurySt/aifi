@@ -1,0 +1,91 @@
+.chatgpt-accounts-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.chatgpt-accounts-heading h2 {
+  font-size: 14px;
+  font-weight: 550;
+}
+.chatgpt-accounts-heading .button {
+  min-height: 30px;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+.chatgpt-account-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.chatgpt-account-person .profile-avatar {
+  flex-shrink: 0;
+}
+.chatgpt-account-identity {
+  min-width: 0;
+}
+.chatgpt-account-identity strong,
+.chatgpt-account-identity p {
+  overflow-wrap: anywhere;
+}
+.chatgpt-account-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.chatgpt-account-actions .button,
+.chatgpt-account-row > .button {
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.chatgpt-account-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--positive);
+  white-space: nowrap;
+}
+.chatgpt-account-actions .chatgpt-account-more {
+  width: 32px;
+  padding: 0;
+}
+.chatgpt-account-progress {
+  margin: 10px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.chatgpt-accounts .chatgpt-usage-link {
+  margin-top: 10px;
+  padding: 5px 0;
+  font-size: 12px;
+  color: var(--muted);
+  min-height: 30px;
+}
+@media (max-width: 660px) {
+  .chatgpt-accounts .chatgpt-account-row {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .chatgpt-account-row > .chatgpt-account-person:first-child {
+    flex: 1 1 160px;
+  }
+  .chatgpt-account-actions {
+    margin-left: auto;
+  }
+}
+@media (max-width: 480px) {
+  .chatgpt-account-row > .chatgpt-account-person:first-child {
+    flex: 1 1 100%;
+  }
+  .chatgpt-account-actions {
+    margin-left: auto;
+  }
+}

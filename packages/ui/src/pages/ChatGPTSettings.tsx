@@ -1,168 +1,189 @@
-import { Select } from "../components/Select";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import {
+  ArrowUpRight,
+  Check,
+  Ellipsis,
+  LogOut,
+  Plus,
+  UserRound,
+} from "lucide-react";
 import { useChatGPT } from "../chatgpt-context";
 import { Button } from "../components/primitives";
+import "./chatgpt-settings.css";
 
 export function ChatGPTSettings() {
-  const {
-    available,
-    status,
-    busy,
-    signingIn,
-    error,
-    models,
-    model,
-    setModel,
-    action,
-    refresh,
-  } = useChatGPT();
-  const active = status?.profiles.find((p) => p.id === status.activeProfileId);
-  if (!available)
-    return (
-      <section className="setting-group">
-        <h2>ChatGPT</h2>
-        <div className="setting-card">
-          <div className="setting-row">
-            <p>Open the desktop app to connect your ChatGPT plan.</p>
-          </div>
-        </div>
-      </section>
-    );
+  const { available, status, busy, signingIn, error, action } = useChatGPT();
+  const profiles = status?.profiles ?? [];
+  const active = profiles.find(
+    (profile) => profile.id === status?.activeProfileId,
+  );
   return (
-    <>
-      <section className="setting-group">
-        <h2>ChatGPT plan</h2>
-        <div className="setting-card">
-          <div className="setting-row">
-            <div>
-              <strong>
-                {active?.connected ? "Connected" : "Connect ChatGPT"}
-              </strong>
-              <p>
-                {active?.sharing
-                  ? "ChatGPT plan usage is enabled."
-                  : active?.connected
-                    ? "Reconnect to enable ChatGPT plan usage."
-                    : "Use your ChatGPT plan in AIFi."}
-              </p>
-            </div>
-            <div className="setting-control">
-              {signingIn ? (
-                <Button onClick={() => void action("cancelSignIn")}>
-                  Cancel sign-in
-                </Button>
-              ) : (
-                <Button
-                  variant="primary"
-                  disabled={busy}
-                  onClick={() =>
-                    void action(
-                      "signIn",
-                      active ? { profileId: active.id } : undefined,
-                    )
-                  }
-                >
-                  Continue with ChatGPT
-                </Button>
-              )}
-            </div>
-          </div>
-          {!!status?.profiles.length && (
-            <div className="setting-row">
-              <div>
-                <strong>Account</strong>
-                {active?.email && <p>{active.email}</p>}
-              </div>
-              <div className="setting-control">
-                <Select
-                  label="ChatGPT account"
-                  value={status.activeProfileId ?? ""}
-                  disabled={busy}
-                  onValueChange={(value) =>
-                    void action("selectProfile", { profileId: value })
-                  }
-                  searchable
-                  placeholder="Choose account"
-                  options={status.profiles.map((p) => ({
-                    value: p.id,
-                    label: `${p.label}${p.connected ? "" : " · Sign in needed"}`,
-                  }))}
-                />
-              </div>
-            </div>
-          )}
-          {active?.sharing && (
-            <div className="setting-row">
-              <div>
-                <strong>Model</strong>
-              </div>
-              <div className="setting-control">
-                <Select
-                  label="ChatGPT model"
-                  value={model}
-                  disabled={busy || !models.length}
-                  onValueChange={setModel}
-                  searchable
-                  placeholder="No models available"
-                  options={models.map((m) => ({
-                    value: m.slug,
-                    label: m.displayName,
-                  }))}
-                />
-                <Button
-                  disabled={busy}
-                  onClick={() =>
-                    void action("models", { profileId: active.id })
-                  }
-                >
-                  Refresh
-                </Button>
-              </div>
-            </div>
-          )}
-          <div className="setting-row">
-            <div>
-              <strong>Usage</strong>
-              <p>Review your plan and this app’s limits.</p>
-            </div>
-            <div className="setting-control">
-              <Button onClick={() => void action("openUsage")}>
-                Manage usage
-              </Button>
-            </div>
-          </div>
-          <div className="setting-row">
-            <div>
-              <strong>Connections</strong>
-            </div>
-            <div className="setting-control">
+    <section
+      className="setting-group chatgpt-accounts"
+      aria-label="ChatGPT accounts"
+    >
+      <div className="chatgpt-accounts-heading">
+        <h2>Accounts</h2>
+        {available &&
+          (signingIn ? (
+            <Button variant="ghost" onClick={() => void action("cancelSignIn")}>
+              Cancel sign-in
+            </Button>
+          ) : (
+            profiles.length > 0 && (
               <Button
+                variant="ghost"
                 disabled={busy}
                 onClick={() => void action("signIn", { newProfile: true })}
               >
-                Add account
+                <Plus size={14} /> Add account
               </Button>
-              {active?.connected && (
-                <Button
-                  disabled={busy}
-                  onClick={() =>
-                    void action("signOut", { profileId: active.id })
-                  }
-                >
-                  Sign out
-                </Button>
-              )}
-            </div>
+            )
+          ))}
+      </div>
+      <div className="setting-card" aria-busy={available && !status && !error}>
+        {!available ? (
+          <div className="setting-row">
+            <p>Sign in from the desktop app.</p>
           </div>
-        </div>
-      </section>
+        ) : !status ? (
+          <div className="setting-row">
+            <p role="status">
+              {error ? "Couldn’t load accounts." : "Loading accounts…"}
+            </p>
+          </div>
+        ) : !profiles.length ? (
+          <div className="setting-row chatgpt-account-row">
+            <div className="chatgpt-account-person">
+              <span className="profile-avatar" aria-hidden="true">
+                <UserRound size={21} strokeWidth={1.6} />
+              </span>
+              <strong>Not signed in</strong>
+            </div>
+            <Button
+              variant="primary"
+              disabled={busy || signingIn}
+              onClick={() => void action("signIn")}
+            >
+              {signingIn ? "Signing in…" : "Sign in with ChatGPT"}
+            </Button>
+          </div>
+        ) : (
+          profiles.map((profile) => {
+            const name = profile.name || profile.label.replace(/ · \d+$/, "");
+            const isActive = profile.id === status.activeProfileId;
+            return (
+              <div
+                className="setting-row chatgpt-account-row"
+                key={profile.id}
+                data-account-id={profile.id}
+              >
+                <div className="chatgpt-account-person">
+                  <span className="profile-avatar" aria-hidden="true">
+                    {(profile.name || profile.email || profile.label)
+                      .trim()
+                      .slice(0, 1)
+                      .toLocaleUpperCase()}
+                  </span>
+                  <div className="chatgpt-account-identity">
+                    <strong>{name}</strong>
+                    {profile.email && profile.email !== name && (
+                      <p>{profile.email}</p>
+                    )}
+                  </div>
+                </div>
+                <div className="chatgpt-account-actions">
+                  {!profile.connected || !profile.sharing ? (
+                    <Button
+                      disabled={busy || signingIn}
+                      aria-label={`${profile.connected ? "Reconnect" : "Sign in to"} ${name}`}
+                      onClick={() =>
+                        void action("signIn", { profileId: profile.id })
+                      }
+                    >
+                      {profile.connected ? "Reconnect" : "Sign in"}
+                    </Button>
+                  ) : isActive ? (
+                    <span className="chatgpt-account-active">
+                      <Check size={13} aria-hidden="true" /> Active
+                    </span>
+                  ) : (
+                    <Button
+                      disabled={busy || signingIn}
+                      aria-label={`Use ${name} for Chat`}
+                      onClick={() =>
+                        void action("selectProfile", { profileId: profile.id })
+                      }
+                    >
+                      Use account
+                    </Button>
+                  )}
+                  {profile.connected && (
+                    <DropdownMenu.Root>
+                      <DropdownMenu.Trigger asChild>
+                        <Button
+                          variant="ghost"
+                          className="chatgpt-account-more"
+                          disabled={busy || signingIn}
+                          aria-label={`More options for ${name}`}
+                        >
+                          <Ellipsis size={17} />
+                        </Button>
+                      </DropdownMenu.Trigger>
+                      <DropdownMenu.Portal>
+                        <DropdownMenu.Content
+                          className="dropdown-menu"
+                          align="end"
+                          sideOffset={5}
+                          collisionPadding={10}
+                        >
+                          <DropdownMenu.Item
+                            className="dropdown-item"
+                            onSelect={() =>
+                              void action("signOut", { profileId: profile.id })
+                            }
+                          >
+                            <LogOut size={15} /> Sign out
+                          </DropdownMenu.Item>
+                        </DropdownMenu.Content>
+                      </DropdownMenu.Portal>
+                    </DropdownMenu.Root>
+                  )}
+                </div>
+              </div>
+            );
+          })
+        )}
+      </div>
+      {signingIn && (
+        <p className="chatgpt-account-progress" role="status">
+          Complete sign-in in your browser.
+        </p>
+      )}
+      {active?.connected && (
+        <Button
+          variant="ghost"
+          className="chatgpt-usage-link"
+          disabled={busy}
+          onClick={() => void action("openUsage")}
+        >
+          ChatGPT usage <ArrowUpRight size={13} />
+        </Button>
+      )}
       {error && (
         <div className="settings-service-error" role="alert">
           {error}
-          <Button variant="ghost" onClick={() => void refresh()}>
-            Refresh connection
-          </Button>
+          {!status && (
+            <Button
+              variant="ghost"
+              disabled={busy}
+              onClick={() => void action("status")}
+            >
+              Retry
+            </Button>
+          )}
         </div>
       )}
-    </>
+    </section>
   );
 }

@@ -184,8 +184,9 @@ Chat. Center 64px icon+text buttons in the 76px rail with equal 6px side margins
 keep no extra gutter before the inset panel. The bottom account control uses a
 44px trigger and 36px avatar: a person icon before sign-in, verified name initial
 after connection. Its 228px popup uses 6px padding, a 14px radius and 34px desktop
-rows. Show identity plus Continue with ChatGPT/Settings before sign-in; show
-Usage/Settings after connection. Usage opens the official management page; show
+rows. Before sign-in use the identity area itself as Sign in with ChatGPT;
+after connection show name/email, with identity opening account settings and
+Usage/Settings as separate actions. Usage opens the official management page; show
 no unverified remaining percentage. Theme lives in the toolbar/Appearance.
 Command/Ctrl+, opens Settings and dismisses an open account menu. At mobile widths move the same avatar menu into the page toolbar;
 avoid duplicating sidebar footers. Menus support keyboard navigation, Escape,
@@ -447,3 +448,13 @@ Settings category links and shared Select option rows leave 2px between rounded
 highlights. Active/hover and selected options share the neutral interaction fill;
 do not add an inset outline to the hovered option. Preserve the selected check
 and normal keyboard focus cues on the trigger.
+
+### Account management
+
+Settings → ChatGPT contains one compact account list. Show name/email and an
+Active check, an explicit Use account action on other authorized profiles, and
+Sign in/Reconnect on profiles that need authorization. Keep per-account Sign out
+in the row's more menu. Put Add account in the section heading, cancellation in
+its place while sign-in is pending, and official ChatGPT usage below as a subtle
+external link. Keep model selection in Chat. Avoid Connected/Connections/status
+explanations and duplicated login or usage rows; errors remain actionable.
