@@ -572,3 +572,12 @@ padding. Run `pnpm smoke:insets` (also included in desktop smoke) for the CSSOM
 audit across implemented pages, stock tabs, settings and menus, plus actual peer
 hover/focus and light/dark/narrow geometry checks. See the
 [interaction contract](design-docs/interaction-insets.md).
+
+## Company News
+
+Digest reads persisted Yahoo ticker RSS or the explicitly selected FMP source.
+It shows ordered, deduplicated headlines, publication dates, bounded feed snippets
+and allowlisted original links. Empty source windows and disabled sync are distinct.
+Sync settings exposes News source; saved data remains visible offline or with sync
+off. Run `pnpm smoke:news` and the Go collector/store/worker news regressions.
+See [source findings and contract](references/company-news-sources.md).

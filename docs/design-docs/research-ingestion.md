@@ -43,7 +43,7 @@ subscription is purchased by the application.
 | Analyst data (optional) | FMP stable grades + price-target-consensus | Optional key/entitlement; daily; vendor-defined consensus |
 | Earnings | Yahoo public analysis page embedded JSON | No key/cookie; daily; recent GAAP actual/consensus EPS and earnings calendar |
 | Related stocks | Yahoo recommendations-by-symbol | No key; weekly; related securities, not an industry-peer classification |
-| News headlines | FMP stable news/stock | Optional key/entitlement; daily; recent provider response window |
+| News headlines | Yahoo ticker RSS; optional FMP stable news/stock | Keyless daily RSS window by default; FMP requires news entitlement |
 
 Primary specs checked during implementation:
 [Massive market batches](https://massive.com/docs/rest/stocks/aggregates/daily-market-summary),
@@ -362,3 +362,13 @@ The store now retains 13f staging for up to 30 days instead of dropping it after
 Other staging keeps its previous 24-hour read/48-hour cleanup bounds. Standalone
 backfill startup retries bounded SQLite BUSY/LOCKED errors from cooperating app
 writers; a busy progress read no longer terminates active workers.
+
+## Company news
+
+New installs enable public Yahoo ticker RSS news; existing disabled choices stay
+off and enabled legacy FMP choices stay FMP. News participates in the existing
+Yahoo budget and fair dataset rotation, with normal reads limited to SQLite.
+Validated feed metadata/snippets and immutable XML evidence commit atomically;
+failed collection retains last-good snapshots. FMP news remains an explicit
+subscription-dependent option. See [news sources](../references/company-news-sources.md)
+for observed access, source identity, limits and regression gates.

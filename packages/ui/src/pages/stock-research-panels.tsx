@@ -1,8 +1,8 @@
 import {
+  companyNews,
   financialSeries,
   trailingMetric,
   type StockResearch,
-  type ResearchRecord,
 } from "@aifi/core";
 import { money } from "../workspace-context";
 import { DataTable, MissingData, SourceNote } from "./stock-research-shared";
@@ -13,12 +13,6 @@ export {
   SourceNote,
 } from "./stock-research-shared";
 export { Financials } from "./Financials";
-const value = (r: ResearchRecord, ...keys: string[]) => {
-  for (const key of keys)
-    if (r[key] !== undefined && r[key] !== null && r[key] !== "")
-      return String(r[key]);
-  return "—";
-};
 const amount = (raw: unknown, currency = false) => {
   if (
     raw === null ||
@@ -243,19 +237,45 @@ export function Earnings({ data }: { data: StockResearch }) {
 }
 export function Digest({ data }: { data: StockResearch }) {
   const view = data.datasets.news,
-    records = view?.data.records ?? [];
+    articles = companyNews(view?.data.records ?? []);
   return (
     <>
-      {records.slice(0, 5).map((r, i) => (
-        <article className="stock-news-item" key={i}>
-          <small>{value(r, "publishedDate", "date")}</small>
-          <h3>{value(r, "title")}</h3>
-          <p>{value(r, "site", "publisher")}</p>
+      {articles.slice(0, 5).map((article) => (
+        <article className="stock-news-item" key={article.key}>
+          <small>
+            <time dateTime={article.published}>
+              {/Z$|[+-]\d{2}:\d{2}$/.test(article.published)
+                ? new Date(article.published).toLocaleString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                    timeZone: "America/New_York",
+                    timeZoneName: "short",
+                  })
+                : article.published}
+            </time>
+            {article.publisher ? ` · ${article.publisher}` : ""}
+          </small>
+          <h3>
+            {article.url ? (
+              <a href={article.url} target="_blank" rel="noopener noreferrer">
+                {article.title}
+              </a>
+            ) : (
+              article.title
+            )}
+          </h3>
+          {article.snippet && <p>{article.snippet}</p>}
         </article>
       ))}
-      {!records.length && (
+      {!articles.length && (
         <div className="stock-no-data">
-          <MissingData data={data} dataset="news" />
+          {view ? (
+            "No recent news in this source window"
+          ) : (
+            <MissingData data={data} dataset="news" />
+          )}
         </div>
       )}
       <SourceNote view={view} />

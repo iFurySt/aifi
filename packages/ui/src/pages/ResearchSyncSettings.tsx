@@ -404,6 +404,7 @@ export function ResearchSyncSettings() {
                   ["fundsSource", "Institutional holdings source", "fmp"],
                   ["factsSource", "Financial statements source", "sec"],
                   ["filingsSource", "Filings source", "sec"],
+                  ["newsSource", "News source", "fmp"],
                 ] as const
               ).map(([field, label, official]) => (
                 <div className="setting-row" key={field}>
@@ -441,7 +442,9 @@ export function ResearchSyncSettings() {
                             official === "sec"
                               ? "SEC · Contact required"
                               : official === "fmp"
-                                ? "FMP · API key"
+                                ? field === "newsSource"
+                                  ? "FMP · News subscription"
+                                  : "FMP · API key"
                                 : "Massive · API key",
                         },
                       ]}

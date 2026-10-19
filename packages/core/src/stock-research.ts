@@ -22,6 +22,7 @@ export interface ResearchConfig {
   fundsSource?: "yahoo" | "fmp" | "thirteenf";
   fundsHistoryQuarters?: number;
   insiderHistoryFilings?: number;
+  newsSource?: "yahoo" | "fmp";
   analystSource?: "yahoo" | "fmp";
   priceSource?: "yahoo" | "massive";
   profileSource?: "yahoo" | "massive";
@@ -46,6 +47,10 @@ export function researchProvider(
   config: ResearchConfig,
   dataset: ResearchDataset,
 ): "yahoo" | "massive" | "sec" | "fmp" | "thirteenf" | "congress" {
+  if (dataset === "news")
+    return (
+      config.newsSource ?? (config.datasets.news.enabled ? "fmp" : "yahoo")
+    );
   if (dataset === "politicians") return config.politiciansSource ?? "congress";
   if (dataset === "funds") return config.fundsSource ?? "yahoo";
   if (dataset === "analyst") return config.analystSource ?? "yahoo";
@@ -434,6 +439,7 @@ export function isResearchSourceURL(value: string): boolean {
         "www.apple.com",
         "query1.finance.yahoo.com",
         "finance.yahoo.com",
+        "feeds.finance.yahoo.com",
         "api.nasdaq.com",
         "13f.info",
         "congressinfor-production.up.railway.app",
@@ -523,4 +529,35 @@ export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
     postAsOf: post?.postAsOf,
     postChange: post?.postPrice && price ? post.postPrice - price : undefined,
   };
+}
+
+/** Source headlines only; this is not generated analysis or an article body. */
+export function companyNews(records: ResearchRecord[]) {
+  const seen = new Set<string>();
+  return records
+    .flatMap((r) => {
+      const title =
+        typeof r.title === "string" ? r.title.trim().slice(0, 400) : "";
+      const published = String(r.publishedDate ?? r.date ?? "");
+      if (!title || !Number.isFinite(Date.parse(published))) return [];
+      const url =
+        typeof r.url === "string" && isResearchSourceURL(r.url)
+          ? r.url
+          : undefined;
+      const key = url ?? `${published}/${title}`;
+      if (seen.has(key)) return [];
+      seen.add(key);
+      return [
+        {
+          key,
+          title,
+          published,
+          url,
+          publisher: String(r.publisher ?? r.site ?? "").slice(0, 100),
+          snippet:
+            typeof r.text === "string" ? r.text.trim().slice(0, 260) : "",
+        },
+      ];
+    })
+    .sort((a, b) => b.published.localeCompare(a.published));
 }

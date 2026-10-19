@@ -167,7 +167,7 @@ func (e *Engine) Reconcile(ctx context.Context, force bool) error {
 		jobs = append(jobs, market.Job{Provider: "nasdaq", Dataset: "profile", Subject: symbol}, market.Job{Provider: "nasdaq", Dataset: "analyst", Subject: symbol})
 		jobs = append(jobs, market.Job{Provider: "congress", Dataset: "politicians", Subject: symbol})
 		jobs = append(jobs, market.Job{Provider: "thirteenf", Dataset: "funds", Subject: symbol, Window: market.FundHistoryWindow(now, cfg.FundsHistoryQuarters)})
-		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds"} {
+		for _, d := range []string{"prices", "profile", "facts", "filings", "analyst", "earnings", "peers", "funds", "news"} {
 			j := market.Job{Provider: "yahoo", Dataset: d, Subject: symbol}
 			if d == "analyst" {
 				j.Window = "outlook:3"
@@ -282,7 +282,7 @@ func (e *Engine) Step(ctx context.Context, p string) (bool, error) {
 	if p == "yahoo" {
 		// Rotate datasets before claiming: an existing universe-size price backlog
 		// must not starve company details and financials. All requests share a budget.
-		order := []string{"profile", "filings", "facts", "prices", "analyst", "earnings", "peers", "funds"}
+		order := []string{"profile", "filings", "facts", "prices", "analyst", "earnings", "peers", "funds", "news"}
 		for i := 0; i < len(order); i++ {
 			d := order[e.yahooCursor%len(order)]
 			e.yahooCursor++

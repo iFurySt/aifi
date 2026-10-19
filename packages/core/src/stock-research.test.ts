@@ -371,3 +371,46 @@ it("keeps reported company cap from a dated quote when a fresher price has no va
   expect(quote.marketCap).toBe(5012516765696);
   expect(quote.marketCapAsOf).toBe("2026-10-16T20:00:01Z");
 });
+
+it("orders and deduplicates source news while keeping unsafe URLs inert", async () => {
+  const { companyNews, isResearchSourceURL } = await import("./stock-research");
+  const news = companyNews([
+    {
+      title: "Old",
+      publishedDate: "2026-10-18T14:00:00Z",
+      url: "https://finance.yahoo.com/news/old.html",
+    },
+    {
+      title: "New",
+      publishedDate: "2026-10-19T14:00:00Z",
+      url: "https://finance.yahoo.com/news/new.html",
+      publisher: "Yahoo Finance",
+      text: "Source snippet",
+    },
+    {
+      title: "Duplicate",
+      publishedDate: "2026-10-19T14:00:00Z",
+      url: "https://finance.yahoo.com/news/new.html",
+    },
+    {
+      title: "Unsafe link",
+      publishedDate: "2026-10-17T14:00:00Z",
+      url: "javascript:alert(1)",
+    },
+    { title: "Invalid date", publishedDate: "not-a-date" },
+    { title: "", publishedDate: "2026-10-19T14:00:00Z" },
+  ]);
+  expect(news.map((n) => n.title)).toEqual(["New", "Old", "Unsafe link"]);
+  expect(news[0].snippet).toBe("Source snippet");
+  expect(news[2].url).toBeUndefined();
+  expect(
+    isResearchSourceURL(
+      "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AAPL",
+    ),
+  ).toBe(true);
+  expect(
+    isResearchSourceURL(
+      "https://feeds.finance.yahoo.com.attacker.invalid/news",
+    ),
+  ).toBe(false);
+});

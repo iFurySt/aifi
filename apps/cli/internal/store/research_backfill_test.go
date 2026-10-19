@@ -13,6 +13,7 @@ func TestTargetedResearchRepairPreservesScopeAndBlocks(t *testing.T) {
 	commitTest(t, db, fixtures(t, "1012202621:31", true))
 	cfg, _ := db.ResearchConfig(ctx)
 	cfg.FilingsSource = "sec"
+	cfg.Datasets["news"] = DatasetConfig{false, 24}
 	if _, err := db.SaveResearchConfig(ctx, cfg); err != nil {
 		t.Fatal(err)
 	}

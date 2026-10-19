@@ -4180,3 +4180,12 @@ kbd {
   align-items: center;
   gap: 8px;
 }
+
+.stock-news-item h3 a:hover,
+.stock-news-item h3 a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.stock-news-item small {
+  overflow-wrap: anywhere;
+}

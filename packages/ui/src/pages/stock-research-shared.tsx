@@ -65,6 +65,7 @@ export function MissingData({
 }) {
   const status = data.coverage[dataset];
   const message: Record<string, string> = {
+    disabled: "Sync is off",
     needs_key: "API key required",
     needs_contact: "SEC contact required",
     access_denied: "Source access required",

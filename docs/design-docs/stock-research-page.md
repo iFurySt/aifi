@@ -52,7 +52,7 @@ name, exchange, quote, chart, or statements.
 
 | Tab | Current content | Future source requirement |
 | --- | --- | --- |
-| Chart | Stored quote, About, analyst/earnings summaries, metrics/peers, interactive daily chart, empty Digest/recent filings. | Profile, daily OHLCV, facts, sourced news/filings. |
+| Chart | Stored quote, About, analyst/earnings summaries, metrics/peers, interactive daily chart, sourced Digest headlines/recent filings. | Profile, daily OHLCV, facts, sourced news/filings. |
 | Financials | Metrics/Income/Balance/Cash flow/Filings selector; Quarter/Yearly tables with stored units and periods; empty filings. | Validated XBRL mappings and submissions. |
 | Funds | Stored institutional aggregates, institution/mutual-fund samples, linked holder history/table, local search and position filters. | Full historical 13F backfill, CUSIP/amendment handling; existing top-holder coverage is partial. |
 | Politicians | Purchases/sales/filers, All/Buy/Sell, transaction/range/traded/disclosed columns. | Public disclosures with transaction and publication dates. |

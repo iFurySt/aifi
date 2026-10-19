@@ -20,6 +20,7 @@
     "smoke:desktop": "pnpm --filter @aifi/desktop smoke && pnpm smoke:insets",
     "smoke:chart-tools": "node scripts/check-stock-chart-tools.mjs",
     "smoke:market-session": "node scripts/check-market-session.mjs",
+    "smoke:news": "node scripts/check-company-news.mjs",
     "smoke:insets": "node scripts/check-interaction-insets.mjs",
     "smoke:stocks-layout": "node scripts/check-stocks-responsive.mjs",
     "smoke:stocks-cache": "node scripts/check-stock-list-reentry.mjs",

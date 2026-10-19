@@ -30,6 +30,7 @@ type ProviderLimit struct {
 	PerDay    int `json:"perDay"`
 }
 type ResearchConfig struct {
+	NewsSource            string                   `json:"newsSource"`
 	Revision              int                      `json:"revision"`
 	PriceSource           string                   `json:"priceSource"`
 	ProfileSource         string                   `json:"profileSource"`
@@ -116,10 +117,24 @@ func readResearchConfig(ctx context.Context, db snapshotReader) (ResearchConfig,
 	if c.FilingsSource == "" {
 		c.FilingsSource = "yahoo"
 	}
+	if c.NewsSource == "" {
+		c.NewsSource = "yahoo"
+		if c.Datasets["news"].Enabled {
+			c.NewsSource = "fmp"
+		}
+	}
 	return c, e
 }
 func (c ResearchConfig) ProviderFor(dataset string) string {
 	switch dataset {
+	case "news":
+		if c.NewsSource == "" {
+			if c.Datasets["news"].Enabled {
+				return "fmp"
+			}
+			return "yahoo"
+		}
+		return c.NewsSource
 	case "prices":
 		return c.PriceSource
 	case "politicians":
@@ -145,6 +160,15 @@ func (c ResearchConfig) ProviderFor(dataset string) string {
 	}
 }
 func (s *Store) SaveResearchConfig(ctx context.Context, c ResearchConfig) (ResearchConfig, error) {
+	if c.NewsSource == "" {
+		c.NewsSource = "yahoo"
+		if c.Datasets["news"].Enabled {
+			c.NewsSource = "fmp"
+		}
+	}
+	if c.NewsSource != "yahoo" && c.NewsSource != "fmp" {
+		return c, errors.New("invalid news source")
+	}
 	if c.Limits != nil && c.Limits["nasdaq"].PerMinute == 0 {
 		c.Limits["nasdaq"] = ProviderLimit{20, 10000}
 	}
@@ -725,6 +749,10 @@ func (s *Store) ResearchRead(ctx context.Context, symbol string) (StockResearch,
 	}
 	for _, d := range ResearchDatasets {
 		if out.Coverage[d] == "stored" {
+			continue
+		}
+		if !cfg.Datasets[d].Enabled {
+			out.Coverage[d] = "disabled"
 			continue
 		}
 		p := cfg.ProviderFor(d)
