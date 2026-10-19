@@ -8,7 +8,6 @@ import { Funds } from "./Funds";
 import { Financials } from "./Financials";
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
-  ArrowUpRight,
   Star,
   MessageCircle,
   Moon,
@@ -40,7 +39,6 @@ import { useStockResearch } from "../stock-research-context";
 import {
   SourceNote,
   AnalystSummary,
-  FilingsTable,
   Earnings,
   Digest,
   MissingData,
@@ -497,18 +495,6 @@ export function Stocks() {
                   <section className="stock-digest stock-news-overview">
                     <h2>Digest</h2>
                     <Digest data={data} />
-                  </section>
-                  <section className="stock-digest stock-filings-overview">
-                    <div className="section-heading">
-                      <h2>Recent filings</h2>
-                      <button
-                        className="text-link"
-                        onClick={() => openStock(symbol, "financials")}
-                      >
-                        Financials <ArrowUpRight size={13} />
-                      </button>
-                    </div>
-                    <FilingsTable data={data} compact />
                   </section>
                 </div>
               </div>

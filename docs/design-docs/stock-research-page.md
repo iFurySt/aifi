@@ -52,7 +52,7 @@ name, exchange, quote, chart, or statements.
 
 | Tab | Current content | Future source requirement |
 | --- | --- | --- |
-| Chart | Stored quote, About, analyst/earnings summaries, metrics/peers, interactive daily chart, sourced Digest headlines/recent filings. | Profile, daily OHLCV, facts, sourced news/filings. |
+| Chart | Stored quote, About, analyst/earnings summaries, metrics/peers, interactive daily chart, sourced Digest headlines. | Profile, daily OHLCV, facts, sourced news. |
 | Financials | Metrics/Income/Balance/Cash flow/Filings selector; Quarter/Yearly tables with stored units and periods; empty filings. | Validated XBRL mappings and submissions. |
 | Funds | Stored institutional aggregates, institution/mutual-fund samples, linked holder history/table, local search and position filters. | Full historical 13F backfill, CUSIP/amendment handling; existing top-holder coverage is partial. |
 | Politicians | Purchases/sales/filers, All/Buy/Sell, transaction/range/traded/disclosed columns. | Public disclosures with transaction and publication dates. |
@@ -74,13 +74,13 @@ Outer menu | Stock list | Company / ticker          Search    Watchlist
 
                         Quote + About    Metrics        Price + volume
                         Analyst          Peers          Range / Line / Candle
-                        Earnings                        Digest / recent filings
+                        Earnings                        Digest
 ```
 
 Three flexible columns use thin vertical separators above a 1000px document.
 Between 701 and 1000px, quote/About sit beside the price chart, then metrics/peers
 span the document and secondary sections form pairs. At 700px and below, stack
-quote, About, Analyst, Earnings, metrics/Peers, price chart, Digest and recent filings.
+quote, About, Analyst, Earnings, metrics/Peers, price chart and Digest.
 Do not hide deep company sections. At 440px and below use compact headers,
 40px watch targets and stacked summary rows. CSS reflows one section/chart tree
 so chart mode/range and the mounted list's position survive resizing.

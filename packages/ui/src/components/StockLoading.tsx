@@ -67,8 +67,8 @@ export function StockLoading({ tab }: { tab: StockTab }) {
           <Skeleton className="skeleton-chart-plot" />
           <Skeleton width="55%" />
         </div>
-        <div className="stock-digest stock-filings-overview">
-          <SkeletonRows label="Loading filings" rows={4} />
+        <div className="stock-digest stock-news-overview">
+          <SkeletonRows label="Loading news" rows={4} />
         </div>
       </div>
     </SkeletonGroup>

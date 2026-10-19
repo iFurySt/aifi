@@ -162,7 +162,6 @@ async function checks(phase, width) {
         ".stock-metrics-column",
         ".stock-price-section",
         ".stock-news-overview",
-        ".stock-filings-overview",
       ].map((s) => document.querySelector(s).getBoundingClientRect().top);
       assert(
         positions.every((y, i) => i === 0 || y > positions[i - 1]),
