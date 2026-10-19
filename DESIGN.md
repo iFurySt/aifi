@@ -476,3 +476,11 @@ spacing between outer gaps and hover padding. Chart controls form one wrapping,
 left-aligned row: range, style, source, studies and comparison. Technical coverage
 belongs in source details; chart hover owns point-in-time values. See
 [stock chart tools](docs/design-docs/stock-chart-tools.md).
+
+### Interaction insets
+
+Hover and keyboard-focus backgrounds must leave room around content. Shared
+10px/8px inline-inset tokens define regular/compact rows. Keep document alignment
+by extending padded targets into existing gutters; do not add spacing only on
+hover. See [interaction insets](docs/design-docs/interaction-insets.md) and run
+`pnpm smoke:insets` when changing interactive surfaces.

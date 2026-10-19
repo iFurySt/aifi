@@ -562,3 +562,13 @@ Empty/error results and long-running user operations remain explicit states.
 source details, session-based SMA studies and cached local comparison reads.
 `pnpm smoke:chart-tools` covers their calculations, menus and responsive controls;
 `pnpm smoke:stocks-layout` retains all-tab and chart-state reflow checks.
+
+## Interaction Insets
+
+Shared regular/compact inline-inset tokens keep hover and focus backgrounds from
+touching their contents. Peers rows and Watchlist company links extend into
+existing gutters to preserve alignment; search-footer shortcuts keep their own
+padding. Run `pnpm smoke:insets` (also included in desktop smoke) for the CSSOM
+audit across implemented pages, stock tabs, settings and menus, plus actual peer
+hover/focus and light/dark/narrow geometry checks. See the
+[interaction contract](design-docs/interaction-insets.md).

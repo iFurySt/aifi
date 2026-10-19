@@ -7,7 +7,7 @@
   min-width: 0;
   max-width: 100%;
   min-height: 34px;
-  padding: 6px 10px;
+  padding: 6px var(--interaction-inset);
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--canvas);
@@ -52,8 +52,8 @@
   background: transparent;
   font: inherit;
   line-height: inherit;
-  padding: 2px 4px;
-  margin: -2px -4px;
+  padding: 2px var(--interaction-inset-compact);
+  margin: -2px calc(-1 * var(--interaction-inset-compact));
   min-height: 0;
   gap: 6px;
   border-radius: 7px;
@@ -128,7 +128,7 @@
   justify-content: space-between;
   gap: 16px;
   min-height: 34px;
-  padding: 7px 10px;
+  padding: 7px var(--interaction-inset);
   border-radius: 10px;
   cursor: pointer;
 }

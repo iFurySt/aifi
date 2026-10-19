@@ -17,6 +17,8 @@
   --surface-muted: #f5f5f5;
   --text: #202020;
   --interaction-hover: color-mix(in srgb, var(--text) 6%, transparent);
+  --interaction-inset: 10px;
+  --interaction-inset-compact: 8px;
   --secondary: #636363;
   --muted: #777;
   --border: #e8e8e8;
@@ -529,7 +531,7 @@ nav {
   gap: 8px;
   color: var(--muted);
   font-size: 12px;
-  padding: 6px 8px;
+  padding: 6px var(--interaction-inset-compact);
   border-radius: 6px;
 }
 .search-trigger:hover,
@@ -1032,6 +1034,9 @@ kbd {
   align-items: center;
   gap: 12px;
   text-align: left;
+  padding: 6px var(--interaction-inset);
+  margin: -6px calc(-1 * var(--interaction-inset));
+  border-radius: 8px;
 }
 .company-cell strong {
   display: block;
@@ -1605,7 +1610,7 @@ kbd {
   align-items: center;
   gap: 8px;
   min-height: 32px;
-  padding: 7px 10px;
+  padding: 7px var(--interaction-inset);
   font-size: 12px;
   outline: none;
   border-radius: 6px;
@@ -1655,7 +1660,7 @@ kbd {
   flex-shrink: 0;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 10px var(--interaction-inset);
   border-radius: 8px;
   text-align: left;
 }
@@ -1692,6 +1697,8 @@ kbd {
   align-items: center;
   gap: 8px;
   color: var(--secondary);
+  padding: 4px var(--interaction-inset-compact);
+  border-radius: 6px;
 }
 .search-footer kbd {
   font-size: 10px;
@@ -2089,6 +2096,7 @@ kbd {
 .theme-option:focus-visible {
   border-color: color-mix(in srgb, var(--text) 30%, var(--border));
 }
+.company-cell:hover,
 .company-cell:focus-visible,
 .cadence-control select:focus-visible {
   background: var(--interaction-hover);
@@ -2172,7 +2180,7 @@ kbd {
   text-align: left;
   width: 100%;
   gap: 9px;
-  padding: 12px 8px;
+  padding: 12px var(--interaction-inset-compact);
   border-radius: 10px;
 }
 .stock-list-row:hover,
@@ -2828,7 +2836,7 @@ kbd {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 7px 10px;
+  padding: 7px var(--interaction-inset);
   border-radius: 8px;
   font-size: 13px;
 }
@@ -3140,8 +3148,8 @@ kbd {
   align-items: center;
   gap: 6px;
   border-radius: 6px;
-  padding: 3px 4px;
-  margin: -3px -4px;
+  padding: 3px var(--interaction-inset-compact);
+  margin: -3px calc(-1 * var(--interaction-inset-compact));
   font: inherit;
 }
 .stock-source-trigger svg {
@@ -3511,6 +3519,9 @@ kbd {
 }
 .stock-peer-list {
   margin-top: 14px;
+  margin-inline: calc(-1 * var(--interaction-inset));
+  display: grid;
+  gap: 2px;
 }
 .stock-peer-row {
   display: flex;
@@ -3518,13 +3529,14 @@ kbd {
   align-items: center;
   width: 100%;
   text-align: left;
-  padding: 10px 0;
+  padding: 10px var(--interaction-inset);
   border: 0;
   background: none;
   border-radius: 8px;
   cursor: pointer;
 }
-.stock-peer-row:hover {
+.stock-peer-row:hover,
+.stock-peer-row:focus-visible {
   background: var(--interaction-hover);
 }
 .stock-peer-row .stock-avatar {

@@ -72,7 +72,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px 10px;
+  padding: 8px var(--interaction-inset);
   border-radius: 10px;
   text-align: left;
 }

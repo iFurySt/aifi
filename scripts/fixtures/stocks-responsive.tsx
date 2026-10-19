@@ -196,6 +196,16 @@ createRoot(document.getElementById("root")!).render(
         })),
         datasets: {
           ...extraDatasets,
+          ...(new URLSearchParams(location.search).has("hover")
+            ? {
+                peers: view({
+                  records: [
+                    { recordKind: "related-stock", symbol: "MSFT" },
+                    { recordKind: "related-stock", symbol: "S0" },
+                  ],
+                }),
+              }
+            : {}),
           profile: view({
             complete: true,
             profile: {
