@@ -1,3 +1,4 @@
+import { usEquityMarketStatus, newYorkSessionDate } from "./market-session";
 import { financialMetric, financialUnit } from "./financial-definitions";
 import type { DailyBar } from "./stocks";
 export const researchDatasets = [
@@ -451,26 +452,15 @@ export function isResearchSourceURL(value: string): boolean {
 
 /** Price and market status are separate: a saved quote never becomes a live feed. */
 export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/New_York",
-    weekday: "short",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    hourCycle: "h23",
-  }).formatToParts(new Date(now));
-  const part = (key: string) => parts.find((p) => p.type === key)?.value ?? "";
-  const today = `${part("year")}-${part("month")}-${part("day")}`;
-  const minutes = Number(part("hour")) * 60 + Number(part("minute"));
-  const nyDate = (time: string) =>
-    new Intl.DateTimeFormat("en-CA", {
-      timeZone: "America/New_York",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    }).format(new Date(time));
+  const nyDate = (time: string) => newYorkSessionDate(Date.parse(time));
+  const market = usEquityMarketStatus(
+    now,
+    Object.values(data.datasets).flatMap((view) =>
+      view?.data.quote
+        ? [{ ...view.data.quote, fetchedAt: view.fetchedAt }]
+        : [],
+    ),
+  );
   const candidates = Object.values(data.datasets).flatMap((v) =>
     v?.data.quote &&
     Number.isFinite(v.data.quote.price) &&
@@ -488,45 +478,13 @@ export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
   const bars = data.bars,
     latest = bars.at(-1);
   const source = candidates.find(
-    (q) => !latest || nyDate(q.asOf) >= latest.date,
+    (q) => !latest || (nyDate(q.asOf) ?? "") >= latest.date,
   );
   const sourceDate = source ? nyDate(source.asOf) : latest?.date;
   const price = source?.price ?? latest?.close;
   const previous =
     source?.previousClose ??
     [...bars].reverse().find((b) => b.date < (sourceDate ?? ""))?.close;
-  const session = candidates.find(
-    (q) =>
-      q.sessionStart &&
-      q.sessionEnd &&
-      nyDate(new Date(q.sessionStart * 1000).toISOString()) === today,
-  );
-  const outside =
-    part("weekday") === "Sat" ||
-    part("weekday") === "Sun" ||
-    minutes < 570 ||
-    minutes >= 960 ||
-    !!(session?.sessionEnd && now >= session.sessionEnd * 1000);
-  const observedOpen = !!(
-    session?.sessionStart &&
-    session.sessionEnd &&
-    now >= session.sessionStart * 1000 &&
-    now < session.sessionEnd * 1000 &&
-    sourceDate === today
-  );
-  const freshState = candidates.find(
-    (q) =>
-      q.state &&
-      nyDate(q.asOf) === today &&
-      now - Date.parse(q.fetchedAt) < 3600000,
-  )?.state;
-  const status = outside
-    ? "Market Closed"
-    : observedOpen || freshState === "REGULAR"
-      ? "Market Open"
-      : freshState === "CLOSED"
-        ? "Market Closed"
-        : "Market status unavailable";
   const post = candidates
     .filter(
       (q) =>
@@ -559,7 +517,8 @@ export function stockQuotePresentation(data: StockResearch, now = Date.now()) {
         : undefined,
     asOf: source?.asOf,
     date: sourceDate,
-    status,
+    status: market.status,
+    market,
     postPrice: post?.postPrice,
     postAsOf: post?.postAsOf,
     postChange: post?.postPrice && price ? post.postPrice - price : undefined,

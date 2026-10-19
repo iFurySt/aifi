@@ -1,3 +1,4 @@
+import { useExchangeTime } from "../use-exchange-time";
 import { Skeleton, SkeletonGroup } from "../components/Skeleton";
 import { StockLoading } from "../components/StockLoading";
 import { Analysts } from "./Analysts";
@@ -5,7 +6,7 @@ import { Insiders } from "./Insiders";
 import { Politicians } from "./Politicians";
 import { Funds } from "./Funds";
 import { Financials } from "./Financials";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowUpRight,
   Star,
@@ -66,11 +67,7 @@ export function Stocks() {
   const adjusted = useMemo(() => splitAdjustedBars(data), [data]);
   const bars = adjusted.bars;
   const calculated = priceMetrics(bars);
-  const [clock, setClock] = useState(Date.now);
-  useEffect(() => {
-    const id = setInterval(() => setClock(Date.now()), 60000);
-    return () => clearInterval(id);
-  }, []);
+  const clock = useExchangeTime();
   const shown = stockQuotePresentation(data, clock);
   const quote = calculated.latest
     ? {
@@ -292,7 +289,11 @@ export function Stocks() {
               <div className="stock-chart-layout">
                 <div className="stock-identity-column">
                   <section className="stock-quote">
-                    <div className="stock-market-state">
+                    <div
+                      className="stock-market-state"
+                      title={shown.market.detail}
+                      data-market-basis={shown.market.basis}
+                    >
                       {shown.status === "Market Open" ? (
                         <Sun size={16} />
                       ) : (
@@ -355,6 +356,7 @@ export function Stocks() {
                       detail={
                         <>
                           <p>Collected snapshot · Not streaming.</p>
+                          <p>{shown.market.detail}</p>
                           {shown.date && !shown.asOf && (
                             <p>Price session: {shown.date}</p>
                           )}

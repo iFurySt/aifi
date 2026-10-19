@@ -258,7 +258,7 @@ it("keeps vendor annual and quarterly periods separate without invented start da
   });
 });
 
-it("keeps regular close and post-market prices distinct and never calls a stale weekday quote live", async () => {
+it("keeps regular close and post-market prices distinct and keeps stale prices while determining the current market session", async () => {
   const { stockQuotePresentation } = await import("./stock-research");
   const data = emptyResearch("AAPL");
   data.datasets.prices = {
@@ -292,7 +292,16 @@ it("keeps regular close and post-market prices distinct and never calls a stale 
     data,
     Date.parse("2026-10-19T14:00:00Z"),
   );
-  expect(monday.status).toBe("Market status unavailable");
+  expect(monday.status).toBe("Market Open");
+  expect(monday.market.basis).toBe("calendar");
+  expect(monday.price).toBe(343.46);
+  expect(monday.asOf).toBe("2026-10-16T20:00:01Z");
+  const empty = stockQuotePresentation(
+    emptyResearch("AAPL"),
+    Date.parse("2026-10-19T14:00:00Z"),
+  );
+  expect(empty.status).toBe("Market Open");
+  expect(empty.price).toBeUndefined();
 });
 
 it("does not replace a newer local close with an older company-page quote", async () => {

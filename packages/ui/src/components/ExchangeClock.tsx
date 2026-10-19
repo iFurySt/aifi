@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useExchangeTime } from "../use-exchange-time";
 
 /** Current exchange time is independent of the stored quote's observation time. */
 export function ExchangeClock({
@@ -6,18 +6,7 @@ export function ExchangeClock({
 }: {
   timeZone?: string;
 }) {
-  const [now, setNow] = useState(Date.now);
-  useEffect(() => {
-    const tick = () => setNow(Date.now());
-    const timer = window.setInterval(tick, 1000);
-    window.addEventListener("focus", tick);
-    document.addEventListener("visibilitychange", tick);
-    return () => {
-      window.clearInterval(timer);
-      window.removeEventListener("focus", tick);
-      document.removeEventListener("visibilitychange", tick);
-    };
-  }, []);
+  const now = useExchangeTime();
   return (
     <time
       className="stock-exchange-clock"

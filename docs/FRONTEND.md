@@ -346,6 +346,14 @@ recent GAAP actual/estimated EPS read persisted research snapshots; missing data
 is never replaced with reference-site values. Snapshot dates stay out of the
 stock-list heading area.
 
+Market status is independent of quote freshness: an old saved price does not
+prevent a current scheduled Open/Closed determination. Use the reviewed New York
+equity calendar and validated current provider exceptions; retain the actual
+price/source date. The status title and quote-source popup explain the basis.
+Clock and status updates align to minute boundaries and recover on focus or
+visibility changes. See the [calendar contract](references/us-equity-market-calendar.md)
+and run `pnpm smoke:market-session` for the stale-Friday/Monday and wake regressions.
+
 ## Research citations and comparison details
 
 Shared source chips show only the provider until clicked. Radix menus expose
