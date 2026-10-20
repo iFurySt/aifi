@@ -1,10 +1,8 @@
 name: CI
 
+# Hosted checks are opt-in during early development. Local `make ci` stays available.
 on:
-  pull_request:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   contents: read

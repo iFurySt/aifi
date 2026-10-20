@@ -1,6 +1,9 @@
-import { expect, it } from "vitest";
+import { expect, it, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { StockChart } from "./StockChart";
+
+// Keep this volume-rendering unit test independent of the comparison picker’s live directory hooks.
+vi.mock("./StockComparePicker", () => ({ StockComparePicker: () => null }));
 
 it("draws every stored daily volume, including a peak formerly skipped by the stride", () => {
   const bars = Array.from({ length: 365 }, (_, i) => ({
@@ -16,6 +19,7 @@ it("draws every stored daily volume, including a peak formerly skipped by the st
   );
   expect((html.match(/class="stock-volume-bar"/g) ?? []).length).toBe(365);
   expect(html).toContain('height="52"');
-  expect(html).toContain("365 sessions");
+  expect(html).toContain("2025-10-17");
+  expect(html).toContain("2026-10-16");
   expect(html).not.toContain("NaN");
 });

@@ -34,8 +34,9 @@ This document defines the default collaboration model for an agent-first reposit
 
 ## CI/CD And Release Posture
 
-- CI should enforce repository legibility and baseline safety for the current
-  skills-driven workspace.
+- Hosted CI is manually triggered during early development. Keep repository
+  legibility and application checks runnable locally through `make ci`; pushes
+  and pull requests do not automatically run the workflow.
 - Add CD only after there is a real build artifact and deployment target.
 - When a runtime stack arrives, extend `scripts/ci.sh` before adding separate
   workflow-only checks.

@@ -1,11 +1,14 @@
 # CI/CD Guide
 
-CI covers both the research workspace and the local Web/Electron app foundation.
+Checks cover both the research workspace and the local Web/Electron app foundation.
+Hosted CI is currently **manual only** (`workflow_dispatch`): pushes and pull
+requests do not start GitHub Actions. Run it from Actions → CI → Run workflow,
+or use `make ci` locally. No deployment or release automation is enabled.
 
 ## What Exists By Default
 
-- `ci.yml`: repository checks for docs, hygiene, skill entry points, GitHub
-  Action pinning, shell validity, and Python script syntax.
+- `ci.yml`: an opt-in manual workflow for docs, hygiene, skill entry points,
+  GitHub Action pinning, shell validity, Python syntax and application checks.
 - `scripts/ci.sh`: the local entry point used by GitHub Actions and by
   contributors through `make ci`.
 - Go from apps/cli/go.mod, pinned module sums, gofmt/vet/race tests, and a
@@ -30,7 +33,8 @@ when updating actions.
 
 ## Recommended Customization Sequence
 
-1. Keep `ci.yml` as the only always-on repository gate.
+1. Keep `ci.yml` manual while the app is in early development. Re-enable automatic
+   PR/push checks when the project needs a maintained hosted merge gate.
 2. Extend `scripts/check-skills.sh` when skill metadata or reference structure
    becomes stricter.
 3. Keep app checks in `scripts/ci.sh`; add runner verification there when
