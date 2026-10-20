@@ -485,7 +485,11 @@ export function StockChart({
           align="start"
           className="stock-range-select"
         />
-        <div className="segmented-control" aria-label="Chart style">
+        <div
+          className="segmented-control stock-chart-mode"
+          aria-label="Chart style"
+          data-mode={mode.toLowerCase()}
+        >
           {["Line", "Candle"].map((t) => (
             <button
               key={t}
@@ -531,13 +535,13 @@ export function StockChart({
             className="stock-chart-tool"
             aria-label="Indicators"
           >
-            <SlidersHorizontal size={14} />
+            <SlidersHorizontal size={16} />
             <span>Indicators</span>
             {indicators.length > 0 && <small>{indicators.length}</small>}
           </DropdownMenu.Trigger>
           <DropdownMenu.Portal>
             <DropdownMenu.Content
-              className="dropdown-content stock-indicator-menu"
+              className="dropdown-menu stock-indicator-menu"
               align="start"
               sideOffset={6}
               collisionPadding={12}

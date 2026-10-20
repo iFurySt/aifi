@@ -36,7 +36,7 @@ export function StockComparePicker({
       }}
     >
       <Popover.Trigger className="stock-chart-tool" aria-label="Compare stocks">
-        <Plus size={14} />
+        <Plus size={16} />
         <span>Compare</span>
         {selected.length > 0 && <small>{selected.length}</small>}
       </Popover.Trigger>

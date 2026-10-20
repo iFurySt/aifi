@@ -11,12 +11,17 @@ touch target. Long names wrap with the star as one title group.
 ## Toolbar
 
 The chart's single left-aligned, wrapping row contains the shared range Select,
-existing Line/Candle segment, original provider source chip, Indicators and Compare.
+equal-width Line/Candle segment, original provider source chip, Indicators and Compare.
 Ranges are 1M, 3M, YTD, 1Y, 2Y and All, ending at the latest stored session.
 Intraday 1D/5D are deferred until persisted minute bars exist. The old OHLCV/basis/
 session-count prose and duplicate range caption are removed from the document;
 coverage and basis stay available in source details. Cursor OHLCV stays in the
 floating tooltip and keyboard live region.
+
+Toolbar controls share a 32px minimum height (38px on phones) and 16px icon slots. Line/Candle
+uses one sliding selected surface; reduced motion switches it immediately.
+Indicators reuses the shared opaque `dropdown-menu` surface, border and shadow,
+with inset, spaced checked/highlighted rows and viewport-bounded scrolling.
 
 ## Studies and comparison
 
